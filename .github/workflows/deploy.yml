@@ -1,0 +1,56 @@
+name: Deploy signetartists.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build site
+        run: python3 build.py
+
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          # rsync rather than a hand-picked cp list, so a new output directory
+          # is never silently left out of a deploy.
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_src' \
+            --exclude='_site' \
+            --exclude='build.py' \
+            --exclude='README.md' \
+            --exclude='__pycache__' \
+            ./ _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

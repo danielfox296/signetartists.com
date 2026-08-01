@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <meta name="robots" content="{{robots}}">
+  <link rel="canonical" href="{{canonical}}">
+
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:site_name" content="{{brand_name}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{meta_description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260801">
+  {{schema}}
+  {{ga}}
+</head>
+<body>
+  {{header}}
+  <main>
+    {{content}}
+  </main>
+  {{footer}}
+
+  <script>
+    // Mobile nav toggle. The button label doubles as the state indicator, the
+    // same as the React version it replaced.
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.querySelector('.nav-mobile');
+      if (!btn || !panel) { return; }
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+</body>
+</html>

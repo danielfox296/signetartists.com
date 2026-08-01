@@ -1,0 +1,100 @@
+<section class="section section--top">
+  <div class="wrap">
+    <div class="split contact-grid">
+      <div>
+        <div class="heading">
+          <p class="eyebrow">Enquiries</p>
+          <h2 class="h2">Check a date.</h2>
+          <p class="lede">Tell us when and where. You&rsquo;ll get availability and a real number back, not a request for a call.</p>
+        </div>
+
+        <dl class="contact-details">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:{{brand_email_raw}}">{{brand_email}}</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:{{brand_phone_raw}}">{{brand_phone}}</a></dd>
+          </div>
+          <div>
+            <dt>Where we play</dt>
+            <dd>{{brand_service_area}}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Static host, so this posts to formsubmit.co rather than a server
+           action. _next is the confirmation page; _honey is the spam trap. -->
+      <form action="{{form_action}}" method="POST">
+        <input type="hidden" name="_next" value="{{site_url}}/thanks/">
+        <input type="hidden" name="_subject" value="Enquiry — signetartists.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-honey" aria-hidden="true">
+          <label for="_honey">Company</label>
+          <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input id="name" name="Name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="eventDate">Event date <span class="req">*</span></label>
+            <input id="eventDate" name="Event date" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="eventType">Event type</label>
+            <select id="eventType" name="Event type">
+              <option value="">Select&hellip;</option>
+              <option>Corporate party</option>
+              <option>Gala or fundraiser</option>
+              <option>Wedding</option>
+              <option>Private party or milestone</option>
+              <option>Retreat or conference</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="venue">Venue or city</label>
+            <input id="venue" name="Venue or city">
+          </div>
+
+          <div class="field">
+            <label for="guests">Guest count</label>
+            <input id="guests" name="Guest count" inputmode="numeric">
+          </div>
+
+          <div class="field">
+            <label for="covering">What needs covering</label>
+            <input id="covering" name="What needs covering" placeholder="Cocktails, dinner, dancing&hellip;">
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Anything else <span class="req">*</span></label>
+            <textarea id="message" name="Anything else" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check a Date — Signet Artists</title>
+  <meta name="description" content="Send your date and we&#x27;ll confirm availability and a price, usually within one business day.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://signetartists.com/contact/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Signet Artists">
+  <meta property="og:title" content="Check a Date — Signet Artists">
+  <meta property="og:description" content="Send your date and we&#x27;ll confirm availability and a price, usually within one business day.">
+  <meta property="og:url" content="https://signetartists.com/contact/">
+  <meta property="og:image" content="https://signetartists.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css?v=20260801">
+  
+  
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="../">Signet Artists</a>
+
+    <nav class="nav-desktop">
+      <a href="../music/" >The Music</a>
+      <a href="../pricing/" >Pricing</a>
+      <a href="../planners/" >For Planners</a>
+      <a href="../corporate/" >Corporate &amp; Galas</a>
+      <a class="btn btn--sm" href="../contact/" aria-current="page">Check a Date</a>
+    </nav>
+
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+
+  <nav class="nav-mobile" id="mobile-nav">
+    <a href="../music/">The Music</a>
+    <a href="../pricing/">Pricing</a>
+    <a href="../planners/">For Planners</a>
+    <a href="../corporate/">Corporate &amp; Galas</a>
+    <a class="btn nav-mobile-cta" href="../contact/">Check a Date</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="section section--top">
+  <div class="wrap">
+    <div class="split contact-grid">
+      <div>
+        <div class="heading">
+          <p class="eyebrow">Enquiries</p>
+          <h2 class="h2">Check a date.</h2>
+          <p class="lede">Tell us when and where. You&rsquo;ll get availability and a real number back, not a request for a call.</p>
+        </div>
+
+        <dl class="contact-details">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:hello@signetartists.com"><span data-tbd="true">[hello@signetartists.com]</span></a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:(303) 555-0000"><span data-tbd="true">[(303) 555-0000]</span></a></dd>
+          </div>
+          <div>
+            <dt>Where we play</dt>
+            <dd>Denver, the Front Range, and the mountain corridor</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Static host, so this posts to formsubmit.co rather than a server
+           action. _next is the confirmation page; _honey is the spam trap. -->
+      <form action="https://formsubmit.co/FORMSUBMIT-ID" method="POST">
+        <input type="hidden" name="_next" value="https://signetartists.com/thanks/">
+        <input type="hidden" name="_subject" value="Enquiry — signetartists.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-honey" aria-hidden="true">
+          <label for="_honey">Company</label>
+          <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input id="name" name="Name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="eventDate">Event date <span class="req">*</span></label>
+            <input id="eventDate" name="Event date" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="eventType">Event type</label>
+            <select id="eventType" name="Event type">
+              <option value="">Select&hellip;</option>
+              <option>Corporate party</option>
+              <option>Gala or fundraiser</option>
+              <option>Wedding</option>
+              <option>Private party or milestone</option>
+              <option>Retreat or conference</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="venue">Venue or city</label>
+            <input id="venue" name="Venue or city">
+          </div>
+
+          <div class="field">
+            <label for="guests">Guest count</label>
+            <input id="guests" name="Guest count" inputmode="numeric">
+          </div>
+
+          <div class="field">
+            <label for="covering">What needs covering</label>
+            <input id="covering" name="What needs covering" placeholder="Cocktails, dinner, dancing&hellip;">
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Anything else <span class="req">*</span></label>
+            <textarea id="message" name="Anything else" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark">Signet Artists</p>
+      <p class="footer-line">Denver, the Front Range, and the mountain corridor</p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <p class="eyebrow">Enquiries</p>
+        <ul class="footer-list">
+          <li><a href="mailto:hello@signetartists.com"><span data-tbd="true">[hello@signetartists.com]</span></a></li>
+          <li><a href="tel:(303) 555-0000"><span data-tbd="true">[(303) 555-0000]</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Site</p>
+        <ul class="footer-list">
+          <li><a href="../pricing/">Pricing</a></li>
+          <li><a href="../planners/">For Planners</a></li>
+          <li><a href="../contact/">Check a Date</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="footer-meta">&copy; 2026 Entuned, LLC. Signet Artists is a trade name of Entuned, LLC.</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile nav toggle. The button label doubles as the state indicator, the
+    // same as the React version it replaced.
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.querySelector('.nav-mobile');
+      if (!btn || !panel) { return; }
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+</body>
+</html>

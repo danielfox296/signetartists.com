@@ -1,0 +1,108 @@
+{
+  "_comment": "Every brand-dependent value on the site. No template hardcodes one. Values in [square brackets] are unresolved and render with a dotted underline in the browser so open decisions stay visible while browsing.",
+
+  "brand": {
+    "name": "Signet Artists",
+    "legalName": "Entuned, LLC",
+    "tagline": "Live music for private events, run like a business.",
+    "intro": "A Denver company covering private events across Colorado — jazz through a full dance floor, two players to thirteen. Published pricing, production included, and a named contact for the night given to you in advance.",
+    "email": "[hello@signetartists.com]",
+    "phone": "[(303) 555-0000]",
+    "city": "Denver",
+    "region": "CO",
+    "serviceArea": "Denver, the Front Range, and the mountain corridor",
+    "url": "https://signetartists.com",
+    "formsubmit": "[FORMSUBMIT-ID]"
+  },
+
+  "acts": [
+    {
+      "id": "standards",
+      "name": "The Standards",
+      "kind": "Jazz and lounge",
+      "sizes": "2 to 5 players",
+      "blurb": "Ceremony, cocktails and dinner. Conversation volume, and it stops the moment somebody picks up a microphone."
+    },
+    {
+      "id": "headliners",
+      "name": "The Headliners",
+      "kind": "Party and dance",
+      "sizes": "3 to 13 players",
+      "blurb": "The main event. Contemporary pop, funk and Motown, read to the room rather than run off a fixed list."
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "kind": "Continuous",
+      "sizes": "Late night, between sets, or on its own",
+      "blurb": "Through the same system, run by the same team. No second load-in and no gap when the band steps off."
+    }
+  ],
+
+  "rates": [
+    { "size": "Duo", "pieces": 2, "callOut": 600, "hourly": 450, "min": 1 },
+    { "size": "Trio", "pieces": 3, "callOut": 1000, "hourly": 600, "min": 1 },
+    { "size": "Quartet", "pieces": 4, "callOut": 1600, "hourly": 800, "min": 2 },
+    { "size": "Quintet", "pieces": 5, "callOut": 2200, "hourly": 1000, "min": 2 },
+    { "size": "Seven-piece", "pieces": 7, "callOut": 3500, "hourly": 1250, "min": 2 },
+    { "size": "Ten-piece", "pieces": 10, "callOut": 5300, "hourly": 1800, "min": 2 },
+    { "size": "Thirteen-piece", "pieces": 13, "callOut": 8000, "hourly": 2500, "min": 2 },
+    { "size": "DJ", "pieces": 1, "callOut": 800, "hourly": 350, "min": 1 }
+  ],
+
+  "included": [
+    "A named contact for the night, given to you before the event",
+    "Sound and lighting sized to the room, with an engineer",
+    "Load-in, setup, strike and load-out",
+    "Certificate of insurance naming your venue",
+    "W-9 and one itemised invoice",
+    "Timeline coordination before the event",
+    "Continuous audio during breaks"
+  ],
+
+  "extras": [
+    { "item": "Front Range travel — Boulder, Colorado Springs, Fort Collins", "rate": "$300" },
+    { "item": "I-70 corridor — Vail, Beaver Creek, Breckenridge, Winter Park", "rate": "$600" },
+    { "item": "Far resorts — Aspen, Telluride, Steamboat, Crested Butte", "rate": "$600 + lodging at cost" },
+    { "item": "Holiday and peak weekends", "rate": "+25%" },
+    { "item": "New Year's Eve", "rate": "+50%" },
+    { "item": "Live-band karaoke", "rate": "+$1,500" },
+    { "item": "Learned songs beyond the first", "rate": "$250 each" }
+  ],
+
+  "eventTypes": [
+    "Weddings",
+    "Corporate parties",
+    "Galas and fundraisers",
+    "Retreats and kickoffs",
+    "Milestones and anniversaries",
+    "Club and member events"
+  ],
+
+  "faqs": [
+    {
+      "q": "What does a band cost for a corporate event in Denver?",
+      "a": "Our published rates run from $1,050 for a one-hour duo up to $18,000 for a thirteen-piece over four hours. Most corporate parties land between $6,000 and $12,500. Sound, lighting and an engineer are included at every size. Travel outside the metro and holiday weekends are quoted as separate lines, never folded into the total."
+    },
+    {
+      "q": "How is the price calculated?",
+      "a": "Two parts. A call-out covers the evening we commit regardless of length — travel, load-in, setup, sound check, strike and production. Then an hourly rate for performance time. That means a one-hour booking is priced honestly rather than forced into a four-hour block, and there is no overtime rate: hour five costs what hour four cost."
+    },
+    {
+      "q": "Do you provide a certificate of insurance?",
+      "a": "Yes, naming your venue as additional insured, sent with the contract rather than after you ask. A W-9 and an itemised invoice come with it."
+    },
+    {
+      "q": "Can one booking cover cocktails and dancing?",
+      "a": "Yes, and it is cheaper than two vendors. Once we are in the building the call-out is already paid, so adding a smaller group for ceremony, cocktails or dinner bills at the hourly rate only. An hour of cocktail duo added to a full band booking is $450."
+    },
+    {
+      "q": "Who do we deal with on the night?",
+      "a": "One named person, given to you before the event and reachable throughout it — usually one of the players, most often the bandleader. You are never hunting for whoever looks in charge. That is included in every booking and is not an add-on."
+    },
+    {
+      "q": "How far in advance should we book?",
+      "a": "Corporate holiday parties are typically decided August through October for November and December. Weddings and galas run longer — ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+    }
+  ]
+}
