@@ -336,8 +336,6 @@ def build_page(page_dir: pathlib.Path) -> dict | None:
         "{{brand_service_area}}": esc(BRAND["serviceArea"]),
         "{{brand_email}}": val(BRAND["email"]),
         "{{brand_email_raw}}": esc(BRAND["email"].strip("[]")),
-        "{{brand_phone}}": val(BRAND["phone"]),
-        "{{brand_phone_raw}}": esc(BRAND["phone"].strip("[]")),
         "{{form_action}}": esc(
             f"https://formsubmit.co/{BRAND['formsubmit'].strip('[]')}"
         ),
