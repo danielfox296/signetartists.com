@@ -40,6 +40,7 @@ SITE_URL = BRAND["url"].rstrip("/")
 OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 
 PLACEHOLDER = re.compile(r"\[.+\]")
+COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 
 
 # ---------------------------------------------------------------- helpers
@@ -284,6 +285,10 @@ def build_page(page_dir: pathlib.Path) -> dict | None:
     section_dir = page_dir / "sections"
     sections = sorted(section_dir.glob("*.html")) if section_dir.exists() else []
     content = "\n".join(read(s) for s in sections)
+    # Section comments are editorial notes to ourselves — why a block exists,
+    # which pillar it carries, what was cut. They do not belong in the shipped
+    # page, where anyone can read them in view-source.
+    content = COMMENT.sub("", content)
 
     base = read(LAYOUTS / "base.html")
     header = partial("header")
