@@ -29,8 +29,10 @@ DATA_FILE = DATA / "site.json"
 NAV_KEYS = ["music", "pricing", "planners", "corporate", "contact"]
 
 # GA4 measurement id. Empty string => no analytics tag is emitted at all.
-# Never ship a half-wired tag. Create the property, paste the G-XXXXXXXX here.
-GA_MEASUREMENT_ID = ""
+# Never ship a half-wired tag.
+# Property "Signet Artists", stream signetartists.com (15364913067), created
+# 2026-08-01 under the same Analytics account (121066079) as the other properties.
+GA_MEASUREMENT_ID = "G-LL5DKVEX29"
 
 site = json.loads(DATA_FILE.read_text(encoding="utf-8"))
 BRAND = site["brand"]
