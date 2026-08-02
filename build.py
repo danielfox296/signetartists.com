@@ -211,6 +211,7 @@ def organization_schema() -> dict:
         "name": BRAND["name"],
         "description": BRAND["intro"],
         "url": SITE_URL,
+        "email": BRAND["email"],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": BRAND["city"],
@@ -280,7 +281,9 @@ def build_ga() -> str:
 def build_page(page_dir: pathlib.Path) -> dict | None:
     cfg = json.loads(read(page_dir / "config.json"))
     output = cfg["output"]
-    nav_prefix = "../" * output.count("/")
+    # 404.html is served by GitHub Pages for *any* missing path, including
+    # deep ones, so its asset and nav links must be absolute or they break.
+    nav_prefix = "/" if cfg.get("absolute_paths") else "../" * output.count("/")
 
     section_dir = page_dir / "sections"
     sections = sorted(section_dir.glob("*.html")) if section_dir.exists() else []

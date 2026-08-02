@@ -9,8 +9,11 @@
   --rule: #dfdad1;
   --ink: #16150f;
   --ink-soft: #4a473d;
-  --ink-faint: #7d7a6e;
-  --brass: #8a6d2f;
+  /* Both darkened 2026-08-01 to clear WCAG AA (4.5:1) against the *sunk*
+     background, not just paper — the eyebrows and table headers sit on sunk.
+     Previously 3.75:1 and 4.25:1 there, at 14px and 11px. */
+  --ink-faint: #6f6c62;
+  --brass: #84682d;
 
   --display: "Fraunces", ui-serif, Georgia, serif;
   --sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
@@ -183,6 +186,26 @@ img {
 .prose strong {
   font-weight: 500;
   color: var(--ink);
+}
+
+/* Inline links in body copy. Without this they inherit the surrounding colour
+   and are indistinguishable from text — which they were until 2026-08-02. */
+.prose a,
+.note a,
+.lede a,
+.spec-list a,
+.faq-row dd a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 1px;
+}
+
+.prose a:hover,
+.note a:hover,
+.lede a:hover,
+.spec-list a:hover,
+.faq-row dd a:hover {
+  color: var(--brass);
 }
 
 .note {
