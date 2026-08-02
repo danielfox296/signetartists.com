@@ -1,6 +1,8 @@
 {
   "_comment": "Every brand-dependent value on the site. No template hardcodes one. Values in [square brackets] are unresolved and render with a dotted underline in the browser so open decisions stay visible while browsing.",
 
+  "_images_note": "PLACEHOLDERS. Free-licence Unsplash stills, cropped 16:9 and duotoned into the brand palette so they read as one art-directed set rather than five unrelated stock photos. Deliberately objects, gear and empty rooms — no people, and nothing that implies it is our band. Swap every one of these for footage from the shoot; the alt text will need rewriting too.",
+
   "brand": {
     "name": "Signet Artists",
     "legalName": "Entuned, LLC",
@@ -21,21 +23,27 @@
       "name": "The Standards",
       "kind": "Jazz and lounge",
       "sizes": "2 to 5 players",
-      "blurb": "Ceremony, cocktails and dinner. Conversation volume, and it stops the moment somebody picks up a microphone."
+      "blurb": "Ceremony, cocktails and dinner. Conversation volume, and it stops the moment somebody picks up a microphone.",
+      "img": "standards.jpg",
+      "alt": "A trumpet resting on a table."
     },
     {
       "id": "headliners",
       "name": "The Headliners",
       "kind": "Party and dance",
       "sizes": "3 to 13 players",
-      "blurb": "The main event. Contemporary pop, funk and Motown, read to the room rather than run off a fixed list."
+      "blurb": "The main event. Contemporary pop, funk and Motown, read to the room rather than run off a fixed list.",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a close microphone."
     },
     {
       "id": "dj",
       "name": "DJ",
       "kind": "Continuous",
       "sizes": "Late night, between sets, or on its own",
-      "blurb": "Through the same system, run by the same team. No second load-in and no gap when the band steps off."
+      "blurb": "Through the same system, run by the same team. No second load-in and no gap when the band steps off.",
+      "img": "dj.jpg",
+      "alt": "Faders and knobs on a mixing console."
     }
   ],
 

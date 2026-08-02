@@ -413,6 +413,19 @@ img {
 
 /* ------------------------------------------------------------ media slot */
 
+/* Placeholder imagery until the shoot. Duotoned into the palette so the set
+   reads as art direction; the hairline border matches the rate tables and
+   card grids so a photograph sits inside the same system as everything else. */
+.media {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+}
+
 .media-slot {
   aspect-ratio: 16 / 9;
   display: flex;

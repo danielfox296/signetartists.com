@@ -174,8 +174,8 @@ def acts_grid() -> str:
     return f'<div class="card-grid card-grid--3">{cards}</div>'
 
 
-def acts_sections() -> str:
-    """Music page: one alternating band per section, media slot beside it."""
+def acts_sections(nav_prefix: str = "") -> str:
+    """Music page: one alternating band per section, image beside it."""
     out = []
     for i, a in enumerate(site["acts"]):
         sunk = " section--sunk" if i % 2 == 1 else ""
@@ -189,7 +189,8 @@ def acts_sections() -> str:
             f'<p class="act-sizes">{esc(a["sizes"])}</p>'
             f'<p class="prose">{esc(a["blurb"])}</p>'
             "</div>"
-            f'<div class="media-slot"><p>{esc(a["name"])} — video</p></div>'
+            f'<img class="media" src="{nav_prefix}img/{esc(a["img"])}" '
+            f'alt="{esc(a["alt"])}" width="1600" height="900" loading="lazy" decoding="async">'
             "</div></div></section>"
         )
     return "".join(out)
@@ -315,7 +316,7 @@ def build_page(page_dir: pathlib.Path) -> dict | None:
         "{{extras_list}}": extras_list(),
         "{{faq_list}}": faq_list(),
         "{{acts_grid}}": acts_grid(),
-        "{{acts_sections}}": acts_sections(),
+        "{{acts_sections}}": acts_sections(nav_prefix),
         "{{event_types}}": event_types(),
     }
     for token, value in blocks.items():
