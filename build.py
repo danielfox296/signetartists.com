@@ -86,12 +86,17 @@ def canonical_for(output: str) -> str:
 
 
 def rate_table_summary() -> str:
-    """Home page: size, 2 hrs, 4 hrs. The teaser for the full card."""
+    """Home page: size, 2 hrs, 4 hrs. The teaser for the full card.
+
+    The 4-hour column carries the brass accent (WEBSITE-PLAN §6.3): it is the
+    number the organization schema and llms.txt publish. Safe for quote.js,
+    which reads cells by textContent and ignores attributes.
+    """
     rows = "".join(
         "<tr>"
         f'<td class="rate-size">{esc(r["size"])}</td>'
         f'<td>{money(r["callOut"] + r["hourly"] * 2)}</td>'
-        f'<td>{money(r["callOut"] + r["hourly"] * 4)}</td>'
+        f'<td class="num-accent">{money(r["callOut"] + r["hourly"] * 4)}</td>'
         "</tr>"
         for r in site["rates"]
     )
@@ -106,10 +111,15 @@ def rate_table_full() -> str:
     """Pricing page: the whole card, including the hours below each minimum."""
     rows = []
     for r in site["rates"]:
-        cells = "".join(
-            f"<td>{'—' if h < r['min'] else money(r['callOut'] + r['hourly'] * h)}</td>"
-            for h in (1, 2, 3, 4)
-        )
+        # The 4-hour totals get the brass .num-accent, same as the summary
+        # table. Every published minimum is <= 2, so the accented cell is
+        # always a real figure, never the em-dash.
+        cells = []
+        for h in (1, 2, 3, 4):
+            cls = ' class="num-accent"' if h == 4 else ""
+            value = "—" if h < r["min"] else money(r["callOut"] + r["hourly"] * h)
+            cells.append(f"<td{cls}>{value}</td>")
+        cells = "".join(cells)
         rows.append(
             "<tr>"
             f'<td class="rate-size">{esc(r["size"])}</td>'
@@ -150,7 +160,7 @@ def extras_list() -> str:
         f'<dd class="tnum">{esc(e["rate"])}</dd></div>'
         for e in site["extras"]
     )
-    return f'<dl class="def-list def-list--inline">{rows}</dl>'
+    return f'<dl class="def-list">{rows}</dl>'
 
 
 def faq_list() -> str:

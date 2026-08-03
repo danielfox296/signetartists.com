@@ -6,8 +6,8 @@
   "brand": {
     "name": "Signet Artists",
     "legalName": "Entuned, LLC",
-    "tagline": "Live music for private events, run like a business.",
-    "intro": "A Denver company covering private events across Colorado — jazz through a full dance floor, two players to thirteen. Published pricing, production included, and a named contact for the night given to you in advance.",
+    "tagline": "Quiet at seven. Loud at eleven. Gone by one.",
+    "intro": "Live music for private events across Colorado. Two bands and a DJ, two players to thirteen, one contract. The invoice is one page and it adds up to the number we published.",
     "_phone_note": "Decided 2026-08-01: no phone number is published. Email is the only published route. If that changes, restore the markup in the footer partial, the contact page and the home page close section.",
     "email": "hello@signetartists.com",
     "city": "Denver",
@@ -23,7 +23,7 @@
       "name": "The Standards",
       "kind": "Jazz and lounge",
       "sizes": "2 to 5 players",
-      "blurb": "Ceremony, cocktails and dinner. Conversation volume, and it stops the moment somebody picks up a microphone.",
+      "blurb": "Ceremony, cocktails and dinner. Jazz and lounge at conversation volume. The sound of a good party starting.",
       "img": "standards.jpg",
       "alt": "A trumpet resting on a table."
     },
@@ -32,7 +32,7 @@
       "name": "The Headliners",
       "kind": "Party and dance",
       "sizes": "3 to 13 players",
-      "blurb": "The main event. Contemporary pop, funk and Motown, read to the room rather than run off a fixed list.",
+      "blurb": "The main event. Contemporary pop, funk and Motown, read to the room song by song until the floor is full and stays that way.",
       "img": "headliners.jpg",
       "alt": "A snare drum with sticks laid across it and a close microphone."
     },
@@ -41,7 +41,7 @@
       "name": "DJ",
       "kind": "Continuous",
       "sizes": "Late night, between sets, or on its own",
-      "blurb": "Through the same system, run by the same team. No second load-in and no gap when the band steps off.",
+      "blurb": "Through the same sound system, run by the same team. The band steps off at midnight and the floor stays full.",
       "img": "dj.jpg",
       "alt": "Faders and knobs on a mixing console."
     }
@@ -90,27 +90,27 @@
   "faqs": [
     {
       "q": "What does a band cost for a corporate event in Denver?",
-      "a": "Our published rates run from $1,050 for a one-hour duo up to $18,000 for a thirteen-piece over four hours. Most corporate parties land between $6,000 and $12,500. Sound, lighting and an engineer are included at every size. Travel outside the metro and holiday weekends are quoted as separate lines, never folded into the total."
+      "a": "Our published rates run from $1,050 for a one-hour duo up to $18,000 for a thirteen-piece over four hours. Most corporate parties land between $6,000 and $12,500. Sound, lighting and an engineer are included at every size. Travel outside the metro and holiday weekends are quoted as their own lines on the contract."
     },
     {
       "q": "How is the price calculated?",
-      "a": "Two parts. A call-out covers the evening we commit regardless of length — travel, load-in, setup, sound check, strike and production. Then an hourly rate for performance time. That means a one-hour booking is priced honestly rather than forced into a four-hour block, and there is no overtime rate: hour five costs what hour four cost."
+      "a": "Two parts. A call-out covers the evening we commit regardless of length: travel, load-in, setup, sound check, strike and production. Then an hourly rate for performance time. A one-hour booking is priced as one hour, and there is no overtime rate: added time bills at the same hourly figure in 30-minute increments, so hour five costs what hour four cost."
     },
     {
       "q": "Do you provide a certificate of insurance?",
-      "a": "Yes, naming your venue as additional insured, sent with the contract rather than after you ask. A W-9 and an itemised invoice come with it."
+      "a": "Yes, naming your venue as additional insured, sent in the same email as the contract. A W-9 and an itemised invoice come with it."
     },
     {
       "q": "Can one booking cover cocktails and dancing?",
-      "a": "Yes, and it is cheaper than two vendors. Once we are in the building the call-out is already paid, so adding a smaller group for ceremony, cocktails or dinner bills at the hourly rate only. An hour of cocktail duo added to a full band booking is $450."
+      "a": "Yes. Once we are in the building the call-out is already paid, so a smaller group for ceremony, cocktails or dinner bills at the hourly rate only. An hour of cocktail duo added to a full band booking is $450, an hour of DJ after the band is $350, and booking three or more parts of the night together takes 10% off performance fees."
     },
     {
       "q": "Who do we deal with on the night?",
-      "a": "One named person, given to you before the event and reachable throughout it — usually one of the players, most often the bandleader. You are never hunting for whoever looks in charge. That is included in every booking and is not an add-on."
+      "a": "One named person, usually one of the players and most often the bandleader. Their number arrives with the contract, and they are reachable from load-in to load-out. Every booking includes this."
     },
     {
       "q": "How far in advance should we book?",
-      "a": "Corporate holiday parties are typically decided August through October for November and December. Weddings and galas run longer — ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+      "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
     }
   ]
 }

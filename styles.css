@@ -1,12 +1,19 @@
 /* Signet Artists — signetartists.com
    Ported from the Tailwind build 2026-08-01. Same tokens, same design.
    Light, high-contrast, information-first: this reader scans a rate table
-   between two other tasks. */
+   between two other tasks. Design-system pass 2026-08-02 (WEBSITE-PLAN §6):
+   display type step, the home page's night arc, brass as a functional
+   accent, the Fraunces-italic wink, and the stated base-8 spacing scale. */
 
 :root {
   --paper: #fbfaf7;
   --paper-sunk: #f2efe9;
   --rule: #dfdad1;
+  /* Form-control boundaries. --rule reads 1.33:1 on paper — fine for hairline
+     dividers, short of WCAG 1.4.11's 3:1 for a component whose border is its
+     only visual indicator. This cut clears it on paper (3.5:1) and on
+     paper-sunk (3.2:1), staying in the same warm-grey family. */
+  --rule-strong: #8a8679;
   --ink: #16150f;
   --ink-soft: #4a473d;
   /* Both darkened 2026-08-01 to clear WCAG AA (4.5:1) against the *sunk*
@@ -14,11 +21,28 @@
      Previously 3.75:1 and 4.25:1 there, at 14px and 11px. */
   --ink-faint: #6f6c62;
   --brass: #84682d;
+  /* Brass for dark ground only. --brass itself reads 3.5:1 on --ink, short
+     of AA, so the night section's eyebrow and accents use this lifted cut:
+     7.8:1 on --ink. Never used on light backgrounds (2.4:1 on paper). */
+  --brass-bright: #c9a45a;
+  /* The --ink-soft counterpart for dark ground: body copy on the night
+     section. 11.4:1 on --ink. */
+  --paper-dim: #cfccc2;
 
   --display: "Fraunces", ui-serif, Georgia, serif;
   --sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   --wrap: 64rem;
+
+  /* Spacing scale (WEBSITE-PLAN §6.5): base-8, stated. 8/16/24/40/64/104.
+     Dense where a planner compares, generous where we assert; section
+     rhythm runs on the top three steps. */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;
 }
 
 *,
@@ -106,11 +130,11 @@ img {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: var(--space-5) 0;
 }
 
 .section--top {
-  padding-top: 3rem;
+  padding-top: var(--space-4);
 }
 
 .section--ruled {
@@ -127,14 +151,53 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
 }
 
-@media (prefers-reduced-transparency: reduce) {
-  .section--sunk {
-    background-image: none;
-  }
+/* The night arc (WEBSITE-PLAN §6.2), home page only. The scroll moves through
+   the evening: paper, paper again, paper-sunk, then this one inverted band —
+   eleven o'clock — before pricing returns to light. Backgrounds enacting the
+   tagline; no motion, no scroll effects. Rate tables, buttons and --ink-faint
+   never sit on this section. Same turbulence grain as the sunk band, which
+   reads as faint light speckle on ink — printed black, not flat digital. */
+.section--night {
+  background-color: var(--ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  color: var(--paper);
 }
 
-.stack > * + * {
-  margin-top: 1rem;
+/* The cut from sunk to ink is its own rule; a light hairline there is noise. */
+.section--night.section--ruled {
+  border-top-color: var(--ink);
+}
+
+.section--night .h1,
+.section--night .h2,
+.section--night .h3 {
+  color: var(--paper);
+}
+
+.section--night .eyebrow {
+  color: var(--brass-bright);
+}
+
+.section--night .lede,
+.section--night .prose,
+.section--night .note {
+  color: var(--paper-dim);
+}
+
+.section--night ::selection {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.section--night :focus-visible {
+  outline-color: var(--brass-bright);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .section--sunk,
+  .section--night {
+    background-image: none;
+  }
 }
 
 /* ------------------------------------------------------------ typography */
@@ -170,6 +233,24 @@ img {
   font-size: 1.5rem;
   line-height: 1.2;
   color: var(--ink);
+}
+
+/* Display step (WEBSITE-PLAN §6.1): the hero and flagship section headlines,
+   roughly 1.5x the h1, riding Fraunces' display optical sizes (opsz tracks
+   font-size automatically). Composes with the existing heading class —
+   class="h1 display", class="h2 display" — so the h1/h2/h3 hierarchy beneath
+   stays coherent, and the compound selector outranks the breakpoint h1/h2
+   sizes below. clamp() runs 40px on a 375px viewport to 72px from ~1030px
+   up; short lines justify the size, and text-wrap keeps the rag even where
+   the line breaks on small screens. */
+.h1.display,
+.h2.display,
+.h3.display {
+  font-optical-sizing: auto;
+  font-size: clamp(2.5rem, 1.35rem + 4.9vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 .heading {
@@ -226,6 +307,17 @@ img {
   color: var(--ink-faint);
 }
 
+/* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set in true
+   Fraunces italic at the size of the text around it, so the register shift
+   reads as intentional design rather than inconsistency. Inherits size and
+   colour deliberately: in the footer it sits at body size mid-sentence; on
+   404 and thanks the playful line is the headline itself, where .smile adds
+   only the italic tell. The italic axis is loaded in base.html. */
+.smile {
+  font-family: var(--display);
+  font-style: italic;
+}
+
 .hero-lede {
   margin-top: 1.25rem;
   max-width: 36rem;
@@ -251,6 +343,15 @@ img {
 }
 
 .btn:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+}
+
+/* Brass is spent on the active CTA (WEBSITE-PLAN §6.3). The primary button
+   stays ink at rest; keyboard focus now answers in brass exactly as hover
+   does, on top of the global brass focus ring. Outline buttons keep the
+   ring alone. Paper on brass is 5.0:1. */
+.btn:not(.btn--outline):focus-visible {
   background: var(--brass);
   border-color: var(--brass);
 }
@@ -411,7 +512,7 @@ img {
   color: var(--ink-soft);
 }
 
-/* ------------------------------------------------------------ media slot */
+/* ----------------------------------------------------------------- media */
 
 /* Placeholder imagery until the shoot. Duotoned into the palette so the set
    reads as art direction; the hairline border matches the rate tables and
@@ -424,28 +525,6 @@ img {
   object-fit: cover;
   border: 1px solid var(--rule);
   background: var(--paper-sunk);
-}
-
-.media-slot {
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--rule);
-  background: var(--paper-sunk);
-}
-
-.media-slot p {
-  padding: 0 1.5rem;
-  text-align: center;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--ink-faint);
-}
-
-.media-block {
-  margin-top: 2.5rem;
 }
 
 /* ------------------------------------------------------------------ acts */
@@ -522,10 +601,6 @@ img {
   width: 1rem;
   flex-shrink: 0;
   background: var(--brass);
-}
-
-.spec-list--compact {
-  margin-top: 1.5rem;
 }
 
 /* ------------------------------------------------------------- data lists */
@@ -649,6 +724,19 @@ img {
   color: var(--ink);
 }
 
+/* Brass accent (WEBSITE-PLAN §6.3): promoted from ambient to functional.
+   One accent, spent where the persuasion is — the four-hour totals on the
+   rate cards (the number the schema and llms.txt publish) and the single
+   emphasised fact per page. AA on paper (5.0:1) and paper-sunk (4.6:1);
+   never used on .section--night. The extra selectors outgun
+   ".prose strong" and ".rate-table td". */
+.num-accent,
+.prose strong.num-accent,
+.rate-table td.num-accent {
+  color: var(--brass);
+  font-weight: 500;
+}
+
 /* ------------------------------------------------------------------ form */
 
 .form-grid {
@@ -675,7 +763,7 @@ img {
   margin-top: 0.5rem;
   width: 100%;
   padding: 0.625rem 0.75rem;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--rule-strong);
   border-radius: 0;
   background: var(--paper);
   font-family: inherit;
@@ -742,6 +830,116 @@ img {
   border: 1px solid var(--rule);
   background: var(--paper-sunk);
   padding: 2rem;
+}
+
+/* ---------------------------------------------------------- quote engine */
+
+/* Moved out of the quote-engine section fragment 2026-08-02: <style> is
+   metadata content, non-conforming in body position. Everything is namespaced
+   under #quote-engine; the section ships hidden and quote.js reveals it only
+   after proving the rendered rate card. */
+
+#quote-engine .quote-grid {
+  margin-top: 3rem;
+  align-items: start;
+}
+
+#quote-engine fieldset.field {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+#quote-engine legend {
+  padding: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+}
+
+#quote-engine .radio-row {
+  margin-top: 0.75rem;
+  display: grid;
+  row-gap: 0.625rem;
+}
+
+#quote-engine .radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+#quote-engine .radio-row input[type="radio"] {
+  width: auto;
+  margin: 0;
+  accent-color: var(--brass);
+  flex-shrink: 0;
+}
+
+#quote-engine select:disabled {
+  background: var(--paper-sunk);
+  color: var(--ink-faint);
+  cursor: not-allowed;
+}
+
+#quote-engine .quote-lines {
+  margin-top: 1.5rem;
+  border-bottom: 0;
+}
+
+#quote-engine .quote-lines dd {
+  color: var(--ink);
+}
+
+#quote-engine .qe-discount dd {
+  color: var(--brass);
+}
+
+#quote-engine .quote-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  border-top: 1px solid var(--ink);
+  padding-top: 1rem;
+}
+
+#quote-engine .quote-total-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+}
+
+#quote-engine .quote-total-figure {
+  font-family: var(--display);
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+@media (min-width: 1024px) {
+  #quote-engine .quote-panel {
+    position: sticky;
+    top: 5.5rem;
+  }
+}
+
+@media print {
+  #quote-engine .btn-row {
+    display: none;
+  }
+
+  #quote-engine .quote-panel {
+    position: static;
+  }
 }
 
 /* ---------------------------------------------------------------- footer */
@@ -824,11 +1022,11 @@ img {
 
 @media (min-width: 768px) {
   .section {
-    padding: 6rem 0;
+    padding: var(--space-6) 0;
   }
 
   .section--top {
-    padding-top: 4rem;
+    padding-top: var(--space-5);
   }
 
   .h1 {

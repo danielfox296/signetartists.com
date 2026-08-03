@@ -1,0 +1,93 @@
+<!-- Quote engine (OFFER.md, "Quote engine" spec). The transparency pillar made
+     interactive: a planner building a proposal at 11pm gets a real number
+     without emailing us. Ungated by decision; capture lives on the action
+     after the number ("Check this date").
+
+     Integration: copy this file into the pricing page's sections, e.g. as
+     _src/pages/pricing/sections/02b-quote.html, and rebuild. It must sit on
+     the same page as the rendered rate card: ../quote.js reads the eight rows
+     off table.rate-table--full and proves them against the card's printed
+     totals before revealing the section. No card, no JS, or any mismatch and
+     this section simply never appears, so the static page stands unchanged.
+     The script tag is at the bottom of the fragment; nothing else to wire.
+
+     Rates are never written in this file. Travel fees and multipliers appear
+     in the option labels only, mirroring site.json "extras"; the arithmetic
+     for them lives in quote.js. Update both if the extras ever change. -->
+<section class="section section--ruled" id="quote-engine" hidden>
+  <!-- The #quote-engine rules live in styles.css ("quote engine" section):
+       <style> is metadata content and non-conforming in body position. -->
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Quote</p>
+      <h2 class="h2" id="qe-heading">Price your night.</h2>
+      <p class="lede">Set the size, the hours and the drive. The total updates as you change it, itemised line by line, ready for a budget or a client proposal.</p>
+    </div>
+
+    <div class="split quote-grid">
+      <form id="qe-form" aria-labelledby="qe-heading">
+        <div class="form-grid">
+          <div class="field">
+            <label for="qe-ensemble">Ensemble</label>
+            <select id="qe-ensemble"></select>
+          </div>
+
+          <div class="field">
+            <label for="qe-hours">Performance hours</label>
+            <select id="qe-hours"></select>
+          </div>
+
+          <div class="field field--full">
+            <label for="qe-travel">Where the night is</label>
+            <select id="qe-travel">
+              <option value="metro" selected>Denver metro</option>
+              <option value="frontrange">Front Range: Boulder, Colorado Springs, Fort Collins (+$300)</option>
+              <option value="i70">I-70 corridor: Vail, Beaver Creek, Breckenridge, Winter Park (+$600)</option>
+              <option value="far">Far resorts: Aspen, Telluride, Steamboat, Crested Butte (+$600, lodging at cost)</option>
+            </select>
+          </div>
+
+          <fieldset class="field field--full">
+            <legend>The date</legend>
+            <div class="radio-row">
+              <label><input type="radio" name="qe-date" value="standard" checked> A standard date</label>
+              <label><input type="radio" name="qe-date" value="peak"> Holiday or peak weekend, +25% on performance fees</label>
+              <label><input type="radio" name="qe-date" value="nye"> New Year's Eve, +50% on performance fees</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="qe-duo">Cocktail duo, earlier in the night</label>
+            <select id="qe-duo">
+              <option value="0" selected>None</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="qe-dj">DJ, after the band</label>
+            <select id="qe-dj">
+              <option value="0" selected>None</option>
+            </select>
+          </div>
+        </div>
+        <p class="note">An added slot bills at the hourly rate only; the call-out is already in the main booking. Three parts of the night booked together take 10% off performance fees.</p>
+        <p class="note">The rate follows the headcount: a trio from The Standards and a trio from The Headliners price the same.</p>
+      </form>
+
+      <div class="panel quote-panel">
+        <h3 class="h3">The night, itemised</h3>
+        <dl class="def-list quote-lines tnum" id="qe-lines"></dl>
+        <div class="quote-total tnum">
+          <p class="quote-total-label">Total</p>
+          <p class="quote-total-figure" id="qe-total" aria-live="polite" aria-atomic="true">$0</p>
+        </div>
+        <p class="note" id="qe-lodging-note" hidden>The total is before lodging, which is billed at cost as its own line on the contract.</p>
+        <p class="note">Sound, lighting, an engineer and a named contact for the night are inside these numbers, at every size.</p>
+        <div class="btn-row">
+          <a class="btn" id="qe-check" href="../contact/">Check this date</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script defer src="../quote.js"></script>
+</section>
