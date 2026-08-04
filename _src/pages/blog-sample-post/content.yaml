@@ -1,0 +1,130 @@
+# ---------------------------------------------------------------------------
+# SAMPLE POST — the authoring reference for the blog kit. draft: true keeps
+# it off every publish surface (no HTML, no index row, no RSS/sitemap/llms
+# entry); `python3 build.py --lint` still validates it, so this file always
+# demonstrates a schema that passes.
+#
+# To write a real post: copy this directory to _src/pages/blog-<slug>/,
+# set slug to match, replace everything, delete draft (or set it false),
+# then `python3 build.py --lint` and build.
+# ---------------------------------------------------------------------------
+draft: true
+
+title: "A sample post for the blog kit"
+slug: "sample-post"
+# One of: CORPORATE, MUSIC, NOTES, PLANNING, WEDDINGS
+# (VALID_EYEBROWS in _src/lib/blog_renderer.py — provisional taxonomy)
+eyebrow: "NOTES"
+dek: "Every typed block in one draft. This is the authoring reference for the kit; it never deploys."
+# Dates are quoted strings, YYYY-MM-DD. last_updated is optional and feeds
+# the sitemap <lastmod> (and dateModified in the Article schema).
+date: "2026-08-03"
+author:
+  name: "Signet Artists"
+  # role is optional; it shows after the name in the byline
+meta_description: "Authoring reference for the signetartists.com blog kit. This draft never deploys."
+# llms_description (optional) overrides meta_description in llms.txt
+# seo_title (optional) overrides title in the <title> tag only
+# robots (optional) e.g. "noindex, follow" — also drops the post from
+#   sitemap and llms.txt
+
+# hero is optional. src is repo-relative; alt is required with it.
+hero:
+  src: "img/standards.jpg"
+  alt: "A trumpet resting on a table."
+  # caption is optional
+
+# video is optional frontmatter; the `video` and `transcript` blocks read it.
+# video:
+#   id: "YOUTUBE_ID"
+#   title: "Video title"
+
+sections:
+  # key_takeaways renders before the body wherever it sits, but keep it
+  # first here too so the YAML reads in page order.
+  - type: key_takeaways
+    items:
+      - "Posts are YAML files with typed blocks; the build renders, lists, and feeds them."
+      - "Reading time, RSS, sitemap lastmod and the Article schema are computed, never hand-written."
+      - "Run python3 build.py --lint before committing a post."
+
+  - type: prose
+    body: |
+      Body copy is Markdown. **Bold** becomes the site's medium weight,
+      [links](https://signetartists.com/pricing/) pick up the brass underline,
+      and paragraphs are separated by blank lines.
+
+      Lists work too:
+
+      - One item
+      - Another item
+
+  - type: subhead
+    text: "Subheads get anchor links"
+    # level defaults to 2; anchor defaults to a slug of the text
+
+  - type: prose
+    body: |
+      Hover a subhead to see the anchor link; clicking it copies the section
+      URL. A subhead whose text ends in a question mark reads like an FAQ,
+      which suits answer engines.
+
+  - type: pullquote
+    text: "One line worth pulling out of the flow, set in the display italic."
+    attribution: "A sample attribution"
+
+  # stat_callout requires a source — a number with no attribution fails lint.
+  - type: stat_callout
+    number: "$0"
+    label: "Sample statistic label. The number carries the page's brass accent."
+    source: "Sample source, 2026"
+
+  - type: aside
+    title: "An aside"
+    body: "A short sidebar note in a sunk panel. Markdown works here too."
+
+  - type: comparison_table
+    title: "A sample comparison"
+    columns: ["Option", "Column two", "Column three"]
+    rows:
+      - ["First row", "Value", "Value"]
+      - ["Second row", "Value", "Value"]
+
+  - type: data_viz
+    chart_type: "bar"
+    title: "Sample chart title"
+    data:
+      - { label: "One", value: 3 }
+      - { label: "Two", value: 5 }
+      - { label: "Three", value: 2 }
+    caption: "Sample caption for a generated SVG bar chart."
+    source: "Sample source"
+
+  - type: methodology
+    what_we_measured: "What the numbers above actually count."
+    sample: "Where they came from and how many."
+    date_range: "When they were collected."
+    caveats: "What they cannot tell you."
+
+  - type: figure
+    src: "img/dj.jpg"
+    alt: "Faders and knobs on a mixing console."
+    caption: "A figure with a caption."
+    source: "Sample source"
+
+  - type: references
+    items:
+      - "Sample Author (2026). Sample citation for the references block. Sample Journal."
+
+  # cta renders after the body wherever it sits. The link is repo-relative.
+  - type: cta
+    headline: "Tell us the room and we'll tell you what fits."
+    body: "Every rate is published on the pricing page, before you ever write to us."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  # related renders last; list published slugs (drafts and unknown slugs
+  # are silently dropped).
+  # - type: related
+  #   posts:
+  #     - slug: "another-post"

@@ -1,0 +1,5 @@
+{# data_viz block — render_chart() already wraps the SVG in a
+   <figure class="blog-data-viz"> with its caption and source, so this
+   template is a passthrough. (The foxlessons original wrapped it in a
+   second figure; the double wrapper stops here.) #}
+{{ block.svg_html|safe }}

@@ -1,0 +1,74 @@
+{# Blog post article template — fills the {{content}} slot in base.html.
+   No <html>, <head>, nav or footer here; build.py wraps this in the layout.
+
+   Variables from blog_renderer.render_post():
+     title, slug, eyebrow, dek, date, date_display, author (dict),
+     hero (dict or none, src already depth-corrected), reading_time (int),
+     sections_html, key_takeaways_html, cta_html, related_html, nav_prefix
+
+   No reading-progress bar and no fade-up classes: the design rule is
+   no motion, no scroll effects (see the night-arc note in styles.css). #}
+<section class="section section--top">
+  <div class="wrap">
+    <article class="blog-article">
+
+      <header class="blog-header">
+        <p class="eyebrow">{{ eyebrow }}</p>
+        <h1 class="h1 blog-headline">{{ title }}</h1>
+        <p class="lede blog-dek">{{ dek }}</p>
+        <p class="blog-byline">
+          <span class="blog-byline-author">{{ author.name }}</span>
+          {% if author.role %}
+          <span class="blog-byline-sep" aria-hidden="true">&middot;</span>
+          <span>{{ author.role }}</span>
+          {% endif %}
+          <span class="blog-byline-sep" aria-hidden="true">&middot;</span>
+          <time datetime="{{ date }}">{{ date_display }}</time>
+          <span class="blog-byline-sep" aria-hidden="true">&middot;</span>
+          <span>{{ reading_time }} min read</span>
+        </p>
+      </header>
+
+      {% if hero %}
+      <figure class="blog-hero">
+        <img class="media" src="{{ hero.src }}" alt="{{ hero.alt }}" width="1600" height="900" loading="eager" fetchpriority="high">
+        {% if hero.caption %}
+        <figcaption class="blog-hero-caption">{{ hero.caption }}</figcaption>
+        {% endif %}
+      </figure>
+      {% endif %}
+
+      {% if key_takeaways_html %}
+      {{ key_takeaways_html|safe }}
+      {% endif %}
+
+      <div class="blog-body">
+        {{ sections_html|safe }}
+      </div>
+
+      {% if cta_html %}
+      {{ cta_html|safe }}
+      {% endif %}
+
+      {% if related_html %}
+      {{ related_html|safe }}
+      {% endif %}
+
+    </article>
+  </div>
+</section>
+
+<script>
+  // Anchor-link copy for subheads. Click puts the section URL on the
+  // clipboard; the # flips to a check for a moment as the receipt.
+  document.querySelectorAll('.anchor-link').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      navigator.clipboard.writeText(
+        window.location.origin + window.location.pathname + a.getAttribute('href')
+      );
+      a.textContent = '✓';
+      setTimeout(function () { a.textContent = '#'; }, 1500);
+    });
+  });
+</script>

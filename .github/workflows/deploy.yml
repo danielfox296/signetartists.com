@@ -37,6 +37,14 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Blog kit dependencies (same line as the foxlessons workflow, minus
+      # Pillow which this build does not use).
+      - name: Install Python dependencies
+        run: pip install jinja2 markdown pyyaml
+
+      - name: Lint blog posts
+        run: python3 build.py --lint
+
       - name: Build site
         run: python3 build.py
 

@@ -1,0 +1,6 @@
+{
+  "_note": "The blog index is auto-built: {{blog_cards}} in the section fills with one row per published post, newest first, or the empty state until the first post ships. The RSS channel description reuses meta_description verbatim, so editing it here updates both.",
+  "title": "Blog",
+  "meta_description": "Occasional writing on live music for private events: planning it, pricing it, and the music itself. From Signet Artists in Denver.",
+  "output": "blog/index.html"
+}
