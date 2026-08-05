@@ -14,7 +14,8 @@
     "region": "CO",
     "serviceArea": "Denver, the Front Range, and the mountain corridor",
     "url": "https://signetartists.com",
-    "formsubmit": "hello@signetartists.com"
+    "_formsubmit_note": "FormSubmit's hashed endpoint for hello@signetartists.com, so the address is not in the page source. Same pattern as daniel-fox.com and danielchristopherfox.com. The plain address still renders on the contact page, deliberately.",
+    "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8"
   },
 
   "acts": [
