@@ -1,0 +1,195 @@
+title: "What a band needs from the room"
+slug: "what-a-band-needs-from-the-room"
+eyebrow: "PLANNING"
+dek: "Stage footprint, power, load-in and the paperwork your venue and your finance team will both ask for. Including why published stage-size guidance runs to roughly double what a working band actually asks for."
+date: "2026-08-05"
+author:
+  name: "Signet Artists"
+meta_description: "Stage size, electrical circuits, load-in and insurance paperwork for a live band at a corporate event, with published stage dimensions compared against a working band's rider."
+
+hero:
+  src: "img/dj.jpg"
+  alt: "Faders and knobs on a mixing console."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "Stage-rental guidance for a seven to ten-piece band runs to 24 ft by 24 ft. A working eight-piece band's own rider asks for 12 ft by 24 ft and will take about 10 ft by 16 ft."
+      - "Power is the requirement venues most often get wrong. A band needs its own dedicated circuits, within reach of the stage."
+      - "Ask the band for its rider before you promise the venue anything. The rider is the figure that binds."
+      - "Insurance, a W-9 and one itemised invoice are a procurement gate with a queue behind each one, and they should arrive with the contract."
+
+  - type: prose
+    body: |
+      You booked the band. A week later the venue sends a form with four
+      questions on it, and three of them are about things you have never had a
+      reason to think about. How much stage. How much power. What time the
+      truck arrives. There is usually a fourth box asking for a certificate of
+      insurance, and that one has a deadline.
+
+      None of these are hard questions. They are just questions somebody has to
+      actually ask the band, and the failure mode is that nobody does until the
+      week of, at which point the answer has consequences for a floor plan that
+      was signed off in June.
+
+  - type: subhead
+    text: "How much stage does a band need?"
+
+  - type: prose
+    body: |
+      Search this and you will land on stage-rental companies, who publish
+      recommendations by band size. [Stage
+      Rental](https://www.stagerental.com/what-size-stage-do-i-need-for-my-event/)
+      puts a seven to ten-piece band on 20 ft by 24 ft at the small end and 24
+      ft by 24 ft in the middle, all at 4 ft of height.
+
+      Then look at what a working band actually asks for. [The John Parker
+      Band](https://jpband.com/setup/) publishes its own setup requirements: an
+      eight-piece prefers 12 ft by 24 ft, with a minimum of roughly 10 ft by 16
+      ft. Ten to twelve-plus pieces prefer 16 ft by 24 ft, with a minimum
+      around 12 ft by 20 ft.
+
+  - type: comparison_table
+    title: "Published guidance against a working band's rider"
+    columns: ["Band size", "Stage-rental guidance", "A working band's own rider"]
+    rows:
+      - ["Duo", "8 ft x 8 ft small, 8 ft x 12 ft medium", "Not published"]
+      - ["Three to six pieces", "12 ft x 16 ft small, 16 ft x 20 ft medium", "Not published"]
+      - ["Eight pieces", "Not published at this granularity", "12 ft x 24 ft preferred, about 10 ft x 16 ft minimum"]
+      - ["Seven to ten pieces", "20 ft x 24 ft small, 24 ft x 24 ft medium", "Not published at this granularity"]
+      - ["Ten to twelve or more", "24 ft x 32 ft small (larger production)", "16 ft x 24 ft preferred, about 12 ft x 20 ft minimum"]
+
+  - type: prose
+    body: |
+      The gap is the useful part. Take an eight-piece, which sits inside both
+      sets of figures. The rental company's middle recommendation works out to
+      576 square feet. The working band asks for 288 and will play on 160.
+
+      Both figures are honest, and they answer different questions. The rental
+      company is sizing for sight lines, for audiences who need to see over
+      seated tables, and for the version of the event where the stage is a
+      rented structure in a room that has none. The band is describing the
+      smallest footprint where nobody hits anybody. In a hotel ballroom with a
+      built-in riser and eleven round tables you would like to keep, the
+      difference between those two numbers is a few of those tables.
+
+      So the number that binds is the band's, and it should come from the band
+      rather than from an article. Ask for the rider before you promise the
+      venue a footprint.
+
+  - type: subhead
+    text: "Power, which is where it usually goes wrong"
+
+  - type: prose
+    body: |
+      The John Parker Band's published requirement is two standard 20-amp,
+      120-volt circuits within 25 feet of the stage, with 15 amps as the floor.
+      That shape of requirement is typical, and there are two words in it doing
+      most of the work.
+
+      **Circuits.** Two outlets on the same wall are very often the same
+      circuit, which means the requirement gets ticked off on paper while the
+      band still has one circuit. When that fails it fails at the worst
+      possible moment, because everything switches on at once, and that moment
+      is the downbeat of the first song.
+
+      **Within 25 feet.** Distance is a hard constraint. A band running power
+      from across a ballroom is running cable across a path that guests and
+      servers will walk for four hours.
+
+      The person who can answer both of these is the venue's engineer or head
+      of operations. Your sales contact will forward the question to them
+      anyway, so start there, and ask early enough that the answer can still
+      change something.
+
+  - type: subhead
+    text: "Load-in"
+
+  - type: prose
+    body: |
+      Load-in gets coordinated with the venue in advance, and the questions are
+      always the same ones: dock times, elevator windows, how far the door is
+      from the stage, where the cases sit during dinner, and what time the room
+      has to be clear at the end.
+
+      That last one is worth pinning down before you sign anything. Strike
+      takes as long as it takes, and it starts after the last song, so a hard
+      curfew on the room sets the time the music has to end.
+
+  - type: subhead
+    text: "Mountain venues"
+
+  - type: prose
+    body: |
+      Properties in the corridor run on their own rules, and those rules differ
+      by property rather than by town. Decibel limits and curfews are set by
+      the venue, written into your contract with them, and honoured as written.
+      Get them in writing from the property and send them to the band. Anybody
+      who quotes you a number for a mountain venue without having read that
+      venue's own terms is guessing.
+
+      Travel is its own line. Vail, Beaver Creek, Breckenridge and Winter Park
+      add $600. Aspen, Telluride, Steamboat and Crested Butte add $600 plus
+      lodging at cost. Lodging is billed as what it actually cost, which in
+      that corridor is a number worth confirming before you commit to a date in
+      February.
+
+  - type: subhead
+    text: "The paperwork your finance team will ask for"
+
+  - type: prose
+    body: |
+      This is the part that stops bookings, and it stops them late. A venue
+      will not let a vendor load in without a certificate of insurance, and
+      accounts payable will not pay an invoice that arrives without a W-9 on
+      file.
+
+      Three documents settle it:
+
+      - **A certificate of insurance** naming your venue as additional insured.
+        The venue is checking that document for its own name on it.
+      - **A W-9**, before accounts payable asks for it.
+      - **One itemised invoice**, with everything on separate lines, in a form
+        finance will accept the first time.
+
+      Ours arrive in the same email as the contract, and net-30 is available on
+      approval. The reason to send them unprompted is that every one of them is
+      a gate somebody else controls, and each gate has a queue.
+
+  - type: aside
+    title: "The four things to ask the band first"
+    body: |
+      Footprint and height. Circuits and distance. Load-in and strike windows.
+      Certificate of insurance with your venue named. If a band cannot answer
+      those four in a single email, that is the useful signal, and it arrives
+      early enough to matter.
+
+  - type: subhead
+    text: "Why any of this ends up being your problem"
+
+  - type: prose
+    body: |
+      The venue asks you. You are the contract holder, so the form comes to
+      your inbox with a date on it.
+
+      The version of this that works is the one where you forward the question
+      and get an answer the same day from somebody who has loaded into that
+      room before. Every booking here comes with a named contact for the night,
+      given to you before the event. The reason they exist is this, weeks
+      before anybody plays a note.
+
+  - type: references
+    items:
+      - "Stage Rental. \"What Size Stage Do I Need For My Event?\" stagerental.com. Stage dimensions by band size, retrieved 2026-08-05."
+      - "John Parker Band. \"Setup: Staging, Electrical, Seating, etc.\" jpband.com. Published stage and electrical requirements, retrieved 2026-08-05."
+
+  - type: cta
+    headline: "Send us the venue and we'll send you the requirements."
+    body: "Certificate of insurance, W-9 and one itemised invoice come with the contract at every size."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "what-live-music-costs-corporate-event"
+      - slug: "playing-around-a-program"
