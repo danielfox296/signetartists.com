@@ -25,7 +25,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fraunces carries its italic (ital 1, 400) for the .smile wink — a true
        italic, not a synthesised oblique. -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- 600 added 2026-08-07 for the display step only. Light type on a dark
+       ground optically thins, so the weight that read as confident on cream
+       reads as frail at 80px on near-black. This is a legibility correction
+       that happens to also answer WEBSITE-PLAN §6.1's "timid slice". -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -65,7 +69,7 @@
 <section class="section section--top">
   <div class="wrap">
     <div class="heading">
-      <p class="eyebrow">Booking</p>
+      <p class="eyebrow eyebrow--slab">Booking</p>
       <h1 class="h2 display">From the first email to the last invoice.</h1>
       <p class="lede">What happens at each step, who does it, and how long it takes. The first reply comes inside <span class="num-accent">24 to 48 hours</span>, in business hours. The contract, the certificate of insurance and the W-9 arrive in one email, and nobody has to ask for them.</p>
     </div>

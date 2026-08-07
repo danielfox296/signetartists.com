@@ -242,6 +242,33 @@ img {
   color: var(--brass);
 }
 
+/* The brass slab (borrowed from soundbathcalendar's coral "TODAY" marker,
+   2026-08-07). That site spends its one signal hue as a FILLED slab behind
+   reversed type rather than as coloured text, and holds it to a written
+   budget: "≤2 coral slabs per screen. Nothing else." Signet's brass had the
+   budget already (WEBSITE-PLAN §6.3, one emphasised fact per page) but only
+   ever existed as text colour, which is why it kept losing arguments with the
+   display type above it.
+
+   BUDGET LAW, and it is the whole point of the component: exactly one slab
+   per page, on the page eyebrow. Brass stays text colour everywhere else —
+   table headers, .num-accent, link underlines, focus rings. A second slab on
+   a page means one of them is not the emphasised fact.
+
+   Reversed type is --paper on --brass: 7.92:1. */
+.eyebrow--slab {
+  display: inline-block;
+  padding: 0.35rem 0.7rem 0.3rem;
+  background: var(--brass);
+  color: var(--paper);
+  letter-spacing: 0.16em;
+}
+
+.section--night .eyebrow--slab {
+  background: var(--brass-bright);
+  color: #0a0906;
+}
+
 .h1 {
   margin-top: 1rem;
   font-family: var(--display);
@@ -275,13 +302,20 @@ img {
    sizes below. clamp() runs 40px on a 375px viewport to 72px from ~1030px
    up; short lines justify the size, and text-wrap keeps the rag even where
    the line breaks on small screens. */
+/* Weight and leading revised 2026-08-07, after a look at soundbathcalendar's
+   display setting (Archivo 800 at 72% stretch, leading 0.92). Not the face —
+   Fraunces is this site's voice and a condensed sans would be someone else's.
+   What transferred is the conviction: heavier, tighter, and unafraid of the
+   size. 600 rather than 400 because light-on-dark optically thins, so the
+   weight that read as confident on cream read as frail on near-black. */
 .h1.display,
 .h2.display,
 .h3.display {
   font-optical-sizing: auto;
-  font-size: clamp(2.5rem, 1.35rem + 4.9vw, 4.5rem);
-  line-height: 1.04;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 1.35rem + 5.2vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.018em;
   text-wrap: balance;
 }
 
@@ -542,11 +576,20 @@ img {
   padding: 1.75rem;
 }
 
+/* Type tiles (soundbathcalendar CAL-28, borrowed 2026-08-07). That site has no
+   photography for most of its listings and answered it by making the tile a
+   typographic object rather than a caption under a missing image. Signet has
+   the same problem for the opposite reason — the shoot has not happened — and
+   the planner hub is where it shows most, six cards carrying the whole
+   section. Title goes up from 1.25rem to the display face at a size that can
+   hold a card on its own. The tile still recesses into the lifted band, which
+   is the ground doing the work the image would have. */
 .card-grid--2 .card h2 {
   font-family: var(--display);
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.3;
+  font-weight: 600;
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
   color: var(--ink);
 }
 
@@ -849,11 +892,17 @@ img {
    emphasised fact per page. AA on paper (5.0:1) and paper-sunk (4.6:1);
    never used on .section--night. The extra selectors outgun
    ".prose strong" and ".rate-table td". */
+/* tabular-nums added 2026-08-07: soundbathcalendar sets its counts and prices
+   to tabular figures in PROSE, not only in table columns, and it is right —
+   .tnum was only ever applied to tables here, so "$6,000 and $12,500" mid
+   sentence and "24 to 48 hours" were rendering proportional while the same
+   figures in the rate card were tabular. Same number, two shapes. */
 .num-accent,
 .prose strong.num-accent,
 .rate-table td.num-accent {
   color: var(--brass);
   font-weight: 500;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ------------------------------------------------------------------ form */

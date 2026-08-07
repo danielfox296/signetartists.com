@@ -886,7 +886,27 @@ def main() -> None:
         print("  NOTE: no GA4 measurement id set — no analytics tag emitted")
 
 
+def contrast_gate() -> bool:
+    """Run scripts/contrast_check.py against the palette.
+
+    Wired into the build so a token edit cannot ship a failing pair silently —
+    the way soundbathcalendar caught its border falling to 2.51:1 when the ink
+    changed. Prints only on failure; a passing palette stays quiet.
+    """
+    import subprocess
+    r = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "contrast_check.py")],
+        capture_output=True, text=True,
+    )
+    if r.returncode:
+        print("\n  CONTRAST GATE FAILED\n")
+        print(r.stdout)
+    return r.returncode == 0
+
+
 if __name__ == "__main__":
     if "--lint" in sys.argv:
         sys.exit(0 if lint() else 1)
     main()
+    if not contrast_gate():
+        sys.exit(1)

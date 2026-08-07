@@ -25,7 +25,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fraunces carries its italic (ital 1, 400) for the .smile wink — a true
        italic, not a synthesised oblique. -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- 600 added 2026-08-07 for the display step only. Light type on a dark
+       ground optically thins, so the weight that read as confident on cream
+       reads as frail at 80px on near-black. This is a legibility correction
+       that happens to also answer WEBSITE-PLAN §6.1's "timid slice". -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -64,7 +68,7 @@
     <section class="section section--top">
   <div class="wrap">
     <div class="heading">
-      <p class="eyebrow">Pricing</p>
+      <p class="eyebrow eyebrow--slab">Pricing</p>
       <h1 class="h2 display">Every rate, on this page.</h1>
       <p class="lede">An hour of jazz duo is $1,050. A thirteen-piece over four hours is $18,000. Most corporate parties land between <span class="num-accent">$6,000 and $12,500</span>, and every number between the ends of that ladder is below, so you can put an exact figure in a budget before you ever write to us.</p>
     </div>

@@ -25,7 +25,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fraunces carries its italic (ital 1, 400) for the .smile wink — a true
        italic, not a synthesised oblique. -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- 600 added 2026-08-07 for the display step only. Light type on a dark
+       ground optically thins, so the weight that read as confident on cream
+       reads as frail at 80px on near-black. This is a legibility correction
+       that happens to also answer WEBSITE-PLAN §6.1's "timid slice". -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -65,7 +69,7 @@
 <section class="section section--top">
   <div class="wrap">
     <div class="heading">
-      <p class="eyebrow">For Planners</p>
+      <p class="eyebrow eyebrow--slab">For Planners</p>
       <h1 class="h2 display">The paperwork, before you ask for it.</h1>
       <p class="lede">Every vendor you shortlist carries your name into the room. Rather than describe how we handle that, here is the material itself: what the venue will ask for, what the night looks like hour by hour, and the answer to every question we have been asked so far.</p>
     </div>
