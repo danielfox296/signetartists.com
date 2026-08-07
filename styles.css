@@ -1,32 +1,53 @@
 /* Signet Artists — signetartists.com
-   Ported from the Tailwind build 2026-08-01. Same tokens, same design.
-   Light, high-contrast, information-first: this reader scans a rate table
-   between two other tasks. Design-system pass 2026-08-02 (WEBSITE-PLAN §6):
-   display type step, the home page's night arc, brass as a functional
-   accent, the Fraunces-italic wink, and the stated base-8 spacing scale. */
+   Ported from the Tailwind build 2026-08-01. Design-system pass 2026-08-02
+   (WEBSITE-PLAN §6): display type step, brass as a functional accent, the
+   Fraunces-italic wink, and the stated base-8 spacing scale.
+
+   Inverted to a dark base 2026-08-07, on Daniel's call. The repertoire page's
+   cover walls were the reference: the whole site now sits on the ground that
+   used to be reserved for the late-night beat. This reverses
+   DESIGN-DIRECTION's "light base" and WEBSITE-PLAN §6.2's "night is for the
+   music, never for the paperwork"; both docs are amended to match rather than
+   left contradicting the stylesheet.
+
+   The inversion happens here and almost nowhere else. 267 rules read these
+   tokens, so the token NAMES are now role names rather than descriptions:
+   --paper is the ground, --ink is the type that sits on it. Renaming them
+   would have touched every rule in the file to no benefit. Read "paper" as
+   "ground" and "ink" as "foreground" and everything below still parses. */
 
 :root {
-  --paper: #fbfaf7;
-  --paper-sunk: #f2efe9;
-  --rule: #dfdad1;
-  /* Form-control boundaries. --rule reads 1.33:1 on paper — fine for hairline
-     dividers, short of WCAG 1.4.11's 3:1 for a component whose border is its
-     only visual indicator. This cut clears it on paper (3.5:1) and on
-     paper-sunk (3.2:1), staying in the same warm-grey family. */
-  --rule-strong: #8a8679;
-  --ink: #16150f;
-  --ink-soft: #4a473d;
-  /* Both darkened 2026-08-01 to clear WCAG AA (4.5:1) against the *sunk*
-     background, not just paper — the eyebrows and table headers sit on sunk.
-     Previously 3.75:1 and 4.25:1 there, at 14px and 11px. */
-  --ink-faint: #6f6c62;
-  --brass: #84682d;
-  /* Brass for dark ground only. --brass itself reads 3.5:1 on --ink, short
-     of AA, so the night section's eyebrow and accents use this lifted cut:
-     7.8:1 on --ink. Never used on light backgrounds (2.4:1 on paper). */
-  --brass-bright: #c9a45a;
-  /* The --ink-soft counterpart for dark ground: body copy on the night
-     section. 11.4:1 on --ink. */
+  /* Tells the UA to render form controls, scrollbars and spellcheck underlines
+     dark. Without it the select menus and the quote engine's controls come
+     back light and the page looks half-converted. */
+  color-scheme: dark;
+
+  /* Grounds. The band is now LIFTED off the base rather than sunk into it,
+     which is the way depth reads on a dark ground. 1.09:1 apart — a hair more
+     separation than the light build's paper/sunk pair had at 1.06:1. */
+  --paper: #14130e;
+  --paper-sunk: #1e1c15;
+  --rule: #332f26;
+  /* Form-control boundaries. --rule reads 1.40:1 on the base — fine for
+     hairline dividers, short of WCAG 1.4.11's 3:1 for a component whose
+     border is its only visual indicator. This cut clears it on the base
+     (3.86:1) and on the band (3.54:1), staying in the same warm-grey family. */
+  --rule-strong: #77725f;
+  --ink: #fbfaf7;
+  --ink-soft: #cfccc2;
+  /* All three checked against BOTH grounds, not just the base — eyebrows and
+     table headers sit on the lifted band. Worst case is --ink-faint on the
+     band at 5.99:1, comfortably past AA at the 11px it gets used at. */
+  --ink-faint: #9d998d;
+  /* Brass was two cuts, one per ground. On a dark site the lifted cut is the
+     only one that works, so it is promoted to the default: 7.92:1 on the base
+     and 7.26:1 on the band. The old light-ground brass (#84682d) reads 2.4:1
+     here and is gone. */
+  --brass: #c9a45a;
+  /* Kept for the rare second level of emphasis. 10.12:1 on the base. */
+  --brass-bright: #dcbb7a;
+  /* Alias, retained so the cover-wall and night rules that predate the
+     inversion keep resolving. Same value as --ink-soft by design. */
   --paper-dim: #cfccc2;
 
   --display: "Fraunces", ui-serif, Georgia, serif;
@@ -146,43 +167,43 @@ img {
    this exact palette rather than approximated from a stock texture. Pushes
    the sunk bands from flat-digital toward printed matter, which is the
    "well-made editorial site" reference class in DESIGN-DIRECTION. */
+/* The rect is filled white since the inversion. Unfilled it defaults to black,
+   which was correct speckle on cream and invisible on a dark ground — the
+   grain had to flip with the palette or it stopped existing. */
 .section--sunk {
   background-color: var(--paper-sunk);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
-/* The night arc (WEBSITE-PLAN §6.2). On the home page the scroll moves through
-   the evening: paper, paper again, paper-sunk, then this one inverted band —
-   eleven o'clock — before pricing returns to light. Backgrounds enacting the
-   tagline; no motion, no scroll effects. Same turbulence grain as the sunk
-   band, which reads as faint light speckle on ink — printed black, not flat
-   digital.
+/* The night arc, rebuilt for the dark base (WEBSITE-PLAN §6.2, amended
+   2026-08-07). Inverting the whole site would have flattened this: a band that
+   used to mean "eleven o'clock" is indistinguishable from its neighbours once
+   every ground is dark. So night went the other way and became the DEEPEST
+   ground rather than the only dark one. The arc still runs, one step lower
+   than before: base, lifted band, then true midnight for the late-night beat
+   and the cover walls, then back up.
 
-   Two pages, not one: §6.2 was amended 2026-08-07 to license night on
-   /repertoire/ as well, where the cover walls carry full-colour album art.
-   The rule that keeps this from spreading is "night is for the music, never
-   for the paperwork" — rate tables and --ink-faint stay on light, and the
-   repertoire page returns to paper-sunk for its song catalog exactly as the
-   home page returns to light for pricing.
+   That is also what keeps the walls working. The album sleeves are the one
+   place full-colour art enters this system, and they want the quietest
+   possible ground under them.
 
-   Buttons stay on that list too, and note why it matters: .btn is ink-on-ink
-   here, i.e. invisible. Putting one on this ground means writing the inverted
-   rule for it, not just dropping it in. */
+   .btn is unaffected here now — it is a light fill with dark type across the
+   whole site since the inversion, so it reads on all three grounds. */
 .section--night {
-  background-color: var(--ink);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
-  color: var(--paper);
+  background-color: #0a0906;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  color: var(--ink);
 }
 
-/* The cut from sunk to ink is its own rule; a light hairline there is noise. */
+/* The cut into midnight is its own rule; a hairline there is noise. */
 .section--night.section--ruled {
-  border-top-color: var(--ink);
+  border-top-color: #0a0906;
 }
 
 .section--night .h1,
 .section--night .h2,
 .section--night .h3 {
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .section--night .eyebrow {
@@ -192,12 +213,12 @@ img {
 .section--night .lede,
 .section--night .prose,
 .section--night .note {
-  color: var(--paper-dim);
+  color: var(--ink-soft);
 }
 
 .section--night ::selection {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .section--night :focus-visible {
@@ -410,7 +431,7 @@ img {
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--rule);
-  background: rgba(251, 250, 247, 0.95);
+  background: rgba(20, 19, 14, 0.95);
   backdrop-filter: blur(8px);
 }
 
@@ -745,10 +766,10 @@ img {
   margin-top: 2rem;
   overflow-x: auto;
   background:
-    linear-gradient(to right, var(--paper) 30%, rgba(251, 250, 247, 0)) left center,
-    linear-gradient(to left, var(--paper) 30%, rgba(251, 250, 247, 0)) right center,
-    radial-gradient(farthest-side at 0 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0)) left center,
-    radial-gradient(farthest-side at 100% 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0)) right center;
+    linear-gradient(to right, var(--paper) 30%, rgba(20, 19, 14, 0)) left center,
+    linear-gradient(to left, var(--paper) 30%, rgba(20, 19, 14, 0)) right center,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) left center,
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) right center;
   background-size: 3rem 100%, 3rem 100%, 1.25rem 100%, 1.25rem 100%;
   background-repeat: no-repeat;
   background-attachment: local, local, scroll, scroll;
@@ -758,10 +779,10 @@ img {
    never fully clears at the ends of the travel. */
 .section--sunk .table-scroll {
   background-image:
-    linear-gradient(to right, var(--paper-sunk) 30%, rgba(242, 239, 233, 0)),
-    linear-gradient(to left, var(--paper-sunk) 30%, rgba(242, 239, 233, 0)),
-    radial-gradient(farthest-side at 0 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0));
+    linear-gradient(to right, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
+    linear-gradient(to left, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
 }
 
 /* A whole table of working figures, as distinct from one open value inline.
@@ -1948,7 +1969,7 @@ img {
   font-family: var(--sans);
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .wall-credit {
