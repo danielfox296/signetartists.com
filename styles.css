@@ -1,7 +1,8 @@
 /* Signet Artists — signetartists.com
    Ported from the Tailwind build 2026-08-01. Design-system pass 2026-08-02
    (WEBSITE-PLAN §6): display type step, brass as a functional accent, the
-   Fraunces-italic wink, and the stated base-8 spacing scale.
+   wink, and the stated base-8 spacing scale. Type became Archivo 2026-08-07,
+   ported from soundbathcalendar; Fraunces and Inter are gone.
 
    Inverted to a dark base 2026-08-07, on Daniel's call. The repertoire page's
    cover walls were the reference: the whole site now sits on the ground that
@@ -50,8 +51,32 @@
      inversion keep resolving. Same value as --ink-soft by design. */
   --paper-dim: #cfccc2;
 
-  --display: "Fraunces", ui-serif, Georgia, serif;
-  --sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  /* Archivo, ported from soundbathcalendar 2026-08-07 on Daniel's call: "i
+     want the type choices from the sound bath site ported over." That replaces
+     Fraunces + Inter, which WEBSITE-PLAN §6 had called settled. One variable
+     family, two voices, selected per surface with font-stretch and weight
+     rather than by loading a second file. Both token names survive as aliases
+     so every rule below keeps resolving; they now point at the same face.
+
+     That site's standing ruling comes with it: no serif ever appears, in the
+     stack or anywhere else. The fallbacks are the system sans. */
+  --display: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
+
+  /* TRACKING LAW (2026-08-07, from soundbathcalendar's "zero positive
+     letter-spacing anywhere"). One value, one token, every uppercase label on
+     the site. Nothing else on this site carries positive tracking; display and
+     heading steps run negative, and body runs normal.
+
+     Not zero, and the difference is deliberate. That site applies caps at
+     display sizes, where zero is right. Every tracked element here is a 12px
+     label — eyebrows, table headers, field labels — and caps at 12px are drawn
+     for mixing with lowercase, so they set tight and need a little air to stay
+     readable. What the law is actually killing is the old 0.22em, which is the
+     letterspaced-caps register DESIGN-DIRECTION bans by name as wedding
+     stationery. This is a third of that, and it replaced fifteen scattered
+     values of 0.22 and 0.16 that had drifted apart with no rule behind them. */
+  --track-caps: 0.06em;
 
   --wrap: 64rem;
 
@@ -64,6 +89,19 @@
   --space-4: 2.5rem;
   --space-5: 4rem;
   --space-6: 6.5rem;
+}
+
+/* Self-hosted latin subset, both axes, ~88KB. OFL, licence in vendor/fonts/.
+   Self-hosted rather than linked: it drops two preconnects and a
+   render-blocking Google stylesheet, which matters for the venue-basement
+   phone this site is designed around. */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url(vendor/fonts/archivo-variable-latin.woff2) format("woff2");
 }
 
 *,
@@ -238,7 +276,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
 }
 
@@ -261,7 +299,7 @@ img {
   padding: 0.35rem 0.7rem 0.3rem;
   background: var(--brass);
   color: var(--paper);
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
 }
 
 .section--night .eyebrow--slab {
@@ -269,53 +307,61 @@ img {
   color: #0a0906;
 }
 
+/* Every heading is condensed and heavy — soundbathcalendar's h1/h2/h3 rule,
+   ported verbatim as the setting: weight 800, stretch 72%, leading 1.02,
+   tracking -0.005em. The variable font's two axes are what carry the voice
+   here now, where the old build used two families. */
 .h1 {
   margin-top: 1rem;
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 800;
+  font-stretch: 72%;
   font-size: 2.25rem;
-  line-height: 1.08;
+  line-height: 1.02;
+  letter-spacing: -0.005em;
   color: var(--ink);
 }
 
 .h2 {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 800;
+  font-stretch: 72%;
   font-size: 1.875rem;
-  line-height: 1.15;
+  line-height: 1.02;
+  letter-spacing: -0.005em;
   color: var(--ink);
 }
 
 .h3 {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 800;
+  font-stretch: 72%;
   font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.05;
+  letter-spacing: -0.005em;
   color: var(--ink);
 }
 
-/* Display step (WEBSITE-PLAN §6.1): the hero and flagship section headlines,
-   roughly 1.5x the h1, riding Fraunces' display optical sizes (opsz tracks
-   font-size automatically). Composes with the existing heading class —
-   class="h1 display", class="h2 display" — so the h1/h2/h3 hierarchy beneath
-   stays coherent, and the compound selector outranks the breakpoint h1/h2
-   sizes below. clamp() runs 40px on a 375px viewport to 72px from ~1030px
-   up; short lines justify the size, and text-wrap keeps the rag even where
-   the line breaks on small screens. */
-/* Weight and leading revised 2026-08-07, after a look at soundbathcalendar's
-   display setting (Archivo 800 at 72% stretch, leading 0.92). Not the face —
-   Fraunces is this site's voice and a condensed sans would be someone else's.
-   What transferred is the conviction: heavier, tighter, and unafraid of the
-   size. 600 rather than 400 because light-on-dark optically thins, so the
-   weight that read as confident on cream read as frail on near-black. */
+/* Display step (WEBSITE-PLAN §6.1): the hero and flagship section headlines.
+   Composes with the existing heading class — class="h1 display" — so the
+   h1/h2/h3 hierarchy beneath stays coherent, and the compound selector
+   outranks the breakpoint sizes below.
+
+   Rebuilt on Archivo 2026-08-07. Uppercase and leading 0.95 are that site's
+   display treatment (.detail__h1), and they are the whole reason its headlines
+   land: condensed caps stack into a block, and the block is the image on a
+   page that has no photograph. The opsz axis that used to drive this is gone
+   with Fraunces; stretch and weight do the work now. Tracking is left at the
+   heading value rather than opened up — caps want air at 12px, not at 80. */
 .h1.display,
 .h2.display,
 .h3.display {
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-size: clamp(2.5rem, 1.35rem + 5.2vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.018em;
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(2.5rem, 1.35rem + 5.6vw, 5.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
   text-wrap: balance;
 }
 
@@ -386,15 +432,22 @@ img {
   color: var(--ink-faint);
 }
 
-/* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set in true
-   Fraunces italic at the size of the text around it, so the register shift
-   reads as intentional design rather than inconsistency. Inherits size and
-   colour deliberately: in the footer it sits at body size mid-sentence; on
-   404 and thanks the playful line is the headline itself, where .smile adds
-   only the italic tell. The italic axis is loaded in base.html. */
+/* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set at the size
+   of the text around it so the register shift reads as intentional design
+   rather than inconsistency. Inherits size and colour deliberately: in the
+   footer it sits at body size mid-sentence; on 404 and thanks the playful line
+   is the headline itself, where .smile adds only the tell.
+
+   Rebuilt 2026-08-07. It used to be Fraunces
+   italic, and the Archivo subset carries no italic axis — the ported ruling is
+   one family, roman, no serif. So the tell moved from slant to WIDTH: the
+   playful line expands to 118% while every heading around it sits condensed at
+   72%. Same job as the italic did, said in the axis this face actually has,
+   and a 46-point width jump is more visible than a slant was. */
 .smile {
   font-family: var(--display);
-  font-style: italic;
+  font-stretch: 118%;
+  font-weight: 500;
 }
 
 .hero-lede {
@@ -621,7 +674,7 @@ img {
   margin-top: 0.25rem;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
 }
 
@@ -663,7 +716,7 @@ img {
   margin-top: 2rem;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
@@ -856,7 +909,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
   white-space: nowrap;
 }
@@ -917,7 +970,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
@@ -979,7 +1032,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
 }
 
@@ -1024,7 +1077,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
@@ -1082,7 +1135,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
@@ -1494,7 +1547,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
@@ -1542,7 +1595,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
 }
 
@@ -1617,7 +1670,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
@@ -1638,7 +1691,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
 }
 
@@ -1670,7 +1723,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
   cursor: pointer;
 }
@@ -1875,7 +1928,7 @@ img {
 .blog-row-eyebrow {
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--track-caps);
   color: var(--brass);
 }
 
