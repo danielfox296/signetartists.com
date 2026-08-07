@@ -1,0 +1,169 @@
+title: "What changes when the reception is outdoors"
+slug: "outdoor-reception"
+eyebrow: "PLANNING"
+dek: "Power, cover, the weather call, and the two ways an outdoor site works against volume at once. Including the Colorado decibel cap most outdoor receptions are actually bound by."
+date: "2026-08-07"
+author:
+  name: "Signet Artists"
+meta_description: "Planning a live band for an outdoor reception in Colorado: generator and circuit requirements, cover, the weather decision, and the state noise caps measured at the property line."
+
+hero:
+  src: "img/headliners.jpg"
+  alt: "A snare drum with sticks laid across it and a close microphone."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "An outdoor site works against volume twice: no walls to reflect sound back toward the floor, and a clear path for it to travel to the property line."
+      - "Colorado caps noise at 55 dB(A) in a residential zone during the day and 50 dB(A) after 7pm, measured 25 feet or more beyond the property line."
+      - "Cover over the band and over the mixing desk is not a forecast decision. Dew on its own will end an evening early."
+      - "The move-indoors call needs one named person and a stated time, written into the run of show before the day."
+
+  - type: prose
+    body: |
+      A tent on a lawn looks like a simpler production than a ballroom. Fewer
+      rules, no house AV to coordinate with, nobody from the venue watching a
+      meter. In practice an outdoor reception asks more of a band than an
+      indoor one, and the reasons are physical before they are administrative.
+
+      Here is what actually changes.
+
+  - type: subhead
+    text: "Sound stops working in your favour"
+
+  - type: prose
+    body: |
+      Indoors, walls and a ceiling reflect sound back toward the room. A band
+      gets that reinforcement for free, which is why a seven-piece in a
+      ballroom can fill the space without the PA working hard.
+
+      Outdoors there is nothing to reflect. The same band needs more
+      amplification to reach the same volume on the dance floor, and every
+      decibel of it travels outward with nothing to stop it. You lose on both
+      sides at once: you need more sound at the floor, and you have less margin
+      at the boundary.
+
+      This is the whole reason an outdoor reception feels quieter to guests and
+      louder to neighbours at the same time.
+
+  - type: subhead
+    text: "The number you are bound by is measured at the property line"
+
+  - type: prose
+    body: |
+      Colorado's Noise Abatement Act sets maximum levels measured 25 feet or
+      more from the property line. In a residential zone that is 55 dB(A)
+      between 7am and 7pm, and 50 dB(A) after that. Exceeding it is prima facie
+      evidence of a public nuisance.
+
+      A dance floor runs 88 to 95 dB(A) where people are dancing. Those two
+      figures are not comparable, because they are taken in different places,
+      and the distance between the stage and the boundary is what reconciles
+      them. On an estate with two hundred feet of lawn in every direction,
+      there is no conflict. On a residential lot backing onto neighbours, the
+      cap is the binding constraint on the evening and it is worth knowing that
+      in March rather than at ten o'clock on the night.
+
+  - type: stat_callout
+    number: "50 dB(A)"
+    label: "Colorado's cap in a residential zone after 7pm, measured 25 feet or more beyond the property line. Below the level of ordinary conversation."
+    source: "C.R.S. 25-12-103, Maximum permissible noise levels"
+
+  - type: prose
+    body: |
+      One development is worth flagging because it is recent. In September 2025
+      the Colorado Supreme Court held that a municipality cannot authorise a
+      private for-profit venue to exceed the state caps. The exemption for
+      cultural and entertainment events covers property used by a government
+      body or a nonprofit, and the court read it narrowly.
+
+      For a planner that changes one habit. A sound permit issued by the town
+      to a commercial venue is no longer the end of the question. Ask who holds
+      the property and under which exemption, and get it answered before the
+      contract.
+
+  - type: subhead
+    text: "Power, and why a generator is not automatically the answer"
+
+  - type: prose
+    body: |
+      A band needs dedicated circuits within reach of the stage. Dedicated is
+      the operative word: a circuit shared with catering
+      warmers or a lighting truss will trip, and it will trip when everything
+      switches on at once, which is when the room is full.
+
+      A generator covers it, with conditions. It has to be properly grounded,
+      sized with headroom above the band's requirement rather than exactly to
+      it, and it has to be a genuinely quiet unit sited away from the guests. A
+      domestic generator at the edge of a lawn adds a noise floor that sits
+      underneath every soft moment of the evening, and once it is running
+      nobody can take it away.
+
+  - type: subhead
+    text: "Cover is not a forecast decision"
+
+  - type: prose
+    body: |
+      Cover over the band and over the mixing desk goes in the plan regardless
+      of what the forecast says in the week of the event. Dew is enough on its
+      own. Colorado evenings drop fast, wooden instruments and electronics both
+      react to damp, and by the end of a clear cold night the players are
+      retuning between songs whether or not a drop of rain fell.
+
+      The temperature swing matters for a second reason. A sound check at five
+      in the afternoon and a last set at eleven are two different environments,
+      and a band that has played outdoors before builds that into how it paces
+      the night.
+
+  - type: subhead
+    text: "Somebody owns the weather call"
+
+  - type: prose
+    body: |
+      The failure here is almost never meteorological. It is that two people
+      each assumed the other one was going to make the decision.
+
+      Write it into the run of show as a row like any other: who makes the
+      move-indoors call, what time they make it, and what happens in the twenty
+      minutes after they make it. A band can strike and reset a full rig, but
+      not instantly, and the answer to how long depends on the size of the band
+      and the distance between the two positions. Ask for that number when you
+      book, and put it next to the decision time.
+
+  - type: comparison_table
+    title: "Indoors and outdoors, same band"
+    columns: ["", "Indoors", "Outdoors"]
+    rows:
+      - ["Reinforcement from the room", "Walls and ceiling reflect sound back", "None"]
+      - ["PA needed for the same floor volume", "Less", "More"]
+      - ["Where the limit is measured", "Usually a house policy", "25 ft past the property line"]
+      - ["Power", "House circuits", "House circuits or a sized, grounded generator"]
+      - ["Cover", "Not applicable", "Over the band and the desk, always"]
+      - ["Retuning across the night", "Occasional", "Frequent as the temperature drops"]
+      - ["Contingency", "Rarely needed", "A named person and a stated time"]
+
+  - type: subhead
+    text: "What to settle before the contract"
+
+  - type: prose
+    body: |
+      Four answers, all of which the venue or the property owner already has:
+
+      - The zone the property sits in, and therefore which cap applies
+      - The distance from the intended stage position to the nearest property line
+      - The power available at the stage, by circuit count, or the generator spec
+      - Who makes the weather call and by what time
+
+      None of them take longer than an email to get in March. All four get
+      expensive in the week of the event.
+
+  - type: references
+    items:
+      - "Colorado Revised Statutes 25-12-103, Maximum permissible noise levels."
+      - "Colorado Supreme Court decision on municipal amplified-sound permits and state noise limits, 8 September 2025, as reported by Colorado Politics."
+
+  - type: cta
+    headline: "Send us the site before you send us the date."
+    body: "Stage position, property line and power decide more about an outdoor night than the guest count does. Every rate is published on the pricing page."
+    link: "contact/"
+    link_text: "Check a Date"

@@ -179,6 +179,110 @@ def faq_list() -> str:
     return f'<dl class="faq-list">{rows}</dl>'
 
 
+def players_list() -> str:
+    """Featured bandleaders. Chair above the name, the same order the acts use:
+    what this person does here comes before who they are, because a planner
+    reads the chair and a client reads the name.
+
+    Stacked rather than gridded on purpose. One bio has to look deliberate,
+    since the roster publishes as the accolade sweep lands rather than at once.
+    """
+    out = []
+    for p in site.get("players", []):
+        # val(), not esc(): a bio paragraph still carrying [bracketed] copy is
+        # unwritten, and gets the same dotted underline as any other unresolved
+        # value so a gap in the roster cannot ship looking finished.
+        paras = "".join(f'<p class="prose">{val(t)}</p>' for t in p["bio"])
+        out.append(
+            '<article class="player">'
+            f'<p class="act-kind">{esc(p["chair"])}</p>'
+            f'<h3 class="h3 act-heading">{esc(p["name"])}</h3>'
+            f"{paras}</article>"
+        )
+    return f'<div class="player-list">{"".join(out)}</div>'
+
+
+def _config_rows(columns) -> str:
+    """Shared body for the technical tables.
+
+    `columns` is a list of (header, key) pairs. Every table on the technical
+    page is a projection of site["configurations"], which is keyed to the same
+    row names as site["rates"], so a size can never appear on the rate card
+    and be missing from the stage plot.
+
+    Column order is a mobile decision, not a reading-order one: .rate-table
+    carries min-width 30rem and nowrap cells, so at 375px only the first two
+    columns are on screen. Whatever the page is actually answering goes second.
+
+    The whole block carries data-provisional while site.json says these figures
+    are unratified, which draws a brass edge down the table (styles.css). The
+    numbers here are our own inference; the mountain page's are cited. Until
+    that difference is visible, both pages claim the same authority.
+    """
+    head = "".join(f"<th>{esc(h)}</th>" for h, _ in columns)
+    rows = []
+    for c in site["configurations"]:
+        cells = []
+        for i, (_, key) in enumerate(columns):
+            cls = ' class="rate-size"' if i == 0 else ""
+            cells.append(f"<td{cls}>{esc(str(c[key]))}</td>")
+        rows.append(f'<tr>{"".join(cells)}</tr>')
+    flag = ' data-provisional="true"' if site.get("_configurations_provisional") else ""
+    return (
+        f'<div class="table-scroll"{flag}><table class="rate-table tnum">'
+        f"<thead><tr>{head}</tr></thead>"
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
+
+
+def stage_table() -> str:
+    # Payload second. "Who is on it" is the widest column and the least urgent,
+    # and leading with it pushed both footprint columns off a 375px viewport —
+    # i.e. the entire answer the page exists to give.
+    return _config_rows([
+        ("Size", "size"),
+        ("Footprint we ask for", "stage"),
+        ("Smallest we will take", "stageMin"),
+        ("Who is on it", "build"),
+    ])
+
+
+def power_table() -> str:
+    return _config_rows([
+        ("Size", "size"),
+        ("Channels at the desk", "inputs"),
+        ("Dedicated 20A circuits", "circuits"),
+    ])
+
+
+def loadin_table() -> str:
+    return _config_rows([
+        ("Size", "size"),
+        ("Load-in and setup", "loadIn"),
+        ("Strike", "strike"),
+        ("Vehicles", "vans"),
+    ])
+
+
+def planner_faq_list() -> str:
+    """The deep FAQ, grouped. An entry flagged "open" is a policy nobody has
+    decided yet: it renders with the same dotted underline as an unresolved
+    brand value, so a guess cannot ship looking like a decision."""
+    out = []
+    for group in site["plannerFaqs"]:
+        rows = []
+        for f in group["items"]:
+            answer = esc(f["a"])
+            if f.get("open"):
+                answer = f'<span data-tbd="true">{answer}</span>'
+            rows.append(f'<div class="faq-row"><dt>{esc(f["q"])}</dt><dd>{answer}</dd></div>')
+        out.append(
+            f'<h2 class="h3">{esc(group["group"])}</h2>'
+            f'<dl class="faq-list">{"".join(rows)}</dl>'
+        )
+    return "".join(out)
+
+
 def acts_grid() -> str:
     cards = "".join(
         '<article class="card">'
@@ -294,7 +398,35 @@ def article_schema(post: dict, canonical: str, og_image: str) -> dict:
     }
 
 
-SCHEMAS = {"organization": organization_schema, "faq": faq_schema}
+def planner_faq_schema() -> dict:
+    """Every settled question, pricing set included, as one FAQPage.
+
+    Entries flagged "open" are deliberately excluded: they are our best guess
+    at a policy nobody has decided, and a guess does not belong in structured
+    data that search engines quote back as fact.
+    """
+    entries = list(site["faqs"])
+    for group in site["plannerFaqs"]:
+        entries += [f for f in group["items"] if not f.get("open")]
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": f["q"],
+                "acceptedAnswer": {"@type": "Answer", "text": f["a"]},
+            }
+            for f in entries
+        ],
+    }
+
+
+SCHEMAS = {
+    "organization": organization_schema,
+    "faq": faq_schema,
+    "plannerfaq": planner_faq_schema,
+}
 
 
 def build_schema(cfg: dict) -> str:
@@ -426,6 +558,11 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{included_list_columns}}": included_list_columns(),
         "{{extras_list}}": extras_list(),
         "{{faq_list}}": faq_list(),
+        "{{planner_faq_list}}": planner_faq_list(),
+        "{{stage_table}}": stage_table(),
+        "{{power_table}}": power_table(),
+        "{{loadin_table}}": loadin_table(),
+        "{{players_list}}": players_list(),
         "{{acts_grid}}": acts_grid(),
         "{{acts_sections}}": acts_sections(nav_prefix),
         "{{event_types}}": event_types(),

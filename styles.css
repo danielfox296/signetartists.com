@@ -151,12 +151,23 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
 }
 
-/* The night arc (WEBSITE-PLAN §6.2), home page only. The scroll moves through
+/* The night arc (WEBSITE-PLAN §6.2). On the home page the scroll moves through
    the evening: paper, paper again, paper-sunk, then this one inverted band —
    eleven o'clock — before pricing returns to light. Backgrounds enacting the
-   tagline; no motion, no scroll effects. Rate tables, buttons and --ink-faint
-   never sit on this section. Same turbulence grain as the sunk band, which
-   reads as faint light speckle on ink — printed black, not flat digital. */
+   tagline; no motion, no scroll effects. Same turbulence grain as the sunk
+   band, which reads as faint light speckle on ink — printed black, not flat
+   digital.
+
+   Two pages, not one: §6.2 was amended 2026-08-07 to license night on
+   /repertoire/ as well, where the cover walls carry full-colour album art.
+   The rule that keeps this from spreading is "night is for the music, never
+   for the paperwork" — rate tables and --ink-faint stay on light, and the
+   repertoire page returns to paper-sunk for its song catalog exactly as the
+   home page returns to light for pricing.
+
+   Buttons stay on that list too, and note why it matters: .btn is ink-on-ink
+   here, i.e. invisible. Putting one on this ground means writing the inverted
+   rule for it, not just dropping it in. */
 .section--night {
   background-color: var(--ink);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
@@ -251,6 +262,19 @@ img {
   line-height: 1.04;
   letter-spacing: -0.01em;
   text-wrap: balance;
+}
+
+/* Flagship section head (WEBSITE-PLAN §6.1, which defines the display step for
+   "hero/section heads" — until now only heroes took it). One per page, on the
+   section that is the page's actual payload: the checklist on the technical
+   page, the gala on run of show. Its own step rather than `.h2 display`, which
+   would tie a section head to the h1 and let it win the page. Before this the
+   planner pages ran 72px then 24px with nothing between, and seven equal-weight
+   heads in a row is what makes a page read as documentation. */
+.h3--lead {
+  font-size: clamp(1.875rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.005em;
 }
 
 .heading {
@@ -579,6 +603,32 @@ img {
   color: var(--ink-faint);
 }
 
+/* ---------------------------------------------------------------- players */
+/* Bandleader bios. Stacked and ruled rather than gridded, so the section
+   reads as deliberate with one entry and still holds at six. Prose measure
+   is capped independently of the wrap: a bio is read, not scanned. */
+
+.player-list {
+  margin-top: 2.5rem;
+  display: grid;
+}
+
+/* Every entry opens on a rule, including the first. Without it the chair
+   label reads as another line of the section lede rather than the start of a
+   person, because unlike .card-grid this block has no border of its own. */
+.player {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.player .act-kind {
+  margin-top: 0;
+}
+
+.player .prose {
+  max-width: 34rem;
+}
+
 /* ------------------------------------------------------------ spec lists */
 
 .spec-list {
@@ -685,9 +735,44 @@ img {
 
 /* ---------------------------------------------------------------- tables */
 
+/* Tables run past the viewport on a phone. The stage table hid 68% of itself
+   at 375px — including both columns the page exists for — and the cut had no
+   affordance, so a row severed mid-word read as a bug rather than as "scroll
+   me". Two fixed gradients pinned to the scroller's edges, two scrolling
+   gradients that cover them at the ends of the travel. No JS, no listener:
+   background-attachment does the work. */
 .table-scroll {
   margin-top: 2rem;
   overflow-x: auto;
+  background:
+    linear-gradient(to right, var(--paper) 30%, rgba(251, 250, 247, 0)) left center,
+    linear-gradient(to left, var(--paper) 30%, rgba(251, 250, 247, 0)) right center,
+    radial-gradient(farthest-side at 0 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0)) left center,
+    radial-gradient(farthest-side at 100% 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0)) right center;
+  background-size: 3rem 100%, 3rem 100%, 1.25rem 100%, 1.25rem 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* The covering gradients have to match the ground they sit on or the shadow
+   never fully clears at the ends of the travel. */
+.section--sunk .table-scroll {
+  background-image:
+    linear-gradient(to right, var(--paper-sunk) 30%, rgba(242, 239, 233, 0)),
+    linear-gradient(to left, var(--paper-sunk) 30%, rgba(242, 239, 233, 0)),
+    radial-gradient(farthest-side at 0 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(22, 21, 15, 0.18), rgba(22, 21, 15, 0));
+}
+
+/* A whole table of working figures, as distinct from one open value inline.
+   [data-tbd] dotted-underlines a single unresolved string; sixteen of them in
+   one table argues the page is unfinished rather than that these are our own
+   measurements. So the flag moves to the block. Pairs with the mountain page's
+   Sources list to make a system: a brass edge is what we measured, a sources
+   list is what we cited. Clears itself when site.json drops the flag. */
+.table-scroll[data-provisional="true"] {
+  border-left: 2px solid var(--brass);
+  padding-left: 1.25rem;
 }
 
 .rate-table {
@@ -722,6 +807,19 @@ img {
 
 .rate-table td.rate-size {
   color: var(--ink);
+}
+
+/* The label column sets its own width off its longest entry, and with nowrap
+   that is "3. Your contact reaches you" — 200px of a 327px phone, which pushed
+   "When" back off the screen the column reorder had just rescued. Letting only
+   this column wrap costs a two-line row and buys the answer column. Row heights
+   go ragged; on a phone that is the right trade, and the numeric columns keep
+   their nowrap so no figure ever breaks across lines. */
+@media (max-width: 640px) {
+  .rate-table td.rate-size,
+  .rate-table th:first-child {
+    white-space: normal;
+  }
 }
 
 /* Brass accent (WEBSITE-PLAN §6.3): promoted from ambient to functional.
@@ -1736,4 +1834,281 @@ img {
   .blog-related-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ------------------------------------------------- repertoire: cover walls */
+/* Ported from foxlessons.com, retokenised to this palette. Each set is a
+   10-column, 3-row tile wall spanning the full viewport (no .wrap around the
+   grid). The text block is an island carved out of the grid (4 cols x 2 rows),
+   alternating left/right per set. Tiles are placed by hand-drawn maps in
+   scripts/covers.py; unplaced cells stay empty on purpose so the ink ground
+   reads through. Below 1100px the maps collapse to a packed dense grid and the
+   parallax stands down.
+
+   Ground is .section--night, which WEBSITE-PLAN §6.2 had reserved for the home
+   page's evening arc. Extended here deliberately: this site is paper-light and
+   information-first, and full-colour album art on cream reads as a busy tile
+   field. On ink it reads as records on a shelf. The covers are the one place
+   the paper system lets the outside world in.
+
+   --d is the per-tile parallax rate consumed by the emitted script (static
+   without JS, static under reduced motion, packed + still under 1100px). */
+.cover-wall {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-5) 0 var(--space-4);
+  /* Makes cqw below resolve against the content box. vw would include the
+     scrollbar while the 1fr columns do not, leaving cells 126.5 wide by 128
+     tall — a 1.2% vertical crop on every sleeve. Without a container, cqw
+     falls back to the viewport, i.e. exactly the old behaviour. */
+  container-type: inline-size;
+}
+
+/* Row height MUST equal column width or the sleeves stop being square. Ten
+   columns across the viewport makes each column 10vw, so rows are 10vw and
+   nothing else — a px floor here crops every album cover to a portrait
+   rectangle. Fitting the copy is therefore the text block's problem, not the
+   grid's: the island takes all three rows and the tiles sit clear of it. */
+.wall-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 10cqw;
+}
+
+/* Three rows, not two. At the 1100px breakpoint two rows is 220px, which the
+   longest set overruns by ~130px — the copy then paints over the tiles. Three
+   gives 330px there and 384px at 1280. The layout maps in scripts/covers.py
+   keep every tile in columns 5-10 (mirrored for flipped walls) so nothing
+   sits under the island. */
+.wall-text {
+  grid-column: 1 / 5;
+  grid-row: 1 / 4;
+  align-self: center;
+  position: relative;
+  z-index: 5;
+  padding-left: max(1.5rem, calc((100vw - var(--wrap)) / 2));
+  padding-right: var(--space-4);
+}
+
+.cover-wall--flip .wall-text {
+  grid-column: 7 / 11;
+  padding-right: max(1.5rem, calc((100vw - var(--wrap)) / 2));
+  padding-left: var(--space-4);
+}
+
+/* Caption scale, not body scale. This block lives inside a fixed grid cell,
+   so it is sized to fit rather than to match the page's reading measure. */
+.wall-text .h2 {
+  font-size: clamp(1.4rem, 1.9vw, 2rem);
+  margin-bottom: var(--space-2);
+}
+
+.wall-text .prose {
+  max-width: 26rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.wall-tile {
+  position: relative;
+  z-index: var(--z, 2);
+  margin: 0;
+  grid-column: var(--c) / span var(--cs);
+  grid-row: var(--r) / span var(--rs);
+}
+
+.wall-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The song surfaces on hover; the always-visible liner notes below the wall
+   carry the same titles for touch, keyboard and no-hover readers. */
+.wall-tile figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2.2rem 0.8rem 0.7rem;
+  background: linear-gradient(0deg, rgba(22, 21, 15, 0.94) 40%, rgba(22, 21, 15, 0));
+  opacity: 0;
+  transition: opacity 0.25s;
+  line-height: 1.4;
+}
+
+.wall-tile:hover {
+  z-index: 9;
+}
+
+.wall-tile:hover figcaption {
+  opacity: 1;
+}
+
+.wall-song {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.wall-credit {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--paper-dim);
+}
+
+.wall-notes {
+  color: var(--paper-dim);
+  font-size: 0.82rem;
+  margin-top: var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-tile figcaption {
+    transition: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  /* The art-directed sparse maps assume 10 columns; below that the field packs
+     dense (holes close up) and the parallax script stands down. Row 1 is
+     template-sized `auto` and belongs to the text island, so copy never
+     overlaps tiles. */
+  .wall-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: 16.6667cqw;
+    grid-auto-flow: dense;
+  }
+
+  .wall-text,
+  .cover-wall--flip .wall-text {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 0 1.5rem var(--space-3);
+  }
+
+  .wall-tile {
+    grid-column: auto / span var(--cs);
+    grid-row: auto / span var(--rs);
+  }
+}
+
+@media (max-width: 640px) {
+  .wall-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 25cqw;
+  }
+}
+
+/* ---------------------------------------------------- repertoire: catalog */
+/* The full book. Ships as a plain list that works with JavaScript off; the
+   search box and chips are revealed by scripts/repertoire.py's inline script,
+   so filtering can never be what makes the songs visible. */
+.catalog-controls {
+  margin-bottom: var(--space-3);
+}
+
+.catalog-search input {
+  width: 100%;
+  max-width: 26rem;
+  padding: 0.6rem 0.8rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+}
+
+.catalog-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.catalog-count {
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+.catalog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+
+.catalog-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.catalog-row[hidden] {
+  display: none;
+}
+
+.catalog-song {
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.catalog-artist {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.catalog-empty {
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 800px) {
+  .catalog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------- utilities */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }

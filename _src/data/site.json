@@ -48,6 +48,33 @@
     }
   ],
 
+  "_players_note": "Reverses the 2026-08-01 decision not to publish player names, on Daniel's instruction 2026-08-07 when he supplied the first bandleader bio. Names are published for featured bandleaders only; the wider roster and the DJ stay unnamed, per OFFER.md. Source bios are artist bios written to sell the player to listening rooms and festivals, so every one gets re-pointed at the planner before it lands here: what the person does in this band first, then the credential that proves caliber, then the capability a buyer can act on. Themes, influences and artistic mission do not survive the edit. ROSTER.md's open task is a one-line accolade per chair, which is the `credit` field.",
+
+  "players": [
+    {
+      "name": "Daniel Fox",
+      "chair": "Your contact for the night. Bass, both books.",
+      "credit": "Founded a festival, co-owns a concert series, and is the only player in every build.",
+      "bio": [
+        "There are two kinds of lead on a stage and they are rarely the same person. One calls the show in front of the room. The other holds the booking. Daniel is the second one. The number that arrives with your contract is his, he answers this website himself, and he is on the stand all night, so there is nobody to hand you off to on the day.",
+        "He came to this from the other side of the table. He founded Unfold Fest in Costa Rica in 2021 and booked the whole thing without playing a note on it. He co-owns Dizzy Charlies Music and Events in Colorado Springs, where he has run a summer concert series end to end and booked every act on it, playing exactly one himself. He has held a run of show rather than played to one, and that is most of the reason this site publishes what it publishes.",
+        "He plays bass in both books, upright with The Standards and electric with The Headliners. That makes him the one person on stage at every size on the rate card, from the two-piece at six o'clock to the thirteen-piece at eleven.",
+        "Bass, drums, guitar and keys are all gig-ready, which matters most on the nights that go sideways. He has played a full show with a band he had never met and whose material he did not know, and covered bass for Booty and the Beat at an Aurora festival on three days' notice with no rehearsal. On a Signet date he does it before anyone notices: he covers a chair, reassigns a part, swaps a song, and rebuilds the set while it is still running."
+      ]
+    },
+    {
+      "name": "Tejas Singh",
+      "chair": "Fronts The Headliners. Guitar and lead voice.",
+      "credit": "Calls the show from the stage. Years in the Washington, D.C. and New York scenes, and two records of his own.",
+      "bio": [
+        "Tejas is the other kind of lead. On a Headliners date he calls the show from the stage: counts the tunes, reads the floor, decides what follows what. It is the leadership the room can see, and it is why he can rebuild a set three songs in without anyone noticing he did.",
+        "He came up as a songwriter rather than a covers player, through years in the Washington, D.C. and New York music scenes before Denver. He has released two records under his own name, Good Years and Closer/Warmer.",
+        "He writes across rock, Americana, soul, folk and pop. That range is why the band can play Motown and a song released this year inside one set without sounding like two different groups working in shifts.",
+        "On his own he performs with live looping, building an arrangement in real time instead of playing to a track. It is why one player can cover a cocktail hour and still fill the room."
+      ]
+    }
+  ],
+
   "rates": [
     { "size": "Duo", "pieces": 2, "callOut": 600, "hourly": 450, "min": 1 },
     { "size": "Trio", "pieces": 3, "callOut": 1000, "hourly": 600, "min": 1 },
@@ -79,6 +106,69 @@
     { "item": "Learned songs beyond the first", "rate": "$250 each" }
   ],
 
+  "_configurations_note": "DRAFT 2026-08-07, needs Daniel's correction pass. Headcounts and row names are locked to `rates` above so the technical page and the rate card can never disagree; that is the whole reason this lives in data. The builds for the ten- and thirteen-piece are inferred from ROSTER.md's chair list and are the least certain rows. Footprints are the working figures a band actually takes, not the stage-rental guidance, which runs to roughly double; that gap is the point of the page. Inputs are channel counts at the desk, including one announcement mic and a stereo playback pair from the quintet up.",
+  "_configurations_provisional": true,
+  "_configurations_provisional_note": "Draws the brass edge down the technical page tables (styles.css .table-scroll[data-provisional]). Set to false once Daniel's correction pass lands and these stop being our own inference.",
+
+  "configurations": [
+    {
+      "size": "Duo", "pieces": 2,
+      "build": "Guitar and upright bass",
+      "stage": "8 by 6 ft", "stageMin": "6 by 5 ft",
+      "inputs": 3, "circuits": 1,
+      "loadIn": "60 min", "strike": "45 min", "vans": 1
+    },
+    {
+      "size": "Trio", "pieces": 3,
+      "build": "Guitar, bass and drums",
+      "stage": "12 by 8 ft", "stageMin": "10 by 6 ft",
+      "inputs": 8, "circuits": 1,
+      "loadIn": "60 min", "strike": "45 min", "vans": 1
+    },
+    {
+      "size": "Quartet", "pieces": 4,
+      "build": "Trio plus a horn or a voice",
+      "stage": "14 by 10 ft", "stageMin": "12 by 8 ft",
+      "inputs": 10, "circuits": 2,
+      "loadIn": "90 min", "strike": "60 min", "vans": 1
+    },
+    {
+      "size": "Quintet", "pieces": 5,
+      "build": "Keys and voice, guitar and voice, bass, drums, saxophone",
+      "stage": "16 by 12 ft", "stageMin": "12 by 10 ft",
+      "inputs": 17, "circuits": 2,
+      "loadIn": "90 min", "strike": "60 min", "vans": 1
+    },
+    {
+      "size": "Seven-piece", "pieces": 7,
+      "build": "The quintet plus trumpet and trombone",
+      "stage": "20 by 12 ft", "stageMin": "16 by 10 ft",
+      "inputs": 19, "circuits": 3,
+      "loadIn": "2 hrs", "strike": "75 min", "vans": 2
+    },
+    {
+      "size": "Ten-piece", "pieces": 10,
+      "build": "Three voices, guitar, bass, drums, keys, trumpet, trombone, saxophone",
+      "stage": "24 by 14 ft", "stageMin": "20 by 12 ft",
+      "inputs": 21, "circuits": 3,
+      "loadIn": "2 hrs", "strike": "90 min", "vans": 2
+    },
+    {
+      "size": "Thirteen-piece", "pieces": 13,
+      "build": "The ten-piece plus percussion, second guitar and second keys",
+      "stage": "28 by 16 ft", "stageMin": "24 by 14 ft",
+      "inputs": 26, "circuits": 4,
+      "loadIn": "2.5 hrs", "strike": "90 min", "vans": 3
+    },
+    {
+      "size": "DJ", "pieces": 1,
+      "build": "Booth, controller and the house of our own PA",
+      "stage": "6 by 4 ft", "stageMin": "6 by 3 ft",
+      "inputs": 3, "circuits": 1,
+      "loadIn": "45 min", "strike": "30 min", "vans": 1
+    }
+  ],
+
   "eventTypes": [
     "Weddings",
     "Corporate parties",
@@ -86,6 +176,143 @@
     "Retreats and kickoffs",
     "Milestones and anniversaries",
     "Club and member events"
+  ],
+
+  "_plannerFaqs_note": "DRAFT 2026-08-07. The deep operational FAQ, the questions a planner asks that are not about price. `faqs` above stays the short pricing set on the pricing page; this is the full set on planners/faq/. Any entry with \"open\": true is an answer written as a best guess because it is a business policy nobody has decided yet. Those render with a dotted underline, the same convention as an unresolved brand value, so an undecided policy cannot ship silently. Resolve them, drop the flag.",
+
+  "plannerFaqs": [
+    {
+      "group": "The band and the people",
+      "items": [
+        {
+          "q": "Do you have regular personnel, or is the band filled with whoever is available?",
+          "a": "Named chairs, held by the same players. The Standards and The Headliners draw from separate benches rather than one shared pool, so a jazz drummer is never asked to play funk or a rock drummer to play dinner volume. Most chairs are two deep, and the second name is a specific person, not an agency call."
+        },
+        {
+          "q": "What happens if a player cannot make the date?",
+          "a": "Any substitution is named to you in advance. Subs are how every roster in this business works; the part that goes wrong is a planner discovering one at load-in. You get the name and the reason as soon as we know, which is the promise we can actually keep."
+        },
+        {
+          "q": "Who do we deal with on the night?",
+          "a": "One named person, and they are a player rather than a coordinator. Their number arrives with the contract, weeks before load-in, and they are reachable from load-in to load-out. Two roles sit behind that and they are rarely the same person: whoever fronts the band calls the show from the stage, counting tunes and reading the floor, while the person who holds your booking is the one you call. You deal with the second. The room watches the first. Every booking includes both."
+        },
+        {
+          "q": "Can we see the band play before we book?",
+          "a": "Yes. Ask and we will tell you what is on the calendar that you could attend, or arrange a showcase.",
+          "open": true
+        },
+        {
+          "q": "What do the players wear?",
+          "a": "Black tie, business formal or all black, whichever your event calls for. Tell us the dress code you have set for guests and we will sit one notch inside it. If you need something specific, put it in the contract and that is what the players wear.",
+          "open": true
+        }
+      ]
+    },
+    {
+      "group": "Booking and paperwork",
+      "items": [
+        {
+          "q": "What holds a date?",
+          "a": "A signed contract and a 50% retainer. Until both land the date stays available to anyone else asking for it, and we will tell you if someone does.",
+          "open": true
+        },
+        {
+          "q": "When is the balance due, and how do we pay?",
+          "a": "The balance is due 14 days before the event. ACH and check for no fee, card with the processing fee added. Corporate clients can have net-30 on approval instead, with the terms written into the contract.",
+          "open": true
+        },
+        {
+          "q": "What is the cancellation policy?",
+          "a": "The retainer is non-refundable once the date is held, because holding it means turning away other work. Cancel more than 90 days out and the retainer transfers to any other date inside twelve months.",
+          "open": true
+        },
+        {
+          "q": "Do you carry liability insurance?",
+          "a": "Yes. A certificate naming your venue as additional insured comes in the same email as the contract, along with a W-9 and one itemised invoice. You do not have to ask for any of them."
+        },
+        {
+          "q": "Can you work with our procurement or AP process?",
+          "a": "Yes. We can be set up as a vendor, quote against a purchase order, and invoice in whatever form your finance team needs. Ask early rather than late; vendor onboarding is usually the slowest thing on a corporate booking."
+        },
+        {
+          "q": "How far in advance should we book?",
+          "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+        }
+      ]
+    },
+    {
+      "group": "The night itself",
+      "items": [
+        {
+          "q": "How long are the sets, and how long are the breaks?",
+          "a": "Sets run 45 to 60 minutes with 15 to 20 minutes between them, set against your run of show rather than a fixed clock. Audio continues through every break at every size, so the room never goes silent."
+        },
+        {
+          "q": "Can we use your microphones for speeches?",
+          "a": "Yes. A dedicated announcement microphone is on its own channel at every size, live from the moment we finish sound check. Hand it to whoever is speaking. No cable swap, no gap, no borrowing the singer's mic."
+        },
+        {
+          "q": "Will you learn a song we choose?",
+          "a": "The first one is included in every booking. Each one after that is $250. Send it at least four weeks out, with the version you mean; there are usually several and they are not the same chart."
+        },
+        {
+          "q": "Do you make announcements or act as MC?",
+          "a": "The bandleader will make short announcements from the stage: dinner is served, the dance floor is open, please welcome your speaker. We do not run the evening as an MC. If your program needs a host, that is a separate hire and we will work to their cues."
+        },
+        {
+          "q": "Can we add time on the night?",
+          "a": "Yes, and it costs what the earlier hours cost. There is no overtime rate. Added time bills at the same hourly figure in 30-minute increments, agreed on the night with whoever holds the budget, so the only question at 11pm is whether the room wants one more."
+        },
+        {
+          "q": "How loud is it, really?",
+          "a": "Dinner and cocktails run 65 to 72 dBA at the nearest table, which is a volume you can talk across without raising your voice. Dancing runs 88 to 95 dBA on the floor. If your venue enforces a cap, tell us the number at contract and we will build the night under it rather than argue about it at 10pm."
+        }
+      ]
+    },
+    {
+      "group": "The room and the gear",
+      "items": [
+        {
+          "q": "Do you provide sound and lighting?",
+          "a": "Yes, at every size, with an engineer. Sound sized to the room and stage lighting for the band. We do not light the room, the tables or a dance floor as a design element; that is your lighting vendor's work, and we will coordinate with them."
+        },
+        {
+          "q": "Do you need a stage, and do you provide one?",
+          "a": "We do not require one and we do not supply one. A band plays fine on a floor. If you want a riser, the venue or your production company provides it, and the footprints we need at each size are published on the technical page."
+        },
+        {
+          "q": "What power do you need?",
+          "a": "Dedicated 20-amp circuits within reach of the stage, one to four of them depending on the size of the band. The requirement most often missed is that they be dedicated: sharing a circuit with catering warmers or a lighting truss is the single most common cause of a problem at load-in. Exact counts are on the technical page."
+        },
+        {
+          "q": "Can you play outdoors?",
+          "a": "Yes, with cover over the band and the desk, power run to the stage, and a plan for the weather written before the day. Colorado evenings drop fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time.",
+          "open": true
+        },
+        {
+          "q": "The venue has a curfew and a decibel limit. Is that a problem?",
+          "a": "No. Mountain and residential venues run on their own rules and we honour them as written. Tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
+        },
+        {
+          "q": "Do the players need a green room or meals?",
+          "a": "For calls over four hours, a room to hold cases and change in, and a meal per player. Vendor meal is fine. For shorter calls neither is expected.",
+          "open": true
+        }
+      ]
+    },
+    {
+      "group": "The music",
+      "items": [
+        {
+          "q": "How much say do we get over the songs?",
+          "a": "As much or as little as you want. You can build the list yourself, hand us a do-not-play list and leave the rest, or tell us the room and let the band read it song by song. Most clients do the middle one, and the do-not-play list is the part worth spending time on."
+        },
+        {
+          "q": "Do you take requests during the event?",
+          "a": "From you, yes, and from guests where it fits. The bandleader's job is reading the floor, so a request that would empty it gets a straight answer and an alternative rather than a yes and a bad twenty minutes."
+        }
+      ]
+    }
   ],
 
   "faqs": [
@@ -106,10 +333,7 @@
       "a": "Yes. Once we are in the building the call-out is already paid, so a smaller group for ceremony, cocktails or dinner bills at the hourly rate only. An hour of cocktail duo added to a full band booking is $450, an hour of DJ after the band is $350, and booking three or more parts of the night together takes 10% off performance fees."
     },
     {
-      "q": "Who do we deal with on the night?",
-      "a": "One named person, usually one of the players and most often the bandleader. Their number arrives with the contract, and they are reachable from load-in to load-out. Every booking includes this."
-    },
-    {
+      "_note": "The 'who do we deal with on the night' question lived here too until 2026-08-07. It is not a money question, and it now has a fuller answer in plannerFaqs that distinguishes the contact from whoever fronts the band. One home only.",
       "q": "How far in advance should we book?",
       "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
     }
