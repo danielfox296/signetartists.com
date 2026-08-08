@@ -1009,6 +1009,54 @@ img {
   }
 }
 
+/* ------------------------------------------------------------ stage plot */
+
+/* The technical page's argument at scale. Capped well below the wrap: a
+   24-foot square rendered 64rem wide is a diagram nobody can take in at a
+   glance, and glance is the whole job. */
+.stage-plot {
+  margin: var(--space-4) 0 0;
+  max-width: 26rem;
+}
+
+.stage-plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* The rental figure: an empty outline, because it is floor nobody uses. */
+.plot-guide {
+  fill: none;
+  stroke: var(--rule-strong);
+  stroke-width: 2;
+  stroke-dasharray: 8 7;
+}
+
+/* What the band takes: solid, brass, and the only filled thing in the frame.
+   This is the page's one emphasised fact, so it takes the accent (§6.3) — and
+   it is a fill rather than a text colour, the same move as the eyebrow slab. */
+.plot-actual {
+  fill: color-mix(in srgb, var(--brass) 22%, transparent);
+  stroke: var(--brass);
+  stroke-width: 2;
+}
+
+.plot-label {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 30px;
+  fill: var(--ink);
+}
+
+.plot-sub {
+  font-family: var(--sans);
+  font-size: 17px;
+  fill: var(--ink-faint);
+}
+
 /* ---------------------------------------------------------- cover strip */
 
 /* The site owns 36 real album sleeves and was showing them on exactly one page

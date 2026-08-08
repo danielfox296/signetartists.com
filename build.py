@@ -264,6 +264,60 @@ def loadin_table() -> str:
     ])
 
 
+def stage_plot() -> str:
+    """The technical page's argument, drawn to scale.
+
+    That page opens by saying published stage-rental guidance for a seven to
+    ten-piece runs to 24 by 24 feet, and that this is close to double what the
+    band takes. It is the most useful thing on the page for a planner pricing a
+    riser, and until now it was three sentences of prose above a table of
+    numbers. Two rectangles at the same scale make it in one look.
+
+    Drawn from site["configurations"] rather than hardcoded, so it cannot drift
+    from the table twenty lines below it. Inline SVG: no request, no library,
+    scales to any width, and it inherits the palette through currentColor and
+    the CSS custom properties.
+
+    Not a photograph, deliberately. The shoot has not happened, and a diagram
+    is the right object here anyway — a planner forwarding this to a venue
+    needs a measurement, not a mood.
+    """
+    seven = next(c for c in site["configurations"] if c["size"] == "Seven-piece")
+    # "20 by 12 ft" -> (20, 12)
+    w, d = (int(n) for n in re.findall(r"\d+", seven["stage"])[:2])
+    GUIDE = 24  # the published rental figure the page argues against
+    U = 20      # units per foot
+    gw = GUIDE * U
+    aw, ad = w * U, d * U
+    ax, ay = (gw - aw) / 2, gw - ad
+    saved = GUIDE * GUIDE - w * d
+
+    return f"""<figure class="stage-plot">
+<svg viewBox="-8 -8 {gw + 16} {gw + 16}" role="img"
+     aria-label="Two stage footprints at the same scale. Published rental
+     guidance is {GUIDE} by {GUIDE} feet. A seven-piece band takes {w} by {d} feet,
+     about {round(100 * (1 - (w * d) / (GUIDE * GUIDE)))} percent less floor.">
+  <rect x="0" y="0" width="{gw}" height="{gw}" class="plot-guide"/>
+  <rect x="{ax}" y="{ay}" width="{aw}" height="{ad}" class="plot-actual"/>
+  <text x="{gw / 2}" y="{ay / 2}" class="plot-label" text-anchor="middle">
+    {GUIDE} &#215; {GUIDE} ft
+  </text>
+  <text x="{gw / 2}" y="{ay / 2 + 26}" class="plot-sub" text-anchor="middle">
+    what the rental guide says
+  </text>
+  <text x="{gw / 2}" y="{ay + ad / 2 - 4}" class="plot-label" text-anchor="middle">
+    {w} &#215; {d} ft
+  </text>
+  <text x="{gw / 2}" y="{ay + ad / 2 + 22}" class="plot-sub" text-anchor="middle">
+    what a seven-piece takes
+  </text>
+</svg>
+<figcaption class="note">Both drawn to the same scale. The difference is
+{saved} square feet of floor, which is a few hundred dollars of riser and about
+{round(saved / 10)} guests standing.</figcaption>
+</figure>"""
+
+
 def cover_strip() -> str:
     """A run of album sleeves linking through to /repertoire/.
 
@@ -599,6 +653,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{faq_list}}": faq_list(),
         "{{planner_faq_list}}": planner_faq_list(),
         "{{cover_strip}}": cover_strip(),
+        "{{stage_plot}}": stage_plot(),
         "{{stage_table}}": stage_table(),
         "{{power_table}}": power_table(),
         "{{loadin_table}}": loadin_table(),
