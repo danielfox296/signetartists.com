@@ -70,7 +70,7 @@ MANIFEST = [
     {
         'eyebrow': 'Doors to first toast',
         'h2': 'The hour nobody remembers, and everybody feels.',
-        'intro': "Guests are finding the bar, finding each other, deciding what kind of night this is. The music keeps the room warm and unhurried — present enough that it isn't silent, quiet enough that nobody raises their voice. We play this hour softer than most bands want to.",
+        'intro': "Guests are finding the bar, finding each other, deciding what kind of night this is. The music keeps the room warm and unhurried, present enough that it isn't silent and quiet enough that nobody raises their voice. We play this hour softer than most bands want to.",
         'covers': [
             C('into-the-mystic', 'Into the Mystic', 'Van Morrison', 'Moondance'),
             C('dock-of-the-bay', "(Sittin' On) The Dock of the Bay", 'Otis Redding', 'The Dock of the Bay'),
@@ -104,7 +104,7 @@ MANIFEST = [
     {
         'eyebrow': 'Plates clearing',
         'h2': 'The twenty minutes that decide the rest of the night.',
-        'intro': "Nobody's dancing yet and dinner is over. Most bands wait it out. We use it — the set climbs on purpose, song by song, so that when the floor opens the room is already leaning forward.",
+        'intro': "Nobody's dancing yet and dinner is over. Most bands wait it out. We use it. The set climbs on purpose, song by song, so that when the floor opens the room is already leaning forward.",
         'covers': [
             C('tiny-dancer', 'Tiny Dancer', 'Elton John', 'Madman Across the Water'),
             C('have-you-ever-seen-the-rain', 'Have You Ever Seen the Rain', 'Creedence Clearwater Revival', 'Pendulum'),
@@ -118,7 +118,7 @@ MANIFEST = [
     {
         'eyebrow': 'Dancing',
         'h2': 'Songs that work on a room of strangers.',
-        'intro': "A floor-filler isn't the best song, it's the song the most people in the room have in common. Four generations, one floor, nobody sitting down because they didn't recognize it. We adjust this set live — if a room wants more country, we go there.",
+        'intro': "A floor-filler isn't the best song, it's the song the most people in the room have in common. Four generations, one floor, nobody sitting down because they didn't recognize it. We adjust this set live. If a room wants more country, we go there.",
         'covers': [
             C('brown-eyed-girl', 'Brown Eyed Girl', 'Van Morrison', "Blowin' Your Mind!"),
             C('valerie', 'Valerie', 'Mark Ronson', 'Version'),
@@ -155,7 +155,7 @@ MANIFEST = [
         # say "formalities"; the site never addresses a couple directly.
         'eyebrow': 'Ceremony and formalities',
         'h2': 'The three minutes with no second take.',
-        'intro': "Processionals end when the aisle ends, not when the song does — so we watch, and we land it. Same for a first dance or an award walk-up. We also read lyrics before agreeing to anything, which is why a few romantic-sounding requests come back with a phone call.",
+        'intro': "Processionals end when the aisle ends rather than when the song does, so we watch and we land it. Same for a first dance or an award walk-up. We also read lyrics before agreeing to anything, which is why a few romantic-sounding requests come back with a phone call.",
         'covers': [
             C('cant-help-falling-in-love', "Can't Help Falling in Love", 'Elvis Presley', 'Blue Hawaii'),
             # A one-letter album title matches everything, so pin it. Deezer
@@ -456,7 +456,7 @@ def emit():
         for j, cover in enumerate(mod['covers']):
             out.append(tile(cover, places[j], feature=(j == 0)))
         out.append('  </div>\n')
-        notes = ' · '.join(f"{c['song']} — {c['artist']}" for c in mod['covers'])
+        notes = ' · '.join(f"{c['song']}, {c['artist']}" for c in mod['covers'])
         out.append(f'  <div class="wrap"><p class="wall-notes">{html.escape(notes)}</p></div>\n')
         out.append('</section>\n')
         if i < len(MANIFEST) - 1:
