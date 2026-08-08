@@ -322,6 +322,11 @@ img {
   color: var(--ink);
 }
 
+/* Subheads go uppercase 2026-08-07, on Daniel's call, which extends the
+   display step's treatment down the scale. Condensed caps at 800 hold a
+   section without a rule above them, so the caps are doing structural work
+   rather than decoration. Tracking stays at the heading value: caps want air
+   at 12px, not at 24 and 30. */
 .h2 {
   font-family: var(--display);
   font-weight: 800;
@@ -329,6 +334,7 @@ img {
   font-size: 1.875rem;
   line-height: 1.02;
   letter-spacing: -0.005em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 
@@ -339,6 +345,7 @@ img {
   font-size: 1.5rem;
   line-height: 1.05;
   letter-spacing: -0.005em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 
@@ -530,10 +537,17 @@ img {
   padding-bottom: 1rem;
 }
 
+/* The wordmark is set, not drawn — WEBSITE-PLAN §6.7 keeps a drawn signet mark
+   as a Phase-3 nice-to-have. Uppercase and heavy 2026-08-07: at sentence case
+   and 400 it read as a page title rather than as a mark, which is the one
+   thing a wordmark cannot do. */
 .wordmark {
   font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
   font-size: 1.125rem;
-  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
   color: var(--ink);
 }
 
@@ -956,6 +970,87 @@ img {
   color: var(--brass);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
+}
+
+/* Two figures at display scale, replacing the home page's duplicate rate table
+   (2026-08-07). DESIGN-DIRECTION §3: "Numbers get typographic prominence.
+   Rates are display-scale, not fine print." A table set the rates at 14px; the
+   page that was supposed to prove we publish our prices was whispering them. */
+.figure-pair {
+  margin-top: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-3);
+}
+
+.figure-pair dt {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.figure-pair dd {
+  margin-top: 0.4rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+@media (min-width: 640px) {
+  .figure-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------------------------------------------------------- cover strip */
+
+/* The site owns 36 real album sleeves and was showing them on exactly one page
+   while nine other pages carried no image at all. This is that asset, wired
+   into the pages that had nothing: a full-bleed run of sleeves on the night
+   ground, linking through to /repertoire/. Full-bleed because the wall on the
+   repertoire page is full-bleed and this has to read as the same object seen
+   in passing, not as a widget quoting it.
+
+   No parallax here. The wall earns motion because it is the page; a strip is
+   a signpost and should hold still. */
+.cover-strip {
+  padding: var(--space-4) 0;
+  overflow: hidden;
+}
+
+.cover-strip-inner {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+}
+
+.cover-strip img {
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Below the fold of a phone the strip would show eight 45px stamps, which reads
+   as noise. Four sleeves at a legible size instead. */
+@media (max-width: 700px) {
+  .cover-strip img:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+.cover-strip-note {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
 }
 
 /* ------------------------------------------------------------------ form */

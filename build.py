@@ -34,7 +34,7 @@ DATA_FILE = DATA / "site.json"
 
 # Nav keys for active-state highlighting. A page's config.json sets "nav" to one
 # of these to mark the matching header link as the current page.
-NAV_KEYS = ["music", "pricing", "planners", "corporate", "contact"]
+NAV_KEYS = ["music", "repertoire", "pricing", "planners", "corporate", "contact"]
 
 # GA4 measurement id. Empty string => no analytics tag is emitted at all.
 # Never ship a half-wired tag.
@@ -262,6 +262,45 @@ def loadin_table() -> str:
         ("Strike", "strike"),
         ("Vehicles", "vans"),
     ])
+
+
+def cover_strip() -> str:
+    """A run of album sleeves linking through to /repertoire/.
+
+    The site owns 36 real, self-hosted sleeves and was showing them on exactly
+    one page while nine others carried no image at all. Alt text is lifted from
+    the repertoire page's own tiles so the two surfaces describe the same
+    picture the same way; the sleeves are decorative here, but a screen reader
+    landing on eight unlabelled images would have nothing to skip past.
+
+    Ordered by the arc of an evening rather than alphabetically: the first four
+    are the ones that survive the phone breakpoint, so they carry the dinner
+    end of the night, and the run climbs from there.
+    """
+    strip = [
+        ("into-the-mystic", "Moondance, Van Morrison"),
+        ("landslide", "Fleetwood Mac"),
+        ("tennessee-whiskey", "Chris Stapleton"),
+        ("dock-of-the-bay", "The Dock of the Bay, Otis Redding"),
+        ("valerie", "Version, Mark Ronson"),
+        ("sweet-caroline", "Neil Diamond"),
+        ("dont-stop-believin", "Escape, Journey"),
+        ("mr-brightside", "Hot Fuss, The Killers"),
+    ]
+    tiles = "".join(
+        f'<img src="{{{{nav_prefix}}}}img/covers/{slug}.jpg" '
+        f'alt="{esc(credit)} album cover" loading="lazy" decoding="async" '
+        f'width="300" height="300">'
+        for slug, credit in strip
+    )
+    return (
+        '<section class="section--night cover-strip">'
+        f'<div class="cover-strip-inner">{tiles}</div>'
+        '<div class="wrap"><p class="cover-strip-note">'
+        'Eight of a few hundred. The whole book, and the six sets a night gets '
+        'built from, are on the <a href="{{nav_prefix}}repertoire/">songs page</a>.'
+        "</p></div></section>"
+    )
 
 
 def planner_faq_list() -> str:
@@ -559,6 +598,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{extras_list}}": extras_list(),
         "{{faq_list}}": faq_list(),
         "{{planner_faq_list}}": planner_faq_list(),
+        "{{cover_strip}}": cover_strip(),
         "{{stage_table}}": stage_table(),
         "{{power_table}}": power_table(),
         "{{loadin_table}}": loadin_table(),
