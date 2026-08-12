@@ -97,18 +97,22 @@ Google config for the ID, DNS, live redirect chains, deploy history:
 - **Bing**: verified via `BingSiteAuth.xml` at the site root; every deploy
   pings IndexNow with the URLs whose sitemap entry changed.
 
-Still to do in the consoles (not doable from this repo):
+Console side, completed 2026-08-12 from a browser session on Daniel's
+machine:
 
-- Link Search Console to the GA4 property: GA Admin → Product links →
-  Search Console links. (The soundbathcalendar property has this link;
-  this one does not yet.)
-- Confirm `sitemap.xml` is submitted in Search Console and Bing Webmaster
-  Tools — `robots.txt` advertises it either way.
+- Search Console is linked to the GA4 property (GA Admin → Product links →
+  Search Console links), same as the other sites.
+- `sitemap.xml` shows Success in both Search Console and Bing Webmaster
+  Tools, 17 URLs each.
+- Live smoke test passed: with ad blocking off, Realtime received
+  page_view and pricing_engaged on the stream. The 2026-08 "no data"
+  scare was client-side ad blocking, not the tag.
 
-To watch data arrive: open the site in a private window with ad blocking
-off, then check GA Realtime. Ad blockers eat gtag.js, so your own everyday
-browsing mostly never reaches GA — an empty report on a week-old site is
-expected, not evidence the tag is broken.
+Ad blockers eat gtag.js, so everyday browsing from this desk mostly never
+reaches GA — test in a private window with blocking off before concluding
+anything is broken. The 404 page serves the same tag as every other page
+(verified against a live bad-URL fetch), so a mistyped address should
+record a page_view carrying that URL as page_location.
 
 ## Still open
 
