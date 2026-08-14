@@ -57,9 +57,8 @@ python3 build.py --lint    # validate every post, drafts included
   llms.txt Blog section, and Article JSON-LD whose publisher is the site's
   MusicGroup entity.
 - The blog index (`/blog/`) is a regular page (`_src/pages/blog-index/`)
-  whose `{{blog_cards}}` token fills with published posts, newest first. It
-  is deliberately not in the site nav yet — link it when the first real
-  post ships.
+  whose `{{blog_cards}}` token fills with published posts, newest first.
+  It is linked from the footer.
 
 ## Section tokens
 
@@ -82,10 +81,42 @@ silently. `build.py` also prints them at the end of every build.
 Push to `main`. GitHub Actions lints the blog, builds, publishes to GitHub
 Pages, and pings IndexNow with the URLs whose sitemap entry changed.
 
+## Analytics & search wiring
+
+Verified end to end 2026-08-09 — tag markup on every built page, the served
+Google config for the ID, DNS, live redirect chains, deploy history:
+
+- **GA4**: `G-LL5DKVEX29`, set as `GA_MEASUREMENT_ID` in `build.py` and
+  emitted into every page head; live since the first deploy on 2026-08-01.
+  `analytics.js` layers the four site events on top and no-ops if gtag is
+  blocked.
+- **Search Console**: domain property, verified via a DNS TXT record at the
+  registrar; Google has collected Search impressions since 2026-08-06. Its
+  "Page with redirect" notices are the benign http→https, www→apex and
+  no-trailing-slash consolidations — all 301 to the canonical URL.
+- **Bing**: verified via `BingSiteAuth.xml` at the site root; every deploy
+  pings IndexNow with the URLs whose sitemap entry changed.
+
+Console side, completed 2026-08-12 from a browser session on Daniel's
+machine:
+
+- Search Console is linked to the GA4 property (GA Admin → Product links →
+  Search Console links), same as the other sites.
+- `sitemap.xml` shows Success in both Search Console and Bing Webmaster
+  Tools, 17 URLs each.
+- Live smoke test passed: with ad blocking off, Realtime received
+  page_view and pricing_engaged on the stream. The 2026-08 "no data"
+  scare was client-side ad blocking, not the tag.
+
+Ad blockers eat gtag.js, so everyday browsing from this desk mostly never
+reaches GA — test in a private window with blocking off before concluding
+anything is broken. The 404 page serves the same tag as every other page
+(verified against a live bad-URL fetch), so a mistyped address should
+record a page_view carrying that URL as page_location.
+
 ## Still open
 
-- The contact form posts to formsubmit.co and needs its endpoint activated
 - The music page's "The players" section is an unresolved decision — names are
   deliberately not published
-- Blog index copy is placeholder pending the voice/ICP content pass; no real
-  posts exist yet (publishing cadence floor: one per month once live)
+- Blog publishing cadence floor: one per month (the first posts shipped
+  2026-08-05)
