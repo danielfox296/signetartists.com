@@ -5,6 +5,8 @@
 
   "_pricing_note": "Per-config prices are NOT stored on acts. Each ladder rung names a rateCard config id and the build reads the range from rateCard below, so an act page and the pricing page can never disagree. The provisional per-act floors in the workbook (Dirty Flamenco 1800/2500, Tejas 1000/1400, and so on) are deliberately NOT used: the workbook's own legend calls them provisional, and they sit well under the spec rate card. The spec rate card is the authority.",
 
+  "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source (signet-roster-system-v2.xlsx, Roster!B11/E11 and Chair Specs!A11/B11). The act slug changed with it, /music/tejas-sing/ to /music/tejas-singh/, while the page was under an hour old. Do not 'fix' this back to match an older copy of the spec.",
+
   "_players_note": "No player names, no lineup, no 'collective of musicians' framing. The face is the one name published for an act, because the face is what the client buys. Instrumentation is published where it is part of the product (upright bass and guitar for a jazz duo); the people holding those chairs are not.",
 
   "rateCard": [
@@ -178,11 +180,11 @@
     },
 
     {
-      "id": "tejas-sing",
-      "name": "Tejas Sing",
+      "id": "tejas-singh",
+      "name": "Tejas Singh",
       "status": "flagship",
       "style": "Singer-songwriter covers",
-      "face": "Tejas Sing",
+      "face": "Tejas Singh",
       "material": "Covers",
       "bucket_tags": ["cocktail", "party"],
       "config_tags": ["duo", "trio", "quartet", "quintet"],
@@ -191,7 +193,7 @@
       "alt": "A snare drum with sticks laid across it and a close microphone.",
       "video": null,
       "blurb": "The only act here that ladders. A duo at six o'clock and a quartet at ten, same face, same book, one contract. At quartet and up this is the biggest thing on the roster and the one to book when the floor has to fill.",
-      "seo_title": "Tejas Sing: cover band for weddings and private events in Denver",
+      "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
       "meta_description": "Voice-fronted covers for private events in Denver and the Colorado mountains. Duo for cocktails from $2,000, quartet for the dance floor from $4,000. Every rate published.",
       "identity": [
         "One act, four sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
