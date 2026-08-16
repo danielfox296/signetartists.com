@@ -1,13 +1,15 @@
 {
-  "_comment": "The act roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about an act is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
+  "_comment": "The roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about a booking is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
 
-  "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs. If a 'final' workbook exists elsewhere, diff it against this before launch.",
+  "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page. Thomas Owen Band is a face-led listing.",
 
-  "_pricing_note": "Per-config prices are NOT stored on acts. Each ladder rung names a rateCard config id and the build reads the range from rateCard below, so an act page and the pricing page can never disagree. The provisional per-act floors in the workbook (Dirty Flamenco 1800/2500, Tejas 1000/1400, and so on) are deliberately NOT used: the workbook's own legend calls them provisional, and they sit well under the spec rate card. The spec rate card is the authority.",
+  "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs.",
 
-  "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source (signet-roster-system-v2.xlsx, Roster!B11/E11 and Chair Specs!A11/B11). The act slug changed with it, /music/tejas-sing/ to /music/tejas-singh/, while the page was under an hour old. Do not 'fix' this back to match an older copy of the spec.",
+  "_pricing_note": "Per-config prices are NOT stored on acts. Each ladder rung names a rateCard config id and the build reads the range from rateCard below, so an act page and the pricing page can never disagree. The provisional per-act floors in the workbook are deliberately NOT used: the workbook's own legend calls them provisional and they sit well under the spec rate card, which is the authority.",
 
-  "_players_note": "No player names, no lineup, no 'collective of musicians' framing. The face is the one name published for an act, because the face is what the client buys. Instrumentation is published where it is part of the product (upright bass and guitar for a jazz duo); the people holding those chairs are not.",
+  "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source. Do not 'fix' this back to match an older copy of the spec.",
+
+  "_players_note": "No player names, no lineup, no 'collective of musicians' framing. On a face-led act the face is the one name published, because the face is what the client buys. On a spec'd format no person is named at all. Instrumentation is published everywhere, because it is part of the product; the people holding those chairs never are.",
 
   "rateCard": [
     {
@@ -83,6 +85,7 @@
     {
       "id": "dirty-flamenco",
       "name": "Dirty Flamenco",
+      "presentation": "face",
       "status": "flagship",
       "style": "Flamenco",
       "face": "Gary Meyers",
@@ -99,7 +102,8 @@
       "identity": [
         "Flamenco is the one booking on this roster that nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing book, sold at private event scale.",
         "That matters for a specific kind of night. Most live music at a private event is designed to be felt and not watched. This is the opposite booking. It is the act you hire when the program has a moment in it that needs to be the moment: a cultural centerpiece, a corporate dinner that has to be memorable rather than pleasant, a reception that wants something guests will describe to people who were not there.",
-        "The book is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars."
+        "The book is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
+        "This is a named act rather than a format, which means the group you hear is the group that arrives. It does not get swapped for another flamenco trio, because there is not another one."
       ],
       "ladder": [
         {
@@ -121,60 +125,8 @@
       "setlist": {
         "note": "Flamenco is organized by palo, the traditional form, rather than by song title. A set is built from these and shaped to the room on the night. Representative, not fixed.",
         "items": [
-          "Bulerias",
-          "Solea",
-          "Alegrias",
-          "Tangos",
-          "Rumba",
-          "Fandangos",
-          "Sevillanas",
-          "Guajiras"
-        ]
-      }
-    },
-
-    {
-      "id": "jordan-lovinger-and-df",
-      "name": "Jordan Lovinger & DF",
-      "status": "flagship",
-      "style": "Jazz standards",
-      "face": "Jordan Lovinger",
-      "material": "Standards and covers",
-      "bucket_tags": ["cocktail"],
-      "config_tags": ["duo"],
-      "from": "duo",
-      "img": "standards.jpg",
-      "alt": "A trumpet resting on a table.",
-      "video": null,
-      "blurb": "Standards on upright bass and guitar, played at the volume of the room. The booking for arrival, cocktails and dinner, when the music has to hold the room without anybody having to raise their voice over it.",
-      "seo_title": "Jordan Lovinger & DF: jazz duo for cocktails and dinner in Denver",
-      "meta_description": "Jazz standards duo for private events in Denver and the Colorado mountains. Upright bass and guitar for cocktails and dinner. $1,050 for an hour, $2,000 for the cocktail and dinner block.",
-      "identity": [
-        "This is the cocktail hour booking. Upright bass and guitar, playing the standards book, at a volume you can talk across.",
-        "Most of what goes wrong in the first two hours of an event is a volume decision, not a repertoire decision. A band that plays this hour at the level it plays the dance floor makes guests shout at each other while they are still deciding what kind of night it is. A duo is the honest instrument for it: two players cannot get loud by accident, and the arrangement stays open enough that conversation sits on top of it rather than under it.",
-        "Standards are the book because they are the one repertoire nobody has to be told about. Guests do not identify the tunes and do not need to. The room reads as expensive and unhurried, which is the whole job for that hour.",
-        "The duo covers arrival, cocktails and dinner on one line of the contract. If the night also needs a dance floor, that is a second act rather than this one turning up."
-      ],
-      "ladder": [
-        {
-          "config": "duo",
-          "build": "Upright bass and guitar",
-          "bestFor": "Arrival, cocktails and dinner. One hour or the whole front of the night."
-        }
-      ],
-      "setlist": {
-        "note": "The standards book. A set is pulled from it and paced to the room rather than played in order. Representative, not fixed.",
-        "items": [
-          "Autumn Leaves",
-          "All the Things You Are",
-          "There Will Never Be Another You",
-          "Take the A Train",
-          "Blue Bossa",
-          "Beautiful Love",
-          "Someday My Prince Will Come",
-          "The Girl from Ipanema",
-          "All of Me",
-          "Green Dolphin Street"
+          "Bulerias", "Solea", "Alegrias", "Tangos",
+          "Rumba", "Fandangos", "Sevillanas", "Guajiras"
         ]
       }
     },
@@ -182,6 +134,7 @@
     {
       "id": "tejas-singh",
       "name": "Tejas Singh",
+      "presentation": "face",
       "status": "flagship",
       "style": "Singer-songwriter covers",
       "face": "Tejas Singh",
@@ -192,36 +145,21 @@
       "img": "headliners.jpg",
       "alt": "A snare drum with sticks laid across it and a close microphone.",
       "video": null,
-      "blurb": "The only act here that ladders. A duo at six o'clock and a quartet at ten, same face, same book, one contract. At quartet and up this is the biggest thing on the roster and the one to book when the floor has to fill.",
+      "blurb": "The only booking here that ladders. A duo at six o'clock and a quartet at ten, same voice, same book, one contract. At quartet and up this is the biggest thing on the roster and the one to book when the floor has to fill.",
       "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
       "meta_description": "Voice-fronted covers for private events in Denver and the Colorado mountains. Duo for cocktails from $2,000, quartet for the dance floor from $4,000. Every rate published.",
       "identity": [
         "One act, four sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
         "The reason to care is the contract. Most events buy the front of the night and the back of the night from two different acts, which means two load-ins, two sound checks, two sets of names to keep straight and a seam in the middle that guests can hear. This ladders instead: a duo through arrival and dinner, then the rhythm section arrives and the same voice fronts the dance floor. The room experiences one band getting bigger.",
         "At quartet and above it stops being a cocktail act. Voice, guitar, bass and drums playing a covers book built for a floor is the largest live format on this roster, and it is the one to book when filling the floor is the actual objective rather than a hope.",
-        "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing."
+        "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing.",
+        "This is a named act, so the voice on the recording is the voice in the room. It is not a format we fill from whoever is free."
       ],
       "ladder": [
-        {
-          "config": "duo",
-          "build": "Voice and guitar, plus bass",
-          "bestFor": "Arrival, cocktails and dinner."
-        },
-        {
-          "config": "trio",
-          "build": "Voice and guitar, bass, drums",
-          "bestFor": "Small rooms, and parties that want a floor without a full band."
-        },
-        {
-          "config": "quartet",
-          "build": "The trio plus keys or a second guitar",
-          "bestFor": "The dance floor booking. Weddings and corporate parties."
-        },
-        {
-          "config": "quintet",
-          "build": "The quartet plus a horn or a second voice",
-          "bestFor": "Large rooms, galas, and anything that has to sound like an event rather than a band."
-        }
+        { "config": "duo", "build": "Voice and guitar, plus bass", "bestFor": "Arrival, cocktails and dinner." },
+        { "config": "trio", "build": "Voice and guitar, bass, drums", "bestFor": "Small rooms, and parties that want a floor without a full band." },
+        { "config": "quartet", "build": "The trio plus keys or a second guitar", "bestFor": "The dance floor booking. Weddings and corporate parties." },
+        { "config": "quintet", "build": "The quartet plus a horn or a second voice", "bestFor": "Large rooms, galas, and anything that has to sound like an event rather than a band." }
       ],
       "setlist": {
         "note": "Pulled from the full song book, which runs past 240 titles and is published in its own right. A set is built against your run of show and read song by song on the night. Representative, not fixed.",
@@ -235,41 +173,52 @@
     },
 
     {
-      "id": "dan-steele",
-      "name": "Dan Steele",
-      "status": "listing",
-      "style": "Funk",
-      "face": "Dan Steele",
-      "material": "Covers",
-      "bucket_tags": ["party"],
-      "config_tags": ["trio"],
-      "from": "trio",
-      "img": "headliners.jpg",
-      "alt": "A snare drum with sticks laid across it and a close microphone.",
+      "id": "jazz-duo",
+      "name": "Jazz Duo",
+      "presentation": "spec",
+      "status": "flagship",
+      "style": "Jazz standards",
+      "spec": "Upright bass and guitar",
+      "material": "Standards and covers",
+      "bucket_tags": ["cocktail"],
+      "config_tags": ["duo"],
+      "from": "duo",
+      "img": "standards.jpg",
+      "alt": "A trumpet resting on a table.",
       "video": null,
-      "blurb": "Voice-fronted funk and soul for a small room. The singer is the front of this band, so the set leans on the vocal end of the funk book: Motown, Stax, the songs a room sings back. Book it where the dance floor is close to the tables.",
-      "_face_chair_note": "The workbook marks this act's face chair as assumed (vox/keys) and flags the overlap with DF Funk. The voice-fronted framing here is what differentiates the two listings and it rests on that assumed chair. Confirm with Dan Steele before launch; if the chair is wrong, this blurb is wrong."
-    },
-
-    {
-      "id": "df-funk",
-      "name": "DF Funk",
-      "status": "listing",
-      "style": "Funk",
-      "face": "Daniel Fox",
-      "material": "Covers",
-      "bucket_tags": ["party"],
-      "config_tags": ["trio"],
-      "from": "trio",
-      "img": "headliners.jpg",
-      "alt": "A snare drum with sticks laid across it and a close microphone.",
-      "video": null,
-      "blurb": "Guitar-fronted funk, built on the groove rather than the vocal. Instrumental heads, longer pockets, and a set that works as hard at background volume as it does on a floor. The one to book when the room wants funk without a frontman working it."
+      "_was_note": "Listed as 'Jordan Lovinger & DF' until 2026-08-16. Spec'd on Daniel's call: the cocktail hour is bought as a format, not as a personality, and naming it promised a specific pair we would not always field. The players behind it are unchanged.",
+      "blurb": "Standards on upright bass and guitar, played at the volume of the room. The booking for arrival, cocktails and dinner, when the music has to hold the room without anybody having to raise their voice over it.",
+      "seo_title": "Jazz duo for cocktails and dinner at Denver private events",
+      "meta_description": "Jazz standards duo for private events in Denver and the Colorado mountains. Upright bass and guitar for cocktails and dinner. $1,050 for an hour, $2,000 for the cocktail and dinner block.",
+      "identity": [
+        "This is the cocktail hour booking. Upright bass and guitar, playing the standards book, at a volume you can talk across.",
+        "It is sold as a format rather than under a name, and that is a deliberate promise rather than a hedge. What you are buying for this hour is an instrumentation, a repertoire and a volume. Which two players deliver it does not change any of the three, and pretending otherwise would mean naming a pair we cannot guarantee for your date. You get the spec, on every date it is available.",
+        "Most of what goes wrong in the first two hours of an event is a volume decision, not a repertoire decision. A band that plays this hour at the level it plays the dance floor makes guests shout at each other while they are still deciding what kind of night it is. A duo is the honest instrument for it: two players cannot get loud by accident, and the arrangement stays open enough that conversation sits on top of it rather than under it.",
+        "Standards are the book because they are the one repertoire nobody has to be told about. Guests do not identify the tunes and do not need to. The room reads as expensive and unhurried, which is the whole job for that hour.",
+        "The duo covers arrival, cocktails and dinner on one line of the contract. If the night also needs a dance floor, that is a second booking rather than this one turning up."
+      ],
+      "ladder": [
+        {
+          "config": "duo",
+          "build": "Upright bass and guitar",
+          "bestFor": "Arrival, cocktails and dinner. One hour or the whole front of the night."
+        }
+      ],
+      "setlist": {
+        "note": "The standards book. A set is pulled from it and paced to the room rather than played in order. Representative, not fixed.",
+        "items": [
+          "Autumn Leaves", "All the Things You Are", "There Will Never Be Another You",
+          "Take the A Train", "Blue Bossa", "Beautiful Love",
+          "Someday My Prince Will Come", "The Girl from Ipanema",
+          "All of Me", "Green Dolphin Street"
+        ]
+      }
     },
 
     {
       "id": "thomas-owen-band",
       "name": "Thomas Owen Band",
+      "presentation": "face",
       "status": "listing",
       "style": "Americana",
       "face": "Thomas Owen",
@@ -281,15 +230,36 @@
       "alt": "An empty room set for an event before doors.",
       "video": null,
       "blurb": "Americana for a patio and the daylight end of an event. Roots, country and folk-rock played by a trio that can sit at conversation volume for three hours without going flat. Outdoor ceremonies, welcome parties and long afternoons.",
-      "_promote_note": "Spec: promote to flagship when footage exists. The workbook also flags this act as originals-first with an open question about whether it can field a two hour covers set. The material field says covers and originals on that basis. Resolve the covers question before promoting."
+      "_promote_note": "Spec: promote to flagship when footage exists. The workbook also flags this act as originals-first with an open question about whether it can field a two hour covers set, which is why `material` says covers and originals. Resolve the covers question before promoting.",
+      "_face_note": "Confirmed face-led by Daniel 2026-08-16. The name and the person stay on the card."
     },
 
     {
-      "id": "josh-dj",
-      "name": "Josh",
+      "id": "funk-trio",
+      "name": "Funk Trio",
+      "presentation": "spec",
       "status": "listing",
-      "style": "DJ",
-      "face": "Josh",
+      "style": "Funk and soul",
+      "spec": "Guitar, bass, drums, with voice",
+      "material": "Covers",
+      "bucket_tags": ["party"],
+      "config_tags": ["trio"],
+      "from": "trio",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a close microphone.",
+      "video": null,
+      "_merged_note": "MERGED 2026-08-16 from two listings, 'Dan Steele (funk trio)' and 'DF Funk'. The workbook flagged the direct overlap and said pick one or merge; Daniel's ruling is that they are interchangeable, so this is one format with both behind it as availability depth. The first pass differentiated them on voice-fronted versus guitar-fronted, which rested on a face chair the workbook marks 'assumed'. That copy is gone and is not to be reinstated without confirming the chair.",
+      "depth": ["Dan Steele trio", "DF Funk"],
+      "blurb": "Funk and soul covers at trio size, for a party in a room where the dance floor is close to the tables. The songs a room already knows, played by three people who can fill a floor without needing a stage to do it. Two working trios sit behind this format, which is why it holds a Saturday."
+    },
+
+    {
+      "id": "dj",
+      "name": "DJ",
+      "presentation": "spec",
+      "status": "listing",
+      "style": "Open format",
+      "spec": "Decks, and a PA sized to the room",
       "material": "Open format",
       "bucket_tags": ["dj", "party"],
       "config_tags": ["solo", "duo"],
@@ -297,21 +267,22 @@
       "img": "dj.jpg",
       "alt": "Faders and knobs on a mixing console.",
       "video": null,
-      "blurb": "Open format DJ, on its own or carrying the late end after a band steps off. Adding a live instrument over the decks, bass or saxophone, is a named option rather than a favor: it is the format roughly one couple in six now asks for, and it is priced on the rate card.",
+      "_was_note": "Listed as 'Josh' until 2026-08-16. A bare first name read thin next to the named acts and promised a specific person for a service that is bought as a format.",
+      "blurb": "Open format, on its own or carrying the late end after a band steps off. Through the same sound system, run by the same team, on the same contract. The most common single booking of the corporate season.",
       "hybrid": {
         "label": "DJ plus live instrument",
         "instruments": ["Bass", "Saxophone"],
-        "copy": "A player on the floor over the DJ set. It is the difference between a playlist and a room watching something happen, and it holds a dance floor through the hours a band would have gone home."
-      },
-      "_name_note": "The act is listed with a first name only, per the workbook and the spec. A single first name reads thin next to eight other named acts on the roster page. Worth a surname or a DJ name before launch."
+        "copy": "A live player on the floor over the DJ set. It is the difference between a playlist and a room watching something happen, and it holds a dance floor through the hours a band would have gone home. Roughly one couple in six now asks for this format, so it is priced on the rate card rather than treated as a favor."
+      }
     },
 
     {
-      "id": "tony-medina",
-      "name": "Tony Medina",
+      "id": "blues-solo",
+      "name": "Blues Solo",
+      "presentation": "spec",
       "status": "listing",
       "style": "Blues-based covers",
-      "face": "Tony Medina",
+      "spec": "One voice and a guitar, or two",
       "material": "Covers",
       "bucket_tags": ["budget", "cocktail"],
       "config_tags": ["solo", "duo"],
@@ -319,16 +290,17 @@
       "img": "hero.jpg",
       "alt": "An empty room set for an event before doors.",
       "video": null,
-      "blurb": "Blues-based covers, solo or as a duo, at the smallest spend on this roster. Background music that is actually played rather than streamed. Rehearsal dinners, welcome drinks, office parties and any room where live music is the right idea and a band is the wrong size."
+      "_was_note": "Listed as 'Tony Medina' until 2026-08-16. The workbook describes Freddy Alexander as redundant with him and calls that availability depth rather than a problem, which is the interchangeable pattern exactly. Spec'd, both sit behind one format and the depth becomes an asset instead of two thin listings competing at the bottom of the card.",
+      "depth": ["Tony Medina", "Freddy Alexander"],
+      "blurb": "Blues-based covers, solo or as a duo, at the smallest spend on this roster. Background music that is actually played rather than streamed. Rehearsal dinners, welcome drinks, office parties, and any room where live music is the right idea and a band is the wrong size."
     }
   ],
 
-  "_holds_note": "Acts held out of the build on the spec's instruction. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost.",
+  "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is depth behind Blues Solo, which is what the workbook always said he was.",
   "holds": [
     { "name": "Tchunk", "reason": "Artistic project, not an event product. Different website." },
     { "name": "Vaughn Tromburg Project", "reason": "Event-set question unresolved." },
     { "name": "Arbor Sons", "reason": "Face and covers ratio unknown." },
-    { "name": "DF & Kyren", "reason": "Overlaps the cocktail bucket. Unfilmed." },
-    { "name": "Freddy Alexander", "reason": "Redundant with Tony Medina at the budget tier. Availability depth, not a listing." }
+    { "name": "DF & Kyren", "reason": "Overlaps the cocktail bucket. Unfilmed." }
   ]
 }

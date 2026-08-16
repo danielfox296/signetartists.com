@@ -401,6 +401,43 @@ def act_configs(act: dict) -> list:
     return [rate_of(c) for c in act["config_tags"]]
 
 
+def act_byline(act: dict) -> str:
+    """The line under the name, and the whole point of the presentation axis.
+
+    A face-led act publishes the person, because the person is what was
+    bought and they do not get swapped. A spec'd format publishes the
+    instrumentation instead, because that is what we can guarantee on any
+    date. Naming a format would promise a personality the booking cannot
+    honour; specifying it promises a sound, a size and a price, which it can.
+    """
+    if act["presentation"] == "face":
+        return f'Fronted by {act["face"]}'
+    return act["spec"]
+
+
+def act_byline_inline(act: dict) -> str:
+    """The byline where it sits mid-sentence, as in llms.txt's
+    "Dirty Flamenco (Flamenco, fronted by Gary Meyers)". Built rather than
+    lowercased from act_byline: .lower() flattens the proper noun and turns
+    "a PA sized to the room" into "a pa sized to the room"."""
+    if act["presentation"] == "face":
+        return f'fronted by {act["face"]}'
+    return act["spec"]
+
+
+NUMBER_WORDS = {
+    1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five",
+    6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten",
+}
+
+
+def act_count_word() -> str:
+    """Headlines count the roster out loud, so the count is a token rather
+    than a typed word. Adding or merging an act cannot leave a page claiming
+    a number that stopped being true."""
+    return NUMBER_WORDS.get(len(ACTS), str(len(ACTS)))
+
+
 def act_config_range(act: dict) -> str:
     """"Trio to six piece", not "Trio to Five to six piece". The tail of a range
     reads as prose, so the rate card carries a lowercase `rangeLabel` for it
@@ -468,7 +505,7 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
         '<div class="act-card-body">'
         f'<p class="act-kind">{esc(act["style"])}</p>'
         f'<h3 class="act-name">{esc(act["name"])}</h3>'
-        f'<p class="act-face">Fronted by {esc(act["face"])}</p>'
+        f'<p class="act-face">{esc(act_byline(act))}</p>'
         f'<ul class="pill-row">{tags}</ul>'
         f'<p class="act-blurb">{esc(act["blurb"])}</p>'
         '<dl class="act-facts">'
@@ -573,7 +610,7 @@ def season_leads(nav_prefix: str = "") -> str:
             '<article class="card">'
             f'<p class="act-kind">{esc(r["label"])}</p>'
             f'<h3 class="act-name">{esc(act["name"])}</h3>'
-            f'<p class="act-face">{esc(act["style"])}. Fronted by {esc(act["face"])}.</p>'
+            f'<p class="act-face">{esc(act["style"])}. {esc(act_byline(act))}.</p>'
             f'<p class="act-blurb">{esc(lead["why"])}</p>'
             '<dl class="act-facts"><dt>Denver</dt>'
             f'<dd class="num-accent">{rng(r["denver"])}</dd>'
@@ -961,6 +998,8 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{roster_grid}}": roster_grid(nav_prefix),
         "{{roster_grid_flagships}}": roster_grid_flagships(nav_prefix),
         "{{act_picker}}": act_picker(),
+        "{{act_count}}": str(len(ACTS)),
+        "{{act_count_word}}": act_count_word(),
         "{{season_board}}": season_board(),
         "{{season_leads}}": season_leads(nav_prefix),
     }
@@ -1013,7 +1052,7 @@ def act_hero(act: dict) -> str:
         '<div class="heading">'
         f'<p class="eyebrow eyebrow--slab">{esc(act["style"])}</p>'
         f'<h1 class="h1 display">{esc(act["name"])}</h1>'
-        f'<p class="act-face">Fronted by {esc(act["face"])}. '
+        f'<p class="act-face">{esc(act_byline(act))}. '
         f'{esc(act["material"])}.</p>'
         f'<p class="lede">{esc(act["blurb"])}</p>'
         f'<p class="act-from">From <span class="num-accent">{price}</span> in Denver. '
@@ -1412,7 +1451,7 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         where = f"{SITE_URL}/{ACTS_BASE}/{a['id']}/" if a["status"] == "flagship" \
             else f"{SITE_URL}/{ACTS_BASE}/"
         lines.append(
-            f"- {a['name']} ({a['style']}, fronted by {a['face']}): "
+            f"- {a['name']} ({a['style']}, {act_byline_inline(a)}): "
             f"{a['blurb']} Configurations: {act_config_range(a)}. "
             f"From {money(act_from_price(a))} in Denver. {where}"
         )
