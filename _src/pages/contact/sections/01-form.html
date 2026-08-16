@@ -66,6 +66,12 @@
             </select>
           </div>
 
+          <!-- Added with the roster restructure 2026-08-15. Every Inquire link
+               on the site carries ?act=<id> and acts.js preselects it here, so
+               an enquiry that started on an act page arrives naming the act
+               rather than making the planner say it twice. -->
+          {{act_picker}}
+
           <div class="field">
             <label for="venue">Venue or city</label>
             <input id="venue" name="Venue or city">
@@ -94,3 +100,5 @@
     </div>
   </div>
 </section>
+
+<script defer src="../acts.js"></script>

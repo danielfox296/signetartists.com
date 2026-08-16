@@ -18,62 +18,10 @@
     "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8"
   },
 
-  "acts": [
-    {
-      "id": "standards",
-      "name": "The Standards",
-      "kind": "Jazz and lounge",
-      "sizes": "2 to 5 players",
-      "blurb": "Ceremony, cocktails and dinner. Jazz and lounge at conversation volume. The sound of a good party starting.",
-      "img": "standards.jpg",
-      "alt": "A trumpet resting on a table."
-    },
-    {
-      "id": "headliners",
-      "name": "The Headliners",
-      "kind": "Party and dance",
-      "sizes": "3 to 13 players",
-      "blurb": "The main event. Contemporary pop, funk and Motown, read to the room song by song until the floor is full and stays that way.",
-      "img": "headliners.jpg",
-      "alt": "A snare drum with sticks laid across it and a close microphone."
-    },
-    {
-      "id": "dj",
-      "name": "DJ",
-      "kind": "Continuous",
-      "sizes": "Late night, between sets, or on its own",
-      "blurb": "Through the same sound system, run by the same team. The band steps off at midnight and the floor stays full.",
-      "img": "dj.jpg",
-      "alt": "Faders and knobs on a mixing console."
-    }
-  ],
+  "_acts_moved_note": "The two house bands (The Standards, The Headliners) and the DJ lived here until the 2026-08-15 restructure. The business books named acts, so the roster moved to _src/data/acts.json with a real schema: bucket and config tags, per-config pricing read off the rate card, and flagship/listing status. Nothing reads site.acts any more.",
 
-  "_players_note": "Reverses the 2026-08-01 decision not to publish player names, on Daniel's instruction 2026-08-07 when he supplied the first bandleader bio. Names are published for featured bandleaders only; the wider roster and the DJ stay unnamed, per OFFER.md. Source bios are artist bios written to sell the player to listening rooms and festivals, so every one gets re-pointed at the planner before it lands here: what the person does in this band first, then the credential that proves caliber, then the capability a buyer can act on. Themes, influences and artistic mission do not survive the edit. ROSTER.md's open task is a one-line accolade per chair, which is the `credit` field.",
 
-  "players": [
-    {
-      "name": "Daniel Fox",
-      "chair": "Your contact for the night. Bass, both books.",
-      "credit": "Founded a festival, co-owns a concert series, and is the only player in every build.",
-      "bio": [
-        "There are two kinds of lead on a stage and they are rarely the same person. One calls the show in front of the room. The other holds the booking. Daniel is the second one. The number that arrives with your contract is his, he answers this website himself, and he is on the stand all night, so there is nobody to hand you off to on the day.",
-        "He came to this from the other side of the table. He founded Unfold Fest in Costa Rica in 2021 and booked the whole thing without playing a note on it. He co-owns Dizzy Charlies Music and Events in Colorado Springs, where he has run a summer concert series end to end and booked every act on it, playing exactly one himself. He has held a run of show rather than played to one, and that is most of the reason this site publishes what it publishes.",
-        "He plays bass in both books, upright with The Standards and electric with The Headliners. That makes him the one person on stage at every size on the rate card, from the two-piece at six o'clock to the thirteen-piece at eleven.",
-        "Bass, drums, guitar and keys are all gig-ready, which matters most on the nights that go sideways. He has played a full show with a band he had never met and whose material he did not know, and covered bass for Booty and the Beat at an Aurora festival on three days' notice with no rehearsal. On a Signet date he does it before anyone notices: he covers a chair, reassigns a part, swaps a song, and rebuilds the set while it is still running."
-      ]
-    },
-    {
-      "name": "Tejas Singh",
-      "chair": "Fronts The Headliners. Guitar and lead voice.",
-      "credit": "Calls the show from the stage. Years in the Washington, D.C. and New York scenes, and two records of his own.",
-      "bio": [
-        "Tejas is the other kind of lead. On a Headliners date he calls the show from the stage: counts the tunes, reads the floor, decides what follows what. It is the leadership the room can see, and it is why he can rebuild a set three songs in without anyone noticing he did.",
-        "He came up as a songwriter rather than a covers player, through years in the Washington, D.C. and New York music scenes before Denver. He has released two records under his own name, Good Years and Closer/Warmer.",
-        "He writes across rock, Americana, soul, folk and pop. That range is why the band can play Motown and a song released this year inside one set without sounding like two different groups working in shifts.",
-        "On his own he performs with live looping, building an arrangement in real time instead of playing to a track. It is why one player can cover a cocktail hour and still fill the room."
-      ]
-    }
-  ],
+  "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
 
   "rates": [
     { "size": "Duo", "pieces": 2, "callOut": 600, "hourly": 450, "min": 1 },
@@ -95,6 +43,12 @@
     "Timeline coordination before the event",
     "Continuous audio during breaks"
   ],
+
+  "_insurance_note": "ADDED 2026-08-15 with the roster restructure, from the spec's planner trust-signal list. These are a PUBLISHED CLAIM ABOUT REAL COVERAGE, not marketing copy: a planner forwards them to a venue and the venue checks the certificate against them. VERIFY BOTH FIGURES AGAINST THE ACTUAL POLICY BEFORE THIS PAGE IS PROMOTED. $1M per occurrence / $2M aggregate is the standard commercial general liability pair venues ask for, which is why the spec names it, but standard is not the same as what we hold. If the policy differs, change it here and it changes everywhere it renders.",
+  "insurance": {
+    "perOccurrence": "$1,000,000",
+    "aggregate": "$2,000,000"
+  },
 
   "extras": [
     { "item": "Front Range travel: Boulder, Colorado Springs, Fort Collins", "rate": "$300" },
@@ -185,8 +139,9 @@
       "group": "The band and the people",
       "items": [
         {
+          "_rewritten_note": "2026-08-15. The old answer named the two house bands and described benches and chairs, which is the lineup framing the restructure retires. The honest answer under an agency model is simpler and stronger: you are not booking a pool, you are booking an act.",
           "q": "Do you have regular personnel, or is the band filled with whoever is available?",
-          "a": "Named chairs, held by the same players. The Standards and The Headliners draw from separate benches rather than one shared pool, so a jazz drummer is never asked to play funk or a rock drummer to play dinner volume. Most chairs are two deep, and the second name is a specific person, not an agency call."
+          "a": "You book an act, not a pool. Every act on the roster is an existing group with its own book and its own regular personnel, fronted by the person whose name is on it. That person never changes, because they are what you booked. A flamenco act is not assembled out of whoever was free, and a funk act is never asked to play dinner volume it does not play."
         },
         {
           "q": "What happens if a player cannot make the date?",

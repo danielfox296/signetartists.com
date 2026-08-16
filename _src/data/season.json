@@ -1,0 +1,46 @@
+{
+  "_comment": "The corporate holiday season board. Built 2026-08-15 for the Nov/Dec 2026 landing page.",
+
+  "_MAINTENANCE": "THIS IS THE ONE FILE ON THE SITE THAT GOES STALE. It publishes availability, which is a factual claim about the calendar, and a wrong one costs a double booking or a lost enquiry. Update `status` per date as holds and bookings land, and bump `updated` every time. The page prints `updated` on it so a visitor can see how fresh the board is; that is deliberate and should not be removed.",
+
+  "_STATUS_WARNING": "Every date below currently reads `open` because no booking calendar was supplied with the restructure spec. That is an assumption, not a verified fact. True it up against the real calendar BEFORE this page is promoted anywhere.",
+
+  "year": 2026,
+  "label": "November and December 2026",
+  "updated": "2026-08-15",
+
+  "_dates_note": "Thursdays, Fridays and Saturdays, which is where corporate holiday parties actually sit. Thanksgiving (Nov 26) and Christmas (Dec 24 to 26) are out. New Year's Eve is in and priced at +50% per the extras list.",
+
+  "_status_values": "open | held | booked. `held` renders as a soft hold that can still be beaten; `booked` renders struck through, because a season board with nothing gone on it is not evidence of anything.",
+
+  "dates": [
+    { "date": "2026-11-05", "status": "open" },
+    { "date": "2026-11-06", "status": "open" },
+    { "date": "2026-11-07", "status": "open" },
+    { "date": "2026-11-12", "status": "open" },
+    { "date": "2026-11-13", "status": "open" },
+    { "date": "2026-11-14", "status": "open" },
+    { "date": "2026-11-19", "status": "open" },
+    { "date": "2026-11-20", "status": "open" },
+    { "date": "2026-11-21", "status": "open" },
+    { "date": "2026-11-27", "status": "open" },
+    { "date": "2026-11-28", "status": "open" },
+    { "date": "2026-12-03", "status": "open" },
+    { "date": "2026-12-04", "status": "open" },
+    { "date": "2026-12-05", "status": "open", "peak": true },
+    { "date": "2026-12-10", "status": "open" },
+    { "date": "2026-12-11", "status": "open", "peak": true },
+    { "date": "2026-12-12", "status": "open", "peak": true },
+    { "date": "2026-12-17", "status": "open" },
+    { "date": "2026-12-18", "status": "open", "peak": true },
+    { "date": "2026-12-19", "status": "open", "peak": true },
+    { "date": "2026-12-31", "status": "open", "note": "New Year's Eve" }
+  ],
+
+  "_leads_note": "The three configurations to lead the holiday page with, per the restructure spec. Named by act id so they resolve against acts.json rather than being retyped here.",
+  "leads": [
+    { "act": "josh-dj", "config": "dj", "why": "The whole night on one line, at the smallest number on this page. The format most corporate parties actually book." },
+    { "act": "jordan-lovinger-and-df", "config": "duo", "why": "Drinks and dinner covered without anybody raising their voice over it. The safest booking on the page for a room that has speeches in it." },
+    { "act": "tejas-sing", "config": "quartet", "why": "The dance floor booking. Book this when the party is the point rather than the backdrop." }
+  ]
+}

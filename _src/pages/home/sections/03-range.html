@@ -1,23 +1,31 @@
-<!-- The range grid — pillar 2 as a picture. The evening warms here:
-     paper-sunk, before the night section inverts. -->
+<!-- Pillar 2 as a picture. Rewritten 2026-08-15: this block described two house
+     bands and a DJ, which is not what the business is. It is an agency booking
+     named acts, so the home page shows the three flagship acts and sends the
+     rest to the roster. The evening still warms here, paper-sunk, before the
+     night section inverts. -->
 <section class="section section--ruled section--sunk">
   <div class="wrap">
     <div class="heading">
-      <p class="eyebrow">OUR ENTERTAINMENT Range</p>
-      <h2 class="h2">Variable piece bands and a DJ, assembled around your run of show.</h2>
-      <p class="lede">Our jazz and lounge act "The Standards" play ceremony, cocktails and dinner, while out hits group "The Headliners" fill the dance floor. The DJ carries it past midnight (or whenever you want that particular magic). Book one part of the night, or all three.</p>
+      <p class="eyebrow">The roster</p>
+      <h2 class="h2">Eight acts, and the price of every one of them.</h2>
+      <p class="lede">Flamenco, jazz standards, funk, americana, singer-songwriter covers and a DJ. Named acts with their own books, not one band renamed for the occasion. Three of them are below. The rest are on the roster, filterable by the kind of night, the size and what you have to spend.</p>
     </div>
 
-    {{acts_grid}}
+    {{roster_grid_flagships}}
+
+    <div class="btn-row">
+      <a class="btn btn--outline" href="music/">The whole roster</a>
+      <a class="btn btn--outline" href="pricing/">The rate card</a>
+    </div>
 
     <p class="tag-label">Booked for</p>
     {{event_types}}
   </div>
 </section>
 
-<!-- The sleeves, wired in 2026-08-07. It sits directly under the range grid
-     because range is a claim about what we can play and this is the only
-     evidence for it on the page. Full-bleed on the night ground, so the strip
-     also does the arc's work: the range section warms, the sleeves drop to
-     midnight, and the late-night section that follows is already there. -->
+<!-- The sleeves, wired in 2026-08-07. It sits directly under the roster because
+     range is a claim about what we can play and this is the only evidence for
+     it on the page. Full-bleed on the night ground, so the strip also does the
+     arc's work: the roster section warms, the sleeves drop to midnight, and the
+     late-night section that follows is already there. -->
 {{cover_strip}}

@@ -1,0 +1,10 @@
+{
+  "_note": "Time-critical landing page for the Nov/Dec 2026 corporate holiday season, built 2026-08-15. The season decides August through October, so this page is live before the enquiries start rather than after. Availability comes from _src/data/season.json, which carries its own maintenance warning: the board is the one thing on this site that goes stale.",
+  "_seasonal_note": "At the end of the 2026 season this page either rolls to 2027 (update season.json, retitle) or gets a noindex. Do not leave a page publishing last year's availability.",
+  "title": "Corporate holiday party bands and DJs in Denver, November and December 2026",
+  "title_exact": true,
+  "meta_description": "Live music and DJs for Denver corporate holiday parties, November and December 2026. Open dates published, rates published, from $1,500. Book August through October for the best dates.",
+  "output": "corporate/holiday/index.html",
+  "nav": "corporate",
+  "schema": "roster"
+}

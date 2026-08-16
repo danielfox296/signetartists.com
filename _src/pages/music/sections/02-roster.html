@@ -1,0 +1,15 @@
+<!-- Filter UI ships hidden and roster.js unhides it, so with script off every
+     act on the roster is still on the page. The filter is a class toggle over
+     data attributes rendered by build.py, never a re-render. -->
+<section class="section section--ruled">
+  <div class="wrap">
+    <h2 class="h3">Filter the roster</h2>
+    <p class="note">By the kind of night, the size of the act, or what you have to spend. Starting prices are Denver metro; mountain and resort dates carry their own column on the <a href="../pricing/">rate card</a>.</p>
+
+    {{roster_filters}}
+
+    {{roster_grid}}
+  </div>
+</section>
+
+<script defer src="../acts.js"></script>

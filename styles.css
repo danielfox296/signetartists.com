@@ -2365,6 +2365,410 @@ img {
   }
 }
 
+/* ============================================================= the roster
+   Restructure 2026-08-15. The site went from two house bands to eight named
+   acts, which changes what a card has to carry: not a mood paragraph but an
+   identity, a size range and a price. Every rule below reads the existing
+   tokens; no new colour enters the system. */
+
+/* The face is the one name published for an act, so it sits directly under
+   the name rather than in the blurb. Faint, because it is attribution and
+   not a headline. */
+.act-face {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+/* Bucket tags. Hairline chips rather than filled pills: the card already has
+   a photograph and a price in brass, and a third filled element would fight
+   both. Doubles as the visible legend for the filter above. */
+.pill-row {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+}
+
+.pill {
+  padding: 0.1875rem 0.5rem;
+  border: 1px solid var(--rule-strong);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------- roster cards */
+
+/* The image bleeds to the card edge, so padding moves off .card and onto the
+   body. .card's own 1.5rem is overridden rather than fought with a negative
+   margin. */
+.act-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.act-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-sunk);
+}
+
+.act-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Configurations and the starting price, as a definition list because that
+   is what it is. Pushed to the bottom of the card with margin-top:auto so a
+   row of cards lines its prices up regardless of blurb length. That
+   alignment is the point of publishing them: the row is comparable at a
+   glance, which is the whole differentiator. */
+.act-facts {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  align-items: baseline;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+}
+
+.act-facts dt {
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  font-size: 0.6875rem;
+  color: var(--ink-faint);
+}
+
+.act-facts dd {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.act-facts dd.num-accent {
+  font-size: 1rem;
+}
+
+.act-card-link {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 0.125rem;
+}
+
+.act-card-link:hover {
+  color: var(--brass);
+}
+
+/* ------------------------------------------------------------- filtering */
+
+/* Ships hidden and roster.js unhides it. With script off the controls never
+   appear and every act is on the page, which is the only honest default:
+   a filter that cannot filter must not be offered. */
+.roster-filters {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 10rem;
+  flex: 1 1 10rem;
+}
+
+.filter-field label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+.filter-field select {
+  padding: 0.5rem 0.625rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+}
+
+/* role="status" — the count is the only confirmation a filter did anything,
+   so it has to reach a screen reader as well as the eye. */
+.filter-count {
+  flex: 0 0 auto;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-empty {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.act-card[hidden] {
+  display: none;
+}
+
+/* --------------------------------------------------------- the act pages */
+
+.act-hero .heading {
+  max-width: 44rem;
+}
+
+.act-from {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.act-hero .btn {
+  margin-top: 1.5rem;
+}
+
+/* The footage slot. It renders whether or not a video exists, because the
+   gap is real and a page that silently omits the slot hides it. Empty, it
+   carries the placeholder still at low contrast under a brass edge, the same
+   convention the technical page's provisional tables use: a brass edge means
+   this is ours and it is not finished. */
+.act-video {
+  margin-top: 2.5rem;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  overflow: hidden;
+}
+
+.act-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.act-video--empty {
+  border-left: 2px solid var(--brass);
+}
+
+.act-video-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+}
+
+.act-video-note {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+/* The "where it lands" column is prose inside a numeric table, so it is the
+   one cell allowed to wrap. Without this the ladder forces a horizontal
+   scroll on every phone. */
+.rate-table td.ladder-best {
+  white-space: normal;
+  min-width: 14rem;
+  color: var(--ink-faint);
+}
+
+/* The build, under the size it belongs to. A second line inside the row
+   header rather than its own column: it is a caption for the size, and a
+   fifth column would push the two price columns off a phone. */
+.rate-note {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+  white-space: normal;
+}
+
+.rate-table th.rate-size {
+  color: var(--ink);
+  vertical-align: top;
+  min-width: 11rem;
+  white-space: normal;
+}
+
+.rate-card {
+  min-width: 34rem;
+}
+
+/* The corporate envelope is not a configuration. The rule above it says so
+   without a subheading interrupting the table. */
+.rate-row--corp th,
+.rate-row--corp td {
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 1.25rem;
+}
+
+/* ---------------------------------------------------------- the set list */
+
+.setlist {
+  margin-top: 1rem;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.setlist--cols {
+  grid-template-columns: 1fr;
+}
+
+.song-title {
+  color: var(--ink);
+}
+
+.song-artist {
+  color: var(--ink-faint);
+}
+
+.song-artist::before {
+  content: " / ";
+  color: var(--rule-strong);
+}
+
+.h5 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+/* Prose measure, independent of --wrap. Identity copy and the close are read
+   rather than scanned, and 64rem is too wide to read at. */
+.wrap--narrow {
+  max-width: 42rem;
+  margin-right: 0;
+}
+
+.wrap--narrow .prose + .prose {
+  margin-top: 1rem;
+}
+
+.act-cta .btn {
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .setlist--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .split--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .setlist--cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ======================================================== the season board
+   The Nov/Dec availability module on the corporate holiday page. It is a
+   calendar rendered as a grid of tiles rather than a month view, because
+   the only question it answers is which nights are free, and a month view
+   spends most of its area on Mondays nobody is asking about. */
+
+.season-board {
+  margin-top: 2rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 1px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.season-date {
+  background: var(--paper-sunk);
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.season-day {
+  font-size: 0.875rem;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.season-status {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+.season-date--open .season-status {
+  color: var(--brass);
+}
+
+/* Gone dates stay on the board. A season board with nothing taken off it is
+   not evidence of a season, and striking them is the only honest way to show
+   scarcity: the proof is the dates you cannot have. */
+.season-date--booked {
+  background: var(--paper);
+}
+
+.season-date--booked .season-day {
+  text-decoration: line-through;
+  color: var(--ink-faint);
+}
+
+.season-date--held .season-status {
+  color: var(--ink-soft);
+}
+
+/* The nights that always go first. A left edge rather than a fill, so the
+   brass stays spent on the status word and the peak marker reads as an
+   annotation on the tile instead of competing with it. */
+.season-date--peak {
+  border-left: 2px solid var(--brass);
+}
+
+.season-tag {
+  font-size: 0.6875rem;
+  color: var(--ink-faint);
+}
+
 /* ------------------------------------------------------------- utilities */
 .visually-hidden {
   position: absolute;

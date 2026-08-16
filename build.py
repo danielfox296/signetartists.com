@@ -47,6 +47,22 @@ BRAND = site["brand"]
 SITE_URL = BRAND["url"].rstrip("/")
 OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 
+# The act roster (restructure 2026-08-15). Acts are data, never hardcoded
+# pages: act pages, roster cards, the filter UI, per-act Offer schema and
+# llms.txt all render from _src/data/acts.json. Prices live only on the rate
+# card and are looked up by config id, so an act page and the pricing page
+# cannot drift apart.
+ACTS_FILE = DATA / "acts.json"
+roster = json.loads(ACTS_FILE.read_text(encoding="utf-8"))
+ACTS = roster["acts"]
+RATE_CARD = roster["rateCard"]
+RATE_BY_ID = {r["id"]: r for r in RATE_CARD}
+BUCKETS = roster["buckets"]
+BUCKET_LABEL = {b["id"]: b["label"] for b in BUCKETS}
+FLAGSHIPS = [a for a in ACTS if a["status"] == "flagship"]
+LISTINGS = [a for a in ACTS if a["status"] == "listing"]
+ACTS_BASE = "music"  # roster lives at /music/, act pages at /music/<id>/
+
 PLACEHOLDER = re.compile(r"\[.+\]")
 COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 
@@ -177,29 +193,6 @@ def faq_list() -> str:
         for f in site["faqs"]
     )
     return f'<dl class="faq-list">{rows}</dl>'
-
-
-def players_list() -> str:
-    """Featured bandleaders. Chair above the name, the same order the acts use:
-    what this person does here comes before who they are, because a planner
-    reads the chair and a client reads the name.
-
-    Stacked rather than gridded on purpose. One bio has to look deliberate,
-    since the roster publishes as the accolade sweep lands rather than at once.
-    """
-    out = []
-    for p in site.get("players", []):
-        # val(), not esc(): a bio paragraph still carrying [bracketed] copy is
-        # unwritten, and gets the same dotted underline as any other unresolved
-        # value so a gap in the roster cannot ship looking finished.
-        paras = "".join(f'<p class="prose">{val(t)}</p>' for t in p["bio"])
-        out.append(
-            '<article class="player">'
-            f'<p class="act-kind">{esc(p["chair"])}</p>'
-            f'<h3 class="h3 act-heading">{esc(p["name"])}</h3>'
-            f"{paras}</article>"
-        )
-    return f'<div class="player-list">{"".join(out)}</div>'
 
 
 def _config_rows(columns) -> str:
@@ -376,44 +369,243 @@ def planner_faq_list() -> str:
     return "".join(out)
 
 
-def acts_grid() -> str:
-    cards = "".join(
-        '<article class="card">'
-        f'<h3 class="act-name">{esc(a["name"])}</h3>'
-        f'<p class="act-kind">{esc(a["kind"])}</p>'
-        f'<p class="act-sizes">{esc(a["sizes"])}</p>'
-        f'<p class="act-blurb">{esc(a["blurb"])}</p>'
-        "</article>"
-        for a in site["acts"]
-    )
-    return f'<div class="card-grid card-grid--3">{cards}</div>'
-
-
-def acts_sections(nav_prefix: str = "") -> str:
-    """Music page: one alternating band per section, image beside it."""
-    out = []
-    for i, a in enumerate(site["acts"]):
-        sunk = " section--sunk" if i % 2 == 1 else ""
-        flip = " split--flip" if i % 2 == 1 else ""
-        out.append(
-            f'<section class="section section--ruled{sunk}"><div class="wrap">'
-            f'<div class="split split--center{flip}">'
-            "<div>"
-            f'<p class="act-kind">{esc(a["kind"])}</p>'
-            f'<h2 class="h2 act-heading">{esc(a["name"])}</h2>'
-            f'<p class="act-sizes">{esc(a["sizes"])}</p>'
-            f'<p class="prose">{esc(a["blurb"])}</p>'
-            "</div>"
-            f'<img class="media" src="{nav_prefix}img/{esc(a["img"])}" '
-            f'alt="{esc(a["alt"])}" width="1600" height="900" loading="lazy" decoding="async">'
-            "</div></div></section>"
-        )
-    return "".join(out)
-
-
 def event_types() -> str:
     items = "".join(f"<li>{esc(t)}</li>" for t in site["eventTypes"])
     return f'<ul class="tag-list">{items}</ul>'
+
+
+# ----------------------------------------------------------------- the roster
+# En dashes in numeric ranges only. They are a data separator, the same
+# accepted exemption as the title separator; the em-dash ban is on prose.
+
+
+def rng(pair: list) -> str:
+    return f"{money(pair[0])}–{pair[1]:,}"
+
+
+def rate_of(config_id: str) -> dict:
+    return RATE_BY_ID[config_id]
+
+
+def act_url(act: dict, nav_prefix: str = "") -> str:
+    return f"{nav_prefix}{ACTS_BASE}/{act['id']}/"
+
+
+def act_from_price(act: dict) -> int:
+    """The published floor for an act: the bottom of its smallest config,
+    Denver column. Every surface an act appears on shows this number."""
+    return rate_of(act["from"])["denver"][0]
+
+
+def act_configs(act: dict) -> list:
+    return [rate_of(c) for c in act["config_tags"]]
+
+
+def act_config_range(act: dict) -> str:
+    """"Trio to six piece", not "Trio to Five to six piece". The tail of a range
+    reads as prose, so the rate card carries a lowercase `rangeLabel` for it
+    rather than the title-case table label."""
+    configs = act_configs(act)
+    if len(configs) == 1:
+        return configs[0]["label"]
+    return f'{configs[0]["label"]} to {configs[-1]["rangeLabel"]}'
+
+
+def rate_card_table() -> str:
+    """The published rate card. THE differentiator: almost no Colorado
+    competitor publishes one, so this table is static HTML on a crawlable
+    page and never rendered by script."""
+    rows = []
+    for r in RATE_CARD:
+        note = f'<span class="rate-note">{esc(r["note"])}</span>' if r.get("note") else ""
+        rows.append(
+            "<tr>"
+            f'<th scope="row" class="rate-size">{esc(r["label"])}{note}</th>'
+            f'<td class="num-accent">{rng(r["denver"])}</td>'
+            f'<td>{rng(r["resort"])}</td>'
+            "</tr>"
+        )
+    corp = roster["corporateRange"]
+    open_mark = "+" if corp.get("resortOpen") else ""
+    rows.append(
+        '<tr class="rate-row--corp">'
+        '<th scope="row" class="rate-size">Corporate band range'
+        '<span class="rate-note">Not a size. What a corporate buyer should budget.</span></th>'
+        f'<td class="num-accent">{rng(corp["denver"])}</td>'
+        f'<td>{rng(corp["resort"])}{open_mark}</td>'
+        "</tr>"
+    )
+    return (
+        '<div class="table-scroll"><table class="rate-table rate-card tnum">'
+        "<thead><tr><th>Configuration</th><th>Denver metro</th>"
+        "<th>Mountain and resort</th></tr></thead>"
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
+
+
+def act_card(act: dict, nav_prefix: str = "") -> str:
+    """One roster card. Carries its own filter state in data attributes so
+    the filter UI is a class toggle and never a re-render."""
+    flagship = act["status"] == "flagship"
+    buckets = " ".join(act["bucket_tags"])
+    configs = " ".join(act["config_tags"])
+    price = act_from_price(act)
+    tags = "".join(
+        f'<li class="pill">{esc(BUCKET_LABEL[b])}</li>' for b in act["bucket_tags"]
+    )
+    cta = (
+        f'<a class="act-card-link" href="{act_url(act, nav_prefix)}">'
+        f'See {esc(act["name"])}</a>'
+        if flagship
+        else f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">Inquire</a>'
+    )
+    return (
+        f'<article class="card act-card" data-buckets="{esc(buckets)}" '
+        f'data-configs="{esc(configs)}" data-price="{price}" '
+        f'data-status="{esc(act["status"])}" data-name="{esc(act["name"])}">'
+        f'<img class="act-card-img" src="{nav_prefix}img/{esc(act["img"])}" '
+        f'alt="{esc(act["alt"])}" width="1600" height="900" loading="lazy" decoding="async">'
+        '<div class="act-card-body">'
+        f'<p class="act-kind">{esc(act["style"])}</p>'
+        f'<h3 class="act-name">{esc(act["name"])}</h3>'
+        f'<p class="act-face">Fronted by {esc(act["face"])}</p>'
+        f'<ul class="pill-row">{tags}</ul>'
+        f'<p class="act-blurb">{esc(act["blurb"])}</p>'
+        '<dl class="act-facts">'
+        f"<dt>Configurations</dt><dd>{esc(act_config_range(act))}</dd>"
+        f'<dt>From</dt><dd class="num-accent">{money(price)}</dd>'
+        "</dl>"
+        f"{cta}"
+        "</article>"
+    )
+
+
+def roster_filters() -> str:
+    """Filter by bucket, config size and price. Rendered as real controls in
+    static HTML: with script off every act is visible and nothing is lost."""
+    bucket_opts = "".join(
+        f'<option value="{esc(b["id"])}">{esc(b["label"])}</option>' for b in BUCKETS
+    )
+    config_opts = "".join(
+        f'<option value="{esc(r["id"])}">{esc(r["label"])}</option>' for r in RATE_CARD
+    )
+    price_opts = "".join(
+        f'<option value="{v}">{label}</option>'
+        for v, label in [
+            (1500, "Under $1,500"),
+            (2800, "Under $2,800"),
+            (4000, "Under $4,000"),
+            (6000, "Under $6,000"),
+        ]
+    )
+    return (
+        '<form class="roster-filters" id="roster-filters" hidden>'
+        '<div class="filter-field"><label for="filter-bucket">Kind of night</label>'
+        '<select id="filter-bucket" name="bucket">'
+        f'<option value="">Any</option>{bucket_opts}</select></div>'
+        '<div class="filter-field"><label for="filter-config">Size</label>'
+        '<select id="filter-config" name="config">'
+        f'<option value="">Any</option>{config_opts}</select></div>'
+        '<div class="filter-field"><label for="filter-price">Starting price</label>'
+        '<select id="filter-price" name="price">'
+        f'<option value="">Any</option>{price_opts}</select></div>'
+        '<button type="button" class="btn btn--sm btn--outline" id="filter-reset">Reset</button>'
+        f'<p class="filter-count" id="filter-count" role="status">{len(ACTS)} acts</p>'
+        "</form>"
+    )
+
+
+def roster_grid(nav_prefix: str = "") -> str:
+    cards = "".join(act_card(a, nav_prefix) for a in ACTS)
+    return (
+        f'<div class="card-grid card-grid--3 roster-grid" id="roster-grid">{cards}</div>'
+        '<p class="filter-empty" id="filter-empty" hidden>Nothing on the roster matches '
+        "that combination. Widen one of the three and it will.</p>"
+    )
+
+
+# ------------------------------------------------------- the holiday season
+# Availability is a factual claim with a cost attached to being wrong, so the
+# board prints the date it was last trued up and season.json carries the
+# maintenance warning. See _src/data/season.json.
+
+SEASON = json.loads(read(DATA / "season.json"))
+ACT_BY_ID = {a["id"]: a for a in ACTS}
+
+
+def season_board() -> str:
+    cells = []
+    for d in SEASON["dates"]:
+        dt = datetime.datetime.strptime(d["date"], "%Y-%m-%d")
+        label = f'{dt.strftime("%a")} {dt.strftime("%b")} {dt.day}'
+        classes = f'season-date season-date--{d["status"]}'
+        if d.get("peak"):
+            classes += " season-date--peak"
+        tail = ""
+        if d.get("note"):
+            tail = f'<span class="season-tag">{esc(d["note"])}</span>'
+        elif d.get("peak"):
+            tail = '<span class="season-tag">Goes first</span>'
+        word = {"open": "Open", "held": "On hold", "booked": "Booked"}[d["status"]]
+        cells.append(
+            f'<li class="{classes}"><span class="season-day">{esc(label)}</span>'
+            f'<span class="season-status">{word}</span>{tail}</li>'
+        )
+    open_count = sum(1 for d in SEASON["dates"] if d["status"] == "open")
+    updated = datetime.datetime.strptime(SEASON["updated"], "%Y-%m-%d")
+    return (
+        f'<ul class="season-board">{"".join(cells)}</ul>'
+        f'<p class="note"><strong class="num-accent">{open_count}</strong> of '
+        f'{len(SEASON["dates"])} party dates still open. Board last checked '
+        f'{updated.strftime("%-d %B %Y")}. A date is only held once a contract '
+        "and a retainer land, so an open date here is genuinely open.</p>"
+    )
+
+
+def season_leads(nav_prefix: str = "") -> str:
+    """The three configurations to lead the holiday page with. Names and prices
+    resolve out of acts.json and the rate card, never retyped."""
+    cards = []
+    for lead in SEASON["leads"]:
+        act = ACT_BY_ID[lead["act"]]
+        r = rate_of(lead["config"])
+        cards.append(
+            '<article class="card">'
+            f'<p class="act-kind">{esc(r["label"])}</p>'
+            f'<h3 class="act-name">{esc(act["name"])}</h3>'
+            f'<p class="act-face">{esc(act["style"])}. Fronted by {esc(act["face"])}.</p>'
+            f'<p class="act-blurb">{esc(lead["why"])}</p>'
+            '<dl class="act-facts"><dt>Denver</dt>'
+            f'<dd class="num-accent">{rng(r["denver"])}</dd>'
+            f'<dt>Resort</dt><dd>{rng(r["resort"])}</dd></dl>'
+            f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">'
+            "Check a date</a>"
+            "</article>"
+        )
+    return f'<div class="card-grid card-grid--3">{"".join(cards)}</div>'
+
+
+def act_picker() -> str:
+    """The act field on the contact form. Every "Inquire" link across the site
+    carries ?act=<id>, and contact.js preselects from it, so an inquiry that
+    started on an act page arrives naming that act. Without script the field
+    is still a working select, which is why it is rendered rather than hidden."""
+    opts = "".join(
+        f'<option value="{esc(a["name"])}" data-id="{esc(a["id"])}">'
+        f'{esc(a["name"])} ({esc(a["style"])})</option>'
+        for a in ACTS
+    )
+    return (
+        '<div class="field"><label for="act">Act</label>'
+        '<select id="act" name="Act">'
+        '<option value="">Not sure yet, recommend one</option>'
+        f"{opts}</select></div>"
+    )
+
+
+def roster_grid_flagships(nav_prefix: str = "") -> str:
+    cards = "".join(act_card(a, nav_prefix) for a in FLAGSHIPS)
+    return f'<div class="card-grid card-grid--3">{cards}</div>'
 
 
 # ------------------------------------------------------------ structured data
@@ -515,10 +707,114 @@ def planner_faq_schema() -> dict:
     }
 
 
+# The towns the business actually serves, named individually rather than as a
+# prose blob. Search reads these; "the mountain corridor" is not a place.
+SERVICE_AREAS = [
+    "Denver", "Boulder", "Colorado Springs", "Fort Collins",
+    "Vail", "Beaver Creek", "Aspen", "Breckenridge",
+    "Telluride", "Steamboat Springs", "Winter Park", "Crested Butte",
+]
+
+
+def local_business_node() -> dict:
+    return {
+        "@type": "LocalBusiness",
+        "@id": f"{SITE_URL}/#business",
+        "name": BRAND["name"],
+        "description": BRAND["intro"],
+        "url": SITE_URL,
+        "email": BRAND["email"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": BRAND["city"],
+            "addressRegion": BRAND["region"],
+            "addressCountry": "US",
+        },
+        "areaServed": [{"@type": "Place", "name": n} for n in SERVICE_AREAS],
+        "priceRange": "$$$",
+    }
+
+
+def act_offers(act: dict) -> list:
+    """One Offer per act config per column. The prices are the published rate
+    card, so structured data and the visible table are the same numbers."""
+    offers = []
+    for cid in act["config_tags"]:
+        r = rate_of(cid)
+        for col, area in (("denver", "Denver, CO"), ("resort", "Colorado mountain resorts")):
+            offers.append({
+                "@type": "Offer",
+                "name": f"{act['name']} — {r['label']}, {area}",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": r[col][0],
+                    "maxPrice": r[col][1],
+                    "priceCurrency": "USD",
+                },
+                "areaServed": area,
+                "availability": "https://schema.org/InStock",
+            })
+    return offers
+
+
+def act_service_node(act: dict) -> dict:
+    return {
+        "@type": "Service",
+        "@id": f"{SITE_URL}/{ACTS_BASE}/{act['id']}/#service",
+        "name": act["name"],
+        "serviceType": f"{act['style']} for private events",
+        "description": act["blurb"],
+        "provider": {"@id": f"{SITE_URL}/#business"},
+        "areaServed": [{"@type": "Place", "name": n} for n in SERVICE_AREAS],
+        "offers": act_offers(act),
+    }
+
+
+def act_schema(act: dict) -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@graph": [local_business_node(), act_service_node(act)],
+    }
+
+
+def roster_schema() -> dict:
+    """Roster and pricing pages: the business plus every act as a Service."""
+    return {
+        "@context": "https://schema.org",
+        "@graph": [local_business_node()] + [act_service_node(a) for a in ACTS],
+    }
+
+
+def pricing_schema() -> dict:
+    """The pricing page carries the most structured data on the site, on
+    purpose. It is the page whose whole job is to be crawled with numbers in
+    it: the business, every act as a Service with priced Offers per
+    configuration, and the pricing FAQ."""
+    return {
+        "@context": "https://schema.org",
+        "@graph": [local_business_node()]
+        + [act_service_node(a) for a in ACTS]
+        + [{
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": f["q"],
+                    "acceptedAnswer": {"@type": "Answer", "text": f["a"]},
+                }
+                for f in site["faqs"]
+            ],
+        }],
+    }
+
+
 SCHEMAS = {
     "organization": organization_schema,
     "faq": faq_schema,
     "plannerfaq": planner_faq_schema,
+    "roster": roster_schema,
+    "pricing": pricing_schema,
 }
 
 
@@ -604,6 +900,8 @@ def render_page(
         "{{brand_tagline}}": esc(BRAND["tagline"]),
         "{{brand_intro}}": esc(BRAND["intro"]),
         "{{brand_service_area}}": esc(BRAND["serviceArea"]),
+        "{{gl_per_occurrence}}": val(site["insurance"]["perOccurrence"]),
+        "{{gl_aggregate}}": val(site["insurance"]["aggregate"]),
         "{{brand_email}}": val(BRAND["email"]),
         "{{brand_email_raw}}": esc(BRAND["email"].strip("[]")),
         "{{form_action}}": esc(
@@ -657,10 +955,14 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{stage_table}}": stage_table(),
         "{{power_table}}": power_table(),
         "{{loadin_table}}": loadin_table(),
-        "{{players_list}}": players_list(),
-        "{{acts_grid}}": acts_grid(),
-        "{{acts_sections}}": acts_sections(nav_prefix),
         "{{event_types}}": event_types(),
+        "{{rate_card_table}}": rate_card_table(),
+        "{{roster_filters}}": roster_filters(),
+        "{{roster_grid}}": roster_grid(nav_prefix),
+        "{{roster_grid_flagships}}": roster_grid_flagships(nav_prefix),
+        "{{act_picker}}": act_picker(),
+        "{{season_board}}": season_board(),
+        "{{season_leads}}": season_leads(nav_prefix),
     }
     blocks.update(extra_blocks or {})
     for token, value in blocks.items():
@@ -677,6 +979,181 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         schema_html=build_schema(cfg),
         nav_active=cfg.get("nav", ""),
         nav_prefix=nav_prefix,
+    )
+    return {"output": output, "cfg": cfg}
+
+
+# -------------------------------------------------------------- act pages
+# Flagship pages are generated from acts.json, not authored as page dirs.
+# Adding a flagship is a status flip in the data file, never a new template.
+
+
+def act_hero(act: dict) -> str:
+    """Hero with the video slot. `video` is null until footage exists, and the
+    slot renders as a marked placeholder rather than being omitted, so the
+    gap is visible on the page instead of only in a backlog."""
+    price = money(act_from_price(act))
+    if act.get("video"):
+        media = (
+            '<div class="act-video"><iframe src="' + esc(act["video"]) + '" '
+            f'title="{esc(act["name"])} performing" loading="lazy" '
+            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+            'picture-in-picture" allowfullscreen></iframe></div>'
+        )
+    else:
+        media = (
+            '<div class="act-video act-video--empty" data-tbd="true" role="img" '
+            f'aria-label="Video of {esc(act["name"])} is not published yet.">'
+            '<img class="act-video-poster" src="../../img/' + esc(act["img"]) + '" '
+            f'alt="" width="1600" height="900" decoding="async">'
+            '<p class="act-video-note">Footage slot</p></div>'
+        )
+    return (
+        '<section class="section section--top act-hero"><div class="wrap">'
+        '<div class="heading">'
+        f'<p class="eyebrow eyebrow--slab">{esc(act["style"])}</p>'
+        f'<h1 class="h1 display">{esc(act["name"])}</h1>'
+        f'<p class="act-face">Fronted by {esc(act["face"])}. '
+        f'{esc(act["material"])}.</p>'
+        f'<p class="lede">{esc(act["blurb"])}</p>'
+        f'<p class="act-from">From <span class="num-accent">{price}</span> in Denver. '
+        f'Every configuration is priced below.</p>'
+        '<a class="btn" href="../../contact/?act=' + esc(act["id"]) + '">Check a date</a>'
+        "</div>"
+        f"{media}"
+        "</div></section>"
+    )
+
+
+def act_identity(act: dict) -> str:
+    paras = "".join(f'<p class="prose">{esc(p)}</p>' for p in act.get("identity", []))
+    return (
+        '<section class="section section--ruled"><div class="wrap wrap--narrow">'
+        f"{paras}</div></section>"
+    )
+
+
+def act_ladder(act: dict) -> str:
+    """The configuration ladder. Every rung carries both columns of the rate
+    card, pulled by config id, so this table cannot disagree with /pricing/."""
+    rows = []
+    for rung in act["ladder"]:
+        r = rate_of(rung["config"])
+        rows.append(
+            "<tr>"
+            f'<th scope="row" class="rate-size">{esc(r["label"])}'
+            f'<span class="rate-note">{esc(rung["build"])}</span></th>'
+            f'<td class="ladder-best">{esc(rung["bestFor"])}</td>'
+            f'<td class="num-accent">{rng(r["denver"])}</td>'
+            f'<td>{rng(r["resort"])}</td>'
+            "</tr>"
+        )
+    hourly = ""
+    if any(rate_of(x["config"]).get("hourly") for x in act["ladder"]):
+        h = next(rate_of(x["config"])["hourly"] for x in act["ladder"]
+                 if rate_of(x["config"]).get("hourly"))
+        hourly = f'<p class="note">A single hour on its own is {money(h)}.</p>'
+    return (
+        '<section class="section section--ruled section--sunk" id="configurations">'
+        '<div class="wrap"><h2 class="h3">Configurations</h2>'
+        '<p class="note">Starting prices. Mountain and resort dates add travel and '
+        "lodging, which is why they carry their own column.</p>"
+        '<div class="table-scroll"><table class="rate-table tnum">'
+        "<thead><tr><th>Size</th><th>Where it lands</th><th>Denver metro</th>"
+        "<th>Mountain and resort</th></tr></thead>"
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+        f"{hourly}"
+        "</div></section>"
+    )
+
+
+def _repertoire_setlist(act: dict) -> str:
+    songs = json.loads(read(DATA / "repertoire.json"))
+    cols = []
+    for group in act["setlist"]["groups"]:
+        # Deterministic pick: first N in catalogue order. Songs flagged `band`
+        # are held back, the same rule the cover walls use, so a set list never
+        # implies a lineup that was not booked.
+        picked = [
+            s for s in songs
+            if group["moment"] in s["moments"] and "band" not in s["flags"]
+        ][: group["count"]]
+        items = "".join(
+            f'<li><span class="song-title">{esc(s["title"])}</span> '
+            f'<span class="song-artist">{esc(s["artist"])}</span></li>'
+            for s in picked
+        )
+        cols.append(
+            f'<div><h3 class="h5">{esc(group["label"])}</h3>'
+            f'<ul class="setlist">{items}</ul></div>'
+        )
+    return f'<div class="split split--three">{"".join(cols)}</div>'
+
+
+def act_setlist(act: dict) -> str:
+    sl = act.get("setlist")
+    if not sl:
+        return ""
+    if sl.get("from_repertoire"):
+        body = _repertoire_setlist(act)
+        more = ('<p class="note"><a href="../../repertoire/">The whole song book</a> '
+                "is published, all 240 titles.</p>")
+    else:
+        items = "".join(f'<li><span class="song-title">{esc(i)}</span></li>'
+                        for i in sl["items"])
+        body = f'<ul class="setlist setlist--cols">{items}</ul>'
+        more = ""
+    return (
+        '<section class="section section--ruled"><div class="wrap">'
+        '<h2 class="h3">A sample of the set</h2>'
+        f'<p class="note">{esc(sl["note"])}</p>'
+        f"{body}{more}</div></section>"
+    )
+
+
+def act_cta(act: dict) -> str:
+    """The hold-or-no promise. It is the one thing on the page that is a
+    commitment rather than a description, so it gets its own section."""
+    return (
+        '<section class="section section--ruled section--sunk act-cta">'
+        '<div class="wrap wrap--narrow"><h2 class="h3">Check a date</h2>'
+        f'<p class="prose">Send the date, the venue and roughly how many guests. '
+        f'Inside 24 to 48 hours you get one of two answers: {esc(act["name"])} is '
+        "available and here is the hold, or it is not and here is what is. No "
+        "discovery call in between, and no quote that arrives a week later.</p>"
+        '<p class="prose">Prices on this page are what you pay. Travel outside the '
+        "metro, holiday weekends and New Year's Eve are quoted as their own lines "
+        'on the contract, and all three are published on the '
+        '<a href="../../pricing/">pricing page</a>.</p>'
+        '<a class="btn" href="../../contact/?act=' + esc(act["id"]) + '">Check a date</a>'
+        "</div></section>"
+    )
+
+
+def build_act_page(act: dict) -> dict:
+    output = f"{ACTS_BASE}/{act['id']}/index.html"
+    content = "".join([
+        act_hero(act),
+        act_identity(act),
+        act_ladder(act),
+        act_setlist(act),
+        act_cta(act),
+    ])
+    cfg = {
+        "title": act["seo_title"],
+        "title_exact": True,
+        "meta_description": act["meta_description"],
+        "output": output,
+        "nav": ACTS_BASE,
+    }
+    render_page(
+        output=output,
+        content=content,
+        title=cfg["title"],
+        title_exact=True,
+        meta_description=cfg["meta_description"],
+        schema_html=schema_tag(act_schema(act)),
+        nav_active=ACTS_BASE,
     )
     return {"output": output, "cfg": cfg}
 
@@ -928,7 +1405,33 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         for p in published:
             desc = p.get("llms_description") or p.get("meta_description") or p.get("dek", "")
             lines.append(f"- [{p['title']}]({SITE_URL}/blog/{p['slug']}/): {desc}")
-    lines += ["", "## Rates", ""]
+    # The roster, so an answer engine naming a Colorado act for a private
+    # event has real acts, real configurations and real floors to quote.
+    lines += ["", "## Acts", ""]
+    for a in ACTS:
+        where = f"{SITE_URL}/{ACTS_BASE}/{a['id']}/" if a["status"] == "flagship" \
+            else f"{SITE_URL}/{ACTS_BASE}/"
+        lines.append(
+            f"- {a['name']} ({a['style']}, fronted by {a['face']}): "
+            f"{a['blurb']} Configurations: {act_config_range(a)}. "
+            f"From {money(act_from_price(a))} in Denver. {where}"
+        )
+
+    lines += ["", "## Rate card", "",
+              "Starting prices by configuration. Denver metro, then mountain "
+              "and resort, which adds travel and lodging.", ""]
+    for r in RATE_CARD:
+        lines.append(
+            f"- {r['label']}: Denver {rng(r['denver'])}, "
+            f"mountain and resort {rng(r['resort'])}."
+        )
+    corp = roster["corporateRange"]
+    lines.append(
+        f"- Corporate band range: Denver {rng(corp['denver'])}, "
+        f"mountain and resort {rng(corp['resort'])}+."
+    )
+
+    lines += ["", "## Hourly build (Denver metro)", ""]
     for r in site["rates"]:
         four = money(r["callOut"] + r["hourly"] * 4)
         lines.append(
@@ -959,6 +1462,13 @@ def main() -> None:
         if result:
             built.append(result)
             print(f"  built {result['output']}")
+
+    # Flagship act pages, generated from acts.json. They join `built` so the
+    # sitemap and llms.txt pick them up with no separate registration.
+    for act in FLAGSHIPS:
+        result = build_act_page(act)
+        built.append(result)
+        print(f"  built {result['output']}")
 
     for post in published:
         result = build_blog_post(post, published)
