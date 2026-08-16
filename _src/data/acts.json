@@ -220,16 +220,16 @@
       "name": "Thomas Owen Band",
       "presentation": "face",
       "status": "listing",
-      "style": "Americana",
+      "style": "Outlaw Americana",
       "face": "Thomas Owen",
       "material": "Covers and originals",
       "bucket_tags": ["patio", "cocktail"],
-      "config_tags": ["trio"],
-      "from": "trio",
+      "config_tags": ["solo", "duo", "trio"],
+      "from": "solo",
       "img": "hero.jpg",
       "alt": "An empty room set for an event before doors.",
       "video": null,
-      "blurb": "Americana for a patio and the daylight end of an event. Roots, country and folk-rock played by a trio that can sit at conversation volume for three hours without going flat. Outdoor ceremonies, welcome parties and long afternoons.",
+      "blurb": "Outlaw americana for a patio and the daylight end of an event. Country, roots and the harder edge of the folk-rock book, at one piece up to three depending on how much room there is to fill. Sits at conversation volume for three hours without going flat, and has somewhere to go when it does not have to. Outdoor ceremonies, welcome parties and long afternoons.",
       "_promote_note": "Spec: promote to flagship when footage exists. The workbook also flags this act as originals-first with an open question about whether it can field a two hour covers set, which is why `material` says covers and originals. Resolve the covers question before promoting.",
       "_face_note": "Confirmed face-led by Daniel 2026-08-16. The name and the person stay on the card."
     },
@@ -277,11 +277,12 @@
     },
 
     {
-      "id": "blues-solo",
-      "name": "Blues Solo",
+      "id": "blues-rock",
+      "name": "Blues Rock",
       "presentation": "spec",
       "status": "listing",
-      "style": "Blues-based covers",
+      "_style_note": "Deliberately not 'Blues rock'. The card renders style as an eyebrow directly above the name, and a format named after its genre would print the same two words twice.",
+      "style": "Blues, rock and roots",
       "spec": "One voice and a guitar, or two",
       "material": "Covers",
       "bucket_tags": ["budget", "cocktail"],
@@ -292,7 +293,7 @@
       "video": null,
       "_was_note": "Listed as 'Tony Medina' until 2026-08-16. The workbook describes Freddy Alexander as redundant with him and calls that availability depth rather than a problem, which is the interchangeable pattern exactly. Spec'd, both sit behind one format and the depth becomes an asset instead of two thin listings competing at the bottom of the card.",
       "depth": ["Tony Medina", "Freddy Alexander"],
-      "blurb": "Blues-based covers, solo or as a duo, at the smallest spend on this roster. Background music that is actually played rather than streamed. Rehearsal dinners, welcome drinks, office parties, and any room where live music is the right idea and a band is the wrong size."
+      "blurb": "Blues rock covers, solo or as a duo, at the smallest spend on this roster. Real playing rather than a playlist, at whatever volume the room will take. Rehearsal dinners, welcome drinks, office parties, and any room where live music is the right idea and a band is the wrong size."
     }
   ],
 
