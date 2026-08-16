@@ -134,6 +134,8 @@
 
   "_plannerFaqs_note": "DRAFT 2026-08-07. The deep operational FAQ, the questions a planner asks that are not about price. `faqs` above stays the short pricing set on the pricing page; this is the full set on planners/faq/. Any entry with \"open\": true is an answer written as a best guess because it is a business policy nobody has decided yet. Those render with a dotted underline, the same convention as an unresolved brand value, so an undecided policy cannot ship silently. Resolve them, drop the flag.",
 
+  "_plannerFaqs_reconciliation_2026_08_16": "Reconciled against the contract drafts in outreach/readiness/ before planner outreach. Seven open flags became four. Closed: what holds a date (contract §3), balance and payment (contract §3 + invoice format 03c), outdoors (contract §7). Rewritten but still flagged: cancellation, which CONTRADICTED contract §5 outright. The site said 90 days with a transferring retainer; the contract says free postponement inside twelve months, separate from a cancellation line at 30 days. The site was disagreeing with the document a client signs. It now matches, and stays flagged only because the [30] in the contract is a bracketed default awaiting the attorney pass. Still genuinely open and needing Daniel: showcases, dress code, green room and meals. Vocabulary aligned to the contract throughout: deposit, never retainer.",
+
   "plannerFaqs": [
     {
       "group": "The band and the people",
@@ -167,18 +169,19 @@
       "group": "Booking and paperwork",
       "items": [
         {
+          "_closed_note": "Closed 2026-08-16 against contract §3. Vocabulary aligned to the contract: deposit, not retainer. The net-30 exception was missing here and is in the contract.",
           "q": "What holds a date?",
-          "a": "A signed contract and a 50% retainer. Until both land the date stays available to anyone else asking for it, and we will tell you if someone does.",
-          "open": true
+          "a": "A signed contract and a 50% deposit. Until both land the date stays available to anyone else asking for it, and we will tell you if someone does. Approved corporate accounts on net-30 are the exception: those hold on signature, and the full fee is invoiced after the event."
         },
         {
+          "_closed_note": "Closed 2026-08-16 against contract §3 and the invoice format in readiness/03c. CARD PAYMENT REMOVED: the site promised 'card with the processing fee added' and no processor exists; 03c lists ACH and check only. Restore the card sentence the day a processor is live, not before. ACH remit details still pend the bank conversation, which pends the trade-name filing.",
           "q": "When is the balance due, and how do we pay?",
-          "a": "The balance is due 14 days before the event. ACH and check for no fee, card with the processing fee added. Corporate clients can have net-30 on approval instead, with the terms written into the contract.",
-          "open": true
+          "a": "The balance is due 14 days before the event. ACH or a check made out to Entuned, LLC, both at no fee. Corporate clients can be approved for net-30 instead, invoiced at the event and due 30 days after it, with a purchase order number on the invoice if your finance team uses one."
         },
         {
+          "_contradiction_note": "REWRITTEN 2026-08-16. The old answer said 90 days and framed the retainer as transferring. Contract §5 says something materially different and better structured: postponement is free and separate from cancellation, and the cancellation line sits at 30 days. The site was contradicting the document the client actually signs. Still flagged open because the [30] in the contract is a bracketed default awaiting the attorney pass; confirm that number and this closes.",
           "q": "What is the cancellation policy?",
-          "a": "The retainer is non-refundable once the date is held, because holding it means turning away other work. Cancel more than 90 days out and the retainer transfers to any other date inside twelve months.",
+          "a": "Postponing is almost always cheaper than cancelling and we will say so at the time. One move to a new date inside twelve months is free, subject to availability, and everything paid transfers. If we cannot make any date that works, you get everything back. A straight cancellation more than 30 days out costs the deposit and nothing further. At 30 days or fewer the full fee is due, less any travel and lodging we have not already spent. If we ever cancel, every payment comes back inside 7 days and we help you and your planner find a replacement.",
           "open": true
         },
         {
@@ -240,9 +243,9 @@
           "a": "Dedicated 20-amp circuits within reach of the stage, one to four of them depending on the size of the band. The requirement most often missed is that they be dedicated: sharing a circuit with catering warmers or a lighting truss is the single most common cause of a problem at load-in. Exact counts are on the technical page."
         },
         {
+          "_closed_note": "Closed 2026-08-16 against contract §7, which requires a covered, level, dry performance area. Level and dry were missing here.",
           "q": "Can you play outdoors?",
-          "a": "Yes, with cover over the band and the desk, power run to the stage, and a plan for the weather written before the day. Colorado evenings drop fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time.",
-          "open": true
+          "a": "Yes, on a covered, level and dry performance area, with power run to it and a plan for the weather written before the day. Colorado evenings drop fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time."
         },
         {
           "q": "The venue has a curfew and a decibel limit. Is that a problem?",
