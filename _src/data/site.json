@@ -154,14 +154,14 @@
           "a": "One named person, and they are a player rather than a coordinator. Their number arrives with the contract, weeks before load-in, and they are reachable from load-in to load-out. Two roles sit behind that and they are rarely the same person: whoever fronts the band calls the show from the stage, counting tunes and reading the floor, while the person who holds your booking is the one you call. You deal with the second. The room watches the first. Every booking includes both."
         },
         {
+          "_closed_note": "Closed 2026-08-17. Daniel: no showcases. The old answer offered to arrange one. Deliberately does not promise footage in the abstract, because the act pages currently have empty video slots; it points at whatever is actually there, which stays true before and after the shoots land.",
           "q": "Can we see the band play before we book?",
-          "a": "Yes. Ask and we will tell you what is on the calendar that you could attend, or arrange a showcase.",
-          "open": true
+          "a": "We do not put on showcases. Where an act has a public date you could attend, we will tell you which one and when. Anything we have on video sits on that act's own page, so what you see there is what exists."
         },
         {
+          "_closed_note": "Ratified 2026-08-17 as written. Daniel: dress code is standard.",
           "q": "What do the players wear?",
-          "a": "Black tie, business formal or all black, whichever your event calls for. Tell us the dress code you have set for guests and we will sit one notch inside it. If you need something specific, put it in the contract and that is what the players wear.",
-          "open": true
+          "a": "Black tie, business formal or all black, whichever your event calls for. Tell us the dress code you have set for guests and we will sit one notch inside it. If you need something specific, put it in the contract and that is what the players wear."
         }
       ]
     },
@@ -174,9 +174,9 @@
           "a": "A signed contract and a 50% deposit. Until both land the date stays available to anyone else asking for it, and we will tell you if someone does. Approved corporate accounts on net-30 are the exception: those hold on signature, and the full fee is invoiced after the event."
         },
         {
-          "_closed_note": "Closed 2026-08-16 against contract §3 and the invoice format in readiness/03c. CARD PAYMENT REMOVED: the site promised 'card with the processing fee added' and no processor exists; 03c lists ACH and check only. Restore the card sentence the day a processor is live, not before. ACH remit details still pend the bank conversation, which pends the trade-name filing.",
+          "_closed_note": "Closed 2026-08-16 against contract §3 and the invoice format in readiness/03c. Card was pulled that day because no processor existed; Daniel confirmed Stripe 2026-08-17 and it is restored. ACH remit details still pend the bank conversation, which pends the trade-name filing.",
           "q": "When is the balance due, and how do we pay?",
-          "a": "The balance is due 14 days before the event. ACH or a check made out to Entuned, LLC, both at no fee. Corporate clients can be approved for net-30 instead, invoiced at the event and due 30 days after it, with a purchase order number on the invoice if your finance team uses one."
+          "a": "The balance is due 14 days before the event. ACH or a check made out to Entuned, LLC, both at no fee, or card through Stripe with the processing fee added. Corporate clients can be approved for net-30 instead, invoiced at the event and due 30 days after it, with a purchase order number on the invoice if your finance team uses one."
         },
         {
           "_contradiction_note": "REWRITTEN 2026-08-16. The old answer said 90 days and framed the retainer as transferring. Contract §5 says something materially different and better structured: postponement is free and separate from cancellation, and the cancellation line sits at 30 days. The site was contradicting the document the client actually signs. Still flagged open because the [30] in the contract is a bracketed default awaiting the attorney pass; confirm that number and this closes.",
@@ -252,9 +252,9 @@
           "a": "No. Mountain and residential venues run on their own rules and we honour them as written. Tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
         },
         {
+          "_closed_note": "Closed 2026-08-17. Daniel: green room not needed but it supports their event; if meals are served the band would like them. The old answer made both a requirement over four hours. Because neither is an obligation, this does NOT go into contract §7, which cancels draft note 7 on 03a.",
           "q": "Do the players need a green room or meals?",
-          "a": "For calls over four hours, a room to hold cases and change in, and a meal per player. Vendor meal is fine. For shorter calls neither is expected.",
-          "open": true
+          "a": "Neither is a requirement. A green room, where one exists, does more for your event than for us: it keeps cases and spare gear out of your guests' sightline and gives the band somewhere to change that is not a corridor. On meals, we do not ask for them. If meals are being served, the band would like them, and a vendor meal is exactly right."
         }
       ]
     },

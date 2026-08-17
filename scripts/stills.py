@@ -56,17 +56,17 @@ MANIFEST = {
     "standards": (
         "trumpet brass instrument still life",
         "A trumpet resting on a table.",
-        "acts grid, The Standards",
+        "roster cards: jazz and flamenco slots",
     ),
     "headliners": (
         "snare drum kit close up microphone",
         "A snare drum with sticks laid across it and a close microphone.",
-        "acts grid, The Headliners",
+        "roster cards: covers and funk slots",
     ),
     "dj": (
         "dj mixer controller booth closeup",
         "A DJ controller and mixer under low light.",
-        "acts grid, DJ",
+        "roster cards: DJ slot",
     ),
     "ballroom": (
         "empty hotel ballroom event tables",
