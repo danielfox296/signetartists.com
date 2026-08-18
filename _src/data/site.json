@@ -25,7 +25,7 @@
 
   "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
 
-  "_rates_byRequest_note": "ADDED 2026-08-17. `byRequest` rows are held out of the published hourly table and out of llms.txt's hourly build, because the 2026 product is solo through quartet and the quote engine's ensemble picker is built from that table. The figures stay here rather than being deleted: they are real rates, a five or six piece is still quoted on request, and the seven, ten and thirteen piece rows are what the planners technical page is written against. Flip the flag, not the number, if any of them come back as a sold size.",
+  "_rates_byRequest_note": "ADDED 2026-08-17. `byRequest` rows are held out of the published hourly table and out of llms.txt's hourly build, because the 2026 product is solo through quartet and the quote engine's ensemble picker is built from that table. The figures stay here rather than being deleted: they are real rates and a five or six piece is still quoted on request. The planners technical page stopped at the quartet with the 2026-08-17 sweep, so these rows render nowhere. Flip the flag, not the number, if any of them come back as a sold size.",
   "rates": [
     { "size": "Duo", "pieces": 2, "callOut": 600, "hourly": 450, "min": 1 },
     { "size": "Trio", "pieces": 3, "callOut": 1000, "hourly": 600, "min": 1 },
@@ -63,11 +63,18 @@
     { "item": "Learned songs beyond the first", "rate": "$250 each" }
   ],
 
-  "_configurations_note": "DRAFT 2026-08-07, needs Daniel's correction pass. Headcounts and row names are locked to `rates` above so the technical page and the rate card can never disagree; that is the whole reason this lives in data. The builds for the ten- and thirteen-piece are inferred from ROSTER.md's chair list and are the least certain rows. Footprints are the working figures a band actually takes, not the stage-rental guidance, which runs to roughly double; that gap is the point of the page. Inputs are channel counts at the desk, including one announcement mic and a stereo playback pair from the quintet up.",
+  "_configurations_note": "DRAFT 2026-08-07, swept 2026-08-17 with the Q4 refocus: rows now cover exactly what is sold, solo through quartet plus the DJ. The quintet, seven-, ten- and thirteen-piece rows are in git history if a larger size ever returns as a sold product. Solo has no call-out/hourly row in `rates` (the card publishes it as a range only), so it appears here for logistics without a rates twin; every other row name stays locked to `rates` so the technical page and the rate card cannot disagree. A solo's logistics mirror the DJ's: one person and a small PA. Footprints are the working figures a band actually takes, not the stage-rental guidance, which runs far larger; that gap is the point of the page. Inputs are channel counts at the desk, including one announcement mic on its own channel.",
   "_configurations_provisional": true,
   "_configurations_provisional_note": "Draws the brass edge down the technical page tables (styles.css .table-scroll[data-provisional]). Set to false once Daniel's correction pass lands and these stop being our own inference.",
 
   "configurations": [
+    {
+      "size": "Solo", "pieces": 1,
+      "build": "One voice, one instrument",
+      "stage": "6 by 4 ft", "stageMin": "5 by 4 ft",
+      "inputs": 3, "circuits": 1,
+      "loadIn": "45 min", "strike": "30 min", "vans": 1
+    },
     {
       "size": "Duo", "pieces": 2,
       "build": "Guitar and upright bass",
@@ -88,34 +95,6 @@
       "stage": "14 by 10 ft", "stageMin": "12 by 8 ft",
       "inputs": 10, "circuits": 2,
       "loadIn": "90 min", "strike": "60 min", "vans": 1
-    },
-    {
-      "size": "Quintet", "pieces": 5,
-      "build": "Keys and voice, guitar and voice, bass, drums, saxophone",
-      "stage": "16 by 12 ft", "stageMin": "12 by 10 ft",
-      "inputs": 17, "circuits": 2,
-      "loadIn": "90 min", "strike": "60 min", "vans": 1
-    },
-    {
-      "size": "Seven-piece", "pieces": 7,
-      "build": "The quintet plus trumpet and trombone",
-      "stage": "20 by 12 ft", "stageMin": "16 by 10 ft",
-      "inputs": 19, "circuits": 3,
-      "loadIn": "2 hrs", "strike": "75 min", "vans": 2
-    },
-    {
-      "size": "Ten-piece", "pieces": 10,
-      "build": "Three voices, guitar, bass, drums, keys, trumpet, trombone, saxophone",
-      "stage": "24 by 14 ft", "stageMin": "20 by 12 ft",
-      "inputs": 21, "circuits": 3,
-      "loadIn": "2 hrs", "strike": "90 min", "vans": 2
-    },
-    {
-      "size": "Thirteen-piece", "pieces": 13,
-      "build": "The ten-piece plus percussion, second guitar and second keys",
-      "stage": "28 by 16 ft", "stageMin": "24 by 14 ft",
-      "inputs": 26, "circuits": 4,
-      "loadIn": "2.5 hrs", "strike": "90 min", "vans": 3
     },
     {
       "size": "DJ", "pieces": 1,
@@ -265,7 +244,7 @@
         },
         {
           "q": "What power do you need?",
-          "a": "Dedicated 20-amp circuits within reach of the stage, one to four of them depending on the size of the band. The requirement most often missed is that they be dedicated: sharing a circuit with catering warmers or a lighting truss is the single most common cause of a problem at load-in. Exact counts are on the technical page."
+          "a": "Dedicated 20-amp circuits within reach of the stage, one or two of them depending on the size of the band. The requirement most often missed is that they be dedicated: sharing a circuit with catering warmers or a lighting truss is the single most common cause of a problem at load-in. Exact counts are on the technical page."
         },
         {
           "_closed_note": "Closed 2026-08-16 against contract §7, which requires a covered, level, dry performance area. Level and dry were missing here.",

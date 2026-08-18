@@ -3,9 +3,10 @@ slug: "what-live-music-costs-corporate-event"
 eyebrow: "CORPORATE"
 dek: "A band's price has two parts. Here is what each one covers, what moves it, and what the total comes to for the shapes a corporate night actually takes."
 date: "2026-08-05"
+last_updated: "2026-08-17"
 author:
   name: "Signet Artists"
-meta_description: "How a live band's price for a corporate event is built: call-out plus hourly, worked totals from duo to thirteen-piece, and what travel and holiday dates add."
+meta_description: "How a live band's price for a corporate event is built: call-out plus hourly, worked totals from duo to quartet, and what travel and holiday dates add."
 
 hero:
   src: "img/headliners.jpg"
@@ -15,8 +16,8 @@ sections:
   - type: key_takeaways
     items:
       - "A band's fee splits into a call-out, which covers the evening, and an hourly rate, which covers the music."
-      - "Our published totals run from $1,500 for a two-hour duo to $18,000 for a thirteen-piece over four hours."
-      - "Most corporate parties land between $6,000 and $12,500, which is a seven-piece for two hours at the bottom and a ten-piece for four at the top."
+      - "Our published totals run from $1,050 for a single hour of duo, or $1,150 for a DJ, up to $4,800 for a quartet over four hours."
+      - "Most corporate parties land between $1,500 and $5,500, which is a DJ or a duo at the bottom and a quartet through the whole evening at the top."
       - "Travel, holiday weekends and New Year's Eve are separate lines. Nothing about them is folded into the headline number."
 
   - type: prose
@@ -65,10 +66,6 @@ sections:
       - ["Duo", "$600", "$450", "$1,500", "$1,950", "$2,400"]
       - ["Trio", "$1,000", "$600", "$2,200", "$2,800", "$3,400"]
       - ["Quartet", "$1,600", "$800", "$3,200", "$4,000", "$4,800"]
-      - ["Quintet", "$2,200", "$1,000", "$4,200", "$5,200", "$6,200"]
-      - ["Seven-piece", "$3,500", "$1,250", "$6,000", "$7,250", "$8,500"]
-      - ["Ten-piece", "$5,300", "$1,800", "$8,900", "$10,700", "$12,500"]
-      - ["Thirteen-piece", "$8,000", "$2,500", "$13,000", "$15,500", "$18,000"]
       - ["DJ", "$800", "$350", "$1,500", "$1,850", "$2,200"]
 
   - type: prose
@@ -76,12 +73,16 @@ sections:
       Every cell in that table is the call-out plus the hourly rate times the
       hours. There is no cell doing anything else.
 
-      A duo, trio or DJ can be booked for a single hour. From a quartet up the
-      minimum is two, which is why the table starts there.
+      A duo, trio or DJ can be booked for a single hour, and a single hour is
+      the call-out plus one hour of performance: $1,050 for the duo, $1,600
+      for the trio, $1,150 for the DJ. A quartet's minimum is two hours, which
+      is why the table starts there. A five to six piece is quoted by request
+      rather than from this table, at $6,000 to $8,000 in Denver on the
+      published rate card.
 
   - type: stat_callout
-    number: "$6,000 to $12,500"
-    label: "Where most corporate parties land. A seven-piece for two hours at the bottom of that range, a ten-piece for four hours at the top, with sound, lighting, an engineer and a named contact for the night inside both figures."
+    number: "$1,500 to $5,500"
+    label: "Where most corporate parties land. A DJ or a duo covering the night at the bottom of that range, a quartet through the whole evening at the top, with sound, lighting, an engineer and a named contact for the night inside both figures."
     source: "Signet Artists published rates, signetartists.com/pricing/"
 
   - type: subhead
@@ -92,14 +93,15 @@ sections:
       Rate cards are abstract until somebody puts an evening against them.
       These are the three that come up most.
 
-      **An awards dinner.** A quintet, three hours, playing dinner at
-      conversation volume and then holding the room through the presentation.
-      Call-out $2,200, three hours at $1,000. **$5,200.**
+      **A client dinner.** A jazz duo, three hours, sitting under the
+      conversation for the whole evening so nobody has to raise their voice
+      across the table. Call-out $600, three hours at $450. **$1,950.**
 
-      **A holiday party with a real dance floor.** A ten-piece, four hours.
-      Call-out $5,300, four hours at $1,800. **$12,500.**
+      **A holiday party with a real dance floor.** A quartet, four hours,
+      playing dinner at conversation volume and getting loud on cue.
+      Call-out $1,600, four hours at $800. **$4,800.**
 
-      **A gala that runs across the whole night.** A seven-piece for three
+      **A gala that runs across the whole night.** A quartet for three
       hours, a cocktail duo for the hour before it, and a DJ for the hour
       after. Once we are in the building the setup is already paid for, so the
       added slots bill at the hourly rate with no second call-out, and booking
@@ -109,18 +111,19 @@ sections:
     title: "The gala, itemised"
     columns: ["Line", "Amount"]
     rows:
-      - ["Seven-piece call-out", "$3,500"]
-      - ["Performance, 3 hours at $1,250 an hour", "$3,750"]
+      - ["Quartet call-out", "$1,600"]
+      - ["Performance, 3 hours at $800 an hour", "$2,400"]
       - ["Cocktail duo, 1 hour, no second call-out", "$450"]
       - ["DJ after the band, 1 hour, no second call-out", "$350"]
-      - ["Three parts booked together, 10% off", "-$805"]
-      - ["Total", "$7,245"]
+      - ["Three parts booked together, 10% off", "-$480"]
+      - ["Total", "$4,320"]
 
   - type: prose
     body: |
-      That is a five-hour evening with three different musical settings for less
-      than a ten-piece playing four. The arithmetic is what makes it cheaper,
-      and you can do the arithmetic yourself before you call anybody.
+      That is a five-hour evening with three different musical settings for
+      less than the quartet on its own costs over four. The arithmetic is what
+      makes it cheaper, and you can do the arithmetic yourself before you call
+      anybody.
 
   - type: subhead
     text: "What moves the number"

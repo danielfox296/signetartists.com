@@ -208,9 +208,10 @@ def _config_rows(columns) -> str:
     """Shared body for the technical tables.
 
     `columns` is a list of (header, key) pairs. Every table on the technical
-    page is a projection of site["configurations"], which is keyed to the same
-    row names as site["rates"], so a size can never appear on the rate card
-    and be missing from the stage plot.
+    page is a projection of site["configurations"], which covers exactly the
+    sold sizes, solo through quartet plus the DJ, so a size cannot appear on
+    the rate card and be missing from the stage plot. (Solo has no hourly row
+    in site["rates"]; the card publishes it as a range only.)
 
     Column order is a mobile decision, not a reading-order one: .rate-table
     carries min-width 30rem and nowrap cells, so at 375px only the first two
@@ -270,10 +271,11 @@ def stage_plot() -> str:
     """The technical page's argument, drawn to scale.
 
     That page opens by saying published stage-rental guidance for a seven to
-    ten-piece runs to 24 by 24 feet, and that this is close to double what the
-    band takes. It is the most useful thing on the page for a planner pricing a
-    riser, and until now it was three sentences of prose above a table of
-    numbers. Two rectangles at the same scale make it in one look.
+    ten-piece runs to 24 by 24 feet, and that this is more than four times
+    what the quartet, the largest band sold, asks for. It is the most useful
+    thing on the page for a planner pricing a riser, and until now it was
+    three sentences of prose above a table of numbers. Two rectangles at the
+    same scale make it in one look.
 
     Drawn from site["configurations"] rather than hardcoded, so it cannot drift
     from the table twenty lines below it. Inline SVG: no request, no library,
@@ -284,9 +286,9 @@ def stage_plot() -> str:
     is the right object here anyway — a planner forwarding this to a venue
     needs a measurement, not a mood.
     """
-    seven = next(c for c in site["configurations"] if c["size"] == "Seven-piece")
-    # "20 by 12 ft" -> (20, 12)
-    w, d = (int(n) for n in re.findall(r"\d+", seven["stage"])[:2])
+    quartet = next(c for c in site["configurations"] if c["size"] == "Quartet")
+    # "14 by 10 ft" -> (14, 10)
+    w, d = (int(n) for n in re.findall(r"\d+", quartet["stage"])[:2])
     GUIDE = 24  # the published rental figure the page argues against
     U = 20      # units per foot
     gw = GUIDE * U
@@ -297,7 +299,7 @@ def stage_plot() -> str:
     return f"""<figure class="stage-plot">
 <svg viewBox="-8 -8 {gw + 16} {gw + 16}" role="img"
      aria-label="Two stage footprints at the same scale. Published rental
-     guidance is {GUIDE} by {GUIDE} feet. A seven-piece band takes {w} by {d} feet,
+     guidance is {GUIDE} by {GUIDE} feet. A quartet takes {w} by {d} feet,
      about {round(100 * (1 - (w * d) / (GUIDE * GUIDE)))} percent less floor.">
   <rect x="0" y="0" width="{gw}" height="{gw}" class="plot-guide"/>
   <rect x="{ax}" y="{ay}" width="{aw}" height="{ad}" class="plot-actual"/>
@@ -311,7 +313,7 @@ def stage_plot() -> str:
     {w} &#215; {d} ft
   </text>
   <text x="{gw / 2}" y="{ay + ad / 2 + 22}" class="plot-sub" text-anchor="middle">
-    what a seven-piece takes
+    what a quartet takes
   </text>
 </svg>
 <figcaption class="note">Both drawn to the same scale. The difference is

@@ -3,11 +3,11 @@
 
   "_MAINTENANCE": "THIS IS THE ONE FILE ON THE SITE THAT GOES STALE. It publishes availability, which is a factual claim about the calendar, and a wrong one costs a double booking or a lost enquiry. Update `status` per date as holds and bookings land, and bump `updated` every time. The page prints `updated` on it so a visitor can see how fresh the board is; that is deliberate and should not be removed.",
 
-  "_STATUS_WARNING": "Every date below currently reads `open` because no booking calendar was supplied with the restructure spec. That is an assumption, not a verified fact. True it up against the real calendar BEFORE this page is promoted anywhere.",
+  "_STATUS_WARNING": "VERIFIED 2026-08-17 against the live booking calendar, which is empty. Every `open` below is genuinely true, not an assumption. Keep the statuses true as holds and bookings land, and bump `updated` with every change.",
 
   "year": 2026,
   "label": "November and December 2026",
-  "updated": "2026-08-15",
+  "updated": "2026-08-17",
 
   "_dates_note": "Thursdays, Fridays and Saturdays, which is where corporate holiday parties actually sit. Thanksgiving (Nov 26) and Christmas (Dec 24 to 26) are out. New Year's Eve is in and priced at +50% per the extras list.",
 
