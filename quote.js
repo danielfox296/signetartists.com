@@ -3,7 +3,7 @@
    _src/partials/quote-engine.html and is integrated as a pricing section.
 
    Rules this file follows:
-   - The eight ensemble rates are never written here. They are read off the
+   - The ensemble rates are never written here. They are read off the
      server-rendered rate card (table.rate-table--full), which build.py
      generates from _src/data/site.json. One source of truth: change
      site.json, rebuild, and the engine follows on the next load.
