@@ -3,7 +3,7 @@ slug: "outdoor-reception"
 eyebrow: "PLANNING"
 dek: "Power, cover, the weather call, and the two ways an outdoor site works against volume at once. Including the Colorado decibel cap most outdoor receptions are actually bound by."
 date: "2026-08-07"
-last_updated: "2026-08-17"
+last_updated: "2026-08-18"
 author:
   name: "Signet Artists"
 meta_description: "Planning a live band for an outdoor reception in Colorado: generator and circuit requirements, cover, the weather decision, and the state noise caps measured at the property line."
@@ -34,7 +34,7 @@ sections:
 
   - type: prose
     body: |
-      Indoors, walls and a ceiling reflect sound back toward the room. A band
+      Indoors, walls and a ceiling reflect sound back toward the guests. A band
       gets that reinforcement for free, which is why a quartet in a
       ballroom can fill the space without the PA working hard.
 
@@ -91,7 +91,7 @@ sections:
       A band needs dedicated circuits within reach of the stage. Dedicated is
       the operative word: a circuit shared with catering
       warmers or a lighting truss will trip, and it will trip when everything
-      switches on at once, which is when the room is full.
+      switches on at once, which is when the venue is full.
 
       A generator covers it, with conditions. It has to be properly grounded,
       sized with headroom above the band's requirement rather than exactly to
@@ -135,7 +135,7 @@ sections:
     title: "Indoors and outdoors, same band"
     columns: ["", "Indoors", "Outdoors"]
     rows:
-      - ["Reinforcement from the room", "Walls and ceiling reflect sound back", "None"]
+      - ["Reinforcement from the building", "Walls and ceiling reflect sound back", "None"]
       - ["PA needed for the same floor volume", "Less", "More"]
       - ["Where the limit is measured", "Usually a house policy", "25 ft past the property line"]
       - ["Power", "House circuits", "House circuits or a sized, grounded generator"]

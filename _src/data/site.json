@@ -9,7 +9,7 @@
     "_tagline_note": "REWRITTEN 2026-08-17. Was 'PROfessional PERFORMANCE FOR PROFESSIONAL SETTINGS'. The capitalisation read as a typo at display size and the sentence said nothing a planner could act on. This is the h1 on the home page and nowhere else, set in the display face at uppercase, so it has a hard length budget: the retired line was 47 characters and ran three lines. Anything much past that fills the first screen on its own and pushes the lede and both buttons under the fold. The rest of the offer moved into `intro` below.",
     "tagline": "Live music for your event, solo to quartet.",
     "_intro_note": "REWRITTEN 2026-08-17 with the Q4 refocus. The old version sold the 2027 system, 'from a single DJ to a 13 piece band', which is not the product. It also carried three of the copy bugs from the 17 Aug audit. This renders as the home page hero lede and as the MusicGroup description in schema, so it has to stand alone.",
-    "intro": "Sized to the room and the budget, for private events across Colorado. One contract, one named contact for the night, and every rate published before you write to us. Send the date and the room. We do the rest.",
+    "intro": "Sized to your event and budget, for private events across Colorado. One contract, one named contact for the night, and every rate published before you write to us. Send the date and the venue. We do the rest.",
     "_phone_note": "Decided 2026-08-01: no phone number is published. Email is the only published route. If that changes, restore the markup in the footer partial, the contact page and the home page close section.",
     "email": "hello@signetartists.com",
     "city": "Denver",
@@ -39,7 +39,7 @@
 
   "included": [
     "A named contact for the night, given to you before the event",
-    "Sound sized to the room",
+    "Sound sized to the venue",
     "Load-in, setup, strike and load-out",
     "Certificate of insurance naming your venue",
     "W-9 and one itemised invoice",
@@ -123,7 +123,7 @@
       "occasion": "The member or association event",
       "act": "dirty-flamenco",
       "config": "trio",
-      "why": "A room that has remarks in it and wants one thing guests describe afterwards. A set piece rather than a background, placed where the program has room for it."
+      "why": "An event that has remarks in it and wants one thing guests describe afterwards. A set piece rather than a background, placed where the program leaves space for it."
     }
   ],
 
@@ -161,7 +161,7 @@
         {
           "_closed_note": "Closed 2026-08-17. Daniel: no showcases, and these are private groups that do not play public dates, so the first version's offer to point at a public date was wrong too. The honest answer is no, and it is written as a straight no rather than a hedge. NOTE: this makes video the only pre-booking evidence that can ever exist, which moves the footage shoots from nice-to-have to the answer to a question every planner asks.",
           "q": "Can we see the band play before we book?",
-          "a": "No, and it is worth being straight about why. These are private-event groups. They do not play public dates you could attend, and we do not stage showcases, because a showcase is a performance for an audience that came to judge it rather than for a room that came to a party. Video on each act's page is the honest substitute, alongside published rates and paperwork you can check before you commit to anything."
+          "a": "No, and it is worth being straight about why. These are private-event groups. They do not play public dates you could attend, and we do not stage showcases, because a showcase is a performance for an audience that came to judge it rather than for a crowd that came to a party. Video on each act's page is the honest substitute, alongside published rates and paperwork you can check before you commit to anything."
         },
         {
           "_closed_note": "Ratified 2026-08-17 as written. Daniel: dress code is standard.",
@@ -207,7 +207,7 @@
       "items": [
         {
           "q": "How long are the sets, and how long are the breaks?",
-          "a": "Sets run 45 to 60 minutes with 15 to 20 minutes between them, set against your run of show rather than a fixed clock. Audio continues through every break at every size, so the room never goes silent."
+          "a": "Sets run 45 to 60 minutes with 15 to 20 minutes between them, set against your run of show rather than a fixed clock. Audio continues through every break at every size, so the night never goes silent."
         },
         {
           "q": "Can we use your microphones for speeches?",
@@ -223,7 +223,7 @@
         },
         {
           "q": "Can we add time on the night?",
-          "a": "Yes, and it costs what the earlier hours cost. There is no overtime rate. Added time bills at the same hourly figure in 30-minute increments, agreed on the night with whoever holds the budget, so the only question at 11pm is whether the room wants one more."
+          "a": "Yes, and it costs what the earlier hours cost. There is no overtime rate. Added time bills at the same hourly figure in 30-minute increments, agreed on the night with whoever holds the budget, so the only question at 11pm is whether the crowd wants one more."
         },
         {
           "q": "How loud is it, really?",
@@ -232,11 +232,11 @@
       ]
     },
     {
-      "group": "The room and the gear",
+      "group": "The venue and the gear",
       "items": [
         {
           "q": "Do you provide sound and lighting?",
-          "a": "Sound sized to the room is included at every size. Stage lighting and a dedicated front-of-house engineer are optional add-ons, quoted as their own line. We do not light the room, the tables or a dance floor as a design element; that is your lighting vendor's work, and we will coordinate with them."
+          "a": "Sound sized to the venue is included at every size. Stage lighting and a dedicated front-of-house engineer are optional add-ons, quoted as their own line. We do not light the space, the tables or a dance floor as a design element; that is your lighting vendor's work, and we will coordinate with them."
         },
         {
           "q": "Do you need a stage, and do you provide one?",
@@ -267,7 +267,7 @@
       "items": [
         {
           "q": "How much say do we get over the songs?",
-          "a": "As much or as little as you want. You can build the list yourself, hand us a do-not-play list and leave the rest, or tell us the room and let the band read it song by song. Most clients do the middle one, and the do-not-play list is the part worth spending time on."
+          "a": "As much or as little as you want. You can build the list yourself, hand us a do-not-play list and leave the rest, or describe the crowd and let the band read it song by song. Most clients do the middle one, and the do-not-play list is the part worth spending time on."
         },
         {
           "q": "Do you take requests during the event?",

@@ -744,7 +744,7 @@ img {
   display: grid;
 }
 
-/* Every entry opens on a rule, including the first. Without it the chair
+/* Every entry opens on a rule, including the first. Without it the act-kind
    label reads as another line of the section lede rather than the start of a
    person, because unlike .card-grid this block has no border of its own. */
 .player {

@@ -430,7 +430,7 @@ def act_byline_inline(act: dict) -> str:
     """The byline where it sits mid-sentence, as in llms.txt's
     "Dirty Flamenco (Flamenco, fronted by Gary Meyers)". Built rather than
     lowercased from act_byline: .lower() flattens the proper noun and turns
-    "a PA sized to the room" into "a pa sized to the room"."""
+    "a PA sized to the venue" into "a pa sized to the venue"."""
     if act["presentation"] == "face":
         return f'fronted by {act["face"]}'
     return act["spec"]
