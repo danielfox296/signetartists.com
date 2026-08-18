@@ -3,9 +3,13 @@
 
   "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page. Thomas Owen Band is a face-led listing.",
 
+  "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included.",
+
   "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs.",
 
   "_pricing_note": "Per-config prices are NOT stored on acts. Each ladder rung names a rateCard config id and the build reads the range from rateCard below, so an act page and the pricing page can never disagree. The provisional per-act floors in the workbook are deliberately NOT used: the workbook's own legend calls them provisional and they sit well under the spec rate card, which is the authority.",
+
+  "_scope_note": "REFOCUSED 2026-08-17 for Q4. The 2026 product is small format: solo, duo, trio and quartet, cocktail through featured. Quartet is the published ceiling on every act and every surface. Five and six piece stays on the rate card under a by-request divider, because the published-pricing philosophy is the differentiator and hiding a number we hold would cost more than printing it; it is not merchandised as a standard product anywhere else. Seven, ten and thirteen piece are off the sold tables entirely (see site.json rates). Tejas Singh leads the roster and every featured-acts block.",
 
   "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source. Do not 'fix' this back to match an older copy of the spec.",
 
@@ -54,9 +58,10 @@
       "rangeLabel": "six piece",
       "label": "Five to six piece",
       "pieces": 5,
+      "byRequest": true,
       "denver": [6000, 8000],
       "resort": [8000, 11000],
-      "note": "Horns or a second voice. The largest build on the roster."
+      "note": "Horns or a second voice. Quoted on request rather than sold off the card."
     },
     {
       "id": "dj",
@@ -69,8 +74,7 @@
     }
   ],
 
-  "_corporateRange_note": "Not a config. The band-spend envelope a corporate buyer should budget, published so a planner can size the line before writing to us.",
-  "corporateRange": { "denver": [6000, 12500], "resort": [8000, 15000], "resortOpen": true },
+  "_corporateRange_removed_note": "RETIRED 2026-08-17, Daniel's call. Was { denver: [6000, 12500], resort: [8000, 15000], resortOpen: true } and rendered as a Corporate band range row on the rate card and a line in llms.txt. That envelope is a seven- to ten-piece figure: it anchored a corporate buyer at roughly double what the 2026 product costs. The card's own solo-through-quartet rows publish the whole range now, so the aggregate had nothing left to add and one more number to keep true.",
 
   "buckets": [
     { "id": "party", "label": "Party", "blurb": "Dance floor." },
@@ -83,55 +87,6 @@
 
   "acts": [
     {
-      "id": "dirty-flamenco",
-      "name": "Dirty Flamenco",
-      "presentation": "face",
-      "status": "flagship",
-      "style": "Flamenco",
-      "face": "Gary Meyers",
-      "material": "Traditional and covers",
-      "bucket_tags": ["specialty", "cocktail"],
-      "config_tags": ["trio", "quartet", "quintet"],
-      "from": "trio",
-      "img": "standards.jpg",
-      "alt": "A trumpet resting on a table.",
-      "video": null,
-      "blurb": "The only flamenco act on this roster, and close to the only one in Colorado sold as a private event product rather than a concert booking. Real palos, played by a group with a standing book. Book it when the room needs one thing guests photograph.",
-      "seo_title": "Dirty Flamenco: flamenco trio for private events in Denver",
-      "meta_description": "Flamenco for weddings, corporate dinners and private events in Denver and the Colorado mountains. Trio from $2,800, with dancer and percussion configurations. Rates published.",
-      "identity": [
-        "Flamenco is the one booking on this roster that nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing book, sold at private event scale.",
-        "That matters for a specific kind of night. Most live music at a private event is designed to be felt and not watched. This is the opposite booking. It is the act you hire when the program has a moment in it that needs to be the moment: a cultural centerpiece, a corporate dinner that has to be memorable rather than pleasant, a reception that wants something guests will describe to people who were not there.",
-        "The book is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
-        "This is a named act rather than a format, which means the group you hear is the group that arrives. It does not get swapped for another flamenco trio, because there is not another one."
-      ],
-      "ladder": [
-        {
-          "config": "trio",
-          "build": "Flamenco guitar, bass, cajon",
-          "bestFor": "Cocktails and dinner. Full volume range without a dance floor."
-        },
-        {
-          "config": "quartet",
-          "build": "The trio plus a dancer",
-          "bestFor": "A program with a set-piece in it. The dancer is what the room turns to watch."
-        },
-        {
-          "config": "quintet",
-          "build": "The trio plus dancer and second percussion",
-          "bestFor": "Large rooms and outdoor events, where a cajon alone will not carry."
-        }
-      ],
-      "setlist": {
-        "note": "Flamenco is organized by palo, the traditional form, rather than by song title. A set is built from these and shaped to the room on the night. Representative, not fixed.",
-        "items": [
-          "Bulerias", "Solea", "Alegrias", "Tangos",
-          "Rumba", "Fandangos", "Sevillanas", "Guajiras"
-        ]
-      }
-    },
-
-    {
       "id": "tejas-singh",
       "name": "Tejas Singh",
       "presentation": "face",
@@ -140,26 +95,25 @@
       "face": "Tejas Singh",
       "material": "Covers",
       "bucket_tags": ["cocktail", "party"],
-      "config_tags": ["duo", "trio", "quartet", "quintet"],
+      "config_tags": ["duo", "trio", "quartet"],
       "from": "duo",
       "img": "headliners.jpg",
       "alt": "A snare drum with sticks laid across it and a close microphone.",
       "video": null,
-      "blurb": "The only booking here that ladders. A duo at six o'clock and a quartet at ten, same voice, same book, one contract. At quartet and up this is the biggest thing on the roster and the one to book when the floor has to fill.",
+      "blurb": "The only booking here that ladders. A duo at six o'clock and a quartet at ten, same voice, same book, one contract, so the room hears one band getting bigger rather than two bands swapping over. The quartet is the dance floor booking.",
       "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
       "meta_description": "Voice-fronted covers for private events in Denver and the Colorado mountains. Duo for cocktails from $2,000, quartet for the dance floor from $4,000. Every rate published.",
       "identity": [
-        "One act, four sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
+        "One act, three sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
         "The reason to care is the contract. Most events buy the front of the night and the back of the night from two different acts, which means two load-ins, two sound checks, two sets of names to keep straight and a seam in the middle that guests can hear. This ladders instead: a duo through arrival and dinner, then the rhythm section arrives and the same voice fronts the dance floor. The room experiences one band getting bigger.",
-        "At quartet and above it stops being a cocktail act. Voice, guitar, bass and drums playing a covers book built for a floor is the largest live format on this roster, and it is the one to book when filling the floor is the actual objective rather than a hope.",
+        "At quartet it stops being a cocktail act. Voice, guitar, bass and drums playing a covers book built for a floor, and it is the size to book when filling the floor is the actual objective rather than a hope.",
         "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing.",
         "This is a named act, so the voice on the recording is the voice in the room. It is not a format we fill from whoever is free."
       ],
       "ladder": [
         { "config": "duo", "build": "Voice and guitar, plus bass", "bestFor": "Arrival, cocktails and dinner." },
         { "config": "trio", "build": "Voice and guitar, bass, drums", "bestFor": "Small rooms, and parties that want a floor without a full band." },
-        { "config": "quartet", "build": "The trio plus keys or a second guitar", "bestFor": "The dance floor booking. Weddings and corporate parties." },
-        { "config": "quintet", "build": "The quartet plus a horn or a second voice", "bestFor": "Large rooms, galas, and anything that has to sound like an event rather than a band." }
+        { "config": "quartet", "build": "The trio plus keys or a second guitar", "bestFor": "The dance floor booking. Weddings and corporate parties." }
       ],
       "setlist": {
         "note": "Pulled from the full song book, which runs past 240 titles and is published in its own right. A set is built against your run of show and read song by song on the night. Representative, not fixed.",
@@ -211,6 +165,52 @@
           "Take the A Train", "Blue Bossa", "Beautiful Love",
           "Someday My Prince Will Come", "The Girl from Ipanema",
           "All of Me", "Green Dolphin Street"
+        ]
+      }
+    },
+
+    {
+      "id": "dirty-flamenco",
+      "name": "Dirty Flamenco",
+      "presentation": "face",
+      "status": "flagship",
+      "style": "Flamenco",
+      "face": "Gary Meyers",
+      "material": "Traditional and covers",
+      "bucket_tags": ["specialty", "cocktail"],
+      "config_tags": ["trio", "quartet"],
+      "from": "trio",
+      "_configRangeLabel_note": "Overrides the derived range, which would read 'Trio to quartet'. The quartet here is the trio plus a dancer, which is an addition you ask for rather than a size off the ladder, so the card sells the trio and says the rest out loud.",
+      "configRangeLabel": "Trio, larger by request",
+      "img": "dj.jpg",
+      "alt": "Faders and knobs on a mixing console.",
+      "video": null,
+      "blurb": "The only flamenco act on this roster, and close to the only one in Colorado sold as a private event product rather than a concert booking. Real palos, played by a group with a standing book. Book it when the room needs one thing guests photograph.",
+      "seo_title": "Dirty Flamenco: flamenco trio for private events in Denver",
+      "meta_description": "Flamenco for weddings, corporate dinners and private events in Denver and the Colorado mountains. Trio from $2,800, with a dancer configuration. Rates published.",
+      "identity": [
+        "Flamenco is the one booking on this roster that nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing book, sold at private event scale.",
+        "That matters for a specific kind of night. Most live music at a private event is designed to be felt and not watched. This is the opposite booking. It is the act you hire when the program has a moment in it that needs to be the moment: a cultural centerpiece, a corporate dinner that has to be memorable rather than pleasant, a reception that wants something guests will describe to people who were not there.",
+        "The book is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
+        "This is a named act rather than a format, which means the group you hear is the group that arrives. It does not get swapped for another flamenco trio, because there is not another one."
+      ],
+      "ladder": [
+        {
+          "config": "trio",
+          "build": "Flamenco guitar, bass, cajon",
+          "bestFor": "Cocktails and dinner. Full volume range without a dance floor."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus a dancer",
+          "bestFor": "A program with a set-piece in it. The dancer is what the room turns to watch."
+        }
+      ],
+      "setlist": {
+        "note": "Flamenco is organized by palo, the traditional form, rather than by song title. A set is built from these and shaped to the room on the night. Representative, not fixed.",
+        "items": [
+          "Bulerias", "Solea", "Alegrias", "Tangos",
+          "Rumba", "Fandangos", "Sevillanas", "Guajiras"
         ]
       }
     },
@@ -288,8 +288,8 @@
       "bucket_tags": ["budget", "cocktail"],
       "config_tags": ["solo", "duo"],
       "from": "solo",
-      "img": "hero.jpg",
-      "alt": "An empty room set for an event before doors.",
+      "img": "standards.jpg",
+      "alt": "A trumpet resting on a table.",
       "video": null,
       "_was_note": "Listed as 'Tony Medina' until 2026-08-16. The workbook describes Freddy Alexander as redundant with him and calls that availability depth rather than a problem, which is the interchangeable pattern exactly. Spec'd, both sit behind one format and the depth becomes an asset instead of two thin listings competing at the bottom of the card.",
       "depth": ["Tony Medina", "Freddy Alexander"],

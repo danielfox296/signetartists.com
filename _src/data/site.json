@@ -6,8 +6,10 @@
   "brand": {
     "name": "Signet Artists",
     "legalName": "Entuned, LLC",
-    "tagline": "PROfessional PERFORMANCE FOR PROFESSIONAL SETTINGS",
-    "intro": "Whether it's a jazz trio vibe while your guests find the bar, or a party on the dance floor, we've got you covered. Signet artists provides high quality, professional live music for private events across Colorado: from a single DJ to a 13 piece band all on one contract.",
+    "_tagline_note": "REWRITTEN 2026-08-17. Was 'PROfessional PERFORMANCE FOR PROFESSIONAL SETTINGS'. The capitalisation read as a typo at display size and the sentence said nothing a planner could act on. This is the h1 on the home page and nowhere else, set in the display face at uppercase, so it has a hard length budget: the retired line was 47 characters and ran three lines. Anything much past that fills the first screen on its own and pushes the lede and both buttons under the fold. The rest of the offer moved into `intro` below.",
+    "tagline": "Live music for your event, solo to quartet.",
+    "_intro_note": "REWRITTEN 2026-08-17 with the Q4 refocus. The old version sold the 2027 system, 'from a single DJ to a 13 piece band', which is not the product. It also carried three of the copy bugs from the 17 Aug audit. This renders as the home page hero lede and as the MusicGroup description in schema, so it has to stand alone.",
+    "intro": "Sized to the room and the budget, for private events across Colorado. One contract, one named contact for the night, and every rate published before you write to us. Send the date and the room. We do the rest.",
     "_phone_note": "Decided 2026-08-01: no phone number is published. Email is the only published route. If that changes, restore the markup in the footer partial, the contact page and the home page close section.",
     "email": "hello@signetartists.com",
     "city": "Denver",
@@ -23,14 +25,15 @@
 
   "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
 
+  "_rates_byRequest_note": "ADDED 2026-08-17. `byRequest` rows are held out of the published hourly table and out of llms.txt's hourly build, because the 2026 product is solo through quartet and the quote engine's ensemble picker is built from that table. The figures stay here rather than being deleted: they are real rates, a five or six piece is still quoted on request, and the seven, ten and thirteen piece rows are what the planners technical page is written against. Flip the flag, not the number, if any of them come back as a sold size.",
   "rates": [
     { "size": "Duo", "pieces": 2, "callOut": 600, "hourly": 450, "min": 1 },
     { "size": "Trio", "pieces": 3, "callOut": 1000, "hourly": 600, "min": 1 },
     { "size": "Quartet", "pieces": 4, "callOut": 1600, "hourly": 800, "min": 2 },
-    { "size": "Quintet", "pieces": 5, "callOut": 2200, "hourly": 1000, "min": 2 },
-    { "size": "Seven-piece", "pieces": 7, "callOut": 3500, "hourly": 1250, "min": 2 },
-    { "size": "Ten-piece", "pieces": 10, "callOut": 5300, "hourly": 1800, "min": 2 },
-    { "size": "Thirteen-piece", "pieces": 13, "callOut": 8000, "hourly": 2500, "min": 2 },
+    { "byRequest": true, "size": "Quintet", "pieces": 5, "callOut": 2200, "hourly": 1000, "min": 2 },
+    { "byRequest": true, "size": "Seven-piece", "pieces": 7, "callOut": 3500, "hourly": 1250, "min": 2 },
+    { "byRequest": true, "size": "Ten-piece", "pieces": 10, "callOut": 5300, "hourly": 1800, "min": 2 },
+    { "byRequest": true, "size": "Thirteen-piece", "pieces": 13, "callOut": 8000, "hourly": 2500, "min": 2 },
     { "size": "DJ", "pieces": 1, "callOut": 800, "hourly": 350, "min": 1 }
   ],
 
@@ -120,6 +123,28 @@
       "stage": "6 by 4 ft", "stageMin": "6 by 3 ft",
       "inputs": 3, "circuits": 1,
       "loadIn": "45 min", "strike": "30 min", "vans": 1
+    }
+  ],
+
+  "_corporateShapes_note": "ADDED 2026-08-17 with the Q4 refocus. The three shapes a corporate enquiry actually arrives as, for the /corporate/ page. Act and config are ids so the names and both price columns resolve out of acts.json and the rate card: this block cannot quote a size the pricing page has stopped publishing, which is the whole reason it is data and not typed into the section.",
+  "corporateShapes": [
+    {
+      "occasion": "The office holiday party",
+      "act": "tejas-singh",
+      "config": "quartet",
+      "why": "Two hundred staff, a hotel ballroom, done by eleven. The floor has to fill and there is a short program in front of it, so the band plays dinner at conversation volume and gets loud on cue."
+    },
+    {
+      "occasion": "The client dinner",
+      "act": "jazz-duo",
+      "config": "duo",
+      "why": "Twenty at one table or eighty at ten. The conversation is the event, so the music sits under it for the whole night and nobody has to raise their voice to be heard across the table."
+    },
+    {
+      "occasion": "The member or association event",
+      "act": "dirty-flamenco",
+      "config": "trio",
+      "why": "A room that has remarks in it and wants one thing guests describe afterwards. A set piece rather than a background, placed where the program has room for it."
     }
   ],
 
@@ -275,7 +300,7 @@
   "faqs": [
     {
       "q": "What does a band cost for a corporate event in Denver?",
-      "a": "Our published rates run from $1,050 for a one-hour duo up to $18,000 for a thirteen-piece over four hours. Most corporate parties land between $6,000 and $12,500. Sound, lighting and an engineer are included at every size. Travel outside the metro and holiday weekends are quoted as their own lines on the contract."
+      "a": "Our published rates run from $900 for a solo player at cocktail hour to $5,500 for a quartet through a Denver evening. An hour of jazz duo on its own is $1,050. Sound, lighting and an engineer are included at every size. Travel outside the metro and holiday weekends are quoted as their own lines on the contract."
     },
     {
       "q": "How is the price calculated?",

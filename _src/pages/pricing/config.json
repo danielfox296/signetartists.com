@@ -2,7 +2,7 @@
   "_seo_note": "The single most important page on the site to have indexed. Requirements checked 2026-08-15: static HTML with every price in the source (no client rendering), present in sitemap.xml, robots.txt allows all, no noindex here or in robots meta. The quote engine is progressive enhancement over an already-rendered table and never supplies a price the crawler cannot see. Schema carries priced Offers per act per configuration.",
   "title": "Pricing: what a band costs for a private event in Colorado",
   "title_exact": true,
-  "meta_description": "The full published rate card for live music in Denver and the Colorado mountains. Solo from $900, trio from $2,800, five piece from $6,000, DJ from $1,500. Denver and resort columns, no quote required.",
+  "meta_description": "The full published rate card for live music in Denver and the Colorado mountains. Solo from $900, trio from $2,800, quartet from $4,000, DJ from $1,500. Denver and resort columns, no quote required.",
   "output": "pricing/index.html",
   "nav": "pricing",
   "schema": "pricing"

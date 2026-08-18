@@ -325,10 +325,11 @@
       recalc(true);
     }
 
-    /* Defaults: the quintet at four hours, the build the card is anchored on. */
+    /* Defaults: the quartet at four hours. It is the ceiling of the 2026 product
+       and the size most enquiries are sizing. */
     var defaultIdx = 0;
     for (var d = 0; d < rates.length; d++) {
-      if (rates[d].size === 'Quintet') { defaultIdx = d; break; }
+      if (rates[d].size === 'Quartet') { defaultIdx = d; break; }
     }
     el.ensemble.value = String(defaultIdx);
     fillHours(rates[defaultIdx].min);

@@ -60,6 +60,15 @@ RATE_BY_ID = {r["id"]: r for r in RATE_CARD}
 BUCKETS = roster["buckets"]
 BUCKET_LABEL = {b["id"]: b["label"] for b in BUCKETS}
 FLAGSHIPS = [a for a in ACTS if a["status"] == "flagship"]
+# Q4 2026 refocus: the product is solo through quartet. A `byRequest` row is a
+# real rate we still hold and quote, held out of every sold surface: the hourly
+# table (and so the quote engine's ensemble picker, which is built from it),
+# makesOffer, and llms.txt's hourly build. On the rate card itself the
+# by-request rows stay visible under a divider, because publishing the card is
+# the differentiator and a number we hold is cheaper to print than to hide.
+SOLD_RATES = [r for r in site["rates"] if not r.get("byRequest")]
+SOLD_CONFIGS = [r for r in RATE_CARD if not r.get("byRequest")]
+BYREQUEST_CONFIGS = [r for r in RATE_CARD if r.get("byRequest")]
 LISTINGS = [a for a in ACTS if a["status"] == "listing"]
 ACTS_BASE = "music"  # roster lives at /music/, act pages at /music/<id>/
 
@@ -122,7 +131,7 @@ def rate_table_summary() -> str:
         f'<td>{money(r["callOut"] + r["hourly"] * 2)}</td>'
         f'<td class="num-accent">{money(r["callOut"] + r["hourly"] * 4)}</td>'
         "</tr>"
-        for r in site["rates"]
+        for r in SOLD_RATES
     )
     return (
         '<div class="table-scroll"><table class="rate-table tnum">'
@@ -134,7 +143,7 @@ def rate_table_summary() -> str:
 def rate_table_full() -> str:
     """Pricing page: the whole card, including the hours below each minimum."""
     rows = []
-    for r in site["rates"]:
+    for r in SOLD_RATES:
         # The 4-hour totals get the brass .num-accent, same as the summary
         # table. Every published minimum is <= 2, so the accented cell is
         # always a real figure, never the em-dash.
@@ -442,6 +451,8 @@ def act_config_range(act: dict) -> str:
     """"Trio to six piece", not "Trio to Five to six piece". The tail of a range
     reads as prose, so the rate card carries a lowercase `rangeLabel` for it
     rather than the title-case table label."""
+    if act.get("configRangeLabel"):
+        return act["configRangeLabel"]
     configs = act_configs(act)
     if len(configs) == 1:
         return configs[0]["label"]
@@ -452,26 +463,23 @@ def rate_card_table() -> str:
     """The published rate card. THE differentiator: almost no Colorado
     competitor publishes one, so this table is static HTML on a crawlable
     page and never rendered by script."""
-    rows = []
-    for r in RATE_CARD:
+    def row(r):
         note = f'<span class="rate-note">{esc(r["note"])}</span>' if r.get("note") else ""
-        rows.append(
+        return (
             "<tr>"
             f'<th scope="row" class="rate-size">{esc(r["label"])}{note}</th>'
             f'<td class="num-accent">{rng(r["denver"])}</td>'
             f'<td>{rng(r["resort"])}</td>'
             "</tr>"
         )
-    corp = roster["corporateRange"]
-    open_mark = "+" if corp.get("resortOpen") else ""
-    rows.append(
-        '<tr class="rate-row--corp">'
-        '<th scope="row" class="rate-size">Corporate band range'
-        '<span class="rate-note">Not a size. What a corporate buyer should budget.</span></th>'
-        f'<td class="num-accent">{rng(corp["denver"])}</td>'
-        f'<td>{rng(corp["resort"])}{open_mark}</td>'
-        "</tr>"
-    )
+
+    rows = [row(r) for r in SOLD_CONFIGS]
+    if BYREQUEST_CONFIGS:
+        rows.append(
+            '<tr class="rate-row--divider"><th colspan="3" scope="colgroup">'
+            "Larger configurations, by request</th></tr>"
+        )
+        rows += [row(r) for r in BYREQUEST_CONFIGS]
     return (
         '<div class="table-scroll"><table class="rate-table rate-card tnum">'
         "<thead><tr><th>Configuration</th><th>Denver metro</th>"
@@ -500,8 +508,7 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
         f'<article class="card act-card" data-buckets="{esc(buckets)}" '
         f'data-configs="{esc(configs)}" data-price="{price}" '
         f'data-status="{esc(act["status"])}" data-name="{esc(act["name"])}">'
-        f'<img class="act-card-img" src="{nav_prefix}img/{esc(act["img"])}" '
-        f'alt="{esc(act["alt"])}" width="1600" height="900" loading="lazy" decoding="async">'
+        f"{act_card_media(act, nav_prefix)}"
         '<div class="act-card-body">'
         f'<p class="act-kind">{esc(act["style"])}</p>'
         f'<h3 class="act-name">{esc(act["name"])}</h3>'
@@ -517,14 +524,40 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
     )
 
 
+def act_card_media(act: dict, nav_prefix: str = "") -> str:
+    """The top of a roster card. `video` is null on every act until the shoot
+    lands; the still holds the slot until it is a URL, and setting that one
+    field in acts.json turns the card into an embed everywhere the card
+    renders. No marker prints here, unlike the act page: this is the surface a
+    planner is being sold on, and a card that announces its own gap sells
+    nothing."""
+    if act.get("video"):
+        return (
+            '<div class="act-card-video">'
+            f'<iframe src="{esc(act["video"])}" '
+            f'title="{esc(act["name"])} performing" loading="lazy" '
+            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+            'picture-in-picture" allowfullscreen></iframe></div>'
+        )
+    return (
+        f'<img class="act-card-img" src="{nav_prefix}img/{esc(act["img"])}" '
+        f'alt="{esc(act["alt"])}" width="1600" height="900" loading="lazy" '
+        'decoding="async">'
+    )
+
+
 def roster_filters() -> str:
     """Filter by bucket, config size and price. Rendered as real controls in
     static HTML: with script off every act is visible and nothing is lost."""
     bucket_opts = "".join(
         f'<option value="{esc(b["id"])}">{esc(b["label"])}</option>' for b in BUCKETS
     )
+    # Derived from the roster, not the rate card: a size nothing is tagged with
+    # is a filter that can only ever return the empty state.
+    in_use = {c for a in ACTS for c in a["config_tags"]}
     config_opts = "".join(
-        f'<option value="{esc(r["id"])}">{esc(r["label"])}</option>' for r in RATE_CARD
+        f'<option value="{esc(r["id"])}">{esc(r["label"])}</option>'
+        for r in RATE_CARD if r["id"] in in_use
     )
     price_opts = "".join(
         f'<option value="{v}">{label}</option>'
@@ -595,7 +628,7 @@ def season_board() -> str:
         f'<p class="note"><strong class="num-accent">{open_count}</strong> of '
         f'{len(SEASON["dates"])} party dates still open. Board last checked '
         f'{updated.strftime("%-d %B %Y")}. A date is only held once a contract '
-        "and a retainer land, so an open date here is genuinely open.</p>"
+        "and a deposit land, so an open date here is genuinely open.</p>"
     )
 
 
@@ -612,6 +645,31 @@ def season_leads(nav_prefix: str = "") -> str:
             f'<h3 class="act-name">{esc(act["name"])}</h3>'
             f'<p class="act-face">{esc(act["style"])}. {esc(act_byline(act))}.</p>'
             f'<p class="act-blurb">{esc(lead["why"])}</p>'
+            '<dl class="act-facts"><dt>Denver</dt>'
+            f'<dd class="num-accent">{rng(r["denver"])}</dd>'
+            f'<dt>Resort</dt><dd>{rng(r["resort"])}</dd></dl>'
+            f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">'
+            "Check a date</a>"
+            "</article>"
+        )
+    return f'<div class="card-grid card-grid--3">{"".join(cards)}</div>'
+
+
+def corporate_shapes(nav_prefix: str = "") -> str:
+    """The three shapes a corporate enquiry arrives as, on /corporate/. Same
+    contract as season_leads: the occasion is copy, but the act name and both
+    price columns resolve out of acts.json and the rate card, so this block
+    cannot quote a size the pricing page has stopped publishing."""
+    cards = []
+    for shape in site["corporateShapes"]:
+        act = ACT_BY_ID[shape["act"]]
+        r = rate_of(shape["config"])
+        cards.append(
+            '<article class="card">'
+            f'<p class="act-kind">{esc(shape["occasion"])}</p>'
+            f'<h3 class="act-name">{esc(act["name"])}</h3>'
+            f'<p class="act-face">{esc(r["label"])}. {esc(act_byline(act))}.</p>'
+            f'<p class="act-blurb">{esc(shape["why"])}</p>'
             '<dl class="act-facts"><dt>Denver</dt>'
             f'<dd class="num-accent">{rng(r["denver"])}</dd>'
             f'<dt>Resort</dt><dd>{rng(r["resort"])}</dd></dl>'
@@ -673,7 +731,7 @@ def organization_schema() -> dict:
                 "price": str(r["callOut"] + r["hourly"] * 4),
                 "priceCurrency": "USD",
             }
-            for r in site["rates"]
+            for r in SOLD_RATES
         ],
     }
 
@@ -997,6 +1055,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{roster_filters}}": roster_filters(),
         "{{roster_grid}}": roster_grid(nav_prefix),
         "{{roster_grid_flagships}}": roster_grid_flagships(nav_prefix),
+        "{{corporate_shapes}}": corporate_shapes(nav_prefix),
         "{{act_picker}}": act_picker(),
         "{{act_count}}": str(len(ACTS)),
         "{{act_count_word}}": act_count_word(),
@@ -1459,19 +1518,19 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
     lines += ["", "## Rate card", "",
               "Starting prices by configuration. Denver metro, then mountain "
               "and resort, which adds travel and lodging.", ""]
-    for r in RATE_CARD:
+    for r in SOLD_CONFIGS:
         lines.append(
             f"- {r['label']}: Denver {rng(r['denver'])}, "
             f"mountain and resort {rng(r['resort'])}."
         )
-    corp = roster["corporateRange"]
-    lines.append(
-        f"- Corporate band range: Denver {rng(corp['denver'])}, "
-        f"mountain and resort {rng(corp['resort'])}+."
-    )
+    for r in BYREQUEST_CONFIGS:
+        lines.append(
+            f"- {r['label']} (by request, not a standard booking): "
+            f"Denver {rng(r['denver'])}, mountain and resort {rng(r['resort'])}."
+        )
 
     lines += ["", "## Hourly build (Denver metro)", ""]
-    for r in site["rates"]:
+    for r in SOLD_RATES:
         four = money(r["callOut"] + r["hourly"] * 4)
         lines.append(
             f"- {r['size']}: {money(r['callOut'])} call-out + "
