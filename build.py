@@ -1218,7 +1218,7 @@ def act_cta(act: dict) -> str:
         '<section class="section section--ruled section--sunk act-cta">'
         '<div class="wrap wrap--narrow"><h2 class="h3">Check a date</h2>'
         f'<p class="prose">Send the date, the venue and roughly how many guests. '
-        f'Inside 24 to 48 hours you get one of two answers: {esc(act["name"])} is '
+        f'You get one of two answers: {esc(act["name"])} is '
         "available and here is the hold, or it is not and here is what is. No "
         "discovery call in between, and no quote that arrives a week later.</p>"
         '<p class="prose">Prices on this page are what you pay. Travel outside the '
