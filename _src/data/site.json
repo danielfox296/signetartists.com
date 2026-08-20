@@ -127,13 +127,16 @@
     }
   ],
 
+  "_eventTypes_note": "RESTRUCTURED 2026-08-20 with the SEO buildout. Each tag is now a doorway into its occasion page, which is the home page's placement for the occasion tree. 'Weddings' became 'Wedding cocktail hours' deliberately: the cocktail hour is the one wedding product in 2026 scope, and the tag should not promise a reception band that does not exist yet. Galas route to the corporate hub, where they are framed at small-format scale per the 17 Aug audit.",
   "eventTypes": [
-    "Weddings",
-    "Corporate parties",
-    "Galas and fundraisers",
-    "Retreats and kickoffs",
-    "Milestones and anniversaries",
-    "Club and member events"
+    { "label": "Office holiday parties", "href": "corporate/holiday-party/" },
+    { "label": "Client dinners", "href": "corporate/client-dinners/" },
+    { "label": "Corporate retreats", "href": "corporate/retreats/" },
+    { "label": "Galas and fundraisers", "href": "corporate/" },
+    { "label": "Dinner and cocktail parties", "href": "private-parties/" },
+    { "label": "Milestones and anniversaries", "href": "private-parties/" },
+    { "label": "Wedding cocktail hours", "href": "weddings/cocktail-hour/" },
+    { "label": "Club and member events", "href": "corporate/client-dinners/" }
   ],
 
   "_plannerFaqs_note": "DRAFT 2026-08-07. The deep operational FAQ, the questions a planner asks that are not about price. `faqs` above stays the short pricing set on the pricing page; this is the full set on planners/faq/. Any entry with \"open\": true is an answer written as a best guess because it is a business policy nobody has decided yet. Those render with a dotted underline, the same convention as an unresolved brand value, so an undecided policy cannot ship silently. Resolve them, drop the flag.",

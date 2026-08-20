@@ -4,7 +4,8 @@
   "title": "Corporate holiday party bands and DJs in Denver, November and December 2026",
   "title_exact": true,
   "meta_description": "Live music and DJs for Denver corporate holiday parties, November and December 2026. Open dates published, rates published, from $1,500. Book August through October for the best dates.",
-  "output": "corporate/holiday/index.html",
+  "_url_note": "MOVED 2026-08-20 with the SEO buildout: /corporate/holiday/ became /corporate/holiday-party/ (the occasion x location pattern needs the occasion named in the path, and 'holiday party' is the query). build.py REDIRECTS carries the stub at the old path.",
+  "output": "corporate/holiday-party/index.html",
   "nav": "corporate",
   "schema": "roster"
 }

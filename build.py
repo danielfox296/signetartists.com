@@ -34,7 +34,7 @@ DATA_FILE = DATA / "site.json"
 
 # Nav keys for active-state highlighting. A page's config.json sets "nav" to one
 # of these to mark the matching header link as the current page.
-NAV_KEYS = ["music", "repertoire", "pricing", "planners", "corporate", "contact"]
+NAV_KEYS = ["music", "repertoire", "pricing", "planners", "corporate", "private", "contact"]
 
 # GA4 measurement id. Empty string => no analytics tag is emitted at all.
 # Never ship a half-wired tag.
@@ -355,7 +355,7 @@ def cover_strip() -> str:
         '<section class="section--night cover-strip">'
         f'<div class="cover-strip-inner">{tiles}</div>'
         '<div class="wrap"><p class="cover-strip-note">'
-        'Eight of a few hundred. The whole book, and the six sets a night gets '
+        'Eight of a few hundred. The whole song list, and the six sets a night gets '
         'built from, are on the <a href="{{nav_prefix}}repertoire/">songs page</a>.'
         "</p></div></section>"
     )
@@ -381,8 +381,19 @@ def planner_faq_list() -> str:
 
 
 def event_types() -> str:
-    items = "".join(f"<li>{esc(t)}</li>" for t in site["eventTypes"])
-    return f'<ul class="tag-list">{items}</ul>'
+    """The booked-for tags. An entry with an href is a real doorway into its
+    occasion page (2026-08-20 buildout: the tags are the home page's placement
+    for the occasion tree); a plain string stays a plain tag."""
+    items = []
+    for t in site["eventTypes"]:
+        if isinstance(t, dict):
+            items.append(
+                f'<li><a href="{{{{nav_prefix}}}}{esc(t["href"])}">'
+                f'{esc(t["label"])}</a></li>'
+            )
+        else:
+            items.append(f"<li>{esc(t)}</li>")
+    return f'<ul class="tag-list">{"".join(items)}</ul>'
 
 
 # ----------------------------------------------------------------- the roster
@@ -399,6 +410,12 @@ def rate_of(config_id: str) -> dict:
 
 
 def act_url(act: dict, nav_prefix: str = "") -> str:
+    # An act with a `page` field is owned by an authored page dir (the 2026-08-20
+    # buildout moved the flagships to /artists/ and /ensembles/); everything that
+    # links to the act follows it there, and the old generated URL gets a redirect
+    # stub via REDIRECTS below.
+    if act.get("page"):
+        return f"{nav_prefix}{act['page']}"
     return f"{nav_prefix}{ACTS_BASE}/{act['id']}/"
 
 
@@ -503,7 +520,7 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
     cta = (
         f'<a class="act-card-link" href="{act_url(act, nav_prefix)}">'
         f'See {esc(act["name"])}</a>'
-        if flagship
+        if flagship or act.get("page")
         else f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">Inquire</a>'
     )
     return (
@@ -858,7 +875,7 @@ def act_offers(act: dict) -> list:
 def act_service_node(act: dict) -> dict:
     return {
         "@type": "Service",
-        "@id": f"{SITE_URL}/{ACTS_BASE}/{act['id']}/#service",
+        "@id": f"{SITE_URL}/{act_url(act)}#service",
         "name": act["name"],
         "serviceType": f"{act['style']} for private events",
         "description": act["blurb"],
@@ -928,6 +945,170 @@ def schema_tag(payload: dict) -> str:
         + json.dumps(payload, ensure_ascii=False)
         + "</script>"
     )
+
+
+# --------------------------------------------------- moved URLs (redirects)
+# The 2026-08-20 SEO buildout moved four URLs. GitHub Pages serves static
+# files only, so a move is a stub at the old path: meta refresh 0 (a redirect
+# signal Google honours) plus a canonical to the target and one visible link.
+# Stubs are not registered pages: no sitemap entry, no llms.txt row.
+
+REDIRECTS = {
+    "corporate/holiday/index.html": "corporate/holiday-party/",
+    "music/tejas-singh/index.html": "artists/tejas-singh/",
+    "music/jazz-duo/index.html": "ensembles/jazz-duo-trio/",
+    "music/dirty-flamenco/index.html": "ensembles/flamenco-trio/",
+}
+
+
+def write_redirects() -> None:
+    for old, new in REDIRECTS.items():
+        target = f"{SITE_URL}/{new}"
+        doc = (
+            '<!DOCTYPE html>\n<html lang="en">\n<head>\n'
+            '  <meta charset="utf-8">\n'
+            f'  <meta http-equiv="refresh" content="0; url={target}">\n'
+            f'  <link rel="canonical" href="{target}">\n'
+            f"  <title>Moved — {esc(BRAND['name'])}</title>\n"
+            "</head>\n<body>\n"
+            f'  <p>This page moved to <a href="{target}">{target}</a>.</p>\n'
+            "</body>\n</html>\n"
+        )
+        out = ROOT / old
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(doc, encoding="utf-8")
+
+
+# ------------------------------------------- parameterized section tokens
+# The 2026-08-20 buildout authors occasion, location and format pages as page
+# dirs, and those pages still must never type a price. These tokens resolve
+# rate-card and act data into any section: {{rate_range:duo}}, {{rate_4h:Trio}},
+# {{act_ladder:tejas-singh}}, {{offer_close:Headline.}} and so on. An unknown id
+# fails the build loudly rather than shipping a literal token.
+
+PARAM_BLOCK = re.compile(
+    r"\{\{(rate_range_resort|rate_range|rate_hour|rate_4h"
+    r"|act_ladder|act_setlist|act_from|offer_close):([^}]+)\}\}"
+)
+
+RATES_BY_SIZE = {r["size"]: r for r in site["rates"]}
+
+
+def offer_close(headline: str) -> str:
+    """The sitewide close (handoff §4): one offer sentence, one intake action.
+
+    Every buildout page ends with this block, so the offer cannot fork per
+    page. Only the headline is the page's own.
+    """
+    return (
+        '<section class="section section--ruled"><div class="wrap">'
+        '<div class="close-row">'
+        f'<div style="max-width: 32rem;"><h2 class="h2">{esc(headline)}</h2>'
+        '<p class="lede">Live music sized to the event, solo, duo, trio or '
+        "quartet, with published rates and a single point of contact.</p></div>"
+        '<div class="btn-row"><a class="btn" href="{{nav_prefix}}contact/">'
+        "Check a Date</a></div>"
+        "</div>"
+        '<p class="note">Send the date and the venue. You get the date held or '
+        'a straight no, and every figure is on the '
+        '<a href="{{nav_prefix}}pricing/">rate card</a> before you write.</p>'
+        "</div></section>"
+    )
+
+
+def param_block(m: re.Match) -> str:
+    kind, arg = m.group(1), m.group(2).strip()
+    if kind == "offer_close":
+        return offer_close(arg)
+    if kind == "rate_range":
+        return rng(rate_of(arg)["denver"])
+    if kind == "rate_range_resort":
+        return rng(rate_of(arg)["resort"])
+    if kind == "rate_hour":
+        return money(rate_of(arg)["hourly"])
+    if kind == "rate_4h":
+        r = RATES_BY_SIZE[arg]
+        return money(r["callOut"] + r["hourly"] * 4)
+    act = ACT_BY_ID[arg]
+    if kind == "act_ladder":
+        return act_ladder(act)
+    if kind == "act_setlist":
+        return act_setlist(act)
+    return f'<span class="num-accent">{money(act_from_price(act))}</span>'  # act_from
+
+
+# ----------------------------------------------- per-page structured data
+# A page dir may carry schema.json: its Service (with priced Offers off the
+# rate card), optionally one act's Service node, and the page FAQ. One file
+# feeds both the FAQPage markup and the visible {{page_faqs}} list, so the
+# two can never drift — the same rule the rate card lives by.
+
+
+def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
+    path = page_dir / "schema.json"
+    if not path.exists():
+        return "", ""
+    data = json.loads(read(path))
+    graph = [local_business_node()]
+    svc = data.get("service")
+    if svc:
+        node = {
+            "@type": "Service",
+            "@id": f"{canonical_for(cfg['output'])}#service",
+            "name": svc["name"],
+            "serviceType": svc["serviceType"],
+            "description": svc.get("description", ""),
+            "provider": {"@id": f"{SITE_URL}/#business"},
+            "areaServed": [
+                {"@type": "Place", "name": n}
+                for n in svc.get("areaServed", SERVICE_AREAS)
+            ],
+        }
+        offers = []
+        for cid in svc.get("configs", []):
+            r = rate_of(cid)
+            for col, area in (
+                ("denver", "Denver, CO"),
+                ("resort", "Colorado mountain resorts"),
+            ):
+                offers.append({
+                    "@type": "Offer",
+                    "name": f"{r['label']} — {area}",
+                    "priceCurrency": "USD",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": r[col][0],
+                        "maxPrice": r[col][1],
+                        "priceCurrency": "USD",
+                    },
+                    "areaServed": area,
+                    "availability": "https://schema.org/InStock",
+                })
+        if offers:
+            node["offers"] = offers
+        graph.append(node)
+    if data.get("act"):
+        graph.append(act_service_node(ACT_BY_ID[data["act"]]))
+    faq_html = ""
+    faqs = data.get("faqs", [])
+    if faqs:
+        graph.append({
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": f["q"],
+                    "acceptedAnswer": {"@type": "Answer", "text": f["a"]},
+                }
+                for f in faqs
+            ],
+        })
+        rows = "".join(
+            f'<div class="faq-row"><dt>{esc(f["q"])}</dt><dd>{esc(f["a"])}</dd></div>'
+            for f in faqs
+        )
+        faq_html = f'<dl class="faq-list">{rows}</dl>'
+    return schema_tag({"@context": "https://schema.org", "@graph": graph}), faq_html
 
 
 def build_ga() -> str:
@@ -1064,9 +1245,22 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{season_board}}": season_board(),
         "{{season_leads}}": season_leads(nav_prefix),
     }
+    # Per-page structured data + the FAQ block, both from the dir's schema.json.
+    schema_html, faq_block = page_schema(page_dir, cfg)
+    blocks["{{page_faqs}}"] = faq_block
+
     blocks.update(extra_blocks or {})
     for token, value in blocks.items():
         content = content.replace(token, value)
+
+    # Parameterized tokens after the static ones, so a static block's output
+    # can itself carry brand tokens but never a parameterized one.
+    try:
+        content = PARAM_BLOCK.sub(param_block, content)
+    except KeyError as e:
+        raise SystemExit(
+            f"{page_dir.name}: unknown id in a parameterized token: {e}"
+        )
 
     render_page(
         output=output,
@@ -1076,7 +1270,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         meta_description=cfg.get("meta_description", ""),
         og_type=cfg.get("og_type", "website"),
         robots=cfg.get("robots", "index, follow"),
-        schema_html=build_schema(cfg),
+        schema_html=schema_html or build_schema(cfg),
         nav_active=cfg.get("nav", ""),
         nav_prefix=nav_prefix,
     )
@@ -1196,7 +1390,9 @@ def act_setlist(act: dict) -> str:
         return ""
     if sl.get("from_repertoire"):
         body = _repertoire_setlist(act)
-        more = ('<p class="note"><a href="../../repertoire/">The whole song book</a> '
+        # {{nav_prefix}} rather than a counted path: this block now also renders
+        # into authored pages at other depths via {{act_setlist:ID}}.
+        more = ('<p class="note"><a href="{{nav_prefix}}repertoire/">The whole song list</a> '
                 "is published, all 240 titles.</p>")
     else:
         items = "".join(f'<li><span class="song-title">{esc(i)}</span></li>'
@@ -1509,7 +1705,7 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
     # event has real acts, real configurations and real floors to quote.
     lines += ["", "## Acts", ""]
     for a in ACTS:
-        where = f"{SITE_URL}/{ACTS_BASE}/{a['id']}/" if a["status"] == "flagship" \
+        where = f"{SITE_URL}/{act_url(a)}" if a["status"] == "flagship" or a.get("page") \
             else f"{SITE_URL}/{ACTS_BASE}/"
         lines.append(
             f"- {a['name']} ({a['style']}, {act_byline_inline(a)}): "
@@ -1564,11 +1760,16 @@ def main() -> None:
             print(f"  built {result['output']}")
 
     # Flagship act pages, generated from acts.json. They join `built` so the
-    # sitemap and llms.txt pick them up with no separate registration.
+    # sitemap and llms.txt pick them up with no separate registration. An act
+    # with a `page` field is skipped: an authored page dir owns its URL now.
     for act in FLAGSHIPS:
+        if act.get("page"):
+            continue
         result = build_act_page(act)
         built.append(result)
         print(f"  built {result['output']}")
+
+    write_redirects()
 
     for post in published:
         result = build_blog_post(post, published)

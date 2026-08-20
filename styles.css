@@ -726,6 +726,20 @@ img {
   color: var(--ink-soft);
 }
 
+/* A tag that links into its occasion page (2026-08-20 buildout). Reads as a
+   tag first, a link second: quiet rule underneath, brass on hover. */
+.tag-list a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+}
+
+.tag-list a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--brass);
+}
+
 .tag-label {
   margin-top: 2rem;
   font-size: 0.75rem;

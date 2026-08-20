@@ -14,7 +14,8 @@
     } catch (e) { /* analytics must never break the page */ }
   }
 
-  // cta_click: .btn anchors into contact/ plus the form's Send button.
+  // cta_click: .btn and .act-card-link anchors into contact/ (query string
+  // included — Inquire links carry ?act=<id>) plus the form's Send button.
   // email_click: any mailto link. One delegated listener covers both;
   // capture phase so a stopPropagation elsewhere can't swallow them.
   document.addEventListener("click", function (e) {
@@ -22,8 +23,8 @@
     if (!el) return;
     var href = el.getAttribute("href") || "";
     if (href.slice(0, 7) === "mailto:") return send("email_click");
-    if (!el.classList.contains("btn")) return;
-    if (el.tagName === "A" && !/contact\/$/.test(href)) return;
+    if (!el.classList.contains("btn") && !el.classList.contains("act-card-link")) return;
+    if (el.tagName === "A" && !/contact\/(\?[^#]*)?$/.test(href)) return;
     var label = (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
     send("cta_click", { label: label });
   }, true);
