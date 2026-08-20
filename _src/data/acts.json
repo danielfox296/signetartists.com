@@ -107,12 +107,12 @@
       "identity": [
         "One act, three sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
         "The reason to care is the contract. Most events buy the front of the night and the back of the night from two different acts, which means two load-ins, two sound checks, two sets of names to keep straight and a seam in the middle that guests can hear. This ladders instead: a duo through arrival and dinner, then the rhythm section arrives and the same voice fronts the dance floor. The party sees one band getting bigger.",
-        "At quartet it stops being a cocktail act. Voice, guitar, bass and drums playing a covers set built for a floor, and it is the size to book when filling the floor is the actual objective rather than a hope.",
+        "At quartet it stops being a cocktail act. The full rhythm section behind one voice, keys or a second guitar on top, playing a covers set built for a floor, and it is the size to book when filling the floor is the actual objective rather than a hope.",
         "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing.",
         "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
       ],
       "ladder": [
-        { "config": "duo", "build": "Voice and guitar, plus bass", "bestFor": "Arrival, cocktails and dinner." },
+        { "config": "duo", "build": "A singer-guitarist, plus bass", "bestFor": "Arrival, cocktails and dinner." },
         { "config": "trio", "build": "Voice and guitar, bass, drums", "bestFor": "Small venues, and parties that want a floor without a full band." },
         { "config": "quartet", "build": "The trio plus keys or a second guitar", "bestFor": "The dance floor booking. Weddings and corporate parties." }
       ],
@@ -137,7 +137,7 @@
       "spec": "Upright bass and guitar",
       "material": "Standards and covers",
       "bucket_tags": ["cocktail"],
-      "config_tags": ["duo"],
+      "config_tags": ["duo", "trio"],
       "from": "duo",
       "img": "standards.jpg",
       "alt": "A trumpet resting on a table.",
@@ -153,11 +153,17 @@
         "Standards are the repertoire because they are the one set of songs nobody has to be told about. Guests do not identify the tunes and do not need to. The night reads as expensive and unhurried, which is the whole job for that hour.",
         "The duo covers arrival, cocktails and dinner on one line of the contract. If the night also needs a dance floor, that is a second booking rather than this one turning up."
       ],
+      "_trio_rung_note": "ADDED 2026-08-20 with the SEO buildout. The handoff sells the jazz format as one page, duo and trio, upright bass and guitar core; the trio rung makes the ladder table on /ensembles/jazz-duo-trio/ carry both sizes off the rate card instead of the page pricing the trio beside the table.",
       "ladder": [
         {
           "config": "duo",
           "build": "Upright bass and guitar",
           "bestFor": "Arrival, cocktails and dinner. One hour or the whole front of the night."
+        },
+        {
+          "config": "trio",
+          "build": "The duo plus drums, played with brushes",
+          "bestFor": "Larger floors and longer nights, still at conversation volume."
         }
       ],
       "setlist": {
@@ -192,7 +198,7 @@
       "seo_title": "Dirty Flamenco: flamenco trio for private events in Denver",
       "meta_description": "Flamenco for weddings, corporate dinners and private events in Denver and the Colorado mountains. Trio from $2,800, with a dancer configuration. Rates published.",
       "identity": [
-        "Flamenco is the one booking on this roster that nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing repertoire, sold at private event scale.",
+        "Flamenco is the booking on this roster that almost nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing repertoire, sold at private event scale.",
         "That matters for a specific kind of night. Most live music at a private event is designed to be felt and not watched. This is the opposite booking. It is the act you hire when the program has a moment in it that needs to be the moment: a cultural centerpiece, a corporate dinner that has to be memorable rather than pleasant, a reception that wants something guests will describe to people who were not there.",
         "The repertoire is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
         "This is a named act rather than a format, an existing group booked under its own name. Any change to the lineup is named to you in advance."

@@ -1,0 +1,18 @@
+<!-- The full published card. This guide and /pricing/ are the only two pages
+     that carry {{rate_card_table}}, per the architecture; everywhere else the
+     card appears as two figures and a link. The travel lines are typed from
+     site.json extras because no parameterized token carries them. -->
+<section class="section section--ruled section--sunk" id="rate-card">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">The published card</p>
+      <h2 class="h2">The full card, Denver and the mountains.</h2>
+      <p class="lede">Starting prices by configuration, as published. Denver metro in the left column, the resort corridor in the right, and the difference between the two is travel and lodging.</p>
+    </div>
+
+    {{rate_card_table}}
+
+    <p class="prose">The travel lines behind the right column are published too. The Front Range adds $300. The I-70 corridor adds $600. The far resorts add $600 plus lodging, billed at cost rather than marked up, because a band that has crossed the passes for a late strike stays the night rather than driving them again at one in the morning. Altitude, town noise rules, curfews and the rest of the corridor's working detail are on <a href="{{nav_prefix}}planners/mountain/">the mountain corridor page</a>, and <a href="{{nav_prefix}}corporate/retreats/">corporate retreats</a> price from this right-hand column.</p>
+    <p class="note">This guide and the <a href="{{nav_prefix}}pricing/">rate card page</a> render from the same data, so the two cannot disagree. The card page also carries the quote engine, which itemises a night before you write to us.</p>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+{
+  "service": {
+    "name": "Client dinner and member event entertainment",
+    "serviceType": "Live music for client dinners, member events and private clubs",
+    "description": "Jazz duo and small ensembles for client dinners, member events and private clubs in Denver, played at conversation volume with every rate published.",
+    "areaServed": ["Denver", "Boulder", "Colorado Springs"],
+    "configs": ["solo", "duo", "trio"]
+  },
+  "faqs": [
+    {
+      "q": "How loud is a jazz duo during dinner?",
+      "a": "Dinner and cocktail sets run 65 to 72 dBA at the nearest table, a level you can talk across without raising your voice. If your venue or club enforces a cap, give us the number at contract and the evening is built under it rather than argued about on the night."
+    },
+    {
+      "q": "What does music for a client dinner cost?",
+      "a": "The jazz duo prices by the hour, and both the hourly figure and the cocktails-and-dinner range are published on this page and on the rate card. There is no overtime rate: added time bills at the same hourly figure in 30-minute increments, agreed on the night with whoever holds the budget."
+    },
+    {
+      "q": "Can you invoice against a purchase order?",
+      "a": "Yes. We can be set up as a vendor, quote against a PO, and invoice net-30 on approval, with the purchase order number on one itemised invoice. The certificate of insurance naming your venue and the W-9 arrive in the same email as the contract, before anyone has to ask for them."
+    },
+    {
+      "q": "Does the music stop for toasts and remarks?",
+      "a": "Yes, before the speaker reaches the microphone. A dedicated announcement microphone is live on its own channel from the end of sound check, so toasts, introductions and remarks get a working mic of their own rather than the singer's. Transitions are set against your run of show before the event."
+    },
+    {
+      "q": "How much space does the duo need?",
+      "a": "An 8 by 6 foot corner, one dedicated 20-amp circuit, and a 60-minute load-in. No stage and no house sound system are required: sound sized to the venue is included in the rate, and the footprint for every size up to quartet is published on the technical page."
+    }
+  ]
+}

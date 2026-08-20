@@ -1,0 +1,28 @@
+{
+  "_note": "Colorado Springs holiday spoke. City-specific set: the pricing-column fact, the vendor process, ballroom sizing, and where the open dates live. No dollar figures in answers; the Offers this file emits carry the ranges.",
+  "service": {
+    "name": "Corporate holiday party entertainment in Colorado Springs",
+    "serviceType": "Live music and DJ for corporate holiday parties",
+    "description": "Live music for Colorado Springs corporate holiday parties, duo through quartet plus DJ, priced off the Denver column with one flat Front Range travel line.",
+    "areaServed": ["Colorado Springs"],
+    "configs": ["duo", "trio", "quartet", "dj"]
+  },
+  "faqs": [
+    {
+      "q": "Does a Colorado Springs booking cost more than a Denver one?",
+      "a": "One flat travel line more, published on the rate card with everything else. Colorado Springs prices off the same column as Denver; the resort column is for the mountain corridor. Peak weekends and New Year's Eve carry the same published premiums they carry everywhere on the card."
+    },
+    {
+      "q": "Can you clear a defense contractor's vendor process?",
+      "a": "Yes. We can be set up as a vendor, quote against a purchase order and invoice net-30 on approval, with a W-9 and a certificate of insurance naming your venue sent in the same email as the contract. Start onboarding when you shortlist dates; it is usually the slowest step in a corporate booking."
+    },
+    {
+      "q": "What size fits a Broadmoor-class ballroom party?",
+      "a": "A quartet, once the floor has to fill. Dinner and remarks sit at 65 to 72 dBA, which a duo or trio holds comfortably; dancing runs 88 to 95 dBA, which is quartet work. One act can ladder across both halves of the night on a single contract."
+    },
+    {
+      "q": "Which December dates are still open for Colorado Springs?",
+      "a": "The board on our holiday season page is the answer, and it covers the whole Front Range: 21 published party dates across November and December, Thursdays through Saturdays. It is our availability rather than any venue's, so check your venue's calendar in parallel and send us the date that clears both."
+    }
+  ]
+}

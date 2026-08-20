@@ -1,0 +1,36 @@
+{
+  "_note": "The cost FAQ types figures because rate tokens do not resolve inside schema.json, the same documented pattern as guides-live-music-cost/schema.json. The typed figures mirror the rate card as of 2026-08-20: solo Denver $900 to $1,200, duo Denver $2,000 to $2,800. If the card moves, this answer moves with it.",
+  "service": {
+    "name": "Private party and dinner party live music",
+    "serviceType": "Live music for private parties, dinner parties and milestone celebrations",
+    "description": "Live music for dinner parties, cocktail parties, milestone birthdays and anniversaries at homes and clubs in Denver, Boulder and across Colorado, solo through quartet, with published rates.",
+    "areaServed": ["Denver", "Boulder", "Front Range", "Colorado mountain corridor"],
+    "configs": ["solo", "duo", "trio", "quartet"]
+  },
+  "faqs": [
+    {
+      "q": "What does a band for a dinner party cost?",
+      "a": "A dinner party usually books at solo or duo size: a solo runs {{rate_range:solo}} and a duo through cocktails and dinner runs {{rate_range:duo}} in Denver, with sound included and no overtime rate. Every size is published in both the Denver and mountain columns on the pricing page, and travel outside the metro is its own line on the quote."
+    },
+    {
+      "q": "Do you play private homes?",
+      "a": "Yes. Dinner parties, cocktail parties and milestones at homes and clubs are the bookings this page exists for. The requirements are small: floor space in a corner, one dedicated 20-amp circuit within reach, and somewhere to park for load-in. Clubs that ask for a certificate of insurance get one with the contract."
+    },
+    {
+      "q": "How much space does the band need?",
+      "a": "A solo takes 6 by 4 ft, a duo 8 by 6, a trio 12 by 8, and none of them needs a stage. Those are working footprints, the space players and gear actually occupy, and the full table for every size is on our technical page."
+    },
+    {
+      "q": "How loud will it be?",
+      "a": "Dinner and cocktail sets run 65 to 72 dBA at the nearest table, a volume you can talk across without raising your voice. Dancing runs 88 to 95 dBA on the floor. If your venue or club enforces a cap, tell us the number when you book and the night is built under it."
+    },
+    {
+      "q": "How far ahead should we book a private party?",
+      "a": "For a November or December date, decide as the corporate season does: those dates are settled August through October and New Year's Eve books earliest of all. The rest of the year runs lighter, and a specific act on a Saturday is still worth claiming early."
+    },
+    {
+      "q": "Can you play outdoors at a home?",
+      "a": "Yes, on a covered, level and dry performance area with power run to it, and with a move-indoors call time agreed before the day. Colorado evenings drop fast, and instruments and electronics stop behaving in the cold and the wet, so the cover and the call are both required."
+    }
+  ]
+}

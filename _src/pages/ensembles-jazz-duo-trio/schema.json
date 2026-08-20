@@ -1,0 +1,32 @@
+{
+  "service": {
+    "name": "Jazz duo and trio",
+    "serviceType": "Jazz duo and trio for cocktail hours, dinners and private events",
+    "description": "Jazz standards on upright bass and guitar, with a trio adding drums played with brushes for larger floors, for cocktail hours, client dinners and private events across Denver and the Colorado mountain corridor.",
+    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
+    "configs": ["duo", "trio"]
+  },
+  "act": "jazz-duo",
+  "faqs": [
+    {
+      "q": "What is the difference between the jazz duo and the trio?",
+      "a": "One player, and the size of floor each holds. The duo is upright bass and guitar, the standard booking for cocktails and dinner. The trio adds drums played with brushes, which carries a larger floor and a longer guest list at the same conversation volume. Both play the same standards set."
+    },
+    {
+      "q": "Is a jazz duo enough for a dinner of sixty guests?",
+      "a": "Yes. Dinner and cocktail sets run 65 to 72 dBA at the nearest table, a level guests can talk across, and the duo holds that from twenty guests at one table to eighty at ten. Past that point, or on a larger floor, the trio is the honest size."
+    },
+    {
+      "q": "Why is the duo sold as a format instead of under a name?",
+      "a": "Because the booking is an instrumentation, a repertoire and a volume, and all three are guaranteed on any date it is available. Naming a specific pair would promise a personality we might not field for your date. The spec is the promise we can keep every time."
+    },
+    {
+      "q": "Can one booking cover cocktails and dinner?",
+      "a": "Yes, and that is the standard shape. The duo covers arrival, cocktails and dinner on one line of the contract, with sound included and audio continuing through breaks. A single hour on its own is also a published rate, and added time bills in 30-minute increments with no overtime rate."
+    },
+    {
+      "q": "Does the trio need a stage?",
+      "a": "No. The trio plays fine on the floor and takes a 12 by 8 ft footprint on one dedicated 20-amp circuit, with load-in running about an hour. If you want a riser, the venue or your production company provides it, and every footprint is published on the technical page."
+    }
+  ]
+}

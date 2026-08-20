@@ -1,0 +1,31 @@
+{
+  "service": {
+    "name": "Corporate event entertainment",
+    "serviceType": "Live music for office holiday parties, client dinners, member events and corporate retreats",
+    "description": "Live music for corporate events in Denver and across Colorado, solo through quartet plus a DJ, with published rates, a certificate of insurance with the contract, and net-30 on approval.",
+    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
+    "configs": ["solo", "duo", "trio", "quartet", "dj"]
+  },
+  "faqs": [
+    {
+      "q": "What does live music cost for a corporate event in Denver?",
+      "a": "Every rate is published before you write to us: solo through quartet plus a DJ, each priced as a range on the rate card, with sound included at every size. Travel outside the metro is its own published line, holiday and peak weekends carry +25%, and New Year's Eve +50%."
+    },
+    {
+      "q": "How far in advance should we book?",
+      "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Established acts book out by Thanksgiving. Client dinners and retreats run on shorter windows, and any date gets a straight yes or no by email."
+    },
+    {
+      "q": "Can you work with our procurement process?",
+      "a": "Yes. We can be set up as a vendor, quote against a purchase order, and invoice net-30 on approval. A certificate of insurance naming your venue, a W-9 and one itemised invoice arrive in the same email as the contract. Vendor onboarding is usually the slowest step, so start it early."
+    },
+    {
+      "q": "How do you handle speeches and a program?",
+      "a": "The music stops while your speaker is still steps from the microphone, and transitions are rehearsed against the run of show the week before the event. A dedicated announcement microphone is live on its own channel from the end of sound check at every size, so remarks, awards and auctions never wait on a cable swap."
+    },
+    {
+      "q": "How loud is the band during dinner and networking?",
+      "a": "Dinner and cocktails run 65 to 72 dBA at the nearest table, a level you can talk across without raising your voice. Dancing runs 88 to 95 dBA on the floor, later in the night, when loud is the point. If your venue enforces a cap, give us the number at contract and the night is built under it."
+    }
+  ]
+}

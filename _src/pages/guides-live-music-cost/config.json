@@ -1,0 +1,10 @@
+{
+  "_note": "The cost guide, Tier 1c of the 2026-08-20 SEO buildout. Built to be the quoted source for cost queries, which are budget calibration, so the page is arithmetic and market context, never a discount pitch. The one page besides /pricing/ that carries the full rate card token. Every Signet figure in the sections is a token off the rate card; the market-context anchors (commodity roughly $1,600 to $2,100, boutiques from $8,000) and the travel lines are typed per the handoff and site.json extras because no token carries them.",
+  "_meta_note": "The meta description types three figures because tokens do not resolve in config values, same precedent as corporate-holiday-party. If the card moves, this line and schema.json are the two typed surfaces on this page.",
+  "_title_note": "Trimmed 2026-08-20 from the 84-character colon form; the occasion list lives in the lede and the occasion sections rather than the title. The build appends the brand.",
+  "title": "What live music costs in Colorado",
+  "title_exact": false,
+  "meta_description": "Published rates for live music in Colorado: solo from $900, an hour of jazz duo $1,050, a quartet evening $4,000 to $5,500. How each figure is built.",
+  "output": "guides/live-music-cost-colorado/index.html",
+  "nav": "pricing"
+}

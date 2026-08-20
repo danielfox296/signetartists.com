@@ -1,0 +1,28 @@
+{
+  "_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the published premiums, the booking window. Answers answer in the first sentence and carry no dollar figures; ranges live on the rate card and in the Offers this file emits.",
+  "service": {
+    "name": "Corporate holiday party entertainment in Denver",
+    "serviceType": "Live music and DJ for corporate holiday parties",
+    "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, with published rates and an open-date board.",
+    "areaServed": ["Denver"],
+    "configs": ["duo", "trio", "quartet", "dj"]
+  },
+  "faqs": [
+    {
+      "q": "How many holiday party dates does Denver actually have?",
+      "a": "Twenty-one. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 published party dates, and 10 of them are in December. The board on this page shows the current status of every one, with the date it was last checked printed under it."
+    },
+    {
+      "q": "What does load-in look like at a downtown Denver hotel?",
+      "a": "Through the dock and the service elevator, inside the windows the venue sets. We coordinate dock time, elevator window and power with the venue before the day. A band needs 45 to 90 minutes to load in depending on size, plus one or two dedicated 20-amp circuits; the full sheet by size is on our technical page."
+    },
+    {
+      "q": "Do December dates in Denver cost more?",
+      "a": "The base rates hold; the premiums are published. Holiday and peak weekends carry a 25 percent line and New Year's Eve carries 50 percent, printed on the rate card rather than discovered at contract. Every configuration's range is public too, so the arithmetic can be run before you write to us."
+    },
+    {
+      "q": "When should a Denver company book its holiday party?",
+      "a": "August through October. That is when the season is decided for November and December dates, and established acts are booked out by Thanksgiving. New Year's Eve books earliest of all. After October you are choosing from what is left rather than from the calendar."
+    }
+  ]
+}

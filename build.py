@@ -987,7 +987,7 @@ def write_redirects() -> None:
 # fails the build loudly rather than shipping a literal token.
 
 PARAM_BLOCK = re.compile(
-    r"\{\{(rate_range_resort|rate_range|rate_hour|rate_4h"
+    r"\{\{(rate_range_resort|rate_range|rate_hour|rate_4h|rate_1h"
     r"|act_ladder|act_setlist|act_from|offer_close):([^}]+)\}\}"
 )
 
@@ -1026,9 +1026,9 @@ def param_block(m: re.Match) -> str:
         return rng(rate_of(arg)["resort"])
     if kind == "rate_hour":
         return money(rate_of(arg)["hourly"])
-    if kind == "rate_4h":
+    if kind in ("rate_4h", "rate_1h"):
         r = RATES_BY_SIZE[arg]
-        return money(r["callOut"] + r["hourly"] * 4)
+        return money(r["callOut"] + r["hourly"] * (4 if kind == "rate_4h" else 1))
     act = ACT_BY_ID[arg]
     if kind == "act_ladder":
         return act_ladder(act)
@@ -1042,6 +1042,25 @@ def param_block(m: re.Match) -> str:
 # rate card), optionally one act's Service node, and the page FAQ. One file
 # feeds both the FAQPage markup and the visible {{page_faqs}} list, so the
 # two can never drift — the same rule the rate card lives by.
+
+
+def resolve_rate_tokens(text: str) -> str:
+    """Rate tokens inside schema.json strings, resolved to plain figures.
+
+    A FAQ answer that names a real number is the answer engines actually
+    quote, and typing the number would let it drift from the card. Layout
+    tokens (act_ladder, act_setlist, offer_close) have no plain-text form
+    and fail the build loudly if they appear here."""
+    def plain(m: re.Match) -> str:
+        kind = m.group(1)
+        if kind in ("act_ladder", "act_setlist", "offer_close"):
+            raise SystemExit(
+                f"schema.json: {{{{{kind}:...}}}} has no plain-text form"
+            )
+        if kind == "act_from":
+            return money(act_from_price(ACT_BY_ID[m.group(2).strip()]))
+        return param_block(m)
+    return PARAM_BLOCK.sub(plain, text)
 
 
 def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
@@ -1090,7 +1109,10 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
     if data.get("act"):
         graph.append(act_service_node(ACT_BY_ID[data["act"]]))
     faq_html = ""
-    faqs = data.get("faqs", [])
+    faqs = [
+        {**f, "q": resolve_rate_tokens(f["q"]), "a": resolve_rate_tokens(f["a"])}
+        for f in data.get("faqs", [])
+    ]
     if faqs:
         graph.append({
             "@type": "FAQPage",

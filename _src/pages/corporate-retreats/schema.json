@@ -1,0 +1,31 @@
+{
+  "service": {
+    "name": "Corporate retreat entertainment",
+    "serviceType": "Live music for corporate retreats and incentive events",
+    "description": "Live music for corporate retreats and incentive events in the Colorado mountain corridor, solo through quartet, priced from a published resort rate column with travel as its own line.",
+    "areaServed": ["Vail", "Aspen", "Beaver Creek", "Breckenridge"],
+    "configs": ["solo", "duo", "trio", "quartet"]
+  },
+  "faqs": [
+    {
+      "q": "What does live music cost at a mountain resort?",
+      "a": "Resort dates price from their own published column of the rate card, above the Denver column because the drive, the lost day and the altitude are in the number. Travel is separate and published: Vail, Beaver Creek, Breckenridge and Winter Park add $600, and Aspen and the far resorts add $600 plus lodging at cost."
+    },
+    {
+      "q": "What does the resort need to provide?",
+      "a": "One or two dedicated 20-amp circuits within reach of the performance area, a load-in window of 45 to 90 minutes depending on size, and the cap and curfew figures at contract. Dedicated is the word that matters: sharing a circuit with catering warmers is the most common cause of a load-in problem."
+    },
+    {
+      "q": "Do you honour decibel caps and curfews?",
+      "a": "Yes, as written. Mountain venues run on their own rules, so tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
+    },
+    {
+      "q": "Can the band play outdoors at altitude?",
+      "a": "Yes, on a covered, level and dry performance area with power run to it and a move-indoors call time written before the day. Mountain evenings drop fast, and instruments and electronics both stop behaving in the cold. Altitude also changes pacing: singers and horn players tire faster in thin air, so the night is paced for it."
+    },
+    {
+      "q": "Is lodging marked up?",
+      "a": "No. Lodging applies on far-resort dates, Aspen among them, and is billed at cost as its own line on the quote, the receipt and nothing added. It exists because far-resort dates are two-day commitments for the band, whatever the run of show says."
+    }
+  ]
+}

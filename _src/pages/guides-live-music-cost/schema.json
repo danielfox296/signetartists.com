@@ -1,0 +1,28 @@
+{
+  "_note": "UPDATED 2026-08-20: build.py resolve_rate_tokens() now resolves rate tokens inside schema.json FAQ strings, so the card-derived figures here are tokens and cannot drift. Still typed because no data source carries them: the market anchors (roughly $1,600 to $2,100 commodity, $8,000+ boutique, from the handoff) and the travel lines ($300/$600, matching site.json extras as of 2026-08-20: duo hour 1,050, duo 4h 2,400, quartet 4h 4,800, DJ 4h 2,200, DJ hour 1,150, travel 300 and 600, peak +25%, NYE +50%. If the card moves, this file and the meta description are the typed surfaces on this page.",
+  "service": {
+    "name": "Live music pricing guide for Colorado",
+    "serviceType": "Live music for private and corporate events",
+    "description": "Published rates and worked cost arithmetic for live music at corporate events, private parties and wedding cocktail hours across Denver, the Front Range and the Colorado resort corridor.",
+    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
+    "configs": ["solo", "duo", "trio", "quartet", "dj"]
+  },
+  "faqs": [
+    {
+      "q": "Why do live music prices vary so much in Colorado?",
+      "a": "Because the market runs in tiers and quotes cover different scopes. Marketplace commodity averages run roughly $1,600 to $2,100, and what sits inside a figure varies listing by listing. Boutique production starts at $8,000 and up. Our published card sits between them, with sound, insurance and a named contact for the night inside every figure."
+    },
+    {
+      "q": "What does the mountain premium cover?",
+      "a": "Travel and lodging. The resort column runs above the Denver column because the corridor costs real money to reach: the Front Range adds $300, the I-70 corridor adds $600, and the far resorts add $600 plus lodging billed at cost rather than marked up. Winter passes and late strikes make the overnight the safe call at the far resorts."
+    },
+    {
+      "q": "Is a band or a DJ cheaper?",
+      "a": "A DJ, once the night runs past two hours. Four hours of DJ is {{rate_4h:DJ}} against {{rate_4h:Duo}} for a duo and {{rate_4h:Quartet}} for a quartet, all published, while a single hour flips it: {{rate_hour:duo}} for an hour of jazz duo against {{rate_1h:DJ}} for the DJ. The most common corporate pairing uses both, a duo through dinner and the DJ carrying the floor, on one contract and one invoice."
+    },
+    {
+      "q": "Does booking early get a lower price?",
+      "a": "No. The rates are published and the figure holds wherever the date lands, apart from two published premiums: holiday and peak weekends add 25% and New Year's Eve adds 50%. Booking early buys availability instead. Corporate holiday dates are decided August through October, and the strong Saturdays go first."
+    }
+  ]
+}
