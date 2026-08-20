@@ -1105,6 +1105,27 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
                 })
         if offers:
             node["offers"] = offers
+        # The review slot (§10.7 of the buildout): empty today because zero
+        # reviews exist and a fabricated one would be worse than none. When a
+        # real testimonial lands, add {"author": "...", "body": "...",
+        # "rating": 5, "date": "YYYY-MM-DD"} to schema.json "reviews" and it
+        # renders as Review markup on this Service, no build change needed.
+        reviews = data.get("reviews", [])
+        if reviews:
+            node["review"] = [
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": r["author"]},
+                    "reviewBody": r["body"],
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": r.get("rating", 5),
+                        "bestRating": 5,
+                    },
+                    "datePublished": r.get("date", ""),
+                }
+                for r in reviews
+            ]
         graph.append(node)
     if data.get("act"):
         graph.append(act_service_node(ACT_BY_ID[data["act"]]))
