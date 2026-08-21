@@ -831,7 +831,7 @@ SERVICE_AREAS = [
 
 
 def local_business_node() -> dict:
-    return {
+    node = {
         "@type": "LocalBusiness",
         "@id": f"{SITE_URL}/#business",
         "name": BRAND["name"],
@@ -847,6 +847,11 @@ def local_business_node() -> dict:
         "areaServed": [{"@type": "Place", "name": n} for n in SERVICE_AREAS],
         "priceRange": "$$$",
     }
+    # sameAs holds the profile URLs (Google Business Profile, marketplaces,
+    # socials) as each one goes live. An empty list stays out of the markup.
+    if BRAND.get("sameAs"):
+        node["sameAs"] = BRAND["sameAs"]
+    return node
 
 
 def act_offers(act: dict) -> list:
