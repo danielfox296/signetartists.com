@@ -17,7 +17,7 @@
     "serviceArea": "Denver, the Front Range, and the mountain corridor",
     "url": "https://signetartists.com",
     "_sameAs_note": "ADDED 2026-08-21. Profile URLs (Google Business Profile, Thumbtack, The Bash, socials) go here as each goes live; the build emits schema sameAs only when the list is non-empty. The 2026-08-01 no-published-phone decision stands: profiles use the email route and private contact numbers, nothing published.",
-    "sameAs": [],
+    "sameAs": ["https://www.thumbtack.com/co/littleton/pro/signet-artists/service/588192753972838403"],
     "_formsubmit_note": "FormSubmit's hashed endpoint for hello@signetartists.com, so the address is not in the page source. Same pattern as daniel-fox.com and danielchristopherfox.com. The plain address still renders on the contact page, deliberately.",
     "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8"
   },
