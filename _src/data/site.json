@@ -1,8 +1,6 @@
 {
   "_comment": "Every brand-dependent value on the site. No template hardcodes one. Values in [square brackets] are unresolved and render with a dotted underline in the browser so open decisions stay visible while browsing.",
-
   "_images_note": "PLACEHOLDERS. Free-licence Unsplash stills, cropped 16:9 and duotoned into the brand palette so they read as one art-directed set rather than five unrelated stock photos. Deliberately objects, gear and empty rooms — no people, and nothing that implies it is our band. Swap every one of these for footage from the shoot; the alt text will need rewriting too.",
-
   "brand": {
     "name": "Signet Artists",
     "legalName": "Entuned, LLC",
@@ -17,28 +15,78 @@
     "serviceArea": "Denver, the Front Range, and the mountain corridor",
     "url": "https://signetartists.com",
     "_sameAs_note": "ADDED 2026-08-21. Profile URLs (Google Business Profile, Thumbtack, The Bash, socials) go here as each goes live; the build emits schema sameAs only when the list is non-empty. The 2026-08-01 no-published-phone decision stands: profiles use the email route and private contact numbers, nothing published.",
-    "sameAs": ["https://www.thumbtack.com/co/littleton/pro/signet-artists/service/588192753972838403"],
+    "sameAs": [
+      "https://www.thumbtack.com/co/littleton/pro/signet-artists/service/588192753972838403",
+      "https://www.linkedin.com/company/signetartists/"
+    ],
     "_formsubmit_note": "FormSubmit's hashed endpoint for hello@signetartists.com, so the address is not in the page source. Same pattern as daniel-fox.com and danielchristopherfox.com. The plain address still renders on the contact page, deliberately.",
     "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8"
   },
-
   "_acts_moved_note": "The two house bands (The Standards, The Headliners) and the DJ lived here until the 2026-08-15 restructure. The business books named acts, so the roster moved to _src/data/acts.json with a real schema: bucket and config tags, per-config pricing read off the rate card, and flagship/listing status. Nothing reads site.acts any more.",
-
-
   "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
-
   "_rates_byRequest_note": "ADDED 2026-08-17. `byRequest` rows are held out of the published hourly table and out of llms.txt's hourly build, because the 2026 product is solo through quartet and the quote engine's ensemble picker is built from that table. The figures stay here rather than being deleted: they are real rates and a five or six piece is still quoted on request. The planners technical page stopped at the quartet with the 2026-08-17 sweep, so these rows render nowhere. Flip the flag, not the number, if any of them come back as a sold size.",
   "rates": [
-    { "size": "Duo", "pieces": 2, "callOut": 600, "hourly": 450, "min": 1 },
-    { "size": "Trio", "pieces": 3, "callOut": 1000, "hourly": 600, "min": 1 },
-    { "size": "Quartet", "pieces": 4, "callOut": 1600, "hourly": 800, "min": 2 },
-    { "byRequest": true, "size": "Quintet", "pieces": 5, "callOut": 2200, "hourly": 1000, "min": 2 },
-    { "byRequest": true, "size": "Seven-piece", "pieces": 7, "callOut": 3500, "hourly": 1250, "min": 2 },
-    { "byRequest": true, "size": "Ten-piece", "pieces": 10, "callOut": 5300, "hourly": 1800, "min": 2 },
-    { "byRequest": true, "size": "Thirteen-piece", "pieces": 13, "callOut": 8000, "hourly": 2500, "min": 2 },
-    { "size": "DJ", "pieces": 1, "callOut": 800, "hourly": 350, "min": 1 }
+    {
+      "size": "Duo",
+      "pieces": 2,
+      "callOut": 600,
+      "hourly": 450,
+      "min": 1
+    },
+    {
+      "size": "Trio",
+      "pieces": 3,
+      "callOut": 1000,
+      "hourly": 600,
+      "min": 1
+    },
+    {
+      "size": "Quartet",
+      "pieces": 4,
+      "callOut": 1600,
+      "hourly": 800,
+      "min": 2
+    },
+    {
+      "byRequest": true,
+      "size": "Quintet",
+      "pieces": 5,
+      "callOut": 2200,
+      "hourly": 1000,
+      "min": 2
+    },
+    {
+      "byRequest": true,
+      "size": "Seven-piece",
+      "pieces": 7,
+      "callOut": 3500,
+      "hourly": 1250,
+      "min": 2
+    },
+    {
+      "byRequest": true,
+      "size": "Ten-piece",
+      "pieces": 10,
+      "callOut": 5300,
+      "hourly": 1800,
+      "min": 2
+    },
+    {
+      "byRequest": true,
+      "size": "Thirteen-piece",
+      "pieces": 13,
+      "callOut": 8000,
+      "hourly": 2500,
+      "min": 2
+    },
+    {
+      "size": "DJ",
+      "pieces": 1,
+      "callOut": 800,
+      "hourly": 350,
+      "min": 1
+    }
   ],
-
   "included": [
     "A named contact for the night, given to you before the event",
     "Sound sized to the venue",
@@ -48,65 +96,106 @@
     "Timeline coordination before the event",
     "Continuous audio during breaks"
   ],
-
   "_insurance_note": "ADDED 2026-08-15 with the roster restructure, from the spec's planner trust-signal list. These are a PUBLISHED CLAIM ABOUT REAL COVERAGE, not marketing copy: a planner forwards them to a venue and the venue checks the certificate against them. VERIFY BOTH FIGURES AGAINST THE ACTUAL POLICY BEFORE THIS PAGE IS PROMOTED. $1M per occurrence / $2M aggregate is the standard commercial general liability pair venues ask for, which is why the spec names it, but standard is not the same as what we hold. If the policy differs, change it here and it changes everywhere it renders.",
   "insurance": {
     "perOccurrence": "$1,000,000",
     "aggregate": "$2,000,000"
   },
-
   "extras": [
-    { "item": "Front Range travel: Boulder, Colorado Springs, Fort Collins", "rate": "$300" },
-    { "item": "I-70 corridor: Vail, Beaver Creek, Breckenridge, Winter Park", "rate": "$600" },
-    { "item": "Far resorts: Aspen, Telluride, Steamboat, Crested Butte", "rate": "$600 + lodging at cost" },
-    { "item": "Holiday and peak weekends", "rate": "+25%" },
-    { "item": "New Year's Eve", "rate": "+50%" },
-    { "item": "Live-band karaoke", "rate": "+$1,500" },
-    { "item": "Learned songs beyond the first", "rate": "$250 each" }
+    {
+      "item": "Front Range travel: Boulder, Colorado Springs, Fort Collins",
+      "rate": "$300"
+    },
+    {
+      "item": "I-70 corridor: Vail, Beaver Creek, Breckenridge, Winter Park",
+      "rate": "$600"
+    },
+    {
+      "item": "Far resorts: Aspen, Telluride, Steamboat, Crested Butte",
+      "rate": "$600 + lodging at cost"
+    },
+    {
+      "item": "Holiday and peak weekends",
+      "rate": "+25%"
+    },
+    {
+      "item": "New Year's Eve",
+      "rate": "+50%"
+    },
+    {
+      "item": "Live-band karaoke",
+      "rate": "+$1,500"
+    },
+    {
+      "item": "Learned songs beyond the first",
+      "rate": "$250 each"
+    }
   ],
-
   "_configurations_note": "DRAFT 2026-08-07, swept 2026-08-17 with the Q4 refocus: rows now cover exactly what is sold, solo through quartet plus the DJ. The quintet, seven-, ten- and thirteen-piece rows are in git history if a larger size ever returns as a sold product. Solo has no call-out/hourly row in `rates` (the card publishes it as a range only), so it appears here for logistics without a rates twin; every other row name stays locked to `rates` so the technical page and the rate card cannot disagree. A solo's logistics mirror the DJ's: one person and a small PA. Footprints are the working figures a band actually takes, not the stage-rental guidance, which runs far larger; that gap is the point of the page. Inputs are channel counts at the desk, including one announcement mic on its own channel.",
   "_configurations_provisional": true,
   "_configurations_provisional_note": "Draws the brass edge down the technical page tables (styles.css .table-scroll[data-provisional]). Set to false once Daniel's correction pass lands and these stop being our own inference.",
-
   "configurations": [
     {
-      "size": "Solo", "pieces": 1,
+      "size": "Solo",
+      "pieces": 1,
       "build": "One voice, one instrument",
-      "stage": "6 by 4 ft", "stageMin": "5 by 4 ft",
-      "inputs": 3, "circuits": 1,
-      "loadIn": "45 min", "strike": "30 min", "vans": 1
+      "stage": "6 by 4 ft",
+      "stageMin": "5 by 4 ft",
+      "inputs": 3,
+      "circuits": 1,
+      "loadIn": "45 min",
+      "strike": "30 min",
+      "vans": 1
     },
     {
-      "size": "Duo", "pieces": 2,
+      "size": "Duo",
+      "pieces": 2,
       "build": "Guitar and upright bass",
-      "stage": "8 by 6 ft", "stageMin": "6 by 5 ft",
-      "inputs": 3, "circuits": 1,
-      "loadIn": "60 min", "strike": "45 min", "vans": 1
+      "stage": "8 by 6 ft",
+      "stageMin": "6 by 5 ft",
+      "inputs": 3,
+      "circuits": 1,
+      "loadIn": "60 min",
+      "strike": "45 min",
+      "vans": 1
     },
     {
-      "size": "Trio", "pieces": 3,
+      "size": "Trio",
+      "pieces": 3,
       "build": "Guitar, bass and drums",
-      "stage": "12 by 8 ft", "stageMin": "10 by 6 ft",
-      "inputs": 8, "circuits": 1,
-      "loadIn": "60 min", "strike": "45 min", "vans": 1
+      "stage": "12 by 8 ft",
+      "stageMin": "10 by 6 ft",
+      "inputs": 8,
+      "circuits": 1,
+      "loadIn": "60 min",
+      "strike": "45 min",
+      "vans": 1
     },
     {
-      "size": "Quartet", "pieces": 4,
+      "size": "Quartet",
+      "pieces": 4,
       "build": "Trio plus a horn or a voice",
-      "stage": "14 by 10 ft", "stageMin": "12 by 8 ft",
-      "inputs": 10, "circuits": 2,
-      "loadIn": "90 min", "strike": "60 min", "vans": 1
+      "stage": "14 by 10 ft",
+      "stageMin": "12 by 8 ft",
+      "inputs": 10,
+      "circuits": 2,
+      "loadIn": "90 min",
+      "strike": "60 min",
+      "vans": 1
     },
     {
-      "size": "DJ", "pieces": 1,
+      "size": "DJ",
+      "pieces": 1,
       "build": "Booth, controller and the house of our own PA",
-      "stage": "6 by 4 ft", "stageMin": "6 by 3 ft",
-      "inputs": 3, "circuits": 1,
-      "loadIn": "45 min", "strike": "30 min", "vans": 1
+      "stage": "6 by 4 ft",
+      "stageMin": "6 by 3 ft",
+      "inputs": 3,
+      "circuits": 1,
+      "loadIn": "45 min",
+      "strike": "30 min",
+      "vans": 1
     }
   ],
-
   "_corporateShapes_note": "ADDED 2026-08-17 with the Q4 refocus. The three shapes a corporate enquiry actually arrives as, for the /corporate/ page. Act and config are ids so the names and both price columns resolve out of acts.json and the rate card: this block cannot quote a size the pricing page has stopped publishing, which is the whole reason it is data and not typed into the section.",
   "corporateShapes": [
     {
@@ -128,23 +217,43 @@
       "why": "An event that has remarks in it and wants one thing guests describe afterwards. A set piece rather than a background, placed where the program leaves space for it."
     }
   ],
-
   "_eventTypes_note": "RESTRUCTURED 2026-08-20 with the SEO buildout. Each tag is now a doorway into its occasion page, which is the home page's placement for the occasion tree. 'Weddings' became 'Wedding cocktail hours' deliberately: the cocktail hour is the one wedding product in 2026 scope, and the tag should not promise a reception band that does not exist yet. Galas route to the corporate hub, where they are framed at small-format scale per the 17 Aug audit.",
   "eventTypes": [
-    { "label": "Office holiday parties", "href": "corporate/holiday-party/" },
-    { "label": "Client dinners", "href": "corporate/client-dinners/" },
-    { "label": "Corporate retreats", "href": "corporate/retreats/" },
-    { "label": "Galas and fundraisers", "href": "corporate/" },
-    { "label": "Dinner and cocktail parties", "href": "private-parties/" },
-    { "label": "Milestones and anniversaries", "href": "private-parties/" },
-    { "label": "Wedding cocktail hours", "href": "weddings/cocktail-hour/" },
-    { "label": "Club and member events", "href": "corporate/client-dinners/" }
+    {
+      "label": "Office holiday parties",
+      "href": "corporate/holiday-party/"
+    },
+    {
+      "label": "Client dinners",
+      "href": "corporate/client-dinners/"
+    },
+    {
+      "label": "Corporate retreats",
+      "href": "corporate/retreats/"
+    },
+    {
+      "label": "Galas and fundraisers",
+      "href": "corporate/"
+    },
+    {
+      "label": "Dinner and cocktail parties",
+      "href": "private-parties/"
+    },
+    {
+      "label": "Milestones and anniversaries",
+      "href": "private-parties/"
+    },
+    {
+      "label": "Wedding cocktail hours",
+      "href": "weddings/cocktail-hour/"
+    },
+    {
+      "label": "Club and member events",
+      "href": "corporate/client-dinners/"
+    }
   ],
-
   "_plannerFaqs_note": "DRAFT 2026-08-07. The deep operational FAQ, the questions a planner asks that are not about price. `faqs` above stays the short pricing set on the pricing page; this is the full set on planners/faq/. Any entry with \"open\": true is an answer written as a best guess because it is a business policy nobody has decided yet. Those render with a dotted underline, the same convention as an unresolved brand value, so an undecided policy cannot ship silently. Resolve them, drop the flag.",
-
   "_plannerFaqs_reconciliation": "Reconciled against the contract drafts in outreach/readiness/ before planner outreach, 16 to 17 Aug 2026. ALL SEVEN OPEN FLAGS ARE NOW CLOSED. Closed against the contract: what holds a date (§3), balance and payment (§3 plus invoice format 03c), outdoors (§7). Closed by Daniel 17 Aug: showcases (no, and no public dates either, these are private groups), dress code (ratified as written), green room and meals (neither required, so they do NOT enter contract §7), and the cancellation window at 90 days. The cancellation entry was the important one: the site had been contradicting contract §5 outright. Vocabulary is the contract's throughout: deposit, never retainer. Anything reopened here must be reopened in 03a at the same time, because these answers and that document are now the same policy in two registers.",
-
   "plannerFaqs": [
     {
       "group": "The band and the people",
@@ -281,7 +390,6 @@
       ]
     }
   ],
-
   "faqs": [
     {
       "q": "What does a band cost for a corporate event in Denver?",
