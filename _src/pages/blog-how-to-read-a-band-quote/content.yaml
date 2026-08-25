@@ -1,0 +1,169 @@
+# DRAFT 2026-08-24, site-ops weekly run.
+# Register: WEBSITE-PLAN §1 plus MESSAGING §Register correction (Daniel,
+# 2026-08-02). No opponent in any line. This describes what line items mean,
+# never what anyone else is hiding. No negation carrying a headline.
+# Zero em dashes.
+#
+# The 2026-08-17 outline flagged a TODO on whether travel and lodging could be
+# stated as Signet's actual practice. RESOLVED from the site itself: the rate
+# card publishes Front Range +$300, I-70 corridor +$600, far resorts +$600 with
+# lodging at cost, and pricing/sections/02-rates.html states lodging is billed
+# at cost as its own line on the contract. Every figure below is on the rate
+# card or in _src/data/site.json. Nothing is invented.
+
+title: "How to read a band quote"
+slug: "how-to-read-a-band-quote"
+eyebrow: "PLANNING"
+dek: "A quote is one number sitting on top of six or seven decisions. The number is the last thing to look at. Here is the rest of it, in the order it matters."
+date: "2026-08-24"
+last_updated: "2026-08-24"
+author:
+  name: "Signet Artists"
+meta_description: "What the line items in a live band quote actually mean: personnel, sound, set time, travel and lodging, and the paperwork. A method for comparing two quotes fairly."
+
+hero:
+  src: "img/headliners.jpg"
+  alt: "A snare drum with sticks laid across it and a close microphone."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "Two quotes are only comparable once they assume the same set count, the same sound arrangement and the same travel terms. Normalise first, compare second."
+      - "Sound is the line that most often separates two totals that otherwise look alike. Ours is inside the number at every size."
+      - "Travel is geography, not a surcharge: $300 to the Front Range, $600 to the I-70 corridor, $600 plus lodging at cost to the far resorts."
+      - "The four items that cost nothing on a quote and cost a week when they are missing: a certificate of insurance, a W-9, one itemised invoice and a named contact."
+
+  - type: prose
+    body: |
+      A band quote is one number sitting on top of six or seven decisions
+      somebody already made for you. Read from the number upward and you learn
+      almost nothing, because two totals a few hundred dollars apart can cover
+      genuinely different evenings.
+
+      This is what each decision is, and how to see it on paper. It works on
+      our quote and it works on anyone else's.
+
+  - type: subhead
+    text: "Start with the shape of the fee"
+
+  - type: prose
+    body: |
+      Most band pricing has two parts. One part covers the evening the band
+      commits to regardless of how long they play: travel, load-in, setup,
+      sound check, strike, load-out and production. The other part covers
+      performance time by the hour.
+
+      We call those the call-out and the hourly rate, and
+      [what live music costs for a corporate event](https://signetartists.com/blog/what-live-music-costs-corporate-event/)
+      works through the arithmetic with totals. The reason the split matters
+      when you are reading someone else's paper is that a quote showing one
+      flat figure has made both decisions and shown you neither. Ask which part
+      is which and the rest of the conversation gets easier.
+
+  - type: subhead
+    text: "Personnel, which moves the number most"
+
+  - type: prose
+    body: |
+      Ensemble size is the single largest driver of a band's price, and it is
+      the line most often described in words rather than in a count. "Full
+      band" is not a number. Four people and six people are different budgets
+      and different rooms.
+
+      Get the head count in writing, then check it against the space. A room
+      that seats 120 and a room that seats 400 want different sizes, and
+      [what a band needs from the room](https://signetartists.com/blog/what-a-band-needs-from-the-room/)
+      covers the footprint each one takes.
+
+  - type: subhead
+    text: "Sound, which is where two quotes usually part ways"
+
+  - type: prose
+    body: |
+      This is the item worth your attention. A quote either includes a system
+      sized to your venue, or it assumes the venue is providing one, or it
+      assumes you will hire an engineer separately. All three are legitimate
+      arrangements and they produce very different totals.
+
+      Sound sized to the venue is inside our numbers at every size, along with
+      continuous audio during breaks. Stage lighting and a dedicated engineer
+      are optional and quoted on their own line, so they are visible before you
+      agree to them rather than after.
+
+      When you compare two quotes, this is the first thing to level. Put both
+      on the same sound assumption and the gap between them will often close or
+      reverse.
+
+  - type: subhead
+    text: "Time, and what happens when the night runs long"
+
+  - type: prose
+    body: |
+      Check three things: how many sets, how long each one is, and what an
+      extra half hour costs at eleven o'clock.
+
+      Ours is the same hourly figure in 30-minute increments, with no overtime
+      rate. Hour five costs what hour four cost. That is worth asking about
+      wherever you are reading, because a night that runs long is common and
+      the terms for it are usually decided in advance whether or not anyone
+      told you.
+
+  - type: subhead
+    text: "Travel and lodging, which are geography"
+
+  - type: prose
+    body: |
+      Distance is a real cost and it belongs on the page before you ask. Ours
+      is published by corridor: $300 for the Front Range, meaning Boulder,
+      Colorado Springs and Fort Collins. $600 for the I-70 corridor, meaning
+      Vail, Beaver Creek, Breckenridge and Winter Park. $600 for the far
+      resorts, Aspen, Telluride, Steamboat and Crested Butte, with lodging
+      billed at cost as its own line on the contract.
+
+      Resort dates sit in their own column on our rate card rather than
+      arriving as a percentage later. When you read any quote for a mountain
+      date, find where distance is accounted for. It is in there somewhere.
+
+  - type: subhead
+    text: "The paperwork lines"
+
+  - type: prose
+    body: |
+      Four items cost nothing on a quote and cost a week when they are missing:
+      a certificate of insurance naming your venue, a W-9, one itemised invoice
+      and a named contact for the night given to you before the event.
+
+      All four are included in our numbers. Wherever you are reading, confirm
+      they exist before the deposit rather than during the week of the event,
+      because that is the week your venue will ask for the first one.
+
+  - type: subhead
+    text: "Now compare the two quotes"
+
+  - type: prose
+    body: |
+      Normalise before you total. Put both quotes on the same set count, the
+      same sound arrangement and the same travel terms, and add the missing
+      pieces to whichever one is missing them. Only then look at the two
+      figures.
+
+      Most of the time the exercise does not change which band you want. It
+      changes what you thought you were choosing between, which is the more
+      useful outcome for the person who has to defend the line item.
+
+  - type: prose
+    body: |
+      Every rate we have is on the pricing page, so you can run this exercise
+      on us first.
+
+  - type: cta
+    headline: "Tell us the event and we'll tell you what fits."
+    body: "Every rate is on the pricing page, and the quote engine there will itemise your night before you write to us."
+    link: "pricing/"
+    link_text: "See the rate card"
+
+  - type: related
+    posts:
+      - slug: "what-live-music-costs-corporate-event"
+      - slug: "what-a-band-needs-from-the-room"
+      - slug: "playing-around-a-program"
