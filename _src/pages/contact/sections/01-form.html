@@ -21,14 +21,20 @@
       </div>
 
       <!-- Static host, so this posts to formsubmit.co rather than a server
-           action. _next is the confirmation page; _honey is the spam trap. -->
+           action. _next is the confirmation page; _honey is the spam trap.
+           The honeypot label must never name a real autofill category:
+           Chrome profile autofill fills hidden fields it can classify (it
+           ignores autocomplete="off"), and a non-empty _honey makes
+           formsubmit drop the enquiry silently while still redirecting to
+           /thanks/. The label "Company" cost us a live corporate enquiry
+           the week of 2026-08-24. -->
       <form action="{{form_action}}" method="POST">
         <input type="hidden" name="_next" value="{{site_url}}/thanks/">
         <input type="hidden" name="_subject" value="Enquiry via signetartists.com">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <div class="form-honey" aria-hidden="true">
-          <label for="_honey">Company</label>
+          <label for="_honey">Leave this field empty</label>
           <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off">
         </div>
 
