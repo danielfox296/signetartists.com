@@ -1,7 +1,7 @@
 {
   "_comment": "The roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about a booking is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
 
-  "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page. Thomas Owen Band is a face-led listing.",
+  "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page.",
 
   "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included.",
 
@@ -225,25 +225,6 @@
     },
 
     {
-      "id": "thomas-owen-band",
-      "name": "Thomas Owen Band",
-      "presentation": "face",
-      "status": "listing",
-      "style": "Outlaw Americana",
-      "face": "Thomas Owen",
-      "material": "Covers and originals",
-      "bucket_tags": ["patio", "cocktail"],
-      "config_tags": ["solo", "duo", "trio"],
-      "from": "solo",
-      "img": "hero.jpg",
-      "alt": "An empty venue set for an event before doors.",
-      "video": null,
-      "blurb": "Outlaw americana for a patio and the daylight end of an event. Country, roots and the harder edge of the folk-rock catalog, at one piece up to three depending on how much space there is to fill. Sits at conversation volume for three hours without going flat, and has somewhere to go when it does not have to. Outdoor ceremonies, welcome parties and long afternoons.",
-      "_promote_note": "Spec: promote to flagship when footage exists. The workbook also flags this act as originals-first with an open question about whether it can field a two hour covers set, which is why `material` says covers and originals. Resolve the covers question before promoting.",
-      "_face_note": "Confirmed face-led by Daniel 2026-08-16. The name and the person stay on the card."
-    },
-
-    {
       "id": "funk-trio",
       "name": "Funk Trio",
       "presentation": "spec",
@@ -272,7 +253,10 @@
       "spec": "Decks, and a PA sized to the venue",
       "material": "Open format",
       "bucket_tags": ["dj", "party"],
-      "config_tags": ["solo", "duo"],
+      "_config_note": "CORRECTED 2026-08-27, Daniel's catch on the critical pass. Was ['solo', 'duo'], which read the band-size ladder onto a booking that is not on it: the roster card and llms.txt printed 'Configurations: Solo to duo', the size filter offered the DJ as a duo, and act_offers priced the structured-data Offers off the solo and duo BAND rows, telling a crawler the DJ starts at $900 while every visible surface says $1,500. The DJ's one config is the rate card's own dj row, which is what this page's schema.json always said. The two-person version of this booking is the hybrid below, an add-on inside the dj row's range, not a size.",
+      "config_tags": ["dj"],
+      "_configRangeLabel_note": "Without the override the card would print 'Configurations: DJ' under the name DJ. This states the actual choice, and it is the dj rate row's own note in card grammar.",
+      "configRangeLabel": "On its own, or with a live player",
       "from": "dj",
       "img": "dj.jpg",
       "alt": "Faders and knobs on a mixing console.",
@@ -282,7 +266,8 @@
       "hybrid": {
         "label": "DJ plus live instrument",
         "instruments": ["Bass", "Saxophone"],
-        "copy": "A live player on the floor over the DJ set. It is the difference between a playlist and a crowd watching something happen, and it holds a dance floor through the hours a band would have gone home. Roughly one couple in six now asks for this format, so it is priced on the rate card rather than treated as a favor."
+        "_stat_note": "TRIMMED 2026-08-27 critical pass. The copy claimed 'Roughly one couple in six now asks for this format', an unsourced adoption stat, wedding-framed on a corporate-first product, published under a company in its first season. If the number is real from Daniel's own books it can come back with that framing; the priced-on-the-card fact stands without it.",
+        "copy": "A live player on the floor over the DJ set. It is the difference between a playlist and a crowd watching something happen, and it holds a dance floor through the hours a band would have gone home. It is priced on the rate card rather than treated as a favor, and quoted as its own line when you ask for it."
       }
     },
 
@@ -309,6 +294,7 @@
 
   "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is depth behind Blues Solo, which is what the workbook always said he was.",
   "holds": [
+    { "name": "Thomas Owen Band", "reason": "Pulled from the site on Daniel's call, 2026-08-27. Was the one face-led listing: patio and cocktail, solo to trio, from $900, promote-on-footage. The workbook's open question about fielding a two-hour covers set was never resolved. Nothing else is tagged patio, so the patio filter left the roster page with it." },
     { "name": "Tchunk", "reason": "Artistic project, not an event product. Different website." },
     { "name": "Vaughn Tromburg Project", "reason": "Event-set question unresolved." },
     { "name": "Arbor Sons", "reason": "Face and covers ratio unknown." },

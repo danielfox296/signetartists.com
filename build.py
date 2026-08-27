@@ -568,11 +568,15 @@ def act_card_media(act: dict, nav_prefix: str = "") -> str:
 def roster_filters() -> str:
     """Filter by bucket, config size and price. Rendered as real controls in
     static HTML: with script off every act is visible and nothing is lost."""
+    # Both selects derive from the roster, not from the vocabulary lists: an
+    # option nothing is tagged with is a filter that can only ever return the
+    # empty state. buckets[] in acts.json stays the label vocabulary, so a
+    # bucket returns to the select the moment an act carries its tag again.
+    in_use_buckets = {b for a in ACTS for b in a["bucket_tags"]}
     bucket_opts = "".join(
-        f'<option value="{esc(b["id"])}">{esc(b["label"])}</option>' for b in BUCKETS
+        f'<option value="{esc(b["id"])}">{esc(b["label"])}</option>'
+        for b in BUCKETS if b["id"] in in_use_buckets
     )
-    # Derived from the roster, not the rate card: a size nothing is tagged with
-    # is a filter that can only ever return the empty state.
     in_use = {c for a in ACTS for c in a["config_tags"]}
     config_opts = "".join(
         f'<option value="{esc(r["id"])}">{esc(r["label"])}</option>'
@@ -860,10 +864,13 @@ def act_offers(act: dict) -> list:
     offers = []
     for cid in act["config_tags"]:
         r = rate_of(cid)
+        # The DJ's config IS the dj rate row, so the joined form would print
+        # "DJ — DJ". One name is the name.
+        base = act["name"] if r["label"] == act["name"] else f"{act['name']} — {r['label']}"
         for col, area in (("denver", "Denver, CO"), ("resort", "Colorado mountain resorts")):
             offers.append({
                 "@type": "Offer",
-                "name": f"{act['name']} — {r['label']}, {area}",
+                "name": f"{base}, {area}",
                 "priceCurrency": "USD",
                 "priceSpecification": {
                     "@type": "PriceSpecification",
