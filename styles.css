@@ -561,6 +561,34 @@ img {
   padding-bottom: 1rem;
 }
 
+/* The location cue under the wordmark (2026-08-27): geography on every page
+   without spending a pixel of image, at every width. */
+.header-loc {
+  margin: 0.2rem 0 0;
+  font-size: 0.6875rem;
+  letter-spacing: 0.07em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* The Front Range locator strip (2026-08-27): the downtown-into-the-mountains
+   shot as a thin full-bleed band under the home hero. Height-capped so it
+   reads as a locator, not a hero; the duotone keeps it in the paper. */
+.range-strip {
+  position: relative;
+  height: clamp(110px, 15vw, 180px);
+  overflow: hidden;
+}
+
+.range-strip img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+
 /* The wordmark is set, not drawn — WEBSITE-PLAN §6.7 keeps a drawn signet mark
    as a Phase-3 nice-to-have. Uppercase and heavy 2026-08-07: at sentence case
    and 400 it read as a page title rather than as a mark, which is the one

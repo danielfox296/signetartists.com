@@ -78,6 +78,21 @@ MANIFEST = {
         "Flight cases stacked at a loading door.",
         "planners hub — the operational proof nobody photographs",
     ),
+    # The one exception to "objects and empty rooms": geography. A skyline is
+    # a claim about where we play, and that claim is true. Added 2026-08-27 on
+    # Daniel's call (the site did not read as front-range centric); the wide
+    # crop is the home locator strip, not a card. No people prominent.
+    # NOTE: the shipped range.jpg was hand-picked (Commons "City Park
+    # Panorama 2", see img/SOURCES.md): every Openverse top hit for this query
+    # is the stadium angle, which has no mountains in it. This entry exists so
+    # `pull` knows the slug; it skips while range.jpg exists, and a --force
+    # re-pull would regress the image. Do not --force this slug.
+    "range": (
+        "denver skyline mountains colorado",
+        "The Denver skyline against the Front Range.",
+        "home page locator strip",
+        (2400, 800),
+    ),
 }
 
 
@@ -119,7 +134,9 @@ def duotone(im: Image.Image, w: int = 1600, h: int = 900) -> Image.Image:
 def pull(force: bool = False) -> int:
     IMG.mkdir(exist_ok=True)
     sources, failures = [], []
-    for slug, (query, alt, use) in MANIFEST.items():
+    for slug, spec in MANIFEST.items():
+        query, alt, use = spec[:3]
+        size = spec[3] if len(spec) > 3 else (1600, 900)
         dest = IMG / f"{slug}.jpg"
         if dest.exists() and not force:
             print(f"  skip   {slug} (exists)")
@@ -136,7 +153,7 @@ def pull(force: bool = False) -> int:
             tmp = IMG / f".{slug}.src"
             tmp.write_bytes(raw)
             with Image.open(tmp) as im:
-                duotone(im).save(dest, "JPEG", quality=82, optimize=True)
+                duotone(im, *size).save(dest, "JPEG", quality=82, optimize=True)
             tmp.unlink()
             sources.append((slug, use, hit))
             print(f"  pulled {slug:11s} {hit.get('license','?'):6s} "
@@ -146,6 +163,22 @@ def pull(force: bool = False) -> int:
             print(f"  FAIL   {slug}: {e}")
 
     if sources:
+        # A partial pull must not amnesia the rest of the provenance: keep the
+        # existing SOURCES.md sections for every slug not re-pulled this run.
+        kept = []
+        old = IMG / "SOURCES.md"
+        if old.exists():
+            pulled = {s for s, _, _ in sources}
+            section, keep = [], False
+            for ln in old.read_text().splitlines():
+                if ln.startswith("## "):
+                    if keep:
+                        kept += section
+                    section, keep = [ln], ln[3:].replace(".jpg", "").strip() not in pulled
+                elif section:
+                    section.append(ln)
+            if keep:
+                kept += section
         lines = [
             "# Interim still provenance",
             "",
@@ -167,8 +200,9 @@ def pull(force: bool = False) -> int:
                 f"- Source: {h.get('foreign_landing_url') or h.get('url')}",
                 "",
             ]
+        lines += kept
         (IMG / "SOURCES.md").write_text("\n".join(lines))
-        print(f"\n  wrote img/SOURCES.md ({len(sources)} entries)")
+        print(f"\n  wrote img/SOURCES.md ({len(sources)} new, {sum(1 for ln in kept if ln.startswith('## '))} kept)")
 
     if failures:
         print(f"\n  {len(failures)} FAILED: " +
