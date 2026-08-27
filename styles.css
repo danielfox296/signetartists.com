@@ -439,6 +439,30 @@ img {
   color: var(--ink-faint);
 }
 
+/* One client quote, verbatim, brass rule, no card and no stars. Moved out of
+   invisible Review markup 2026-08-27: a buyer could not read it there, and
+   self-serving Review schema is the pattern Google ignores. Quiet on purpose;
+   the proof layer starts at one. */
+.review-pull {
+  margin: 2.5rem auto 0;
+  max-width: 44rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--brass);
+}
+
+.review-pull blockquote {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.review-pull figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
 /* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set at the size
    of the text around it so the register shift reads as intentional design
    rather than inconsistency. Inherits size and colour deliberately: in the

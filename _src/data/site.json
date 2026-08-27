@@ -202,7 +202,7 @@
       "occasion": "The office holiday party",
       "act": "tejas-singh",
       "config": "quartet",
-      "why": "Two hundred staff, a hotel ballroom, done by eleven. The floor has to fill and there is a short program in front of it, so the band plays dinner at conversation volume and gets loud on cue."
+      "why": "Two hundred staff, a hotel ballroom, a short program in front of the dancing. The band plays dinner at conversation volume and gets loud on cue."
     },
     {
       "occasion": "The client dinner",
@@ -351,6 +351,11 @@
         {
           "q": "Do you provide sound and lighting?",
           "a": "Sound sized to the venue is included at every size. Stage lighting and a dedicated front-of-house engineer are optional add-ons, quoted as their own line. We do not light the space, the tables or a dance floor as a design element; that is your lighting vendor's work, and we will coordinate with them."
+        },
+        {
+          "_note": "ADDED 2026-08-27 from a buyer-questions pass. Daniel's phrasing: 'We take care of that unless you or the hotel has hired an additional contractor for sound support, in which case that would be their domain.' Downtown hotels commonly carry mandatory in-house AV (Encore and similar), so this is a real corporate-buyer question the site did not answer.",
+          "q": "The venue has its own AV company. Whose sound system runs the night?",
+          "a": "Ours, unless you or the venue have hired a sound contractor, in which case sound support is their domain: we advance the plan with them before the night and play through what they run. Either way it is settled at contract rather than at load-in."
         },
         {
           "q": "Do you need a stage, and do you provide one?",
