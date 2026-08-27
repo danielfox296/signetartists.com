@@ -3,14 +3,21 @@
   "service": {
     "name": "Corporate holiday party entertainment in Denver",
     "serviceType": "Live music and DJ for corporate holiday parties",
-    "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, with published rates and an open-date board.",
-    "areaServed": ["Denver"],
-    "configs": ["duo", "trio", "quartet", "dj"]
+    "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, with published rates and the season's 21 dates priced.",
+    "areaServed": [
+      "Denver"
+    ],
+    "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+    ]
   },
   "faqs": [
     {
       "q": "How many holiday party dates does Denver actually have?",
-      "a": "Twenty-one. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 published party dates, and 10 of them are in December. The board on this page shows the current status of every one, with the date it was last checked printed under it."
+      "a": "Twenty-one. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 published party dates, and 10 of them are in December. They are laid out on this page with the peak premiums tagged, and whether one is free is answered against the booking calendar inside 24 to 48 hours."
     },
     {
       "q": "What does load-in look like at a downtown Denver hotel?",

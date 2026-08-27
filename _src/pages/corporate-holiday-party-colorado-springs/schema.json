@@ -1,11 +1,18 @@
 {
-  "_note": "Colorado Springs holiday spoke. City-specific set: the pricing-column fact, the vendor process, ballroom sizing, and where the open dates live. No dollar figures in answers; the Offers this file emits carry the ranges.",
+  "_note": "Colorado Springs holiday spoke. City-specific set: the pricing-column fact, the vendor process, ballroom sizing, and where the season's dates live. No dollar figures in answers; the Offers this file emits carry the ranges. No availability claims (2026-08-27): the booking calendar is private.",
   "service": {
     "name": "Corporate holiday party entertainment in Colorado Springs",
     "serviceType": "Live music and DJ for corporate holiday parties",
     "description": "Live music for Colorado Springs corporate holiday parties, duo through quartet plus DJ, priced off the Denver column with one flat Front Range travel line.",
-    "areaServed": ["Colorado Springs"],
-    "configs": ["duo", "trio", "quartet", "dj"]
+    "areaServed": [
+      "Colorado Springs"
+    ],
+    "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+    ]
   },
   "faqs": [
     {
@@ -21,8 +28,8 @@
       "a": "A quartet, once the floor has to fill. Dinner and remarks sit at 65 to 72 dBA, which a duo or trio holds comfortably; dancing runs 88 to 95 dBA, which is quartet work. One act can ladder across both halves of the night on a single contract."
     },
     {
-      "q": "Which December dates are still open for Colorado Springs?",
-      "a": "The board on our holiday season page is the answer, and it covers the whole Front Range: 21 published party dates across November and December, Thursdays through Saturdays. It is our availability rather than any venue's, so check your venue's calendar in parallel and send us the date that clears both."
+      "q": "Which dates does the season cover for Colorado Springs?",
+      "a": "The same 21 published party dates as the whole Front Range: Thursdays through Saturdays across November and December, laid out with their peak premiums on our holiday season page. Whether one is free is a booking-calendar question we answer inside 24 to 48 hours, and it is our availability rather than any venue's, so check your venue's calendar in parallel and send us the date that clears both."
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
-  "_note": "Time-critical landing page for the Nov/Dec 2026 corporate holiday season, built 2026-08-15. The season decides August through October, so this page is live before the enquiries start rather than after. Availability comes from _src/data/season.json, which carries its own maintenance warning: the board is the one thing on this site that goes stale.",
-  "_seasonal_note": "At the end of the 2026 season this page either rolls to 2027 (update season.json, retitle) or gets a noindex. Do not leave a page publishing last year's availability.",
+  "_note": "Time-critical landing page for the Nov/Dec 2026 corporate holiday season, built 2026-08-15. The season decides August through October, so this page is live before the enquiries start rather than after. The season's dates and premium tags come from _src/data/season.json. AVAILABILITY IS NEVER PUBLISHED: Daniel killed the 'season board' 2026-08-27 as fiction; the booking calendar is private and no page claims to mirror it.",
+  "_seasonal_note": "At the end of the 2026 season this page either rolls to 2027 (update season.json, retitle) or gets a noindex. Do not leave a page publishing last year's season.",
   "title": "Corporate holiday party bands and DJs in Denver, 2026 | Signet Artists",
   "title_exact": true,
-  "meta_description": "Live music and DJs for Denver corporate holiday parties, November and December 2026. Open dates and rates published, from $1,500. Book by October.",
+  "meta_description": "Live music and DJs for Denver corporate holiday parties, November and December 2026. Every rate published and all 21 dates priced, from $1,500. Book by October.",
   "_url_note": "MOVED 2026-08-20 with the SEO buildout: /corporate/holiday/ became /corporate/holiday-party/ (the occasion x location pattern needs the occasion named in the path, and 'holiday party' is the query). build.py REDIRECTS carries the stub at the old path.",
   "_schema_note": "The 'schema: roster' key was removed 2026-08-20 with the SEO buildout: this dir now carries its own schema.json (Service with priced Offers plus the page FAQ), which supersedes the config-level schema in build.py.",
   "output": "corporate/holiday-party/index.html",

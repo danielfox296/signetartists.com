@@ -627,32 +627,35 @@ SEASON = json.loads(read(DATA / "season.json"))
 ACT_BY_ID = {a["id"]: a for a in ACTS}
 
 
-def season_board() -> str:
+def season_dates() -> str:
+    """The season's dates with their published pricing tags. Calendar and
+    pricing facts only: no availability. Statuses were published here until
+    2026-08-27, when Daniel killed the 'season board' as fiction — the
+    booking calendar is private, and the site never claims to mirror it."""
     cells = []
     for d in SEASON["dates"]:
         dt = datetime.datetime.strptime(d["date"], "%Y-%m-%d")
         label = f'{dt.strftime("%a")} {dt.strftime("%b")} {dt.day}'
-        classes = f'season-date season-date--{d["status"]}'
+        classes = "season-date"
         if d.get("peak"):
             classes += " season-date--peak"
-        tail = ""
         if d.get("note"):
-            tail = f'<span class="season-tag">{esc(d["note"])}</span>'
+            tail = f'<span class="season-tag">{esc(d["note"])}, +50%</span>'
         elif d.get("peak"):
-            tail = '<span class="season-tag">Goes first</span>'
-        word = {"open": "Open", "held": "On hold", "booked": "Booked"}[d["status"]]
+            tail = '<span class="season-tag">Peak, +25%</span>'
+        else:
+            tail = '<span class="season-tag">Standard rate</span>'
         cells.append(
             f'<li class="{classes}"><span class="season-day">{esc(label)}</span>'
-            f'<span class="season-status">{word}</span>{tail}</li>'
+            f"{tail}</li>"
         )
-    open_count = sum(1 for d in SEASON["dates"] if d["status"] == "open")
-    updated = datetime.datetime.strptime(SEASON["updated"], "%Y-%m-%d")
     return (
         f'<ul class="season-board">{"".join(cells)}</ul>'
-        f'<p class="note"><strong class="num-accent">{open_count}</strong> of '
-        f'{len(SEASON["dates"])} party dates still open. Board last checked '
-        f'{updated.strftime("%-d %B %Y")}. A date is only held once a contract '
-        "and a deposit land, so an open date here is genuinely open.</p>"
+        f'<p class="note"><strong class="num-accent">{len(SEASON["dates"])}</strong> '
+        "party dates: Thursdays, Fridays and Saturdays across November and "
+        "December, plus New Year's Eve. Peak dates carry the published 25 "
+        "percent line and New Year's Eve 50, on the fees before travel."
+        "</p>"
     )
 
 
@@ -1327,7 +1330,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{act_picker}}": act_picker(),
         "{{act_count}}": str(len(ACTS)),
         "{{act_count_word}}": act_count_word(),
-        "{{season_board}}": season_board(),
+        "{{season_dates}}": season_dates(),
         "{{season_leads}}": season_leads(nav_prefix),
     }
     # Per-page structured data + the FAQ block, both from the dir's schema.json.

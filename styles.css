@@ -2806,36 +2806,9 @@ img {
   font-variant-numeric: tabular-nums;
 }
 
-.season-status {
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: var(--track-caps);
-  color: var(--ink-faint);
-}
-
-.season-date--open .season-status {
-  color: var(--brass);
-}
-
-/* Gone dates stay on the board. A season board with nothing taken off it is
-   not evidence of a season, and striking them is the only honest way to show
-   scarcity: the proof is the dates you cannot have. */
-.season-date--booked {
-  background: var(--paper);
-}
-
-.season-date--booked .season-day {
-  text-decoration: line-through;
-  color: var(--ink-faint);
-}
-
-.season-date--held .season-status {
-  color: var(--ink-soft);
-}
-
-/* The nights that always go first. A left edge rather than a fill, so the
-   brass stays spent on the status word and the peak marker reads as an
-   annotation on the tile instead of competing with it. */
+/* Dates carry pricing tags, never availability. The open/held/booked status
+   styling lived here until 2026-08-27, when the published "board" was killed:
+   the booking calendar is private and the site does not mirror it. */
 .season-date--peak {
   border-left: 2px solid var(--brass);
 }
@@ -2843,6 +2816,11 @@ img {
 .season-tag {
   font-size: 0.6875rem;
   color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.season-date--peak .season-tag {
+  color: var(--brass);
 }
 
 /* ------------------------------------------------------------- utilities */
