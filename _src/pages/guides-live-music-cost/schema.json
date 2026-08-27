@@ -4,10 +4,28 @@
     "name": "Live music pricing guide for Colorado",
     "serviceType": "Live music for private and corporate events",
     "description": "Published rates and worked cost arithmetic for live music at corporate events, private parties and wedding cocktail hours across Denver, the Front Range and the Colorado resort corridor.",
-    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
-    "configs": ["solo", "duo", "trio", "quartet", "dj"]
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+    ]
   },
   "faqs": [
+    {
+      "q": "How much does a live band cost in Colorado?",
+      "a": "From our published card: a solo player runs {{rate_range:solo}}, an hour of jazz duo is {{rate_hour:duo}}, a trio evening is {{rate_range:trio}}, and a quartet through a Denver evening is {{rate_range:quartet}}. The same quartet in the resort corridor is {{rate_range_resort:quartet}} with travel as its own line. Every figure includes sound sized to the venue and a named contact for the night."
+    },
     {
       "q": "Why do live music prices vary so much in Colorado?",
       "a": "Because the market runs in tiers and quotes cover different scopes. Marketplace commodity averages run roughly $1,600 to $2,100, and what sits inside a figure varies listing by listing. Boutique production starts at $8,000 and up. Our published card sits between them, with sound, insurance and a named contact for the night inside every figure."

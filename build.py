@@ -739,6 +739,7 @@ def organization_schema() -> dict:
         "@type": "MusicGroup",
         "@id": f"{SITE_URL}/#org",
         "name": BRAND["name"],
+        "legalName": BRAND["legalName"],
         "description": BRAND["intro"],
         "url": SITE_URL,
         "email": BRAND["email"],
@@ -843,6 +844,7 @@ def local_business_node() -> dict:
         "@type": "LocalBusiness",
         "@id": f"{SITE_URL}/#business",
         "name": BRAND["name"],
+        "legalName": BRAND["legalName"],
         "description": BRAND["intro"],
         "url": SITE_URL,
         "email": BRAND["email"],
@@ -1350,6 +1352,14 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
             f"{page_dir.name}: unknown id in a parameterized token: {e}"
         )
 
+    # og_image in config is repo-relative ("img/hero.jpg") and should be the
+    # image the page itself shows. The Softdocs enquiry travelled through
+    # Microsoft Teams as a shared link, so the unfurl is a real surface: a page
+    # without its own image falls back to og-default.png.
+    og_image = cfg.get("og_image", "")
+    if og_image and not og_image.startswith(("http://", "https://")):
+        og_image = f"{SITE_URL}/{og_image.lstrip('/')}"
+
     render_page(
         output=output,
         content=content,
@@ -1357,6 +1367,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         title_exact=bool(cfg.get("title_exact")),
         meta_description=cfg.get("meta_description", ""),
         og_type=cfg.get("og_type", "website"),
+        og_image=og_image,
         robots=cfg.get("robots", "index, follow"),
         schema_html=schema_html or build_schema(cfg),
         nav_active=cfg.get("nav", ""),
