@@ -1083,10 +1083,38 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
     data = json.loads(read(path))
     graph = [local_business_node()]
     svc = data.get("service")
-    if svc:
+    act = ACT_BY_ID[data["act"]] if data.get("act") else None
+    canonical = canonical_for(cfg["output"])
+    node = None
+    if act and svc and f"{SITE_URL}/{act_url(act)}" == canonical:
+        # The act's own page: the service block and the act's roster node
+        # describe the same booking, and both would claim #service — an @id
+        # that /music/ and /pricing/ already emit with the act's name on it.
+        # So one merged Service: the act node keeps the id, the name and the
+        # offers (identical to its siblings on those pages), and wears the
+        # page's authored copy; the page's descriptive name survives as an
+        # alternateName instead of forking the entity's name across pages.
+        if set(svc.get("configs", act["config_tags"])) != set(act["config_tags"]):
+            raise SystemExit(
+                f"{path}: service configs {svc.get('configs')} differ from "
+                f"act {act['id']} config_tags {act['config_tags']}; the "
+                "merged node prices from the act, so they must match"
+            )
+        node = act_service_node(act)
+        if svc["name"] != act["name"]:
+            node["alternateName"] = svc["name"]
+        node["serviceType"] = svc["serviceType"]
+        if svc.get("description"):
+            node["description"] = svc["description"]
+        if svc.get("areaServed"):
+            node["areaServed"] = [
+                {"@type": "Place", "name": n} for n in svc["areaServed"]
+            ]
+        act = None
+    elif svc:
         node = {
             "@type": "Service",
-            "@id": f"{canonical_for(cfg['output'])}#service",
+            "@id": f"{canonical}#service",
             "name": svc["name"],
             "serviceType": svc["serviceType"],
             "description": svc.get("description", ""),
@@ -1118,6 +1146,7 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
                 })
         if offers:
             node["offers"] = offers
+    if node:
         # The review slot (§10.7 of the buildout): empty today because zero
         # reviews exist and a fabricated one would be worse than none. When a
         # real testimonial lands, add {"author": "...", "body": "...",
@@ -1140,8 +1169,8 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
                 for r in reviews
             ]
         graph.append(node)
-    if data.get("act"):
-        graph.append(act_service_node(ACT_BY_ID[data["act"]]))
+    if act:
+        graph.append(act_service_node(act))
     faq_html = ""
     faqs = [
         {**f, "q": resolve_rate_tokens(f["q"]), "a": resolve_rate_tokens(f["a"])}
