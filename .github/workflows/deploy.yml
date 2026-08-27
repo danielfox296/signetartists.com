@@ -21,8 +21,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Full history: the sitemap's per-page <lastmod> is the newest commit
+      # touching each page's _src dir, and a depth-1 checkout would date
+      # every page identically (build.py omits lastmod in that case).
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # BEFORE build/deploy — after the deploy the live sitemap already equals
       # the new one, so a post-deploy fetch would always diff empty. This

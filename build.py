@@ -20,6 +20,7 @@ import html
 import json
 import pathlib
 import re
+import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).parent
@@ -1329,7 +1330,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         nav_active=cfg.get("nav", ""),
         nav_prefix=nav_prefix,
     )
-    return {"output": output, "cfg": cfg}
+    return {"output": output, "cfg": cfg, "src_dir": str(page_dir.relative_to(ROOT))}
 
 
 # -------------------------------------------------------------- act pages
@@ -1506,7 +1507,7 @@ def build_act_page(act: dict) -> dict:
         schema_html=schema_tag(act_schema(act)),
         nav_active=ACTS_BASE,
     )
-    return {"output": output, "cfg": cfg}
+    return {"output": output, "cfg": cfg, "src_dir": "_src/data/acts.json"}
 
 
 # ------------------------------------------------------------------- blog
@@ -1703,12 +1704,56 @@ def lint() -> bool:
 # -------------------------------------------------------- generated files
 
 
+def _page_lastmod_map() -> dict:
+    """Last commit date (YYYY-MM-DD) per _src path, from one git-log pass.
+
+    Returns {} when real history is unavailable — an unborn repo, or a
+    shallow CI checkout, where every path would get the same date and the
+    signal would be a lie crawlers learn to ignore. Callers omit <lastmod>
+    for any path not in the map.
+    """
+    try:
+        depth = subprocess.run(
+            ["git", "rev-list", "--count", "HEAD"],
+            cwd=ROOT, capture_output=True, text=True, timeout=30,
+        )
+        if depth.returncode != 0 or int(depth.stdout.strip() or 0) < 2:
+            return {}
+        log = subprocess.run(
+            ["git", "log", "--format=%cs", "--name-only", "--", "_src"],
+            cwd=ROOT, capture_output=True, text=True, timeout=60,
+        )
+        if log.returncode != 0:
+            return {}
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return {}
+    dates: dict[str, str] = {}
+    current = ""
+    for line in log.stdout.splitlines():
+        line = line.strip()
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", line):
+            current = line
+        elif line and current and line not in dates:
+            dates[line] = current  # newest-first: first sighting is the last edit
+    return dates
+
+
 def write_sitemap(pages: list[dict], posts: list[dict] = None) -> None:
+    # Static pages get <lastmod> from the newest git commit touching their
+    # source dir. Shared-template and rate changes don't bump it; that keeps
+    # the date conservative, which is the only honest direction for a hint.
+    file_dates = _page_lastmod_map()
     urls = []
     for page in pages:
         if page["cfg"].get("robots", "").startswith("noindex"):
             continue
-        urls.append(f"  <url><loc>{html.escape(canonical_for(page['output']))}</loc></url>")
+        loc = html.escape(canonical_for(page["output"]))
+        src = page.get("src_dir", "")
+        dates = [d for f, d in file_dates.items() if src and f.startswith(src)]
+        if dates:
+            urls.append(f"  <url><loc>{loc}</loc><lastmod>{max(dates)}</lastmod></url>")
+        else:
+            urls.append(f"  <url><loc>{loc}</loc></url>")
     # Blog posts follow the pages, newest first, and carry <lastmod> — the
     # field the IndexNow diff and crawlers actually read. An edit that bumps
     # last_updated gets the URL re-pinged on the next deploy.
