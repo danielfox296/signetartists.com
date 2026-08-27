@@ -1169,14 +1169,6 @@ img {
   grid-column: 1 / -1;
 }
 
-.form-honey {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 .contact-details {
   margin-top: 2.5rem;
   border-top: 1px solid var(--rule);
