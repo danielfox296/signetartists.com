@@ -1,10 +1,10 @@
 {
   "service": {
-    "name": "Acoustic duo",
-    "serviceType": "Acoustic duo for cocktail hours, dinner parties, patios and welcome drinks",
-    "description": "Voice and guitar, or guitar and upright bass, playing singer-songwriter and folk-rock covers at conversation volume for cocktail hours, dinner parties and receptions across Denver and the Colorado mountain corridor.",
+    "name": "Acoustic duo and trio",
+    "serviceType": "Acoustic duo and trio for cocktail hours, dinner parties, patios and welcome drinks",
+    "description": "Voice and guitar, guitar and upright bass, or the trio joining all three players, playing singer-songwriter and folk-rock covers at conversation volume for cocktail hours, dinner parties and receptions across Denver and the Colorado mountain corridor.",
     "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
-    "configs": ["duo"]
+    "configs": ["duo", "trio"]
   },
   "faqs": [
     {
@@ -24,8 +24,8 @@
       "a": "Sets run 45 to 60 minutes with 15 to 20 between them, built against your run of show, and audio continues through breaks so the night never goes silent. Added time on the night bills at the same hourly rate in 30-minute increments. There is no overtime rate."
     },
     {
-      "q": "What if the night needs an acoustic trio?",
-      "a": "The rate card prices a trio at $2,800 to $3,800 for a Denver evening, and that line is already sold two ways that keep the duo's dinner discipline: the jazz trio, which adds drums played with brushes for larger floors, and Tejas Singh, whose voice-fronted trio sits on the ladder between duo and quartet. Either books on the same contract terms as the duo."
+      "q": "Does the acoustic duo book as a trio?",
+      "a": "Yes. The acoustic trio puts voice, guitar and upright bass on the same night, so the sung build and the instrumental build stop being a choice. It prices at the card's trio line, $2,800 to $3,800 for a Denver evening and $1,600 for a single hour, on the same contract terms as the duo. When the night should grow past three, Tejas Singh fronts the ladder from duo to quartet on one contract."
     }
   ]
 }
