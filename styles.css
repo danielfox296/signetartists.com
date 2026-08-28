@@ -2662,6 +2662,54 @@ img {
   border-left: 2px solid var(--brass);
 }
 
+/* Real-media grids, 2026-08-27. Video embeds reuse .act-video; the photo
+   grid unifies mixed orientations behind a 4/3 crop with rule-colored gaps,
+   the same joinery as the season grid. */
+.video-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin-top: 2rem;
+}
+
+.video-grid .act-video {
+  margin-top: 0;
+}
+
+.video-grid--single {
+  grid-template-columns: minmax(0, 40rem);
+}
+
+.media-grid {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  margin-top: 2rem;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.media-grid figure {
+  margin: 0;
+  background: var(--paper-sunk);
+}
+
+.media-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 3;
+}
+
+.media-grid--single {
+  grid-template-columns: minmax(0, 40rem);
+}
+
+.media-grid--single img {
+  aspect-ratio: auto;
+}
+
 .act-video-poster {
   width: 100%;
   height: 100%;

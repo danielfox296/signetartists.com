@@ -1,28 +1,26 @@
 {
   "_comment": "The roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about a booking is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
-
   "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page.",
-
   "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included. UPDATE 2026-08-28: Dirty Flamenco's card now carries its own footage (see its _video_note), so the dj.jpg collision no longer renders anywhere; the img stays as data because the card falls back to it wherever the video field is ever cleared.",
-
   "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs.",
-
   "_pricing_note": "Per-config prices are NOT stored on acts. Each ladder rung names a rateCard config id and the build reads the range from rateCard below, so an act page and the pricing page can never disagree. The provisional per-act floors in the workbook are deliberately NOT used: the workbook's own legend calls them provisional and they sit well under the spec rate card, which is the authority.",
-
   "_scope_note": "REFOCUSED 2026-08-17 for Q4. The 2026 product is small format: solo, duo, trio and quartet, cocktail through featured. Quartet is the published ceiling on every act and every surface. Five and six piece stays on the rate card under a by-request divider, because the published-pricing philosophy is the differentiator and hiding a number we hold would cost more than printing it; it is not merchandised as a standard product anywhere else. Seven, ten and thirteen piece are off the sold tables entirely (see site.json rates). Tejas Singh leads the roster and every featured-acts block.",
-
   "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source. Do not 'fix' this back to match an older copy of the spec.",
-
   "_players_note": "No player names, no lineup, no 'collective of musicians' framing. On a face-led act the face is the one name published, because the face is what the client buys. On a spec'd format no person is named at all. Instrumentation is published everywhere, because it is part of the product; the people holding those chairs never are.",
-
   "rateCard": [
     {
       "id": "solo",
       "rangeLabel": "solo",
       "label": "Solo",
       "pieces": 1,
-      "denver": [900, 1200],
-      "resort": [1400, 1900],
+      "denver": [
+        900,
+        1200
+      ],
+      "resort": [
+        1400,
+        1900
+      ],
       "note": "Background and cocktail. One voice, one instrument."
     },
     {
@@ -30,8 +28,14 @@
       "rangeLabel": "duo",
       "label": "Duo",
       "pieces": 2,
-      "denver": [2000, 2800],
-      "resort": [2800, 3800],
+      "denver": [
+        2000,
+        2800
+      ],
+      "resort": [
+        2800,
+        3800
+      ],
       "hourly": 1050,
       "note": "$1,050 for a single hour. The range above covers cocktails and dinner together."
     },
@@ -40,8 +44,14 @@
       "rangeLabel": "trio",
       "label": "Trio",
       "pieces": 3,
-      "denver": [2800, 3800],
-      "resort": [3800, 5200],
+      "denver": [
+        2800,
+        3800
+      ],
+      "resort": [
+        3800,
+        5200
+      ],
       "note": "The working size for a party in a small venue."
     },
     {
@@ -49,8 +59,14 @@
       "rangeLabel": "quartet",
       "label": "Quartet",
       "pieces": 4,
-      "denver": [4000, 5500],
-      "resort": [5500, 7500],
+      "denver": [
+        4000,
+        5500
+      ],
+      "resort": [
+        5500,
+        7500
+      ],
       "note": "Where a covers act becomes a dance floor act."
     },
     {
@@ -59,8 +75,14 @@
       "label": "Five to six piece",
       "pieces": 5,
       "byRequest": true,
-      "denver": [6000, 8000],
-      "resort": [8000, 11000],
+      "denver": [
+        6000,
+        8000
+      ],
+      "resort": [
+        8000,
+        11000
+      ],
       "note": "Horns or a second voice. Quoted on request rather than sold off the card."
     },
     {
@@ -68,23 +90,50 @@
       "rangeLabel": "DJ",
       "label": "DJ",
       "pieces": 1,
-      "denver": [1500, 2800],
-      "resort": [3000, 4800],
+      "denver": [
+        1500,
+        2800
+      ],
+      "resort": [
+        3000,
+        4800
+      ],
       "note": "On its own, or against a live instrument as a hybrid."
     }
   ],
-
   "_corporateRange_removed_note": "RETIRED 2026-08-17, Daniel's call. Was { denver: [6000, 12500], resort: [8000, 15000], resortOpen: true } and rendered as a Corporate band range row on the rate card and a line in llms.txt. That envelope is a seven- to ten-piece figure: it anchored a corporate buyer at roughly double what the 2026 product costs. The card's own solo-through-quartet rows publish the whole range now, so the aggregate had nothing left to add and one more number to keep true.",
-
   "buckets": [
-    { "id": "party", "label": "Party", "blurb": "Dance floor." },
-    { "id": "cocktail", "label": "Cocktail", "blurb": "Arrival, cocktails, dinner." },
-    { "id": "patio", "label": "Patio", "blurb": "Outdoor and casual." },
-    { "id": "specialty", "label": "Specialty", "blurb": "Cultural and centerpiece." },
-    { "id": "budget", "label": "Budget", "blurb": "Background, smallest spend." },
-    { "id": "dj", "label": "DJ", "blurb": "Continuous, and hybrid." }
+    {
+      "id": "party",
+      "label": "Party",
+      "blurb": "Dance floor."
+    },
+    {
+      "id": "cocktail",
+      "label": "Cocktail",
+      "blurb": "Arrival, cocktails, dinner."
+    },
+    {
+      "id": "patio",
+      "label": "Patio",
+      "blurb": "Outdoor and casual."
+    },
+    {
+      "id": "specialty",
+      "label": "Specialty",
+      "blurb": "Cultural and centerpiece."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Background, smallest spend."
+    },
+    {
+      "id": "dj",
+      "label": "DJ",
+      "blurb": "Continuous, and hybrid."
+    }
   ],
-
   "acts": [
     {
       "id": "tejas-singh",
@@ -95,11 +144,18 @@
       "style": "Singer-songwriter covers",
       "face": "Tejas Singh",
       "material": "Covers",
-      "bucket_tags": ["cocktail", "party"],
-      "config_tags": ["duo", "trio", "quartet"],
+      "bucket_tags": [
+        "cocktail",
+        "party"
+      ],
+      "config_tags": [
+        "duo",
+        "trio",
+        "quartet"
+      ],
       "from": "duo",
-      "img": "headliners.jpg",
-      "alt": "A snare drum with sticks laid across it and a close microphone.",
+      "img": "tejas-card.jpg",
+      "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
       "video": null,
       "blurb": "The only booking here that ladders. Starts as a duo and finishes as a quartet, same voice, same songs, one contract, so guests hear one band getting bigger rather than two bands swapping over. The quartet is the dance floor size.",
       "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
@@ -112,21 +168,44 @@
         "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
       ],
       "ladder": [
-        { "config": "duo", "build": "A singer-guitarist, plus bass", "bestFor": "Arrival, cocktails and dinner." },
-        { "config": "trio", "build": "Voice and guitar, bass, drums", "bestFor": "Small venues, and parties that want a floor without a full band." },
-        { "config": "quartet", "build": "The trio plus keys or a second guitar", "bestFor": "The dance floor booking. Weddings and corporate parties." }
+        {
+          "config": "duo",
+          "build": "A singer-guitarist, plus bass",
+          "bestFor": "Arrival, cocktails and dinner."
+        },
+        {
+          "config": "trio",
+          "build": "Voice and guitar, bass, drums",
+          "bestFor": "Small venues, and parties that want a floor without a full band."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus keys or a second guitar",
+          "bestFor": "The dance floor booking. Weddings and corporate parties."
+        }
       ],
       "setlist": {
         "note": "Pulled from the full song list, which runs to 240 titles and is published in its own right. A set is built against your run of show and read song by song on the night. Representative, not fixed.",
         "from_repertoire": true,
         "groups": [
-          { "label": "Arrival and dinner", "moment": "dinner", "count": 6 },
-          { "label": "The lift", "moment": "lift", "count": 6 },
-          { "label": "The floor", "moment": "dance", "count": 6 }
+          {
+            "label": "Arrival and dinner",
+            "moment": "dinner",
+            "count": 6
+          },
+          {
+            "label": "The lift",
+            "moment": "lift",
+            "count": 6
+          },
+          {
+            "label": "The floor",
+            "moment": "dance",
+            "count": 6
+          }
         ]
       }
     },
-
     {
       "id": "jazz-duo",
       "name": "Jazz Duo",
@@ -136,12 +215,17 @@
       "style": "Jazz standards",
       "spec": "Upright bass and guitar",
       "material": "Standards and covers",
-      "bucket_tags": ["cocktail"],
-      "config_tags": ["duo", "trio"],
+      "bucket_tags": [
+        "cocktail"
+      ],
+      "config_tags": [
+        "duo",
+        "trio"
+      ],
       "from": "duo",
       "img": "standards.jpg",
       "alt": "A trumpet resting on a table.",
-      "video": null,
+      "video": "https://www.youtube-nocookie.com/embed/U2G_lp4nXv0?rel=0",
       "_was_note": "Listed as 'Jordan Lovinger & DF' until 2026-08-16. Spec'd on Daniel's call: the cocktail hour is bought as a format, not as a personality, and naming it promised a specific pair we would not always field. The players behind it are unchanged.",
       "blurb": "Standards on upright bass and guitar, played at conversation volume. Arrival, cocktails and dinner are its regular work, when the music has to hold the night without anybody having to raise their voice over it.",
       "seo_title": "Jazz duo for cocktails and dinner at Denver private events",
@@ -169,14 +253,19 @@
       "setlist": {
         "note": "A set pulled from the standards, paced to the night rather than played in order. Representative, not fixed.",
         "items": [
-          "Autumn Leaves", "All the Things You Are", "There Will Never Be Another You",
-          "Take the A Train", "Blue Bossa", "Beautiful Love",
-          "Someday My Prince Will Come", "The Girl from Ipanema",
-          "All of Me", "Green Dolphin Street"
+          "Autumn Leaves",
+          "All the Things You Are",
+          "There Will Never Be Another You",
+          "Take the A Train",
+          "Blue Bossa",
+          "Beautiful Love",
+          "Someday My Prince Will Come",
+          "The Girl from Ipanema",
+          "All of Me",
+          "Green Dolphin Street"
         ]
       }
     },
-
     {
       "id": "dirty-flamenco",
       "name": "Dirty Flamenco",
@@ -186,13 +275,19 @@
       "style": "Flamenco",
       "face": "Gary Meyers",
       "material": "Traditional and covers",
-      "bucket_tags": ["specialty", "cocktail"],
-      "config_tags": ["trio", "quartet"],
+      "bucket_tags": [
+        "specialty",
+        "cocktail"
+      ],
+      "config_tags": [
+        "trio",
+        "quartet"
+      ],
       "from": "trio",
       "_configRangeLabel_note": "Overrides the derived range, which would read 'Trio to quartet'. The quartet here is the trio plus a dancer, which is an addition you ask for rather than a size off the ladder, so the card sells the trio and says the rest out loud.",
       "configRangeLabel": "Trio, larger by request",
-      "img": "dj.jpg",
-      "alt": "Faders and knobs on a mixing console.",
+      "img": "flamenco-card.jpg",
+      "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
       "_video_note": "LANDED 2026-08-28, the first real footage on the roster. Daniel's phone video from a live date ('monarch 1' in his archive): 53 seconds of the trio playing, guitar, bass and percussion, under the venue's uplights. Shot vertical with the 16:9 image letterboxed inside, so the black bars are cropped at the source and the published file is native 16:9; 99MB re-encoded to 14.5MB, H.264, faststart. A site-relative path here renders as a native player (an http URL still renders as an embed). The poster is a frame from the footage itself, which also serves as the page's og_image, and the venue is deliberately not named anywhere it publishes.",
       "video": "media/dirty-flamenco.mp4",
       "video_poster": "media/dirty-flamenco-poster.jpg",
@@ -220,12 +315,17 @@
       "setlist": {
         "note": "Flamenco is organized by palo, the traditional form, rather than by song title. A set is built from these and shaped to the crowd on the night. Representative, not fixed.",
         "items": [
-          "Bulerias", "Solea", "Alegrias", "Tangos",
-          "Rumba", "Fandangos", "Sevillanas", "Guajiras"
+          "Bulerias",
+          "Solea",
+          "Alegrias",
+          "Tangos",
+          "Rumba",
+          "Fandangos",
+          "Sevillanas",
+          "Guajiras"
         ]
       }
     },
-
     {
       "id": "funk-trio",
       "name": "Funk Trio",
@@ -234,17 +334,23 @@
       "style": "Funk and soul",
       "spec": "Guitar, bass, drums, with voice",
       "material": "Covers",
-      "bucket_tags": ["party"],
-      "config_tags": ["trio"],
+      "bucket_tags": [
+        "party"
+      ],
+      "config_tags": [
+        "trio"
+      ],
       "from": "trio",
-      "img": "headliners.jpg",
-      "alt": "A snare drum with sticks laid across it and a close microphone.",
+      "img": "funk-card.jpg",
+      "alt": "A bassist mid-set under stage lights.",
       "video": null,
       "_merged_note": "MERGED 2026-08-16 from two listings, 'Dan Steele (funk trio)' and 'DF Funk'. The workbook flagged the direct overlap and said pick one or merge; Daniel's ruling is that they are interchangeable, so this is one format with both behind it as availability depth. The first pass differentiated them on voice-fronted versus guitar-fronted, which rested on a face chair the workbook marks 'assumed'. That copy is gone and is not to be reinstated without confirming the chair.",
-      "depth": ["Dan Steele trio", "DF Funk"],
+      "depth": [
+        "Dan Steele trio",
+        "DF Funk"
+      ],
       "blurb": "Funk and soul covers at trio size, for a party where the dance floor is close to the tables. The songs a crowd already knows, played by three people who can fill a floor without needing a stage to do it. Two working trios sit behind this format, which is why it holds a Saturday."
     },
-
     {
       "id": "dj",
       "name": "DJ",
@@ -254,9 +360,14 @@
       "style": "Open format",
       "spec": "Decks, and a PA sized to the venue",
       "material": "Open format",
-      "bucket_tags": ["dj", "party"],
+      "bucket_tags": [
+        "dj",
+        "party"
+      ],
       "_config_note": "CORRECTED 2026-08-27, Daniel's catch on the critical pass. Was ['solo', 'duo'], which read the band-size ladder onto a booking that is not on it: the roster card and llms.txt printed 'Configurations: Solo to duo', the size filter offered the DJ as a duo, and act_offers priced the structured-data Offers off the solo and duo BAND rows, telling a crawler the DJ starts at $900 while every visible surface says $1,500. The DJ's one config is the rate card's own dj row, which is what this page's schema.json always said. The two-person version of this booking is the hybrid below, an add-on inside the dj row's range, not a size.",
-      "config_tags": ["dj"],
+      "config_tags": [
+        "dj"
+      ],
       "_configRangeLabel_note": "Without the override the card would print 'Configurations: DJ' under the name DJ. This states the actual choice, and it is the dj rate row's own note in card grammar.",
       "configRangeLabel": "On its own, or with a live player",
       "from": "dj",
@@ -267,12 +378,14 @@
       "blurb": "Open format, on its own or carrying the late end after a band steps off. Through the same sound system, run by the same team, on the same contract. The most common single booking of the corporate season.",
       "hybrid": {
         "label": "DJ plus live instrument",
-        "instruments": ["Bass", "Saxophone"],
+        "instruments": [
+          "Bass",
+          "Saxophone"
+        ],
         "_stat_note": "TRIMMED 2026-08-27 critical pass. The copy claimed 'Roughly one couple in six now asks for this format', an unsourced adoption stat, wedding-framed on a corporate-first product, published under a company in its first season. If the number is real from Daniel's own books it can come back with that framing; the priced-on-the-card fact stands without it.",
         "copy": "A live player on the floor over the DJ set. It is the difference between a playlist and a crowd watching something happen, and it holds a dance floor through the hours a band would have gone home. It is priced on the rate card rather than treated as a favor, and quoted as its own line when you ask for it."
       }
     },
-
     {
       "id": "blues-rock",
       "name": "Blues Rock",
@@ -282,24 +395,48 @@
       "style": "Blues, rock and roots",
       "spec": "One voice and a guitar, or two",
       "material": "Covers",
-      "bucket_tags": ["budget", "cocktail"],
-      "config_tags": ["solo", "duo"],
+      "bucket_tags": [
+        "budget",
+        "cocktail"
+      ],
+      "config_tags": [
+        "solo",
+        "duo"
+      ],
       "from": "solo",
       "img": "standards.jpg",
       "alt": "A trumpet resting on a table.",
-      "video": null,
+      "video": "https://www.youtube-nocookie.com/embed/tbsh69P6iPA?rel=0",
       "_was_note": "Listed as 'Tony Medina' until 2026-08-16. The workbook describes Freddy Alexander as redundant with him and calls that availability depth rather than a problem, which is the interchangeable pattern exactly. Spec'd, both sit behind one format and the depth becomes an asset instead of two thin listings competing at the bottom of the card.",
-      "depth": ["Tony Medina", "Freddy Alexander"],
+      "depth": [
+        "Tony Medina",
+        "Freddy Alexander"
+      ],
       "blurb": "Blues rock covers, solo or as a duo, at the smallest spend on this roster. Real playing rather than a playlist, at whatever volume the venue will take. Rehearsal dinners, welcome drinks, office parties, and any event where live music is the right idea and a band is the wrong size."
     }
   ],
-
   "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is depth behind Blues Solo, which is what the workbook always said he was.",
   "holds": [
-    { "name": "Thomas Owen Band", "reason": "Pulled from the site on Daniel's call, 2026-08-27. Was the one face-led listing: patio and cocktail, solo to trio, from $900, promote-on-footage. The workbook's open question about fielding a two-hour covers set was never resolved. Nothing else is tagged patio, so the patio filter left the roster page with it." },
-    { "name": "Tchunk", "reason": "Artistic project, not an event product. Different website." },
-    { "name": "Vaughn Tromburg Project", "reason": "Event-set question unresolved." },
-    { "name": "Arbor Sons", "reason": "Face and covers ratio unknown." },
-    { "name": "DF & Kyren", "reason": "Overlaps the cocktail bucket. Unfilmed." }
-  ]
+    {
+      "name": "Thomas Owen Band",
+      "reason": "Pulled from the site on Daniel's call, 2026-08-27. Was the one face-led listing: patio and cocktail, solo to trio, from $900, promote-on-footage. The workbook's open question about fielding a two-hour covers set was never resolved. Nothing else is tagged patio, so the patio filter left the roster page with it."
+    },
+    {
+      "name": "Tchunk",
+      "reason": "Artistic project, not an event product. Different website."
+    },
+    {
+      "name": "Vaughn Tromburg Project",
+      "reason": "Event-set question unresolved."
+    },
+    {
+      "name": "Arbor Sons",
+      "reason": "Face and covers ratio unknown."
+    },
+    {
+      "name": "DF & Kyren",
+      "reason": "Overlaps the cocktail bucket. Unfilmed."
+    }
+  ],
+  "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are."
 }
