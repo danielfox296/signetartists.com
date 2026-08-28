@@ -34,7 +34,7 @@
 
   "_leads_note": "The three configurations to lead the holiday page with, per the restructure spec. Named by act id so they resolve against acts.json rather than being retyped here. REORDERED 2026-08-17: the flagship leads every featured-acts block on the site, so Tejas Singh sits first and the block no longer reads cheapest-first. The page copy said 'ordered by spend' and was changed with it.",
   "leads": [
-    { "act": "tejas-singh", "config": "quartet", "why": "The dance floor booking. Book this when the party is the point rather than the backdrop." },
+    { "act": "tejas-singh", "config": "quartet", "why": "The dance floor booking. Book this when the party is the point." },
     { "act": "jazz-duo", "config": "duo", "why": "Drinks and dinner covered without anybody raising their voice over it. The safest booking on the page for a night that has speeches in it." },
     { "act": "dj", "config": "dj", "why": "The whole night on one line, at the smallest number on this page. The format most corporate parties actually book." }
   ]
