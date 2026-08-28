@@ -1,6 +1,8 @@
 <!-- The face-led specialty act: Gary Meyers is the one name that publishes
      here. Intro reuses the ratified identity paragraphs from acts.json
-     dirty-flamenco. Rate-card link in the first screen per the spine. -->
+     dirty-flamenco. Rate-card link in the first screen per the spine.
+     Footage landed 2026-08-28 (acts.json _video_note has the provenance):
+     the placeholder slot is now the real player, first on the site. -->
 <section class="section section--top">
   <div class="wrap">
     <div class="heading">
@@ -14,9 +16,8 @@
         <a class="btn btn--outline" href="{{nav_prefix}}pricing/">See Pricing</a>
       </div>
     </div>
-    <div class="act-video act-video--empty" data-tbd="true" role="img" aria-label="Video of Dirty Flamenco is not published yet.">
-      <img class="act-video-poster" src="{{nav_prefix}}img/dj.jpg" alt="" width="1600" height="900" decoding="async">
-      <p class="act-video-note">Footage slot</p>
+    <div class="act-video">
+      <video src="{{nav_prefix}}media/dirty-flamenco.mp4" poster="{{nav_prefix}}media/dirty-flamenco-poster.jpg" title="Dirty Flamenco performing" controls preload="metadata" playsinline></video>
     </div>
   </div>
 </section>

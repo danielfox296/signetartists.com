@@ -545,19 +545,32 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
 
 
 def act_card_media(act: dict, nav_prefix: str = "") -> str:
-    """The top of a roster card. `video` is null on every act until the shoot
-    lands; the still holds the slot until it is a URL, and setting that one
-    field in acts.json turns the card into an embed everywhere the card
-    renders. No marker prints here, unlike the act page: this is the surface a
-    planner is being sold on, and a card that announces its own gap sells
-    nothing."""
+    """The top of a roster card. `video` is null on every act until footage
+    lands; the still holds the slot until then, and setting that one field in
+    acts.json turns the card into footage everywhere the card renders. An
+    http(s) value is an embed URL and renders as an iframe; anything else is
+    a site-relative file under media/ and renders as a native player, with
+    `video_poster` as its first frame. No marker prints here, unlike the act
+    page: this is the surface a planner is being sold on, and a card that
+    announces its own gap sells nothing."""
     if act.get("video"):
+        if act["video"].startswith(("http://", "https://")):
+            return (
+                '<div class="act-card-video">'
+                f'<iframe src="{esc(act["video"])}" '
+                f'title="{esc(act["name"])} performing" loading="lazy" '
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+                'picture-in-picture" allowfullscreen></iframe></div>'
+            )
+        poster = (
+            f' poster="{nav_prefix}{esc(act["video_poster"])}"'
+            if act.get("video_poster") else ""
+        )
         return (
             '<div class="act-card-video">'
-            f'<iframe src="{esc(act["video"])}" '
-            f'title="{esc(act["name"])} performing" loading="lazy" '
-            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
-            'picture-in-picture" allowfullscreen></iframe></div>'
+            f'<video src="{nav_prefix}{esc(act["video"])}"{poster} '
+            f'title="{esc(act["name"])} performing" '
+            'controls preload="metadata" playsinline></video></div>'
         )
     return (
         f'<img class="act-card-img" src="{nav_prefix}img/{esc(act["img"])}" '
@@ -1174,6 +1187,34 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
         graph.append(node)
     if act:
         graph.append(act_service_node(act))
+    # The page's VideoObject (schema.json "video"): name, description,
+    # uploadDate and duration are authored here, but the file and the poster
+    # come from the act's own video fields in acts.json, so the markup can
+    # never point at footage the page does not play. An http(s) act video is
+    # an embed and publishes embedUrl; a site-relative file publishes
+    # contentUrl. duration is ISO 8601 ("PT53S").
+    vid = data.get("video")
+    if vid:
+        a = ACT_BY_ID.get(data.get("act", ""))
+        if not a or not a.get("video"):
+            raise SystemExit(
+                f"{path}: a schema video block needs its act to carry a "
+                "video in acts.json; the markup points at the act's own file"
+            )
+        video_node = {
+            "@type": "VideoObject",
+            "@id": f"{canonical}#video",
+            "name": vid["name"],
+            "description": vid["description"],
+            "thumbnailUrl": f"{SITE_URL}/{a['video_poster']}",
+            "uploadDate": vid["uploadDate"],
+            "duration": vid["duration"],
+        }
+        if a["video"].startswith(("http://", "https://")):
+            video_node["embedUrl"] = a["video"]
+        else:
+            video_node["contentUrl"] = f"{SITE_URL}/{a['video']}"
+        graph.append(video_node)
     faq_html = ""
     faqs = [
         {**f, "q": resolve_rate_tokens(f["q"]), "a": resolve_rate_tokens(f["a"])}
@@ -1385,12 +1426,26 @@ def act_hero(act: dict) -> str:
     gap is visible on the page instead of only in a backlog."""
     price = money(act_from_price(act))
     if act.get("video"):
-        media = (
-            '<div class="act-video"><iframe src="' + esc(act["video"]) + '" '
-            f'title="{esc(act["name"])} performing" loading="lazy" '
-            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
-            'picture-in-picture" allowfullscreen></iframe></div>'
-        )
+        # Same contract as act_card_media: http(s) is an embed, anything
+        # else is a site-relative file. Generated act pages sit two levels
+        # deep, matching the ../../img/ the placeholder branch already uses.
+        if act["video"].startswith(("http://", "https://")):
+            media = (
+                '<div class="act-video"><iframe src="' + esc(act["video"]) + '" '
+                f'title="{esc(act["name"])} performing" loading="lazy" '
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+                'picture-in-picture" allowfullscreen></iframe></div>'
+            )
+        else:
+            poster = (
+                f' poster="../../{esc(act["video_poster"])}"'
+                if act.get("video_poster") else ""
+            )
+            media = (
+                f'<div class="act-video"><video src="../../{esc(act["video"])}"'
+                f'{poster} title="{esc(act["name"])} performing" '
+                'controls preload="metadata" playsinline></video></div>'
+            )
     else:
         media = (
             '<div class="act-video act-video--empty" data-tbd="true" role="img" '
