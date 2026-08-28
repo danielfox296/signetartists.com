@@ -13,8 +13,13 @@
         <a class="btn btn--outline" href="{{nav_prefix}}pricing/">See Pricing</a>
       </div>
     </div>
+    <!-- Real photo, the artist's own (provenance: _src/data/media-sources.json).
+         A photo rather than an embed: this player's YouTube uploads are
+         Shorts, and his Shorts return "Video unavailable" inside iframes,
+         verified live 2026-08-28. The one regular upload embeds fine and
+         leads the jazz page. -->
     <div class="act-video">
-      <iframe src="https://www.youtube-nocookie.com/embed/CkabNus6iRA?rel=0" title="Solo jazz guitar on Blue Bossa" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      <img class="act-video-photo" src="{{nav_prefix}}img/acts/solo-bridge.jpg" alt="A guitarist playing an acoustic set on a Denver bridge." width="1600" height="1066" decoding="async">
     </div>
   </div>
 </section>

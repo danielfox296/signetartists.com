@@ -2662,6 +2662,13 @@ img {
   border-left: 2px solid var(--brass);
 }
 
+.act-video-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Real-media grids, 2026-08-27. Video embeds reuse .act-video; the photo
    grid unifies mixed orientations behind a 4/3 crop with rule-colored gaps,
    the same joinery as the season grid. */
