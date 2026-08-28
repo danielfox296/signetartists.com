@@ -341,8 +341,8 @@
         "trio"
       ],
       "from": "trio",
-      "img": "funk-card.jpg",
-      "alt": "A bassist mid-set under stage lights.",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a close microphone.",
       "video": null,
       "_merged_note": "MERGED 2026-08-16 from two listings, 'Dan Steele (funk trio)' and 'DF Funk'. The workbook flagged the direct overlap and said pick one or merge; Daniel's ruling is that they are interchangeable, so this is one format with both behind it as availability depth. The first pass differentiated them on voice-fronted versus guitar-fronted, which rested on a face chair the workbook marks 'assumed'. That copy is gone and is not to be reinstated without confirming the chair.",
       "depth": [
@@ -406,7 +406,7 @@
       "from": "solo",
       "img": "standards.jpg",
       "alt": "A trumpet resting on a table.",
-      "video": "https://www.youtube-nocookie.com/embed/tbsh69P6iPA?rel=0",
+      "video": null,
       "_was_note": "Listed as 'Tony Medina' until 2026-08-16. The workbook describes Freddy Alexander as redundant with him and calls that availability depth rather than a problem, which is the interchangeable pattern exactly. Spec'd, both sit behind one format and the depth becomes an asset instead of two thin listings competing at the bottom of the card.",
       "depth": [
         "Tony Medina",
@@ -438,5 +438,5 @@
       "reason": "Overlaps the cocktail bucket. Unfilmed."
     }
   ],
-  "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are."
+  "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are. REMOVED on Daniel's call 2026-08-28: Jordan's media off the funk-trio card (stage photo) and blues-rock card (Old #7 embed); his footage stays on the jazz and solo pages. The Guaraldi solo video is embed-blocked on YouTube's side (shows 'Video unavailable' in embeds) and was replaced by the Blue Bossa solo."
 }
