@@ -357,7 +357,7 @@ def cover_strip() -> str:
         f'<div class="cover-strip-inner">{tiles}</div>'
         '<div class="wrap"><p class="cover-strip-note">'
         'Eight of a few hundred. The whole song list, and the six sets a night gets '
-        'built from, are on the <a href="{{nav_prefix}}repertoire/">songs page</a>.'
+        'built from, are on the <a href="{{nav_prefix}}repertoire/"></a>.'
         "</p></div></section>"
     )
 
