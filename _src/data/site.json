@@ -14,10 +14,12 @@
     "region": "CO",
     "serviceArea": "Denver, the Front Range, and the mountain corridor",
     "url": "https://signetartists.com",
-    "_sameAs_note": "ADDED 2026-08-21. Profile URLs (Google Business Profile, Thumbtack, The Bash, socials) go here as each goes live; the build emits schema sameAs only when the list is non-empty. The 2026-08-01 no-published-phone decision stands: profiles use the email route and private contact numbers, nothing published.",
+    "_sameAs_note": "ADDED 2026-08-21. Profile URLs (Google Business Profile, Thumbtack, The Bash, socials) go here as each goes live; the build emits schema sameAs only when the list is non-empty. The 2026-08-01 no-published-phone decision stands: profiles use the email route and private contact numbers, nothing published. GBP LIVE 2026-09-01: the profile is the converted Waitlist Ready listing, owner waitlistready@gmail.com, store code 10848524311009745186, verified. Its Maps URL leads the list so the site and the profile resolve to one entity for Search. Instagram added the same day to match the social profiles already published on the GBP itself.",
     "sameAs": [
+      "https://maps.google.com/?cid=6360132596165295264",
       "https://www.thumbtack.com/co/littleton/pro/signet-artists/service/588192753972838403",
-      "https://www.linkedin.com/company/signetartists/"
+      "https://www.linkedin.com/company/signetartists/",
+      "https://instagram.com/signetartists"
     ],
     "_formsubmit_note": "FormSubmit's hashed endpoint for hello@signetartists.com, so the address is not in the page source. Same pattern as daniel-fox.com and danielchristopherfox.com. The plain address still renders on the contact page, deliberately.",
     "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8"
