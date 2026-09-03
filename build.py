@@ -1692,9 +1692,28 @@ def collect_blog_posts() -> list:
     return posts
 
 
-def blog_cards(published: list) -> str:
+def blog_thumb(src: str) -> str:
+    """The index-sized copy of a hero, or the hero itself.
+
+    scripts/thumbs.py writes img/thumbs/<filename>. Seven full-size heroes on
+    one listing page is about a megabyte of image to draw seven thumbnails,
+    so the index takes the small copy when there is one. Falling back rather
+    than failing means a post added without running that script ships a
+    heavier index, not a broken one.
+    """
+    if not src or src.startswith(("http://", "https://", "//")):
+        return src
+    thumb = f"img/thumbs/{pathlib.Path(src).name}"
+    return thumb if (ROOT / thumb).exists() else src
+
+
+def blog_cards(published: list, nav_prefix: str = "../") -> str:
     """Blog index listing: one row per published post, newest first, or the
-    quiet empty state until the first post ships."""
+    quiet empty state until the first post ships.
+
+    nav_prefix is the depth of the page this lands on. It defaults to the
+    blog index's own depth because that is the only page the token appears
+    on, and the row hrefs below are relative to it too."""
     if not published:
         return (
             '<p class="prose">The first entry is on its way.</p>\n'
@@ -1703,7 +1722,7 @@ def blog_cards(published: list) -> str:
         )
     sep = '<span class="blog-row-sep" aria-hidden="true">&middot;</span>'
     rows = []
-    for p in published:
+    for i, p in enumerate(published):
         meta = sep.join(
             [
                 f'<span class="blog-row-eyebrow">{esc(p.get("eyebrow", ""))}</span>',
@@ -1711,11 +1730,27 @@ def blog_cards(published: list) -> str:
                 f"<span>{p['reading_time']} min read</span>",
             ]
         )
+        # The post's own hero, at thumbnail size. alt is empty on purpose: the
+        # link is already named by the headline beside it, and the hero's real
+        # alt is on the post page where the image is the subject rather than a
+        # marker for which row you are looking at. The top two rows are close
+        # enough to the fold to load eagerly; the rest wait.
+        hero = p.get("hero") or {}
+        thumb = ""
+        if isinstance(hero, dict) and hero.get("src"):
+            loading = "eager" if i < 2 else "lazy"
+            thumb = (
+                f'<img class="blog-row-thumb" src="{nav_prefix}{esc(blog_thumb(hero["src"]))}" '
+                f'alt="" width="640" height="360" loading="{loading}" decoding="async">'
+            )
         rows.append(
             f'<a class="blog-row" href="{esc(p["slug"])}/">'
+            f"{thumb}"
+            '<div class="blog-row-text">'
             f'<p class="blog-row-meta">{meta}</p>'
             f'<h2 class="blog-row-title">{esc(p["title"])}</h2>'
             f'<p class="blog-row-dek">{esc(p.get("dek", ""))}</p>'
+            "</div>"
             "</a>"
         )
     return f'<div class="blog-list">{"".join(rows)}</div>'

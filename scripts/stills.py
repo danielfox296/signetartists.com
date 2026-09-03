@@ -29,6 +29,7 @@ than re-mapped, since duotoning a duotone compounds the loss.
 """
 import json
 import pathlib
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -38,6 +39,7 @@ from PIL import Image, ImageOps
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = ROOT / "img"
 API = "https://api.openverse.org/v1/images/"
+COMMONS = "https://commons.wikimedia.org/w/api.php"
 UA = {"User-Agent": "signetartists.com asset pull (contact hello@signetartists.com)"}
 
 # Duotone endpoints. Shadow is the page ground so images sit in the paper
@@ -93,7 +95,67 @@ MANIFEST = {
         "home page locator strip",
         (2400, 800),
     ),
+    # Blog stills, added 2026-09-03. The index lists posts with their hero
+    # beside them, and three posts were sharing one snare drum; these three
+    # are the subjects those posts are actually about. All hand-picked (see
+    # PICKS): the Openverse queries that describe them return either nothing
+    # or a photo with people in it.
+    "ballroom": (
+        "empty hotel ballroom event tables",
+        "A hotel banquet hall set for dinner before guests arrive.",
+        "blog: corporate holiday party venues",
+    ),
+    "loadin": (
+        "road cases flight case equipment backstage",
+        "Road cases stacked backstage in a dark hall.",
+        "blog: what a band needs from the venue",
+    ),
+    "outdoor": (
+        "event tent dance floor stage outdoor",
+        "A frame tent on grass with a plywood stage deck under it.",
+        "blog: what changes when the reception is outdoors",
+    ),
 }
+
+# Hand-picked sources, by slug. `pull` fetches the named Commons file
+# instead of taking the Openverse top hit, and records the same provenance.
+# A slug lands here when the search cannot express what the still has to
+# show -- an empty room, gear with nobody around it -- and the top hit comes
+# back with a crowd in it.
+PICKS = {
+    "ballroom": "File:Banquet Hall Thorbj\u00f8rnrud Hotell.jpg",
+    "loadin": "File:Salon du Livre 2015 - Les coulisses - 3.jpg",
+    "outdoor": "File:Century Tent with Dance Floor and Stage.JPG",
+}
+
+
+def commons(title: str):
+    """A hit-shaped dict for one named Wikimedia Commons file.
+
+    Same keys `pull` reads off an Openverse result, so a hand-picked source
+    is written into SOURCES.md by the same code path as a searched one.
+    """
+    qs = urllib.parse.urlencode({
+        "action": "query", "format": "json", "titles": title,
+        "prop": "imageinfo", "iiprop": "url|extmetadata",
+    })
+    req = urllib.request.Request(COMMONS + "?" + qs, headers=UA)
+    with urllib.request.urlopen(req, timeout=40) as r:
+        data = json.load(r)
+    pages = (data.get("query") or {}).get("pages") or {}
+    info = (list(pages.values())[0].get("imageinfo") or [None])[0]
+    if not info:
+        return None
+    meta = info.get("extmetadata") or {}
+    creator = re.sub(r"<[^>]+>", "", (meta.get("Artist") or {}).get("value", ""))
+    return {
+        "url": info["url"],
+        "title": title[5:],
+        "creator": creator.strip() or "unknown",
+        "license": (meta.get("LicenseShortName") or {}).get("value", "?"),
+        "license_version": "",
+        "foreign_landing_url": info.get("descriptionurl"),
+    }
 
 
 def search(query: str):
@@ -142,10 +204,12 @@ def pull(force: bool = False) -> int:
             print(f"  skip   {slug} (exists)")
             continue
         try:
-            hit = search(query)
+            pick = PICKS.get(slug)
+            hit = commons(pick) if pick else search(query)
             if not hit:
                 failures.append((slug, "no result"))
-                print(f"  MISS   {slug}: nothing matched {query!r}")
+                what = f"the picked file {pick!r}" if pick else f"{query!r}"
+                print(f"  MISS   {slug}: nothing matched {what}")
                 continue
             req = urllib.request.Request(hit["url"], headers=UA)
             with urllib.request.urlopen(req, timeout=60) as r:

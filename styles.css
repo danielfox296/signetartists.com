@@ -2112,9 +2112,30 @@ img {
 }
 
 .blog-row {
-  display: block;
+  display: grid;
+  gap: 1rem;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--rule);
+}
+
+/* The post's hero at thumbnail size, so a reader scanning the list has
+   something to recognise a piece by. Stacked above the text on a phone, a
+   fixed column beside it from 40rem up: a 16:9 still that reflows with the
+   text column ends up either postage-stamp small or taller than its own
+   headline, and neither reads as a list any more. */
+.blog-row-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  transition: opacity 0.15s ease;
+}
+
+.blog-row:hover .blog-row-thumb {
+  opacity: 0.82;
 }
 
 .blog-row-meta {
@@ -2157,6 +2178,18 @@ img {
 @media (min-width: 640px) {
   .blog-related-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-row {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* A row with no hero keeps its text in the text column rather than
+     sliding under the thumbnails above it. */
+  .blog-row > .blog-row-text:first-child {
+    grid-column: 2;
   }
 }
 
