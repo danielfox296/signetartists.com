@@ -5,9 +5,9 @@
     "name": "Signet Artists",
     "legalName": "Entuned, LLC",
     "_tagline_note": "REWRITTEN 2026-08-17. Was 'PROfessional PERFORMANCE FOR PROFESSIONAL SETTINGS'. The capitalisation read as a typo at display size and the sentence said nothing a planner could act on. This is the h1 on the home page and nowhere else, set in the display face at uppercase, so it has a hard length budget: the retired line was 47 characters and ran three lines. Anything much past that fills the first screen on its own and pushes the lede and both buttons under the fold. The rest of the offer moved into `intro` below.",
-    "tagline": "Live music for your event, solo to quartet.",
+    "tagline": "Live music for your event. From solo to quartet.",
     "_intro_note": "REWRITTEN 2026-08-17 with the Q4 refocus. The old version sold the 2027 system, 'from a single DJ to a 13 piece band', which is not the product. It also carried three of the copy bugs from the 17 Aug audit. This renders as the home page hero lede and as the MusicGroup description in schema, so it has to stand alone.",
-    "intro": "Sized to your event and budget, for private events across Colorado. One contract, one named contact for the night, and every rate published before you write to us. Send the date and the venue. We do the rest.",
+    "intro": "Signet Artists delivers music for your event in Denver, Colorado and surrounding areas. A variety of genre's and configurations are available to book - effortlessly. All sized to your event and budget, for private events across Colorado. Enjoy one contract, one point of contact for the night, and our rates published right on the website. Send us the date and the venue - we take care of  the rest.",
     "_phone_note": "Decided 2026-08-01: no phone number is published. Email is the only published route. If that changes, restore the markup in the footer partial, the contact page and the home page close section.",
     "email": "hello@signetartists.com",
     "city": "Denver",
@@ -235,7 +235,7 @@
       {"id": "casa-bonita", "name": "Casa Bonita", "h": 1},
       {"id": "monarch-casino", "name": "Monarch Casino Resort Spa Black Hawk", "h": 1.9}
     ],
-    "also": "Also Live Nation, Valley Country Club and the National Cherry Blossom Festival, and the stages at Dazzle, the Bluebird Theater, Cervantes and the 9:30 Club."
+    "also": "Also Live Nation, Valley Country Club and the National Cherry Blossom Festival, and the stages at Dazzle, the Bluebird Theater, Cervantes, the 9:30 Club and many, many more."
   },
   "_eventTypes_note": "RESTRUCTURED 2026-08-20 with the SEO buildout. Each tag is now a doorway into its occasion page, which is the home page's placement for the occasion tree. 'Weddings' became 'Wedding cocktail hours' deliberately: the cocktail hour is the one wedding product in 2026 scope, and the tag should not promise a reception band that does not exist yet. Galas route to the corporate hub, where they are framed at small-format scale per the 17 Aug audit.",
   "eventTypes": [
