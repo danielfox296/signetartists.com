@@ -219,6 +219,21 @@
       "why": "An event that has remarks in it and wants one thing guests describe afterwards. A set piece rather than a background, placed where the program leaves space for it."
     }
   ],
+  "_credits_note": "ADDED 2026-09-03, from Daniel's list of the companies, institutions and venues the roster's artists have played for. Rendered by build.py credits() as the one-colour logo strip on the home page and /corporate/, and as a Credits line in llms.txt. Each logo ships as img/logos/<id>.svg, normalised to currentColor (provenance in img/logos/SOURCES.md); `h` scales a mark against the strip's base height so a stacked crest and a wide wordmark carry the same visual weight. The eight with logos are the names a corporate planner or a couple recognises on sight: national employers, the museum, the two hotel flags and a major-league club. The rest of the list is the `also` sentence, text only and home page only, because a club stage says the musicians are real and a client name says a company hired them. Held back: Monarch Casino (acts.json keeps the venue of the flamenco footage unnamed) and the Hummingbird bar. The claim is 'our artists', never 'Signet', because the credits belong to the players.",
+  "credits": {
+    "label": "Our artists have played for",
+    "logos": [
+      {"id": "amazon", "name": "Amazon", "h": 1},
+      {"id": "nbcuniversal", "name": "NBCUniversal", "h": 0.85},
+      {"id": "charles-schwab", "name": "Charles Schwab", "h": 1.5},
+      {"id": "kroger", "name": "Kroger", "h": 1.3},
+      {"id": "denver-art-museum", "name": "Denver Art Museum", "h": 1.7},
+      {"id": "sheraton", "name": "Sheraton", "h": 2},
+      {"id": "hyatt", "name": "Hyatt", "h": 0.9},
+      {"id": "washington-nationals", "name": "Washington Nationals", "h": 2}
+    ],
+    "also": "Also Live Nation, Casa Bonita, Valley Country Club and the National Cherry Blossom Festival, and the stages at Dazzle, the Bluebird Theater, Cervantes and the 9:30 Club."
+  },
   "_eventTypes_note": "RESTRUCTURED 2026-08-20 with the SEO buildout. Each tag is now a doorway into its occasion page, which is the home page's placement for the occasion tree. 'Weddings' became 'Wedding cocktail hours' deliberately: the cocktail hour is the one wedding product in 2026 scope, and the tag should not promise a reception band that does not exist yet. Galas route to the corporate hub, where they are framed at small-format scale per the 17 Aug audit.",
   "eventTypes": [
     {

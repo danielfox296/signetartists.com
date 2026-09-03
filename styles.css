@@ -2907,3 +2907,54 @@ img {
   white-space: nowrap;
   border: 0;
 }
+
+/* ------------------------------------------------------------ client strip
+   2026-09-03. The one-colour logo row under the home locator strip and the
+   corporate intro (site.json credits, inlined by build.py). Marks take
+   --ink-soft, one step under the type around them, so eight trademarks read
+   as a quiet list instead of eight shouting brands. Each mark is sized off
+   one base height times its own --credit-h, set in the data, because a
+   stacked crest and a wide wordmark at the same pixel height never look the
+   same size. Centred and wrapping, so a phone gets two or three even rows. */
+.credits {
+  padding: var(--space-4) 0;
+}
+
+.credits-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem 3rem;
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+}
+
+.credit svg {
+  display: block;
+  height: calc(1.5rem * var(--credit-h, 1));
+  width: auto;
+  color: var(--ink-soft);
+}
+
+.credits-also {
+  margin: 1.75rem auto 0;
+  max-width: 44rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .credits-list {
+    gap: 1.25rem 2rem;
+  }
+
+  .credit svg {
+    height: calc(1.25rem * var(--credit-h, 1));
+  }
+}

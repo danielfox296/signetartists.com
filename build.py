@@ -720,6 +720,31 @@ def corporate_shapes(nav_prefix: str = "") -> str:
     return f'<div class="card-grid card-grid--3">{"".join(cards)}</div>'
 
 
+def credits() -> str:
+    """The client strip (2026-09-03): the eyebrow and the one-colour logo row,
+    from site.json credits. Every mark is inlined from img/logos/<id>.svg so it
+    takes the palette from CSS (currentColor for the mark, var(--paper) for a
+    knockout) and needs no request; the file is already normalised to a tight
+    viewBox with no width or height, so CSS sets the height and the aspect
+    ratio does the rest. role="img" plus the name is the alt text."""
+    c = site["credits"]
+    items = []
+    for logo in c["logos"]:
+        svg = (ROOT / "img" / "logos" / f"{logo['id']}.svg").read_text(encoding="utf-8")
+        svg = svg.replace(
+            "<svg ", f'<svg role="img" aria-label="{esc(logo["name"])}" focusable="false" ', 1
+        )
+        items.append(f'<li class="credit" style="--credit-h:{logo.get("h", 1)}">{svg}</li>')
+    return (
+        f'<p class="eyebrow">{esc(c["label"])}</p>'
+        f'<ul class="credits-list" aria-label="{esc(c["label"])}">{"".join(items)}</ul>'
+    )
+
+
+def credits_also() -> str:
+    return esc(site["credits"]["also"])
+
+
 def act_picker() -> str:
     """The act field on the contact form. Every "Inquire" link across the site
     carries ?act=<id>, and contact.js preselects from it, so an inquiry that
@@ -1368,6 +1393,8 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{roster_grid}}": roster_grid(nav_prefix),
         "{{roster_grid_flagships}}": roster_grid_flagships(nav_prefix),
         "{{corporate_shapes}}": corporate_shapes(nav_prefix),
+        "{{credits}}": credits(),
+        "{{credits_also}}": credits_also(),
         "{{act_picker}}": act_picker(),
         "{{act_count}}": str(len(ACTS)),
         "{{act_count_word}}": act_count_word(),
@@ -1878,6 +1905,12 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         f"{BRAND['name']} is a live music company for private events in "
         f"{BRAND['serviceArea']}. Rates are published rather than quoted on request; "
         "the full card is on the pricing page.",
+        "",
+        "## Credits",
+        "",
+        f"{site['credits']['label']} "
+        + ", ".join(l["name"] for l in site["credits"]["logos"][:-1])
+        + f" and {site['credits']['logos'][-1]['name']}. {site['credits']['also']}",
         "",
         "## Pages",
         "",
