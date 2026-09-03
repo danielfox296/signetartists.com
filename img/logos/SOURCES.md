@@ -23,9 +23,10 @@ viewBox tightened to the drawn bounds. No shape was redrawn.
 | sheraton.svg | Sheraton laurel and wordmark | https://commons.wikimedia.org/wiki/File:Sheraton_Hotels_and_Resorts.svg |
 | hyatt.svg | Hyatt wordmark (the Denver date was Hyatt Centric; the parent mark is the one people know) | https://commons.wikimedia.org/wiki/File:Hyatt_Logo.svg |
 | washington-nationals.svg | Washington Nationals primary crest | https://commons.wikimedia.org/wiki/File:Washington_Nationals_logo.svg |
+| casa-bonita.svg | Casa Bonita wordmark | https://commons.wikimedia.org/wiki/File:Casa_Bonita_logo.svg |
+| monarch-casino.svg | Monarch Casino Resort Spa Black Hawk, stacked mark (gradients on the butterfly flattened to one colour) | https://www.monarchblackhawk.com/skins/skin-prodmonarchblackhawk/assets/desktop/images/logo/logo-black-hawk-dark.svg, the resort's own site, since no wiki holds it |
 
-Fetched and normalised but not shipped, because they sit in the text sentence
-instead: Live Nation (en.wikipedia File:Live_Nation_Logo.svg) and Casa Bonita
-(Commons File:Casa_Bonita_logo.svg). No usable vector exists on either wiki
-for Dazzle, the Bluebird Theater, Cervantes, the 9:30 Club, Valley Country
-Club, the National Cherry Blossom Festival or Monarch Casino.
+Fetched and normalised but not shipped, because it sits in the text sentence
+instead: Live Nation (en.wikipedia File:Live_Nation_Logo.svg). No usable vector
+exists on either wiki for Dazzle, the Bluebird Theater, Cervantes, the 9:30
+Club, Valley Country Club or the National Cherry Blossom Festival.

@@ -2909,7 +2909,7 @@ img {
 }
 
 /* ------------------------------------------------------------ client strip
-   2026-09-03. The one-colour logo row under the home locator strip and the
+   2026-09-03, sized up the same day at Daniel's ask. The one-colour logo row under the home locator strip and the
    corporate intro (site.json credits, inlined by build.py). Marks take
    --ink-soft, one step under the type around them, so eight trademarks read
    as a quiet list instead of eight shouting brands. Each mark is sized off
@@ -2928,7 +2928,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.75rem 3rem;
+  gap: 2rem 3.5rem;
 }
 
 .credit {
@@ -2938,7 +2938,7 @@ img {
 
 .credit svg {
   display: block;
-  height: calc(1.5rem * var(--credit-h, 1));
+  height: calc(2.125rem * var(--credit-h, 1));
   width: auto;
   color: var(--ink-soft);
 }
@@ -2951,10 +2951,10 @@ img {
 
 @media (max-width: 640px) {
   .credits-list {
-    gap: 1.25rem 2rem;
+    gap: 1.5rem 2.25rem;
   }
 
   .credit svg {
-    height: calc(1.25rem * var(--credit-h, 1));
+    height: calc(1.5rem * var(--credit-h, 1));
   }
 }
