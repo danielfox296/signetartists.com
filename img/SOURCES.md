@@ -6,11 +6,13 @@ Objects, gear and empty rooms only: no people, and nothing that implies it is ou
 Some slugs are hand-picked instead of searched (`PICKS` in that script); those
 come from Wikimedia Commons and say so below.
 
-Attribution is carried here, not on the page, which is the same call range.jpg
-has been shipping under since 2026-08-27. Two of them are share-alike
-(loadin.jpg and range.jpg): the duotoned crop is a derivative and inherits
-that licence. If a visible credit line is ever wanted, it belongs on one
-page, not under each still, and it is Daniel's call.
+Attribution is carried here and nowhere else. Asked directly on 2026-09-03,
+Daniel said no credit line on the site: this file is the record, and the repo
+it sits in is public. Two of these are share-alike (loadin.jpg and range.jpg)
+and the duotoned crop inherits that licence, so the obligation stands and
+this file is what answers it. Settled, not an open question — do not add a
+credits page, and do not re-raise it. The whole set goes away at the shoot
+anyway.
 
 Exception, 2026-08-27: `range.jpg` is geography, not gear. A skyline is a claim
 about where we play, and that claim is true; Daniel asked for the downtown-into-
