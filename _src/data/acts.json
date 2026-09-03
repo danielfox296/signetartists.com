@@ -413,6 +413,35 @@
         "Freddy Alexander"
       ],
       "blurb": "Blues rock covers, solo or as a duo, at the smallest spend on this roster. Real playing rather than a playlist, at whatever volume the venue will take. Rehearsal dinners, welcome drinks, office parties, and any event where live music is the right idea and a band is the wrong size."
+    },
+    {
+      "id": "last-consulate",
+      "name": "Last Consulate",
+      "presentation": "spec",
+      "_presentation_note": "ADDED 2026-09-03. A named solo project, not an interchangeable format, but the player behind it is not published by name, so the byline carries the instrumentation the way a spec'd format does. It sits with the named acts on the music page intro because the sound is specific and comes with the booking. If Daniel wants the player named, switch to presentation 'face' and fill `face`.",
+      "status": "listing",
+      "style": "Instrumental downtempo",
+      "spec": "Upright bass, guitar and electronics, one player",
+      "material": "Originals",
+      "bucket_tags": [
+        "cocktail"
+      ],
+      "config_tags": [
+        "solo"
+      ],
+      "from": "solo",
+      "img": "last-consulate-card.jpg",
+      "_img_note": "The act's own artwork, supplied by Daniel 2026-09-03 (his Desktop last-consulate folder, passport.jpg). Not a placeholder and not a shoot still: it is a prop passport, already black and white, cropped to 16:9 at y=390 of the 960x1095 source and otherwise untouched, no palette duotone. The name printed on the prop is artwork and nothing on the site repeats it. Provenance in media-sources.json.",
+      "alt": "A passport held open at its photo page, in black and white.",
+      "video": null,
+      "blurb": "One player, upright bass out front, over downtempo electronics with slow hip-hop drums, worn keys and delayed guitar. Jazz improvisation on top, at conversation volume. Arrival, cocktails and dinner, on original material that sounds closer to an early-2000s downtempo record than to a jazz set.",
+      "_identity_note": "Daniel's supplied description, passed through AI-TELLS-2026 on 2026-09-03 (em dash, 'not X but Y', the five-adjective stack, the crate-digger triad and the three-fragment tagline all cut). Held here for the day the act gets a page; a listing renders the blurb only, and the SEO buildout is holding new URLs until indexation catches up.",
+      "identity": [
+        "Last Consulate is the solo project of one multi-instrumentalist, built on upright bass, electric bass, guitar and downtempo electronics.",
+        "The improvising is jazz. The production is early-2000s downtempo electronica, the slow and hazy end of it, instrumental and warm, and mixed so that what was played and what was sampled are hard to tell apart.",
+        "Upright bass is the lead instrument. Under it sit slow hip-hop drums, extended jazz harmony, tape-worn keys and delayed guitars, and the improvised bass line is usually the melody.",
+        "It is built for arrival, cocktails and dinner, played at a volume guests can talk across, with the feel of a late jazz set or a hotel lobby."
+      ]
     }
   ],
   "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is depth behind Blues Solo, which is what the workbook always said he was.",
