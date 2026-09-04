@@ -20,7 +20,9 @@ runs stdlib-only; the deploy workflow pip-installs them).
 ## Layout
 
 ```
-_src/data/site.json          every brand value, the rate card, FAQs
+_src/data/site.json          every brand value, the FAQs, what is itemised
+_src/data/market-rates.json  sourced market figures + provenance (the ONLY
+                             dollar figures or percentages the site may print)
 _src/layouts/base.html       page shell
 _src/partials/               header, footer
 _src/pages/<slug>/
@@ -64,9 +66,12 @@ python3 build.py --lint    # validate every post, drafts included
 
 A section can drop in any of these and the build fills them from `site.json`:
 
-`{{rate_table_summary}}` `{{rate_table_full}}` `{{included_list}}`
+`{{market_table}}` `{{market_sources}}` `{{included_list}}`
 `{{included_list_columns}}` `{{extras_list}}` `{{faq_list}}` `{{acts_grid}}`
 `{{acts_sections}}` `{{event_types}}` `{{blog_cards}}`
+
+Parameterized: `{{market:<id>}}` `{{act_ladder:<act>}}` `{{act_setlist:<act>}}`
+`{{offer_close:Headline.}}`. An unknown id fails the build.
 
 Brand tokens work anywhere: `{{brand_name}}` `{{brand_tagline}}` `{{brand_intro}}`
 `{{brand_email}}` `{{brand_service_area}}` `{{brand_legal_name}}`
@@ -80,6 +85,36 @@ silently. `build.py` also prints them at the end of every build.
 
 Push to `main`. GitHub Actions lints the blog, builds, publishes to GitHub
 Pages, and pings IndexNow with the URLs whose sitemap entry changed.
+
+## No published prices (2026-09-04)
+
+Signet publishes no price of any kind on this site: no card, floor, "from",
+range, hourly, call-out figure, uplift percentage, travel figure or discount
+rule. What the site publishes is *market* information.
+
+- **The only dollar figures and percentages allowed anywhere** come from
+  `_src/data/market-rates.json`, each with the URL it was read from and the
+  date it was read, rendered through `{{market:<id>}}`. Never type a figure
+  into a section, a FAQ answer, a description or a blog cell.
+- A page that resolves a `market:` token **must** carry `{{market_sources}}`
+  or the build stops. That token prints the Sources note listing exactly the
+  sources that page used.
+- `{{market_table}}` renders the market ranges as one table. It carries
+  `.rate-table`, so `analytics.js`'s `pricing_engaged` observer still fires
+  when a reader reaches the money block; the event means what it always meant.
+- Structured data emits **no** `Offer` and no `makesOffer`. `Service` nodes
+  stay. Only `market:` resolves inside `schema.json` strings.
+- Retired with the card: `rate_range`, `rate_range_resort`, `rate_hour`,
+  `rate_4h`, `rate_1h`, `act_from`, `rate_card_table`, `rate_table_summary`,
+  `rate_table_full`, the quote engine (`quote.js`, `_src/partials/quote-engine.html`,
+  the pricing page's `02b-quote` section, the `quote engine` block in
+  `styles.css`, the `quote_configured` event), the roster's price filter, and
+  `llms.txt`'s rate-card and hourly-build sections.
+- `scripts/copy_gate.py` audits **every built page plus llms.txt**, not a
+  directory list: every figure against `market-rates.json`, plus a phrase ban
+  ("rate card", "published rates", "from $", "starting at", "10% off" and the
+  rest). Zero hits required.
+- Signet's internal numbers live in `../OFFER.md` and nowhere in this repo.
 
 ## Analytics & search wiring
 
