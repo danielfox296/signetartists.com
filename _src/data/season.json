@@ -1,41 +1,96 @@
 {
   "_comment": "The corporate holiday season's dates. Built 2026-08-15 for the Nov/Dec 2026 landing pages.",
-
   "_DECISION_2026_08_27": "AVAILABILITY IS NEVER PUBLISHED. This file carried per-date open/held/booked statuses and an `updated` stamp until 2026-08-27, when Daniel killed the published 'season board' as fiction: the booking calendar is private, nothing on the site claims to mirror it, and no session should reintroduce statuses, counters or freshness stamps here. What this file holds now is calendar and pricing fact only: which dates the season is, and which carry the published premiums.",
-
-  "_dates_note": "Thursdays, Fridays and Saturdays, which is where corporate holiday parties actually sit. Thanksgiving (Nov 26) and Christmas (Dec 24 to 26) are out. New Year's Eve is in and priced at +50% per the extras list. `peak: true` marks the dates that carry the published +25% holiday/peak line.",
-
+  "_dates_note": "Thursdays, Fridays and Saturdays, which is where corporate holiday parties actually sit. Thanksgiving (Nov 26) and Christmas (Dec 24 to 26) are out. New Year's Eve is in. `peak: true` marks the dates the market prices above a standard one. The premium percentages that lived in this note and in build.py's season_dates() came off 2026-09-04: the site publishes no Signet uplift, and the board now marks a date as peak without saying by how much.",
   "year": 2026,
   "label": "November and December 2026",
-
   "dates": [
-    { "date": "2026-11-05" },
-    { "date": "2026-11-06" },
-    { "date": "2026-11-07" },
-    { "date": "2026-11-12" },
-    { "date": "2026-11-13" },
-    { "date": "2026-11-14" },
-    { "date": "2026-11-19" },
-    { "date": "2026-11-20" },
-    { "date": "2026-11-21" },
-    { "date": "2026-11-27" },
-    { "date": "2026-11-28" },
-    { "date": "2026-12-03" },
-    { "date": "2026-12-04" },
-    { "date": "2026-12-05", "peak": true },
-    { "date": "2026-12-10" },
-    { "date": "2026-12-11", "peak": true },
-    { "date": "2026-12-12", "peak": true },
-    { "date": "2026-12-17" },
-    { "date": "2026-12-18", "peak": true },
-    { "date": "2026-12-19", "peak": true },
-    { "date": "2026-12-31", "note": "New Year's Eve" }
+    {
+      "date": "2026-11-05"
+    },
+    {
+      "date": "2026-11-06"
+    },
+    {
+      "date": "2026-11-07"
+    },
+    {
+      "date": "2026-11-12"
+    },
+    {
+      "date": "2026-11-13"
+    },
+    {
+      "date": "2026-11-14"
+    },
+    {
+      "date": "2026-11-19"
+    },
+    {
+      "date": "2026-11-20"
+    },
+    {
+      "date": "2026-11-21"
+    },
+    {
+      "date": "2026-11-27"
+    },
+    {
+      "date": "2026-11-28"
+    },
+    {
+      "date": "2026-12-03"
+    },
+    {
+      "date": "2026-12-04"
+    },
+    {
+      "date": "2026-12-05",
+      "peak": true
+    },
+    {
+      "date": "2026-12-10"
+    },
+    {
+      "date": "2026-12-11",
+      "peak": true
+    },
+    {
+      "date": "2026-12-12",
+      "peak": true
+    },
+    {
+      "date": "2026-12-17"
+    },
+    {
+      "date": "2026-12-18",
+      "peak": true
+    },
+    {
+      "date": "2026-12-19",
+      "peak": true
+    },
+    {
+      "date": "2026-12-31",
+      "note": "New Year's Eve"
+    }
   ],
-
   "_leads_note": "The three configurations to lead the holiday page with, per the restructure spec. Named by act id so they resolve against acts.json rather than being retyped here. REORDERED 2026-08-17: the flagship leads every featured-acts block on the site, so Tejas Singh sits first and the block no longer reads cheapest-first. The page copy said 'ordered by spend' and was changed with it.",
   "leads": [
-    { "act": "tejas-singh", "config": "quartet", "why": "The dance floor booking. Book this when the party is the point." },
-    { "act": "jazz-duo", "config": "duo", "why": "Drinks and dinner covered without anybody raising their voice over it. The safest booking on the page for a night that has speeches in it." },
-    { "act": "dj", "config": "dj", "why": "The whole night on one line, at the smallest number on this page. The format most corporate parties actually book." }
+    {
+      "act": "tejas-singh",
+      "config": "quartet",
+      "why": "The dance floor booking. Book this when the party is the point."
+    },
+    {
+      "act": "jazz-duo",
+      "config": "duo",
+      "why": "Drinks and dinner covered without anybody raising their voice over it. The safest booking on the page for a night that has speeches in it."
+    },
+    {
+      "act": "dj",
+      "config": "dj",
+      "why": "The whole night on one line, at the smallest number on this page. The format most corporate parties actually book."
+    }
   ]
 }

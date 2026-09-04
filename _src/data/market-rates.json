@@ -1,0 +1,344 @@
+{
+  "_comment": "Sourced market figures, 2026-09-04. THE ONLY DOLLAR FIGURES OR PERCENTAGES THAT MAY APPEAR ANYWHERE ON THIS SITE. Signet publishes no price of its own: no card, floor, range, hourly, call-out, uplift, travel figure or discount rule. Every figure below belongs to the market, is attributable to a named public source, and renders through {{market:<id>}} so it can never be retyped and never drift. A page that prints one must also print {{market_sources}}; the build fails otherwise.",
+  "_provenance_note": "Same contract as media-sources.json: one entry per figure, with the URL it came from and the date it was read. Before reusing any figure, open its url and check it still says what `figure` says. Marketplace pages in particular recompute their averages as listings change. If a source has moved on, correct the entry or delete it and rewrite the sentence that used it. Never edit a figure without moving `retrieved`.",
+  "_attribution_rule": "Every figure is attributed in the sentence or the table caption as the market's: 'Colorado couples budget about...', 'a Denver marketplace averages...'. Nothing may be worded so a reader could take it as Signet's number.",
+  "_2026_09_04_verification": "All six sources opened and read on 2026-09-04. Two of the figures carried in the spec had drifted and were corrected here: the US wedding-band range and average now cite Paperlust, which still carries them, rather than SpeechLess, whose 2026 guide has moved to $6,000 to $15,000 and up; and the GigHeaven Denver party-band average now reads $1,150 against the $1,750 the spec recorded. Uptown Drive's page moved to /post/. The spec's suggestion of a travel figure was dropped on purpose: travel is words on this site, never a number, market or otherwise.",
+  "rates": [
+    {
+      "id": "co_band_budget",
+      "figure": [
+        2338,
+        2858
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Colorado",
+      "what": "What Colorado couples budget for a live band",
+      "source": "The Wedding Report, Colorado estimate",
+      "url": "https://wedding.report/index.cfm/action/wedding_cost.estimate/budgetid/01CD9F22-E589-7C9B-880BF5E4E10CE922",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_band_range",
+      "figure": [
+        3000,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What most US couples pay for a live wedding band in 2026",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_band_average",
+      "figure": 4500,
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "The 2026 national average for a live wedding band",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_duo",
+      "figure": [
+        1500,
+        2500
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "United States",
+      "what": "An acoustic duo over a four-hour reception, national",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_trio",
+      "figure": [
+        2000,
+        3500
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "United States",
+      "what": "A trio over a four-hour reception, national",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_four_piece",
+      "figure": [
+        2500,
+        5000
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "United States",
+      "what": "A four-piece band over a four-hour reception, national",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "mountain_west_band",
+      "figure": [
+        2500,
+        6500
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "Mountain West",
+      "what": "A five to six piece band in Mountain West markets",
+      "source": "Paperlust, 2026 wedding band cost guide, regional table",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_band_range",
+      "figure": [
+        2500,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Denver",
+      "what": "Denver wedding bands, a trio at the bottom to a full band with horns at the top",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_midtier_band",
+      "figure": [
+        4000,
+        6000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Denver",
+      "what": "The four to six piece band, which the Denver market treats as its middle",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_strings",
+      "figure": [
+        800,
+        2000
+      ],
+      "kind": "usd",
+      "unit": "ceremony or cocktail hour",
+      "market": "Denver",
+      "what": "A classical string duo or trio for a ceremony or cocktail hour, Denver",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_dj",
+      "figure": [
+        2500,
+        6000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Denver",
+      "what": "A Denver DJ carrying a night with production lighting",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_holiday_surcharge",
+      "figure": [
+        20,
+        30
+      ],
+      "kind": "percent",
+      "unit": "on the fee",
+      "market": "Denver",
+      "what": "What the Denver market adds for a holiday weekend",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_overtime",
+      "figure": [
+        200,
+        400
+      ],
+      "kind": "usd",
+      "unit": "per hour",
+      "market": "Denver",
+      "what": "What the Denver market charges per hour beyond the contracted set",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_marketplace_avg",
+      "figure": 1150,
+      "kind": "usd",
+      "unit": "per booking",
+      "market": "Denver",
+      "what": "The average booking for a Denver party band on one listing marketplace",
+      "source": "GigHeaven, Denver party bands",
+      "url": "https://www.gigheaven.com/search/party-bands/united-states/denver.html",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_marketplace_range",
+      "figure": [
+        230,
+        3550
+      ],
+      "kind": "usd",
+      "unit": "per booking",
+      "market": "Denver",
+      "what": "The spread of Denver party-band listings on that marketplace",
+      "source": "GigHeaven, Denver party bands",
+      "url": "https://www.gigheaven.com/search/party-bands/united-states/denver.html",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_corporate_band",
+      "figure": [
+        2500,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a cover or jazz band costs for a corporate event, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_dinner_band",
+      "figure": [
+        500,
+        3000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a jazz trio or acoustic duo costs for a dinner, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_private_party_band",
+      "figure": [
+        3000,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a cover or acoustic band costs for a private party, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_showband",
+      "figure": [
+        7500,
+        17000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a seven to nine piece show band costs, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_showband_speechless",
+      "figure": [
+        6000,
+        15000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a full professional wedding band costs, national averages by size",
+      "source": "SpeechLess, 2026 and 2027 wedding band pricing guide",
+      "url": "https://speechlessmusic.com/blog/how-much-does-a-wedding-band-cost-a-complete-2026-pricing-guide",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "space_gallery_rental",
+      "figure": [
+        4000,
+        6500
+      ],
+      "kind": "usd",
+      "unit": "eight-hour rental",
+      "market": "Denver",
+      "what": "Space Gallery, a weeknight through a Saturday",
+      "source": "Space Gallery, published event rental rates",
+      "url": "https://spacegallery.org/space-gallery/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "ophelias_buyout",
+      "figure": [
+        4000,
+        5500
+      ],
+      "kind": "usd",
+      "unit": "full-building buyout",
+      "market": "Denver",
+      "what": "Ophelia's Electric Soapbox, Sunday to Thursday through a Friday or Saturday",
+      "source": "Ophelia's Electric Soapbox, published private event pricing",
+      "url": "https://opheliasdenver.com/private-events/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "ophelias_stage_level",
+      "figure": 2750,
+      "kind": "usd",
+      "unit": "stage level",
+      "market": "Denver",
+      "what": "Ophelia's Electric Soapbox, the cheapest single level",
+      "source": "Ophelia's Electric Soapbox, published private event pricing",
+      "url": "https://opheliasdenver.com/private-events/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "clyfford_still_buyout",
+      "figure": 5000,
+      "kind": "usd",
+      "unit": "up to four hours",
+      "market": "Denver",
+      "what": "Clyfford Still Museum, a full evening buyout",
+      "source": "Clyfford Still Museum, published event rental rates",
+      "url": "https://clyffordstillmuseum.org/plan-your-visit/host-an-event/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "clyfford_still_monday",
+      "figure": 10000,
+      "kind": "usd",
+      "unit": "eight hours on a Monday",
+      "market": "Denver",
+      "what": "Clyfford Still Museum, the eight-hour Monday buyout",
+      "source": "Clyfford Still Museum, published event rental rates",
+      "url": "https://clyffordstillmuseum.org/plan-your-visit/host-an-event/",
+      "retrieved": "2026-09-04"
+    }
+  ],
+  "_venue_note": "Venue rental figures, added 2026-09-04. The Denver venues post named three venues' published buyout prices with no provenance on file. They are market figures like any other, they belong to the venue rather than to Signet, and they now live here with the venue's own page and the date it was read. Venue pricing moves seasonally; re-read before reusing. Ophelia's does not publish event hours, so the post no longer claims any."
+}
