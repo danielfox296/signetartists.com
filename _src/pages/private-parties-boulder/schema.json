@@ -3,9 +3,15 @@
   "service": {
     "name": "Private party entertainment in Boulder",
     "serviceType": "Live music for dinner parties and private celebrations",
-    "description": "Live music for Boulder private parties, solo to trio, with caps and curfews honoured as written and every rate published.",
-    "areaServed": ["Boulder"],
-    "configs": ["solo", "duo", "trio"]
+    "description": "Live music for Boulder private parties, solo to trio, with caps and curfews honoured as written.",
+    "areaServed": [
+      "Boulder"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio"
+    ]
   },
   "faqs": [
     {
@@ -14,7 +20,7 @@
     },
     {
       "q": "Does travel from Denver add to a Boulder quote?",
-      "a": "One flat line, the published Front Range travel rate, printed on the rate card next to every performance figure. It covers the whole trip; there is no mileage arithmetic and no lodging line for Boulder, and the performance rate itself is the same one a Denver host sees."
+      "a": "One short line on the quote, covering the whole trip down and back. There is no mileage arithmetic and no lodging line for Boulder, because Boulder is a drive home, and the fee for the music itself is the same one a Denver host sees."
     },
     {
       "q": "What size fits the Community House at Chautauqua or a Boulderado event floor?",

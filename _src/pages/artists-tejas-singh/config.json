@@ -1,9 +1,9 @@
 {
-  "_note": "The flagship act page, authored 2026-08-20 with the SEO buildout. Replaces the generated /music/tejas-singh/ page: acts.json carries page: 'artists/tejas-singh/', build.py skips generation for acts with a page field, and REDIRECTS stubs the old URL to this one. Identity copy is the ratified acts.json paragraphs; prices, the ladder and the setlist all resolve from tokens so this page cannot disagree with the rate card.",
+  "_note": "The flagship act page, authored 2026-08-20 with the SEO buildout. Replaces the generated /music/tejas-singh/ page: acts.json carries page: 'artists/tejas-singh/', build.py skips generation for acts with a page field, and REDIRECTS stubs the old URL to this one. Identity copy is the ratified acts.json paragraphs; the ladder and the setlist resolve from tokens. No prices anywhere since 2026-09-04.",
   "_title_note": "57 chars before the brand suffix, inside the 60-char cap (the cap is measured pre-suffix). title_exact swaps the build's em dash suffix for the pipe suffix written here; the brand stays in the SERP line like every other page.",
   "title": "Tejas Singh: voice-fronted covers, duo to quartet, Denver | Signet Artists",
   "title_exact": true,
-  "meta_description": "Voice-fronted covers for events in Denver and the Colorado mountains. Starts as a duo, finishes as a quartet, one contract. Duo from $2,000, every rate published.",
+  "meta_description": "Voice-fronted covers for events in Denver and the Colorado mountains. Starts as a duo, finishes as a quartet, on one contract. Send a date and we price the night.",
   "output": "artists/tejas-singh/index.html",
   "nav": "music",
   "og_image": "img/tejas-card.jpg"

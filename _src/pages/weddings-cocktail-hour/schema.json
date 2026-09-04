@@ -2,9 +2,20 @@
   "service": {
     "name": "Wedding cocktail hour music",
     "serviceType": "Live music for wedding cocktail hours",
-    "description": "Jazz duo, acoustic duo and solo guitarist bookings for wedding cocktail hours across Denver, the Front Range and the Colorado mountain corridor, at published rates.",
-    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
-    "configs": ["solo", "duo"]
+    "description": "Jazz duo, acoustic duo and solo guitarist bookings for wedding cocktail hours across Denver, the Front Range and the Colorado mountain corridor.",
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+    ],
+    "configs": [
+      "solo",
+      "duo"
+    ]
   },
   "faqs": [
     {
@@ -21,7 +32,7 @@
     },
     {
       "q": "Should we book a band or a DJ for cocktail hour?",
-      "a": "Two players, for this hour. A duo reads the crowd, takes a request, and lands at a volume people can talk across. A DJ earns its fee later, carrying the dance floor after dinner. Both sit on the same published rate card, so the comparison costs nothing to make."
+      "a": "Two players, for this hour. A duo reads the crowd, takes a request, and lands at a volume people can talk across. A DJ earns its fee later, carrying the dance floor after dinner. For this one hour they are not close, and after dinner the answer flips."
     },
     {
       "q": "Can one booking cover the cocktail hour and dinner?",

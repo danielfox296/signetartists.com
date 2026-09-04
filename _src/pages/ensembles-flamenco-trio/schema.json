@@ -3,8 +3,19 @@
     "name": "Flamenco trio for private events",
     "serviceType": "Flamenco trio and dancer configuration for corporate dinners, member events and milestone parties",
     "description": "Dirty Flamenco, fronted by Gary Meyers: a working flamenco group with a standing repertoire of traditional palos, sold at private event scale across Denver and the Colorado mountain corridor.",
-    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
-    "configs": ["trio", "quartet"]
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+    ],
+    "configs": [
+      "trio",
+      "quartet"
+    ]
   },
   "act": "dirty-flamenco",
   "video": {
@@ -20,7 +31,7 @@
     },
     {
       "q": "Can we add a dancer?",
-      "a": "Yes. The quartet configuration is the trio plus a dancer, and the dancer is the set piece. Both configurations sit on the published rate card."
+      "a": "Yes. The quartet configuration is the trio plus a dancer, and the dancer is the set piece. Which one an evening wants depends on whether the program has space for a set piece in it."
     },
     {
       "q": "Does flamenco work as dinner music, or only as a show?",

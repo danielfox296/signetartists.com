@@ -3,20 +3,22 @@
 # party ideas denver" earned impressions in AUGUST at position 31 with no
 # page on the site answering the ideas intent; the venues post was catching
 # it by accident. This is the ideas page, built the way the cost pages are
-# built: every idea is a format off the published card with its figure
-# attached, because a cost query is a calibration query. It also feeds the
+# built: every idea is a format with the size it needs attached, because a
+# cost query is a calibration query. Prices came off 2026-09-04 with the
+# no-published-price decision; the market figures in it are sourced through
+# {{market:<id>}} tokens. It also feeds the
 # holiday cluster: hub, Denver page, venue guide and cost post all get
 # body links from here.
 # ---------------------------------------------------------------------------
-title: "Office holiday party ideas in Denver, priced"
+title: "Office holiday party ideas in Denver"
 slug: "office-holiday-party-ideas-denver"
 eyebrow: "CORPORATE"
-dek: "Seven shapes a Denver office party can take, each with its published figure attached, so the idea you pitch and the number you take to finance arrive together."
+dek: "Seven shapes a Denver office party can take, each with the size it actually needs, and what this market charges for that size."
 date: "2026-08-27"
 author:
   name: "Signet Artists"
-meta_description: "Office holiday party ideas for Denver, each priced from published rates: a DJ night at $2,200, a jazz duo dinner at $1,950, a quartet dance floor at $4,800, live-band karaoke and more."
-llms_description: "Seven priced office holiday party ideas for Denver: DJ night $2,200 for four hours, jazz duo dinner $1,950 for three, acoustic duo hour $1,050, quartet dance floor $4,800, band-into-DJ evening $4,350, live-band karaoke plus $1,500, flamenco set piece from $2,800."
+meta_description: "Seven office holiday party ideas for Denver: a DJ night, a jazz duo dinner, a quartet dance floor, live-band karaoke and more, with the build each needs."
+llms_description: "Seven office holiday party ideas for Denver, each with the build it needs: a four-hour DJ night, a three-hour jazz duo dinner, a one-hour acoustic duo in the office, a quartet dance floor, a quartet into a DJ, live-band karaoke, and a flamenco set piece. Signet publishes no prices; the post carries sourced market figures."
 
 hero:
   src: "img/dj.jpg"
@@ -25,9 +27,9 @@ hero:
 sections:
   - type: key_takeaways
     items:
-      - "Every idea here is a format with a published rate, so the pitch and the price arrive together. The full card is on the pricing page."
-      - "The published card spans $1,500 to $5,500 for an office party evening. The bottom of the range is the DJ. The top is a quartet carrying the whole evening."
-      - "Denver holiday dates get decided between August and October. The peak December dates price at plus 25 percent, New Year's Eve at plus 50."
+      - "Every idea here is a format with a size attached, so the pitch and the build arrive together."
+      - "A cover or jazz band for a corporate event runs {{market:us_corporate_band}} in this market, which is the figure to take into a budget conversation."
+      - "Denver holiday dates get decided between August and October, and a holiday weekend carries {{market:denver_holiday_surcharge}} across this market. New Year's Eve is its own case again."
       - "The venue is a separate decision from the entertainment. Sixteen venues that host this market are covered one by one in our venue guide."
 
   - type: prose
@@ -39,11 +41,15 @@ sections:
       second research project into what it costs, and the party gets planned
       at the speed of the slowest quote.
 
-      This list runs the other way. Each idea below is a format we publish a
-      rate for, so the figure is attached to the idea the day you pitch it.
-      The arithmetic behind every number is set out in
+      This list runs the other way. Each idea below comes with the build it
+      actually needs, which moves a number far more than the choice of act
+      does. For the budget itself: a cover or jazz band for a corporate event
+      runs {{market:us_corporate_band}} in this market, and Denver bands run
+      {{market:denver_band_range}}, a trio at the bottom of that and a full
+      band with horns at the top. How figures like those are built is set out
+      in
       [what live music costs for a corporate event](https://signetartists.com/blog/what-live-music-costs-corporate-event/),
-      and the whole card sits on the
+      and the sourced market table is on the
       [pricing page](https://signetartists.com/pricing/). Where the party
       goes is its own decision, and the sixteen venues that host this market
       are covered one by one in
@@ -57,13 +63,13 @@ sections:
       The most common single booking of the corporate season, and the
       simplest to approve: one line and one load-in, with the whole night covered.
       An [open-format DJ](https://signetartists.com/ensembles/dj/) reads the
-      crowd from the first drink to the last song, and the published figure
-      for four hours is $2,200: an $800 call-out plus $350 an hour.
+      crowd from the first drink to the last song, on one line and one
+      load-in.
 
-      This is the idea to pitch when the budget line is the point: one
-      booking that runs from the first drink to the last song and still
-      holds a dance floor, at less than half what the quartet evening
-      costs.
+      This is the idea to pitch when the budget line is the point. Across this
+      market a DJ carrying a night with production lighting runs
+      {{market:denver_dj}}, under what a band of any size costs for the same
+      hours, and it still holds a dance floor.
 
   - type: subhead
     text: "The jazz duo dinner"
@@ -75,11 +81,12 @@ sections:
       [jazz duo](https://signetartists.com/ensembles/jazz-duo-trio/) plays
       standards on upright bass and guitar at 65 to 72 dBA at the nearest
       table, which is a level people talk across without leaning in. Three
-      hours runs $1,950: a $600 call-out plus $450 an hour.
+      hours is the usual shape of it.
 
       If the group outgrows the duo, the trio adds drums played with brushes
-      for larger floors, and the same arithmetic carries: $1,000 call-out,
-      $600 an hour.
+      for larger floors. A jazz trio or acoustic duo for a dinner runs
+      {{market:us_dinner_band}} in this market, which is the band this idea
+      sits in.
 
   - type: subhead
     text: "The in-office afternoon"
@@ -90,22 +97,24 @@ sections:
       catering spread on the main floor at the end of a workday is a small
       one. A
       single hour of the
-      [acoustic duo](https://signetartists.com/ensembles/acoustic-duo/) is
-      $1,050, voice and guitar playing covers people know at a volume they
-      can talk across. A
+      [acoustic duo](https://signetartists.com/ensembles/acoustic-duo/) is a
+      real booking rather than a minimum to work around: voice and guitar
+      playing covers people know at a volume they can talk across. A
       [solo guitarist](https://signetartists.com/ensembles/solo-guitarist/)
-      runs $900 to $1,200 for the evening and sets up in 6 by 4 feet, which
-      fits an office floor without moving the desks.
+      is smaller again and sets up in 6 by 4 feet, which fits an office floor
+      without moving the desks.
 
   - type: subhead
     text: "The dance floor"
 
   - type: prose
     body: |
-      A quartet through a four-hour evening is $4,800, playing dinner at
-      conversation volume and getting loud on cue when the program ends and
-      the night turns. This is the booking for a party where the dancing is
-      the point.
+      A quartet through a four-hour evening, playing dinner at conversation
+      volume and getting loud on cue when the program ends and the night
+      turns. This is the booking for a party where the dancing is the point,
+      and four players is what a ballroom floor actually needs. The horns and
+      the second vocalist are what take a booking into show-band money, at
+      {{market:us_showband}}.
 
       The flagship version is
       [Tejas Singh](https://signetartists.com/artists/tejas-singh/): a duo
@@ -122,10 +131,9 @@ sections:
       quartet for three hours, then a
       [DJ](https://signetartists.com/ensembles/dj/) carrying the late end
       through the same sound system on the same contract. Because the setup
-      is already paid for, the DJ hour bills at the hourly rate with no
-      second call-out. Quartet call-out $1,600, three hours at $800, one DJ
-      hour at $350: $4,350 for a five-hour evening with two different kinds
-      of music in it.
+      is already paid for, adding that hour costs far less than a second
+      booking would. It comes to a five-hour evening with two different kinds
+      of music in it, on one contract and one invoice.
 
   - type: subhead
     text: "Live-band karaoke"
@@ -134,8 +142,9 @@ sections:
     body: |
       The band learns the songs, your people sing them, and the floor
       belongs to whoever is brave enough to take it. It books as a chapter
-      of the night added to any band booking, published at $1,500 on the
-      [extras list](https://signetartists.com/pricing/).
+      of the night added to any band booking, quoted as its own line. What is
+      itemised separately on a quote is listed on the
+      [pricing page](https://signetartists.com/pricing/).
 
       For one chapter of the night the people on stage are the people
       everyone came with, and a live band is behind them instead of a
@@ -149,27 +158,26 @@ sections:
       Some parties want one thing guests photograph, and a format none of
       them have seen at an office party before.
       [Dirty Flamenco](https://signetartists.com/ensembles/flamenco-trio/)
-      is that booking: real palos played by a working flamenco trio, from
-      $2,800 in Denver, with a dancer configuration when the night wants a
-      floor show. Its work is the set moment: the entertainment as the
+      is that booking: real palos played by a working flamenco trio, with a
+      dancer configuration when the night wants a floor show. Its work is the set moment: the entertainment as the
       centerpiece of the party.
 
   - type: comparison_table
-    title: "The ideas, priced. Denver metro, standard date."
-    columns: ["The idea", "The booking", "Published figure"]
+    title: "The seven ideas and what each one books"
+    columns: ["The idea", "The booking", "Where it sits"]
     rows:
-      - ["The DJ night", "DJ, four hours", "$2,200"]
-      - ["The jazz duo dinner", "Jazz duo, three hours", "$1,950"]
-      - ["The in-office afternoon", "Acoustic duo, one hour", "$1,050"]
-      - ["The dance floor", "Quartet, four hours", "$4,800"]
-      - ["The band into the DJ", "Quartet three hours, DJ hour after", "$4,350"]
-      - ["Live-band karaoke", "Added to any band booking", "plus $1,500"]
-      - ["The set piece", "Flamenco trio, from", "$2,800"]
+      - ["The DJ night", "DJ, four hours", "The cheapest way to cover a whole evening"]
+      - ["The jazz duo dinner", "Jazz duo, three hours", "A seated night with a toast in it"]
+      - ["The in-office afternoon", "Acoustic duo, one hour", "The smallest real booking on the list"]
+      - ["The dance floor", "Quartet, four hours", "A ballroom floor that has to fill"]
+      - ["The band into the DJ", "Quartet three hours, DJ hour after", "A crowd that will outlast the band"]
+      - ["Live-band karaoke", "Added to any band booking", "A chapter, not a whole night"]
+      - ["The set piece", "Flamenco trio, with or without a dancer", "A program that wants a moment in it"]
 
   - type: stat_callout
-    number: "$1,500 to $5,500"
-    label: "The span of the published card for an office party evening. The DJ covers a night at the bottom of the range, a quartet through the whole evening sits at the top, and sound and a named contact for the night are inside both figures."
-    source: "Signet Artists published rates, signetartists.com/pricing/"
+    number: "{{market:us_corporate_band}}"
+    label: "What a cover or jazz band costs for a corporate event across this market. The figure moves on how many players are on the stand and how many hours they play, far more than on which act is standing there."
+    source: "Livent Group, 2026 live band cost guide"
 
   - type: subhead
     text: "What the calendar does to the number"
@@ -177,14 +185,16 @@ sections:
   - type: prose
     body: |
       Denver holiday parties get decided between August and October, and the
-      calendar prices itself. There are
+      calendar does most of the moving. There are
       [21 party dates across November and December](https://signetartists.com/corporate/holiday-party/denver/),
-      Thursdays through Saturdays, and the peak December dates carry a 25
-      percent premium on the fees: the $4,800 quartet evening becomes $6,000
-      on the second Saturday of December. New Year's Eve adds 50 percent and
-      books earlier than anything else on the calendar.
+      Thursdays through Saturdays, and a peak December date costs more than a
+      standard one everywhere in this market: a Denver holiday weekend carries
+      {{market:denver_holiday_surcharge}}. New Year's Eve is its own case
+      again, and it books earlier than anything else on the calendar.
 
-      The season's dates, premiums tagged, are laid out on the
+      {{market_sources}}
+
+      The season's dates, with the peak ones marked, are laid out on the
       [holiday party page](https://signetartists.com/corporate/holiday-party/),
       and whether yours is free is a two-line email: the date and the venue.
 
@@ -200,8 +210,8 @@ sections:
       we play it.
 
   - type: cta
-    headline: "Pick the idea, and we'll price the date."
-    body: "Every figure on this page is on the published rate card, and the whole season is dated on the holiday party page. Send the date and the venue, and availability and the exact number come back by email."
+    headline: "Pick the idea, and we will price the date."
+    body: "The whole season is dated on the holiday party page. Send us the date and the venue, and a yes or a straight no comes back with our number for that night."
     link: "contact/"
     link_text: "Check a Date"
 

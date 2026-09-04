@@ -2,15 +2,29 @@
   "service": {
     "name": "Corporate event entertainment",
     "serviceType": "Live music for office holiday parties, client dinners, member events and corporate retreats",
-    "description": "Live music for corporate events in Denver and across Colorado, solo through quartet plus a DJ, with published rates, a certificate of insurance with the contract, and net-30 on approval.",
-    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
-    "configs": ["solo", "duo", "trio", "quartet", "dj"]
+    "description": "Live music for corporate events in Denver and across Colorado, solo through quartet plus a DJ, with a certificate of insurance with the contract and net-30 on approval.",
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+    ]
   },
   "_reviews_note": "EMPTIED 2026-08-27. The Annette M. review (5 stars, 2026-08-21) moved onto the visible page in 01b-shapes.html: no buyer could read it here, and first-party Review markup on your own LocalBusiness is the self-serving pattern Google's review-snippet guidelines reject. Third-party profiles (Google Business Profile, marketplaces) are where star markup belongs; do not repopulate this key.",
   "faqs": [
     {
       "q": "What does live music cost for a corporate event in Denver?",
-      "a": "Every rate is published before you write to us: solo through quartet plus a DJ, each priced as a range on the rate card, with sound included at every size. Travel outside the metro is its own published line, holiday and peak weekends carry +25%, and New Year's Eve +50%."
+      "a": "A cover or jazz band for a corporate event runs {{market:us_corporate_band}} in this market, which is the figure to budget against. Signet does not publish prices: send the date, the venue and the guest count and you get our number for that night. Travel outside the metro and a holiday weekend are their own lines rather than folded into it."
     },
     {
       "q": "How far in advance should we book?",

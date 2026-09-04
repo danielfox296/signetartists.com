@@ -6,7 +6,7 @@ date: "2026-08-05"
 last_updated: "2026-08-27"
 author:
   name: "Signet Artists"
-meta_description: "What a live band costs for a Denver corporate event: call-out plus hourly, worked totals from duo to quartet, and what travel and holiday dates add."
+meta_description: "What a live band costs for a Denver corporate event: sourced market figures by size, how a quote is built, and what travel and December add."
 
 hero:
   src: "img/hero.jpg"
@@ -15,10 +15,10 @@ hero:
 sections:
   - type: key_takeaways
     items:
-      - "A band's fee splits into a call-out, which covers the evening, and an hourly rate, which covers the music."
-      - "Our published Denver-metro totals run from $1,050 for a single hour of duo, or $1,150 for a DJ, up to $4,800 for a quartet over four hours."
-      - "The published card spans $1,500 to $5,500 for a corporate evening: the DJ at the bottom of the range, a quartet through the whole evening at the top."
-      - "Travel beyond the Denver metro, holiday weekends and New Year's Eve are separate lines. Nothing about them is folded into the headline number."
+      - "A cover or jazz band for a corporate event runs {{market:us_corporate_band}} in this market, and Denver bands run {{market:denver_band_range}}, a trio at the bottom of that and a full band with horns at the top."
+      - "Most acts bill two things: a call-out covering the evening they commit to whatever its length, and a rate for performance time. That is why one hour is never a quarter of four."
+      - "Sound is the line that most often makes two quotes at the same number cover two different evenings. Ask whether it is inside the figure."
+      - "Travel beyond the Denver metro and a December weekend are separate lines on an honest quote. A Denver holiday weekend carries {{market:denver_holiday_surcharge}} across this market."
 
   - type: prose
     body: |
@@ -34,11 +34,13 @@ sections:
       One will mention it later. Three weeks go by and you still cannot put a
       line in a budget.
 
-      Our rates sit on the [pricing page](https://signetartists.com/pricing/),
-      in full, with no form in front of them. This is the explanation that
-      belongs beside them. The figures on this page are the Denver metro
-      column; the mountain corridor prices on its own column, and what travel
-      adds beyond the metro is its own section below.
+      We do not publish our prices, because a Saturday in December and a
+      Tuesday in September are not the same job and one figure would be wrong
+      for most of the nights somebody read it on. What we can do is show you
+      the market, sourced, so the budget conversation can happen today. Every
+      figure below is somebody else's published number, with the page it came
+      from listed at the end. Send us a date and you get our number for that
+      night.
 
   - type: subhead
     text: "Why the price has two parts"
@@ -59,117 +61,106 @@ sections:
       the arithmetic on your quote is something you can check yourself.
 
   - type: subhead
-    text: "What the totals actually are"
+    text: "What the market actually charges"
 
   - type: comparison_table
-    title: "Published rates, Denver metro, standard date"
-    columns: ["Ensemble", "Call-out", "Per hour", "2 hours", "3 hours", "4 hours"]
+    title: "What the market charges, by size"
+    columns: ["What you are booking", "What the market charges", "Whose market"]
     rows:
-      - ["Duo", "$600", "$450", "$1,500", "$1,950", "$2,400"]
-      - ["Trio", "$1,000", "$600", "$2,200", "$2,800", "$3,400"]
-      - ["Quartet", "$1,600", "$800", "$3,200", "$4,000", "$4,800"]
-      - ["DJ", "$800", "$350", "$1,500", "$1,850", "$2,200"]
+      - ["A jazz trio or acoustic duo for a dinner", "{{market:us_dinner_band}}", "United States"]
+      - ["A cover or jazz band for a corporate event", "{{market:us_corporate_band}}", "United States"]
+      - ["A Denver band, trio up to a full band with horns", "{{market:denver_band_range}}", "Denver"]
+      - ["The four to six piece, the Denver middle", "{{market:denver_midtier_band}}", "Denver"]
+      - ["A DJ carrying a night with production lighting", "{{market:denver_dj}}", "Denver"]
+      - ["A seven to nine piece show band", "{{market:us_showband}}", "United States"]
 
   - type: prose
     body: |
-      Every cell in that table is the call-out plus the hourly rate times the
-      hours. There is no cell doing anything else.
+      Read those next to what each one covers, because that is where two
+      quotes at the same number stop being the same purchase. A booking
+      marketplace averages {{market:denver_marketplace_avg}} for a Denver
+      party band across listings running
+      {{market:denver_marketplace_range}}, and what sits inside a listing at
+      that price varies listing by listing.
 
-      A duo, trio or DJ can be booked for a single hour, and a single hour is
-      the call-out plus one hour of performance: $1,050 for the duo, $1,600
-      for the trio, $1,150 for the DJ. A quartet's minimum is two hours, which
-      is why the table starts there. A five to six piece is quoted by request
-      rather than from this table, at $6,000 to $8,000 in Denver on the
-      published rate card.
-
-  - type: stat_callout
-    number: "$1,500 to $5,500"
-    label: "The span of the published Denver card for a corporate evening. The DJ covers a night at the bottom of the range, a quartet through the whole evening sits at the top, and sound and a named contact for the night are inside both figures."
-    source: "Signet Artists published rates, signetartists.com/pricing/"
+      The other thing the table hides is size. A dinner for thirty and a
+      ballroom of two hundred want different builds, and most corporate
+      evenings need fewer players than the person booking them expects. The
+      number moves far more on how many people are on the stand and how many
+      hours they play than on which act is standing there.
 
   - type: subhead
     text: "Three shapes a corporate night takes"
 
   - type: prose
     body: |
-      Rate cards are abstract until somebody puts an evening against them.
-      These are the three that come up most in a Denver corporate year.
+      A market range is abstract until somebody puts an evening against it.
+      These are the three that come up most in a Denver corporate year, and
+      the size each one actually needs.
 
       **A client dinner.** A jazz duo, three hours, sitting under the
       conversation for the whole evening so nobody has to raise their voice
-      across the table. Call-out $600, three hours at $450. **$1,950.**
+      across the table. Two players, low volume, no stage. This is the
+      cheapest real booking on the list and it is the one most often
+      over-specified.
 
       **A holiday party with a real dance floor.** A quartet, four hours,
-      playing dinner at conversation volume and getting loud on cue.
-      Call-out $1,600, four hours at $800. **$4,800.**
+      playing dinner at conversation volume and getting loud on cue. Four
+      players covers a ballroom floor; the horns and the second vocalist are
+      what take a booking into show-band money.
 
-      **A gala that runs across the whole night.** A quartet for three
-      hours, a cocktail duo for the hour before it, and a DJ for the hour
-      after. Once we are in the building the setup is already paid for, so the
-      added slots bill at the hourly rate with no second call-out, and booking
-      three parts of the night together takes 10% off performance fees.
-
-  - type: comparison_table
-    title: "The gala, itemised"
-    columns: ["Line", "Amount"]
-    rows:
-      - ["Quartet call-out", "$1,600"]
-      - ["Performance, 3 hours at $800 an hour", "$2,400"]
-      - ["Cocktail duo, 1 hour, no second call-out", "$450"]
-      - ["DJ after the band, 1 hour, no second call-out", "$350"]
-      - ["Three parts booked together, 10% off performance fees", "-$320"]
-      - ["Total", "$4,480"]
-
-  - type: prose
-    body: |
-      That is a five-hour evening with three different musical settings for
-      less than the quartet on its own costs over four. The arithmetic is what
-      makes it cheaper, and you can do the arithmetic yourself before you call
-      anybody.
+      **A gala that runs across the whole night.** A quartet for three hours,
+      a cocktail duo for the hour before it, and a DJ for the hour after. The
+      thing worth knowing here is that covering all three from one booking is
+      much cheaper than three separate ones, because the drive, the load-in
+      and the sound system are paid for once. Ask any act you are comparing
+      whether they price it that way.
 
   - type: subhead
     text: "What moves the number"
 
   - type: prose
     body: |
-      Five things, each of which arrives as its own line on the quote and its
-      own line on the contract.
+      Five things, each of which should arrive as its own line on the quote
+      and its own line on the contract. If they do not, that is the question
+      to ask before you compare two numbers.
 
-      - **Travel.** The Front Range adds $300. The I-70 corridor, which covers
-        Vail, Beaver Creek, Breckenridge and Winter Park, adds $600. Aspen,
-        Telluride, Steamboat and Crested Butte add $600 plus lodging at cost,
-        billed as what it actually cost.
-      - **Holiday and peak weekends.** Add 25% to the fees, before travel.
-      - **New Year's Eve.** Adds 50%, and books earlier than anything else on
-        the calendar.
-      - **Live-band karaoke.** $1,500, if the program wants a chapter where
-        your people sing and the band plays behind them.
-      - **Learned songs beyond the first.** $250 each.
-
-      One thing that does not move it: overtime. There is no overtime rate.
-      Added time bills at the same hourly figure in 30-minute increments, so
-      hour five costs what hour four cost. At eleven o'clock the only question
-      on the table is whether the crowd wants another half hour.
+      - **Travel.** The Front Range is a short line. The I-70 corridor, which
+        covers Vail, Beaver Creek, Breckenridge and Winter Park, is a longer
+        one. Aspen, Telluride, Steamboat and Crested Butte add travel plus a
+        night's lodging, billed as what it actually cost.
+      - **Holiday and peak weekends.** A Denver holiday weekend carries
+        {{market:denver_holiday_surcharge}} across this market.
+      - **New Year's Eve.** Its own case everywhere, and it books earlier than
+        anything else on the calendar.
+      - **Live-band karaoke.** Its own line, if the program wants a chapter
+        where your people sing and the band plays behind them.
+      - **Learned songs beyond the first.** The first one is included with us;
+        each one after that is its own line.
+      - **Overtime.** This market charges {{market:denver_overtime}} for time
+        beyond the contracted set. We do not: added time costs what the
+        earlier hours did, in 30-minute increments, so at eleven o'clock the
+        only question is whether the crowd wants another half hour.
 
   - type: subhead
     text: "The holiday calendar, worked through"
 
   - type: prose
     body: |
-      Since the corporate season concentrates in November and December,
-      the peak-date line deserves its own arithmetic.
-      The 25 percent applies to the fees, before travel. On a peak December
-      Saturday, the four-hour duo goes from $2,400 to $3,000, the four-hour
-      quartet from $4,800 to $6,000, and the DJ evening from $2,200 to
-      $2,750. New Year's Eve is its own case at plus 50 percent: the same
-      quartet evening runs $7,200.
+      The corporate season concentrates into eight weeks, so the December
+      premium deserves its own paragraph. A Denver holiday weekend carries
+      {{market:denver_holiday_surcharge}} across this market, applied to the
+      fee for the music rather than to travel. On a strong December Saturday
+      you should expect to be quoted above the ranges in the table above, and
+      an act that does not tell you that in advance is going to tell you later.
+      New Year's Eve is its own case again, everywhere.
 
       There are [21 party dates across November and December](https://signetartists.com/corporate/holiday-party/denver/)
-      in the Denver season, dated with their premiums on the
+      in the Denver season, laid out on the
       [holiday party page](https://signetartists.com/corporate/holiday-party/).
       If you are still at the ideas stage rather than the date stage,
-      [the priced ideas list](https://signetartists.com/blog/office-holiday-party-ideas-denver/)
-      runs seven party shapes with these figures already attached.
+      [the ideas list](https://signetartists.com/blog/office-holiday-party-ideas-denver/)
+      runs seven party shapes with a size attached to each.
 
   - type: subhead
     text: "What is inside every one of those numbers"
@@ -199,10 +190,12 @@ sections:
     body: |
       In almost every corporate booking the person choosing the band and the
       person approving the spend are two different people, and they are rarely
-      in the same meeting. A rate you have to request is a rate you cannot
-      forward. Putting the whole ladder on a public page means the figure you
-      take to finance is the same figure that ends up on the invoice, and you
-      did not have to spend a week of back-and-forth to get it.
+      in the same meeting. That is the reason this page exists: the market
+      figures on it can be forwarded, questioned and approved without anybody
+      waiting on a vendor to reply. What we will not do is publish a single
+      number of our own and let you find out later that it did not apply to
+      your date. Send the date, and the figure you take to finance is the one
+      that ends up on the invoice.
 
   - type: subhead
     text: "How far ahead should this be booked?"
@@ -217,11 +210,15 @@ sections:
       If your date is already fixed, the useful thing to know is that a date
       can be checked without a conversation about budget first.
 
+  - type: prose
+    body: |
+      {{market_sources}}
+
   - type: cta
-    headline: "Tell us the event and we'll tell you what fits."
-    body: "Every rate is on the pricing page, and the quote engine there will itemise your night before you write to us."
-    link: "pricing/"
-    link_text: "See the rate card"
+    headline: "Send the date and we will tell you what that night costs."
+    body: "A yes or a straight no, and our number for that evening, sized to what you are actually trying to solve."
+    link: "contact/"
+    link_text: "Check a Date"
 
   - type: related
     posts:

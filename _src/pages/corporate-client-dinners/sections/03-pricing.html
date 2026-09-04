@@ -1,18 +1,18 @@
-<!-- The rate module, conversion spine: pricing visible early, two figures,
-     composed from rate tokens only. -->
+<!-- Was the rate module: two Signet figures and a link to the card. Since
+     2026-09-04 it is the market's figure for this shape, sourced, plus what
+     actually moves a dinner booking. One figure, one source note. -->
 <section class="section section--ruled section--sunk">
   <div class="wrap">
     <div class="heading">
       <p class="eyebrow">What it costs</p>
-      <h2 class="h2">Priced by the hour, published in advance.</h2>
-      <p class="lede">The jazz duo is the lead booking for this occasion, and it is the one size on the card with an hourly figure of its own. There is no overtime rate: added time bills at the same hourly figure in 30-minute increments, agreed on the night.</p>
+      <h2 class="h2">What a dinner booking runs.</h2>
+      <p class="lede">A jazz trio or acoustic duo for a dinner runs {{market:us_dinner_band}} in this market. The spread is mostly how long the music plays and how much production comes with it, and a dinner needs less production than a dance floor does.</p>
     </div>
 
-    <dl class="figure-pair">
-      <div><dt>An hour of the jazz duo</dt><dd class="tnum">{{rate_hour:duo}}</dd></div>
-      <div><dt>Cocktails and dinner together</dt><dd class="tnum">{{rate_range:duo}}</dd></div>
-    </dl>
+    <p class="prose">What moves it for a client dinner: how many hours the music covers, whether the evening runs past a standard date into a holiday weekend, and how far outside the metro the venue sits. There is no overtime rate with us, so an extra half hour at the end costs what the earlier ones did.</p>
 
-    <p class="note">A third player for a bigger crowd moves the booking to {{rate_range:trio}}. Every size and both columns are on the <a href="{{nav_prefix}}pricing/">rate card</a>, and what the wider Colorado market charges around these figures is set out in the <a href="{{nav_prefix}}guides/live-music-cost-colorado/">cost guide</a>.</p>
+    <p class="prose">Send us the date, the venue and roughly how many are sitting down, and you get our number for that evening. The wider Colorado market is set out in the <a href="{{nav_prefix}}guides/live-music-cost-colorado/">cost guide</a>, and how a quote is put together is on the <a href="{{nav_prefix}}pricing/">pricing page</a>.</p>
+
+    {{market_sources}}
   </div>
 </section>

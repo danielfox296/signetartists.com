@@ -6,7 +6,7 @@
 #
 # The 2026-08-17 outline flagged a TODO on whether travel and lodging could be
 # stated as Signet's actual practice. RESOLVED from the site itself: the rate
-# card publishes Front Range +$300, I-70 corridor +$600, far resorts +$600 with
+# travel is itemised by corridor: Front Range, I-70 corridor, far resorts with
 # lodging at cost, and pricing/sections/02-rates.html states lodging is billed
 # at cost as its own line on the contract. Every figure below is on the rate
 # card or in _src/data/site.json. Nothing is invented.
@@ -30,7 +30,7 @@ sections:
     items:
       - "Two quotes are only comparable once they assume the same set count, the same sound arrangement and the same travel terms. Normalise first, compare second."
       - "Sound is the line that most often separates two totals that otherwise look alike. Ours is inside the number at every size."
-      - "Travel is geography, not a surcharge: $300 to the Front Range, $600 to the I-70 corridor, $600 plus lodging at cost to the far resorts."
+      - "Travel is geography rather than a surcharge, and it belongs on its own line: a short one to the Front Range, a longer one to the I-70 corridor, and travel plus a night's lodging to the far resorts."
       - "The four items that cost nothing on a quote and cost a week when they are missing: a certificate of insurance, a W-9, one itemised invoice and a named contact."
 
   - type: prose
@@ -53,9 +53,9 @@ sections:
       sound check, strike, load-out and production. The other part covers
       performance time by the hour.
 
-      We call those the call-out and the hourly rate, and
+      Those are usually called the call-out and the hourly rate, and
       [what live music costs for a corporate event](https://signetartists.com/blog/what-live-music-costs-corporate-event/)
-      works through the arithmetic with totals. The reason the split matters
+      works through what the market charges for each shape. The reason the split matters
       when you are reading someone else's paper is that a quote showing one
       flat figure has made both decisions and shown you neither. Ask which part
       is which and the rest of the conversation gets easier.
@@ -114,15 +114,16 @@ sections:
   - type: prose
     body: |
       Distance is a real cost and it belongs on the page before you ask. Ours
-      is published by corridor: $300 for the Front Range, meaning Boulder,
-      Colorado Springs and Fort Collins. $600 for the I-70 corridor, meaning
-      Vail, Beaver Creek, Breckenridge and Winter Park. $600 for the far
-      resorts, Aspen, Telluride, Steamboat and Crested Butte, with lodging
-      billed at cost as its own line on the contract.
+      is itemised by corridor: a short line for the Front Range, meaning
+      Boulder, Colorado Springs and Fort Collins. A longer one for the I-70
+      corridor, meaning Vail, Beaver Creek, Breckenridge and Winter Park. For
+      the far resorts, Aspen, Telluride, Steamboat and Crested Butte, travel
+      plus a night's lodging billed at cost, because a band that struck at
+      eleven is not driving that road home.
 
-      Resort dates sit in their own column on our rate card rather than
-      arriving as a percentage later. When you read any quote for a mountain
-      date, find where distance is accounted for. It is in there somewhere.
+      What you should not see is distance arriving later as a percentage of
+      something. When you read any quote for a mountain date, find where it is
+      accounted for. It is in there somewhere.
 
   - type: subhead
     text: "The paperwork lines"
@@ -153,14 +154,14 @@ sections:
 
   - type: prose
     body: |
-      Every rate we have is on the pricing page, so you can run this exercise
-      on us first.
+      What this market charges, sourced figure by figure, is on our pricing
+      page, so you can calibrate before you read anybody's paper.
 
   - type: cta
-    headline: "Tell us the event and we'll tell you what fits."
-    body: "Every rate is on the pricing page, and the quote engine there will itemise your night before you write to us."
-    link: "pricing/"
-    link_text: "See the rate card"
+    headline: "Tell us the event and we will tell you what fits."
+    body: "Send the date, the venue and roughly how many guests. What comes back is a yes or a straight no, and our number for that night, itemised the way this post says a quote should be."
+    link: "contact/"
+    link_text: "Check a Date"
 
   - type: related
     posts:

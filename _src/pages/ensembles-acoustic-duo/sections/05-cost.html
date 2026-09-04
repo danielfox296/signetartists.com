@@ -1,22 +1,16 @@
-<!-- The rate module, all by token. The 4-hour figure comes off the hourly
-     table; the resort column gets its own line. -->
+<!-- Was the rate module, six Signet figures by token. Since 2026-09-04 it is
+     one market line for this size plus check a date, per the spec. -->
 <section class="section section--ruled">
   <div class="wrap">
     <div class="heading">
       <p class="eyebrow">What it costs</p>
       <h2 class="h2">One hour, or the whole front of the night.</h2>
+      <p class="lede">An acoustic duo over a four-hour reception runs {{market:us_duo}} in this market, and a trio {{market:us_trio}}. Those are the market's figures for this size.</p>
     </div>
-    <dl class="figure-pair">
-      <div>
-        <dt>An hour of acoustic duo</dt>
-        <dd class="tnum">{{rate_hour:duo}}</dd>
-      </div>
-      <div>
-        <dt>Cocktails and dinner together</dt>
-        <dd class="tnum">{{rate_range:duo}}</dd>
-      </div>
-    </dl>
-    <p class="prose">A call-out and four hours of duo runs {{rate_4h:Duo}}, and mountain dates price at {{rate_range_resort:duo}} with travel published as its own line. The trio follows the same arithmetic one line up the card: {{rate_1h:Trio}} for a single hour, {{rate_4h:Trio}} for a call-out and four, {{rate_range:trio}} for a Denver evening and {{rate_range_resort:trio}} in the mountains. Added time on the night bills at the same hourly rate in 30-minute increments; there is no overtime rate.</p>
-    <p class="note">Sound sized to the venue is included in every figure. The whole card, both columns, is on the <a href="{{nav_prefix}}pricing/">pricing page</a>, with the arithmetic behind it in <a href="{{nav_prefix}}guides/live-music-cost-colorado/">the cost guide</a>.</p>
+    <p class="prose">What moves a duo booking is how many hours the music covers, how far outside the metro the venue is, and whether the date is a weekend the whole market wants. There is no overtime rate with us: an extra half hour at the end costs what the earlier ones did.</p>
+    <p class="prose">Sound sized to the venue is included at every size, which is worth checking against any other quote you are holding. Send us the date, the venue and the shape of the evening, and you get our number for that night.</p>
+    <p class="note">How a quote is put together is on the <a href="{{nav_prefix}}pricing/">pricing page</a>, and the Colorado market is set out figure by figure in <a href="{{nav_prefix}}guides/live-music-cost-colorado/">the cost guide</a>.</p>
+
+    {{market_sources}}
   </div>
 </section>

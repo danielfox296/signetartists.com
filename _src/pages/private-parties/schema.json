@@ -1,16 +1,26 @@
 {
-  "_note": "The cost FAQ types figures because rate tokens do not resolve inside schema.json, the same documented pattern as guides-live-music-cost/schema.json. The typed figures mirror the rate card as of 2026-08-20: solo Denver $900 to $1,200, duo Denver $2,000 to $2,800. If the card moves, this answer moves with it.",
+  "_note": "The cost FAQ carries the market's figures as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text; the page prints the Sources note beside them. No Signet figure appears here or anywhere since 2026-09-04. Never type a figure.",
   "service": {
     "name": "Private party and dinner party live music",
     "serviceType": "Live music for private parties, dinner parties and milestone celebrations",
-    "description": "Live music for dinner parties, cocktail parties, milestone birthdays and anniversaries at homes and clubs in Denver, Boulder and across Colorado, solo through quartet, with published rates.",
-    "areaServed": ["Denver", "Boulder", "Front Range", "Colorado mountain corridor"],
-    "configs": ["solo", "duo", "trio", "quartet"]
+    "description": "Live music for dinner parties, cocktail parties, milestone birthdays and anniversaries at homes and clubs in Denver, Boulder and across Colorado, solo through quartet.",
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Front Range",
+      "Colorado mountain corridor"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+    ]
   },
   "faqs": [
     {
       "q": "What does a band for a dinner party cost?",
-      "a": "A dinner party usually books at solo or duo size: a solo runs {{rate_range:solo}} and a duo through cocktails and dinner runs {{rate_range:duo}} in Denver, with sound included and no overtime rate. Every size is published in both the Denver and mountain columns on the pricing page, and travel outside the metro is its own line on the quote."
+      "a": "A jazz trio or acoustic duo for a dinner runs {{market:us_dinner_band}} in this market, and a cover or acoustic band for a full private party {{market:us_private_party_band}}. Those are the market's figures. Signet does not publish prices: send the date, the venue and the guest count and you get our number for that evening, with sound included and no overtime rate."
     },
     {
       "q": "Do you play private homes?",

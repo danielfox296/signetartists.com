@@ -2,14 +2,21 @@
   "service": {
     "name": "Corporate retreat entertainment in Aspen",
     "serviceType": "Live music for corporate retreats and incentive events",
-    "description": "Live music for corporate retreats and private celebrations at Aspen venues, solo through quartet, with travel and lodging published as their own lines.",
-    "areaServed": ["Aspen"],
-    "configs": ["solo", "duo", "trio", "quartet"]
+    "description": "Live music for corporate retreats and private celebrations at Aspen venues, solo through quartet, with travel and lodging.",
+    "areaServed": [
+      "Aspen"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+    ]
   },
   "faqs": [
     {
       "q": "What does live music cost in Aspen?",
-      "a": "Three published lines: the resort column of the rate card for the size you book, a flat $600 travel line, and lodging billed at cost. Sound sized to the venue is included at every size. The arithmetic, set against the wider Colorado market, is worked through in our cost guide."
+      "a": "Three lines, itemised. The fee for the music, with sound sized to the venue inside it. Travel, because Aspen is roughly four hours from Denver each way over passes. And a night's lodging at cost, because a band that played until eleven is not driving that road home. A retreat budget goes through finance, and a quote that separates the three survives being forwarded and approved."
     },
     {
       "q": "Why is lodging on an Aspen quote?",

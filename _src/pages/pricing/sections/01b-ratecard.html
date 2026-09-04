@@ -1,28 +1,33 @@
-<!-- The card. Rendered from acts.json's rateCard by build.py, which is also
-     where every act page's configuration ladder reads its prices, so an act
-     page and this table cannot disagree. -->
-<section class="section section--ruled" id="rate-card">
+<!-- The market table. Rendered by build.py market_table() from
+     _src/data/market-rates.json, which is the only place on this site a
+     dollar figure or a percentage may come from. Every figure here is
+     somebody else's published number, read on the date the Sources note
+     prints. It carries .rate-table, so analytics.js's pricing_engaged
+     observer still fires when a reader reaches the money block. -->
+<section class="section section--ruled" id="market">
   <div class="wrap">
-    <h2 class="h3">The rate card</h2>
-    <p class="prose">Starting prices by configuration. The left column is the Denver metro. The right is the mountain and resort corridor: Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat and the Broadmoor. Resort dates carry travel and lodging, which is why they are priced as their own column rather than as a surcharge you find out about later.</p>
+    <h2 class="h3">What the market charges</h2>
+    <p class="prose">These are published figures from cost guides, a wedding-budget dataset and one booking marketplace, each read on the date below. They describe the Colorado and national markets, not us. They are here because a budget has to start somewhere, and the honest place to start is what live music actually goes for.</p>
 
-    {{rate_card_table}}
+    {{market_table}}
 
-    <p class="note">Solo through quartet is what the roster books. A five or six piece is quoted on request and priced on the same card, so you can see the number before you ask for it. Weddings run above private-party rates at the same size, because the day is longer, the run of show is tighter and the load-in is rarely simple. Every act's own ladder is priced on <a href="../music/">its page on the roster</a>.</p>
+    <p class="prose">The spread is the point. A marketplace listing and a full band with horns are two different purchases, and a figure only reads right next to what it covers. What sits inside a quote, sound in particular, varies enough between acts that two quotes at the same number can be two different evenings.</p>
+
+    {{market_sources}}
   </div>
 </section>
 
 <section class="section section--ruled section--sunk">
   <div class="wrap">
-    <h2 class="h3">What moves a price inside the range</h2>
+    <h2 class="h3">What moves a number</h2>
     <div class="split split--two">
       <div>
-        <p class="prose"><strong>Up:</strong> a wedding rather than a private party. A Saturday in June, September or October. A holiday weekend. A venue with a hard load-in, a long carry or a late curfew. A run of show with ceremony, cocktails, dinner and dancing all needing cover.</p>
+        <p class="prose"><strong>Up:</strong> a wedding rather than a private party. A Saturday in June, September or October. A holiday weekend, which this market prices above a standard date. A venue with a hard load-in, a long carry or a late curfew. A run of show with ceremony, cocktails, dinner and dancing all needing cover. A drive over the passes, and past them a night's lodging.</p>
       </div>
       <div>
-        <p class="prose"><strong>Down:</strong> a weeknight. A short call. A single block rather than the whole evening. Booking three or more parts of the night together, which takes 10% off performance fees.</p>
+        <p class="prose"><strong>Down:</strong> a weeknight. A short call. A single block rather than the whole evening. A smaller build for the same music. A venue the load-in is easy at.</p>
       </div>
     </div>
-    <p class="note">If you tell us the date, the venue and the guest count, the number we send back is inside the range on this page and it does not move afterwards.</p>
+    <p class="note">Send the date, the venue and the guest count, and the number that comes back accounts for all of it. It does not move afterwards.</p>
   </div>
 </section>

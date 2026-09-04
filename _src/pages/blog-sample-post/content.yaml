@@ -75,7 +75,7 @@ sections:
 
   # stat_callout requires a source — a number with no attribution fails lint.
   - type: stat_callout
-    number: "$0"
+    number: "240"
     label: "Sample statistic label. The number carries the page's brass accent."
     source: "Sample source, 2026"
 

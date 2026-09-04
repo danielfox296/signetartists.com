@@ -3,9 +3,16 @@
   "service": {
     "name": "Private party entertainment in Denver",
     "serviceType": "Live music for dinner parties, cocktail parties and milestone celebrations",
-    "description": "Live music for Denver private parties at home and at the city's venues, solo through quartet, at published rates.",
-    "areaServed": ["Denver"],
-    "configs": ["solo", "duo", "trio", "quartet"]
+    "description": "Live music for Denver private parties at home and at the city's venues, solo through quartet, with sound sized to the space.",
+    "areaServed": [
+      "Denver"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+    ]
   },
   "faqs": [
     {
@@ -22,7 +29,7 @@
     },
     {
       "q": "Do you charge travel inside Denver?",
-      "a": "No. Travel lines start outside the metro: one flat published line covers the Front Range, and the mountain lines are published the same way. Inside Denver the published rate is the whole figure, with sound included at every size."
+      "a": "No. Travel lines start outside the metro: one short line covers the Front Range, and the corridor and far-resort lines work the same way. Inside Denver there is no travel line at all, and sound sized to the venue is included at every size."
     }
   ]
 }

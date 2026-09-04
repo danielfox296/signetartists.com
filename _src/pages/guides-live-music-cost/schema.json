@@ -1,9 +1,9 @@
 {
-  "_note": "UPDATED 2026-08-20: build.py resolve_rate_tokens() now resolves rate tokens inside schema.json FAQ strings, so the card-derived figures here are tokens and cannot drift. Still typed because no data source carries them: the market anchors (roughly $1,600 to $2,100 commodity, $8,000+ boutique, from the handoff) and the travel lines ($300/$600, matching site.json extras as of 2026-08-20: duo hour 1,050, duo 4h 2,400, quartet 4h 4,800, DJ 4h 2,200, DJ hour 1,150, travel 300 and 600, peak +25%, NYE +50%. If the card moves, this file and the meta description are the typed surfaces on this page.",
+  "_note": "REWRITTEN 2026-09-04 with the no-published-price decision. The five questions are unchanged: this page ranks on them. The answers carry the market's figures instead of ours, as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text and registers against the page, so the Sources note under the market table names every source a crawler can quote from this file. Never type a figure into an answer, and never put any other token here.",
   "service": {
     "name": "Live music pricing guide for Colorado",
     "serviceType": "Live music for private and corporate events",
-    "description": "Published rates and worked cost arithmetic for live music at corporate events, private parties and wedding cocktail hours across Denver, the Front Range and the Colorado resort corridor.",
+    "description": "Sourced market figures and worked cost explanation for live music at corporate events, private parties and wedding cocktail hours across Denver, the Front Range and the Colorado resort corridor.",
     "areaServed": [
       "Denver",
       "Boulder",
@@ -24,23 +24,23 @@
   "faqs": [
     {
       "q": "How much does a live band cost in Colorado?",
-      "a": "From our published card: a solo player runs {{rate_range:solo}}, an hour of jazz duo is {{rate_hour:duo}}, a trio evening is {{rate_range:trio}}, and a quartet through a Denver evening is {{rate_range:quartet}}. The same quartet in the resort corridor is {{rate_range_resort:quartet}} with travel as its own line. Every figure includes sound sized to the venue and a named contact for the night."
+      "a": "Colorado couples budget {{market:co_band_budget}} for a live band, and the Denver market runs {{market:denver_band_range}}, a trio at the bottom of that and a full band with horns at the top. Nationally most couples land {{market:us_band_range}}. Those are the market's published figures. Signet does not publish prices: send a date and the size of the night, and we price that night."
     },
     {
       "q": "Why do live music prices vary so much in Colorado?",
-      "a": "Because the market runs in tiers and quotes cover different scopes. Marketplace commodity averages run roughly $1,600 to $2,100, and what sits inside a figure varies listing by listing. Boutique production starts at $8,000 and up. Our published card sits between them, with sound, insurance and a named contact for the night inside every figure."
+      "a": "Because the market runs in tiers and quotes cover different scopes. One booking marketplace averages {{market:denver_marketplace_avg}} for a Denver party band, the Denver market treats the four to six piece as its middle at {{market:denver_midtier_band}}, and a seven to nine piece show band runs {{market:us_showband}}. What sits inside a figure, sound above all, varies as much as the figure."
     },
     {
       "q": "What does the mountain premium cover?",
-      "a": "Travel and lodging. The resort column runs above the Denver column because the corridor costs real money to reach: the Front Range adds $300, the I-70 corridor adds $600, and the far resorts add $600 plus lodging billed at cost. Winter passes and late strikes make the overnight the safe call at the far resorts."
+      "a": "Travel and lodging. A resort date costs more than a metro date everywhere in this market for two reasons: the drive over the passes, and the night in a bed at the far end of it, because a band that struck at midnight in Aspen is not driving back over the passes at one in the morning. Both belong on their own lines on a quote rather than folded into a fee."
     },
     {
       "q": "Is a band or a DJ cheaper?",
-      "a": "A DJ, once the night runs past two hours. Four hours of DJ is {{rate_4h:DJ}} against {{rate_4h:Duo}} for a duo and {{rate_4h:Quartet}} for a quartet, all published, while a single hour flips it: {{rate_hour:duo}} for an hour of jazz duo against {{rate_1h:DJ}} for the DJ. A corporate night can use both, a duo through dinner and the DJ carrying the floor, on one contract and one invoice."
+      "a": "A DJ, usually, and the gap narrows as the night gets longer. A Denver DJ carrying a night with production lighting runs {{market:denver_dj}}, against {{market:denver_band_range}} for a Denver band. A corporate night can use both, a duo through dinner and the DJ carrying the floor, on one contract and one invoice, which is cheaper than hiring twice."
     },
     {
       "q": "Does booking early get a lower price?",
-      "a": "No. The rates are published and the figure holds wherever the date lands, apart from two published premiums: holiday and peak weekends add 25% and New Year's Eve adds 50%. Booking early buys availability instead. Corporate holiday dates are decided August through October, and the strong Saturdays go first."
+      "a": "No. Booking early buys availability, which on a December Saturday is worth more than a discount would be. What does move a number is the date itself: this market charges {{market:denver_holiday_surcharge}} for a holiday weekend, and New Year's Eve is its own case everywhere. Corporate holiday dates are decided August through October."
     }
   ]
 }

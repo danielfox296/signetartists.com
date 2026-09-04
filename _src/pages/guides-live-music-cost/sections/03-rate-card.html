@@ -1,18 +1,20 @@
-<!-- The full published card. This guide and /pricing/ are the only two pages
-     that carry {{rate_card_table}}, per the architecture; everywhere else the
-     card appears as two figures and a link. The travel lines are typed from
-     site.json extras because no parameterized token carries them. -->
+<!-- Was the full published card. Since 2026-09-04 it is the market table:
+     {{market_table}} from market-rates.json with {{market_sources}} under it.
+     The section id stays #rate-card so inbound anchors and the internal links
+     that point at it do not break. -->
 <section class="section section--ruled section--sunk" id="rate-card">
   <div class="wrap">
     <div class="heading">
-      <p class="eyebrow">The published card</p>
-      <h2 class="h2">The full card, Denver and the mountains.</h2>
-      <p class="lede">Starting prices by configuration, as published. Denver metro in the left column, the resort corridor in the right, and the difference between the two is travel and lodging.</p>
+      <p class="eyebrow">The market</p>
+      <h2 class="h2">What live music goes for, figure by figure.</h2>
+      <p class="lede">Published numbers from cost guides, a wedding-budget dataset and one booking marketplace, each read on the date under the table. They describe the market. They are not our prices and we do not publish ours.</p>
     </div>
 
-    {{rate_card_table}}
+    {{market_table}}
 
-    <p class="prose">The travel lines behind the right column are published too. The Front Range adds $300. The I-70 corridor adds $600. The far resorts add $600 plus lodging, billed at cost, because a band that has crossed the passes for a late strike stays the night rather than driving them again at one in the morning. Altitude, town noise rules, curfews and the rest of the corridor's working detail are on <a href="{{nav_prefix}}planners/mountain/">the mountain corridor page</a>, and <a href="{{nav_prefix}}corporate/retreats/">corporate retreats</a> price from this right-hand column.</p>
-    <p class="note">This guide and the <a href="{{nav_prefix}}pricing/">rate card page</a> render from the same data, so the two cannot disagree. The card page also carries the quote engine, which itemises a night before you write to us.</p>
+    {{market_sources}}
+
+    <p class="prose">A figure only reads right next to what it covers, which is why the spread is this wide. The marketplace average and a full band with horns are two different purchases. What sits inside the number varies as much as the number does: sound in particular is inside some quotes and a later conversation with others, and a certificate of insurance naming the venue is standard with some acts and an unwelcome surprise with others.</p>
+    <p class="prose">Resort dates sit above metro dates everywhere in this market for the same two reasons: the drive, and the night in a bed at the far end of it. Altitude, town noise rules, curfews and the rest of the corridor's working detail are on <a href="{{nav_prefix}}planners/mountain/">the mountain corridor page</a>, and <a href="{{nav_prefix}}corporate/retreats/">corporate retreats</a> is where the resort booking is set out in full.</p>
   </div>
 </section>

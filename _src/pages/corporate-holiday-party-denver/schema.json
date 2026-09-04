@@ -1,9 +1,9 @@
 {
-  "_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the published premiums, the booking window. Answers answer in the first sentence and carry no dollar figures; ranges live on the rate card and in the Offers this file emits.",
+  "_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the December calendar, the booking window. Answers answer in the first sentence. Any figure is a {{market:<id>}} token off market-rates.json and the page prints its source; no Signet figure appears here or anywhere since 2026-09-04.",
   "service": {
     "name": "Corporate holiday party entertainment in Denver",
     "serviceType": "Live music and DJ for corporate holiday parties",
-    "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, with published rates and the season's 21 dates priced.",
+    "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, across the season's 21 November and December dates.",
     "areaServed": [
       "Denver"
     ],
@@ -17,11 +17,11 @@
   "faqs": [
     {
       "q": "What does a corporate holiday party band cost in Denver?",
-      "a": "The published card spans $1,500 to $5,500 for a Denver holiday evening: a DJ runs {{rate_range:dj}}, a duo through cocktails and dinner {{rate_range:duo}}, and a quartet carrying a full evening {{rate_range:quartet}}. Peak December dates add the published 25 percent line and New Year's Eve 50, and sound is inside every figure."
+      "a": "A cover or jazz band for a corporate event runs {{market:us_corporate_band}} in this market, and a Denver holiday weekend carries {{market:denver_holiday_surcharge}} on top across the market. Those are the market's figures. Signet does not publish prices: send the date, the venue and the guest count, and you get our number for that night."
     },
     {
       "q": "How many holiday party dates does Denver actually have?",
-      "a": "Twenty-one. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 published party dates, and 10 of them are in December. They are laid out on this page with the peak premiums tagged, and whether one is free is a booking-calendar question: the date and the venue, by email."
+      "a": "Twenty-one. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 party dates, and 10 of them are in December. They are laid out on this page. Whether one is free is a booking-calendar question: send the date and the venue by email."
     },
     {
       "q": "What does load-in look like at a downtown Denver hotel?",
@@ -29,11 +29,11 @@
     },
     {
       "q": "Do December dates in Denver cost more?",
-      "a": "The base rates hold; the premiums are published. Holiday and peak weekends carry a 25 percent line and New Year's Eve carries 50 percent, printed on the rate card. Every configuration's range is public too, so the arithmetic can be run before you write to us."
+      "a": "The strong December dates do, here and everywhere in this market: a holiday weekend in Denver carries {{market:denver_holiday_surcharge}}. New Year's Eve is its own case again. What that means for your date is named before you sign rather than after, and it is never folded into a headline figure."
     },
     {
       "q": "When should a Denver company book its holiday party?",
-      "a": "August through October. That is when the season is decided for November and December dates, and New Year's Eve books earliest of all. The premiums do not depend on when you sign: peak dates carry the published 25 percent line whenever the contract lands."
+      "a": "August through October. That is when the season is decided for November and December dates, and New Year's Eve books earliest of all. Booking early buys the date rather than a lower number, which on a December Saturday is the thing actually worth having."
     }
   ]
 }
