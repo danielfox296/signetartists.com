@@ -356,8 +356,9 @@ def cover_strip() -> str:
         '<section class="section--night cover-strip">'
         f'<div class="cover-strip-inner">{tiles}</div>'
         '<div class="wrap"><p class="cover-strip-note">'
-        'Eight of a few hundred. The whole song list, and the six sets a night gets '
-        'built from, are on the <a href="{{nav_prefix}}repertoire/">songs page</a>.'
+        'We love music - both originals from our artists and a few hundred familiar '
+        'favorites. For our singer-songwriter acts, you can check out our '
+        '<a href="{{nav_prefix}}repertoire/">Songs page</a> for an example of the available repertoire.'
         "</p></div></section>"
     )
 
