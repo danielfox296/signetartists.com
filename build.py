@@ -49,10 +49,9 @@ SITE_URL = BRAND["url"].rstrip("/")
 OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 
 # The act roster (restructure 2026-08-15). Acts are data, never hardcoded
-# pages: act pages, roster cards, the filter UI, per-act Offer schema and
-# llms.txt all render from _src/data/acts.json. Prices live only on the rate
-# card and are looked up by config id, so an act page and the pricing page
-# cannot drift apart.
+# pages: act pages, roster cards, the filter UI and llms.txt all render from
+# _src/data/acts.json. From 2026-09-04 the roster carries no prices at all:
+# `rateCard` is configuration structure (id, label, pieces) and nothing else.
 ACTS_FILE = DATA / "acts.json"
 roster = json.loads(ACTS_FILE.read_text(encoding="utf-8"))
 ACTS = roster["acts"]
@@ -61,16 +60,54 @@ RATE_BY_ID = {r["id"]: r for r in RATE_CARD}
 BUCKETS = roster["buckets"]
 BUCKET_LABEL = {b["id"]: b["label"] for b in BUCKETS}
 FLAGSHIPS = [a for a in ACTS if a["status"] == "flagship"]
-# Q4 2026 refocus: the product is solo through quartet. A `byRequest` row is a
-# real rate we still hold and quote, held out of every sold surface: the hourly
-# table (and so the quote engine's ensemble picker, which is built from it),
-# makesOffer, and llms.txt's hourly build. On the rate card itself the
-# by-request rows stay visible under a divider, because publishing the card is
-# the differentiator and a number we hold is cheaper to print than to hide.
-SOLD_RATES = [r for r in site["rates"] if not r.get("byRequest")]
+# Q4 2026 refocus: the product is solo through quartet. A `byRequest` config is
+# a size we field but do not merchandise as a standard booking.
 SOLD_CONFIGS = [r for r in RATE_CARD if not r.get("byRequest")]
 BYREQUEST_CONFIGS = [r for r in RATE_CARD if r.get("byRequest")]
 LISTINGS = [a for a in ACTS if a["status"] == "listing"]
+
+# Market figures, 2026-09-04. THE ONLY dollar figures or percentages any
+# surface of this site may render. Signet publishes no price of its own: not a
+# card, a floor, a "from", an hourly, an uplift, a travel figure or a discount
+# rule. Every entry here belongs to the market, carries the URL it was read
+# from and the date it was read, and reaches a page only through
+# {{market:<id>}}. A page that resolves one must also carry {{market_sources}};
+# the build fails otherwise, so a figure can never publish unattributed.
+MARKET_FILE = DATA / "market-rates.json"
+MARKET = json.loads(MARKET_FILE.read_text(encoding="utf-8"))["rates"]
+MARKET_BY_ID = {m["id"]: m for m in MARKET}
+# The rows {{market_table}} prints: the shape of the market a Colorado buyer is
+# actually shopping in, largest context first. Ids resolve against MARKET.
+MARKET_TABLE_IDS = [
+    "co_band_budget", "us_band_range", "us_corporate_band",
+    "denver_marketplace_avg", "denver_band_range", "denver_midtier_band",
+    "us_showband", "denver_holiday_surcharge",
+]
+
+# Ids resolved on the page currently being built, in first-use order. Reset by
+# begin_page(); read by market_sources() and finalize_market().
+_market_used: list = []
+
+
+def begin_page() -> None:
+    _market_used.clear()
+
+
+def finalize_market(content: str, where: str) -> str:
+    """Resolve {{market_sources}} and refuse to ship an unattributed figure.
+
+    Runs last, after every other token, because the sources note has to know
+    which figures the page ended up printing.
+    """
+    if _market_used and "{{market_sources}}" not in content:
+        raise SystemExit(
+            f"{where}: prints market figures ({', '.join(_market_used)}) with no "
+            "{{market_sources}} on the page. Every figure carries its source."
+        )
+    note = market_sources()
+    content = content.replace("<p>{{market_sources}}</p>", note)
+    return content.replace("{{market_sources}}", note)
+
 ACTS_BASE = "music"  # roster lives at /music/, act pages at /music/<id>/
 
 PLACEHOLDER = re.compile(r"\[.+\]")
@@ -119,56 +156,77 @@ def canonical_for(output: str) -> str:
 # ------------------------------------------------------- generated blocks
 
 
-def rate_table_summary() -> str:
-    """Home page: size, 2 hrs, 4 hrs. The teaser for the full card.
+def market_figure(mid: str) -> str:
+    """One market figure, plain: "$2,338 to $2,858", "20 to 30 percent".
 
-    The 4-hour column carries the brass accent (WEBSITE-PLAN §6.3): it is the
-    number the organization schema and llms.txt publish. Safe for quote.js,
-    which reads cells by textContent and ignores attributes.
+    Registers the id against the page being built, so market_sources() can
+    print exactly the sources that page used and finalize_market() can refuse
+    to ship a figure with no attribution next to it.
+    """
+    m = MARKET_BY_ID.get(mid)
+    if m is None:
+        raise SystemExit(
+            f"{{{{market:{mid}}}}}: no such id in _src/data/market-rates.json"
+        )
+    if mid not in _market_used:
+        _market_used.append(mid)
+    f = m["figure"]
+    if m["kind"] == "percent":
+        return f"{f[0]} to {f[1]} percent" if isinstance(f, list) else f"{f} percent"
+    return f"{money(f[0])} to {money(f[1])}" if isinstance(f, list) else money(f)
+
+
+def market_sources() -> str:
+    """The Sources note for the figures this page printed.
+
+    One line, at the foot of the section that called it, naming each source
+    once with a link and the date it was read. It is what makes a figure on
+    this site the market's rather than ours, so the build treats it as
+    mandatory rather than decorative.
+    """
+    seen = []
+    for mid in _market_used:
+        m = MARKET_BY_ID[mid]
+        key = (m["source"], m["url"])
+        if key not in seen:
+            seen.append(key)
+    if not seen:
+        return ""
+    links = ", ".join(
+        f'<a href="{esc(url)}" rel="nofollow noopener" target="_blank">{esc(src)}</a>'
+        for src, url in seen
+    )
+    read_on = max(MARKET_BY_ID[mid]["retrieved"] for mid in _market_used)
+    when = datetime.datetime.strptime(read_on, "%Y-%m-%d").strftime("%-d %B %Y")
+    label = "Where this figure comes from" if len(seen) == 1 \
+        else "Where these figures come from"
+    return (
+        f'<p class="note">{label}, read {when}: {links}. '
+        "Signet prices a date on request."
+        "</p>"
+    )
+
+
+def market_table() -> str:
+    """The market ranges as one table: what, the figure, whose market it is.
+
+    Carries .rate-table so analytics.js's pricing_engaged observer keeps
+    firing when a reader reaches the money block on a page, which is still
+    exactly what that event means.
     """
     rows = "".join(
-        "<tr>"
-        f'<td class="rate-size">{esc(r["size"])}</td>'
-        f'<td>{money(r["callOut"] + r["hourly"] * 2)}</td>'
-        f'<td class="num-accent">{money(r["callOut"] + r["hourly"] * 4)}</td>'
+        '<tr>'
+        f'<th scope="row" class="rate-size">{esc(MARKET_BY_ID[mid]["what"])}</th>'
+        f'<td class="num-accent">{market_figure(mid)}</td>'
+        f'<td>{esc(MARKET_BY_ID[mid]["market"])}</td>'
         "</tr>"
-        for r in SOLD_RATES
+        for mid in MARKET_TABLE_IDS
     )
     return (
         '<div class="table-scroll"><table class="rate-table tnum">'
-        "<thead><tr><th>Size</th><th>2 hrs</th><th>4 hrs</th></tr></thead>"
+        "<thead><tr><th>What the market pays</th><th>Figure</th>"
+        "<th>Market</th></tr></thead>"
         f"<tbody>{rows}</tbody></table></div>"
-    )
-
-
-def rate_table_full() -> str:
-    """Pricing page: the whole card, including the hours below each minimum."""
-    rows = []
-    for r in SOLD_RATES:
-        # The 4-hour totals get the brass .num-accent, same as the summary
-        # table. Every published minimum is <= 2, so the accented cell is
-        # always a real figure, never the em-dash.
-        cells = []
-        for h in (1, 2, 3, 4):
-            cls = ' class="num-accent"' if h == 4 else ""
-            value = "—" if h < r["min"] else money(r["callOut"] + r["hourly"] * h)
-            cells.append(f"<td{cls}>{value}</td>")
-        cells = "".join(cells)
-        rows.append(
-            "<tr>"
-            f'<td class="rate-size">{esc(r["size"])}</td>'
-            f'<td>{money(r["callOut"])}</td>'
-            f'<td>{money(r["hourly"])}</td>'
-            f"{cells}</tr>"
-        )
-    head = "".join(
-        f"<th>{h}</th>"
-        for h in ("Size", "Call-out", "Per hour", "1 hr", "2 hrs", "3 hrs", "4 hrs")
-    )
-    return (
-        '<div class="table-scroll"><table class="rate-table rate-table--full tnum">'
-        f"<thead><tr>{head}</tr></thead>"
-        f'<tbody>{"".join(rows)}</tbody></table></div>'
     )
 
 
@@ -189,17 +247,22 @@ def included_list_columns() -> str:
 
 
 def extras_list() -> str:
-    rows = "".join(
-        f'<div class="def-row"><dt>{esc(e["item"])}</dt>'
-        f'<dd class="tnum">{esc(e["rate"])}</dd></div>'
+    """What arrives as its own line on a quote. Items only from 2026-09-04:
+    the site names what is itemised separately and never what it costs."""
+    items = "".join(
+        f'<li><span class="dash" aria-hidden="true"></span>{esc(e["item"])}</li>'
         for e in site["extras"]
     )
-    return f'<dl class="def-list">{rows}</dl>'
+    return f'<ul class="spec-list">{items}</ul>'
 
 
 def faq_list() -> str:
+    """The pricing page's questions. Answers may carry {{market:<id>}}; they
+    are resolved here so the visible list and the FAQPage markup print the
+    same figure from the same source."""
     rows = "".join(
-        f'<div class="faq-row"><dt>{esc(f["q"])}</dt><dd>{esc(f["a"])}</dd></div>'
+        f'<div class="faq-row"><dt>{esc(f["q"])}</dt>'
+        f'<dd>{resolve_market_tokens(esc(f["a"]))}</dd></div>'
         for f in site["faqs"]
     )
     return f'<dl class="faq-list">{rows}</dl>'
@@ -403,11 +466,10 @@ def event_types() -> str:
 # accepted exemption as the title separator; the em-dash ban is on prose.
 
 
-def rng(pair: list) -> str:
-    return f"{money(pair[0])}–{pair[1]:,}"
-
-
 def rate_of(config_id: str) -> dict:
+    """A configuration by id: its label, its piece count, its note. Carries no
+    price since 2026-09-04; the name is kept because every caller reads it for
+    the label and renaming it would touch thirty call sites for nothing."""
     return RATE_BY_ID[config_id]
 
 
@@ -419,12 +481,6 @@ def act_url(act: dict, nav_prefix: str = "") -> str:
     if act.get("page"):
         return f"{nav_prefix}{act['page']}"
     return f"{nav_prefix}{ACTS_BASE}/{act['id']}/"
-
-
-def act_from_price(act: dict) -> int:
-    """The published floor for an act: the bottom of its smallest config,
-    Denver column. Every surface an act appears on shows this number."""
-    return rate_of(act["from"])["denver"][0]
 
 
 def act_configs(act: dict) -> list:
@@ -480,42 +536,12 @@ def act_config_range(act: dict) -> str:
     return f'{configs[0]["label"]} to {configs[-1]["rangeLabel"]}'
 
 
-def rate_card_table() -> str:
-    """The published rate card. THE differentiator: almost no Colorado
-    competitor publishes one, so this table is static HTML on a crawlable
-    page and never rendered by script."""
-    def row(r):
-        note = f'<span class="rate-note">{esc(r["note"])}</span>' if r.get("note") else ""
-        return (
-            "<tr>"
-            f'<th scope="row" class="rate-size">{esc(r["label"])}{note}</th>'
-            f'<td class="num-accent">{rng(r["denver"])}</td>'
-            f'<td>{rng(r["resort"])}</td>'
-            "</tr>"
-        )
-
-    rows = [row(r) for r in SOLD_CONFIGS]
-    if BYREQUEST_CONFIGS:
-        rows.append(
-            '<tr class="rate-row--divider"><th colspan="3" scope="colgroup">'
-            "Larger configurations, by request</th></tr>"
-        )
-        rows += [row(r) for r in BYREQUEST_CONFIGS]
-    return (
-        '<div class="table-scroll"><table class="rate-table rate-card tnum">'
-        "<thead><tr><th>Configuration</th><th>Denver metro</th>"
-        "<th>Mountain and resort</th></tr></thead>"
-        f'<tbody>{"".join(rows)}</tbody></table></div>'
-    )
-
-
 def act_card(act: dict, nav_prefix: str = "") -> str:
     """One roster card. Carries its own filter state in data attributes so
     the filter UI is a class toggle and never a re-render."""
     flagship = act["status"] == "flagship"
     buckets = " ".join(act["bucket_tags"])
     configs = " ".join(act["config_tags"])
-    price = act_from_price(act)
     tags = "".join(
         f'<li class="pill">{esc(BUCKET_LABEL[b])}</li>' for b in act["bucket_tags"]
     )
@@ -527,7 +553,7 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
     )
     return (
         f'<article class="card act-card" data-buckets="{esc(buckets)}" '
-        f'data-configs="{esc(configs)}" data-price="{price}" '
+        f'data-configs="{esc(configs)}" '
         f'data-status="{esc(act["status"])}" data-name="{esc(act["name"])}">'
         f"{act_card_media(act, nav_prefix)}"
         '<div class="act-card-body">'
@@ -538,7 +564,6 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
         f'<p class="act-blurb">{esc(act["blurb"])}</p>'
         '<dl class="act-facts">'
         f"<dt>Configurations</dt><dd>{esc(act_config_range(act))}</dd>"
-        f'<dt>From</dt><dd class="num-accent">{money(price)}</dd>'
         "</dl>"
         f"{cta}"
         "</article>"
@@ -597,15 +622,8 @@ def roster_filters() -> str:
         f'<option value="{esc(r["id"])}">{esc(r["label"])}</option>'
         for r in RATE_CARD if r["id"] in in_use
     )
-    price_opts = "".join(
-        f'<option value="{v}">{label}</option>'
-        for v, label in [
-            (1500, "Under $1,500"),
-            (2800, "Under $2,800"),
-            (4000, "Under $4,000"),
-            (6000, "Under $6,000"),
-        ]
-    )
+    # The starting-price filter was removed 2026-09-04 with the published card.
+    # Kind of night and size are the two axes a buyer actually shops on here.
     return (
         '<form class="roster-filters" id="roster-filters" hidden>'
         '<div class="filter-field"><label for="filter-bucket">Kind of night</label>'
@@ -614,9 +632,6 @@ def roster_filters() -> str:
         '<div class="filter-field"><label for="filter-config">Size</label>'
         '<select id="filter-config" name="config">'
         f'<option value="">Any</option>{config_opts}</select></div>'
-        '<div class="filter-field"><label for="filter-price">Starting price</label>'
-        '<select id="filter-price" name="price">'
-        f'<option value="">Any</option>{price_opts}</select></div>'
         '<button type="button" class="btn btn--sm btn--outline" id="filter-reset">Reset</button>'
         f'<p class="filter-count" id="filter-count" role="status">{len(ACTS)} acts</p>'
         "</form>"
@@ -654,11 +669,11 @@ def season_dates() -> str:
         if d.get("peak"):
             classes += " season-date--peak"
         if d.get("note"):
-            tail = f'<span class="season-tag">{esc(d["note"])}, +50%</span>'
+            tail = f'<span class="season-tag">{esc(d["note"])}</span>'
         elif d.get("peak"):
-            tail = '<span class="season-tag">Peak, +25%</span>'
+            tail = '<span class="season-tag">Peak date</span>'
         else:
-            tail = '<span class="season-tag">Standard rate</span>'
+            tail = '<span class="season-tag">Standard date</span>'
         cells.append(
             f'<li class="{classes}"><span class="season-day">{esc(label)}</span>'
             f"{tail}</li>"
@@ -667,8 +682,9 @@ def season_dates() -> str:
         f'<ul class="season-board">{"".join(cells)}</ul>'
         f'<p class="note"><strong class="num-accent">{len(SEASON["dates"])}</strong> '
         "party dates: Thursdays, Fridays and Saturdays across November and "
-        "December, plus New Year's Eve. Peak dates carry the published 25 "
-        "percent line and New Year's Eve 50, on the fees before travel."
+        "December, plus New Year's Eve. A peak date and a Thursday in November "
+        "are not the same job, and New Year's Eve is its own case. Send the date "
+        "and we price that night."
         "</p>"
     )
 
@@ -686,9 +702,9 @@ def season_leads(nav_prefix: str = "") -> str:
             f'<h3 class="act-name">{esc(act["name"])}</h3>'
             f'<p class="act-face">{esc(act["style"])}. {esc(act_byline(act))}.</p>'
             f'<p class="act-blurb">{esc(lead["why"])}</p>'
-            '<dl class="act-facts"><dt>Denver</dt>'
-            f'<dd class="num-accent">{rng(r["denver"])}</dd>'
-            f'<dt>Resort</dt><dd>{rng(r["resort"])}</dd></dl>'
+            '<dl class="act-facts"><dt>Configuration</dt>'
+            f'<dd>{esc(r["label"])}, {r["pieces"]} '
+            f'{"player" if r["pieces"] == 1 else "players"}</dd></dl>'
             f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">'
             "Check a date</a>"
             "</article>"
@@ -698,9 +714,9 @@ def season_leads(nav_prefix: str = "") -> str:
 
 def corporate_shapes(nav_prefix: str = "") -> str:
     """The three shapes a corporate enquiry arrives as, on /corporate/. Same
-    contract as season_leads: the occasion is copy, but the act name and both
-    price columns resolve out of acts.json and the rate card, so this block
-    cannot quote a size the pricing page has stopped publishing."""
+    contract as season_leads: the occasion is copy, but the act name and the
+    configuration resolve out of acts.json, so this block cannot name a size
+    the roster has stopped fielding. No prices since 2026-09-04."""
     cards = []
     for shape in site["corporateShapes"]:
         act = ACT_BY_ID[shape["act"]]
@@ -711,9 +727,9 @@ def corporate_shapes(nav_prefix: str = "") -> str:
             f'<h3 class="act-name">{esc(act["name"])}</h3>'
             f'<p class="act-face">{esc(r["label"])}. {esc(act_byline(act))}.</p>'
             f'<p class="act-blurb">{esc(shape["why"])}</p>'
-            '<dl class="act-facts"><dt>Denver</dt>'
-            f'<dd class="num-accent">{rng(r["denver"])}</dd>'
-            f'<dt>Resort</dt><dd>{rng(r["resort"])}</dd></dl>'
+            '<dl class="act-facts"><dt>Configuration</dt>'
+            f'<dd>{esc(r["label"])}, {r["pieces"]} '
+            f'{"player" if r["pieces"] == 1 else "players"}</dd></dl>'
             f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">'
             "Check a date</a>"
             "</article>"
@@ -788,17 +804,10 @@ def organization_schema() -> dict:
             "addressCountry": "US",
         },
         "areaServed": BRAND["serviceArea"],
-        # Published rates, so answer engines can quote real numbers rather than
-        # the directory averages that currently own the cost queries.
-        "makesOffer": [
-            {
-                "@type": "Offer",
-                "name": f"{r['size']} — 4 hours",
-                "price": str(r["callOut"] + r["hourly"] * 4),
-                "priceCurrency": "USD",
-            }
-            for r in SOLD_RATES
-        ],
+        # No makesOffer since 2026-09-04. An Offer node is a published price,
+        # and the site publishes none: a night is priced when a date is
+        # checked. Removing it also means no Offer can fail a rich-results
+        # test for a missing price.
     }
 
 
@@ -810,7 +819,9 @@ def faq_schema() -> dict:
             {
                 "@type": "Question",
                 "name": f["q"],
-                "acceptedAnswer": {"@type": "Answer", "text": f["a"]},
+                "acceptedAnswer": {
+                    "@type": "Answer", "text": resolve_market_tokens(f["a"])
+                },
             }
             for f in site["faqs"]
         ],
@@ -845,13 +856,19 @@ def article_schema(post: dict, canonical: str, og_image: str) -> dict:
 
 
 def planner_faq_schema() -> dict:
-    """Every settled question, pricing set included, as one FAQPage.
+    """Every settled question on /planners/faq/, as one FAQPage.
 
     Entries flagged "open" are deliberately excluded: they are our best guess
     at a policy nobody has decided, and a guess does not belong in structured
     data that search engines quote back as fact.
+
+    The pricing set (site.json "faqs") used to be folded in here too. It came
+    out 2026-09-04: those answers carry the market's figures now, and a figure
+    belongs in structured data only on a page that prints the source beside
+    it. They keep their own FAQPage on /pricing/, where the Sources note is,
+    and the visible list on this page never showed them anyway.
     """
-    entries = list(site["faqs"])
+    entries = []
     for group in site["plannerFaqs"]:
         entries += [f for f in group["items"] if not f.get("open")]
     return {
@@ -861,7 +878,9 @@ def planner_faq_schema() -> dict:
             {
                 "@type": "Question",
                 "name": f["q"],
-                "acceptedAnswer": {"@type": "Answer", "text": f["a"]},
+                "acceptedAnswer": {
+                    "@type": "Answer", "text": resolve_market_tokens(f["a"])
+                },
             }
             for f in entries
         ],
@@ -901,32 +920,6 @@ def local_business_node() -> dict:
     return node
 
 
-def act_offers(act: dict) -> list:
-    """One Offer per act config per column. The prices are the published rate
-    card, so structured data and the visible table are the same numbers."""
-    offers = []
-    for cid in act["config_tags"]:
-        r = rate_of(cid)
-        # The DJ's config IS the dj rate row, so the joined form would print
-        # "DJ — DJ". One name is the name.
-        base = act["name"] if r["label"] == act["name"] else f"{act['name']} — {r['label']}"
-        for col, area in (("denver", "Denver, CO"), ("resort", "Colorado mountain resorts")):
-            offers.append({
-                "@type": "Offer",
-                "name": f"{base}, {area}",
-                "priceCurrency": "USD",
-                "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "minPrice": r[col][0],
-                    "maxPrice": r[col][1],
-                    "priceCurrency": "USD",
-                },
-                "areaServed": area,
-                "availability": "https://schema.org/InStock",
-            })
-    return offers
-
-
 def act_service_node(act: dict) -> dict:
     return {
         "@type": "Service",
@@ -936,7 +929,8 @@ def act_service_node(act: dict) -> dict:
         "description": act["blurb"],
         "provider": {"@id": f"{SITE_URL}/#business"},
         "areaServed": [{"@type": "Place", "name": n} for n in SERVICE_AREAS],
-        "offers": act_offers(act),
+        # No offers. A Service describes what is booked; the price for a night
+        # comes back when a date is checked, so there is nothing to publish.
     }
 
 
@@ -956,10 +950,10 @@ def roster_schema() -> dict:
 
 
 def pricing_schema() -> dict:
-    """The pricing page carries the most structured data on the site, on
-    purpose. It is the page whose whole job is to be crawled with numbers in
-    it: the business, every act as a Service with priced Offers per
-    configuration, and the pricing FAQ."""
+    """The pricing page carries the most structured data on the site: the
+    business, every act as a Service, and the pricing FAQ. The FAQ answers
+    carry the market's figures with their sources, which is the only priced
+    thing on the page and belongs to somebody else."""
     return {
         "@context": "https://schema.org",
         "@graph": [local_business_node()]
@@ -970,7 +964,9 @@ def pricing_schema() -> dict:
                 {
                     "@type": "Question",
                     "name": f["q"],
-                    "acceptedAnswer": {"@type": "Answer", "text": f["a"]},
+                    "acceptedAnswer": {
+                        "@type": "Answer", "text": resolve_market_tokens(f["a"])
+                    },
                 }
                 for f in site["faqs"]
             ],
@@ -1035,18 +1031,18 @@ def write_redirects() -> None:
 
 
 # ------------------------------------------- parameterized section tokens
-# The 2026-08-20 buildout authors occasion, location and format pages as page
-# dirs, and those pages still must never type a price. These tokens resolve
-# rate-card and act data into any section: {{rate_range:duo}}, {{rate_4h:Trio}},
-# {{act_ladder:tejas-singh}}, {{offer_close:Headline.}} and so on. An unknown id
-# fails the build loudly rather than shipping a literal token.
+# A section never types a figure. Since 2026-09-04 the only figures on this
+# site are the market's, and {{market:<id>}} is the one token that renders one:
+# it reads _src/data/market-rates.json, registers the id against the page, and
+# the page must carry {{market_sources}} or the build stops. The rate tokens
+# that used to live here (rate_range, rate_range_resort, rate_hour, rate_4h,
+# rate_1h, act_from, and the rate_card_table / rate_table_summary /
+# rate_table_full blocks) were deleted with the published card; git history has
+# them and OFFER.md has the numbers.
 
 PARAM_BLOCK = re.compile(
-    r"\{\{(rate_range_resort|rate_range|rate_hour|rate_4h|rate_1h"
-    r"|act_ladder|act_setlist|act_from|offer_close):([^}]+)\}\}"
+    r"\{\{(act_ladder|act_setlist|offer_close|market):([^}]+)\}\}"
 )
-
-RATES_BY_SIZE = {r["size"]: r for r in site["rates"]}
 
 
 def offer_close(headline: str) -> str:
@@ -1060,13 +1056,14 @@ def offer_close(headline: str) -> str:
         '<div class="close-row">'
         f'<div style="max-width: 32rem;"><h2 class="h2">{esc(headline)}</h2>'
         '<p class="lede">Live music sized to the event, solo, duo, trio or '
-        "quartet, with published rates and a single point of contact.</p></div>"
+        "quartet, priced to the date, with a single point of contact.</p></div>"
         '<div class="btn-row"><a class="btn" href="{{nav_prefix}}contact/">'
         "Check a Date</a></div>"
         "</div>"
-        '<p class="note">Send the date and the venue. You get the date held or '
-        'a straight no, and every figure is on the '
-        '<a href="{{nav_prefix}}pricing/">rate card</a> before you write.</p>'
+        '<p class="note">Send the date and the venue. What comes back is a yes '
+        "or a straight no, and our number for that night. What the wider "
+        'market charges is set out on the <a href="{{nav_prefix}}pricing/">'
+        "pricing page</a>.</p>"
         "</div></section>"
     )
 
@@ -1075,21 +1072,21 @@ def param_block(m: re.Match) -> str:
     kind, arg = m.group(1), m.group(2).strip()
     if kind == "offer_close":
         return offer_close(arg)
-    if kind == "rate_range":
-        return rng(rate_of(arg)["denver"])
-    if kind == "rate_range_resort":
-        return rng(rate_of(arg)["resort"])
-    if kind == "rate_hour":
-        return money(rate_of(arg)["hourly"])
-    if kind in ("rate_4h", "rate_1h"):
-        r = RATES_BY_SIZE[arg]
-        return money(r["callOut"] + r["hourly"] * (4 if kind == "rate_4h" else 1))
+    if kind == "market":
+        return market_figure(arg)
     act = ACT_BY_ID[arg]
     if kind == "act_ladder":
         return act_ladder(act)
-    if kind == "act_setlist":
-        return act_setlist(act)
-    return f'<span class="num-accent">{money(act_from_price(act))}</span>'  # act_from
+    return act_setlist(act)
+
+
+def resolve_market_tokens(text: str) -> str:
+    """{{market:<id>}} inside a data string: a FAQ answer in site.json, a
+    schema.json answer, a blog post's YAML. Same registration as a section
+    token, so the page still has to carry its Sources note."""
+    return re.sub(
+        r"\{\{market:([^}]+)\}\}", lambda m: market_figure(m.group(1).strip()), text
+    )
 
 
 # ----------------------------------------------- per-page structured data
@@ -1100,21 +1097,17 @@ def param_block(m: re.Match) -> str:
 
 
 def resolve_rate_tokens(text: str) -> str:
-    """Rate tokens inside schema.json strings, resolved to plain figures.
-
-    A FAQ answer that names a real number is the answer engines actually
-    quote, and typing the number would let it drift from the card. Layout
-    tokens (act_ladder, act_setlist, offer_close) have no plain-text form
-    and fail the build loudly if they appear here."""
+    """Tokens inside schema.json strings. Only {{market:<id>}} has a
+    plain-text form; a figure a crawler quotes has to be one whose source is
+    printed on the page beside it. Everything else fails the build here."""
     def plain(m: re.Match) -> str:
         kind = m.group(1)
-        if kind in ("act_ladder", "act_setlist", "offer_close"):
+        if kind != "market":
             raise SystemExit(
-                f"schema.json: {{{{{kind}:...}}}} has no plain-text form"
+                f"schema.json: {{{{{kind}:...}}}} has no plain-text form. Only "
+                "market: figures may appear in structured data."
             )
-        if kind == "act_from":
-            return money(act_from_price(ACT_BY_ID[m.group(2).strip()]))
-        return param_block(m)
+        return market_figure(m.group(2).strip())
     return PARAM_BLOCK.sub(plain, text)
 
 
@@ -1132,15 +1125,14 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
         # The act's own page: the service block and the act's roster node
         # describe the same booking, and both would claim #service — an @id
         # that /music/ and /pricing/ already emit with the act's name on it.
-        # So one merged Service: the act node keeps the id, the name and the
-        # offers (identical to its siblings on those pages), and wears the
-        # page's authored copy; the page's descriptive name survives as an
-        # alternateName instead of forking the entity's name across pages.
+        # So one merged Service: the act node keeps the id and the name, and
+        # wears the page's authored copy; the page's descriptive name survives
+        # as an alternateName instead of forking the entity across pages.
         if set(svc.get("configs", act["config_tags"])) != set(act["config_tags"]):
             raise SystemExit(
                 f"{path}: service configs {svc.get('configs')} differ from "
-                f"act {act['id']} config_tags {act['config_tags']}; the "
-                "merged node prices from the act, so they must match"
+                f"act {act['id']} config_tags {act['config_tags']}; one merged "
+                "node describes one booking, so they must match"
             )
         node = act_service_node(act)
         if svc["name"] != act["name"]:
@@ -1166,28 +1158,9 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
                 for n in svc.get("areaServed", SERVICE_AREAS)
             ],
         }
-        offers = []
-        for cid in svc.get("configs", []):
-            r = rate_of(cid)
-            for col, area in (
-                ("denver", "Denver, CO"),
-                ("resort", "Colorado mountain resorts"),
-            ):
-                offers.append({
-                    "@type": "Offer",
-                    "name": f"{r['label']} — {area}",
-                    "priceCurrency": "USD",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "minPrice": r[col][0],
-                        "maxPrice": r[col][1],
-                        "priceCurrency": "USD",
-                    },
-                    "areaServed": area,
-                    "availability": "https://schema.org/InStock",
-                })
-        if offers:
-            node["offers"] = offers
+        # schema.json "configs" still names the sizes a page sells, and the
+        # build still checks it against the act it merges with. It emits no
+        # Offer: there is no published price to put in one.
     if node:
         # The review slot (§10.7 of the buildout): empty today because zero
         # reviews exist and a fabricated one would be worse than none. When a
@@ -1333,8 +1306,6 @@ def render_page(
         "{{brand_tagline}}": esc(BRAND["tagline"]),
         "{{brand_intro}}": esc(BRAND["intro"]),
         "{{brand_service_area}}": esc(BRAND["serviceArea"]),
-        "{{gl_per_occurrence}}": val(site["insurance"]["perOccurrence"]),
-        "{{gl_aggregate}}": val(site["insurance"]["aggregate"]),
         "{{brand_email}}": val(BRAND["email"]),
         "{{brand_email_raw}}": esc(BRAND["email"].strip("[]")),
         "{{form_action}}": esc(
@@ -1352,6 +1323,17 @@ def render_page(
         if token in ("{{header}}", "{{footer}}", "{{content}}"):
             continue
         out_html = out_html.replace(token, value)
+
+    # An unresolved token is a page shipping "{{rate_range:duo}}" as visible
+    # text. That used to be impossible because every token was in one regex;
+    # the 2026-09-04 sweep retired six of them, so the build checks the
+    # rendered page rather than trusting that every call site was found.
+    stray = re.findall(r"\{\{[a-z_]+(?::[^}]*)?\}\}", out_html)
+    if stray:
+        raise SystemExit(
+            f"{output}: unresolved token(s) {sorted(set(stray))}. A retired "
+            "rate token, or a typo."
+        )
 
     out_path = ROOT / output
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -1373,41 +1355,47 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
     # page, where anyone can read them in view-source.
     content = COMMENT.sub("", content)
 
-    # Blocks first: a section can contain {{rate_table_full}}, and the brand
+    # Blocks first: a section can contain {{market_table}}, and the brand
     # tokens inside generated markup still need resolving afterwards.
+    #
+    # Every block is a thunk and only runs when its token is actually on the
+    # page. That matters since 2026-09-04: market_table() and faq_list()
+    # register the market ids they print against this page, and a block that
+    # ran for a page that never showed it would demand a Sources note there.
+    begin_page()
     blocks = {
-        "{{rate_table_summary}}": rate_table_summary(),
-        "{{rate_table_full}}": rate_table_full(),
-        "{{included_list}}": included_list(),
-        "{{included_list_columns}}": included_list_columns(),
-        "{{extras_list}}": extras_list(),
-        "{{faq_list}}": faq_list(),
-        "{{planner_faq_list}}": planner_faq_list(),
-        "{{cover_strip}}": cover_strip(),
-        "{{stage_plot}}": stage_plot(),
-        "{{stage_table}}": stage_table(),
-        "{{power_table}}": power_table(),
-        "{{loadin_table}}": loadin_table(),
-        "{{event_types}}": event_types(),
-        "{{rate_card_table}}": rate_card_table(),
-        "{{roster_filters}}": roster_filters(),
-        "{{roster_grid}}": roster_grid(nav_prefix),
-        "{{roster_grid_flagships}}": roster_grid_flagships(nav_prefix),
-        "{{corporate_shapes}}": corporate_shapes(nav_prefix),
-        "{{credits}}": credits(),
-        "{{credits_also}}": credits_also(),
-        "{{act_picker}}": act_picker(),
-        "{{act_count}}": str(len(ACTS)),
-        "{{act_count_word}}": act_count_word(),
-        "{{season_dates}}": season_dates(),
-        "{{season_leads}}": season_leads(nav_prefix),
+        "{{market_table}}": market_table,
+        "{{included_list}}": included_list,
+        "{{included_list_columns}}": included_list_columns,
+        "{{extras_list}}": extras_list,
+        "{{faq_list}}": faq_list,
+        "{{planner_faq_list}}": planner_faq_list,
+        "{{cover_strip}}": cover_strip,
+        "{{stage_plot}}": stage_plot,
+        "{{stage_table}}": stage_table,
+        "{{power_table}}": power_table,
+        "{{loadin_table}}": loadin_table,
+        "{{event_types}}": event_types,
+        "{{roster_filters}}": roster_filters,
+        "{{roster_grid}}": lambda: roster_grid(nav_prefix),
+        "{{roster_grid_flagships}}": lambda: roster_grid_flagships(nav_prefix),
+        "{{corporate_shapes}}": lambda: corporate_shapes(nav_prefix),
+        "{{credits}}": credits,
+        "{{credits_also}}": credits_also,
+        "{{act_picker}}": act_picker,
+        "{{act_count}}": lambda: str(len(ACTS)),
+        "{{act_count_word}}": act_count_word,
+        "{{season_dates}}": season_dates,
+        "{{season_leads}}": lambda: season_leads(nav_prefix),
     }
+    for token, build in blocks.items():
+        if token in content:
+            content = content.replace(token, build())
+
     # Per-page structured data + the FAQ block, both from the dir's schema.json.
     schema_html, faq_block = page_schema(page_dir, cfg)
-    blocks["{{page_faqs}}"] = faq_block
-
-    blocks.update(extra_blocks or {})
-    for token, value in blocks.items():
+    content = content.replace("{{page_faqs}}", faq_block)
+    for token, value in (extra_blocks or {}).items():
         content = content.replace(token, value)
 
     # Parameterized tokens after the static ones, so a static block's output
@@ -1418,6 +1406,14 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         raise SystemExit(
             f"{page_dir.name}: unknown id in a parameterized token: {e}"
         )
+    # Config-level schema (the pricing FAQ, the planner FAQ) can carry market
+    # figures too, so it resolves before the Sources note is written and not
+    # in the render_page call, where it would land after it.
+    schema_html = schema_html or build_schema(cfg)
+
+    # Last: the Sources note for whatever figures the page ended up printing,
+    # and a hard stop if it printed one without asking for the note.
+    content = finalize_market(content, page_dir.name)
 
     # og_image in config is repo-relative ("img/hero.jpg") and should be the
     # image the page itself shows. The Softdocs enquiry travelled through
@@ -1436,7 +1432,7 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         og_type=cfg.get("og_type", "website"),
         og_image=og_image,
         robots=cfg.get("robots", "index, follow"),
-        schema_html=schema_html or build_schema(cfg),
+        schema_html=schema_html,
         nav_active=cfg.get("nav", ""),
         nav_prefix=nav_prefix,
     )
@@ -1452,7 +1448,6 @@ def act_hero(act: dict) -> str:
     """Hero with the video slot. `video` is null until footage exists, and the
     slot renders as a marked placeholder rather than being omitted, so the
     gap is visible on the page instead of only in a backlog."""
-    price = money(act_from_price(act))
     if act.get("video"):
         # Same contract as act_card_media: http(s) is an embed, anything
         # else is a site-relative file. Generated act pages sit two levels
@@ -1490,8 +1485,6 @@ def act_hero(act: dict) -> str:
         f'<p class="act-face">{esc(act_byline(act))}. '
         f'{esc(act["material"])}.</p>'
         f'<p class="lede">{esc(act["blurb"])}</p>'
-        f'<p class="act-from">From <span class="num-accent">{price}</span> in Denver. '
-        f'Every configuration is priced below.</p>'
         '<a class="btn" href="../../contact/?act=' + esc(act["id"]) + '">Check a date</a>'
         "</div>"
         f"{media}"
@@ -1508,8 +1501,10 @@ def act_identity(act: dict) -> str:
 
 
 def act_ladder(act: dict) -> str:
-    """The configuration ladder. Every rung carries both columns of the rate
-    card, pulled by config id, so this table cannot disagree with /pricing/."""
+    """The configuration ladder: size, build, and where it lands. Both price
+    columns came off 2026-09-04 with the published card. What the table still
+    does is the useful part, which is show a buyer which build fits the night
+    they are describing."""
     rows = []
     for rung in act["ladder"]:
         r = rate_of(rung["config"])
@@ -1518,25 +1513,18 @@ def act_ladder(act: dict) -> str:
             f'<th scope="row" class="rate-size">{esc(r["label"])}'
             f'<span class="rate-note">{esc(rung["build"])}</span></th>'
             f'<td class="ladder-best">{esc(rung["bestFor"])}</td>'
-            f'<td class="num-accent">{rng(r["denver"])}</td>'
-            f'<td>{rng(r["resort"])}</td>'
             "</tr>"
         )
-    hourly = ""
-    if any(rate_of(x["config"]).get("hourly") for x in act["ladder"]):
-        h = next(rate_of(x["config"])["hourly"] for x in act["ladder"]
-                 if rate_of(x["config"]).get("hourly"))
-        hourly = f'<p class="note">A single hour on its own is {money(h)}.</p>'
     return (
         '<section class="section section--ruled section--sunk" id="configurations">'
         '<div class="wrap"><h2 class="h3">Configurations</h2>'
-        '<p class="note">Starting prices. Mountain and resort dates add travel and '
-        "lodging, which is why they carry their own column.</p>"
         '<div class="table-scroll"><table class="rate-table tnum">'
-        "<thead><tr><th>Size</th><th>Where it lands</th><th>Denver metro</th>"
-        "<th>Mountain and resort</th></tr></thead>"
+        "<thead><tr><th>Size</th><th>Where it lands</th></tr></thead>"
         f'<tbody>{"".join(rows)}</tbody></table></div>'
-        f"{hourly}"
+        '<p class="note">The configuration and the date set the number: an hour '
+        "under cocktails and a full evening in the resort corridor are different "
+        'jobs. <a href="{{nav_prefix}}contact/">Send us the date</a> and we price '
+        "that night.</p>"
         "</div></section>"
     )
 
@@ -1597,9 +1585,10 @@ def act_cta(act: dict) -> str:
         f'You get one of two answers: {esc(act["name"])} is '
         "available and here is the hold, or it is not and here is what is. No "
         "discovery call in between, and no quote that arrives a week later.</p>"
-        '<p class="prose">Prices on this page are what you pay. Travel outside the '
-        "metro, holiday weekends and New Year's Eve are quoted as their own lines "
-        'on the contract, and all three are published on the '
+        '<p class="prose">Travel outside the metro, a night\'s lodging past the '
+        "passes, holiday weekends and New Year's Eve are quoted as their own "
+        "lines on the contract rather than folded into a headline figure. What "
+        'the wider market charges is set out on the '
         '<a href="../../pricing/">pricing page</a>.</p>'
         '<a class="btn" href="../../contact/?act=' + esc(act["id"]) + '">Check a date</a>'
         "</div></section>"
@@ -1607,6 +1596,7 @@ def act_cta(act: dict) -> str:
 
 
 def build_act_page(act: dict) -> dict:
+    begin_page()
     output = f"{ACTS_BASE}/{act['id']}/index.html"
     content = "".join([
         act_hero(act),
@@ -1615,6 +1605,7 @@ def build_act_page(act: dict) -> dict:
         act_setlist(act),
         act_cta(act),
     ])
+    content = finalize_market(content, output)
     cfg = {
         "title": act["seo_title"],
         "title_exact": True,
@@ -1760,10 +1751,18 @@ def blog_cards(published: list, nav_prefix: str = "../") -> str:
 def build_blog_post(post: dict, published: list) -> dict:
     """Render one published post to blog/<slug>/index.html."""
     br, env = ensure_blog_renderer()
+    begin_page()
     try:
         content, data = br.render_post(post["post_dir"], env, published)
     except ValueError as exc:
         raise SystemExit(f"  {post['dir_name']}: {exc}")
+
+    # A post writes figures the same way a page does: {{market:<id>}} in the
+    # YAML, resolved here against market-rates.json, with {{market_sources}}
+    # somewhere in the post or the build stops. The renderer stays free of
+    # site data; markdown leaves both tokens alone on the way through.
+    content = resolve_market_tokens(content)
+    content = finalize_market(content, post["dir_name"])
 
     output = f"blog/{data['slug']}/index.html"
     canonical = canonical_for(output)
@@ -1939,8 +1938,9 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         f"> {BRAND['intro']}",
         "",
         f"{BRAND['name']} is a live music company for private events in "
-        f"{BRAND['serviceArea']}. Rates are published rather than quoted on request; "
-        "the full card is on the pricing page.",
+        f"{BRAND['serviceArea']}. No prices are published: what the pricing page "
+        "carries is what live music costs in this market, each figure with the "
+        "source it came from, and a night is priced when a date is checked.",
         "",
         "## Credits",
         "",
@@ -1974,36 +1974,28 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
             else f"{SITE_URL}/{ACTS_BASE}/"
         lines.append(
             f"- {a['name']} ({a['style']}, {act_byline_inline(a)}): "
-            f"{a['blurb']} Configurations: {act_config_range(a)}. "
-            f"From {money(act_from_price(a))} in Denver. {where}"
+            f"{a['blurb']} Configurations: {act_config_range(a)}. {where}"
         )
 
-    lines += ["", "## Rate card", "",
-              "Starting prices by configuration. Denver metro, then mountain "
-              "and resort, which adds travel and lodging.", ""]
-    for r in SOLD_CONFIGS:
-        lines.append(
-            f"- {r['label']}: Denver {rng(r['denver'])}, "
-            f"mountain and resort {rng(r['resort'])}."
-        )
-    for r in BYREQUEST_CONFIGS:
-        lines.append(
-            f"- {r['label']} (by request, not a standard booking): "
-            f"Denver {rng(r['denver'])}, mountain and resort {rng(r['resort'])}."
-        )
-
-    lines += ["", "## Hourly build (Denver metro)", ""]
-    for r in SOLD_RATES:
-        four = money(r["callOut"] + r["hourly"] * 4)
-        lines.append(
-            f"- {r['size']}: {money(r['callOut'])} call-out + "
-            f"{money(r['hourly'])}/hour. Four hours = {four}."
-        )
+    # No rate card and no hourly build since 2026-09-04. Both sections
+    # published Signet figures, which is exactly what this file must not do.
+    # What replaces them is the pointer: the market information is on the
+    # pricing page, sourced, and Signet's number for a night comes from
+    # checking the date.
     lines += [
         "",
-        "Price = call-out + (hours x hourly rate). There is no overtime rate. "
-        "Adding a smaller group to an existing booking bills at the hourly rate "
-        "only, with no second call-out.",
+        "## Pricing",
+        "",
+        f"{BRAND['name']} publishes no price list, no starting prices and no "
+        "hourly figures. Actual prices vary by date, size, hours and location. "
+        f"{SITE_URL}/pricing/ sets out what live music costs in this market, "
+        "with each figure attributed to the public source it came from, so a "
+        "budget can be set before anyone writes. To get the number for a "
+        f"specific night, send the date: {SITE_URL}/contact/",
+        "",
+        "Travel beyond the Denver metro, a night's lodging past the passes, "
+        "holiday weekends and New Year's Eve are quoted as their own lines "
+        "rather than folded into a headline figure.",
         "",
     ]
     (ROOT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")

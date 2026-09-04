@@ -1,15 +1,31 @@
 #!/usr/bin/env python3
-"""Mechanical copy gate for the SEO buildout pages (handoff §7).
+"""Mechanical copy gate (handoff §7, plus the 2026-09-04 no-published-price law).
 
-Greps the buildout's authored sources for the bans a machine can catch:
-em dashes, the word AI, chair, room/rooms (ballroom and green room exempt),
-exclamation marks, and the consultant kill list. The judgment calls (negation
-headlines, "book" as repertoire, invented claims) stay with Copy QA; this
-catches the greppable ones before a human wastes a pass on them.
+Two passes.
+
+1. Authored sources under the buildout page dirs get the greppable copy bans:
+   em dashes, the word AI, chair, room/rooms (ballroom and green room exempt),
+   exclamation marks, and the consultant kill list. The judgment calls
+   (negation headlines, "book" as repertoire, invented claims) stay with Copy
+   QA; this catches the mechanical ones before a human wastes a pass on them.
+
+2. The whole built site, every index.html plus llms.txt, gets the money gate.
+   From 2026-09-04 the site publishes no Signet price of any kind: no card, no
+   floor, no "from", no hourly, no call-out grid, no uplift percentage, no
+   travel figure, no discount rule. The only legal dollar figures and
+   percentages are the ones in _src/data/market-rates.json, and a page that
+   prints one has to print its source beside it (build.py enforces that half).
+   A phrase ban catches the claims that survive a figure sweep, the "every
+   rate", "rates published", "from $" family.
+
+   The audit is deliberately whole-site rather than a directory list: the
+   2026-08-28 pass left pricing, home, music, planners, contact, 404 and the
+   blog ungated, and a per-directory allowlist is how that happens again.
 
 Run: python3 scripts/copy_gate.py [page-dir ...]   (default: the buildout dirs)
 Exit 1 on any hit.
 """
+import json
 import pathlib
 import re
 import sys
@@ -27,7 +43,7 @@ BUILDOUT_DIRS = [
     "corporate-retreats-beaver-creek", "corporate-retreats-breckenridge",
     "ensembles-solo-guitarist", "ensembles-acoustic-duo",
     "ensembles-jazz-duo-trio", "ensembles-flamenco-trio", "ensembles-dj",
-    "artists-tejas-singh",
+    "artists-tejas-singh", "pricing",
 ]
 
 COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
@@ -48,6 +64,32 @@ CHECKS = [
     ("the word quietly", re.compile(r"\bquietly\b", re.IGNORECASE), "never publishes"),
 ]
 
+# Claims that survive a figure sweep because they carry no number. Whole site,
+# zero hits. "call-out" is how this market bills and the two market pages
+# explain that, so it is allowed on those paths and nowhere else.
+PHRASE_BANS = [
+    ("every rate", None),
+    ("rates published", None),
+    ("rate published", None),
+    ("published rates", None),
+    ("published card", None),
+    ("rate card", None),
+    ("no quote required", None),
+    ("every figure", None),
+    ("starting at", None),
+    ("from $", None),
+    ("per hour", None),
+    # "call-out" is how this market bills. The three pages whose subject is
+    # exactly that may use the word; nowhere else may.
+    ("call-out", ("pricing/index.html",
+                  "guides/live-music-cost-colorado/index.html",
+                  "blog/what-live-music-costs-corporate-event/index.html",
+                  "blog/how-to-read-a-band-quote/index.html")),
+    ("+25%", None),
+    ("+50%", None),
+    ("10% off", None),
+]
+
 
 def check_file(path: pathlib.Path) -> list:
     text = path.read_text(encoding="utf-8")
@@ -61,53 +103,74 @@ def check_file(path: pathlib.Path) -> list:
     return hits
 
 
-def legal_dollar_figures() -> set:
-    """Every dollar figure derivable from the data files, plus the whitelist.
+def legal_figures() -> tuple:
+    """Every dollar figure and percentage the site may print.
 
-    The whitelist is the set with no data source: the cost guide's market
-    anchors (commodity roughly $1,600–2,100, boutiques from $8,000, from the
-    buildout handoff). Everything else a page prints must trace to data.
+    Rebuilt 2026-09-04 from market-rates.json alone. The old version read
+    site.json rates, acts.json rateCard and site.json extras, and carried a
+    hardcoded {1600, 2100, 8000} for the cost guide's unsourced market
+    anchors. None of those exist any more: Signet's numbers left the repo with
+    the published card, and the market anchors are sourced entries now.
     """
-    import json as _json
-    site = _json.loads((ROOT / "_src" / "data" / "site.json").read_text())
-    roster = _json.loads((ROOT / "_src" / "data" / "acts.json").read_text())
-    legal = {1600, 2100, 8000}
-    for r in roster["rateCard"]:
-        legal.update(r["denver"] + r["resort"])
-        if r.get("hourly"):
-            legal.add(r["hourly"])
-    for r in site["rates"]:
-        legal.update([r["callOut"], r["hourly"]])
-        legal.update(r["callOut"] + r["hourly"] * h for h in range(1, 7))
-    for e in site["extras"]:
-        legal.update(int(n.replace(",", "")) for n in re.findall(r"\$?([\d,]+)", e["rate"]))
-    for v in site["insurance"].values():
-        legal.add(int(re.sub(r"[^\d]", "", v)))
-    return legal
+    data = json.loads((ROOT / "_src" / "data" / "market-rates.json").read_text())
+    dollars, percents = set(), set()
+    for m in data["rates"]:
+        fig = m["figure"]
+        vals = fig if isinstance(fig, list) else [fig]
+        (percents if m["kind"] == "percent" else dollars).update(vals)
+    return dollars, percents
 
 
-def audit_built_figures() -> list:
-    """Check every $-figure on the built buildout pages (home included)
-    against the legal set, so a typed figure that drifts from the data files
-    fails the build instead of shipping wrong."""
-    import json as _json
-    legal = legal_dollar_figures()
-    hits = []
-    outputs = ["index.html"]
-    for slug in BUILDOUT_DIRS:
-        cfgp = PAGES / slug / "config.json"
-        if cfgp.exists():
-            outputs.append(_json.loads(cfgp.read_text())["output"])
-    for out in outputs:
-        path = ROOT / out
-        if not path.exists():
+def built_pages() -> list:
+    """Every built page on the site, plus llms.txt. Output only: _src, the
+    scripts dir and the deploy workflow are not published."""
+    skip = {"_src", "_site", "scripts", ".git", ".github", "node_modules",
+            "__pycache__", "vendor"}
+    out = []
+    for p in sorted(ROOT.rglob("*.html")):
+        if any(part in skip for part in p.relative_to(ROOT).parts):
             continue
-        text = re.sub(r"<script.*?</script>", " ", path.read_text(), flags=re.DOTALL)
+        out.append(p)
+    llms = ROOT / "llms.txt"
+    if llms.exists():
+        out.append(llms)
+    return out
+
+
+def visible_text(path: pathlib.Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    if path.suffix == ".html":
+        # Scripts stripped except JSON-LD: structured data is published text
+        # and an Offer hiding in it is exactly what this gate is for.
+        text = re.sub(
+            r'<script(?![^>]*application/ld\+json).*?</script>', " ",
+            text, flags=re.DOTALL,
+        )
         text = re.sub(r"<[^>]+>", " ", text)
+    return text
+
+
+def audit_money() -> list:
+    """Every $-figure and percentage on every built page, against the legal
+    set. A figure that is not in market-rates.json is a Signet price, a stale
+    typed number, or a claim nobody can source. All three fail."""
+    dollars, percents = legal_figures()
+    hits = []
+    for path in built_pages():
+        rel = str(path.relative_to(ROOT))
+        text = visible_text(path)
         for m in re.finditer(r"\$([\d,]+)", text):
             n = int(m.group(1).replace(",", ""))
-            if n not in legal:
-                hits.append((out, f"${m.group(1)}"))
+            if n not in dollars:
+                hits.append((rel, f"dollar figure not in market-rates.json: ${m.group(1)}"))
+        for m in re.finditer(r"(\d+)\s*(?:%|percent\b)", text):
+            n = int(m.group(1))
+            if n not in percents:
+                hits.append((rel, f"percentage not in market-rates.json: {m.group(0).strip()}"))
+        low = text.lower()
+        for phrase, allowed_on in PHRASE_BANS:
+            if phrase in low and not (allowed_on and rel in allowed_on):
+                hits.append((rel, f"banned phrase: {phrase!r}"))
     return hits
 
 
@@ -124,10 +187,10 @@ def main() -> int:
     for path, line, label, fix, snippet in hits:
         rel = path.relative_to(ROOT)
         print(f"{rel}:{line}  [{label}] {fix}\n    {snippet}")
-    figure_hits = audit_built_figures()
-    for out, fig in figure_hits:
-        print(f"{out}  [dollar figure not derivable from data] {fig}")
-    total = len(hits) + len(figure_hits)
+    money_hits = audit_money()
+    for out, why in money_hits:
+        print(f"{out}  [{why}]")
+    total = len(hits) + len(money_hits)
     print(f"\n{total} hit(s)." if total else "Clean.")
     return 1 if total else 0
 

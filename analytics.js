@@ -37,7 +37,10 @@
     if (action.indexOf("formsubmit.co") !== -1) send("lead_submit");
   }, true);
 
-  // pricing_engaged: first rate table scrolled into view, once per page view.
+  // pricing_engaged: first .rate-table scrolled into view, once per page view.
+  // Since 2026-09-04 the table that carries that class is the MARKET table
+  // (build.py market_table), so the event still means what it always meant:
+  // a reader reached the money block and read it. No change was needed here.
   var tables = document.querySelectorAll(".rate-table");
   if (tables.length && "IntersectionObserver" in window) {
     var fired = false; // latch: a pending batch can land after disconnect()

@@ -4,15 +4,17 @@
  * loads on the roster page and the contact page and does the right thing on
  * each: roster filtering, and preselecting the act on the contact form.
  *
- * Progressive enhancement, the same contract quote.js works to: the controls
- * ship hidden in the HTML and this file unhides them. With script off, or if
- * this file fails to load, every act on the roster is still on the page and
- * nothing is offered that cannot work.
+ * Progressive enhancement: the controls ship hidden in the HTML and this file
+ * unhides them. With script off, or if this file fails to load, every act on
+ * the roster is still on the page and nothing is offered that cannot work.
  *
  * The filter is a hidden-attribute toggle over data attributes rendered by
  * build.py. No re-render, no template in JS, and the cards remain the same
- * DOM nodes the crawler saw, which matters on the one page whose job is to be
- * indexed with prices in it.
+ * DOM nodes the crawler saw.
+ *
+ * The starting-price filter was removed 2026-09-04 with the published rate
+ * card. Kind of night and size are the two axes left, and they are the two a
+ * buyer actually shops this roster on.
  */
 (function () {
   "use strict";
@@ -26,7 +28,6 @@
 
   var bucket = document.getElementById("filter-bucket");
   var config = document.getElementById("filter-config");
-  var price = document.getElementById("filter-price");
   var reset = document.getElementById("filter-reset");
   var countEl = document.getElementById("filter-count");
   var emptyEl = document.getElementById("filter-empty");
@@ -38,16 +39,12 @@
   function apply() {
     var wantBucket = bucket.value;
     var wantConfig = config.value;
-    var ceiling = price.value ? parseInt(price.value, 10) : 0;
     var shown = 0;
 
     cards.forEach(function (card) {
       var ok = true;
       if (wantBucket && tags(card, "buckets").indexOf(wantBucket) === -1) ok = false;
       if (wantConfig && tags(card, "configs").indexOf(wantConfig) === -1) ok = false;
-      // Price filters on the act's starting figure: "under $4,000" means the
-      // act can be booked from under $4,000, not that every size of it is.
-      if (ceiling && parseInt(card.getAttribute("data-price"), 10) > ceiling) ok = false;
       card.hidden = !ok;
       if (ok) shown += 1;
     });
@@ -59,14 +56,13 @@
     emptyEl.hidden = shown !== 0;
   }
 
-  [bucket, config, price].forEach(function (el) {
+  [bucket, config].forEach(function (el) {
     el.addEventListener("change", apply);
   });
 
   reset.addEventListener("click", function () {
     bucket.value = "";
     config.value = "";
-    price.value = "";
     apply();
   });
 

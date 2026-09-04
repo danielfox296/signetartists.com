@@ -19,8 +19,8 @@
 
 :root {
   /* Tells the UA to render form controls, scrollbars and spellcheck underlines
-     dark. Without it the select menus and the quote engine's controls come
-     back light and the page looks half-converted. */
+     dark. Without it the select menus and the filter controls come back
+     light and the page looks half-converted. */
   color-scheme: dark;
 
   /* Grounds. The band is now LIFTED off the base rather than sunk into it,
@@ -1252,116 +1252,6 @@ img {
   border: 1px solid var(--rule);
   background: var(--paper-sunk);
   padding: 2rem;
-}
-
-/* ---------------------------------------------------------- quote engine */
-
-/* Moved out of the quote-engine section fragment 2026-08-02: <style> is
-   metadata content, non-conforming in body position. Everything is namespaced
-   under #quote-engine; the section ships hidden and quote.js reveals it only
-   after proving the rendered rate card. */
-
-#quote-engine .quote-grid {
-  margin-top: 3rem;
-  align-items: start;
-}
-
-#quote-engine fieldset.field {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-}
-
-#quote-engine legend {
-  padding: 0;
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: var(--track-caps);
-  color: var(--ink-faint);
-}
-
-#quote-engine .radio-row {
-  margin-top: 0.75rem;
-  display: grid;
-  row-gap: 0.625rem;
-}
-
-#quote-engine .radio-row label {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  font-size: 0.875rem;
-  color: var(--ink-soft);
-  cursor: pointer;
-}
-
-#quote-engine .radio-row input[type="radio"] {
-  width: auto;
-  margin: 0;
-  accent-color: var(--brass);
-  flex-shrink: 0;
-}
-
-#quote-engine select:disabled {
-  background: var(--paper-sunk);
-  color: var(--ink-faint);
-  cursor: not-allowed;
-}
-
-#quote-engine .quote-lines {
-  margin-top: 1.5rem;
-  border-bottom: 0;
-}
-
-#quote-engine .quote-lines dd {
-  color: var(--ink);
-}
-
-#quote-engine .qe-discount dd {
-  color: var(--brass);
-}
-
-#quote-engine .quote-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1.5rem;
-  border-top: 1px solid var(--ink);
-  padding-top: 1rem;
-}
-
-#quote-engine .quote-total-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: var(--track-caps);
-  color: var(--ink-faint);
-}
-
-#quote-engine .quote-total-figure {
-  font-family: var(--display);
-  font-size: 2rem;
-  line-height: 1.1;
-  color: var(--ink);
-}
-
-@media (min-width: 1024px) {
-  #quote-engine .quote-panel {
-    position: sticky;
-    top: 5.5rem;
-  }
-}
-
-@media print {
-  #quote-engine .btn-row {
-    display: none;
-  }
-
-  #quote-engine .quote-panel {
-    position: static;
-  }
 }
 
 /* ---------------------------------------------------------------- footer */
