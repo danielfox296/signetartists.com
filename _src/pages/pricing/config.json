@@ -2,7 +2,7 @@
   "_seo_note": "The single most important page on the site to have indexed, and the URL and the title do not change: it was submitted for indexing 2026-08-27 and title_exact is set. REWRITTEN 2026-09-04 with the no-published-price decision. What it publishes now is the market: sourced figures from market-rates.json through {{market_table}}, with {{market_sources}} under them, and an explanation of how a quote is put together. No Signet figure appears on it, in its schema or in llms.txt. Static HTML, in the sitemap, robots allows all, no noindex.",
   "title": "Pricing: what a band costs for a private event in Colorado",
   "title_exact": true,
-  "meta_description": "What live music costs in Denver and Colorado: sourced market figures, how a band quote is built, and what moves the number. Send a date for ours.",
+  "meta_description": "What the Denver market charges for live music: $2,500 to $8,000 for a band, and what moves a number inside that. Signet prices your date.",
   "output": "pricing/index.html",
   "nav": "pricing",
   "schema": "pricing"

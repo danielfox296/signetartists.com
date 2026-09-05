@@ -13,7 +13,7 @@
       "kind": "usd",
       "unit": "per event",
       "market": "Colorado",
-      "what": "What Colorado couples budget for a live band",
+      "what": "What couples budget for a live band",
       "source": "The Wedding Report, Colorado estimate",
       "url": "https://wedding.report/index.cfm/action/wedding_cost.estimate/budgetid/01CD9F22-E589-7C9B-880BF5E4E10CE922",
       "retrieved": "2026-09-04"
@@ -27,7 +27,7 @@
       "kind": "usd",
       "unit": "per event",
       "market": "United States",
-      "what": "What most US couples pay for a live wedding band in 2026",
+      "what": "What most couples pay for a wedding band",
       "source": "Paperlust, 2026 wedding band cost guide",
       "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
       "retrieved": "2026-09-04"
@@ -72,20 +72,6 @@
       "retrieved": "2026-09-04"
     },
     {
-      "id": "us_four_piece",
-      "figure": [
-        2500,
-        5000
-      ],
-      "kind": "usd",
-      "unit": "four-hour reception",
-      "market": "United States",
-      "what": "A four-piece band over a four-hour reception, national",
-      "source": "Paperlust, 2026 wedding band cost guide",
-      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
-      "retrieved": "2026-09-04"
-    },
-    {
       "id": "mountain_west_band",
       "figure": [
         2500,
@@ -108,7 +94,7 @@
       "kind": "usd",
       "unit": "per event",
       "market": "Denver",
-      "what": "Denver wedding bands, a trio at the bottom to a full band with horns at the top",
+      "what": "A Denver band, a trio up to a full band with horns",
       "source": "Uptown Drive, Denver wedding entertainment guide 2026",
       "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
       "retrieved": "2026-09-04"
@@ -122,7 +108,7 @@
       "kind": "usd",
       "unit": "per event",
       "market": "Denver",
-      "what": "The four to six piece band, which the Denver market treats as its middle",
+      "what": "The four to six piece, the middle of the Denver market",
       "source": "Uptown Drive, Denver wedding entertainment guide 2026",
       "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
       "retrieved": "2026-09-04"
@@ -217,7 +203,7 @@
       "kind": "usd",
       "unit": "per event",
       "market": "United States",
-      "what": "What a cover or jazz band costs for a corporate event, US",
+      "what": "A cover or jazz band for a corporate event",
       "source": "Livent Group, 2026 live band cost guide",
       "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
       "retrieved": "2026-09-04"
@@ -259,86 +245,11 @@
       "kind": "usd",
       "unit": "per event",
       "market": "United States",
-      "what": "What a seven to nine piece show band costs, US",
+      "what": "A seven to nine piece show band",
       "source": "Livent Group, 2026 live band cost guide",
       "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
       "retrieved": "2026-09-04"
-    },
-    {
-      "id": "us_showband_speechless",
-      "figure": [
-        6000,
-        15000
-      ],
-      "kind": "usd",
-      "unit": "per event",
-      "market": "United States",
-      "what": "What a full professional wedding band costs, national averages by size",
-      "source": "SpeechLess, 2026 and 2027 wedding band pricing guide",
-      "url": "https://speechlessmusic.com/blog/how-much-does-a-wedding-band-cost-a-complete-2026-pricing-guide",
-      "retrieved": "2026-09-04"
-    },
-    {
-      "id": "space_gallery_rental",
-      "figure": [
-        4000,
-        6500
-      ],
-      "kind": "usd",
-      "unit": "eight-hour rental",
-      "market": "Denver",
-      "what": "Space Gallery, a weeknight through a Saturday",
-      "source": "Space Gallery, published event rental rates",
-      "url": "https://spacegallery.org/space-gallery/",
-      "retrieved": "2026-09-04"
-    },
-    {
-      "id": "ophelias_buyout",
-      "figure": [
-        4000,
-        5500
-      ],
-      "kind": "usd",
-      "unit": "full-building buyout",
-      "market": "Denver",
-      "what": "Ophelia's Electric Soapbox, Sunday to Thursday through a Friday or Saturday",
-      "source": "Ophelia's Electric Soapbox, published private event pricing",
-      "url": "https://opheliasdenver.com/private-events/",
-      "retrieved": "2026-09-04"
-    },
-    {
-      "id": "ophelias_stage_level",
-      "figure": 2750,
-      "kind": "usd",
-      "unit": "stage level",
-      "market": "Denver",
-      "what": "Ophelia's Electric Soapbox, the cheapest single level",
-      "source": "Ophelia's Electric Soapbox, published private event pricing",
-      "url": "https://opheliasdenver.com/private-events/",
-      "retrieved": "2026-09-04"
-    },
-    {
-      "id": "clyfford_still_buyout",
-      "figure": 5000,
-      "kind": "usd",
-      "unit": "up to four hours",
-      "market": "Denver",
-      "what": "Clyfford Still Museum, a full evening buyout",
-      "source": "Clyfford Still Museum, published event rental rates",
-      "url": "https://clyffordstillmuseum.org/plan-your-visit/host-an-event/",
-      "retrieved": "2026-09-04"
-    },
-    {
-      "id": "clyfford_still_monday",
-      "figure": 10000,
-      "kind": "usd",
-      "unit": "eight hours on a Monday",
-      "market": "Denver",
-      "what": "Clyfford Still Museum, the eight-hour Monday buyout",
-      "source": "Clyfford Still Museum, published event rental rates",
-      "url": "https://clyffordstillmuseum.org/plan-your-visit/host-an-event/",
-      "retrieved": "2026-09-04"
     }
   ],
-  "_venue_note": "Venue rental figures, added 2026-09-04. The Denver venues post named three venues' published buyout prices with no provenance on file. They are market figures like any other, they belong to the venue rather than to Signet, and they now live here with the venue's own page and the date it was read. Venue pricing moves seasonally; re-read before reusing. Ophelia's does not publish event hours, so the post no longer claims any."
+  "_venue_note": "Venue rental figures were added here on 2026-09-04 and REMOVED on 2026-09-05. They were verified and correctly attributed, and they were still the wrong thing to publish: a venue's rental rate is not Signet's story, it dates faster than anything else on the site, and a stale third party price on a vendor page is a small liability for no marketing gain. The venues post names the venues, links their own event pages and says which of them publish flat rates, which is the useful part. Do not re-add third-party venue pricing."
 }

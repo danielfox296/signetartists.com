@@ -76,12 +76,21 @@ LISTINGS = [a for a in ACTS if a["status"] == "listing"]
 MARKET_FILE = DATA / "market-rates.json"
 MARKET = json.loads(MARKET_FILE.read_text(encoding="utf-8"))["rates"]
 MARKET_BY_ID = {m["id"]: m for m in MARKET}
-# The rows {{market_table}} prints: the shape of the market a Colorado buyer is
-# actually shopping in, largest context first. Ids resolve against MARKET.
+# The rows {{market_table}} prints. Denver first, because a Denver buyer
+# reading this page needs their own market before the national one, then the
+# national context, then the top of the range.
+#
+# Two ids are deliberately NOT here (2026-09-05, marketing pass). The
+# marketplace average is the cheapest tier in this market, and printed as a
+# bare figure in the accent column on our own pricing page it anchors a reader
+# down before anything has framed it. It belongs where it is framed as a tier,
+# which is the cost guide's market section, and the pricing page points there
+# in a sentence instead. The holiday surcharge is a modifier rather than a
+# level, so it reads wrong in a table of what things cost; it lives in the
+# prose about what moves a number.
 MARKET_TABLE_IDS = [
-    "co_band_budget", "us_band_range", "us_corporate_band",
-    "denver_marketplace_avg", "denver_band_range", "denver_midtier_band",
-    "us_showband", "denver_holiday_surcharge",
+    "denver_band_range", "denver_midtier_band", "us_corporate_band",
+    "co_band_budget", "us_band_range", "us_showband",
 ]
 
 # Ids resolved on the page currently being built, in first-use order. Reset by
