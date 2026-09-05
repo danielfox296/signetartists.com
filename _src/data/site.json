@@ -29,13 +29,13 @@
   "_acts_moved_note": "The two house bands (The Standards, The Headliners) and the DJ lived here until the 2026-08-15 restructure. The business books named acts, so the roster moved to _src/data/acts.json with a real schema: bucket and config tags, per-config pricing read off the rate card, and flagship/listing status. Nothing reads site.acts any more.",
   "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
   "included": [
-    "A named contact for the night, given to you before the event",
+    "A personal contact for the night.",
     "Sound sized to the venue",
     "Load-in, setup, strike and load-out",
     "Certificate of insurance naming your venue",
     "W-9 and one itemised invoice",
     "Timeline coordination before the event",
-    "Continuous audio during breaks"
+    "Continuous audio during set breaks"
   ],
   "extras": [
     {
