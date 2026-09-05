@@ -3,11 +3,11 @@
 
 Two passes.
 
-1. Authored sources under the buildout page dirs get the greppable copy bans:
-   em dashes, the word AI, chair, room/rooms (ballroom and green room exempt),
-   exclamation marks, and the consultant kill list. The judgment calls
-   (negation headlines, "book" as repertoire, invented claims) stay with Copy
-   QA; this catches the mechanical ones before a human wastes a pass on them.
+1. Authored sources under the buildout page dirs get the copy bans that are
+   actually Daniel's: em dashes, the word AI, and chair / room / rooms in
+   music copy (ballroom and green room exempt), plus a short list of hollow
+   B2B filler. Emotive words are NOT banned. This site sells a night people
+   remember, and "unforgettable" and "magical" are legitimate tools for that.
 
 2. The whole built site, every index.html plus llms.txt, gets the money gate.
    From 2026-09-04 the site publishes no Signet price of any kind: no card, no
@@ -56,12 +56,20 @@ CHECKS = [
     ("chair", re.compile(r"\bchairs?\b", re.IGNORECASE), "the seat/role sense is banned"),
     ("room/rooms", re.compile(r"(?<!ball)(?<!green )\brooms?\b", re.IGNORECASE),
      "say venue, floor, crowd, night (ballroom/green room exempt)"),
-    ("exclamation mark", re.compile(r"!(?!\[)"), "no exclamation marks"),
-    ("consultant vocabulary", re.compile(
-        r"\b(leverage|seamless|elevate|curated|bespoke|solutions|unforgettable"
-        r"|magical|world-class|premier|award-winning)\b", re.IGNORECASE),
-     "kill list"),
-    ("the word quietly", re.compile(r"\bquietly\b", re.IGNORECASE), "never publishes"),
+    # RECALIBRATED 2026-09-05, Daniel: "unforgettable and magical are fine and
+    # they should NOT be banned, they are emotive language that moves humans to
+    # picture things and feel." The old kill list, the exclamation-mark ban and
+    # the "quietly" ban were agent-manufactured, not his, and they were the
+    # reason this site reads like a spec sheet. They are gone. His own home
+    # page copy violated two of them.
+    #
+    # What is left is hollow B2B filler that makes a sentence vaguer, never
+    # warmer. Nobody pictures anything when they read "seamless". If any of
+    # these earn their place in a real sentence, delete the line.
+    ("business filler", re.compile(
+        r"\b(leverage|seamless|solutions|bespoke|curated|synergy|holistic"
+        r"|best-in-class|turnkey)\b", re.IGNORECASE),
+     "vague where it should be vivid; say the thing itself"),
 ]
 
 # Claims that survive a figure sweep because they carry no number. Whole site,
