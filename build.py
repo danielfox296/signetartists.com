@@ -233,7 +233,7 @@ def market_table() -> str:
     )
     return (
         '<div class="table-scroll"><table class="rate-table tnum">'
-        "<thead><tr><th>What the market pays</th><th>Figure</th>"
+        "<thead><tr><th>2 hours of live music performance</th><th>Figure</th>"
         "<th>Market</th></tr></thead>"
         f"<tbody>{rows}</tbody></table></div>"
     )
