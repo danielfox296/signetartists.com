@@ -30,9 +30,9 @@
   "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
   "included": [
     "A personal contact for the night.",
-    "Sound sized to the venue",
+    "Sound sized for a small-to-medium sized event venue",
     "Load-in, setup, strike and load-out",
-    "Certificate of insurance naming your venue",
+    "Certificate of insurance",
     "W-9 and one itemised invoice",
     "Timeline coordination before the event",
     "Continuous audio during set breaks"
@@ -54,7 +54,7 @@
       "item": "Live-band karaoke"
     },
     {
-      "item": "Learned songs beyond the first, with four weeks' notice"
+      "item": "Learned songs, with four weeks' notice"
     }
   ],
   "_configurations_note": "DRAFT 2026-08-07, swept 2026-08-17 with the Q4 refocus: rows now cover exactly what is sold, solo through quartet plus the DJ. The quintet, seven-, ten- and thirteen-piece rows are in git history if a larger size ever returns as a sold product. Solo has no call-out/hourly row in `rates` (the card publishes it as a range only), so it appears here for logistics without a rates twin; every other row name stays locked to `rates` so the technical page and the rate card cannot disagree. A solo's logistics mirror the DJ's: one person and a small PA. Footprints are the working figures a band actually takes, not the stage-rental guidance, which runs far larger; that gap is the point of the page. Inputs are channel counts at the desk, including one announcement mic on its own channel.",

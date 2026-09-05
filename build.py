@@ -210,8 +210,7 @@ def market_sources() -> str:
     label = "Where this figure comes from" if len(seen) == 1 \
         else "Where these figures come from"
     return (
-        f'<p class="note">{label}, read {when}: {links}. '
-        "Signet prices a date on request."
+        f'<p class="note">{label}, read {when}: {links}. Signet provides prices for a specific date on request.'
         "</p>"
     )
 
