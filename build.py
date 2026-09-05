@@ -201,17 +201,15 @@ def market_sources() -> str:
             seen.append(key)
     if not seen:
         return ""
-    links = ", ".join(
-        f'<a href="{esc(url)}" rel="nofollow noopener" target="_blank">{esc(src)}</a>'
-        for src, url in seen
-    )
+    # 2026-09-05, Daniel: never name or link the sources on the page — some
+    # are competitors. Provenance stays in market-rates.json (still mandatory,
+    # still checked); the page says only what kind of source and when.
     read_on = max(MARKET_BY_ID[mid]["retrieved"] for mid in _market_used)
-    when = datetime.datetime.strptime(read_on, "%Y-%m-%d").strftime("%-d %B %Y")
-    label = "Where this figure comes from" if len(seen) == 1 \
-        else "Where these figures come from"
+    when = datetime.datetime.strptime(read_on, "%Y-%m-%d").strftime("%B %Y")
+    what = "This figure comes" if len(seen) == 1 else "These figures come"
     return (
-        f'<p class="note">{label}, read {when}: {links}. Signet provides prices for a specific date on request.'
-        "</p>"
+        f'<p class="note">{what} from published 2026 market guides, read {when}. '
+        "Signet provides prices for a specific date on request.</p>"
     )
 
 
