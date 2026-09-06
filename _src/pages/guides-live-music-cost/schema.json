@@ -41,6 +41,10 @@
     {
       "q": "Does booking early get a lower price?",
       "a": "No. Booking early buys availability, which on a December Saturday is worth more than a discount would be. What does move a number is the date itself: this market charges {{market:denver_holiday_surcharge}} for a holiday weekend, and New Year's Eve is its own case everywhere. Corporate holiday dates are decided August through October."
+    },
+    {
+      "q": "How much does a jazz trio cost?",
+      "a": "A trio across a four-hour evening runs {{market:us_trio}} in this market, and a jazz trio or acoustic duo for a dinner runs {{market:us_dinner_band}}. Denver publishes no separate trio figure: the Denver band range of {{market:denver_band_range}} starts at the trio. Signet does not publish prices, so send the date and the length of the evening and we price that night."
     }
   ]
 }
