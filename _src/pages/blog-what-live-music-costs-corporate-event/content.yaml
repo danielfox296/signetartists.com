@@ -1,12 +1,14 @@
 title: "What live music costs for a corporate event"
+seo_title: "What live music costs for a corporate event (2026), two hours and four"
 slug: "what-live-music-costs-corporate-event"
 eyebrow: "CORPORATE"
-dek: "A band's price has two parts. Here is what each one covers, what moves it, and what the total comes to for the shapes a Denver corporate night actually takes."
+dek: "A band's price has two parts. Here is what each one covers, what two hours costs against four, and what the total comes to for the shapes a Denver corporate night actually takes."
 date: "2026-08-05"
-last_updated: "2026-08-27"
+last_updated: "2026-09-06"
 author:
   name: "Signet Artists"
-meta_description: "What a live band costs for a Denver corporate event: the market runs $2,500 to $8,000, how a quote is built, and what travel and December add."
+meta_description: "What live music costs for a corporate event in 2026: what the market charges for two hours against four, how a quote is built, and what travel and December add."
+llms_description: "What live music costs for a corporate event, built from sourced market figures: why a band's price has two parts, what the market charges for a two-hour booking against a four-hour one, what a company holiday party budget should carry, and what travel, December and overtime add. Signet publishes no prices of its own."
 
 hero:
   src: "img/hero.jpg"
@@ -90,6 +92,62 @@ sections:
       hours they play than on which act is standing there.
 
   - type: subhead
+    text: "Two hours against four, which is how buyers actually ask"
+
+  - type: prose
+    body: |
+      Almost nobody types the question the way the industry answers it. What
+      people search is how much it costs to hire a band for an hour, for two
+      hours, for four. Hours are the unit the budget line is written in, so
+      here is the market read that way.
+
+      The first thing to know is that two hours is not half of four, and the
+      reason is the call-out above. A two-hour booking costs the act the same
+      evening a four-hour booking costs: the same drive, the same load-in,
+      the same sound check, the same strike after the guests leave. Only the
+      playing time is halved, and playing time is the smaller half of the
+      fee. A short booking is closer to two thirds of a long one than to half
+      of it, which is why the short end of every published range sits higher
+      than the arithmetic suggests it should.
+
+  - type: comparison_table
+    title: "What the market charges for a short booking and for a full evening"
+    columns: ["What you are booking", "What the market charges", "Whose market"]
+    rows:
+      - ["A short booking, a ceremony or a cocktail hour", "{{market:denver_strings}}", "Denver"]
+      - ["A jazz trio or acoustic duo for a dinner", "{{market:us_dinner_band}}", "United States"]
+      - ["An acoustic duo across a four-hour evening", "{{market:us_duo}}", "United States"]
+      - ["A trio across a four-hour evening", "{{market:us_trio}}", "United States"]
+      - ["A cover or jazz band for a corporate evening", "{{market:us_corporate_band}}", "United States"]
+      - ["Each hour past the contracted set", "{{market:denver_overtime}}", "Denver"]
+
+  - type: prose
+    body: |
+      Read the two ends together. The Denver market puts a short ceremony or
+      cocktail-hour booking at {{market:denver_strings}}, and a jazz trio or
+      acoustic duo for a dinner at {{market:us_dinner_band}} nationally, the
+      spread inside that second figure being how long the music plays and how
+      much production travels with it. A four-hour evening moves to
+      {{market:us_duo}} for an acoustic duo and {{market:us_trio}} for a trio
+      across this market, and a cover or jazz band carrying a corporate
+      evening runs {{market:us_corporate_band}}.
+
+      For a two-hour corporate booking specifically, the useful anchor is the
+      dinner figure rather than the reception one, because a two-hour job is
+      almost always a seated evening with remarks in it rather than a floor
+      that has to fill. Two players for two hours is the cheapest real
+      booking on any of these lists, and it is the one most often
+      over-specified: the quartet gets quoted for an evening that a duo would
+      have carried.
+
+      Going the other way, the market's price for time added on the night is
+      {{market:denver_overtime}} for each hour past the contracted set. That
+      line is worth asking about before you sign anything, because a four-hour
+      quote that becomes a five-hour night is where a budget gets broken after
+      the fact. We do not charge one, and the paragraph on what moves the
+      number, below, says what we do instead.
+
+  - type: subhead
     text: "Three shapes a corporate night takes"
 
   - type: prose
@@ -137,10 +195,10 @@ sections:
         where your people sing and the band plays behind them.
       - **Learned songs beyond the first.** The first one is included with us;
         each one after that is its own line.
-      - **Overtime.** This market charges {{market:denver_overtime}} for time
-        beyond the contracted set. We do not: added time costs what the
-        earlier hours did, in 30-minute increments, so at eleven o'clock the
-        only question is whether the crowd wants another half hour.
+      - **Overtime.** This market charges {{market:denver_overtime}} for each
+        hour beyond the contracted set. We do not: added time costs what the
+        earlier time did, in 30-minute increments, so if the night runs long
+        the only question left is whether the crowd wants more.
 
   - type: subhead
     text: "The holiday calendar, worked through"
@@ -161,6 +219,32 @@ sections:
       If you are still at the ideas stage rather than the date stage,
       [the ideas list](https://signetartists.com/blog/office-holiday-party-ideas-denver/)
       runs seven party shapes with a size attached to each.
+
+  - type: subhead
+    text: "What should live music cost for a company holiday party?"
+
+  - type: prose
+    body: |
+      Budget {{market:us_corporate_band}} for a cover or jazz band, which is
+      what this market charges for the format most holiday parties book, and
+      {{market:denver_band_range}} if you want the Denver read, a trio at the
+      bottom of that and a full band with horns at the top. Then move the
+      number for the date: a Denver holiday weekend carries
+      {{market:denver_holiday_surcharge}} across this market, and New Year's
+      Eve is its own case everywhere.
+
+      If the party is a seated dinner rather than a dance floor, the honest
+      figure is lower and the format is smaller: a jazz trio or acoustic duo
+      for a dinner runs {{market:us_dinner_band}}. If it is a full evening
+      with dancing in a ballroom, the four-hour figures above are the band you
+      are in, and the horns and the second vocalist are what take a booking
+      into show-band money at {{market:us_showband}}.
+
+      Two lines decide whether the figure you take upstairs survives contact
+      with the quote. Sound, which is inside some numbers and a later
+      conversation with others, and travel, which is a short line on the
+      Front Range and a longer one over the passes. Ask about both before you
+      compare two figures.
 
   - type: subhead
     text: "What is inside every one of those numbers"
@@ -196,6 +280,10 @@ sections:
       number of our own and let you find out later that it did not apply to
       your date. Send the date, and the figure you take to finance is the one
       that ends up on the invoice.
+
+      The corporate calendars behind this page are Amazon, NBCUniversal,
+      Charles Schwab, Kroger, the Denver Art Museum, Sheraton, Hyatt, the
+      Washington Nationals, Casa Bonita and Monarch Casino.
 
   - type: subhead
     text: "How far ahead should this be booked?"
