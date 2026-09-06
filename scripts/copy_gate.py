@@ -36,7 +36,8 @@ PAGES = ROOT / "_src" / "pages"
 BUILDOUT_DIRS = [
     "corporate", "corporate-holiday-party", "corporate-client-dinners",
     "corporate-retreats", "private-parties", "private-parties-denver",
-    "private-parties-boulder", "weddings-cocktail-hour",
+    "private-parties-boulder", "private-parties-colorado-springs",
+    "weddings-cocktail-hour",
     "weddings-cocktail-hour-denver", "guides-live-music-cost",
     "corporate-holiday-party-denver", "corporate-holiday-party-colorado-springs",
     "corporate-retreats-vail", "corporate-retreats-aspen",

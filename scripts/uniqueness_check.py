@@ -33,6 +33,7 @@ GROUPS = {
         "private-parties/index.html",
         "private-parties/denver/index.html",
         "private-parties/boulder/index.html",
+        "private-parties/colorado-springs/index.html",
     ],
     "corporate/retreats": [
         "corporate/retreats/index.html",
