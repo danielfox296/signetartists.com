@@ -1,0 +1,220 @@
+# ---------------------------------------------------------------------------
+# Tier 2 item 8 of the 2026-09-06 content plan. Evidence: "band vs dj cost",
+# "is a dj considered live music", "is a wedding dj worth it", "live band vs
+# dj wedding reddit" and eight more forms all autocomplete; no Colorado page
+# ranks for the decision (national wedding media and an LA agency do).
+# Signet sells both, so this can answer it without a thumb on the scale, and
+# the honest answer for most full nights is both in sequence, which is the
+# existing DJ module. Question-form subheads throughout: the query family is
+# a question family. Market figures only, tokens, sources note carried.
+# ---------------------------------------------------------------------------
+title: "Band or DJ for a Denver wedding or company party"
+seo_title: "Band vs DJ in Denver, cost and which one fits (2026)"
+slug: "band-or-dj-denver"
+eyebrow: "PLANNING"
+dek: "We sell both, so here is the comparison without a thumb on the scale: what each one actually does to a night, what this market charges for either, and why most full evenings end up booking both."
+date: "2026-09-06"
+author:
+  name: "Signet Artists"
+meta_description: "Band vs DJ for a Denver wedding or corporate party: what each does to the night, what this market charges for both, and when booking both in sequence is the cheaper answer."
+llms_description: "An even-handed band versus DJ comparison for Denver weddings and corporate events from an agency that books both. Covers whether a DJ counts as live music, what a band and a DJ cost across this market, when a DJ is worth it, and the band-into-DJ sequence that covers a whole evening on one contract. Sourced market figures only; Signet publishes no prices."
+
+hero:
+  src: "img/dj.jpg"
+  alt: "Faders and knobs on a mixing console."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "A band is something guests watch. A DJ is something guests dance to. Both fill a floor, and they fill it differently."
+      - "A DJ carrying a night with production lighting runs {{market:denver_dj}} across this market. Denver bands run {{market:denver_band_range}}, a trio at the bottom of that and a full band with horns at the top."
+      - "A DJ is not live music in the sense couples mean when they ask. Nobody on the floor is playing anything."
+      - "For a full evening the common answer is both in order, live players through arrival and dinner and a DJ carrying the late end, which costs far less as one booking than as two."
+
+  - type: prose
+    body: |
+      Picture the two versions of the same wedding. In the first, four
+      players are twelve feet from the dance floor, the singer catches
+      somebody's eye during the last chorus, and there is a half second where
+      the whole floor knows it is happening live. In the second, the song
+      everybody was waiting for arrives at exactly the right moment, mixed
+      into the one before it, and nobody leaves the floor for two hours.
+
+      Both of those are good nights. They are not the same night, and the
+      choice between them is usually made on price when it should be made on
+      what you want the evening to feel like. We book bands and we book DJs,
+      which means this comparison costs us nothing either way.
+
+  - type: subhead
+    text: "Is a DJ considered live music?"
+
+  - type: prose
+    body: |
+      No. A DJ plays recordings, and however skilled the mixing is, nobody in
+      the venue is producing a note. The question comes up constantly because
+      the industry blurs it, and it matters for one practical reason: some
+      venues, some ceremonies and some corporate programs specify live
+      musicians, and a DJ does not satisfy that.
+
+      The performance is real, though. A DJ reads a floor in real time and
+      decides what happens next, which is a live skill applied to recorded
+      material. There is also a middle position we book often, a bass player
+      or a saxophonist playing on the floor over the DJ set. That is live
+      music, and it holds a dance floor through the hours a band would have
+      gone home.
+
+  - type: subhead
+    text: "Band vs DJ cost in Denver"
+
+  - type: prose
+    body: |
+      Across this market a DJ carrying a night with production lighting runs
+      {{market:denver_dj}}. Denver bands run {{market:denver_band_range}},
+      with a trio at the bottom of that and a full band with horns at the
+      top, and the four to six piece middle of the market runs
+      {{market:denver_midtier_band}}. On the corporate side a cover or jazz
+      band runs {{market:us_corporate_band}}, and a jazz trio or acoustic duo
+      for a dinner runs {{market:us_dinner_band}}.
+
+      Read those figures as overlapping rather than as two tiers. A small
+      live act and a well-equipped DJ land in the same territory, and the
+      thing that moves either number most is how many people are working and
+      for how long. A duo through a dinner and a five-piece band through a
+      reception are the same product only in the sense that a taxi and a
+      coach are both transport.
+
+      Two costs sit outside the headline figure on both sides. This market
+      adds {{market:denver_holiday_surcharge}} for a holiday weekend, and an
+      hour beyond the contracted set runs {{market:denver_overtime}} across
+      Denver. Ours does not carry an overtime rate at all. Added time bills
+      what the earlier hours did, in 30-minute increments, agreed on the
+      night with whoever holds the budget.
+
+      {{market_sources}}
+
+  - type: comparison_table
+    title: "What each one actually does"
+    columns: ["", "A band", "A DJ"]
+    rows:
+      - ["What guests watch", "People playing, which is half the entertainment", "The floor, and each other"]
+      - ["The song list", "What the act plays, arranged their way", "Effectively anything recorded"]
+      - ["The version guests know", "A live reading of it", "The record, exactly as they know it"]
+      - ["Between songs", "Air, applause, a word from the stage", "Continuous, mixed, no gap"]
+      - ["Floor space", "12 by 8 ft for a trio, 14 by 10 for a quartet", "6 by 4 ft for the booth"]
+      - ["Power", "One or two dedicated 20-amp circuits", "One dedicated 20-amp circuit"]
+      - ["Load-in", "45 to 90 minutes by size", "45 minutes"]
+      - ["Volume control", "Held by ear, 65 to 72 dBA at dinner", "Held at the console, same discipline"]
+      - ["How long it can play", "Sets of 45 to 60 minutes with breaks", "All night without stopping"]
+
+  - type: subhead
+    text: "Is a wedding DJ worth it?"
+
+  - type: prose
+    body: |
+      For most receptions, yes, and the reason is duration. A DJ covers the
+      whole night without a break, plays the exact version of the song your
+      cousin is waiting for, and handles the announcements that hold a
+      reception together. If your priority is a floor that stays full from
+      dinner to the end, a DJ is the most reliable way to buy it.
+
+      The case against is thinner than the forums suggest, and it comes down
+      to occasion. A DJ makes a great party. Live players make an event feel
+      like an event, because there are people in front of your guests doing
+      something difficult in real time. That reads strongest during the parts
+      of the day when nobody is dancing anyway: the ceremony, the cocktail
+      hour, the seated dinner. Which is exactly where the two stop competing.
+
+  - type: subhead
+    text: "The answer most nights land on"
+
+  - type: prose
+    body: |
+      Live players through the front of the evening, a DJ carrying the back
+      half. It is the most common shape we book and the cheapest way to get
+      both, because once we are in the building the evening is already
+      committed. Adding the DJ to a band booking costs far less than hiring
+      one separately would, and the handoff runs through the same sound
+      system on the same contract, so the music does not stop between them.
+
+      The wedding version: an acoustic duo or a jazz trio through ceremony
+      and cocktail hour, the band for the first dances and the early floor,
+      then the DJ from there. The corporate version is the same shape with
+      different names on it, dinner at conversation volume and a floor
+      afterwards, which is the standard Denver holiday build. Both are set
+      out on our [DJ page](https://signetartists.com/ensembles/dj/), and the
+      act that grows across a night rather than swapping over is
+      [Tejas Singh](https://signetartists.com/artists/tejas-singh/), a duo
+      through arrival and dinner that becomes a quartet when the dancing
+      starts.
+
+  - type: subhead
+    text: "What should decide it"
+
+  - type: prose
+    body: |
+      Five things, in the order they usually matter.
+
+      **The floor.** How many people will actually dance, and for how long.
+      A crowd that will still be dancing late wants a DJ somewhere in the
+      plan, because a band plays sets with breaks in them.
+
+      **The venue's numbers.** A decibel cap or an early curfew changes the
+      answer more than taste does. Get the cap and the cut-off from the venue
+      in writing before you book either, and the act is built under them.
+      Footprints, circuits and input lists by size are published on our
+      [technical page](https://signetartists.com/planners/technical/) so a
+      venue can check them line by line.
+
+      **The parts of the night nobody dances.** Ceremony, cocktails, dinner
+      and the speeches are most of the hours. Live players do more for those
+      hours than they do for a dance floor, which is the opposite of how most
+      budgets get built.
+
+      **Who is in the crowd.** A wide age range is a DJ's home ground. A
+      crowd that came to see something is a band's.
+
+      **The budget shape.** Not the total, the shape. If the number is fixed
+      and the night is long, a smaller live act plus a DJ buys more evening
+      than a big band and nothing else.
+
+  - type: subhead
+    text: "What we would say if you asked us straight"
+
+  - type: prose
+    body: |
+      If the event has a program in it, a client dinner, an awards night, a
+      seminar with a reception after, book live players and skip the DJ. The
+      music sits under conversation, stops for the speeches and starts again,
+      and nobody needs a floor.
+
+      If the event is a party from the first minute and it runs late, book
+      the DJ and add a live instrument over the set when you want the last
+      two hours to be something people watch as well as dance to.
+
+      If it is a wedding or a full-evening corporate night, book both in
+      sequence and put the live players where the conversation is. Our
+      artists have played for Amazon, NBCUniversal, Charles Schwab, Kroger,
+      the Denver Art Museum, Sheraton, Hyatt, the Washington Nationals, Casa
+      Bonita and Monarch Casino Resort Spa Black Hawk, and the split above is
+      the one we build most often.
+
+  - type: aside
+    title: "The comparison the figures come from"
+    body: |
+      What live music costs across Colorado, size by size and sourced figure
+      by figure, is in the
+      [cost guide](https://signetartists.com/guides/live-music-cost-colorado/).
+      How a quote is put together, and what is itemised separately on it, is
+      on the [pricing page](https://signetartists.com/pricing/) and in
+      [how to read a band quote](https://signetartists.com/blog/how-to-read-a-band-quote/).
+
+  - type: cta
+    headline: "Send the night and we will tell you which one it wants."
+    body: "The date, the venue and how late it runs is enough. If a DJ is the better answer for your evening we will say so, and quote it."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "how-to-read-a-band-quote"
+      - slug: "what-live-music-costs-corporate-event"
