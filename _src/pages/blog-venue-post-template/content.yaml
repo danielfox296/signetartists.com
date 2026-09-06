@@ -1,0 +1,125 @@
+# ---------------------------------------------------------------------------
+# VENUE POST TEMPLATE. The "[ensemble] at [venue]" real-event post, the format
+# that took three of seven slots on "wedding cocktail hour music denver" for a
+# flute-and-strings competitor and that Deja Blu's 35 venue pages and Lost Wax's
+# 2026 Colorado venue pages copy. Tier 3, item 13 of the 2026-09-06 plan.
+#
+# draft: true keeps this file off every publish surface; lint still validates
+# it. To write a real one: copy this directory to _src/pages/blog-<slug>/, set
+# the slug, replace every bracketed value, delete draft, run
+# `python3 build.py --lint`, build, run scripts/copy_gate.py and
+# scripts/uniqueness_check.py, commit, push.
+#
+# Slug pattern: <ensemble>-at-<venue>-<city>  e.g. jazz-duo-at-hudson-gardens-littleton
+# Title pattern: "<Ensemble> at <Venue>, <City>: <the occasion>"
+# One post per gig. Never two posts for one venue in a season; extend the first.
+#
+# GATES BEFORE YOU START (all three, or the post does not get written):
+#   1. The client's written permission to name the event, and the venue's name
+#      is fine to publish (a private corporate date is NEVER named; a wedding
+#      names the venue, never the couple's surnames).
+#   2. At least one usable photo or clip from the night, ours or the
+#      photographer's with credit. No footage, no post; a venue post with a
+#      stock hero is the thing we are trying not to be.
+#   3. Named faces only for genuinely fronted acts (Tejas Singh, Gary Meyers).
+#      The jazz duo, acoustic duo, DJ and funk lines are specified, not named,
+#      so the post says "our jazz duo", never a player's name.
+#
+# WHAT THE POST TRIGGERS THE SAME WEEK (this is the link strategy):
+#   - Photographer credit line email, within seven days of the event:
+#     "Cocktail hour: Signet Artists, signetartists.com", plus the clip offer.
+#     Draft 15 in outreach/link-asks-2026-09.md.
+#   - Venue vendor-list ask to the events manager, with this post's URL as the
+#     proof and one 30-second clip. Drafts 5 to 12 in the same file.
+#   - The post's URL goes into the after-gig citation routine (venue calendar,
+#     Visit Denver / Visit Littleton where the date was public).
+#
+# HOUSE RULES: no Signet price or percentage; market figures only via
+# {{market:<id>}} tokens and never a named source; no availability, hold or
+# "book early" language; no o'clocks and no assigning acts to hours; lead with
+# the night, logistics one paragraph down; no em dashes; "chair" and "room" are
+# banned in music copy (venue, floor, terrace, crowd, night are the words);
+# client list belongs on landing pages, not here (one line at most).
+# ---------------------------------------------------------------------------
+draft: true
+
+title: "[Ensemble] at [Venue], [City]: [the occasion]"
+seo_title: "[Ensemble] at [Venue], [City]: live music for a [wedding cocktail hour | holiday party | client dinner]"
+slug: "venue-post-template"
+# WEDDINGS for a wedding, CORPORATE for a company date, NOTES for a private party
+eyebrow: "NOTES"
+dek: "[One sentence a guest would say the next morning. The floor, the light, the moment the music did its job. No adjectives that could sit on any venue.]"
+date: "2026-09-06"
+last_updated: "2026-09-06"
+author:
+  name: "Signet Artists"
+meta_description: "[Ensemble] played [the occasion] at [Venue] in [City]. What the terrace hears, how the set sat under the evening, and what the venue needs from a small ensemble."
+llms_description: "A real event: [ensemble] at [Venue], [City], for [the occasion]. The acoustic character of the space for a small ensemble, the set that fitted it, and the venue's practical notes for live music. No prices published."
+
+# The hero is a photograph from the night, ours or credited. Not a stock image.
+hero:
+  src: "img/events/[venue-slug]-[yyyy-mm].jpg"
+  alt: "[What is in the frame: the ensemble, where in the venue, the light. Name a face only if the act is fronted.]"
+  caption: "[Venue], [Month Year]. Photo: [Photographer], used with permission."
+
+# The clip from the night. Title it in the words buyers type (see
+# FOOTAGE-TITLES.md in the private events folder), then paste the YouTube id.
+# Delete this block if there is no clip yet; add it back when there is.
+video:
+  id: "[YOUTUBE_ID]"
+  title: "[Ensemble] at [Venue], [City]: [occasion] | Signet Artists"
+
+sections:
+  - type: key_takeaways
+    items:
+      - "[The moment. What the night was like at the point the music mattered most.]"
+      - "[What the venue is like to play: the surface the sound lands on, where the ensemble sat, what carried and what did not.]"
+      - "[The one practical fact a planner booking this venue would want first: power, load-in route, the sound policy, the altitude if it applies.]"
+
+  - type: prose
+    body: |
+      [Open on the night, not the booking. Two short paragraphs: where the
+      guests were, what the ensemble was doing under it, the moment someone
+      noticed. This is the part a buyer forwards.]
+
+  - type: video
+    # Renders the clip from the frontmatter above. Remove if there is no clip.
+
+  - type: subhead
+    text: "What the terrace hears at [Venue]"
+
+  - type: prose
+    body: |
+      [The venue as an instrument. Stone or timber, glass or garden, ceiling
+      height, where the bar is relative to where the ensemble sat, and what
+      that did to the sound. Say what size of act the space wants and why.
+      This is the paragraph nobody else writes and the reason the post ranks.]
+
+  - type: aside
+    title: "For the planner"
+    body: |
+      [Three to five lines of fact, no times of day: load-in route and door,
+      power at the position, the venue's sound policy or dBA cap if it has
+      one, weather plan if outdoors, altitude if it applies. Facts only;
+      confirm them with the venue and say so.]
+
+  - type: pullquote
+    text: "[One sentence from the client or planner, verbatim, with written permission.]"
+    attribution: "[First name and role, or the company where permitted]"
+
+  - type: prose
+    body: |
+      [Close on the floor at the end of the night. One paragraph. Then a
+      single line that routes to the occasion page this venue belongs to,
+      e.g. the cocktail-hour page, the holiday-party page, the client-dinner
+      page. Market figure, if any, only as a token.]
+
+  - type: cta
+    headline: "Tell us the venue and the night, and we'll tell you what fits."
+    body: "Every act on the roster has footage on its page, and the pricing page shows how the number is built before you write to us."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "[the occasion post this belongs with, e.g. office-holiday-party-ideas-denver]"

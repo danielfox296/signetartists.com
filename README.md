@@ -45,7 +45,10 @@ at the root.
 The shared blog kit (ported from the foxlessons.com generation, restyled to
 this site's tokens). A post is `_src/pages/blog-<slug>/content.yaml`;
 `_src/pages/blog-sample-post/` is the always-valid authoring reference and
-documents every block type and frontmatter field.
+documents every block type and frontmatter field. `_src/pages/blog-venue-post-template/` is the second
+draft-only reference: the "[ensemble] at [venue]" real-event post, with its
+permission gates and the same-week link asks it triggers in its header comment;
+clip titles for those posts come from `../FOOTAGE-TITLES.md`.
 
 ```bash
 python3 build.py --lint    # validate every post, drafts included
