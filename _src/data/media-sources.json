@@ -187,5 +187,68 @@
   "first_party": {
     "media/dirty-flamenco.mp4": "Daniel's own phone footage ('monarch 1'), landed by a parallel session 2026-08-28; leads the flamenco page and both roster cards as a native player."
   },
-  "_existing_footage_note_2026_09_06": "Daniel 2026-09-06: no new shoots; use the artists' existing uploads. Placements above, VideoObject names authored in each page's schema.json, asks to the artists in outreach/link-asks-2026-09.md. Poster frames for embeds are YouTube thumbnails saved to img/acts/."
+  "_existing_footage_note_2026_09_06": "Daniel 2026-09-06: no new shoots; use the artists' existing uploads. Placements above, VideoObject names authored in each page's schema.json, asks to the artists in outreach/link-asks-2026-09.md. Poster frames for embeds are YouTube thumbnails saved to img/acts/.",
+  "signet_channel": {
+    "channel": "https://www.youtube.com/@SignetArtists",
+    "id": "UCdIteX74DYel7z7zurPUDmQ",
+    "note": "Reuploads of the artists' published clips with their explicit permission (Daniel, 2026-09-06); credit line in every description. Site embeds point at the Signet copy once it exists; the original ID stays here as provenance.",
+    "reuploads": {
+      "O2A0PKE7CXE": {
+        "original": "U2G_lp4nXv0",
+        "artist": "Jordan Lovinger",
+        "title": "Jazz duo for a wedding cocktail hour: Autumn Leaves, guitar and upright bass | Signet Artists",
+        "published": "2026-09-06",
+        "placed": "jazz page act video + VideoObject; cocktail-hour footage; client-dinners footage"
+      },
+      "klpdQ4wtXkc": {
+        "original": "_JhIQ6DO35s",
+        "artist": "Gary Meyers",
+        "title": "Spanish guitar for a wedding ceremony: Malaguena, Dirty Flamenco, Denver | Signet Artists",
+        "published": "2026-09-06",
+        "placed": "ceremony footage; flamenco page footage"
+      },
+      "4DMf0D47_N0": {
+        "original": "wVy5D8vQhug",
+        "artist": "Gary Meyers",
+        "title": "Three Spanish guitars for a corporate event: Entre dos Aguas, Denver | Signet Artists",
+        "published": "2026-09-06"
+      },
+      "isKpOj8rPos": {
+        "original": "vzsoTYjbug8",
+        "artist": "Tejas Singh",
+        "title": "Live band for a holiday party: Tejas Singh quartet, Denver | Signet Artists",
+        "published": "2026-09-06"
+      },
+      "Y6_evCDeUm8": {
+        "original": "fOwjolruYIM",
+        "artist": "Jordan Lovinger",
+        "title": "Solo jazz guitar for a holiday party: White Christmas, Denver | Signet Artists",
+        "published": "2026-09-06"
+      },
+      "hIPHFuxl9YI": {
+        "original": "BXkj6iyPdzM",
+        "artist": "Jordan Lovinger",
+        "title": "Solo jazz guitarist for a client dinner: Autumn Leaves, Denver | Signet Artists",
+        "published": "2026-09-06"
+      },
+      "iBDwUWrVxWU": {
+        "original": "Xs-qvEOUKv8",
+        "artist": "Gary Meyers",
+        "title": "Flamenco guitar at a private party, Denver | Signet Artists",
+        "published": "2026-09-06"
+      },
+      "LvI8FAVFADA": {
+        "original": "HZJvdyIZ-Ao",
+        "artist": "Jordan Lovinger",
+        "title": "Solo jazz guitar for a cocktail hour: a blues after Grant Green, Denver | Signet Artists",
+        "published": "2026-09-06"
+      },
+      "nzVtbiEF5ak": {
+        "original": "b1FSylzCpo8",
+        "artist": "Jordan Lovinger",
+        "title": "Acoustic singer and guitarist for a private party: Last Dance With Mary Jane | Signet Artists",
+        "published": "2026-09-06"
+      }
+    }
+  }
 }
