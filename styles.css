@@ -603,15 +603,22 @@ img {
   color: var(--ink);
 }
 
+/* Gap tightened from 1.75rem and labels pinned to one line on 2026-09-06,
+   when Weddings joined Corporate and Private Parties as the third occasion
+   hub. The header wrap caps at 1024px with 32px of padding, so the row has
+   960px to live in whatever the screen is: seven links plus the button
+   measure about 908 at this gap, and measured about 964 at the old one,
+   which is why labels had started breaking across two lines. */
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
 .nav-desktop a {
   font-size: 0.875rem;
   color: var(--ink-soft);
+  white-space: nowrap;
 }
 
 .nav-desktop a:hover,
@@ -1353,15 +1360,6 @@ img {
     font-size: 1.125rem;
   }
 
-  .nav-desktop {
-    display: flex;
-  }
-
-  .nav-toggle,
-  .nav-mobile {
-    display: none;
-  }
-
   .card-grid--3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1399,6 +1397,22 @@ img {
 
   .close-row .btn-row {
     margin-top: 0;
+  }
+}
+
+/* The desktop nav row: seven links plus the Check a Date button. It used to
+   swap in at 768px, which stopped fitting once the row grew to eight items on
+   2026-09-06: the page scrolled sideways at 800px and the labels wrapped. The
+   row needs about 908px of content width, so it swaps in at 1024 and the Menu
+   button covers every width under that. */
+@media (min-width: 1024px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-toggle,
+  .nav-mobile {
+    display: none;
   }
 }
 

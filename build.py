@@ -35,7 +35,7 @@ DATA_FILE = DATA / "site.json"
 
 # Nav keys for active-state highlighting. A page's config.json sets "nav" to one
 # of these to mark the matching header link as the current page.
-NAV_KEYS = ["music", "repertoire", "pricing", "planners", "corporate", "private", "contact"]
+NAV_KEYS = ["music", "repertoire", "pricing", "planners", "corporate", "weddings", "private", "contact"]
 
 # GA4 measurement id. Empty string => no analytics tag is emitted at all.
 # Never ship a half-wired tag.

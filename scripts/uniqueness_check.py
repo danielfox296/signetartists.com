@@ -45,6 +45,14 @@ GROUPS = {
         "weddings/cocktail-hour/index.html",
         "weddings/cocktail-hour/denver/index.html",
     ],
+    # The wedding tree, 2026-09-06. The hub and the two spokes make three
+    # different arguments (route the day, the ceremony, the hour after it),
+    # so they are compared to each other as siblings.
+    "weddings": [
+        "weddings/index.html",
+        "weddings/ceremony/index.html",
+        "weddings/cocktail-hour/index.html",
+    ],
 }
 
 # Markup whose contents are deliberately shared, stripped before comparison.
