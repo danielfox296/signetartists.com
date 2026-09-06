@@ -97,12 +97,12 @@
     "8sVxHJ9ql2g": {
       "title": "Tejas Singh - LIVE | Sofar Virginia",
       "channel": "Sofar Sounds",
-      "placed": "artists/tejas-singh/ hero"
+      "placed": "artists/tejas-singh/ hero; Tejas act video + roster card + VideoObject (2026-09-06)"
     },
     "DLQs9cEzOW0": {
       "title": "Live Looping Cover of Bob Marley's No Woman No Cry",
       "channel": "Tejas Singh Music",
-      "placed": "artists/tejas-singh/ footage"
+      "placed": "artists/tejas-singh/ footage; private-parties/ footage (2026-09-06)"
     },
     "GRBAijVpRA8": {
       "title": "Tejas Singh - A Life of Crime",
@@ -112,12 +112,12 @@
     "_JhIQ6DO35s": {
       "title": "Malaguena @ the Muse",
       "channel": "Gary Meyers Dirty Flamenco",
-      "placed": "ensembles/flamenco-trio/ footage"
+      "placed": "ensembles/flamenco-trio/ footage; weddings/ceremony/ footage (2026-09-06)"
     },
     "77bxWl5HQck": {
       "title": "Rumba Flamenca",
       "channel": "Gary Meyers Dirty Flamenco",
-      "placed": "ensembles/flamenco-trio/ footage"
+      "placed": "ensembles/flamenco-trio/ footage; private-parties/ footage (2026-09-06)"
     },
     "rUysRHVCk-8": {
       "title": "Farruca - Blu Note",
@@ -137,19 +137,40 @@
     "U2G_lp4nXv0": {
       "title": "Autumn Leaves - Guitar & Upright Bass",
       "channel": "Jordan Lovinger",
-      "placed": "ensembles/jazz-duo-trio/ hero + roster card"
+      "placed": "ensembles/jazz-duo-trio/ hero + roster card; weddings/cocktail-hour/ footage; corporate/client-dinners/ footage (2026-09-06)"
     },
     "CkabNus6iRA": {
       "REMOVED": "2026-08-28: also 'Video unavailable' in embeds. Finding: this artist's Shorts (hashtag-titled verticals) all refuse embedding; only the regular upload U2G_lp4nXv0 embeds. Do not re-place his Shorts as iframes.",
-      "was": "ensembles/solo-guitarist/ hero"
+      "was": "ensembles/solo-guitarist/ hero",
+      "title": "#jazzguitar solo on Blue Bossa #denver #jazzmusic",
+      "channel": "Jordan Lovinger",
+      "placed": "not placed (Guaraldi/Old #7 removed on Daniel's call 2026-08-28)"
     },
     "ZSr6_kiA4P0": {
       "REMOVED": "2026-08-28: embed-blocked ('Video unavailable' when embedded); replaced by CkabNus6iRA on the solo page",
-      "was": "ensembles/solo-guitarist/ hero"
+      "was": "ensembles/solo-guitarist/ hero",
+      "title": "Great Pumpkin Waltz, Vince Guaraldi, solo jazz guitar",
+      "channel": "Jordan Lovinger",
+      "placed": "not placed (Guaraldi/Old #7 removed on Daniel's call 2026-08-28)"
     },
     "tbsh69P6iPA": {
       "REMOVED": "2026-08-28 on Daniel's call: Jordan off blues rock",
-      "was": "music/ blues-rock roster card"
+      "was": "music/ blues-rock roster card",
+      "title": "Cover of Old #7 by Devil Makes 3",
+      "channel": "Jordan Lovinger",
+      "placed": "not placed (Guaraldi/Old #7 removed on Daniel's call 2026-08-28)"
+    },
+    "Viyz2S8W3wU": {
+      "title": "Tangos",
+      "channel": "Gary Meyers Dirty Flamenco",
+      "uploaded": "2026-06-25",
+      "placed": "ensembles/flamenco-trio/ footage (2026-09-06)"
+    },
+    "rURzLOfK_iQ": {
+      "title": "Verdiallas - Sabicas",
+      "channel": "Gary Meyers Dirty Flamenco",
+      "uploaded": "2026-07-22",
+      "placed": "ensembles/flamenco-trio/ footage (2026-09-06)"
     }
   },
   "held_back": {
@@ -165,5 +186,6 @@
   },
   "first_party": {
     "media/dirty-flamenco.mp4": "Daniel's own phone footage ('monarch 1'), landed by a parallel session 2026-08-28; leads the flamenco page and both roster cards as a native player."
-  }
+  },
+  "_existing_footage_note_2026_09_06": "Daniel 2026-09-06: no new shoots; use the artists' existing uploads. Placements above, VideoObject names authored in each page's schema.json, asks to the artists in outreach/link-asks-2026-09.md. Poster frames for embeds are YouTube thumbnails saved to img/acts/."
 }
