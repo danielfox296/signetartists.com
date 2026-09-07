@@ -1,7 +1,7 @@
 {
-  "_restructure_note": "Was 'The Music' and described two house bands. Now the roster page for the eight represented acts. URL stays /music/ deliberately: it is the indexed URL and carries the nav slot, so the model changed underneath it rather than moving.",
+  "_restructure_note": "Was 'The Music' and described two house bands. Now the roster page for the represented acts. Never state a count of acts here or anywhere outbound: the roster grows and a number goes stale silently (2026-09-07). URL stays /music/ deliberately: it is the indexed URL and carries the nav slot, so the model changed underneath it rather than moving.",
   "title": "The Roster",
-  "meta_description": "Seven live acts for private events in Denver and the Colorado mountains. Singer-songwriter covers, jazz, flamenco, funk, americana and a DJ, solo to quartet. Every act's starting price published.",
+  "meta_description": "Live acts for private events in Denver and the Colorado mountains: singer-songwriter covers, jazz, flamenco, funk, blues and a DJ, solo to quartet.",
   "output": "music/index.html",
   "nav": "music",
   "schema": "roster"

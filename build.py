@@ -523,13 +523,6 @@ NUMBER_WORDS = {
 }
 
 
-def act_count_word() -> str:
-    """Headlines count the roster out loud, so the count is a token rather
-    than a typed word. Adding or merging an act cannot leave a page claiming
-    a number that stopped being true."""
-    return NUMBER_WORDS.get(len(ACTS), str(len(ACTS)))
-
-
 def act_config_range(act: dict) -> str:
     """"Trio to six piece", not "Trio to Five to six piece". The tail of a range
     reads as prose, so the rate card carries a lowercase `rangeLabel` for it
@@ -1443,8 +1436,11 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{credits}}": credits,
         "{{credits_also}}": credits_also,
         "{{act_picker}}": act_picker,
-        "{{act_count}}": lambda: str(len(ACTS)),
-        "{{act_count_word}}": act_count_word,
+        # RETIRED 2026-09-07, Daniel: no count of acts is published anywhere.
+        # These tokens existed so a hand-typed number could not go stale; the
+        # ruling is that the number itself is the problem, not its freshness,
+        # because the roster grows and every surface carrying a count becomes
+        # maintenance. Name the range, never the number. Do not reinstate.
         "{{season_dates}}": season_dates,
         "{{season_leads}}": lambda: season_leads(nav_prefix),
     }
