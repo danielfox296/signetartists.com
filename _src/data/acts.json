@@ -183,11 +183,12 @@
       "meta_description": "Jazz standards duo for private events in Denver and the Colorado mountains. Upright bass and guitar for cocktails and dinner, at a volume guests talk across.",
       "identity": [
         "This is the cocktail hour booking. Upright bass and guitar, playing the standards book, at a volume you can talk across.",
-        "It is sold as a format, with no name on it, and that is a deliberate promise. What you are buying for this hour is an instrumentation, a repertoire and a volume. Which two players deliver it does not change any of the three, and pretending otherwise would mean naming a pair we cannot guarantee for your date. You get the spec, on every date it is available.",
+        "It is sold as a format rather than under a name, and that is a deliberate promise. What you are buying for this hour is an instrumentation, a repertoire and a volume. Which two players deliver it does not change any of the three, and pretending otherwise would mean naming a pair we cannot guarantee for your date. You get the spec, on every date it is available.",
         "Most of what goes wrong in the first two hours of an event is a volume decision, not a repertoire decision. A band that plays this hour at the level it plays the dance floor makes guests shout at each other while they are still deciding what kind of night it is. A duo is the honest instrument for it: two players cannot get loud by accident, and the arrangement stays open enough that conversation sits on top of it.",
         "Standards are the repertoire because they are the one set of songs nobody has to be told about. Guests do not identify the tunes and do not need to. The night reads as expensive and unhurried.",
         "The duo covers arrival, cocktails and dinner on one line of the contract. If the night also needs a dance floor, that is a second booking."
       ],
+      "_reviews_note": "AMENDED 2026-09-06 with the first client reviews on the format pages (Daniel's call). The identity line used to read \"with no name on it\"; a verified review that names the guitarist now sits on /ensembles/jazz-duo-trio/, so the absolute claim came out and the promise stayed. What is sold is still the spec, not a named pair, and the schema.json FAQ that explains why is unchanged. Provenance for every published review is in reviews.json.",
       "_trio_rung_note": "ADDED 2026-08-20 with the SEO buildout. The handoff sells the jazz format as one page, duo and trio, upright bass and guitar core; the trio rung makes the ladder table on /ensembles/jazz-duo-trio/ carry both sizes off the rate card instead of the page pricing the trio beside the table.",
       "ladder": [
         {
