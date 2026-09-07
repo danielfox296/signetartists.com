@@ -242,7 +242,7 @@
       "title": "'Going Down'",
       "channel": "SIDEHATCH ARTS",
       "uploaded": "2020-11-22",
-      "placed": "artists/tony-medina/ hero; Tony Medina act video + roster card + VideoObject (2026-09-06)",
+      "placed": "artists/tony-medina/ footage grid. WAS the page hero until 2026-09-06, when it was demoted: it sits on the SIDEHATCH ARTS channel, which meant the most-watched slot on the page ran on a channel we do not control, and the frames did not support the claim that it was his best-shot cut (720p, plain office setting, a second player as prominent as Tony). Still the one duo performance on the page, so it keeps a tile. Needs SIDEHATCH's word before a Signet copy goes up.",
       "embed_checked": "playableInEmbed true, 2026-09-06",
       "_note": "A Freddie King blues standard, played as a duo. Third-party channel: see the reupload note below before copying this one to the Signet channel."
     },
@@ -257,7 +257,7 @@
       "title": "PURPLE RAIN -(Prince) a Tony Medina cover",
       "channel": "Tony Medina Music",
       "uploaded": "2020-04-25",
-      "placed": "SUPERSEDED 2026-09-06 by the Signet copy mHtY8DbqLtA, which is what artists/tony-medina/ now embeds. Kept here as provenance.",
+      "placed": "SUPERSEDED 2026-09-06 by the Signet copy mHtY8DbqLtA, which is now the artists/tony-medina/ hero. Kept here as provenance.",
       "embed_checked": "playableInEmbed true, 2026-09-06"
     },
     "Kn8nmA2thRg": {
@@ -437,27 +437,31 @@
         "original": "5CX5YLI_5Rk",
         "artist": "Tony Medina",
         "title": "Blues guitar for a private party: The Thrill Is Gone, Tony Medina, Denver | Signet Artists",
-        "published": "2026-09-06"
+        "published": "2026-09-06",
+        "placed": "artists/tony-medina/ footage grid"
       },
       "mHtY8DbqLtA": {
         "original": "vYQ0d2RQAug",
         "artist": "Tony Medina",
         "title": "Live music for a milestone birthday: Purple Rain, Tony Medina, Denver | Signet Artists",
-        "published": "2026-09-06"
+        "published": "2026-09-06",
+        "placed": "artists/tony-medina/ HERO + act video + roster card + VideoObject (2026-09-06). Promoted from the footage grid the same evening on Daniel's call, so the top of the page runs on a video Signet hosts."
       },
       "C6M9wwR9DWk": {
         "original": "Kn8nmA2thRg",
         "artist": "Tony Medina",
         "title": "Classic rock covers for an office party: Drive, Tony Medina, Denver | Signet Artists",
-        "published": "2026-09-06"
+        "published": "2026-09-06",
+        "placed": "artists/tony-medina/ footage grid"
       },
       "wt2SnYjWxKs": {
         "original": "cdiTSJd7Qpo",
         "artist": "Tony Medina",
         "title": "Singer and guitarist for welcome drinks: Tony Medina, Headline | Signet Artists",
-        "published": "2026-09-06"
+        "published": "2026-09-06",
+        "placed": "artists/tony-medina/ footage grid"
       }
     }
   },
-  "_tony_medina_note_2026_09_06": "Daniel 2026-09-06: 'we have permission to add him with all the media from his site, to youtube too.' BOTH HALVES ARE DONE, except for two videos that are not his to give. Site: nine photographs and six embeds, live. YouTube: the four cuts on his own channel were reuploaded to @SignetArtists the same evening with the footage/reuploads pipeline (Entuned OAuth client, yt_upload.py), keys 21 to 24, and the page embeds the Signet copies. The Thrill Is Gone published as a Short: vertical and under three minutes. All four verified public and embeddable before the embeds were swapped, and added to the channel playlists including a new 'Tony Medina, blues and rock'. STILL OPEN: t_s2FavrDew (the page hero, 'Going Down') and qf4_7lKu3iE ('Don't Drink The Water') sit on the SIDEHATCH ARTS channel, not on Tony's. His permission covers his material, not another channel's upload, so those two still embed the original and need SIDEHATCH's word before a Signet copy goes up. Tracked in Asana."
+  "_tony_medina_note_2026_09_06": "Daniel 2026-09-06: 'we have permission to add him with all the media from his site, to youtube too.' BOTH HALVES ARE DONE, except for two videos that are not his to give. Site: nine photographs and six embeds, live. YouTube: the four cuts on his own channel were reuploaded to @SignetArtists the same evening with the footage/reuploads pipeline (Entuned OAuth client, yt_upload.py), keys 21 to 24, and the page embeds the Signet copies. The Thrill Is Gone published as a Short: vertical and under three minutes. All four verified public and embeddable before the embeds were swapped, and added to the channel playlists including a new 'Tony Medina, blues and rock'. HERO SWAPPED the same evening to mHtY8DbqLtA (the Signet copy of his Prince cover), so nothing at the top of the page depends on a third-party channel. STILL OPEN: t_s2FavrDew ('Going Down', now a footage tile) and qf4_7lKu3iE ('Don't Drink The Water') sit on the SIDEHATCH ARTS channel, not on Tony's. His permission covers his material, not another channel's upload, so those two still embed the original and need SIDEHATCH's word before a Signet copy goes up. Tracked in Asana."
 }
