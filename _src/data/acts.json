@@ -1,7 +1,7 @@
 {
   "_comment": "The roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about a booking is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
   "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page.",
-  "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included. UPDATE 2026-08-28: Dirty Flamenco's card now carries its own footage (see its _video_note), so the dj.jpg collision no longer renders anywhere; the img stays as data because the card falls back to it wherever the video field is ever cleared.",
+  "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included. UPDATE 2026-08-28: Dirty Flamenco's card now carries its own footage (see its _video_note), so the dj.jpg collision no longer renders anywhere; the img stays as data because the card falls back to it wherever the video field is ever cleared. UPDATE 2026-09-06: the shortage is down to two slots. Tony Medina replaced Blues Rock carrying his own photograph, which releases standards.jpg back to the jazz duo alone, and the only interim stills still rendering are the jazz duo's and the DJ's.",
   "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs.",
   "_pricing_note": "REWRITTEN 2026-09-04. This file carried the published rate card: a `denver` and a `resort` range on every rateCard row, an `hourly` on the duo, and per-config Offers derived from them. The site publishes no Signet price of any kind from that date, so the price columns are gone from the data as well as the copy; the repo is the published site and a number in a shipped JSON file is a published number. What is left is structure: the configuration ids, their labels and their piece counts, which is what the ladders, the roster filter and the schema still need. The internal card is in OFFER.md. Market figures live in _src/data/market-rates.json with their provenance and are the only figures any surface may render.",
   "_scope_note": "REFOCUSED 2026-08-17 for Q4. The 2026 product is small format: solo, duo, trio and quartet, cocktail through featured. Quartet is the published ceiling on every act and every surface. Five and six piece stays on the rate card under a by-request divider, because the published-pricing philosophy is the differentiator and hiding a number we hold would cost more than printing it; it is not merchandised as a standard product anywhere else. Seven, ten and thirteen piece are off the sold tables entirely (see site.json rates). Tejas Singh leads the roster and every featured-acts block.",
@@ -339,17 +339,22 @@
       }
     },
     {
-      "id": "blues-rock",
-      "name": "Blues Rock",
-      "presentation": "spec",
+      "id": "tony-medina",
+      "name": "Tony Medina",
+      "presentation": "face",
+      "_presentation_note": "PROMOTED 2026-09-06 on Daniel's call, reversing the 2026-08-16 spec'ing for this artist only. He was anonymous depth behind the 'Blues Rock' format because the workbook read him and Freddy Alexander as interchangeable. That reading does not survive contact with his own material: he fronts under his own name, on his own site and his own channel, with a published catalogue of originals and a covers book you can watch him play. That is the definition of a fronted act in _players_note, so he is named and the format he stood behind retires into him. Freddy stays below as unpublished depth, which is what the face-led promise already covers.",
       "status": "listing",
-      "_style_note": "Deliberately not 'Blues rock'. The card renders style as an eyebrow directly above the name, and a format named after its genre would print the same two words twice.",
+      "_status_note": "A listing that owns a page, the same shape as the DJ. Not flagship: FLAGSHIPS drives the home page's three-up grid, and a fourth card would leave one orphan on a second row. He still gets the authored page, the 'See Tony Medina' card CTA and his own llms.txt URL, because both of those key off `page` rather than off status.",
+      "page": "artists/tony-medina/",
+      "_style_note": "Kept from the format he replaces. The card renders style as an eyebrow directly above the name, and 'Blues, rock and roots' over 'Tony Medina' reads as a byline rather than as the same two words twice.",
       "style": "Blues, rock and roots",
-      "spec": "One voice and a guitar, or two",
-      "material": "Covers",
+      "face": "Tony Medina",
+      "material": "Covers and originals",
+      "_bucket_note": "budget carries over from the format he replaces, and he is the only act tagged with it. Dropping it would empty the Budget filter on the roster page entirely, which costs a planner with the smallest spend the one act that actually answers them. It is honest as well: solo voice and guitar is the smallest live booking on this roster. If the Budget pill under a named artist's face reads wrong, it is one tag to delete.",
       "bucket_tags": [
-        "budget",
-        "cocktail"
+        "cocktail",
+        "party",
+        "budget"
       ],
       "config_tags": [
         "solo",
@@ -358,15 +363,59 @@
         "quartet"
       ],
       "from": "solo",
-      "img": "standards.jpg",
-      "alt": "A trumpet resting on a table.",
-      "video": null,
-      "_was_note": "Listed as 'Tony Medina' until 2026-08-16. The workbook describes Freddy Alexander as redundant with him and calls that availability depth rather than a problem, which is the interchangeable pattern exactly. Spec'd, both sit behind one format and the depth becomes an asset instead of two thin listings competing at the bottom of the card.",
-      "depth": [
-        "Tony Medina",
-        "Freddy Alexander"
+      "img": "tony-medina-card.jpg",
+      "_img_note": "His own photograph, not an interim still: a black and white frame of him playing an acoustic guitar under string lights, cropped 16:9 from the centre of the source. Provenance in media-sources.json. It also releases standards.jpg, which the retired Blues Rock card shared with the jazz duo.",
+      "alt": "Tony Medina playing an acoustic guitar under string lights, in black and white.",
+      "video": "https://www.youtube-nocookie.com/embed/t_s2FavrDew?rel=0",
+      "_video_note": "His own footage, from the video page of his site. This one is a Freddie King blues standard played as a duo, and it is the best-shot cut he publishes. It sits on the SIDEHATCH ARTS channel rather than his own, which matters for the Signet reupload: the permission Daniel has covers Tony's material, not another channel's upload, so this ID stays pointed at the original until that is cleared. The cuts on his own channel are the ones a Signet copy can carry.",
+      "video_poster": "img/acts/medina-live-poster.jpg",
+      "blurb": "A smoky voice and a guitar played with a funk player's right hand. Tony Medina plays the blues and the rock and roll that came out of it, Freddie King and B.B. King through The Cars and Prince, with a book of his own songs threaded through. Solo for welcome drinks and dinner, up to a four piece when the night wants a floor.",
+      "seo_title": "Tony Medina: blues and rock for Denver private events",
+      "meta_description": "Blues and rock for private events in Denver and the Colorado mountains. Solo through four piece, fronted by Tony Medina. Send a date and we price the night.",
+      "identity": [
+        "Some nights want a voice that sounds like it has been somewhere. Tony Medina sings with grit and gravel in it and plays guitar with a funk player's right hand, which is why a set of blues and classic rock in his hands tends to catch a crowd that thought it had turned up for background music.",
+        "The book is the blues and most of what the blues turned into. Freddie King and B.B. King at one end, The Cars, Prince and the rock records of the seventies and nineties at the other, and his own songs threaded through. Guests recognise nearly all of it without being told what it is, which is the whole trick of a covers set at a private event.",
+        "It scales from one player to four. Solo it is a voice and an acoustic guitar, warm enough to sit under conversation through welcome drinks and dinner. Add percussion, then bass and drums, and at the four piece it is a band with a floor in front of it.",
+        "He is a working Denver musician with his own catalogue, his own site and his own channel, so none of this has to be taken on trust. The footage on this page is his, and there is a great deal more of it where that came from.",
+        "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
       ],
-      "blurb": "Blues and rock covers and originals, a solo or up to a quartet. Real, seasoned players rather than a spotify playlist, at whatever volume makes the venue sing. Rehearsal dinners, welcome drinks, office parties, and any event where live blues and rock is the right idea."
+      "ladder": [
+        {
+          "config": "solo",
+          "build": "Voice and acoustic guitar",
+          "bestFor": "Welcome drinks, patios and dinner, at conversation volume."
+        },
+        {
+          "config": "duo",
+          "build": "Voice and guitar, plus percussion",
+          "bestFor": "Patio evenings and receptions that want a pulse under the set."
+        },
+        {
+          "config": "trio",
+          "build": "Voice and guitar, bass, drums",
+          "bestFor": "Smaller venues, and parties that want a floor without a full band."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus a second guitar or keys",
+          "bestFor": "The dance floor booking. Office parties and milestone birthdays."
+        }
+      ],
+      "setlist": {
+        "_note": "Every title here is a cover he publishes footage of, on this page or on his own channel, so the sample set and the evidence are the same list. Deliberately not from_repertoire: that branch picks the first N titles in catalogue order and would have printed the same songs as the Tejas Singh page.",
+        "note": "These are the covers you can watch him play, on this page and on his own channel. The wider book runs from sixties soul and classic rock through nineties alternative, and a set is built against your run of show. Representative, not fixed.",
+        "items": [
+          "Going Down",
+          "The Thrill Is Gone",
+          "Purple Rain",
+          "Drive",
+          "Don't Drink the Water"
+        ]
+      },
+      "_depth_note": "Freddy Alexander was the other half of the interchangeable pair behind the retired Blues Rock format. He is not a listing and he is not published: `depth` renders on no surface, and this is the same unpublished availability depth he has been since 2026-08-16. The face-led promise above already covers him honestly, because it says any substitution is named to you in advance rather than pretending there is never one.",
+      "depth": [
+        "Freddy Alexander"
+      ]
     },
     {
       "id": "last-consulate",
@@ -398,7 +447,7 @@
       ]
     }
   ],
-  "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is depth behind Blues Solo, which is what the workbook always said he was.",
+  "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is unpublished availability depth, which is what the workbook always said he was. Since 2026-09-06 he sits behind Tony Medina rather than behind the retired Blues Rock format.",
   "holds": [
     {
       "name": "Thomas Owen Band",
@@ -421,6 +470,6 @@
       "reason": "Overlaps the cocktail bucket. Unfilmed."
     }
   ],
-  "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are. REMOVED on Daniel's call 2026-08-28: Jordan's media off the funk-trio card (stage photo) and blues-rock card (Old #7 embed); his footage stays on the jazz and solo pages. The Guaraldi solo video is embed-blocked on YouTube's side (shows 'Video unavailable' in embeds) and was replaced by the Blue Bossa solo.",
+  "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are. REMOVED on Daniel's call 2026-08-28: Jordan's media off the funk-trio card (stage photo) and blues-rock card (Old #7 embed); his footage stays on the jazz and solo pages. The Guaraldi solo video is embed-blocked on YouTube's side (shows 'Video unavailable' in embeds) and was replaced by the Blue Bossa solo. ADDED 2026-09-06: Tony Medina's own photographs and footage, on Daniel's permission, when he was promoted out of the Blues Rock format. Every one of his eight published videos was checked for playableInEmbed before placement. Held back deliberately, and not to be reinstated without asking him: a memorial video for a family member who died in 2026, the family-update and show-alert vlogs, a poster graphic with baked-in text, the green-venue wall-signing photographs of identifiable third parties, and a shot whose backdrop is a plasma-donation advertisement.",
   "_corporateRange_removed_note": "RETIRED 2026-08-17, Daniel's call. Was an aggregate corporate band range rendered as a card row and a line in llms.txt, and it anchored a corporate buyer at roughly double what the 2026 product costs. Superseded entirely 2026-09-04: no Signet range publishes anywhere now. The figure is in git history and in OFFER.md."
 }

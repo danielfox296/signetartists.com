@@ -1,0 +1,10 @@
+{
+  "_note": "Authored 2026-09-06, the day Tony Medina was promoted out of the spec'd Blues Rock format on Daniel's call. Mirrors the artists-tejas-singh dir exactly: acts.json carries page: 'artists/tony-medina/', so build.py links every card and every llms.txt line here and generates nothing at /music/tony-medina/. Blues Rock never had a URL of its own (it was a listing), so there is nothing to redirect. Identity copy is the ratified acts.json paragraphs; the ladder resolves from the token. No prices anywhere.",
+  "_title_note": "55 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here.",
+  "title": "Tony Medina: blues and rock band in Denver | Signet Artists",
+  "title_exact": true,
+  "meta_description": "Blues, classic rock and originals for private events in Denver and the Colorado mountains. Solo voice and guitar through a four piece with a dance floor.",
+  "output": "artists/tony-medina/index.html",
+  "nav": "music",
+  "og_image": "img/tony-medina-card.jpg"
+}

@@ -91,6 +91,72 @@
       "from": "Daniel, supplied in session 2026-09-03",
       "retrieved": "2026-09-03",
       "note": "Cropped to 960x540 (16:9, top edge at y=390). No duotone: this is the act's own art, not an interim still."
+    },
+    "img/tony-medina-card.jpg": {
+      "source": "crop of img/acts/medina-marquee.jpg (73726b_c199c91a), centred 16:9 at 1600x900",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "_note": "The roster card and the page og_image. Already black and white at source, so no palette duotone: this is his own photograph, not an interim still.",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-marquee.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_c199c91af94745509716fad6125a6980~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "_note": "Black and white, playing an acoustic guitar under string lights. The card crop comes from this frame.",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-patio.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_dd9796fe8f674d95a7b25f5f03783c86~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "_note": "Also the profile image on his about page.",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-portrait.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_cc898b7fdf6e47b093b5134d7ba7514d~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-band.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_bcb1efaa1b594acc843e6367fdee4a46~mv2.png",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "_note": "The four piece on a stage. Converted to jpg. The other players are not named anywhere the photo publishes, per the no-lineup rule.",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-street.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_81b24775ca8b4c1b9947b5e6d8cce088~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-glass.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_c9fbd4f5a4c74c7fb90ec86307809eb1~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-inlay.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_cfd7bc0cec244842889917e7747f6954~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "_note": "His surname inlaid in abalone along a fretboard. The one place his name publishes as an image rather than as type.",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-soundhole.jpg": {
+      "source": "https://static.wixstatic.com/media/73726b_9198d292cdf842aeb39f6b7bd2543798~mv2.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/acts/medina-live-poster.jpg": {
+      "source": "https://i.ytimg.com/vi/t_s2FavrDew/hqdefault.jpg",
+      "from": "medinablues.com",
+      "retrieved": "2026-09-06",
+      "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl. Same 480x360 treatment as the Tejas and jazz posters.",
+      "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
     }
   },
   "video_embeds": {
@@ -171,6 +237,51 @@
       "channel": "Gary Meyers Dirty Flamenco",
       "uploaded": "2026-07-22",
       "placed": "ensembles/flamenco-trio/ footage (2026-09-06)"
+    },
+    "t_s2FavrDew": {
+      "title": "'Going Down'",
+      "channel": "SIDEHATCH ARTS",
+      "uploaded": "2020-11-22",
+      "placed": "artists/tony-medina/ hero; Tony Medina act video + roster card + VideoObject (2026-09-06)",
+      "embed_checked": "playableInEmbed true, 2026-09-06",
+      "_note": "A Freddie King blues standard, played as a duo. Third-party channel: see the reupload note below before copying this one to the Signet channel."
+    },
+    "5CX5YLI_5Rk": {
+      "title": "Thrill Is Gone cover at The Alley Blues Jam",
+      "channel": "Tony Medina Music",
+      "uploaded": "2026-08-08",
+      "placed": "artists/tony-medina/ footage",
+      "embed_checked": "playableInEmbed true, 2026-09-06"
+    },
+    "vYQ0d2RQAug": {
+      "title": "PURPLE RAIN -(Prince) a Tony Medina cover",
+      "channel": "Tony Medina Music",
+      "uploaded": "2020-04-25",
+      "placed": "artists/tony-medina/ footage",
+      "embed_checked": "playableInEmbed true, 2026-09-06"
+    },
+    "Kn8nmA2thRg": {
+      "title": "\"Drive\" Cars Cover By Tony Medina",
+      "channel": "Tony Medina Music",
+      "uploaded": "2021-07-27",
+      "placed": "artists/tony-medina/ footage",
+      "embed_checked": "playableInEmbed true, 2026-09-06"
+    },
+    "qf4_7lKu3iE": {
+      "title": "'Don't Drink The Water'",
+      "channel": "SIDEHATCH ARTS",
+      "uploaded": "2020-11-29",
+      "placed": "artists/tony-medina/ footage",
+      "embed_checked": "playableInEmbed true, 2026-09-06",
+      "_note": "Third-party channel, same caveat as the hero."
+    },
+    "cdiTSJd7Qpo": {
+      "title": "HEADLINE- original song By Tony Medina (c)2020",
+      "channel": "Tony Medina Music",
+      "uploaded": "2020-05-08",
+      "placed": "artists/tony-medina/ footage",
+      "embed_checked": "playableInEmbed true, 2026-09-06",
+      "_note": "The one original placed on the page, so the catalogue claim has something behind it."
     }
   },
   "held_back": {
@@ -181,7 +292,14 @@
       "lovinger wedding processional photos (bride and father identifiable): not our couple to publish",
       "lovinger watermarked Dazzle venue shot (Jessica Dnea Imagery): photographer's watermark",
       "lovinger studio portrait: a named-face headshot on spec'd pages would name the player",
-      "instagram (all three artists): not scraped, artists can hand assets over directly"
+      "instagram (all three artists): not scraped, artists can hand assets over directly",
+      "tony medina memorial video for a family member who died in 2026, and the family-update vlog: personal grief, and this is a marketing site. Never place these.",
+      "tony medina show-alert and open-mic-announcement vlogs: not performance footage",
+      "tony medina 'Tony Medina and Shon Howard' poster graphic: baked-in text, off house style, same rule as Gary's press-quote graphics",
+      "tony medina green-venue wall-signing photographs (identifiable third parties signing a wall in sharpie): not our people to publish",
+      "tony medina photo shot against a plasma-donation advertisement: off-brand backdrop",
+      "tony medina band photograph outside a named Denver venue: the venue's signage reads as a credit we have not cleared with the venue",
+      "tony medina 'State Of Emergency' and the topical originals: fine songs, wrong register for a corporate buyer's first look"
     ]
   },
   "first_party": {
@@ -310,5 +428,6 @@
         "published": "2026-09-06"
       }
     }
-  }
+  },
+  "_tony_medina_note_2026_09_06": "Daniel 2026-09-06: 'we have permission to add him with all the media from his site, to youtube too.' The site placements above are live. The YouTube half is NOT done: the Signet channel carries no Tony Medina reupload yet, so every embed on his page points at the original upload, which is the pre-Signet-channel pattern. Two of the six placed videos (t_s2FavrDew and qf4_7lKu3iE) sit on the SIDEHATCH ARTS channel rather than his own. His permission covers his material, not another channel's upload, so those two need SIDEHATCH's word before a Signet copy goes up; the four on his own channel can be reuploaded on what Daniel already has. Tracked in Asana."
 }

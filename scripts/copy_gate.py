@@ -45,7 +45,7 @@ BUILDOUT_DIRS = [
     "corporate-retreats-beaver-creek", "corporate-retreats-breckenridge",
     "ensembles-solo-guitarist", "ensembles-acoustic-duo",
     "ensembles-jazz-duo-trio", "ensembles-flamenco-trio", "ensembles-dj",
-    "artists-tejas-singh", "pricing",
+    "artists-tejas-singh", "artists-tony-medina", "pricing",
 ]
 
 COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
