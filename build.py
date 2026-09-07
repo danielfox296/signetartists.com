@@ -795,26 +795,11 @@ def roster_grid_flagships(nav_prefix: str = "") -> str:
 
 
 def organization_schema() -> dict:
-    return {
-        "@context": "https://schema.org",
-        "@type": "MusicGroup",
-        "@id": f"{SITE_URL}/#org",
-        "name": BRAND["name"],
-        "description": BRAND["intro"],
-        "url": SITE_URL,
-        "email": BRAND["email"],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": BRAND["city"],
-            "addressRegion": BRAND["region"],
-            "addressCountry": "US",
-        },
-        "areaServed": BRAND["serviceArea"],
-        # No makesOffer since 2026-09-04. An Offer node is a published price,
-        # and the site publishes none: a night is priced when a date is
-        # checked. Removing it also means no Offer can fail a rich-results
-        # test for a missing price.
-    }
+    """The home page's entity is the same LocalBusiness node every other page
+    emits (@id #business), so sameAs, logo, areaServed and the rest are
+    declared once and never drift. It used to be a separate MusicGroup with a
+    prose areaServed; that was two entities for one business."""
+    return {"@context": "https://schema.org", **local_business_node()}
 
 
 def faq_schema() -> dict:
@@ -841,10 +826,11 @@ def article_schema(post: dict, canonical: str, og_image: str) -> dict:
     the brand is that same entity; anyone else is a Person."""
     author_name = (post.get("author") or {}).get("name", BRAND["name"])
     entity = {
-        "@type": "MusicGroup",
-        "@id": f"{SITE_URL}/#org",
+        "@type": "LocalBusiness",
+        "@id": f"{SITE_URL}/#business",
         "name": BRAND["name"],
         "url": SITE_URL,
+        "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/img/icon-512.png"},
     }
     return {
         "@context": "https://schema.org",
@@ -857,7 +843,11 @@ def article_schema(post: dict, canonical: str, og_image: str) -> dict:
         "datePublished": post.get("date", ""),
         "dateModified": post.get("last_updated") or post.get("date", ""),
         "image": og_image,
-        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
+        "mainEntityOfPage": {
+            "@type": "WebPage", "@id": canonical,
+            # Google's preferred-image nomination (Mar 2026): the post's hero.
+            "primaryImageOfPage": {"@type": "ImageObject", "url": og_image},
+        },
     }
 
 
@@ -918,7 +908,24 @@ def local_business_node() -> dict:
         },
         "areaServed": [{"@type": "Place", "name": n} for n in SERVICE_AREAS],
         "priceRange": "$$$",
+        "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/img/icon-512.png",
+                 "width": 512, "height": 512},
+        "image": [f"{SITE_URL}/img/hero.jpg", f"{SITE_URL}/img/acts/flamenco-live.jpg",
+                  f"{SITE_URL}/img/acts/tejas-mural.jpg"],
+        "slogan": BRAND.get("tagline", ""),
+        # What the business is about, in the words buyers type; answer engines
+        # reconcile entities on these terms.
+        "knowsAbout": [
+            "live music for private events", "wedding cocktail hour music",
+            "wedding ceremony guitarist", "jazz duo and trio",
+            "acoustic duo", "Spanish guitar and flamenco trio", "DJ",
+            "corporate holiday party entertainment", "client dinner music",
+            "corporate retreat evenings", "private party and milestone birthday music",
+        ],
     }
+    maps = [u for u in BRAND.get("sameAs", []) if "maps.google.com" in u]
+    if maps:
+        node["hasMap"] = maps[0]
     # sameAs holds the profile URLs (Google Business Profile, marketplaces,
     # socials) as each one goes live. An empty list stays out of the markup.
     if BRAND.get("sameAs"):
@@ -1220,6 +1227,53 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
         else:
             video_node["contentUrl"] = f"{SITE_URL}/{a['video']}"
         graph.append(video_node)
+    # Extra embedded clips (schema.json "videos"): the Signet channel's copies
+    # of the artists' footage that a page plays in a "Hear it" section. Each
+    # entry names the YouTube id and the text we authored for it; the embed
+    # URL and thumbnail derive from the id so the markup cannot point at a
+    # clip the page does not play (the build checks the section HTML).
+    for i, v in enumerate(data.get("videos", [])):
+        vid_id = v["id"]
+        played = any(
+            vid_id in read(f) for f in sorted((page_dir / "sections").glob("*.html"))
+        ) if (page_dir / "sections").exists() else False
+        if not played:
+            raise SystemExit(f"{path}: videos[{i}] {vid_id} is not embedded on this page")
+        vnode = {
+            "@type": "VideoObject",
+            "@id": f"{canonical}#video-{vid_id}",
+            "name": v["name"],
+            "description": v["description"],
+            "thumbnailUrl": f"https://i.ytimg.com/vi/{vid_id}/hqdefault.jpg",
+            "uploadDate": v["uploadDate"],
+            "duration": v["duration"],
+            "embedUrl": f"https://www.youtube-nocookie.com/embed/{vid_id}",
+            "contentUrl": f"https://www.youtube.com/watch?v={vid_id}",
+            "publisher": {"@id": f"{SITE_URL}/#business"},
+        }
+        if v.get("clips"):
+            vnode["hasPart"] = [
+                {
+                    "@type": "Clip", "name": c["name"],
+                    "startOffset": c["start"], "endOffset": c["end"],
+                    "url": f"https://www.youtube.com/watch?v={vid_id}&t={int(c['start'])}s",
+                }
+                for c in v["clips"]
+            ]
+        graph.append(vnode)
+    # The page's preferred image, per Google's March 2026 guidance: the
+    # configured og_image, else the site default card.
+    og = cfg.get("og_image", "")
+    og = og if og.startswith(("http://", "https://")) else (
+        f"{SITE_URL}/{og.lstrip('/')}" if og else OG_IMAGE
+    )
+    graph.append({
+        "@type": "WebPage", "@id": canonical, "url": canonical,
+        "name": cfg.get("title", BRAND["name"]),
+        "isPartOf": {"@type": "WebSite", "url": SITE_URL, "name": BRAND["name"]},
+        "about": {"@id": f"{SITE_URL}/#business"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": og},
+    })
     faq_html = ""
     faqs = [
         {**f, "q": resolve_rate_tokens(f["q"]), "a": resolve_rate_tokens(f["a"])}
