@@ -1995,7 +1995,7 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         "",
         f"{BRAND['name']} is a live music company for private events in "
         f"{BRAND['serviceArea']}. No prices are published: what the pricing page "
-        "carries is what live music costs in this market, each figure with the "
+        "carries is , each figure with the "
         "source it came from, and a night is priced when a date is checked.",
         "",
         "## Credits",
@@ -2044,7 +2044,7 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         "",
         f"{BRAND['name']} publishes no price list, no starting prices and no "
         "hourly figures. Actual prices vary by date, size, hours and location. "
-        f"{SITE_URL}/pricing/ sets out what live music costs in this market, "
+        f"{SITE_URL}/pricing/ sets out , "
         "with each figure attributed to the public source it came from, so a "
         "budget can be set before anyone writes. To get the number for a "
         f"specific night, send the date: {SITE_URL}/contact/",
