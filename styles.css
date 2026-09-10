@@ -726,6 +726,115 @@ img {
   color: var(--ink-soft);
 }
 
+/* ------------------------------------------------------------- hero-cine */
+
+/* The home hero, 2026-09-10. Full-width band, three black and white artist
+   stills crossfading behind white type, darkened from the bottom so the
+   headline and lede hold. CSS only: each frame runs one 18s cycle and the
+   three cycles are offset with negative delays, so frame one is on screen
+   at first paint (no fade-in from black). Each frame also drifts a few
+   percent while it is up. Reduced motion holds frame one, still. The stills
+   are shipped already grayscale; the filter is a belt for any future colour
+   frame dropped into img/hero/. */
+.hero-cine {
+  position: relative;
+  min-height: clamp(520px, 82vh, 860px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  isolation: isolate;
+}
+
+.hero-cine__frames,
+.hero-cine__scrim {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-cine__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: grayscale(1);
+  opacity: 0;
+  transform: scale(1.02);
+  animation: hero-cine-cycle 18s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.hero-cine__frame:nth-child(1) { animation-delay: 0s; }
+.hero-cine__frame:nth-child(2) { animation-delay: -12s; }
+.hero-cine__frame:nth-child(3) { animation-delay: -6s; }
+
+@keyframes hero-cine-cycle {
+  0%    { opacity: 1; transform: scale(1.02); }
+  28%   { opacity: 1; }
+  33.3% { opacity: 0; transform: scale(1.09); }
+  95%   { opacity: 0; transform: scale(1.02); }
+  100%  { opacity: 1; transform: scale(1.02); }
+}
+
+.hero-cine__scrim {
+  z-index: 1;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.18) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.hero-cine__copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-5);
+}
+
+.hero-cine__copy .h1 {
+  margin-top: 0;
+  max-width: 14ch;
+  color: #fff;
+}
+
+.hero-cine__copy .hero-lede {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* The one button on the hero is white on the dark still, brass on hover as
+   everywhere else. */
+.hero-cine__copy .btn {
+  background: #fff;
+  color: #0a0906;
+  border-color: #fff;
+}
+
+.hero-cine__copy .btn:hover,
+.hero-cine__copy .btn:focus-visible {
+  background: var(--brass-bright);
+  border-color: var(--brass-bright);
+  color: #0a0906;
+}
+
+@media (min-width: 1024px) {
+  .hero-cine__copy {
+    padding-bottom: var(--space-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cine__frame {
+    animation: none;
+    transform: none;
+  }
+  .hero-cine__frame:nth-child(1) {
+    opacity: 1;
+  }
+}
+
 /* ----------------------------------------------------------------- media */
 
 /* Placeholder imagery until the shoot. Duotoned into the palette so the set

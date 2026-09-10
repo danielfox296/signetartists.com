@@ -157,6 +157,23 @@
       "retrieved": "2026-09-06",
       "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl. Same 480x360 treatment as the Tejas and jazz posters.",
       "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
+    },
+    "img/hero/gary-meyers.jpg": {
+      "source": "16:9 crop of img/acts/flamenco-court.jpg (nkr-6523), converted to grayscale, 1600x900",
+      "from": "dirtyflamenco.com",
+      "retrieved": "2026-08-27",
+      "placed": "home hero crossfade, frame 1 (2026-09-10)"
+    },
+    "img/hero/tejas-singh.jpg": {
+      "source": "16:9 crop of img/acts/tejas-profile.jpg, converted to grayscale, 1600x900",
+      "from": "tejassinghmusic.com",
+      "retrieved": "2026-08-27",
+      "placed": "home hero crossfade, frame 2 (2026-09-10)"
+    },
+    "img/hero/last-consulate.jpg": {
+      "source": "Daniel's own act artwork for Last Consulate: ~/Desktop/last-consulate/passport.jpg, 960x1095, the same 16:9 band at y=390 as the card, upscaled to 1600x900 and already black and white",
+      "from": "Daniel, 2026-09-03",
+      "placed": "home hero crossfade, frame 3 (2026-09-10). The name printed on the prop is artwork; nothing on the site repeats it."
     }
   },
   "video_embeds": {
