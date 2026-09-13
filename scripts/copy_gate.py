@@ -37,7 +37,7 @@ BUILDOUT_DIRS = [
     "corporate", "corporate-holiday-party", "corporate-client-dinners",
     "corporate-retreats", "private-parties", "private-parties-denver",
     "private-parties-boulder", "private-parties-colorado-springs",
-    "weddings", "weddings-ceremony",
+    "weddings", "weddings-ceremony", "weddings-colorado-springs",
     "weddings-cocktail-hour",
     "weddings-cocktail-hour-denver", "guides-live-music-cost",
     "corporate-holiday-party-denver", "corporate-holiday-party-colorado-springs",
@@ -45,6 +45,7 @@ BUILDOUT_DIRS = [
     "corporate-retreats-beaver-creek", "corporate-retreats-breckenridge",
     "ensembles-solo-guitarist", "ensembles-acoustic-duo",
     "ensembles-jazz-duo-trio", "ensembles-flamenco-trio", "ensembles-dj",
+    "ensembles-spanish-guitarist",
     "artists-tejas-singh", "artists-tony-medina", "pricing",
 ]
 

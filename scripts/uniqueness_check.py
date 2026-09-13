@@ -53,6 +53,22 @@ GROUPS = {
         "weddings/index.html",
         "weddings/ceremony/index.html",
         "weddings/cocktail-hour/index.html",
+        "weddings/colorado-springs/index.html",
+    ],
+    # Three guitar pages, 2026-09-13: the steel-string solo, the nylon-string
+    # solo and the flamenco trio make three different bookings and are
+    # compared as siblings so none of them drifts into another.
+    "guitar": [
+        "ensembles/solo-guitarist/index.html",
+        "ensembles/spanish-guitarist/index.html",
+        "ensembles/flamenco-trio/index.html",
+    ],
+    # The two Springs pages share a city and a venue list and must not share
+    # an argument.
+    "colorado-springs": [
+        "weddings/colorado-springs/index.html",
+        "private-parties/colorado-springs/index.html",
+        "corporate/holiday-party/colorado-springs/index.html",
     ],
 }
 
