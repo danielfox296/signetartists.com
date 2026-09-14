@@ -174,10 +174,11 @@ def audit_money() -> list:
             n = int(m.group(1).replace(",", ""))
             if n not in dollars:
                 hits.append((rel, f"dollar figure not in market-rates.json: ${m.group(1)}"))
-        for m in re.finditer(r"(\d+)\s*(?:%|percent\b)", text):
-            n = int(m.group(1))
-            if n not in percents:
-                hits.append((rel, f"percentage not in market-rates.json: {m.group(0).strip()}"))
+        # The percentage audit came out 2026-09-14 on Daniel's call. It was an
+        # agent extension of the 2026-09-04 no-published-price rule, and its
+        # one live hit was a client review saying "100%". Signet's own
+        # percent-shaped pricing claims (+25%, +50%, 10% off) stay caught by
+        # PHRASE_BANS below; the dollar audit is unchanged.
         low = text.lower()
         for phrase, allowed_on in PHRASE_BANS:
             if phrase in low and not (allowed_on and rel in allowed_on):
