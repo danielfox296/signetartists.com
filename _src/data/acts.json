@@ -446,6 +446,122 @@
         "Upright bass is the lead instrument. Under it sit slow hip-hop drums, extended jazz harmony, tape-worn keys and delayed guitars, and the improvised bass line is usually the melody.",
         "It is built for arrival, cocktails and dinner, played at a volume guests can talk across, with the feel of a late jazz set or a hotel lobby."
       ]
+    },
+    {
+      "id": "live-band-karaoke",
+      "name": "Live Band Karaoke",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/live-band-karaoke/",
+      "style": "Party covers, the 80s and 90s onward",
+      "spec": "Voice and guitar, keys, bass, drums, and a host working the mic",
+      "material": "Covers",
+      "bucket_tags": [
+        "party"
+      ],
+      "config_tags": [
+        "quartet",
+        "quintet"
+      ],
+      "from": "quartet",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a close microphone.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 from the corporate demand report. Zero Colorado corporate vendors sell live band karaoke, no Denver-metro act exists on The Bash or GigSalad, and 'live karaoke denver' autocompletes. Daniel folded the 80s and 90s cover-band ideas into this act the same day: it plays as a party band on its own and hands the mic over. Spec'd, no names.",
+      "blurb": "A party band that plays the 80s and 90s hits on its own, then hands the mic to anyone in the crowd who wants a song. Nobody has to sing for the night to work, and the band is ready the moment somebody does."
+    },
+    {
+      "id": "yacht-rock",
+      "name": "Yacht Rock Band",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/yacht-rock/",
+      "style": "Yacht rock",
+      "spec": "Three voices, keys, guitar, bass, drums and saxophone",
+      "material": "Covers",
+      "bucket_tags": [
+        "party",
+        "patio"
+      ],
+      "config_tags": [
+        "quartet",
+        "quintet"
+      ],
+      "from": "quartet",
+      "img": "outdoor.jpg",
+      "alt": "A frame tent with a plywood stage deck under it.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 from the corporate demand report: 'yacht rock cover band denver' and ten neighbouring phrases autocomplete, no Colorado act exists and no marketplace carries the category. Spec'd, no names.",
+      "blurb": "Doobie Brothers, Steely Dan, Hall and Oates, Toto and Christopher Cross, sung in harmony with the saxophone out front. The summer party band, and the late set a whole crowd knows the words to."
+    },
+    {
+      "id": "americana-band",
+      "name": "Americana Band",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/americana-band/",
+      "style": "Americana and the Colorado songbook",
+      "spec": "Voice and acoustic guitar, fiddle or mandolin, upright bass, drums",
+      "material": "Covers",
+      "bucket_tags": [
+        "patio",
+        "cocktail",
+        "party"
+      ],
+      "config_tags": [
+        "trio",
+        "quartet"
+      ],
+      "from": "trio",
+      "img": "range.jpg",
+      "alt": "The Denver skyline with the Front Range behind it, seen from City Park.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 from the corporate demand report: the Colorado welcome act for conferences and incentive groups. Planners report demand for local flavor, the DMCs sell Western and apres-ski evenings, and bluegrass supply in Denver is deep but nobody packages it for corporate work. Fronted, but sold as a spec on Daniel's call 2026-09-14: no face on the page.",
+      "blurb": "The Colorado evening for a crowd that flew in for it. Grateful Dead, Tom Petty and Neil Young beside Nathaniel Rateliff and Gregory Alan Isakov, on acoustic guitar, fiddle, upright bass and drums, for a welcome reception, a ranch dinner or a summer picnic."
+    },
+    {
+      "id": "soul-rnb",
+      "name": "Soul and R&B Band",
+      "presentation": "spec",
+      "status": "listing",
+      "style": "Soul and R&B",
+      "spec": "Voice, keys, guitar, bass, drums, and a horn when the floor wants one",
+      "material": "Covers",
+      "bucket_tags": [
+        "party"
+      ],
+      "config_tags": [
+        "quartet",
+        "quintet"
+      ],
+      "from": "quartet",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a close microphone.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 on Daniel's call: a sung soul and R&B listing beside the instrumental Funk Trio. Every Colorado variety band carries Motown and soul as a layer of its set; this is that layer sold as its own act. Spec'd, no names. Listing only: 'soul band for hire denver' returns no autocomplete, so no page.",
+      "blurb": "Stevie Wonder, Aretha Franklin, Al Green, Bill Withers and the Motown book, sung out front with a horn on the big choruses. The dance floor act for a holiday party or the second half of a gala."
+    },
+    {
+      "id": "solo-piano",
+      "name": "Solo Piano",
+      "presentation": "spec",
+      "status": "listing",
+      "style": "Cocktail piano",
+      "spec": "Piano, with a voice when the evening wants one",
+      "material": "Standards and covers",
+      "bucket_tags": [
+        "cocktail",
+        "budget"
+      ],
+      "config_tags": [
+        "solo"
+      ],
+      "from": "solo",
+      "img": "ballroom.jpg",
+      "alt": "An empty banquet hall set for dinner.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 on Daniel's call. Organizers ask for 'a piano player' by name in the planner threads, galas seat a pianist at dinner, and hotels sell the ballroom and leave the music to the planner. Listing only.",
+      "blurb": "One player at the piano through arrival, cocktails and dinner, standards and covers at a level the table talks across, with a voice added when the evening wants singing. The hotel-ballroom and client-dinner booking."
     }
   ],
   "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is unpublished availability depth, which is what the workbook always said he was. Since 2026-09-06 he sits behind Tony Medina rather than behind the retired Blues Rock format.",

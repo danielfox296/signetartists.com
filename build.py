@@ -622,6 +622,8 @@ def roster_filters() -> str:
         for r in RATE_CARD if r["id"] in in_use
     )
     # The starting-price filter was removed 2026-09-04 with the published card.
+    # NO COUNT (2026-09-07 rule, applied here 2026-09-14): the status label never
+    # prints the size of the roster; acts.js prints how many match a filter.
     # Kind of night and size are the two axes a buyer actually shops on here.
     return (
         '<form class="roster-filters" id="roster-filters" hidden>'
@@ -632,7 +634,7 @@ def roster_filters() -> str:
         '<select id="filter-config" name="config">'
         f'<option value="">Any</option>{config_opts}</select></div>'
         '<button type="button" class="btn btn--sm btn--outline" id="filter-reset">Reset</button>'
-        f'<p class="filter-count" id="filter-count" role="status">{len(ACTS)} acts</p>'
+        f'<p class="filter-count" id="filter-count" role="status">Every act</p>'
         "</form>"
     )
 

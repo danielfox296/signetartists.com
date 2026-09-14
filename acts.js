@@ -51,8 +51,8 @@
 
     countEl.textContent =
       shown === cards.length
-        ? cards.length + " acts"
-        : shown + " of " + cards.length + " acts";
+        ? "Every act"
+        : shown + " matching";
     emptyEl.hidden = shown !== 0;
   }
 
