@@ -685,6 +685,12 @@ img {
   align-items: center;
 }
 
+/* A two-column split that follows a heading block needs the gap the
+   def-list carries on its own (live band karaoke booking section, 2026-09-14). */
+.heading + .split {
+  margin-top: 2.5rem;
+}
+
 .card-grid {
   display: grid;
   gap: 1px;
