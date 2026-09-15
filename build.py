@@ -1063,14 +1063,15 @@ def offer_close(headline: str) -> str:
         '<section class="section section--ruled"><div class="wrap">'
         '<div class="close-row">'
         f'<div style="max-width: 32rem;"><h2 class="h2">{esc(headline)}</h2>'
-        '<p class="lede">Live music sized to the event, solo, duo, trio or '
-        "quartet, priced to the date, with a single point of contact.</p></div>"
+        '<p class="lede">Live music for your event, from a solo musician to a full '
+        "band, with sound support that&rsquo;s the right size for the venue and a "
+        "personal contact for the night.</p></div>"
         '<div class="btn-row"><a class="btn" href="{{nav_prefix}}contact/">'
         "Check a Date</a></div>"
         "</div>"
-        '<p class="note">Send the date and the venue. What comes back is a yes '
-        "or a straight no, and our number for that night. What the wider "
-        'market charges is set out on the <a href="{{nav_prefix}}pricing/">'
+        '<p class="note">Send us the date and the venue, and we&rsquo;ll come back with '
+        "a recommendation and a price for your night. What live music costs in "
+        'this market is on the <a href="{{nav_prefix}}pricing/">'
         "pricing page</a>.</p>"
         "</div></section>"
     )
@@ -1618,8 +1619,10 @@ def act_setlist(act: dict) -> str:
         body = _repertoire_setlist(act)
         # {{nav_prefix}} rather than a counted path: this block now also renders
         # into authored pages at other depths via {{act_setlist:ID}}.
-        more = ('<p class="note"><a href="{{nav_prefix}}repertoire/">The whole song list</a> '
-                "is published, all 240 titles.</p>")
+        # No song count: the book grows, and Daniel cut the count from the
+        # repertoire page himself (CopyDesk, 2026-09-05).
+        more = ('<p class="note">A sample. <a href="{{nav_prefix}}repertoire/">The whole song list</a> '
+                "is on the repertoire page.</p>")
     else:
         items = "".join(f'<li><span class="song-title">{esc(i)}</span></li>'
                         for i in sl["items"])

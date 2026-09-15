@@ -18,31 +18,29 @@ sections:
   - type: key_takeaways
     items:
       - "A cover or jazz band for a corporate event runs {{market:us_corporate_band}} in this market, and Denver bands run {{market:denver_band_range}}, a trio at the bottom of that and a full band with horns at the top."
-      - "Most acts bill two things: a call-out covering the evening they commit to whatever its length, and a rate for performance time. That is why one hour is never a quarter of four."
-      - "Sound is the line that most often makes two quotes at the same number cover two different evenings. Ask whether it is inside the figure."
-      - "Travel beyond the Denver metro and a December weekend are separate lines on an honest quote. A Denver holiday weekend carries {{market:denver_holiday_surcharge}} across this market."
+      - "Most acts bill two things: a call-out covering the evening they commit to whatever its length, and a rate for performance time. That's why one hour is never a quarter of four."
+      - "Sound is the line that most often makes two quotes at the same number cover two different evenings. Ask whether it's inside the figure."
+      - "Travel beyond the Denver metro and a December weekend are separate lines on a quote. A Denver holiday weekend carries {{market:denver_holiday_surcharge}} across this market."
 
   - type: prose
     body: |
       The question usually arrives without much warning. Someone decides the
       holiday party should have a band this year, and by the end of that
-      meeting you are the person who has to find out what a band costs and
+      meeting you're the person who has to find out what a band costs and
       report back with a figure somebody upstairs can approve.
 
-      Then you start looking, and almost every band site answers with a form.
-      You fill it in, you wait two days, and a number comes back that you
-      cannot compare against the next number, because the two quotes cover
-      different things. One includes sound. One does not. One mentions travel.
-      One will mention it later. Three weeks go by and you still cannot put a
-      line in a budget.
+      Then you start looking, and the numbers that come back are hard to
+      compare, because two quotes rarely cover the same things: one includes
+      sound and the other assumes the venue has it, and travel is on one and
+      missing from the other. Weeks go by and you still can't put a line in a
+      budget.
 
-      We do not publish our prices, because a Saturday in December and a
-      Tuesday in September are not the same job and one figure would be wrong
-      for most of the nights somebody read it on. What we can do is show you
+      We don't publish our prices, because a Saturday in December and a
+      Tuesday in September aren't the same job. What we can do is show you
       the market, sourced, so the budget conversation can happen today. Every
       figure below is somebody else's published number, with the page it came
-      from listed at the end. For ours, the date is the whole question, so that
-      is what we ask for first.
+      from listed at the end. For ours, tell us the date and we'll come back
+      with a recommendation and a price.
 
   - type: subhead
     text: "Why the price has two parts"
@@ -67,7 +65,7 @@ sections:
 
   - type: comparison_table
     title: "What the market charges, by size"
-    columns: ["What you are booking", "What the market charges", "Whose market"]
+    columns: ["What you're booking", "What the market charges", "Whose market"]
     rows:
       - ["A jazz trio or acoustic duo for a dinner", "{{market:us_dinner_band}}", "United States"]
       - ["A cover or jazz band for a corporate event", "{{market:us_corporate_band}}", "United States"]
@@ -78,16 +76,15 @@ sections:
 
   - type: prose
     body: |
-      Read those next to what each one covers, because that is where two
+      Read those next to what each one covers, because that's where two
       quotes at the same number stop being the same purchase. A booking
       marketplace averages {{market:denver_marketplace_avg}} for a Denver
       party band across listings running
-      {{market:denver_marketplace_range}}, and what sits inside a listing at
-      that price varies listing by listing.
+      {{market:denver_marketplace_range}}.
 
       The other thing the table hides is size. A dinner for thirty and a
       ballroom of two hundred want different builds, and most corporate
-      evenings need fewer players than the person booking them expects. The
+      evenings need fewer musicians than the person booking them expects. The
       number moves far more on how many people are on the stand and how many
       hours they play than on which act is standing there.
 
@@ -99,9 +96,9 @@ sections:
       Almost nobody types the question the way the industry answers it. What
       people search is how much it costs to hire a band for an hour, for two
       hours, for four. Hours are the unit the budget line is written in, so
-      here is the market read that way.
+      here's the market read that way.
 
-      The first thing to know is that two hours is not half of four, and the
+      The first thing to know is that two hours isn't half of four, and the
       reason is the call-out above. A two-hour booking costs the act the same
       evening a four-hour booking costs: the same drive, the same load-in,
       the same sound check, the same strike after the guests leave. Only the
@@ -112,7 +109,7 @@ sections:
 
   - type: comparison_table
     title: "What the market charges for a short booking and for a full evening"
-    columns: ["What you are booking", "What the market charges", "Whose market"]
+    columns: ["What you're booking", "What the market charges", "Whose market"]
     rows:
       - ["A short booking, a ceremony or a cocktail hour", "{{market:denver_strings}}", "Denver"]
       - ["A jazz trio or acoustic duo for a dinner", "{{market:us_dinner_band}}", "United States"]
@@ -133,10 +130,9 @@ sections:
       evening runs {{market:us_corporate_band}}.
 
       For a two-hour corporate booking specifically, the useful anchor is the
-      dinner figure rather than the reception one, because a two-hour job is
-      almost always a seated evening with remarks in it rather than a floor
-      that has to fill. Two players for two hours is the cheapest real
-      booking on any of these lists, and it is the one most often
+      dinner figure, because a two-hour job is almost always a seated evening
+      with remarks in it. Two musicians for two hours is the cheapest real
+      booking on any of these lists, and it's the one most often
       over-specified: the quartet gets quoted for an evening that a duo would
       have carried.
 
@@ -144,11 +140,10 @@ sections:
       {{market:denver_overtime}} for each hour past the contracted set. That
       line is worth asking about before you sign anything, because a four-hour
       quote that becomes a five-hour night is where a budget gets broken after
-      the fact. We do not charge one, and the paragraph on what moves the
-      number, below, says what we do instead.
+      the fact.
 
   - type: subhead
-    text: "Three shapes a corporate night takes"
+    text: "Three common configurations of a corporate night"
 
   - type: prose
     body: |
@@ -158,29 +153,29 @@ sections:
 
       **A client dinner.** A jazz duo, three hours, sitting under the
       conversation for the whole evening so nobody has to raise their voice
-      across the table. Two players, low volume, no stage. This is the
-      cheapest real booking on the list and it is the one most often
+      across the table. Two musicians, low volume, no stage. This is the
+      cheapest real booking on the list and it's the one most often
       over-specified.
 
       **A holiday party with a real dance floor.** A quartet, four hours,
       playing dinner at conversation volume and getting loud on cue. Four
-      players covers a ballroom floor; the horns and the second vocalist are
+      musicians cover a ballroom floor; the horns and the second vocalist are
       what take a booking into show-band money.
 
       **A gala that runs across the whole night.** A quartet for three hours,
       a cocktail duo for the hour before it, and a DJ for the hour after. The
       thing worth knowing here is that covering all three from one booking is
       much cheaper than three separate ones, because the drive, the load-in
-      and the sound system are paid for once. Ask any act you are comparing
+      and the sound system are paid for once. Ask any act you're comparing
       whether they price it that way.
 
   - type: subhead
-    text: "What moves the number"
+    text: "Factors that affect price"
 
   - type: prose
     body: |
-      Five things, each of which should arrive as its own line on the quote
-      and its own line on the contract. If they do not, that is the question
+      Six things, each of which should arrive as its own line on the quote
+      and its own line on the contract. If they don't, that's the question
       to ask before you compare two numbers.
 
       - **Travel.** The Front Range is a short line. The I-70 corridor, which
@@ -193,10 +188,10 @@ sections:
         anything else on the calendar.
       - **Live-band karaoke.** Its own line, if the program wants a chapter
         where your people sing and the band plays behind them.
-      - **Learned songs beyond the first.** The first one is included with us;
-        each one after that is its own line.
+      - **Learned songs.** The first one is included with us; each one after
+        that is its own line.
       - **Overtime.** This market charges {{market:denver_overtime}} for each
-        hour beyond the contracted set. We do not: added time costs what the
+        hour beyond the contracted set. We don't: added time costs what the
         earlier time did, in 30-minute increments, so if the night runs long
         the only question left is whether the crowd wants more.
 
@@ -209,16 +204,15 @@ sections:
       premium deserves its own paragraph. A Denver holiday weekend carries
       {{market:denver_holiday_surcharge}} across this market, applied to the
       fee for the music rather than to travel. On a strong December Saturday
-      you should expect to be quoted above the ranges in the table above, and
-      an act that does not tell you that in advance is going to tell you later.
+      you should expect to be quoted above the ranges in the table above.
       New Year's Eve is its own case again, everywhere.
 
       There are [21 party dates across November and December](https://signetartists.com/corporate/holiday-party/denver/)
       in the Denver season, laid out on the
       [holiday party page](https://signetartists.com/corporate/holiday-party/).
-      If you are still at the ideas stage rather than the date stage,
+      If you're still at the ideas stage,
       [the ideas list](https://signetartists.com/blog/office-holiday-party-ideas-denver/)
-      runs seven party shapes with a size attached to each.
+      runs seven party formats with a size attached to each.
 
   - type: subhead
     text: "What should live music cost for a company holiday party?"
@@ -235,9 +229,9 @@ sections:
 
       If the party is a seated dinner rather than a dance floor, the figure
       is lower and the format is smaller: a jazz trio or acoustic duo
-      for a dinner runs {{market:us_dinner_band}}. If it is a full evening
-      with dancing in a ballroom, the four-hour figures above are the band you
-      are in, and the horns and the second vocalist are what take a booking
+      for a dinner runs {{market:us_dinner_band}}. If it's a full evening
+      with dancing in a ballroom, the four-hour figures above are the band
+      you're in, and the horns and the second vocalist are what take a booking
       into show-band money at {{market:us_showband}}.
 
       Two lines decide whether the figure you take upstairs survives contact
@@ -247,7 +241,7 @@ sections:
       compare two figures.
 
   - type: subhead
-    text: "What is inside every one of those numbers"
+    text: "What's inside every one of those numbers"
 
   - type: prose
     body: |
@@ -255,16 +249,16 @@ sections:
       them covers, and this is the part where quotes diverge most. At every
       size, ours includes:
 
-      - Sound sized to the venue
+      - Sound support that's the right size for the venue
       - Load-in, setup, strike and load-out
-      - A certificate of insurance naming your venue as additional insured
+      - A certificate of insurance
       - A W-9 and one itemised invoice
       - Timeline coordination before the event
       - Continuous audio during breaks
-      - A named contact for the night, given to you before the event
+      - A personal contact for the night
 
       Sound is the line worth checking hardest against another quote. A band
-      that does not carry production will either add it later or expect the
+      that doesn't carry production will either add it later or expect the
       venue to have it, and the venue's house system was probably specified for
       speeches. Stage lighting and a dedicated engineer are optional add-ons,
       quoted as their own line when you want them.
@@ -273,13 +267,11 @@ sections:
     title: "Why any of this is published"
     body: |
       In almost every corporate booking the person choosing the band and the
-      person approving the spend are two different people, and they are rarely
-      in the same meeting. That is the reason this page exists: the market
+      person approving the spend are two different people, and they're rarely
+      in the same meeting. That's the reason this page exists: the market
       figures on it can be forwarded, questioned and approved without anybody
-      waiting on a vendor to reply. What we will not do is publish a single
-      number of our own and let you find out later that it did not apply to
-      your date. Send the date, and the figure you take to finance is the one
-      that ends up on the invoice.
+      waiting on a vendor to reply. Send the date and we'll come back with a
+      recommendation and a price for it.
 
       The corporate calendars behind this page are Amazon, NBCUniversal,
       Charles Schwab, Kroger, the Denver Art Museum, Sheraton, Hyatt, the
@@ -303,8 +295,8 @@ sections:
       {{market_sources}}
 
   - type: cta
-    headline: "Send the date and we will tell you what that night costs."
-    body: "A yes or a straight no, and our number for that evening, sized to what you are actually trying to solve."
+    headline: "Send the date and we'll tell you what that night costs."
+    body: "The date and the venue are enough. We'll come back with a recommendation and our number for that evening, sized to what you're actually trying to solve."
     link: "contact/"
     link_text: "Check a Date"
 
