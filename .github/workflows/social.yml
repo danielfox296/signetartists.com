@@ -1,0 +1,123 @@
+name: Social queue
+
+# The publishing rail. It moves words a person already wrote; it never writes
+# one. Substance lives in _marketing/content-queue.yaml and is authored by
+# hand. See _marketing/BRAND-SOCIAL-STRATEGY.md section 7 for the line between
+# what is automated and what never will be.
+#
+# Hourly rather than at each post's exact minute, because GitHub's scheduler
+# is best-effort and a party invitation does not care about nine minutes. The
+# ledger makes the job idempotent: a post already in published.json is never
+# sent twice, however often this runs.
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      live:
+        description: "Actually post (otherwise dry run)"
+        type: boolean
+        default: false
+  pull_request:
+    paths:
+      - "_marketing/**"
+      - "scripts/social_*.py"
+      - ".github/workflows/social.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-queue
+  cancel-in-progress: false
+
+jobs:
+  # Pull requests get the copy gate and nothing else. A branch can never post.
+  lint:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate the queue
+        run: python3 scripts/social_queue.py --lint
+
+  publish:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      # Belt and braces: social_publish.py runs the gate itself and refuses to
+      # send if it fails. This step exists so a queue problem is visible as its
+      # own red step rather than buried in the publish log.
+      - name: Copy gate
+        run: python3 scripts/social_queue.py --lint
+
+      - name: What is due
+        run: python3 scripts/social_queue.py --due
+
+      # Without --live, or without credentials, this prints the payloads and
+      # touches no network. A missing secret degrades to dry run rather than
+      # failing, so an expired Instagram token never turns the repository red
+      # at 3am; the queue simply waits.
+      # A LinkedIn access token lasts 60 days and a consumer-tier app is
+      # issued no refresh token, so the token has to be replaced by hand before
+      # it lapses. This step never fails the run; it exists so the expiry shows
+      # up in the log a week early instead of as a dead Tuesday post.
+      - name: LinkedIn token check
+        continue-on-error: true
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
+        run: |
+          if [ -n "$LINKEDIN_ACCESS_TOKEN" ]; then
+            python3 scripts/linkedin_auth.py --doctor
+          else
+            echo "No LinkedIn token set yet; see _marketing/LINKEDIN-SETUP.md"
+          fi
+
+      - name: Publish
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          LINKEDIN_ORG_URN: ${{ secrets.LINKEDIN_ORG_URN }}
+          LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] \
+             || [ "${{ inputs.live }}" = "true" ]; then
+            python3 scripts/social_publish.py --live
+          else
+            python3 scripts/social_publish.py
+          fi
+
+      # The ledger is what makes this idempotent, so it has to survive the run.
+      # deploy.yml ignores _marketing/**, so this commit never triggers a site
+      # rebuild.
+      - name: Record what went out
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain _marketing/published.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _marketing/published.json
+            git commit -m "social: record published posts"
+            git push
+          fi
