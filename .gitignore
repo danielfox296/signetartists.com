@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 _site/
 .claude/
+
+# A logged-in LinkedIn session and its screenshots. Never commit either: the
+# profile directory is a live credential.
+.browser-profile/
+.browser-shots/

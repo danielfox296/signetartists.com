@@ -71,33 +71,18 @@ jobs:
       # touches no network. A missing secret degrades to dry run rather than
       # failing, so an expired Instagram token never turns the repository red
       # at 3am; the queue simply waits.
-      # A LinkedIn access token lasts 60 days and a consumer-tier app is
-      # issued no refresh token, so the token has to be replaced by hand before
-      # it lapses. This step never fails the run; it exists so the expiry shows
-      # up in the log a week early instead of as a dead Tuesday post.
-      - name: LinkedIn token check
-        continue-on-error: true
-        env:
-          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
-          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
-          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
-        run: |
-          if [ -n "$LINKEDIN_ACCESS_TOKEN" ]; then
-            python3 scripts/linkedin_auth.py --doctor
-          else
-            echo "No LinkedIn token set yet; see _marketing/LINKEDIN-SETUP.md"
-          fi
-
+      # LinkedIn is NOT published from here. It goes out through
+      # scripts/social_browser.py, on Daniel's own machine and his own
+      # logged-in browser, because the Community Management API is weeks away.
+      # Logging in to LinkedIn from a GitHub runner would be a datacenter IP on
+      # an unrecognised device, which is the fastest way to get an account
+      # challenged, so this workflow must never hold a LinkedIn session.
+      # social_publish.py stands LinkedIn down unless LINKEDIN_ENABLE_API=1,
+      # which is for when the Page is approved and the API route comes back.
+      # See _marketing/BROWSER-POSTING.md.
       - name: Publish
         env:
-          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
-          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
-          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
-          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
-          LINKEDIN_ORG_URN: ${{ secrets.LINKEDIN_ORG_URN }}
-          LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
+          # Instagram only. No LinkedIn credential is exposed to this job.
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: |

@@ -365,6 +365,8 @@ Three files, one workflow.
 ```
 _marketing/content-queue.yaml   every post: slot, brief, body, asset, link, status
 scripts/social_queue.py         validate, lint, list what is due
+scripts/social_browser.py       LinkedIn, via a logged-in browser, run locally
+scripts/social_publish.py       Instagram, via the Graph API, run by CI
 .github/workflows/social.yml    hourly: publish what is due, record it, alert on failure
 ```
 
@@ -390,6 +392,25 @@ publishing needs a Business or Creator account linked to a Facebook Page, plus a
 long-lived token that has to be refreshed about every 60 days. If either is
 blocked or slow, point the same queue at Buffer or Later and keep the queue file
 as the source of truth. **The queue is the system. The API is a detail.**
+
+**Decided 2026-09-15: LinkedIn goes out through a logged-in browser, not the
+API.** Waiting weeks on the Page review during the six weeks that decide the
+holiday season was the wrong trade, so `scripts/social_browser.py` drives a real
+browser Daniel is already signed in to. Same queue, same copy gate, same ledger;
+only the last mile changed.
+
+That route is against LinkedIn's User Agreement, which is a real cost and is
+recorded here rather than buried: the account exposed is the personal profile
+this plan leans on hardest. The mitigations are structural, not cosmetic. It
+runs only on Daniel's machine, never in CI, because a login from a datacenter IP
+is the loudest flag available. It runs headed, stops before publishing, and
+confirms per post. It stays at the cadence this plan already set, two or three a
+week. And it makes no attempt to defeat bot detection, which is the line that
+keeps this "his own account posting his own content" rather than something else.
+
+`_marketing/BROWSER-POSTING.md` is the runbook. The Page application stays open
+in the background, and `LINKEDIN_ENABLE_API=1` switches the API rail back on the
+day it lands.
 
 **Corrected 2026-09-15.** An earlier version of this section claimed the
 personal LinkedIn profile could not be posted to by API. That was wrong, and

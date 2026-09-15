@@ -296,11 +296,29 @@ def main() -> int:
 
     data = q.load()
     done = q.published_ids()
-    queued = [p for p in (data.get("posts") or [])
-              if p.get("status") == "ready"
-              and p.get("channel") in PUBLISHERS
-              and p.get("id") not in done
-              and q.parse_when(p["publish_at"]) <= now]
+    # LinkedIn is published by scripts/social_browser.py, from Daniel's own
+    # machine and his own logged-in browser, because the Community Management
+    # API is weeks away. Two rails both claiming LinkedIn is how a post goes
+    # out twice, so this one stands down unless the API route is explicitly
+    # turned back on. Set LINKEDIN_ENABLE_API=1 once the Page is approved.
+    api_linkedin = os.environ.get("LINKEDIN_ENABLE_API") == "1"
+    queued, stood_down = [], []
+    for p in (data.get("posts") or []):
+        if p.get("status") != "ready" or p.get("id") in done:
+            continue
+        if p.get("channel") not in PUBLISHERS:
+            continue
+        if p.get("channel", "").startswith("linkedin") and not api_linkedin:
+            stood_down.append(p["id"])
+            continue
+        try:
+            if q.parse_when(p["publish_at"]) <= now:
+                queued.append(p)
+        except (TypeError, ValueError):
+            continue
+    if stood_down:
+        print(f"social_publish: {len(stood_down)} LinkedIn post(s) left to "
+              "social_browser.py: " + ", ".join(stood_down))
 
     live = args.live and bool(
         os.environ.get("LINKEDIN_ACCESS_TOKEN")

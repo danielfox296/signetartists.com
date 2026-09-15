@@ -139,12 +139,25 @@ scripts/linkedin_auth.py             OAuth helper; --doctor says what a token ca
 .github/workflows/social.yml         hourly publish; copy gate on every PR
 ```
 
-**LinkedIn has two publishing products and only one is gated.** The personal
-profile (`w_member_social`, self-serve *Share on LinkedIn*) needs no review and
-works the same day; the company page (*Community Management API*) is
-partner-gated behind a review of the app and the company. The queue calls them
-`linkedin-personal` and `linkedin`. The ungated one carries the most reach, so
-it is where to start. `_marketing/LINKEDIN-SETUP.md` is the runbook.
+**LinkedIn publishes through a logged-in browser, not the API** (decided
+2026-09-15). The Community Management API is partner-gated behind a review of
+the app and the company, which is weeks, and the holiday season is being decided
+now. `scripts/social_browser.py` drives a real browser on Daniel's machine:
+same queue, same copy gate, same ledger, different last mile.
+
+It runs **locally only, never in CI** — a LinkedIn login from a GitHub runner is
+a datacenter IP on an unrecognised device, which is the fastest way to get an
+account challenged. `social.yml` therefore holds no LinkedIn credential and
+`social_publish.py` stands LinkedIn down unless `LINKEDIN_ENABLE_API=1`. It runs
+headed, stops before publishing, confirms per post, and makes no attempt to
+defeat bot detection. This is against LinkedIn's User Agreement; the reasoning
+and the mitigations are in `_marketing/BROWSER-POSTING.md`.
+
+The API route is kept for the day the Page is approved.
+`_marketing/LINKEDIN-SETUP.md` is that runbook, and it is still the reference
+for the two LinkedIn products: the personal profile (`w_member_social`,
+self-serve, no review) and the company page (Community Management API,
+partner-gated).
 
 `LinkedIn-Version` is a `YYYYMM` header supported for about a year. The default
 is `202608`; override it with the `LINKEDIN_API_VERSION` secret when it sunsets.
