@@ -15,6 +15,12 @@ request or a laptop never posts by accident.
 
 Channels
     linkedin    Posts API, as the organisation. Optional single image.
+                Needs the partner-gated Community Management API.
+    linkedin-personal
+                The same Posts API, authored as the member. Needs only
+                w_member_social, which is self-serve, so this surface works
+                long before the Page is approved. It is also the higher-reach
+                one, so it is where to start.
     instagram   Graph API, two steps: build a container, then publish it. The
                 API fetches media by URL rather than accepting an upload, which
                 is why media has to be a file this site already serves.
@@ -24,7 +30,9 @@ Channels
                 stays a person's job by design.
 
 Credentials, from the environment, set as GitHub Actions secrets:
-    LINKEDIN_ACCESS_TOKEN   LINKEDIN_ORG_URN   (urn:li:organization:123456)
+    LINKEDIN_ACCESS_TOKEN   or LINKEDIN_REFRESH_TOKEN with CLIENT_ID/SECRET
+    LINKEDIN_PERSON_URN     (urn:li:person:ABC)       personal surface
+    LINKEDIN_ORG_URN        (urn:li:organization:123) company page
     IG_ACCESS_TOKEN         IG_USER_ID
     LINKEDIN_API_VERSION    optional, defaults below
 
@@ -53,7 +61,10 @@ ROOT = q.ROOT
 LEDGER = q.LEDGER
 SITE = q.SITE
 
-LINKEDIN_VERSION = os.environ.get("LINKEDIN_API_VERSION", "202405")
+# YYYYMM, supported for a year from release. This read "202405" until
+# 2026-09-15, by which point it had been sunset for over a year and would have
+# failed every call. `linkedin_auth.py --doctor` tests the value and says so.
+LINKEDIN_VERSION = os.environ.get("LINKEDIN_API_VERSION", "202608")
 GRAPH = "https://graph.facebook.com/v21.0"
 
 
@@ -84,6 +95,44 @@ def public_url(item: str) -> str:
 # LinkedIn
 # --------------------------------------------------------------------------
 
+def linkedin_token() -> str:
+    """A usable access token, refreshed if this app was issued a refresh token.
+
+    A LinkedIn access token lasts 60 days. Approved apps also get a refresh
+    token good for a year, and when one is present it is far better to mint a
+    fresh access token on each run than to store a 60-day secret that dies
+    quietly halfway through the season. Consumer-tier apps are issued no
+    refresh token, so the stored access token is the fallback and
+    `linkedin_auth.py --doctor` is what keeps an eye on its expiry.
+    """
+    refresh = os.environ.get("LINKEDIN_REFRESH_TOKEN")
+    cid = os.environ.get("LINKEDIN_CLIENT_ID")
+    secret = os.environ.get("LINKEDIN_CLIENT_SECRET")
+    if refresh and cid and secret:
+        body = urllib.parse.urlencode({
+            "grant_type": "refresh_token", "refresh_token": refresh,
+            "client_id": cid, "client_secret": secret}).encode()
+        minted = request("https://www.linkedin.com/oauth/v2/accessToken", body,
+                         {"Content-Type": "application/x-www-form-urlencoded"})
+        if minted.get("access_token"):
+            return minted["access_token"]
+    return os.environ.get("LINKEDIN_ACCESS_TOKEN") or ""
+
+
+def linkedin_author(channel: str) -> str:
+    """Who the post is published as.
+
+    The two surfaces are different LinkedIn products, not a setting. The
+    company page needs the partner-gated Community Management API; the personal
+    profile needs only self-serve w_member_social, and it is the surface with
+    the most reach, which is why the queue can use it long before the Page is
+    approved.
+    """
+    key = ("LINKEDIN_PERSON_URN" if channel == "linkedin-personal"
+           else "LINKEDIN_ORG_URN")
+    return os.environ.get(key) or ""
+
+
 def linkedin_headers(token: str) -> dict:
     return {
         "Authorization": f"Bearer {token}",
@@ -107,8 +156,9 @@ def linkedin_image(path: str, owner: str, token: str) -> str:
 
 
 def publish_linkedin(post: dict, live: bool) -> dict:
-    token = os.environ.get("LINKEDIN_ACCESS_TOKEN")
-    owner = os.environ.get("LINKEDIN_ORG_URN")
+    channel = post.get("channel", "linkedin")
+    token = linkedin_token() if live else os.environ.get("LINKEDIN_ACCESS_TOKEN")
+    owner = linkedin_author(channel)
     body = post["body"].strip()
     link = post.get("link")
 
@@ -136,7 +186,11 @@ def publish_linkedin(post: dict, live: bool) -> dict:
         return {"dry_run": True, "payload": payload, "images": media,
                 "first_comment": post.get("first_comment")}
     if not (token and owner):
-        raise RuntimeError("LINKEDIN_ACCESS_TOKEN and LINKEDIN_ORG_URN not set")
+        need = ("LINKEDIN_PERSON_URN" if channel == "linkedin-personal"
+                else "LINKEDIN_ORG_URN")
+        raise RuntimeError(
+            f"a LinkedIn token and {need} are both needed. Run "
+            "scripts/linkedin_auth.py --authorize, then --doctor")
 
     if media:
         payload["content"] = {"media": {
@@ -208,7 +262,9 @@ def publish_instagram(post: dict, live: bool) -> dict:
     return {"media_id": done.get("id"), "creation_id": creation}
 
 
-PUBLISHERS = {"linkedin": publish_linkedin, "instagram": publish_instagram}
+PUBLISHERS = {"linkedin": publish_linkedin,
+              "linkedin-personal": publish_linkedin,
+              "instagram": publish_instagram}
 
 
 def append_ledger(rows: list) -> None:
@@ -247,7 +303,9 @@ def main() -> int:
               and q.parse_when(p["publish_at"]) <= now]
 
     live = args.live and bool(
-        os.environ.get("LINKEDIN_ACCESS_TOKEN") or os.environ.get("IG_ACCESS_TOKEN"))
+        os.environ.get("LINKEDIN_ACCESS_TOKEN")
+        or os.environ.get("LINKEDIN_REFRESH_TOKEN")
+        or os.environ.get("IG_ACCESS_TOKEN"))
     if args.live and not live:
         print("social_publish: --live given but no credentials in the "
               "environment, staying in dry run")
@@ -261,7 +319,13 @@ def main() -> int:
         pid, channel = post["id"], post["channel"]
         try:
             result = PUBLISHERS[channel](post, live)
-            print(f"  {'sent' if live else 'DRY '} {channel:<9} {pid}")
+            print(f"  {'sent' if live else 'DRY '} {channel:<18} {pid}")
+            if not live:
+                # The point of a dry run is reading what would go out, so show
+                # it rather than just naming the post.
+                for line in json.dumps(result, indent=2,
+                                       default=str).splitlines():
+                    print(f"       {line}")
             if live:
                 rows.append({"id": pid, "channel": channel,
                              "published_at": now.isoformat(),
@@ -271,7 +335,7 @@ def main() -> int:
             failed += 1
             detail = exc.read().decode("utf-8", "replace")[:400] if isinstance(
                 exc, urllib.error.HTTPError) else str(exc)
-            print(f"  FAIL {channel:<9} {pid}: {detail}", file=sys.stderr)
+            print(f"  FAIL {channel:<18} {pid}: {detail}", file=sys.stderr)
             if live:
                 rows.append({"id": pid, "channel": channel,
                              "published_at": now.isoformat(),

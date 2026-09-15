@@ -305,6 +305,10 @@ The only goal is that both profiles look unmistakably current and complete.
 | Company page | 3 a week (Tue, Wed, Thu) | 4 a week: 2 Reels, 1 carousel, 1 still |
 | Daniel personal | 2 a week (Tue, Thu) | Stories 3 a week, manual, never scheduled |
 
+Until the Page is approved, run the company-page slots on the personal profile
+too rather than leaving them empty. Three a week on a profile that reaches
+people beats three a week on a page that cannot post yet.
+
 Roughly seven authored pieces a week, most of them short, several of them
 one asset plus three sentences. Write in weekly batches, publish daily.
 
@@ -387,10 +391,34 @@ long-lived token that has to be refreshed about every 60 days. If either is
 blocked or slow, point the same queue at Buffer or Later and keep the queue file
 as the source of truth. **The queue is the system. The API is a detail.**
 
-Two things the API cannot do and a person must: Instagram Stories, and anything
-on Daniel's personal LinkedIn profile. Personal-profile posting is not available
-to third-party tools and is precisely the surface with the most reach, so that
-one stays manual by design. Budget five minutes, twice a week.
+**Corrected 2026-09-15.** An earlier version of this section claimed the
+personal LinkedIn profile could not be posted to by API. That was wrong, and
+the mistake mattered, because it is the highest-reach surface in this plan.
+
+LinkedIn has two publishing products and only one of them is gated:
+
+- **Personal profile**, scope `w_member_social`, from the self-serve *Share on
+  LinkedIn* product. No review, added from the Products tab, working the same
+  day. Queue channel `linkedin-personal`.
+- **Company page**, the *Community Management API*. Partner-gated: a review of
+  the app and the company, a registered legal entity and a verified Page.
+  Weeks. Queue channel `linkedin`.
+
+So the surface that carries most of the reach is the one available immediately,
+and the Page can be requested and then forgotten about until it lands. Start on
+the personal profile; do not wait for the Page to start posting.
+
+`_marketing/LINKEDIN-SETUP.md` is the runbook, and
+`scripts/linkedin_auth.py --doctor` reports what a token actually unlocks by
+asking LinkedIn rather than assuming.
+
+Instagram Stories remain the one surface a person must post by hand. Budget
+five minutes, twice a week.
+
+One operational note that will otherwise bite in December: a LinkedIn access
+token lasts 60 days, and a consumer-tier app is issued no refresh token, so it
+has to be replaced by hand. The workflow prints the days remaining on every run
+and warns inside a week.
 
 ---
 

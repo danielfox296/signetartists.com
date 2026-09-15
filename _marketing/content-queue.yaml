@@ -13,11 +13,16 @@
 #
 # Fields
 #   id          unique, YYYY-MM-DD-<channel>-<slug>
-#   channel     linkedin | instagram | manual
-#               `manual` = a person posts it by hand. Instagram Stories and
-#               anything on Daniel's personal profile are always manual: the
-#               APIs do not support them and the personal profile is the
-#               surface with the most reach.
+#   channel     linkedin | linkedin-personal | instagram | manual
+#               `linkedin`          the company page. Needs the partner-gated
+#                                   Community Management API, so it waits on
+#                                   LinkedIn's review.
+#               `linkedin-personal` Daniel's own profile, via self-serve
+#                                   w_member_social. Available immediately and
+#                                   the higher-reach surface, so most LinkedIn
+#                                   slots should be this until the Page clears.
+#               `manual`            a person posts it by hand. Instagram
+#                                   Stories only.
 #   publish_at  ISO 8601 with offset. Denver is -06:00 (MDT) until 2026-11-01
 #               and -07:00 (MST) after it. Get this wrong and a post lands an
 #               hour off, which nobody will notice, so it is not worth agonising
@@ -239,14 +244,15 @@ posts:
       booking it might cost, and we sell both anyway.
 
   - id: "2026-10-08-linkedin-personal-why-empty"
-    channel: manual
+    channel: linkedin-personal
     publish_at: "2026-10-08T08:30:00-06:00"
     pillar: floor
     campaign: holiday-2026
     status: brief
+    link: "https://signetartists.com/corporate/holiday-party/?utm_source=linkedin&utm_medium=social&utm_campaign=holiday-2026"
     brief: >
-      DANIEL'S PERSONAL PROFILE. Manual. First person, a story rather than a
-      lesson: why a dance floor stays empty, and what the band was doing wrong.
+      DANIEL'S PERSONAL PROFILE. First person, a story rather than a lesson:
+      why a dance floor stays empty, and what the band was doing wrong.
       Personal posts out-distribute the company page by a wide margin and this
       pillar is the reason to use that reach.
 

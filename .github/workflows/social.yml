@@ -71,9 +71,31 @@ jobs:
       # touches no network. A missing secret degrades to dry run rather than
       # failing, so an expired Instagram token never turns the repository red
       # at 3am; the queue simply waits.
+      # A LinkedIn access token lasts 60 days and a consumer-tier app is
+      # issued no refresh token, so the token has to be replaced by hand before
+      # it lapses. This step never fails the run; it exists so the expiry shows
+      # up in the log a week early instead of as a dead Tuesday post.
+      - name: LinkedIn token check
+        continue-on-error: true
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
+        run: |
+          if [ -n "$LINKEDIN_ACCESS_TOKEN" ]; then
+            python3 scripts/linkedin_auth.py --doctor
+          else
+            echo "No LinkedIn token set yet; see _marketing/LINKEDIN-SETUP.md"
+          fi
+
       - name: Publish
         env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           LINKEDIN_ORG_URN: ${{ secrets.LINKEDIN_ORG_URN }}
           LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}

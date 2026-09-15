@@ -131,11 +131,25 @@ IndexNow.
 _marketing/BRAND-SOCIAL-STRATEGY.md  positioning, pillars, campaigns, cadence
 _marketing/ICP.md                    who we sell to, and their buying calendar
 _marketing/content-queue.yaml        every post: slot, brief, body, asset, link
+_marketing/LINKEDIN-SETUP.md         the one-time LinkedIn credential runbook
 _marketing/published.json            what actually went out (written by CI)
 scripts/social_queue.py              validate the queue; list what is due
 scripts/social_publish.py            post it (dry run unless --live + secrets)
+scripts/linkedin_auth.py             OAuth helper; --doctor says what a token can do
 .github/workflows/social.yml         hourly publish; copy gate on every PR
 ```
+
+**LinkedIn has two publishing products and only one is gated.** The personal
+profile (`w_member_social`, self-serve *Share on LinkedIn*) needs no review and
+works the same day; the company page (*Community Management API*) is
+partner-gated behind a review of the app and the company. The queue calls them
+`linkedin-personal` and `linkedin`. The ungated one carries the most reach, so
+it is where to start. `_marketing/LINKEDIN-SETUP.md` is the runbook.
+
+`LinkedIn-Version` is a `YYYYMM` header supported for about a year. The default
+is `202608`; override it with the `LINKEDIN_API_VERSION` secret when it sunsets.
+An access token lasts 60 days and a consumer-tier app gets no refresh token, so
+the workflow prints the days remaining on every run and warns inside a week.
 
 **The substance of every post is written by a person.** Nothing generates a
 body. The automation owns the calendar and the keys only; see the strategy's
@@ -167,13 +181,13 @@ of the file. `_marketing/published.json` makes the job idempotent, so the hourly
 schedule never double-posts.
 
 Credentials are GitHub Actions secrets, never in the repo:
-`LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_ORG_URN`, `IG_ACCESS_TOKEN`, `IG_USER_ID`.
-A missing secret degrades to dry run rather than failing the workflow.
+`LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_ACCESS_TOKEN`,
+`LINKEDIN_REFRESH_TOKEN` (when issued), `LINKEDIN_PERSON_URN`,
+`LINKEDIN_ORG_URN`, `IG_ACCESS_TOKEN`, `IG_USER_ID`. A missing secret degrades
+to dry run rather than failing the workflow.
 
-Two surfaces stay manual because no API offers them, and one of them is the
-highest-reach surface we have: Instagram Stories, and Daniel's personal
-LinkedIn profile. They are queued as `channel: manual` and skipped by the
-publisher.
+Instagram Stories are the only surface that stays manual. They are queued as
+`channel: manual` and skipped by the publisher.
 
 ## Analytics & search wiring
 

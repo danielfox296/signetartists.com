@@ -51,7 +51,15 @@ ROOT = pathlib.Path(__file__).parent.parent
 QUEUE = ROOT / "_marketing" / "content-queue.yaml"
 LEDGER = ROOT / "_marketing" / "published.json"
 
-CHANNELS = {"linkedin", "instagram", "manual"}
+# linkedin        the company page, via the partner-gated Community
+#                 Management API
+# linkedin-personal
+#                 Daniel's own profile, via self-serve w_member_social. Higher
+#                 reach and available immediately, so most LinkedIn slots
+#                 should be this one until the Page is approved.
+# manual          a person posts it by hand. Instagram Stories only, now that
+#                 the personal profile turns out to be API-addressable.
+CHANNELS = {"linkedin", "linkedin-personal", "instagram", "manual"}
 PILLARS = {"calendar", "floor", "paperwork", "acts", "proof"}
 STATUSES = {"brief", "draft", "ready", "published", "skipped"}
 
@@ -167,7 +175,7 @@ def check_post(post: dict, seen: set, errors: list) -> None:
     # Everything below is only asked of a post that is about to go out.
     if not body.strip():
         errors.append(f"{pid}: ready with no body")
-    if channel == "linkedin":
+    if channel.startswith("linkedin"):
         link = post.get("link") or ""
         if not link:
             errors.append(f"{pid}: ready LinkedIn post with no link")
