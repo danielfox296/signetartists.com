@@ -119,6 +119,62 @@ rule. What the site publishes is *market* information.
   rest). Zero hits required.
 - Signet's internal numbers live in `../OFFER.md` and nowhere in this repo.
 
+## Social (`_marketing/`, 2026-09-15)
+
+Brand and social strategy for LinkedIn and Instagram, plus the rail that
+publishes it. **Internal. Not part of the site**: `_marketing/` is excluded from
+the deploy's rsync and `deploy.yml` ignores pushes that only touch it, so the
+ledger commit the social workflow makes never rebuilds the site or pings
+IndexNow.
+
+```
+_marketing/BRAND-SOCIAL-STRATEGY.md  positioning, pillars, campaigns, cadence
+_marketing/ICP.md                    who we sell to, and their buying calendar
+_marketing/content-queue.yaml        every post: slot, brief, body, asset, link
+_marketing/published.json            what actually went out (written by CI)
+scripts/social_queue.py              validate the queue; list what is due
+scripts/social_publish.py            post it (dry run unless --live + secrets)
+.github/workflows/social.yml         hourly publish; copy gate on every PR
+```
+
+**The substance of every post is written by a person.** Nothing generates a
+body. The automation owns the calendar and the keys only; see the strategy's
+section 7 for the full line, which includes never automating replies, DMs,
+connection requests or engagement.
+
+The queue runs under the same law as the site, enforced mechanically by
+`social_queue.py`:
+
+- **No figure at all.** Not just no Signet price: social carries no dollar
+  figure and no percentage, because the site's one exemption (a sourced market
+  figure printed beside its source) cannot survive in a caption.
+- **No availability claims.** `dates left`, `spots left`, `book fast` and their
+  family are refused. Urgency comes from calendar fact, which is true and
+  already published.
+- The `copy_gate.py` bans carry over: em dashes, the word AI, chair, room
+  outside ballroom and green room, business filler.
+- Instagram media must be a file this site serves, since the Graph API fetches
+  a URL rather than taking an upload. A YouTube link is refused at `ready`.
+
+```bash
+python3 scripts/social_queue.py --lint     # validate everything
+python3 scripts/social_queue.py --due      # JSON of posts due now
+python3 scripts/social_publish.py          # dry run, prints the payloads
+```
+
+Only `status: ready` publishes; `brief` and `draft` are the normal state of most
+of the file. `_marketing/published.json` makes the job idempotent, so the hourly
+schedule never double-posts.
+
+Credentials are GitHub Actions secrets, never in the repo:
+`LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_ORG_URN`, `IG_ACCESS_TOKEN`, `IG_USER_ID`.
+A missing secret degrades to dry run rather than failing the workflow.
+
+Two surfaces stay manual because no API offers them, and one of them is the
+highest-reach surface we have: Instagram Stories, and Daniel's personal
+LinkedIn profile. They are queued as `channel: manual` and skipped by the
+publisher.
+
 ## Analytics & search wiring
 
 Verified end to end 2026-08-09 — tag markup on every built page, the served

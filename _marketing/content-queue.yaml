@@ -1,0 +1,354 @@
+# ---------------------------------------------------------------------------
+# Signet Artists social content queue
+#
+# THE SUBSTANCE OF EVERY POST IS WRITTEN BY A PERSON. Nothing in this file is
+# generated. The automation reads this file, validates it and publishes what is
+# due. It never writes a body.
+#
+# How a week runs
+#   1. Fill in `body` for the slots whose `status` is `brief`
+#   2. python3 scripts/social_queue.py --lint
+#   3. Set `status: ready`, commit, push
+#   4. .github/workflows/social.yml publishes each post at `publish_at`
+#
+# Fields
+#   id          unique, YYYY-MM-DD-<channel>-<slug>
+#   channel     linkedin | instagram | manual
+#               `manual` = a person posts it by hand. Instagram Stories and
+#               anything on Daniel's personal profile are always manual: the
+#               APIs do not support them and the personal profile is the
+#               surface with the most reach.
+#   publish_at  ISO 8601 with offset. Denver is -06:00 (MDT) until 2026-11-01
+#               and -07:00 (MST) after it. Get this wrong and a post lands an
+#               hour off, which nobody will notice, so it is not worth agonising
+#               over.
+#   pillar      calendar | floor | paperwork | acts | proof   (see the strategy)
+#   campaign    holiday-2026 | january-2027 | always-on
+#   status      brief | draft | ready | published | skipped
+#               Only `ready` publishes. `brief` and `draft` are ignored by the
+#               workflow and are the normal state of most of this file.
+#   brief       what this slot is for. Written ahead, by a person, as a prompt
+#               for the person who fills it in
+#   body        the post itself. Required for `ready`
+#   media       repo-relative image paths or a YouTube URL. Optional on
+#               LinkedIn, required on Instagram
+#   link        destination with UTMs. Required for `ready` on LinkedIn
+#   first_comment  optional. LinkedIn suppresses posts with outbound links, so
+#               the link often does better in the first comment
+#
+# Standing rules, enforced by scripts/social_queue.py
+#   no prices, no percentages, no availability claims, no em dashes,
+#   no "AI", no "chair", no "room" except ballroom and green room,
+#   no business filler. See _marketing/BRAND-SOCIAL-STRATEGY.md section 2.
+# ---------------------------------------------------------------------------
+
+meta:
+  timezone: "America/Denver"
+  utm_medium: "social"
+  campaigns:
+    holiday-2026:
+      utm_campaign: "holiday-2026"
+      live: "2026-09-22 to 2026-12-05"
+      hook: "The one they still talk about in February."
+    january-2027:
+      utm_campaign: "january-2027"
+      live: "2026-10-15 to 2027-01-15"
+      hook: "The party everybody actually comes to."
+    always-on:
+      utm_campaign: "always-on"
+
+posts:
+
+# =========================================================================
+# PHASE 0. PROOF OF LIFE. 22 Sep to 5 Oct.
+# LinkedIn twice a week, Instagram three times. Existing assets only.
+# =========================================================================
+
+  - id: "2026-09-22-linkedin-booking-window"
+    channel: linkedin
+    publish_at: "2026-09-22T09:00:00-06:00"
+    pillar: calendar
+    campaign: holiday-2026
+    status: draft
+    brief: >
+      Season opener. Useful, dated, true, and asks for nothing. Calendar fact
+      only: no availability, no figures. This is the post that says we are
+      back, without saying we are back.
+    link: "https://signetartists.com/corporate/holiday-party/?utm_source=linkedin&utm_medium=social&utm_campaign=holiday-2026"
+    body: |
+      Denver corporate holiday parties get decided between August and October.
+
+      That is not a sales line, it is just when the venues go. If you are the
+      person who ended up responsible for this year's party, here is the order
+      that saves the most trouble.
+
+      Venue first. Then headcount. Then your run of show. Then the music.
+
+      Most planners do the music last anyway, and that is fine. The part worth
+      doing early is telling whoever you hire what time the speeches are. A band
+      that knows the programme can play dinner at conversation volume, go silent
+      while your CEO walks to the microphone, and get loud the moment the
+      programme ends. A band that finds out on the night cannot.
+
+      December Fridays and Saturdays go first. Thursdays stay open longest and
+      are underrated, because on a Thursday your people are not choosing between
+      your party and three others.
+
+      New Year's Eve is its own animal and books earliest of all.
+
+      We are a Denver corporate entertainment company. Bands, small ensembles, a
+      DJ and live band karaoke, all on one contract. Our musicians have played
+      for Amazon, NBCUniversal, Charles Schwab and the Denver Art Museum.
+
+      Every November and December date is laid out on the season page, link
+      below.
+    first_comment: "Season page, with every November and December date: https://signetartists.com/corporate/holiday-party/?utm_source=linkedin&utm_medium=social&utm_campaign=holiday-2026"
+
+  - id: "2026-09-23-instagram-jazz-duo"
+    channel: instagram
+    publish_at: "2026-09-23T11:30:00-06:00"
+    pillar: acts
+    campaign: always-on
+    status: draft
+    brief: >
+      Proof of life on the grid. Cleared footage, sound on. Says what the act
+      is for, not how good it is.
+    note: >
+      BEFORE THIS CAN GO TO `ready`: the Graph API fetches a file, so the
+      YouTube reference below has to become a vertical cut saved to media/ and
+      published with the site. The linter will refuse it otherwise, on purpose.
+    media:
+      - "https://www.youtube.com/watch?v=O2A0PKE7CXE"
+    link: "https://signetartists.com/ensembles/jazz-duo-trio/?utm_source=instagram&utm_medium=social&utm_campaign=always-on"
+    body: |
+      Autumn Leaves. Guitar and upright bass.
+
+      This is the booking for an evening where the conversation is the event.
+      Twenty at one table or eighty at ten. The music sits underneath the whole
+      night and nobody has to raise their voice to be heard across the table.
+
+      Client dinners, member evenings, cocktail hour. Denver, Boulder and the
+      mountain corridor.
+
+      #denverevents #corporateevents #livemusic #jazzduo #denvermusic
+      #eventplanner #coloradoevents #cocktailhour
+
+  - id: "2026-09-24-linkedin-speeches"
+    channel: linkedin
+    publish_at: "2026-09-24T08:45:00-06:00"
+    pillar: floor
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      The Floor Read pillar, and the single most distinctive thing we say.
+      What actually happens around the remarks: the music stops before the CEO
+      reaches the microphone, the announcement microphone is ready from the end
+      of sound check, transitions planned against the run of show, the band
+      does not MC. Source: plannerFaqs, "The night itself". No link needed,
+      this one is pure credibility.
+
+  - id: "2026-09-25-instagram-ballroom"
+    channel: instagram
+    publish_at: "2026-09-25T18:00:00-06:00"
+    pillar: floor
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      A set and lit ballroom before doors. Caption is the decibel fact, which
+      is the detail nobody else publishes: dinner and cocktails run 65 to 72
+      dBA at the nearest table, dancing runs 88 to 95 on the floor. Guests
+      cannot tell you that is why it worked, but it is.
+
+  - id: "2026-09-28-instagram-flamenco"
+    channel: instagram
+    publish_at: "2026-09-28T11:30:00-06:00"
+    pillar: acts
+    campaign: always-on
+    status: brief
+    brief: >
+      Dirty Flamenco, first-party footage at media/dirty-flamenco.mp4. The
+      centrepiece booking: an evening with remarks in it that wants one thing
+      guests describe afterwards. One of very few real flamenco acts in
+      Colorado available for private events.
+
+  - id: "2026-09-29-linkedin-checklist"
+    channel: linkedin
+    publish_at: "2026-09-29T08:45:00-06:00"
+    pillar: paperwork
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      THE HIGHEST VALUE POST OF THE QUARTER. Carousel. What a planner should
+      have settled before they book entertainment. Draw from plannerFaqs:
+      what holds a date, dress code, decibel cap and curfew, dedicated 20 amp
+      circuits, whose sound system runs the night when the venue has in-house
+      AV, certificate of insurance naming the venue, W-9, net-30 and a PO
+      number, and that vendor onboarding is reliably the slowest step.
+      Save-worthy, which is the format LinkedIn rewards most.
+      Route to /planners/booking/.
+
+  - id: "2026-09-30-instagram-loadin"
+    channel: instagram
+    publish_at: "2026-09-30T11:30:00-06:00"
+    pillar: floor
+    campaign: always-on
+    status: brief
+    brief: >
+      Load-in. img/loadin.jpg. Planners love this and it costs nothing. Caption
+      is the dedicated circuit point: sharing power with the catering warmers
+      is the single most common cause of a problem at load-in.
+
+  - id: "2026-10-01-linkedin-credits"
+    channel: linkedin
+    publish_at: "2026-10-01T08:45:00-06:00"
+    pillar: proof
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      The Proof pillar, used once and not repeated for a fortnight. The client
+      list, and the Lindy R. review that corroborates the NBCUniversal picnic
+      because it is the one review that names a credit the site already claims.
+      Attribution exactly as reviews.json requires, no link to the source.
+
+  - id: "2026-10-02-instagram-tejas"
+    channel: instagram
+    publish_at: "2026-10-02T18:00:00-06:00"
+    pillar: acts
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      Tejas Singh, the flagship. Cleared reupload isKpOj8rPos, "Live band for a
+      holiday party". The quartet is the dance floor booking, the duo is the
+      client dinner. Same act, two different evenings.
+
+# =========================================================================
+# PHASE 1. CAMPAIGN CADENCE. 6 Oct onward.
+# LinkedIn Tue/Wed/Thu, Instagram four a week. Personal profile Tue/Thu.
+# Slots below are seeded with briefs only. Fill weekly, in batches.
+# =========================================================================
+
+  - id: "2026-10-06-linkedin-band-or-dj"
+    channel: linkedin
+    publish_at: "2026-10-06T08:45:00-06:00"
+    pillar: floor
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      Band or DJ, answered honestly rather than in our own favour. The blog
+      post of the same name is the source. Honesty here buys more than the
+      booking it might cost, and we sell both anyway.
+
+  - id: "2026-10-08-linkedin-personal-why-empty"
+    channel: manual
+    publish_at: "2026-10-08T08:30:00-06:00"
+    pillar: floor
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      DANIEL'S PERSONAL PROFILE. Manual. First person, a story rather than a
+      lesson: why a dance floor stays empty, and what the band was doing wrong.
+      Personal posts out-distribute the company page by a wide margin and this
+      pillar is the reason to use that reach.
+
+  - id: "2026-10-13-linkedin-quote"
+    channel: linkedin
+    publish_at: "2026-10-13T08:45:00-06:00"
+    pillar: paperwork
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      How to read a band quote, from the blog post of that name. What is one
+      line and what is three, what sound support covers, what travel and
+      lodging look like when they are itemised honestly. No figures. The point
+      is that a quote you can read is a vendor you can trust.
+
+  - id: "2026-10-15-linkedin-january-open"
+    channel: linkedin
+    publish_at: "2026-10-15T08:45:00-06:00"
+    pillar: calendar
+    campaign: january-2027
+    status: draft
+    brief: >
+      TRACK B OPENS. The single most important post of the plan. Plant January
+      while people are still choosing December, and frame it as the better
+      evening rather than the consolation prize.
+    link: "https://signetartists.com/blog/january-office-party-ideas/?utm_source=linkedin&utm_medium=social&utm_campaign=january-2027"
+    body: |
+      A growing number of companies have moved the office holiday party to
+      January, and Denver's venues have already followed. Several now write
+      their holiday packages to run from the middle of November into the third
+      week of January and past it.
+
+      The planners who moved it say the same two things about why.
+
+      December belongs to everybody else. Your party competes with three other
+      invitations, a school concert and a flight home. And the person who
+      organised it spends December organising it instead of attending anything.
+
+      Move the date past the new year and the evening becomes the only thing on
+      the calendar that week. The venue has dates. And the planner gets to enjoy
+      the night they built.
+
+      Nothing about the music changes. Standards, covers and a dance set were
+      never seasonal, so a January party books exactly the same acts a December
+      one does. The formats that want the crowd's attention, live band karaoke
+      most of all, get more of it in January than they ever get in December.
+
+      If your December date fell through, this is not a downgrade. Ask the
+      people who did it last year which party had better attendance.
+
+      Seven formats and the themes that do not need a tree, link below.
+    first_comment: "The full write-up: https://signetartists.com/blog/january-office-party-ideas/?utm_source=linkedin&utm_medium=social&utm_campaign=january-2027"
+
+  - id: "2026-10-20-linkedin-procurement"
+    channel: linkedin
+    publish_at: "2026-10-20T08:45:00-06:00"
+    pillar: paperwork
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      Aimed squarely at the organiser who left it late and is now anxious.
+      Certificate of insurance naming the venue, W-9, one itemised invoice,
+      vendor setup, quoting against a purchase order, net-30. And the line that
+      does the work: ask early, because vendor onboarding is usually the slowest
+      thing on a corporate booking.
+
+  - id: "2026-10-22-instagram-karaoke"
+    channel: instagram
+    publish_at: "2026-10-22T18:00:00-06:00"
+    pillar: acts
+    campaign: january-2027
+    status: brief
+    brief: >
+      Live band karaoke, positioned for January. A party band that plays the
+      80s and 90s on its own and then hands the mic to anyone who wants a song.
+      Nobody has to sing for the night to work. This is the act that gains the
+      most from a January date.
+
+  - id: "2026-10-27-linkedin-venues"
+    channel: linkedin
+    publish_at: "2026-10-27T08:45:00-06:00"
+    pillar: proof
+    campaign: holiday-2026
+    status: brief
+    brief: >
+      Denver holiday party venues, from the blog post. Written to be useful to
+      a planner and forwardable to a catering manager, which is the actual
+      objective. Tag no venue without asking first.
+
+# ---------------------------------------------------------------------------
+# NOVEMBER onward. Note the offset changes to -07:00 on 1 November.
+#
+# Nov 3 to Dec 5   the live season. Acts and Floor Read lead. Footage from the
+#                  evenings we are actually playing, under the filming
+#                  permission asked for at contract. Every December post
+#                  carries a January line.
+# Dec 8 to Jan 5   Track B earns. The "did not get the date you wanted" moment,
+#                  then kickoff dinners and year in review for companies who
+#                  want the evening to do a job beyond a party.
+# Jan 6 to Jan 15  last call on January, then drop to always-on cadence.
+#
+# Do not seed these slots until the first week of November. Write them against
+# what the season actually produced rather than against a guess made in
+# September.
+# ---------------------------------------------------------------------------
