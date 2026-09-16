@@ -1,0 +1,169 @@
+# Calibration post, 2026-09-16. Evidence: "how much do djs cost", "how much
+# does it cost to book a dj", "how much is a dj for a wedding", "average dj
+# rates" and the per-hour forms all autocomplete, and DJ cost is the anchor
+# every buyer calibrates a band against. The site had the band-or-DJ post and
+# no DJ cost page. The argument: "DJ" is two different purchases, a
+# four-hour block from a working DJ and a production DJ with lighting and an
+# MC, and the market prices them a long way apart. Every figure is a market
+# token; Signet publishes no price of its own.
+title: "What a DJ costs in Denver"
+seo_title: "What a DJ costs in Denver (2026): a wedding, a party, four hours"
+slug: "what-a-dj-costs-denver"
+eyebrow: "PLANNING"
+dek: "The word covers two different purchases, and the market prices them a long way apart. Here is what a DJ costs for four hours, for a wedding and for a corporate party, and where the production DJ with lighting sits above all of it."
+date: "2026-09-16"
+author:
+  name: "Signet Artists"
+meta_description: "What a DJ costs in Denver in 2026: sourced market figures for a four-hour block, a wedding DJ, a corporate party DJ and a production DJ with lighting, and what moves the number."
+llms_description: "What a DJ costs in Denver, built from sourced 2026 market figures: a Denver DJ's four-hour block, the national four-hour figure, a wedding DJ's average and range, the premium tier, a corporate party DJ, a production DJ with lighting, and the per-hour and overtime figures. Why the same word covers two different purchases. Signet publishes no prices of its own."
+
+hero:
+  src: "img/dj.jpg"
+  alt: "Faders and knobs on a mixing console."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "A Denver DJ's four-hour block runs {{market:denver_dj_four_hours}} across this market, and a Denver DJ carrying a night with production lighting runs {{market:denver_dj}}. Those are two different purchases with one name."
+      - "Most US couples pay a wedding DJ {{market:us_wedding_dj_range}}, and the 2026 national average is {{market:us_wedding_dj_average}}. The premium tier runs {{market:us_dj_premium_tier}}."
+      - "A four-hour corporate party DJ runs {{market:dj_four_hours_corporate}}, the cheapest live-entertainment line a company event can carry."
+      - "A DJ's time runs {{market:us_dj_hourly}} for each hour, and the number moves on the gear and the extras far more than on the hours."
+
+  - type: prose
+    body: |
+      DJ cost is the number every other number gets measured against. Couples
+      compare the band to it, companies compare the karaoke night to it, and
+      the person handed the office party opens a spreadsheet with it in the
+      first cell. So it's worth getting right, and the first thing to get
+      right is that the market publishes two very different figures under
+      the same word.
+
+      One is a working DJ for a four-hour block: a laptop, a controller, two
+      speakers and somebody who reads a floor. The other is a production DJ:
+      the same person with a lighting rig, a wireless microphone for the
+      toasts, an MC role through the program, and a truck to carry it. Both
+      are DJs. The market prices them a long way apart, and most of the
+      confusion in DJ quotes is one of these being compared to the other.
+      All of the figures below are somebody else's published numbers. We book DJs
+      and don't publish our prices; send the date and we'll come back with
+      a recommendation and a price for that night.
+
+  - type: subhead
+    text: "How much does a DJ cost for four hours?"
+
+  - type: prose
+    body: |
+      Four hours is the block the market quotes in, and it's the honest
+      unit, because a DJ's evening is the same length whether the floor is
+      full or not. The market puts a DJ for four hours at a private event at
+      {{market:dj_four_hours_private}}, and a Denver DJ's four-hour block at
+      {{market:denver_dj_four_hours}}. Denver is slightly under the national
+      figure, which is typical of a market with a deep bench of working
+      DJs.
+
+      For a corporate party the same four hours run
+      {{market:dj_four_hours_corporate}}, lower still, because a company
+      party usually books the DJ without the wedding extras. That figure is
+      the cheapest live-entertainment line a company event can carry, and
+      the reason a DJ is the most common single booking of the corporate
+      season.
+
+  - type: subhead
+    text: "How much does a wedding DJ cost?"
+
+  - type: prose
+    body: |
+      More, and for a reason. A wedding DJ runs the ceremony sound, the
+      cocktail hour, the introductions, the first dance, the toasts and the
+      open floor, and the package price reflects the whole day rather than
+      four hours of it.
+
+      Most US couples pay {{market:us_wedding_dj_range}}, the 2026 national
+      average is {{market:us_wedding_dj_average}}, and a wedding DJ for a
+      four-hour block on its own runs {{market:wedding_dj_four_hours}}. In a
+      larger city the figure is {{market:us_dj_large_city}}, and the premium
+      tier, seasoned professionals in major metros with full-day coverage,
+      runs {{market:us_dj_premium_tier}}. Denver sits between the four-hour
+      figure and the large-city one, depending on what the package carries.
+
+  - type: subhead
+    text: "What the market charges, from a four-hour block to a production night"
+
+  - type: comparison_table
+    title: "What a DJ costs, by what you're actually buying"
+    columns: ["What you're booking", "What the market charges", "Whose market"]
+    rows:
+      - ["A Denver DJ, four hours", "{{market:denver_dj_four_hours}}", "Denver"]
+      - ["A DJ for a corporate party, four hours", "{{market:dj_four_hours_corporate}}", "United States"]
+      - ["A DJ for a private event, four hours", "{{market:dj_four_hours_private}}", "United States"]
+      - ["A wedding DJ, four hours", "{{market:wedding_dj_four_hours}}", "United States"]
+      - ["What most couples pay a wedding DJ", "{{market:us_wedding_dj_range}}", "United States"]
+      - ["A wedding DJ in a larger city", "{{market:us_dj_large_city}}", "United States"]
+      - ["A Denver DJ carrying a night with production lighting", "{{market:denver_dj}}", "Denver"]
+      - ["The premium tier: seasoned pros, major metros, full-day coverage", "{{market:us_dj_premium_tier}}", "United States"]
+
+  - type: prose
+    body: |
+      The table runs from the four-hour block at the top to the production
+      night at the bottom, and the jump between the two Denver rows is the
+      whole point. A Denver DJ for four hours and a Denver DJ with a
+      lighting rig, a wireless system and an MC role are the same person
+      with a different truck, and the market prices the truck. When two DJ
+      quotes arrive a long way apart, the first question is which of these
+      rows each one is quoting.
+
+  - type: subhead
+    text: "What moves the number"
+
+  - type: prose
+    body: |
+      - **The gear.** Speakers sized to the venue, a subwoofer for a floor,
+        uplighting, a dance-floor rig, a wireless microphone for the toasts.
+        Each one is a line, and together they're the difference between the
+        top and the bottom of the table.
+      - **The role.** A DJ who also MCs the program, runs the introductions
+        and holds the timeline is doing a second job, and the wedding
+        packages price it in.
+      - **The hours.** A DJ's time runs {{market:us_dj_hourly}} for each
+        hour, and time added on the night runs {{market:denver_overtime}}
+        for each hour past the contracted set across this market. Hours
+        move the number less than the gear does.
+      - **The date.** A Denver holiday weekend carries
+        {{market:denver_holiday_surcharge}} across this market, and New
+        Year's Eve is its own case everywhere.
+
+  - type: subhead
+    text: "A DJ against a band, and a DJ with a band"
+
+  - type: prose
+    body: |
+      The comparison most people are actually making. A live wedding band
+      averages {{market:us_band_average}} nationally against the DJ's
+      {{market:us_wedding_dj_average}}, and Denver bands run
+      {{market:denver_band_range}}. A band is something guests watch; a DJ
+      is something guests dance to; and the even-handed version of that
+      argument is on the [band or DJ page](https://signetartists.com/blog/band-or-dj-denver/).
+
+      The answer a lot of evenings settle on is both, in order. Live
+      musicians through arrival and dinner, and the DJ carrying the late
+      end through the same sound system on the same contract, which costs
+      far less as one booking than as two. The other version is the hybrid:
+      a saxophonist or a bassist playing on the floor over the DJ set, the
+      difference between a playlist and a crowd watching something happen.
+      Both are on the [DJ page](https://signetartists.com/ensembles/dj/).
+
+  - type: prose
+    body: |
+      {{market_sources}}
+
+  - type: cta
+    headline: "Send the date and we'll tell you what that night costs."
+    body: "The date, the venue and the shape of the evening are enough. We'll come back with a recommendation, DJ, band or both, and our number for it."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "band-or-dj-denver"
+      - slug: "what-a-jazz-band-costs-denver"
+      - slug: "what-live-music-costs-corporate-event"

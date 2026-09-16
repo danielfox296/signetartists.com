@@ -985,6 +985,8 @@ def local_business_node() -> dict:
             "acoustic duo", "Spanish guitar and flamenco trio", "DJ",
             "corporate holiday party entertainment", "client dinner music",
             "corporate retreat evenings", "private party and milestone birthday music",
+            "jazz band for weddings and corporate events", "singer and guitarist for hire",
+            "musician for a proposal or a surprise song", "Christmas jazz trio",
         ],
     }
     maps = [u for u in BRAND.get("sameAs", []) if "maps.google.com" in u]

@@ -47,6 +47,8 @@ BUILDOUT_DIRS = [
     "ensembles-jazz-duo-trio", "ensembles-flamenco-trio", "ensembles-dj",
     "ensembles-spanish-guitarist",
     "artists-tejas-singh", "artists-tony-medina", "pricing",
+    "weddings-jazz-band", "weddings-vail", "corporate-jazz-band",
+    "private-parties-proposals",
 ]
 # Every artist and ensemble page dir is gated whether or not it is listed
 # above (2026-09-16): a new act's page used to be ungated until someone
