@@ -13,7 +13,9 @@ TODO left in it, so nothing half-written can build its way onto the site.
 
 Defaults: a face-led act goes under /artists/<id>/, a spec'd format under
 /ensembles/<id>/. Pass --slug when the URL should carry the phrase buyers type
-rather than the act's name (Dirty Flamenco lives at /ensembles/flamenco-trio/).
+rather than the act's name (Dirty Flamenco lives at /ensembles/flamenco-trio/),
+--kind ensembles for a named group, and --shape to pick the section set
+independently of the URL (a named group takes the artist shape by default).
 """
 import argparse
 import json
@@ -74,7 +76,8 @@ def video_block(act: dict, kind: str) -> str:
 
 def artist_sections(act: dict) -> dict:
     name, aid = act["name"], act["id"]
-    byline = f'A named act. {act["material"]}, {config_range(act)}.'
+    byline = (f'A named act. {act["byline"]} {act["material"]}, {config_range(act)}.'
+              if act.get("byline") else f'A named act. {act["material"]}, {config_range(act)}.')
     identity = "".join(f'    <p class="prose">{esc(p)}</p>\n' for p in act.get("identity", [])) or \
         "    <!-- TODO: four or five identity paragraphs. What the act sounds like, what the book is,\n" \
         "         how it scales, what proves it (their own site, channel, catalogue), and the\n" \
@@ -273,6 +276,8 @@ def main() -> int:
     ap.add_argument("act_id")
     ap.add_argument("--kind", choices=["artists", "ensembles"])
     ap.add_argument("--slug")
+    ap.add_argument("--shape", choices=["artist", "format"],
+                    help="section shape; default artist for a face-led act, format for a spec'd one")
     ap.add_argument("--dry-run", action="store_true", help="print what would be written, touch nothing")
     a = ap.parse_args()
 
@@ -324,7 +329,8 @@ def main() -> int:
             "uploadDate": "TODO: YYYY-MM-DD",
             "duration": "TODO: PT0M0S",
         }
-    sections = artist_sections(act) if kind == "artists" else format_sections(act)
+    shape = a.shape or ("artist" if act["presentation"] == "face" else "format")
+    sections = artist_sections(act) if shape == "artist" else format_sections(act)
 
     if a.dry_run:
         print(f"would write {d.relative_to(ROOT)}/")

@@ -526,6 +526,12 @@ def act_byline(act: dict) -> str:
     date. Naming a format would promise a personality the booking cannot
     honour; specifying it promises a sound, a size and a price, which it can.
     """
+    # A named group of equals (Changes Jazz Trio, 2026-09-16) carries its
+    # own byline: "Fronted by" implies one front person, and a trio that
+    # publishes three names on its own site is honestly described by the
+    # three names and their instruments.
+    if act.get("byline"):
+        return act["byline"]
     if act["presentation"] == "face":
         return f'Fronted by {act["face"]}'
     return act["spec"]
@@ -536,6 +542,8 @@ def act_byline_inline(act: dict) -> str:
     "Dirty Flamenco (Flamenco, fronted by Gary Meyers)". Built rather than
     lowercased from act_byline: .lower() flattens the proper noun and turns
     "a PA sized to the venue" into "a pa sized to the venue"."""
+    if act.get("byline_inline"):
+        return act["byline_inline"]
     if act["presentation"] == "face":
         return f'fronted by {act["face"]}'
     return act["spec"]

@@ -719,6 +719,56 @@
       "video": null,
       "_note": "ADDED 2026-09-14 on Daniel's call. Organizers ask for 'a piano player' by name in the planner threads, galas seat a pianist at dinner, and hotels sell the ballroom and leave the music to the planner. Listing only.",
       "blurb": "A pianist through arrival, cocktails and dinner, standards and covers at a level the table talks across, with a voice added when the evening wants singing. The hotel-ballroom and client-dinner booking."
+    },
+    {
+      "id": "changes-jazz-trio",
+      "name": "Changes Jazz Trio",
+      "presentation": "face",
+      "_note": "ADDED 2026-09-16, the first act published with the signet-new-act skill, ported from changesjazz.base44.app on Daniel's direction ('They can be a named act'). Named as a group of three equals rather than one front person, so `byline` and `byline_inline` override the 'Fronted by' line. Every image on their site is a generated illustration (base44 'generated_image' files: instruments on an empty stage, a Strat against brick, a saxophone mark), none a photograph of the trio, so nothing was taken and the card carries the interim hero still until a real photograph arrives; asked for in the Gmail draft to Sri Viswanath, the contact on their site. No footage exists anywhere; their site has two studio audio recordings, which the page links rather than embeds. Their Spotify link returns 400 and is not published; the Instagram exists and is not scraped; the 646 phone on their site is not published.",
+      "status": "listing",
+      "page": "ensembles/changes-jazz-trio/",
+      "style": "Modern jazz",
+      "face": "Doug Emery, Sri Viswanath and Brian Jaffe",
+      "byline": "Doug Emery, guitar. Sri Viswanath, bass. Brian Jaffe, drums.",
+      "byline_inline": "Doug Emery on guitar, Sri Viswanath on bass and Brian Jaffe on drums",
+      "material": "Standards",
+      "bucket_tags": [
+        "cocktail",
+        "specialty"
+      ],
+      "config_tags": [
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "jazz"
+      ],
+      "vocals": "instrumental",
+      "from": "trio",
+      "img": "hero.jpg",
+      "_img_note": "Interim still (scripts/stills.py, an empty stage with a drum kit), not a photograph of the act. Their site publishes no photograph. Replace with the trio's own picture through scripts/act_media.py photo --card the day one arrives, and update the page hero poster and og_image with it.",
+      "alt": "An empty stage set with drums, keys and microphones.",
+      "video": null,
+      "blurb": "Guitar, fretless bass and drums, playing the standards with a modern edge at a volume guests can talk across. Three working Denver players booked under their own names, with a saxophone added when the evening wants a featured set.",
+      "identity": [
+        "Changes is a guitar trio with a modern edge. Doug Emery on guitar, Sri Viswanath on fretless bass and Brian Jaffe on drums, playing the standards the way a working trio plays them, with the arrangements left open and a little risk in the solos. It holds a dinner at conversation volume, and it holds a listening crowd when the night wants that instead.",
+        "The three players are the reason it books under a name. Doug studied guitar performance at Berklee, played more than three thousand dates across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri spent decades as a working bassist in New York, on stages from Smalls to the Plaza Hotel, and played on Radha Thomas's 2019 tribute to Chet Baker. Brian came through the Lamont School of Music at the University of Denver and has played more than a hundred theater productions in the Denver pit orchestras since 2011.",
+        "It books as a trio, or as a quartet with a saxophone out front when the night wants a horn on the melody. The trio is the cocktail hour and dinner size. The quartet is the one for a featured set at a gala, or a client dinner where the music is part of the program.",
+        "Their own site carries the three bios and two studio recordings, and the recordings are the quickest way to hear what the trio sounds like before you write to us.",
+        "This is a named act, booked under the names of the three players in it, and if anyone in the lineup changes, we tell you in advance."
+      ],
+      "ladder": [
+        {
+          "config": "trio",
+          "build": "Guitar, fretless bass and drums",
+          "bestFor": "Cocktails and dinner at conversation volume, and a listening crowd."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus saxophone",
+          "bestFor": "A featured set at a gala, or a client dinner where the music is part of the program."
+        }
+      ]
     }
   ],
   "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is unpublished availability depth, which is what the workbook always said he was. Since 2026-09-06 he sits behind Tony Medina rather than behind the retired Blues Rock format.",

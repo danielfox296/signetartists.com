@@ -63,6 +63,12 @@ GROUPS = {
         "ensembles/spanish-guitarist/index.html",
         "ensembles/flamenco-trio/index.html",
     ],
+    # Two jazz pages, 2026-09-16: the spec'd duo-and-trio format and the
+    # named modern trio are two different bookings and must read that way.
+    "jazz": [
+        "ensembles/jazz-duo-trio/index.html",
+        "ensembles/changes-jazz-trio/index.html",
+    ],
     # The two Springs pages share a city and a venue list and must not share
     # an argument.
     "colorado-springs": [
