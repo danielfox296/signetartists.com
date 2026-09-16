@@ -84,6 +84,107 @@
       "blurb": "Continuous, and hybrid."
     }
   ],
+  "_facets_note": "ADDED 2026-09-16 with the new-act skill. Every filterable fact about an act is a tag against a vocabulary declared here, the same contract buckets[] and rateCard[] already had: bucket_tags = the kind of night, config_tags = the size, genre_tags = the genre, vocals = whether a singer fronts it, area_tags = where it plays. A select renders on the roster page only for a facet the roster actually varies on, and only with the options some act carries, so an unused tag is never a dead filter. vocals is one of: sung (a singer fronts it), instrumental (no singer), optional (a voice can be added; matches both filters). area_tags omitted means every area in areas[], which is the roster-wide default; set it only on an act that does not travel the whole list, and the Where filter appears the moment one does. The vocabularies grow with the roster; never publish a count of them either.",
+  "genres": [
+    {
+      "id": "jazz",
+      "label": "Jazz"
+    },
+    {
+      "id": "singer-songwriter",
+      "label": "Singer-songwriter"
+    },
+    {
+      "id": "pop-covers",
+      "label": "Pop and rock covers"
+    },
+    {
+      "id": "classic-rock",
+      "label": "Classic rock"
+    },
+    {
+      "id": "blues",
+      "label": "Blues"
+    },
+    {
+      "id": "soul",
+      "label": "Soul and R&B"
+    },
+    {
+      "id": "funk",
+      "label": "Funk"
+    },
+    {
+      "id": "yacht-rock",
+      "label": "Yacht rock"
+    },
+    {
+      "id": "americana",
+      "label": "Americana and bluegrass"
+    },
+    {
+      "id": "flamenco",
+      "label": "Flamenco and Spanish guitar"
+    },
+    {
+      "id": "downtempo",
+      "label": "Downtempo and electronic"
+    },
+    {
+      "id": "dj",
+      "label": "DJ, open format"
+    }
+  ],
+  "areas": [
+    {
+      "id": "denver",
+      "label": "Denver"
+    },
+    {
+      "id": "boulder",
+      "label": "Boulder"
+    },
+    {
+      "id": "colorado-springs",
+      "label": "Colorado Springs"
+    },
+    {
+      "id": "fort-collins",
+      "label": "Fort Collins"
+    },
+    {
+      "id": "vail",
+      "label": "Vail"
+    },
+    {
+      "id": "beaver-creek",
+      "label": "Beaver Creek"
+    },
+    {
+      "id": "aspen",
+      "label": "Aspen"
+    },
+    {
+      "id": "breckenridge",
+      "label": "Breckenridge"
+    },
+    {
+      "id": "telluride",
+      "label": "Telluride"
+    },
+    {
+      "id": "steamboat-springs",
+      "label": "Steamboat Springs"
+    },
+    {
+      "id": "winter-park",
+      "label": "Winter Park"
+    },
+    {
+      "id": "crested-butte",
+      "label": "Crested Butte"
+    }
+  ],
   "acts": [
     {
       "id": "tejas-singh",
@@ -103,6 +204,11 @@
         "trio",
         "quartet"
       ],
+      "genre_tags": [
+        "singer-songwriter",
+        "pop-covers"
+      ],
+      "vocals": "sung",
       "from": "duo",
       "img": "tejas-card.jpg",
       "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
@@ -173,6 +279,10 @@
         "duo",
         "trio"
       ],
+      "genre_tags": [
+        "jazz"
+      ],
+      "vocals": "instrumental",
       "from": "duo",
       "img": "standards.jpg",
       "alt": "A trumpet resting on a table.",
@@ -236,6 +346,10 @@
         "trio",
         "quartet"
       ],
+      "genre_tags": [
+        "flamenco"
+      ],
+      "vocals": "instrumental",
       "from": "trio",
       "_configRangeLabel_note": "Overrides the derived range, which would read 'Trio to quartet'. The quartet here is the trio plus a dancer, which is an addition you ask for rather than a size off the ladder, so the card sells the trio and says the rest out loud.",
       "configRangeLabel": "Trio, larger by request",
@@ -293,6 +407,11 @@
       "config_tags": [
         "trio"
       ],
+      "genre_tags": [
+        "funk",
+        "soul"
+      ],
+      "vocals": "instrumental",
       "from": "trio",
       "img": "headliners.jpg",
       "alt": "A snare drum with sticks laid across it and a close microphone.",
@@ -321,6 +440,10 @@
       "config_tags": [
         "dj"
       ],
+      "genre_tags": [
+        "dj"
+      ],
+      "vocals": "instrumental",
       "_configRangeLabel_note": "Without the override the card would print 'Configurations: DJ' under the name DJ. This states the actual choice, and it is the dj rate row's own note in card grammar.",
       "configRangeLabel": "solo to duo",
       "from": "dj",
@@ -363,6 +486,11 @@
         "trio",
         "quartet"
       ],
+      "genre_tags": [
+        "blues",
+        "classic-rock"
+      ],
+      "vocals": "sung",
       "from": "solo",
       "img": "tony-medina-card.jpg",
       "_img_note": "His own photograph, not an interim still: a black and white frame of him playing an acoustic guitar under string lights, cropped 16:9 from the centre of the source. Provenance in media-sources.json. It also releases standards.jpg, which the retired Blues Rock card shared with the jazz duo.",
@@ -433,6 +561,11 @@
       "config_tags": [
         "solo"
       ],
+      "genre_tags": [
+        "downtempo",
+        "jazz"
+      ],
+      "vocals": "instrumental",
       "from": "solo",
       "img": "last-consulate-card.jpg",
       "_img_note": "The act's own artwork, supplied by Daniel 2026-09-03 (his Desktop last-consulate folder, passport.jpg). Not a placeholder and not a shoot still: it is a prop passport, already black and white, cropped to 16:9 at y=390 of the 960x1095 source and otherwise untouched, no palette duotone. The name printed on the prop is artwork and nothing on the site repeats it. Provenance in media-sources.json.",
@@ -463,6 +596,11 @@
         "quartet",
         "quintet"
       ],
+      "genre_tags": [
+        "pop-covers",
+        "classic-rock"
+      ],
+      "vocals": "sung",
       "from": "quartet",
       "img": "headliners.jpg",
       "alt": "A snare drum with sticks laid across it and a close microphone.",
@@ -487,6 +625,11 @@
         "quartet",
         "quintet"
       ],
+      "genre_tags": [
+        "yacht-rock",
+        "pop-covers"
+      ],
+      "vocals": "sung",
       "from": "quartet",
       "img": "outdoor.jpg",
       "alt": "A frame tent with a plywood stage deck under it.",
@@ -512,6 +655,11 @@
         "trio",
         "quartet"
       ],
+      "genre_tags": [
+        "americana",
+        "classic-rock"
+      ],
+      "vocals": "sung",
       "from": "trio",
       "img": "range.jpg",
       "alt": "The Denver skyline with the Front Range behind it, seen from City Park.",
@@ -534,6 +682,10 @@
         "quartet",
         "quintet"
       ],
+      "genre_tags": [
+        "soul"
+      ],
+      "vocals": "sung",
       "from": "quartet",
       "img": "headliners.jpg",
       "alt": "A snare drum with sticks laid across it and a close microphone.",
@@ -556,6 +708,11 @@
       "config_tags": [
         "solo"
       ],
+      "genre_tags": [
+        "jazz",
+        "pop-covers"
+      ],
+      "vocals": "optional",
       "from": "solo",
       "img": "ballroom.jpg",
       "alt": "An empty banquet hall set for dinner.",

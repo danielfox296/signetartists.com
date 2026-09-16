@@ -13,8 +13,9 @@
  * DOM nodes the crawler saw.
  *
  * The starting-price filter was removed 2026-09-04 with the published rate
- * card. Kind of night and size are the two axes left, and they are the two a
- * buyer actually shops this roster on.
+ * card. Kind of night and size were the two axes left; genre, vocals and
+ * where joined them 2026-09-16 (acts.json _facets_note), each rendered by
+ * build.py only when the roster varies on it.
  */
 (function () {
   "use strict";
@@ -26,8 +27,19 @@
   var cards = Array.prototype.slice.call(grid.querySelectorAll(".act-card"));
   if (!cards.length) return;
 
-  var bucket = document.getElementById("filter-bucket");
-  var config = document.getElementById("filter-config");
+  // Each select filters one data attribute on the cards. Genre, vocals and
+  // where were added 2026-09-16; build.py renders a select only when the
+  // roster varies on that facet, so every entry here is guarded on the
+  // element existing.
+  var facets = [
+    ["filter-bucket", "buckets"],
+    ["filter-config", "configs"],
+    ["filter-genre", "genres"],
+    ["filter-vocals", "vocals"],
+    ["filter-area", "areas"],
+  ].map(function (pair) {
+    return { el: document.getElementById(pair[0]), key: pair[1] };
+  }).filter(function (f) { return f.el; });
   var reset = document.getElementById("filter-reset");
   var countEl = document.getElementById("filter-count");
   var emptyEl = document.getElementById("filter-empty");
@@ -37,14 +49,12 @@
   }
 
   function apply() {
-    var wantBucket = bucket.value;
-    var wantConfig = config.value;
     var shown = 0;
 
     cards.forEach(function (card) {
-      var ok = true;
-      if (wantBucket && tags(card, "buckets").indexOf(wantBucket) === -1) ok = false;
-      if (wantConfig && tags(card, "configs").indexOf(wantConfig) === -1) ok = false;
+      var ok = facets.every(function (f) {
+        return !f.el.value || tags(card, f.key).indexOf(f.el.value) !== -1;
+      });
       card.hidden = !ok;
       if (ok) shown += 1;
     });
@@ -56,13 +66,12 @@
     emptyEl.hidden = shown !== 0;
   }
 
-  [bucket, config].forEach(function (el) {
-    el.addEventListener("change", apply);
+  facets.forEach(function (f) {
+    f.el.addEventListener("change", apply);
   });
 
   reset.addEventListener("click", function () {
-    bucket.value = "";
-    config.value = "";
+    facets.forEach(function (f) { f.el.value = ""; });
     apply();
   });
 
