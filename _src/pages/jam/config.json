@@ -1,0 +1,9 @@
+{
+  "_note": "Signet Jam, the jam-night pitch page (2026-09-16). A PRIVATE SHARE: Daniel sends the link after a first conversation with a venue owner, so it is linked from no nav and no footer, and the noindex keeps it out of the sitemap, llms.txt and search. ?venue=Name personalises the hero line and the tab title (textContent only); ?motion=off renders the plain stack. Copy is Daniel's handoff, HANDOFF.md in this dir, amended the same day on his call: a single unnamed host, no photo slots, the site's own type and header. Page-scoped CSS lives in sections/00-style.html, the motion in sections/08-script.html.",
+  "title": "Signet Jam",
+  "title_exact": true,
+  "meta_description": "A weekly jam at one venue in Denver. Sunday or Monday.",
+  "output": "jam/index.html",
+  "og_image": "img/jam-og.jpg",
+  "robots": "noindex, follow"
+}

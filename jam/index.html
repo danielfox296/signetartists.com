@@ -1,773 +1,789 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Signet Jam</title>
-<meta name="description" content="A weekly jam at one venue in Denver. Sunday or Monday.">
-<meta property="og:title" content="Signet Jam">
-<meta property="og:description" content="A weekly jam at one venue in Denver. Sunday or Monday.">
-<meta property="og:image" content="https://signetartists.com/jam/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://signetartists.com/jam/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://signetartists.com/jam/">
-<meta name="robots" content="noindex">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0E0D0B">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Matches --paper. Without it the phone's browser chrome stays white above
+       a dark page, which is the tell that a dark theme was retrofitted. -->
+  <meta name="theme-color" content="#14130e">
+  <title>Signet Jam</title>
+  <meta name="description" content="A weekly jam at one venue in Denver. Sunday or Monday.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://signetartists.com/jam/">
+  <link rel="alternate" type="application/rss+xml" title="Signet Artists — Blog" href="../rss.xml">
 
-<!-- Analytics: none in v1 (handoff §6). The GA4 tag, build.py GA_MEASUREMENT_ID,
-     goes here when this page joins the site build. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Signet Artists">
+  <meta property="og:title" content="Signet Jam">
+  <meta property="og:description" content="A weekly jam at one venue in Denver. Sunday or Monday.">
+  <meta property="og:url" content="https://signetartists.com/jam/">
+  <meta property="og:image" content="https://signetartists.com/img/jam-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..400,50;1,9..144,300,50&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Fraunces + Inter came off Google Fonts here until 2026-08-07. Archivo is
+       self-hosted in vendor/fonts/ and declared in styles.css, so the two
+       preconnects and the render-blocking third-party stylesheet are gone with
+       them: one origin, one font file, nothing to hand off to. -->
+  <link rel="preload" href="../vendor/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../styles.css?v=20260914a">
+  
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-LL5DKVEX29"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LL5DKVEX29');</script>
+  <script defer src="../analytics.js"></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap header-inner">
+    <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
+         front-range centric). A third line under the wordmark, so every page
+         says where in one glance at every width, and the nav row stays
+         uncrowded. Display form, not the footer's prose form. -->
+    <div class="brand-lockup">
+      <a class="wordmark" href="../">Signet Artists</a>
+      <p class="header-loc">BOOK LIVE MUSIC IN COLORADO</p>
+    </div>
+
+    <!-- Songs added 2026-08-07. /repertoire/ carries the cover walls and the
+         whole song book and was reachable only from two inline prose links and
+         one hub card. The best page on the site, absent from its own
+         navigation. "Songs" rather than "Repertoire" because it sits next to
+         "The Music" and the pair has to read as two different questions: who
+         plays, and what they play. -->
+    <!-- Weddings added 2026-09-06 with the /weddings/ hub, when Daniel lifted
+         the one-wedding-surface cap. It sits between Corporate and Private
+         Parties because the three are one row of occasion hubs and corporate
+         keeps the earlier slot. -->
+    <!-- Corporate and Private Parties are the two occasion hubs of the
+         2026-08-20 buildout; corporate keeps the earlier slot. "Corporate"
+         rather than "Corporate & Galas": the 17 Aug audit reframed galas as a
+         small-format section on the hub, not a co-headline. -->
+    <nav class="nav-desktop">
+      <a href="../music/" >Artist Roster</a>
+      <a href="../repertoire/" >Songs</a>
+      <a href="../pricing/" >Pricing</a>
+      <a href="../corporate/" >Corporate</a>
+      <a href="../weddings/" >Weddings</a>
+      <a href="../private-parties/" >Private Parties</a>
+      <a href="../planners/" >For Planners</a>
+      <a class="btn btn--sm" href="../contact/" >Check a Date</a>
+    </nav>
+
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+
+  <nav class="nav-mobile" id="mobile-nav">
+    <a href="../music/">The Roster</a>
+    <a href="../repertoire/">Songs</a>
+    <a href="../pricing/">Pricing</a>
+    <a href="../corporate/">Corporate</a>
+    <a href="../weddings/">Weddings</a>
+    <a href="../private-parties/">Private Parties</a>
+    <a href="../planners/">For Planners</a>
+    <a class="btn nav-mobile-cta" href="../contact/">Check a Date</a>
+  </nav>
+</header>
+
+  <main>
+    
 <style>
-/* ---------------------------------------------------------------------------
-   Signet Jam. One self-contained page, hand-authored from the 2026-09-16
-   handoff (_src/jam/HANDOFF.md). Not generated by build.py. The blocks below
-   are ordered head / tokens / type / sections / motion states so the file cuts
-   into partials when it ports into the site generator.
+/* Icons: one sprite (below), line icons on the 24 grid, brass, 1.5 stroke. */
+.jam-ico { display: block; width: 1.5rem; height: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-   Tokens: the daniel-fox.com editorial-industrial set, inverted for a night
-   page. Dark by design; there is no light theme.
-   --------------------------------------------------------------------------- */
-:root {
-  --ink:        #0E0D0B;
-  --ink-2:      #171512;
-  --bone:       #EDE6D8;
-  --bone-60:    rgba(237,230,216,0.60);
-  --bone-30:    rgba(237,230,216,0.30);
-  --keyline:    rgba(237,230,216,0.16);
-  --oxide:      #B5472B;
-  --oxide-hi:   #D9673F;
-  --lamp:       rgba(217,164,65,0.18);
+/* Section index labels: the handoff's "02 / The night", as the site eyebrow. */
+.jam-idx span { color: var(--ink-faint); margin-right: 0.6rem; font-variant-numeric: tabular-nums; }
 
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-mono:    'IBM Plex Mono', ui-monospace, Menlo, monospace;
-
-  --measure: 34ch;
-  --gutter: clamp(20px, 4vw, 64px);
-  --keyline-w: 1px;
-
-  --header-h: 56px;
-  --ruler-y: 84px;                              /* the drafting line, clear of the fixed header */
-  --pad-top: calc(var(--ruler-y) + 40px);       /* where section content starts */
-  --content-max: 1320px;
-  --col-gap: 24px;
-  --footer-h: 80px;
-
-  color-scheme: dark;
+/* ---------------------------------------------------------------- 01 hero */
+.jam-hero { padding-top: var(--space-4); padding-bottom: var(--space-5); }
+.jam-hero__grid { display: grid; gap: var(--space-4); align-items: center; }
+.jam-venue {
+  margin-top: 1rem;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
+  line-height: 1.2;
+  color: var(--ink-soft);
 }
-@media (max-width: 759px) {
-  :root { --ruler-y: 76px; --pad-top: calc(var(--ruler-y) + 28px); }
+/* The sign-up sheet, half full. Drawn, not photographed: the one image on
+   the page, in the palette, and it is the object the copy keeps coming back
+   to. Brass is spent on the signatures. */
+.jam-sheet { width: 100%; max-width: 19rem; }
+.jam-sheet svg { display: block; width: 100%; height: auto; overflow: visible; }
+.jam-sheet__paper { fill: var(--paper-sunk); stroke: var(--rule-strong); stroke-width: 1.5; }
+.jam-sheet__rule { stroke: var(--rule-strong); stroke-width: 1.5; }
+.jam-sheet__line { stroke: var(--rule); stroke-width: 1.5; }
+.jam-sheet__num { font-family: var(--sans); font-size: 11px; letter-spacing: 0.06em; fill: var(--ink-faint); }
+.jam-sheet__head { font-family: var(--display); font-weight: 800; font-stretch: 72%; font-size: 22px; text-transform: uppercase; fill: var(--ink); }
+.jam-sheet__sig { fill: none; stroke: var(--brass); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 860px) {
+  .jam-hero__grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+  .jam-sheet { justify-self: end; max-width: 21rem; }
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html { background: var(--ink); -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--ink);
-  color: var(--bone);
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-variation-settings: "opsz" 48, "SOFT" 50;
-  line-height: 1.35;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-p { margin: 0; }
-a { color: inherit; }
-img, video { display: block; max-width: 100%; }
-
-/* Type scale ------------------------------------------------------------- */
-.display {
-  margin: 0;
-  font-weight: 300;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: clamp(56px, 11vw, 168px);
-  line-height: 0.92;
-  letter-spacing: -0.02em;
-}
-.display--close { font-size: clamp(44px, 8vw, 128px); max-width: 12ch; text-wrap: balance; }
-.venue {
-  margin-top: 0.55em;
-  font-style: italic;
-  font-weight: 300;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: clamp(22px, 3.2vw, 44px);
-  line-height: 1.1;
-  color: var(--bone-60);
-}
-.prose { font-size: clamp(24px, 2.6vw, 38px); line-height: 1.25; max-width: var(--measure); text-wrap: pretty; }
-.lead  { font-size: clamp(28px, 3.4vw, 52px); line-height: 1.15; text-wrap: pretty; }
-.card-body { font-size: clamp(17px, 1.3vw, 21px); line-height: 1.35; text-wrap: pretty; }
-.line  { font-size: clamp(18px, 1.5vw, 24px); line-height: 1.3; }
-.eyebrow {
-  font-family: var(--font-mono);
+/* ------------------------------------------------------------ 02 the night */
+.jam-night { position: relative; overflow: hidden; }
+.jam-night .wrap { position: relative; }
+.jam-night__block { position: relative; margin-top: var(--space-4); max-width: 40rem; padding-left: 4.25rem; }
+.jam-night__line {
+  position: relative;
+  margin: 0 0 1.1em;
+  font-size: clamp(1.375rem, 1.05rem + 1.4vw, 2.125rem);
   font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--oxide);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-wrap: pretty;
 }
-.idx {
-  font-family: var(--font-mono);
-  font-weight: 400;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--bone-30);
-  white-space: nowrap;
-}
-.btn {
-  display: inline-block;
-  padding: 17px 30px;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--bone);
-  text-decoration: none;
-  border: var(--keyline-w) solid var(--oxide);
-  transition: background-color 160ms ease, color 160ms ease;
-}
-.btn:hover, .btn:focus-visible { background: var(--oxide); color: var(--ink); outline: none; }
-
-/* Header ----------------------------------------------------------------- */
-.hdr {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: var(--header-h);
-  z-index: 100;
+.jam-night__line:last-child { margin-bottom: 0; }
+/* The set-list numeral and the brass dash, the site's own list marker. */
+.jam-num {
+  position: absolute;
+  left: -4.25rem;
+  top: 0.55em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--gutter);
-  background: transparent;
-  transition: background-color 200ms ease, box-shadow 200ms ease;
-}
-.hdr.is-scrolled { background: rgba(23,21,18,0.92); box-shadow: 0 var(--keyline-w) 0 var(--keyline); }
-.mark {
-  font-weight: 300;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: 22px;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  color: var(--bone);
-}
-.hdr-cta {
-  font-family: var(--font-mono);
+  gap: 0.6rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  text-decoration: none;
-  color: var(--bone-60);
-  transition: color 160ms ease;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+  font-variant-numeric: tabular-nums;
 }
-.hdr-cta:hover, .hdr-cta:focus-visible { color: var(--oxide-hi); }
+.jam-num::after { content: ""; width: 1rem; height: 1px; background: var(--brass); }
+.jam-mask { display: none; position: absolute; left: 0; right: 0; z-index: 2; pointer-events: none; }
+.jam-mask--top { top: 0; height: 30%; background: linear-gradient(to bottom, #0a0906 0, #0a0906 5.5rem, transparent 100%); }
+.jam-mask--bot { bottom: 0; height: 22%; background: linear-gradient(to top, #0a0906, transparent); }
+@media (max-width: 479px) {
+  .jam-night__block { padding-left: 0; }
+  .jam-num { position: static; margin-bottom: 0.5rem; }
+}
 
-/* Sections and the drafting keylines ------------------------------------- */
-.s {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
-  padding: var(--pad-top) var(--gutter) 64px;
-}
-.wrap {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: var(--content-max);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--col-gap);
-}
-/* Every section opens with a full-width 1px line: a 6px tick at the left
-   gutter and at 25/50/75/100% of width, the index label just above it.
-   Decorative; positioned out of flow so content below never moves. */
-.ruler {
-  position: absolute;
-  left: 0; right: 0;
-  top: var(--ruler-y);
-  height: var(--keyline-w);
-  background: var(--keyline);
-  pointer-events: none;
-  z-index: 5;
-}
-.ruler i { position: absolute; top: 0; width: var(--keyline-w); height: 6px; background: var(--keyline); }
-.ruler .t-g   { left: var(--gutter); }
-.ruler .t-25  { left: 25%; }
-.ruler .t-50  { left: 50%; }
-.ruler .t-75  { left: 75%; }
-.ruler .t-100 { right: 0; }
-.ruler .idx { position: absolute; left: var(--gutter); bottom: 100%; margin-bottom: 8px; }
-/* The hero's line sits under the fixed header, so its index hangs below it. */
-.ruler--hero .idx { bottom: auto; top: 100%; margin: 10px 0 0; }
-
-/* Media slots: every photo and video ships as a placeholder surface, film
-   grain (SVG turbulence at 0.06) over a radial lamp glow offset top-left.
-   A real <img> or <video> dropped inside takes the slot with no layout change. */
-.slot { position: relative; overflow: hidden; background: var(--ink-2); }
-.slot::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: radial-gradient(62% 58% at 18% 12%, var(--lamp), transparent 72%);
-  pointer-events: none;
-}
-.slot::after {
-  content: "";
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 240px 240px;
-  opacity: 0.06;
-  pointer-events: none;
-}
-.slot > img, .slot > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.slot--45 { aspect-ratio: 4 / 5; }
-.slot--32 { aspect-ratio: 3 / 2; }
-.shade { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-
-/* 01 Hero ---------------------------------------------------------------- */
-.s-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 128px;
-  overflow: hidden;
-}
-.hero-media { position: absolute; inset: 0; z-index: 0; }
-.hero-media .shade { background: linear-gradient(to bottom, rgba(14,13,11,0.15), rgba(14,13,11,0.55) 60%, var(--ink) 100%); }
-.hero-text { position: relative; z-index: 1; width: 100%; max-width: var(--content-max); margin: 0 auto; }
-.cue {
-  position: absolute;
-  left: 50%; bottom: 36px;
-  width: var(--keyline-w); height: 48px;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.cue::after { content: ""; position: absolute; inset: 0; background: var(--bone-60); animation: pulse 2s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
-
-/* 02 The night ----------------------------------------------------------- */
-.s-night { overflow: hidden; }
-.night-bg { position: absolute; left: 0; right: 0; top: 0; height: 110%; z-index: 0; }
-.night-bg .shade { background: rgba(14,13,11,0.55); }
-.night-block { grid-column: 2 / 8; }
-.night-block p { margin: 0 0 0.65em; }
-.night-block p:last-child { margin-bottom: 0; }
-.mask { position: absolute; left: 0; right: 0; z-index: 2; pointer-events: none; display: none; }
-.mask--top { top: 0; height: 34vh; height: 34svh; background: linear-gradient(to bottom, var(--ink) 0, var(--ink) calc(var(--ruler-y) + 24px), transparent 100%); }
-.mask--bot { bottom: 0; height: 22vh; height: 22svh; background: linear-gradient(to top, var(--ink), transparent); }
-
-/* 03 Who's in the building ----------------------------------------------- */
-.s-cast {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 40px;
-  overflow: hidden;
-}
-.track-wrap {
+/* ------------------------------------------------- 03 who's in the building */
+.jam-cast { overflow: hidden; }
+.jam-track-wrap {
+  margin-top: var(--space-4);
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: var(--bone-30) transparent;
-  padding-bottom: 16px;
+  scrollbar-color: var(--rule-strong) transparent;
+  padding-bottom: 1rem;
 }
-.track-wrap::-webkit-scrollbar { height: 6px; }
-.track-wrap::-webkit-scrollbar-track { background: var(--keyline); }
-.track-wrap::-webkit-scrollbar-thumb { background: var(--bone-30); }
-.track { display: flex; gap: 24px; padding: 0 var(--gutter); width: max-content; will-change: transform; }
-.card { flex: 0 0 auto; width: min(clamp(260px, 30vw, 420px), 40vh); }
-.card .eyebrow { margin-bottom: 12px; }
-.card .slot { margin-bottom: 16px; }
-.progress { position: relative; display: none; height: var(--keyline-w); margin: 32px var(--gutter) 0; background: var(--keyline); }
-.progress i { position: absolute; inset: 0; background: var(--oxide); transform-origin: left center; transform: scaleX(0); }
-
-/* 04 What it turns into -------------------------------------------------- */
-.s-turns { overflow: hidden; }
-.turns-line {
-  position: absolute;
-  display: none;
-  left: var(--gutter);
-  top: calc(var(--ruler-y) + 40px);
-  bottom: 56px;
-  width: var(--keyline-w);
-  background: var(--keyline);
-}
-.turns-line b { position: absolute; inset: 0; background: var(--oxide); transform-origin: center top; transform: scaleY(0); }
-.turns-line i { position: absolute; left: 0; width: 6px; height: var(--keyline-w); background: var(--bone-30); }
-.turns-line .t0 { top: 0; }
-.turns-line .t1 { top: 36%; }
-.turns-line .t2 { top: 70%; }
-.states { grid-column: 2 / 8; }
-.state + .state { margin-top: 3rem; }
-.state .eyebrow { margin-bottom: 20px; }
-
-/* 05 Who's running it ---------------------------------------------------- */
-.hosts-photo { grid-column: 1 / 7; align-self: center; }
-.hosts-text { grid-column: 8 / 13; align-self: center; }
-.hosts-text .line { max-width: 40ch; text-wrap: pretty; }
-.mark-sm {
-  margin-top: 36px;
-  font-weight: 300;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: 22px;
-  letter-spacing: 0.01em;
-  color: var(--bone-60);
-}
-/* An unresolved placeholder from the handoff (§8). Same convention as
-   site.json's [square brackets]: visible while browsing, never silent. */
-.ph { color: var(--oxide); border-bottom: 1px dotted var(--oxide); }
-
-/* 06 How it works -------------------------------------------------------- */
-.s-how .lead { grid-column: 1 / 11; margin-bottom: 56px; }
-.ledger { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--col-gap); }
-.ledger .eyebrow { margin-bottom: 20px; }
-.ledger .line + .line { margin-top: 14px; }
-.closing { grid-column: 1 / 11; margin-top: 64px; font-size: clamp(24px, 2.6vw, 38px); line-height: 1.25; }
-
-/* 07 Close --------------------------------------------------------------- */
-.s-close { display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - var(--footer-h)); min-height: calc(100svh - var(--footer-h)); }
-.close-inner { grid-column: 1 / -1; }
-.close-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px 36px; margin-top: 48px; }
-.link-mail {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--bone-60);
-  text-decoration: none;
-  border-bottom: var(--keyline-w) solid var(--keyline);
-  transition: color 160ms ease, border-color 160ms ease;
-}
-.link-mail:hover, .link-mail:focus-visible { color: var(--bone); border-color: var(--oxide-hi); }
-
-/* Footer ----------------------------------------------------------------- */
-.ftr {
+.jam-track-wrap::-webkit-scrollbar { height: 6px; }
+.jam-track-wrap::-webkit-scrollbar-track { background: var(--rule); }
+.jam-track-wrap::-webkit-scrollbar-thumb { background: var(--rule-strong); }
+/* The track's left edge is the wrap's content edge, so the first card lines
+   up under the section label. */
+.jam-track {
   display: flex;
-  align-items: center;
-  height: var(--footer-h);
-  padding: 0 var(--gutter);
-  border-top: var(--keyline-w) solid var(--keyline);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  color: var(--bone-60);
+  width: max-content;
+  padding-left: max(1.5rem, calc((100% - 64rem) / 2));
+  padding-right: max(1.5rem, calc((100% - 64rem) / 2));
+  will-change: transform;
 }
-.ftr a { text-decoration: none; }
-.ftr a:hover { color: var(--bone); }
+.jam-card {
+  flex: 0 0 auto;
+  width: clamp(15rem, 23vw, 18.5rem);
+  margin-left: -1px;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+.jam-card:first-child { margin-left: 0; }
+.jam-card .jam-ico { width: 2rem; height: 2rem; color: var(--brass); }
+.jam-card__role {
+  margin-top: 2.5rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 1.125rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.jam-card p { margin-top: 0.6rem; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); }
+.jam-progress { display: none; height: 1px; margin: var(--space-3) auto 0; max-width: 64rem; background: var(--rule); }
+.jam-progress i { display: block; height: 100%; background: var(--brass); transform-origin: left center; transform: scaleX(0); }
+@media (max-width: 759px) { .jam-card { width: min(78vw, 20rem); } }
 
-/* Motion states -----------------------------------------------------------
-   The stylesheet above is the plain vertical stack: what reduced motion, a
-   blocked CDN and every crawler get. `has-motion` on <html> is set by the
-   script only when GSAP loaded and motion is allowed, and switches the three
-   pinned sections into their pinned layouts. */
-.has-motion .s-pin { height: 100vh; height: 100svh; }
-.has-motion .mask { display: block; }
-.has-motion .night-block { margin-top: calc(38vh - var(--pad-top)); margin-top: calc(38svh - var(--pad-top)); will-change: transform; }
-.has-motion .track-wrap { overflow: hidden; padding-bottom: 0; }
-.has-motion .progress { display: block; }
-.has-motion .turns-line { display: block; }
-.has-motion .states { display: grid; margin-top: calc(30vh - var(--pad-top)); margin-top: calc(30svh - var(--pad-top)); }
-.has-motion .state { grid-area: 1 / 1; margin-top: 0; }
+/* ---------------------------------------------------- 04 what it turns into */
+.jam-turns { overflow: hidden; }
+/* The timeline: a rule with the three marks the states sit on; brass fills it
+   across the pin. */
+.jam-timeline { position: relative; display: none; margin-top: var(--space-3); height: 1px; background: var(--rule); }
+.jam-timeline b { position: absolute; inset: 0; background: var(--brass); transform-origin: left center; transform: scaleY(1) scaleX(0); }
+.jam-timeline i { position: absolute; top: -3px; width: 1px; height: 7px; background: var(--rule-strong); }
+.jam-timeline .t0 { left: 0; }
+.jam-timeline .t1 { left: 36%; }
+.jam-timeline .t2 { left: 70%; }
+.jam-states { margin-top: var(--space-4); }
+.jam-state { display: grid; gap: var(--space-2); align-items: start; }
+.jam-state + .jam-state { margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--rule); }
+.jam-figure {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(5rem, 3rem + 9vw, 11rem);
+  line-height: 0.85;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.jam-figure small {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.jam-state .eyebrow { margin-top: 0.25rem; }
+.jam-prose {
+  margin-top: 0.75rem;
+  max-width: 34rem;
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+@media (min-width: 760px) {
+  .jam-state { grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr); gap: var(--space-4); }
+}
 
-/* Breakpoints: 480, 760, 1100. Nothing bespoke above 1440. */
-@media (max-width: 1099px) {
-  .hosts-photo { grid-column: 1 / 7; }
-  .hosts-text { grid-column: 7 / 13; }
-  .night-block, .states { grid-column: 2 / 9; }
+/* ------------------------------------------------------ 05 who's running it */
+.jam-host { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+.jam-host__ico { width: 5.5rem; height: 5.5rem; color: var(--brass); }
+.jam-host__text { max-width: 40rem; font-size: 1.125rem; line-height: 1.65; color: var(--ink-soft); }
+.jam-host .wordmark { display: block; margin-top: var(--space-3); color: var(--ink-faint); }
+@media (min-width: 760px) { .jam-host { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-4); } }
+
+/* ---------------------------------------------------------- 06 how it works */
+.jam-how .h2 { margin-top: 0.75rem; max-width: 22ch; }
+.jam-ledger { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
+.jam-ledger__col { padding: 1.75rem; background: var(--paper); }
+.jam-ledger__col .eyebrow { margin-bottom: 0.5rem; }
+.jam-ledger__row { display: flex; align-items: flex-start; gap: 0.875rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); }
+.jam-ledger__row:last-child { border-bottom: 0; padding-bottom: 0; }
+.jam-ledger__row .jam-ico { flex: 0 0 auto; width: 1.375rem; height: 1.375rem; margin-top: 0.1rem; color: var(--brass); }
+.jam-ledger__row p { font-size: 0.9375rem; line-height: 1.55; color: var(--ink-soft); }
+.jam-closing { display: grid; gap: var(--space-2); align-items: center; margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
+.jam-closing .jam-figure { font-size: clamp(4rem, 3rem + 4vw, 6.5rem); }
+.jam-closing__line { font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem); font-weight: 500; line-height: 1.25; letter-spacing: -0.005em; color: var(--ink); max-width: 18ch; text-wrap: balance; }
+@media (min-width: 760px) {
+  .jam-ledger { grid-template-columns: 1fr 1fr; }
+  .jam-closing { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-4); }
 }
-@media (max-width: 759px) {
-  .night-block, .states { grid-column: 1 / -1; }
-  .has-motion .states { padding-left: 28px; }
-  .card { width: min(78vw, 40vh); }
-  .hosts-photo, .hosts-text { grid-column: 1 / -1; }
-  .hosts-text { margin-top: 32px; }
-  .ledger { grid-template-columns: 1fr; row-gap: 40px; }
-  .s-how .lead, .closing { grid-column: 1 / -1; }
-  .s-hero { padding-bottom: 104px; }
-}
-@media (max-width: 479px) {
-  .venue { margin-top: 0.7em; }
-  .close-actions { margin-top: 36px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cue::after { animation: none; opacity: 0.6; }
-  .hdr, .btn, .hdr-cta, .link-mail { transition: none; }
-}
+
+/* -------------------------------------------------------------- 07 close */
+.jam-close .h2 { margin-top: 0.75rem; max-width: 14ch; }
+.jam-close .btn-row { align-items: center; }
+
+/* ---------------------------------------------------------- motion states */
+/* jam-motion: GSAP loaded and motion allowed. The three pinned sections take
+   the viewport below the sticky header; --jam-hdr is measured by the script. */
+.jam-motion .jam-pin { height: calc(100vh - var(--jam-hdr, 0px)); height: calc(100svh - var(--jam-hdr, 0px)); display: flex; flex-direction: column; }
+/* .wrap is content-box with 1.5rem side padding; as a flex item with auto
+   margins it would shrink to its eyebrow, so give it the full width back. */
+.jam-motion .jam-pin > .wrap { width: calc(100% - 3rem); }
+.jam-motion .jam-night .wrap { flex: 1 1 auto; }
+.jam-motion .jam-night__block { position: absolute; top: 34%; left: 1.5rem; right: 1.5rem; margin-top: 0; }
+.jam-motion .jam-mask { display: block; }
+.jam-motion .jam-cast .jam-track-wrap { margin-top: auto; margin-bottom: auto; }
+.jam-motion .jam-track-wrap { overflow: hidden; padding-bottom: 0; }
+.jam-motion .jam-progress { display: block; }
+.jam-motion .jam-timeline { display: block; }
+.jam-motion .jam-states { display: grid; }
+.jam-motion .jam-state { grid-area: 1 / 1; }
+.jam-motion .jam-state + .jam-state { margin-top: 0; padding-top: 0; border-top: 0; }
 </style>
-</head>
-<body>
 
-<header class="hdr" id="hdr">
-  <a class="mark" href="https://signetartists.com/">Signet</a>
-  <a class="hdr-cta" href="#close" data-scroll>Let's talk</a>
-</header>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3.5M8.5 21.5h7"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6.5 3h11l-1.3 16.2a1.8 1.8 0 0 1-1.8 1.7H9.6a1.8 1.8 0 0 1-1.8-1.7L6.5 3zM7.1 9.5h9.8"/></symbol>
+  <symbol id="i-stool" viewBox="0 0 24 24"><path d="M5 5.5h14M7.5 5.5l-1.5 16M16.5 5.5l1.5 16M7 14.5h10M7.6 10h8.8"/></symbol>
+  <symbol id="i-bass" viewBox="0 0 24 24"><path d="M12 2.5v6.2M10.6 3.2h2.8"/><path d="M12 8.7c-2.9 0-4.9 1.6-4.9 3.6 0 1.1.6 1.8.6 2.9 0 1.4-2.2 2.2-2.2 4.1 0 1.9 3 3.2 6.5 3.2s6.5-1.3 6.5-3.2c0-1.9-2.2-2.7-2.2-4.1 0-1.1.6-1.8.6-2.9 0-2-2-3.6-4.9-3.6z"/><path d="M9.8 15v3M14.2 15v3"/></symbol>
+  <symbol id="i-flight" viewBox="0 0 24 24"><path d="M3 19.5h18M4.5 10.5h3.2l-.4 7H4.9zM10.4 10.5h3.2l-.4 7h-2.4zM16.3 10.5h3.2l-.4 7h-2.4z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 17.1 6.6 20l1.1-6.1-4.5-4.3 6.1-.8z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/><circle cx="12" cy="10" r="2.2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9.5M17.5 12v3M20.5 12v3"/></symbol>
+  <symbol id="i-corner" viewBox="0 0 24 24"><path d="M4 20V5M4 20h15"/><circle cx="13" cy="14.5" r="2.2"/><path d="M15.2 14.5V6.5l4.5-1.2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M3.5 17.5h17M5.5 17.5a6.5 6.5 0 0 1 13 0M12 9V6.5M10.5 6.5h3"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M3 12.5h18M8.5 7V5.2A1.2 1.2 0 0 1 9.7 4h4.6a1.2 1.2 0 0 1 1.2 1.2V7M10 12.5v2M14 12.5v2"/></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3.5 10.5v3a1 1 0 0 0 1 1h2.8l8.2 4V5.5l-8.2 4H4.5a1 1 0 0 0-1 1zM18.5 9.3a3.8 3.8 0 0 1 0 5.4M7.5 14.5v4a1 1 0 0 0 1 1h1.3"/></symbol>
+  <symbol id="i-drink" viewBox="0 0 24 24"><path d="M6.5 3.5h11v15a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-15zM6.5 12.5h11"/></symbol>
+  <symbol id="i-notes" viewBox="0 0 24 24"><circle cx="7.5" cy="17" r="2.8"/><circle cx="16.5" cy="15" r="2.8"/><path d="M10.3 17V6.2l9-2.2V15M10.3 9.7l9-2.2"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="4.5" y="3" width="15" height="18" rx="1.5"/><path d="M9.5 2.5h5v2h-5zM8 9.5h8M8 13.5h8M8 17.5h4.5"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10.2 9v6l5-3z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.5-5.7 5.5-5.7s5.5 2.4 5.5 5.7"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.4c2.9.3 5 2.6 5 5.6"/></symbol>
+</svg>
 
-<main>
 
-<!-- 01 Hero -->
-<section class="s s-hero" id="hero">
-  <div class="slot hero-media" aria-hidden="true">
-    <!-- Hero media slot: 16:9 video, 9:16 for portrait, poster required.
-         Drop the poster and sources in when the footage exists:
-         <video class="hero-video" muted loop playsinline preload="metadata" poster="hero-poster.jpg">
-           <source src="hero-9x16.mp4" type="video/mp4" media="(orientation: portrait)">
-           <source src="hero-16x9.mp4" type="video/mp4">
-         </video> -->
-    <video class="hero-video" muted loop playsinline preload="none"></video>
-    <div class="shade"></div>
+<section class="section section--top jam-hero">
+  <div class="wrap jam-hero__grid">
+    <div class="jam-hero__copy">
+      <p class="eyebrow eyebrow--slab">Sunday or Monday</p>
+      <h1 class="h1 display">Signet Jam</h1>
+      <p class="jam-venue smile" id="jam-venue">at one venue in Denver</p>
+    </div>
+    <figure class="jam-sheet" aria-hidden="true">
+      <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+        <rect class="jam-sheet__paper" x="1" y="1" width="298" height="378" rx="2"/>
+        <text class="jam-sheet__head" x="28" y="52">Sign-up</text>
+        <line class="jam-sheet__rule" x1="28" y1="66" x2="272" y2="66"/>
+    <text class="jam-sheet__num" x="28" y="104">01</text>
+    <line class="jam-sheet__line" x1="58" y1="106" x2="272" y2="106"/>
+    <path class="jam-sheet__sig" d="M62 101c1-10 4-14 6-8 1 4-2 9 1 9 3 0 5-6 8-4 2 3 1 6 4 5 4-1 7-6 10-3 3 2 5 4 8 2 3-2 6-5 10-2 3 2 7 1 11-1"/>
+    <text class="jam-sheet__num" x="28" y="131">02</text>
+    <line class="jam-sheet__line" x1="58" y1="133" x2="272" y2="133"/>
+    <path class="jam-sheet__sig" d="M62 128c0-8 3-12 5-9 2 3 0 7 2 9 2 1 4-4 6-2 3 3 7 3 10 0 3-3 5-6 8-3 2 2 4 5 7 3 3-2 6-4 9-1 3 3 6 1 9-1"/>
+    <text class="jam-sheet__num" x="28" y="158">03</text>
+    <line class="jam-sheet__line" x1="58" y1="160" x2="272" y2="160"/>
+    <path class="jam-sheet__sig" d="M62 155c2-9 5-11 7-5 1 3-1 7 1 8 3 1 5-4 8-2 2 2 5 5 8 2 2-2 4-5 7-3 3 2 6 3 9 1 2-1 5-3 8-1"/>
+    <text class="jam-sheet__num" x="28" y="185">04</text>
+    <line class="jam-sheet__line" x1="58" y1="187" x2="272" y2="187"/>
+    <path class="jam-sheet__sig" d="M62 182c1-12 4-13 6-6 1 5-2 8 1 8 4 0 6-5 9-2 3 3 6 4 9 1 3-3 6-4 9-1 3 2 5 4 8 1 3-3 6-5 10-2 3 2 6 2 9 0 3-2 6-3 9-1"/>
+    <text class="jam-sheet__num" x="28" y="212">05</text>
+    <line class="jam-sheet__line" x1="58" y1="214" x2="272" y2="214"/>
+    <path class="jam-sheet__sig" d="M62 209c0-9 3-13 6-7 2 4-1 8 2 8 3 0 5-3 8-1 3 3 5 4 8 1 3-2 5-4 8-2 3 2 6 3 9 0"/>
+    <text class="jam-sheet__num" x="28" y="239">06</text>
+    <line class="jam-sheet__line" x1="58" y1="241" x2="272" y2="241"/>
+    <text class="jam-sheet__num" x="28" y="266">07</text>
+    <line class="jam-sheet__line" x1="58" y1="268" x2="272" y2="268"/>
+    <text class="jam-sheet__num" x="28" y="293">08</text>
+    <line class="jam-sheet__line" x1="58" y1="295" x2="272" y2="295"/>
+    <text class="jam-sheet__num" x="28" y="320">09</text>
+    <line class="jam-sheet__line" x1="58" y1="322" x2="272" y2="322"/>
+    <text class="jam-sheet__num" x="28" y="347">10</text>
+    <line class="jam-sheet__line" x1="58" y1="349" x2="272" y2="349"/>
+      </svg>
+    </figure>
   </div>
-  <div class="ruler ruler--hero" aria-hidden="true"><span class="idx">01</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
-  <div class="hero-text">
-    <h1 class="display display--hero">Signet Jam</h1>
-    <p class="venue" id="venue">at one venue in Denver</p>
-  </div>
-  <div class="cue" aria-hidden="true"></div>
 </section>
 
-<!-- 02 The night -->
-<section class="s s-pin s-night" id="night">
-  <div class="slot night-bg" aria-hidden="true">
-    <!-- 3:2 still, object-fit cover: <img src="night.jpg" alt="" loading="lazy"> -->
-    <div class="shade"></div>
-  </div>
-  <div class="ruler" aria-hidden="true"><span class="idx">02 / The night</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
+
+<section class="section section--night jam-night jam-pin" id="jam-night">
   <div class="wrap">
-    <div class="night-block prose" id="nightBlock">
-      <p>It's a quarter to eight on a Sunday and the door's been open since seven.</p>
-      <p>Six people at the bar. Two of them came for this. The other four are figuring that out.</p>
-      <p>The sign-up sheet is on the end of the bar, half full, mostly names the bartender already knows.</p>
-      <p>A drummer is adjusting a hi-hat that was fine. A trumpet player nobody's met is standing by the wall with the case still shut.</p>
-      <p>The house band counts off the first tune and the case opens.</p>
-      <p>By the third song the guy who came in for a flight has moved to a stool with a sightline.</p>
-      <p>Somebody's filming. Somebody always is.</p>
-      <p>The tune goes somewhere it wasn't supposed to and the bartender looks up.</p>
-      <p>Same time next week.</p>
+    <p class="eyebrow jam-idx"><span>02</span>The night</p>
+    <div class="jam-night__block" id="jam-night-block">
+      <p class="jam-night__line"><span class="jam-num">01</span>It's a quarter to eight on a Sunday and the door's been open since seven.</p>
+      <p class="jam-night__line"><span class="jam-num">02</span>Six people at the bar. Two of them came for this. The other four are figuring that out.</p>
+      <p class="jam-night__line"><span class="jam-num">03</span>The sign-up sheet is on the end of the bar, half full, mostly names the bartender already knows.</p>
+      <p class="jam-night__line"><span class="jam-num">04</span>A drummer is adjusting a hi-hat that was fine. A trumpet player nobody's met is standing by the wall with the case still shut.</p>
+      <p class="jam-night__line"><span class="jam-num">05</span>The house band counts off the first tune and the case opens.</p>
+      <p class="jam-night__line"><span class="jam-num">06</span>By the third song the guy who came in for a flight has moved to a stool with a sightline.</p>
+      <p class="jam-night__line"><span class="jam-num">07</span>Somebody's filming. Somebody always is.</p>
+      <p class="jam-night__line"><span class="jam-num">08</span>The tune goes somewhere it wasn't supposed to and the bartender looks up.</p>
+      <p class="jam-night__line"><span class="jam-num">09</span>Same time next week.</p>
     </div>
   </div>
-  <div class="mask mask--top" aria-hidden="true"></div>
-  <div class="mask mask--bot" aria-hidden="true"></div>
+  <div class="jam-mask jam-mask--top" aria-hidden="true"></div>
+  <div class="jam-mask jam-mask--bot" aria-hidden="true"></div>
 </section>
 
-<!-- 03 Who's in the building -->
-<section class="s s-pin s-cast" id="cast">
-  <div class="ruler" aria-hidden="true"><span class="idx">03 / Who's in the building</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
-  <div class="track-wrap" id="trackWrap">
-    <div class="track" id="track">
-      <article class="card">
-        <p class="eyebrow">The hosts</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Run the sign-up sheet and the count-offs. Know who should sit in on what, and when to let a tune run.</p>
+
+<section class="section section--sunk jam-cast jam-pin" id="jam-cast">
+  <div class="wrap">
+    <p class="eyebrow jam-idx"><span>03</span>Who's in the building</p>
+  </div>
+  <div class="jam-track-wrap" id="jam-track-wrap">
+    <div class="jam-track" id="jam-track">
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-mic"/></svg>
+        <p class="jam-card__role">The hosts</p>
+        <p>Run the sign-up sheet and the count-offs. Know who should sit in on what, and when to let a tune run.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The bartender</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">By week two she has the band's drinks memorized and a regular who tips like it's Friday.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-glass"/></svg>
+        <p class="jam-card__role">The bartender</p>
+        <p>By week two she has the band's drinks memorized and a regular who tips like it's Friday.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The regulars</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Two of them haven't missed one. They pick the seat with the sightline and tell people it's theirs.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-stool"/></svg>
+        <p class="jam-card__role">The regulars</p>
+        <p>Two of them haven't missed one. They pick the seat with the sightline and tell people it's theirs.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The player who drove in</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Drives in from Aurora with an upright in the back seat. Plays two tunes, stays for the rest.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-bass"/></svg>
+        <p class="jam-card__role">The player who drove in</p>
+        <p>Drives in from Aurora with an upright in the back seat. Plays two tunes, stays for the rest.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The walk-in</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Came in for a flight at 7:30. Left at 10:40 with a name to look up.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-flight"/></svg>
+        <p class="jam-card__role">The walk-in</p>
+        <p>Came in for a flight at 7:30. Left at 10:40 with a name to look up.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The feature</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Once a month somebody with a name in town gets the second set. Their people come. Their people come back.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-star"/></svg>
+        <p class="jam-card__role">The feature</p>
+        <p>Once a month somebody with a name in town gets the second set. Their people come. Their people come back.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The one with the phone</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Films thirty seconds of the tune that went somewhere. Tags the venue. That's the ad.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-phone"/></svg>
+        <p class="jam-card__role">The one with the phone</p>
+        <p>Films thirty seconds of the tune that went somewhere. Tags the venue. That's the ad.</p>
       </article>
-      <article class="card">
-        <p class="eyebrow">The owner</p>
-        <div class="slot slot--45" aria-hidden="true"></div>
-        <p class="card-body">Came down to check on the night. Stayed. Started coming down every week.</p>
+      <article class="jam-card">
+        <svg class="jam-ico" aria-hidden="true"><use href="#i-key"/></svg>
+        <p class="jam-card__role">The owner</p>
+        <p>Came down to check on the night. Stayed. Started coming down every week.</p>
       </article>
     </div>
   </div>
-  <div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
+  <div class="wrap"><div class="jam-progress" aria-hidden="true"><i id="jam-progress-fill"></i></div></div>
 </section>
 
-<!-- 04 What it turns into -->
-<section class="s s-pin s-turns" id="turns">
-  <div class="ruler" aria-hidden="true"><span class="idx">04 / What it turns into</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
-  <div class="turns-line" aria-hidden="true"><b id="turnsFill"></b><i class="t0"></i><i class="t1"></i><i class="t2"></i></div>
+
+<section class="section jam-turns jam-pin" id="jam-turns">
   <div class="wrap">
-    <div class="states" id="states">
-      <div class="state">
-        <p class="eyebrow">Month one</p>
-        <p class="prose">A sign-up sheet, a house band, and a night that exists now. People find out the way people find out, which is someone they trust telling them.</p>
+    <p class="eyebrow jam-idx"><span>04</span>What it turns into</p>
+    <div class="jam-timeline" aria-hidden="true"><b id="jam-timeline-fill"></b><i class="t0"></i><i class="t1"></i><i class="t2"></i></div>
+    <div class="jam-states" id="jam-states">
+      <div class="jam-state">
+        <p class="jam-figure">1<small>month</small></p>
+        <div>
+          <p class="eyebrow">Month one</p>
+          <p class="jam-prose">A sign-up sheet, a house band, and a night that exists now. People find out the way people find out, which is someone they trust telling them.</p>
+        </div>
       </div>
-      <div class="state">
-        <p class="eyebrow">Six months in</p>
-        <p class="prose">The sheet fills before the band starts. Players in town know the night by name. The wall by the stage has photos on it that weren't there in the spring. Someone wrote about it.</p>
+      <div class="jam-state">
+        <p class="jam-figure">6<small>months</small></p>
+        <div>
+          <p class="eyebrow">Six months in</p>
+          <p class="jam-prose">The sheet fills before the band starts. Players in town know the night by name. The wall by the stage has photos on it that weren't there in the spring. Someone wrote about it.</p>
+        </div>
       </div>
-      <div class="state">
-        <p class="eyebrow">A year in</p>
-        <p class="prose">Sunday is the night. Bands that came up through the jam are playing the venue's private parties. Out-of-town players ask about it before they land. People plan the weekend around getting there.</p>
+      <div class="jam-state">
+        <p class="jam-figure">12<small>months</small></p>
+        <div>
+          <p class="eyebrow">A year in</p>
+          <p class="jam-prose">Sunday is the night. Bands that came up through the jam are playing the venue's private parties. Out-of-town players ask about it before they land. People plan the weekend around getting there.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 05 Who's running it -->
-<section class="s s-hosts" id="hosts">
-  <div class="ruler" aria-hidden="true"><span class="idx">05 / Who's running it</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
+
+<section class="section section--ruled jam-hosts">
   <div class="wrap">
-    <div class="slot slot--32 hosts-photo reveal" aria-hidden="true">
-      <!-- 3:2, the hosts on stage or at the bar, not posed: <img src="hosts.jpg" alt="" loading="lazy"> -->
-    </div>
-    <div class="hosts-text reveal">
-      <p class="line">Signet Jam is run by Daniel Fox and <span class="ph">{cohost name}</span>. Daniel plays bass for a living, upright and electric, in bands around Denver, and before that built a company to 180 people and sold it. <span class="ph">{Cohost: one sentence, what they play and what they've done.}</span> The house band is working players who play out every week. Signet is the outfit behind it.</p>
-      <p class="mark-sm">Signet</p>
+    <p class="eyebrow jam-idx"><span>05</span>Who's running it</p>
+    <div class="jam-host jam-reveal">
+      <svg class="jam-ico jam-host__ico" aria-hidden="true"><use href="#i-bass"/></svg>
+      <div>
+        <p class="jam-host__text">Signet Jam is run by a seasoned, connected professional musician. The host plays bass for a living, upright and electric, in bands around Denver, and before that built a company to 180 people and sold it. The house band is working players who play out every week. Signet is the outfit behind it.</p>
+        <p class="wordmark">Signet Artists</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 06 How it works -->
-<section class="s s-how" id="how">
-  <div class="ruler" aria-hidden="true"><span class="idx">06 / How it works</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
+
+<section class="section section--ruled jam-how" id="jam-how">
   <div class="wrap">
-    <p class="lead">Every week, same night, one venue. You pick Sunday or Monday.</p>
-    <div class="ledger">
-      <div class="col">
+    <p class="eyebrow jam-idx"><span>06</span>How it works</p>
+    <h2 class="h2 jam-reveal">Every week, same night, one venue. You pick Sunday or Monday.</h2>
+    <div class="jam-ledger">
+      <div class="jam-ledger__col">
         <p class="eyebrow">The venue brings</p>
-        <p class="line">The space and a corner for the band.</p>
-        <p class="line">The staff for the night.</p>
-        <p class="line">A closet for the backline.</p>
-        <p class="line">Promo behind the night, from your accounts.</p>
-        <p class="line">A drink for the band.</p>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-corner"/></svg><p>The space and a corner for the band.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-bell"/></svg><p>The staff for the night.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-case"/></svg><p>A closet for the backline.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-megaphone"/></svg><p>Promo behind the night, from your accounts.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-drink"/></svg><p>A drink for the band.</p></div>
       </div>
-      <div class="col">
+      <div class="jam-ledger__col">
         <p class="eyebrow">Signet brings</p>
-        <p class="line">The house band.</p>
-        <p class="line">The hosts.</p>
-        <p class="line">The sign-up sheet and the shape of the night.</p>
-        <p class="line">A featured act every month.</p>
-        <p class="line">Clips every week, cut and ready to post.</p>
-        <p class="line">The players, who are the first hundred people who show up.</p>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-notes"/></svg><p>The house band.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-mic"/></svg><p>The hosts.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-list"/></svg><p>The sign-up sheet and the shape of the night.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-star"/></svg><p>A featured act every month.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-clip"/></svg><p>Clips every week, cut and ready to post.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-people"/></svg><p>The players, who are the first hundred people who show up.</p></div>
       </div>
     </div>
-    <p class="closing">Twelve weeks to start. Then we both decide.</p>
-  </div>
-</section>
-
-<!-- 07 Close -->
-<section class="s s-close" id="close">
-  <div class="ruler" aria-hidden="true"><span class="idx">07 / Close</span><i class="t-g"></i><i class="t-25"></i><i class="t-50"></i><i class="t-75"></i><i class="t-100"></i></div>
-  <div class="wrap">
-    <div class="close-inner reveal">
-      <p class="display display--close">One venue. Sunday or Monday.</p>
-      <div class="close-actions">
-        <a class="btn" href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Let's talk</a>
-        <a class="link-mail" href="mailto:hello@signetartists.com">hello@signetartists.com</a>
-      </div>
+    <div class="jam-closing jam-reveal">
+      <p class="jam-figure">12<small>weeks</small></p>
+      <p class="jam-closing__line">Twelve weeks to start. Then we both decide.</p>
     </div>
   </div>
 </section>
 
-</main>
 
-<footer class="ftr">
-  <p>Signet · Denver · <a href="mailto:hello@signetartists.com">hello@signetartists.com</a></p>
-</footer>
+<section class="section section--ruled jam-close" id="jam-close">
+  <div class="wrap jam-reveal">
+    <p class="eyebrow jam-idx"><span>07</span>Close</p>
+    <h2 class="h2 display">One venue. Sunday or Monday.</h2>
+    <div class="btn-row">
+      <a class="btn" href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Let's talk</a>
+      <a class="btn btn--outline" href="mailto:hello@signetartists.com">hello@signetartists.com</a>
+    </div>
+  </div>
+</section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
 (function () {
   'use strict';
   var doc = document, root = doc.documentElement;
 
-  /* §6 Venue parameter. textContent only, never innerHTML, so
-     ?venue=<b>x</b> renders as literal text. Nothing else is venue-specific. */
-  var venueEl = doc.getElementById('venue');
+  /* Venue parameter. textContent only, never innerHTML, so ?venue=<b>x</b>
+     renders as literal text. Nothing else on the page is venue-specific. */
+  var venueEl = doc.getElementById('jam-venue');
   try {
     var venue = new URLSearchParams(location.search).get('venue');
     venue = venue ? venue.replace(/\s+/g, ' ').trim().slice(0, 80) : '';
-    if (venue) {
+    if (venue && venueEl) {
       venueEl.textContent = 'at ' + venue;
       doc.title = 'Signet Jam at ' + venue;
     }
   } catch (e) { /* no URLSearchParams: the fallback line stands */ }
 
-  /* Header: class toggle past 40px of scroll, 200ms transition in CSS. */
-  var hdr = doc.getElementById('hdr');
-  var onScroll = function () { hdr.classList.toggle('is-scrolled', (window.scrollY || root.scrollTop) > 40); };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  /* ?motion=off renders the plain stack, the same one reduced motion gets. */
+  var motionOff = false;
+  try { motionOff = new URLSearchParams(location.search).get('motion') === 'off'; } catch (e) {}
 
-  var video = doc.querySelector('.hero-video');
-  var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function init() {
+    if (motionOff || !(window.gsap && window.ScrollTrigger)) { root.classList.add('jam-static'); return; }
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
-  /* No GSAP (CDN blocked) means the plain vertical stack the stylesheet
-     already renders. */
-  if (!(window.gsap && window.ScrollTrigger)) { root.classList.add('no-motion'); return; }
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  ScrollTrigger.config({ ignoreMobileResize: true });
+    /* The site header is sticky, so every pin starts under it and every
+       pinned section is the viewport minus its height. */
+    var hdr = doc.querySelector('.site-header');
+    var hdrH = function () { return hdr ? hdr.offsetHeight : 0; };
+    var setHdr = function () { root.style.setProperty('--jam-hdr', hdrH() + 'px'); };
+    setHdr();
+    ScrollTrigger.addEventListener('refreshInit', setHdr);
 
-  /* Header link: scroll to 07 in 0.8s. Under reduced motion the anchor jumps. */
-  doc.querySelector('[data-scroll]').addEventListener('click', function (e) {
-    if (reduceMQ.matches) return;
-    e.preventDefault();
-    gsap.to(window, { duration: 0.8, scrollTo: { y: '#close', autoKill: false }, ease: 'power2.out' });
-  });
+    /* gsap.matchMedia runs the setup when any listed condition matches; the
+       desktop query is what makes it run at all above 760px. */
+    var mm = gsap.matchMedia();
+    mm.add({
+      reduce: '(prefers-reduced-motion: reduce)',
+      mobile: '(max-width: 759px)',
+      desktop: '(min-width: 760px)'
+    }, function (ctx) {
+      var c = ctx.conditions;
+      if (c.reduce) {
+        root.classList.remove('jam-motion');
+        root.classList.add('jam-static');
+        return;
+      }
+      root.classList.add('jam-motion');
+      root.classList.remove('jam-static');
+      var startAt = function () { return 'top ' + hdrH() + 'px'; };
 
-  /* 01 Hero, on load. Once, outside matchMedia, so a resize never replays it. */
-  if (!reduceMQ.matches) {
-    gsap.from('.hero-media', { scale: 1.06, duration: 1.6, ease: 'power2.out' });
-    gsap.from('.display--hero', { opacity: 0, y: 24, duration: 0.9, delay: 0.2, ease: 'power2.out' });
-    gsap.from('#venue', { opacity: 0, y: 24, duration: 0.9, delay: 0.5, ease: 'power2.out' });
+      /* 02 The night. One line carries the weight at a time: each steps from
+         0.14 to 1 in sequence and the one before it drops to 0.5. The block
+         rides up so the lit line sits on one reading line, which is what lets
+         nine lines fit any viewport. The last line lights by 88% and holds. */
+      var night = doc.getElementById('jam-night');
+      var block = doc.getElementById('jam-night-block');
+      var lines = gsap.utils.toArray('#jam-night-block .jam-night__line');
+      var slice = 0.85 / (lines.length - 1);
+      var tlNight = gsap.timeline({
+        scrollTrigger: {
+          trigger: night, start: startAt, end: '+=' + (c.mobile ? 200 : 280) + '%',
+          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
+        }
+      });
+      gsap.set(lines, { opacity: 0.14 });
+      lines.forEach(function (line, i) {
+        var at = i * slice;
+        tlNight.to(line, { opacity: 1, duration: slice * 0.3, ease: 'none' }, at);
+        if (i > 0) {
+          tlNight.to(lines[i - 1], { opacity: 0.5, duration: slice * 0.3, ease: 'none' }, at);
+          tlNight.fromTo(block,
+            { y: function () { return -lines[i - 1].offsetTop; } },
+            { y: function () { return -line.offsetTop; }, duration: slice * 0.55, ease: 'none', immediateRender: false },
+            at);
+        }
+      });
+      tlNight.set({}, {}, 1);
+
+      /* 03 Who's in the building. Pinned for exactly the track's overflow;
+         the track is the animation, the brass rule fills in sync. No snap. */
+      var cast = doc.getElementById('jam-cast');
+      var trackWrap = doc.getElementById('jam-track-wrap');
+      var track = doc.getElementById('jam-track');
+      var distance = function () { return Math.max(0, track.scrollWidth - trackWrap.clientWidth); };
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: cast, start: startAt, end: function () { return '+=' + distance(); },
+          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
+        }
+      })
+        .to(track, { x: function () { return -distance(); }, ease: 'none', duration: 1 }, 0)
+        .to('#jam-progress-fill', { scaleX: 1, ease: 'none', duration: 1 }, 0);
+
+      /* 04 What it turns into. Three stacked states: crossfade at 30-42% and
+         64-76%, opacity plus a 12px rise on the incoming one; the timeline
+         rule fills across the pin. */
+      var turns = doc.getElementById('jam-turns');
+      var states = gsap.utils.toArray('#jam-states .jam-state');
+      gsap.set(states.slice(1), { opacity: 0, y: 12 });
+      var tlTurns = gsap.timeline({
+        scrollTrigger: {
+          trigger: turns, start: startAt, end: '+=' + (c.mobile ? 180 : 240) + '%',
+          pin: true, pinSpacing: true, scrub: true
+        }
+      });
+      tlTurns.fromTo('#jam-timeline-fill', { scaleX: 0 }, { scaleX: 1, ease: 'none', duration: 1 }, 0);
+      [[0, 1, 0.30], [1, 2, 0.64]].forEach(function (step) {
+        tlTurns
+          .to(states[step[0]], { opacity: 0, duration: 0.12, ease: 'none' }, step[2])
+          .to(states[step[1]], { opacity: 1, y: 0, duration: 0.12, ease: 'none' }, step[2]);
+      });
+      tlTurns.set({}, {}, 1);
+
+      /* 05, 06, 07: fade up on enter, once. */
+      gsap.utils.toArray('.jam-reveal').forEach(function (el) {
+        gsap.from(el, {
+          opacity: 0, y: 24, duration: 0.8, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 80%', once: true }
+        });
+      });
+      /* The ledger rows at 80ms, left column first, once. */
+      gsap.from(gsap.utils.toArray('#jam-how .jam-ledger__row, #jam-how .jam-ledger .eyebrow'), {
+        opacity: 0, y: 12, duration: 0.5, ease: 'power2.out', stagger: 0.08,
+        scrollTrigger: { trigger: '#jam-how .jam-ledger', start: 'top 80%', once: true }
+      });
+
+      return function () { root.classList.remove('jam-motion'); };
+    });
+
+    /* Late fonts change line wrapping; measure again. */
+    if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(function () { ScrollTrigger.refresh(); }); }
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
   }
 
-  /* gsap.matchMedia runs the setup when any listed condition matches, so
-     the desktop query is what makes it run at all above 760px. */
-  var mm = gsap.matchMedia();
-  mm.add({
-    reduce: '(prefers-reduced-motion: reduce)',
-    mobile: '(max-width: 759px)',
-    desktop: '(min-width: 760px)'
-  }, function (ctx) {
-    var c = ctx.conditions;
-
-    /* Reduced motion: no triggers, no pins, every section a plain stack at
-       full opacity, 03 a native horizontal scroller, hero media paused. */
-    if (c.reduce) {
-      root.classList.remove('has-motion');
-      root.classList.add('no-motion');
-      if (video) video.pause();
-      return;
-    }
-    root.classList.add('has-motion');
-    root.classList.remove('no-motion');
-    if (video && video.querySelector('source')) { video.muted = true; video.play().catch(function () {}); }
-
-    /* 01 Hero, on scroll: the text block at half speed, gone by the time the
-       section's bottom reaches 40% of the viewport; the cue gone by 10%. */
-    gsap.timeline({ scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom 40%', scrub: true } })
-      .to('.cue', { opacity: 0, duration: 0.1, ease: 'none' }, 0)
-      .to('.hero-text', { yPercent: 30, opacity: 0, duration: 1, ease: 'none' }, 0);
-
-    /* 02 The night. Pinned; each line steps from 0.14 to 1 in sequence, the
-       line before it dropping to 0.5, so one line carries the weight at any
-       moment. The block rides up so the lit line sits on one reading line
-       (38svh), which is what lets nine lines fit any viewport. The last line
-       lights by 88% and holds the final 12%. */
-    var night = doc.getElementById('night');
-    var block = doc.getElementById('nightBlock');
-    var lines = gsap.utils.toArray('#nightBlock p');
-    var nightBg = night.querySelector('.night-bg');
-    var lastAt = 0.85;
-    var slice = lastAt / (lines.length - 1);
-    var tlNight = gsap.timeline({
-      scrollTrigger: {
-        trigger: night, start: 'top top', end: '+=' + (c.mobile ? 200 : 280) + '%',
-        pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
-      }
-    });
-    gsap.set(lines, { opacity: 0.14 });
-    tlNight.to(nightBg, { yPercent: -8, ease: 'none', duration: 1 }, 0);
-    lines.forEach(function (line, i) {
-      var at = i * slice;
-      tlNight.to(line, { opacity: 1, duration: slice * 0.3, ease: 'none' }, at);
-      if (i > 0) {
-        tlNight.to(lines[i - 1], { opacity: 0.5, duration: slice * 0.3, ease: 'none' }, at);
-        tlNight.fromTo(block,
-          { y: function () { return -lines[i - 1].offsetTop; } },
-          { y: function () { return -line.offsetTop; }, duration: slice * 0.55, ease: 'none', immediateRender: false },
-          at);
-      }
-    });
-    tlNight.set({}, {}, 1);
-
-    /* 03 Who's in the building. Pinned for exactly the track's overflow; the
-       track is the animation, the keyline fills in sync. No snap. */
-    var cast = doc.getElementById('cast');
-    var track = doc.getElementById('track');
-    var fill = doc.getElementById('progressFill');
-    var distance = function () { return Math.max(0, track.scrollWidth - window.innerWidth); };
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: cast, start: 'top top', end: function () { return '+=' + distance(); },
-        pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
-      }
-    })
-      .to(track, { x: function () { return -distance(); }, ease: 'none', duration: 1 }, 0)
-      .to(fill, { scaleX: 1, ease: 'none', duration: 1 }, 0);
-
-    /* 04 What it turns into. Three stacked states: crossfade 30-42% and
-       64-76%, opacity plus a 12px rise on the incoming block; the active
-       eyebrow oxide, the others bone-30; the left keyline grows across the pin. */
-    var turns = doc.getElementById('turns');
-    var states = gsap.utils.toArray('#states .state');
-    var eyebrows = states.map(function (s) { return s.querySelector('.eyebrow'); });
-    var OXIDE = '#B5472B', DIM = 'rgba(237,230,216,0.3)';
-    gsap.set(states.slice(1), { opacity: 0, y: 12 });
-    gsap.set(eyebrows.slice(1), { color: DIM });
-    var tlTurns = gsap.timeline({
-      scrollTrigger: {
-        trigger: turns, start: 'top top', end: '+=' + (c.mobile ? 180 : 240) + '%',
-        pin: true, pinSpacing: true, scrub: true
-      }
-    });
-    tlTurns.fromTo('#turnsFill', { scaleY: 0 }, { scaleY: 1, ease: 'none', duration: 1 }, 0);
-    [[0, 1, 0.30], [1, 2, 0.64]].forEach(function (step) {
-      var out = step[0], inc = step[1], at = step[2];
-      tlTurns
-        .to(states[out], { opacity: 0, duration: 0.12, ease: 'none' }, at)
-        .to(eyebrows[out], { color: DIM, duration: 0.12, ease: 'none' }, at)
-        .to(states[inc], { opacity: 1, y: 0, duration: 0.12, ease: 'none' }, at)
-        .to(eyebrows[inc], { color: OXIDE, duration: 0.12, ease: 'none' }, at);
-    });
-    tlTurns.set({}, {}, 1);
-
-    /* 05 and 07: fade up 24px on enter at 70% of the viewport, once. */
-    gsap.utils.toArray('.reveal').forEach(function (el) {
-      gsap.from(el, {
-        opacity: 0, y: 24, duration: 0.8, ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 70%', once: true }
-      });
-    });
-
-    /* 06 How it works: the lead, then the ledger lines at 80ms, left column
-       first then right, then the closing line after 200ms. Once. */
-    var how = doc.getElementById('how');
-    gsap.timeline({ scrollTrigger: { trigger: how, start: 'top 70%', once: true } })
-      .from(how.querySelector('.lead'), { opacity: 0, y: 24, duration: 0.8, ease: 'power2.out' })
-      .from(gsap.utils.toArray('#how .ledger p'), { opacity: 0, y: 16, duration: 0.6, ease: 'power2.out', stagger: 0.08 }, '-=0.4')
-      .from(how.querySelector('.closing'), { opacity: 0, y: 24, duration: 0.8, ease: 'power2.out' }, '+=0.2');
-
-    return function () { root.classList.remove('has-motion'); };
-  });
-
-  /* Late fonts and media change line wrapping; measure again. */
-  if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(function () { ScrollTrigger.refresh(); }); }
-  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  if (doc.readyState === 'loading') { doc.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
 </script>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark">Signet Artists</p>
+      <p class="footer-line">Live entertainment for private events in the Denver area, including the Front Range, and the mountain corridor.</p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <p class="eyebrow">Enquiries</p>
+        <ul class="footer-list">
+          <li><a href="mailto:hello@signetartists.com">hello@signetartists.com</a></li>
+          <!-- Profile links, added 2026-08-21 as profiles go live. rel="me" marks
+               them as this brand's own identities for entity consolidation. Only
+               profiles worth a buyer's click belong here, never every citation —
+               and never Thumbtack: that would route free direct traffic into the
+               pay-per-lead channel. -->
+          <li><a href="https://www.linkedin.com/company/signetartists/" rel="me">Signet on LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Site</p>
+        <!-- Songs and Notes added 2026-08-07: /repertoire/ was in no navigation
+             at all, and /blog/ was reachable only from the sitemap and the RSS
+             feed. Four published posts nobody could find from the site. -->
+        <!-- About added 2026-09-06 with the brand page; the header row is
+             full at eight items and the occasion hubs keep those slots. -->
+        <ul class="footer-list">
+          <li><a href="../about/">About</a></li>
+          <li><a href="../music/">The Music</a></li>
+          <li><a href="../repertoire/">Songs</a></li>
+          <li><a href="../pricing/">Pricing</a></li>
+          <li><a href="../corporate/">Corporate</a></li>
+          <li><a href="../private-parties/">Private Parties</a></li>
+          <li><a href="../guides/live-music-cost-colorado/">What live music costs</a></li>
+          <li><a href="../blog/">Notes</a></li>
+          <li><a href="../contact/">Check a Date</a></li>
+        </ul>
+      </div>
+      <!-- Occasions and Ensembles added 2026-09-13. The 2026-09-13 crawl
+           found the occasion spokes, ensemble pages and artist pages carrying
+           one to seven inbound links each while the header hubs carried 56,
+           and Search Console had four hubs (Tejas, retreats, private parties,
+           cocktail hour) "Discovered, never crawled". A footer link from
+           every page is the cheapest sitewide inlink there is; the header row
+           stays at eight. -->
+      <div>
+        <p class="eyebrow">Occasions</p>
+        <ul class="footer-list">
+          <li><a href="../weddings/">Weddings</a></li>
+          <li><a href="../weddings/ceremony/">Wedding ceremony</a></li>
+          <li><a href="../weddings/cocktail-hour/">Cocktail hour</a></li>
+          <li><a href="../weddings/colorado-springs/">Weddings, Colorado Springs</a></li>
+          <li><a href="../corporate/holiday-party/">Corporate holiday party</a></li>
+          <li><a href="../corporate/client-dinners/">Client dinners</a></li>
+          <li><a href="../corporate/retreats/">Corporate retreats</a></li>
+          <li><a href="../corporate/galas-and-awards/">Galas and award nights</a></li>
+          <li><a href="../corporate/after-party/">After-parties</a></li>
+          <li><a href="../private-parties/denver/">Private parties, Denver</a></li>
+          <li><a href="../private-parties/colorado-springs/">Private parties, Colorado Springs</a></li>
+          <li><a href="../weddings/vail/">Weddings, Vail</a></li>
+          <li><a href="../weddings/jazz-band/">Jazz band for a wedding</a></li>
+          <li><a href="../corporate/jazz-band/">Jazz band for a corporate event</a></li>
+          <li><a href="../private-parties/proposals/">Proposals and surprise songs</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Ensembles</p>
+        <ul class="footer-list">
+          <li><a href="../ensembles/solo-guitarist/">Solo guitarist</a></li>
+          <li><a href="../ensembles/acoustic-duo/">Acoustic duo and trio</a></li>
+          <li><a href="../ensembles/jazz-duo-trio/">Jazz duo and trio</a></li>
+          <li><a href="../ensembles/spanish-guitarist/">Spanish guitarist</a></li>
+          <li><a href="../ensembles/flamenco-trio/">Dirty Flamenco, the trio</a></li>
+          <li><a href="../ensembles/dj/">DJ</a></li>
+          <li><a href="../ensembles/live-band-karaoke/">Live Band Karaoke</a></li>
+          <li><a href="../ensembles/yacht-rock/">Yacht rock band</a></li>
+          <li><a href="../ensembles/americana-band/">Americana band</a></li>
+          <li><a href="../ensembles/singer-guitarist/">Singer and guitarist</a></li>
+          <li><a href="../ensembles/christmas-jazz-trio/">Christmas jazz trio</a></li>
+          <li><a href="../artists/tejas-singh/">Tejas Singh</a></li>
+          <li><a href="../artists/tony-medina/">Tony Medina</a></li>
+          <li><a href="../ensembles/changes-jazz-trio/">Changes Jazz Trio</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">For planners</p>
+        <ul class="footer-list">
+          <li><a href="../planners/">Resources</a></li>
+          <li><a href="../planners/technical/">What we need from your venue</a></li>
+          <li><a href="../planners/mountain/">The mountain corridor</a></li>
+          <li><a href="../planners/booking/">How a booking works</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="footer-meta">&copy; 2026 Signet Artists</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile nav toggle. The button label doubles as the state indicator, the
+    // same as the React version it replaced.
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.querySelector('.nav-mobile');
+      if (!btn || !panel) { return; }
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
 </body>
 </html>

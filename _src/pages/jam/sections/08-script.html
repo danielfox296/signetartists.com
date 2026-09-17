@@ -1,0 +1,146 @@
+<!-- The motion (handoff §5) and the venue parameter (§6). GSAP 3.12.5 +
+     ScrollTrigger from cdnjs, deferred; the page script waits for
+     DOMContentLoaded, which fires after deferred scripts run. With GSAP
+     missing or reduced motion on, the page is the plain stack 00-style.html
+     already renders. -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var doc = document, root = doc.documentElement;
+
+  /* Venue parameter. textContent only, never innerHTML, so ?venue=<b>x</b>
+     renders as literal text. Nothing else on the page is venue-specific. */
+  var venueEl = doc.getElementById('jam-venue');
+  try {
+    var venue = new URLSearchParams(location.search).get('venue');
+    venue = venue ? venue.replace(/\s+/g, ' ').trim().slice(0, 80) : '';
+    if (venue && venueEl) {
+      venueEl.textContent = 'at ' + venue;
+      doc.title = 'Signet Jam at ' + venue;
+    }
+  } catch (e) { /* no URLSearchParams: the fallback line stands */ }
+
+  /* ?motion=off renders the plain stack, the same one reduced motion gets. */
+  var motionOff = false;
+  try { motionOff = new URLSearchParams(location.search).get('motion') === 'off'; } catch (e) {}
+
+  function init() {
+    if (motionOff || !(window.gsap && window.ScrollTrigger)) { root.classList.add('jam-static'); return; }
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
+    /* The site header is sticky, so every pin starts under it and every
+       pinned section is the viewport minus its height. */
+    var hdr = doc.querySelector('.site-header');
+    var hdrH = function () { return hdr ? hdr.offsetHeight : 0; };
+    var setHdr = function () { root.style.setProperty('--jam-hdr', hdrH() + 'px'); };
+    setHdr();
+    ScrollTrigger.addEventListener('refreshInit', setHdr);
+
+    /* gsap.matchMedia runs the setup when any listed condition matches; the
+       desktop query is what makes it run at all above 760px. */
+    var mm = gsap.matchMedia();
+    mm.add({
+      reduce: '(prefers-reduced-motion: reduce)',
+      mobile: '(max-width: 759px)',
+      desktop: '(min-width: 760px)'
+    }, function (ctx) {
+      var c = ctx.conditions;
+      if (c.reduce) {
+        root.classList.remove('jam-motion');
+        root.classList.add('jam-static');
+        return;
+      }
+      root.classList.add('jam-motion');
+      root.classList.remove('jam-static');
+      var startAt = function () { return 'top ' + hdrH() + 'px'; };
+
+      /* 02 The night. One line carries the weight at a time: each steps from
+         0.14 to 1 in sequence and the one before it drops to 0.5. The block
+         rides up so the lit line sits on one reading line, which is what lets
+         nine lines fit any viewport. The last line lights by 88% and holds. */
+      var night = doc.getElementById('jam-night');
+      var block = doc.getElementById('jam-night-block');
+      var lines = gsap.utils.toArray('#jam-night-block .jam-night__line');
+      var slice = 0.85 / (lines.length - 1);
+      var tlNight = gsap.timeline({
+        scrollTrigger: {
+          trigger: night, start: startAt, end: '+=' + (c.mobile ? 200 : 280) + '%',
+          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
+        }
+      });
+      gsap.set(lines, { opacity: 0.14 });
+      lines.forEach(function (line, i) {
+        var at = i * slice;
+        tlNight.to(line, { opacity: 1, duration: slice * 0.3, ease: 'none' }, at);
+        if (i > 0) {
+          tlNight.to(lines[i - 1], { opacity: 0.5, duration: slice * 0.3, ease: 'none' }, at);
+          tlNight.fromTo(block,
+            { y: function () { return -lines[i - 1].offsetTop; } },
+            { y: function () { return -line.offsetTop; }, duration: slice * 0.55, ease: 'none', immediateRender: false },
+            at);
+        }
+      });
+      tlNight.set({}, {}, 1);
+
+      /* 03 Who's in the building. Pinned for exactly the track's overflow;
+         the track is the animation, the brass rule fills in sync. No snap. */
+      var cast = doc.getElementById('jam-cast');
+      var trackWrap = doc.getElementById('jam-track-wrap');
+      var track = doc.getElementById('jam-track');
+      var distance = function () { return Math.max(0, track.scrollWidth - trackWrap.clientWidth); };
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: cast, start: startAt, end: function () { return '+=' + distance(); },
+          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
+        }
+      })
+        .to(track, { x: function () { return -distance(); }, ease: 'none', duration: 1 }, 0)
+        .to('#jam-progress-fill', { scaleX: 1, ease: 'none', duration: 1 }, 0);
+
+      /* 04 What it turns into. Three stacked states: crossfade at 30-42% and
+         64-76%, opacity plus a 12px rise on the incoming one; the timeline
+         rule fills across the pin. */
+      var turns = doc.getElementById('jam-turns');
+      var states = gsap.utils.toArray('#jam-states .jam-state');
+      gsap.set(states.slice(1), { opacity: 0, y: 12 });
+      var tlTurns = gsap.timeline({
+        scrollTrigger: {
+          trigger: turns, start: startAt, end: '+=' + (c.mobile ? 180 : 240) + '%',
+          pin: true, pinSpacing: true, scrub: true
+        }
+      });
+      tlTurns.fromTo('#jam-timeline-fill', { scaleX: 0 }, { scaleX: 1, ease: 'none', duration: 1 }, 0);
+      [[0, 1, 0.30], [1, 2, 0.64]].forEach(function (step) {
+        tlTurns
+          .to(states[step[0]], { opacity: 0, duration: 0.12, ease: 'none' }, step[2])
+          .to(states[step[1]], { opacity: 1, y: 0, duration: 0.12, ease: 'none' }, step[2]);
+      });
+      tlTurns.set({}, {}, 1);
+
+      /* 05, 06, 07: fade up on enter, once. */
+      gsap.utils.toArray('.jam-reveal').forEach(function (el) {
+        gsap.from(el, {
+          opacity: 0, y: 24, duration: 0.8, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 80%', once: true }
+        });
+      });
+      /* The ledger rows at 80ms, left column first, once. */
+      gsap.from(gsap.utils.toArray('#jam-how .jam-ledger__row, #jam-how .jam-ledger .eyebrow'), {
+        opacity: 0, y: 12, duration: 0.5, ease: 'power2.out', stagger: 0.08,
+        scrollTrigger: { trigger: '#jam-how .jam-ledger', start: 'top 80%', once: true }
+      });
+
+      return function () { root.classList.remove('jam-motion'); };
+    });
+
+    /* Late fonts change line wrapping; measure again. */
+    if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(function () { ScrollTrigger.refresh(); }); }
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  }
+
+  if (doc.readyState === 'loading') { doc.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
