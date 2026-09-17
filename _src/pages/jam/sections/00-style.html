@@ -1,10 +1,9 @@
 <!-- Signet Jam, 2026-09-16. Page-scoped rules, every class prefixed jam-.
      Everything else is the site's own system: .wrap, .section and its grain
      bands, .eyebrow and the one brass slab, .h1/.h2 in condensed caps, .btn,
-     Archivo. The page pins one section with GSAP (08-script.html); this
-     stylesheet is the plain vertical stack, which is what reduced motion, a
-     blocked CDN and every crawler get, and the `jam-motion` class on <html>
-     switches the pinned layouts on. -->
+     Archivo. No pins any more: the sections that pinned were cut on Daniel's
+     call the same day. The only motion left is a fade-up on enter
+     (05-script.html), off under reduced motion. -->
 <style>
 /* Icons: one sprite (below), line icons on the 24 grid, brass, 1.5 stroke. */
 .jam-ico { display: block; width: 1.5rem; height: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
@@ -37,41 +36,28 @@
   .jam-sheet { justify-self: end; max-width: 21rem; }
 }
 
-/* ------------------------------------------------- 02 who's in the building */
-.jam-cast-grid { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
-.jam-card { padding: 1.5rem; background: var(--paper); }
-.jam-card .jam-ico { width: 2rem; height: 2rem; color: var(--brass); }
-.jam-card__role {
-  margin-top: 2.5rem;
-  font-family: var(--display);
-  font-weight: 800;
-  font-stretch: 72%;
-  font-size: 1.125rem;
-  line-height: 1.05;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-.jam-card p { margin-top: 0.6rem; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); }
-@media (min-width: 760px) { .jam-cast-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* ------------------------------------------------------ 03 who's running it */
+.jam-host { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+.jam-host__ico { width: 5.5rem; height: 5.5rem; color: var(--brass); }
+.jam-host__text { max-width: 40rem; font-size: 1.125rem; line-height: 1.65; color: var(--ink-soft); }
+.jam-host .wordmark { display: block; margin-top: var(--space-3); color: var(--ink-faint); }
+@media (min-width: 760px) { .jam-host { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-4); } }
 
-/* ---------------------------------------------------- 03 what it turns into */
-.jam-turns { overflow: hidden; }
-/* The timeline: a rule with the three marks the states sit on; brass fills it
-   across the pin. */
-.jam-timeline { position: relative; display: none; margin-top: var(--space-3); height: 1px; background: var(--rule); }
-.jam-timeline b { position: absolute; inset: 0; background: var(--brass); transform-origin: left center; transform: scaleY(1) scaleX(0); }
-.jam-timeline i { position: absolute; top: -3px; width: 1px; height: 7px; background: var(--rule-strong); }
-.jam-timeline .t0 { left: 0; }
-.jam-timeline .t1 { left: 36%; }
-.jam-timeline .t2 { left: 70%; }
-.jam-states { margin-top: var(--space-4); }
-.jam-state { display: grid; gap: var(--space-2); align-items: start; }
-.jam-state + .jam-state { margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--rule); }
+/* ---------------------------------------------------------- 02 how it works */
+.jam-how .h2 { margin-top: 0.75rem; max-width: 22ch; }
+.jam-ledger { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
+.jam-ledger__col { padding: 1.75rem; background: var(--paper); }
+.jam-ledger__col .eyebrow { margin-bottom: 0.5rem; }
+.jam-ledger__row { display: flex; align-items: flex-start; gap: 0.875rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); }
+.jam-ledger__row:last-child { border-bottom: 0; padding-bottom: 0; }
+.jam-ledger__row .jam-ico { flex: 0 0 auto; width: 1.375rem; height: 1.375rem; margin-top: 0.1rem; color: var(--brass); }
+.jam-ledger__row p { font-size: 0.9375rem; line-height: 1.55; color: var(--ink-soft); }
+.jam-closing { display: grid; gap: var(--space-2); align-items: center; margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
 .jam-figure {
   font-family: var(--display);
   font-weight: 800;
   font-stretch: 72%;
-  font-size: clamp(5rem, 3rem + 9vw, 11rem);
+  font-size: clamp(4rem, 3rem + 4vw, 6.5rem);
   line-height: 0.85;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -88,58 +74,24 @@
   text-transform: uppercase;
   color: var(--ink-faint);
 }
-.jam-state .eyebrow { margin-top: 0.25rem; }
-.jam-prose {
-  margin-top: 0.75rem;
-  max-width: 34rem;
-  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
-  line-height: 1.5;
-  color: var(--ink-soft);
-  text-wrap: pretty;
-}
-@media (min-width: 760px) {
-  .jam-state { grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr); gap: var(--space-4); }
-}
-
-/* ------------------------------------------------------ 04 who's running it */
-.jam-host { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
-.jam-host__ico { width: 5.5rem; height: 5.5rem; color: var(--brass); }
-.jam-host__text { max-width: 40rem; font-size: 1.125rem; line-height: 1.65; color: var(--ink-soft); }
-.jam-host .wordmark { display: block; margin-top: var(--space-3); color: var(--ink-faint); }
-@media (min-width: 760px) { .jam-host { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-4); } }
-
-/* ---------------------------------------------------------- 05 how it works */
-.jam-how .h2 { margin-top: 0.75rem; max-width: 22ch; }
-.jam-ledger { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
-.jam-ledger__col { padding: 1.75rem; background: var(--paper); }
-.jam-ledger__col .eyebrow { margin-bottom: 0.5rem; }
-.jam-ledger__row { display: flex; align-items: flex-start; gap: 0.875rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); }
-.jam-ledger__row:last-child { border-bottom: 0; padding-bottom: 0; }
-.jam-ledger__row .jam-ico { flex: 0 0 auto; width: 1.375rem; height: 1.375rem; margin-top: 0.1rem; color: var(--brass); }
-.jam-ledger__row p { font-size: 0.9375rem; line-height: 1.55; color: var(--ink-soft); }
-.jam-closing { display: grid; gap: var(--space-2); align-items: center; margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
-.jam-closing .jam-figure { font-size: clamp(4rem, 3rem + 4vw, 6.5rem); }
 .jam-closing__line { font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem); font-weight: 500; line-height: 1.25; letter-spacing: -0.005em; color: var(--ink); max-width: 18ch; text-wrap: balance; }
 @media (min-width: 760px) {
   .jam-ledger { grid-template-columns: 1fr 1fr; }
   .jam-closing { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-4); }
 }
 
-/* -------------------------------------------------------------- 06 close */
+/* -------------------------------------------------------------- 04 close */
 .jam-close .h2 { margin-top: 0.75rem; max-width: 14ch; }
 .jam-close .btn-row { align-items: center; }
 
-/* ---------------------------------------------------------- motion states */
-/* jam-motion: GSAP loaded and motion allowed. The one pinned section takes
-   the viewport below the sticky header; --jam-hdr is measured by the script. */
-.jam-motion .jam-pin { height: calc(100vh - var(--jam-hdr, 0px)); height: calc(100svh - var(--jam-hdr, 0px)); display: flex; flex-direction: column; }
-/* .wrap is content-box with 1.5rem side padding; as a flex item with auto
-   margins it would shrink to its eyebrow, so give it the full width back. */
-.jam-motion .jam-pin > .wrap { width: calc(100% - 3rem); }
-.jam-motion .jam-timeline { display: block; }
-.jam-motion .jam-states { display: grid; }
-.jam-motion .jam-state { grid-area: 1 / 1; }
-.jam-motion .jam-state + .jam-state { margin-top: 0; padding-top: 0; border-top: 0; }
+/* ----------------------------------------------------------------- motion */
+/* Fade up on enter, once, driven by 05-script.html; the page renders in
+   full without it, and under reduced motion nothing moves. */
+.jam-motion .jam-reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.jam-motion .jam-reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .jam-motion .jam-reveal { opacity: 1; transform: none; transition: none; }
+}
 </style>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
