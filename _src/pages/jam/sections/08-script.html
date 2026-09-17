@@ -1,8 +1,8 @@
-<!-- The motion (handoff §5) and the venue parameter (§6). GSAP 3.12.5 +
-     ScrollTrigger from cdnjs, deferred; the page script waits for
-     DOMContentLoaded, which fires after deferred scripts run. With GSAP
-     missing or reduced motion on, the page is the plain stack 00-style.html
-     already renders. -->
+<!-- The motion (handoff §5, as it stands after the 2026-09-16 cuts) and the
+     venue parameter (§6). GSAP 3.12.5 + ScrollTrigger from cdnjs, deferred;
+     the page script waits for DOMContentLoaded, which fires after deferred
+     scripts run. With GSAP missing or reduced motion on, the page is the
+     plain stack 00-style.html already renders. -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
@@ -31,8 +31,8 @@
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.config({ ignoreMobileResize: true });
 
-    /* The site header is sticky, so every pin starts under it and every
-       pinned section is the viewport minus its height. */
+    /* The site header is sticky, so the pin starts under it and the pinned
+       section is the viewport minus its height. */
     var hdr = doc.querySelector('.site-header');
     var hdrH = function () { return hdr ? hdr.offsetHeight : 0; };
     var setHdr = function () { root.style.setProperty('--jam-hdr', hdrH() + 'px'); };
@@ -55,52 +55,8 @@
       }
       root.classList.add('jam-motion');
       root.classList.remove('jam-static');
-      var startAt = function () { return 'top ' + hdrH() + 'px'; };
 
-      /* 02 The night. One line carries the weight at a time: each steps from
-         0.14 to 1 in sequence and the one before it drops to 0.5. The block
-         rides up so the lit line sits on one reading line, which is what lets
-         nine lines fit any viewport. The last line lights by 88% and holds. */
-      var night = doc.getElementById('jam-night');
-      var block = doc.getElementById('jam-night-block');
-      var lines = gsap.utils.toArray('#jam-night-block .jam-night__line');
-      var slice = 0.85 / (lines.length - 1);
-      var tlNight = gsap.timeline({
-        scrollTrigger: {
-          trigger: night, start: startAt, end: '+=' + (c.mobile ? 200 : 280) + '%',
-          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
-        }
-      });
-      gsap.set(lines, { opacity: 0.14 });
-      lines.forEach(function (line, i) {
-        var at = i * slice;
-        tlNight.to(line, { opacity: 1, duration: slice * 0.3, ease: 'none' }, at);
-        if (i > 0) {
-          tlNight.to(lines[i - 1], { opacity: 0.5, duration: slice * 0.3, ease: 'none' }, at);
-          tlNight.fromTo(block,
-            { y: function () { return -lines[i - 1].offsetTop; } },
-            { y: function () { return -line.offsetTop; }, duration: slice * 0.55, ease: 'none', immediateRender: false },
-            at);
-        }
-      });
-      tlNight.set({}, {}, 1);
-
-      /* 03 Who's in the building. Pinned for exactly the track's overflow;
-         the track is the animation, the brass rule fills in sync. No snap. */
-      var cast = doc.getElementById('jam-cast');
-      var trackWrap = doc.getElementById('jam-track-wrap');
-      var track = doc.getElementById('jam-track');
-      var distance = function () { return Math.max(0, track.scrollWidth - trackWrap.clientWidth); };
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: cast, start: startAt, end: function () { return '+=' + distance(); },
-          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
-        }
-      })
-        .to(track, { x: function () { return -distance(); }, ease: 'none', duration: 1 }, 0)
-        .to('#jam-progress-fill', { scaleX: 1, ease: 'none', duration: 1 }, 0);
-
-      /* 04 What it turns into. Three stacked states: crossfade at 30-42% and
+      /* 03 What it turns into. Three stacked states: crossfade at 30-42% and
          64-76%, opacity plus a 12px rise on the incoming one; the timeline
          rule fills across the pin. */
       var turns = doc.getElementById('jam-turns');
@@ -108,7 +64,8 @@
       gsap.set(states.slice(1), { opacity: 0, y: 12 });
       var tlTurns = gsap.timeline({
         scrollTrigger: {
-          trigger: turns, start: startAt, end: '+=' + (c.mobile ? 180 : 240) + '%',
+          trigger: turns, start: function () { return 'top ' + hdrH() + 'px'; },
+          end: '+=' + (c.mobile ? 180 : 240) + '%',
           pin: true, pinSpacing: true, scrub: true
         }
       });
@@ -120,7 +77,7 @@
       });
       tlTurns.set({}, {}, 1);
 
-      /* 05, 06, 07: fade up on enter, once. */
+      /* 02, 04, 05, 06: fade up on enter, once. */
       gsap.utils.toArray('.jam-reveal').forEach(function (el) {
         gsap.from(el, {
           opacity: 0, y: 24, duration: 0.8, ease: 'power2.out',

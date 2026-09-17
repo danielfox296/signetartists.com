@@ -1,7 +1,7 @@
 <!-- Signet Jam, 2026-09-16. Page-scoped rules, every class prefixed jam-.
      Everything else is the site's own system: .wrap, .section and its grain
      bands, .eyebrow and the one brass slab, .h1/.h2 in condensed caps, .btn,
-     Archivo. The page pins three sections with GSAP (08-script.html); this
+     Archivo. The page pins one section with GSAP (08-script.html); this
      stylesheet is the plain vertical stack, which is what reduced motion, a
      blocked CDN and every crawler get, and the `jam-motion` class on <html>
      switches the pinned layouts on. -->
@@ -37,76 +37,9 @@
   .jam-sheet { justify-self: end; max-width: 21rem; }
 }
 
-/* ------------------------------------------------------------ 02 the night */
-.jam-night { position: relative; overflow: hidden; }
-.jam-night .wrap { position: relative; }
-.jam-night__block { position: relative; margin-top: var(--space-4); max-width: 40rem; padding-left: 4.25rem; }
-.jam-night__line {
-  position: relative;
-  margin: 0 0 1.1em;
-  font-size: clamp(1.375rem, 1.05rem + 1.4vw, 2.125rem);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.005em;
-  color: var(--ink);
-  text-wrap: pretty;
-}
-.jam-night__line:last-child { margin-bottom: 0; }
-/* The set-list numeral and the brass dash, the site's own list marker. */
-.jam-num {
-  position: absolute;
-  left: -4.25rem;
-  top: 0.55em;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: var(--track-caps);
-  color: var(--brass);
-  font-variant-numeric: tabular-nums;
-}
-.jam-num::after { content: ""; width: 1rem; height: 1px; background: var(--brass); }
-.jam-mask { display: none; position: absolute; left: 0; right: 0; z-index: 2; pointer-events: none; }
-.jam-mask--top { top: 0; height: 30%; background: linear-gradient(to bottom, #0a0906 0, #0a0906 5.5rem, transparent 100%); }
-.jam-mask--bot { bottom: 0; height: 22%; background: linear-gradient(to top, #0a0906, transparent); }
-@media (max-width: 479px) {
-  .jam-night__block { padding-left: 0; }
-  .jam-num { position: static; margin-bottom: 0.5rem; }
-}
-
-/* ------------------------------------------------- 03 who's in the building */
-.jam-cast { overflow: hidden; }
-.jam-track-wrap {
-  margin-top: var(--space-4);
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--rule-strong) transparent;
-  padding-bottom: 1rem;
-}
-.jam-track-wrap::-webkit-scrollbar { height: 6px; }
-.jam-track-wrap::-webkit-scrollbar-track { background: var(--rule); }
-.jam-track-wrap::-webkit-scrollbar-thumb { background: var(--rule-strong); }
-/* The track's left edge is the wrap's content edge, so the first card lines
-   up under the section label. */
-.jam-track {
-  display: flex;
-  width: max-content;
-  padding-left: max(1.5rem, calc((100% - 64rem) / 2));
-  padding-right: max(1.5rem, calc((100% - 64rem) / 2));
-  will-change: transform;
-}
-.jam-card {
-  flex: 0 0 auto;
-  width: clamp(15rem, 23vw, 18.5rem);
-  margin-left: -1px;
-  padding: 1.5rem;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-}
-.jam-card:first-child { margin-left: 0; }
+/* ------------------------------------------------- 02 who's in the building */
+.jam-cast-grid { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
+.jam-card { padding: 1.5rem; background: var(--paper); }
 .jam-card .jam-ico { width: 2rem; height: 2rem; color: var(--brass); }
 .jam-card__role {
   margin-top: 2.5rem;
@@ -119,11 +52,9 @@
   color: var(--ink);
 }
 .jam-card p { margin-top: 0.6rem; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); }
-.jam-progress { display: none; height: 1px; margin: var(--space-3) auto 0; max-width: 64rem; background: var(--rule); }
-.jam-progress i { display: block; height: 100%; background: var(--brass); transform-origin: left center; transform: scaleX(0); }
-@media (max-width: 759px) { .jam-card { width: min(78vw, 20rem); } }
+@media (min-width: 760px) { .jam-cast-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-/* ---------------------------------------------------- 04 what it turns into */
+/* ---------------------------------------------------- 03 what it turns into */
 .jam-turns { overflow: hidden; }
 /* The timeline: a rule with the three marks the states sit on; brass fills it
    across the pin. */
@@ -170,14 +101,14 @@
   .jam-state { grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr); gap: var(--space-4); }
 }
 
-/* ------------------------------------------------------ 05 who's running it */
+/* ------------------------------------------------------ 04 who's running it */
 .jam-host { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
 .jam-host__ico { width: 5.5rem; height: 5.5rem; color: var(--brass); }
 .jam-host__text { max-width: 40rem; font-size: 1.125rem; line-height: 1.65; color: var(--ink-soft); }
 .jam-host .wordmark { display: block; margin-top: var(--space-3); color: var(--ink-faint); }
 @media (min-width: 760px) { .jam-host { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-4); } }
 
-/* ---------------------------------------------------------- 06 how it works */
+/* ---------------------------------------------------------- 05 how it works */
 .jam-how .h2 { margin-top: 0.75rem; max-width: 22ch; }
 .jam-ledger { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
 .jam-ledger__col { padding: 1.75rem; background: var(--paper); }
@@ -194,23 +125,17 @@
   .jam-closing { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-4); }
 }
 
-/* -------------------------------------------------------------- 07 close */
+/* -------------------------------------------------------------- 06 close */
 .jam-close .h2 { margin-top: 0.75rem; max-width: 14ch; }
 .jam-close .btn-row { align-items: center; }
 
 /* ---------------------------------------------------------- motion states */
-/* jam-motion: GSAP loaded and motion allowed. The three pinned sections take
+/* jam-motion: GSAP loaded and motion allowed. The one pinned section takes
    the viewport below the sticky header; --jam-hdr is measured by the script. */
 .jam-motion .jam-pin { height: calc(100vh - var(--jam-hdr, 0px)); height: calc(100svh - var(--jam-hdr, 0px)); display: flex; flex-direction: column; }
 /* .wrap is content-box with 1.5rem side padding; as a flex item with auto
    margins it would shrink to its eyebrow, so give it the full width back. */
 .jam-motion .jam-pin > .wrap { width: calc(100% - 3rem); }
-.jam-motion .jam-night .wrap { flex: 1 1 auto; }
-.jam-motion .jam-night__block { position: absolute; top: 34%; left: 1.5rem; right: 1.5rem; margin-top: 0; }
-.jam-motion .jam-mask { display: block; }
-.jam-motion .jam-cast .jam-track-wrap { margin-top: auto; margin-bottom: auto; }
-.jam-motion .jam-track-wrap { overflow: hidden; padding-bottom: 0; }
-.jam-motion .jam-progress { display: block; }
 .jam-motion .jam-timeline { display: block; }
 .jam-motion .jam-states { display: grid; }
 .jam-motion .jam-state { grid-area: 1 / 1; }

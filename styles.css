@@ -1448,9 +1448,13 @@ img {
     column-gap: 2.5rem;
   }
 
+  /* Five columns since the Occasions + Ensembles columns (f4f39e8); between
+     this breakpoint and about 720px they overflowed the wrap and gave every
+     page a horizontal scrollbar (found 2026-09-16 on the jam page). Wrap. */
   .footer-cols {
     flex-direction: row;
-    gap: 3.5rem;
+    flex-wrap: wrap;
+    gap: 2rem 3.5rem;
   }
 }
 

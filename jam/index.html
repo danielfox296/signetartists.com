@@ -30,7 +30,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="../styles.css?v=20260914a">
+  <link rel="stylesheet" href="../styles.css?v=20260916a">
   
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-LL5DKVEX29"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LL5DKVEX29');</script>
   <script defer src="../analytics.js"></script>
@@ -121,76 +121,9 @@
   .jam-sheet { justify-self: end; max-width: 21rem; }
 }
 
-/* ------------------------------------------------------------ 02 the night */
-.jam-night { position: relative; overflow: hidden; }
-.jam-night .wrap { position: relative; }
-.jam-night__block { position: relative; margin-top: var(--space-4); max-width: 40rem; padding-left: 4.25rem; }
-.jam-night__line {
-  position: relative;
-  margin: 0 0 1.1em;
-  font-size: clamp(1.375rem, 1.05rem + 1.4vw, 2.125rem);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.005em;
-  color: var(--ink);
-  text-wrap: pretty;
-}
-.jam-night__line:last-child { margin-bottom: 0; }
-/* The set-list numeral and the brass dash, the site's own list marker. */
-.jam-num {
-  position: absolute;
-  left: -4.25rem;
-  top: 0.55em;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: var(--track-caps);
-  color: var(--brass);
-  font-variant-numeric: tabular-nums;
-}
-.jam-num::after { content: ""; width: 1rem; height: 1px; background: var(--brass); }
-.jam-mask { display: none; position: absolute; left: 0; right: 0; z-index: 2; pointer-events: none; }
-.jam-mask--top { top: 0; height: 30%; background: linear-gradient(to bottom, #0a0906 0, #0a0906 5.5rem, transparent 100%); }
-.jam-mask--bot { bottom: 0; height: 22%; background: linear-gradient(to top, #0a0906, transparent); }
-@media (max-width: 479px) {
-  .jam-night__block { padding-left: 0; }
-  .jam-num { position: static; margin-bottom: 0.5rem; }
-}
-
-/* ------------------------------------------------- 03 who's in the building */
-.jam-cast { overflow: hidden; }
-.jam-track-wrap {
-  margin-top: var(--space-4);
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--rule-strong) transparent;
-  padding-bottom: 1rem;
-}
-.jam-track-wrap::-webkit-scrollbar { height: 6px; }
-.jam-track-wrap::-webkit-scrollbar-track { background: var(--rule); }
-.jam-track-wrap::-webkit-scrollbar-thumb { background: var(--rule-strong); }
-/* The track's left edge is the wrap's content edge, so the first card lines
-   up under the section label. */
-.jam-track {
-  display: flex;
-  width: max-content;
-  padding-left: max(1.5rem, calc((100% - 64rem) / 2));
-  padding-right: max(1.5rem, calc((100% - 64rem) / 2));
-  will-change: transform;
-}
-.jam-card {
-  flex: 0 0 auto;
-  width: clamp(15rem, 23vw, 18.5rem);
-  margin-left: -1px;
-  padding: 1.5rem;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-}
-.jam-card:first-child { margin-left: 0; }
+/* ------------------------------------------------- 02 who's in the building */
+.jam-cast-grid { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
+.jam-card { padding: 1.5rem; background: var(--paper); }
 .jam-card .jam-ico { width: 2rem; height: 2rem; color: var(--brass); }
 .jam-card__role {
   margin-top: 2.5rem;
@@ -203,11 +136,9 @@
   color: var(--ink);
 }
 .jam-card p { margin-top: 0.6rem; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); }
-.jam-progress { display: none; height: 1px; margin: var(--space-3) auto 0; max-width: 64rem; background: var(--rule); }
-.jam-progress i { display: block; height: 100%; background: var(--brass); transform-origin: left center; transform: scaleX(0); }
-@media (max-width: 759px) { .jam-card { width: min(78vw, 20rem); } }
+@media (min-width: 760px) { .jam-cast-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-/* ---------------------------------------------------- 04 what it turns into */
+/* ---------------------------------------------------- 03 what it turns into */
 .jam-turns { overflow: hidden; }
 /* The timeline: a rule with the three marks the states sit on; brass fills it
    across the pin. */
@@ -254,14 +185,14 @@
   .jam-state { grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr); gap: var(--space-4); }
 }
 
-/* ------------------------------------------------------ 05 who's running it */
+/* ------------------------------------------------------ 04 who's running it */
 .jam-host { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
 .jam-host__ico { width: 5.5rem; height: 5.5rem; color: var(--brass); }
 .jam-host__text { max-width: 40rem; font-size: 1.125rem; line-height: 1.65; color: var(--ink-soft); }
 .jam-host .wordmark { display: block; margin-top: var(--space-3); color: var(--ink-faint); }
 @media (min-width: 760px) { .jam-host { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-4); } }
 
-/* ---------------------------------------------------------- 06 how it works */
+/* ---------------------------------------------------------- 05 how it works */
 .jam-how .h2 { margin-top: 0.75rem; max-width: 22ch; }
 .jam-ledger { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
 .jam-ledger__col { padding: 1.75rem; background: var(--paper); }
@@ -278,23 +209,17 @@
   .jam-closing { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-4); }
 }
 
-/* -------------------------------------------------------------- 07 close */
+/* -------------------------------------------------------------- 06 close */
 .jam-close .h2 { margin-top: 0.75rem; max-width: 14ch; }
 .jam-close .btn-row { align-items: center; }
 
 /* ---------------------------------------------------------- motion states */
-/* jam-motion: GSAP loaded and motion allowed. The three pinned sections take
+/* jam-motion: GSAP loaded and motion allowed. The one pinned section takes
    the viewport below the sticky header; --jam-hdr is measured by the script. */
 .jam-motion .jam-pin { height: calc(100vh - var(--jam-hdr, 0px)); height: calc(100svh - var(--jam-hdr, 0px)); display: flex; flex-direction: column; }
 /* .wrap is content-box with 1.5rem side padding; as a flex item with auto
    margins it would shrink to its eyebrow, so give it the full width back. */
 .jam-motion .jam-pin > .wrap { width: calc(100% - 3rem); }
-.jam-motion .jam-night .wrap { flex: 1 1 auto; }
-.jam-motion .jam-night__block { position: absolute; top: 34%; left: 1.5rem; right: 1.5rem; margin-top: 0; }
-.jam-motion .jam-mask { display: block; }
-.jam-motion .jam-cast .jam-track-wrap { margin-top: auto; margin-bottom: auto; }
-.jam-motion .jam-track-wrap { overflow: hidden; padding-bottom: 0; }
-.jam-motion .jam-progress { display: block; }
 .jam-motion .jam-timeline { display: block; }
 .jam-motion .jam-states { display: grid; }
 .jam-motion .jam-state { grid-area: 1 / 1; }
@@ -365,56 +290,14 @@
 </section>
 
 
-<section class="section section--night jam-night jam-pin" id="jam-night">
+<section class="section section--sunk jam-cast">
   <div class="wrap">
-    <p class="eyebrow jam-idx"><span>02</span>The night</p>
-    <div class="jam-night__block" id="jam-night-block">
-      <p class="jam-night__line"><span class="jam-num">01</span>It's a quarter to eight on a Sunday and the door's been open since seven.</p>
-      <p class="jam-night__line"><span class="jam-num">02</span>Six people at the bar. Two of them came for this. The other four are figuring that out.</p>
-      <p class="jam-night__line"><span class="jam-num">03</span>The sign-up sheet is on the end of the bar, half full, mostly names the bartender already knows.</p>
-      <p class="jam-night__line"><span class="jam-num">04</span>A drummer is adjusting a hi-hat that was fine. A trumpet player nobody's met is standing by the wall with the case still shut.</p>
-      <p class="jam-night__line"><span class="jam-num">05</span>The house band counts off the first tune and the case opens.</p>
-      <p class="jam-night__line"><span class="jam-num">06</span>By the third song the guy who came in for a flight has moved to a stool with a sightline.</p>
-      <p class="jam-night__line"><span class="jam-num">07</span>Somebody's filming. Somebody always is.</p>
-      <p class="jam-night__line"><span class="jam-num">08</span>The tune goes somewhere it wasn't supposed to and the bartender looks up.</p>
-      <p class="jam-night__line"><span class="jam-num">09</span>Same time next week.</p>
-    </div>
-  </div>
-  <div class="jam-mask jam-mask--top" aria-hidden="true"></div>
-  <div class="jam-mask jam-mask--bot" aria-hidden="true"></div>
-</section>
-
-
-<section class="section section--sunk jam-cast jam-pin" id="jam-cast">
-  <div class="wrap">
-    <p class="eyebrow jam-idx"><span>03</span>Who's in the building</p>
-  </div>
-  <div class="jam-track-wrap" id="jam-track-wrap">
-    <div class="jam-track" id="jam-track">
+    <p class="eyebrow jam-idx"><span>02</span>Who's in the building</p>
+    <div class="jam-cast-grid jam-reveal">
       <article class="jam-card">
         <svg class="jam-ico" aria-hidden="true"><use href="#i-mic"/></svg>
         <p class="jam-card__role">The hosts</p>
         <p>Run the sign-up sheet and the count-offs. Know who should sit in on what, and when to let a tune run.</p>
-      </article>
-      <article class="jam-card">
-        <svg class="jam-ico" aria-hidden="true"><use href="#i-glass"/></svg>
-        <p class="jam-card__role">The bartender</p>
-        <p>By week two she has the band's drinks memorized and a regular who tips like it's Friday.</p>
-      </article>
-      <article class="jam-card">
-        <svg class="jam-ico" aria-hidden="true"><use href="#i-stool"/></svg>
-        <p class="jam-card__role">The regulars</p>
-        <p>Two of them haven't missed one. They pick the seat with the sightline and tell people it's theirs.</p>
-      </article>
-      <article class="jam-card">
-        <svg class="jam-ico" aria-hidden="true"><use href="#i-bass"/></svg>
-        <p class="jam-card__role">The player who drove in</p>
-        <p>Drives in from Aurora with an upright in the back seat. Plays two tunes, stays for the rest.</p>
-      </article>
-      <article class="jam-card">
-        <svg class="jam-ico" aria-hidden="true"><use href="#i-flight"/></svg>
-        <p class="jam-card__role">The walk-in</p>
-        <p>Came in for a flight at 7:30. Left at 10:40 with a name to look up.</p>
       </article>
       <article class="jam-card">
         <svg class="jam-ico" aria-hidden="true"><use href="#i-star"/></svg>
@@ -426,20 +309,14 @@
         <p class="jam-card__role">The one with the phone</p>
         <p>Films thirty seconds of the tune that went somewhere. Tags the venue. That's the ad.</p>
       </article>
-      <article class="jam-card">
-        <svg class="jam-ico" aria-hidden="true"><use href="#i-key"/></svg>
-        <p class="jam-card__role">The owner</p>
-        <p>Came down to check on the night. Stayed. Started coming down every week.</p>
-      </article>
     </div>
   </div>
-  <div class="wrap"><div class="jam-progress" aria-hidden="true"><i id="jam-progress-fill"></i></div></div>
 </section>
 
 
 <section class="section jam-turns jam-pin" id="jam-turns">
   <div class="wrap">
-    <p class="eyebrow jam-idx"><span>04</span>What it turns into</p>
+    <p class="eyebrow jam-idx"><span>03</span>What it turns into</p>
     <div class="jam-timeline" aria-hidden="true"><b id="jam-timeline-fill"></b><i class="t0"></i><i class="t1"></i><i class="t2"></i></div>
     <div class="jam-states" id="jam-states">
       <div class="jam-state">
@@ -453,7 +330,7 @@
         <p class="jam-figure">6<small>months</small></p>
         <div>
           <p class="eyebrow">Six months in</p>
-          <p class="jam-prose">The sheet fills before the band starts. Players in town know the night by name. The wall by the stage has photos on it that weren't there in the spring. Someone wrote about it.</p>
+          <p class="jam-prose">The sheet fills before the band starts. Players in town know the night by name. Someone wrote about it.</p>
         </div>
       </div>
       <div class="jam-state">
@@ -470,7 +347,7 @@
 
 <section class="section section--ruled jam-hosts">
   <div class="wrap">
-    <p class="eyebrow jam-idx"><span>05</span>Who's running it</p>
+    <p class="eyebrow jam-idx"><span>04</span>Who's running it</p>
     <div class="jam-host jam-reveal">
       <svg class="jam-ico jam-host__ico" aria-hidden="true"><use href="#i-bass"/></svg>
       <div>
@@ -484,7 +361,7 @@
 
 <section class="section section--ruled jam-how" id="jam-how">
   <div class="wrap">
-    <p class="eyebrow jam-idx"><span>06</span>How it works</p>
+    <p class="eyebrow jam-idx"><span>05</span>How it works</p>
     <h2 class="h2 jam-reveal">Every week, same night, one venue. You pick Sunday or Monday.</h2>
     <div class="jam-ledger">
       <div class="jam-ledger__col">
@@ -515,7 +392,7 @@
 
 <section class="section section--ruled jam-close" id="jam-close">
   <div class="wrap jam-reveal">
-    <p class="eyebrow jam-idx"><span>07</span>Close</p>
+    <p class="eyebrow jam-idx"><span>06</span>Close</p>
     <h2 class="h2 display">One venue. Sunday or Monday.</h2>
     <div class="btn-row">
       <a class="btn" href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Let's talk</a>
@@ -553,8 +430,8 @@
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.config({ ignoreMobileResize: true });
 
-    /* The site header is sticky, so every pin starts under it and every
-       pinned section is the viewport minus its height. */
+    /* The site header is sticky, so the pin starts under it and the pinned
+       section is the viewport minus its height. */
     var hdr = doc.querySelector('.site-header');
     var hdrH = function () { return hdr ? hdr.offsetHeight : 0; };
     var setHdr = function () { root.style.setProperty('--jam-hdr', hdrH() + 'px'); };
@@ -577,52 +454,8 @@
       }
       root.classList.add('jam-motion');
       root.classList.remove('jam-static');
-      var startAt = function () { return 'top ' + hdrH() + 'px'; };
 
-      /* 02 The night. One line carries the weight at a time: each steps from
-         0.14 to 1 in sequence and the one before it drops to 0.5. The block
-         rides up so the lit line sits on one reading line, which is what lets
-         nine lines fit any viewport. The last line lights by 88% and holds. */
-      var night = doc.getElementById('jam-night');
-      var block = doc.getElementById('jam-night-block');
-      var lines = gsap.utils.toArray('#jam-night-block .jam-night__line');
-      var slice = 0.85 / (lines.length - 1);
-      var tlNight = gsap.timeline({
-        scrollTrigger: {
-          trigger: night, start: startAt, end: '+=' + (c.mobile ? 200 : 280) + '%',
-          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
-        }
-      });
-      gsap.set(lines, { opacity: 0.14 });
-      lines.forEach(function (line, i) {
-        var at = i * slice;
-        tlNight.to(line, { opacity: 1, duration: slice * 0.3, ease: 'none' }, at);
-        if (i > 0) {
-          tlNight.to(lines[i - 1], { opacity: 0.5, duration: slice * 0.3, ease: 'none' }, at);
-          tlNight.fromTo(block,
-            { y: function () { return -lines[i - 1].offsetTop; } },
-            { y: function () { return -line.offsetTop; }, duration: slice * 0.55, ease: 'none', immediateRender: false },
-            at);
-        }
-      });
-      tlNight.set({}, {}, 1);
-
-      /* 03 Who's in the building. Pinned for exactly the track's overflow;
-         the track is the animation, the brass rule fills in sync. No snap. */
-      var cast = doc.getElementById('jam-cast');
-      var trackWrap = doc.getElementById('jam-track-wrap');
-      var track = doc.getElementById('jam-track');
-      var distance = function () { return Math.max(0, track.scrollWidth - trackWrap.clientWidth); };
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: cast, start: startAt, end: function () { return '+=' + distance(); },
-          pin: true, pinSpacing: true, scrub: true, invalidateOnRefresh: true
-        }
-      })
-        .to(track, { x: function () { return -distance(); }, ease: 'none', duration: 1 }, 0)
-        .to('#jam-progress-fill', { scaleX: 1, ease: 'none', duration: 1 }, 0);
-
-      /* 04 What it turns into. Three stacked states: crossfade at 30-42% and
+      /* 03 What it turns into. Three stacked states: crossfade at 30-42% and
          64-76%, opacity plus a 12px rise on the incoming one; the timeline
          rule fills across the pin. */
       var turns = doc.getElementById('jam-turns');
@@ -630,7 +463,8 @@
       gsap.set(states.slice(1), { opacity: 0, y: 12 });
       var tlTurns = gsap.timeline({
         scrollTrigger: {
-          trigger: turns, start: startAt, end: '+=' + (c.mobile ? 180 : 240) + '%',
+          trigger: turns, start: function () { return 'top ' + hdrH() + 'px'; },
+          end: '+=' + (c.mobile ? 180 : 240) + '%',
           pin: true, pinSpacing: true, scrub: true
         }
       });
@@ -642,7 +476,7 @@
       });
       tlTurns.set({}, {}, 1);
 
-      /* 05, 06, 07: fade up on enter, once. */
+      /* 02, 04, 05, 06: fade up on enter, once. */
       gsap.utils.toArray('.jam-reveal').forEach(function (el) {
         gsap.from(el, {
           opacity: 0, y: 24, duration: 0.8, ease: 'power2.out',
