@@ -34,11 +34,20 @@ _src/templates/              blog post template + one partial per block type
 _src/lib/                    blog renderer, reading time, SVG charts
 build.py                     generator
 styles.css                   hand-written, ported from the Tailwind build
+jam/                         hand-authored, self-contained pitch page + its OG
+                             card; NOT generated (spec: _src/jam/HANDOFF.md)
 CNAME                        signetartists.com
 ```
 
 Generated on every build: `sitemap.xml`, `llms.txt`, `rss.xml`, and the HTML
 at the root.
+
+The one exception to the never-edit-root-HTML rule is `jam/index.html`, the
+Signet Jam pitch page (2026-09-16): a single hand-authored file with inline
+CSS and JS, built from `_src/jam/HANDOFF.md`, that the build neither writes
+nor reads. It is a private share, sent by link after a first conversation with
+a venue: no nav link, no sitemap entry, no llms.txt row, and `noindex`.
+`?venue=` personalises the hero line and the tab title.
 
 ## Blog
 
