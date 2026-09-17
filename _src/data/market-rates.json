@@ -370,8 +370,188 @@
       "source": "American Express GBT, 2026 Global Meetings and Events Forecast, as relayed by Hotel News Resource",
       "url": "https://www.hotelnewsresource.com/article139293.html",
       "retrieved": "2026-09-14"
+    },
+    {
+      "id": "us_wedding_dj_average",
+      "figure": 1800,
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "The 2026 national average for a wedding DJ",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_wedding_dj_range",
+      "figure": [
+        1000,
+        2500
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What most US couples pay a wedding DJ",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_dj_premium_tier",
+      "figure": [
+        3000,
+        5000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "The premium tier for a wedding DJ: seasoned pros, major metros, full-day coverage",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_dj_hourly",
+      "figure": [
+        100,
+        200
+      ],
+      "kind": "usd",
+      "unit": "per hour",
+      "market": "United States",
+      "what": "A DJ's standard per-hour rate",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "dj_four_hours_private",
+      "figure": [
+        400,
+        800
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "United States",
+      "what": "What a DJ charges for four hours at a private event",
+      "source": "Uptown Drive, how much a DJ should charge for four hours, 2026",
+      "url": "https://www.uptowndrive.com/post/how-much-should-a-dj-charge-for-4-hours",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "denver_dj_four_hours",
+      "figure": [
+        350,
+        700
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "Denver",
+      "what": "What a Denver DJ charges for a four-hour block",
+      "source": "Uptown Drive, how much a DJ should charge for four hours, 2026",
+      "url": "https://www.uptowndrive.com/post/how-much-should-a-dj-charge-for-4-hours",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "dj_four_hours_corporate",
+      "figure": [
+        300,
+        500
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "United States",
+      "what": "What a DJ charges for a four-hour corporate party",
+      "source": "Uptown Drive, how much a DJ should charge for four hours, 2026",
+      "url": "https://www.uptowndrive.com/post/how-much-should-a-dj-charge-for-4-hours",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "wedding_dj_four_hours",
+      "figure": [
+        600,
+        1200
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "United States",
+      "what": "A wedding DJ for a four-hour event",
+      "source": "Livent Group, 2026 wedding DJ cost guide",
+      "url": "https://liventgroup.com/cost-of-dj-for-wedding/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_dj_large_city",
+      "figure": [
+        1600,
+        2200
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "A wedding DJ in a larger city",
+      "source": "Livent Group, 2026 wedding DJ cost guide",
+      "url": "https://liventgroup.com/cost-of-dj-for-wedding/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_cocktail_solo_duo",
+      "figure": [
+        200,
+        700
+      ],
+      "kind": "usd",
+      "unit": "cocktail hour",
+      "market": "United States",
+      "what": "A solo musician or acoustic duo for a cocktail hour, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_small_band",
+      "figure": [
+        1000,
+        5000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "A standard four-to-five-piece live band, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "ca_jazz_trio",
+      "figure": [
+        3450,
+        6450
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "California",
+      "what": "A jazz trio for a cocktail hour or a home party up to 80 guests, California",
+      "source": "Sunny Jazz, 2026 jazz band hire guide (California)",
+      "url": "https://sunnyjazz.band/how-to-hire-a-jazz-band-for-events-price-cost-band-sizes-booking-guide-2026/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "ca_jazz_quartet",
+      "figure": [
+        4250,
+        7250
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "California",
+      "what": "A jazz quartet for a brand activation or a small reception, California",
+      "source": "Sunny Jazz, 2026 jazz band hire guide (California)",
+      "url": "https://sunnyjazz.band/how-to-hire-a-jazz-band-for-events-price-cost-band-sizes-booking-guide-2026/",
+      "retrieved": "2026-09-16"
     }
   ],
   "_venue_note": "Venue rental figures were added here on 2026-09-04 and REMOVED on 2026-09-05. They were verified and correctly attributed, and they were still the wrong thing to publish: a venue's rental rate is not Signet's story, it dates faster than anything else on the site, and a stale third party price on a vendor page is a small liability for no marketing gain. The venues post names the venues, links their own event pages and says which of them publish flat rates, which is the useful part. Do not re-add third-party venue pricing.",
-  "_2026_09_14_offsites_note": "Eleven figures added 2026-09-14 for /blog/company-offsite-ideas-colorado-remote-teams/: Surf Office's 2026 offsites report (90 survey responses plus 200 events), Gallup's May 2026 hybrid indicator, Emburse via Custom Ink, and Amex GBT via a trade relay. Percentages, not prices; they say how remote companies gather, never what Signet charges."
+  "_2026_09_14_offsites_note": "Eleven figures added 2026-09-14 for /blog/company-offsite-ideas-colorado-remote-teams/: Surf Office's 2026 offsites report (90 survey responses plus 200 events), Gallup's May 2026 hybrid indicator, Emburse via Custom Ink, and Amex GBT via a trade relay. Percentages, not prices; they say how remote companies gather, never what Signet charges.",
+  "_2026_09_16_dj_and_jazz_note": "Thirteen figures added 2026-09-16 for the two calibration posts (what a jazz band costs, what a DJ costs), each read from its url that day. The spread between a Denver DJ's four-hour block and a Denver DJ with production lighting (denver_dj) is the point of the DJ post: the word covers two different purchases. The California jazz figures are the top of the market and are labelled as California wherever they print."
 }

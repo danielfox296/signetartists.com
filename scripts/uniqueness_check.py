@@ -34,6 +34,7 @@ GROUPS = {
         "private-parties/denver/index.html",
         "private-parties/boulder/index.html",
         "private-parties/colorado-springs/index.html",
+        "private-parties/proposals/index.html",
     ],
     "corporate/retreats": [
         "corporate/retreats/index.html",
@@ -54,6 +55,13 @@ GROUPS = {
         "weddings/ceremony/index.html",
         "weddings/cocktail-hour/index.html",
         "weddings/colorado-springs/index.html",
+        "weddings/vail/index.html",
+        "weddings/jazz-band/index.html",
+    ],
+    # The two Vail pages share six venue names and must not share a day.
+    "vail": [
+        "corporate/retreats/vail/index.html",
+        "weddings/vail/index.html",
     ],
     # Three guitar pages, 2026-09-13: the steel-string solo, the nylon-string
     # solo and the flamenco trio make three different bookings and are
@@ -62,6 +70,23 @@ GROUPS = {
         "ensembles/solo-guitarist/index.html",
         "ensembles/spanish-guitarist/index.html",
         "ensembles/flamenco-trio/index.html",
+        "ensembles/singer-guitarist/index.html",
+    ],
+    # Two jazz pages, 2026-09-16: the spec'd duo-and-trio format and the
+    # named modern trio are two different bookings and must read that way.
+    "jazz": [
+        "ensembles/jazz-duo-trio/index.html",
+        "ensembles/changes-jazz-trio/index.html",
+        "ensembles/christmas-jazz-trio/index.html",
+        "weddings/jazz-band/index.html",
+        "corporate/jazz-band/index.html",
+    ],
+    # The corporate jazz page beside the two corporate pages it must not
+    # restate: the dinner volume argument and the gala cues.
+    "corporate-jazz": [
+        "corporate/client-dinners/index.html",
+        "corporate/galas-and-awards/index.html",
+        "corporate/jazz-band/index.html",
     ],
     # The two Springs pages share a city and a venue list and must not share
     # an argument.

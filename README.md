@@ -40,6 +40,15 @@ CNAME                        signetartists.com
 Generated on every build: `sitemap.xml`, `llms.txt`, `rss.xml`, and the HTML
 at the root.
 
+`_src/pages/jam/` is the Signet Jam pitch page (2026-09-16), a private
+share: Daniel sends `/jam/?venue=Name` after a first conversation with a
+venue owner. It is a normal page of the build, so it gets the site header,
+footer, styles and analytics, but it is linked from no nav or footer and its
+`robots: noindex` keeps it out of the sitemap, llms.txt and search. Page-scoped
+CSS and the GSAP motion live in its own sections (`00-style.html`,
+`08-script.html`); `?motion=off` renders the plain stack. The handoff it was
+built from is `HANDOFF.md` in that dir.
+
 ## Blog
 
 The shared blog kit (ported from the foxlessons.com generation, restyled to
@@ -64,6 +73,28 @@ python3 build.py --lint    # validate every post, drafts included
 - The blog index (`/blog/`) is a regular page (`_src/pages/blog-index/`)
   whose `{{blog_cards}}` token fills with published posts, newest first.
   It is linked from the footer.
+
+## Adding an act
+
+The roster is `_src/data/acts.json`; the cards, filters, contact picker,
+llms.txt and Service schema render from it. The publishing routine (scrape
+the act's site, data entry with tags, media with provenance, the page, the
+wiring, the gates, the deploy, the profiles) is the `signet-new-act` skill.
+Its tooling lives here:
+
+- `scripts/act_lint.py [id]` — the roster gate: fields, tag vocabularies,
+  media provenance, the page dir, the schema merge, the footer link, the
+  copy bans. Run it with the other gates.
+- `scripts/act_media.py photo|poster|embed` — fetch and crop a photograph,
+  save a hero poster, check that a YouTube clip is embeddable; each writes
+  its row into `media-sources.json`.
+- `scripts/new_act_page.py <id>` — scaffold `_src/pages/<artists|ensembles>-<slug>/`
+  from the act's entry, set `page`, add the footer link.
+
+Tags (2026-09-16): `bucket_tags` (kind of night), `config_tags` (size),
+`genre_tags`, `vocals` and optional `area_tags`, each against a vocabulary at
+the top of `acts.json`. A filter select renders only for a facet the roster
+varies on. `areas[]` is also the business's service area.
 
 ## Section tokens
 

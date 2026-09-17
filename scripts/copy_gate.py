@@ -47,7 +47,16 @@ BUILDOUT_DIRS = [
     "ensembles-jazz-duo-trio", "ensembles-flamenco-trio", "ensembles-dj",
     "ensembles-spanish-guitarist",
     "artists-tejas-singh", "artists-tony-medina", "pricing",
+    "weddings-jazz-band", "weddings-vail", "corporate-jazz-band",
+    "private-parties-proposals",
 ]
+# Every artist and ensemble page dir is gated whether or not it is listed
+# above (2026-09-16): a new act's page used to be ungated until someone
+# remembered this list, and three format pages shipped that way.
+BUILDOUT_DIRS += sorted(
+    d.name for pat in ("artists-*", "ensembles-*") for d in PAGES.glob(pat)
+    if d.is_dir() and d.name not in BUILDOUT_DIRS
+)
 
 COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 

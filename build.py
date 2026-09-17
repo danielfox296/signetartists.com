@@ -59,6 +59,20 @@ RATE_CARD = roster["rateCard"]
 RATE_BY_ID = {r["id"]: r for r in RATE_CARD}
 BUCKETS = roster["buckets"]
 BUCKET_LABEL = {b["id"]: b["label"] for b in BUCKETS}
+# The other facets (2026-09-16, the new-act skill): genre, vocals and area are
+# tags against vocabularies declared in acts.json, same contract as buckets.
+# See acts.json _facets_note. areas[] is also the business's service area, so
+# the LocalBusiness node, every Service node and the Where filter read one list.
+GENRES = roster.get("genres", [])
+GENRE_LABEL = {g["id"]: g["label"] for g in GENRES}
+AREAS = roster.get("areas", [])
+AREA_LABEL = {a["id"]: a["label"] for a in AREAS}
+SERVICE_AREAS = [a["label"] for a in AREAS]
+# vocals: what an act's card matches when a buyer filters. An act whose voice
+# is optional answers both questions, so it carries both tokens.
+VOCALS_LABEL = {"sung": "With a singer", "instrumental": "Instrumental"}
+VOCALS_MATCH = {"sung": "sung", "instrumental": "instrumental",
+                "optional": "sung instrumental"}
 FLAGSHIPS = [a for a in ACTS if a["status"] == "flagship"]
 # Q4 2026 refocus: the product is solo through quartet. A `byRequest` config is
 # a size we field but do not merchandise as a standard booking.
@@ -493,6 +507,16 @@ def act_configs(act: dict) -> list:
     return [rate_of(c) for c in act["config_tags"]]
 
 
+def act_area_ids(act: dict) -> list:
+    """Where the act plays, as area ids. Omitted means the whole list."""
+    return act.get("area_tags") or [a["id"] for a in AREAS]
+
+
+def act_areas(act: dict) -> list:
+    """Where the act plays, as the labels schema and copy print."""
+    return [AREA_LABEL[i] for i in act_area_ids(act)]
+
+
 def act_byline(act: dict) -> str:
     """The line under the name, and the whole point of the presentation axis.
 
@@ -502,6 +526,12 @@ def act_byline(act: dict) -> str:
     date. Naming a format would promise a personality the booking cannot
     honour; specifying it promises a sound, a size and a price, which it can.
     """
+    # A named group of equals (Changes Jazz Trio, 2026-09-16) carries its
+    # own byline: "Fronted by" implies one front person, and a trio that
+    # publishes three names on its own site is honestly described by the
+    # three names and their instruments.
+    if act.get("byline"):
+        return act["byline"]
     if act["presentation"] == "face":
         return f'Fronted by {act["face"]}'
     return act["spec"]
@@ -512,6 +542,8 @@ def act_byline_inline(act: dict) -> str:
     "Dirty Flamenco (Flamenco, fronted by Gary Meyers)". Built rather than
     lowercased from act_byline: .lower() flattens the proper noun and turns
     "a PA sized to the venue" into "a pa sized to the venue"."""
+    if act.get("byline_inline"):
+        return act["byline_inline"]
     if act["presentation"] == "face":
         return f'fronted by {act["face"]}'
     return act["spec"]
@@ -541,6 +573,9 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
     flagship = act["status"] == "flagship"
     buckets = " ".join(act["bucket_tags"])
     configs = " ".join(act["config_tags"])
+    genres = " ".join(act.get("genre_tags", []))
+    vocals = VOCALS_MATCH[act.get("vocals", "instrumental")]
+    areas = " ".join(act_area_ids(act))
     tags = "".join(
         f'<li class="pill">{esc(BUCKET_LABEL[b])}</li>' for b in act["bucket_tags"]
     )
@@ -552,7 +587,8 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
     )
     return (
         f'<article class="card act-card" data-buckets="{esc(buckets)}" '
-        f'data-configs="{esc(configs)}" '
+        f'data-configs="{esc(configs)}" data-genres="{esc(genres)}" '
+        f'data-vocals="{esc(vocals)}" data-areas="{esc(areas)}" '
         f'data-status="{esc(act["status"])}" data-name="{esc(act["name"])}">'
         f"{act_card_media(act, nav_prefix)}"
         '<div class="act-card-body">'
@@ -621,10 +657,44 @@ def roster_filters() -> str:
         f'<option value="{esc(r["id"])}">{esc(r["label"])}</option>'
         for r in RATE_CARD if r["id"] in in_use
     )
+    # Genre, vocals and where (2026-09-16). Same rule as above: a select
+    # renders only when the roster varies on it, with the options some act
+    # carries. Where appears only once an act restricts its area_tags; while
+    # every act travels the whole list the filter would be a no-op.
+    in_use_genres = {g for a in ACTS for g in a.get("genre_tags", [])}
+    genre_opts = "".join(
+        f'<option value="{esc(g["id"])}">{esc(g["label"])}</option>'
+        for g in GENRES if g["id"] in in_use_genres
+    )
+    vocal_values = {v for a in ACTS for v in VOCALS_MATCH[a.get("vocals", "instrumental")].split()}
+    vocal_opts = "".join(
+        f'<option value="{esc(v)}">{esc(label)}</option>'
+        for v, label in VOCALS_LABEL.items() if v in vocal_values
+    )
+    restricted = any(a.get("area_tags") for a in ACTS)
+    in_use_areas = {i for a in ACTS for i in act_area_ids(a)}
+    area_opts = "".join(
+        f'<option value="{esc(a["id"])}">{esc(a["label"])}</option>'
+        for a in AREAS if a["id"] in in_use_areas
+    )
+    genre_field = (
+        '<div class="filter-field"><label for="filter-genre">Genre</label>'
+        '<select id="filter-genre" name="genre">'
+        f'<option value="">Any</option>{genre_opts}</select></div>'
+    ) if genre_opts else ""
+    vocals_field = (
+        '<div class="filter-field"><label for="filter-vocals">Vocals</label>'
+        '<select id="filter-vocals" name="vocals">'
+        f'<option value="">Any</option>{vocal_opts}</select></div>'
+    ) if len(vocal_values) > 1 else ""
+    area_field = (
+        '<div class="filter-field"><label for="filter-area">Where</label>'
+        '<select id="filter-area" name="area">'
+        f'<option value="">Anywhere we play</option>{area_opts}</select></div>'
+    ) if restricted else ""
     # The starting-price filter was removed 2026-09-04 with the published card.
     # NO COUNT (2026-09-07 rule, applied here 2026-09-14): the status label never
     # prints the size of the roster; acts.js prints how many match a filter.
-    # Kind of night and size are the two axes a buyer actually shops on here.
     return (
         '<form class="roster-filters" id="roster-filters" hidden>'
         '<div class="filter-field"><label for="filter-bucket">Kind of night</label>'
@@ -633,6 +703,7 @@ def roster_filters() -> str:
         '<div class="filter-field"><label for="filter-config">Size</label>'
         '<select id="filter-config" name="config">'
         f'<option value="">Any</option>{config_opts}</select></div>'
+        f"{genre_field}{vocals_field}{area_field}"
         '<button type="button" class="btn btn--sm btn--outline" id="filter-reset">Reset</button>'
         f'<p class="filter-count" id="filter-count" role="status">Every act</p>'
         "</form>"
@@ -644,7 +715,7 @@ def roster_grid(nav_prefix: str = "") -> str:
     return (
         f'<div class="card-grid card-grid--3 roster-grid" id="roster-grid">{cards}</div>'
         '<p class="filter-empty" id="filter-empty" hidden>Nothing on the roster matches '
-        "that combination. Widen one of the three and it will.</p>"
+        "that combination. Widen one of them and it will.</p>"
     )
 
 
@@ -880,11 +951,9 @@ def planner_faq_schema() -> dict:
 
 # The towns the business actually serves, named individually rather than as a
 # prose blob. Search reads these; "the mountain corridor" is not a place.
-SERVICE_AREAS = [
-    "Denver", "Boulder", "Colorado Springs", "Fort Collins",
-    "Vail", "Beaver Creek", "Aspen", "Breckenridge",
-    "Telluride", "Steamboat Springs", "Winter Park", "Crested Butte",
-]
+# SERVICE_AREAS moved to the roster constants above (2026-09-16): it is
+# acts.json areas[] now, so an act's area_tags and the business's areaServed
+# cannot drift apart.
 
 
 def local_business_node() -> dict:
@@ -916,6 +985,8 @@ def local_business_node() -> dict:
             "acoustic duo", "Spanish guitar and flamenco trio", "DJ",
             "corporate holiday party entertainment", "client dinner music",
             "corporate retreat evenings", "private party and milestone birthday music",
+            "jazz band for weddings and corporate events", "singer and guitarist for hire",
+            "musician for a proposal or a surprise song", "Christmas jazz trio",
         ],
     }
     maps = [u for u in BRAND.get("sameAs", []) if "maps.google.com" in u]
@@ -936,7 +1007,9 @@ def act_service_node(act: dict) -> dict:
         "serviceType": f"{act['style']} for private events",
         "description": act["blurb"],
         "provider": {"@id": f"{SITE_URL}/#business"},
-        "areaServed": [{"@type": "Place", "name": n} for n in SERVICE_AREAS],
+        # The act's own area_tags (or the whole service area when it has none),
+        # so a Service never claims a town the act does not travel to.
+        "areaServed": [{"@type": "Place", "name": n} for n in act_areas(act)],
         # No offers. A Service describes what is booked; the price for a night
         # comes back when a date is checked, so there is nothing to publish.
     }

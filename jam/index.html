@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Matches --paper. Without it the phone's browser chrome stays white above
+       a dark page, which is the tell that a dark theme was retrofitted. -->
+  <meta name="theme-color" content="#14130e">
+  <title>Signet Jam</title>
+  <meta name="description" content="A weekly jam at one venue in Denver. Sunday or Monday.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://signetartists.com/jam/">
+  <link rel="alternate" type="application/rss+xml" title="Signet Artists — Blog" href="../rss.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Signet Artists">
+  <meta property="og:title" content="Signet Jam">
+  <meta property="og:description" content="A weekly jam at one venue in Denver. Sunday or Monday.">
+  <meta property="og:url" content="https://signetartists.com/jam/">
+  <meta property="og:image" content="https://signetartists.com/img/jam-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+
+  <!-- Fraunces + Inter came off Google Fonts here until 2026-08-07. Archivo is
+       self-hosted in vendor/fonts/ and declared in styles.css, so the two
+       preconnects and the render-blocking third-party stylesheet are gone with
+       them: one origin, one font file, nothing to hand off to. -->
+  <link rel="preload" href="../vendor/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../styles.css?v=20260916a">
+  
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-LL5DKVEX29"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LL5DKVEX29');</script>
+  <script defer src="../analytics.js"></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap header-inner">
+    <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
+         front-range centric). A third line under the wordmark, so every page
+         says where in one glance at every width, and the nav row stays
+         uncrowded. Display form, not the footer's prose form. -->
+    <div class="brand-lockup">
+      <a class="wordmark" href="../">Signet Artists</a>
+      <p class="header-loc">BOOK LIVE MUSIC IN COLORADO</p>
+    </div>
+
+    <!-- Songs added 2026-08-07. /repertoire/ carries the cover walls and the
+         whole song book and was reachable only from two inline prose links and
+         one hub card. The best page on the site, absent from its own
+         navigation. "Songs" rather than "Repertoire" because it sits next to
+         "The Music" and the pair has to read as two different questions: who
+         plays, and what they play. -->
+    <!-- Weddings added 2026-09-06 with the /weddings/ hub, when Daniel lifted
+         the one-wedding-surface cap. It sits between Corporate and Private
+         Parties because the three are one row of occasion hubs and corporate
+         keeps the earlier slot. -->
+    <!-- Corporate and Private Parties are the two occasion hubs of the
+         2026-08-20 buildout; corporate keeps the earlier slot. "Corporate"
+         rather than "Corporate & Galas": the 17 Aug audit reframed galas as a
+         small-format section on the hub, not a co-headline. -->
+    <nav class="nav-desktop">
+      <a href="../music/" >Artist Roster</a>
+      <a href="../repertoire/" >Songs</a>
+      <a href="../pricing/" >Pricing</a>
+      <a href="../corporate/" >Corporate</a>
+      <a href="../weddings/" >Weddings</a>
+      <a href="../private-parties/" >Private Parties</a>
+      <a href="../planners/" >For Planners</a>
+      <a class="btn btn--sm" href="../contact/" >Check a Date</a>
+    </nav>
+
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+
+  <nav class="nav-mobile" id="mobile-nav">
+    <a href="../music/">The Roster</a>
+    <a href="../repertoire/">Songs</a>
+    <a href="../pricing/">Pricing</a>
+    <a href="../corporate/">Corporate</a>
+    <a href="../weddings/">Weddings</a>
+    <a href="../private-parties/">Private Parties</a>
+    <a href="../planners/">For Planners</a>
+    <a class="btn nav-mobile-cta" href="../contact/">Check a Date</a>
+  </nav>
+</header>
+
+  <main>
+    
+<style>
+/* Icons: one sprite (below), line icons on the 24 grid, brass, 1.5 stroke. */
+.jam-ico { display: block; width: 1.5rem; height: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Section index labels: the handoff's "02 / The night", as the site eyebrow. */
+.jam-idx span { color: var(--ink-faint); margin-right: 0.6rem; font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------- 01 hero */
+.jam-hero { padding-top: var(--space-4); padding-bottom: var(--space-5); }
+.jam-hero__grid { display: grid; gap: var(--space-4); align-items: center; }
+.jam-venue {
+  margin-top: 1rem;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
+  line-height: 1.2;
+  color: var(--ink-soft);
+}
+/* The sign-up sheet, half full. Drawn, not photographed: the one image on
+   the page, in the palette, and it is the object the copy keeps coming back
+   to. Brass is spent on the signatures. */
+.jam-sheet { width: 100%; max-width: 19rem; }
+.jam-sheet svg { display: block; width: 100%; height: auto; overflow: visible; }
+.jam-sheet__paper { fill: var(--paper-sunk); stroke: var(--rule-strong); stroke-width: 1.5; }
+.jam-sheet__rule { stroke: var(--rule-strong); stroke-width: 1.5; }
+.jam-sheet__line { stroke: var(--rule); stroke-width: 1.5; }
+.jam-sheet__num { font-family: var(--sans); font-size: 11px; letter-spacing: 0.06em; fill: var(--ink-faint); }
+.jam-sheet__head { font-family: var(--display); font-weight: 800; font-stretch: 72%; font-size: 22px; text-transform: uppercase; fill: var(--ink); }
+.jam-sheet__sig { fill: none; stroke: var(--brass); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 860px) {
+  .jam-hero__grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+  .jam-sheet { justify-self: end; max-width: 21rem; }
+}
+
+/* ------------------------------------------------------ 03 who's running it */
+.jam-host { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+.jam-host__ico { width: 5.5rem; height: 5.5rem; color: var(--brass); }
+.jam-host__text { max-width: 40rem; font-size: 1.125rem; line-height: 1.65; color: var(--ink-soft); }
+.jam-host .wordmark { display: block; margin-top: var(--space-3); color: var(--ink-faint); }
+@media (min-width: 760px) { .jam-host { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-4); } }
+
+/* ---------------------------------------------------------- 02 how it works */
+.jam-how .h2 { margin-top: 0.75rem; max-width: 22ch; }
+.jam-ledger { margin-top: var(--space-4); display: grid; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
+.jam-ledger__col { padding: 1.75rem; background: var(--paper); }
+.jam-ledger__col .eyebrow { margin-bottom: 0.5rem; }
+.jam-ledger__row { display: flex; align-items: flex-start; gap: 0.875rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); }
+.jam-ledger__row:last-child { border-bottom: 0; padding-bottom: 0; }
+.jam-ledger__row .jam-ico { flex: 0 0 auto; width: 1.375rem; height: 1.375rem; margin-top: 0.1rem; color: var(--brass); }
+.jam-ledger__row p { font-size: 0.9375rem; line-height: 1.55; color: var(--ink-soft); }
+.jam-closing { display: grid; gap: var(--space-2); align-items: center; margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
+.jam-figure {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(4rem, 3rem + 4vw, 6.5rem);
+  line-height: 0.85;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.jam-figure small {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.jam-closing__line { font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem); font-weight: 500; line-height: 1.25; letter-spacing: -0.005em; color: var(--ink); max-width: 18ch; text-wrap: balance; }
+@media (min-width: 760px) {
+  .jam-ledger { grid-template-columns: 1fr 1fr; }
+  .jam-closing { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-4); }
+}
+
+/* -------------------------------------------------------------- 04 close */
+.jam-close .h2 { margin-top: 0.75rem; max-width: 14ch; }
+.jam-close .btn-row { align-items: center; }
+
+/* ----------------------------------------------------------------- motion */
+/* Fade up on enter, once, driven by 05-script.html; the page renders in
+   full without it, and under reduced motion nothing moves. */
+.jam-motion .jam-reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.jam-motion .jam-reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .jam-motion .jam-reveal { opacity: 1; transform: none; transition: none; }
+}
+</style>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3.5M8.5 21.5h7"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6.5 3h11l-1.3 16.2a1.8 1.8 0 0 1-1.8 1.7H9.6a1.8 1.8 0 0 1-1.8-1.7L6.5 3zM7.1 9.5h9.8"/></symbol>
+  <symbol id="i-stool" viewBox="0 0 24 24"><path d="M5 5.5h14M7.5 5.5l-1.5 16M16.5 5.5l1.5 16M7 14.5h10M7.6 10h8.8"/></symbol>
+  <symbol id="i-bass" viewBox="0 0 24 24"><path d="M12 2.5v6.2M10.6 3.2h2.8"/><path d="M12 8.7c-2.9 0-4.9 1.6-4.9 3.6 0 1.1.6 1.8.6 2.9 0 1.4-2.2 2.2-2.2 4.1 0 1.9 3 3.2 6.5 3.2s6.5-1.3 6.5-3.2c0-1.9-2.2-2.7-2.2-4.1 0-1.1.6-1.8.6-2.9 0-2-2-3.6-4.9-3.6z"/><path d="M9.8 15v3M14.2 15v3"/></symbol>
+  <symbol id="i-flight" viewBox="0 0 24 24"><path d="M3 19.5h18M4.5 10.5h3.2l-.4 7H4.9zM10.4 10.5h3.2l-.4 7h-2.4zM16.3 10.5h3.2l-.4 7h-2.4z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 17.1 6.6 20l1.1-6.1-4.5-4.3 6.1-.8z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/><circle cx="12" cy="10" r="2.2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9.5M17.5 12v3M20.5 12v3"/></symbol>
+  <symbol id="i-corner" viewBox="0 0 24 24"><path d="M4 20V5M4 20h15"/><circle cx="13" cy="14.5" r="2.2"/><path d="M15.2 14.5V6.5l4.5-1.2"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M3.5 17.5h17M5.5 17.5a6.5 6.5 0 0 1 13 0M12 9V6.5M10.5 6.5h3"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M3 12.5h18M8.5 7V5.2A1.2 1.2 0 0 1 9.7 4h4.6a1.2 1.2 0 0 1 1.2 1.2V7M10 12.5v2M14 12.5v2"/></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3.5 10.5v3a1 1 0 0 0 1 1h2.8l8.2 4V5.5l-8.2 4H4.5a1 1 0 0 0-1 1zM18.5 9.3a3.8 3.8 0 0 1 0 5.4M7.5 14.5v4a1 1 0 0 0 1 1h1.3"/></symbol>
+  <symbol id="i-drink" viewBox="0 0 24 24"><path d="M6.5 3.5h11v15a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-15zM6.5 12.5h11"/></symbol>
+  <symbol id="i-notes" viewBox="0 0 24 24"><circle cx="7.5" cy="17" r="2.8"/><circle cx="16.5" cy="15" r="2.8"/><path d="M10.3 17V6.2l9-2.2V15M10.3 9.7l9-2.2"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="4.5" y="3" width="15" height="18" rx="1.5"/><path d="M9.5 2.5h5v2h-5zM8 9.5h8M8 13.5h8M8 17.5h4.5"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10.2 9v6l5-3z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.5-5.7 5.5-5.7s5.5 2.4 5.5 5.7"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.4c2.9.3 5 2.6 5 5.6"/></symbol>
+</svg>
+
+
+<section class="section section--top jam-hero">
+  <div class="wrap jam-hero__grid">
+    <div class="jam-hero__copy">
+      <p class="eyebrow eyebrow--slab">Sunday or Monday</p>
+      <h1 class="h1 display">Signet Jam</h1>
+      <p class="jam-venue smile" id="jam-venue">at one venue in Denver</p>
+    </div>
+    <figure class="jam-sheet" aria-hidden="true">
+      <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+        <rect class="jam-sheet__paper" x="1" y="1" width="298" height="378" rx="2"/>
+        <text class="jam-sheet__head" x="28" y="52">Sign-up</text>
+        <line class="jam-sheet__rule" x1="28" y1="66" x2="272" y2="66"/>
+    <text class="jam-sheet__num" x="28" y="104">01</text>
+    <line class="jam-sheet__line" x1="58" y1="106" x2="272" y2="106"/>
+    <path class="jam-sheet__sig" d="M62 101c1-10 4-14 6-8 1 4-2 9 1 9 3 0 5-6 8-4 2 3 1 6 4 5 4-1 7-6 10-3 3 2 5 4 8 2 3-2 6-5 10-2 3 2 7 1 11-1"/>
+    <text class="jam-sheet__num" x="28" y="131">02</text>
+    <line class="jam-sheet__line" x1="58" y1="133" x2="272" y2="133"/>
+    <path class="jam-sheet__sig" d="M62 128c0-8 3-12 5-9 2 3 0 7 2 9 2 1 4-4 6-2 3 3 7 3 10 0 3-3 5-6 8-3 2 2 4 5 7 3 3-2 6-4 9-1 3 3 6 1 9-1"/>
+    <text class="jam-sheet__num" x="28" y="158">03</text>
+    <line class="jam-sheet__line" x1="58" y1="160" x2="272" y2="160"/>
+    <path class="jam-sheet__sig" d="M62 155c2-9 5-11 7-5 1 3-1 7 1 8 3 1 5-4 8-2 2 2 5 5 8 2 2-2 4-5 7-3 3 2 6 3 9 1 2-1 5-3 8-1"/>
+    <text class="jam-sheet__num" x="28" y="185">04</text>
+    <line class="jam-sheet__line" x1="58" y1="187" x2="272" y2="187"/>
+    <path class="jam-sheet__sig" d="M62 182c1-12 4-13 6-6 1 5-2 8 1 8 4 0 6-5 9-2 3 3 6 4 9 1 3-3 6-4 9-1 3 2 5 4 8 1 3-3 6-5 10-2 3 2 6 2 9 0 3-2 6-3 9-1"/>
+    <text class="jam-sheet__num" x="28" y="212">05</text>
+    <line class="jam-sheet__line" x1="58" y1="214" x2="272" y2="214"/>
+    <path class="jam-sheet__sig" d="M62 209c0-9 3-13 6-7 2 4-1 8 2 8 3 0 5-3 8-1 3 3 5 4 8 1 3-2 5-4 8-2 3 2 6 3 9 0"/>
+    <text class="jam-sheet__num" x="28" y="239">06</text>
+    <line class="jam-sheet__line" x1="58" y1="241" x2="272" y2="241"/>
+    <text class="jam-sheet__num" x="28" y="266">07</text>
+    <line class="jam-sheet__line" x1="58" y1="268" x2="272" y2="268"/>
+    <text class="jam-sheet__num" x="28" y="293">08</text>
+    <line class="jam-sheet__line" x1="58" y1="295" x2="272" y2="295"/>
+    <text class="jam-sheet__num" x="28" y="320">09</text>
+    <line class="jam-sheet__line" x1="58" y1="322" x2="272" y2="322"/>
+    <text class="jam-sheet__num" x="28" y="347">10</text>
+    <line class="jam-sheet__line" x1="58" y1="349" x2="272" y2="349"/>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+
+<section class="section section--ruled jam-how" id="jam-how">
+  <div class="wrap">
+    <p class="eyebrow jam-idx"><span>02</span>How it works</p>
+    <h2 class="h2 jam-reveal">Every week, same night, one venue. You pick Sunday or Monday.</h2>
+    <div class="jam-ledger jam-reveal">
+      <div class="jam-ledger__col">
+        <p class="eyebrow">The venue brings</p>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-corner"/></svg><p>The space and a corner for the band.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-bell"/></svg><p>The staff for the night.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-case"/></svg><p>A closet for the backline.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-megaphone"/></svg><p>Promo behind the night, from your accounts.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-drink"/></svg><p>A drink for the band.</p></div>
+      </div>
+      <div class="jam-ledger__col">
+        <p class="eyebrow">Signet brings</p>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-notes"/></svg><p>The house band.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-mic"/></svg><p>The hosts.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-list"/></svg><p>The sign-up sheet and the shape of the night.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-star"/></svg><p>A featured act every month.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-clip"/></svg><p>Clips every week, cut and ready to post.</p></div>
+        <div class="jam-ledger__row"><svg class="jam-ico" aria-hidden="true"><use href="#i-people"/></svg><p>The players, who are the first hundred people who show up.</p></div>
+      </div>
+    </div>
+    <div class="jam-closing jam-reveal">
+      <p class="jam-figure">12<small>weeks</small></p>
+      <p class="jam-closing__line">Twelve weeks to start. Then we both decide.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--ruled jam-hosts">
+  <div class="wrap">
+    <p class="eyebrow jam-idx"><span>03</span>Who's running it</p>
+    <div class="jam-host jam-reveal">
+      <svg class="jam-ico jam-host__ico" aria-hidden="true"><use href="#i-bass"/></svg>
+      <div>
+        <p class="jam-host__text">Signet Jam is run by a seasoned, connected professional musician. The host plays bass for a living, upright and electric, in bands around Denver, and before that built a company to 180 people and sold it. The house band is working players who play out every week. Signet is the outfit behind it.</p>
+        <p class="wordmark">Signet Artists</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--ruled jam-close" id="jam-close">
+  <div class="wrap jam-reveal">
+    <p class="eyebrow jam-idx"><span>04</span>Close</p>
+    <h2 class="h2 display">One venue. Sunday or Monday.</h2>
+    <div class="btn-row">
+      <a class="btn" href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Let's talk</a>
+      <a class="btn btn--outline" href="mailto:hello@signetartists.com">hello@signetartists.com</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function () {
+  'use strict';
+  var doc = document, root = doc.documentElement;
+
+  /* Venue parameter. textContent only, never innerHTML, so ?venue=<b>x</b>
+     renders as literal text. Nothing else on the page is venue-specific, and
+     with no parameter the line reads "at one venue in Denver". */
+  var params = null;
+  try { params = new URLSearchParams(location.search); } catch (e) {}
+  var venueEl = doc.getElementById('jam-venue');
+  var venue = params ? params.get('venue') : '';
+  venue = venue ? venue.replace(/\s+/g, ' ').trim().slice(0, 80) : '';
+  if (venue && venueEl) {
+    venueEl.textContent = 'at ' + venue;
+    doc.title = 'Signet Jam at ' + venue;
+  }
+
+  /* Fade up on enter, once. A scroll check rather than an
+     IntersectionObserver: a fast scroll can jump an element clean past the
+     viewport between observer frames, and it would then never fire and stay
+     invisible. Anything whose top has passed the 88% line is in, including
+     anything already scrolled past. ?motion=off or reduced motion: nothing
+     moves, everything simply renders. */
+  var motionOff = (params && params.get('motion') === 'off')
+    || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (motionOff) { return; }
+  root.classList.add('jam-motion');
+  var pending = Array.prototype.slice.call(doc.querySelectorAll('.jam-reveal'));
+  var ticking = false;
+  function check() {
+    ticking = false;
+    var line = window.innerHeight * 0.88;
+    pending = pending.filter(function (el) {
+      if (el.getBoundingClientRect().top < line) { el.classList.add('is-in'); return false; }
+      return true;
+    });
+    if (!pending.length) {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    }
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(check); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('pageshow', onScroll);
+  check();
+})();
+</script>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark">Signet Artists</p>
+      <p class="footer-line">Live entertainment for private events in the Denver area, including the Front Range, and the mountain corridor.</p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <p class="eyebrow">Enquiries</p>
+        <ul class="footer-list">
+          <li><a href="mailto:hello@signetartists.com">hello@signetartists.com</a></li>
+          <!-- Profile links, added 2026-08-21 as profiles go live. rel="me" marks
+               them as this brand's own identities for entity consolidation. Only
+               profiles worth a buyer's click belong here, never every citation —
+               and never Thumbtack: that would route free direct traffic into the
+               pay-per-lead channel. -->
+          <li><a href="https://www.linkedin.com/company/signetartists/" rel="me">Signet on LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Site</p>
+        <!-- Songs and Notes added 2026-08-07: /repertoire/ was in no navigation
+             at all, and /blog/ was reachable only from the sitemap and the RSS
+             feed. Four published posts nobody could find from the site. -->
+        <!-- About added 2026-09-06 with the brand page; the header row is
+             full at eight items and the occasion hubs keep those slots. -->
+        <ul class="footer-list">
+          <li><a href="../about/">About</a></li>
+          <li><a href="../music/">The Music</a></li>
+          <li><a href="../repertoire/">Songs</a></li>
+          <li><a href="../pricing/">Pricing</a></li>
+          <li><a href="../corporate/">Corporate</a></li>
+          <li><a href="../private-parties/">Private Parties</a></li>
+          <li><a href="../guides/live-music-cost-colorado/">What live music costs</a></li>
+          <li><a href="../blog/">Notes</a></li>
+          <li><a href="../contact/">Check a Date</a></li>
+        </ul>
+      </div>
+      <!-- Occasions and Ensembles added 2026-09-13. The 2026-09-13 crawl
+           found the occasion spokes, ensemble pages and artist pages carrying
+           one to seven inbound links each while the header hubs carried 56,
+           and Search Console had four hubs (Tejas, retreats, private parties,
+           cocktail hour) "Discovered, never crawled". A footer link from
+           every page is the cheapest sitewide inlink there is; the header row
+           stays at eight. -->
+      <div>
+        <p class="eyebrow">Occasions</p>
+        <ul class="footer-list">
+          <li><a href="../weddings/">Weddings</a></li>
+          <li><a href="../weddings/ceremony/">Wedding ceremony</a></li>
+          <li><a href="../weddings/cocktail-hour/">Cocktail hour</a></li>
+          <li><a href="../weddings/colorado-springs/">Weddings, Colorado Springs</a></li>
+          <li><a href="../corporate/holiday-party/">Corporate holiday party</a></li>
+          <li><a href="../corporate/client-dinners/">Client dinners</a></li>
+          <li><a href="../corporate/retreats/">Corporate retreats</a></li>
+          <li><a href="../corporate/galas-and-awards/">Galas and award nights</a></li>
+          <li><a href="../corporate/after-party/">After-parties</a></li>
+          <li><a href="../private-parties/denver/">Private parties, Denver</a></li>
+          <li><a href="../private-parties/colorado-springs/">Private parties, Colorado Springs</a></li>
+          <li><a href="../weddings/vail/">Weddings, Vail</a></li>
+          <li><a href="../weddings/jazz-band/">Jazz band for a wedding</a></li>
+          <li><a href="../corporate/jazz-band/">Jazz band for a corporate event</a></li>
+          <li><a href="../private-parties/proposals/">Proposals and surprise songs</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Ensembles</p>
+        <ul class="footer-list">
+          <li><a href="../ensembles/solo-guitarist/">Solo guitarist</a></li>
+          <li><a href="../ensembles/acoustic-duo/">Acoustic duo and trio</a></li>
+          <li><a href="../ensembles/jazz-duo-trio/">Jazz duo and trio</a></li>
+          <li><a href="../ensembles/spanish-guitarist/">Spanish guitarist</a></li>
+          <li><a href="../ensembles/flamenco-trio/">Dirty Flamenco, the trio</a></li>
+          <li><a href="../ensembles/dj/">DJ</a></li>
+          <li><a href="../ensembles/live-band-karaoke/">Live Band Karaoke</a></li>
+          <li><a href="../ensembles/yacht-rock/">Yacht rock band</a></li>
+          <li><a href="../ensembles/americana-band/">Americana band</a></li>
+          <li><a href="../ensembles/singer-guitarist/">Singer and guitarist</a></li>
+          <li><a href="../ensembles/christmas-jazz-trio/">Christmas jazz trio</a></li>
+          <li><a href="../artists/tejas-singh/">Tejas Singh</a></li>
+          <li><a href="../artists/tony-medina/">Tony Medina</a></li>
+          <li><a href="../ensembles/changes-jazz-trio/">Changes Jazz Trio</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">For planners</p>
+        <ul class="footer-list">
+          <li><a href="../planners/">Resources</a></li>
+          <li><a href="../planners/technical/">What we need from your venue</a></li>
+          <li><a href="../planners/mountain/">The mountain corridor</a></li>
+          <li><a href="../planners/booking/">How a booking works</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="footer-meta">&copy; 2026 Signet Artists</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile nav toggle. The button label doubles as the state indicator, the
+    // same as the React version it replaced.
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.querySelector('.nav-mobile');
+      if (!btn || !panel) { return; }
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+</body>
+</html>

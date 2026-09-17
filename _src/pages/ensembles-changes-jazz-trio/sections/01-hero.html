@@ -1,0 +1,28 @@
+<!-- The act hero, mirroring build.py act_hero: eyebrow is the style, the name is
+     the h1, the byline names the three players (a group of equals, so acts.json
+     carries a `byline` instead of a front person), the blurb is the lede. The
+     footage slot is the act_hero empty-video pattern over the interim still,
+     because the trio has published no photograph and no footage: their site's
+     images are generated illustrations and were not taken. The note links the
+     two studio recordings on their site, which is the look-up for this act. -->
+<section class="section section--top act-hero">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow eyebrow--slab">Modern jazz</p>
+      <h1 class="h1 display">Changes Jazz Trio</h1>
+      <p class="act-face">A named act. Doug Emery, guitar. Sri Viswanath, bass. Brian Jaffe, drums. Standards, trio to quartet.</p>
+      <p class="lede">Guitar, fretless bass and drums, playing the standards with a modern edge at a volume guests can talk across. Three working Denver players booked under their own names, with a saxophone added when the evening wants a featured set.</p>
+      <div class="btn-row">
+        <a class="btn" href="{{nav_prefix}}contact/?act=changes-jazz-trio">Check a date</a>
+        <a class="btn btn--outline" href="{{nav_prefix}}pricing/">See pricing</a>
+      </div>
+      <!-- The named-acts promise on /music/ is "you can go and look them up";
+           this is the look-up. Verified against their site 2026-09-16. -->
+      <p class="note">Hear them first: <a href="https://changesjazz.base44.app/music">two studio recordings on their site</a>, with the three bios beside them.</p>
+    </div>
+    <div class="act-video act-video--empty" data-tbd="true" role="img" aria-label="Video of Changes Jazz Trio is not published yet.">
+      <img class="act-video-poster" src="{{nav_prefix}}img/hero.jpg" alt="" width="1600" height="900" decoding="async">
+      <p class="act-video-note">Footage slot</p>
+    </div>
+  </div>
+</section>
