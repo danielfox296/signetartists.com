@@ -22,6 +22,10 @@ Two passes.
    2026-08-28 pass left pricing, home, music, planners, contact, 404 and the
    blog ungated, and a per-directory allowlist is how that happens again.
 
+3. Compression notes (2026-09-18, AI-TELLS-2026.md Layer 7): the two
+   greppable sub-patterns of the compression tell, printed for the read and
+   never counted as hits. The rest of that layer is a read-aloud, not code.
+
 Run: python3 scripts/copy_gate.py [page-dir ...]   (default: the buildout dirs)
 Exit 1 on any hit.
 """
@@ -195,9 +199,46 @@ def audit_money() -> list:
     return hits
 
 
+# Compression notes (AI-TELLS-2026.md Layer 7, 2026-09-18). The two
+# sub-patterns of the compression layer that a regex can see: a paragraph
+# closing on a fragment of three words or fewer ("Their people come."), and
+# the uncontracted first person a warm page would contract ("it is", "they
+# are", "we will"). Both are NOTES, never hits: a fragment as rhythm is legal
+# and ratified copy carries some of each, so the gate prints them for the
+# read and exits clean. The other eight patterns of the layer are a read.
+CLOSER_WORDS = 3
+UNCONTRACTED = re.compile(
+    r"\b(?:it|that|there|what) is\b|\b(?:they|we|you) are\b|\bwe will\b"
+    r"|\b(?:do|does|did|is|are|was|were|has|have|had|can|could|would|should)"
+    r" not\b", re.IGNORECASE)
+PARA_TAGS = re.compile(r"<(?:p|dd|li|h[1-6])\b[^>]*>(.*?)</(?:p|dd|li|h[1-6])>",
+                       re.DOTALL | re.IGNORECASE)
+
+
+def compression_notes(path: pathlib.Path) -> list:
+    if path.suffix != ".html":
+        return []
+    text = COMMENT.sub("", path.read_text(encoding="utf-8"))
+    notes = []
+    uncontracted = 0
+    for m in PARA_TAGS.finditer(text):
+        para = re.sub(r"<[^>]+>", " ", m.group(1))
+        para = re.sub(r"\s+", " ", para).strip()
+        if not para:
+            continue
+        uncontracted += len(UNCONTRACTED.findall(para))
+        sentences = [x for x in re.split(r"(?<=[.!?])\s+", para) if x]
+        if len(sentences) > 1 and len(sentences[-1].split()) <= CLOSER_WORDS:
+            notes.append((path, f"paragraph closes on a fragment: {sentences[-1]!r}"))
+    if uncontracted:
+        notes.append((path, f"{uncontracted} uncontracted form(s) (it is / they are / do not)"))
+    return notes
+
+
 def main() -> int:
     targets = sys.argv[1:] or BUILDOUT_DIRS
     hits = []
+    notes = []
     for slug in targets:
         d = PAGES / slug
         if not d.exists():
@@ -205,12 +246,17 @@ def main() -> int:
         for f in sorted(d.rglob("*.html")) + sorted(d.glob("schema.json")) \
                 + sorted(d.glob("config.json")):
             hits += check_file(f)
+            notes += compression_notes(f)
     for path, line, label, fix, snippet in hits:
         rel = path.relative_to(ROOT)
         print(f"{rel}:{line}  [{label}] {fix}\n    {snippet}")
     money_hits = audit_money()
     for out, why in money_hits:
         print(f"{out}  [{why}]")
+    if notes:
+        print("Compression notes (Layer 7; a read, not a failure):")
+        for path, why in notes:
+            print(f"  {path.relative_to(ROOT)}  {why}")
     total = len(hits) + len(money_hits)
     print(f"\n{total} hit(s)." if total else "Clean.")
     return 1 if total else 0
