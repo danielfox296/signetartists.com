@@ -755,7 +755,7 @@ def season_dates() -> str:
         f'<p class="note"><strong class="num-accent">{len(SEASON["dates"])}</strong> '
         "party dates: Thursdays, Fridays and Saturdays across November and "
         "December, plus New Year's Eve. A peak date and a Thursday in November "
-        "are not the same job, and New Year's Eve is its own case. Send the date "
+        "aren't the same job, and New Year's Eve is its own case. Send the date "
         "and we price that night."
         "</p>"
     )
@@ -776,7 +776,7 @@ def season_leads(nav_prefix: str = "") -> str:
             f'<p class="act-blurb">{esc(lead["why"])}</p>'
             '<dl class="act-facts"><dt>Configuration</dt>'
             f'<dd>{esc(r["label"])}, {r["pieces"]} '
-            f'{"player" if r["pieces"] == 1 else "players"}</dd></dl>'
+            f'{"musician" if r["pieces"] == 1 else "musicians"}</dd></dl>'
             f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">'
             "Check a date</a>"
             "</article>"
@@ -801,7 +801,7 @@ def corporate_shapes(nav_prefix: str = "") -> str:
             f'<p class="act-blurb">{esc(shape["why"])}</p>'
             '<dl class="act-facts"><dt>Configuration</dt>'
             f'<dd>{esc(r["label"])}, {r["pieces"]} '
-            f'{"player" if r["pieces"] == 1 else "players"}</dd></dl>'
+            f'{"musician" if r["pieces"] == 1 else "musicians"}</dd></dl>'
             f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">'
             "Check a date</a>"
             "</article>"
@@ -2072,9 +2072,9 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         f"> {BRAND['intro']}",
         "",
         f"{BRAND['name']} is a live music company for private events in "
-        f"{BRAND['serviceArea']}. No prices are published: what the pricing page "
-        "carries is , each figure with the "
-        "source it came from, and a night is priced when a date is checked.",
+        f"{BRAND['serviceArea']}. No prices are published. What the pricing page "
+        "carries is what live music costs in this market, each figure with the "
+        "source it came from, and Signet prices a specific night when the date is sent.",
         "",
         "## Credits",
         "",
@@ -2122,9 +2122,9 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         "",
         f"{BRAND['name']} publishes no price list, no starting prices and no "
         "hourly figures. Actual prices vary by date, size, hours and location. "
-        f"{SITE_URL}/pricing/ sets out , "
+        f"{SITE_URL}/pricing/ sets out what live music costs in this market, "
         "with each figure attributed to the public source it came from, so a "
-        "budget can be set before anyone writes. To get the number for a "
+        "reader can set a budget before writing to Signet. To get the number for a "
         f"specific night, send the date: {SITE_URL}/contact/",
         "",
         "Travel beyond the Denver metro, a night's lodging past the passes, "
