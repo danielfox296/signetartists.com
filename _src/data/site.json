@@ -130,7 +130,7 @@
       "occasion": "The office holiday party",
       "act": "tejas-singh",
       "config": "quartet",
-      "why": "Two hundred staff, a hotel ballroom, a short program in front of the dancing. The band plays dinner at conversation volume and gets loud on cue."
+      "why": "Two hundred staff in a hotel ballroom, with a short program before the dancing. The band plays dinner at conversation volume and gets loud on cue."
     },
     {
       "occasion": "The client dinner",
@@ -142,7 +142,7 @@
       "occasion": "The member or association event",
       "act": "dirty-flamenco",
       "config": "trio",
-      "why": "An event that has remarks in it and wants one thing guests describe afterwards. A set piece rather than a background, placed where the program leaves space for it."
+      "why": "An event that has remarks in it and wants one thing guests describe afterwards. The trio plays a set piece that guests watch, placed where the program leaves space for it."
     }
   ],
   "_credits_note": "ADDED 2026-09-03, from Daniel's list of the companies, institutions and venues the roster's artists have played for. Rendered by build.py credits() as the one-colour logo strip on the home page and /corporate/, and as a Credits line in llms.txt. Each logo ships as img/logos/<id>.svg, normalised to currentColor (provenance in img/logos/SOURCES.md); `h` scales a mark against the strip's base height so a stacked crest and a wide wordmark carry the same visual weight. The ten with logos: national employers, the museum, the two hotel flags, a major-league club, and the two Colorado names Daniel added the same day, Casa Bonita and Monarch (Daniel's call 2026-09-03, which supersedes the acts.json footage note that left the casino unnamed). The club stages and the rest are the `also` sentence, text only and home page only. Held back: the Hummingbird bar. Label 'Trusted and booked by' is Daniel's wording, 2026-09-03.",
@@ -246,7 +246,7 @@
         {
           "_rewritten_note": "2026-08-15. The old answer named the two house bands and described benches and chairs, which is the lineup framing the restructure retires. Revised 2026-08-17: the front-never-changes claim removed per Daniel. REVISED AGAIN 2026-08-20, Daniel's ruling from the outreach audit: the opener 'You book an act, not a pool' contradicted contract 03a §6, which sells a configuration and not a named act, and Daniel chose to align the FAQ to the contract rather than the contract to the FAQ. The answer now leads with exactly what the contract names, and the act texture follows as description rather than as the contractual claim. 'its own book' also became 'its own repertoire' under the buildout's vocabulary rule (legacy fixed when touched).",
           "q": "Do you have regular personnel, or is the band filled with whoever is available?",
-          "a": "The contract names a configuration: the size, the instrumentation and the repertoire, and that's exactly what performs on your date. Behind it, every act on the roster is an existing group with its own repertoire and regular personnel, and a named act is published under the name of the person who fronts it. Any substitution, the front included, is named to you in advance along with the reason."
+          "a": "The contract names a configuration: the size, the instrumentation and the repertoire, and that's exactly what performs on your date. Behind it, every act on the roster is an existing group with its own repertoire and regular personnel, and a named act is published under the name of the person who fronts it. Any substitution, front person included, is named to you in advance along with the reason."
         },
         {
           "q": "What happens if a musician cannot make the date?",
@@ -275,7 +275,7 @@
         {
           "_closed_note": "Closed 2026-08-16 against contract §3. Vocabulary aligned to the contract: deposit, not retainer. The net-30 exception was missing here and is in the contract.",
           "q": "What holds a date?",
-          "a": "A signed contract and a deposit, both at booking. Until both are in, the date stays open. Approved corporate accounts can hold on signature and be invoiced after the event."
+          "a": "A signed contract and a deposit, both at booking. Until both are in, the date stays open. Approved corporate accounts can hold the date with a signature alone and be invoiced after the event."
         },
         {
           "_closed_note": "Closed 2026-08-16 against contract §3 and the invoice format in readiness/03c. Card was pulled that day because no processor existed; Daniel confirmed Stripe 2026-08-17 and it is restored. Fee decision 2026-08-17: Signet absorbs the card processing fee, so all three methods cost the client the same. ACH remit details still pend the bank conversation, which pends the trade-name filing.",
@@ -314,11 +314,11 @@
         },
         {
           "q": "Will you learn a song we choose?",
-          "a": "Yes. Send it at least four weeks out, with the version you mean, since there are usually several and they are not the same chart. The first one is included in every booking, and each one after that is its own line on the quote."
+          "a": "Yes. Send it at least four weeks out, with the version you mean, since there are usually several and they aren't the same arrangement. The first one is included in every booking, and each one after that is its own line on the quote."
         },
         {
           "q": "Do you make announcements or act as MC?",
-          "a": "The bandleader will make short announcements from the stage: dinner is served, the dance floor is open, please welcome your speaker. We do not run the evening as an MC. If your program needs a host, that is a separate hire and we will work to their cues."
+          "a": "The bandleader will make short announcements from the stage: dinner is served, the dance floor is open, please welcome your speaker. We don't run the evening as an MC. If your program needs a host, that's a separate hire and we'll work to their cues."
         },
         {
           "q": "Can we add time on the night?",
@@ -340,11 +340,11 @@
         {
           "_note": "ADDED 2026-08-27 from a buyer-questions pass. Daniel's phrasing: 'We take care of that unless you or the hotel has hired an additional contractor for sound support, in which case that would be their domain.' Downtown hotels commonly carry mandatory in-house AV (Encore and similar), so this is a real corporate-buyer question the site did not answer.",
           "q": "The venue has its own AV company. Whose sound system runs the night?",
-          "a": "Ours, unless you or the venue have hired a sound contractor, in which case sound support is their domain: we advance the plan with them before the night and play through what they run. Either way it is settled at contract rather than at load-in."
+          "a": "Ours, unless you or the venue have hired a sound contractor, in which case sound support is their domain: we advance the plan with them before the night and play through what they run. Either way it's settled at contract rather than at load-in."
         },
         {
           "q": "Do you need a stage, and do you provide one?",
-          "a": "We do not require one and we do not supply one. A band plays fine on a floor. If you want a riser, the venue or your production company provides it, and the footprints we need at each size are published on the technical page."
+          "a": "We don't require one and we don't supply one. A band plays fine on a floor. If you want a riser, the venue or your production company provides it, and the footprints we need at each size are published on the technical page."
         },
         {
           "q": "What power do you need?",
@@ -353,7 +353,7 @@
         {
           "_closed_note": "Closed 2026-08-16 against contract §7, which requires a covered, level, dry performance area. Level and dry were missing here.",
           "q": "Can you play outdoors?",
-          "a": "Yes, on a covered, level and dry performance area, with power run to it and a plan for the weather written before the day. Colorado evenings drop fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time."
+          "a": "Yes, on a covered, level and dry performance area, with power run to it and a plan for the weather written before the day. Colorado evenings get cold fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time."
         },
         {
           "q": "The venue has a curfew and a decibel limit. Is that a problem?",
@@ -362,7 +362,7 @@
         {
           "_closed_note": "Closed 2026-08-17. Daniel: green room not needed but it supports their event; if meals are served the band would like them. The old answer made both a requirement over four hours. Because neither is an obligation, this does NOT go into contract §7, which cancels draft note 7 on 03a.",
           "q": "Do the musicians need a green room or meals?",
-          "a": "Neither is a requirement. A green room, where one exists, does more for your event than for us: it keeps cases and spare gear out of your guests' sightline and gives the band somewhere to change that is not a corridor. We don't ask for meals. If meals are being served, the band would like them, and a vendor meal is exactly right."
+          "a": "Neither is a requirement. A green room, where one exists, does more for your event than for us: it keeps cases and spare gear out of your guests' sightline and gives the band somewhere to change that isn't a corridor. We don't ask for meals. If meals are being served, the band would like them, and a vendor meal is exactly right."
         }
       ]
     },
@@ -375,7 +375,7 @@
         },
         {
           "q": "Do you take requests during the event?",
-          "a": "From you, yes, and from guests where it fits. The bandleader's job is reading the floor, so a request that would empty it gets a straight answer and an alternative rather than a yes and a bad twenty minutes."
+          "a": "From you, yes, and from guests where it fits. The bandleader's job is reading the dance floor, so a request that would empty it gets a straight answer and an alternative rather than a yes and a bad twenty minutes."
         }
       ]
     }
@@ -383,7 +383,7 @@
   "faqs": [
     {
       "q": "What does a band cost for a corporate event in Denver?",
-      "a": "In this market a cover or jazz band for a corporate event runs {{market:us_corporate_band}}, and the four to six piece build the Denver market treats as its middle runs {{market:denver_midtier_band}}. Those are the market's figures, not ours. Signet prices the date you are asking about, because a Tuesday in September and a Saturday in December are not the same job."
+      "a": "In this market a cover or jazz band for a corporate event runs {{market:us_corporate_band}}, and a four to six piece band, the size the Denver market treats as its middle, runs {{market:denver_midtier_band}}. Those are the market's figures, not ours. Signet prices the date you're asking about, because a Tuesday in September and a Saturday in December aren't the same job."
     },
     {
       "q": "Do you publish your prices?",
@@ -395,11 +395,11 @@
     },
     {
       "q": "Do you provide a certificate of insurance?",
-      "a": "Yes, naming your venue as additional insured, sent in the same email as the contract. The limits are the pair Colorado venues write into their vendor requirements. A W-9 and one itemised invoice come with it."
+      "a": "Yes, naming your venue as additional insured, sent in the same email as the contract. The coverage limits match what Colorado venues write into their vendor requirements. A W-9 and one itemised invoice come with it."
     },
     {
       "q": "Can one booking cover cocktails and dancing?",
-      "a": "Yes. Once we are in the building the setup is already paid for, so a smaller group covering ceremony, cocktails or dinner alongside the main booking is a cheaper way to cover the night than hiring twice. One contract, one load-in, one invoice."
+      "a": "Yes. Once we're in the building the setup is already paid for, so a smaller group covering ceremony, cocktails or dinner alongside the main booking is a cheaper way to cover the night than hiring twice. You get one contract, one load-in and one invoice."
     },
     {
       "_note": "The 'who do we deal with on the night' question lived here too until 2026-08-07. It is not a money question, and it now has a fuller answer in plannerFaqs that distinguishes the contact from whoever fronts the band. One home only.",

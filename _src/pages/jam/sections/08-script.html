@@ -1,23 +1,12 @@
-<!-- The venue parameter (handoff §6) and the one piece of motion left, a
-     fade-up on enter. No library: the GSAP pins went with the sections that
-     used them (2026-09-16). -->
+<!-- The one piece of motion, a fade-up on enter. No library. The ?venue=
+     parameter left 2026-09-18: no venue is mentioned on the page. -->
 <script>
 (function () {
   'use strict';
   var doc = document, root = doc.documentElement;
 
-  /* Venue parameter. textContent only, never innerHTML, so ?venue=<b>x</b>
-     renders as literal text. Nothing else on the page is venue-specific, and
-     with no parameter the line reads "at one venue in Denver". */
   var params = null;
   try { params = new URLSearchParams(location.search); } catch (e) {}
-  var venueEl = doc.getElementById('jam-venue');
-  var venue = params ? params.get('venue') : '';
-  venue = venue ? venue.replace(/\s+/g, ' ').trim().slice(0, 80) : '';
-  if (venue && venueEl) {
-    venueEl.textContent = 'at ' + venue;
-    doc.title = 'Signet Jam at ' + venue;
-  }
 
   /* Fade up on enter, once. A scroll check rather than an
      IntersectionObserver: a fast scroll can jump an element clean past the
