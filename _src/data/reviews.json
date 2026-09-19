@@ -1,8 +1,6 @@
 {
   "_comment": "The provenance ledger for every third-party review published on this site. Same job media-sources.json does for footage and photographs: nothing quoted on a page exists without a row here, and a removal goes through this file rather than through the HTML. Not read by build.py. Reviews render as visible HTML in the section files listed under `placed`; they NEVER go into schema.json, per the standing note in corporate/schema.json _reviews_note (first-party Review markup on your own LocalBusiness is the self-serving pattern Google's review-snippet guidelines reject).",
 
-  "_attribution_rule": "Name, month and year, then the source in plain text: 'From the Thumbtack profile of Jordan Lovinger, guitar.' No link, ever. Thumbtack is a paid lead marketplace that lists our competitors on the same page, and Jordan's profile FAQ publishes hourly rates, which collides with the no-published-prices law.",
-
   "_verification_rule": "Only reviews carrying Thumbtack's 'Hired on Thumbtack' badge may be published. Five of the twenty-six do not carry it and are all held below.",
 
   "sources": {
