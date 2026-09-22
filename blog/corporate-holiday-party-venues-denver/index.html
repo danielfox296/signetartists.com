@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Matches --paper. Without it the phone's browser chrome stays white above
-       a dark page, which is the tell that a dark theme was retrofitted. -->
+  
   <meta name="theme-color" content="#14130e">
   <title>Sixteen corporate holiday party venues in Denver, 2026 — Signet Artists</title>
   <meta name="description" content="Sixteen Denver corporate holiday party venues for 2026, sized from 40 to 3,500 guests, with published capacities, the fine print planners hit, and live-music notes on each.">
@@ -23,10 +22,7 @@
   <meta property="article:modified_time" content="2026-08-27">
   <meta property="article:author" content="Signet Artists">
 
-  <!-- Fraunces + Inter came off Google Fonts here until 2026-08-07. Archivo is
-       self-hosted in vendor/fonts/ and declared in styles.css, so the two
-       preconnects and the render-blocking third-party stylesheet are gone with
-       them: one origin, one font file, nothing to hand off to. -->
+  
   <link rel="preload" href="../../vendor/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -38,36 +34,20 @@
   <script defer src="../../analytics.js"></script>
 </head>
 <body>
-  <!-- WCAG 2.4.1 Bypass Blocks. Visually hidden until it takes focus, so
-     the first Tab on any page offers the content instead of eight nav
-     links. Added 2026-09-22; the site had no skip link at all. -->
+  
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
-         front-range centric). A third line under the wordmark, so every page
-         says where in one glance at every width, and the nav row stays
-         uncrowded. Display form, not the footer's prose form. -->
+    
     <div class="brand-lockup">
       <a class="wordmark" href="../../">Signet Artists</a>
       <p class="header-loc">BOOK LIVE MUSIC IN COLORADO</p>
     </div>
 
-    <!-- Songs added 2026-08-07. /repertoire/ carries the cover walls and the
-         whole song book and was reachable only from two inline prose links and
-         one hub card. The best page on the site, absent from its own
-         navigation. "Songs" rather than "Repertoire" because it sits next to
-         "The Music" and the pair has to read as two different questions: who
-         plays, and what they play. -->
-    <!-- Weddings added 2026-09-06 with the /weddings/ hub, when Daniel lifted
-         the one-wedding-surface cap. It sits between Corporate and Private
-         Parties because the three are one row of occasion hubs and corporate
-         keeps the earlier slot. -->
-    <!-- Corporate and Private Parties are the two occasion hubs of the
-         2026-08-20 buildout; corporate keeps the earlier slot. "Corporate"
-         rather than "Corporate & Galas": the 17 Aug audit reframed galas as a
-         small-format section on the hub, not a co-headline. -->
+    
+    
+    
     <nav class="nav-desktop">
       <a href="../../music/" >Artist Roster</a>
       <a href="../../repertoire/" >Songs</a>
@@ -82,18 +62,7 @@
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
   </div>
 
-  <!-- The mobile menu covers every width under 1024px, which is most of the
-       traffic, so it carries what the desktop row carries and is labelled the
-       same way. Two things it did not have until 2026-09-22: the same label as
-       the desktop row for /music/ (the roster was "The Roster" here, "Artist
-       Roster" in the desktop row and "Artist roster" in the footer — one
-       destination, three anchor texts, on every page), and aria-current, so
-       there was no current-page indicator at all below 1024px. The nav_* tokens
-       resolve in both rows; build.py replaces every occurrence.
-
-       Daytime has no desktop slot — the row needs 987px of content width as it
-       stands and swaps in at 1024 — but the menu is a stacked list with room,
-       so the fourth occasion tree is reachable from the nav here. -->
+  
   <nav class="nav-mobile" id="mobile-nav">
     <a href="../../music/" >Artist Roster</a>
     <a href="../../repertoire/" >Songs</a>
@@ -392,37 +361,7 @@ above.</p>
   });
 </script>
   </main>
-  <!-- The footer is orientation, not inventory. Cut from 63 links to 20 on
-     2026-09-22, the same day the configuration index went on /music/ and the
-     HTML sitemap went up at /sitemap/.
-
-     It had 63 links because it was doing a job it no longer has to do. On
-     2026-09-13 the spokes carried one to seven inbound links each and four
-     hubs sat "Discovered, never crawled" in Search Console, so a column went
-     in per tree. A crawl of the build on 2026-09-22 found every occasion hub
-     already linking, in its own body copy, to every spoke beneath it:
-     corporate 6/6, weddings 5/5, private parties 11/11, daytime 5/5, planners
-     4/4. /weddings/cocktail-hour/ has 21 in-body linking pages now. The footer
-     link was the weakest of its 39.
-
-     What it was costing: 63 links x 95 pages = 5,985 internal links, a median
-     of 65.6% of every page's links and more than half on all 95 of them.
-     Boilerplate ran to 93% of the words on /thanks/, 62% on /about/ and 53%
-     on /contact/. Sitewide footer links are read as low-priority navigational
-     signals anyway, and for retrieval the cost is sameness: a funerals page
-     and a yacht-rock page shared about 65% of their anchor text.
-
-     Only three destinations here have no in-body inbound link anywhere on the
-     site, and all three stay: /about/, /blog/ and /for-artists/. Everything
-     else that left is linked from its hub in body copy and from /sitemap/,
-     which is generated from the build and so cannot go stale by hand.
-
-     The test for a link belonging here: it answers what this is, who is
-     behind it, where to learn more, or how to reach us. "Halloween party"
-     answers none of them. It belongs on the private-parties hub, where it is.
-
-     DO NOT add a column when a tree ships. Add the spoke to its hub's index
-     section, and /sitemap/ picks it up on the next build with no edit here. -->
+  
 <footer class="site-footer">
 
   <div class="wrap footer-head">
@@ -430,11 +369,7 @@ above.</p>
       <p class="wordmark">Signet Artists</p>
       <p class="footer-line">Live entertainment for private events in the Denver area, including the Front Range, and the mountain corridor.</p>
     </div>
-    <!-- Profile links, added 2026-08-21 as profiles go live. rel="me" marks
-         them as this brand's own identities for entity consolidation. Only
-         profiles worth a buyer's click belong here, never every citation —
-         and never Thumbtack: that would route free direct traffic into the
-         pay-per-lead channel. -->
+    
     <div class="footer-contact">
       <a class="footer-email" href="mailto:hello@signetartists.com">hello@signetartists.com</a>
       <a class="footer-social" href="https://www.linkedin.com/company/signetartists/" rel="me">Signet on LinkedIn</a>
@@ -443,9 +378,7 @@ above.</p>
   </div>
 
   <div class="wrap footer-band">
-    <!-- The four occasion hubs, in the header nav's order. Each one is a
-         complete index of its own tree in its own body copy, which is what
-         lets the spokes come out of here. -->
+    
     <div class="footer-col">
       <p class="eyebrow">Occasions</p>
       <ul class="footer-list">
@@ -456,10 +389,7 @@ above.</p>
       </ul>
     </div>
 
-    <!-- The roster and the configuration index both live on /music/; the song
-         book is /repertoire/. scripts/act_lint.py checks that a new act's page
-         is linked from here or from the roster, so the roster link is what
-         keeps that gate honest now. -->
+    
     <div class="footer-col">
       <p class="eyebrow">The music</p>
       <ul class="footer-list">
@@ -487,20 +417,14 @@ above.</p>
     </div>
   </div>
 
-  <!-- The two ways to work with Signet, and the backstop. /sitemap/ carries
-       every page on the site, so one link here replaces the forty-three that
-       left. -->
+  
   <div class="wrap footer-base">
     <ul class="footer-base-links">
       <li><a href="../../sitemap/">All pages</a></li>
       <li><a href="../../for-artists/">For artists</a></li>
       <li><a href="../../preferred-vendors/join/">Join the Preferred Vendor List</a></li>
     </ul>
-    <!-- The availability disclaimer, Daniel's wording, 2026-09-19 ("make a
-         disclaimer that all acts and configurations are subject to
-         availability"). Sitewide because the roster, the act pages, the
-         pricing page and the occasion pages all name acts and sizes. It is a
-         disclaimer, never a status: nothing on the site says who is free when. -->
+    
     <div class="footer-base-meta">
       <p class="footer-meta">All acts and configurations are subject to availability.</p>
       <p class="footer-meta footer-meta--copyright">&copy; 2026 Signet Artists</p>

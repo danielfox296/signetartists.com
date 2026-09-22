@@ -1476,9 +1476,16 @@ def render_page(
     if nav_prefix is None:
         nav_prefix = "../" * output.count("/")
 
-    base = read(LAYOUTS / "base.html")
-    header = partial("header")
-    footer = partial("footer")
+    # The layout and the two partials get the same treatment page sections have
+    # had all along: the editorial comments are for us, not for view-source.
+    # They were exempt until 2026-09-22 only because the strip ran on `content`
+    # and these are assembled around it — 577KB of notes across the build, 7.4%
+    # of every byte of HTML the site serves, repeated on all 96 pages. The
+    # source keeps every word. Scripts here carry no "<!--", so the regex has
+    # nothing to eat but comments.
+    base = COMMENT.sub("", read(LAYOUTS / "base.html"))
+    header = COMMENT.sub("", partial("header"))
+    footer = COMMENT.sub("", partial("footer"))
 
     for key in NAV_KEYS:
         marker = 'aria-current="page"' if key == nav_active else ""
