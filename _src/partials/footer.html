@@ -28,7 +28,21 @@
      answers none of them. It belongs on the private-parties hub, where it is.
 
      DO NOT add a column when a tree ships. Add the spoke to its hub's index
-     section, and /sitemap/ picks it up on the next build with no edit here. -->
+     section, and /sitemap/ picks it up on the next build with no edit here.
+
+     2026-09-22, second pass. It shipped with "Pricing" and "What live music
+     costs" as adjacent rows in the Planning column. Two URLs, one question,
+     and to anyone scanning the column it reads as the site repeating itself.
+     The guide came out: /pricing/ links to it three times in its own body,
+     it has thirty in-body inbound links and it is on /sitemap/, so the footer
+     slot was buying nothing. Three destinations were also wearing two names
+     each between here and the nav row (Corporate / "Corporate events",
+     Daytime / "Daytime bookings", For Planners / "Resources for planners")
+     and Private Parties differed in case. Every label here now matches the
+     nav row character for character.
+
+     scripts/nav_lint.py enforces all of that against the built HTML. Run it
+     before shipping a change to this file. -->
 <footer class="site-footer">
 
   <div class="wrap footer-head">
@@ -55,10 +69,10 @@
     <div class="footer-col">
       <p class="eyebrow">Occasions</p>
       <ul class="footer-list">
-        <li><a href="{{nav_prefix}}corporate/">Corporate events</a></li>
+        <li><a href="{{nav_prefix}}corporate/">Corporate</a></li>
         <li><a href="{{nav_prefix}}weddings/">Weddings</a></li>
-        <li><a href="{{nav_prefix}}private-parties/">Private parties</a></li>
-        <li><a href="{{nav_prefix}}daytime/">Daytime bookings</a></li>
+        <li><a href="{{nav_prefix}}private-parties/">Private Parties</a></li>
+        <li><a href="{{nav_prefix}}daytime/">Daytime</a></li>
       </ul>
     </div>
 
@@ -78,8 +92,7 @@
       <p class="eyebrow">Planning</p>
       <ul class="footer-list">
         <li><a href="{{nav_prefix}}pricing/">Pricing</a></li>
-        <li><a href="{{nav_prefix}}guides/live-music-cost-colorado/">What live music costs</a></li>
-        <li><a href="{{nav_prefix}}planners/">Resources for planners</a></li>
+        <li><a href="{{nav_prefix}}planners/">For Planners</a></li>
         <li><a href="{{nav_prefix}}preferred-vendors/">Preferred Vendor List</a></li>
       </ul>
     </div>
@@ -99,7 +112,7 @@
   <div class="wrap footer-base">
     <ul class="footer-base-links">
       <li><a href="{{nav_prefix}}sitemap/">All pages</a></li>
-      <li><a href="{{nav_prefix}}for-artists/">For artists</a></li>
+      <li><a href="{{nav_prefix}}for-artists/">For Artists</a></li>
       <li><a href="{{nav_prefix}}preferred-vendors/join/">Join the Preferred Vendor List</a></li>
     </ul>
     <!-- The availability disclaimer, Daniel's wording, 2026-09-19 ("make a

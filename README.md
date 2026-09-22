@@ -83,8 +83,17 @@ wiring, the gates, the deploy, the profiles) is the `signet-new-act` skill.
 Its tooling lives here:
 
 - `scripts/act_lint.py [id]` — the roster gate: fields, tag vocabularies,
-  media provenance, the page dir, the schema merge, the footer link, the
+  media provenance, the page dir, the schema merge, the roster link, the
   copy bans. Run it with the other gates.
+- `scripts/nav_lint.py` — the navigation gate, run on the **built** html and
+  wired into the deploy workflow, so it blocks a release rather than being
+  remembered. Three checks across the header row, the mobile menu, every
+  footer column and the 404 list: the same destination twice in one list, two
+  rows in one list answering the same question, and one destination wearing
+  different labels across those surfaces. The second check reads a curated
+  `TOPICS` table, because the pair that prompted it — "Pricing" and "What live
+  music costs" — shares no words with itself and no string comparison would
+  ever have found it. Add a group when two pages start answering one question.
 - `scripts/act_media.py photo|poster|embed` — fetch and crop a photograph,
   save a hero poster, check that a YouTube clip is embeddable; each writes
   its row into `media-sources.json`.

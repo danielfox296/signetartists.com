@@ -53,6 +53,15 @@ jobs:
       - name: Build site
         run: python3 build.py
 
+      # The orientation surfaces, checked against the BUILT html: no
+      # destination twice in one list, no two rows answering the same
+      # question, no destination wearing two names across the header, the
+      # footer and the 404. Added 2026-09-22 after the footer shipped with
+      # "Pricing" and "What live music costs" one under the other. It fails
+      # the deploy on purpose — that pair reached production once already.
+      - name: Lint the navigation
+        run: python3 scripts/nav_lint.py
+
       - name: Stage site
         run: |
           mkdir -p _site
