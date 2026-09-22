@@ -1,0 +1,38 @@
+{
+  "service": {
+    "name": "TODO: what is booked, e.g. 'Blues and rock band'",
+    "serviceType": "TODO: Beatles songs, and everybody sings for private and corporate events",
+    "description": "TODO: one factual sentence: who, what, sizes, where.",
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+    ],
+    "configs": [
+      "duo"
+    ]
+  },
+  "act": "your-bird-can-sing",
+  "faqs": [
+    {
+      "q": "What does Your Bird Can Sing play?",
+      "a": "TODO: answer inside the first sentence, then one supporting fact."
+    },
+    {
+      "q": "How small can this booking be?",
+      "a": "TODO"
+    },
+    {
+      "q": "Will it fill a dance floor?",
+      "a": "TODO"
+    },
+    {
+      "q": "Can it play outdoors?",
+      "a": "TODO"
+    }
+  ]
+}

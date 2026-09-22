@@ -15,6 +15,7 @@ Three checks, all on the BUILT html, because that is what a person sees:
   E  /sitemap/ lists every indexable page, exactly once, and nothing else
   F  a breadcrumb or sibling label disagrees with the nav label for that URL
   G  a breadcrumb trail that repeats itself or points at a page not in the build
+  H  an anchor anywhere in the build with nothing to click and nothing to read
 
 /sitemap/ and the breadcrumbs were exempt from C until 2026-09-22, on the
 argument that they use different label lengths on purpose — /sitemap/ wants
@@ -247,6 +248,27 @@ def main() -> int:
                 crumb_labels.setdefault(u, set()).add(label)
                 if u not in built:
                     errors.append(f"{page_url}: sibling list points at {u}, not in the build")
+
+    # ---- H: anchors with no text ----------------------------------------
+    # /music/ shipped "...happy to help at every stage.  <a href="../repertoire/">
+    # </a> <a href="../pricing/"></a>." — two anchors whose text had been
+    # deleted and a stray period left behind, rendering as "at every stage. ."
+    # It was live. A screen reader announces the URL; a mouse finds nothing to
+    # hit. Found 2026-09-22 by auditing the build rather than the nav.
+    for f in sorted(ROOT.rglob("index.html")):
+        rel = f.relative_to(ROOT)
+        if any(x in rel.parts for x in ("_src", ".git", "vendor", "__pycache__", ".github", ".claude")):
+            continue
+        html = f.read_text(encoding="utf-8")
+        if 'http-equiv="refresh"' in html:
+            continue
+        page_url = "/" + rel.as_posix().replace("index.html", "")
+        for tag, inner in re.findall(r"(<a\b[^>]*>)(.*?)</a>", html, re.S):
+            text = " ".join(re.sub(r"<[^>]+>", " ", inner).split())
+            if text or "aria-label=" in tag or "<img" in inner or "<svg" in inner:
+                continue
+            href = re.search(r'href="([^"]*)"', tag)
+            errors.append(f"{page_url}: anchor with no text -> {href.group(1) if href else tag}")
 
     for url, labs in sorted(crumb_labels.items()):
         # "Home" is the trail's word for the root everywhere on the web, and
