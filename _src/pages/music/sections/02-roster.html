@@ -1,0 +1,19 @@
+<!-- Filter UI ships hidden and roster.js unhides it, so with script off every
+     act on the roster is still on the page. The filter is a class toggle over
+     data attributes rendered by build.py, never a re-render. -->
+<section class="section section--ruled">
+  <div class="wrap">
+    <h2 class="h3">Filter the roster</h2>
+    <p class="note">By the kind of night, the size of the act, the genre, or whether it&rsquo;s sung.</p>
+
+    {{roster_filters}}
+
+    {{roster_grid}}
+
+    <!-- Daniel's disclaimer, 2026-09-19, on the page that lists every act and
+         size. The footer carries the same sentence sitewide. -->
+    <p class="note">All acts and configurations are subject to availability.</p>
+  </div>
+</section>
+
+<script defer src="../acts.js"></script>

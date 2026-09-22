@@ -1,0 +1,3063 @@
+/* Signet Artists — signetartists.com
+   Ported from the Tailwind build 2026-08-01. Design-system pass 2026-08-02
+   (WEBSITE-PLAN §6): display type step, brass as a functional accent, the
+   wink, and the stated base-8 spacing scale. Type became Archivo 2026-08-07,
+   ported from soundbathcalendar; Fraunces and Inter are gone.
+
+   Inverted to a dark base 2026-08-07, on Daniel's call. The repertoire page's
+   cover walls were the reference: the whole site now sits on the ground that
+   used to be reserved for the late-night beat. This reverses
+   DESIGN-DIRECTION's "light base" and WEBSITE-PLAN §6.2's "night is for the
+   music, never for the paperwork"; both docs are amended to match rather than
+   left contradicting the stylesheet.
+
+   The inversion happens here and almost nowhere else. 267 rules read these
+   tokens, so the token NAMES are now role names rather than descriptions:
+   --paper is the ground, --ink is the type that sits on it. Renaming them
+   would have touched every rule in the file to no benefit. Read "paper" as
+   "ground" and "ink" as "foreground" and everything below still parses. */
+
+:root {
+  /* Tells the UA to render form controls, scrollbars and spellcheck underlines
+     dark. Without it the select menus and the filter controls come back
+     light and the page looks half-converted. */
+  color-scheme: dark;
+
+  /* Grounds. The band is now LIFTED off the base rather than sunk into it,
+     which is the way depth reads on a dark ground. 1.09:1 apart — a hair more
+     separation than the light build's paper/sunk pair had at 1.06:1. */
+  --paper: #14130e;
+  --paper-sunk: #1e1c15;
+  --rule: #332f26;
+  /* Form-control boundaries. --rule reads 1.40:1 on the base — fine for
+     hairline dividers, short of WCAG 1.4.11's 3:1 for a component whose
+     border is its only visual indicator. This cut clears it on the base
+     (3.86:1) and on the band (3.54:1), staying in the same warm-grey family. */
+  --rule-strong: #77725f;
+  --ink: #fbfaf7;
+  --ink-soft: #cfccc2;
+  /* All three checked against BOTH grounds, not just the base — eyebrows and
+     table headers sit on the lifted band. Worst case is --ink-faint on the
+     band at 5.99:1, comfortably past AA at the 11px it gets used at. */
+  --ink-faint: #9d998d;
+  /* Brass was two cuts, one per ground. On a dark site the lifted cut is the
+     only one that works, so it is promoted to the default: 7.92:1 on the base
+     and 7.26:1 on the band. The old light-ground brass (#84682d) reads 2.4:1
+     here and is gone. */
+  --brass: #c9a45a;
+  /* Kept for the rare second level of emphasis. 10.12:1 on the base. */
+  --brass-bright: #dcbb7a;
+  /* Alias, retained so the cover-wall and night rules that predate the
+     inversion keep resolving. Same value as --ink-soft by design. */
+  --paper-dim: #cfccc2;
+
+  /* Archivo, ported from soundbathcalendar 2026-08-07 on Daniel's call: "i
+     want the type choices from the sound bath site ported over." That replaces
+     Fraunces + Inter, which WEBSITE-PLAN §6 had called settled. One variable
+     family, two voices, selected per surface with font-stretch and weight
+     rather than by loading a second file. Both token names survive as aliases
+     so every rule below keeps resolving; they now point at the same face.
+
+     That site's standing ruling comes with it: no serif ever appears, in the
+     stack or anywhere else. The fallbacks are the system sans. */
+  --display: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
+
+  /* TRACKING LAW (2026-08-07, from soundbathcalendar's "zero positive
+     letter-spacing anywhere"). One value, one token, every uppercase label on
+     the site. Nothing else on this site carries positive tracking; display and
+     heading steps run negative, and body runs normal.
+
+     Not zero, and the difference is deliberate. That site applies caps at
+     display sizes, where zero is right. Every tracked element here is a 12px
+     label — eyebrows, table headers, field labels — and caps at 12px are drawn
+     for mixing with lowercase, so they set tight and need a little air to stay
+     readable. What the law is actually killing is the old 0.22em, which is the
+     letterspaced-caps register DESIGN-DIRECTION bans by name as wedding
+     stationery. This is a third of that, and it replaced fifteen scattered
+     values of 0.22 and 0.16 that had drifted apart with no rule behind them. */
+  --track-caps: 0.06em;
+
+  --wrap: 64rem;
+
+  /* Spacing scale (WEBSITE-PLAN §6.5): base-8, stated. 8/16/24/40/64/104.
+     Dense where a planner compares, generous where we assert; section
+     rhythm runs on the top three steps. */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;
+}
+
+/* Self-hosted latin subset, both axes, ~88KB. OFL, licence in vendor/fonts/.
+   Self-hosted rather than linked: it drops two preconnects and a
+   render-blocking Google stylesheet, which matters for the venue-basement
+   phone this site is designed around. */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url(vendor/fonts/archivo-variable-latin.woff2) format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+/* Unresolved config values carry a dotted underline so open decisions stay
+   visible while browsing. */
+[data-tbd="true"] {
+  text-decoration: underline dotted var(--brass);
+  text-underline-offset: 0.3em;
+}
+
+/* Tabular figures everywhere numbers sit in a column — rates, sizes, hours. */
+.tnum,
+.tnum td,
+.tnum th {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- layout */
+
+/* padding-left/right rather than the shorthand: the responsive override below
+   would otherwise reset the vertical padding that .header-inner sets. */
+.wrap {
+  box-sizing: content-box;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding: var(--space-5) 0;
+}
+
+.section--top {
+  padding-top: var(--space-4);
+}
+
+.section--ruled {
+  border-top: 1px solid var(--rule);
+}
+
+/* Generated grain, not a photograph. An SVG turbulence filter inlined as a
+   data URI — about 400 bytes, no extra request, no licence, and tuned to
+   this exact palette rather than approximated from a stock texture. Pushes
+   the sunk bands from flat-digital toward printed matter, which is the
+   "well-made editorial site" reference class in DESIGN-DIRECTION. */
+/* The rect is filled white since the inversion. Unfilled it defaults to black,
+   which was correct speckle on cream and invisible on a dark ground — the
+   grain had to flip with the palette or it stopped existing. */
+.section--sunk {
+  background-color: var(--paper-sunk);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* The night arc, rebuilt for the dark base (WEBSITE-PLAN §6.2, amended
+   2026-08-07). Inverting the whole site would have flattened this: a band that
+   used to mean "eleven o'clock" is indistinguishable from its neighbours once
+   every ground is dark. So night went the other way and became the DEEPEST
+   ground rather than the only dark one. The arc still runs, one step lower
+   than before: base, lifted band, then true midnight for the late-night beat
+   and the cover walls, then back up.
+
+   That is also what keeps the walls working. The album sleeves are the one
+   place full-colour art enters this system, and they want the quietest
+   possible ground under them.
+
+   .btn is unaffected here now — it is a light fill with dark type across the
+   whole site since the inversion, so it reads on all three grounds. */
+.section--night {
+  background-color: #0a0906;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  color: var(--ink);
+}
+
+/* The cut into midnight is its own rule; a hairline there is noise. */
+.section--night.section--ruled {
+  border-top-color: #0a0906;
+}
+
+.section--night .h1,
+.section--night .h2,
+.section--night .h3 {
+  color: var(--ink);
+}
+
+.section--night .eyebrow {
+  color: var(--brass-bright);
+}
+
+.section--night .lede,
+.section--night .prose,
+.section--night .note {
+  color: var(--ink-soft);
+}
+
+.section--night ::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.section--night :focus-visible {
+  outline-color: var(--brass-bright);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .section--sunk,
+  .section--night {
+    background-image: none;
+  }
+}
+
+/* ------------------------------------------------------------ typography */
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+/* The brass slab (borrowed from soundbathcalendar's coral "TODAY" marker,
+   2026-08-07). That site spends its one signal hue as a FILLED slab behind
+   reversed type rather than as coloured text, and holds it to a written
+   budget: "≤2 coral slabs per screen. Nothing else." Signet's brass had the
+   budget already (WEBSITE-PLAN §6.3, one emphasised fact per page) but only
+   ever existed as text colour, which is why it kept losing arguments with the
+   display type above it.
+
+   BUDGET LAW, and it is the whole point of the component: exactly one slab
+   per page, on the page eyebrow. Brass stays text colour everywhere else —
+   table headers, .num-accent, link underlines, focus rings. A second slab on
+   a page means one of them is not the emphasised fact.
+
+   Reversed type is --paper on --brass: 7.92:1. */
+.eyebrow--slab {
+  display: inline-block;
+  padding: 0.35rem 0.7rem 0.3rem;
+  background: var(--brass);
+  color: var(--paper);
+  letter-spacing: var(--track-caps);
+}
+
+.section--night .eyebrow--slab {
+  background: var(--brass-bright);
+  color: #0a0906;
+}
+
+/* Every heading is condensed and heavy — soundbathcalendar's h1/h2/h3 rule,
+   ported verbatim as the setting: weight 800, stretch 72%, leading 1.02,
+   tracking -0.005em. The variable font's two axes are what carry the voice
+   here now, where the old build used two families. */
+.h1 {
+  margin-top: 1rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 2.25rem;
+  line-height: 1.02;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+
+/* Subheads go uppercase 2026-08-07, on Daniel's call, which extends the
+   display step's treatment down the scale. Condensed caps at 800 hold a
+   section without a rule above them, so the caps are doing structural work
+   rather than decoration. Tracking stays at the heading value: caps want air
+   at 12px, not at 24 and 30. */
+.h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 1.875rem;
+  line-height: 1.02;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 1.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* Display step (WEBSITE-PLAN §6.1): the hero and flagship section headlines.
+   Composes with the existing heading class — class="h1 display" — so the
+   h1/h2/h3 hierarchy beneath stays coherent, and the compound selector
+   outranks the breakpoint sizes below.
+
+   Rebuilt on Archivo 2026-08-07. Uppercase and leading 0.95 are that site's
+   display treatment (.detail__h1), and they are the whole reason its headlines
+   land: condensed caps stack into a block, and the block is the image on a
+   page that has no photograph. The opsz axis that used to drive this is gone
+   with Fraunces; stretch and weight do the work now. Tracking is left at the
+   heading value rather than opened up — caps want air at 12px, not at 80. */
+.h1.display,
+.h2.display,
+.h3.display {
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(2.5rem, 1.35rem + 5.6vw, 5.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* Flagship section head (WEBSITE-PLAN §6.1, which defines the display step for
+   "hero/section heads" — until now only heroes took it). One per page, on the
+   section that is the page's actual payload: the checklist on the technical
+   page, the gala on run of show. Its own step rather than `.h2 display`, which
+   would tie a section head to the h1 and let it win the page. Before this the
+   planner pages ran 72px then 24px with nothing between, and seven equal-weight
+   heads in a row is what makes a page read as documentation. */
+.h3--lead {
+  font-size: clamp(1.875rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+}
+
+.heading {
+  max-width: 42rem;
+}
+
+.heading .h2 {
+  margin-top: 0.75rem;
+}
+
+.lede {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.prose {
+  margin-top: 1rem;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.prose strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Inline links in body copy. Without this they inherit the surrounding colour
+   and are indistinguishable from text — which they were until 2026-08-02. */
+.prose a,
+.note a,
+.lede a,
+.spec-list a,
+.faq-row dd a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 1px;
+}
+
+.prose a:hover,
+.note a:hover,
+.lede a:hover,
+.spec-list a:hover,
+.faq-row dd a:hover {
+  color: var(--brass);
+}
+
+/* A link inside an eyebrow (the founder line on /about/): same hairline as
+   body links, in the eyebrow's own colour on either ground. */
+.eyebrow a {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+/* One client quote, verbatim, brass rule, no card and no stars. Moved out of
+   invisible Review markup 2026-08-27: a buyer could not read it there, and
+   self-serving Review schema is the pattern Google ignores. Quiet on purpose;
+   the proof layer starts at one. */
+.review-pull {
+  margin: 2.5rem auto 0;
+  max-width: 44rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--brass);
+}
+
+.review-pull blockquote {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.review-pull figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+/* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set at the size
+   of the text around it so the register shift reads as intentional design
+   rather than inconsistency. Inherits size and colour deliberately: in the
+   footer it sits at body size mid-sentence; on 404 and thanks the playful line
+   is the headline itself, where .smile adds only the tell.
+
+   Rebuilt 2026-08-07. It used to be Fraunces
+   italic, and the Archivo subset carries no italic axis — the ported ruling is
+   one family, roman, no serif. So the tell moved from slant to WIDTH: the
+   playful line expands to 118% while every heading around it sits condensed at
+   72%. Same job as the italic did, said in the axis this face actually has,
+   and a 46-point width jump is more visible than a slant was. */
+.smile {
+  font-family: var(--display);
+  font-stretch: 118%;
+  font-weight: 500;
+}
+
+.hero-lede {
+  margin-top: 1.25rem;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* -------------------------------------------------------------- buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+}
+
+/* Brass is spent on the active CTA (WEBSITE-PLAN §6.3). The primary button
+   stays ink at rest; keyboard focus now answers in brass exactly as hover
+   does, on top of the global brass focus ring. Outline buttons keep the
+   ring alone. Paper on brass is 5.0:1. */
+.btn:not(.btn--outline):focus-visible {
+  background: var(--brass);
+  border-color: var(--brass);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--rule);
+}
+
+.btn--outline:hover {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn--sm {
+  padding: 0.5rem 1rem;
+}
+
+.btn-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------- header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--rule);
+  background: rgba(20, 19, 14, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* The location cue under the wordmark (2026-08-27): geography on every page
+   without spending a pixel of image, at every width. */
+.header-loc {
+  margin: 0.2rem 0 0;
+  font-size: 0.6875rem;
+  letter-spacing: 0.07em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* The Front Range locator strip (2026-08-27): the downtown-into-the-mountains
+   shot as a thin full-bleed band under the home hero. Height-capped so it
+   reads as a locator, not a hero; the duotone keeps it in the paper. */
+.range-strip {
+  position: relative;
+  height: clamp(110px, 15vw, 180px);
+  overflow: hidden;
+}
+
+.range-strip img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+
+/* The wordmark is set, not drawn — WEBSITE-PLAN §6.7 keeps a drawn signet mark
+   as a Phase-3 nice-to-have. Uppercase and heavy 2026-08-07: at sentence case
+   and 400 it read as a page title rather than as a mark, which is the one
+   thing a wordmark cannot do. */
+.wordmark {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+
+/* Gap tightened from 1.75rem and labels pinned to one line on 2026-09-06,
+   when Weddings joined Corporate and Private Parties as the third occasion
+   hub. The header wrap caps at 1024px with 32px of padding, so the row has
+   960px to live in whatever the screen is: seven links plus the button
+   measure about 908 at this gap, and measured about 964 at the old one,
+   which is why labels had started breaking across two lines. */
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-desktop a {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.nav-desktop a:hover,
+.nav-desktop a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.nav-desktop a.btn {
+  color: var(--paper);
+}
+
+.nav-desktop a.btn:hover {
+  color: var(--paper);
+}
+
+.nav-toggle {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+  border-top: 1px solid var(--rule);
+  padding: 0 1.5rem 1.25rem;
+}
+
+.nav-mobile.open {
+  display: block;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.nav-mobile a.nav-mobile-cta {
+  margin-top: 1rem;
+  border-bottom: 0;
+  text-align: center;
+  color: var(--paper);
+}
+
+/* ----------------------------------------------------------------- grids */
+
+.hero-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.split {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.split--center {
+  align-items: center;
+}
+
+/* A two-column split that follows a heading block needs the gap the
+   def-list carries on its own (live band karaoke booking section, 2026-09-14). */
+.heading + .split {
+  margin-top: 2.5rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1px;
+  margin-top: 2.5rem;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.card {
+  background: var(--paper);
+  padding: 1.5rem;
+}
+
+.card-grid--2 .card {
+  padding: 1.75rem;
+}
+
+/* Type tiles (soundbathcalendar CAL-28, borrowed 2026-08-07). That site has no
+   photography for most of its listings and answered it by making the tile a
+   typographic object rather than a caption under a missing image. Signet has
+   the same problem for the opposite reason — the shoot has not happened — and
+   the planner hub is where it shows most, six cards carrying the whole
+   section. Title goes up from 1.25rem to the display face at a size that can
+   hold a card on its own. The tile still recesses into the lifted band, which
+   is the ground doing the work the image would have. */
+.card-grid--2 .card h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+
+.card-grid--2 .card p {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* The Preferred Vendor List (2026-09-20). A vendor card sits under its
+   category's h2, so its name is an h3 set exactly like the card h2 above,
+   with the city on a small line under it. The join line at the foot of the
+   list is smaller and fainter than the listings on purpose, so it never
+   reads as a second call to action beside them. */
+.card-grid--2 .card h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+
+.card-grid--2 .card .vendor-where {
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+.note--small {
+  font-size: 0.8125rem;
+}
+
+.vendor-cat + .vendor-cat {
+  margin-top: 2.75rem;
+}
+
+.vendor-cat .card-grid {
+  margin-top: 1.25rem;
+}
+
+/* ------------------------------------------------------------- hero-cine */
+
+/* The home hero, 2026-09-10. Full-width band, three black and white artist
+   stills crossfading behind white type, darkened from the bottom so the
+   headline and lede hold. CSS only: each frame runs one 18s cycle and the
+   three cycles are offset with negative delays, so frame one is on screen
+   at first paint (no fade-in from black). Each frame also drifts a few
+   percent while it is up. Reduced motion holds frame one, still. The stills
+   are shipped already grayscale; the filter is a belt for any future colour
+   frame dropped into img/hero/. */
+.hero-cine {
+  position: relative;
+  min-height: clamp(520px, 82vh, 860px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  isolation: isolate;
+}
+
+.hero-cine__frames,
+.hero-cine__scrim {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-cine__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: grayscale(1);
+  opacity: 0;
+  transform: scale(1.02);
+  animation: hero-cine-cycle 18s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.hero-cine__frame:nth-child(1) { animation-delay: 0s; }
+.hero-cine__frame:nth-child(2) { animation-delay: -12s; }
+.hero-cine__frame:nth-child(3) { animation-delay: -6s; }
+
+@keyframes hero-cine-cycle {
+  0%    { opacity: 1; transform: scale(1.02); }
+  28%   { opacity: 1; }
+  33.3% { opacity: 0; transform: scale(1.09); }
+  95%   { opacity: 0; transform: scale(1.02); }
+  100%  { opacity: 1; transform: scale(1.02); }
+}
+
+.hero-cine__scrim {
+  z-index: 1;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.18) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.hero-cine__copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-5);
+}
+
+.hero-cine__copy .h1 {
+  margin-top: 0;
+  max-width: 14ch;
+  color: #fff;
+}
+
+.hero-cine__copy .hero-lede {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* The one button on the hero is white on the dark still, brass on hover as
+   everywhere else. */
+.hero-cine__copy .btn {
+  background: #fff;
+  color: #0a0906;
+  border-color: #fff;
+}
+
+.hero-cine__copy .btn:hover,
+.hero-cine__copy .btn:focus-visible {
+  background: var(--brass-bright);
+  border-color: var(--brass-bright);
+  color: #0a0906;
+}
+
+@media (min-width: 1024px) {
+  .hero-cine__copy {
+    padding-bottom: var(--space-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cine__frame {
+    animation: none;
+    transform: none;
+  }
+  .hero-cine__frame:nth-child(1) {
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------------------------- media */
+
+/* Placeholder imagery until the shoot. Duotoned into the palette so the set
+   reads as art direction; the hairline border matches the rate tables and
+   card grids so a photograph sits inside the same system as everything else. */
+.media {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+}
+
+/* ------------------------------------------------------------------ acts */
+
+.act-kind {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.act-name {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.act-heading {
+  margin-top: 0.5rem;
+}
+
+.act-sizes {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+.act-blurb {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.tag-list {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+/* A tag that links into its occasion page (2026-08-20 buildout). Reads as a
+   tag first, a link second: quiet rule underneath, brass on hover. */
+.tag-list a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+}
+
+.tag-list a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--brass);
+}
+
+.tag-label {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+/* ---------------------------------------------------------------- players */
+/* Bandleader bios. Stacked and ruled rather than gridded, so the section
+   reads as deliberate with one entry and still holds at six. Prose measure
+   is capped independently of the wrap: a bio is read, not scanned. */
+
+.player-list {
+  margin-top: 2.5rem;
+  display: grid;
+}
+
+/* Every entry opens on a rule, including the first. Without it the act-kind
+   label reads as another line of the section lede rather than the start of a
+   person, because unlike .card-grid this block has no border of its own. */
+.player {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.player .act-kind {
+  margin-top: 0;
+}
+
+.player .prose {
+  max-width: 34rem;
+}
+
+/* ------------------------------------------------------------ spec lists */
+
+.spec-list {
+  margin-top: 2.5rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.spec-list li {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.spec-list .dash {
+  margin-top: 0.7rem;
+  height: 1px;
+  width: 1rem;
+  flex-shrink: 0;
+  background: var(--brass);
+}
+
+/* ------------------------------------------------------------- data lists */
+
+.def-list {
+  margin-top: 2rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.def-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.def-row:last-child {
+  border-bottom: 0;
+}
+
+.def-row dt {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.def-row dd {
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+
+.def-list--stack .def-row {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem 0;
+}
+
+.def-list--stack dt {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.def-list--stack dd {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.faq-list {
+  margin-top: 2rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-row {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-row:last-child {
+  border-bottom: 0;
+}
+
+.faq-row dt {
+  font-family: var(--display);
+  font-size: 1.125rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.faq-row dd {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------- tables */
+
+/* Tables run past the viewport on a phone. The stage table hid 68% of itself
+   at 375px — including both columns the page exists for — and the cut had no
+   affordance, so a row severed mid-word read as a bug rather than as "scroll
+   me". Two fixed gradients pinned to the scroller's edges, two scrolling
+   gradients that cover them at the ends of the travel. No JS, no listener:
+   background-attachment does the work. */
+.table-scroll {
+  margin-top: 2rem;
+  overflow-x: auto;
+  background:
+    linear-gradient(to right, var(--paper) 30%, rgba(20, 19, 14, 0)) left center,
+    linear-gradient(to left, var(--paper) 30%, rgba(20, 19, 14, 0)) right center,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) left center,
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) right center;
+  background-size: 3rem 100%, 3rem 100%, 1.25rem 100%, 1.25rem 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* The covering gradients have to match the ground they sit on or the shadow
+   never fully clears at the ends of the travel. */
+.section--sunk .table-scroll {
+  background-image:
+    linear-gradient(to right, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
+    linear-gradient(to left, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+}
+
+/* A whole table of working figures, as distinct from one open value inline.
+   [data-tbd] dotted-underlines a single unresolved string; sixteen of them in
+   one table argues the page is unfinished rather than that these are our own
+   measurements. So the flag moves to the block. Pairs with the mountain page's
+   Sources list to make a system: a brass edge is what we measured, a sources
+   list is what we cited. Clears itself when site.json drops the flag. */
+.table-scroll[data-provisional="true"] {
+  border-left: 2px solid var(--brass);
+  padding-left: 1.25rem;
+}
+
+.rate-table {
+  width: 100%;
+  min-width: 30rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.rate-table--full {
+  min-width: 42rem;
+}
+
+.rate-table th {
+  padding: 0.5rem 1rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+  white-space: nowrap;
+}
+
+.rate-table td {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.rate-table td.rate-size {
+  color: var(--ink);
+}
+
+/* The label column sets its own width off its longest entry, and with nowrap
+   that is "3. Your contact reaches you" — 200px of a 327px phone, which pushed
+   "When" back off the screen the column reorder had just rescued. Letting only
+   this column wrap costs a two-line row and buys the answer column. Row heights
+   go ragged; on a phone that is the right trade, and the numeric columns keep
+   their nowrap so no figure ever breaks across lines. */
+@media (max-width: 640px) {
+  .rate-table td.rate-size,
+  .rate-table th:first-child {
+    white-space: normal;
+  }
+}
+
+/* Brass accent (WEBSITE-PLAN §6.3): promoted from ambient to functional.
+   One accent, spent where the persuasion is — the four-hour totals on the
+   rate cards (the number the schema and llms.txt publish) and the single
+   emphasised fact per page. AA on paper (5.0:1) and paper-sunk (4.6:1);
+   never used on .section--night. The extra selectors outgun
+   ".prose strong" and ".rate-table td". */
+/* tabular-nums added 2026-08-07: soundbathcalendar sets its counts and prices
+   to tabular figures in PROSE, not only in table columns, and it is right —
+   .tnum was only ever applied to tables here, so "$6,000 and $12,500" mid
+   sentence and "24 to 48 hours" were rendering proportional while the same
+   figures in the rate card were tabular. Same number, two shapes. */
+.num-accent,
+.prose strong.num-accent,
+.rate-table td.num-accent {
+  color: var(--brass);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Two figures at display scale, replacing the home page's duplicate rate table
+   (2026-08-07). DESIGN-DIRECTION §3: "Numbers get typographic prominence.
+   Rates are display-scale, not fine print." A table set the rates at 14px; the
+   page that was supposed to prove we publish our prices was whispering them. */
+.figure-pair {
+  margin-top: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-3);
+}
+
+.figure-pair dt {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.figure-pair dd {
+  margin-top: 0.4rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+@media (min-width: 640px) {
+  .figure-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ------------------------------------------------------------ stage plot */
+
+/* The technical page's argument at scale. Capped well below the wrap: a
+   24-foot square rendered 64rem wide is a diagram nobody can take in at a
+   glance, and glance is the whole job. */
+.stage-plot {
+  margin: var(--space-4) 0 0;
+  max-width: 26rem;
+}
+
+.stage-plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* The rental figure: an empty outline, because it is floor nobody uses. */
+.plot-guide {
+  fill: none;
+  stroke: var(--rule-strong);
+  stroke-width: 2;
+  stroke-dasharray: 8 7;
+}
+
+/* What the band takes: solid, brass, and the only filled thing in the frame.
+   This is the page's one emphasised fact, so it takes the accent (§6.3) — and
+   it is a fill rather than a text colour, the same move as the eyebrow slab. */
+.plot-actual {
+  fill: color-mix(in srgb, var(--brass) 22%, transparent);
+  stroke: var(--brass);
+  stroke-width: 2;
+}
+
+.plot-label {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 30px;
+  fill: var(--ink);
+}
+
+.plot-sub {
+  font-family: var(--sans);
+  font-size: 17px;
+  fill: var(--ink-faint);
+}
+
+/* ---------------------------------------------------------- cover strip */
+
+/* The site owns 36 real album sleeves and was showing them on exactly one page
+   while nine other pages carried no image at all. This is that asset, wired
+   into the pages that had nothing: a full-bleed run of sleeves on the night
+   ground, linking through to /repertoire/. Full-bleed because the wall on the
+   repertoire page is full-bleed and this has to read as the same object seen
+   in passing, not as a widget quoting it.
+
+   No parallax here. The wall earns motion because it is the page; a strip is
+   a signpost and should hold still. */
+.cover-strip {
+  padding: var(--space-4) 0;
+  overflow: hidden;
+}
+
+.cover-strip-inner {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+}
+
+.cover-strip img {
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Below the fold of a phone the strip would show eight 45px stamps, which reads
+   as noise. Four sleeves at a legible size instead. */
+@media (max-width: 700px) {
+  .cover-strip img:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+.cover-strip-note {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+/* ------------------------------------------------------------------ form */
+
+.form-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+.field .req {
+  color: var(--brass);
+}
+
+.field input,
+.field select,
+.field textarea {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 0;
+  background: var(--paper);
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--ink);
+  outline: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--ink-faint);
+}
+
+.field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-details {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.contact-details dt {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.contact-details dd {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.contact-details a:hover {
+  color: var(--ink);
+}
+
+.panel {
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  padding: 2rem;
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--rule);
+  padding: 3rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-brand {
+  max-width: 20rem;
+}
+
+.footer-line {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+.footer-cols {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-list {
+  margin-top: 0.75rem;
+  display: grid;
+  row-gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.footer-list a:hover {
+  color: var(--ink);
+}
+
+.footer-meta {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+/* The availability disclaimer sits on the rule; the copyright line follows
+   it without a second rule (2026-09-19). */
+.footer-meta--copyright {
+  margin-top: 0.5rem;
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* ----------------------------------------------------------- breakpoints */
+
+@media (min-width: 640px) {
+  .wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .nav-mobile {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spec-list--cols {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
+
+  /* Five columns since the Occasions + Ensembles columns (f4f39e8); between
+     this breakpoint and about 720px they overflowed the wrap and gave every
+     page a horizontal scrollbar (found 2026-09-16 on the jam page). Wrap. */
+  .footer-cols {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-6) 0;
+  }
+
+  .section--top {
+    padding-top: var(--space-5);
+  }
+
+  .h1 {
+    font-size: 3rem;
+  }
+
+  .h2 {
+    font-size: 2.25rem;
+  }
+
+  .lede {
+    font-size: 1.125rem;
+  }
+
+  .card-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split--two {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .faq-row {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.5rem;
+  }
+
+  .def-list--stack .def-row {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 2.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .close-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .close-row .btn-row {
+    margin-top: 0;
+  }
+}
+
+/* The desktop nav row: seven links plus the Check a Date button. It used to
+   swap in at 768px, which stopped fitting once the row grew to eight items on
+   2026-09-06: the page scrolled sideways at 800px and the labels wrapped. The
+   row needs about 908px of content width, so it swaps in at 1024 and the Menu
+   button covers every width under that. */
+@media (min-width: 1024px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-toggle,
+  .nav-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split--flip > *:first-child {
+    order: 2;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------ blog */
+
+/* The blog kit's typed blocks (_src/templates/blocks/), restyled onto this
+   site's tokens: same reading measure as .prose (42rem), hairline rules,
+   paper-sunk panels, brass spent on the one emphasised fact. No motion, no
+   scroll effects — the kit's progress bar and fade-ups were deliberately
+   not ported (see the night-arc note above). */
+
+.blog-article {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.blog-header {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--rule);
+}
+
+.blog-byline {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+}
+
+.blog-byline-author {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.blog-hero {
+  margin-top: var(--space-4);
+}
+
+.blog-hero-caption,
+.blog-figure figcaption,
+.blog-data-viz figcaption,
+.blog-video-caption {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+
+.blog-hero-caption cite,
+.blog-figure figcaption cite,
+.blog-data-viz figcaption cite {
+  font-style: normal;
+}
+
+/* ----- body flow */
+
+.blog-prose {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.blog-prose > :first-child {
+  margin-top: 0;
+}
+
+.blog-prose p {
+  margin-top: 1rem;
+}
+
+.blog-prose strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.blog-prose a,
+.blog-takeaways a,
+.blog-aside-body a,
+.blog-references-list a,
+.blog-transcript a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 1px;
+}
+
+.blog-prose a:hover,
+.blog-takeaways a:hover,
+.blog-aside-body a:hover,
+.blog-references-list a:hover,
+.blog-transcript a:hover {
+  color: var(--brass);
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.blog-prose ul {
+  list-style: disc;
+}
+
+.blog-prose ol {
+  list-style: decimal;
+}
+
+.blog-prose li {
+  margin-top: 0.5rem;
+}
+
+.blog-prose li::marker {
+  color: var(--ink-faint);
+}
+
+.blog-prose blockquote {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--brass);
+  color: var(--ink-soft);
+}
+
+.blog-prose code {
+  font-size: 0.875em;
+  background: var(--paper-sunk);
+  padding: 0.1em 0.35em;
+}
+
+.blog-prose pre {
+  margin: 1rem 0 0;
+  padding: 1rem;
+  background: var(--paper-sunk);
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.blog-prose pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ----- subheads */
+
+.blog-subhead {
+  margin-top: var(--space-4);
+  font-family: var(--display);
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.blog-subhead--h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.blog-subhead--h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.anchor-link {
+  margin-left: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+  opacity: 0;
+}
+
+.blog-subhead:hover .anchor-link,
+.anchor-link:focus-visible {
+  opacity: 1;
+}
+
+.anchor-link:hover {
+  color: var(--brass);
+}
+
+/* ----- pullquote */
+
+.blog-pullquote {
+  margin-top: var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.blog-pullquote blockquote {
+  margin: 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.375rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.blog-pullquote figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+/* ----- stat callout: the single emphasised fact, so it carries the brass */
+
+.blog-stat {
+  margin-top: var(--space-4);
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  padding: 1.5rem;
+}
+
+.blog-stat-number {
+  font-family: var(--display);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: var(--brass);
+}
+
+.blog-stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.blog-stat-source {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+/* ----- aside and key takeaways: paper-sunk panels */
+
+.blog-aside,
+.blog-takeaways {
+  margin-top: var(--space-4);
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  padding: 1.5rem;
+}
+
+.blog-aside-title,
+.blog-takeaways-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.blog-aside-body {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.blog-aside-body p {
+  margin-top: 0.75rem;
+}
+
+.blog-aside-body > :first-child {
+  margin-top: 0;
+}
+
+.blog-takeaways ul {
+  margin-top: 1rem;
+  display: grid;
+  row-gap: 0.75rem;
+}
+
+.blog-takeaways li {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.blog-takeaways li::before {
+  content: "";
+  margin-top: 0.7rem;
+  height: 1px;
+  width: 1rem;
+  flex-shrink: 0;
+  background: var(--brass);
+}
+
+/* ----- figure and data viz */
+
+.blog-figure {
+  margin-top: var(--space-4);
+}
+
+.blog-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+}
+
+.blog-data-viz {
+  margin: var(--space-4) 0 0;
+}
+
+.blog-data-viz svg {
+  display: block;
+  border: 1px solid var(--rule);
+}
+
+/* ----- comparison table: same voice as the rate tables */
+
+.blog-comparison-table {
+  margin: var(--space-4) 0 0;
+}
+
+.blog-comparison-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+.blog-comparison-table .table-scroll {
+  margin-top: 0.75rem;
+}
+
+.blog-comparison-table table {
+  width: 100%;
+  min-width: 30rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.blog-comparison-table th {
+  padding: 0.5rem 1rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.blog-comparison-table th[scope="row"] {
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--ink);
+}
+
+.blog-comparison-table td {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+/* ----- methodology */
+
+.blog-methodology {
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem 0;
+}
+
+.blog-methodology summary {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+  cursor: pointer;
+}
+
+.blog-methodology dl {
+  margin-top: 0.5rem;
+}
+
+.blog-methodology dt {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.blog-methodology dd {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* ----- references, transcript, video */
+
+.blog-references-list {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: decimal;
+}
+
+.blog-references-list li {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  overflow-wrap: break-word;
+}
+
+.blog-references-list li::marker {
+  color: var(--ink-faint);
+}
+
+.blog-transcript-toc {
+  margin-top: 1rem;
+  display: grid;
+  row-gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.blog-transcript-time {
+  display: inline-block;
+  min-width: 3rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.blog-transcript-chapter {
+  margin-top: var(--space-3);
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: var(--ink);
+}
+
+.blog-transcript p {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.blog-video {
+  margin-top: var(--space-4);
+}
+
+.blog-video-frame {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+}
+
+.blog-video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ----- CTA: the one persuasion block per post, printed-matter texture */
+
+.blog-cta {
+  margin-top: var(--space-5);
+  border: 1px solid var(--rule);
+  background-color: var(--paper-sunk);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  padding: 2rem;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .blog-cta {
+    background-image: none;
+  }
+}
+
+.blog-cta-headline {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.blog-cta-body {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.blog-cta-body p {
+  margin-top: 0.75rem;
+}
+
+.blog-cta-body > :first-child {
+  margin-top: 0;
+}
+
+.blog-cta-btn {
+  margin-top: 1.5rem;
+}
+
+/* ----- related posts */
+
+.blog-related {
+  margin-top: var(--space-5);
+}
+
+.blog-related-grid {
+  display: grid;
+  gap: 1px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.blog-related-card {
+  background: var(--paper);
+  padding: 1.5rem;
+}
+
+.blog-related-card .media {
+  margin-bottom: 1rem;
+}
+
+.blog-related-card .eyebrow {
+  display: block;
+}
+
+.blog-related-card-title {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.blog-related-card:hover .blog-related-card-title {
+  color: var(--brass);
+}
+
+.blog-related-dek {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* ----- blog index rows */
+
+.blog-list {
+  margin-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.blog-row {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* The post's hero at thumbnail size, so a reader scanning the list has
+   something to recognise a piece by. Stacked above the text on a phone, a
+   fixed column beside it from 40rem up: a 16:9 still that reflows with the
+   text column ends up either postage-stamp small or taller than its own
+   headline, and neither reads as a list any more. */
+.blog-row-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  transition: opacity 0.15s ease;
+}
+
+.blog-row:hover .blog-row-thumb {
+  opacity: 0.82;
+}
+
+.blog-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+.blog-row-eyebrow {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+.blog-row-title {
+  margin-top: 0.5rem;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.blog-row:hover .blog-row-title {
+  color: var(--brass);
+}
+
+.blog-row-dek {
+  margin-top: 0.5rem;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 640px) {
+  .blog-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-row {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* A row with no hero keeps its text in the text column rather than
+     sliding under the thumbnails above it. */
+  .blog-row > .blog-row-text:first-child {
+    grid-column: 2;
+  }
+}
+
+/* ------------------------------------------------- repertoire: cover walls */
+/* Ported from foxlessons.com, retokenised to this palette. Each set is a
+   10-column, 3-row tile wall spanning the full viewport (no .wrap around the
+   grid). The text block is an island carved out of the grid (4 cols x 2 rows),
+   alternating left/right per set. Tiles are placed by hand-drawn maps in
+   scripts/covers.py; unplaced cells stay empty on purpose so the ink ground
+   reads through. Below 1100px the maps collapse to a packed dense grid and the
+   parallax stands down.
+
+   Ground is .section--night, which WEBSITE-PLAN §6.2 had reserved for the home
+   page's evening arc. Extended here deliberately: this site is paper-light and
+   information-first, and full-colour album art on cream reads as a busy tile
+   field. On ink it reads as records on a shelf. The covers are the one place
+   the paper system lets the outside world in.
+
+   --d is the per-tile parallax rate consumed by the emitted script (static
+   without JS, static under reduced motion, packed + still under 1100px). */
+.cover-wall {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-5) 0 var(--space-4);
+  /* Makes cqw below resolve against the content box. vw would include the
+     scrollbar while the 1fr columns do not, leaving cells 126.5 wide by 128
+     tall — a 1.2% vertical crop on every sleeve. Without a container, cqw
+     falls back to the viewport, i.e. exactly the old behaviour. */
+  container-type: inline-size;
+}
+
+/* Row height MUST equal column width or the sleeves stop being square. Ten
+   columns across the viewport makes each column 10vw, so rows are 10vw and
+   nothing else — a px floor here crops every album cover to a portrait
+   rectangle. Fitting the copy is therefore the text block's problem, not the
+   grid's: the island takes all three rows and the tiles sit clear of it. */
+.wall-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 10cqw;
+}
+
+/* Three rows, not two. At the 1100px breakpoint two rows is 220px, which the
+   longest set overruns by ~130px — the copy then paints over the tiles. Three
+   gives 330px there and 384px at 1280. The layout maps in scripts/covers.py
+   keep every tile in columns 5-10 (mirrored for flipped walls) so nothing
+   sits under the island. */
+.wall-text {
+  grid-column: 1 / 5;
+  grid-row: 1 / 4;
+  align-self: center;
+  position: relative;
+  z-index: 5;
+  padding-left: max(1.5rem, calc((100vw - var(--wrap)) / 2));
+  padding-right: var(--space-4);
+}
+
+.cover-wall--flip .wall-text {
+  grid-column: 7 / 11;
+  padding-right: max(1.5rem, calc((100vw - var(--wrap)) / 2));
+  padding-left: var(--space-4);
+}
+
+/* Caption scale, not body scale. This block lives inside a fixed grid cell,
+   so it is sized to fit rather than to match the page's reading measure. */
+.wall-text .h2 {
+  font-size: clamp(1.4rem, 1.9vw, 2rem);
+  margin-bottom: var(--space-2);
+}
+
+.wall-text .prose {
+  max-width: 26rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.wall-tile {
+  position: relative;
+  z-index: var(--z, 2);
+  margin: 0;
+  grid-column: var(--c) / span var(--cs);
+  grid-row: var(--r) / span var(--rs);
+}
+
+.wall-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The song surfaces on hover; the always-visible liner notes below the wall
+   carry the same titles for touch, keyboard and no-hover readers. */
+.wall-tile figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2.2rem 0.8rem 0.7rem;
+  background: linear-gradient(0deg, rgba(22, 21, 15, 0.94) 40%, rgba(22, 21, 15, 0));
+  opacity: 0;
+  transition: opacity 0.25s;
+  line-height: 1.4;
+}
+
+.wall-tile:hover {
+  z-index: 9;
+}
+
+.wall-tile:hover figcaption {
+  opacity: 1;
+}
+
+.wall-song {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.wall-credit {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--paper-dim);
+}
+
+.wall-notes {
+  color: var(--paper-dim);
+  font-size: 0.82rem;
+  margin-top: var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-tile figcaption {
+    transition: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  /* The art-directed sparse maps assume 10 columns; below that the field packs
+     dense (holes close up) and the parallax script stands down. Row 1 is
+     template-sized `auto` and belongs to the text island, so copy never
+     overlaps tiles. */
+  .wall-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: 16.6667cqw;
+    grid-auto-flow: dense;
+  }
+
+  .wall-text,
+  .cover-wall--flip .wall-text {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 0 1.5rem var(--space-3);
+  }
+
+  .wall-tile {
+    grid-column: auto / span var(--cs);
+    grid-row: auto / span var(--rs);
+  }
+}
+
+@media (max-width: 640px) {
+  .wall-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 25cqw;
+  }
+}
+
+/* ---------------------------------------------------- repertoire: catalog */
+/* The full book. Ships as a plain list that works with JavaScript off; the
+   search box and chips are revealed by scripts/repertoire.py's inline script,
+   so filtering can never be what makes the songs visible. */
+.catalog-controls {
+  margin-bottom: var(--space-3);
+}
+
+.catalog-search input {
+  width: 100%;
+  max-width: 26rem;
+  padding: 0.6rem 0.8rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+}
+
+.catalog-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.catalog-count {
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+.catalog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+
+.catalog-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.catalog-row[hidden] {
+  display: none;
+}
+
+.catalog-song {
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.catalog-artist {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.catalog-empty {
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 800px) {
+  .catalog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================= the roster
+   Restructure 2026-08-15. The site went from two house bands to eight named
+   acts, which changes what a card has to carry: not a mood paragraph but an
+   identity, a size range and a price. Every rule below reads the existing
+   tokens; no new colour enters the system. */
+
+/* The face is the one name published for an act, so it sits directly under
+   the name rather than in the blurb. Faint, because it is attribution and
+   not a headline. */
+.act-face {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+/* Bucket tags. Hairline chips rather than filled pills: the card already has
+   a photograph and a price in brass, and a third filled element would fight
+   both. Doubles as the visible legend for the filter above. */
+.pill-row {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+}
+
+.pill {
+  padding: 0.1875rem 0.5rem;
+  border: 1px solid var(--rule-strong);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------- roster cards */
+
+/* The image bleeds to the card edge, so padding moves off .card and onto the
+   body. .card's own 1.5rem is overridden rather than fought with a negative
+   margin. */
+.act-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.act-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-sunk);
+}
+
+.act-card-video {
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  overflow: hidden;
+}
+
+.act-card-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.act-card-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.act-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Configurations and the starting price, as a definition list because that
+   is what it is. Pushed to the bottom of the card with margin-top:auto so a
+   row of cards lines its prices up regardless of blurb length. That
+   alignment is the point of publishing them: the row is comparable at a
+   glance, which is the whole differentiator. */
+.act-facts {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  align-items: baseline;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+}
+
+.act-facts dt {
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  font-size: 0.6875rem;
+  color: var(--ink-faint);
+}
+
+.act-facts dd {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.act-facts dd.num-accent {
+  font-size: 1rem;
+}
+
+.act-card-link {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 0.125rem;
+}
+
+.act-card-link:hover {
+  color: var(--brass);
+}
+
+/* ------------------------------------------------------------- filtering */
+
+/* Ships hidden and roster.js unhides it. With script off the controls never
+   appear and every act is on the page, which is the only honest default:
+   a filter that cannot filter must not be offered. */
+.roster-filters {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 10rem;
+  flex: 1 1 10rem;
+}
+
+.filter-field label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+.filter-field select {
+  padding: 0.5rem 0.625rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+}
+
+/* role="status" — the count is the only confirmation a filter did anything,
+   so it has to reach a screen reader as well as the eye. */
+.filter-count {
+  flex: 0 0 auto;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-empty {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.act-card[hidden] {
+  display: none;
+}
+
+/* --------------------------------------------------------- the act pages */
+
+.act-hero .heading {
+  max-width: 44rem;
+}
+
+.act-from {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.act-hero .btn {
+  margin-top: 1.5rem;
+}
+
+/* The footage slot. It renders whether or not a video exists, because the
+   gap is real and a page that silently omits the slot hides it. Empty, it
+   carries the placeholder still at low contrast under a brass edge, the same
+   convention the technical page's provisional tables use: a brass edge means
+   this is ours and it is not finished. */
+.act-video {
+  margin-top: 2.5rem;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  overflow: hidden;
+}
+
+.act-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.act-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.act-video--empty {
+  border-left: 2px solid var(--brass);
+}
+
+.act-video-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Real-media grids, 2026-08-27. Video embeds reuse .act-video; the photo
+   grid unifies mixed orientations behind a 4/3 crop with rule-colored gaps,
+   the same joinery as the season grid. */
+.video-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin-top: 2rem;
+}
+
+.video-grid .act-video {
+  margin-top: 0;
+}
+
+.video-grid--single {
+  grid-template-columns: minmax(0, 40rem);
+}
+
+.media-grid {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  margin-top: 2rem;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.media-grid figure {
+  margin: 0;
+  background: var(--paper-sunk);
+}
+
+.media-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 3;
+}
+
+.media-grid--single {
+  grid-template-columns: minmax(0, 40rem);
+}
+
+.media-grid--single img {
+  aspect-ratio: auto;
+}
+
+.act-video-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+}
+
+.act-video-note {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+/* The "where it lands" column is prose inside a numeric table, so it is the
+   one cell allowed to wrap. Without this the ladder forces a horizontal
+   scroll on every phone. */
+.rate-table td.ladder-best {
+  white-space: normal;
+  min-width: 14rem;
+  color: var(--ink-faint);
+}
+
+/* The build, under the size it belongs to. A second line inside the row
+   header rather than its own column: it is a caption for the size, and a
+   fifth column would push the two price columns off a phone. */
+.rate-note {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+  white-space: normal;
+}
+
+.rate-table th.rate-size {
+  color: var(--ink);
+  vertical-align: top;
+  min-width: 11rem;
+  white-space: normal;
+}
+
+.rate-card {
+  min-width: 34rem;
+}
+
+/* The corporate envelope is not a configuration. The rule above it says so
+   without a subheading interrupting the table. */
+.rate-row--divider th {
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+
+/* ---------------------------------------------------------- the set list */
+
+.setlist {
+  margin-top: 1rem;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.setlist--cols {
+  grid-template-columns: 1fr;
+}
+
+.song-title {
+  color: var(--ink);
+}
+
+.song-artist {
+  color: var(--ink-faint);
+}
+
+.song-artist::before {
+  content: " / ";
+  color: var(--rule-strong);
+}
+
+.h5 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+
+/* Prose measure, independent of --wrap. Identity copy and the close are read
+   rather than scanned, and 64rem is too wide to read at. */
+.wrap--narrow {
+  max-width: 42rem;
+  margin-right: 0;
+}
+
+.wrap--narrow .prose + .prose {
+  margin-top: 1rem;
+}
+
+.act-cta .btn {
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .setlist--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .split--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .setlist--cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ======================================================== the season board
+   The Nov/Dec availability module on the corporate holiday page. It is a
+   calendar rendered as a grid of tiles rather than a month view, because
+   the only question it answers is which nights are free, and a month view
+   spends most of its area on Mondays nobody is asking about. */
+
+.season-board {
+  margin-top: 2rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 1px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.season-date {
+  background: var(--paper-sunk);
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.season-day {
+  font-size: 0.875rem;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dates carry pricing tags, never availability. The open/held/booked status
+   styling lived here until 2026-08-27, when the published "board" was killed:
+   the booking calendar is private and the site does not mirror it. */
+.season-date--peak {
+  border-left: 2px solid var(--brass);
+}
+
+.season-tag {
+  font-size: 0.6875rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.season-date--peak .season-tag {
+  color: var(--brass);
+}
+
+/* ------------------------------------------------------------- utilities */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------ client strip
+   2026-09-03, sized up the same day at Daniel's ask. The one-colour logo row under the home locator strip and the
+   corporate intro (site.json credits, inlined by build.py). Marks take
+   --ink-soft, one step under the type around them, so eight trademarks read
+   as a quiet list instead of eight shouting brands. Each mark is sized off
+   one base height times its own --credit-h, set in the data, because a
+   stacked crest and a wide wordmark at the same pixel height never look the
+   same size. Centred and wrapping, so a phone gets two or three even rows. */
+.credits {
+  padding: var(--space-4) 0;
+}
+
+.credits-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 3.5rem;
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+}
+
+.credit svg {
+  display: block;
+  height: calc(2.125rem * var(--credit-h, 1));
+  width: auto;
+  color: var(--ink-soft);
+}
+
+.credits-also {
+  margin: 1.75rem auto 0;
+  max-width: 44rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .credits-list {
+    gap: 1.5rem 2.25rem;
+  }
+
+  .credit svg {
+    height: calc(1.5rem * var(--credit-h, 1));
+  }
+}

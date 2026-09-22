@@ -1,0 +1,50 @@
+{
+  "_note": "REWRITTEN 2026-09-04 with the no-published-price decision. The five questions are unchanged: this page ranks on them. The answers carry the market's figures instead of ours, as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text and registers against the page, so the Sources note under the market table names every source a crawler can quote from this file. Never type a figure into an answer, and never put any other token here.",
+  "service": {
+    "name": "Live music pricing guide for Colorado",
+    "serviceType": "Live music for private and corporate events",
+    "description": "Sourced market figures and worked cost explanation for live music at corporate events, private parties and wedding cocktail hours across Denver, the Front Range and the Colorado resort corridor.",
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+    ]
+  },
+  "faqs": [
+    {
+      "q": "How much does a live band cost in Colorado?",
+      "a": "Colorado couples budget {{market:co_band_budget}} for a live band, and the Denver market runs {{market:denver_band_range}}, with a trio at the bottom of that and a full band with horns at the top. Nationally most couples land {{market:us_band_range}}. Those are the market's published figures. Signet doesn't publish prices, so send us the date and the size of the night and we'll price that night."
+    },
+    {
+      "q": "Why do live music prices vary so much in Colorado?",
+      "a": "Because the market runs in tiers and quotes cover different scopes. One booking marketplace averages {{market:denver_marketplace_avg}} for a Denver party band, the Denver market treats the four to six piece as its middle at {{market:denver_midtier_band}}, and a seven to nine piece show band runs {{market:us_showband}}. What sits inside a figure, sound above all, varies as much as the figure."
+    },
+    {
+      "q": "What does the mountain premium cover?",
+      "a": "Travel and lodging. A resort date costs more than a metro date everywhere in this market for two reasons: the drive over the passes, and the night in a bed at the far end of it, because a band that struck late in Aspen isn't driving back over the passes the same night. Both belong on their own lines on a quote."
+    },
+    {
+      "q": "Is a band or a DJ cheaper?",
+      "a": "A DJ, usually, and the gap narrows as the night gets longer. A Denver DJ carrying a night with production lighting runs {{market:denver_dj}}, against {{market:denver_band_range}} for a Denver band. A corporate night can use both, a duo through dinner and the DJ carrying the floor, on one contract and one invoice, which is cheaper than hiring twice."
+    },
+    {
+      "q": "Does booking early get a lower price?",
+      "a": "No. Booking early buys availability, which on a December Saturday is worth more than a discount would be. What does change the price is the date itself: this market charges {{market:denver_holiday_surcharge}} for a holiday weekend, and New Year's Eve is its own case everywhere. Corporate holiday dates are decided August through October."
+    },
+    {
+      "q": "How much does a jazz trio cost?",
+      "a": "A trio across a four-hour evening runs {{market:us_trio}} in this market, and a jazz trio or acoustic duo for a dinner runs {{market:us_dinner_band}}. Denver publishes no separate trio figure: the Denver band range of {{market:denver_band_range}} starts at the trio. Signet doesn't publish prices; send us the date and the length of the evening and we'll come back with a price."
+    }
+  ]
+}

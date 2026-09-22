@@ -1,0 +1,39 @@
+{
+  "_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the December calendar, the booking window. Answers answer in the first sentence. Any figure is a {{market:<id>}} token off market-rates.json and the page prints its source; no Signet figure appears here or anywhere since 2026-09-04.",
+  "service": {
+    "name": "Corporate holiday party entertainment in Denver",
+    "serviceType": "Live music and DJ for corporate holiday parties",
+    "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, across the season's 21 November and December dates.",
+    "areaServed": [
+      "Denver"
+    ],
+    "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+    ]
+  },
+  "faqs": [
+    {
+      "q": "What does a corporate holiday party band cost in Denver?",
+      "a": "It depends on the size of the act, how long it plays, and the date, because a December Saturday is the busiest night of the year in this market. We don't publish prices. What live music costs across this market is on our pricing page; tell us the date, the venue and the guest count, and we'll come back with a recommendation and a price."
+    },
+    {
+      "q": "How many holiday party dates does Denver actually have?",
+      "a": "Twenty-one. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 party dates, and 10 of them are in December. They're laid out on this page. Tell us the date and the venue and we'll check the booking calendar."
+    },
+    {
+      "q": "What does load-in look like at a downtown Denver hotel?",
+      "a": "Through the dock and the service elevator, inside the windows the venue sets. We coordinate dock time, elevator window and power with the venue before the day. A band needs 45 to 90 minutes to load in depending on size, plus one or two dedicated 20-amp circuits; the full sheet by size is on our technical page."
+    },
+    {
+      "q": "Do December dates in Denver cost more?",
+      "a": "Yes. December weekends cost more than a standard date everywhere in this market, and New Year's Eve is a peak date of its own. What that means for your date is its own line on the quote."
+    },
+    {
+      "q": "When should a Denver company book its holiday party?",
+      "a": "August through October. That's when the season is decided for November and December dates, and New Year's Eve books earliest of all. Booking early is how you get the date you want; it doesn't change the price."
+    }
+  ]
+}

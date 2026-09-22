@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Matches --paper. Without it the phone's browser chrome stays white above
+       a dark page, which is the tell that a dark theme was retrofitted. -->
+  <meta name="theme-color" content="#14130e">
+  <title>What we need from your venue — Signet Artists</title>
+  <meta name="description" content="Stage footprint, power, channel counts, load-in times and volume at every size we sell, solo to quartet, plus the DJ. Published so a planner can forward them to the venue.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://signetartists.com/planners/technical/">
+  <link rel="alternate" type="application/rss+xml" title="Signet Artists — Blog" href="../../rss.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Signet Artists">
+  <meta property="og:title" content="What we need from your venue — Signet Artists">
+  <meta property="og:description" content="Stage footprint, power, channel counts, load-in times and volume at every size we sell, solo to quartet, plus the DJ. Published so a planner can forward them to the venue.">
+  <meta property="og:url" content="https://signetartists.com/planners/technical/">
+  <meta property="og:image" content="https://signetartists.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
+
+  <!-- Fraunces + Inter came off Google Fonts here until 2026-08-07. Archivo is
+       self-hosted in vendor/fonts/ and declared in styles.css, so the two
+       preconnects and the render-blocking third-party stylesheet are gone with
+       them: one origin, one font file, nothing to hand off to. -->
+  <link rel="preload" href="../../vendor/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../../styles.css?v=20260920a">
+  
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-LL5DKVEX29"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LL5DKVEX29');</script>
+  <script defer src="../../analytics.js"></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap header-inner">
+    <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
+         front-range centric). A third line under the wordmark, so every page
+         says where in one glance at every width, and the nav row stays
+         uncrowded. Display form, not the footer's prose form. -->
+    <div class="brand-lockup">
+      <a class="wordmark" href="../../">Signet Artists</a>
+      <p class="header-loc">BOOK LIVE MUSIC IN COLORADO</p>
+    </div>
+
+    <!-- Songs added 2026-08-07. /repertoire/ carries the cover walls and the
+         whole song book and was reachable only from two inline prose links and
+         one hub card. The best page on the site, absent from its own
+         navigation. "Songs" rather than "Repertoire" because it sits next to
+         "The Music" and the pair has to read as two different questions: who
+         plays, and what they play. -->
+    <!-- Weddings added 2026-09-06 with the /weddings/ hub, when Daniel lifted
+         the one-wedding-surface cap. It sits between Corporate and Private
+         Parties because the three are one row of occasion hubs and corporate
+         keeps the earlier slot. -->
+    <!-- Corporate and Private Parties are the two occasion hubs of the
+         2026-08-20 buildout; corporate keeps the earlier slot. "Corporate"
+         rather than "Corporate & Galas": the 17 Aug audit reframed galas as a
+         small-format section on the hub, not a co-headline. -->
+    <nav class="nav-desktop">
+      <a href="../../music/" >Artist Roster</a>
+      <a href="../../repertoire/" >Songs</a>
+      <a href="../../pricing/" >Pricing</a>
+      <a href="../../corporate/" >Corporate</a>
+      <a href="../../weddings/" >Weddings</a>
+      <a href="../../private-parties/" >Private Parties</a>
+      <a href="../../planners/" aria-current="page">For Planners</a>
+      <a class="btn btn--sm" href="../../contact/" >Check a Date</a>
+    </nav>
+
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+
+  <nav class="nav-mobile" id="mobile-nav">
+    <a href="../../music/">The Roster</a>
+    <a href="../../repertoire/">Songs</a>
+    <a href="../../pricing/">Pricing</a>
+    <a href="../../corporate/">Corporate</a>
+    <a href="../../weddings/">Weddings</a>
+    <a href="../../private-parties/">Private Parties</a>
+    <a href="../../planners/">For Planners</a>
+    <a class="btn nav-mobile-cta" href="../../contact/">Check a Date</a>
+  </nav>
+</header>
+
+  <main>
+    
+<section class="section section--top">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow eyebrow--slab">Technical</p>
+      <h1 class="h2 display">What we need from your venue.</h1>
+      <p class="lede">Every question a venue asks before it will confirm a band, answered on one page. It covers stage, power, channels, load-in and volume, from solo to quartet, plus the DJ. Send the link to the venue and to your AV lead; the six things worth confirming at contract are at the bottom.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <h2 class="h3">The stage</h2>
+    <p class="prose">Published stage-rental guidance for a seven to ten-piece band runs to <strong class="num-accent">24 by 24 feet</strong>. That figure is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. Renting to it costs you a chunk of floor your guests wanted.</p>
+    <figure class="stage-plot">
+<svg viewBox="-8 -8 496 496" role="img"
+     aria-label="Two stage footprints at the same scale. Published rental
+     guidance is 24 by 24 feet. A quartet takes 14 by 10 feet,
+     about 76 percent less floor.">
+  <rect x="0" y="0" width="480" height="480" class="plot-guide"/>
+  <rect x="100.0" y="280" width="280" height="200" class="plot-actual"/>
+  <text x="240.0" y="140.0" class="plot-label" text-anchor="middle">
+    24 &#215; 24 ft
+  </text>
+  <text x="240.0" y="166.0" class="plot-sub" text-anchor="middle">
+    what the rental guide says
+  </text>
+  <text x="240.0" y="376.0" class="plot-label" text-anchor="middle">
+    14 &#215; 10 ft
+  </text>
+  <text x="240.0" y="402.0" class="plot-sub" text-anchor="middle">
+    what a quartet takes
+  </text>
+</svg>
+<figcaption class="note">Both drawn to the same scale. The difference is
+436 square feet of floor, which is a few hundred dollars of riser and about
+44 guests standing.</figcaption>
+</figure>
+
+    <p class="prose">So there are two numbers below. The first is what we ask for, where the band is comfortable and the sightlines work. The second is the smallest we'll play on. Between them nothing breaks; the band just gets tighter.</p>
+
+    <div class="table-scroll" data-provisional="true"><table class="rate-table tnum"><thead><tr><th>Size</th><th>Footprint we ask for</th><th>Smallest we will take</th><th>Who is on it</th></tr></thead><tbody><tr><td class="rate-size">Solo</td><td>6 by 4 ft</td><td>5 by 4 ft</td><td>One voice, one instrument</td></tr><tr><td class="rate-size">Duo</td><td>8 by 6 ft</td><td>6 by 5 ft</td><td>Guitar and upright bass</td></tr><tr><td class="rate-size">Trio</td><td>12 by 8 ft</td><td>10 by 6 ft</td><td>Guitar, bass and drums</td></tr><tr><td class="rate-size">Quartet</td><td>14 by 10 ft</td><td>12 by 8 ft</td><td>Trio plus a horn or a voice</td></tr><tr><td class="rate-size">DJ</td><td>6 by 4 ft</td><td>6 by 3 ft</td><td>Booth, controller and the house of our own PA</td></tr></tbody></table></div>
+
+    <p class="note">Depth before width if you have to choose. A band squeezed narrow still works; a band with no depth puts the drums in the singer&rsquo;s back.</p>
+  </div>
+</section>
+
+<section class="section section--ruled">
+  <div class="wrap">
+    <h2 class="h3">Risers, floors and ceilings</h2>
+    <dl class="def-list def-list--stack">
+      <div class="def-row">
+        <dt>We don't require a stage</dt>
+        <dd>A band plays fine on a floor, and most of our Denver bookings are on one. A riser is a sightline decision for events over about 150 guests.</dd>
+      </div>
+      <div class="def-row">
+        <dt>We don't supply one either</dt>
+        <dd>If you want a riser, it comes from the venue or your production company. Tell us the height and we'll plan the load-in around it; 12 to 24 inches is normal and anything over 24 needs a rail behind the drums.</dd>
+      </div>
+      <div class="def-row">
+        <dt>Ceiling height</dt>
+        <dd>Ten feet clear above the stage surface. Lighting stands go to nine, and a low ceiling over a riser is the one constraint that can't be solved on the day.</dd>
+      </div>
+      <div class="def-row">
+        <dt>Surface</dt>
+        <dd>Level and solid. Deck that flexes under a drummer will be heard through every microphone on the stage. Carpet is fine; grass and gravel need a deck under the band.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <h2 class="h3">Power</h2>
+    <p class="prose">This is the requirement venues get wrong most often. <strong>Dedicated</strong> is the operative word. A 20-amp circuit shared with catering warmers, a coffee urn or a lighting truss will trip, and it will trip at the moment everything is switched on at once, which is the moment the venue is full.</p>
+    <p class="prose">Circuits need to be within about 50 feet of the stage. We bring our own distribution and cable and don't need the venue to supply either. What we need from the venue is the circuits, confirmed in writing, before the day.</p>
+
+    <div class="table-scroll" data-provisional="true"><table class="rate-table tnum"><thead><tr><th>Size</th><th>Channels at the desk</th><th>Dedicated 20A circuits</th></tr></thead><tbody><tr><td class="rate-size">Solo</td><td>3</td><td>1</td></tr><tr><td class="rate-size">Duo</td><td>3</td><td>1</td></tr><tr><td class="rate-size">Trio</td><td>8</td><td>1</td></tr><tr><td class="rate-size">Quartet</td><td>10</td><td>2</td></tr><tr><td class="rate-size">DJ</td><td>3</td><td>1</td></tr></tbody></table></div>
+
+    <p class="note">Channel counts are what arrives at the desk, including one announcement microphone on its own channel. Your AV lead will ask for this number.</p>
+  </div>
+</section>
+
+<section class="section section--ruled">
+  <div class="wrap">
+    <h2 class="h3">Outdoors, and other places without a wall socket</h2>
+    <p class="prose">A generator works if it's a quiet one, properly grounded, and sized with headroom above the figures above. A domestic generator at the edge of a lawn isn't that, and the noise floor it adds sits underneath every quiet moment of the evening.</p>
+    <p class="prose">Cover over the band and over the desk isn't optional outdoors, in any forecast. Colorado evenings cool fast enough that by the end of a damp night the musicians are retuning between songs. If there's a move-indoors plan, it needs a decision time written into the run of show and a person named to make the call.</p>
+  </div>
+</section>
+
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <h2 class="h3">Load-in and strike</h2>
+    <p class="prose">Times below are from the vehicle arriving to the band being ready for sound check, assuming a ground-floor space with parking within a reasonable push. Add 30 minutes for an elevator, and add 30 more if the elevator is shared with catering during their load-in.</p>
+
+    <div class="table-scroll" data-provisional="true"><table class="rate-table tnum"><thead><tr><th>Size</th><th>Load-in and setup</th><th>Strike</th><th>Vehicles</th></tr></thead><tbody><tr><td class="rate-size">Solo</td><td>45 min</td><td>30 min</td><td>1</td></tr><tr><td class="rate-size">Duo</td><td>60 min</td><td>45 min</td><td>1</td></tr><tr><td class="rate-size">Trio</td><td>60 min</td><td>45 min</td><td>1</td></tr><tr><td class="rate-size">Quartet</td><td>90 min</td><td>60 min</td><td>1</td></tr><tr><td class="rate-size">DJ</td><td>45 min</td><td>30 min</td><td>1</td></tr></tbody></table></div>
+
+    <dl class="def-list def-list--stack">
+      <div class="def-row">
+        <dt>Doors and corridors</dt>
+        <dd>36 inches clear. The widest single item is the bass amp or a keyboard case; nothing needs a double door, but a 30-inch doorway with a turn in it will cost you 20 minutes.</dd>
+      </div>
+      <div class="def-row">
+        <dt>Elevator</dt>
+        <dd>A car of about 4 by 6 feet takes everything in several trips. Tell us the window we have it in and we'll plan inside it.</dd>
+      </div>
+      <div class="def-row">
+        <dt>Sound check</dt>
+        <dd>30 minutes once the band is set, and it finishes 60 minutes before the first guest arrives. That gap is where the problems found at sound check get fixed.</dd>
+      </div>
+      <div class="def-row">
+        <dt>Where the cases live</dt>
+        <dd>Out of sight of guests, and not in the kitchen path. Any back-of-house corner works. If there's nowhere, tell us at contract and the cases go back to the vehicles, which adds 20 minutes to the strike.</dd>
+      </div>
+      <div class="def-row">
+        <dt>Strike</dt>
+        <dd>Begins after the last note. We don't break down during the final set, and nothing gets carried through a space with guests still in it unless the venue requires it.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section section--ruled">
+  <div class="wrap">
+    <h2 class="h3">Volume</h2>
+    <p class="prose">Volume is a decision somebody makes in advance and writes into the run of show. Left undecided, it gets made on the night by whoever is standing nearest the desk.</p>
+    <dl class="def-list">
+      <div class="def-row">
+        <dt>Ceremony, cocktails and dinner, measured at the nearest table</dt>
+        <dd class="tnum">65 to 72 dBA</dd>
+      </div>
+      <div class="def-row">
+        <dt>Remarks, awards and anything on a microphone that is not us</dt>
+        <dd class="tnum">Silent</dd>
+      </div>
+      <div class="def-row">
+        <dt>Dancing, measured on the floor</dt>
+        <dd class="tnum">88 to 95 dBA</dd>
+      </div>
+      <div class="def-row">
+        <dt>Peaks during the last hour</dt>
+        <dd class="tnum">100 dBA</dd>
+      </div>
+    </dl>
+    <p class="prose">If the venue enforces a cap, give us the number when you book. A band that knows at contract the ceiling is 95 dBA chooses arrangements and instrumentation that land inside it. A band told on the night just gets quieter.</p>
+    <p class="prose">Curfews are honoured as written. Where there's one, the last twenty minutes are planned so the night ends on the right song.</p>
+  </div>
+</section>
+
+
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <h2 class="h3 h3--lead">What we need confirmed, and when</h2>
+    <p class="prose">There are six, and all of them are answers the venue already has. None of them takes longer than one email to get.</p>
+    <ul class="spec-list">
+      <li><span class="dash" aria-hidden="true"></span>The circuits, by count, and that they are dedicated</li>
+      <li><span class="dash" aria-hidden="true"></span>The stage or the floor area, in feet, and the riser height if there is one</li>
+      <li><span class="dash" aria-hidden="true"></span>The load-in door, the route, and the elevator window if there is an elevator</li>
+      <li><span class="dash" aria-hidden="true"></span>Where the vehicles park and for how long</li>
+      <li><span class="dash" aria-hidden="true"></span>Any decibel cap, as a number, and any curfew, as a time</li>
+      <li><span class="dash" aria-hidden="true"></span>Somewhere out of sight for cases and for the musicians to change</li>
+    </ul>
+    <p class="note">Not sure of an answer? Send us the venue name and we'll call them ourselves.</p>
+  </div>
+</section>
+
+<section class="section section--ruled">
+  <div class="wrap">
+    <div class="close-row">
+      <div style="max-width: 32rem;">
+        <h2 class="h2">Anything here that your venue disagrees with?</h2>
+        <p class="lede">Send us the venue and we'll work it out with them directly.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="../../contact/">Check a Date</a>
+      </div>
+    </div>
+    <p class="note">More for planners: the <a href="../run-of-show/">run of show templates</a> and the <a href="../faq/">full question list</a>.</p>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark">Signet Artists</p>
+      <p class="footer-line">Live entertainment for private events in the Denver area, including the Front Range, and the mountain corridor.</p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <p class="eyebrow">Enquiries</p>
+        <ul class="footer-list">
+          <li><a href="mailto:hello@signetartists.com">hello@signetartists.com</a></li>
+          <!-- Profile links, added 2026-08-21 as profiles go live. rel="me" marks
+               them as this brand's own identities for entity consolidation. Only
+               profiles worth a buyer's click belong here, never every citation —
+               and never Thumbtack: that would route free direct traffic into the
+               pay-per-lead channel. -->
+          <li><a href="https://www.linkedin.com/company/signetartists/" rel="me">Signet on LinkedIn</a></li>
+          <!-- The two ways to work with Signet, added 2026-09-20 with the
+               Preferred Vendor List: the artist page and the vendor
+               application. Both are indexed and this is their sitewide
+               inlink; the header row stays at eight. -->
+          <li><a href="../../for-artists/">For artists</a></li>
+          <li><a href="../../preferred-vendors/join/">Join the Preferred Vendor List</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Site</p>
+        <!-- Songs and Notes added 2026-08-07: /repertoire/ was in no navigation
+             at all, and /blog/ was reachable only from the sitemap and the RSS
+             feed. Four published posts nobody could find from the site. -->
+        <!-- About added 2026-09-06 with the brand page; the header row is
+             full at eight items and the occasion hubs keep those slots. -->
+        <ul class="footer-list">
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../music/">The Music</a></li>
+          <li><a href="../../repertoire/">Songs</a></li>
+          <li><a href="../../pricing/">Pricing</a></li>
+          <li><a href="../../corporate/">Corporate</a></li>
+          <li><a href="../../private-parties/">Private Parties</a></li>
+          <li><a href="../../guides/live-music-cost-colorado/">What live music costs</a></li>
+          <li><a href="../../blog/">Notes</a></li>
+          <li><a href="../../contact/">Check a Date</a></li>
+        </ul>
+      </div>
+      <!-- Occasions and Ensembles added 2026-09-13. The 2026-09-13 crawl
+           found the occasion spokes, ensemble pages and artist pages carrying
+           one to seven inbound links each while the header hubs carried 56,
+           and Search Console had four hubs (Tejas, retreats, private parties,
+           cocktail hour) "Discovered, never crawled". A footer link from
+           every page is the cheapest sitewide inlink there is; the header row
+           stays at eight. -->
+      <div>
+        <p class="eyebrow">Occasions</p>
+        <ul class="footer-list">
+          <li><a href="../../weddings/">Weddings</a></li>
+          <li><a href="../../weddings/ceremony/">Wedding ceremony</a></li>
+          <li><a href="../../weddings/cocktail-hour/">Cocktail hour</a></li>
+          <li><a href="../../weddings/colorado-springs/">Weddings, Colorado Springs</a></li>
+          <li><a href="../../corporate/holiday-party/">Corporate holiday party</a></li>
+          <li><a href="../../corporate/client-dinners/">Client dinners</a></li>
+          <li><a href="../../corporate/retreats/">Corporate retreats</a></li>
+          <li><a href="../../corporate/galas-and-awards/">Galas and award nights</a></li>
+          <li><a href="../../corporate/after-party/">After-parties</a></li>
+          <li><a href="../../weddings/vail/">Weddings, Vail</a></li>
+          <li><a href="../../weddings/jazz-band/">Jazz band for a wedding</a></li>
+          <li><a href="../../corporate/jazz-band/">Jazz band for a corporate event</a></li>
+        </ul>
+      </div>
+      <!-- Daytime added 2026-09-19 with the daytime hub and its five spokes.
+           The header row is full at eight, so the footer is the sitewide
+           inlink for this tree, the same reasoning as the Occasions column. -->
+            <!-- Private parties column added 2026-09-20 with the occasion spokes, the
+           same reasoning as the Daytime column: one sitewide inlink for the
+           whole tree. The city rows moved here from Occasions. -->
+      <div>
+        <p class="eyebrow">Private parties</p>
+        <ul class="footer-list">
+          <li><a href="../../private-parties/">Private parties</a></li>
+          <li><a href="../../private-parties/denver/">Private parties, Denver</a></li>
+          <li><a href="../../private-parties/colorado-springs/">Private parties, Colorado Springs</a></li>
+          <li><a href="../../private-parties/engagement-party/">Engagement party</a></li>
+          <li><a href="../../private-parties/showers/">Baby and bridal showers</a></li>
+          <li><a href="../../private-parties/graduation-party/">Graduation party</a></li>
+          <li><a href="../../private-parties/backyard-party/">Backyard party</a></li>
+          <li><a href="../../private-parties/anniversary-party/">Anniversary party</a></li>
+          <li><a href="../../private-parties/retirement-party/">Retirement party</a></li>
+          <li><a href="../../private-parties/halloween-party/">Halloween party</a></li>
+          <li><a href="../../private-parties/holiday-party/">Holiday party at home</a></li>
+          <li><a href="../../private-parties/proposals/">Proposals and surprise songs</a></li>
+        </ul>
+      </div>
+<div>
+        <p class="eyebrow">Daytime</p>
+        <ul class="footer-list">
+          <li><a href="../../daytime/">Daytime bookings</a></li>
+          <li><a href="../../daytime/senior-living/">Senior living and memory care</a></li>
+          <li><a href="../../daytime/funerals-and-memorials/">Funerals and memorials</a></li>
+          <li><a href="../../daytime/sound-bath/">Daytime sound bath</a></li>
+          <li><a href="../../daytime/brunch/">Sunday brunch</a></li>
+          <li><a href="../../daytime/community-programs/">Farmers markets and libraries</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Ensembles</p>
+        <ul class="footer-list">
+          <li><a href="../../ensembles/solo-guitarist/">Solo guitarist</a></li>
+          <li><a href="../../ensembles/acoustic-duo/">Acoustic duo and trio</a></li>
+          <li><a href="../../ensembles/jazz-duo-trio/">Jazz duo and trio</a></li>
+          <li><a href="../../ensembles/spanish-guitarist/">Spanish guitarist</a></li>
+          <li><a href="../../ensembles/flamenco-trio/">Dirty Flamenco, the trio</a></li>
+          <li><a href="../../ensembles/dj/">DJ</a></li>
+          <li><a href="../../ensembles/live-band-karaoke/">Live Band Karaoke</a></li>
+          <li><a href="../../ensembles/yacht-rock/">Yacht rock band</a></li>
+          <li><a href="../../ensembles/americana-band/">Americana band</a></li>
+          <li><a href="../../ensembles/singer-guitarist/">Singer and guitarist</a></li>
+          <li><a href="../../ensembles/christmas-jazz-trio/">Christmas jazz trio</a></li>
+          <li><a href="../../artists/tejas-singh/">Tejas Singh</a></li>
+          <li><a href="../../artists/tony-medina/">Tony Medina</a></li>
+          <li><a href="../../ensembles/changes-jazz-trio/">Changes Jazz Trio</a></li>
+          <li><a href="../../artists/firstwater/">Firstwater</a></li>
+          <li><a href="../../artists/rene-moffatt/">René Moffatt</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">For planners</p>
+        <ul class="footer-list">
+          <li><a href="../../planners/">Resources</a></li>
+          <li><a href="../../planners/technical/">What we need from your venue</a></li>
+          <li><a href="../../planners/mountain/">The mountain corridor</a></li>
+          <li><a href="../../planners/booking/">How a booking works</a></li>
+          <li><a href="../../preferred-vendors/">Preferred Vendor List</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- The availability disclaimer, Daniel's wording, 2026-09-19 ("make a
+         disclaimer that all acts and configurations are subject to
+         availability"). Sitewide because the roster, the act pages, the
+         pricing page and the occasion pages all name acts and sizes. It is a
+         disclaimer, never a status: nothing on the site says who is free when. -->
+    <p class="footer-meta">All acts and configurations are subject to availability.</p>
+    <p class="footer-meta footer-meta--copyright">&copy; 2026 Signet Artists</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile nav toggle. The button label doubles as the state indicator, the
+    // same as the React version it replaced.
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.querySelector('.nav-mobile');
+      if (!btn || !panel) { return; }
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+</body>
+</html>

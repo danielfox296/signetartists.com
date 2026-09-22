@@ -1,0 +1,419 @@
+{
+  "_comment": "Every brand-dependent value on the site. No template hardcodes one. Values in [square brackets] are unresolved and render with a dotted underline in the browser so open decisions stay visible while browsing.",
+  "_images_note": "PLACEHOLDERS. Free-licence Unsplash stills, cropped 16:9 and duotoned into the brand palette so they read as one art-directed set rather than five unrelated stock photos. Deliberately objects, gear and empty rooms — no people, and nothing that implies it is our band. Swap every one of these for footage from the shoot; the alt text will need rewriting too.",
+  "brand": {
+    "name": "Signet Artists",
+    "legalName": "Entuned, LLC",
+    "_tagline_note": "REWRITTEN 2026-08-17. Was 'PROfessional PERFORMANCE FOR PROFESSIONAL SETTINGS'. The capitalisation read as a typo at display size and the sentence said nothing a planner could act on. This is the h1 on the home page and nowhere else, set in the display face at uppercase, so it has a hard length budget: the retired line was 47 characters and ran three lines. Anything much past that fills the first screen on its own and pushes the lede and both buttons under the fold. The rest of the offer moved into `intro` below.",
+    "tagline": "Live music for your event.",
+    "_intro_note": "REWRITTEN 2026-08-17 with the Q4 refocus. The old version sold the 2027 system, 'from a single DJ to a 13 piece band', which is not the product. It also carried three of the copy bugs from the 17 Aug audit. This renders as the home page hero lede and as the MusicGroup description in schema, so it has to stand alone. AMENDED 2026-09-04: the clause 'and our rates published right on the website' was removed with the no-published-price decision. It was the one sentence on the site that made the claim in Daniel's own words, and it had stopped being true. Nothing else in the intro moved, and the hero was not touched.",
+    "intro": "Signet Artists delivers live entertainment for private events in Denver, Colorado and surrounding areas. We provide a variety of genres and configurations - effortlessly.",
+    "_phone_note": "Decided 2026-08-01: no phone number is published. Email is the only published route. If that changes, restore the markup in the footer partial, the contact page and the home page close section.",
+    "email": "hello@signetartists.com",
+    "city": "Denver",
+    "region": "CO",
+    "serviceArea": "Denver, BOULDER, and the mountain corridor",
+    "url": "https://signetartists.com",
+    "_sameAs_note": "ADDED 2026-08-21. Profile URLs (Google Business Profile, Thumbtack, The Bash, socials) go here as each goes live; the build emits schema sameAs only when the list is non-empty. The 2026-08-01 no-published-phone decision stands: profiles use the email route and private contact numbers, nothing published. GBP LIVE 2026-09-01: the profile is the converted Waitlist Ready listing, owner waitlistready@gmail.com, store code 10848524311009745186, verified. Its Maps URL leads the list so the site and the profile resolve to one entity for Search. Instagram added the same day to match the social profiles already published on the GBP itself. GigSalad LIVE 2026-09-03: the PromoKit was approved and switched on by GigSalad support, so its public profile URL joins the list. Free tier, one listing for the whole roster on GigSalad's own advice, main category Jazz Band. YouTube channel @SignetArtists (UCdIteX74DYel7z7zurPUDmQ) created by Daniel 2026-09-06, added the same day; first uploads are the artists' existing footage with their permission.",
+    "sameAs": [
+      "https://maps.google.com/?cid=6360132596165295264",
+      "https://www.thumbtack.com/co/littleton/pro/signet-artists/service/588192753972838403",
+      "https://www.gigsalad.com/signet_artists_littleton",
+      "https://www.linkedin.com/company/signetartists/",
+      "https://instagram.com/signetartists",
+      "https://www.youtube.com/@SignetArtists",
+      "https://www.partyslate.com/vendors/signet-artists"
+    ],
+    "_formsubmit_note": "FormSubmit's hashed endpoint for hello@signetartists.com, so the address is not in the page source. Same pattern as daniel-fox.com and danielchristopherfox.com. The plain address still renders on the contact page, deliberately.",
+    "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8",
+    "_forms_note": "ADDED 2026-09-20. The two Google Forms behind /for-artists/ (act submission) and /preferred-vendors/join/ (vendor application), owned by danielchristopherfox@gmail.com, each linked to its own sheet. Rendered through {{form_artist}} and {{form_vendor}}. The sheets feed a process Daniel has yet to formalize; nothing from them publishes back to the site.",
+    "forms": {
+      "artist": "https://docs.google.com/forms/d/e/1FAIpQLSfwqRn9_PH7so43wI-q2zGRAD32v2rtrYaGVMudcOIVl6jdjg/viewform",
+      "vendor": "https://docs.google.com/forms/d/e/1FAIpQLSceJeX15gxvOkWoahNqD9jw4C3dv8P7_3C3nKu6IYfibteUGw/viewform"
+    },
+    "_legalName_note": "The legal entity, kept as data because the build needs it for nothing that publishes. AI-TELLS estate law and the copy laws both ban emitting 'Entuned, LLC' on any Signet surface; the planner FAQ answer that named it as the check payee was corrected 2026-09-04 to say the name on the contract. Do not put it back into copy or schema."
+  },
+  "_acts_moved_note": "The two house bands (The Standards, The Headliners) and the DJ lived here until the 2026-08-15 restructure. The business books named acts, so the roster moved to _src/data/acts.json with a real schema: bucket and config tags, per-config pricing read off the rate card, and flagship/listing status. Nothing reads site.acts any more.",
+  "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
+  "included": [
+    "A personal contact for the night.",
+    "Sound sized for a small-to-medium sized event venue",
+    "Load-in, setup, strike and load-out",
+    "Certificate of insurance",
+    "W-9 and one itemised invoice",
+    "Timeline coordination before the event",
+    "Continuous audio during set breaks"
+  ],
+  "extras": [
+    {
+      "item": "Front Range travel: Boulder, Colorado Springs, Fort Collins"
+    },
+    {
+      "item": "I-70 corridor travel: Vail, Beaver Creek, Breckenridge, Winter Park"
+    },
+    {
+      "item": "Far resort travel and a night's lodging: Aspen, Telluride, Steamboat, Crested Butte"
+    },
+    {
+      "item": "Holiday and peak weekends, and New Year's Eve"
+    },
+    {
+      "item": "Live-band karaoke"
+    },
+    {
+      "item": "Learned songs, with four weeks' notice"
+    }
+  ],
+  "_configurations_note": "DRAFT 2026-08-07, swept 2026-08-17 with the Q4 refocus: rows now cover exactly what is sold, solo through quartet plus the DJ. The quintet, seven-, ten- and thirteen-piece rows are in git history if a larger size ever returns as a sold product. Solo has no call-out/hourly row in `rates` (the card publishes it as a range only), so it appears here for logistics without a rates twin; every other row name stays locked to `rates` so the technical page and the rate card cannot disagree. A solo's logistics mirror the DJ's: one person and a small PA. Footprints are the working figures a band actually takes, not the stage-rental guidance, which runs far larger; that gap is the point of the page. Inputs are channel counts at the desk, including one announcement mic on its own channel.",
+  "_configurations_provisional": true,
+  "_configurations_provisional_note": "Draws the brass edge down the technical page tables (styles.css .table-scroll[data-provisional]). Set to false once Daniel's correction pass lands and these stop being our own inference.",
+  "configurations": [
+    {
+      "size": "Solo",
+      "pieces": 1,
+      "build": "One voice, one instrument",
+      "stage": "6 by 4 ft",
+      "stageMin": "5 by 4 ft",
+      "inputs": 3,
+      "circuits": 1,
+      "loadIn": "45 min",
+      "strike": "30 min",
+      "vans": 1
+    },
+    {
+      "size": "Duo",
+      "pieces": 2,
+      "build": "Guitar and upright bass",
+      "stage": "8 by 6 ft",
+      "stageMin": "6 by 5 ft",
+      "inputs": 3,
+      "circuits": 1,
+      "loadIn": "60 min",
+      "strike": "45 min",
+      "vans": 1
+    },
+    {
+      "size": "Trio",
+      "pieces": 3,
+      "build": "Guitar, bass and drums",
+      "stage": "12 by 8 ft",
+      "stageMin": "10 by 6 ft",
+      "inputs": 8,
+      "circuits": 1,
+      "loadIn": "60 min",
+      "strike": "45 min",
+      "vans": 1
+    },
+    {
+      "size": "Quartet",
+      "pieces": 4,
+      "build": "Trio plus a horn or a voice",
+      "stage": "14 by 10 ft",
+      "stageMin": "12 by 8 ft",
+      "inputs": 10,
+      "circuits": 2,
+      "loadIn": "90 min",
+      "strike": "60 min",
+      "vans": 1
+    },
+    {
+      "size": "DJ",
+      "pieces": 1,
+      "build": "Booth, controller and the house of our own PA",
+      "stage": "6 by 4 ft",
+      "stageMin": "6 by 3 ft",
+      "inputs": 3,
+      "circuits": 1,
+      "loadIn": "45 min",
+      "strike": "30 min",
+      "vans": 1
+    }
+  ],
+  "_corporateShapes_note": "ADDED 2026-08-17 with the Q4 refocus. The three shapes a corporate enquiry actually arrives as, for the /corporate/ page. Act and config are ids so the act name and the configuration label resolve out of acts.json rather than being retyped. The two price columns were removed 2026-09-04: the cards carry the shape and the build, and the number for a date comes from checking the date.",
+  "corporateShapes": [
+    {
+      "occasion": "The office holiday party",
+      "act": "tejas-singh",
+      "config": "quartet",
+      "why": "Two hundred staff in a hotel ballroom, with a short program before the dancing. The band plays dinner at conversation volume and gets loud on cue."
+    },
+    {
+      "occasion": "The client dinner",
+      "act": "jazz-duo",
+      "config": "duo",
+      "why": "Twenty at one table or eighty at ten. The conversation is the event, so the music sits under it for the whole night and nobody has to raise their voice to be heard across the table."
+    },
+    {
+      "occasion": "The member or association event",
+      "act": "dirty-flamenco",
+      "config": "trio",
+      "why": "An event that has remarks in it and wants one thing guests describe afterwards. The trio plays a set piece that guests watch, placed where the program leaves space for it."
+    }
+  ],
+  "_credits_note": "ADDED 2026-09-03, from Daniel's list of the companies, institutions and venues the roster's artists have played for. Rendered by build.py credits() as the one-colour logo strip on the home page and /corporate/, and as a Credits line in llms.txt. Each logo ships as img/logos/<id>.svg, normalised to currentColor (provenance in img/logos/SOURCES.md); `h` scales a mark against the strip's base height so a stacked crest and a wide wordmark carry the same visual weight. The ten with logos: national employers, the museum, the two hotel flags, a major-league club, and the two Colorado names Daniel added the same day, Casa Bonita and Monarch (Daniel's call 2026-09-03, which supersedes the acts.json footage note that left the casino unnamed). The club stages and the rest are the `also` sentence, text only and home page only. Held back: the Hummingbird bar. Label 'Trusted and booked by' is Daniel's wording, 2026-09-03.",
+  "credits": {
+    "label": "Trusted and booked by",
+    "logos": [
+      {
+        "id": "amazon",
+        "name": "Amazon",
+        "h": 1
+      },
+      {
+        "id": "nbcuniversal",
+        "name": "NBCUniversal",
+        "h": 0.85
+      },
+      {
+        "id": "charles-schwab",
+        "name": "Charles Schwab",
+        "h": 1.5
+      },
+      {
+        "id": "kroger",
+        "name": "Kroger",
+        "h": 1.3
+      },
+      {
+        "id": "denver-art-museum",
+        "name": "Denver Art Museum",
+        "h": 1.7
+      },
+      {
+        "id": "sheraton",
+        "name": "Sheraton",
+        "h": 2
+      },
+      {
+        "id": "hyatt",
+        "name": "Hyatt",
+        "h": 0.9
+      },
+      {
+        "id": "washington-nationals",
+        "name": "Washington Nationals",
+        "h": 2
+      },
+      {
+        "id": "casa-bonita",
+        "name": "Casa Bonita",
+        "h": 1
+      },
+      {
+        "id": "monarch-casino",
+        "name": "Monarch Casino Resort Spa Black Hawk",
+        "h": 1.9
+      }
+    ],
+    "also": "Also Live Nation, Valley Country Club and the National Cherry Blossom Festival, and the stages at Dazzle, the Bluebird Theater, Cervantes, the 9:30 Club and many, many more."
+  },
+  "_eventTypes_note": "RESTRUCTURED 2026-08-20 with the SEO buildout. Each tag is now a doorway into its occasion page, which is the home page's placement for the occasion tree. 'Weddings' became 'Wedding cocktail hours' deliberately: the cocktail hour is the one wedding product in 2026 scope, and the tag should not promise a reception band that does not exist yet. Galas route to the corporate hub, where they are framed at small-format scale per the 17 Aug audit.",
+  "eventTypes": [
+    {
+      "label": "Office holiday parties",
+      "href": "corporate/holiday-party/"
+    },
+    {
+      "label": "Client dinners",
+      "href": "corporate/client-dinners/"
+    },
+    {
+      "label": "Corporate retreats",
+      "href": "corporate/retreats/"
+    },
+    {
+      "label": "Galas and fundraisers",
+      "href": "corporate/"
+    },
+    {
+      "label": "Dinner and cocktail parties",
+      "href": "private-parties/"
+    },
+    {
+      "label": "Milestones and anniversaries",
+      "href": "private-parties/"
+    },
+    {
+      "label": "Wedding cocktail hours",
+      "href": "weddings/cocktail-hour/"
+    },
+    {
+      "label": "Club and member events",
+      "href": "corporate/client-dinners/"
+    }
+  ],
+  "_plannerFaqs_note": "DRAFT 2026-08-07. The deep operational FAQ, the questions a planner asks that are not about price. `faqs` above stays the short pricing set on the pricing page; this is the full set on planners/faq/. Any entry with \"open\": true is an answer written as a best guess because it is a business policy nobody has decided yet. Those render with a dotted underline, the same convention as an unresolved brand value, so an undecided policy cannot ship silently. Resolve them, drop the flag.",
+  "_plannerFaqs_reconciliation": "Reconciled against the contract drafts in outreach/readiness/ before planner outreach, 16 to 17 Aug 2026. ALL SEVEN OPEN FLAGS ARE NOW CLOSED. Closed against the contract: what holds a date (§3), balance and payment (§3 plus invoice format 03c), outdoors (§7). Closed by Daniel 17 Aug: showcases (no, and no public dates either, these are private groups), dress code (ratified as written), green room and meals (neither required, so they do NOT enter contract §7), and the cancellation window at 90 days. The cancellation entry was the important one: the site had been contradicting contract §5 outright. Vocabulary is the contract's throughout: deposit, never retainer. Anything reopened here must be reopened in 03a at the same time, because these answers and that document are now the same policy in two registers.",
+  "plannerFaqs": [
+    {
+      "group": "The band and the people",
+      "items": [
+        {
+          "_rewritten_note": "2026-08-15. The old answer named the two house bands and described benches and chairs, which is the lineup framing the restructure retires. Revised 2026-08-17: the front-never-changes claim removed per Daniel. REVISED AGAIN 2026-08-20, Daniel's ruling from the outreach audit: the opener 'You book an act, not a pool' contradicted contract 03a §6, which sells a configuration and not a named act, and Daniel chose to align the FAQ to the contract rather than the contract to the FAQ. The answer now leads with exactly what the contract names, and the act texture follows as description rather than as the contractual claim. 'its own book' also became 'its own repertoire' under the buildout's vocabulary rule (legacy fixed when touched).",
+          "q": "Do you have regular personnel, or is the band filled with whoever is available?",
+          "a": "The contract names a configuration: the size, the instrumentation and the repertoire, and that's exactly what performs on your date. Behind it, every act on the roster is an existing group with its own repertoire and regular personnel, and a named act is published under the name of the person who fronts it. Any substitution, front person included, is named to you in advance along with the reason."
+        },
+        {
+          "q": "What happens if a musician cannot make the date?",
+          "a": "Any substitution is named to you in advance. Every roster in this business uses subs from time to time, and you get the name and the reason as soon as we know."
+        },
+        {
+          "_rewritten_note": "2026-08-17. Daniel: the contact's role does not matter to the client, so the player-not-coordinator claim and the two-roles explanation are gone. The answer is now exactly what the contract promises: a name and mobile in writing two weeks out, reachable load-in to load-out.",
+          "q": "Who do we deal with on the night?",
+          "a": "One personal contact. You get their name and mobile number before the event, and they're reachable from load-in to load-out."
+        },
+        {
+          "_closed_note": "Closed 2026-08-17. Daniel: no showcases, and these are private groups that do not play public dates, so the first version's offer to point at a public date was wrong too. The honest answer is no, and it is written as a straight no rather than a hedge. NOTE: this makes video the only pre-booking evidence that can ever exist, which moves the footage shoots from nice-to-have to the answer to a question every planner asks.",
+          "q": "Can we see the band play before we book?",
+          "a": "These are private-event groups, so there's usually no public date to attend and we don't stage showcases. Video on each act's page is the best way to hear them before you book."
+        },
+        {
+          "_closed_note": "Ratified 2026-08-17 as written. Daniel: dress code is standard.",
+          "q": "What do the musicians wear?",
+          "a": "Black tie, business formal or all black, whichever your event calls for. Tell us the dress code you've set for guests and we'll sit one notch inside it. If you need something specific, put it in the contract and that's what the musicians wear."
+        }
+      ]
+    },
+    {
+      "group": "Booking and paperwork",
+      "items": [
+        {
+          "_closed_note": "Closed 2026-08-16 against contract §3. Vocabulary aligned to the contract: deposit, not retainer. The net-30 exception was missing here and is in the contract.",
+          "q": "What holds a date?",
+          "a": "A signed contract and a deposit, both at booking. Until both are in, the date stays open. Approved corporate accounts can hold the date with a signature alone and be invoiced after the event."
+        },
+        {
+          "_closed_note": "Closed 2026-08-16 against contract §3 and the invoice format in readiness/03c. Card was pulled that day because no processor existed; Daniel confirmed Stripe 2026-08-17 and it is restored. Fee decision 2026-08-17: Signet absorbs the card processing fee, so all three methods cost the client the same. ACH remit details still pend the bank conversation, which pends the trade-name filing.",
+          "q": "When is the balance due, and how do we pay?",
+          "a": "The balance is due 14 days before the event. ACH, a check made out to the name on the contract, or card through Stripe, all at no fee. Every method costs you the same, so pick whichever your finance process prefers. Corporate clients can be approved for net-30 instead, invoiced at the event and due 30 days after it, with a purchase order number on the invoice if your finance team uses one."
+        },
+        {
+          "_closed_note": "CLOSED 2026-08-17 at 90 days, Daniel's call, and contract §5 now says the same. History: the site originally said 90 days but framed the retainer as transferring, which contradicted the contract draft's 30-day line and its separate free postponement. Reconciled to the contract on 16 Aug at 30, then the 30 was rejected as too generous: a date released inside 90 days cannot realistically be resold, which is the whole reason the date is held. The free postponement is what keeps this fair, so this only bites on a genuine cancellation.",
+          "q": "What is the cancellation policy?",
+          "a": "Postponing is almost always cheaper than cancelling and we will say so at the time. One move to a new date inside twelve months is free, subject to availability, and everything paid transfers. If we cannot make any date that works, you get everything back. A straight cancellation more than 90 days out costs the deposit and nothing further. At 90 days or fewer the fee is due, less any travel and lodging we have not already spent. If we ever cancel on you, you get everything back and we help you find the replacement."
+        },
+        {
+          "q": "Do you carry liability insurance?",
+          "a": "Yes. A certificate naming your venue as additional insured comes with the contract, along with a W-9 and one itemised invoice."
+        },
+        {
+          "q": "Can you work with our procurement or AP process?",
+          "a": "Yes. We can be set up as a vendor, quote against a purchase order, and invoice in whatever form your finance team needs. Ask early; vendor onboarding is usually the slowest thing on a corporate booking."
+        },
+        {
+          "q": "How far in advance should we book?",
+          "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+        }
+      ]
+    },
+    {
+      "group": "The night itself",
+      "items": [
+        {
+          "q": "How long are the sets, and how long are the breaks?",
+          "a": "Sets run 45 to 60 minutes with 15 to 20 minutes between them, set against your run of show rather than a fixed clock. Audio continues through every break at every size, so the night never goes silent."
+        },
+        {
+          "q": "Can we use your microphones for speeches?",
+          "a": "Yes. An announcement microphone is ready at every size from the end of sound check. Hand it to whoever is speaking."
+        },
+        {
+          "q": "Will you learn a song we choose?",
+          "a": "Yes. Send it at least four weeks out, with the version you mean, since there are usually several and they aren't the same arrangement. The first one is included in every booking, and each one after that is its own line on the quote."
+        },
+        {
+          "q": "Do you make announcements or act as MC?",
+          "a": "The bandleader will make short announcements from the stage: dinner is served, the dance floor is open, please welcome your speaker. We don't run the evening as an MC. If your program needs a host, that's a separate hire and we'll work to their cues."
+        },
+        {
+          "q": "Can we add time on the night?",
+          "a": "Yes. Added time costs what the earlier hours did, in 30-minute increments, agreed on the night with whoever holds the budget."
+        },
+        {
+          "q": "How loud is it, really?",
+          "a": "Dinner and cocktails run 65 to 72 dBA at the nearest table, which is a volume you can talk across without raising your voice. Dancing runs 88 to 95 dBA on the floor. If your venue enforces a cap, tell us the number at contract and we'll build the night under it."
+        }
+      ]
+    },
+    {
+      "group": "The venue and the gear",
+      "items": [
+        {
+          "q": "Do you provide sound and lighting?",
+          "a": "Sound support that's the right size for the venue is included at every size. Stage lighting and a dedicated front-of-house engineer are optional add-ons, quoted as their own line. We don't light the space, the tables or the dance floor as a design element. That's your lighting vendor's work, and we'll coordinate with them."
+        },
+        {
+          "_note": "ADDED 2026-08-27 from a buyer-questions pass. Daniel's phrasing: 'We take care of that unless you or the hotel has hired an additional contractor for sound support, in which case that would be their domain.' Downtown hotels commonly carry mandatory in-house AV (Encore and similar), so this is a real corporate-buyer question the site did not answer.",
+          "q": "The venue has its own AV company. Whose sound system runs the night?",
+          "a": "Ours, unless you or the venue have hired a sound contractor, in which case sound support is their domain: we advance the plan with them before the night and play through what they run. Either way it's settled at contract rather than at load-in."
+        },
+        {
+          "q": "Do you need a stage, and do you provide one?",
+          "a": "We don't require one and we don't supply one. A band plays fine on a floor. If you want a riser, the venue or your production company provides it, and the footprints we need at each size are published on the technical page."
+        },
+        {
+          "q": "What power do you need?",
+          "a": "Dedicated 20-amp circuits within reach of the stage, one or two of them depending on the size of the band. The requirement most often missed is that they be dedicated: sharing a circuit with catering warmers or a lighting truss is the single most common cause of a problem at load-in. Exact counts are on the technical page."
+        },
+        {
+          "_closed_note": "Closed 2026-08-16 against contract §7, which requires a covered, level, dry performance area. Level and dry were missing here.",
+          "q": "Can you play outdoors?",
+          "a": "Yes, on a covered, level and dry performance area, with power run to it and a plan for the weather written before the day. Colorado evenings get cold fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time."
+        },
+        {
+          "q": "The venue has a curfew and a decibel limit. Is that a problem?",
+          "a": "No. Mountain and residential venues run on their own rules and we honour them as written. Tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
+        },
+        {
+          "_closed_note": "Closed 2026-08-17. Daniel: green room not needed but it supports their event; if meals are served the band would like them. The old answer made both a requirement over four hours. Because neither is an obligation, this does NOT go into contract §7, which cancels draft note 7 on 03a.",
+          "q": "Do the musicians need a green room or meals?",
+          "a": "Neither is a requirement. A green room, where one exists, does more for your event than for us: it keeps cases and spare gear out of your guests' sightline and gives the band somewhere to change that isn't a corridor. We don't ask for meals. If meals are being served, the band would like them, and a vendor meal is exactly right."
+        }
+      ]
+    },
+    {
+      "group": "The music",
+      "items": [
+        {
+          "q": "How much say do we get over the songs?",
+          "a": "As much or as little as you want. You can build the list yourself, hand us a do-not-play list and leave the rest, or describe the crowd and let the band read it song by song. Most clients do the middle one, and the do-not-play list is the part worth spending time on."
+        },
+        {
+          "q": "Do you take requests during the event?",
+          "a": "From you, yes, and from guests where it fits. The bandleader's job is reading the dance floor, so a request that would empty it gets a straight answer and an alternative rather than a yes and a bad twenty minutes."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does a band cost for a corporate event in Denver?",
+      "a": "In this market a cover or jazz band for a corporate event runs {{market:us_corporate_band}}, and a four to six piece band, the size the Denver market treats as its middle, runs {{market:denver_midtier_band}}. Those are the market's figures, not ours. Signet prices the date you're asking about, because a Tuesday in September and a Saturday in December aren't the same job."
+    },
+    {
+      "q": "Do you publish your prices?",
+      "a": "We quote each date rather than publish a list, because a Saturday in December and a Tuesday in September aren't the same job. What's published here is what live music costs in this market, with the source for each figure, so you can set a budget before you write to us. Send the date and we'll come back with a recommendation and a price for your night."
+    },
+    {
+      "q": "How is the price calculated?",
+      "a": "Most acts in this market bill two things: a call-out that covers the evening they commit to whatever its length, and an hourly rate for performance time. That is why a one-hour cocktail set is not a quarter of a four-hour reception. Sound sits inside the figure with some acts and arrives as its own line with others, which is the first thing worth checking when two quotes look far apart."
+    },
+    {
+      "q": "Do you provide a certificate of insurance?",
+      "a": "Yes, naming your venue as additional insured, sent in the same email as the contract. The coverage limits match what Colorado venues write into their vendor requirements. A W-9 and one itemised invoice come with it."
+    },
+    {
+      "q": "Can one booking cover cocktails and dancing?",
+      "a": "Yes. Once we're in the building the setup is already paid for, so a smaller group covering ceremony, cocktails or dinner alongside the main booking is a cheaper way to cover the night than hiring twice. You get one contract, one load-in and one invoice."
+    },
+    {
+      "_note": "The 'who do we deal with on the night' question lived here too until 2026-08-07. It is not a money question, and it now has a fuller answer in plannerFaqs that distinguishes the contact from whoever fronts the band. One home only.",
+      "q": "How far in advance should we book?",
+      "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+    }
+  ],
+  "_rates_removed_note": "REMOVED 2026-09-04. `rates` held the call-out plus hourly table and `_rates_byRequest_note` explained the by-request rows. The site publishes no Signet price of any kind from that date, and the repo is the published site, so the numbers left the data file with the copy. They live in OFFER.md, which is the internal model and always was. Do not restore them here: market figures go in market-rates.json with their provenance, and Signet's own numbers go in a quote.",
+  "_extras_note": "REWRITTEN 2026-09-04 with the no-published-price decision. This was an item plus a `rate` column and rendered as a priced table. It is now the list of what is itemised separately on a quote, which is a real and useful thing to publish, with no figure attached to any line. The figures are in OFFER.md.",
+  "_insurance_removed_note": "REMOVED 2026-09-04. Held the general-liability limits and rendered them through {{gl_per_occurrence}} / {{gl_aggregate}} on /planners/ and /corporate/client-dinners/. The coverage is real and unchanged; the figures came off because the no-published-figure rule of 2026-09-04 is written as an absolute and the repo is the published site. The copy now says the certificate names the venue as additional insured and meets what Colorado venues write into their vendor requirements. The limits are in OFFER.md and on the certificate itself.",
+  "_faqs_note": "REWRITTEN 2026-09-04 with the no-published-price decision. These are the pricing page's questions and they still answer the money question, with the market's figures instead of Signet's. Figures only ever arrive here as {{market:<id>}} tokens off market-rates.json; a page that resolves one has to carry {{market_sources}} or the build fails. Never type a figure into an answer."
+}

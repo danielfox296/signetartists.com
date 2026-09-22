@@ -1,0 +1,125 @@
+<section class="section section--top">
+  <div class="wrap">
+    <div class="split contact-grid">
+      <div>
+        <div class="heading">
+          <p class="eyebrow eyebrow--slab">Enquiries</p>
+          <h1 class="h2 display">Check a date.</h1>
+          <p class="lede">Tell us when and where. You'll get availability and an exact number back inside 24 to 48 hours, in business hours.</p>
+          <!-- 2026-09-04, with the no-published-price decision. The site
+               publishes no price, so the one thing this page has to say is
+               that a date and a problem are enough to start with. Nothing
+               else on this page changed. -->
+          <p class="prose">A date and a problem to solve are enough to start. You don't need a size, a set list or a budget worked out first; tell us what the night is and we'll size it from there.</p>
+        </div>
+
+        <dl class="contact-details">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:{{brand_email_raw}}">{{brand_email}}</a></dd>
+          </div>
+          <div>
+            <dt>Where we play</dt>
+            <dd>{{brand_service_area}}</dd>
+          </div>
+          <!-- 2026-08-27, from the buyer-questions pass. Calls happen on
+               request (Daniel's practice) but no number publishes — his call.
+               One plain line, not a promise stack. -->
+          <div>
+            <dt>Prefer a call?</dt>
+            <dd>Say so in the form and leave your number.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Static host, so this posts to formsubmit.co rather than a server
+           action. _next is the confirmation page.
+           No honeypot, on purpose: a hidden _honey field makes formsubmit
+           drop the submission silently while still redirecting to /thanks/,
+           and browser autofill fills hidden fields it can classify. That
+           combination cost us a live corporate enquiry the week of
+           2026-08-24 while blocking no observable spam — formsubmit's own
+           server-side filtering is the spam layer. If spam volume ever
+           becomes a problem, escalate to a relay that logs submissions,
+           never back to a silent trap. -->
+      <form action="{{form_action}}" method="POST">
+        <input type="hidden" name="_next" value="{{site_url}}/thanks/">
+        <input type="hidden" name="_subject" value="Enquiry via signetartists.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input id="name" name="Name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="company">Company or organization</label>
+            <input id="company" name="Company or organization" autocomplete="organization">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="eventDate">Event date <span class="req">*</span></label>
+            <input id="eventDate" name="Event date" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="eventType">Event type</label>
+            <select id="eventType" name="Event type">
+              <option value="">Select&hellip;</option>
+              <option>Corporate party</option>
+              <option>Gala or fundraiser</option>
+              <option>Wedding</option>
+              <option>Private party or milestone</option>
+              <option>Retreat or conference</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Added with the roster restructure 2026-08-15. Every Inquire link
+               on the site carries ?act=<id> and acts.js preselects it here, so
+               an enquiry that started on an act page arrives naming the act
+               rather than making the planner say it twice. -->
+          {{act_picker}}
+
+          <div class="field">
+            <label for="venue">Venue or city</label>
+            <input id="venue" name="Venue or city">
+          </div>
+
+          <div class="field">
+            <label for="guests">Guest count</label>
+            <input id="guests" name="Guest count" inputmode="numeric">
+          </div>
+
+          <div class="field">
+            <label for="covering">What needs covering</label>
+            <input id="covering" name="What needs covering" placeholder="Cocktails, dinner, dancing, all of it&hellip;">
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Anything else <span class="req">*</span></label>
+            <textarea id="message" name="Anything else" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script defer src="../acts.js"></script>

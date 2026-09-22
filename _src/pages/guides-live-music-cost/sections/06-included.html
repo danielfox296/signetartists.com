@@ -1,0 +1,20 @@
+<!-- What sits inside a figure, and what arrives as its own line. Both lists
+     render from site.json, same as the pricing page, so the surfaces cannot
+     disagree; the copy around them is this page's own. -->
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <div class="split split--two">
+      <div>
+        <h2 class="h3">Included in the fee</h2>
+        {{included_list}}
+        <p class="note">Sound is included at every size. Stage lighting and a dedicated front-of-house engineer are add-ons, quoted as their own line.</p>
+      </div>
+      <div>
+        <h2 class="h3">Quoted separately</h2>
+        <p class="prose">These sit outside the fee on any quote. This market charges {{market:denver_holiday_surcharge}} for a holiday weekend.</p>
+        {{extras_list}}
+      </div>
+    </div>
+
+  </div>
+</section>

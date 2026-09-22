@@ -1,0 +1,940 @@
+{
+  "_comment": "The roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about a booking is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
+  "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page.",
+  "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included. UPDATE 2026-08-28: Dirty Flamenco's card now carries its own footage (see its _video_note), so the dj.jpg collision no longer renders anywhere; the img stays as data because the card falls back to it wherever the video field is ever cleared. UPDATE 2026-09-06: the shortage is down to two slots. Tony Medina replaced Blues Rock carrying his own photograph, which releases standards.jpg back to the jazz duo alone, and the only interim stills still rendering are the jazz duo's and the DJ's.",
+  "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs.",
+  "_pricing_note": "REWRITTEN 2026-09-04. This file carried the published rate card: a `denver` and a `resort` range on every rateCard row, an `hourly` on the duo, and per-config Offers derived from them. The site publishes no Signet price of any kind from that date, so the price columns are gone from the data as well as the copy; the repo is the published site and a number in a shipped JSON file is a published number. What is left is structure: the configuration ids, their labels and their piece counts, which is what the ladders, the roster filter and the schema still need. The internal card is in OFFER.md. Market figures live in _src/data/market-rates.json with their provenance and are the only figures any surface may render.",
+  "_scope_note": "REFOCUSED 2026-08-17 for Q4. The 2026 product is small format: solo, duo, trio and quartet, cocktail through featured. Quartet is the published ceiling on every act and every surface. Five and six piece stays on the rate card under a by-request divider, because the published-pricing philosophy is the differentiator and hiding a number we hold would cost more than printing it; it is not merchandised as a standard product anywhere else. Seven, ten and thirteen piece are off the sold tables entirely (see site.json rates). Tejas Singh leads the roster and every featured-acts block.",
+  "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source. Do not 'fix' this back to match an older copy of the spec.",
+  "_players_note": "No player names, no lineup, no 'collective of musicians' framing. On a face-led act the face is the one name published, because the face is what the client buys. On a spec'd format no person is named at all. Instrumentation is published everywhere, because it is part of the product; the people holding those chairs never are.",
+  "rateCard": [
+    {
+      "id": "solo",
+      "rangeLabel": "solo",
+      "label": "Solo",
+      "pieces": 1,
+      "note": "Background and cocktail. One voice, one instrument."
+    },
+    {
+      "id": "duo",
+      "rangeLabel": "duo",
+      "label": "Duo",
+      "pieces": 2,
+      "note": "The working pair. An hour on its own, or cocktails and dinner together."
+    },
+    {
+      "id": "trio",
+      "rangeLabel": "trio",
+      "label": "Trio",
+      "pieces": 3,
+      "note": "The working size for a party in a small venue."
+    },
+    {
+      "id": "quartet",
+      "rangeLabel": "quartet",
+      "label": "Quartet",
+      "pieces": 4,
+      "note": "Where a covers act becomes a dance floor act."
+    },
+    {
+      "id": "quintet",
+      "rangeLabel": "six piece",
+      "label": "Five to six piece",
+      "pieces": 5,
+      "byRequest": true,
+      "note": "Horns or a second voice. Quoted on request rather than sold as a standard size."
+    },
+    {
+      "id": "dj",
+      "rangeLabel": "DJ",
+      "label": "DJ",
+      "pieces": 1,
+      "note": "On its own, or against a live instrument as a hybrid."
+    }
+  ],
+  "buckets": [
+    {
+      "id": "party",
+      "label": "Party",
+      "blurb": "Dance floor."
+    },
+    {
+      "id": "cocktail",
+      "label": "Cocktail",
+      "blurb": "Arrival, cocktails, dinner."
+    },
+    {
+      "id": "patio",
+      "label": "Patio",
+      "blurb": "Outdoor and casual."
+    },
+    {
+      "id": "specialty",
+      "label": "Specialty",
+      "blurb": "Cultural and centerpiece."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Background, smallest spend."
+    },
+    {
+      "id": "dj",
+      "label": "DJ",
+      "blurb": "Continuous, and hybrid."
+    }
+  ],
+  "_facets_note": "ADDED 2026-09-16 with the new-act skill. Every filterable fact about an act is a tag against a vocabulary declared here, the same contract buckets[] and rateCard[] already had: bucket_tags = the kind of night, config_tags = the size, genre_tags = the genre, vocals = whether a singer fronts it, area_tags = where it plays. A select renders on the roster page only for a facet the roster actually varies on, and only with the options some act carries, so an unused tag is never a dead filter. vocals is one of: sung (a singer fronts it), instrumental (no singer), optional (a voice can be added; matches both filters). area_tags omitted means every area in areas[], which is the roster-wide default; set it only on an act that does not travel the whole list, and the Where filter appears the moment one does. The vocabularies grow with the roster; never publish a count of them either.",
+  "genres": [
+    {
+      "id": "jazz",
+      "label": "Jazz"
+    },
+    {
+      "id": "singer-songwriter",
+      "label": "Singer-songwriter"
+    },
+    {
+      "id": "pop-covers",
+      "label": "Pop and rock covers"
+    },
+    {
+      "id": "classic-rock",
+      "label": "Classic rock"
+    },
+    {
+      "id": "blues",
+      "label": "Blues"
+    },
+    {
+      "id": "soul",
+      "label": "Soul and R&B"
+    },
+    {
+      "id": "funk",
+      "label": "Funk"
+    },
+    {
+      "id": "yacht-rock",
+      "label": "Yacht rock"
+    },
+    {
+      "id": "americana",
+      "label": "Americana, folk and bluegrass",
+      "_note": "Label widened from \"Americana and bluegrass\" 2026-09-20, the day René Moffatt joined: his EPK calls the music folk, Americana and folk-rock, and the filter should say folk somewhere without minting a one-act genre."
+    },
+    {
+      "id": "flamenco",
+      "label": "Flamenco and Spanish guitar"
+    },
+    {
+      "id": "downtempo",
+      "label": "Downtempo and electronic"
+    },
+    {
+      "id": "dj",
+      "label": "DJ, open format"
+    },
+    {
+      "id": "sound-bath",
+      "label": "Sound bath and sound healing"
+    }
+  ],
+  "areas": [
+    {
+      "id": "denver",
+      "label": "Denver"
+    },
+    {
+      "id": "boulder",
+      "label": "Boulder"
+    },
+    {
+      "id": "colorado-springs",
+      "label": "Colorado Springs"
+    },
+    {
+      "id": "fort-collins",
+      "label": "Fort Collins"
+    },
+    {
+      "id": "vail",
+      "label": "Vail"
+    },
+    {
+      "id": "beaver-creek",
+      "label": "Beaver Creek"
+    },
+    {
+      "id": "aspen",
+      "label": "Aspen"
+    },
+    {
+      "id": "breckenridge",
+      "label": "Breckenridge"
+    },
+    {
+      "id": "telluride",
+      "label": "Telluride"
+    },
+    {
+      "id": "steamboat-springs",
+      "label": "Steamboat Springs"
+    },
+    {
+      "id": "winter-park",
+      "label": "Winter Park"
+    },
+    {
+      "id": "crested-butte",
+      "label": "Crested Butte"
+    }
+  ],
+  "acts": [
+    {
+      "id": "tejas-singh",
+      "name": "Tejas Singh",
+      "presentation": "face",
+      "status": "flagship",
+      "page": "artists/tejas-singh/",
+      "style": "Singer-songwriter covers",
+      "face": "Tejas Singh",
+      "material": "Covers",
+      "bucket_tags": [
+        "cocktail",
+        "party"
+      ],
+      "config_tags": [
+        "duo",
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "singer-songwriter",
+        "pop-covers"
+      ],
+      "vocals": "sung",
+      "from": "duo",
+      "img": "tejas-card.jpg",
+      "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
+      "video": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+      "blurb": "Authentic and intimate with a specialty in building familiar songs from the ground up with his amazing ear and looping tech, Tejas brings a wide variety of fan favorite songs and is also available to play his original, singer-songwriter material to your event.",
+      "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
+      "meta_description": "Voice-fronted covers for private events in Denver and the Colorado mountains. A duo through cocktails, a quartet for the dance floor. Send a date and we price the night.",
+      "identity": [
+        "One act, three sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
+        "The reason to care is the contract. Most events buy the front of the night and the back of the night from two different acts, which means two load-ins, two sound checks, two sets of names to keep straight and a seam in the middle that guests can hear. This ladders instead: a duo through arrival and dinner, then the rhythm section arrives and the same voice fronts the dance floor. The party sees one band getting bigger.",
+        "At quartet it stops being a cocktail act. The full rhythm section behind one voice, keys or a second guitar on top, playing a covers set built for a floor.",
+        "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing.",
+        "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
+      ],
+      "ladder": [
+        {
+          "config": "duo",
+          "build": "A singer-guitarist, plus bass",
+          "bestFor": "Arrival, cocktails and dinner."
+        },
+        {
+          "config": "trio",
+          "build": "Voice and guitar, bass, drums",
+          "bestFor": "Small venues, and parties that want a dance floor without a full band."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus keys or a second guitar",
+          "bestFor": "The dance floor booking. Weddings and corporate parties."
+        }
+      ],
+      "setlist": {
+        "note": "Pulled from the full song list on the repertoire page. A set is built around the flow of your evening, and this is a sample rather than the whole list.",
+        "from_repertoire": true,
+        "groups": [
+          {
+            "label": "Arrival and dinner",
+            "moment": "dinner",
+            "count": 6
+          },
+          {
+            "label": "The lift",
+            "moment": "lift",
+            "count": 6
+          },
+          {
+            "label": "The floor",
+            "moment": "dance",
+            "count": 6
+          }
+        ]
+      },
+      "video_poster": "img/acts/tejas-live-poster.jpg"
+    },
+    {
+      "id": "jazz-duo",
+      "name": "Jazz Duo",
+      "presentation": "spec",
+      "status": "flagship",
+      "page": "ensembles/jazz-duo-trio/",
+      "style": "Jazz standards",
+      "spec": "Upright bass and guitar",
+      "material": "Standards and covers",
+      "bucket_tags": [
+        "cocktail"
+      ],
+      "config_tags": [
+        "duo",
+        "trio"
+      ],
+      "genre_tags": [
+        "jazz"
+      ],
+      "vocals": "instrumental",
+      "from": "duo",
+      "img": "standards.jpg",
+      "alt": "A trumpet resting on a table.",
+      "video": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+      "_was_note": "Listed as 'Jordan Lovinger & DF' until 2026-08-16. Spec'd on Daniel's call: the cocktail hour is bought as a format, not as a personality, and naming it promised a specific pair we would not always field. The players behind it are unchanged.",
+      "blurb": "Class it up with jazz standards on upright bass and guitar, bring immediate sophistication to any cocktail hour or special event. The Signet Jazz duo specializes in music for when guests arrive, sip cocktails or enjoy dinner. This act is the perfect musical glue that holds the night together effortlessly. The volume and genre sit perfectly under riveting conversations.",
+      "seo_title": "Jazz duo for cocktails and dinner at Denver private events",
+      "meta_description": "Jazz standards duo for private events in Denver and the Colorado mountains. Upright bass and guitar for cocktails and dinner, at a volume guests talk across.",
+      "identity": [
+        "This is the cocktail hour booking. Upright bass and guitar, playing the standards book, at a volume you can talk across.",
+        "It is sold as a format rather than under a name, and that is a deliberate promise. What you are buying for this hour is an instrumentation, a repertoire and a volume. Which two musicians deliver it does not change any of the three, and pretending otherwise would mean naming a pair we cannot guarantee for your date. You get the spec, on every date it is available.",
+        "Most of what goes wrong in the first two hours of an event is a volume decision, not a repertoire decision. A band that plays this hour at the level it plays the dance floor makes guests shout at each other while they are still deciding what kind of night it is. A duo is the honest instrument for it: two musicians cannot get loud by accident, and the arrangement stays open enough that conversation sits on top of it.",
+        "Standards are the repertoire because they are the one set of songs nobody has to be told about. Guests do not identify the tunes and do not need to. The night reads as expensive and unhurried.",
+        "The duo covers arrival, cocktails and dinner on one line of the contract. If the night also needs a dance floor, that is a second booking."
+      ],
+      "_reviews_note": "AMENDED 2026-09-06 with the first client reviews on the format pages (Daniel's call). The identity line used to read \"with no name on it\"; a verified review that names the guitarist now sits on /ensembles/jazz-duo-trio/, so the absolute claim came out and the promise stayed. What is sold is still the spec, not a named pair, and the schema.json FAQ that explains why is unchanged. Provenance for every published review is in reviews.json.",
+      "_trio_rung_note": "ADDED 2026-08-20 with the SEO buildout. The handoff sells the jazz format as one page, duo and trio, upright bass and guitar core; the trio rung makes the ladder table on /ensembles/jazz-duo-trio/ carry both sizes off the rate card instead of the page pricing the trio beside the table.",
+      "ladder": [
+        {
+          "config": "duo",
+          "build": "Upright bass and guitar",
+          "bestFor": "Arrival, cocktails and dinner. One hour or the whole front of the night."
+        },
+        {
+          "config": "trio",
+          "build": "The duo plus drums, played with brushes",
+          "bestFor": "Larger venues and longer nights, still at conversation volume."
+        }
+      ],
+      "setlist": {
+        "note": "A set pulled from the standards and paced to the night. This is a sample, and the set on the night won't be exactly this list.",
+        "items": [
+          "Autumn Leaves",
+          "All the Things You Are",
+          "There Will Never Be Another You",
+          "Take the A Train",
+          "Blue Bossa",
+          "Beautiful Love",
+          "Someday My Prince Will Come",
+          "The Girl from Ipanema",
+          "All of Me",
+          "Green Dolphin Street"
+        ]
+      },
+      "video_poster": "img/acts/jazz-duo-poster.jpg"
+    },
+    {
+      "id": "dirty-flamenco",
+      "name": "Dirty Flamenco",
+      "presentation": "face",
+      "status": "flagship",
+      "page": "ensembles/flamenco-trio/",
+      "style": "Flamenco",
+      "face": "Gary Meyers",
+      "material": "Traditional and covers",
+      "bucket_tags": [
+        "specialty",
+        "cocktail"
+      ],
+      "config_tags": [
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "flamenco"
+      ],
+      "vocals": "instrumental",
+      "from": "trio",
+      "_configRangeLabel_note": "Overrides the derived range, which would read 'Trio to quartet'. The quartet here is the trio plus a dancer, which is an addition you ask for rather than a size off the ladder, so the card sells the trio and says the rest out loud.",
+      "configRangeLabel": "Trio, larger by request",
+      "img": "flamenco-card.jpg",
+      "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
+      "_video_note": "LANDED 2026-08-28, the first real footage on the roster. Daniel's phone video from a live date ('monarch 1' in his archive): 53 seconds of the trio playing, guitar, bass and percussion, under the venue's uplights. Shot vertical with the 16:9 image letterboxed inside, so the black bars are cropped at the source and the published file is native 16:9; 99MB re-encoded to 14.5MB, H.264, faststart. A site-relative path here renders as a native player (an http URL still renders as an embed). The poster is a frame from the footage itself, which also serves as the page's og_image, and the venue is deliberately not named anywhere it publishes. REPLACED 2026-09-20 by a second clip from the same room: Daniel's iPhone footage of 2026-09-19, trimmed to 65 seconds in QuickTime (his export, 'Untitled.mov'), better lit and framed than the August clip, all three players in frame. Re-encoded from the 720p export to 15.0MB H.264, faststart, native 16:9, 24fps. It carries both roster cards and leads the flamenco page again as a native player, with the schema VideoObject describing it; the August clip stays in the page's footage grid. The venue is still not named.",
+      "video": "media/dirty-flamenco-2.mp4",
+      "video_poster": "media/dirty-flamenco-2-poster.jpg",
+      "blurb": "Brilliant, guitar-based flamenco musical act and one of the only in Colorado available for private events. Dirty flamenco plays real palos, and rhumba both authentically and with a soulful twist. Their polish as a working group is matched by their extensive standing repertoire.",
+      "seo_title": "Dirty Flamenco: flamenco trio for private events in Denver",
+      "meta_description": "Flamenco for weddings, corporate dinners and private events in Denver and the Colorado mountains. Trio, or a quartet with a dancer for a program that wants a set piece.",
+      "identity": [
+        "Flamenco is the booking on this roster that almost nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing repertoire, sold at private event scale.",
+        "Most live music at a private event is designed to be felt and not watched. This is the opposite booking, and its work is the set moment: a cultural centerpiece, a corporate dinner that has to be memorable, a reception that wants something guests will describe to people who were not there.",
+        "The repertoire is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
+        "This is a named act rather than a format, an existing group booked under its own name. Any change to the lineup is named to you in advance."
+      ],
+      "ladder": [
+        {
+          "config": "trio",
+          "build": "Flamenco guitar, bass, cajon",
+          "bestFor": "Cocktails and dinner. It plays anywhere from background to full volume, and it doesn't need a dance floor."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus a dancer",
+          "bestFor": "A program with a set piece in it."
+        }
+      ],
+      "setlist": {
+        "note": "Flamenco is organized by palo, the traditional form, rather than by song title. A set is built from these and shaped to the crowd on the night, so the list here is a sample.",
+        "items": [
+          "Bulerias",
+          "Solea",
+          "Alegrias",
+          "Tangos",
+          "Rumba",
+          "Fandangos",
+          "Sevillanas",
+          "Guajiras"
+        ]
+      }
+    },
+    {
+      "id": "funk-trio",
+      "name": "Funk Trio to quartet",
+      "presentation": "spec",
+      "status": "listing",
+      "style": "Funk and soul",
+      "spec": "Guitar, bass, drums",
+      "material": "Covers",
+      "bucket_tags": [
+        "party"
+      ],
+      "config_tags": [
+        "trio"
+      ],
+      "genre_tags": [
+        "funk",
+        "soul"
+      ],
+      "vocals": "instrumental",
+      "from": "trio",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a microphone set close to it.",
+      "video": null,
+      "_merged_note": "MERGED 2026-08-16 from two listings, 'Dan Steele (funk trio)' and 'DF Funk'. The workbook flagged the direct overlap and said pick one or merge; Daniel's ruling is that they are interchangeable, so this is one format with both behind it as availability depth. The first pass differentiated them on voice-fronted versus guitar-fronted, which rested on a face chair the workbook marks 'assumed'. That copy is gone and is not to be reinstated without confirming the chair.",
+      "depth": [
+        "Dan Steele trio",
+        "DF Funk"
+      ],
+      "blurb": "Instrumental funk and soul covers at trio size, for a party where the dance floor is close to the tables."
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/dj/",
+      "style": "Open format",
+      "spec": "Decks, and a PA sized to the venue",
+      "material": "Open format",
+      "bucket_tags": [
+        "dj",
+        "party"
+      ],
+      "_config_note": "CORRECTED 2026-08-27, Daniel's catch on the critical pass. Was ['solo', 'duo'], which read the band-size ladder onto a booking that is not on it: the roster card and llms.txt printed 'Configurations: Solo to duo', the size filter offered the DJ as a duo, and act_offers priced the structured-data Offers off the solo and duo BAND rows, pricing the DJ off the wrong row entirely. The DJ's one config is the rate card's own dj row, which is what this page's schema.json always said. The two-person version of this booking is the hybrid below, an add-on inside the dj row's range, not a size.",
+      "config_tags": [
+        "dj"
+      ],
+      "genre_tags": [
+        "dj"
+      ],
+      "vocals": "instrumental",
+      "_configRangeLabel_note": "Without the override the card would print 'Configurations: DJ' under the name DJ. This states the actual choice, and it is the dj rate row's own note in card grammar.",
+      "configRangeLabel": "solo to duo",
+      "from": "dj",
+      "img": "dj.jpg",
+      "alt": "Faders and knobs on a mixing console.",
+      "video": null,
+      "_was_note": "Listed as 'Josh' until 2026-08-16. A bare first name read thin next to the named acts and promised a specific person for a service that is bought as a format.",
+      "blurb": "Book a DJ on their own or to carry a late night set after the band wraps their set. All run by the same team, with the same contract. A solid DJ gets people moving and is the most common single booking of the corporate season.",
+      "hybrid": {
+        "label": "DJ plus live instrument",
+        "instruments": [
+          "Bass",
+          "Saxophone"
+        ],
+        "_stat_note": "TRIMMED 2026-08-27 critical pass. The copy claimed 'Roughly one couple in six now asks for this format', an unsourced adoption stat, wedding-framed on a corporate-first product, published under a company in its first season. If the number is real from Daniel's own books it can come back with that framing; the priced-on-the-card fact stands without it.",
+        "copy": "This is a live musician on the floor, playing over the DJ set. It's the difference between a playlist and a crowd watching something happen, and it keeps a dance floor going through the hours when a band would already have gone home. It's quoted as its own line when you ask for it."
+      }
+    },
+    {
+      "id": "tony-medina",
+      "name": "Tony Medina",
+      "presentation": "face",
+      "_presentation_note": "PROMOTED 2026-09-06 on Daniel's call, reversing the 2026-08-16 spec'ing for this artist only. He was anonymous depth behind the 'Blues Rock' format because the workbook read him and Freddy Alexander as interchangeable. That reading does not survive contact with his own material: he fronts under his own name, on his own site and his own channel, with a published catalogue of originals and a covers book you can watch him play. That is the definition of a fronted act in _players_note, so he is named and the format he stood behind retires into him. Freddy stays below as unpublished depth, which is what the face-led promise already covers.",
+      "status": "listing",
+      "_status_note": "A listing that owns a page, the same shape as the DJ. Not flagship: FLAGSHIPS drives the home page's three-up grid, and a fourth card would leave one orphan on a second row. He still gets the authored page, the 'See Tony Medina' card CTA and his own llms.txt URL, because both of those key off `page` rather than off status.",
+      "page": "artists/tony-medina/",
+      "_style_note": "Kept from the format he replaces. The card renders style as an eyebrow directly above the name, and 'Blues, rock and roots' over 'Tony Medina' reads as a byline rather than as the same two words twice.",
+      "style": "Blues, rock and roots",
+      "face": "Tony Medina",
+      "material": "Covers and originals",
+      "_bucket_note": "budget carries over from the format he replaces, and he is the only act tagged with it. Dropping it would empty the Budget filter on the roster page entirely, which costs a planner with the smallest spend the one act that actually answers them. It is honest as well: solo voice and guitar is the smallest live booking on this roster. If the Budget pill under a named artist's face reads wrong, it is one tag to delete.",
+      "bucket_tags": [
+        "cocktail",
+        "party",
+        "budget"
+      ],
+      "config_tags": [
+        "solo",
+        "duo",
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "blues",
+        "classic-rock"
+      ],
+      "vocals": "sung",
+      "from": "solo",
+      "img": "tony-medina-card.jpg",
+      "_img_note": "His own photograph, not an interim still: a black and white frame of him playing an acoustic guitar under string lights, cropped 16:9 from the centre of the source. Provenance in media-sources.json. It also releases standards.jpg, which the retired Blues Rock card shared with the jazz duo.",
+      "alt": "Tony Medina playing an acoustic guitar under string lights, in black and white.",
+      "video": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+      "_video_note": "SWAPPED 2026-09-06, Daniel's call, and this is a hosting decision as much as a taste one. The hero was t_s2FavrDew, the Freddie King duo cut, which sits on the SIDEHATCH ARTS channel rather than Tony's. That put the most-watched thing on the page on a channel we do not control: the views accrued to someone else, and a deletion or an embed switch on their side would have blanked the top of the page with no warning. It was also the weakest footage of the five once the frames were actually compared, at 720p in a plain office space with a second player as prominent as Tony. This is the Signet copy of his Prince cover instead: 1080p, purple stage light, unmistakably him out front, and we own it. Going Down keeps its place in the footage grid as the one duo performance.",
+      "video_poster": "img/acts/medina-live-poster.jpg",
+      "blurb": "A smoky voice and a guitar played with a funk guitarist's right hand. Tony Medina plays the blues and the rock and roll that came out of it, Freddie King and B.B. King through The Cars and Prince, with a book of his own songs threaded through. He plays solo for welcome drinks and dinner, and up to a four piece when the night wants a dance floor.",
+      "seo_title": "Tony Medina: blues and rock for Denver private events",
+      "meta_description": "Blues and rock for private events in Denver and the Colorado mountains. Solo through four piece, fronted by Tony Medina. Send a date and we price the night.",
+      "identity": [
+        "Some nights want a voice that sounds like it has been somewhere. Tony Medina sings with grit and gravel in it and plays guitar with a funk guitarist's right hand, which is why a set of blues and classic rock in his hands tends to catch a crowd that thought it had turned up for background music.",
+        "The book is the blues and most of what the blues turned into. Freddie King and B.B. King at one end, The Cars, Prince and the rock records of the seventies and nineties at the other, and his own songs threaded through. Guests recognise nearly all of it without being told what it is, which is the whole trick of a covers set at a private event.",
+        "It scales from one musician to four. Solo it is a voice and an acoustic guitar, warm enough to sit under conversation through welcome drinks and dinner. Add percussion, then bass and drums, and at the four piece it is a band with a floor in front of it.",
+        "He is a working Denver musician with his own catalogue, his own site and his own channel, so none of this has to be taken on trust. The footage on this page is his, and there is a great deal more of it where that came from.",
+        "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
+      ],
+      "ladder": [
+        {
+          "config": "solo",
+          "build": "Voice and acoustic guitar",
+          "bestFor": "Welcome drinks, patios and dinner, at conversation volume."
+        },
+        {
+          "config": "duo",
+          "build": "Voice and guitar, plus percussion",
+          "bestFor": "Patio evenings and receptions that want a pulse under the set."
+        },
+        {
+          "config": "trio",
+          "build": "Voice and guitar, bass, drums",
+          "bestFor": "Smaller venues, and parties that want a dance floor without a full band."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus a second guitar or keys",
+          "bestFor": "The dance floor booking. Office parties and milestone birthdays."
+        }
+      ],
+      "setlist": {
+        "_note": "Every title here is a cover he publishes footage of, on this page or on his own channel, so the sample set and the evidence are the same list. Deliberately not from_repertoire: that branch picks the first N titles in catalogue order and would have printed the same songs as the Tejas Singh page.",
+        "note": "These are the covers you can watch him play, on this page and on his own channel. His wider song list runs from sixties soul and classic rock through nineties alternative, and a set is built around your run of show. This list is a sample, and the set on the night won't match it song for song.",
+        "items": [
+          "Going Down",
+          "The Thrill Is Gone",
+          "Purple Rain",
+          "Drive",
+          "Don't Drink the Water"
+        ]
+      },
+      "_depth_note": "Freddy Alexander was the other half of the interchangeable pair behind the retired Blues Rock format. He is not a listing and he is not published: `depth` renders on no surface, and this is the same unpublished availability depth he has been since 2026-08-16. The face-led promise above already covers him honestly, because it says any substitution is named to you in advance rather than pretending there is never one.",
+      "depth": [
+        "Freddy Alexander"
+      ]
+    },
+    {
+      "id": "last-consulate",
+      "name": "Last Consulate",
+      "presentation": "spec",
+      "_presentation_note": "ADDED 2026-09-03. A named solo project, not an interchangeable format, but the player behind it is not published by name, so the byline carries the instrumentation the way a spec'd format does. It sits with the named acts on the music page intro because the sound is specific and comes with the booking. If Daniel wants the player named, switch to presentation 'face' and fill `face`.",
+      "status": "listing",
+      "style": "Instrumental downtempo",
+      "spec": "Upright bass, guitar and electronics, one musician",
+      "material": "Originals",
+      "bucket_tags": [
+        "cocktail"
+      ],
+      "config_tags": [
+        "solo"
+      ],
+      "genre_tags": [
+        "downtempo",
+        "jazz"
+      ],
+      "vocals": "instrumental",
+      "from": "solo",
+      "img": "last-consulate-card.jpg",
+      "_img_note": "The act's own artwork, supplied by Daniel 2026-09-03 (his Desktop last-consulate folder, passport.jpg). Not a placeholder and not a shoot still: it is a prop passport, already black and white, cropped to 16:9 at y=390 of the 960x1095 source and otherwise untouched, no palette duotone. The name printed on the prop is artwork and nothing on the site repeats it. Provenance in media-sources.json.",
+      "alt": "A passport held open at its photo page, in black and white.",
+      "video": null,
+      "blurb": "One player, upright bass and guitar out front, over downtempo electronics with slow hip-hop drums, worn keys and delayed guitar. Jazz improvisation on top, at conversation volume. Arrival, cocktails and dinner, on original material that sounds closer to an early-2000s downtempo record than to a jazz set.",
+      "_identity_note": "Daniel's supplied description, passed through AI-TELLS-2026 on 2026-09-03 (em dash, 'not X but Y', the five-adjective stack, the crate-digger triad and the three-fragment tagline all cut). Held here for the day the act gets a page; a listing renders the blurb only, and the SEO buildout is holding new URLs until indexation catches up.",
+      "identity": [
+        "Last Consulate is the solo project of one multi-instrumentalist, built on upright bass, electric bass, guitar and downtempo electronics.",
+        "The improvising is jazz. The production is early-2000s downtempo electronica, the slow and hazy end of it, instrumental and warm, and mixed so that what was played and what was sampled are hard to tell apart.",
+        "Upright bass is the lead instrument. Under it sit slow hip-hop drums, extended jazz harmony, tape-worn keys and delayed guitars, and the improvised bass line is usually the melody.",
+        "It is built for arrival, cocktails and dinner, played at a volume guests can talk across, with the feel of a late jazz set or a hotel lobby."
+      ]
+    },
+    {
+      "id": "live-band-karaoke",
+      "name": "Live Band Karaoke",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/live-band-karaoke/",
+      "style": "Party covers, the 80s and 90s onward",
+      "spec": "Voice and guitar, keys, bass, drums, and a host working the mic",
+      "material": "Covers",
+      "bucket_tags": [
+        "party"
+      ],
+      "config_tags": [
+        "quartet",
+        "quintet"
+      ],
+      "genre_tags": [
+        "pop-covers",
+        "classic-rock"
+      ],
+      "vocals": "sung",
+      "from": "quartet",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a microphone set close to it.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 from the corporate demand report. Zero Colorado corporate vendors sell live band karaoke, no Denver-metro act exists on The Bash or GigSalad, and 'live karaoke denver' autocompletes. Daniel folded the 80s and 90s cover-band ideas into this act the same day: it plays as a party band on its own and hands the mic over. Spec'd, no names.",
+      "blurb": "A party band that plays the 80s and 90s hits on its own, then hands the mic to anyone in the crowd who wants a song. Nobody has to sing for the night to work, and the band is ready the moment somebody does."
+    },
+    {
+      "id": "yacht-rock",
+      "name": "Yacht Rock Band",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/yacht-rock/",
+      "style": "Yacht rock",
+      "spec": "Three voices, keys, guitar, bass, drums and saxophone",
+      "material": "Covers",
+      "bucket_tags": [
+        "party",
+        "patio"
+      ],
+      "config_tags": [
+        "quartet",
+        "quintet"
+      ],
+      "genre_tags": [
+        "yacht-rock",
+        "pop-covers"
+      ],
+      "vocals": "sung",
+      "from": "quartet",
+      "img": "yacht-rock.jpg",
+      "alt": "Two sailboats moored on still water at sunset.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 from the corporate demand report: 'yacht rock cover band denver' and ten neighbouring phrases autocomplete, no Colorado act exists and no marketplace carries the category. Spec'd, no names.",
+      "blurb": "Doobie Brothers, Steely Dan, Hall and Oates, Toto and Christopher Cross, sung in harmony with the saxophone out front. It's the summer party band, and the late set a whole crowd knows the words to.",
+      "_img_note": "REPLACED 2026-09-19, Daniel: 'the yacht rock image is stupid.' The card had been borrowing outdoor.jpg (a frame tent over a plywood stage, the outdoor-reception post's still). Now its own interim still, scripts/stills.py slug yacht-rock: two sailboats at dusk, Wikimedia Commons CC BY 2.0, duotoned like every other interim still, provenance in img/SOURCES.md. The genre's own picture, no people, and no claim about where the band plays."
+    },
+    {
+      "id": "americana-band",
+      "name": "Americana Band",
+      "presentation": "spec",
+      "status": "listing",
+      "page": "ensembles/americana-band/",
+      "style": "Americana and the Colorado songbook",
+      "spec": "Voice and acoustic guitar, fiddle or mandolin, upright bass, drums",
+      "material": "Covers",
+      "bucket_tags": [
+        "patio",
+        "cocktail",
+        "party"
+      ],
+      "config_tags": [
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "americana",
+        "classic-rock"
+      ],
+      "vocals": "sung",
+      "from": "trio",
+      "img": "range.jpg",
+      "alt": "The Denver skyline with the Front Range behind it, seen from City Park.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 from the corporate demand report: the Colorado welcome act for conferences and incentive groups. Planners report demand for local flavor, the DMCs sell Western and apres-ski evenings, and bluegrass supply in Denver is deep but nobody packages it for corporate work. Fronted, but sold as a spec on Daniel's call 2026-09-14: no face on the page.",
+      "blurb": "This is the band for a Colorado evening with a crowd that flew in for it. It plays Grateful Dead, Tom Petty and Neil Young beside Nathaniel Rateliff and Gregory Alan Isakov, on acoustic guitar, fiddle, upright bass and drums, for a welcome reception, a ranch dinner or a summer picnic."
+    },
+    {
+      "id": "soul-rnb",
+      "name": "Soul and R&B Band",
+      "presentation": "spec",
+      "status": "listing",
+      "style": "Soul and R&B",
+      "spec": "Voice, keys, guitar, bass, drums, and a horn when the dance floor wants one",
+      "material": "Covers",
+      "bucket_tags": [
+        "party"
+      ],
+      "config_tags": [
+        "quartet",
+        "quintet"
+      ],
+      "genre_tags": [
+        "soul"
+      ],
+      "vocals": "sung",
+      "from": "quartet",
+      "img": "headliners.jpg",
+      "alt": "A snare drum with sticks laid across it and a microphone set close to it.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 on Daniel's call: a sung soul and R&B listing beside the instrumental Funk Trio. Every Colorado variety band carries Motown and soul as a layer of its set; this is that layer sold as its own act. Spec'd, no names. Listing only: 'soul band for hire denver' returns no autocomplete, so no page.",
+      "blurb": "Stevie Wonder, Aretha Franklin, Al Green, Bill Withers and the Motown songbook, sung out front with a horn on the big choruses. Book it as the dance floor act for a holiday party, or for the second half of a gala."
+    },
+    {
+      "id": "solo-piano",
+      "name": "Solo Piano",
+      "presentation": "spec",
+      "status": "listing",
+      "style": "Cocktail piano",
+      "spec": "Piano, with a voice when the evening wants one",
+      "material": "Standards and covers",
+      "bucket_tags": [
+        "cocktail",
+        "budget"
+      ],
+      "config_tags": [
+        "solo"
+      ],
+      "genre_tags": [
+        "jazz",
+        "pop-covers"
+      ],
+      "vocals": "optional",
+      "from": "solo",
+      "img": "ballroom.jpg",
+      "alt": "An empty banquet hall set for dinner.",
+      "video": null,
+      "_note": "ADDED 2026-09-14 on Daniel's call. Organizers ask for 'a piano player' by name in the planner threads, galas seat a pianist at dinner, and hotels sell the ballroom and leave the music to the planner. Listing only.",
+      "blurb": "A pianist through arrival, cocktails and dinner, standards and covers at a level the table talks across, with a voice added when the evening wants singing. This is the booking for a hotel ballroom or a client dinner."
+    },
+    {
+      "id": "changes-jazz-trio",
+      "name": "Changes Jazz Trio",
+      "presentation": "face",
+      "_note": "ADDED 2026-09-16, the first act published with the signet-new-act skill, ported from changesjazz.base44.app on Daniel's direction ('They can be a named act'). Named as a group of three equals rather than one front person, so `byline` and `byline_inline` override the 'Fronted by' line. Every image on their site is a generated illustration (base44 'generated_image' files: instruments on an empty stage, a Strat against brick, a saxophone mark), none a photograph of the trio, so nothing was taken and the card carries the interim hero still until a real photograph arrives. Daniel had already asked Sri Viswanath for media before the page went up (2026-09-16); it is forthcoming, and the day it lands it goes through scripts/act_media.py photo --card, the hero poster and og_image switch to it, and any clip takes the footage slot. No footage exists anywhere; their site has two studio audio recordings, which the page links rather than embeds. Their Spotify link returns 400 and is not published; the Instagram exists and is not scraped; the 646 phone on their site is not published.",
+      "status": "listing",
+      "page": "ensembles/changes-jazz-trio/",
+      "style": "Modern jazz",
+      "face": "Doug Emery, Sri Viswanath and Brian Jaffe",
+      "byline": "Doug Emery, guitar. Sri Viswanath, bass. Brian Jaffe, drums.",
+      "byline_inline": "Doug Emery on guitar, Sri Viswanath on bass and Brian Jaffe on drums",
+      "material": "Standards",
+      "bucket_tags": [
+        "cocktail",
+        "specialty"
+      ],
+      "config_tags": [
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "jazz"
+      ],
+      "vocals": "instrumental",
+      "from": "trio",
+      "img": "hero.jpg",
+      "_img_note": "Interim still (scripts/stills.py, an empty stage with a drum kit), not a photograph of the act. Their site publishes no photograph. Replace with the trio's own picture through scripts/act_media.py photo --card the day Sri's photographs arrive (Daniel asked 2026-09-16), and update the page hero poster and og_image with it.",
+      "alt": "An empty stage set with drums, keys and microphones.",
+      "video": null,
+      "blurb": "Guitar, fretless bass and drums, playing the standards with a modern edge at a volume guests can talk across. They're three working Denver musicians booked under their own names, with a saxophone added when the evening wants a featured set.",
+      "identity": [
+        "Changes is a guitar trio with a modern edge. Doug Emery on guitar, Sri Viswanath on fretless bass and Brian Jaffe on drums, playing the standards the way a working trio plays them, with the arrangements left open and a little risk in the solos. It holds a dinner at conversation volume, and it holds a listening crowd when the night wants that instead.",
+        "The three musicians are the reason it books under a name. Doug studied guitar performance at Berklee, played more than three thousand dates across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri spent decades as a working bassist in New York, on stages from Smalls to the Plaza Hotel, and played on Radha Thomas's 2019 tribute to Chet Baker. Brian came through the Lamont School of Music at the University of Denver and has played more than a hundred theater productions in the Denver pit orchestras since 2011.",
+        "It books as a trio, or as a quartet with a saxophone out front when the night wants a horn on the melody. The trio is the cocktail hour and dinner size. The quartet is the one for a featured set at a gala, or a client dinner where the music is part of the program.",
+        "Their own site carries the three bios and two studio recordings, and the recordings are the quickest way to hear what the trio sounds like before you write to us.",
+        "This is a named act, booked under the names of the three musicians in it, and if anyone in the lineup changes, we tell you in advance."
+      ],
+      "ladder": [
+        {
+          "config": "trio",
+          "build": "Guitar, fretless bass and drums",
+          "bestFor": "Cocktails and dinner at conversation volume, and a listening crowd."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus saxophone",
+          "bestFor": "A featured set at a gala, or a client dinner where the music is part of the program."
+        }
+      ]
+    },
+    {
+      "id": "firstwater",
+      "name": "Firstwater",
+      "presentation": "spec",
+      "_note": "ADDED 2026-09-19 with the signet-new-act skill, from thefirstwater.co on Daniel's direction ('here's the act. it's a little different than the others'). It is Daniel's own sound-bath practice and the first act on the roster that is not a band. Every fact on the card and the page traces to thefirstwater.co: the home page's plain description of the night, the FAQ, the About page and the corporate page. Not a band: one facilitator, seventy-five minutes, so there is one configuration and no ladder section on the page (a one-row table shows nothing; what the venue needs is in the identity paragraphs and the FAQ). The bucket is specialty, the set piece a group experiences. The act's own corporate page publishes a starting price; no figure of any kind comes across to Signet, and that page is not deep-linked for the same reason. Its reply-window line stays on its site too. No footage exists and none is likely (phones stay in bags at a session), so the hero carries a still in the act-video-photo pattern the solo guitarist page uses, with no footage-slot label; since 2026-09-19 that still is the duotoned stock sound-bath still, on Daniel's call, in place of the portrait that shipped first. Held back: every hero and session image on the act's site (duotoned Unsplash stock, listed in its img/hero/SOURCES.md, not the act), and two photographs from another of Daniel's sites (third parties in frame, and not this act). UPDATED 2026-09-19 later the same day: thefirstwater.co/weddings/ went live (Daniel: 'add wedding stuff to the firstwater site'), so the wedding booking now traces to the act's site and joins the identity copy and the occasions block.",
+      "_presentation_note": "SPEC'D ON DANIEL'S RULING 2026-09-19: 'do not cite my name. no daniel, no daniel fox. firstwater.' The first version named him the way his own site does; it was reverted the same day. Firstwater is a named project whose facilitator is not published by name, the same shape as Last Consulate: `spec` carries the build the way a spec'd format's byline does, nobody is named anywhere on the page, in alt text or in schema, and the act still sits in the roster intro's named-acts sentence because the specific sound comes with the booking. The person's own site names him by first name; that is that site's law, not this one's.",
+      "_style_note": "DANIEL 2026-09-19: 'sound sessions are meaningless... i ask you for buyer oriented intended search terms. this is seo and geo.' The first version used the act's own product term. Style, genre label, title, FAQ questions and body copy now carry the terms buyers type, checked against Google autocomplete the same day: corporate sound bath, sound bath for corporate events, corporate wellness sound bath, sound healing for corporate wellness, sound bath team building, sound bath retreat, group sound bath, private sound bath. 'Sound meditation' autocompletes back to sound bath and sound healing, so those two carry the labels.",
+      "status": "listing",
+      "page": "artists/firstwater/",
+      "style": "Sound bath and sound healing",
+      "spec": "One facilitator, live instruments and a sound system tuned to the venue",
+      "byline_inline": "one facilitator, live instruments and a sound system tuned to the venue",
+      "material": "Original music, composed and played live",
+      "bucket_tags": [
+        "specialty"
+      ],
+      "config_tags": [
+        "solo"
+      ],
+      "_config_note": "One facilitator. The rateCard's solo row is the honest size (one person, one rig); its 'Solo' label reads as a musician count, so configRangeLabel carries the plain fact instead on the card and in llms.txt.",
+      "configRangeLabel": "One facilitator, seventy-five minutes",
+      "genre_tags": [
+        "sound-bath"
+      ],
+      "_genre_note": "The genre id is sound-bath and the label carries the two head terms buyers type, 'Sound bath and sound healing', the same combined-synonyms shape as 'Flamenco and Spanish guitar'. Daniel 2026-09-19: it is not a 'new genre', it is a search category.",
+      "vocals": "instrumental",
+      "from": "solo",
+      "img": "sound-bath.jpg",
+      "_img_note": "REPLACED 2026-09-19 on Daniel's call ('remove my photo and put a stock photo of a sound bath there'). The first version carried the act's own portrait from thefirstwater.co/about/; both files are deleted and their ledger rows read REMOVED. What renders now is an interim stock still from scripts/stills.py (slug sound-bath: three singing bowls on cushions, Wikimedia Commons, CC BY-SA 4.0, duotoned to the palette like every other interim still, provenance in img/SOURCES.md). Objects only, no people, and the alt describes the frame, never the act.",
+      "alt": "Three singing bowls on cushions with a mallet beside them.",
+      "video": null,
+      "blurb": "A sound bath for your team, offsite or retreat. Your people lie down in low light for seventy-five minutes with nothing to do and nothing to say, with live instruments played over composed music and bass deep enough to feel in your chest, and Firstwater opens and closes the session with ceremony. Firstwater brings it to your venue or holds it in a partner space in Denver, and it books for wellness weeks, team building days, retreats and transition days.",
+      "_identity_note": "Written in the Signet voice from the act's own published lines and read aloud against AI-TELLS Layer 7 on 2026-09-19: no fragment closers, no trailing appositives, contractions throughout, and the trade words the act's site uses (a composed bed, sub-bass, the rig) expanded into words a planner owns (music composed for it, bass deep enough to feel in your chest, the sound system). Rewritten the same day on Daniel's rulings: no name anywhere, buyer search terms (sound bath, sound healing, corporate sound bath, team building) in place of 'sound sessions'. 'Sound healing' is a search keyword here under BASE-VOICE's term-of-art allowance, used where the page's job needs it and nowhere as a claim. The lines that are the act's own stay verbatim: 'strong enough to feel in your chest and soft enough to rest inside', 'nobody is asked to share, to speak, or to be anywhere but on the floor', 'the month a team earned something quiet', 'if you have a space, we can make it sound like a different one'.",
+      "identity": [
+        "Firstwater is a sound bath led by one facilitator, and if you've been to one you already know how to arrive: lie down, get warm, and rest. The facilitator composes the music for each session, plays live instruments over it, and mixes the whole thing from the floor, lying where your people will lie. The facilitator treats the venue like a studio and tunes the sound system to it, so if you have a space, Firstwater can make it sound like a different one.",
+        "Your people come in to low light and lie down, and the mats and blankets are already there. The session opens with ceremony, then there are seventy-five minutes of sound strong enough to feel in your chest and soft enough to rest inside, with real silence partway through, and it closes the same way. Nobody is asked to share, to speak, or to be anywhere but on the floor. Some people follow the guidance closely, some drift, and some sleep, and each of those is a fine way to spend the hour. Afterward there's tea near the door, and people stay awhile or slip out as they please.",
+        "Companies book it as a corporate sound bath three ways: a team session at your office or in a partner space in Denver, one or more sessions built into an offsite or a retreat, and a transition day, with a session for the people leaving a company and for the team that stays. As a group sound healing session it suits a wellness week or a team building day, and it's for hospitals, hospices, libraries, schools and conference organizers as much as for companies and event planners. Couples book it too, as a private sound bath for a wedding weekend or a bachelorette, at the house they rented or a partner space in Denver. Firstwater brings the sound system, the mats, the blankets and the waivers, and what it needs from you is enough floor for your people to lie down, a standard outlet, and about ninety minutes ahead of doors.",
+        "Firstwater's own site is where to read about the public sound baths it holds around Denver and the Front Range, the plain answers to what happens at one, and a journal written in the facilitator's own words.",
+        "This is a named act. What you book is Firstwater, and the one facilitator behind the name is the one who arrives with the sound system and runs the session."
+      ]
+    },
+    {
+      "id": "rene-moffatt",
+      "name": "René Moffatt",
+      "presentation": "face",
+      "_note": "ADDED 2026-09-20 with the signet-new-act skill, from renemoffatt.com (a Bandzoogle site: home, about, music, videos, tiny desk, EPK, contact) and his channel, youtube.com/@renemoffatt, on Daniel's direction ('we've added a new artist, an original singer songwriter'). Named because he arrives with his own site, his own channel, a catalogue of six records and a band that plays under his name, which is the definition of fronted in _players_note. Facts on the page trace to his EPK (venues, festivals, the Wildflower and Ullrgrass finalist placings, the Alex Dezen quotes, Wheat Ridge as home), his about page (the influences and the playlist company), his tiny desk page (an NPR Tiny Desk Contest entry every year 2019 to 2026), his music page (the six releases and a holiday playlist) and his channel description (a Denver Public Library Volume Denver featured artist). His band is René Moffatt & The Moonshadows; an earlier band name on one 2024 upload, The Broken Fever, is not published here. The booking contact on his site is booking@renemoffatt.com; the phone on his EPK is not published. The accent in René is his spelling and stays; the id and every path are plain ASCII.",
+      "status": "listing",
+      "_status_note": "A listing that owns a page, the Tony Medina shape. Three flagships already fill the home grid.",
+      "page": "artists/rene-moffatt/",
+      "style": "Original singer-songwriter",
+      "_style_note": "Daniel's own phrase for him (2026-09-20). It renders as the eyebrow over his name and says the one thing that separates him from the covers acts at the same size.",
+      "face": "René Moffatt",
+      "material": "Originals and covers",
+      "_material_note": "His own songs lead every set he publishes. Covers are real and on his channel (Willie Nelson, The Beatles, The Cars, a Crosby Stills and Nash song club entry), so the set can lean either way on request.",
+      "_bucket_note": "cocktail and patio for the solo and the trio; specialty because a songwriter's set for a listening crowd (a house concert, a retreat evening) is a set piece guests watch; budget on the same reasoning as Tony Medina, solo voice and guitar being the smallest live booking on the roster. Not party: his set is his own songs and nothing on his site sells a dance floor.",
+      "bucket_tags": [
+        "cocktail",
+        "patio",
+        "specialty",
+        "budget"
+      ],
+      "_config_note": "His EPK sells two shapes, Solo Performances and Full Band / Trio Performances, and Daniel added the duo 2026-09-20 ('there is a duo version'). The trio in his footage is voice and guitar with lead guitar and bass (the Molecule Effect clips name Joe Mazza and Steve Combs); the full band on the Roxy and UMS footage adds drums, a four piece. The duo's build is written as voice and guitar with lead guitar, the trio minus its bass, because that is the only reading of his own ladder that needs no new instrument; his site publishes no duo, so if the second musician is the bassist it is one word in the rung.",
+      "config_tags": [
+        "solo",
+        "duo",
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "singer-songwriter",
+        "americana"
+      ],
+      "_genre_note": "His EPK: Folk, Americana, Indie-folk, Folk-Rock, Singer-songwriter. The americana label was widened to 'Americana, folk and bluegrass' the day he joined so the filter says folk somewhere; no new genre id was minted.",
+      "vocals": "sung",
+      "from": "solo",
+      "img": "rene-moffatt-card.jpg",
+      "_img_note": "His own press photograph from the EPK gallery on his site (photographer Kenzie Veritt in the filename): on stage at the microphone with an acoustic guitar under warm light, cropped 16:9 with the focus a quarter of the way down so the hat, the face and the guitar body are all in frame. No duotone. Provenance in media-sources.json.",
+      "alt": "René Moffatt singing at a microphone with an acoustic guitar, in a hat under warm stage light.",
+      "video": "https://www.youtube-nocookie.com/embed/DEvhVzOZeQg?rel=0",
+      "_video_note": "Hope For Better Things, the version he published 2026-02-27 without title cards ('This version does not have titles'), solo voice and acoustic guitar in a studio, on his own channel. Picked for the hero over the 2026 Tiny Desk cut of the same performance (a duplicate with titles), over the full-band clips because he is sold first as a songwriter and the band has its own footage section, and over the 2019 studio takes because it is this year's. Every embed on the page was checked playableInEmbed on 2026-09-20. Daniel's rulings the same day: the Willie Nelson cover (Uvp9zMRJrhI) and all nine Underground Music Showcase 2026 clips publish; there is no memorial rule and no sponsorship or alcohol rule on this site, and the first pass was wrong to hold anything back under either. Left off as curation, never as a rule: the other Tiny Desk entries (older home recordings of songs the page already plays), the 90-second why-I-write-songs story (not a performance), and the 2024 clip under the earlier band name (naming two bands would confuse a buyer).",
+      "video_poster": "img/acts/rene-moffatt-live-poster.jpg",
+      "blurb": "René Moffatt writes his own songs and sings them with an acoustic guitar. It's folk and Americana that sits on a playlist beside Josh Ritter and The Avett Brothers. He plays solo for welcome drinks, a patio or a dinner where people listen, and brings his band, René Moffatt & The Moonshadows, when the night wants one. He'll play covers alongside his own songs if you ask for them.",
+      "seo_title": "René Moffatt: folk singer-songwriter for events in Denver",
+      "meta_description": "Original folk and Americana songs for private events in Denver and the Colorado mountains. Solo voice and acoustic guitar, a trio, or his four piece band. Send a date and we price the night.",
+      "identity": [
+        "René Moffatt writes the songs he sings. He's a folk and Americana songwriter based just outside Denver, with six records behind him, King of the Mountain and Here and Now Is Home among them, and an NPR Tiny Desk Contest entry every year since 2019. He calls it heady folk for the open-hearted, and the company he keeps on a playlist is Josh Ritter, Jeff Tweedy and The Avett Brothers.",
+        "Solo, it's a voice and an acoustic guitar. It plays under welcome drinks and on a patio at a volume people talk across, and it's the right size for a dinner party or a retreat evening where the songs are the point of the night. He's played the listening venues around Denver, Swallow Hill and the Black Rose Acoustic Society among them, and stages at the Denver Botanic Gardens and the Clyfford Still Museum.",
+        "With the band, René Moffatt & The Moonshadows, the same songs get lead guitar, bass and drums under them. The duo is his voice and guitar with a lead guitar beside it, the trio adds bass, and the four piece adds drums, which is the band you can watch on a Denver club stage and at the Underground Music Showcase in the footage below. They played the Boulder Roots Music Fest as well, and that size is the one for a park stage or a summer party.",
+        "His own songs lead a set. He plays covers beside them when a night wants them, and the ones on his channel run from Willie Nelson to The Beatles and The Cars, so tell us the balance you want and he builds the set to it.",
+        "This is a named act, booked under the name of the person who fronts it, and if anyone in the lineup changes, we tell you in advance."
+      ],
+      "ladder": [
+        {
+          "config": "solo",
+          "build": "Voice and acoustic guitar",
+          "bestFor": "Welcome drinks, patios and dinner at conversation volume, and a listening set for a smaller crowd."
+        },
+        {
+          "config": "duo",
+          "build": "Voice and acoustic guitar, plus lead guitar",
+          "bestFor": "Cocktail hours, patios and dinners past the size one guitar fills."
+        },
+        {
+          "config": "trio",
+          "build": "Voice and guitar, lead guitar and bass",
+          "bestFor": "A patio evening or a dinner that wants a fuller sound without drums."
+        },
+        {
+          "config": "quartet",
+          "build": "The trio plus drums, which is René Moffatt & The Moonshadows",
+          "bestFor": "A park stage, a summer party or a festival-style evening that wants the band."
+        }
+      ],
+      "setlist": {
+        "_note": "Every title here is one he publishes footage of and this page plays, the same rule as the Tony Medina list. Not from_repertoire: his set is his own catalogue, which the repertoire page does not carry.",
+        "note": "These are songs you can watch him play, on this page and on his own channel. His own songs lead a set and covers sit beside them when you want them. This list is a sample, and the set on the night won't match it song for song.",
+        "items": [
+          "Hope For Better Things",
+          "Calendar Year",
+          "Heirloom Winnebago",
+          "Stuck Inside",
+          "Standing In The Shadow Of The Moon",
+          "If You Were Near",
+          "Goodnight, Texas",
+          "Come Of Age",
+          "Halfway Home",
+          "Iron Gates Of Love",
+          "Waterfall",
+          "What If I, What If You",
+          "Blackbird",
+          "Mammas Don't Let Your Babies Grow Up To Be Cowboys",
+          "Drive"
+        ]
+      }
+    }
+  ],
+  "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is unpublished availability depth, which is what the workbook always said he was. Since 2026-09-06 he sits behind Tony Medina rather than behind the retired Blues Rock format.",
+  "holds": [
+    {
+      "name": "Thomas Owen Band",
+      "reason": "Pulled from the site on Daniel's call, 2026-08-27. Was the one face-led listing: patio and cocktail, solo to trio, promote-on-footage. The workbook's open question about fielding a two-hour covers set was never resolved. Nothing else is tagged patio, so the patio filter left the roster page with it."
+    },
+    {
+      "name": "Tchunk",
+      "reason": "Artistic project, not an event product. Different website."
+    },
+    {
+      "name": "Vaughn Tromburg Project",
+      "reason": "Event-set question unresolved."
+    },
+    {
+      "name": "Arbor Sons",
+      "reason": "Face and covers ratio unknown."
+    },
+    {
+      "name": "DF & Kyren",
+      "reason": "Overlaps the cocktail bucket. Unfilmed."
+    }
+  ],
+  "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are. REMOVED on Daniel's call 2026-08-28: Jordan's media off the funk-trio card (stage photo) and blues-rock card (Old #7 embed); his footage stays on the jazz and solo pages. The Guaraldi solo video is embed-blocked on YouTube's side (shows 'Video unavailable' in embeds) and was replaced by the Blue Bossa solo. ADDED 2026-09-06: Tony Medina's own photographs and footage, on Daniel's permission, when he was promoted out of the Blues Rock format. Every one of his eight published videos was checked for playableInEmbed before placement. Held back deliberately, and not to be reinstated without asking him: a memorial video for a family member who died in 2026, the family-update and show-alert vlogs, a poster graphic with baked-in text, the green-venue wall-signing photographs of identifiable third parties, and a shot whose backdrop is a plasma-donation advertisement. ADDED 2026-09-20: a second clip of Daniel's own Dirty Flamenco footage (media/dirty-flamenco-2.mp4, shot 2026-09-19) replaces the August clip on the cards and in the flamenco page hero; the August clip moves into that page's footage grid. RULINGS 2026-09-20, Daniel, on the René Moffatt load: there is no memorial rule and no sponsorship or alcohol rule on this site; both were agent-made, and a cover recorded for a late parent or a stage with a sponsor's banner on it publishes like anything else. The Tony Medina hold-backs above stay as the record of that day's calls, not as rules.",
+  "_corporateRange_removed_note": "RETIRED 2026-08-17, Daniel's call. Was an aggregate corporate band range rendered as a card row and a line in llms.txt, and it anchored a corporate buyer at roughly double what the 2026 product costs. Superseded entirely 2026-09-04: no Signet range publishes anywhere now. The figure is in git history and in OFFER.md."
+}

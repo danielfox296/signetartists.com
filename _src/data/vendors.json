@@ -1,0 +1,36 @@
+{
+  "_note": "The Preferred Vendor List, 2026-09-20. Six categories in the order they render on /preferred-vendors/, and the vendors on the list. A category with nobody in it still renders (Daniel, 2026-09-20: 'show a category with no act'), with its own `ask` line under the heading (one sentence per category, so six empty headings never read as one line pasted six times). Each vendor: id, category, name as the business writes it, location (city or service area), note (Daniel's two sentences, his words only: what they're good at and the kind of event they suit), url (their site; rendered dofollow, new tab). Seeding the first four to six is Daniel's research task on Signet Relaunch. Nothing here is a price, an availability or a count.",
+  "categories": [
+    {
+      "id": "venues",
+      "label": "Venues",
+      "ask": "Ask us where we’d hold it, and we’ll name a venue we’ve played and tell you what it’s like to work in."
+    },
+    {
+      "id": "planning",
+      "label": "Planning and coordination",
+      "ask": "Ask us which planner we’d want running the day, and we’ll give you a name we’ve worked beside."
+    },
+    {
+      "id": "photography",
+      "label": "Photography",
+      "ask": "Ask us who should shoot it, and we’ll give you the name of a photographer we’ve worked with."
+    },
+    {
+      "id": "videography",
+      "label": "Videography",
+      "ask": "Ask us who should film it, and we’ll give you the name of a videographer we’ve worked with."
+    },
+    {
+      "id": "catering",
+      "label": "Catering",
+      "ask": "Ask us who should feed the crowd, and we’ll give you the name of a caterer we’ve worked with."
+    },
+    {
+      "id": "design-florals",
+      "label": "Design and florals",
+      "ask": "Ask us who should dress the venue, and we’ll give you the name of a designer we’ve worked with."
+    }
+  ],
+  "vendors": []
+}

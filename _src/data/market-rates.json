@@ -1,0 +1,557 @@
+{
+  "_comment": "Sourced market figures, 2026-09-04. THE ONLY DOLLAR FIGURES OR PERCENTAGES THAT MAY APPEAR ANYWHERE ON THIS SITE. Signet publishes no price of its own: no card, floor, range, hourly, call-out, uplift, travel figure or discount rule. Every figure below belongs to the market, is attributable to a named public source, and renders through {{market:<id>}} so it can never be retyped and never drift. A page that prints one must also print {{market_sources}}; the build fails otherwise.",
+  "_provenance_note": "Same contract as media-sources.json: one entry per figure, with the URL it came from and the date it was read. Before reusing any figure, open its url and check it still says what `figure` says. Marketplace pages in particular recompute their averages as listings change. If a source has moved on, correct the entry or delete it and rewrite the sentence that used it. Never edit a figure without moving `retrieved`.",
+  "_attribution_rule": "Every figure is attributed in the sentence or the table caption as the market's: 'Colorado couples budget about...', 'a Denver marketplace averages...'. Nothing may be worded so a reader could take it as Signet's number.",
+  "_2026_09_04_verification": "All six sources opened and read on 2026-09-04. Two of the figures carried in the spec had drifted and were corrected here: the US wedding-band range and average now cite Paperlust, which still carries them, rather than SpeechLess, whose 2026 guide has moved to $6,000 to $15,000 and up; and the GigHeaven Denver party-band average now reads $1,150 against the $1,750 the spec recorded. Uptown Drive's page moved to /post/. The spec's suggestion of a travel figure was dropped on purpose: travel is words on this site, never a number, market or otherwise.",
+  "rates": [
+    {
+      "id": "co_band_budget",
+      "figure": [
+        2338,
+        2858
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Colorado",
+      "what": "average budget for a live wedding band",
+      "source": "The Wedding Report, Colorado estimate",
+      "url": "https://wedding.report/index.cfm/action/wedding_cost.estimate/budgetid/01CD9F22-E589-7C9B-880BF5E4E10CE922",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_band_range",
+      "figure": [
+        3000,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What most couples pay for a wedding band",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_band_average",
+      "figure": 4500,
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "The 2026 national average for a live wedding band",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_duo",
+      "figure": [
+        1500,
+        2500
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "United States",
+      "what": "An acoustic duo over a four-hour reception, national",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_trio",
+      "figure": [
+        2000,
+        3500
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "United States",
+      "what": "A trio over a four-hour reception, national",
+      "source": "Paperlust, 2026 wedding band cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "mountain_west_band",
+      "figure": [
+        2500,
+        6500
+      ],
+      "kind": "usd",
+      "unit": "four-hour reception",
+      "market": "Mountain West",
+      "what": "A five to six piece band in Mountain West markets",
+      "source": "Paperlust, 2026 wedding band cost guide, regional table",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_band_range",
+      "figure": [
+        2500,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Denver",
+      "what": "trio to a full band with horns",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_midtier_band",
+      "figure": [
+        4000,
+        6000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Denver",
+      "what": "four to six-piece bands,  Denver mid-market",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_strings",
+      "figure": [
+        800,
+        2000
+      ],
+      "kind": "usd",
+      "unit": "ceremony or cocktail hour",
+      "market": "Denver",
+      "what": "A classical string duo or trio for a ceremony or cocktail hour, Denver",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_dj",
+      "figure": [
+        2500,
+        6000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "Denver",
+      "what": "A Denver DJ carrying a night with production lighting",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_holiday_surcharge",
+      "figure": [
+        20,
+        30
+      ],
+      "kind": "percent",
+      "unit": "on the fee",
+      "market": "Denver",
+      "what": "What the Denver market adds for a holiday weekend",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_overtime",
+      "figure": [
+        200,
+        400
+      ],
+      "kind": "usd",
+      "unit": "per hour",
+      "market": "Denver",
+      "what": "What the Denver market charges per hour beyond the contracted set",
+      "source": "Uptown Drive, Denver wedding entertainment guide 2026",
+      "url": "https://www.uptowndrive.com/post/luxury-wedding-entertainment-denver",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_marketplace_avg",
+      "figure": 1150,
+      "kind": "usd",
+      "unit": "per booking",
+      "market": "Denver",
+      "what": "The average booking for a Denver party band on one listing marketplace",
+      "source": "GigHeaven, Denver party bands",
+      "url": "https://www.gigheaven.com/search/party-bands/united-states/denver.html",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "denver_marketplace_range",
+      "figure": [
+        230,
+        3550
+      ],
+      "kind": "usd",
+      "unit": "per booking",
+      "market": "Denver",
+      "what": "The spread of Denver party-band listings on that marketplace",
+      "source": "GigHeaven, Denver party bands",
+      "url": "https://www.gigheaven.com/search/party-bands/united-states/denver.html",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_corporate_band",
+      "figure": [
+        2500,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "A cover or jazz band for a corporate event",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_dinner_band",
+      "figure": [
+        500,
+        3000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a jazz trio or acoustic duo costs for a dinner, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_private_party_band",
+      "figure": [
+        3000,
+        8000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What a cover or acoustic band costs for a private party, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "us_showband",
+      "figure": [
+        7500,
+        17000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "A seven to nine piece show band",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-04"
+    },
+    {
+      "id": "offsites_remote_hybrid_share",
+      "figure": 91,
+      "kind": "percent",
+      "unit": "of offsite organizers",
+      "market": "United States",
+      "what": "Company offsite organizers who work fully remote or hybrid",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsites_essential_remote",
+      "figure": 57,
+      "kind": "percent",
+      "unit": "of fully remote companies",
+      "market": "United States",
+      "what": "Fully remote companies that call offsites essential to the success of the business",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsites_one_or_two_per_year",
+      "figure": 70,
+      "kind": "percent",
+      "unit": "of companies",
+      "market": "United States",
+      "what": "Companies holding one or two offsites a year",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsites_team_building_objective",
+      "figure": 85,
+      "kind": "percent",
+      "unit": "of companies",
+      "market": "United States",
+      "what": "Companies naming team building as the primary objective of the offsite",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsites_meals_at_accommodation",
+      "figure": 92,
+      "kind": "percent",
+      "unit": "of groups",
+      "market": "United States",
+      "what": "Offsite groups taking three or more meals at their accommodation",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsites_september_share",
+      "figure": 18,
+      "kind": "percent",
+      "unit": "of the year's offsites",
+      "market": "United States",
+      "what": "Share of offsites held in September, the most popular month",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsites_winter_rise",
+      "figure": 21,
+      "kind": "percent",
+      "unit": "rise in December to March bookings",
+      "market": "United States",
+      "what": "Growth in December-to-March offsite bookings, 2023 to 2024",
+      "source": "Surf Office, The State of Company Offsites report 2026",
+      "url": "https://www.surfoffice.com/blog/company-offsites-report",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "gallup_hybrid_share",
+      "figure": 52,
+      "kind": "percent",
+      "unit": "of remote-capable U.S. employees",
+      "market": "United States",
+      "what": "Remote-capable employees working hybrid",
+      "source": "Gallup, hybrid work indicator, May 2026",
+      "url": "https://www.gallup.com/401384/indicator-hybrid-work.aspx",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "gallup_remote_share",
+      "figure": 26,
+      "kind": "percent",
+      "unit": "of remote-capable U.S. employees",
+      "market": "United States",
+      "what": "Remote-capable employees working exclusively remote",
+      "source": "Gallup, hybrid work indicator, May 2026",
+      "url": "https://www.gallup.com/401384/indicator-hybrid-work.aspx",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "offsite_budgets_up_since_2019",
+      "figure": 59,
+      "kind": "percent",
+      "unit": "of companies",
+      "market": "United States",
+      "what": "Companies that have increased offsite budgets since 2019",
+      "source": "Emburse, State of Corporate Offsites report, as reported by Custom Ink, May 2026",
+      "url": "https://www.customink.com/blog/how-to-plan-a-company-offsite/",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "planners_want_local",
+      "figure": 34,
+      "kind": "percent",
+      "unit": "of meeting planners",
+      "market": "United States",
+      "what": "Planners reporting more demand for local, locally flavored events",
+      "source": "American Express GBT, 2026 Global Meetings and Events Forecast, as relayed by Hotel News Resource",
+      "url": "https://www.hotelnewsresource.com/article139293.html",
+      "retrieved": "2026-09-14"
+    },
+    {
+      "id": "us_wedding_dj_average",
+      "figure": 1800,
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "The 2026 national average for a wedding DJ",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_wedding_dj_range",
+      "figure": [
+        1000,
+        2500
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "What most US couples pay a wedding DJ",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_dj_premium_tier",
+      "figure": [
+        3000,
+        5000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "The premium tier for a wedding DJ: seasoned pros, major metros, full-day coverage",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_dj_hourly",
+      "figure": [
+        100,
+        200
+      ],
+      "kind": "usd",
+      "unit": "per hour",
+      "market": "United States",
+      "what": "A DJ's standard per-hour rate",
+      "source": "Paperlust, 2026 wedding DJ cost guide",
+      "url": "https://paperlust.co/blog/how-much-does-a-wedding-dj-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "dj_four_hours_private",
+      "figure": [
+        400,
+        800
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "United States",
+      "what": "What a DJ charges for four hours at a private event",
+      "source": "Uptown Drive, how much a DJ should charge for four hours, 2026",
+      "url": "https://www.uptowndrive.com/post/how-much-should-a-dj-charge-for-4-hours",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "denver_dj_four_hours",
+      "figure": [
+        350,
+        700
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "Denver",
+      "what": "What a Denver DJ charges for a four-hour block",
+      "source": "Uptown Drive, how much a DJ should charge for four hours, 2026",
+      "url": "https://www.uptowndrive.com/post/how-much-should-a-dj-charge-for-4-hours",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "dj_four_hours_corporate",
+      "figure": [
+        300,
+        500
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "United States",
+      "what": "What a DJ charges for a four-hour corporate party",
+      "source": "Uptown Drive, how much a DJ should charge for four hours, 2026",
+      "url": "https://www.uptowndrive.com/post/how-much-should-a-dj-charge-for-4-hours",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "wedding_dj_four_hours",
+      "figure": [
+        600,
+        1200
+      ],
+      "kind": "usd",
+      "unit": "four hours",
+      "market": "United States",
+      "what": "A wedding DJ for a four-hour event",
+      "source": "Livent Group, 2026 wedding DJ cost guide",
+      "url": "https://liventgroup.com/cost-of-dj-for-wedding/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_dj_large_city",
+      "figure": [
+        1600,
+        2200
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "A wedding DJ in a larger city",
+      "source": "Livent Group, 2026 wedding DJ cost guide",
+      "url": "https://liventgroup.com/cost-of-dj-for-wedding/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_cocktail_solo_duo",
+      "figure": [
+        200,
+        700
+      ],
+      "kind": "usd",
+      "unit": "cocktail hour",
+      "market": "United States",
+      "what": "A solo musician or acoustic duo for a cocktail hour, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "us_small_band",
+      "figure": [
+        1000,
+        5000
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "United States",
+      "what": "A standard four-to-five-piece live band, US",
+      "source": "Livent Group, 2026 live band cost guide",
+      "url": "https://liventgroup.com/how-much-does-a-live-band-cost/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "ca_jazz_trio",
+      "figure": [
+        3450,
+        6450
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "California",
+      "what": "A jazz trio for a cocktail hour or a home party up to 80 guests, California",
+      "source": "Sunny Jazz, 2026 jazz band hire guide (California)",
+      "url": "https://sunnyjazz.band/how-to-hire-a-jazz-band-for-events-price-cost-band-sizes-booking-guide-2026/",
+      "retrieved": "2026-09-16"
+    },
+    {
+      "id": "ca_jazz_quartet",
+      "figure": [
+        4250,
+        7250
+      ],
+      "kind": "usd",
+      "unit": "per event",
+      "market": "California",
+      "what": "A jazz quartet for a brand activation or a small reception, California",
+      "source": "Sunny Jazz, 2026 jazz band hire guide (California)",
+      "url": "https://sunnyjazz.band/how-to-hire-a-jazz-band-for-events-price-cost-band-sizes-booking-guide-2026/",
+      "retrieved": "2026-09-16"
+    }
+  ],
+  "_venue_note": "Venue rental figures were added here on 2026-09-04 and REMOVED on 2026-09-05. They were verified and correctly attributed, and they were still the wrong thing to publish: a venue's rental rate is not Signet's story, it dates faster than anything else on the site, and a stale third party price on a vendor page is a small liability for no marketing gain. The venues post names the venues, links their own event pages and says which of them publish flat rates, which is the useful part. Do not re-add third-party venue pricing.",
+  "_2026_09_14_offsites_note": "Eleven figures added 2026-09-14 for /blog/company-offsite-ideas-colorado-remote-teams/: Surf Office's 2026 offsites report (90 survey responses plus 200 events), Gallup's May 2026 hybrid indicator, Emburse via Custom Ink, and Amex GBT via a trade relay. Percentages, not prices; they say how remote companies gather, never what Signet charges.",
+  "_2026_09_16_dj_and_jazz_note": "Thirteen figures added 2026-09-16 for the two calibration posts (what a jazz band costs, what a DJ costs), each read from its url that day. The spread between a Denver DJ's four-hour block and a Denver DJ with production lighting (denver_dj) is the point of the DJ post: the word covers two different purchases. The California jazz figures are the top of the market and are labelled as California wherever they print."
+}

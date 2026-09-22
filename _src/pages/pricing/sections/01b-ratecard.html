@@ -1,0 +1,40 @@
+<!-- The market table. Rendered by build.py market_table() from
+     _src/data/market-rates.json, which is the only place on this site a
+     dollar figure or a percentage may come from. Every figure here is
+     somebody else's published number, read on the date the Sources note
+     prints. It carries .rate-table, so analytics.js's pricing_engaged
+     observer still fires when a reader reaches the money block.
+
+     2026-09-05: the marketplace average came out of the table. It is the
+     cheapest tier in this market and a bare figure in the accent column was
+     anchoring a reader down on the page they arrive at with a budget
+     question. It is framed as a tier in the cost guide, and the paragraph
+     under the table sends them there. -->
+<section class="section section--ruled" id="market">
+  <div class="wrap">
+    <h2 class="h3">colorado market rates</h2>
+    <p class="prose">We've compiled a Denver-first, price rubric for those clients who are still preparing the budget for their event, sourced from published guides and wedding budget datasets.</p>
+
+    {{market_table}}
+
+    <p class="prose">Note: Professional live sound represents a significant difference in the range of these quotes. It's included with some acts' prices and not others. Insurance, travel considerations, and other factors can affect the price as well.</p>
+
+
+    {{market_sources}}
+  </div>
+</section>
+
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <h2 class="h3">Factors that affect price</h2>
+    <div class="split split--two">
+      <div>
+        <p class="prose"><strong>Price Increase:</strong> a wedding rather than a private party. A Saturday in June, September or October. A holiday weekend, which this market prices {{market:denver_holiday_surcharge}} above a standard date. A venue with a hard load-in, a long carry or a late curfew. A run of show with ceremony, cocktails, dinner and dancing all needing cover. A drive over the passes, and past them a night's lodging.</p>
+      </div>
+      <div>
+        <p class="prose"><strong>Price Decrease:</strong> Booked on an early weeknight. Fewer hours of performance time. A single set rather than the whole evening. A smaller build for the same music. A venue where the load-in is easy.</p>
+      </div>
+    </div>
+    <p class="note">Send us the date, the venue and the guest count, and the price that comes back accounts for all of it.</p>
+  </div>
+</section>

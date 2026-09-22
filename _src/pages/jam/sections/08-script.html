@@ -1,0 +1,43 @@
+<!-- The one piece of motion, a fade-up on enter. No library. The ?venue=
+     parameter left 2026-09-18: no venue is mentioned on the page. -->
+<script>
+(function () {
+  'use strict';
+  var doc = document, root = doc.documentElement;
+
+  var params = null;
+  try { params = new URLSearchParams(location.search); } catch (e) {}
+
+  /* Fade up on enter, once. A scroll check rather than an
+     IntersectionObserver: a fast scroll can jump an element clean past the
+     viewport between observer frames, and it would then never fire and stay
+     invisible. Anything whose top has passed the 88% line is in, including
+     anything already scrolled past. ?motion=off or reduced motion: nothing
+     moves, everything simply renders. */
+  var motionOff = (params && params.get('motion') === 'off')
+    || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (motionOff) { return; }
+  root.classList.add('jam-motion');
+  var pending = Array.prototype.slice.call(doc.querySelectorAll('.jam-reveal'));
+  var ticking = false;
+  function check() {
+    ticking = false;
+    var line = window.innerHeight * 0.88;
+    pending = pending.filter(function (el) {
+      if (el.getBoundingClientRect().top < line) { el.classList.add('is-in'); return false; }
+      return true;
+    });
+    if (!pending.length) {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    }
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(check); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('pageshow', onScroll);
+  check();
+})();
+</script>

@@ -1,0 +1,74 @@
+{
+  "_note": "The cost FAQ carries the market's figures as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text; the page prints the Sources note beside them. No Signet figure appears here or anywhere since 2026-09-04. Never type a figure.",
+  "service": {
+    "name": "Private party and dinner party live music",
+    "serviceType": "Live music for private parties, dinner parties and milestone celebrations",
+    "description": "Live music for dinner parties, cocktail parties, milestone birthdays and anniversaries at homes and clubs in Denver, Boulder and across Colorado, solo through quartet.",
+    "areaServed": [
+      "Denver",
+      "Boulder",
+      "Front Range",
+      "Colorado mountain corridor"
+    ],
+    "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+    ]
+  },
+  "faqs": [
+    {
+      "q": "What does a band for a dinner party cost?",
+      "a": "It depends on how many musicians and how long, and for a dinner party that's usually one or two people rather than the band most hosts picture. We don't publish prices; what live music costs across this market is on our pricing page. Describe the evening and we'll tell you which size it wants and what that costs."
+    },
+    {
+      "q": "Do you play private homes?",
+      "a": "Yes. Dinner parties, cocktail parties and milestones at homes and clubs are the bookings this page exists for. The requirements are small: floor space in a corner, one dedicated 20-amp circuit within reach, and somewhere to park for load-in. Clubs that ask for a certificate of insurance get one with the contract."
+    },
+    {
+      "q": "Can we hire a band for a birthday party?",
+      "a": "Yes, and milestone birthdays are one of the three categories this page exists for. What size you want depends on whether the evening ends with dancing: a solo or duo holds a dinner at conversation volume, a trio fills a floor without needing a stage, and a DJ carries the late half through the same sound system on the same contract."
+    },
+    {
+      "q": "What music works for a 30th, 40th, 50th or 60th birthday party?",
+      "a": "The decade tends to decide it. A 30th dances longest and wants a trio or a DJ; a 40th usually sits down to eat and then moves the furniture, which suits a duo that grows for the second half; a 50th is more often a seated dinner with a toast in it; a 60th and beyond runs earlier and warmer, where a solo player or a jazz duo playing standards reaches everyone at once. In every case the set is built from the years the guest of honour cares about."
+    },
+    {
+      "q": "Can we book a Spanish guitarist for a dinner party?",
+      "a": "Yes. Dirty Flamenco plays the traditional forms at trio size with a dancer configuration when the evening wants a set piece, and a single guitarist covers a dinner table alone. Both play at 65 to 72 dBA at the nearest table, which is a volume a table of twelve can talk across, and neither needs a stage."
+    },
+    {
+      "q": "How much space does the band need?",
+      "a": "A solo takes 6 by 4 ft, a duo 8 by 6, a trio 12 by 8, and none of them needs a stage. Those are working footprints, the space musicians and gear actually occupy, and the full table for every size is on our technical page."
+    },
+    {
+      "q": "How loud will it be?",
+      "a": "Dinner and cocktail sets run 65 to 72 dBA at the nearest table, a volume you can talk across without raising your voice. Dancing runs 88 to 95 dBA on the floor. If your venue or club enforces a cap, tell us the number when you book and the night is built under it."
+    },
+    {
+      "q": "How far ahead should we book a private party?",
+      "a": "For a November or December date, decide as the corporate season does: those dates are settled August through October and New Year's Eve books earliest of all. The rest of the year runs lighter, and a specific act on a Saturday is still worth claiming early."
+    },
+    {
+      "q": "Can you play outdoors at a home?",
+      "a": "Yes, on a covered, level and dry performance area with power run to it, and with a move-indoors call time agreed before the day. Colorado evenings drop fast, and instruments and electronics stop behaving in the cold and the wet, so the cover and the call are both required."
+    }
+  ],
+  "videos": [
+    {
+      "id": "IGww0fFkjyg",
+      "name": "Flamenco trio for a private party: rumba, Dirty Flamenco",
+      "description": "Guitar, bass and percussion on a rumba, the sound of a garden party finding its second wind.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M31S"
+    },
+    {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer and guitarist for a private party: Tejas Singh live-looping No Woman No Cry",
+      "description": "Tejas Singh builds No Woman No Cry from the ground up with live looping.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+    }
+  ]
+}

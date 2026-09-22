@@ -1,0 +1,40 @@
+<!-- Pillar 2 as a picture. Rewritten 2026-08-15: this block described two house
+     bands and a DJ, which is not what the business is. It is an agency booking
+     named acts, so the home page shows the three flagship acts and sends the
+     rest to the roster. The evening still warms here, paper-sunk, before the
+     night section inverts. -->
+<section class="section section--ruled section--sunk">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">The roster</p>
+      <h2 class="h2">A growing book of Flavorful Acts</h2>
+      <!-- "americana" left this list 2026-08-27 with the Thomas Owen Band
+           (acts.json holds). The genre list is hand-typed: it must shrink and
+           grow with the roster. No count in the heading, 2026-09-07: a genre
+           list survives a new act, an integer does not. Sound bath and sound
+           healing joined the list 2026-09-19 on Daniel's instruction ("it should
+           say sound bath, or sound healing, or other related search terms");
+           the sentence is his, only the list moved. -->
+      <p class="lede">From singer-songwriters, covers, jazz, flamenco, funk and DJ options to a sound bath and sound healing, Signet Artists offers many of our acts as solo, duo, trio and quartet. Some with a notable front-person and others organized by genre and purpose. We've highlighted a few below,</p>
+    </div>
+
+    {{roster_grid_flagships}}
+
+    <div class="btn-row">
+      <a class="btn btn--outline" href="music/">See The Full Roster</a>
+      <a class="btn btn--outline" href="pricing/">See Pricing</a>
+    </div>
+
+    <p class="tag-label">Booked for</p>
+    {{event_types}}
+  </div>
+</section>
+
+<!-- The sleeves, wired in 2026-08-07. It sits directly under the roster because
+     range is a claim about what we can play and this is the only evidence for
+     it on the page. Full-bleed on the night ground, so the strip also does the
+     arc's work: the roster section warms and the sleeves drop to midnight. The
+     late-night band that used to follow was cut on 2026-08-17 with the Q4
+     refocus, so the strip is the only night ground on the page now and pricing
+     returns to paper directly after it. -->
+{{cover_strip}}

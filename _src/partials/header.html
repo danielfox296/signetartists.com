@@ -1,0 +1,50 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
+         front-range centric). A third line under the wordmark, so every page
+         says where in one glance at every width, and the nav row stays
+         uncrowded. Display form, not the footer's prose form. -->
+    <div class="brand-lockup">
+      <a class="wordmark" href="{{home_href}}">{{brand_name}}</a>
+      <p class="header-loc">BOOK LIVE MUSIC IN COLORADO</p>
+    </div>
+
+    <!-- Songs added 2026-08-07. /repertoire/ carries the cover walls and the
+         whole song book and was reachable only from two inline prose links and
+         one hub card. The best page on the site, absent from its own
+         navigation. "Songs" rather than "Repertoire" because it sits next to
+         "The Music" and the pair has to read as two different questions: who
+         plays, and what they play. -->
+    <!-- Weddings added 2026-09-06 with the /weddings/ hub, when Daniel lifted
+         the one-wedding-surface cap. It sits between Corporate and Private
+         Parties because the three are one row of occasion hubs and corporate
+         keeps the earlier slot. -->
+    <!-- Corporate and Private Parties are the two occasion hubs of the
+         2026-08-20 buildout; corporate keeps the earlier slot. "Corporate"
+         rather than "Corporate & Galas": the 17 Aug audit reframed galas as a
+         small-format section on the hub, not a co-headline. -->
+    <nav class="nav-desktop">
+      <a href="{{nav_prefix}}music/" {{nav_music}}>Artist Roster</a>
+      <a href="{{nav_prefix}}repertoire/" {{nav_repertoire}}>Songs</a>
+      <a href="{{nav_prefix}}pricing/" {{nav_pricing}}>Pricing</a>
+      <a href="{{nav_prefix}}corporate/" {{nav_corporate}}>Corporate</a>
+      <a href="{{nav_prefix}}weddings/" {{nav_weddings}}>Weddings</a>
+      <a href="{{nav_prefix}}private-parties/" {{nav_private}}>Private Parties</a>
+      <a href="{{nav_prefix}}planners/" {{nav_planners}}>For Planners</a>
+      <a class="btn btn--sm" href="{{nav_prefix}}contact/" {{nav_contact}}>Check a Date</a>
+    </nav>
+
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+
+  <nav class="nav-mobile" id="mobile-nav">
+    <a href="{{nav_prefix}}music/">The Roster</a>
+    <a href="{{nav_prefix}}repertoire/">Songs</a>
+    <a href="{{nav_prefix}}pricing/">Pricing</a>
+    <a href="{{nav_prefix}}corporate/">Corporate</a>
+    <a href="{{nav_prefix}}weddings/">Weddings</a>
+    <a href="{{nav_prefix}}private-parties/">Private Parties</a>
+    <a href="{{nav_prefix}}planners/">For Planners</a>
+    <a class="btn nav-mobile-cta" href="{{nav_prefix}}contact/">Check a Date</a>
+  </nav>
+</header>

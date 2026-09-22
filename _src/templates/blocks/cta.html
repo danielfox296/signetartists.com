@@ -1,0 +1,7 @@
+{# CTA block — the one persuasion block per post. block.variant is
+   tolerated and ignored (one CTA treatment on this site). #}
+<aside class="blog-cta">
+  <div class="blog-cta-headline">{{ block.headline }}</div>
+  <div class="blog-cta-body">{{ block.body|markdown|safe }}</div>
+  <a href="{{ block.link }}" class="btn blog-cta-btn">{{ block.link_text }}</a>
+</aside>

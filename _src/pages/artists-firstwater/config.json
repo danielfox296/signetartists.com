@@ -1,0 +1,10 @@
+{
+  "_note": "Authored 2026-09-19 with the signet-new-act skill (scripts/new_act_page.py --kind artists --shape artist), for Daniel's own sound-bath practice, the first non-band act on the roster. acts.json firstwater.page points here so every card and llms line follows. Ladder, book and footage sections deleted: one configuration, no titles, no footage; the hero carries the interim sound-bath still (scripts/stills.py) in the act-video-photo slot in place of a footage label, the act's portrait having been removed on Daniel's call the same day. No price of any kind: the act's own corporate page publishes a starting figure and it stays there. Rewritten the same day on Daniel's rulings: nobody named, buyer search terms throughout.",
+  "_title_note": "58 chars before the pipe. The name leads because it is a named act; 'corporate sound bath' is the head term Google autocompletes (with 'corporate wellness sound bath' and 'sound bath corporate event' beside it), 'sound healing' is the second head term, and Denver is the market.",
+  "title": "Firstwater: corporate sound bath and sound healing, Denver | Signet Artists",
+  "title_exact": true,
+  "meta_description": "A corporate sound bath in Denver for wellness weeks, team building days, offsites and retreats: seventy-five minutes of live sound healing on the floor.",
+  "output": "artists/firstwater/index.html",
+  "nav": "music",
+  "og_image": "img/sound-bath.jpg"
+}

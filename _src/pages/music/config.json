@@ -1,0 +1,8 @@
+{
+  "_restructure_note": "Was 'The Music' and described two house bands. Now the roster page for the represented acts. Never state a count of acts here or anywhere outbound: the roster grows and a number goes stale silently (2026-09-07). URL stays /music/ deliberately: it is the indexed URL and carries the nav slot, so the model changed underneath it rather than moving.",
+  "title": "The Roster",
+  "meta_description": "Acts for Denver and the mountains: singer-songwriter, pop and classic rock, jazz, blues, soul, funk, yacht rock, Americana, flamenco, downtempo, DJ, sound bath.",
+  "output": "music/index.html",
+  "nav": "music",
+  "schema": "roster"
+}

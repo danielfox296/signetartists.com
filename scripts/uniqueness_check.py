@@ -1,0 +1,191 @@
+#!/usr/bin/env python3
+"""Uniqueness gate for the occasion x location pages (SEO buildout §5).
+
+Templated city clones are a doorway-page liability, so every location page
+must share no more than ~40% of its body prose with any sibling or with its
+parent hub. This measures that: built HTML in, <main> prose out (data blocks
+excluded), 5-word shingles compared pairwise.
+
+Data blocks are excluded because they are deliberately identical everywhere
+they render: the offer close (one offer sentence sitewide is the conversion
+spine, not doorway copy), rate tables and figure pairs (the published card is
+the product), the season board, and the FAQ lists are compared separately by
+eye. What this script measures is the prose a doorway page would clone.
+
+Run: python3 scripts/uniqueness_check.py   (after python3 build.py)
+Exit 1 if any pair exceeds the threshold.
+"""
+import pathlib
+import re
+import sys
+
+ROOT = pathlib.Path(__file__).parent.parent
+THRESHOLD = 0.40
+SHINGLE = 5
+
+GROUPS = {
+    "corporate/holiday-party": [
+        "corporate/holiday-party/index.html",
+        "corporate/holiday-party/denver/index.html",
+        "corporate/holiday-party/colorado-springs/index.html",
+    ],
+    "private-parties": [
+        "private-parties/index.html",
+        "private-parties/denver/index.html",
+        "private-parties/boulder/index.html",
+        "private-parties/colorado-springs/index.html",
+        "private-parties/proposals/index.html",
+        "private-parties/holiday-party/index.html",
+        "private-parties/halloween-party/index.html",
+        "private-parties/backyard-party/index.html",
+        "private-parties/showers/index.html",
+        "private-parties/graduation-party/index.html",
+        "private-parties/anniversary-party/index.html",
+        "private-parties/retirement-party/index.html",
+        "private-parties/engagement-party/index.html",
+    ],
+    "corporate/retreats": [
+        "corporate/retreats/index.html",
+        "corporate/retreats/vail/index.html",
+        "corporate/retreats/aspen/index.html",
+        "corporate/retreats/beaver-creek/index.html",
+        "corporate/retreats/breckenridge/index.html",
+    ],
+    "weddings/cocktail-hour": [
+        "weddings/cocktail-hour/index.html",
+        "weddings/cocktail-hour/denver/index.html",
+    ],
+    # The wedding tree, 2026-09-06. The hub and the two spokes make three
+    # different arguments (route the day, the ceremony, the hour after it),
+    # so they are compared to each other as siblings.
+    "weddings": [
+        "weddings/index.html",
+        "weddings/ceremony/index.html",
+        "weddings/cocktail-hour/index.html",
+        "weddings/colorado-springs/index.html",
+        "weddings/vail/index.html",
+        "weddings/jazz-band/index.html",
+    ],
+    # The two Vail pages share six venue names and must not share a day.
+    "vail": [
+        "corporate/retreats/vail/index.html",
+        "weddings/vail/index.html",
+    ],
+    # Three guitar pages, 2026-09-13: the steel-string solo, the nylon-string
+    # solo and the flamenco trio make three different bookings and are
+    # compared as siblings so none of them drifts into another.
+    "guitar": [
+        "ensembles/solo-guitarist/index.html",
+        "ensembles/spanish-guitarist/index.html",
+        "ensembles/flamenco-trio/index.html",
+        "ensembles/singer-guitarist/index.html",
+    ],
+    # Two jazz pages, 2026-09-16: the spec'd duo-and-trio format and the
+    # named modern trio are two different bookings and must read that way.
+    "jazz": [
+        "ensembles/jazz-duo-trio/index.html",
+        "ensembles/changes-jazz-trio/index.html",
+        "ensembles/christmas-jazz-trio/index.html",
+        "weddings/jazz-band/index.html",
+        "corporate/jazz-band/index.html",
+    ],
+    # The corporate jazz page beside the two corporate pages it must not
+    # restate: the dinner volume argument and the gala cues.
+    "corporate-jazz": [
+        "corporate/client-dinners/index.html",
+        "corporate/galas-and-awards/index.html",
+        "corporate/jazz-band/index.html",
+    ],
+    # The daytime tree, 2026-09-19: the hub and its five spokes make six
+    # different arguments (the routing, the afternoon program, the service,
+    # the session, the Sunday, the season) and are compared as siblings.
+    "daytime": [
+        "daytime/index.html",
+        "daytime/senior-living/index.html",
+        "daytime/funerals-and-memorials/index.html",
+        "daytime/sound-bath/index.html",
+        "daytime/brunch/index.html",
+        "daytime/community-programs/index.html",
+    ],
+    # The daytime sound bath page and the act's own page draw on the same
+    # source (thefirstwater.co) and must read as two pages.
+    "firstwater": [
+        "artists/firstwater/index.html",
+        "daytime/sound-bath/index.html",
+    ],
+    # The vendor list and its join page, 2026-09-20: the buyer's page and
+    # the vendor's page describe the same list and must not share prose.
+    # The artist page sits beside them because all three open on what
+    # Signet books and where.
+    "vendors": [
+        "preferred-vendors/index.html",
+        "preferred-vendors/join/index.html",
+        "for-artists/index.html",
+    ],
+    # The two Springs pages share a city and a venue list and must not share
+    # an argument.
+    "colorado-springs": [
+        "weddings/colorado-springs/index.html",
+        "private-parties/colorado-springs/index.html",
+        "corporate/holiday-party/colorado-springs/index.html",
+    ],
+}
+
+# Markup whose contents are deliberately shared, stripped before comparison.
+EXCLUDE = [
+    r"<table.*?</table>",
+    r"<ul class=\"season-board\">.*?</ul>",
+    r"<dl class=\"figure-pair\">.*?</dl>",
+    r"<dl class=\"faq-list\">.*?</dl>",
+    r"<header.*?</header>",
+    r"<footer.*?</footer>",
+    r"<script.*?</script>",
+    # The offer close: the fixed sentence + CTA block.
+    r"<section[^>]*><div class=\"wrap\">\s*<div class=\"close-row\">.*?</section>",
+]
+
+
+def prose(path: pathlib.Path) -> list:
+    html = path.read_text(encoding="utf-8")
+    m = re.search(r"<main>(.*)</main>", html, re.DOTALL)
+    body = m.group(1) if m else html
+    for pat in EXCLUDE:
+        body = re.sub(pat, " ", body, flags=re.DOTALL)
+    text = re.sub(r"<[^>]+>", " ", body)
+    words = re.findall(r"[a-z0-9']+", text.lower())
+    return words
+
+
+def shingles(words: list) -> set:
+    return {tuple(words[i : i + SHINGLE]) for i in range(len(words) - SHINGLE + 1)}
+
+
+def main() -> int:
+    failures = 0
+    for group, pages in GROUPS.items():
+        texts = {}
+        for p in pages:
+            path = ROOT / p
+            if path.exists():
+                texts[p] = shingles(prose(path))
+        keys = list(texts)
+        if len(keys) < 2:
+            continue
+        print(f"\n{group}")
+        for i, a in enumerate(keys):
+            for b in keys[i + 1 :]:
+                small = min(len(texts[a]), len(texts[b])) or 1
+                overlap = len(texts[a] & texts[b]) / small
+                flag = "  FAIL" if overlap > THRESHOLD else ""
+                print(f"  {overlap:5.0%}  {a} ~ {b}{flag}")
+                if overlap > THRESHOLD:
+                    failures += 1
+    if failures:
+        print(f"\n{failures} pair(s) over the {THRESHOLD:.0%} gate.")
+    else:
+        print("\nAll pairs clear the gate.")
+    return 1 if failures else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

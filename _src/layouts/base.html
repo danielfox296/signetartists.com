@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Matches --paper. Without it the phone's browser chrome stays white above
+       a dark page, which is the tell that a dark theme was retrofitted. -->
+  <meta name="theme-color" content="#14130e">
+  <title>{{title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <meta name="robots" content="{{robots}}">
+  <link rel="canonical" href="{{canonical}}">
+  <link rel="alternate" type="application/rss+xml" title="{{brand_name}} — Blog" href="{{nav_prefix}}rss.xml">
+
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:site_name" content="{{brand_name}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{meta_description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta name="twitter:card" content="summary_large_image">
+  {{head_extra}}
+
+  <!-- Fraunces + Inter came off Google Fonts here until 2026-08-07. Archivo is
+       self-hosted in vendor/fonts/ and declared in styles.css, so the two
+       preconnects and the render-blocking third-party stylesheet are gone with
+       them: one origin, one font file, nothing to hand off to. -->
+  <link rel="preload" href="{{nav_prefix}}vendor/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260920a">
+  {{schema}}
+  {{ga}}
+  <script defer src="{{nav_prefix}}analytics.js"></script>
+</head>
+<body>
+  {{header}}
+  <main>
+    {{content}}
+  </main>
+  {{footer}}
+
+  <script>
+    // Mobile nav toggle. The button label doubles as the state indicator, the
+    // same as the React version it replaced.
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.querySelector('.nav-mobile');
+      if (!btn || !panel) { return; }
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+    })();
+  </script>
+</body>
+</html>

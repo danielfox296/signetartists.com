@@ -1,0 +1,8 @@
+{# One accent on this site (brass), so no per-quote accent variants; an
+   authored block.accent is tolerated and ignored. #}
+<figure class="blog-pullquote">
+  <blockquote>{{ block.text }}</blockquote>
+  {% if block.attribution %}
+  <figcaption>&mdash; {{ block.attribution }}</figcaption>
+  {% endif %}
+</figure>

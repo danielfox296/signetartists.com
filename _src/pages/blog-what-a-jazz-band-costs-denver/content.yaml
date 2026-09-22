@@ -1,0 +1,214 @@
+# Calibration post, 2026-09-16. Evidence: "how much does a jazz band cost",
+# "how much to hire a jazz band", "jazz band for wedding cost" and the
+# per-hour forms all autocomplete; the cost guide answers the trio and the
+# duo in one section and no page answers the family in full. Every figure is
+# a market token from _src/data/market-rates.json, thirteen of them added
+# the same day from four 2026 guides; Signet publishes no price of its own.
+# The post reads hours-first, because that is how the question is typed.
+title: "What a jazz band costs in Denver"
+seo_title: "What a jazz band costs in Denver (2026): duo, trio and quartet"
+slug: "what-a-jazz-band-costs-denver"
+eyebrow: "PLANNING"
+dek: "A jazz band's price depends first on its size. Here is what the market charges for one guitarist, a duo, a trio and a quartet, for an hour and for an evening, so the budget line can be written today."
+date: "2026-09-16"
+author:
+  name: "Signet Artists"
+meta_description: "What a jazz band costs in Denver in 2026: sourced market figures for a solo guitarist, a duo, a trio and a quartet, for a cocktail hour and for a four-hour evening, and what moves the number."
+llms_description: "What a jazz band costs in Denver, built from sourced 2026 market figures: a cocktail-hour solo or duo, a jazz trio or duo for a dinner, a duo and a trio across a four-hour evening, a four-to-five-piece band, the Denver band range, and the top of the market in California. What moves the number: how many musicians, how many hours, the date. Signet publishes no prices of its own."
+
+hero:
+  src: "img/standards.jpg"
+  alt: "A trumpet resting on a table."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "A jazz trio or acoustic duo for a dinner runs {{market:us_dinner_band}} across this market, and a solo musician or duo for a cocktail hour runs {{market:us_cocktail_solo_duo}}."
+      - "Across a four-hour evening the market puts a duo at {{market:us_duo}} and a trio at {{market:us_trio}}. One more musician in the band is the difference between those two figures."
+      - "Denver bands run {{market:denver_band_range}}, a trio at the bottom of that and a full band with horns at the top. The top of the national market, a California jazz trio for a cocktail hour, runs {{market:ca_jazz_trio}}."
+      - "The number moves on three things: how many musicians, how many hours, and the date. A Denver holiday weekend carries {{market:denver_holiday_surcharge}} across this market."
+
+  - type: prose
+    body: |
+      Almost nobody asks what a jazz band costs the way the industry answers
+      it. People ask what it costs for two hours, or for a cocktail hour, or
+      for a wedding, and they get back a page of ranges with no sizes on
+      them. The ranges are real. What's missing is the thing that decides
+      where you land in them, which is how many musicians are playing and for
+      how long.
+
+      A jazz band is one guitarist, or a duo, or a trio, or a quartet with a
+      horn or a voice. It's the same book of standards, played by different
+      numbers of people. So here is what the market charges, size by size and
+      hour by hour. Each figure is somebody else's published number, so a
+      budget line can be written before anyone writes to a band. We don't
+      publish our prices, because a Saturday in December and a Tuesday in
+      September aren't the same job. Send the date and we'll come back with a
+      recommendation and a price for that night.
+
+  - type: subhead
+    text: "How much does a jazz band cost for a cocktail hour?"
+
+  - type: prose
+    body: |
+      This is the most common jazz booking there is, and the smallest. It's
+      one guitarist or a duo, upright bass and guitar, for the hour between a
+      ceremony and dinner or the hour before a corporate program starts.
+
+      The market puts a solo musician or an acoustic duo for a cocktail hour
+      at {{market:us_cocktail_solo_duo}}, and a classical string duo or trio
+      for a Denver ceremony or cocktail hour at {{market:denver_strings}}.
+      Those two figures are the floor and the ceiling of the one-hour
+      booking in this city: a working musician for an hour at one end, a
+      formal ensemble at the other, and a jazz duo sits between them.
+
+      The reason a single hour costs what it does is that the hour of playing
+      isn't the whole job. The musicians still drive, load in, sound check, play and
+      strike, whatever the length of the set. Hours are the smaller half of
+      the fee, which is why a one-hour booking is never a quarter of a
+      four-hour one.
+
+  - type: subhead
+    text: "How much does a jazz trio cost for a dinner?"
+
+  - type: prose
+    body: |
+      A dinner is where the trio earns its keep, and the market's figure for
+      a jazz trio or acoustic duo for a dinner is {{market:us_dinner_band}}.
+      The spread inside that number is how long the music plays and how much
+      production travels with it: two musicians for two hours at one end, a
+      trio with its own sound system for a whole evening at the other.
+
+      What you're buying at dinner is a volume. A trio with the drums played
+      with brushes holds 65 to 72 dBA at the nearest table, the level two
+      guests who've just met can talk across, for as long as the meal runs.
+      That's what makes the dinner figure the safest one on this page to
+      budget from: the format is the same at a client dinner, a wedding and
+      a sixtieth birthday, and so is the price range.
+
+  - type: subhead
+    text: "What the market charges, by size and by length"
+
+  - type: comparison_table
+    title: "What a jazz band costs, size by size"
+    columns: ["What you're booking", "What the market charges", "Whose market"]
+    rows:
+      - ["A solo musician or duo for a cocktail hour", "{{market:us_cocktail_solo_duo}}", "United States"]
+      - ["A jazz trio or acoustic duo for a dinner", "{{market:us_dinner_band}}", "United States"]
+      - ["An acoustic duo across a four-hour evening", "{{market:us_duo}}", "United States"]
+      - ["A trio across a four-hour evening", "{{market:us_trio}}", "United States"]
+      - ["A four-to-five-piece band for an event", "{{market:us_small_band}}", "United States"]
+      - ["A cover or jazz band for a corporate event", "{{market:us_corporate_band}}", "United States"]
+      - ["A Denver band, trio up to a full band with horns", "{{market:denver_band_range}}", "Denver"]
+      - ["A jazz trio for a cocktail hour, the top of the market", "{{market:ca_jazz_trio}}", "California"]
+      - ["A jazz quartet for a reception, the top of the market", "{{market:ca_jazz_quartet}}", "California"]
+
+  - type: prose
+    body: |
+      Read the table down rather than across. From a duo for a cocktail hour
+      to a quartet for a full evening, each row adds either a musician or an
+      hour, and the price moves with it. The two California rows at the
+      bottom are the top of the national market, an agency price for a jazz
+      trio and quartet in California, and they're in the table so a Denver
+      figure has something above it to be read against. Nothing in Colorado
+      is quoted that way.
+
+      The other thing the table hides is what's inside each number. A quote
+      that includes sound and a quote that assumes the venue has it can land
+      on the same figure and cover two different evenings, and sound is the
+      line that most often separates them.
+
+  - type: subhead
+    text: "A duo or a trio across a whole evening"
+
+  - type: prose
+    body: |
+      When the booking is the evening rather than the hour, the market gives
+      two clean figures: an acoustic duo across a four-hour reception runs
+      {{market:us_duo}}, and a trio across the same four hours runs
+      {{market:us_trio}}. Those two are one musician apart, and the market
+      prices that one musician as the gap between them.
+
+      Denver has no trio figure of its own in print. The Denver band range
+      of {{market:denver_band_range}} begins at the trio and ends at a full
+      band with horns, so the trio sits at the bottom of that range rather
+      than in the middle of it. A quartet, the trio plus a horn or a voice,
+      sits a step up, and once the band is five or six with horns and a
+      singer, the figures on the [corporate cost page](https://signetartists.com/blog/what-live-music-costs-corporate-event/)
+      are the ones to read.
+
+  - type: subhead
+    text: "What moves the number"
+
+  - type: prose
+    body: |
+      Three things move it, and each one should be its own line on a quote.
+
+      - **How many musicians.** A duo to a trio is one more person for the
+        whole evening; a trio to a quartet is another. This is the biggest
+        lever and the one most often set wrong. A dinner for forty is a
+        duo or a trio, and it's the size most often over-specified.
+      - **How many hours.** A cocktail hour and a four-hour evening are
+        different jobs, and the short one costs more than the arithmetic
+        suggests because the evening's fixed work is the same. Time added on
+        the night runs {{market:denver_overtime}} for each hour past the
+        contracted set across this market.
+      - **The date.** A Denver holiday weekend carries
+        {{market:denver_holiday_surcharge}} across this market, and New
+        Year's Eve is its own case everywhere. Travel beyond the Denver
+        metro is its own line, and the far resorts add a night's lodging.
+
+  - type: subhead
+    text: "What a jazz band costs for a wedding"
+
+  - type: prose
+    body: |
+      A wedding usually books the jazz band at more than one size across the
+      day, which is what makes it hard to budget from a single range. A duo
+      for the ceremony and the cocktail hour is the one-hour figure above,
+      twice over. A trio through dinner is the dinner figure. A quartet for
+      the first dance and the floor is the four-hour trio figure with one
+      more musician on it.
+
+      The useful way to read it: the ceremony and the cocktail hour together
+      sit in the {{market:denver_strings}} range, and the evening sits in the
+      {{market:us_trio}} range, and one booking that covers both is cheaper
+      than two, because the drive, the load-in and the sound system are paid
+      for once. How the day is sized, moment by moment, is on the
+      [jazz band for a wedding page](https://signetartists.com/weddings/jazz-band/).
+
+  - type: subhead
+    text: "What a jazz band costs for a corporate event"
+
+  - type: prose
+    body: |
+      A cover or jazz band for a corporate event runs
+      {{market:us_corporate_band}} across this market, and the dinner figure
+      of {{market:us_dinner_band}} is the one to use when the evening is a
+      seated one with remarks in it, which most corporate jazz bookings
+      are. How the evening runs slot by slot, and which size plays each part,
+      is on the
+      [corporate jazz band page](https://signetartists.com/corporate/jazz-band/).
+
+      What's inside our number at every size: sound support that's the
+      right size for the venue, load-in, setup, strike and load-out, a
+      certificate of insurance, a W-9 and one itemised invoice, timeline
+      coordination before the event, continuous audio during breaks, and a
+      personal contact for the night. Ask any band you're comparing which
+      of those are inside the figure and which arrive later.
+
+  - type: prose
+    body: |
+      {{market_sources}}
+
+  - type: cta
+    headline: "Send the date and we'll tell you what that night costs."
+    body: "The date, the venue and a rough headcount are enough. We'll come back with a size and our number for that evening."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "what-is-a-jazz-trio"
+      - slug: "what-a-dj-costs-denver"
+      - slug: "how-to-read-a-band-quote"
