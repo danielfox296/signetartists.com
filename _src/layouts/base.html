@@ -30,7 +30,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260920a">
+  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260922a">
   {{schema}}
   {{ga}}
   <script defer src="{{nav_prefix}}analytics.js"></script>
@@ -54,6 +54,50 @@
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         btn.textContent = open ? 'Close' : 'Menu';
       });
+    })();
+
+    // Footer columns collapse under 640px, where the eight of them stack to
+    // three screenfuls. The toggle is a button written in here rather than the
+    // heading itself, because the four map headings are links to their hubs —
+    // tapping "Weddings" has to go to /weddings/. Nothing is hidden without
+    // JavaScript: the collapsing class only lands once this runs.
+    (function () {
+      var footer = document.querySelector('.site-footer');
+      if (!footer || !window.matchMedia) { return; }
+      var mq = window.matchMedia('(max-width: 639px)');
+      var cols = footer.querySelectorAll('.footer-col');
+      if (!cols.length) { return; }
+      var built = false;
+
+      function build() {
+        Array.prototype.forEach.call(cols, function (col, i) {
+          var head = col.querySelector('.footer-head-link, .eyebrow');
+          var list = col.querySelector('.footer-list');
+          if (!head || !list) { return; }
+          list.id = 'footer-col-' + i;
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'footer-col-toggle';
+          b.setAttribute('aria-controls', list.id);
+          b.setAttribute('aria-expanded', 'false');
+          b.setAttribute('aria-label', head.textContent.trim() + ' links');
+          b.addEventListener('click', function () {
+            var open = col.classList.toggle('is-open');
+            b.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+          head.appendChild(b);
+        });
+        built = true;
+      }
+
+      function sync() {
+        if (mq.matches && !built) { build(); }
+        footer.classList.toggle('footer-collapsible', mq.matches);
+      }
+
+      sync();
+      if (mq.addEventListener) { mq.addEventListener('change', sync); }
+      else if (mq.addListener) { mq.addListener(sync); }
     })();
   </script>
 </body>

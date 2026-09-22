@@ -355,13 +355,16 @@ def main() -> int:
         act.clear(); act.update(new)
         ACTS_FILE.write_text(json.dumps(roster, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    # footer: the Ensembles column, one link per act page
+    # footer: the Artists column, one link per act page. The marker is a
+    # comment at the end of that list, put there 2026-09-22 when the footer was
+    # reorganised: the column used to be called Ensembles and held formats and
+    # names together, and this looked for the heading text.
     footer = FOOTER.read_text(encoding="utf-8")
-    link = f'          <li><a href="{{{{nav_prefix}}}}{page}">{esc(act["name"])}</a></li>\n'
+    link = f'        <li><a href="{{{{nav_prefix}}}}{page}">{esc(act["name"])}</a></li>\n'
     if link.strip() not in footer:
-        marker = '<p class="eyebrow">Ensembles</p>'
+        marker = "<!-- act-links -->"
         i = footer.index(marker)
-        j = footer.index("        </ul>", i)
+        j = footer.rindex("\n", 0, i) + 1
         footer = footer[:j] + link + footer[j:]
         FOOTER.write_text(footer, encoding="utf-8")
 

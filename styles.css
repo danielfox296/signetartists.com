@@ -1417,60 +1417,267 @@ img {
 
 /* ---------------------------------------------------------------- footer */
 
+/* Four hairline-separated bands: the brand and the way in, the occasion map,
+   the roster and the practical, the small print. It was seven flex-wrapped
+   columns of unequal length until 2026-09-22 — see the comment at the top of
+   _src/partials/footer.html for what that cost. The bands are what carry the
+   organising principle; nothing here is ornament except the brass bar, which
+   marks the map as the primary tier. */
+
 .site-footer {
   margin-top: auto;
   border-top: 1px solid var(--rule);
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 
-.footer-inner {
+.footer-head,
+.footer-band,
+.footer-base {
+  padding-top: 2.5rem;
+}
+
+.footer-band,
+.footer-base {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* ---- band: brand and the way in */
+
+.footer-head {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .footer-brand {
-  max-width: 20rem;
+  max-width: 24rem;
 }
 
 .footer-line {
   margin-top: 0.5rem;
   font-size: 0.875rem;
+  line-height: 1.5;
   color: var(--ink-faint);
 }
 
-.footer-cols {
+.footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+/* The address is the one thing in the footer a buyer might act on, so it is
+   the one thing set above body size. */
+.footer-email {
+  font-size: 1.125rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 2px;
+}
+
+.footer-email:hover {
+  border-bottom-color: var(--brass);
+}
+
+.footer-social {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.footer-social:hover {
+  color: var(--ink);
+}
+
+.footer-cta {
+  margin-top: 0.5rem;
+}
+
+/* ---- bands: the map, the roster and the practical */
+
+.footer-band {
+  display: grid;
+  align-items: start;
+  gap: 2.25rem 2rem;
+  grid-template-columns: 1fr;
+}
+
+/* The occasion heads are links to their hubs, which is what retired the
+   duplicate /corporate/ and /private-parties/ rows. The short brass bar is
+   the map's signature and the only thing separating the two bands' heads
+   besides size: map heads are ink at 15px over brass, band-two heads are the
+   site's standard 12px brass eyebrow. */
+.footer-band--map .footer-col::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 2px;
+  margin-bottom: 0.875rem;
+  background: var(--brass);
+}
+
+.footer-head-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+
+.footer-head-link a:hover {
+  color: var(--brass-bright);
+}
+
+.footer-head-link,
+.footer-band--house .eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.875rem;
 }
 
 .footer-list {
-  margin-top: 0.75rem;
   display: grid;
   row-gap: 0.5rem;
   font-size: 0.875rem;
+  line-height: 1.45;
   color: var(--ink-soft);
 }
 
 .footer-list a:hover {
   color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.25em;
+}
+
+/* The words the column heading already said. Dimmed rather than cut: the
+   anchor text is doing keyword work on pages whose only sitewide inlink is
+   this one, so "Weddings, Vail" stays "Weddings, Vail" for a crawler and
+   reads as "Vail" to a person scanning the column. */
+.qual {
+  color: var(--ink-faint);
+}
+
+.footer-list a:hover .qual {
+  color: var(--ink-soft);
+}
+
+/* ---- the phone disclosure
+
+   Eight columns and 59 links stack to 2,600px on a 375px screen, which is
+   three and a bit screenfuls of footer. Under 640px each column collapses to
+   its heading. The toggle is its own button rather than the heading itself,
+   because the map headings are links: tapping "Weddings" has to go to
+   /weddings/, not open a drawer. The button is written in by the script in
+   base.html, so with no JavaScript every column stays open and nothing is
+   lost; above 640px the grid goes two-up and the button is gone. */
+
+.footer-col-toggle {
+  display: none;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -0.75rem -0.75rem -0.75rem 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+
+.footer-collapsible .footer-col-toggle {
+  display: flex;
+}
+
+.footer-col-toggle::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.125rem) rotate(45deg);
+  transition: transform 0.18s ease;
+}
+
+.footer-col.is-open .footer-col-toggle {
+  color: var(--ink);
+}
+
+.footer-col.is-open .footer-col-toggle::after {
+  transform: translateY(0.125rem) rotate(-135deg);
+}
+
+.footer-collapsible .footer-col:not(.is-open) .footer-list {
+  display: none;
+}
+
+.footer-collapsible .footer-band {
+  gap: 0;
+}
+
+.footer-collapsible .footer-col {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.footer-collapsible .footer-col:last-child {
+  border-bottom: 0;
+}
+
+.footer-collapsible .footer-band--map .footer-col::before {
+  display: none;
+}
+
+.footer-collapsible .footer-head-link,
+.footer-collapsible .footer-band--house .eyebrow {
+  margin-bottom: 0;
+}
+
+.footer-collapsible .footer-col.is-open .footer-head-link,
+.footer-collapsible .footer-band--house .footer-col.is-open .eyebrow {
+  margin-bottom: 0.875rem;
+}
+
+/* ---- band: the small print */
+
+.footer-base {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* For artists and the vendor application. Neither is buyer navigation, so
+   neither belongs in the map; both are still a link on every page. */
+.footer-base-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+}
+
+.footer-base-links a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.25em;
 }
 
 .footer-meta {
-  margin-top: 2.5rem;
-  border-top: 1px solid var(--rule);
-  padding-top: 1.5rem;
   font-size: 0.75rem;
   color: var(--ink-faint);
 }
 
-/* The availability disclaimer sits on the rule; the copyright line follows
-   it without a second rule (2026-09-19). */
+/* The availability disclaimer sits first; the copyright follows it without a
+   rule between them (2026-09-19). */
 .footer-meta--copyright {
-  margin-top: 0.5rem;
-  border-top: 0;
-  padding-top: 0;
+  margin-top: 0.375rem;
 }
 
 /* ----------------------------------------------------------- breakpoints */
@@ -1495,13 +1702,10 @@ img {
     column-gap: 2.5rem;
   }
 
-  /* Five columns since the Occasions + Ensembles columns (f4f39e8); between
-     this breakpoint and about 720px they overflowed the wrap and gave every
-     page a horizontal scrollbar (found 2026-09-16 on the jam page). Wrap. */
-  .footer-cols {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem 3.5rem;
+  /* Two-up. Full four-column map arrives at 960px, where the longest label
+     ("Private parties, Colorado Springs") stops wrapping. */
+  .footer-band {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1549,9 +1753,21 @@ img {
     gap: 2.5rem;
   }
 
-  .footer-inner {
+  .footer-head,
+  .footer-base {
     flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .footer-contact {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .footer-base-meta {
+    text-align: right;
   }
 
   .close-row {
@@ -1563,6 +1779,16 @@ img {
 
   .close-row .btn-row {
     margin-top: 0;
+  }
+}
+
+/* The map goes four-up here rather than at 768: below about 960 the longest
+   labels in the Private parties and Daytime columns wrap to two lines and the
+   rag stops reading as columns. */
+@media (min-width: 960px) {
+  .footer-band {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem;
   }
 }
 
