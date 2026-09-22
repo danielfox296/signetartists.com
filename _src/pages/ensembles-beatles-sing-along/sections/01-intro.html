@@ -1,20 +1,28 @@
-<!-- Format spoke, spec'd. The h1 and lede carry the buyer's words. No player is
-     named anywhere on this page. -->
-<section class="section section--top">
+<!-- Named act, spec'd presentation: the name publishes and no musician does
+     (Daniel, 2026-09-22: "publish under the act name. no additional names").
+     So this takes the act-hero shape, the same one Firstwater uses, with the
+     style as the eyebrow and the name as the h1.
+
+     The media slot carries the act's own artwork in the act-video-photo
+     pattern rather than the empty footage slot. The artwork is a published
+     asset with its own provenance row, not a placeholder standing in for a
+     clip. Footage and photography are both still open asks: the day either
+     arrives, the clip takes this slot and the artwork moves down the page. -->
+<section class="section section--top act-hero">
   <div class="wrap">
     <div class="heading">
-      <p class="eyebrow eyebrow--slab">Your Bird Can Sing</p>
-      <h1 class="h2 display">TODO: a sentence-case headline with a period, in the buyer's words.</h1>
-      <p class="lede">Two musicians, a stack of sing booklets and the Beatles catalogue, for a crowd that ranges from small children to great-grandparents. Everyone gets the words, nobody has to be a singer, and by the second chorus of Hey Jude the whole venue is going. It books as one duo, indoors or out, for community afternoons, family parties and senior living calendars.</p>
-      <p class="prose">TODO: the occasions it fits, as a picture of the night.</p>
+      <p class="eyebrow eyebrow--slab">Beatles songs, and everybody sings</p>
+      <h1 class="h1 display">Your Bird Can Sing</h1>
+      <p class="act-face">A named act. A multi-instrumental duo, with sing booklets for the guests.</p>
+      <p class="lede">Two musicians play the Beatles catalogue and hand out booklets with the words in them, for a crowd that runs from small children to great-grandparents. Nobody has to be a singer to join in, and by the second chorus of Hey Jude the whole venue is singing.</p>
+      <p class="prose">Book it for the afternoon that has to work for everybody in the space at once. Think the common area of a senior living community on a standing weekday afternoon, a library or community center program, a family party where four generations are in the garden, a school assembly, or a summer courtyard event where the point is that people stay.</p>
       <div class="btn-row">
         <a class="btn" href="{{nav_prefix}}contact/?act=your-bird-can-sing">Check a Date</a>
         <a class="btn btn--outline" href="{{nav_prefix}}pricing/">See Pricing</a>
       </div>
     </div>
-    <div class="act-video act-video--empty" data-tbd="true" role="img" aria-label="Video of the your bird can sing is not published yet.">
-      <img class="act-video-poster" src="{{nav_prefix}}img/your-bird-can-sing-card.jpg" alt="" width="1600" height="900" decoding="async">
-      <p class="act-video-note">Footage slot</p>
+    <div class="act-video">
+      <img class="act-video-photo" src="{{nav_prefix}}img/your-bird-can-sing-card.jpg" alt="A flock of birds in silhouette flying into a sunburst, drawn in the flat color of a sixties record sleeve." width="1600" height="900" decoding="async">
     </div>
   </div>
 </section>

@@ -16,6 +16,7 @@ Three checks, all on the BUILT html, because that is what a person sees:
   F  a breadcrumb or sibling label disagrees with the nav label for that URL
   G  a breadcrumb trail that repeats itself or points at a page not in the build
   H  an anchor anywhere in the build with nothing to click and nothing to read
+  I  a TODO marker in anything the build published
 
 /sitemap/ and the breadcrumbs were exempt from C until 2026-09-22, on the
 argument that they use different label lengths on purpose — /sitemap/ wants
@@ -269,6 +270,13 @@ def main() -> int:
                 continue
             href = re.search(r'href="([^"]*)"', tag)
             errors.append(f"{page_url}: anchor with no text -> {href.group(1) if href else tag}")
+
+        # I — a scaffold that reached the output. build.py skips page dirs
+        # carrying TODO markers; this is the backstop that runs in CI, because
+        # the page that went live on 2026-09-22 was titled
+        # "TODO: Your Bird Can Sing: <what it is> in Denver".
+        if "TODO" in html:
+            errors.append(f"{page_url}: published with a TODO marker in it")
 
     for url, labs in sorted(crumb_labels.items()):
         # "Home" is the trail's word for the root everywhere on the web, and

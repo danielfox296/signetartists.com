@@ -26,6 +26,16 @@ import sys
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "_src"
 PAGES = SRC / "pages"
+
+def scaffold_todo(page_dir: pathlib.Path) -> bool:
+    """True when the dir is still a scaffold. Checked against config.json and
+    every section, because new_act_page.py seeds TODO into both."""
+    for f in [page_dir / "config.json", *sorted((page_dir / "sections").glob("*.html"))]:
+        if f.exists() and "TODO" in f.read_text(encoding="utf-8"):
+            return True
+    return False
+
+
 PARTIALS = SRC / "partials"
 LAYOUTS = SRC / "layouts"
 TEMPLATES = SRC / "templates"
@@ -73,6 +83,17 @@ SERVICE_AREAS = [a["label"] for a in AREAS]
 VOCALS_LABEL = {"sung": "With a singer", "instrumental": "Instrumental"}
 VOCALS_MATCH = {"sung": "sung", "instrumental": "instrumental",
                 "optional": "sung instrumental"}
+# An act whose page dir is still a scaffold is a listing, not a link. Without
+# this the roster card, the schema and llms.txt all advertise a URL the build
+# skipped — which is how https://signetartists.com/ensembles/beatles-sing-along/
+# stayed in llms.txt after the page itself stopped being published.
+for _a in ACTS:
+    _page = _a.get("page")
+    if _page:
+        _dir = PAGES / _page.strip("/").replace("/", "-")
+        if _dir.is_dir() and scaffold_todo(_dir):
+            _a.pop("page")
+
 FLAGSHIPS = [a for a in ACTS if a["status"] == "flagship"]
 # The Preferred Vendor List (2026-09-20): six categories and the vendors on
 # it, rendered on /preferred-vendors/ by vendor_list(). Categories are data
@@ -1485,7 +1506,10 @@ def load_page_labels() -> None:
     for about three quarters of the site."""
     for page_dir in sorted(PAGES.iterdir()):
         cfg_file = page_dir / "config.json"
-        if not cfg_file.is_dir() and cfg_file.exists():
+        # A scaffold is skipped by the build, so it must not appear in the
+        # label map either, or the trails and the sibling lists would point at
+        # a page that was never written.
+        if not cfg_file.is_dir() and cfg_file.exists() and not scaffold_todo(page_dir):
             cfg = json.loads(read(cfg_file))
             url = "/" + cfg["output"].replace("index.html", "")
             _PAGE_LABELS[url] = cfg.get("breadcrumb") or _slug_label(url)
@@ -2542,6 +2566,15 @@ def main() -> None:
             continue
         if page_dir.name == "sitemap":
             index_dir = page_dir
+            continue
+        # A scaffold is not a page. new_act_page.py writes a dir full of TODO
+        # markers for a human to fill in, and until 2026-09-22 nothing stopped
+        # one being published: a page titled "TODO: Your Bird Can Sing: <what
+        # it is> in Denver" reached the live site, because an unrelated commit
+        # swept the untracked scaffold in and the build had no opinion about
+        # it. act_lint catches TODOs, but act_lint is not what deploys.
+        if scaffold_todo(page_dir):
+            print(f"  skipped {page_dir.name} (scaffold: unfilled TODO)")
             continue
         result = build_page(page_dir, extra_blocks)
         if result:
