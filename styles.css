@@ -641,10 +641,16 @@ img {
   color: var(--paper);
 }
 
+/* The only navigation control on every page under 1024px. It measured 36 by
+   16 CSS px until 2026-09-22, which is under any touch-target floor; the
+   negative margin keeps the header row the same height it was. */
 .nav-toggle {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 0.5rem;
+  margin: -0.75rem -0.5rem -0.75rem 0;
   border: 0;
   background: none;
-  padding: 0;
   font-family: inherit;
   font-size: 0.875rem;
   color: var(--ink-soft);
@@ -667,6 +673,14 @@ img {
   border-bottom: 1px solid var(--rule);
   font-size: 0.875rem;
   color: var(--ink-soft);
+}
+
+/* The current page, marked in both rows since 2026-09-22. The mobile menu
+   carried no indicator at all before that, on every width under 1024px. The
+   brass rule does the work a colour change alone cannot in a stacked list. */
+.nav-mobile a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--brass);
 }
 
 .nav-mobile a.nav-mobile-cta {
@@ -1444,6 +1458,34 @@ img {
   text-decoration: underline;
   text-decoration-color: var(--brass);
   text-underline-offset: 0.25em;
+}
+
+/* ------------------------------------------------------------ skip link */
+
+/* WCAG 2.4.1. Off-screen until focused, then it lands on the ground colour so
+   it is legible against whatever the page opens with (the home and occasion
+   pages open on a photograph). */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* The skip link's target takes focus programmatically; it is not a control,
+   so it gets no focus ring of its own. */
+main:focus {
+  outline: none;
 }
 
 /* ---------------------------------------------------------------- footer */

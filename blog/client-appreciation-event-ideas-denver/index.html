@@ -32,13 +32,18 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="../../styles.css?v=20260922b">
+  <link rel="stylesheet" href="../../styles.css?v=20260922c">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Client appreciation event ideas in Denver", "description": "Eight client appreciation event ideas for Denver firms, with vertical notes for financial advisors, realtors and law firms, and what live music costs across this market.", "author": {"@type": "LocalBusiness", "@id": "https://signetartists.com/#business", "name": "Signet Artists", "url": "https://signetartists.com", "logo": {"@type": "ImageObject", "url": "https://signetartists.com/img/icon-512.png"}}, "publisher": {"@type": "LocalBusiness", "@id": "https://signetartists.com/#business", "name": "Signet Artists", "url": "https://signetartists.com", "logo": {"@type": "ImageObject", "url": "https://signetartists.com/img/icon-512.png"}}, "datePublished": "2026-09-06", "dateModified": "2026-09-06", "image": "https://signetartists.com/img/standards.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://signetartists.com/blog/client-appreciation-event-ideas-denver/", "primaryImageOfPage": {"@type": "ImageObject", "url": "https://signetartists.com/img/standards.jpg"}}}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-LL5DKVEX29"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LL5DKVEX29');</script>
   <script defer src="../../analytics.js"></script>
 </head>
 <body>
-  <header class="site-header">
+  <!-- WCAG 2.4.1 Bypass Blocks. Visually hidden until it takes focus, so
+     the first Tab on any page offers the content instead of eight nav
+     links. Added 2026-09-22; the site had no skip link at all. -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
   <div class="wrap header-inner">
     <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
          front-range centric). A third line under the wordmark, so every page
@@ -77,19 +82,32 @@
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
   </div>
 
+  <!-- The mobile menu covers every width under 1024px, which is most of the
+       traffic, so it carries what the desktop row carries and is labelled the
+       same way. Two things it did not have until 2026-09-22: the same label as
+       the desktop row for /music/ (the roster was "The Roster" here, "Artist
+       Roster" in the desktop row and "Artist roster" in the footer — one
+       destination, three anchor texts, on every page), and aria-current, so
+       there was no current-page indicator at all below 1024px. The nav_* tokens
+       resolve in both rows; build.py replaces every occurrence.
+
+       Daytime has no desktop slot — the row needs 987px of content width as it
+       stands and swaps in at 1024 — but the menu is a stacked list with room,
+       so the fourth occasion tree is reachable from the nav here. -->
   <nav class="nav-mobile" id="mobile-nav">
-    <a href="../../music/">The Roster</a>
-    <a href="../../repertoire/">Songs</a>
-    <a href="../../pricing/">Pricing</a>
-    <a href="../../corporate/">Corporate</a>
-    <a href="../../weddings/">Weddings</a>
-    <a href="../../private-parties/">Private Parties</a>
-    <a href="../../planners/">For Planners</a>
-    <a class="btn nav-mobile-cta" href="../../contact/">Check a Date</a>
+    <a href="../../music/" >Artist Roster</a>
+    <a href="../../repertoire/" >Songs</a>
+    <a href="../../pricing/" >Pricing</a>
+    <a href="../../corporate/" >Corporate</a>
+    <a href="../../weddings/" >Weddings</a>
+    <a href="../../private-parties/" >Private Parties</a>
+    <a href="../../daytime/">Daytime</a>
+    <a href="../../planners/" >For Planners</a>
+    <a class="btn nav-mobile-cta" href="../../contact/" >Check a Date</a>
   </nav>
 </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="section section--top">
   <div class="wrap">
     <article class="blog-article">
@@ -560,7 +578,7 @@ are covered one by one in the venue guide.</p></div>
     <div class="footer-col">
       <p class="eyebrow">The music</p>
       <ul class="footer-list">
-        <li><a href="../../music/">Artist roster</a></li>
+        <li><a href="../../music/">Artist Roster</a></li>
         <li><a href="../../repertoire/">Songs</a></li>
       </ul>
     </div>

@@ -1,3 +1,8 @@
+<!-- WCAG 2.4.1 Bypass Blocks. Visually hidden until it takes focus, so
+     the first Tab on any page offers the content instead of eight nav
+     links. Added 2026-09-22; the site had no skip link at all. -->
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap header-inner">
     <!-- The location cue, 2026-08-27 (Daniel: the site did not read as
@@ -37,14 +42,27 @@
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
   </div>
 
+  <!-- The mobile menu covers every width under 1024px, which is most of the
+       traffic, so it carries what the desktop row carries and is labelled the
+       same way. Two things it did not have until 2026-09-22: the same label as
+       the desktop row for /music/ (the roster was "The Roster" here, "Artist
+       Roster" in the desktop row and "Artist roster" in the footer — one
+       destination, three anchor texts, on every page), and aria-current, so
+       there was no current-page indicator at all below 1024px. The nav_* tokens
+       resolve in both rows; build.py replaces every occurrence.
+
+       Daytime has no desktop slot — the row needs 987px of content width as it
+       stands and swaps in at 1024 — but the menu is a stacked list with room,
+       so the fourth occasion tree is reachable from the nav here. -->
   <nav class="nav-mobile" id="mobile-nav">
-    <a href="{{nav_prefix}}music/">The Roster</a>
-    <a href="{{nav_prefix}}repertoire/">Songs</a>
-    <a href="{{nav_prefix}}pricing/">Pricing</a>
-    <a href="{{nav_prefix}}corporate/">Corporate</a>
-    <a href="{{nav_prefix}}weddings/">Weddings</a>
-    <a href="{{nav_prefix}}private-parties/">Private Parties</a>
-    <a href="{{nav_prefix}}planners/">For Planners</a>
-    <a class="btn nav-mobile-cta" href="{{nav_prefix}}contact/">Check a Date</a>
+    <a href="{{nav_prefix}}music/" {{nav_music}}>Artist Roster</a>
+    <a href="{{nav_prefix}}repertoire/" {{nav_repertoire}}>Songs</a>
+    <a href="{{nav_prefix}}pricing/" {{nav_pricing}}>Pricing</a>
+    <a href="{{nav_prefix}}corporate/" {{nav_corporate}}>Corporate</a>
+    <a href="{{nav_prefix}}weddings/" {{nav_weddings}}>Weddings</a>
+    <a href="{{nav_prefix}}private-parties/" {{nav_private}}>Private Parties</a>
+    <a href="{{nav_prefix}}daytime/">Daytime</a>
+    <a href="{{nav_prefix}}planners/" {{nav_planners}}>For Planners</a>
+    <a class="btn nav-mobile-cta" href="{{nav_prefix}}contact/" {{nav_contact}}>Check a Date</a>
   </nav>
 </header>
