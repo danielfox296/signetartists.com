@@ -1074,7 +1074,8 @@ def local_business_node() -> dict:
             "corporate retreat evenings", "private party and milestone birthday music",
             "jazz band for weddings and corporate events", "singer and guitarist for hire",
             "musician for a proposal or a surprise song", "Christmas jazz trio",
-            "folk and Americana singer-songwriter",
+            "folk and Americana singer-songwriter", "Beatles sing-along",
+            "live music for senior living and memory care",
         ],
     }
     maps = [u for u in BRAND.get("sameAs", []) if "maps.google.com" in u]

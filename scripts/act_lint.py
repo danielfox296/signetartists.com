@@ -297,7 +297,12 @@ def check_page(act: dict, page: str):
         if "TODO" in raw:
             err(aid, f"{s.relative_to(ROOT)} still carries a TODO")
         body += COMMENT.sub("", raw)
-    if "{{offer_close:" not in body:
+    # Either close counts. offer_close_day is the daytime tree's variant
+    # (2026-09-19): the same sentence and the same button with "the night" read
+    # as "the day". Your Bird Can Sing is the first act page to want it, since
+    # a senior living afternoon and a library program are not nights, and the
+    # check was written before that variant existed.
+    if "{{offer_close:" not in body and "{{offer_close_day:" not in body:
         err(aid, f"{d.name}: no {{{{offer_close:...}}}}; every page ends on the sitewide close")
     if "{{credits}}" not in body:
         warn(aid, f"{d.name}: no {{{{credits}}}} strip; every act page carries it under the intro")
