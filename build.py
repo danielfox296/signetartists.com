@@ -2089,28 +2089,43 @@ def _page_lastmod_map() -> dict:
     signal would be a lie crawlers learn to ignore. Callers omit <lastmod>
     for any path not in the map.
     """
+    # Seed map: the real per-path dates as they stood before this repo's
+    # history was discarded on 2026-09-22. Git can no longer answer for any
+    # path untouched since then, and the squash date would be exactly the
+    # lie this function refuses to tell. Git still wins for anything edited
+    # after the wipe — the seed is the floor, not the ceiling.
+    seed: dict[str, str] = {}
+    try:
+        with open(SRC / "lastmod-seed.json", encoding="utf-8") as fh:
+            seed = {k: v for k, v in json.load(fh).items()
+                    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(v))}
+    except (OSError, ValueError):
+        seed = {}
+
     try:
         depth = subprocess.run(
             ["git", "rev-list", "--count", "HEAD"],
             cwd=ROOT, capture_output=True, text=True, timeout=30,
         )
         if depth.returncode != 0 or int(depth.stdout.strip() or 0) < 2:
-            return {}
+            return seed
         log = subprocess.run(
             ["git", "log", "--format=%cs", "--name-only", "--", "_src"],
             cwd=ROOT, capture_output=True, text=True, timeout=60,
         )
         if log.returncode != 0:
-            return {}
+            return seed
     except (OSError, ValueError, subprocess.SubprocessError):
-        return {}
-    dates: dict[str, str] = {}
+        return seed
+    dates: dict[str, str] = dict(seed)
+    seen: set[str] = set()
     current = ""
     for line in log.stdout.splitlines():
         line = line.strip()
         if re.fullmatch(r"\d{4}-\d{2}-\d{2}", line):
             current = line
-        elif line and current and line not in dates:
+        elif line and current and line not in seen:
+            seen.add(line)
             dates[line] = current  # newest-first: first sighting is the last edit
     return dates
 
