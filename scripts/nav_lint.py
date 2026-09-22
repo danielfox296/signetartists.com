@@ -149,12 +149,18 @@ def main() -> int:
                 continue
             seen_labels.setdefault(u, set()).add(label)
 
-    # D — one label swallowed by another, anywhere in the footer. A warning,
-    # not an error: "Preferred Vendor List" and "Join the Preferred Vendor
-    # List" are a real pair (read it / apply to be on it) and the word "Join"
-    # carries the difference. It is still worth seeing, because the shape is
-    # the same one that made "Corporate" and "Corporate events" two names for
-    # one page.
+    # D — one label swallowed by another, anywhere in the footer. The shape
+    # that made "Corporate" and "Corporate events" two names for one page.
+    #
+    # It stays a warning rather than an error because containment on its own
+    # does not prove a fault: two labels can nest and still be two real
+    # destinations. It shipped with one live hit, "Preferred Vendor List" in
+    # the Planning column inside "Join the Preferred Vendor List" in the
+    # bottom bar. Daniel ruled on that pair on 2026-09-22 and the join link
+    # came out of the footer, so there is no allow-list here and the build is
+    # clean. A warning from D now is a new one — read it, rule on it, and
+    # resolve it in the footer rather than by teaching this check to look
+    # away.
     footer_rows = [
         (name, label)
         for name, rows in lists.items()
