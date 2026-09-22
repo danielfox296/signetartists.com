@@ -328,10 +328,21 @@ def check_page(act: dict, page: str):
             if face and face in body and other["id"] != aid:
                 warn(aid, f"{d.name}: names {face}; check it is a review or a deliberate cross-link, never the spec'd act's player")
 
-    # the footer link: the cheapest sitewide inlink there is
-    footer = (PARTIALS / "footer.html").read_text(encoding="utf-8")
-    if f'href="{{{{nav_prefix}}}}{page}"' not in footer:
-        err(aid, f"footer.html has no link to {page} (Ensembles column)")
+    # A body link from a parent page. This used to check the footer's Ensembles
+    # column; the footer was cut to 20 orientation links on 2026-09-22 and act
+    # pages came out of it, so the check follows the link to where it now
+    # lives. An act with `page` set renders a card in the roster grid on
+    # /music/ automatically, and /sitemap/ lists it from the build, so the real
+    # failure this catches is an act whose page exists and whose roster card
+    # does not.
+    built_roster = ROOT / "music" / "index.html"
+    if built_roster.exists():
+        import re as _re
+        html = built_roster.read_text(encoding="utf-8")
+        main = _re.search(r"<main\b.*?</main>", html, _re.S | _re.I)
+        leaf = page.rstrip("/").split("/")[-1] + "/"
+        if main and leaf not in main.group(0):
+            err(aid, f"/music/ has no body link to {page}; run build.py, then check acts.json sets `page`")
 
 
 def check_roster():

@@ -355,20 +355,11 @@ def main() -> int:
         act.clear(); act.update(new)
         ACTS_FILE.write_text(json.dumps(roster, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    # footer: the Artists column, one link per act page. The marker is a
-    # comment at the end of that list, put there 2026-09-22 when the footer was
-    # reorganised: the column used to be called Ensembles and held formats and
-    # names together, and this looked for the heading text.
-    footer = FOOTER.read_text(encoding="utf-8")
-    link = f'        <li><a href="{{{{nav_prefix}}}}{page}">{esc(act["name"])}</a></li>\n'
-    if link.strip() not in footer:
-        marker = "<!-- act-links -->"
-        i = footer.index(marker)
-        j = footer.rindex("\n", 0, i) + 1
-        footer = footer[:j] + link + footer[j:]
-        FOOTER.write_text(footer, encoding="utf-8")
-
-    print(f"wrote {d.relative_to(ROOT)}/ ({len(sections)} sections), set page on {act['id']}, footer link added.")
+    # No footer edit. Act pages came out of the footer on 2026-09-22 when it
+    # was cut to 20 orientation links; an act with `page` set gets its body
+    # link from the roster grid on /music/ and its row on /sitemap/, both
+    # rendered by build.py. act_lint checks the roster link instead.
+    print(f"wrote {d.relative_to(ROOT)}/ ({len(sections)} sections), set page on {act['id']}.")
     print("Next: fill every TODO, then python3 scripts/act_lint.py " + act["id"]
           + " && python3 build.py && python3 scripts/copy_gate.py && python3 scripts/uniqueness_check.py")
     return 0

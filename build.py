@@ -2130,6 +2130,102 @@ def _page_lastmod_map() -> dict:
     return dates
 
 
+# ------------------------------------------------------------- site index
+
+# The HTML sitemap at /sitemap/, added 2026-09-22 when the footer was cut from
+# 63 links to 20. It is rendered from `built` — the same list write_sitemap and
+# write_llms read — so it cannot drift from the XML sitemap the way a
+# hand-maintained page would. That drift is exactly what put the site here:
+# the footer grew a column per tree because no page indexed the trees.
+#
+# Grouped by URL tree, in the header nav's order. A page whose output is a
+# single directory deep and heads a tree becomes that group's heading; noindex
+# pages (the jam page) are skipped, the same rule the XML sitemap uses.
+
+SITE_INDEX_GROUPS = [
+    ("corporate/", "Corporate"),
+    ("weddings/", "Weddings"),
+    ("private-parties/", "Private parties"),
+    ("daytime/", "Daytime"),
+    ("ensembles/", "Configurations"),
+    ("artists/", "Artists"),
+    ("planners/", "For planners"),
+    ("preferred-vendors/", "Preferred vendors"),
+    ("guides/", "Guides"),
+]
+
+
+def site_index(pages: list[dict], posts: list[dict] = None) -> str:
+    live = [
+        p for p in pages
+        if not p["cfg"].get("robots", "").startswith("noindex")
+        and p["output"] != "404.html"
+    ]
+    by_output = {p["output"]: p for p in live}
+
+    def row(page):
+        href = "{{nav_prefix}}" + page["output"].replace("index.html", "")
+        label = html.escape(page["cfg"].get("index_label") or page["cfg"]["title"].split("|")[0].split(":")[0].strip())
+        return f'        <li><a href="{href}">{label}</a></li>'
+
+    used = set()
+    out = ['<dl class="def-list def-list--stack">']
+
+    # The top of the site: whatever sits at the root, in nav order.
+    top_order = [
+        "index.html", "music/index.html", "repertoire/index.html",
+        "pricing/index.html", "about/index.html", "contact/index.html",
+        "blog/index.html", "for-artists/index.html", "thanks/index.html",
+    ]
+    tops = [by_output[o] for o in top_order if o in by_output]
+    used.update(p["output"] for p in tops)
+    if tops:
+        out.append('      <div class="def-row">')
+        out.append("        <dt>The site</dt>")
+        out.append('        <dd><ul class="index-list">')
+        out.extend(row(p) for p in tops)
+        out.append("        </ul></dd>")
+        out.append("      </div>")
+
+    for prefix, heading in SITE_INDEX_GROUPS:
+        group = sorted(
+            (p for p in live if p["output"].startswith(prefix) and p["output"] not in used),
+            key=lambda p: (p["output"].count("/"), p["output"]),
+        )
+        if not group:
+            continue
+        used.update(p["output"] for p in group)
+        out.append('      <div class="def-row">')
+        out.append(f"        <dt>{html.escape(heading)}</dt>")
+        out.append('        <dd><ul class="index-list">')
+        out.extend(row(p) for p in group)
+        out.append("        </ul></dd>")
+        out.append("      </div>")
+
+    rest = sorted((p for p in live if p["output"] not in used), key=lambda p: p["output"])
+    if rest:
+        out.append('      <div class="def-row">')
+        out.append("        <dt>Elsewhere</dt>")
+        out.append('        <dd><ul class="index-list">')
+        out.extend(row(p) for p in rest)
+        out.append("        </ul></dd>")
+        out.append("      </div>")
+
+    live_posts = [p for p in posts or [] if not p.get("robots", "").startswith("noindex")]
+    if live_posts:
+        out.append('      <div class="def-row">')
+        out.append("        <dt>Notes</dt>")
+        out.append('        <dd><ul class="index-list">')
+        for post in live_posts:
+            href = "{{nav_prefix}}blog/" + post["slug"] + "/"
+            out.append(f'        <li><a href="{href}">{html.escape(post["title"])}</a></li>')
+        out.append("        </ul></dd>")
+        out.append("      </div>")
+
+    out.append("    </dl>")
+    return "\n".join(out)
+
+
 def write_sitemap(pages: list[dict], posts: list[dict] = None) -> None:
     # Static pages get <lastmod> from the newest git commit touching their
     # source dir. Shared-template and rate changes don't bump it; that keeps
@@ -2243,8 +2339,15 @@ def main() -> None:
 
     built = []
     extra_blocks = {"{{blog_cards}}": blog_cards(published)}
+    # The HTML sitemap is held back to the end: {{site_index}} renders from the
+    # finished `built` list, so it lists every page including the act pages
+    # generated below, and cannot drift from sitemap.xml.
+    index_dir = None
     for page_dir in sorted(PAGES.iterdir()):
         if not page_dir.is_dir() or not (page_dir / "config.json").exists():
+            continue
+        if page_dir.name == "sitemap":
+            index_dir = page_dir
             continue
         result = build_page(page_dir, extra_blocks)
         if result:
@@ -2260,6 +2363,15 @@ def main() -> None:
         result = build_act_page(act)
         built.append(result)
         print(f"  built {result['output']}")
+
+    if index_dir:
+        result = build_page(
+            index_dir,
+            {**extra_blocks, "{{site_index}}": site_index(built, published)},
+        )
+        if result:
+            built.append(result)
+            print(f"  built {result['output']}")
 
     write_redirects()
 

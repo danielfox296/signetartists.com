@@ -1,0 +1,7 @@
+{
+  "_note": "The HTML sitemap, 2026-09-22, built with the footer cull. It is the backstop that lets the footer stop being one: every page on the site, one hop from every page, in a single link. The list is rendered by site_index() in build.py from the same `built` list that writes sitemap.xml and llms.txt, so it cannot go stale by hand. Indexed and linked from the footer's bottom bar. Nothing on it is a price, a status or a count.",
+  "title": "All pages",
+  "meta_description": "Every page on signetartists.com: the occasions, the configurations, the artists, the planning pages and the notes.",
+  "output": "sitemap/index.html",
+  "nav": ""
+}

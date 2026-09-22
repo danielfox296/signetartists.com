@@ -1,21 +1,34 @@
-<!-- The footer is the site's map, and it is organised the way the site is:
-     the four occasion trees first, then who plays, then the practical, then
-     the small print. It used to be organised the way it was BUILT — a new
-     column bolted on the day each tree shipped (Occasions 2026-09-13, Daytime
-     2026-09-19, Private parties 2026-09-20) — which left seven columns of
-     wildly different lengths wrapping into three ragged rows, an "Occasions"
-     column that excluded two of the four occasion trees, and 1,293px of
-     footer on a 1,280px screen. Reorganised 2026-09-22. No destination was
-     dropped: the only links that left are the ones that were in here twice,
-     or that sit in the header on every page anyway.
+<!-- The footer is orientation, not inventory. Cut from 63 links to 20 on
+     2026-09-22, the same day the configuration index went on /music/ and the
+     HTML sitemap went up at /sitemap/.
 
-     The occasion headings are LINKS to their hubs. That is what retires the
-     old duplicate rows (/corporate/ and /private-parties/ were in the Site
-     column as well as heading their own trees) and it is what makes the
-     spoke labels legible: the heading carries the context, so the repeated
-     words inside each anchor are dimmed with <span class="qual"> rather than
-     cut. The anchor text itself is unchanged — it is doing keyword work and
-     is the reason these sitewide inlinks exist. -->
+     It had 63 links because it was doing a job it no longer has to do. On
+     2026-09-13 the spokes carried one to seven inbound links each and four
+     hubs sat "Discovered, never crawled" in Search Console, so a column went
+     in per tree. A crawl of the build on 2026-09-22 found every occasion hub
+     already linking, in its own body copy, to every spoke beneath it:
+     corporate 6/6, weddings 5/5, private parties 11/11, daytime 5/5, planners
+     4/4. /weddings/cocktail-hour/ has 21 in-body linking pages now. The footer
+     link was the weakest of its 39.
+
+     What it was costing: 63 links x 95 pages = 5,985 internal links, a median
+     of 65.6% of every page's links and more than half on all 95 of them.
+     Boilerplate ran to 93% of the words on /thanks/, 62% on /about/ and 53%
+     on /contact/. Sitewide footer links are read as low-priority navigational
+     signals anyway, and for retrieval the cost is sameness: a funerals page
+     and a yacht-rock page shared about 65% of their anchor text.
+
+     Only three destinations here have no in-body inbound link anywhere on the
+     site, and all three stay: /about/, /blog/ and /for-artists/. Everything
+     else that left is linked from its hub in body copy and from /sitemap/,
+     which is generated from the build and so cannot go stale by hand.
+
+     The test for a link belonging here: it answers what this is, who is
+     behind it, where to learn more, or how to reach us. "Halloween party"
+     answers none of them. It belongs on the private-parties hub, where it is.
+
+     DO NOT add a column when a tree ships. Add the spoke to its hub's index
+     section, and /sitemap/ picks it up on the next build with no edit here. -->
 <footer class="site-footer">
 
   <div class="wrap footer-head">
@@ -35,96 +48,29 @@
     </div>
   </div>
 
-  <!-- Band one: the occasion map. Four trees, four columns, each headed by
-       its own hub. Column order matches the header nav. -->
-  <div class="wrap footer-band footer-band--map">
+  <div class="wrap footer-band">
+    <!-- The four occasion hubs, in the header nav's order. Each one is a
+         complete index of its own tree in its own body copy, which is what
+         lets the spokes come out of here. -->
     <div class="footer-col">
-      <p class="footer-head-link"><a href="{{nav_prefix}}corporate/">Corporate</a></p>
+      <p class="eyebrow">Occasions</p>
       <ul class="footer-list">
-        <li><a href="{{nav_prefix}}corporate/holiday-party/"><span class="qual">Corporate </span>holiday party</a></li>
-        <li><a href="{{nav_prefix}}corporate/client-dinners/">Client dinners</a></li>
-        <li><a href="{{nav_prefix}}corporate/retreats/"><span class="qual">Corporate </span>retreats</a></li>
-        <li><a href="{{nav_prefix}}corporate/galas-and-awards/">Galas and award nights</a></li>
-        <li><a href="{{nav_prefix}}corporate/after-party/">After-parties</a></li>
-        <li><a href="{{nav_prefix}}corporate/jazz-band/">Jazz band<span class="qual"> for a corporate event</span></a></li>
+        <li><a href="{{nav_prefix}}corporate/">Corporate events</a></li>
+        <li><a href="{{nav_prefix}}weddings/">Weddings</a></li>
+        <li><a href="{{nav_prefix}}private-parties/">Private parties</a></li>
+        <li><a href="{{nav_prefix}}daytime/">Daytime bookings</a></li>
       </ul>
     </div>
 
+    <!-- The roster and the configuration index both live on /music/; the song
+         book is /repertoire/. scripts/act_lint.py checks that a new act's page
+         is linked from here or from the roster, so the roster link is what
+         keeps that gate honest now. -->
     <div class="footer-col">
-      <p class="footer-head-link"><a href="{{nav_prefix}}weddings/">Weddings</a></p>
+      <p class="eyebrow">The music</p>
       <ul class="footer-list">
-        <li><a href="{{nav_prefix}}weddings/ceremony/"><span class="qual">Wedding </span>ceremony</a></li>
-        <li><a href="{{nav_prefix}}weddings/cocktail-hour/">Cocktail hour</a></li>
-        <li><a href="{{nav_prefix}}weddings/jazz-band/">Jazz band<span class="qual"> for a wedding</span></a></li>
-        <li><a href="{{nav_prefix}}weddings/vail/"><span class="qual">Weddings, </span>Vail</a></li>
-        <li><a href="{{nav_prefix}}weddings/colorado-springs/"><span class="qual">Weddings, </span>Colorado Springs</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <p class="footer-head-link"><a href="{{nav_prefix}}private-parties/">Private parties</a></p>
-      <ul class="footer-list">
-        <li><a href="{{nav_prefix}}private-parties/denver/"><span class="qual">Private parties, </span>Denver</a></li>
-        <li><a href="{{nav_prefix}}private-parties/colorado-springs/"><span class="qual">Private parties, </span>Colorado Springs</a></li>
-        <li><a href="{{nav_prefix}}private-parties/engagement-party/">Engagement party</a></li>
-        <li><a href="{{nav_prefix}}private-parties/showers/">Baby and bridal showers</a></li>
-        <li><a href="{{nav_prefix}}private-parties/graduation-party/">Graduation party</a></li>
-        <li><a href="{{nav_prefix}}private-parties/backyard-party/">Backyard party</a></li>
-        <li><a href="{{nav_prefix}}private-parties/anniversary-party/">Anniversary party</a></li>
-        <li><a href="{{nav_prefix}}private-parties/retirement-party/">Retirement party</a></li>
-        <li><a href="{{nav_prefix}}private-parties/halloween-party/">Halloween party</a></li>
-        <li><a href="{{nav_prefix}}private-parties/holiday-party/">Holiday party at home</a></li>
-        <li><a href="{{nav_prefix}}private-parties/proposals/">Proposals and surprise songs</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <p class="footer-head-link"><a href="{{nav_prefix}}daytime/">Daytime</a></p>
-      <ul class="footer-list">
-        <li><a href="{{nav_prefix}}daytime/senior-living/">Senior living and memory care</a></li>
-        <li><a href="{{nav_prefix}}daytime/funerals-and-memorials/">Funerals and memorials</a></li>
-        <li><a href="{{nav_prefix}}daytime/sound-bath/"><span class="qual">Daytime </span>sound bath</a></li>
-        <li><a href="{{nav_prefix}}daytime/brunch/">Sunday brunch</a></li>
-        <li><a href="{{nav_prefix}}daytime/community-programs/">Farmers markets and libraries</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Band two: who plays, and the practical. Same four-column rhythm, one
-       step quieter. Ensembles and Artists were one list called "Ensembles"
-       until 2026-09-22, which put a format a buyer searches for (solo
-       guitarist) and a name they cannot search for yet (René Moffatt) in the
-       same column under the same word. Formats first, names second. -->
-  <div class="wrap footer-band footer-band--house">
-    <div class="footer-col">
-      <p class="eyebrow">Ensembles</p>
-      <ul class="footer-list">
-        <li><a href="{{nav_prefix}}ensembles/solo-guitarist/">Solo guitarist</a></li>
-        <li><a href="{{nav_prefix}}ensembles/singer-guitarist/">Singer and guitarist</a></li>
-        <li><a href="{{nav_prefix}}ensembles/acoustic-duo/">Acoustic duo and trio</a></li>
-        <li><a href="{{nav_prefix}}ensembles/jazz-duo-trio/">Jazz duo and trio</a></li>
-        <li><a href="{{nav_prefix}}ensembles/spanish-guitarist/">Spanish guitarist</a></li>
-        <li><a href="{{nav_prefix}}ensembles/christmas-jazz-trio/">Christmas jazz trio</a></li>
-        <li><a href="{{nav_prefix}}ensembles/yacht-rock/">Yacht rock band</a></li>
-        <li><a href="{{nav_prefix}}ensembles/americana-band/">Americana band</a></li>
-        <li><a href="{{nav_prefix}}ensembles/live-band-karaoke/">Live Band Karaoke</a></li>
-        <li><a href="{{nav_prefix}}ensembles/dj/">DJ</a></li>
-      </ul>
-    </div>
-
-    <!-- The act pages. scripts/new_act_page.py inserts a new act's link at
-         the act-links marker and scripts/act_lint.py fails an act whose page
-         has no link anywhere in this file, so the marker has to stay. -->
-    <div class="footer-col">
-      <p class="eyebrow">Artists</p>
-      <ul class="footer-list">
-        <li><a href="{{nav_prefix}}ensembles/flamenco-trio/">Dirty Flamenco, the trio</a></li>
-        <li><a href="{{nav_prefix}}ensembles/changes-jazz-trio/">Changes Jazz Trio</a></li>
-        <li><a href="{{nav_prefix}}artists/tejas-singh/">Tejas Singh</a></li>
-        <li><a href="{{nav_prefix}}artists/tony-medina/">Tony Medina</a></li>
-        <li><a href="{{nav_prefix}}artists/firstwater/">Firstwater</a></li>
-        <li><a href="{{nav_prefix}}artists/rene-moffatt/">René Moffatt</a></li>
-        <!-- act-links -->
+        <li><a href="{{nav_prefix}}music/">Artist roster</a></li>
+        <li><a href="{{nav_prefix}}repertoire/">Songs</a></li>
       </ul>
     </div>
 
@@ -133,9 +79,6 @@
       <ul class="footer-list">
         <li><a href="{{nav_prefix}}pricing/">Pricing</a></li>
         <li><a href="{{nav_prefix}}guides/live-music-cost-colorado/">What live music costs</a></li>
-        <li><a href="{{nav_prefix}}planners/booking/">How a booking works</a></li>
-        <li><a href="{{nav_prefix}}planners/technical/">What we need from your venue</a></li>
-        <li><a href="{{nav_prefix}}planners/mountain/">The mountain corridor</a></li>
         <li><a href="{{nav_prefix}}planners/">Resources for planners</a></li>
         <li><a href="{{nav_prefix}}preferred-vendors/">Preferred Vendor List</a></li>
       </ul>
@@ -145,18 +88,17 @@
       <p class="eyebrow">Signet</p>
       <ul class="footer-list">
         <li><a href="{{nav_prefix}}about/">About</a></li>
-        <li><a href="{{nav_prefix}}music/">The Music</a></li>
-        <li><a href="{{nav_prefix}}repertoire/">Songs</a></li>
         <li><a href="{{nav_prefix}}blog/">Notes</a></li>
       </ul>
     </div>
   </div>
 
-  <!-- The two ways to work with Signet, added 2026-09-20 with the Preferred
-       Vendor List. They sit on the bottom bar rather than in the map because
-       neither is buyer navigation; both are still a sitewide inlink. -->
+  <!-- The two ways to work with Signet, and the backstop. /sitemap/ carries
+       every page on the site, so one link here replaces the forty-three that
+       left. -->
   <div class="wrap footer-base">
     <ul class="footer-base-links">
+      <li><a href="{{nav_prefix}}sitemap/">All pages</a></li>
       <li><a href="{{nav_prefix}}for-artists/">For artists</a></li>
       <li><a href="{{nav_prefix}}preferred-vendors/join/">Join the Preferred Vendor List</a></li>
     </ul>

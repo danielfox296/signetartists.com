@@ -1415,14 +1415,46 @@ img {
   padding: 2rem;
 }
 
+/* The HTML sitemap's lists, 2026-09-22. They sit inside the house def-list,
+   one <dd> per group, so the page inherits the two-column measure every other
+   stacked list on the site uses. */
+.index-list {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+/* Multi-column rather than a two-track grid: a grid flows row-wise, so the
+   list read 1-2 across, 3-4 across. Columns read down, then across, which is
+   how anyone reads a list. */
+@media (min-width: 768px) {
+  .index-list {
+    display: block;
+    columns: 2;
+    column-gap: 2.5rem;
+  }
+
+  .index-list li {
+    break-inside: avoid;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.index-list a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.25em;
+}
+
 /* ---------------------------------------------------------------- footer */
 
-/* Four hairline-separated bands: the brand and the way in, the occasion map,
-   the roster and the practical, the small print. It was seven flex-wrapped
-   columns of unequal length until 2026-09-22 — see the comment at the top of
-   _src/partials/footer.html for what that cost. The bands are what carry the
-   organising principle; nothing here is ornament except the brass bar, which
-   marks the map as the primary tier. */
+/* Three hairline-separated bands: the brand and the way in, four columns of
+   orientation links, the small print. It was seven flex-wrapped columns of
+   unequal length carrying 63 links until 2026-09-22 — see the comment at the
+   top of _src/partials/footer.html for why they left and where they went.
+   Nothing in here is ornament. Twenty links fit four-up from 640px with no
+   disclosure, no rag and no brass bar to mark a tier, because at this size
+   there is only one tier. */
 
 .site-footer {
   margin-top: auto;
@@ -1494,48 +1526,16 @@ img {
   margin-top: 0.5rem;
 }
 
-/* ---- bands: the map, the roster and the practical */
+/* ---- band: the link columns */
 
 .footer-band {
   display: grid;
   align-items: start;
   gap: 2.25rem 2rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-/* The occasion heads are links to their hubs, which is what retired the
-   duplicate /corporate/ and /private-parties/ rows. The short brass bar is
-   the map's signature and the only thing separating the two bands' heads
-   besides size: map heads are ink at 15px over brass, band-two heads are the
-   site's standard 12px brass eyebrow. */
-.footer-band--map .footer-col::before {
-  content: "";
-  display: block;
-  width: 1.75rem;
-  height: 2px;
-  margin-bottom: 0.875rem;
-  background: var(--brass);
-}
-
-.footer-head-link {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: var(--track-caps);
-  color: var(--ink);
-}
-
-.footer-head-link a:hover {
-  color: var(--brass-bright);
-}
-
-.footer-head-link,
-.footer-band--house .eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+.footer-band .eyebrow {
   margin-bottom: 0.875rem;
 }
 
@@ -1552,96 +1552,6 @@ img {
   text-decoration: underline;
   text-decoration-color: var(--brass);
   text-underline-offset: 0.25em;
-}
-
-/* The words the column heading already said. Dimmed rather than cut: the
-   anchor text is doing keyword work on pages whose only sitewide inlink is
-   this one, so "Weddings, Vail" stays "Weddings, Vail" for a crawler and
-   reads as "Vail" to a person scanning the column. */
-.qual {
-  color: var(--ink-faint);
-}
-
-.footer-list a:hover .qual {
-  color: var(--ink-soft);
-}
-
-/* ---- the phone disclosure
-
-   Eight columns and 59 links stack to 2,600px on a 375px screen, which is
-   three and a bit screenfuls of footer. Under 640px each column collapses to
-   its heading. The toggle is its own button rather than the heading itself,
-   because the map headings are links: tapping "Weddings" has to go to
-   /weddings/, not open a drawer. The button is written in by the script in
-   base.html, so with no JavaScript every column stays open and nothing is
-   lost; above 640px the grid goes two-up and the button is gone. */
-
-.footer-col-toggle {
-  display: none;
-  flex: none;
-  width: 2.75rem;
-  height: 2.75rem;
-  margin: -0.75rem -0.75rem -0.75rem 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: 0;
-  color: var(--ink-faint);
-  cursor: pointer;
-}
-
-.footer-collapsible .footer-col-toggle {
-  display: flex;
-}
-
-.footer-col-toggle::after {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-0.125rem) rotate(45deg);
-  transition: transform 0.18s ease;
-}
-
-.footer-col.is-open .footer-col-toggle {
-  color: var(--ink);
-}
-
-.footer-col.is-open .footer-col-toggle::after {
-  transform: translateY(0.125rem) rotate(-135deg);
-}
-
-.footer-collapsible .footer-col:not(.is-open) .footer-list {
-  display: none;
-}
-
-.footer-collapsible .footer-band {
-  gap: 0;
-}
-
-.footer-collapsible .footer-col {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.footer-collapsible .footer-col:last-child {
-  border-bottom: 0;
-}
-
-.footer-collapsible .footer-band--map .footer-col::before {
-  display: none;
-}
-
-.footer-collapsible .footer-head-link,
-.footer-collapsible .footer-band--house .eyebrow {
-  margin-bottom: 0;
-}
-
-.footer-collapsible .footer-col.is-open .footer-head-link,
-.footer-collapsible .footer-band--house .footer-col.is-open .eyebrow {
-  margin-bottom: 0.875rem;
 }
 
 /* ---- band: the small print */
@@ -1702,10 +1612,11 @@ img {
     column-gap: 2.5rem;
   }
 
-  /* Two-up. Full four-column map arrives at 960px, where the longest label
-     ("Private parties, Colorado Springs") stops wrapping. */
+  /* Four orientation columns. They fit from here: the longest label is
+     "What live music costs". */
   .footer-band {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem;
   }
 }
 
@@ -1779,16 +1690,6 @@ img {
 
   .close-row .btn-row {
     margin-top: 0;
-  }
-}
-
-/* The map goes four-up here rather than at 768: below about 960 the longest
-   labels in the Private parties and Daytime columns wrap to two lines and the
-   rag stops reading as columns. */
-@media (min-width: 960px) {
-  .footer-band {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2.5rem;
   }
 }
 
