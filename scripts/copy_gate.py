@@ -22,7 +22,14 @@ Two passes.
    2026-08-28 pass left pricing, home, music, planners, contact, 404 and the
    blog ungated, and a per-directory allowlist is how that happens again.
 
-3. Compression notes (2026-09-18, AI-TELLS-2026.md Layer 7): the two
+3. The whole built site gets the em-dash ban a second time, on the output
+   rather than the source (2026-09-22). Pass 1 has only ever read _src, so
+   the em dashes build.py itself wrote were invisible to it: the generated
+   page title separator, the RSS channel title, and the redirect stubs all
+   shipped one for months while the gate reported clean. Any em dash that
+   reaches a published byte fails here, wherever it was authored.
+
+4. Compression notes (2026-09-18, AI-TELLS-2026.md Layer 7): the two
    greppable sub-patterns of the compression tell, printed for the read and
    never counted as hits. The rest of that layer is a read-aloud, not code.
 
@@ -159,9 +166,12 @@ def built_pages() -> list:
         if any(part in skip for part in p.relative_to(ROOT).parts):
             continue
         out.append(p)
-    llms = ROOT / "llms.txt"
-    if llms.exists():
-        out.append(llms)
+    # llms.txt and rss.xml are published text too, and the RSS channel title
+    # is one of the three places build.py used to write an em dash.
+    for extra in ("llms.txt", "rss.xml"):
+        f = ROOT / extra
+        if f.exists():
+            out.append(f)
     return out
 
 
@@ -200,6 +210,48 @@ def audit_money() -> list:
         for phrase, allowed_on in PHRASE_BANS:
             if phrase in low and not (allowed_on and rel in allowed_on):
                 hits.append((rel, f"banned phrase: {phrase!r}"))
+    return hits
+
+
+# Em dashes in the BUILT site (2026-09-22). Rule 8 bans them estate-wide and
+# pass 1 enforces that on _src, but pass 1 has never once read the output, so
+# every em dash build.py wrote itself was invisible to it: the <title>
+# separator on every generated-title page, the RSS channel title carried into
+# a <link rel="alternate"> on all 97 pages, and the redirect stubs. All three
+# are pipes now. This pass is the reason they cannot come back, and it reads
+# the raw file rather than visible_text(): a separator lives in the <title>
+# element and in meta/link attributes, none of which survive tag-stripping.
+#
+# The one exemption is the home page's own title, authored and ratified, whose
+# em dash was recorded at the 2026-08-02 audit as the sitewide separator. That
+# premise is gone as of this pass. The line stays until Daniel rules on it;
+# when he does, delete these three entries and this paragraph with them.
+EM_DASH_EXEMPT = (
+    "Signet Artists — Live music for private events in Denver, Colorado",
+)
+SCRIPT_NOT_LD = re.compile(
+    r'<script(?![^>]*application/ld\+json).*?</script>', re.DOTALL)
+
+
+def audit_em_dashes() -> list:
+    """Every published byte, against rule 8. Comments and non-JSON-LD scripts
+    are stripped (neither is copy); everything else counts, attributes
+    included."""
+    hits = []
+    for path in built_pages():
+        rel = str(path.relative_to(ROOT))
+        text = path.read_text(encoding="utf-8")
+        if path.suffix in (".html", ".xml"):
+            text = COMMENT.sub(" ", text)
+        if path.suffix == ".html":
+            text = SCRIPT_NOT_LD.sub(" ", text)
+        for i, line in enumerate(text.splitlines(), 1):
+            if "—" not in line and "&mdash;" not in line:
+                continue
+            if any(x in line for x in EM_DASH_EXEMPT):
+                continue
+            hits.append((f"{rel}:{i}",
+                         f"em dash in built output: {line.strip()[:90]}"))
     return hits
 
 
@@ -254,14 +306,14 @@ def main() -> int:
     for path, line, label, fix, snippet in hits:
         rel = path.relative_to(ROOT)
         print(f"{rel}:{line}  [{label}] {fix}\n    {snippet}")
-    money_hits = audit_money()
-    for out, why in money_hits:
+    site_hits = audit_money() + audit_em_dashes()
+    for out, why in site_hits:
         print(f"{out}  [{why}]")
     if notes:
         print("Compression notes (Layer 7; a read, not a failure):")
         for path, why in notes:
             print(f"  {path.relative_to(ROOT)}  {why}")
-    total = len(hits) + len(money_hits)
+    total = len(hits) + len(site_hits)
     print(f"\n{total} hit(s)." if total else "Clean.")
     return 1 if total else 0
 

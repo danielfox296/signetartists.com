@@ -1190,7 +1190,7 @@ def write_redirects() -> None:
             '  <meta charset="utf-8">\n'
             f'  <meta http-equiv="refresh" content="0; url={target}">\n'
             f'  <link rel="canonical" href="{target}">\n'
-            f"  <title>Moved — {esc(BRAND['name'])}</title>\n"
+            f"  <title>Moved | {esc(BRAND['name'])}</title>\n"
             "</head>\n<body>\n"
             f'  <p>This page moved to <a href="{target}">{target}</a>.</p>\n'
             "</body>\n</html>\n"
@@ -1697,7 +1697,11 @@ def render_page(
         marker = 'aria-current="page"' if key == nav_active else ""
         header = header.replace("{{nav_" + key + "}}", marker)
 
-    full_title = title if title_exact else f"{title} — {BRAND['name']}"
+    # " | ", not an em dash: rule 8 bans em dashes estate-wide and this line
+    # was writing one into the <title> of every generated-title page. The pipe
+    # is also what the site's own authored titles already use, so the two
+    # halves of the roster now read the same in a results page.
+    full_title = title if title_exact else f"{title} | {BRAND['name']}"
 
     replacements = {
         "{{breadcrumbs}}": crumb_html,
@@ -2247,7 +2251,7 @@ def write_rss(published: list) -> None:
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
         "<channel>",
-        f"  <title>{x(BRAND['name'])} — Blog</title>",
+        f"  <title>{x(BRAND['name'])} | Blog</title>",
         f"  <link>{SITE_URL}/blog/</link>",
         f"  <description>{x(idx.get('meta_description', ''))}</description>",
         "  <language>en-us</language>",
