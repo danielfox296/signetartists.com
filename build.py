@@ -1453,6 +1453,177 @@ def build_ga() -> str:
     )
 
 
+# ------------------------------------------------------ breadcrumbs + siblings
+
+# Added 2026-09-22. The site had no breadcrumbs and no BreadcrumbList anywhere:
+# every spoke linked up to its hub, but only inside a paragraph, so a visitor
+# who landed on /weddings/vail/ from a search had nothing telling them where
+# they were, and nothing in the markup said it either.
+#
+# Both of the blocks below are derived from the URL, so a new page joins the
+# trail and its siblings' lists on the next build with nothing to maintain.
+# That is the same rule /sitemap/ follows and for the same reason.
+
+# Trees with no index page of their own. /ensembles/ and /artists/ are folders,
+# not pages — the roster at /music/ is what indexes both, and it carries the
+# configuration index as of 2026-09-22. The cost guide sits under pricing.
+BREADCRUMB_PARENTS = {
+    "ensembles/": "music/",
+    "artists/": "music/",
+    "guides/": "pricing/",
+}
+
+# The heading over a sibling list names the page the set belongs to.
+SIBLING_SKIP = ("blog/",)  # blog posts already carry "Keep reading"
+
+_PAGE_LABELS: dict[str, str] = {}
+
+
+def load_page_labels() -> None:
+    """URL -> short label, for the trail and the sibling lists. `breadcrumb` in
+    a page's config.json wins; otherwise the slug is good enough, which it is
+    for about three quarters of the site."""
+    for page_dir in sorted(PAGES.iterdir()):
+        cfg_file = page_dir / "config.json"
+        if not cfg_file.is_dir() and cfg_file.exists():
+            cfg = json.loads(read(cfg_file))
+            url = "/" + cfg["output"].replace("index.html", "")
+            _PAGE_LABELS[url] = cfg.get("breadcrumb") or _slug_label(url)
+
+
+def _slug_label(url: str) -> str:
+    slug = url.strip("/").split("/")[-1]
+    return slug.replace("-", " ").capitalize() if slug else "Home"
+
+
+def crumb_label(url: str) -> str:
+    return _PAGE_LABELS.get(url) or _slug_label(url)
+
+
+def crumb_parent(url: str) -> str | None:
+    """The page above this one. Explicit override first, then the URL with its
+    last segment removed, then the nearest ancestor that is a real page."""
+    for prefix, parent in BREADCRUMB_PARENTS.items():
+        if url.startswith("/" + prefix):
+            return "/" + parent
+    parts = url.strip("/").split("/")
+    while len(parts) > 1:
+        parts = parts[:-1]
+        candidate = "/" + "/".join(parts) + "/"
+        if candidate in _PAGE_LABELS:
+            return candidate
+    return "/" if url != "/" else None
+
+
+def crumb_trail(url: str, label: str = "") -> list[tuple[str, str]]:
+    """[(url, label)] from home to this page, this page last."""
+    trail = [(url, label or crumb_label(url))]
+    seen = {url}
+    node = url
+    while True:
+        node = crumb_parent(node)
+        if not node or node in seen:
+            break
+        seen.add(node)
+        trail.insert(0, (node, "Home" if node == "/" else crumb_label(node)))
+        if node == "/":
+            break
+    return trail
+
+
+def breadcrumbs(output: str, nav_prefix: str, label: str = "") -> tuple[str, str]:
+    """(markup, JSON-LD). Empty for the home page and 404, which are not in the
+    tree, and for anything noindex, which is not in the index either."""
+    url = "/" + output.replace("index.html", "")
+    if url in ("/", "/404.html") or output == "404.html":
+        return "", ""
+    trail = crumb_trail(url, label)
+    if len(trail) < 2:
+        return "", ""
+
+    def href(u):
+        return nav_prefix + u.lstrip("/")
+
+    items = []
+    for i, (u, lab) in enumerate(trail):
+        last = i == len(trail) - 1
+        inner = (
+            f'<span aria-current="page">{esc(lab)}</span>'
+            if last
+            else f'<a href="{href(u)}">{esc(lab)}</a>'
+        )
+        items.append(f"      <li>{inner}</li>")
+    markup = (
+        '<nav class="breadcrumb" aria-label="Breadcrumb">\n'
+        '  <div class="wrap">\n'
+        '    <ol>\n' + "\n".join(items) + "\n"
+        "    </ol>\n"
+        "  </div>\n"
+        "</nav>"
+    )
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": i + 1,
+                "name": lab,
+                "item": SITE_URL + u,
+            }
+            for i, (u, lab) in enumerate(trail)
+        ],
+    }
+    schema = (
+        '<script type="application/ld+json">'
+        + json.dumps(ld, ensure_ascii=False)
+        + "</script>"
+    )
+    return markup, schema
+
+
+def siblings(output: str, nav_prefix: str) -> str:
+    """The other pages in this page's folder. Only for pages two or more deep:
+    a hub's "siblings" are About and Contact, which is not a set worth showing.
+
+    This is where the occasion spokes' internal links went when the footer
+    stopped carrying them. Measured 2026-09-22, before this block existed: the
+    five daytime spokes linked to 0 of their 4 siblings each, and the eleven
+    private-party spokes averaged 1.8 of 10."""
+    url = "/" + output.replace("index.html", "")
+    if any(url.startswith("/" + p) for p in SIBLING_SKIP):
+        return ""
+    parts = url.strip("/").split("/")
+    if len(parts) < 2 or output == "404.html":
+        return ""
+    folder = "/" + "/".join(parts[:-1]) + "/"
+    peers = sorted(
+        u
+        for u in _PAGE_LABELS
+        if u != url
+        and u.startswith(folder)
+        and u.strip("/").count("/") == url.strip("/").count("/")
+    )
+    if len(peers) < 2:
+        return ""
+    parent = crumb_parent(url) or "/"
+    rows = "\n".join(
+        f'        <li><a href="{nav_prefix + u.lstrip("/")}">{esc(crumb_label(u))}</a></li>'
+        for u in peers
+    )
+    parent_href = nav_prefix + parent.lstrip("/")
+    parent_label = "Home" if parent == "/" else crumb_label(parent)
+    return (
+        '<section class="section section--ruled siblings">\n'
+        '  <div class="wrap">\n'
+        f'    <p class="eyebrow">More in <a href="{parent_href}">{esc(parent_label)}</a></p>\n'
+        '    <ul class="sibling-list">\n' + rows + "\n"
+        "    </ul>\n"
+        "  </div>\n"
+        "</section>"
+    )
+
+
 # ------------------------------------------------------------------ pages
 
 
@@ -1470,6 +1641,7 @@ def render_page(
     head_extra: str = "",
     nav_active: str = "",
     nav_prefix: str = None,
+    crumb_label: str = "",
 ) -> None:
     """Assemble base.html around `content` and write `output`. The single
     layout path — regular pages and blog posts both come through here."""
@@ -1483,6 +1655,15 @@ def render_page(
     # of every byte of HTML the site serves, repeated on all 96 pages. The
     # source keeps every word. Scripts here carry no "<!--", so the regex has
     # nothing to eat but comments.
+    # The trail and the sibling list, both derived from `output`. A noindex
+    # page gets neither: it is not in the tree a visitor navigates or the index
+    # a crawler builds.
+    indexed = not robots.startswith("noindex")
+    crumb_html, crumb_schema = (
+        breadcrumbs(output, nav_prefix, crumb_label) if indexed else ("", "")
+    )
+    sibling_html = siblings(output, nav_prefix) if indexed else ""
+
     base = COMMENT.sub("", read(LAYOUTS / "base.html"))
     header = COMMENT.sub("", partial("header"))
     footer = COMMENT.sub("", partial("footer"))
@@ -1494,13 +1675,15 @@ def render_page(
     full_title = title if title_exact else f"{title} — {BRAND['name']}"
 
     replacements = {
+        "{{breadcrumbs}}": crumb_html,
+        "{{siblings}}": sibling_html,
         "{{title}}": esc(full_title),
         "{{meta_description}}": esc(meta_description),
         "{{canonical}}": canonical_for(output),
         "{{og_type}}": og_type,
         "{{og_image}}": og_image or OG_IMAGE,
         "{{robots}}": robots,
-        "{{schema}}": schema_html,
+        "{{schema}}": schema_html + crumb_schema,
         "{{head_extra}}": head_extra,
         "{{ga}}": build_ga(),
         "{{nav_prefix}}": nav_prefix,
@@ -2018,6 +2201,9 @@ def build_blog_post(post: dict, published: list) -> dict:
         robots=data.get("robots", "index, follow"),
         schema_html=schema_tag(article_schema(data, canonical, og_image or OG_IMAGE)),
         head_extra=head_extra,
+        # The post's own title, not its slug: a crumb reading "How far ahead to
+        # book wedding musicians colorado" helps nobody.
+        crumb_label=data["title"],
     )
     return {"output": output, "post": data}
 
@@ -2340,6 +2526,7 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
 
 
 def main() -> None:
+    load_page_labels()
     posts = collect_blog_posts()
     published = [p for p in posts if not p.get("draft")]
     drafts = [p for p in posts if p.get("draft")]

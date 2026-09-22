@@ -2,6 +2,7 @@
   "_note": "Authored 2026-09-20, the day René Moffatt joined the roster under his own name (Daniel: 'we've added a new artist, an original singer songwriter'). Mirrors the artists-tony-medina dir: acts.json carries page: 'artists/rene-moffatt/', so build.py links every card and every llms.txt line here and generates nothing at /music/rene-moffatt/. Identity copy is the ratified acts.json paragraphs; the ladder resolves from the token. The title targets the buyer's phrase (singer-songwriter for events) with his name in front, since 'singer-songwriter denver' on its own returns artists and clubs rather than bookings. No prices anywhere.",
   "_title_note": "57 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here.",
   "title": "René Moffatt: folk singer-songwriter for events in Denver | Signet Artists",
+  "breadcrumb": "René Moffatt",
   "title_exact": true,
   "meta_description": "Original folk and Americana songs for private events in Denver and the Colorado mountains. Solo voice and acoustic guitar, a trio, or his four piece band.",
   "output": "artists/rene-moffatt/index.html",

@@ -1460,6 +1460,77 @@ img {
   text-underline-offset: 0.25em;
 }
 
+/* ----------------------------------------------------------- breadcrumb */
+
+/* Added 2026-09-22; the site had none. It sits above the page's own top
+   section and borrows that section's top padding rather than adding its own,
+   so no page grew taller. The separator is a pseudo-element so it is never
+   read aloud or copied with the text. */
+.breadcrumb {
+  padding-top: var(--space-4);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 0.5rem;
+  color: var(--rule-strong);
+}
+
+.breadcrumb a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.25em;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--ink-soft);
+}
+
+/* The page's own first section stops adding its top padding when a trail is
+   above it, so the trail replaces that space instead of stacking with it. */
+.breadcrumb + .section--top {
+  padding-top: var(--space-3);
+}
+
+/* ------------------------------------------------------------- siblings */
+
+/* The rest of the tree, at the foot of every page two or more levels deep.
+   This is where the occasion spokes' internal links went when the footer
+   stopped carrying them: measured 2026-09-22, the five daytime spokes linked
+   to 0 of their 4 siblings each and the eleven private-party spokes averaged
+   1.8 of 10. Wrapped inline rather than a column, because the set is a row of
+   peers and not a hierarchy. */
+.sibling-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem 1.25rem;
+  margin-top: 0.875rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.sibling-list a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.25em;
+}
+
+.siblings .eyebrow a {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
 /* ------------------------------------------------------------ skip link */
 
 /* WCAG 2.4.1. Off-screen until focused, then it lands on the ground colour so
