@@ -2957,6 +2957,44 @@ main:focus {
   display: none;
 }
 
+/* The two lanes of the roster, 2026-09-23. The configurations come first,
+   compact: no photograph, one line, the size and the link, because a format
+   sells a spec and the photograph it used to carry was never of the act. The
+   named acts keep the full card underneath. A lane with nothing visible in
+   it after a filter hides, heading and all. */
+.roster-lane {
+  margin-top: 3rem;
+}
+
+.roster-lane .heading {
+  max-width: 44rem;
+}
+
+.roster-lane .card-grid {
+  margin-top: 2rem;
+}
+
+.roster-lane[hidden] {
+  display: none;
+}
+
+.act-card--compact .act-card-body {
+  padding: 1.25rem 1.5rem 1.375rem;
+}
+
+.act-card--compact .act-blurb {
+  font-size: 0.875rem;
+}
+
+.act-card--compact .act-facts {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.act-card--compact .act-card-link {
+  margin-top: 1rem;
+}
+
 /* --------------------------------------------------------- the act pages */
 
 .act-hero .heading {

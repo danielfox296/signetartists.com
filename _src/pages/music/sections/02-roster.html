@@ -1,14 +1,44 @@
-<!-- Filter UI ships hidden and roster.js unhides it, so with script off every
-     act on the roster is still on the page. The filter is a class toggle over
-     data attributes rendered by build.py, never a re-render. -->
+<!-- Two lanes, 2026-09-23. The roster grid used to list every act in file
+     order, named and spec'd mixed, with the hand-typed configuration index
+     fourteen phone screens further down and five configuration pages that
+     were on no card at all. Now the configurations come first, compact and
+     smallest first, and the named acts follow with their footage. Both lanes
+     render from acts.json (`lane`, see its _lanes_note), so a new act joins
+     the right lane on the next build with nothing to type here.
+
+     Filter UI ships hidden and acts.js unhides it, so with script off every
+     act on the roster is still on the page. The filter is a class toggle
+     over data attributes rendered by build.py, never a re-render, and it
+     works across both lanes; a lane with nothing left in it hides its own
+     heading. The page opens pre-filtered from a query string
+     (?occasion=weddings, ?size=duo, ?genre=jazz, ?night=party), which is how
+     an occasion page can point at the acts that suit it. -->
 <section class="section section--ruled">
   <div class="wrap">
     <h2 class="h3">Filter the roster</h2>
-    <p class="note">By the kind of night, the size of the act, the genre, or whether it&rsquo;s sung.</p>
+    <p class="note">By the occasion, the kind of night, the size of the act, the genre, or whether it&rsquo;s sung.</p>
 
     {{roster_filters}}
 
-    {{roster_grid}}
+    <p class="filter-empty" id="filter-empty" hidden>Nothing on the roster matches that combination. Widen one of them and it will.</p>
+
+    <div class="roster-lane" data-lane="format">
+      <div class="heading">
+        <p class="eyebrow">Configurations</p>
+        <h2 class="h2">The configurations, smallest first.</h2>
+        <p class="lede">Each one is a format we spec by instrumentation, size and repertoire, and the contract names the configuration. Open any of them for what it sounds like, the sizes it books and the events it suits.</p>
+      </div>
+      {{roster_formats}}
+    </div>
+
+    <div class="roster-lane" data-lane="named">
+      <div class="heading">
+        <p class="eyebrow">Named acts</p>
+        <h2 class="h2">The named acts.</h2>
+        <p class="lede">Booked under their own names, so their specific sound and presence comes with the booking, and every one of them is a name you can go and look up.</p>
+      </div>
+      {{roster_named}}
+    </div>
 
     <!-- Daniel's disclaimer, 2026-09-19, on the page that lists every act and
          size. The footer carries the same sentence sitewide. -->

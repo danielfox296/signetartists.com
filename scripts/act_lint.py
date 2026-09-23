@@ -40,6 +40,7 @@ RATE_IDS = [r["id"] for r in roster["rateCard"]]
 BUCKET_IDS = {b["id"] for b in roster["buckets"]}
 GENRE_IDS = {g["id"] for g in roster.get("genres", [])}
 AREA_IDS = {a["id"] for a in roster.get("areas", [])}
+OCCASION_IDS = {o["id"] for o in roster.get("occasions", [])}
 VOCALS = {"sung", "instrumental", "optional"}
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 YT_EMBED = re.compile(r"youtube(?:-nocookie)?\.com/embed/([A-Za-z0-9_-]{11})")
@@ -142,6 +143,21 @@ def check_act(act: dict):
             err(aid, f"genre_tags: unknown genre {g!r}; add it to genres[] first")
     if act.get("vocals") not in VOCALS:
         err(aid, "vocals must be sung, instrumental or optional")
+    # The 2026-09-23 fields: the lane, the occasions, the entity, the card line.
+    if "lane" in act and act["lane"] not in ("named", "format"):
+        err(aid, "lane must be named or format (omit it to follow presentation)")
+    if not act.get("occasion_tags"):
+        warn(aid, "occasion_tags is empty; the Occasion filter cannot find this act")
+    for o in act.get("occasion_tags", []):
+        if o not in OCCASION_IDS:
+            err(aid, f"occasion_tags: unknown occasion {o!r}; add it to occasions[] first")
+    ent = act.get("entity")
+    if ent:
+        if ent.get("type") not in ("Person", "MusicGroup"):
+            err(aid, "entity.type must be Person or MusicGroup")
+        for u in ent.get("sameAs", []):
+            if not u.startswith("https://"):
+                err(aid, f"entity.sameAs {u!r} is not an https URL")
     if "area_tags" in act:
         if not act["area_tags"]:
             err(aid, "area_tags is empty; omit the key for the whole service area")
@@ -206,7 +222,7 @@ def check_act(act: dict):
 
     # ---- copy ---------------------------------------------------------
     for key in ("style", "spec", "material", "blurb", "seo_title", "meta_description",
-                "configRangeLabel", "alt"):
+                "configRangeLabel", "alt", "card_line"):
         copy_bans(aid, key, act.get(key))
     for i, p in enumerate(act.get("identity", [])):
         copy_bans(aid, f"identity[{i}]", p)

@@ -51,6 +51,16 @@ GROUPS = {
         "corporate/retreats/beaver-creek/index.html",
         "corporate/retreats/breckenridge/index.html",
     ],
+    # The party formats, 2026-09-23: five spec'd band pages built in the same
+    # shape (set, sizes, occasions, booking, questions), so the check reads
+    # them against each other for the slot-swapped-nouns failure.
+    "ensembles/party-bands": [
+        "ensembles/yacht-rock/index.html",
+        "ensembles/live-band-karaoke/index.html",
+        "ensembles/americana-band/index.html",
+        "ensembles/soul-band/index.html",
+        "ensembles/funk-band/index.html",
+    ],
     "weddings/cocktail-hour": [
         "weddings/cocktail-hour/index.html",
         "weddings/cocktail-hour/denver/index.html",

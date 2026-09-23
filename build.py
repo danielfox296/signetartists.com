@@ -95,6 +95,31 @@ for _a in ACTS:
             _a.pop("page")
 
 FLAGSHIPS = [a for a in ACTS if a["status"] == "flagship"]
+
+# The two lanes of the roster page (2026-09-23). `lane` in acts.json says
+# which one an act sits in; when it is omitted it follows presentation, so a
+# face-led act is named and a spec'd format is a configuration. Firstwater,
+# Last Consulate and Your Bird Can Sing set it by hand: spec'd, nobody named,
+# still booked as that act. Configurations sort small to large, which is the
+# order a buyer sizes in; named acts keep the file's order, Tejas first.
+OCCASIONS = roster.get("occasions", [])
+OCCASION_LABEL = {o["id"]: o["label"] for o in OCCASIONS}
+
+
+def act_lane(act: dict) -> str:
+    return act.get("lane") or ("named" if act["presentation"] == "face" else "format")
+
+
+def _size_key(act: dict) -> tuple:
+    """Smallest first: by the largest size the format reaches, then the
+    smallest, with the DJ after the solo musicians it shares a headcount with."""
+    pieces = [RATE_BY_ID[c]["pieces"] for c in act["config_tags"]]
+    return (max(pieces), min(pieces), "dj" in act["config_tags"], act["name"])
+
+
+FORMAT_ACTS = sorted((a for a in ACTS if act_lane(a) == "format"), key=_size_key)
+NAMED_ACTS = [a for a in ACTS if act_lane(a) == "named"]
+ACT_BY_URL = {"/" + a["page"]: a for a in ACTS if a.get("page")}
 # The Preferred Vendor List (2026-09-20): six categories and the vendors on
 # it, rendered on /preferred-vendors/ by vendor_list(). Categories are data
 # too, so an empty one still renders with its heading (Daniel's call).
@@ -541,7 +566,10 @@ def act_url(act: dict, nav_prefix: str = "") -> str:
     # stub via REDIRECTS below.
     if act.get("page"):
         return f"{nav_prefix}{act['page']}"
-    return f"{nav_prefix}{ACTS_BASE}/{act['id']}/"
+    # No page: the card on the roster is the act's address (2026-09-23). The
+    # old form, /music/<id>/, was a URL nothing served, and it was the @id of
+    # four Service nodes and the llms.txt line for four acts.
+    return f"{nav_prefix}{ACTS_BASE}/#act-{act['id']}"
 
 
 def act_configs(act: dict) -> list:
@@ -608,15 +636,36 @@ def act_config_range(act: dict) -> str:
     return f'{configs[0]["label"]} to {configs[-1]["rangeLabel"]}'
 
 
-def act_card(act: dict, nav_prefix: str = "") -> str:
+def act_card_line(act: dict) -> str:
+    """The one line a compact card prints: `card_line` when the data sets it,
+    otherwise the blurb's first sentence (two when the first is short). The
+    blurb itself is never shortened; it still renders on the act page, in
+    llms.txt and in the Service description."""
+    if act.get("card_line"):
+        return act["card_line"]
+    parts = re.split(r"(?<=[.!?])\s+", act["blurb"].strip())
+    line = parts[0]
+    if len(line.split()) < 12 and len(parts) > 1:
+        line += " " + parts[1]
+    return line
+
+
+def act_card(act: dict, nav_prefix: str = "", compact: bool = False) -> str:
     """One roster card. Carries its own filter state in data attributes so
-    the filter UI is a class toggle and never a re-render."""
+    the filter UI is a class toggle and never a re-render.
+
+    compact (2026-09-23): the configuration lane on /music/. No media and one
+    line of copy, because what a format sells is a spec, and the page was
+    fourteen phone screens long with every card carrying a photograph that
+    was not of the act. Named acts keep the full card: the face and the
+    footage are the product there."""
     flagship = act["status"] == "flagship"
     buckets = " ".join(act["bucket_tags"])
     configs = " ".join(act["config_tags"])
     genres = " ".join(act.get("genre_tags", []))
     vocals = VOCALS_MATCH[act.get("vocals", "instrumental")]
     areas = " ".join(act_area_ids(act))
+    occasions = " ".join(act.get("occasion_tags", []))
     tags = "".join(
         f'<li class="pill">{esc(BUCKET_LABEL[b])}</li>' for b in act["bucket_tags"]
     )
@@ -626,18 +675,23 @@ def act_card(act: dict, nav_prefix: str = "") -> str:
         if flagship or act.get("page")
         else f'<a class="act-card-link" href="{nav_prefix}contact/?act={esc(act["id"])}">Inquire</a>'
     )
+    media = "" if compact else act_card_media(act, nav_prefix)
+    copy = act_card_line(act) if compact else act["blurb"]
+    classes = "card act-card act-card--compact" if compact else "card act-card"
     return (
-        f'<article class="card act-card" data-buckets="{esc(buckets)}" '
+        f'<article class="{classes}" id="act-{esc(act["id"])}" '
+        f'data-lane="{act_lane(act)}" data-buckets="{esc(buckets)}" '
         f'data-configs="{esc(configs)}" data-genres="{esc(genres)}" '
         f'data-vocals="{esc(vocals)}" data-areas="{esc(areas)}" '
+        f'data-occasions="{esc(occasions)}" '
         f'data-status="{esc(act["status"])}" data-name="{esc(act["name"])}">'
-        f"{act_card_media(act, nav_prefix)}"
+        f"{media}"
         '<div class="act-card-body">'
         f'<p class="act-kind">{esc(act["style"])}</p>'
         f'<h3 class="act-name">{esc(act["name"])}</h3>'
         f'<p class="act-face">{esc(act_byline(act))}</p>'
         f'<ul class="pill-row">{tags}</ul>'
-        f'<p class="act-blurb">{esc(act["blurb"])}</p>'
+        f'<p class="act-blurb">{esc(copy)}</p>'
         '<dl class="act-facts">'
         f"<dt>Configurations</dt><dd>{esc(act_config_range(act))}</dd>"
         "</dl>"
@@ -718,6 +772,18 @@ def roster_filters() -> str:
         f'<option value="{esc(a["id"])}">{esc(a["label"])}</option>'
         for a in AREAS if a["id"] in in_use_areas
     )
+    # Occasion (2026-09-23): the site's own four trees, so the roster answers
+    # the question the nav is organised by. Same rule: only the ids in use.
+    in_use_occ = {o for a in ACTS for o in a.get("occasion_tags", [])}
+    occ_opts = "".join(
+        f'<option value="{esc(o["id"])}">{esc(o["label"])}</option>'
+        for o in OCCASIONS if o["id"] in in_use_occ
+    )
+    occasion_field = (
+        '<div class="filter-field"><label for="filter-occasion">Occasion</label>'
+        '<select id="filter-occasion" name="occasion">'
+        f'<option value="">Any</option>{occ_opts}</select></div>'
+    ) if occ_opts else ""
     genre_field = (
         '<div class="filter-field"><label for="filter-genre">Genre</label>'
         '<select id="filter-genre" name="genre">'
@@ -738,6 +804,7 @@ def roster_filters() -> str:
     # prints the size of the roster; acts.js prints how many match a filter.
     return (
         '<form class="roster-filters" id="roster-filters" hidden>'
+        f"{occasion_field}"
         '<div class="filter-field"><label for="filter-bucket">Kind of night</label>'
         '<select id="filter-bucket" name="bucket">'
         f'<option value="">Any</option>{bucket_opts}</select></div>'
@@ -751,13 +818,16 @@ def roster_filters() -> str:
     )
 
 
-def roster_grid(nav_prefix: str = "") -> str:
-    cards = "".join(act_card(a, nav_prefix) for a in ACTS)
-    return (
-        f'<div class="card-grid card-grid--3 roster-grid" id="roster-grid">{cards}</div>'
-        '<p class="filter-empty" id="filter-empty" hidden>Nothing on the roster matches '
-        "that combination. Widen one of them and it will.</p>"
-    )
+def roster_formats(nav_prefix: str = "") -> str:
+    """The configuration lane: every format, compact, smallest first."""
+    cards = "".join(act_card(a, nav_prefix, compact=True) for a in FORMAT_ACTS)
+    return f'<div class="card-grid card-grid--3 roster-grid" id="roster-formats">{cards}</div>'
+
+
+def roster_named(nav_prefix: str = "") -> str:
+    """The named lane: the full card, face and footage, in the file's order."""
+    cards = "".join(act_card(a, nav_prefix) for a in NAMED_ACTS)
+    return f'<div class="card-grid card-grid--3 roster-grid" id="roster-named">{cards}</div>'
 
 
 # ------------------------------------------------------- the holiday season
@@ -914,16 +984,21 @@ def act_picker() -> str:
     carries ?act=<id>, and contact.js preselects from it, so an inquiry that
     started on an act page arrives naming that act. Without script the field
     is still a working select, which is why it is rendered rather than hidden."""
-    opts = "".join(
-        f'<option value="{esc(a["name"])}" data-id="{esc(a["id"])}">'
-        f'{esc(a["name"])} ({esc(a["style"])})</option>'
-        for a in ACTS
-    )
+    def opts(acts):
+        return "".join(
+            f'<option value="{esc(a["name"])}" data-id="{esc(a["id"])}">'
+            f'{esc(a["name"])} ({esc(a["style"])})</option>'
+            for a in acts
+        )
+    # Grouped the way the roster page is (2026-09-23): the configurations
+    # smallest first, then the named acts.
     return (
         '<div class="field"><label for="act">Act</label>'
         '<select id="act" name="Act">'
         '<option value="">Not sure yet, recommend one</option>'
-        f"{opts}</select></div>"
+        f'<optgroup label="Configurations">{opts(FORMAT_ACTS)}</optgroup>'
+        f'<optgroup label="Named acts">{opts(NAMED_ACTS)}</optgroup>'
+        "</select></div>"
     )
 
 
@@ -1089,9 +1164,14 @@ def local_business_node() -> dict:
 
 
 def act_service_node(act: dict) -> dict:
+    # An act with a page owns <page>#service; one without is anchored on the
+    # roster, where the fragment has to be its own (#service-<id>), since the
+    # act's card already holds #act-<id> and a URL carries one fragment.
+    sid = (f"{SITE_URL}/{act_url(act)}#service" if act.get("page")
+           else f"{SITE_URL}/{ACTS_BASE}/#service-{act['id']}")
     return {
         "@type": "Service",
-        "@id": f"{SITE_URL}/{act_url(act)}#service",
+        "@id": sid,
         "name": act["name"],
         "serviceType": f"{act['style']} for private events",
         "description": act["blurb"],
@@ -1104,18 +1184,49 @@ def act_service_node(act: dict) -> dict:
     }
 
 
-def act_schema(act: dict) -> dict:
-    return {
-        "@context": "https://schema.org",
-        "@graph": [local_business_node(), act_service_node(act)],
+def act_entity_node(act: dict) -> dict | None:
+    """The act as an entity (2026-09-23): a Person or a MusicGroup with
+    sameAs to its own site and channel where those are known. This is the
+    named-act promise, a name you can look up, stated in markup. An act with
+    no `entity` in acts.json emits nothing here."""
+    e = act.get("entity")
+    if not e:
+        return None
+    url = f"{SITE_URL}/{act_url(act)}"
+    eid = f"{url}#act" if act.get("page") else f"{SITE_URL}/{ACTS_BASE}/#entity-{act['id']}"
+    node = {
+        "@type": e["type"],
+        "@id": eid,
+        "name": act["name"],
+        "url": url,
+        "image": f"{SITE_URL}/img/{act['img']}",
     }
+    if e["type"] == "MusicGroup":
+        node["genre"] = [GENRE_LABEL[g] for g in act.get("genre_tags", [])]
+    if e.get("sameAs"):
+        node["sameAs"] = e["sameAs"]
+    return node
+
+
+def roster_entity_nodes() -> list:
+    return [n for n in (act_entity_node(a) for a in ACTS) if n]
+
+
+def act_schema(act: dict) -> dict:
+    graph = [local_business_node(), act_service_node(act)]
+    ent = act_entity_node(act)
+    if ent:
+        graph.append(ent)
+    return {"@context": "https://schema.org", "@graph": graph}
 
 
 def roster_schema() -> dict:
-    """Roster and pricing pages: the business plus every act as a Service."""
+    """Roster and pricing pages: the business plus every act as a Service,
+    and the named acts as entities."""
     return {
         "@context": "https://schema.org",
-        "@graph": [local_business_node()] + [act_service_node(a) for a in ACTS],
+        "@graph": [local_business_node()] + [act_service_node(a) for a in ACTS]
+        + roster_entity_nodes(),
     }
 
 
@@ -1297,6 +1408,14 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
     svc = data.get("service")
     act = ACT_BY_ID[data["act"]] if data.get("act") else None
     canonical = canonical_for(cfg["output"])
+    # The roster page authors its FAQ in schema.json like any page, and keeps
+    # the graph it always had: every act as a Service, the named acts as
+    # entities (2026-09-23).
+    if cfg.get("schema") == "roster":
+        graph += [act_service_node(a) for a in ACTS] + roster_entity_nodes()
+    page_entity = None
+    if act and f"{SITE_URL}/{act_url(act)}" == canonical:
+        page_entity = act_entity_node(act)
     node = None
     if act and svc and f"{SITE_URL}/{act_url(act)}" == canonical:
         # The act's own page: the service block and the act's roster node
@@ -1431,13 +1550,18 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
     og = og if og.startswith(("http://", "https://")) else (
         f"{SITE_URL}/{og.lstrip('/')}" if og else OG_IMAGE
     )
-    graph.append({
+    webpage = {
         "@type": "WebPage", "@id": canonical, "url": canonical,
         "name": cfg.get("title", BRAND["name"]),
         "isPartOf": {"@type": "WebSite", "url": SITE_URL, "name": BRAND["name"]},
         "about": {"@id": f"{SITE_URL}/#business"},
         "primaryImageOfPage": {"@type": "ImageObject", "url": og},
-    })
+    }
+    if page_entity:
+        graph.append(page_entity)
+        webpage["about"] = {"@id": page_entity["@id"]}
+        webpage["mainEntity"] = {"@id": page_entity["@id"]}
+    graph.append(webpage)
     faq_html = ""
     faqs = [
         {**f, "q": resolve_rate_tokens(f["q"]), "a": resolve_rate_tokens(f["a"])}
@@ -1622,13 +1746,23 @@ def siblings(output: str, nav_prefix: str) -> str:
     if len(parts) < 2 or output == "404.html":
         return ""
     folder = "/" + "/".join(parts[:-1]) + "/"
-    peers = sorted(
-        u
-        for u in _PAGE_LABELS
-        if u != url
-        and u.startswith(folder)
-        and u.strip("/").count("/") == url.strip("/").count("/")
-    )
+    act = ACT_BY_URL.get(url)
+    lane_word = ""
+    if act:
+        # An act page's peers are its lane, not its folder (2026-09-23): a
+        # solo guitarist's siblings are the other configurations, smallest
+        # first, and a named act's are the other named acts.
+        lane_acts = FORMAT_ACTS if act_lane(act) == "format" else NAMED_ACTS
+        peers = ["/" + a["page"] for a in lane_acts if a.get("page") and "/" + a["page"] != url]
+        lane_word = "configurations" if act_lane(act) == "format" else "named acts"
+    else:
+        peers = sorted(
+            u
+            for u in _PAGE_LABELS
+            if u != url
+            and u.startswith(folder)
+            and u.strip("/").count("/") == url.strip("/").count("/")
+        )
     if len(peers) < 2:
         return ""
     parent = crumb_parent(url) or "/"
@@ -1638,10 +1772,11 @@ def siblings(output: str, nav_prefix: str) -> str:
     )
     parent_href = nav_prefix + parent.lstrip("/")
     parent_label = "Home" if parent == "/" else crumb_label(parent)
+    lead = f"More {lane_word} in" if lane_word else "More in"
     return (
         '<section class="section section--ruled siblings">\n'
         '  <div class="wrap">\n'
-        f'    <p class="eyebrow">More in <a href="{parent_href}">{esc(parent_label)}</a></p>\n'
+        f'    <p class="eyebrow">{lead} <a href="{parent_href}">{esc(parent_label)}</a></p>\n'
         '    <ul class="sibling-list">\n' + rows + "\n"
         "    </ul>\n"
         "  </div>\n"
@@ -1809,7 +1944,8 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{loadin_table}}": loadin_table,
         "{{event_types}}": event_types,
         "{{roster_filters}}": roster_filters,
-        "{{roster_grid}}": lambda: roster_grid(nav_prefix),
+        "{{roster_formats}}": lambda: roster_formats(nav_prefix),
+        "{{roster_named}}": lambda: roster_named(nav_prefix),
         "{{roster_grid_flagships}}": lambda: roster_grid_flagships(nav_prefix),
         "{{corporate_shapes}}": lambda: corporate_shapes(nav_prefix),
         "{{credits}}": credits,
@@ -2369,8 +2505,8 @@ SITE_INDEX_GROUPS = [
     ("weddings/", "Weddings"),
     ("private-parties/", "Private parties"),
     ("daytime/", "Daytime"),
-    ("ensembles/", "Configurations"),
-    ("artists/", "Artists"),
+    ("ensembles/", "Configurations"),   # act pages list by lane first; see site_index
+    ("artists/", "Named acts"),
     ("planners/", "For planners"),
     ("preferred-vendors/", "Preferred vendors"),
     ("guides/", "Guides"),
@@ -2409,7 +2545,29 @@ def site_index(pages: list[dict], posts: list[dict] = None) -> str:
         out.append("        </ul></dd>")
         out.append("      </div>")
 
+    def emit(heading, group):
+        used.update(p["output"] for p in group)
+        out.append('      <div class="def-row">')
+        out.append(f"        <dt>{html.escape(heading)}</dt>")
+        out.append('        <dd><ul class="index-list">')
+        out.extend(row(p) for p in group)
+        out.append("        </ul></dd>")
+        out.append("      </div>")
+
     for prefix, heading in SITE_INDEX_GROUPS:
+        if prefix == "ensembles/":
+            # Act pages list by lane (2026-09-23): the folders mix them
+            # (three named acts live under /ensembles/, one spec'd act under
+            # /artists/), and the page printed that mix under "Configurations"
+            # and "Artists". Any act page left over falls to its folder below.
+            for lane_heading, lane_acts in (("Configurations", FORMAT_ACTS), ("Named acts", NAMED_ACTS)):
+                group = [
+                    by_output[a["page"] + "index.html"] for a in lane_acts
+                    if a.get("page") and a["page"] + "index.html" in by_output
+                    and a["page"] + "index.html" not in used
+                ]
+                if group:
+                    emit(lane_heading, group)
         group = sorted(
             (p for p in live if p["output"].startswith(prefix) and p["output"] not in used),
             key=lambda p: (p["output"].count("/"), p["output"]),
@@ -2523,8 +2681,7 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
     lines += ["", "## Acts", "",
               "All acts and configurations are subject to availability.", ""]
     for a in ACTS:
-        where = f"{SITE_URL}/{act_url(a)}" if a["status"] == "flagship" or a.get("page") \
-            else f"{SITE_URL}/{ACTS_BASE}/"
+        where = f"{SITE_URL}/{act_url(a)}"
         lines.append(
             f"- {a['name']} ({a['style']}, {act_byline_inline(a)}): "
             f"{a['blurb']} Configurations: {act_config_range(a)}. {where}"

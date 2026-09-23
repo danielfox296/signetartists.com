@@ -267,6 +267,24 @@
       "from": "Signet Artists",
       "retrieved": "2026-09-22",
       "_note": "The sing booklets: an open booklet with the songs leaving the page. Daniel's brief 2026-09-22 named the booklets as what the duo hands out."
+    },
+    "img/live-band-karaoke-card.jpg": {
+      "source": "Original artwork, drawn in scripts/format_art.py",
+      "from": "Signet Artists",
+      "retrieved": "2026-09-23",
+      "_note": "Not a photograph and not stock: a lyric screen with one line lit and a microphone on its stand, drawn flat in the palette of scripts/bird_art.py. Until 2026-09-23 this format shared the interim snare-drum still (headliners.jpg) with two other party formats, three times on one roster page. Rebuild with `python3 scripts/format_art.py`. It reproduces no label, no logo and no photograph."
+    },
+    "img/soul-band-card.jpg": {
+      "source": "Original artwork, drawn in scripts/format_art.py",
+      "from": "Signet Artists",
+      "retrieved": "2026-09-23",
+      "_note": "Not a photograph and not stock: a 45 on the turntable with a rose label, drawn flat in the palette of scripts/bird_art.py. Until 2026-09-23 this format shared the interim snare-drum still (headliners.jpg) with two other party formats, three times on one roster page. Rebuild with `python3 scripts/format_art.py`. It reproduces no label, no logo and no photograph."
+    },
+    "img/funk-band-card.jpg": {
+      "source": "Original artwork, drawn in scripts/format_art.py",
+      "from": "Signet Artists",
+      "retrieved": "2026-09-23",
+      "_note": "Not a photograph and not stock: a row of level meters lit up on a teal field, drawn flat in the palette of scripts/bird_art.py. Until 2026-09-23 this format shared the interim snare-drum still (headliners.jpg) with two other party formats, three times on one roster page. Rebuild with `python3 scripts/format_art.py`. It reproduces no label, no logo and no photograph."
     }
   },
   "video_embeds": {

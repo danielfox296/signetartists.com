@@ -1,6 +1,6 @@
 /* Signet Artists — GA4 event instrumentation (WEBSITE-PLAN.md §7).
-   Four events, nothing more: lead_submit, cta_click, email_click,
-   pricing_engaged. No-ops cleanly if gtag is absent or blocked. */
+   Five events, nothing more: lead_submit, cta_click, email_click,
+   pricing_engaged, roster_filter. No-ops cleanly if gtag is absent or blocked. */
 (function () {
   "use strict";
 
@@ -35,6 +35,16 @@
     var action = e.target && e.target.getAttribute
       ? e.target.getAttribute("action") || "" : "";
     if (action.indexOf("formsubmit.co") !== -1) send("lead_submit");
+  }, true);
+
+  // roster_filter: a select on the roster page changed (2026-09-23). Until
+  // this the site had no way of knowing whether anyone used the filters at
+  // all. facet is the select's name, value the option chosen ("" = Any).
+  document.addEventListener("change", function (e) {
+    var el = e.target;
+    if (!el || el.tagName !== "SELECT") return;
+    if (!el.closest || !el.closest("#roster-filters")) return;
+    send("roster_filter", { facet: el.name || el.id, value: el.value || "any" });
   }, true);
 
   // pricing_engaged: first .rate-table scrolled into view, once per page view.

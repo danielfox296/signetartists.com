@@ -105,6 +105,15 @@ Tags (2026-09-16): `bucket_tags` (kind of night), `config_tags` (size),
 the top of `acts.json`. A filter select renders only for a facet the roster
 varies on. `areas[]` is also the business's service area.
 
+Two lanes (2026-09-23): `/music/` renders the configurations first (compact
+cards, smallest first) and the named acts second (full cards), both from
+`acts.json`. `lane` (`named` | `format`) follows `presentation` unless set by
+hand; `occasion_tags` (against `occasions[]`) drive the Occasion filter and
+the `?occasion=` deep link; `entity` emits a Person or MusicGroup node with
+`sameAs` for a named act; an act without a `page` is addressed as
+`/music/#act-<id>` everywhere. The three party formats' tiles are drawn by
+`scripts/format_art.py`. `scripts/copy_gate.py music` gates the roster copy.
+
 ## Section tokens
 
 A section can drop in any of these and the build fills them from `site.json`:

@@ -1,4 +1,4 @@
-/* The acts UI. Restructure 2026-08-15.
+/* The acts UI. Restructure 2026-08-15, two lanes 2026-09-23.
  *
  * Two behaviours, both guarded on the elements they need, so the one file
  * loads on the roster page and the contact page and does the right thing on
@@ -15,30 +15,40 @@
  * The starting-price filter was removed 2026-09-04 with the published rate
  * card. Kind of night and size were the two axes left; genre, vocals and
  * where joined them 2026-09-16 (acts.json _facets_note), each rendered by
- * build.py only when the roster varies on it.
+ * build.py only when the roster varies on it. Occasion joined 2026-09-23,
+ * the same day the roster split into two lanes: the configurations and the
+ * named acts. A lane whose every card is filtered out hides its heading too,
+ * and the page can be opened pre-filtered (?occasion=weddings, ?size=duo,
+ * ?genre=jazz, ?night=party, ?vocals=sung) so an occasion page can link
+ * straight to the acts that suit it.
  */
 (function () {
   "use strict";
 
   var form = document.getElementById("roster-filters");
-  var grid = document.getElementById("roster-grid");
-  if (!form || !grid) return;
+  var grids = document.querySelectorAll(".roster-grid");
+  if (!form || !grids.length) return;
 
-  var cards = Array.prototype.slice.call(grid.querySelectorAll(".act-card"));
+  var cards = [];
+  for (var g = 0; g < grids.length; g += 1) {
+    cards = cards.concat(Array.prototype.slice.call(grids[g].querySelectorAll(".act-card")));
+  }
   if (!cards.length) return;
+  var lanes = Array.prototype.slice.call(document.querySelectorAll(".roster-lane"));
 
-  // Each select filters one data attribute on the cards. Genre, vocals and
-  // where were added 2026-09-16; build.py renders a select only when the
-  // roster varies on that facet, so every entry here is guarded on the
-  // element existing.
+  // Each select filters one data attribute on the cards. build.py renders a
+  // select only when the roster varies on that facet, so every entry here is
+  // guarded on the element existing. The third column is the query-string
+  // key an occasion page can use to open the roster already filtered.
   var facets = [
-    ["filter-bucket", "buckets"],
-    ["filter-config", "configs"],
-    ["filter-genre", "genres"],
-    ["filter-vocals", "vocals"],
-    ["filter-area", "areas"],
-  ].map(function (pair) {
-    return { el: document.getElementById(pair[0]), key: pair[1] };
+    ["filter-occasion", "occasions", "occasion"],
+    ["filter-bucket", "buckets", "night"],
+    ["filter-config", "configs", "size"],
+    ["filter-genre", "genres", "genre"],
+    ["filter-vocals", "vocals", "vocals"],
+    ["filter-area", "areas", "where"],
+  ].map(function (row) {
+    return { el: document.getElementById(row[0]), key: row[1], param: row[2] };
   }).filter(function (f) { return f.el; });
   var reset = document.getElementById("filter-reset");
   var countEl = document.getElementById("filter-count");
@@ -59,6 +69,13 @@
       if (ok) shown += 1;
     });
 
+    // A lane with nothing left in it takes its heading with it, so a buyer
+    // filtering to one named act never reads "Configurations" over nothing.
+    lanes.forEach(function (lane) {
+      var visible = lane.querySelectorAll(".act-card:not([hidden])").length;
+      lane.hidden = visible === 0;
+    });
+
     countEl.textContent =
       shown === cards.length
         ? "Every act"
@@ -74,6 +91,19 @@
     facets.forEach(function (f) { f.el.value = ""; });
     apply();
   });
+
+  // Preselect from the query string. A value the select does not carry is
+  // ignored, so a stale link filters nothing rather than everything.
+  if (window.location.search) {
+    facets.forEach(function (f) {
+      var m = new RegExp("[?&]" + f.param + "=([^&]+)").exec(window.location.search);
+      if (!m) return;
+      var wanted = decodeURIComponent(m[1]);
+      for (var i = 0; i < f.el.options.length; i += 1) {
+        if (f.el.options[i].value === wanted) { f.el.value = wanted; break; }
+      }
+    });
+  }
 
   // Unhide last: until the listeners are attached the controls would be inert.
   form.hidden = false;

@@ -1,0 +1,25 @@
+{
+  "_note": "The roster's FAQ, 2026-09-23. No service block: the page's graph (every act as a Service, the named acts as entities) comes from build.py roster_schema, and page_schema adds it when config.json says schema: roster. Answers lead with the answer; the figures on the pricing page stay there.",
+  "faqs": [
+    {
+      "q": "What's the difference between a named act and a configuration?",
+      "a": "A named act is booked under its name, and that specific sound and presence comes with the booking: Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate and Firstwater. A configuration is a format we spec by instrumentation, size and repertoire, like a jazz duo or a yacht rock band, and the contract names the configuration. Both kinds have a page of their own."
+    },
+    {
+      "q": "Which size do most private parties book?",
+      "a": "A duo or a trio. A duo plays arrival and dinner at a volume people talk across, and a trio of guitar, bass and drums fills a floor without a stage. For a company party in a ballroom the quartet is the dance floor size, and a duo through dinner with the DJ after it covers both halves of the night on one contract."
+    },
+    {
+      "q": "Can a booking start small and grow through the evening?",
+      "a": "Yes. Tejas Singh starts as a duo and finishes as a quartet on one contract and one load-in, the jazz duo becomes a trio with drums played with brushes, and the DJ takes over from any band through the same sound system."
+    },
+    {
+      "q": "Do you publish prices for the acts?",
+      "a": "No. What live music costs in this market, figure by figure with the source each one came from, is on the pricing page, and we price a specific night when you send the date, the venue and the guest count."
+    },
+    {
+      "q": "Where do the acts play?",
+      "a": "Denver, Boulder, Colorado Springs and Fort Collins, and the mountain towns: Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. Travel outside the metro and a night's lodging past the passes are quoted as their own lines on the contract."
+    }
+  ]
+}
