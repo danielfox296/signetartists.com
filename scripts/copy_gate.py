@@ -161,8 +161,10 @@ def legal_figures() -> tuple:
 def built_pages() -> list:
     """Every built page on the site, plus llms.txt. Output only: _src, the
     scripts dir and the deploy workflow are not published."""
-    skip = {"_src", "_site", "scripts", ".git", ".github", "node_modules",
-            "__pycache__", "vendor"}
+    # .claude holds other sessions' git worktrees, each a full stale copy
+    # of the site; a local run walked them and reported 185 phantom hits.
+    skip = {"_src", "_site", "scripts", ".git", ".github", ".claude",
+            "node_modules", "__pycache__", "vendor"}
     out = []
     for p in sorted(ROOT.rglob("*.html")):
         if any(part in skip for part in p.relative_to(ROOT).parts):
