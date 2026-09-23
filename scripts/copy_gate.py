@@ -64,6 +64,8 @@ BUILDOUT_DIRS = [
     "daytime", "daytime-senior-living", "daytime-funerals-and-memorials",
     "daytime-sound-bath", "daytime-brunch", "daytime-community-programs",
     "for-artists", "preferred-vendors", "preferred-vendors-join",
+    "weddings-boulder", "weddings-fort-collins", "weddings-telluride",
+    "private-parties-birthday-party",
 ]
 # Every artist and ensemble page dir is gated whether or not it is listed
 # above (2026-09-16): a new act's page used to be ungated until someone

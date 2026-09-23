@@ -43,6 +43,7 @@ GROUPS = {
         "private-parties/anniversary-party/index.html",
         "private-parties/retirement-party/index.html",
         "private-parties/engagement-party/index.html",
+        "private-parties/birthday-party/index.html",
     ],
     "corporate/retreats": [
         "corporate/retreats/index.html",
@@ -86,6 +87,9 @@ GROUPS = {
         "weddings/cocktail-hour/index.html",
         "weddings/colorado-springs/index.html",
         "weddings/vail/index.html",
+        "weddings/boulder/index.html",
+        "weddings/fort-collins/index.html",
+        "weddings/telluride/index.html",
         "weddings/jazz-band/index.html",
     ],
     # The two Vail pages share six venue names and must not share a day.
