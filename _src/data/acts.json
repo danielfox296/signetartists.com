@@ -605,6 +605,7 @@
       "presentation": "spec",
       "_presentation_note": "ADDED 2026-09-03. A named solo project, not an interchangeable format, but the player behind it is not published by name, so the byline carries the instrumentation the way a spec'd format does. It sits with the named acts on the music page intro because the sound is specific and comes with the booking. If Daniel wants the player named, switch to presentation 'face' and fill `face`.",
       "status": "listing",
+      "page": "artists/last-consulate/",
       "style": "Instrumental downtempo",
       "spec": "Upright bass, guitar and electronics, one musician",
       "material": "Originals",
@@ -639,7 +640,8 @@
       "lane": "named",
       "entity": {
         "type": "MusicGroup"
-      }
+      },
+      "_page_note": "PAGE 2026-09-23 on Daniel's call ('build pages for solo piano and last consulate too'), at /artists/last-consulate/ in the Firstwater shape: a named project, nobody named, the identity paragraphs held here since 2026-09-03 finally on a page. Title and meta carry the buyer terms ('instrumental music for events', 'background music for corporate events' autocomplete), the eyebrow keeps the act's own genre word."
     },
     {
       "id": "live-band-karaoke",
@@ -784,6 +786,7 @@
       "name": "Solo Piano",
       "presentation": "spec",
       "status": "listing",
+      "page": "ensembles/solo-piano/",
       "style": "Cocktail piano",
       "spec": "Piano, with a voice when the evening wants one",
       "material": "Standards and covers",
@@ -803,13 +806,29 @@
       "img": "ballroom.jpg",
       "alt": "An empty banquet hall set for dinner.",
       "video": null,
-      "_note": "ADDED 2026-09-14 on Daniel's call. Organizers ask for 'a piano player' by name in the planner threads, galas seat a pianist at dinner, and hotels sell the ballroom and leave the music to the planner. Listing only.",
+      "_note": "ADDED 2026-09-14 on Daniel's call. Organizers ask for 'a piano player' by name in the planner threads, galas seat a pianist at dinner, and hotels sell the ballroom and leave the music to the planner. Listing only until 2026-09-23, when Daniel asked for a page (\"build pages for solo piano and last consulate too\"). No Denver phrase for a pianist autocompletes, so the page carries the generic head terms that do (\"pianist for hire\", \"pianist for events\", \"piano player denver\") and the occasions the site already sends a pianist to.",
       "blurb": "A pianist through arrival, cocktails and dinner, standards and covers at a level the table talks across, with a voice added when the evening wants singing. This is the booking for a hotel ballroom or a client dinner.",
       "occasion_tags": [
         "corporate",
         "private-parties",
         "daytime"
-      ]
+      ],
+      "setlist": {
+        "note": "Pulled from the full song list on the repertoire page: the songs that sit under arrival and dinner. A set is built around the flow of your evening, and this is a sample rather than the whole list.",
+        "from_repertoire": true,
+        "groups": [
+          {
+            "label": "Arrival",
+            "moment": "arrival",
+            "count": 6
+          },
+          {
+            "label": "Dinner",
+            "moment": "dinner",
+            "count": 6
+          }
+        ]
+      }
     },
     {
       "id": "changes-jazz-trio",

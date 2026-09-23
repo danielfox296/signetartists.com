@@ -61,6 +61,18 @@ GROUPS = {
         "ensembles/soul-band/index.html",
         "ensembles/funk-band/index.html",
     ],
+    # The solo formats and the two named projects with nobody named,
+    # 2026-09-23, same reason as the party bands: one mould each.
+    "ensembles/solos": [
+        "ensembles/solo-guitarist/index.html",
+        "ensembles/singer-guitarist/index.html",
+        "ensembles/spanish-guitarist/index.html",
+        "ensembles/solo-piano/index.html",
+    ],
+    "artists/named-projects": [
+        "artists/firstwater/index.html",
+        "artists/last-consulate/index.html",
+    ],
     "weddings/cocktail-hour": [
         "weddings/cocktail-hour/index.html",
         "weddings/cocktail-hour/denver/index.html",
