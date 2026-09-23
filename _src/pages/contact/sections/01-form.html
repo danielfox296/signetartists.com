@@ -48,6 +48,15 @@
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
 
+        <!-- 2026-09-23, Daniel: the form was eleven fields with four
+             required, and the required one was labelled "Anything else".
+             The site's own promise everywhere else is "send us the date and
+             the venue", so that is what the form asks now. Three required
+             fields, two optional, and the act field only appears when an
+             Inquire link has already answered it. Company, phone, event
+             type, guest count and "what needs covering" all go in the one
+             box if the buyer wants to say them, and we ask the rest by
+             reply. -->
         <div class="form-grid">
           <div class="field">
             <label for="name">Name <span class="req">*</span></label>
@@ -60,57 +69,26 @@
           </div>
 
           <div class="field">
-            <label for="company">Company or organization</label>
-            <input id="company" name="Company or organization" autocomplete="organization">
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="Phone" type="tel" autocomplete="tel">
-          </div>
-
-          <div class="field">
             <label for="eventDate">Event date <span class="req">*</span></label>
             <input id="eventDate" name="Event date" type="date" required>
           </div>
-
-          <div class="field">
-            <label for="eventType">Event type</label>
-            <select id="eventType" name="Event type">
-              <option value="">Select&hellip;</option>
-              <option>Corporate party</option>
-              <option>Gala or fundraiser</option>
-              <option>Wedding</option>
-              <option>Private party or milestone</option>
-              <option>Retreat or conference</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <!-- Added with the roster restructure 2026-08-15. Every Inquire link
-               on the site carries ?act=<id> and acts.js preselects it here, so
-               an enquiry that started on an act page arrives naming the act
-               rather than making the planner say it twice. -->
-          {{act_picker}}
 
           <div class="field">
             <label for="venue">Venue or city</label>
             <input id="venue" name="Venue or city">
           </div>
 
-          <div class="field">
-            <label for="guests">Guest count</label>
-            <input id="guests" name="Guest count" inputmode="numeric">
-          </div>
-
-          <div class="field">
-            <label for="covering">What needs covering</label>
-            <input id="covering" name="What needs covering" placeholder="Cocktails, dinner, dancing, all of it&hellip;">
-          </div>
+          <!-- Added with the roster restructure 2026-08-15. Every Inquire link
+               on the site carries ?act=<id> and acts.js preselects it here, so
+               an enquiry that started on an act page arrives naming the act
+               rather than making the planner say it twice. Since 2026-09-23
+               the field ships hidden and disabled, and acts.js shows it only
+               when the link named an act, so nobody else scrolls a roster. -->
+          {{act_picker}}
 
           <div class="field field--full">
-            <label for="message">Anything else <span class="req">*</span></label>
-            <textarea id="message" name="Anything else" rows="4" required></textarea>
+            <label for="message">What's the night</label>
+            <textarea id="message" name="What's the night" rows="4" placeholder="What it's for and roughly how many people. A sentence is plenty."></textarea>
           </div>
         </div>
 

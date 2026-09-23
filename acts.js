@@ -114,13 +114,19 @@
  *
  * Every "Inquire" link on the roster and every CTA on an act page carries the
  * act id. Without this the planner arrives at a blank form having already told
- * us what they wanted, and has to say it twice. The select works on its own if
- * this never runs. */
+ * us what they wanted, and has to say it twice.
+ *
+ * Since 2026-09-23 the field ships hidden and disabled, and only appears when
+ * the link named an act the select carries. A buyer who arrives any other way
+ * never sees a roster-length dropdown, and a disabled select is not submitted,
+ * so the enquiry email has no empty Act row. If this never runs the form is
+ * still complete without it. */
 (function () {
   "use strict";
 
   var field = document.getElementById("act");
-  if (!field || !window.location.search) return;
+  var wrap = document.getElementById("act-field");
+  if (!field || !wrap || !window.location.search) return;
 
   var match = /[?&]act=([^&]+)/.exec(window.location.search);
   if (!match) return;
@@ -130,6 +136,8 @@
   for (var i = 0; i < options.length; i += 1) {
     if (options[i].getAttribute("data-id") === wanted) {
       field.value = options[i].value;
+      field.disabled = false;
+      wrap.hidden = false;
       return;
     }
   }

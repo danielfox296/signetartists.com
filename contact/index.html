@@ -6,7 +6,7 @@
   
   <meta name="theme-color" content="#14130e">
   <title>Check a Date | Signet Artists</title>
-  <meta name="description" content="Tell us the date, the venue and the guest count. Availability and an exact number back inside 24 to 48 hours, in business hours.">
+  <meta name="description" content="Tell us the date and the venue. Availability and an exact number back inside 24 to 48 hours, in business hours.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://signetartists.com/contact/">
   <link rel="alternate" type="application/rss+xml" title="Signet Artists | Blog" href="../rss.xml">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Signet Artists">
   <meta property="og:title" content="Check a Date | Signet Artists">
-  <meta property="og:description" content="Tell us the date, the venue and the guest count. Availability and an exact number back inside 24 to 48 hours, in business hours.">
+  <meta property="og:description" content="Tell us the date and the venue. Availability and an exact number back inside 24 to 48 hours, in business hours.">
   <meta property="og:url" content="https://signetartists.com/contact/">
   <meta property="og:image" content="https://signetartists.com/img/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -119,6 +119,7 @@
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
 
+        
         <div class="form-grid">
           <div class="field">
             <label for="name">Name <span class="req">*</span></label>
@@ -131,54 +132,21 @@
           </div>
 
           <div class="field">
-            <label for="company">Company or organization</label>
-            <input id="company" name="Company or organization" autocomplete="organization">
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="Phone" type="tel" autocomplete="tel">
-          </div>
-
-          <div class="field">
             <label for="eventDate">Event date <span class="req">*</span></label>
             <input id="eventDate" name="Event date" type="date" required>
           </div>
-
-          <div class="field">
-            <label for="eventType">Event type</label>
-            <select id="eventType" name="Event type">
-              <option value="">Select&hellip;</option>
-              <option>Corporate party</option>
-              <option>Gala or fundraiser</option>
-              <option>Wedding</option>
-              <option>Private party or milestone</option>
-              <option>Retreat or conference</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          
-          <div class="field"><label for="act">Act</label><select id="act" name="Act"><option value="">Not sure yet, recommend one</option><optgroup label="Configurations"><option value="Singer and Guitarist" data-id="singer-guitarist">Singer and Guitarist (Acoustic covers, sung)</option><option value="Solo Guitarist" data-id="solo-guitarist">Solo Guitarist (Blues, roots, jazz and Spanish flavors)</option><option value="Solo Piano" data-id="solo-piano">Solo Piano (Cocktail piano)</option><option value="Spanish Guitarist" data-id="spanish-guitarist">Spanish Guitarist (Flamenco and Spanish guitar, solo)</option><option value="DJ" data-id="dj">DJ (Open format)</option><option value="Acoustic Duo and Trio" data-id="acoustic-duo">Acoustic Duo and Trio (Acoustic covers)</option><option value="Jazz Duo" data-id="jazz-duo">Jazz Duo (Jazz standards)</option><option value="Christmas Jazz Trio" data-id="christmas-jazz-trio">Christmas Jazz Trio (Christmas jazz)</option><option value="Americana Band" data-id="americana-band">Americana Band (Americana and the Colorado songbook)</option><option value="Funk Band" data-id="funk-trio">Funk Band (Funk and soul)</option><option value="Live Band Karaoke" data-id="live-band-karaoke">Live Band Karaoke (Party covers, the 80s and 90s onward)</option><option value="Soul and R&amp;B Band" data-id="soul-rnb">Soul and R&amp;B Band (Soul and R&amp;B)</option><option value="Yacht Rock Band" data-id="yacht-rock">Yacht Rock Band (Yacht rock)</option></optgroup><optgroup label="Named acts"><option value="Tejas Singh" data-id="tejas-singh">Tejas Singh (Singer-songwriter covers)</option><option value="Dirty Flamenco" data-id="dirty-flamenco">Dirty Flamenco (Flamenco)</option><option value="Tony Medina" data-id="tony-medina">Tony Medina (Blues, rock and roots)</option><option value="Last Consulate" data-id="last-consulate">Last Consulate (Instrumental downtempo)</option><option value="Changes Jazz Trio" data-id="changes-jazz-trio">Changes Jazz Trio (Modern jazz)</option><option value="Firstwater" data-id="firstwater">Firstwater (Sound bath and sound healing)</option><option value="René Moffatt" data-id="rene-moffatt">René Moffatt (Original singer-songwriter)</option><option value="Your Bird Can Sing" data-id="your-bird-can-sing">Your Bird Can Sing (Beatles songs, and everybody sings)</option></optgroup></select></div>
 
           <div class="field">
             <label for="venue">Venue or city</label>
             <input id="venue" name="Venue or city">
           </div>
 
-          <div class="field">
-            <label for="guests">Guest count</label>
-            <input id="guests" name="Guest count" inputmode="numeric">
-          </div>
-
-          <div class="field">
-            <label for="covering">What needs covering</label>
-            <input id="covering" name="What needs covering" placeholder="Cocktails, dinner, dancing, all of it&hellip;">
-          </div>
+          
+          <div class="field field--full" id="act-field" hidden><label for="act">Act</label><select id="act" name="Act" disabled><option value="">Not sure yet, recommend one</option><optgroup label="Configurations"><option value="Singer and Guitarist" data-id="singer-guitarist">Singer and Guitarist (Acoustic covers, sung)</option><option value="Solo Guitarist" data-id="solo-guitarist">Solo Guitarist (Blues, roots, jazz and Spanish flavors)</option><option value="Solo Piano" data-id="solo-piano">Solo Piano (Cocktail piano)</option><option value="Spanish Guitarist" data-id="spanish-guitarist">Spanish Guitarist (Flamenco and Spanish guitar, solo)</option><option value="DJ" data-id="dj">DJ (Open format)</option><option value="Acoustic Duo and Trio" data-id="acoustic-duo">Acoustic Duo and Trio (Acoustic covers)</option><option value="Jazz Duo" data-id="jazz-duo">Jazz Duo (Jazz standards)</option><option value="Christmas Jazz Trio" data-id="christmas-jazz-trio">Christmas Jazz Trio (Christmas jazz)</option><option value="Americana Band" data-id="americana-band">Americana Band (Americana and the Colorado songbook)</option><option value="Funk Band" data-id="funk-trio">Funk Band (Funk and soul)</option><option value="Live Band Karaoke" data-id="live-band-karaoke">Live Band Karaoke (Party covers, the 80s and 90s onward)</option><option value="Soul and R&amp;B Band" data-id="soul-rnb">Soul and R&amp;B Band (Soul and R&amp;B)</option><option value="Yacht Rock Band" data-id="yacht-rock">Yacht Rock Band (Yacht rock)</option></optgroup><optgroup label="Named acts"><option value="Tejas Singh" data-id="tejas-singh">Tejas Singh (Singer-songwriter covers)</option><option value="Dirty Flamenco" data-id="dirty-flamenco">Dirty Flamenco (Flamenco)</option><option value="Tony Medina" data-id="tony-medina">Tony Medina (Blues, rock and roots)</option><option value="Last Consulate" data-id="last-consulate">Last Consulate (Instrumental downtempo)</option><option value="Changes Jazz Trio" data-id="changes-jazz-trio">Changes Jazz Trio (Modern jazz)</option><option value="Firstwater" data-id="firstwater">Firstwater (Sound bath and sound healing)</option><option value="René Moffatt" data-id="rene-moffatt">René Moffatt (Original singer-songwriter)</option><option value="Your Bird Can Sing" data-id="your-bird-can-sing">Your Bird Can Sing (Beatles songs, and everybody sings)</option></optgroup></select></div>
 
           <div class="field field--full">
-            <label for="message">Anything else <span class="req">*</span></label>
-            <textarea id="message" name="Anything else" rows="4" required></textarea>
+            <label for="message">What's the night</label>
+            <textarea id="message" name="What's the night" rows="4" placeholder="What it's for and roughly how many people. A sentence is plenty."></textarea>
           </div>
         </div>
 

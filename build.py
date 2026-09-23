@@ -981,9 +981,12 @@ def credits_also() -> str:
 
 def act_picker() -> str:
     """The act field on the contact form. Every "Inquire" link across the site
-    carries ?act=<id>, and contact.js preselects from it, so an inquiry that
-    started on an act page arrives naming that act. Without script the field
-    is still a working select, which is why it is rendered rather than hidden."""
+    carries ?act=<id>, and acts.js preselects from it, so an inquiry that
+    started on an act page arrives naming that act. Since 2026-09-23 the field
+    ships hidden and disabled (a disabled control is not submitted), and
+    acts.js shows it only when the link named an act it carries. Daniel's
+    call: the form is the shortest thing the site's promise allows, and a
+    roster-length select in front of every buyer was the opposite of that."""
     def opts(acts):
         return "".join(
             f'<option value="{esc(a["name"])}" data-id="{esc(a["id"])}">'
@@ -993,8 +996,8 @@ def act_picker() -> str:
     # Grouped the way the roster page is (2026-09-23): the configurations
     # smallest first, then the named acts.
     return (
-        '<div class="field"><label for="act">Act</label>'
-        '<select id="act" name="Act">'
+        '<div class="field field--full" id="act-field" hidden><label for="act">Act</label>'
+        '<select id="act" name="Act" disabled>'
         '<option value="">Not sure yet, recommend one</option>'
         f'<optgroup label="Configurations">{opts(FORMAT_ACTS)}</optgroup>'
         f'<optgroup label="Named acts">{opts(NAMED_ACTS)}</optgroup>'
