@@ -1,11 +1,12 @@
 {
   "_note": "Authored 2026-09-16, the first page published with the signet-new-act skill (scripts/new_act_page.py --kind ensembles --shape artist). A named group of three equals at an ensembles URL, the same placement as Dirty Flamenco; acts.json changes-jazz-trio.page points here so every card and llms line follows. The hero is the empty footage slot over the interim still: their site has no photograph and no footage, only two studio recordings, which the hero note links. No prices anywhere.",
-  "_title_note": "RETITLED 2026-09-23. It read 'modern jazz trio for hire in Denver', the same head phrase as /ensembles/jazz-duo-trio/ ('Jazz duo and trio for hire in Denver'), so two pages on one small site were competing for 'jazz trio denver' and Search Console had both on page 7 to 10. The rule now: a named act's title leads with the name and its own angle, and the format page owns the generic term. 63 chars before the pipe, the extra three bought by naming all three occasions.",
-  "title": "Changes Jazz Trio: modern jazz for Denver dinners and galas | Signet Artists",
+  "_title_note": "54 chars before the pipe. 'for hire' because the bare Denver jazz SERP is clubs (the jazz-duo-trio page's lesson); the name leads because the name is the product.",
+  "title": "Changes Jazz Trio: modern jazz trio for hire in Denver | Signet Artists",
   "breadcrumb": "Changes Jazz Trio",
   "title_exact": true,
   "meta_description": "A Denver guitar trio playing the standards with a modern edge: guitar, fretless bass and drums for cocktails, dinners and galas, or a quartet with saxophone.",
   "output": "ensembles/changes-jazz-trio/index.html",
   "nav": "music",
-  "og_image": "img/hero.jpg"
+  "og_image": "img/hero.jpg",
+  "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions."
 }
