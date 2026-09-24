@@ -33,6 +33,16 @@ Two passes.
    greppable sub-patterns of the compression tell, printed for the read and
    never counted as hits. The rest of that layer is a read-aloud, not code.
 
+5. Repetition notes (2026-09-24, AI-TELLS-2026.md Layer 8): the one
+   greppable sub-pattern of the page-level tells, section-autonomy
+   restatement. The Beatles sing-along page shipped saying "booklets"
+   fourteen times and "duo" twenty-three times in 1,600 words, because each
+   section re-established the premise as if the reader had arrived there
+   cold. The gate now reads a page's sections and FAQ answers as one text and
+   prints every content word that appears six or more times. A note, never a
+   hit: a product noun recurs on any page, and the read decides which of the
+   recurrences is the second statement of a fact already made.
+
 Run: python3 scripts/copy_gate.py [page-dir ...]   (default: the buildout dirs)
 Exit 1 on any hit.
 """
@@ -295,6 +305,55 @@ def compression_notes(path: pathlib.Path) -> list:
     return notes
 
 
+# Repetition notes (AI-TELLS-2026.md Layer 8, 2026-09-24). One page, read as
+# one text: every authored section plus the FAQ answers in schema.json, with
+# comments, tags and {{tokens}} stripped. Any content word of four letters or
+# more that appears REPEAT_MIN times or more is printed. Function words and
+# the words every Signet page says by design are skipped so the note shows
+# the page's own repetition and not the site's.
+REPEAT_MIN = 6
+REPEAT_SKIP = {
+    "that", "this", "with", "from", "have", "your", "they", "them", "their",
+    "than", "then", "when", "what", "where", "which", "while", "about", "into",
+    "over", "after", "before", "there", "these", "those", "some", "same",
+    "more", "most", "much", "many", "every", "each", "both", "also", "just",
+    "only", "very", "here", "will", "would", "could", "should", "does", "were",
+    "been", "being", "other", "another", "through", "under", "between", "once",
+    "still", "back", "well", "like", "make", "makes", "take", "takes", "come",
+    "comes", "want", "wants", "need", "needs", "book", "books", "booking",
+    "live", "music", "event", "events", "night", "venue", "page", "date",
+    "signet", "artists", "denver", "colorado",
+}
+TOKEN = re.compile(r"\{\{[^}]*\}\}")
+
+
+def repetition_notes(page_dir: pathlib.Path) -> list:
+    parts = []
+    for f in sorted(page_dir.rglob("*.html")):
+        text = COMMENT.sub("", f.read_text(encoding="utf-8"))
+        parts.append(re.sub(r"<[^>]+>", " ", TOKEN.sub(" ", text)))
+    schema = page_dir / "schema.json"
+    if schema.exists():
+        try:
+            faqs = json.loads(schema.read_text(encoding="utf-8")).get("faqs", [])
+        except json.JSONDecodeError:
+            faqs = []
+        parts += [f"{q.get('q', '')} {q.get('a', '')}" for q in faqs]
+    words = re.findall(r"[A-Za-z][A-Za-z']+", " ".join(parts).lower())
+    counts = {}
+    for w in words:
+        w = w.rstrip("'").removesuffix("'s")
+        if len(w) < 4 or w in REPEAT_SKIP:
+            continue
+        counts[w] = counts.get(w, 0) + 1
+    repeated = sorted(((n, w) for w, n in counts.items() if n >= REPEAT_MIN),
+                      reverse=True)
+    if not repeated:
+        return []
+    listing = ", ".join(f"{w} x{n}" for n, w in repeated[:12])
+    return [(page_dir, f"repeated across the page: {listing}")]
+
+
 def main() -> int:
     targets = sys.argv[1:] or BUILDOUT_DIRS
     hits = []
@@ -307,6 +366,7 @@ def main() -> int:
                 + sorted(d.glob("config.json")):
             hits += check_file(f)
             notes += compression_notes(f)
+        notes += repetition_notes(d)
     for path, line, label, fix, snippet in hits:
         rel = path.relative_to(ROOT)
         print(f"{rel}:{line}  [{label}] {fix}\n    {snippet}")
@@ -314,7 +374,7 @@ def main() -> int:
     for out, why in site_hits:
         print(f"{out}  [{why}]")
     if notes:
-        print("Compression notes (Layer 7; a read, not a failure):")
+        print("Compression and repetition notes (Layers 7 and 8; a read, not a failure):")
         for path, why in notes:
             print(f"  {path.relative_to(ROOT)}  {why}")
     total = len(hits) + len(site_hits)

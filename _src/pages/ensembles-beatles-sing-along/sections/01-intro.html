@@ -1,21 +1,27 @@
 <!-- Named act, spec'd presentation: the name publishes and no musician does
      (Daniel, 2026-09-22: "publish under the act name. no additional names").
-     So this takes the act-hero shape, the same one Firstwater uses, with the
-     style as the eyebrow and the name as the h1.
+     Act-hero shape, the same one Firstwater uses, with the style as the
+     eyebrow and the name as the h1.
 
-     The media slot carries the act's own artwork in the act-video-photo
-     pattern rather than the empty footage slot. The artwork is a published
-     asset with its own provenance row, not a placeholder standing in for a
-     clip. Footage and photography are both still open asks: the day either
-     arrives, the clip takes this slot and the artwork moves down the page. -->
+     Rewritten 2026-09-24 in the copy critique Daniel asked for. The first
+     version said the same five facts in every section (booklets fourteen
+     times, the duo twenty-three times), listed venues in four paragraphs,
+     and put the site's own taxonomy on the page ("a named act", "books as
+     one duo"). This hero now carries the whole pitch in two paragraphs: what
+     happens, and who books it. The identity section that restated it is gone.
+
+     The media slot carries the act's own artwork (scripts/bird_art.py, with
+     a provenance row) in the act-video-photo pattern. Footage and
+     photography are both still open asks: the day either arrives, the clip
+     takes this slot. -->
 <section class="section section--top act-hero">
   <div class="wrap">
     <div class="heading">
       <p class="eyebrow eyebrow--slab">Beatles songs, and everybody sings</p>
       <h1 class="h1 display">Your Bird Can Sing</h1>
-      <p class="act-face">A named act. A multi-instrumental duo, with sing booklets for the guests.</p>
-      <p class="lede">Two musicians play the Beatles catalogue and hand out booklets with the words in them, for a crowd that runs from small children to great-grandparents. Nobody has to be a singer to join in, and by the second chorus of Hey Jude the whole venue is singing.</p>
-      <p class="prose">Book it for the afternoon that has to work for everybody in the space at once. Think the common area of a senior living community on a standing weekday afternoon, a library or community center program, a family party where four generations are in the garden, a school assembly, or a summer courtyard event where you want people to stay rather than drift off once the food is gone.</p>
+      <p class="act-face">A multi-instrumental duo, with lyric booklets for the guests.</p>
+      <p class="lede">Two musicians play the Beatles and hand out lyric booklets, and everyone sings, from the grandchildren to the great-grandparents. Most people know the choruses already, and the booklets have the rest of the words. By the second chorus of Hey Jude the whole place is singing.</p>
+      <p class="prose">It&rsquo;s the booking for a crowd of mixed ages, and for an afternoon where you want the whole audience taking part. Activity directors book it for senior living and memory care, libraries put it on as a program hour, and families book it for a fiftieth anniversary or an eightieth birthday, when four generations are in one backyard.</p>
       <div class="btn-row">
         <a class="btn" href="{{nav_prefix}}contact/?act=your-bird-can-sing">Check a Date</a>
         <a class="btn btn--outline" href="{{nav_prefix}}pricing/">See Pricing</a>

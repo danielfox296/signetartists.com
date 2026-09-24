@@ -1055,8 +1055,8 @@
       "status": "listing",
       "page": "ensembles/beatles-sing-along/",
       "style": "Beatles songs, and everybody sings",
-      "spec": "A multi-instrumental duo, with sing booklets for the guests",
-      "byline_inline": "a multi-instrumental duo, with sing booklets for the guests",
+      "spec": "A multi-instrumental duo, with lyric booklets for the guests",
+      "byline_inline": "a multi-instrumental duo, with lyric booklets for the guests",
       "material": "Covers",
       "bucket_tags": [
         "specialty"
@@ -1074,20 +1074,17 @@
       "vocals": "sung",
       "from": "duo",
       "img": "your-bird-can-sing-card.jpg",
-      "_img_note": "Original artwork, not a photograph and not an interim still: a flock in silhouette flying into a sunburst, drawn from scratch in scripts/bird_art.py in the visual language of mid-sixties sleeve design. Daniel asked for Beatles cover art on the page (2026-09-22) and then set the terms himself: published album covers are copyrighted artwork, so none was used and nothing is reproduced. Rebuild with `python3 scripts/bird_art.py`. Two more pieces sit on the page, the square sleeve and the sing booklets. When a photograph of the duo arrives it goes through scripts/act_media.py photo --card and the artwork moves down the page rather than off it.",
+      "_img_note": "Original artwork, not a photograph and not an interim still: a flock in silhouette flying into a sunburst, drawn from scratch in scripts/bird_art.py in the visual language of mid-sixties sleeve design. Daniel asked for Beatles cover art on the page (2026-09-22) and then set the terms himself: published album covers are copyrighted artwork, so none was used and nothing is reproduced. Rebuild with `python3 scripts/bird_art.py`. One more piece sits on the page, the booklet illustration in the program section; the square sleeve (img/acts/your-bird-can-sing-sleeve.jpg) keeps its provenance row but came off the page 2026-09-24, when the section that explained its own provenance to the buyer was cut. When a photograph of the duo arrives it goes through scripts/act_media.py photo --card and the artwork moves down the page rather than off it.",
       "alt": "A flock of birds in silhouette flying into a sunburst, drawn in the flat color of a sixties record sleeve.",
       "video": null,
-      "blurb": "Two musicians play the Beatles catalogue and hand out booklets with the words in them, for a crowd that runs from small children to great-grandparents. Nobody has to be a singer to join in, and by the second chorus of Hey Jude the whole venue is singing. It books as one duo, indoors or out, for community afternoons, family parties and senior living calendars.",
-      "_identity_note": "Written from Daniel's brief 2026-09-22 and read aloud against AI-TELLS Layers 3 to 7. The sing booklets are his fact and they lead, because they are the part nobody else in this market sells. The songs named are the eleven Beatles titles already published on the repertoire page, so the book traces to the site rather than to a claim. No instrument is named, per his ruling. No age is assigned a behaviour beyond what he said: kids to seniors.",
+      "blurb": "Two musicians play the Beatles and hand out lyric booklets, and everyone sings, from the grandchildren to the great-grandparents. Most people know the choruses already, and the booklets have the rest of the words. It books as one duo for senior living, library programs and family parties, indoors or out.",
+      "_identity_note": "Rewritten 2026-09-24 in Daniel's copy critique: two paragraphs, matching the page hero word for word, so the card, llms.txt and any generated page say one thing once. The sing booklets are his fact and they lead; on the page the noun is 'lyric booklets', the buyer's phrase. No instrument is named, per his ruling. No age is assigned a behaviour beyond what he said: kids to seniors.",
       "identity": [
-        "Your Bird Can Sing is a two-person Beatles sing-along. The duo plays the songs and hands out booklets with the words in them, so nobody has to remember the second verse and nobody has to be able to sing to join in. The Beatles catalogue is the one body of songs where a five-year-old and a ninety-year-old already know the same choruses, and the whole act is built on that overlap rather than on a light show or a costume.",
-        "It isn't a tribute act and it isn't an impersonation. Nobody wears a wig and nobody puts on an accent. What the duo does is play Hey Jude, Let It Be, Yesterday, Blackbird, Come Together and the rest of the songbook, and hand out the words so that everyone who wants to join in has them.",
-        "The booklets are what make it work with a crowd of mixed ages. A grandparent who can't quite hear the verse still has the words in front of them, a child who has never heard the song can follow the line, and the parents in between stop worrying about whether they're singing it right. The duo can take the volume anywhere from a common area at conversation level up to a courtyard with a hundred people in it.",
-        "It books as one duo and it plays wherever a duo fits: the common area of a senior living community, a library meeting space, a school gym, a community center, a back garden, a courtyard, or a function space after lunch. Two musicians set up small, play on the floor rather than a stage, and need one outlet.",
-        "This is a named act, booked under its own name rather than the names of the two musicians in it, and if either of them changes we tell you in advance."
+        "Two musicians play the Beatles and hand out lyric booklets, and everyone sings, from the grandchildren to the great-grandparents. Most people know the choruses already, and the booklets have the rest of the words. By the second chorus of Hey Jude the whole place is singing.",
+        "It's the booking for a crowd of mixed ages, and for an afternoon where you want the whole audience taking part. Activity directors book it for senior living and memory care, and libraries book it for a program hour. Families book it for a fiftieth anniversary or an eightieth birthday, when four generations are in one backyard."
       ],
       "setlist": {
-        "note": "The songs below are the Beatles titles already published on the song list, and the booklets go wider than this. The first request a client sends is learned for the date.",
+        "note": "Some of the songs the duo plays.",
         "items": [
           "Hey Jude",
           "Let It Be",
