@@ -147,7 +147,7 @@
       "occasion": "The member or association event",
       "act": "dirty-flamenco",
       "config": "trio",
-      "why": "An event that has remarks in it and wants one thing guests describe afterwards. The trio plays a set piece that guests watch, placed where the program leaves space for it."
+      "why": "An event that has remarks in it and wants one thing guests describe afterward. The trio plays a set piece that guests watch, placed where the program leaves space for it."
     }
   ],
   "_credits_note": "ADDED 2026-09-03, from Daniel's list of the companies, institutions and venues the roster's artists have played for. Rendered by build.py credits() as the one-colour logo strip on the home page and /corporate/, and as a Credits line in llms.txt. Each logo ships as img/logos/<id>.svg, normalised to currentColor (provenance in img/logos/SOURCES.md); `h` scales a mark against the strip's base height so a stacked crest and a wide wordmark carry the same visual weight. The ten with logos: national employers, the museum, the two hotel flags, a major-league club, and the two Colorado names Daniel added the same day, Casa Bonita and Monarch (Daniel's call 2026-09-03, which supersedes the acts.json footage note that left the casino unnamed). The club stages and the rest are the `also` sentence, text only and home page only. Held back: the Hummingbird bar. Label 'Trusted and booked by' is Daniel's wording, 2026-09-03.",
@@ -294,7 +294,7 @@
         },
         {
           "q": "Do you carry liability insurance?",
-          "a": "Yes. A certificate naming your venue as additional insured comes with the contract, along with a W-9 and one itemised invoice."
+          "a": "Yes. A certificate naming your venue as additional insured comes with the contract, along with a W-9 and one itemized invoice."
         },
         {
           "q": "Can you work with our procurement or AP process?",
@@ -362,7 +362,7 @@
         },
         {
           "q": "The venue has a curfew and a decibel limit. Is that a problem?",
-          "a": "No. Mountain and residential venues run on their own rules and we honour them as written. Tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
+          "a": "No. Mountain and residential venues run on their own rules and we honor them as written. Tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
         },
         {
           "_closed_note": "Closed 2026-08-17. Daniel: green room not needed but it supports their event; if meals are served the band would like them. The old answer made both a requirement over four hours. Because neither is an obligation, this does NOT go into contract §7, which cancels draft note 7 on 03a.",
