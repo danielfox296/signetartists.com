@@ -2087,6 +2087,10 @@ def act_ladder(act: dict) -> str:
     data; those live on the technical page's stage/power/load-in tables
     (stage_table, power_table, loadin_table above), because sizes are the
     product on an act page and inches and amps are the product on that one.
+
+    The note under the table lost its contact link and "resort corridor" in
+    copy pass batch 1 (2026-09-24): the sitewide close already asks for the
+    date, and a second ask two sections above it was a pointer pile-up.
     """
     rows = []
     for rung in act["ladder"]:
@@ -2104,10 +2108,9 @@ def act_ladder(act: dict) -> str:
         '<div class="table-scroll"><table class="rate-table tnum">'
         "<thead><tr><th>Size</th><th>What it suits</th></tr></thead>"
         f'<tbody>{"".join(rows)}</tbody></table></div>'
-        '<p class="note">The configuration and the date set the number: an hour '
-        "under cocktails and a full evening in the resort corridor are different "
-        'jobs. <a href="{{nav_prefix}}contact/">Send us the date</a> and we price '
-        "that night.</p>"
+        '<p class="note">The size and the date set the price, since an hour of '
+        "cocktails in Denver and a full evening in the mountains are different "
+        "jobs.</p>"
         "</div></section>"
     )
 

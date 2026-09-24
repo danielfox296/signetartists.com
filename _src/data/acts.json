@@ -241,7 +241,7 @@
         }
       ],
       "setlist": {
-        "note": "Pulled from the full song list on the repertoire page. A set is built around the flow of your evening, and this is a sample rather than the whole list.",
+        "note": "A sample from the song list, from dinner to the dance floor. Requests are welcome.",
         "from_repertoire": true,
         "groups": [
           {
@@ -324,7 +324,7 @@
         }
       ],
       "setlist": {
-        "note": "A set pulled from the standards and paced to the night. This is a sample, and the set on the night won't be exactly this list.",
+        "note": "Standards from the jazz book. Requests are welcome.",
         "items": [
           "Autumn Leaves",
           "All the Things You Are",
@@ -669,7 +669,7 @@
       "alt": "A microphone on a stand beside a lyric screen with one line lit in brass, drawn flat on a dark field.",
       "video": null,
       "_note": "ADDED 2026-09-14 from the corporate demand report. Zero Colorado corporate vendors sell live band karaoke, no Denver-metro act exists on The Bash or GigSalad, and 'live karaoke denver' autocompletes. Daniel folded the 80s and 90s cover-band ideas into this act the same day: it plays as a party band on its own and hands the mic over. Spec'd, no names.",
-      "blurb": "A party band that plays the 80s and 90s hits on its own, then hands the mic to anyone in the crowd who wants a song. Nobody has to sing for the night to work, and the band is ready the moment somebody does.",
+      "blurb": "A party band that plays the 80s and 90s hits on its own, then hands the mic to anyone in the crowd who wants a song, with the words on a screen and the band following whoever is singing.",
       "occasion_tags": [
         "weddings",
         "corporate",
@@ -814,19 +814,19 @@
         "daytime"
       ],
       "setlist": {
-        "note": "Pulled from the full song list on the repertoire page: the songs that sit under arrival and dinner. A set is built around the flow of your evening, and this is a sample rather than the whole list.",
-        "from_repertoire": true,
-        "groups": [
-          {
-            "label": "Arrival",
-            "moment": "arrival",
-            "count": 6
-          },
-          {
-            "label": "Dinner",
-            "moment": "dinner",
-            "count": 6
-          }
+        "_note": "Explicit list from copy pass batch 1, 2026-09-24. The from_repertoire pick (arrival + dinner moments) printed Blackbird twice and no standards on a page that sells standards. Standards are the ones the jazz duo list already publishes; covers are repertoire titles a piano carries.",
+        "note": "Standards, and the covers a piano carries best. Requests are welcome.",
+        "items": [
+          "Autumn Leaves",
+          "All of Me",
+          "The Girl from Ipanema",
+          "All the Things You Are",
+          "Someday My Prince Will Come",
+          "Your Song",
+          "Piano Man",
+          "Let It Be",
+          "Can't Help Falling in Love",
+          "Tiny Dancer"
         ]
       }
     },
@@ -1143,7 +1143,7 @@
       "img": "acts/solo-bridge.jpg",
       "alt": "A guitarist in a tan jacket playing an acoustic guitar on a bridge, with autumn trees behind him.",
       "video": null,
-      "blurb": "One guitarist for cocktail hours, client dinners and private dinners, playing blues, roots, jazz and Spanish flavors at a volume the table talks over. It's the smallest live booking on the roster, sung or instrumental, and it sets up in a 6 by 4 ft corner."
+      "blurb": "One guitarist for cocktail hours, client dinners and private dinners, playing blues, roots, jazz and Spanish flavors at a volume the table talks over. It's the smallest live booking on the roster, sung or instrumental, and it fits in a corner where a band can't."
     },
     {
       "id": "singer-guitarist",
@@ -1212,7 +1212,7 @@
       "img": "acts/flamenco-colonnade.jpg",
       "alt": "A guitarist in a white shirt seated on a stool under a pergola, playing a nylon-string guitar between white columns.",
       "video": null,
-      "blurb": "One Spanish guitarist on nylon strings, with a rumba under the first drink and a Malagueña as the guests sit down. It plays a wedding ceremony and the hour after it, a dinner party, a milestone birthday or a corporate dinner, with no stage and no microphone in anyone's hand."
+      "blurb": "One Spanish guitarist on nylon strings, with a rumba under the first drink and a Malagueña as the guests sit down. It plays a wedding ceremony and the hour after it, a dinner party, a milestone birthday or a corporate dinner, from a corner of a courtyard or the end of a long table."
     },
     {
       "id": "acoustic-duo",
