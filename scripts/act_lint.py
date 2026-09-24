@@ -289,8 +289,9 @@ def check_page(act: dict, page: str):
         elif set(svc.get("configs", [])) != set(act.get("config_tags", [])):
             err(aid, f"{d.name}/schema.json service.configs {svc.get('configs')} != config_tags")
         faqs = sch.get("faqs", [])
-        if not 3 <= len(faqs) <= 6:
-            warn(aid, f"{d.name}/schema.json has {len(faqs)} FAQs; the page contract is 3 to 6")
+        if not 3 <= len(faqs) <= 8:
+            warn(aid, f"{d.name}/schema.json has {len(faqs)} FAQs; the page contract is 3 to 8 "
+                      "(raised 2026-09-24: the FAQ is where ops now lives)")
         for i, f in enumerate(faqs):
             copy_bans(aid, f"{d.name} faq[{i}].q", f.get("q"))
             copy_bans(aid, f"{d.name} faq[{i}].a", f.get("a"))

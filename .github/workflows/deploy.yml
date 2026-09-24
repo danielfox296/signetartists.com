@@ -62,6 +62,16 @@ jobs:
       - name: Lint the navigation
         run: python3 scripts/nav_lint.py
 
+      # Every sentence Daniel wrote or approved by hand through CopyDesk,
+      # checked against the built site. Added 2026-09-24 for the signet-
+      # copy-pass: a batch may rewrite everything around one of these
+      # sentences, never the sentence itself. A baseline of pre-existing
+      # drift (scripts/protected.py) is exempted so this doesn't fail on
+      # history from before the gate existed; anything new that goes
+      # missing fails the deploy.
+      - name: Check protected sentences
+        run: python3 scripts/protected.py
+
       - name: Stage site
         run: |
           mkdir -p _site

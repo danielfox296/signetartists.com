@@ -356,6 +356,90 @@ def repetition_notes(page_dir: pathlib.Path) -> list:
     return [(page_dir, f"repeated across the page: {listing}")]
 
 
+# Layer 8 notes, mechanical half (signet-copy-pass tooling, 2026-09-24). The
+# repetition note above is one sub-pattern of the page-level tells catalog;
+# these are the rest of the greppable ones. All are notes for the read, never
+# hits: an ops term inside an FAQ answer is exactly where it belongs, three
+# links to pricing on a page whose job is pricing is fine, and a page with a
+# named reader in its intro comment but no `reader` key yet just hasn't been
+# touched by this pass. What isn't greppable (section-autonomy restatement
+# beyond word counts, the setting list, the imagined-guest vignette, the
+# provenance leak, the mechanism-first opener) stays a read, per AI-TELLS-2026
+# Layer 8.
+OPS_TERMS = re.compile(
+    r"\bdBA\b|\b\d+\s*(?:by|x)\s*\d+\s*(?:feet|ft)\b|\boutlets?\b"
+    r"|\bload-ins?\b|\bcircuits?\b|\bW-9\b|\bcertificates? of insurance\b"
+    r"|\bpurchase orders?\b|\bstrikes?\b|\binputs?\b", re.IGNORECASE)
+THIRD_PERSON_READER = re.compile(
+    r"\b(?:planners|directors|hosts|couples|families|clients)\s+"
+    r"(?:books?|hires?|wants?)\b", re.IGNORECASE)
+NEGATION_DEVICE = re.compile(
+    r"\bnobody\b|\bisn.t\b|\brather than\b|\bno\s+[a-z]{3,}\b", re.IGNORECASE)
+LOCALE_DRIFT = re.compile(
+    r"\bcatalogue\b|\bhonour\b|\bcolour\b|\bfavourite\b|\bitemised\b"
+    r"|\brecognised\b|\bback garden\b|\bfunction space\b", re.IGNORECASE)
+POINTER_DESTS = ("pricing/", "technical/", "contact/")
+
+
+def _page_text(page_dir: pathlib.Path) -> str:
+    parts = [COMMENT.sub("", f.read_text(encoding="utf-8"))
+             for f in sorted(page_dir.rglob("*.html"))]
+    return "\n".join(parts)
+
+
+def layer8_notes(page_dir: pathlib.Path) -> list:
+    raw = _page_text(page_dir)
+    if not raw:
+        return []
+    text = html.unescape(re.sub(r"<[^>]+>", " ", TOKEN.sub(" ", raw)))
+    notes = []
+
+    ops = OPS_TERMS.findall(raw)
+    if ops:
+        notes.append((page_dir, f"{len(ops)} ops term(s) in body (dBA, a footprint, "
+                                 "an outlet, load-in, a circuit, W-9, insurance, a "
+                                 "purchase order, strike, inputs): the FAQ owns these"))
+
+    tp = THIRD_PERSON_READER.findall(text)
+    if tp:
+        notes.append((page_dir, f"{len(tp)} third-person reader reference(s) "
+                                 "(planners/directors/hosts/couples/families/clients "
+                                 "book/hire/want): the reader is 'you'"))
+
+    for dest in POINTER_DESTS:
+        n = raw.count(f'{dest}"')
+        if n > 1:
+            notes.append((page_dir, f"{n} link(s) to {dest.rstrip('/')}: "
+                                     "one pointer per destination is the rule"))
+
+    neg = NEGATION_DEVICE.findall(text)
+    if len(neg) >= 3:
+        notes.append((page_dir, f"{len(neg)} negation device(s) "
+                                 "(nobody/isn't/rather than/no [noun])"))
+
+    locale = LOCALE_DRIFT.findall(text)
+    if locale:
+        notes.append((page_dir, f"{len(locale)} British spelling/idiom hit(s): "
+                                 + ", ".join(sorted({w.lower() for w in locale}))))
+
+    sentences = [s for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    five_item = [s for s in sentences if s.count(",") >= 4]
+    if five_item:
+        notes.append((page_dir, f"{len(five_item)} sentence(s) with five or more comma items"))
+
+    cfg = page_dir / "config.json"
+    if cfg.exists():
+        try:
+            data = json.loads(cfg.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            data = {}
+        if not data.get("reader"):
+            notes.append((page_dir, "config.json has no `reader`: name the one "
+                                     "buyer this page is written to"))
+
+    return notes
+
+
 def main() -> int:
     targets = sys.argv[1:] or BUILDOUT_DIRS
     hits = []
@@ -369,6 +453,7 @@ def main() -> int:
             hits += check_file(f)
             notes += compression_notes(f)
         notes += repetition_notes(d)
+        notes += layer8_notes(d)
     for path, line, label, fix, snippet in hits:
         rel = path.relative_to(ROOT)
         print(f"{rel}:{line}  [{label}] {fix}\n    {snippet}")

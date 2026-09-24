@@ -2076,10 +2076,18 @@ def act_identity(act: dict) -> str:
 
 
 def act_ladder(act: dict) -> str:
-    """The configuration ladder: size, build, and where it lands. Both price
+    """The configuration ladder: size, build, and what it suits. Both price
     columns came off 2026-09-04 with the published card. What the table still
     does is the useful part, which is show a buyer which build fits the night
-    they are describing."""
+    they are describing.
+
+    Header re-worded 2026-09-24 (signet-copy-pass tooling): "Where it lands"
+    was handoff jargon, not a buyer's phrase. A footprint, input or circuit
+    column never belongs here even if a future act's ladder carries that
+    data; those live on the technical page's stage/power/load-in tables
+    (stage_table, power_table, loadin_table above), because sizes are the
+    product on an act page and inches and amps are the product on that one.
+    """
     rows = []
     for rung in act["ladder"]:
         r = rate_of(rung["config"])
@@ -2094,7 +2102,7 @@ def act_ladder(act: dict) -> str:
         '<section class="section section--ruled section--sunk" id="configurations">'
         '<div class="wrap"><h2 class="h3">Configurations</h2>'
         '<div class="table-scroll"><table class="rate-table tnum">'
-        "<thead><tr><th>Size</th><th>Where it lands</th></tr></thead>"
+        "<thead><tr><th>Size</th><th>What it suits</th></tr></thead>"
         f'<tbody>{"".join(rows)}</tbody></table></div>'
         '<p class="note">The configuration and the date set the number: an hour '
         "under cocktails and a full evening in the resort corridor are different "
