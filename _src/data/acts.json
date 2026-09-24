@@ -1055,8 +1055,8 @@
       "status": "listing",
       "page": "ensembles/beatles-sing-along/",
       "style": "Beatles songs, and everybody sings",
-      "spec": "A multi-instrumental duo, with lyric booklets for the guests",
-      "byline_inline": "a multi-instrumental duo, with lyric booklets for the guests",
+      "spec": "A multi-instrumental duo, with lyric booklets for everyone",
+      "byline_inline": "a multi-instrumental duo, with lyric booklets for everyone",
       "material": "Covers",
       "bucket_tags": [
         "specialty"
@@ -1077,14 +1077,14 @@
       "_img_note": "Original artwork, not a photograph and not an interim still: a flock in silhouette flying into a sunburst, drawn from scratch in scripts/bird_art.py in the visual language of mid-sixties sleeve design. Daniel asked for Beatles cover art on the page (2026-09-22) and then set the terms himself: published album covers are copyrighted artwork, so none was used and nothing is reproduced. Rebuild with `python3 scripts/bird_art.py`. One more piece sits on the page, the booklet illustration in the program section; the square sleeve (img/acts/your-bird-can-sing-sleeve.jpg) keeps its provenance row but came off the page 2026-09-24, when the section that explained its own provenance to the buyer was cut. When a photograph of the duo arrives it goes through scripts/act_media.py photo --card and the artwork moves down the page rather than off it.",
       "alt": "A flock of birds in silhouette flying into a sunburst, drawn in the flat color of a sixties record sleeve.",
       "video": null,
-      "blurb": "You know the part of Hey Jude where everyone joins in. A Beatles sing-along is an hour of that. Two musicians play and everyone has the words in their hands, so the grandparents and the grandchildren end up on the same chorus. It books as one duo for senior living, library programs and family parties, indoors or out.",
+      "blurb": "You know the part of Hey Jude where everyone starts singing. A Beatles sing-along is a playful hour of that. Two musicians play and everyone has the words in their hands, so the grandparents and the grandchildren end up on the same chorus. It books as one duo for senior living, library programs and family parties, indoors or out.",
       "_identity_note": "Rewritten twice on 2026-09-24. First in Daniel's copy critique (two paragraphs, matching the page hero word for word). Then again the same day after he read the opener, 'Two musicians play the Beatles and hand out lyric booklets, and everyone sings, from the grandchildren to the great-grandparents', and asked whether a copywriter would stand behind it: a spec sentence, apparatus first. The lede now opens on the moment (the part of Hey Jude where everyone joins in) and the mechanism follows as what makes it happen. The sing booklets are his fact; on the page the noun is 'lyric booklets' in the act-face and 'the words in their hands' in the lede. No instrument is named, per his ruling.",
       "identity": [
-        "You know the part of Hey Jude where everyone joins in. A Beatles sing-along is an hour of that. Two musicians play and everyone has the words in their hands, so the grandparents and the grandchildren end up on the same chorus.",
-        "Activity directors book it for senior living and memory care, where the residents know every one of these songs, and libraries put it on as a program hour. It's also the act for a fiftieth anniversary or an eightieth birthday, when four generations are in one backyard and you want them all doing one thing together."
+        "You know the part of Hey Jude where everyone starts singing. A Beatles sing-along is a playful hour of that. Two musicians play and everyone has the words in their hands, so the grandparents and the grandchildren end up on the same chorus.",
+        "If you run the activities calendar at a senior living community, your residents know every one of these songs, and it books for one afternoon or as a standing date. It's also the act for your parents' fiftieth anniversary or your dad's eightieth birthday, when four generations are in one backyard and you want them all doing one thing together."
       ],
       "setlist": {
-        "note": "Some of the songs the duo plays.",
+        "note": "Requests are welcome, on the day or ahead of it.",
         "items": [
           "Hey Jude",
           "Let It Be",
