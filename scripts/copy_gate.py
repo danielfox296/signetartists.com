@@ -46,6 +46,7 @@ Two passes.
 Run: python3 scripts/copy_gate.py [page-dir ...]   (default: the buildout dirs)
 Exit 1 on any hit.
 """
+import html
 import json
 import pathlib
 import re
@@ -339,7 +340,8 @@ def repetition_notes(page_dir: pathlib.Path) -> list:
         except json.JSONDecodeError:
             faqs = []
         parts += [f"{q.get('q', '')} {q.get('a', '')}" for q in faqs]
-    words = re.findall(r"[A-Za-z][A-Za-z']+", " ".join(parts).lower())
+    text = html.unescape(" ".join(parts)).replace("\u2019", "'")
+    words = re.findall(r"[A-Za-z][A-Za-z']+", text.lower())
     counts = {}
     for w in words:
         w = w.rstrip("'").removesuffix("'s")
