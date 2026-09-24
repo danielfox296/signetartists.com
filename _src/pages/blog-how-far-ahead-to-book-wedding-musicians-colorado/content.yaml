@@ -11,6 +11,11 @@
 # The rest is process: the order the decisions come in, and what to have ready
 # when you write to anybody.
 # ---------------------------------------------------------------------------
+# Copy pass batch 5, 2026-09-24. THE ONE READER: the couple who just said
+# yes and has a venue with a date on it. Already moment-led. The aside
+# explaining why the site says nothing about its own calendar was the site
+# narrating its own rules (Layer 8, the provenance leak) and is gone, with
+# the matching caveat sentence; dBA left the table; catalogue fixed.
 title: "How far ahead to book wedding musicians in Colorado"
 seo_title: "How far in advance to book wedding musicians, Colorado"
 slug: "how-far-ahead-to-book-wedding-musicians-colorado"
@@ -39,8 +44,7 @@ sections:
       Somebody has just said yes, there's a venue with a date on it, and
       somewhere on a list between the photographer and the flowers is the
       word music. How far ahead you need to sort it depends on how
-      particular you are, and the useful answer is
-      the order to do things in, which is what most of this page is.
+      particular you are, and the useful answer is the order to do things in.
 
       Start with what other couples say, because it's the only real data
       anybody has. In wedding forums, when couples describe their own
@@ -115,7 +119,7 @@ sections:
     columns: ["The part", "What it needs", "The usual size"]
     rows:
       - ["Ceremony", "Cues, and music that lands on them", "Solo or duo"]
-      - ["Cocktail hour", "Volume you can talk across, 65 to 72 dBA", "Duo or trio"]
+      - ["Cocktail hour", "Volume you can talk across", "Duo or trio"]
       - ["Dinner", "The same, held for a long stretch", "Duo or trio"]
       - ["Dancing", "A floor that fills and stays full", "Quartet, DJ, or both"]
 
@@ -184,8 +188,7 @@ sections:
       not at all if you have decided you want a jazz trio.
 
       Special requests need lead time of their own. A song learned for your
-      first dance takes four weeks' notice. Inside four weeks, the answer is
-      the catalogue an act already plays, which for most couples is a better
+      first dance takes four weeks' notice. Inside four weeks, the answer is the catalog an act already plays, which for most couples is a better
       outcome anyway, because a band plays a song it knows better than a
       song it learned last week. What our roster already plays is on the
       [repertoire page](https://signetartists.com/repertoire/).
@@ -212,15 +215,7 @@ sections:
     what_we_measured: "The lead times couples state about their own bookings, in their own words, in public wedding discussions. We counted what people said they did, not what vendors advise."
     sample: "113 Reddit threads with their comment trees across 16 subreddits, plus 18 threads from WeddingWire and Weddingbee. Colorado-specific threads are thin because r/Denver removes vendor-recommendation posts under its own rules, so most of the reported timing is national."
     date_range: "Threads spanning 2023 to 2026, read on 2026-09-06."
-    caveats: "Forum posters skew toward planners who research online, which probably lengthens the reported lead times against the real average. Nothing here is a statement about what is available on any particular date, ours included."
-
-  - type: aside
-    title: "Why there's nothing here about our own calendar"
-    body: |
-      We don't publish anything about our own calendar, because a booking
-      calendar changes daily and a sentence about it on a page is out of
-      date the moment it's written. Send a date and you'll get a straight
-      answer about that date.
+    caveats: "Forum posters skew toward planners who research online, which probably lengthens the reported lead times against the real average. "
 
   - type: cta
     headline: "Send the date and the venue, whatever the timeline looks like."
