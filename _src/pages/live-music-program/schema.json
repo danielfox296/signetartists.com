@@ -1,0 +1,20 @@
+{
+  "service": {
+    "name": "Weekly live music program",
+    "serviceType": "Standing live music program for hotel bars, restaurants and lounges",
+    "description": "A weekly live music program for hotel bars, restaurants and lounges in Denver and Colorado: one solo act from the Signet roster on the nights the venue picks, a sub from the same roster for any missed night, sound sized for a bar, and one itemized invoice a month.",
+    "areaServed": ["Denver", "Boulder", "Colorado Springs", "Vail", "Aspen", "Beaver Creek", "Breckenridge"],
+    "configs": ["solo"]
+  },
+  "faqs": [
+    {"q": "What if the musician can't make a night?", "a": "Another act from the roster plays it, in the same style and at the same volume. You hear from us before the night, and the invoice stays the same."},
+    {"q": "Can we change the act?", "a": "Yes. Tell us it isn't the right fit for the crowd and a different act plays the following week."},
+    {"q": "What does the venue provide?", "a": "A corner of the floor about 6 by 4 feet, one outlet on its own circuit, and a stool. The act brings its own sound or plugs into yours, and sets up in about 45 minutes."},
+    {"q": "How loud is it?", "a": "About as loud as a conversation at the next table. The musician sets the level to the crowd and the space, and turns down the moment the floor asks."},
+    {"q": "Which nights can we pick?", "a": "The ones that suit the bar. They stay fixed for the term, so your guests learn them, and we agree them before the first night."},
+    {"q": "How long is the term, and what does it cost?", "a": "We agree the term and the nights before the first night, and the price is quoted per night for your venue. Send us the venue and the nights you have in mind and the number comes back with the act we'd put there."},
+    {"q": "What about holidays and extra hours?", "a": "A holiday night is quoted on its own. An extra hour on a regular night is added at the same rate as the hours before it."},
+    {"q": "Can the program cover a private party at the venue?", "a": "Yes. A party on the patio or in your back space is added to the program, with the same act or a bigger one from the roster."},
+    {"q": "What paperwork comes with it?", "a": "A written contract naming the nights, the hours, the term and the price, a certificate of insurance naming your venue as additional insured, a W-9, and one itemized invoice a month."}
+  ]
+}
