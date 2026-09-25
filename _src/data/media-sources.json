@@ -290,7 +290,48 @@
       "source": "Original artwork, drawn in scripts/format_art.py",
       "from": "Signet Artists",
       "retrieved": "2026-09-25",
-      "_note": "Not a photograph and not stock: a violin drawn flat in ink on a mustard field, with the offer set in Archivo, in the palette of scripts/bird_art.py like the other drawn format tiles. The classical strings format is spec'd and nobody in it is named, so the honest picture is the instrument. Rebuild with `python3 scripts/format_art.py`. It reproduces no photograph and no likeness."
+      "_note": "Not a photograph and not stock: a violin drawn flat in ink on a mustard field, with the offer set in Archivo, in the palette of scripts/bird_art.py like the other drawn format tiles. The classical strings format is spec'd and nobody in it is named, so the honest picture is the instrument. Rebuild with `python3 scripts/format_art.py`. It reproduces no photograph and no likeness. CAME OFF THE CARD 2026-09-25, a few hours after it shipped: Daniel cleared the violinist's own photographs from her site, and her ceremony photo (img/classical-strings-card.jpg) is the card and og image now. The file stays, rebuildable, in case the page ever wants the drawn piece back."
+    },
+    "img/acts/classical-strings-live-poster.jpg": {
+      "source": "https://i.ytimg.com/vi/NfkVbgovXQU/hqdefault.jpg",
+      "from": "https://www.youtube.com/@maristanton9146",
+      "retrieved": "2026-09-25",
+      "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl.",
+      "verified": "sha256 03e8ddebcf885538, 2026-09-25"
+    },
+    "img/acts/classical-strings-ceremony.jpg": {
+      "source": "https://mariroes.com/assets/images/hero-wedding-ceremony.jpg",
+      "from": "mariroes.com",
+      "retrieved": "2026-09-25",
+      "verified": "sha256 b77fdc887f211a2f of the source bytes, 2026-09-25",
+      "_note": "Her site's wedding hero: playing at an outdoor mountain ceremony with the couple at a flowered arch behind her, soft focus. The card and og image from 2026-09-25 on Daniel's word that her site's photographs are cleared; it replaced the drawn violin tile the same day."
+    },
+    "img/classical-strings-card.jpg": {
+      "source": "crop of img/acts/classical-strings-ceremony.jpg, 16:9 at 1600x900, focus 0.42,0.50",
+      "from": "mariroes.com",
+      "retrieved": "2026-09-25",
+      "_note": "The roster card and the page og_image."
+    },
+    "img/acts/classical-strings-ballroom.jpg": {
+      "source": "https://mariroes.com/assets/images/corporate-events.jpg",
+      "from": "mariroes.com",
+      "retrieved": "2026-09-25",
+      "verified": "sha256 9bf1b631065aee2a of the source bytes, 2026-09-25",
+      "_note": "Her site's events page: solo violin on a riser at a black-tie ballroom dinner, guests at round tables. The gala and client-dinner picture."
+    },
+    "img/acts/classical-strings-stage.jpg": {
+      "source": "https://mariroes.com/assets/images/hero-stage.jpg",
+      "from": "mariroes.com",
+      "retrieved": "2026-09-25",
+      "verified": "sha256 f34fe37a418c48d7 of the source bytes, 2026-09-25",
+      "_note": "Her site's home hero: from behind, on a concert stage under house lights, no face in frame."
+    },
+    "img/acts/classical-strings-meadow.jpg": {
+      "source": "https://mariroes.com/assets/images/card-weddings-events-raised.jpg",
+      "from": "mariroes.com",
+      "retrieved": "2026-09-25",
+      "verified": "sha256 af75fd8aaba90634 of the source bytes, 2026-09-25",
+      "_note": "Her site's weddings card: playing outdoors in a wildflower meadow, landscape crop."
     }
   },
   "video_embeds": {
@@ -524,6 +565,36 @@
       "channel": "René J. Moffatt",
       "placed": "artists/rene-moffatt/ footage (2026-09-20, Daniel: publish the cover and all of UMS)",
       "embed_checked": "playableInEmbed true, 2026-09-20"
+    },
+    "NfkVbgovXQU": {
+      "title": "Bach Sonata No. 2 in A minor, BWV 1003 - Andante",
+      "channel": "Mari Roes",
+      "placed": "ensembles/string-quartet/ hero and footage",
+      "embed_checked": "playableInEmbed true, 2026-09-25"
+    },
+    "K-ADcBUHePE": {
+      "title": "Beethoven String Quartet Op. 18 No. 6, Mvmts 1-2",
+      "channel": "Mari Roes",
+      "placed": "ensembles/string-quartet/ hero and footage",
+      "embed_checked": "playableInEmbed true, 2026-09-25"
+    },
+    "Q8IErG9h694": {
+      "title": "Bach Sonata No. 2 in A minor, BWV 1003 - Allegro",
+      "channel": "Mari Roes",
+      "placed": "ensembles/string-quartet/ hero and footage",
+      "embed_checked": "playableInEmbed true, 2026-09-25"
+    },
+    "uDopMwnLx50": {
+      "title": "Paganini Caprice No. 19 in E-flat Major",
+      "channel": "Mari Roes",
+      "placed": "ensembles/string-quartet/ hero and footage",
+      "embed_checked": "playableInEmbed true, 2026-09-25"
+    },
+    "6LkA27z6c38": {
+      "title": "Sibelius Violin Concerto in D minor, Op. 47 -- Allegro Moderato",
+      "channel": "Mari Roes",
+      "placed": "ensembles/string-quartet/ hero and footage",
+      "embed_checked": "playableInEmbed true, 2026-09-25"
     }
   },
   "held_back": {
