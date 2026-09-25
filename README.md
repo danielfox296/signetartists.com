@@ -166,7 +166,7 @@ rule. What the site publishes is *market* information.
   directory list: every figure against `market-rates.json`, plus a phrase ban
   ("rate card", "published rates", "from $", "starting at", "10% off" and the
   rest). Zero hits required.
-- Signet's internal numbers live in `../OFFER.md` and nowhere in this repo.
+- Signet's internal numbers (what it pays each act, what it charges) live in a private Google Sheet and nowhere in this repo.
 
 ## Analytics & search wiring
 

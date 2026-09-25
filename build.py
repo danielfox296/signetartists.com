@@ -1323,7 +1323,7 @@ def write_redirects() -> None:
 # that used to live here (rate_range, rate_range_resort, rate_hour, rate_4h,
 # rate_1h, act_from, and the rate_card_table / rate_table_summary /
 # rate_table_full blocks) were deleted with the published card; git history has
-# them and OFFER.md has the numbers.
+# them and the private cost and price sheet has the numbers.
 
 PARAM_BLOCK = re.compile(
     r"\{\{(act_ladder|act_setlist|offer_close|offer_close_day|market):([^}]+)\}\}"
