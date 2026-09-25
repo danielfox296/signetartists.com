@@ -64,6 +64,7 @@ function buildArtistForm() {
   text_(form, 'Phone', true);
   text_(form, 'Website', false);
   para_(form, 'Video or audio links', true, 'Live footage is best. Paste as many links as you like.');
+  para_(form, 'Song list', true, 'Paste it or link it. Enough songs for a three-hour event.');
   text_(form, 'Instagram', false);
 
   var genres = form.addCheckboxItem().setTitle('Genres').setRequired(true);
