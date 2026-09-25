@@ -25,6 +25,7 @@ viewBox tightened to the drawn bounds. No shape was redrawn.
 | washington-nationals.svg | Washington Nationals primary crest | https://commons.wikimedia.org/wiki/File:Washington_Nationals_logo.svg |
 | casa-bonita.svg | Casa Bonita wordmark | https://commons.wikimedia.org/wiki/File:Casa_Bonita_logo.svg |
 | monarch-casino.svg | Monarch Casino Resort Spa Black Hawk, stacked mark (gradients on the butterfly flattened to one colour) | https://www.monarchblackhawk.com/skins/skin-prodmonarchblackhawk/assets/desktop/images/logo/logo-black-hawk-dark.svg, the resort's own site, since no wiki holds it |
+| gaylord-rockies.svg | Gaylord Hotels brand mark, which the Rockies property uses as its own (gold flattened to one colour); added 2026-09-25 | https://www.gaylordhotels.com/resourcefiles/svg-icons/gaylord-hotel-logo.svg, the brand's own site, since no wiki holds it |
 
 Fetched and normalised but not shipped, because it sits in the text sentence
 instead: Live Nation (en.wikipedia File:Live_Nation_Logo.svg). No usable vector
