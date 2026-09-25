@@ -3,7 +3,7 @@
   "_restructure_note": "Was 'The Music' and described two house bands. Now the roster page for the represented acts. Never state a count of acts here or anywhere outbound: the roster grows and a number goes stale silently (2026-09-07). URL stays /music/ deliberately: it is the indexed URL and carries the nav slot, so the model changed underneath it rather than moving. REBUILT 2026-09-23: the page carries two lanes now (the configurations, compact and smallest first, then the named acts with their footage), an answer-first block on which configuration fits which kind of event, an occasion filter, and its own FAQ in schema.json; the hand-typed configuration list is gone because the lane renders from acts.json. Title and h1 carry the head term nothing on the site owned, 'bands and musicians for hire in Denver' ('denver bands for hire' and 'denver musicians for hire' autocomplete, 2026-09-23); Search Console had the old page on no buyer query at all. index_label keeps the nav label so the sitemap and the nav agree.",
   "title": "Bands and musicians for hire in Denver",
   "breadcrumb": "Artist Roster",
-  "meta_description": "Bands and musicians for hire in Denver and the mountains: solo guitarists, jazz duos and trios, party bands, a DJ, and named acts you can look up.",
+  "meta_description": "Bands and musicians for hire in Denver and the mountains: guitarists, jazz duos and trios, string quartets, party bands, a DJ, and named acts you can look up.",
   "output": "music/index.html",
   "nav": "music",
   "schema": "roster",

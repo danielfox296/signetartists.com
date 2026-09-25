@@ -69,6 +69,10 @@ GROUPS = {
         "ensembles/singer-guitarist/index.html",
         "ensembles/spanish-guitarist/index.html",
         "ensembles/solo-piano/index.html",
+        # Classical strings joined 2026-09-25: solo violin to quartet, the same
+        # ceremony, cocktail hour, dinner and memorial argument as the Spanish
+        # guitarist page, so it reads against this set.
+        "ensembles/string-quartet/index.html",
     ],
     "artists/named-projects": [
         "artists/firstwater/index.html",

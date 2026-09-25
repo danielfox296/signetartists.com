@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Original artwork for the three party formats (2026-09-23).
+"""Original artwork for the drawn format tiles (2026-09-23, strings added 2026-09-25).
 
     python3 scripts/format_art.py
 
-Writes three files and nothing else:
+Writes these files and nothing else:
 
     img/live-band-karaoke-card.jpg   1600x900, the card, the page hero poster and og_image
     img/soul-band-card.jpg           1600x900, the same three jobs for the soul and R&B band
     img/funk-band-card.jpg           1600x900, the same three jobs for the funk band
+    img/string-quartet-card.jpg      1600x900, the same three jobs for the classical strings format
 
 WHY THIS SCRIPT EXISTS. Until today these three formats shared one interim
 stock still, a snare drum, and the roster printed the same photograph three
@@ -149,6 +150,50 @@ def funk(ttf) -> Image.Image:
     return im
 
 
+# --------------------------------------------------------------------------
+def strings(ttf) -> Image.Image:
+    """A violin drawn flat, for the classical strings format (2026-09-25).
+
+    The offer is solo violin to string quartet and nobody in it is named, so
+    the picture is the instrument itself: body, neck, scroll, two f-holes and
+    four strings, on a mustard field, drawn from the same handful of shapes
+    as the other tiles. Nothing is traced from a photograph."""
+    im = Image.new("RGB", (W, H), MUSTARD)
+    d = ImageDraw.Draw(im)
+
+    # The body: an upper bout, a lower bout, a waist between them, and the two
+    # C-bouts cut back out in the field colour. Centred on x=1230, upright.
+    cx = 1230
+    d.ellipse([cx - 150, 300, cx + 150, 560], fill=INK)          # upper bout
+    d.ellipse([cx - 190, 500, cx + 190, 830], fill=INK)          # lower bout
+    d.rectangle([cx - 120, 420, cx + 120, 620], fill=INK)        # the waist
+    d.ellipse([cx - 245, 455, cx - 95, 600], fill=MUSTARD)       # left C-bout
+    d.ellipse([cx + 95, 455, cx + 245, 600], fill=MUSTARD)       # right C-bout
+    # The neck, the fingerboard and the scroll above the body.
+    d.rounded_rectangle([cx - 26, 90, cx + 26, 380], radius=10, fill=INK)
+    d.ellipse([cx - 44, 40, cx + 44, 128], fill=INK)             # the scroll
+    d.ellipse([cx - 18, 66, cx + 18, 102], fill=MUSTARD)         # its turn
+    # The tailpiece, and the bridge as a cream bar.
+    d.polygon([(cx - 34, 690), (cx + 34, 690), (cx + 22, 810), (cx - 22, 810)], fill=CREAM_DEEP)
+    d.rectangle([cx - 46, 640, cx + 46, 652], fill=CREAM)
+    # Four strings from the scroll to the tailpiece.
+    for i, off in enumerate((-15, -5, 5, 15)):
+        d.line([(cx + off, 118), (cx + off * 1.6, 700)], fill=CREAM, width=3)
+    # The f-holes: two short cream strokes with a dot at each end, mirrored.
+    for sgn in (-1, 1):
+        x = cx + sgn * 82
+        d.line([(x - sgn * 10, 560), (x + sgn * 10, 660)], fill=CREAM, width=8)
+        d.ellipse([x - sgn * 10 - 9, 551, x - sgn * 10 + 9, 569], fill=CREAM)
+        d.ellipse([x + sgn * 10 - 9, 651, x + sgn * 10 + 9, 669], fill=CREAM)
+
+    big = variation(ttf, 132, 800, 112)
+    small = variation(ttf, 30, 600, 100)
+    tracked(d, "CLASSICAL", big, 96, 250, INK, tracking=2)
+    tracked(d, "STRINGS", big, 96, 372, CREAM, tracking=2)
+    tracked(d, "SOLO VIOLIN TO STRING QUARTET", small, 100, 528, INK, tracking=5)
+    return im
+
+
 def main() -> None:
     with tempfile.TemporaryDirectory() as td:
         ttf = archivo(pathlib.Path(td))
@@ -156,6 +201,7 @@ def main() -> None:
         save(karaoke(ttf), IMG / "live-band-karaoke-card.jpg")
         save(soul(ttf), IMG / "soul-band-card.jpg")
         save(funk(ttf), IMG / "funk-band-card.jpg")
+        save(strings(ttf), IMG / "string-quartet-card.jpg")
 
 
 if __name__ == "__main__":

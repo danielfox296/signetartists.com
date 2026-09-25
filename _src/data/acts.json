@@ -133,6 +133,11 @@
     {
       "id": "sound-bath",
       "label": "Sound bath and sound healing"
+    },
+    {
+      "id": "classical",
+      "label": "Classical strings",
+      "_note": "ADDED 2026-09-25 with the classical strings format. The roster carried no classical anything until then. The label is Daniel's own phrase for the offer and the one a buyer picks from a list; the head terms buyers type (string quartet, wedding violinist) are the page's title and URL, not the filter label."
     }
   ],
   "areas": [
@@ -1280,6 +1285,65 @@
       "alt": "A trumpet resting on a table.",
       "video": null,
       "blurb": "The Guaraldi record, the standards that are Christmas songs and the standards that aren't, on guitar, upright bass and drums with brushes at a volume the table talks across. It books for a cocktail hour, for drinks and dinner, or for a whole December evening."
+    },
+    {
+      "id": "classical-strings",
+      "name": "Classical Strings",
+      "presentation": "spec",
+      "_note": "ADDED 2026-09-25 on Daniel's instruction: 'add a new offer to the site. classical strings from solo violin duet, trio or quartet. this is offered as a style, not a named act.' The offer arrived with a violinist's email to hello@ the same afternoon (a resume, a recordings playlist and a wedding and event violin repertoire list), and the song list on the page is that list, published as an example of what the booking offers. Nobody is named anywhere on the page, in alt text or in schema, on his instruction ('do not name the person live'), and the player's own recordings are not embedded because the YouTube player overlay prints the channel name. Search demand checked the same day: 'string quartet denver', 'string quartet wedding denver', 'wedding violinist denver', 'violinist denver', 'string quartet colorado springs' and 'string quartet for corporate events' autocomplete, with a cost family behind them ('string quartet cost per hour', 'average cost string quartet wedding ceremony'), so the page lives at /ensembles/string-quartet/ and its title carries string quartet and wedding violinist. The four configurations are his; the instrumentation at each size is stated as product fact.",
+      "status": "listing",
+      "page": "ensembles/string-quartet/",
+      "style": "Solo violin to string quartet",
+      "spec": "Violin, viola and cello, from one violinist to the full string quartet",
+      "material": "Classical, hymns and popular songs arranged for strings",
+      "bucket_tags": [
+        "cocktail",
+        "budget"
+      ],
+      "_bucket_note": "Cocktail is arrival through dinner, which is where strings play: the ceremony prelude, the cocktail hour, the doors of a gala, a dinner. Budget because the solo violin is a one-musician booking, and that tag is reserved for acts with a solo size.",
+      "config_tags": [
+        "solo",
+        "duo",
+        "trio",
+        "quartet"
+      ],
+      "genre_tags": [
+        "classical"
+      ],
+      "vocals": "instrumental",
+      "from": "solo",
+      "img": "string-quartet-card.jpg",
+      "_img_note": "Original artwork from scripts/format_art.py, in the palette of the other drawn format tiles: a violin drawn flat on a mustard field with the offer set in Archivo. Not a photograph and not stock, since a spec'd format has no face to photograph. Rebuild with `python3 scripts/format_art.py`.",
+      "alt": "A violin drawn flat in ink on a mustard field, with the words classical strings beside it.",
+      "video": null,
+      "card_line": "One violinist or a string quartet for the ceremony, the cocktail hour, a gala or a memorial.",
+      "blurb": "The first notes of Canon in D, and every guest stands up and turns around. That's what most couples are picturing when they ask for strings, and it's the same sound at the entrance of a gala and under a long dinner. Classical strings book as one violinist, a duo, a trio or the full string quartet of two violins, viola and cello, playing Bach for the aisle and Coldplay arranged for strings while the drinks go around.",
+      "setlist": {
+        "_note": "A sample for the data record and llms.txt. The whole list, in six groups, is authored on the page from the repertoire list that arrived with the offer on 2026-09-25.",
+        "note": "The whole list is on the string quartet page. A song that isn't on it can be arranged for the size you book.",
+        "items": [
+          "Canon in D",
+          "Air on the G String",
+          "Jesu, Joy of Man's Desiring",
+          "Ave Maria",
+          "Clair de Lune",
+          "The Swan",
+          "Wedding March",
+          "Amazing Grace",
+          "A Thousand Years",
+          "Can't Help Falling in Love",
+          "Viva La Vida",
+          "Here Comes the Sun",
+          "Married Life",
+          "Moon River"
+        ]
+      },
+      "occasion_tags": [
+        "weddings",
+        "corporate",
+        "private-parties",
+        "daytime"
+      ]
     }
   ],
   "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is unpublished availability depth, which is what the workbook always said he was. Since 2026-09-06 he sits behind Tony Medina rather than behind the retired Blues Rock format.",

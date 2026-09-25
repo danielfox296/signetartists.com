@@ -144,6 +144,12 @@ def check_file(path: pathlib.Path) -> list:
     if path.suffix == ".html":
         text = COMMENT.sub("", text)
     hits = []
+    # Song titles are proper nouns, not copy (2026-09-25: the classical strings
+    # book carries "The Throne Room (Star Wars)", and the room/rooms check is
+    # about the writer's noun for a venue, not a film cue's name). Titles set
+    # in the setlist's own span are skipped; the artist span and every
+    # sentence around a list are still read.
+    text = re.sub(r'<span class="song-title">.*?</span>', "", text)
     for i, line in enumerate(text.splitlines(), 1):
         for label, pat, fix in CHECKS:
             if pat.search(line):
