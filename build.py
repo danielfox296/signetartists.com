@@ -838,6 +838,28 @@ def roster_named(nav_prefix: str = "") -> str:
 SEASON = json.loads(read(DATA / "season.json"))
 ACT_BY_ID = {a["id"]: a for a in ACTS}
 
+# The footage registry (2026-09-25): one entry per clip the site plays, each
+# building a watch page at /video/<slug>/. See the _note in footage.json and
+# the watch-pages section below for why these pages exist.
+FOOTAGE = json.loads((DATA / "footage.json").read_text(encoding="utf-8"))["videos"]
+FOOTAGE_BY_KEY = {(v.get("id") or v["file"]): v for v in FOOTAGE}
+WATCH_BASE = "video"
+
+
+def footage_key(src: str) -> str:
+    """The registry key for a video source: the YouTube id of an embed URL, or
+    the site-relative path of a file (any ../ prefix stripped)."""
+    m = re.search(r"embed/([A-Za-z0-9_-]{11})", src)
+    return m.group(1) if m else re.sub(r"^(?:\.\./)+", "", src)
+
+
+def watch_output(entry: dict) -> str:
+    return f"{WATCH_BASE}/{entry['slug']}/index.html"
+
+
+def watch_url(entry: dict) -> str:
+    return canonical_for(watch_output(entry))
+
 
 def season_dates() -> str:
     """The season's dates with their published pricing tags. Calendar and
@@ -1513,6 +1535,10 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
             video_node["embedUrl"] = a["video"]
         else:
             video_node["contentUrl"] = f"{SITE_URL}/{a['video']}"
+        # The clip's own page, so the markup here and the watch page describe
+        # one video rather than two.
+        if footage_key(a["video"]) in FOOTAGE_BY_KEY:
+            video_node["url"] = watch_url(FOOTAGE_BY_KEY[footage_key(a["video"])])
         graph.append(video_node)
     # Extra embedded clips (schema.json "videos"): the Signet channel's copies
     # of the artists' footage that a page plays in a "Hear it" section. Each
@@ -1538,6 +1564,8 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
             "contentUrl": f"https://www.youtube.com/watch?v={vid_id}",
             "publisher": {"@id": f"{SITE_URL}/#business"},
         }
+        if vid_id in FOOTAGE_BY_KEY:
+            vnode["url"] = watch_url(FOOTAGE_BY_KEY[vid_id])
         if v.get("clips"):
             vnode["hasPart"] = [
                 {
@@ -1621,10 +1649,11 @@ BREADCRUMB_PARENTS = {
     "ensembles/": "music/",
     "artists/": "music/",
     "guides/": "pricing/",
+    "video/": "music/",  # a clip belongs to an act, and the acts live on the roster
 }
 
 # The heading over a sibling list names the page the set belongs to.
-SIBLING_SKIP = ("blog/",)  # blog posts already carry "Keep reading"
+SIBLING_SKIP = ("blog/", "video/")  # blog posts carry "Keep reading"; watch pages list their act's other clips
 
 _PAGE_LABELS: dict[str, str] = {}
 
@@ -2214,6 +2243,230 @@ def build_act_page(act: dict) -> dict:
     return {"output": output, "cfg": cfg, "src_dir": "_src/data/acts.json"}
 
 
+# ------------------------------------------------------------ watch pages
+# One page per clip, at /video/<slug>/, generated from _src/data/footage.json.
+# Search Console reported every video on the site under one reason on
+# 2026-09-25, "Video isn't on a watch page", with none indexed: the act and
+# occasion pages play their clips as one section among several, and Google
+# only indexes a video from a page whose main content is that video. These
+# are those pages: the clip at the top, its name as the title, its
+# description, the act it books, and the act's other clips. The occasion
+# pages keep their embeds, and each VideoObject they carry now names its
+# watch page as `url`. video-sitemap.xml lists the lot for Google, and the
+# build stops if an indexed page plays a clip the registry does not know.
+
+
+def watch_thumbnail(entry: dict) -> str:
+    if entry.get("poster"):
+        return f"{SITE_URL}/{entry['poster']}"
+    return f"https://i.ytimg.com/vi/{entry['id']}/hqdefault.jpg"
+
+
+def watch_player(entry: dict, nav_prefix: str) -> str:
+    """The clip, loaded eagerly: on a watch page the video is the main
+    content, and a lazy iframe is one more reason for a crawler to decide it
+    is not."""
+    if entry.get("id"):
+        return (
+            '<div class="act-video watch-video"><iframe src="'
+            f'https://www.youtube-nocookie.com/embed/{esc(entry["id"])}?rel=0" '
+            f'title="{esc(entry["name"])}" '
+            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+            'picture-in-picture" allowfullscreen></iframe></div>'
+        )
+    poster = (
+        f' poster="{nav_prefix}{esc(entry["poster"])}"' if entry.get("poster") else ""
+    )
+    return (
+        f'<div class="act-video watch-video"><video src="{nav_prefix}{esc(entry["file"])}"'
+        f'{poster} title="{esc(entry["name"])}" controls preload="metadata" '
+        "playsinline></video></div>"
+    )
+
+
+def watch_schema(entry: dict, canonical: str) -> dict:
+    node = {
+        "@type": "VideoObject",
+        "@id": f"{canonical}#video",
+        "name": entry["name"],
+        "description": entry["description"],
+        "thumbnailUrl": watch_thumbnail(entry),
+        "uploadDate": entry["uploadDate"],
+        "duration": entry["duration"],
+        "url": canonical,
+        "publisher": {"@id": f"{SITE_URL}/#business"},
+    }
+    if entry.get("id"):
+        node["embedUrl"] = f"https://www.youtube-nocookie.com/embed/{entry['id']}"
+        node["contentUrl"] = f"https://www.youtube.com/watch?v={entry['id']}"
+    else:
+        node["contentUrl"] = f"{SITE_URL}/{entry['file']}"
+    graph = [local_business_node(), node]
+    ent = act_entity_node(ACT_BY_ID[entry["act"]])
+    if ent:
+        graph.append(ent)
+        node["about"] = {"@id": ent["@id"]}
+    graph.append({
+        "@type": "WebPage", "@id": canonical, "url": canonical,
+        "name": entry["name"],
+        "isPartOf": {"@type": "WebSite", "url": SITE_URL, "name": BRAND["name"]},
+        "about": {"@id": f"{SITE_URL}/#business"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": watch_thumbnail(entry)},
+        "mainEntity": {"@id": node["@id"]},
+        "video": {"@id": node["@id"]},
+    })
+    return {"@context": "https://schema.org", "@graph": graph}
+
+
+def build_watch_page(entry: dict) -> dict:
+    begin_page()
+    output = watch_output(entry)
+    nav_prefix = "../" * output.count("/")
+    act = ACT_BY_ID[entry["act"]]
+    act_href = act_url(act, nav_prefix)
+    others = [v for v in FOOTAGE if v["act"] == entry["act"] and v is not entry]
+    more = ""
+    if others:
+        rows = "\n".join(
+            f'        <li><a href="{nav_prefix}{WATCH_BASE}/{esc(v["slug"])}/">'
+            f'{esc(v["name"])}</a></li>'
+            for v in others
+        )
+        more = (
+            '\n<section class="section section--ruled siblings">\n'
+            '  <div class="wrap">\n'
+            f'    <p class="eyebrow">More footage of <a href="{act_href}">'
+            f'{esc(act["name"])}</a></p>\n'
+            '    <ul class="sibling-list">\n' + rows + "\n"
+            "    </ul>\n"
+            "  </div>\n"
+            "</section>"
+        )
+    content = (
+        '<section class="section section--top watch"><div class="wrap">'
+        '<div class="heading">'
+        f'<p class="eyebrow eyebrow--slab">{esc(act["style"])}</p>'
+        f'<h1 class="h1 display">{esc(entry["name"])}</h1>'
+        "</div>"
+        f"{watch_player(entry, nav_prefix)}"
+        f'<p class="lede">{esc(entry["description"])}</p>'
+        '<div class="btn-row">'
+        f'<a class="btn" href="{nav_prefix}contact/?act={esc(act["id"])}">Check a date</a>'
+        f'<a class="btn btn--outline" href="{act_href}">See {esc(act["name"])}</a>'
+        "</div>"
+        "</div></section>"
+        + more
+    )
+    canonical = canonical_for(output)
+    thumb = watch_thumbnail(entry)
+    if entry.get("id"):
+        head_extra = (
+            '<meta property="og:video" content="https://www.youtube.com/embed/'
+            f'{esc(entry["id"])}">'
+        )
+    else:
+        head_extra = (
+            f'<meta property="og:video" content="{SITE_URL}/{esc(entry["file"])}">'
+            '<meta property="og:video:type" content="video/mp4">'
+        )
+    cfg = {
+        "title": entry["name"],
+        "index_label": entry["name"],
+        "meta_description": entry["description"],
+        "output": output,
+        "nav": ACTS_BASE,
+        "og_image": thumb,
+        "watch": True,
+    }
+    render_page(
+        output=output,
+        content=content,
+        title=entry["name"],
+        meta_description=entry["description"],
+        og_type="video.other",
+        og_image=thumb,
+        schema_html=schema_tag(watch_schema(entry, canonical)),
+        head_extra=head_extra,
+        nav_active=ACTS_BASE,
+        nav_prefix=nav_prefix,
+        crumb_label=entry["name"],
+    )
+    return {"output": output, "cfg": cfg, "src_dir": "_src/data/footage.json"}
+
+
+def iso_duration_seconds(d: str) -> int:
+    m = re.fullmatch(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", d)
+    if not m:
+        raise SystemExit(f"footage.json: duration {d!r} is not ISO 8601 (PT1M5S)")
+    h, mi, s = (int(x or 0) for x in m.groups())
+    return h * 3600 + mi * 60 + s
+
+
+def write_video_sitemap() -> None:
+    """video-sitemap.xml: every watch page with its clip, in the video sitemap
+    extension Google reads. robots.txt names it beside sitemap.xml, and the
+    watch pages are in sitemap.xml too, which is what the IndexNow ping
+    diffs."""
+    urls = []
+    for v in FOOTAGE:
+        if v.get("id"):
+            src = (
+                "      <video:player_loc>"
+                f"https://www.youtube-nocookie.com/embed/{v['id']}</video:player_loc>"
+            )
+        else:
+            src = (
+                "      <video:content_loc>"
+                f"{html.escape(SITE_URL + '/' + v['file'])}</video:content_loc>"
+            )
+        urls.append("\n".join([
+            "  <url>",
+            f"    <loc>{html.escape(watch_url(v))}</loc>",
+            "    <video:video>",
+            f"      <video:thumbnail_loc>{html.escape(watch_thumbnail(v))}</video:thumbnail_loc>",
+            f"      <video:title>{html.escape(v['name'])}</video:title>",
+            f"      <video:description>{html.escape(v['description'])}</video:description>",
+            src,
+            f"      <video:duration>{iso_duration_seconds(v['duration'])}</video:duration>",
+            f"      <video:publication_date>{v['uploadDate']}</video:publication_date>",
+            "    </video:video>",
+            "  </url>",
+        ]))
+    doc = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+        '        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n'
+        + "\n".join(urls)
+        + "\n</urlset>\n"
+    )
+    (ROOT / "video-sitemap.xml").write_text(doc, encoding="utf-8")
+
+
+def check_footage_coverage(pages: list[dict], posts: list[dict] = None) -> None:
+    """Every clip an indexed page plays has an entry in footage.json, or the
+    build stops. A clip without a watch page is a video Google will never
+    index, which is the state the whole site was in until 2026-09-25."""
+    outputs = [p["output"] for p in pages if not p["cfg"].get("robots", "").startswith("noindex")]
+    outputs += [
+        f"blog/{p['slug']}/index.html" for p in posts or []
+        if not p.get("robots", "").startswith("noindex")
+    ]
+    missing = []
+    for output in outputs:
+        doc = (ROOT / output).read_text(encoding="utf-8")
+        for m in re.finditer(r'<(?:iframe|video)\s[^>]*?src="([^"]+)"', doc):
+            src = m.group(1)
+            if "youtube" not in src and not src.endswith(".mp4"):
+                continue
+            if footage_key(src) not in FOOTAGE_BY_KEY:
+                missing.append(f"{output}: {footage_key(src)}")
+    if missing:
+        raise SystemExit(
+            "Clips with no watch page (add each to _src/data/footage.json):\n"
+            + "\n".join(f"  - {m}" for m in sorted(set(missing)))
+        )
+
+
 # ------------------------------------------------------------------- blog
 # The shared blog kit. Authoring format: _src/pages/blog-<slug>/content.yaml
 # with frontmatter plus a `sections` list of typed blocks (see
@@ -2525,6 +2778,7 @@ SITE_INDEX_GROUPS = [
     ("planners/", "For planners"),
     ("preferred-vendors/", "Preferred vendors"),
     ("guides/", "Guides"),
+    ("video/", "Footage"),
 ]
 
 
@@ -2677,13 +2931,20 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         "",
     ]
     for page in pages:
-        if page["cfg"].get("robots", "").startswith("noindex"):
+        if page["cfg"].get("robots", "").startswith("noindex") or page["cfg"].get("watch"):
             continue
         cfg = page["cfg"]
         lines.append(
             f"- [{cfg['title']}]({canonical_for(page['output'])}): "
             f"{cfg.get('meta_description', '')}"
         )
+    # The footage, one line per clip: the watch pages are where a video can
+    # be cited from, and fifty of them as page rows above would bury the site.
+    lines += ["", "## Footage", "",
+              "Each clip the roster plays has its own page, listed in "
+              f"{SITE_URL}/video-sitemap.xml.", ""]
+    for v in FOOTAGE:
+        lines.append(f"- [{v['name']}]({watch_url(v)})")
     # Blog section only when posts exist — no empty heading.
     published = [p for p in posts or [] if not p.get("robots", "").startswith("noindex")]
     if published:
@@ -2768,6 +3029,13 @@ def main() -> None:
         built.append(result)
         print(f"  built {result['output']}")
 
+    # The watch pages, one per clip in the registry. They join `built` for
+    # the same reason the act pages do.
+    for entry in FOOTAGE:
+        result = build_watch_page(entry)
+        built.append(result)
+        print(f"  built {result['output']}")
+
     if index_dir:
         result = build_page(
             index_dir,
@@ -2786,8 +3054,10 @@ def main() -> None:
         print(f"  skipped {post['dir_name']} (draft: true)")
 
     write_sitemap(built, published)
+    write_video_sitemap()
     write_llms(built, published)
     write_rss(published)
+    check_footage_coverage(built, published)
 
     unresolved = [k for k, v in BRAND.items() if isinstance(v, str) and PLACEHOLDER.search(v)]
     print(

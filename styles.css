@@ -1531,6 +1531,24 @@ img {
   padding-bottom: 1px;
 }
 
+/* ---------------------------------------------------------- watch pages */
+/* One clip per page (2026-09-25). The player is the main content, so it sits
+   directly under the heading at the full width of the wrap, and the
+   description reads under it at the act pages' measure. */
+
+.watch .heading {
+  max-width: 44rem;
+}
+
+.watch .watch-video {
+  margin-top: 2rem;
+}
+
+.watch .lede {
+  margin-top: 2rem;
+  max-width: 44rem;
+}
+
 /* ------------------------------------------------------------ skip link */
 
 /* WCAG 2.4.1. Off-screen until focused, then it lands on the ground colour so
