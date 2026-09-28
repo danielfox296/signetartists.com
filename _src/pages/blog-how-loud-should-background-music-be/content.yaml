@@ -1,0 +1,178 @@
+# ---------------------------------------------------------------------------
+# Weekly post, drafted 2026-09-28. Evidence: the buyer-language harvest
+# (research/content-plan-2026-09/03-reddit-buyer-language.md) found "it will
+# get in the way of talking" in 8 threads, "too loud" in 6 and "instrumental
+# or vocals" in 11; the autocomplete harvest (01-autocomplete-demand.md,
+# family 36) carries the question forms "how loud should background music
+# be" and "how many decibels should background music be". The site answers
+# the worry act by act ("How loud is it?" in each act FAQ, the cocktail-hour
+# FAQ, the corporate hub FAQ, the technical page's volume list); no page
+# answers the general question. Corporate holiday threads peak October to
+# November, so the holiday party is the worked example.
+# THE ONE READER: whoever is planning a party or a company evening and wants
+# music people can still talk over. A post that exists to explain the level,
+# so the dBA figures ride beside the human description, never alone.
+# Where each fact comes from on the site: the four levels and the venue
+# limit instruction (planners-technical, 05-volume); a band playing dinner
+# at conversation level (blog office-holiday-party-ideas-denver, corporate
+# FAQ); adjusting as a space fills (weddings-cocktail-hour FAQ); instrumental
+# against a voice (same FAQ); a singer with a guitar at conversation level
+# (ensembles-singer-guitarist FAQ); duo and trio headcounts and brushes (blog
+# what-is-a-jazz-trio, ensembles-jazz-duo-trio); nothing plugged in for a
+# small space (beatles sing-along, community programs, string quartet and
+# spanish guitarist FAQs); the pianist and the ballroom (solo piano FAQ); a
+# guitar outdoors and the missing walls (weddings-cocktail-hour 02b, blog
+# outdoor-reception); the Colorado cap (blog outdoor-reception); instrumental
+# tags and the Christmas trio's book (acts.json); the credits (site.json).
+# Adversarial passes 1 and 2 applied 2026-09-28; two passes is the maximum.
+# ---------------------------------------------------------------------------
+title: "How loud should background music be at a party?"
+seo_title: "How loud should background music be at a party or company event?"
+slug: "how-loud-should-background-music-be"
+eyebrow: "PLANNING"
+dek: "The level people can talk over, what it sounds like in plain terms and in decibels, how the size of the act and the space change it, and whether a singer works over dinner."
+date: "2026-09-28"
+author:
+  name: "Signet Artists"
+meta_description: "How loud background music should be at a party or company event: about as loud as the conversation around it, which is 65 to 72 dBA at the nearest table, and how live musicians keep it there."
+llms_description: "How loud background music should be at a party, dinner or company holiday party, from an agency that books live musicians in Colorado. The answer is about as loud as the conversation around it, 65 to 72 dBA at the table nearest the musicians, against 88 to 95 dBA on a dance floor and silence for speeches. Covers how musicians set the level by ear as a party fills and empties, sizing the act to the headcount, instrumental against vocals under conversation, playing with no amplification in a small space and with sound support in a ballroom or outdoors, and what to do with a venue's volume limit or Colorado's residential noise cap."
+
+hero:
+  src: "img/ballroom.jpg"
+  alt: "A hotel banquet hall set for dinner before guests arrive."
+
+video:
+  id: "O2A0PKE7CXE"
+  title: "A jazz duo playing Autumn Leaves on guitar and upright bass at cocktail-hour volume"
+
+sections:
+  - type: key_takeaways
+    items:
+      - "Background music at a party sits under the talk, so everyone talks in their normal voice. For a planner, that's 65 to 72 dBA at the table nearest the musicians."
+      - "A live act follows the crowd's own volume through the evening, one song at a time."
+      - "Instrumental music is the easier kind to talk over, and a singer with a guitar plays at the same conversation level."
+
+  - type: prose
+    body: |
+      Think of the best dinner party you've been to. You and the person across
+      the table talked all evening without leaning in, and every so often one
+      of you stopped mid-sentence because a song you both knew had come on.
+      That's the level background music should sit at, and it's where our
+      musicians keep cocktails and dinner.
+
+  - type: subhead
+    text: "How many decibels should background music be?"
+
+  - type: prose
+    body: |
+      About as loud as the conversation around it. Two people standing next
+      to each other talk in their normal voices, and a guest at the far end of
+      the party can still pick out the tune. If the venue or the run of show
+      needs a figure, write down 65 to 72 dBA, measured at the table closest
+      to the musicians.
+
+      An evening with a program or a dance floor in it has more than one
+      level, and a planner can put all of them in writing:
+
+  - type: comparison_table
+    title: "The levels of an evening"
+    columns: ["", "What guests hear", "Measured"]
+    rows:
+      - ["Cocktails and dinner", "Music under the talk; the nearest table talks in normal voices", "65 to 72 dBA at the nearest table"]
+      - ["Speeches, awards, anyone else on a microphone", "The music stops", "Silent"]
+      - ["Dancing", "Loud enough to dance to, too loud to hold a conversation on the floor", "88 to 95 dBA on the floor"]
+      - ["The last hour of dancing", "The loudest point of the night", "Peaks of 100 dBA"]
+
+  - type: video
+
+  - type: subhead
+    text: "Can guests talk over live music?"
+
+  - type: prose
+    body: |
+      Yes. Musicians hear the party they're playing for. A crowd gets louder
+      as more people arrive and softer when half of them step out onto a
+      terrace, and a duo follows that change with the next song, so the music
+      stays under the talk from the first guest to the last.
+
+      The other half of it is matching the size of the act to the headcount.
+      A duo of guitar and upright bass is the size for a dinner of twenty to
+      sixty. Past sixty guests, a trio adds a drummer playing with brushes, which
+      gives a bigger crowd a steady pulse at the same dinner level.
+
+  - type: subhead
+    text: "Instrumental or vocals when people are talking?"
+
+  - type: prose
+    body: |
+      Instrumental is the easier one to talk over, because the only words in
+      the air are the guests' own. Instrumental acts on the roster include the
+      [jazz duo](https://signetartists.com/ensembles/jazz-duo-trio/), the
+      [Spanish guitarist](https://signetartists.com/ensembles/spanish-guitarist/)
+      and [classical strings](https://signetartists.com/ensembles/string-quartet/),
+      each of them at home under an evening that's mostly conversation.
+
+      A singer works too. A
+      [singer and guitarist](https://signetartists.com/ensembles/singer-guitarist/)
+      sets the voice at conversation level, so the words are there for anyone
+      who wants to follow them and the next table talks at its own volume.
+
+  - type: subhead
+    text: "How the space changes the level"
+
+  - type: prose
+    body: |
+      In a small space, a guitarist, a duo or a string quartet plays with
+      nothing plugged in at all, and a pianist plays the stage piano barely
+      amplified. A ballroom is the opposite case. The musicians bring sound
+      support so the back tables hear the tune, and the tables nearest the
+      musicians get no louder for it.
+
+      Outdoors, a guitar is close and warm for about thirty feet and fades
+      after that, because there are no walls to send the sound back toward
+      the guests. An outdoor party gets a small sound system for that reason,
+      turned up only as far as it takes to reach the edge of the lawn at
+      conversation level.
+
+  - type: subhead
+    text: "What if the venue has a volume limit?"
+
+  - type: prose
+    body: |
+      Give us the venue's limit when you book. With the figure in hand before
+      the night, the musicians choose the instrumentation and the arrangements
+      that fit under it, and the evening still sounds the way it was planned.
+
+      In a residential zone,
+      [Colorado caps noise](https://signetartists.com/blog/outdoor-reception/)
+      at 50 dB(A) after 7pm, measured 25 feet or more beyond the property
+      line.
+
+  - type: subhead
+    text: "Music for a company holiday party people can talk over"
+
+  - type: prose
+    body: |
+      A company holiday party puts people from different departments at the
+      same tables, so most of the evening is conversation. The
+      [Christmas jazz trio](https://signetartists.com/ensembles/christmas-jazz-trio/)
+      plays that kind of party: the Vince Guaraldi record and the season's
+      standards on guitar, upright bass and brushed drums, at conversation
+      level. A company that wants a dance floor as well books a band, and a
+      band plays dinner at the same level the trio does.
+
+      Our artists have played for Amazon, NBCUniversal, Charles Schwab,
+      Kroger, the Denver Art Museum, Sheraton, Hyatt, the Washington
+      Nationals, Casa Bonita and Monarch Casino.
+
+  - type: cta
+    headline: "Tell us how many people will be talking, and we'll size the music to them."
+    body: "Send the date and the venue, and we'll come back with the act and the size that suit the evening."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "playing-around-a-program"
+      - slug: "what-is-a-jazz-trio"
+      - slug: "office-holiday-party-ideas-denver"
