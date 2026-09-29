@@ -17,6 +17,7 @@ Three checks, all on the BUILT html, because that is what a person sees:
   G  a breadcrumb trail that repeats itself or points at a page not in the build
   H  an anchor anywhere in the build with nothing to click and nothing to read
   I  a TODO marker in anything the build published
+  J  a placeholder in anything the build published
 
 /sitemap/ and the breadcrumbs were exempt from C until 2026-09-22, on the
 argument that they use different label lengths on purpose — /sitemap/ wants
@@ -103,6 +104,15 @@ def canon(href: str) -> str:
     if href.startswith(("mailto:", "tel:", "http")):
         return href
     return "/" + re.sub(r"^(\.\./)+|^/", "", href)
+
+
+# Check J. Markup and words that only ever mean "this is not finished".
+PLACEHOLDER_MARKERS = [
+    ('data-tbd', "an element flagged data-tbd"),
+    ("act-video--empty", "an empty video box"),
+    ("Footage slot", 'the words "Footage slot"'),
+    ("is not published yet", 'the words "is not published yet"'),
+]
 
 
 def main() -> int:
@@ -283,6 +293,16 @@ def main() -> int:
         # "TODO: Your Bird Can Sing: <what it is> in Denver".
         if "TODO" in html:
             errors.append(f"{page_url}: published with a TODO marker in it")
+
+        # J — a placeholder that reached the output. Ten act pages carried an
+        # empty video box labelled "Footage slot" for weeks, on the pages
+        # search and the answer engines were sending buyers to, and Daniel
+        # did not know (2026-09-29: "absolutely hide any placeholders").
+        # Nothing published may say that something is missing: an open item
+        # is tracked in the data or in Asana, never on the page.
+        for marker, what in PLACEHOLDER_MARKERS:
+            if marker in html:
+                errors.append(f"{page_url}: published with a placeholder in it ({what})")
 
     for url, labs in sorted(crumb_labels.items()):
         # "Home" is the trail's word for the root everywhere on the web, and

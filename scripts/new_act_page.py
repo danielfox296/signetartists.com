@@ -65,11 +65,11 @@ def video_block(act: dict, kind: str) -> str:
             'controls preload="metadata" playsinline></video>\n'
             '    </div>'
         )
-    who = act["name"] if kind == "artists" else f'the {act["name"].lower()}'
+    # No footage yet: the slot carries the act's still. A placeholder box
+    # never publishes (Daniel, 2026-09-29); nav_lint check J enforces it.
     return (
-        f'    <div class="act-video act-video--empty" data-tbd="true" role="img" aria-label="Video of {esc(who)} is not published yet.">\n'
-        f'      <img class="act-video-poster" src="{{{{nav_prefix}}}}img/{esc(act["img"])}" alt="" width="1600" height="900" decoding="async">\n'
-        '      <p class="act-video-note">Footage slot</p>\n'
+        '    <div class="act-video">\n'
+        f'      <img class="act-video-photo" src="{{{{nav_prefix}}}}img/{esc(act["img"])}" alt="{esc(act.get("alt", ""))}" width="1600" height="900" decoding="async">\n'
         '    </div>'
     )
 

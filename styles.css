@@ -3029,11 +3029,9 @@ main:focus {
   margin-top: 1.5rem;
 }
 
-/* The footage slot. It renders whether or not a video exists, because the
-   gap is real and a page that silently omits the slot hides it. Empty, it
-   carries the placeholder still at low contrast under a brass edge, the same
-   convention the technical page's provisional tables use: a brass edge means
-   this is ours and it is not finished. */
+/* The media slot. It carries the act's footage, or the act's still until
+   footage exists. It never renders as a labelled placeholder: nothing on a
+   published page says that something is missing (2026-09-29). */
 .act-video {
   margin-top: 2.5rem;
   position: relative;
@@ -3055,10 +3053,6 @@ main:focus {
   height: 100%;
   border: 0;
   object-fit: cover;
-}
-
-.act-video--empty {
-  border-left: 2px solid var(--brass);
 }
 
 .act-video-photo {
@@ -3114,23 +3108,6 @@ main:focus {
 
 .media-grid--single img {
   aspect-ratio: auto;
-}
-
-.act-video-poster {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.28;
-}
-
-.act-video-note {
-  position: absolute;
-  left: 1.25rem;
-  bottom: 1.25rem;
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: var(--track-caps);
-  color: var(--brass);
 }
 
 /* The "where it lands" column is prose inside a numeric table, so it is the

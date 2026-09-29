@@ -2050,9 +2050,11 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
 
 
 def act_hero(act: dict) -> str:
-    """Hero with the video slot. `video` is null until footage exists, and the
-    slot renders as a marked placeholder rather than being omitted, so the
-    gap is visible on the page instead of only in a backlog."""
+    """Hero with the media slot. `video` is null until footage exists, and
+    until then the slot carries the act's own still at full strength. No
+    placeholder publishes (Daniel, 2026-09-29): a buyer never sees a box
+    that says something is missing. The gap is tracked in acts.json
+    (`video: null`), never on the page."""
     if act.get("video"):
         # Same contract as act_card_media: http(s) is an embed, anything
         # else is a site-relative file. Generated act pages sit two levels
@@ -2076,11 +2078,10 @@ def act_hero(act: dict) -> str:
             )
     else:
         media = (
-            '<div class="act-video act-video--empty" data-tbd="true" role="img" '
-            f'aria-label="Video of {esc(act["name"])} is not published yet.">'
-            '<img class="act-video-poster" src="../../img/' + esc(act["img"]) + '" '
-            f'alt="" width="1600" height="900" decoding="async">'
-            '<p class="act-video-note">Footage slot</p></div>'
+            '<div class="act-video">'
+            '<img class="act-video-photo" src="../../img/' + esc(act["img"]) + '" '
+            f'alt="{esc(act.get("alt", ""))}" decoding="async">'
+            '</div>'
         )
     return (
         '<section class="section section--top act-hero"><div class="wrap">'
