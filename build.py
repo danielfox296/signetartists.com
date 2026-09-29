@@ -1620,14 +1620,42 @@ def page_schema(page_dir: pathlib.Path, cfg: dict) -> tuple:
 
 
 def build_ga() -> str:
+    """The Google tag, for visitors only (2026-09-29).
+
+    Until this date the tag loaded everywhere the built pages were opened, so
+    a local preview, an agent checking the live site and an automated browser
+    all counted as visitors, and "direct" was more than half of all sessions
+    with most of it our own. The tag now loads only when all of these hold:
+
+      - the page is on the live hostname (a preview on localhost loads nothing)
+      - the browser has not been marked as ours: opening any page once with
+        ?internal=1 marks that browser for good, ?internal=0 unmarks it
+      - the browser is not an automated one (navigator.webdriver)
+
+    analytics.js already no-ops when gtag is absent, so nothing else changes.
+    The GA4 property also drops this Mac's network by IP address (Admin, Data
+    filters, Internal Traffic); that rule goes stale if the address changes,
+    this one does not.
+    """
     if not GA_MEASUREMENT_ID:
         return ""
     gid = GA_MEASUREMENT_ID
     return (
-        f'<script defer src="https://www.googletagmanager.com/gtag/js?id={gid}"></script>'
-        "<script>window.dataLayer=window.dataLayer||[];"
-        "function gtag(){dataLayer.push(arguments);}gtag('js',new Date());"
-        f"gtag('config','{gid}');</script>"
+        "<script>(function(){"
+        "var h=location.hostname;"
+        "if(h!=='signetartists.com'&&h!=='www.signetartists.com')return;"
+        "try{var q=location.search;"
+        "if(/[?&]internal=1(&|$)/.test(q))localStorage.setItem('signet_internal','1');"
+        "if(/[?&]internal=0(&|$)/.test(q))localStorage.removeItem('signet_internal');"
+        "if(localStorage.getItem('signet_internal')==='1')return;}catch(e){}"
+        "if(navigator.webdriver)return;"
+        "var s=document.createElement('script');s.async=true;"
+        f"s.src='https://www.googletagmanager.com/gtag/js?id={gid}';"
+        "document.head.appendChild(s);"
+        "window.dataLayer=window.dataLayer||[];"
+        "window.gtag=function(){dataLayer.push(arguments);};"
+        f"gtag('js',new Date());gtag('config','{gid}');"
+        "})();</script>"
     )
 
 
