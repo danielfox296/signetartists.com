@@ -1181,6 +1181,16 @@ img {
   color: var(--ink);
 }
 
+/* The market table's attribution (2026-09-30). It lives inside the table so a
+   row copied out by a search engine keeps "not Signet prices" with it. */
+.rate-caption {
+  caption-side: top;
+  padding: 0 0 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
 /* The label column sets its own width off its longest entry, and with nowrap
    that is "3. Your contact reaches you" — 200px of a 327px phone, which pushed
    "When" back off the screen the column reorder had just rescued. Letting only

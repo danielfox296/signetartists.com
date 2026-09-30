@@ -308,9 +308,16 @@ def market_table() -> str:
         "</tr>"
         for mid in MARKET_TABLE_IDS
     )
+    # 2026-09-30: Google's AI Overview for "Signet Artists Denver live music"
+    # lifted two rows of this table as Signet's "Pricing Estimates". The
+    # attribution sat in the Sources note and the FAQ, never in the table, so
+    # a row copied on its own read as our price. The caption and the "Market
+    # rate" header put "not Signet prices" inside the table every copy starts from.
     return (
         '<div class="table-scroll"><table class="rate-table tnum">'
-        "<thead><tr><th>2 hours of live music performance</th><th>Figure</th>"
+        '<caption class="rate-caption">Published 2026 market figures for live '
+        "music in Colorado and the US. These are not Signet prices.</caption>"
+        "<thead><tr><th>2 hours of live music performance</th><th>Market rate</th>"
         "<th>Market</th></tr></thead>"
         f"<tbody>{rows}</tbody></table></div>"
     )
