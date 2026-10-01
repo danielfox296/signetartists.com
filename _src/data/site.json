@@ -135,19 +135,19 @@
       "occasion": "The office holiday party",
       "act": "tejas-singh",
       "config": "quartet",
-      "why": "Two hundred staff in a hotel ballroom, with a short program before the dancing. The band plays dinner at conversation volume and gets loud on cue."
+      "why": "Whether Tejas is performing solo, duo or has a full band for a bigger occasion, you're going to get sophisticated covers of some of your guests favorite tunes. . . and more than one aside in the conversation saying \"These guys are really good\""
     },
     {
       "occasion": "The client dinner",
       "act": "jazz-duo",
       "config": "duo",
-      "why": "Twenty at one table or eighty at ten. The conversation is the event, so the music sits under it for the whole night and nobody has to raise their voice to be heard across the table."
+      "why": "This is the act to book when you want sophistication without drawing an insane amount of attention. We know your conversations are the main event, so the music sits under it for the whole night and nobody has to raise their voice to be heard across the table."
     },
     {
-      "occasion": "The member or association event",
+      "occasion": "themed association event",
       "act": "dirty-flamenco",
       "config": "trio",
-      "why": "An event that has remarks in it and wants one thing guests describe afterward. The trio plays a set piece that guests watch, placed where the program leaves space for it."
+      "why": "Bring a little latin flavor to an evening. Flamenco / Spanish guitar with a soulful, danceable vibe in the trio configuration, or a mysterious European guitar tradition punctuating the evening as a soloist. "
     }
   ],
   "_credits_note": "ADDED 2026-09-03, from Daniel's list of the companies, institutions and venues the roster's artists have played for. Rendered by build.py credits() as the one-colour logo strip on the home page and /corporate/, and as a Credits line in llms.txt. Each logo ships as img/logos/<id>.svg, normalised to currentColor (provenance in img/logos/SOURCES.md); `h` scales a mark against the strip's base height so a stacked crest and a wide wordmark carry the same visual weight. The ten with logos: national employers, the museum, the two hotel flags, a major-league club, and the two Colorado names Daniel added the same day, Casa Bonita and Monarch (Daniel's call 2026-09-03, which supersedes the acts.json footage note that left the casino unnamed). The club stages and the rest are the `also` sentence, text only and home page only. Held back: the Hummingbird bar. Label 'Trusted and booked by' is Daniel's wording, 2026-09-03.",
