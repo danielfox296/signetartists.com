@@ -48,6 +48,21 @@ def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
+def inline_stripped_text(path: pathlib.Path) -> str:
+    """The page's text with inline formatting tags removed and nothing put in
+    their place. visible_text() swaps every tag for a space, which is right
+    for block tags and wrong for the bold, italic and link formatting
+    CopyDesk has written since v2.0 (2026-10-01): "<strong>ceremony
+    musician</strong>, or" came out as "ceremony musician , or" and Daniel's
+    own sentence read as missing the day he bolded two words in it. Checked
+    alongside visible_text(), never instead of it."""
+    import re
+    text = path.read_text(encoding="utf-8")
+    text = re.sub(r"<script.*?</script>", " ", text, flags=re.DOTALL)
+    text = re.sub(r"</?(?:strong|em|b|i|u|a|span)\b[^>]*>", "", text)
+    return re.sub(r"<[^>]+>", " ", text)
+
+
 # Baseline exemption, frozen 2026-09-24 (the day this gate was built, before
 # batch 1 of the copy pass touched anything). The ledger is a literal record
 # of every `new` string ever saved; it has no idea that a ratified rule
@@ -103,6 +118,23 @@ BASELINE_EXEMPT_2026_09_24 = frozenset({
     'Three musical act configurations cover almost every corporate enquiry: the office holiday party, the client dinner, and the member or association event. A duo or a trio through drinks and dinner, a quartet to fill the dance floor. Our musicians have done this for Amazon, NBCUniversal, Charles Schwab and the Denver Art Museum.',
     'What to actually bookk for a wedding',
     'a sample of crown pleasers',
+})
+
+
+# Sentences Daniel asked in chat to have rewritten, outside CopyDesk. The
+# ledger can't know about those: it only retires a sentence when a later
+# CopyDesk save names it as `old`. Each entry carries the date and his words.
+# This is a record of his instructions, never a way round a miss.
+REWRITTEN_ON_DANIELS_WORD = frozenset({
+    # 2026-10-01, the For Planners page: "theres a large section near the top
+    # that perports to answer questions. but the whole thing is confusing.
+    # fix it." The seven document cards became six questions with answers;
+    # this was the first card's body, his patch of an agent sentence. Its
+    # facts (soundboard channel counts, preferred volume, written to be
+    # forwarded, the six things worth confirming at contract) are in the
+    # venue answer, and his card heading is kept verbatim as that answer's
+    # link.
+    "Stage footprint, dedicated circuits, soundboard channel counts, load-in times and preferred volume, It's written to be forwarded to the venue, and it includes the six things worth confirming at contract.",
 })
 
 
@@ -168,11 +200,13 @@ def main() -> int:
 
     pages = built_pages()
     haystacks = [normalize(visible_text(p)) for p in pages]
+    haystacks += [normalize(inline_stripped_text(p)) for p in pages
+                  if p.suffix == ".html"]
 
     misses, baseline_misses = [], []
     for s in unique:
         needle = normalize(s)
-        if not needle:
+        if not needle or s in REWRITTEN_ON_DANIELS_WORD:
             continue
         if any(needle in h for h in haystacks):
             continue
