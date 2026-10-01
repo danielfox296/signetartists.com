@@ -1368,20 +1368,34 @@ def offer_close(headline: str, day: bool = False) -> str:
     night" read as "the day", because a senior living afternoon or a Sunday
     brunch is not a night and the close was the one place the page said so.
     """
-    when = "day" if day else "night"
+    # Each sentence is written out whole, once for the night and once for the
+    # day (2026-10-01). They used to be one sentence with the last word
+    # filled in, and a sentence with a filled-in word can't be found by
+    # CopyDesk, so Daniel could not edit the close on any of the ~70 pages
+    # that carry it. Keep them whole: no f-string inside the words.
+    if day:
+        offer = ("Live music for your event, from a solo musician to a full "
+                 "band, with sound support that&rsquo;s the right size for the venue and a "
+                 "personal contact for the day.")
+        ask = ("Send us the date and the venue, and we&rsquo;ll come back with "
+               "a recommendation and a price for your day. What live music costs in "
+               "this market is on the ")
+    else:
+        offer = ("Live music for your event, from a solo musician to a full "
+                 "band, with sound support that&rsquo;s the right size for the venue and a "
+                 "personal contact for the night.")
+        ask = ("Send us the date and the venue, and we&rsquo;ll come back with "
+               "a recommendation and a price for your night. What live music costs in "
+               "this market is on the ")
     return (
         '<section class="section section--ruled"><div class="wrap">'
         '<div class="close-row">'
         f'<div style="max-width: 32rem;"><h2 class="h2">{esc(headline)}</h2>'
-        '<p class="lede">Live music for your event, from a solo musician to a full '
-        "band, with sound support that&rsquo;s the right size for the venue and a "
-        f"personal contact for the {when}.</p></div>"
+        '<p class="lede">' + offer + "</p></div>"
         '<div class="btn-row"><a class="btn" href="{{nav_prefix}}contact/">'
         "Check a Date</a></div>"
         "</div>"
-        '<p class="note">Send us the date and the venue, and we&rsquo;ll come back with '
-        f"a recommendation and a price for your {when}. What live music costs in "
-        'this market is on the <a href="{{nav_prefix}}pricing/">'
+        '<p class="note">' + ask + '<a href="{{nav_prefix}}pricing/">'
         "pricing page</a>.</p>"
         "</div></section>"
     )
