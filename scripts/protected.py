@@ -138,6 +138,60 @@ REWRITTEN_ON_DANIELS_WORD = frozenset({
 })
 
 
+# Typos in Daniel's own sentences, corrected on his word (2026-10-03: "fix
+# the typos"). The ledger keeps the sentence as he typed it; the site carries
+# the corrected spelling, and that corrected sentence is the protected one.
+# Each pair is (as typed, as corrected), applied to a ledger string before it
+# is looked for. Spelling, a dropped or doubled word, an apostrophe, a capital
+# on a proper noun: nothing else belongs here.
+TYPOS_CORRECTED_ON_DANIELS_WORD = (
+    ("a sample o the signet", "a sample of the signet"),
+    ("what get's people", "what gets people"),
+    ("We make sure to our bands play", "We make sure our bands play"),
+    ("your guests converstaions", "your guests' conversations"),
+    ("the evenuings energy", "the evening's energy"),
+    ("is criticall.", "is critical."),
+    ("it comes down how sensitive", "it comes down to how sensitive"),
+    ("the company throws is on one of the things",
+     "the company throws is one of the things"),
+    ("Tejas Signh", "Tejas Singh"),
+    ("some of your guests favorite tunes", "some of your guests' favorite tunes"),
+    ("Bring a little latin flavor", "Bring a little Latin flavor"),
+    ("Forth of July", "Fourth of July"),
+    ("as far our as August", "as far out as August"),
+    ("we may choose to approved corporate accounts",
+     "we may choose to approve corporate accounts"),
+    ("the Front range of Colorado", "the Front Range of Colorado"),
+    ("Cove covering the ceremony", "Covering the ceremony"),
+    ("and a a bit more or holiday weekends.",
+     "and a bit more for holiday weekends."),
+    ("is where the we go into resort booking",
+     "is where we go into resort booking"),
+    ("Live music in Colorado is prices in tiers",
+     "Live music in Colorado is priced in tiers"),
+    ("a denver party band", "a Denver party band"),
+    ("but w hat else is included", "but what else is included"),
+    ("a Colorado couples budget", "a Colorado couple's budget"),
+    ("a jazz duo on over cocktails", "a jazz duo over cocktails"),
+    ("on the dance floor . ", "on the dance floor. "),
+    ("an hour on it's own", "an hour on its own"),
+    ("some of our recomendations", "some of our recommendations"),
+    ("These are the one that run latest and hits hardest.",
+     "These are the ones that run latest and hit hardest."),
+    ("The intention and flow of most parties similar.",
+     "The intention and flow of most parties are similar."),
+    ("for the honoree specifically The", "for the honoree specifically. The"),
+    ("9 parties with a details of their own.",
+     "9 parties with details of their own."),
+)
+
+
+def corrected(text: str) -> str:
+    for typed, fixed in TYPOS_CORRECTED_ON_DANIELS_WORD:
+        text = text.replace(typed, fixed)
+    return text
+
+
 def protected_strings() -> list:
     """Every `new` string Daniel published through CopyDesk on Signet and
     has not since rewritten or deleted there himself.
@@ -205,7 +259,7 @@ def main() -> int:
 
     misses, baseline_misses = [], []
     for s in unique:
-        needle = normalize(s)
+        needle = normalize(corrected(s))
         if not needle or s in REWRITTEN_ON_DANIELS_WORD:
             continue
         if any(needle in h for h in haystacks):

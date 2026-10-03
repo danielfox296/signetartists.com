@@ -135,7 +135,7 @@
       "occasion": "The office holiday party",
       "act": "tejas-singh",
       "config": "quartet",
-      "why": "Whether Tejas is performing solo, duo or has a full band for a bigger occasion, you're going to get sophisticated covers of some of your guests favorite tunes. . . and more than one aside in the conversation saying \"These guys are really good\""
+      "why": "Whether Tejas is performing solo, duo or has a full band for a bigger occasion, you're going to get sophisticated covers of some of your guests' favorite tunes. . . and more than one aside in the conversation saying \"These guys are really good\""
     },
     {
       "occasion": "The client dinner",
@@ -147,7 +147,7 @@
       "occasion": "themed association event",
       "act": "dirty-flamenco",
       "config": "trio",
-      "why": "Bring a little latin flavor to an evening. Flamenco / Spanish guitar with a soulful, danceable vibe in the trio configuration, or a mysterious European guitar tradition punctuating the evening as a soloist. "
+      "why": "Bring a little Latin flavor to an evening. Flamenco / Spanish guitar with a soulful, danceable vibe in the trio configuration, or a mysterious European guitar tradition punctuating the evening as a soloist. "
     }
   ],
   "_credits_note": "ADDED 2026-09-03, from Daniel's list of the companies, institutions and venues the roster's artists have played for. Rendered by build.py credits() as the one-colour logo strip on the home page and /corporate/, and as a Credits line in llms.txt. Each logo ships as img/logos/<id>.svg, normalised to currentColor (provenance in img/logos/SOURCES.md); `h` scales a mark against the strip's base height so a stacked crest and a wide wordmark carry the same visual weight. The ten with logos: national employers, the museum, the two hotel flags, a major-league club, and the two Colorado names Daniel added the same day, Casa Bonita and Monarch (Daniel's call 2026-09-03, which supersedes the acts.json footage note that left the casino unnamed). The club stages and the rest are the `also` sentence, text only and home page only. Held back: the Hummingbird bar. Label 'Trusted and booked by' is Daniel's wording, 2026-09-03.",
@@ -389,7 +389,7 @@
   "faqs": [
     {
       "q": "What does a band cost for a corporate event in Denver?",
-      "a": "In this market, a cover or jazz band for a corporate event can run {{market:us_corporate_band}}, and a four to six piece band (the size the Denver market treats as its mid-tier), runs {{market:denver_midtier_band}}. Those are the market's figures. At Signet, we send you prices for the date and event when you enquire with us. Because, for example, mid-day on a Tuesday in September and Forth of July weekend have significantly different demand."
+      "a": "In this market, a cover or jazz band for a corporate event can run {{market:us_corporate_band}}, and a four to six piece band (the size the Denver market treats as its mid-tier), runs {{market:denver_midtier_band}}. Those are the market's figures. At Signet, we send you prices for the date and event when you enquire with us. Because, for example, mid-day on a Tuesday in September and Fourth of July weekend have significantly different demand."
     },
     {
       "q": "Do you publish your prices?",
@@ -402,7 +402,7 @@
     {
       "_note": "The 'who do we deal with on the night' question lived here too until 2026-08-07. It is not a money question, and it now has a fuller answer in plannerFaqs that distinguishes the contact from whoever fronts the band. One home only.",
       "q": "How far in advance should we book?",
-      "a": "Corporate holiday parties can be decided as far our as August, all the way through October for November, December and January dates. New Year's Eve books earliest of all - sometimes a year or more in advance. Weddings and galas can similarly be booked with more lead time - often 10 to 12 months, and 12 to 18 for a mountain venue or a fall Saturday. If your event is coming up sooner, no worries. Just reach out and we can often make something great work."
+      "a": "Corporate holiday parties can be decided as far out as August, all the way through October for November, December and January dates. New Year's Eve books earliest of all - sometimes a year or more in advance. Weddings and galas can similarly be booked with more lead time - often 10 to 12 months, and 12 to 18 for a mountain venue or a fall Saturday. If your event is coming up sooner, no worries. Just reach out and we can often make something great work."
     }
   ],
   "_rates_removed_note": "REMOVED 2026-09-04. `rates` held the call-out plus hourly table and `_rates_byRequest_note` explained the by-request rows. The site publishes no Signet price of any kind from that date, and the repo is the published site, so the numbers left the data file with the copy. They live in OFFER.md, which is the internal model and always was. Do not restore them here: market figures go in market-rates.json with their provenance, and Signet's own numbers go in a quote.",
