@@ -36,7 +36,7 @@
   "_acts_moved_note": "The two house bands (The Standards, The Headliners) and the DJ lived here until the 2026-08-15 restructure. The business books named acts, so the roster moved to _src/data/acts.json with a real schema: bucket and config tags, per-config pricing read off the rate card, and flagship/listing status. Nothing reads site.acts any more.",
   "_players_removed_note": "Bandleader bios (Daniel Fox, Tejas Singh) lived here from 2026-08-07 until the 2026-08-15 restructure. The restructure spec bans player names and lineup detail outright: acts and faces only. A bio framed as the chair a person holds in the house band is exactly the framing being retired. Faces carry the same trust load now, from acts.json, on the act pages and the roster cards. This reverses the 2026-08-07 instruction to publish names, so if the spec is wrong on that point the bios are recoverable from git history.",
   "included": [
-    "A personal contact for the night.",
+    "A personal point of contact for the night.",
     "Sound sized for a small-to-medium sized event venue",
     "Load-in, setup, strike and load-out",
     "Certificate of insurance",
@@ -389,20 +389,20 @@
   "faqs": [
     {
       "q": "What does a band cost for a corporate event in Denver?",
-      "a": "In this market a cover or jazz band for a corporate event runs {{market:us_corporate_band}}, and a four to six piece band, the size the Denver market treats as its middle, runs {{market:denver_midtier_band}}. Those are the market's figures, not ours. Signet prices the date you're asking about, because a Tuesday in September and a Saturday in December aren't the same job."
+      "a": "In this market, a cover or jazz band for a corporate event can run {{market:us_corporate_band}}, and a four to six piece band (the size the Denver market treats as its mid-tier), runs {{market:denver_midtier_band}}. Those are the market's figures. At Signet, we send you prices for the date and event when you enquire with us. Because, for example, mid-day on a Tuesday in September and Forth of July weekend have significantly different demand."
     },
     {
       "q": "Do you publish your prices?",
-      "a": "We quote each date rather than publish a list, because a Saturday in December and a Tuesday in September aren't the same job. What's published here is what live music costs in this market, with the source for each figure, so you can set a budget before you write to us. Send the date and we'll come back with a recommendation and a price for your night."
+      "a": "We quote each date one-by-one. What's published on our site is a general market-view of what live music costs in Denver, Colorado. Send the date and we'll come back with a recommendation and a price for your night."
     },
     {
       "q": "Do you provide a certificate of insurance?",
-      "a": "Yes, naming your venue as additional insured, sent in the same email as the contract. The coverage limits match what Colorado venues write into their vendor requirements. A W-9 and one itemized invoice come with it."
+      "a": "Yes, we can, and also name your venue as additional insured, sent in the same email as the contract. The coverage limits match what Colorado venues write into their vendor requirements. Just let us know that's something you need."
     },
     {
       "_note": "The 'who do we deal with on the night' question lived here too until 2026-08-07. It is not a money question, and it now has a fuller answer in plannerFaqs that distinguishes the contact from whoever fronts the band. One home only.",
       "q": "How far in advance should we book?",
-      "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+      "a": "Corporate holiday parties can be decided as far our as August, all the way through October for November, December and January dates. New Year's Eve books earliest of all - sometimes a year or more in advance. Weddings and galas can similarly be booked with more lead time - often 10 to 12 months, and 12 to 18 for a mountain venue or a fall Saturday. If your event is coming up sooner, no worries. Just reach out and we can often make something great work."
     }
   ],
   "_rates_removed_note": "REMOVED 2026-09-04. `rates` held the call-out plus hourly table and `_rates_byRequest_note` explained the by-request rows. The site publishes no Signet price of any kind from that date, and the repo is the published site, so the numbers left the data file with the copy. They live in OFFER.md, which is the internal model and always was. Do not restore them here: market figures go in market-rates.json with their provenance, and Signet's own numbers go in a quote.",
