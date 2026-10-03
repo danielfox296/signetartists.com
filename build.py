@@ -1384,9 +1384,7 @@ def offer_close(headline: str, day: bool = False) -> str:
         offer = ("Live music for your event, from a solo musician to a full "
                  "band, with sound support that&rsquo;s the right size for the venue and a "
                  "personal contact for the night.")
-        ask = ("Send us the date and the venue, and we&rsquo;ll come back with "
-               "a recommendation and a price for your night. What live music costs in "
-               "this market is on the ")
+        ask = ("")
     return (
         '<section class="section section--ruled"><div class="wrap">'
         '<div class="close-row">'
