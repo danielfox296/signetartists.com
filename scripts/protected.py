@@ -13,6 +13,17 @@ a dry run (`result.dry_run`) published nothing; an edit whose id is not in
 Daniel himself rewrote or deleted in a later save (that edit's `old` is the
 earlier `new`) is no longer his sentence, the rewrite is.
 
+Two more shapes of his own rewrite are read the same way (2026-10-03). The
+later edit's `old` can hold the earlier sentence with more around it (the
+run had gained a word at its end before he rewrote it): the sentence is
+retired, and the rewrite is the protected one. And once a paragraph carries
+bold, italic or a link, CopyDesk edits it one run at a time, so the later
+edit's `old` can be a word or two inside the earlier sentence: the sentence
+is kept with those words replaced, and that is the protected one. A box,
+link-address or unformat edit, and an inserted paragraph, log the words of
+the run they are attached to as `old` without changing them, and retire
+nothing.
+
 This gate is the enforcement half of that rule: it collects every protected
 string from the ledger (144 strings, all unique, as of 2026-10-01) and
 checks that each one still appears, verbatim, somewhere in the built site.
@@ -192,6 +203,94 @@ def corrected(text: str) -> str:
     return text
 
 
+# Edits that leave the words of their run as they were: a box, a link
+# address, an unformat, a paragraph inserted after it. CopyDesk logs that
+# run's text as their `old` (STRUCTURAL in copydesk.py), so they never retire
+# or rewrite a protected sentence. Until 2026-10-03 they did: resizing a
+# paragraph's box retired the sentence in it, and eleven of Daniel's
+# sentences, the home page heading among them, had gone unprotected that way.
+STRUCTURAL_KINDS = frozenset({"style", "href", "unwrap", "insert"})
+
+# The shortest protected string that a longer `old` on the same page retires
+# by containing it. Shorter than this it is a label or a heading, and turning
+# up inside a paragraph he rewrote says nothing about the label itself.
+CONTAINED_MIN = 40
+
+
+def compared(text: str) -> str:
+    """A ledger string as it is compared with another ledger string: typos
+    corrected, then normalized. An `old` logged after a typo was corrected
+    on the site carries the corrected spelling, and the `new` it rewrites
+    was logged as typed."""
+    return normalize(corrected(text))
+
+
+def run_spans(text: str, old: str, before: str, after: str) -> list:
+    """Where the run `old` sits inside the protected string `text`, going by
+    the runs the editor showed either side of it (`before` and `after`, the
+    edit's neighbors[0] and neighbors[2]). A place counts when what is left
+    of the string on each side lines up with the neighbouring run on that
+    side, whichever of the two is the longer; a side with nothing left of
+    the string needs no neighbour. "almost" in the sentence it was cut from
+    counts. "almost" in another sentence on the same page does not."""
+    spans = []
+    at = text.find(old)
+    while at != -1:
+        left, right = text[:at].rstrip(), text[at + len(old):].lstrip()
+        left_ok = not left or (
+            before and (left.endswith(before) or before.endswith(left)))
+        right_ok = not right or (
+            after and (right.startswith(after) or after.startswith(right)))
+        if left_ok and right_ok:
+            spans.append((at, at + len(old)))
+        at = text.find(old, at + 1)
+    return spans
+
+
+def carried_forward(strings: list, page: str, published: list) -> list:
+    """The protected strings of earlier saves, as one later save leaves them.
+    `strings` is (page, text) pairs; `published` is the later save's edits
+    that reached the site. Only an edit that changes words is read. See
+    protected_strings() for the three ways it can retire or change a string."""
+    runs = []
+    for edit in published:
+        if edit.get("kind") in STRUCTURAL_KINDS:
+            continue
+        old = compared(edit.get("old", ""))
+        if not old:
+            continue
+        new = "" if edit.get("delete") else compared(edit.get("new", ""))
+        near = list(edit.get("neighbors") or []) + [None] * 3
+        runs.append((old, new, compared(near[0] or ""), compared(near[2] or "")))
+    if not runs:
+        return strings
+    kept = []
+    for owner, text in strings:
+        was = compared(text)
+        if any(old == was for old, _, _, _ in runs):
+            continue
+        if owner == page:
+            if len(was) >= CONTAINED_MIN and any(was in old for old, _, _, _ in runs):
+                continue
+            cuts = []
+            for old, new, before, after in runs:
+                spans = run_spans(was, old, before, after)
+                if len(spans) == 1:
+                    cuts.append(spans[0] + (new,))
+            cuts.sort()
+            if cuts and all(a[1] <= b[0] for a, b in zip(cuts, cuts[1:])):
+                now = was
+                for at, upto, new in reversed(cuts):
+                    now = now[:at] + new + now[upto:]
+                now = normalize(now)
+                if not now:
+                    continue
+                if now != was:
+                    text = now
+        kept.append((owner, text))
+    return kept
+
+
 def protected_strings() -> list:
     """Every `new` string Daniel published through CopyDesk on Signet and
     has not since rewritten or deleted there himself.
@@ -204,10 +303,32 @@ def protected_strings() -> list:
     counts like any other.
 
     The ledger is append-only, so file order is save order. Each save first
-    retires every earlier string that one of its published edits names as
-    `old` (a rewrite or a delete of Daniel's own sentence), then adds its
-    own `new` strings; the two steps run per save, not per edit, so one edit
-    in a save never retires a sentence another edit in the same save wrote.
+    settles what its published word edits did to every earlier string, then
+    adds its own `new` strings; the two steps run per save, not per edit, so
+    one edit in a save never retires a sentence another edit in the same
+    save wrote. An earlier string meets a later edit's `old` in three ways:
+
+    The `old` is the string (a rewrite or a delete of Daniel's own
+    sentence): the string is retired. This one is read across pages.
+
+    The `old` holds the string with more around it, on the same page, and
+    the string is CONTAINED_MIN characters or longer: the string is retired.
+    The whole run it sat in was replaced by that edit's `new`, which is
+    protected from here on (2026-10-03: a paragraph whose text had gained a
+    trailing " The" ahead of a link before he rewrote it).
+
+    The `old` is a run inside the string, on the same page, with the runs
+    the editor showed either side of it lining up with the rest of the
+    string (run_spans): the string stays protected with that run replaced
+    by the edit's `new`. The places are found against the string as it
+    stood before the save and then all applied, because the neighbours are
+    logged as they stood when the page was opened. A run that is found
+    twice in a string, or two runs that overlap, change nothing, and the
+    stale string then fails the gate where someone will read it (2026-10-03:
+    "almost", in italics, deleted from the corporate opening paragraph).
+
+    A string changed that third way is returned as compared() leaves it,
+    not as the ledger spells it.
 
     Duplicates kept (a sentence written in two places is still one protected
     sentence, but the ledger is the source of truth and de-duping here would
@@ -233,16 +354,15 @@ def protected_strings() -> list:
         applied_ids.discard(None)
         published = [e for e in entry.get("edits", [])
                      if e.get("id") in applied_ids]
-        retired = {normalize(e.get("old", "")) for e in published} - {""}
-        if retired:
-            strings = [s for s in strings if normalize(s) not in retired]
+        page = entry.get("page")
+        strings = carried_forward(strings, page, published)
         for edit in published:
             if edit.get("delete"):
                 continue
             new = edit.get("new", "")
             if new:
-                strings.append(new)
-    return strings
+                strings.append((page, new))
+    return [text for _, text in strings]
 
 
 def main() -> int:
