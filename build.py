@@ -834,7 +834,14 @@ def roster_formats(nav_prefix: str = "") -> str:
 def roster_named(nav_prefix: str = "") -> str:
     """The named lane: the full card, face and footage, in the file's order."""
     cards = "".join(act_card(a, nav_prefix) for a in NAMED_ACTS)
-    return f'<div class="card-grid card-grid--3 roster-grid" id="roster-named">{cards}</div>'
+    # The clip index sits under the roster in the trail (2026-10-03), so the
+    # roster links down to it. The wording follows Daniel's own pointer on the
+    # corporate page: "Want some more ideas? Check out our thoughts on...".
+    clips = (
+        '<p class="note">Want to see them play? '
+        f'<a href="{nav_prefix}{WATCH_BASE}/">Check out our video clips</a>.</p>'
+    )
+    return f'<div class="card-grid card-grid--3 roster-grid" id="roster-named">{cards}</div>{clips}'
 
 
 # ------------------------------------------------------- the holiday season
@@ -1323,6 +1330,11 @@ REDIRECTS = {
     "music/tejas-singh/index.html": "artists/tejas-singh/",
     "music/jazz-duo/index.html": "ensembles/jazz-duo-trio/",
     "music/dirty-flamenco/index.html": "ensembles/flamenco-trio/",
+    # Folders that were never pages (2026-10-03). Anyone who trims an act's or
+    # the cost guide's address lands on the page that indexes it, not a 404.
+    "ensembles/index.html": "music/",
+    "artists/index.html": "music/",
+    "guides/index.html": "pricing/",
 }
 
 
@@ -1702,8 +1714,20 @@ BREADCRUMB_PARENTS = {
     "ensembles/": "music/",
     "artists/": "music/",
     "guides/": "pricing/",
-    "video/": "music/",  # a clip belongs to an act, and the acts live on the roster
+    "video/": "music/",  # the clip index is a view of the roster; a clip's own parent is its act, below
 }
+
+# A page whose parent is not the folder above it (2026-10-03). Until then a
+# clip's trail ran Home / Artist Roster / clip, and the roster links to no
+# clip: the fifty watch pages were linked from /sitemap/ and from each other
+# and from nowhere else. A post's trail ran Home / Notes / post, up to one
+# undivided list of twenty-five pieces. A trail is only worth printing when
+# the page it names lists the page you came from, so a clip now sits under its
+# act and a post under the page its reader can book from (`parent:` in the
+# post's content.yaml), and each of those parents prints the list back down:
+# act_clips, related_articles and hub_index below.
+CRUMB_OVERRIDES: dict[str, str] = {}
+POSTS_BY_PARENT: dict[str, list] = {}
 
 # The heading over a sibling list names the page the set belongs to.
 SIBLING_SKIP = ("blog/", "video/")  # blog posts carry "Keep reading"; watch pages list their act's other clips
@@ -1724,6 +1748,41 @@ def load_page_labels() -> None:
             cfg = json.loads(read(cfg_file))
             url = "/" + cfg["output"].replace("index.html", "")
             _PAGE_LABELS[url] = cfg.get("breadcrumb") or _slug_label(url)
+    # The clip index is generated, not authored, so it has no config to read.
+    # "Video Clips" is Daniel's own eyebrow for footage (corporate hub,
+    # 2026-10-03), and the voice standard lists it in place of "Footage".
+    _PAGE_LABELS[f"/{WATCH_BASE}/"] = "Video Clips"
+    for v in FOOTAGE:
+        act = ACT_BY_ID[v["act"]]
+        if act.get("page"):
+            CRUMB_OVERRIDES[f"/{WATCH_BASE}/{v['slug']}/"] = "/" + act["page"]
+
+
+def register_posts(published: list) -> None:
+    """Put each published post under the page it names as `parent`, or stop.
+
+    The parent is any real page: an occasion hub, a spoke, pricing, an act.
+    A post with none would fall back to the blog index and nothing would say
+    so, which is how the trail drifted the first time."""
+    problems = []
+    for p in published:
+        if p.get("robots", "").startswith("noindex"):
+            continue
+        parent = str(p.get("parent") or "").strip("/")
+        url = f"/{parent}/"
+        if not parent:
+            problems.append(f"{p['dir_name']}: no `parent:` in content.yaml")
+        elif url not in _PAGE_LABELS:
+            problems.append(f"{p['dir_name']}: parent {url} is not a page on the site")
+        else:
+            CRUMB_OVERRIDES[f"/blog/{p['slug']}/"] = url
+            POSTS_BY_PARENT.setdefault(url, []).append(p)
+    if problems:
+        raise SystemExit(
+            "Every published post names the page it sits under "
+            '(`parent: "corporate/holiday-party/"`):\n'
+            + "\n".join(f"  - {x}" for x in problems)
+        )
 
 
 def _slug_label(url: str) -> str:
@@ -1738,6 +1797,8 @@ def crumb_label(url: str) -> str:
 def crumb_parent(url: str) -> str | None:
     """The page above this one. Explicit override first, then the URL with its
     last segment removed, then the nearest ancestor that is a real page."""
+    if url in CRUMB_OVERRIDES:
+        return CRUMB_OVERRIDES[url]
     for prefix, parent in BREADCRUMB_PARENTS.items():
         if url.startswith("/" + prefix):
             return "/" + parent
@@ -1870,6 +1931,149 @@ def siblings(output: str, nav_prefix: str) -> str:
     )
 
 
+# ------------------------------------------------- the lists back down
+#
+# Added 2026-10-03. A breadcrumb sends a visitor up to a hub, and what they
+# want there is the list of what is under it. Measured that day: the Private
+# Parties hub listed its thirteen pages two thirds of the way down, Corporate
+# a third of the way down, and only Daytime named its pages in the opening.
+# {{hub_index}} is that list, placed by a section file directly under each
+# hub's opening. The order and the grouping are written here; a page added
+# under a hub later joins the first group on the next build and prints a note,
+# so it is never missing while it waits to be placed.
+
+HUB_INDEX = {
+    "/private-parties/": ("All private party pages", [
+        ("Occasions", [
+            "birthday-party", "anniversary-party", "engagement-party", "showers",
+            "graduation-party", "retirement-party", "backyard-party",
+            "halloween-party", "holiday-party", "proposals",
+        ]),
+        ("Cities", ["denver", "boulder", "colorado-springs"]),
+    ]),
+    "/corporate/": ("All corporate event pages", [
+        ("Occasions", [
+            "holiday-party", "galas-and-awards", "client-dinners", "after-party",
+            "retreats",
+        ]),
+        ("Holiday parties by city", ["holiday-party/denver", "holiday-party/colorado-springs"]),
+        ("Retreats by town", [
+            "retreats/vail", "retreats/beaver-creek", "retreats/breckenridge",
+            "retreats/aspen",
+        ]),
+        ("By act", ["jazz-band"]),
+    ]),
+    "/weddings/": ("All wedding pages", [
+        ("Parts of the day", [
+            "ceremony", "cocktail-hour",
+            ("cocktail-hour/denver", "Cocktail hour in Denver"),
+        ]),
+        ("By act", ["jazz-band"]),
+        ("Towns", ["boulder", "colorado-springs", "fort-collins", "vail", "telluride"]),
+    ]),
+}
+
+
+def _post_rows(posts: list, nav_prefix: str) -> str:
+    return "\n".join(
+        f'          <li><a href="{nav_prefix}blog/{esc(p["slug"])}/">{esc(p["title"])}</a></li>'
+        for p in sorted(posts, key=lambda p: (p.get("date", ""), p["slug"]), reverse=True)
+    )
+
+
+def hub_index(url: str, nav_prefix: str) -> str:
+    """Every page under a hub, grouped, with the hub's posts last."""
+    if url not in HUB_INDEX:
+        raise SystemExit(f"{url}: {{{{hub_index}}}} on a page with no HUB_INDEX entry")
+    heading, groups = HUB_INDEX[url]
+    placed, rows = set(), []
+    for label, entries in groups:
+        links = []
+        for entry in entries:
+            path, text = entry if isinstance(entry, tuple) else (entry, "")
+            u = f"{url}{path.strip('/')}/"
+            if u not in _PAGE_LABELS:
+                raise SystemExit(f"HUB_INDEX {url}: {u} is not a page on the site")
+            placed.add(u)
+            links.append((u, text or crumb_label(u)))
+        rows.append((label, links))
+    strays = sorted(
+        u for u in _PAGE_LABELS
+        if u.startswith(url) and u != url and u not in placed
+    )
+    for u in strays:
+        print(f"  NOTE hub index {url}: {u} is not grouped yet, listed under {rows[0][0]}")
+        rows[0][1].append((u, crumb_label(u)))
+
+    out = []
+    for label, links in rows:
+        items = "\n".join(
+            f'          <li><a href="{nav_prefix + u.lstrip("/")}">{esc(text)}</a></li>'
+            for u, text in links
+        )
+        out.append(
+            '      <div class="hub-index-row">\n'
+            f"        <dt>{esc(label)}</dt>\n"
+            f'        <dd><ul class="sibling-list">\n{items}\n        </ul></dd>\n'
+            "      </div>"
+        )
+    posts = [p for parent, ps in POSTS_BY_PARENT.items() if parent.startswith(url) for p in ps]
+    if posts:
+        out.append(
+            '      <div class="hub-index-row">\n'
+            "        <dt>Articles</dt>\n"
+            f'        <dd><ul class="index-list">\n{_post_rows(posts, nav_prefix)}\n        </ul></dd>\n'
+            "      </div>"
+        )
+    return (
+        f'<nav class="hub-index" aria-label="{esc(heading)}">\n'
+        f'    <p class="eyebrow">{esc(heading)}</p>\n'
+        '    <dl class="hub-index-list">\n' + "\n".join(out) + "\n"
+        "    </dl>\n"
+        "</nav>"
+    )
+
+
+def related_articles(url: str, nav_prefix: str) -> str:
+    """The posts that name this page as their parent, at the foot of it. A hub
+    with a {{hub_index}} lists its posts there instead."""
+    posts = POSTS_BY_PARENT.get(url)
+    if not posts or url in HUB_INDEX:
+        return ""
+    return (
+        '<section class="section section--ruled related">\n'
+        '  <div class="wrap">\n'
+        '    <p class="eyebrow">Related articles</p>\n'
+        '    <ul class="sibling-list">\n' + _post_rows(posts, nav_prefix) + "\n"
+        "    </ul>\n"
+        "  </div>\n"
+        "</section>\n"
+    )
+
+
+def act_clips(url: str, nav_prefix: str) -> str:
+    """An act page's own clips, each linked to its watch page. The act page
+    plays two or three of them; this is the way to the rest, and it is what
+    makes the act the page a clip's trail can honestly name."""
+    act = ACT_BY_URL.get(url)
+    clips = [v for v in FOOTAGE if act and v["act"] == act["id"]]
+    if not clips:
+        return ""
+    rows = "\n".join(
+        f'      <li><a href="{nav_prefix}{WATCH_BASE}/{esc(v["slug"])}/">{esc(v["name"])}</a></li>'
+        for v in clips
+    )
+    return (
+        '<section class="section section--ruled related">\n'
+        '  <div class="wrap">\n'
+        f'    <p class="eyebrow"><a href="{nav_prefix}{WATCH_BASE}/">Video clips</a> of {esc(act["name"])}</p>\n'
+        '    <ul class="sibling-list">\n' + rows + "\n"
+        "    </ul>\n"
+        "  </div>\n"
+        "</section>\n"
+    )
+
+
 # ------------------------------------------------------------------ pages
 
 
@@ -1909,6 +2113,13 @@ def render_page(
         breadcrumbs(output, nav_prefix, crumb_label) if indexed else ("", "")
     )
     sibling_html = siblings(output, nav_prefix) if indexed else ""
+    if indexed:
+        page_url = "/" + output.replace("index.html", "")
+        sibling_html = (
+            act_clips(page_url, nav_prefix)
+            + related_articles(page_url, nav_prefix)
+            + sibling_html
+        )
 
     base = COMMENT.sub("", read(LAYOUTS / "base.html"))
     header = COMMENT.sub("", partial("header"))
@@ -2038,6 +2249,9 @@ def build_page(page_dir: pathlib.Path, extra_blocks: dict = None) -> dict | None
         "{{credits_also}}": credits_also,
         "{{vendor_list}}": vendor_list,
         "{{act_picker}}": act_picker,
+        "{{hub_index}}": lambda: hub_index(
+            "/" + output.replace("index.html", ""), nav_prefix
+        ),
         # RETIRED 2026-09-07, Daniel: no count of acts is published anywhere.
         # These tokens existed so a hand-typed number could not go stale; the
         # ruling is that the number itself is the problem, not its freshness,
@@ -2389,8 +2603,8 @@ def build_watch_page(entry: dict) -> dict:
         more = (
             '\n<section class="section section--ruled siblings">\n'
             '  <div class="wrap">\n'
-            f'    <p class="eyebrow">More footage of <a href="{act_href}">'
-            f'{esc(act["name"])}</a></p>\n'
+            f'    <p class="eyebrow">More <a href="{nav_prefix}{WATCH_BASE}/">video clips</a>'
+            f' of <a href="{act_href}">{esc(act["name"])}</a></p>\n'
             '    <ul class="sibling-list">\n' + rows + "\n"
             "    </ul>\n"
             "  </div>\n"
@@ -2454,6 +2668,129 @@ def iso_duration_seconds(d: str) -> int:
         raise SystemExit(f"footage.json: duration {d!r} is not ISO 8601 (PT1M5S)")
     h, mi, s = (int(x or 0) for x in m.groups())
     return h * 3600 + mi * 60 + s
+
+
+# The clip index at /video/ (2026-10-03). The watch pages had no page above
+# them that listed them, and /video/ itself was a 404 for anyone who trimmed a
+# clip's address. This is every clip, grouped by act in the roster's own order,
+# each card a link to the clip's watch page. It plays nothing itself: a video
+# is indexed from the page where it is the main content, and that is still the
+# watch page.
+
+
+def clip_card(entry: dict, nav_prefix: str) -> str:
+    # The 16:9 YouTube frame (mqdefault) rather than the 4:3 one the schema
+    # names: the 4:3 frame carries black bars top and bottom.
+    if entry.get("poster"):
+        src = nav_prefix + entry["poster"]
+    elif entry.get("id"):
+        src = f"https://i.ytimg.com/vi/{entry['id']}/mqdefault.jpg"
+    else:
+        src = ""
+    # alt is empty for the reason the blog rows give: the link is named by the
+    # title under it, and the frame is a marker for which clip this is.
+    thumb = (
+        f'<img class="clip-thumb" src="{esc(src)}" alt="" width="320" height="180" '
+        'loading="lazy" decoding="async">'
+        if src else ""
+    )
+    secs = iso_duration_seconds(entry["duration"])
+    return (
+        f'<a class="clip-card" href="{nav_prefix}{WATCH_BASE}/{esc(entry["slug"])}/">'
+        f"{thumb}"
+        f'<span class="clip-title">{esc(entry["name"])}</span>'
+        f'<span class="clip-time">{secs // 60}:{secs % 60:02d}</span>'
+        "</a>"
+    )
+
+
+def build_video_index() -> dict:
+    begin_page()
+    output = f"{WATCH_BASE}/index.html"
+    nav_prefix = "../"
+    canonical = canonical_for(output)
+    title = "Video clips of bands and musicians for hire in Denver"
+    description = (
+        "Video clips of the bands and musicians on the Signet Artists roster, "
+        "grouped by act: jazz, Spanish guitar, singer-guitarists and classical "
+        "strings in Denver."
+    )
+    groups, jump, listed = [], [], []
+    for act in FORMAT_ACTS + NAMED_ACTS:
+        clips = [v for v in FOOTAGE if v["act"] == act["id"]]
+        if not clips:
+            continue
+        listed += clips
+        anchor = f'clips-{esc(act["id"])}'
+        act_href = act_url(act, nav_prefix)
+        jump.append(f'<li><a href="#{anchor}">{esc(act["name"])}</a></li>')
+        groups.append(
+            f'<div class="clip-group" id="{anchor}">'
+            '<div class="heading">'
+            f'<p class="eyebrow">{esc(act["style"])}</p>'
+            f'<h2 class="h3"><a href="{act_href}">{esc(act["name"])}</a></h2>'
+            "</div>"
+            f'<div class="clip-grid">{"".join(clip_card(v, nav_prefix) for v in clips)}</div>'
+            # The same words the watch pages' own button uses for this link.
+            f'<p class="note"><a href="{act_href}">See {esc(act["name"])}</a></p>'
+            "</div>"
+        )
+    if len(listed) != len(FOOTAGE):
+        raise SystemExit("video index: a clip in footage.json belongs to no act on the roster")
+    content = (
+        '<section class="section section--top"><div class="wrap">'
+        '<div class="heading">'
+        '<p class="eyebrow eyebrow--slab">Video Clips</p>'
+        '<h1 class="h2 display">Video clips of our bands and musicians.</h1>'
+        '<p class="lede">Every clip is grouped by act. If you see something you '
+        "like, check out the act's page or just "
+        f'<a href="{nav_prefix}contact/">reach out with your date</a>.</p>'
+        "</div>"
+        f'<nav class="jump-list" aria-label="Acts"><ul class="sibling-list">{"".join(jump)}</ul></nav>'
+        "</div></section>"
+        '<section class="section section--ruled clips"><div class="wrap">'
+        + "".join(groups)
+        + "</div></section>"
+    )
+    schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            local_business_node(),
+            {
+                "@type": "CollectionPage", "@id": canonical, "url": canonical,
+                "name": title,
+                "description": description,
+                "isPartOf": {"@type": "WebSite", "url": SITE_URL, "name": BRAND["name"]},
+                "about": {"@id": f"{SITE_URL}/#business"},
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": i + 1,
+                         "name": v["name"], "url": watch_url(v)}
+                        for i, v in enumerate(listed)
+                    ],
+                },
+            },
+        ],
+    }
+    cfg = {
+        "title": title,
+        "index_label": "All video clips",
+        "meta_description": description,
+        "output": output,
+        "nav": ACTS_BASE,
+    }
+    render_page(
+        output=output,
+        content=content,
+        title=title,
+        meta_description=description,
+        schema_html=schema_tag(schema),
+        nav_active=ACTS_BASE,
+        nav_prefix=nav_prefix,
+        crumb_label="Video Clips",
+    )
+    return {"output": output, "cfg": cfg, "src_dir": "_src/data/footage.json"}
 
 
 def write_video_sitemap() -> None:
@@ -2609,8 +2946,8 @@ def blog_cards(published: list, nav_prefix: str = "../") -> str:
             "if you would rather subscribe than check back.</p>"
         )
     sep = '<span class="blog-row-sep" aria-hidden="true">&middot;</span>'
-    rows = []
-    for i, p in enumerate(published):
+
+    def row(i: int, p: dict, tag: str) -> str:
         meta = sep.join(
             [
                 f'<span class="blog-row-eyebrow">{esc(p.get("eyebrow", ""))}</span>',
@@ -2631,17 +2968,44 @@ def blog_cards(published: list, nav_prefix: str = "../") -> str:
                 f'<img class="blog-row-thumb" src="{nav_prefix}{esc(blog_thumb(hero["src"]))}" '
                 f'alt="" width="640" height="360" loading="{loading}" decoding="async">'
             )
-        rows.append(
+        return (
             f'<a class="blog-row" href="{esc(p["slug"])}/">'
             f"{thumb}"
             '<div class="blog-row-text">'
             f'<p class="blog-row-meta">{meta}</p>'
-            f'<h2 class="blog-row-title">{esc(p["title"])}</h2>'
+            f'<{tag} class="blog-row-title">{esc(p["title"])}</{tag}>'
             f'<p class="blog-row-dek">{esc(p.get("dek", ""))}</p>'
             "</div>"
             "</a>"
         )
-    return f'<div class="blog-list">{"".join(rows)}</div>'
+
+    # Grouped by the category each post already carries (2026-10-03). One
+    # newest-first list of twenty-five pieces put a yacht rock explainer above
+    # a holiday party guide for no reason a reader could use. The biggest
+    # group leads; inside a group the order is still newest first. A blog with
+    # one category keeps the plain list.
+    groups: dict[str, list] = {}
+    for p in published:
+        groups.setdefault(p.get("eyebrow", ""), []).append(p)
+    if len(groups) < 2:
+        rows = [row(i, p, "h2") for i, p in enumerate(published)]
+        return f'<div class="blog-list">{"".join(rows)}</div>'
+    order = sorted(groups, key=lambda k: (-len(groups[k]), k))
+    jump = "".join(
+        f'<li><a href="#{esc(k.lower())}">{esc(k.capitalize())}</a></li>' for k in order
+    )
+    out = [f'<nav class="jump-list" aria-label="Topics"><ul class="sibling-list">{jump}</ul></nav>']
+    i = 0
+    for k in order:
+        rows = []
+        for p in groups[k]:
+            rows.append(row(i, p, "h3"))
+            i += 1
+        out.append(
+            f'<h2 class="h3 blog-group-title" id="{esc(k.lower())}">{esc(k.capitalize())}</h2>'
+            f'<div class="blog-list">{"".join(rows)}</div>'
+        )
+    return "".join(out)
 
 
 def build_blog_post(post: dict, published: list) -> dict:
@@ -2832,7 +3196,7 @@ SITE_INDEX_GROUPS = [
     ("planners/", "For planners"),
     ("preferred-vendors/", "Preferred vendors"),
     ("guides/", "Guides"),
-    ("video/", "Footage"),
+    ("video/", "Video clips"),
 ]
 
 
@@ -2994,9 +3358,9 @@ def write_llms(pages: list[dict], posts: list[dict] = None) -> None:
         )
     # The footage, one line per clip: the watch pages are where a video can
     # be cited from, and fifty of them as page rows above would bury the site.
-    lines += ["", "## Footage", "",
-              "Each clip the roster plays has its own page, listed in "
-              f"{SITE_URL}/video-sitemap.xml.", ""]
+    lines += ["", "## Video clips", "",
+              f"Each clip the roster plays has its own page. {SITE_URL}/{WATCH_BASE}/ "
+              f"lists them all by act, and so does {SITE_URL}/video-sitemap.xml.", ""]
     for v in FOOTAGE:
         lines.append(f"- [{v['name']}]({watch_url(v)})")
     # Blog section only when posts exist — no empty heading.
@@ -3047,6 +3411,8 @@ def main() -> None:
     published = [p for p in posts if not p.get("draft")]
     drafts = [p for p in posts if p.get("draft")]
 
+    register_posts(published)
+
     built = []
     extra_blocks = {"{{blog_cards}}": blog_cards(published)}
     # The HTML sitemap is held back to the end: {{site_index}} renders from the
@@ -3089,6 +3455,9 @@ def main() -> None:
         result = build_watch_page(entry)
         built.append(result)
         print(f"  built {result['output']}")
+    result = build_video_index()
+    built.append(result)
+    print(f"  built {result['output']}")
 
     if index_dir:
         result = build_page(

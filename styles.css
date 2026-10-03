@@ -1541,6 +1541,143 @@ img {
   padding-bottom: 1px;
 }
 
+/* ------------------------------------------------------------ hub index */
+
+/* The list of every page under a hub, directly under the hub's opening
+   (2026-10-03). A visitor who clicks "Private Parties" in a trail is looking
+   for the other party pages, and they used to sit two thirds of the way down.
+   A label column and a wrapped row of links per group, so thirteen pages and
+   a handful of articles take a few lines rather than a screen. The band is
+   shorter than a normal section for the same reason. */
+.section.hub-index-band {
+  padding: var(--space-4) 0;
+}
+
+.hub-index-list {
+  margin-top: 0.875rem;
+}
+
+.hub-index-row {
+  display: grid;
+  gap: 0.375rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.hub-index-row dt {
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--ink-faint);
+}
+
+.hub-index-row dd {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.hub-index-row .sibling-list {
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.hub-index-row a {
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+}
+
+.hub-index-row a:hover {
+  color: var(--brass);
+  border-bottom-color: var(--brass);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .hub-index-row {
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+}
+
+/* An act's clips and a page's articles, above the sibling list. Same wrapped
+   row; the links carry a hairline because a clip or an article title is a
+   sentence, and a row of sentences with no rule under them reads as prose. */
+.section.related {
+  padding: var(--space-4) 0;
+}
+
+.related .sibling-list a {
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+}
+
+.related .sibling-list a:hover {
+  border-bottom-color: var(--brass);
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------- clip index */
+
+/* /video/, every clip by act (2026-10-03). Cards link to the watch pages and
+   play nothing here: the frame, the clip's name, its length. */
+.clip-group {
+  scroll-margin-top: 6rem;
+}
+
+.clip-group + .clip-group {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+
+.clip-group .h3 a:hover {
+  color: var(--brass);
+}
+
+.clip-grid {
+  display: grid;
+  gap: 1.75rem 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  margin-top: 1.5rem;
+}
+
+.clip-card {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.clip-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  transition: opacity 0.15s ease;
+}
+
+.clip-card:hover .clip-thumb {
+  opacity: 0.82;
+}
+
+.clip-title {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.clip-card:hover .clip-title {
+  color: var(--brass);
+}
+
+.clip-time {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
 /* ---------------------------------------------------------- watch pages */
 /* One clip per page (2026-09-25). The player is the main content, so it sits
    directly under the heading at the full width of the wrap, and the
@@ -2447,6 +2584,39 @@ main:focus {
 .blog-list {
   margin-top: 1rem;
   border-top: 1px solid var(--rule);
+}
+
+/* The index in groups (2026-10-03): the topics as a row of jump links, then
+   a heading over each group's rows. scroll-margin keeps a jumped-to heading
+   clear of the sticky header. The clip index at /video/ uses the same row
+   for its acts. */
+.jump-list .sibling-list {
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.jump-list a {
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+}
+
+.jump-list a:hover {
+  color: var(--brass);
+  border-bottom-color: var(--brass);
+  text-decoration: none;
+}
+
+.heading + .jump-list {
+  margin-top: var(--space-3);
+}
+
+.blog-group-title {
+  margin-top: var(--space-5);
+  scroll-margin-top: 6rem;
+}
+
+.jump-list + .blog-group-title {
+  margin-top: var(--space-4);
 }
 
 .blog-row {
