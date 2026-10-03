@@ -1385,6 +1385,13 @@ def offer_close(headline: str, day: bool = False) -> str:
                  "band, with sound support that&rsquo;s the right size for the venue and a "
                  "personal contact for the night.")
         ask = ("")
+    # Daniel deleted the night close's note in CopyDesk (2026-10-03). The link
+    # ends a sentence, so with no sentence there is no note at all; on its own
+    # it read "pricing page." under the button on every night page.
+    note = (
+        '<p class="note">' + ask + '<a href="{{nav_prefix}}pricing/">'
+        "pricing page</a>.</p>"
+    ) if ask else ""
     return (
         '<section class="section section--ruled"><div class="wrap">'
         '<div class="close-row">'
@@ -1393,8 +1400,7 @@ def offer_close(headline: str, day: bool = False) -> str:
         '<div class="btn-row"><a class="btn" href="{{nav_prefix}}contact/">'
         "Check a Date</a></div>"
         "</div>"
-        '<p class="note">' + ask + '<a href="{{nav_prefix}}pricing/">'
-        "pricing page</a>.</p>"
+        + note +
         "</div></section>"
     )
 
