@@ -27,7 +27,7 @@ from _src.lib.reading_time import calculate_reading_time
 
 # Eyebrow taxonomy — the category label above the headline. Provisional set
 # pending the content pass; extend it here when a real post needs a new one.
-VALID_EYEBROWS = {'NOTES', 'PLANNING', 'MUSIC', 'WEDDINGS', 'CORPORATE'}
+VALID_EYEBROWS = {'NOTES', 'PLANNING', 'MUSIC', 'WEDDINGS', 'CORPORATE', 'RESEARCH'}
 
 KNOWN_BLOCK_TYPES = {
     'prose', 'subhead', 'pullquote', 'stat_callout', 'data_viz',

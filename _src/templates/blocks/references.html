@@ -1,12 +1,19 @@
-{# References block — peer-reviewed citations rendered as on-page text.
-   block.items: list of citation strings (already cleaned of leading
-   numbers/bullets by the generator). block.heading optional. #}
+{# References block — citations rendered as on-page text.
+   block.items: a list. Each item is either a plain citation string, or a
+   mapping with `text` (the citation) and `url` (where to read it), plus an
+   optional `link_text` (default "Read the source"). The research posts
+   (2026-10-03) use the mapping so every study a post leans on is one click
+   away. block.heading optional. #}
 {% if block['items'] %}
 <div class="blog-references">
   <h2 class="blog-subhead blog-subhead--h2" id="references">{{ block.heading or 'References' }}</h2>
   <ol class="blog-references-list">
     {% for item in block['items'] %}
+    {% if item is mapping %}
+    <li>{{ item.text }}{% if item.url %} <a href="{{ item.url }}" rel="noopener">{{ item.link_text or 'Read the source' }}</a>{% endif %}</li>
+    {% else %}
     <li>{{ item }}</li>
+    {% endif %}
     {% endfor %}
   </ol>
 </div>

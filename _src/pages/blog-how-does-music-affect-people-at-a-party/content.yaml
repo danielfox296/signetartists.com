@@ -1,0 +1,164 @@
+# ---------------------------------------------------------------------------
+# Research series hub, drafted 2026-10-03. Evidence for the title: Google
+# autocomplete (read 2026-10-03) suggests "how does music affect behavior",
+# "how can music affect behavior", "how does music affect people", "how does
+# music affect people's mood" and "how does music affect people
+# psychologically". The front door to the series: one or two sentences per
+# finding, each with one link to the post that covers it, the claims we
+# checked and dropped, and the method said once. Facts come only from the
+# writer's fact sheet (V1 entries of research/music-behavior-2026-10/). The
+# agitation result lives only in the dropped-claims table, and the 14 to 17
+# peak only there too, so neither is said twice.
+# THE ONE READER: someone planning an event who suspects the music matters
+# more than they have been treating it, and wants to know what is actually
+# known.
+# ---------------------------------------------------------------------------
+title: "How does music affect people at a party?"
+seo_title: "How does music affect people's behavior at a party or event?"
+slug: "how-does-music-affect-people-at-a-party"
+eyebrow: "RESEARCH"
+parent: "music/"
+dek: "What research has found about music and how people behave at events, and the popular claims the research doesn't support."
+date: "2026-10-03"
+author:
+  name: "Signet Artists"
+meta_description: "How does music affect people at a party? What research shows about volume, dancing, age, live music and drinking, and the claims that don't hold up."
+llms_description: "The front page of a research series from Signet Artists, a Denver live music booking company, on how music affects people's behavior at parties and events. It summarizes what studies have found about volume and conversation, dancing, the music of different age groups, live versus recorded music, drinking, live music in memory care and sound baths, with a link to a fuller post on each. It lists popular claims that did not hold up when checked against the research, including that people's favorite music comes from age 23, that going to gigs adds nine years to your life, that music reduces agitation in dementia, that slow music makes diners spend more, and that making music together makes children kinder. It explains the method used across the series: for every claim, what was found, how big the effect was, who was studied and the main limitation."
+
+hero:
+  src: "img/range.jpg"
+  alt: "The Denver skyline with the Front Range behind it, seen from City Park."
+
+sections:
+  - type: key_takeaways
+    items:
+      - "The volume of the music has a lot to do with how easily guests can talk, and crowds tend to move together most on songs they know."
+      - "People seem to move more when the musicians are in the same space, and to feel more connected to each other."
+      - "Several popular claims about music, like the idea that going to gigs adds years to your life, fall apart when you check where they came from."
+
+  - type: prose
+    body: |
+      Pretty much every party has music playing. Usually it's a playlist
+      somebody put together or whatever the venue already had on, and
+      nobody picked it for what it might do to the guests. There's
+      [a longer essay on how every party already has a soundtrack](https://danielchristopherfox.com/essays/every-room-is-already-scored.html)
+      if you're curious, and here's a quick tour of what researchers have
+      found so far.
+
+  - type: subhead
+    text: "What the research has found"
+
+  - type: prose
+    body: |
+      The **volume** of the music has a lot to do with who can talk to
+      whom. Two people at arm's length can keep a conversation going with
+      up to about 71 decibels of sound around them, and one large banquet,
+      measured in three halls, ran at 83 to 87 decibels, well past that.
+      Learn more
+      about [how loud background music should be](https://signetartists.com/blog/how-loud-should-background-music-be/).
+
+      On the **dance floor**, crowds seem to move together most on songs they
+      know, at tempos near walking pace. At one concert, bass too low for people
+      to hear made them move about 12% more. Find out more about
+      [how to get people to dance at a wedding](https://signetartists.com/blog/how-to-get-people-to-dance-at-a-wedding/).
+
+      A guest's **age** makes a difference too. The songs people have the
+      most memories of are usually from their teens, and younger guests also
+      respond to their parents' music. Check out our post on
+      [party music for all ages](https://signetartists.com/blog/party-music-for-all-ages/)
+      for what that means for a song list.
+
+      In the few studies there are, people moved more when the music was
+      **live**, and the audience felt more connected to each other. Read more
+      about
+      [whether live music is better than recorded](https://signetartists.com/blog/is-live-music-better-than-recorded/).
+
+      In lab studies, music seems to speed up **drinking** compared with
+      silence. The famous finding that louder music means more drinking
+      rests on one small study from a lab whose work is in question. Learn
+      more about [whether loud music makes people drink more](https://signetartists.com/blog/does-loud-music-make-people-drink-more/).
+
+  - type: subhead
+    text: "Memory care and sound baths"
+
+  - type: prose
+    body: |
+      In one study, residents with dementia were positively engaged 69% of
+      the time during live music, 25% with recorded music and 12.5% in
+      silence. Learn more about
+      [live music for memory care residents](https://signetartists.com/blog/live-music-for-memory-care-residents/),
+      including what it hasn't been shown to do.
+
+      People report feeling calmer after a sound bath, and the evidence for
+      any health claim is thin. Find out more about
+      [whether sound baths work](https://signetartists.com/blog/do-sound-baths-work/).
+
+  - type: subhead
+    text: "Claims we checked and dropped"
+
+  - type: prose
+    body: |
+      You'll hear these a lot, but when we looked into them, the evidence
+      didn't back them up.
+
+  - type: comparison_table
+    columns: ["The claim", "What we found"]
+    rows:
+      - ["Your favorite music is from when you were 23.", "Three later studies put the peak at 14 to 17."]
+      - ["Going to a gig every two weeks adds nine years to your life.", "It came from a marketing study paid for by a venue company, and it was never published as research."]
+      - ["Music reduces agitation in dementia.", "The Cochrane review, which covered 30 trials in its 2025 update, found no effect on agitation."]
+      - ["Slow music makes diners spend more.", "A 2024 experiment across 282 restaurant tables found slow music kept diners about 23 minutes longer (80 minutes against 57), and the bill was the same."]
+      - ["Making music together makes children kinder.", "When researchers repeated the best-known study in kindergartens in 2021, they found no effect."]
+
+  - type: subhead
+    text: "How we read the research"
+
+  - type: prose
+    body: |
+      For every claim we write about, we say what was found, how big the
+      effect was, who was studied and where, and what the catch is (one
+      night, a small group, no comparison group). Some findings rest on
+      many studies and some rest on one small one, and we think you should
+      know which is which before you plan around them.
+
+      As far as we can tell, some questions haven't been studied at all.
+      Nobody has measured music
+      at a charity auction, compared an acoustic act with an amplified one,
+      or counted how much strangers talk at a party with and without music.
+      When a question like that comes up, we'll tell you the research isn't
+      there yet.
+
+  - type: subhead
+    text: "Choosing music for your event"
+
+  - type: prose
+    body: |
+      If you'd like to plan the music with some of this in mind, we're glad
+      to help. Take a look at the
+      [solo players, duos and full dance bands we book](https://signetartists.com/music/).
+
+  - type: references
+    heading: "Sources"
+    items:
+      - text: "Rindel, J. H. (2019). Restaurant acoustics: verbal communication in eating establishments. Acoustics in Practice."
+        url: "https://www.euracoustics.org/documents/8/01_Restaurant_acoustics.pdf"
+      - text: "Kopiez, R., Weigang, J., Platz, F., and Düvel, N. (2021). Farewell to Holbrook & Schindler's (1989) \"song-specific age\"? Music & Science."
+        url: "https://doi.org/10.1177/20592043211001794"
+      - text: "van der Steen, J. T., and others (2025). Music-based therapeutic interventions for people with dementia. Cochrane Database of Systematic Reviews."
+        url: "https://doi.org/10.1002/14651858.CD003477.pub5"
+      - text: "Malcman, M., Azar, O. H., Shavit, T., and Rosenboim, M. (2024). How does background music affect dining duration, tips and bill amounts in restaurants? A field experiment. Behavioral Sciences."
+        url: "https://doi.org/10.3390/bs14121188"
+      - text: "Baier, J., Wöllner, C., and Wolf, A. (2021). Interpersonal musical synchronization and prosocial behavior in children: no effects in a controlled field experiment. Frontiers in Psychology."
+        url: "https://doi.org/10.3389/fpsyg.2021.784255"
+
+  - type: cta
+    headline: "Tell us about your event and we'll help you choose music that suits it."
+    body: "Just reach out with the date and a little about the event, and we'll share some ideas."
+    link: "contact/"
+    link_text: "Check a Date"
+
+  - type: related
+    posts:
+      - slug: "how-to-get-people-to-dance-at-a-wedding"
+      - slug: "party-music-for-all-ages"
+      - slug: "is-live-music-better-than-recorded"
