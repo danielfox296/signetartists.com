@@ -1943,7 +1943,7 @@ def siblings(output: str, nav_prefix: str) -> str:
 # so it is never missing while it waits to be placed.
 
 HUB_INDEX = {
-    "/private-parties/": ("All private party pages", [
+    "/private-parties/": ("TYPES OF private partIES WE SERVE", [
         ("Occasions", [
             "birthday-party", "anniversary-party", "engagement-party", "showers",
             "graduation-party", "retirement-party", "backyard-party",
