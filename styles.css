@@ -2586,10 +2586,9 @@ main:focus {
   border-top: 1px solid var(--rule);
 }
 
-/* The index in groups (2026-10-03): the topics as a row of jump links, then
-   a heading over each group's rows. scroll-margin keeps a jumped-to heading
-   clear of the sticky header. The clip index at /video/ uses the same row
-   for its acts. */
+/* A row of jump links over a long list. The clip index at /video/ uses it
+   for its acts. (The blog index used it for a day, 2026-10-03, while it was
+   grouped by category; it is one newest-first list again.) */
 .jump-list .sibling-list {
   margin-top: 0;
   color: var(--ink);
@@ -2608,15 +2607,6 @@ main:focus {
 
 .heading + .jump-list {
   margin-top: var(--space-3);
-}
-
-.blog-group-title {
-  margin-top: var(--space-5);
-  scroll-margin-top: 6rem;
-}
-
-.jump-list + .blog-group-title {
-  margin-top: var(--space-4);
 }
 
 .blog-row {

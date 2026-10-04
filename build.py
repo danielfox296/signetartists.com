@@ -2933,8 +2933,9 @@ def blog_thumb(src: str) -> str:
 
 
 def blog_cards(published: list, nav_prefix: str = "../") -> str:
-    """Blog index listing: one row per published post, newest first, or the
-    quiet empty state until the first post ships.
+    """Blog index listing: one row per published post, newest first, each
+    with its category as an eyebrow, or the quiet empty state until the
+    first post ships.
 
     nav_prefix is the depth of the page this lands on. It defaults to the
     blog index's own depth because that is the only page the token appears
@@ -2979,33 +2980,13 @@ def blog_cards(published: list, nav_prefix: str = "../") -> str:
             "</a>"
         )
 
-    # Grouped by the category each post already carries (2026-10-03). One
-    # newest-first list of twenty-five pieces put a yacht rock explainer above
-    # a holiday party guide for no reason a reader could use. The biggest
-    # group leads; inside a group the order is still newest first. A blog with
-    # one category keeps the plain list.
-    groups: dict[str, list] = {}
-    for p in published:
-        groups.setdefault(p.get("eyebrow", ""), []).append(p)
-    if len(groups) < 2:
-        rows = [row(i, p, "h2") for i, p in enumerate(published)]
-        return f'<div class="blog-list">{"".join(rows)}</div>'
-    order = sorted(groups, key=lambda k: (-len(groups[k]), k))
-    jump = "".join(
-        f'<li><a href="#{esc(k.lower())}">{esc(k.capitalize())}</a></li>' for k in order
-    )
-    out = [f'<nav class="jump-list" aria-label="Topics"><ul class="sibling-list">{jump}</ul></nav>']
-    i = 0
-    for k in order:
-        rows = []
-        for p in groups[k]:
-            rows.append(row(i, p, "h3"))
-            i += 1
-        out.append(
-            f'<h2 class="h3 blog-group-title" id="{esc(k.lower())}">{esc(k.capitalize())}</h2>'
-            f'<div class="blog-list">{"".join(rows)}</div>'
-        )
-    return "".join(out)
+    # One list, newest first (Daniel, 2026-10-04: "blogs are time-based. the
+    # blog index page should show the most recent work at the top. not by
+    # category. the category should be an eyebrow"). The category is the
+    # eyebrow at the head of each row's meta line. The day-old grouping by
+    # category, with its jump links and group headings, is gone.
+    rows = [row(i, p, "h2") for i, p in enumerate(published)]
+    return f'<div class="blog-list">{"".join(rows)}</div>'
 
 
 def build_blog_post(post: dict, published: list) -> dict:
