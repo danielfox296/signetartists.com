@@ -856,6 +856,48 @@ ACT_BY_ID = {a["id"]: a for a in ACTS}
 # building a watch page at /video/<slug>/. See the _note in footage.json and
 # the watch-pages section below for why these pages exist.
 FOOTAGE = json.loads((DATA / "footage.json").read_text(encoding="utf-8"))["videos"]
+
+# Where the subject of a photo sits (2026-10-08). Photos are cropped to a fixed
+# frame in many places (.media and the blog list are 16:9, object-fit: cover)
+# and a crop around the centre took Jordan's head off on two posts. The focus
+# belongs to the photo, so it is applied to every <img> that shows it, on every
+# page, as it is written; see _src/data/photo-focus.json.
+_FOCUS_FILE = DATA / "photo-focus.json"
+PHOTO_FOCUS = {k: v for k, v in (json.loads(_FOCUS_FILE.read_text(encoding="utf-8")) if _FOCUS_FILE.exists() else {}).items()
+               if not k.startswith("_")}
+_FOCUS_VALUE = re.compile(r"^\d{1,3}(?:\.\d+)?% \d{1,3}(?:\.\d+)?%$")
+for _src, _pos in PHOTO_FOCUS.items():
+    if not _FOCUS_VALUE.match(_pos):
+        raise SystemExit(f"photo-focus.json: {_src} has {_pos!r}; write it as 'x% y%', e.g. '50% 25%'.")
+_IMG_TAG = re.compile(r"<img\b[^>]*>", re.I)
+_SRC_ATTR = re.compile(r'\ssrc="([^"]*)"')
+_STYLE_ATTR = re.compile(r'\sstyle="([^"]*)"')
+
+
+def apply_photo_focus(page_html: str) -> str:
+    """Every <img> showing a photo listed in photo-focus.json is cropped
+    around its subject: object-position joins whatever style it has."""
+    if not PHOTO_FOCUS:
+        return page_html
+
+    def one(m):
+        tag = m.group(0)
+        src = _SRC_ATTR.search(tag)
+        if not src:
+            return tag
+        path = re.sub(r"^(?:\.\./)+|^/", "", src.group(1).split("?")[0].split("#")[0])
+        if path.startswith(SITE_URL + "/"):
+            path = path[len(SITE_URL) + 1:]
+        pos = PHOTO_FOCUS.get(path)
+        if not pos:
+            return tag
+        style = _STYLE_ATTR.search(tag)
+        if style:
+            kept = ";".join(d for d in style.group(1).split(";") if d.strip() and not d.strip().lower().startswith("object-position"))
+            css = (kept.rstrip() + "; " if kept.strip() else "") + f"object-position: {pos};"
+            return tag[:style.start()] + f' style="{css}"' + tag[style.end():]
+        return tag[:4] + f' style="object-position: {pos};"' + tag[4:]
+    return _IMG_TAG.sub(one, page_html)
 FOOTAGE_BY_KEY = {(v.get("id") or v["file"]): v for v in FOOTAGE}
 WATCH_BASE = "video"
 
@@ -2199,6 +2241,7 @@ def render_page(
             "rate token, or a typo."
         )
 
+    out_html = apply_photo_focus(out_html)
     out_path = ROOT / output
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(out_html, encoding="utf-8")

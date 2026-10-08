@@ -15,6 +15,14 @@ share a thumb, and nothing here has to know what a post is called. A thumb is
 rewritten when its source is newer, so re-pulling a still and forgetting this
 script cannot ship a stale crop.
 
+A hero that is not 16:9 is CROPPED to it, around the point
+_src/data/photo-focus.json gives for that photo (its centre when it has
+none), the way the page itself crops it (object-fit: cover). Until
+2026-10-08 it was resized to 640x360 whatever its shape: Jordan's portrait
+came out squashed sideways in the blog list, and the 3:1 panorama of the
+range squashed the other way. A thumb is also rewritten when its focus
+changes.
+
 build.py falls back to the full hero when a thumb is missing, so the index is
 never broken by a post whose thumb has not been generated yet — it is only
 heavier. Run this after adding a post or changing a hero, and commit the
@@ -22,6 +30,7 @@ output. Needs Pillow; build.py does not, which is why this is a script and
 not a build step.
 """
 
+import json
 import pathlib
 import sys
 
@@ -31,6 +40,7 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ROOT / "_src" / "pages"
 THUMBS = ROOT / "img" / "thumbs"
+FOCUS_FILE = ROOT / "_src" / "data" / "photo-focus.json"
 
 # 13rem at the two-column breakpoint is 208px, so 640 wide covers 2x with a
 # little room for a wider column later. Quality 78: these are duotones, and
@@ -56,6 +66,33 @@ def heroes() -> set:
     return found
 
 
+def focus_of(src: str) -> tuple:
+    """(x, y) as fractions, from photo-focus.json's 'x% y%'; the centre by default."""
+    try:
+        pos = json.loads(FOCUS_FILE.read_text(encoding="utf-8")).get(src)
+    except (OSError, ValueError):
+        pos = None
+    if not pos:
+        return 0.5, 0.5
+    x, y = (float(v.rstrip("%")) / 100 for v in pos.split())
+    return min(max(x, 0.0), 1.0), min(max(y, 0.0), 1.0)
+
+
+def crop_to_frame(im: Image.Image, focus: tuple) -> Image.Image:
+    """The largest WIDTH:HEIGHT box in the photo, placed the way CSS
+    object-position places it: the focus point of the photo sits at the
+    same point of the frame."""
+    w, h = im.size
+    want = WIDTH / HEIGHT
+    if w / h > want:
+        cw = round(h * want)
+        left = round((w - cw) * focus[0])
+        return im.crop((left, 0, left + cw, h))
+    ch = round(w / want)
+    top = round((h - ch) * focus[1])
+    return im.crop((0, top, w, top + ch))
+
+
 def main(force: bool = False) -> int:
     THUMBS.mkdir(parents=True, exist_ok=True)
     missing = []
@@ -66,12 +103,14 @@ def main(force: bool = False) -> int:
             print(f"  MISS   {src} (no such file)")
             continue
         dest = THUMBS / source.name
-        if dest.exists() and not force and dest.stat().st_mtime >= source.stat().st_mtime:
+        focus = focus_of(src)
+        refocused = focus != (0.5, 0.5) and FOCUS_FILE.exists() and dest.exists() \
+            and FOCUS_FILE.stat().st_mtime > dest.stat().st_mtime
+        if dest.exists() and not force and not refocused and dest.stat().st_mtime >= source.stat().st_mtime:
             print(f"  skip   {dest.name} (current)")
             continue
         with Image.open(source) as im:
-            im = im.convert("RGB")
-            im.thumbnail((WIDTH * 2, HEIGHT * 2), Image.LANCZOS)
+            im = crop_to_frame(im.convert("RGB"), focus)
             im = im.resize((WIDTH, HEIGHT), Image.LANCZOS)
             im.save(dest, "JPEG", quality=QUALITY, optimize=True)
         kb = dest.stat().st_size / 1024
