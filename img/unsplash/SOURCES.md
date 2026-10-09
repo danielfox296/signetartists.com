@@ -139,3 +139,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1553605379-9221b132f0ac
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1520799275532-15f68640b66b.jpg
+- Used on: the blog › why do dementia patients remember music page
+- Source: https://images.unsplash.com/photo-1520799275532-15f68640b66b
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
