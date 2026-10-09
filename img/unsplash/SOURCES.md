@@ -115,3 +115,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1649298173603-9c95aa950879
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1445375011782-2384686778a0.jpg
+- Used on: the blog › how to read a band quote page
+- Source: https://images.unsplash.com/photo-1445375011782-2384686778a0
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
