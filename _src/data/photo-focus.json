@@ -1,4 +1,6 @@
 {
   "_note": "Where the subject of a photo sits, as a CSS object-position: 'x% y%' from the top left. The site crops photos to a fixed frame in several places (a post's header and the cards linking to it, the blog list, act cards), always around the centre unless the photo is listed here; then the crop keeps this point in view, wherever the photo appears. scripts/thumbs.py crops the blog list's thumbnails around the same point. Added 2026-10-08 after Jordan's portrait in img/acts/acoustic-outdoor.jpg was squashed in the blog list and cut off at the chin on the posts that use it. CopyDesk writes here when a crop is chosen on the page.",
-  "img/acts/acoustic-outdoor.jpg": "50% 25%"
+  "img/acts/acoustic-outdoor.jpg": "50% 25%",
+  "img/unsplash/photo-1612285127323-1837364f9da0.jpg": "55% 64%",
+  "img/unsplash/photo-1429962714451-bb934ecdc4ec.jpg": "50% 70%"
 }
