@@ -145,3 +145,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1520799275532-15f68640b66b
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1773227059529-3a2bd04ce5b0.jpg
+- Used on: the blog › sing along songs for seniors page
+- Source: https://images.unsplash.com/photo-1773227059529-3a2bd04ce5b0
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
