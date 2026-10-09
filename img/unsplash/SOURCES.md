@@ -73,3 +73,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1709689702529-6fa1f343e108
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1687945512099-400cbe94460c.jpg
+- Used on: the blog › why do restaurants have live music page
+- Source: https://images.unsplash.com/photo-1687945512099-400cbe94460c
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
