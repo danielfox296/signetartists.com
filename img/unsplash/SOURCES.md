@@ -175,3 +175,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1735547928473-c099d7ef0628
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1740047602722-b4993b79e4b7.jpg
+- Used on: the blog › does music make food taste better page
+- Source: https://images.unsplash.com/photo-1740047602722-b4993b79e4b7
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
