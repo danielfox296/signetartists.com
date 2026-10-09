@@ -43,3 +43,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1617136785693-54b279bddfeb
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1546512347-3ad629c193c5.jpg
+- Used on: the blog › office holiday party ideas denver page
+- Source: https://images.unsplash.com/photo-1546512347-3ad629c193c5
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
