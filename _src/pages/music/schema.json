@@ -2,7 +2,7 @@
   "_note": "The roster's FAQ, 2026-09-23. No service block: the page's graph (every act as a Service, the named acts as entities) comes from build.py roster_schema, and page_schema adds it when config.json says schema: roster. Answers lead with the answer; the figures on the pricing page stay there.",
   "faqs": [
     {
-      "q": "What's the difference between a named act and a configuration?",
+      "q": "What's the difference between a \"named act\" and a configuration?",
       "a": "A named act is booked under its name, and that specific sound and presence comes with the booking: Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate and Firstwater. A configuration is a format we spec by instrumentation, size and repertoire, like a jazz duo or a yacht rock band, and the contract names the configuration. Both kinds have a page of their own."
     },
     {
