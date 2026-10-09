@@ -91,3 +91,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1594035900144-17151c9910af
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1738156674456-97cdf7793bb7.jpg
+- Used on: the blog › why do people sing along page
+- Source: https://images.unsplash.com/photo-1738156674456-97cdf7793bb7
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
