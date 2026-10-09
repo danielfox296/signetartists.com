@@ -217,3 +217,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1634027593002-f0b652051278
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1531971772042-d189c2021395.jpg
+- Used on: the blog › what a jazz band costs denver page
+- Source: https://images.unsplash.com/photo-1531971772042-d189c2021395
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
