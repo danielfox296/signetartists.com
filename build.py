@@ -1993,7 +1993,7 @@ HUB_INDEX = {
         ]),
         ("Cities", ["denver", "boulder", "colorado-springs"]),
     ]),
-    "/corporate/": ("All corporate event pages", [
+    "/corporate/": ("more details about our corporate events", [
         ("Occasions", [
             "holiday-party", "galas-and-awards", "client-dinners", "after-party",
             "retreats",
