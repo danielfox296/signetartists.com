@@ -235,3 +235,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1592153978217-6913256c7e1e
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1512053459797-38c3a066cabd.jpg
+- Used on: the blog › jazz band instruments page
+- Source: https://images.unsplash.com/photo-1512053459797-38c3a066cabd
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
