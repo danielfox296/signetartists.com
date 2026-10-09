@@ -229,3 +229,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1498145645178-ab2c7cebc433
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1592153978217-6913256c7e1e.jpg
+- Used on: the blog › company picnic entertainment ideas denver page
+- Source: https://images.unsplash.com/photo-1592153978217-6913256c7e1e
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
