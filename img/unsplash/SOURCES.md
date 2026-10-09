@@ -49,3 +49,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1546512347-3ad629c193c5
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1576267460635-dad0eede4415.jpg
+- Used on: the blog › january office party ideas page
+- Source: https://images.unsplash.com/photo-1576267460635-dad0eede4415
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
