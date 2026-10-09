@@ -55,3 +55,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1576267460635-dad0eede4415
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1531058020387-3be344556be6.jpg
+- Used on: the blog › corporate event entertainment ideas denver page
+- Source: https://images.unsplash.com/photo-1531058020387-3be344556be6
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
