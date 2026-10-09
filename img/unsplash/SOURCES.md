@@ -223,3 +223,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1531971772042-d189c2021395
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1498145645178-ab2c7cebc433.jpg
+- Used on: the blog › what is yacht rock page
+- Source: https://images.unsplash.com/photo-1498145645178-ab2c7cebc433
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
