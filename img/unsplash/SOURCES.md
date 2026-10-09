@@ -259,3 +259,15 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1653821355226-6def361cc7ab
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-09 with CopyDesk
+
+## photo-1429962714451-bb934ecdc4ec.jpg
+- Used on: the about page
+- Source: https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-09 with CopyDesk
+
+## photo-1612285127323-1837364f9da0.jpg
+- Used on: the about page
+- Source: https://images.unsplash.com/photo-1612285127323-1837364f9da0
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-09 with CopyDesk
