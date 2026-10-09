@@ -199,3 +199,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1593700861848-8455c0eeeece
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1641957449475-31200d42b183.jpg
+- Used on: the blog › corporate retreat evening ideas vail page
+- Source: https://images.unsplash.com/photo-1641957449475-31200d42b183
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
