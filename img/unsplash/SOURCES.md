@@ -31,3 +31,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1660211934853-e33d8a02201d
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1600102975337-e66752d32557.jpg
+- Used on: the blog › what a dj costs denver page
+- Source: https://images.unsplash.com/photo-1600102975337-e66752d32557
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
