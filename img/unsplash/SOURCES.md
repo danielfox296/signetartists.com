@@ -187,3 +187,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1778694276998-4cfd1f84bfe1
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1783314870559-b93cdcf6db7a.jpg
+- Used on: the blog › outdoor reception page
+- Source: https://images.unsplash.com/photo-1783314870559-b93cdcf6db7a
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
