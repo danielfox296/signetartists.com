@@ -19,3 +19,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1714972383570-44ddc9738355
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1483000805330-4eaf0a0d82da.jpg
+- Used on: the blog › is live music better than recorded page
+- Source: https://images.unsplash.com/photo-1483000805330-4eaf0a0d82da
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
