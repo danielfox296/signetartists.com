@@ -241,3 +241,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1512053459797-38c3a066cabd
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1768508947825-0a63f7c46a2b.jpg
+- Used on: the blog › gala entertainment ideas page
+- Source: https://images.unsplash.com/photo-1768508947825-0a63f7c46a2b
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
