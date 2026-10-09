@@ -163,3 +163,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1527529482837-4698179dc6ce
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1762955911431-4c44c7c3f408.jpg
+- Used on: the blog › live music for memory care residents page
+- Source: https://images.unsplash.com/photo-1762955911431-4c44c7c3f408
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
