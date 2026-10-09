@@ -151,3 +151,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1773227059529-3a2bd04ce5b0
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1616286608358-0e1b143f7d2f.jpg
+- Used on: the blog › what music do 80 year olds listen to page
+- Source: https://images.unsplash.com/photo-1616286608358-0e1b143f7d2f
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
