@@ -205,3 +205,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1641957449475-31200d42b183
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1667066213183-e0ab112cc843.jpg
+- Used on: the blog › what is a string quartet page
+- Source: https://images.unsplash.com/photo-1667066213183-e0ab112cc843
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
