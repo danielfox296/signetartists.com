@@ -133,3 +133,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1630300727308-fe49b6ae8a62
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1553605379-9221b132f0ac.jpg
+- Used on: the blog › why do people play music at funerals page
+- Source: https://images.unsplash.com/photo-1553605379-9221b132f0ac
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
