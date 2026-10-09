@@ -169,3 +169,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1762955911431-4c44c7c3f408
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1735547928473-c099d7ef0628.jpg
+- Used on: the blog › last song of the night wedding page
+- Source: https://images.unsplash.com/photo-1735547928473-c099d7ef0628
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
