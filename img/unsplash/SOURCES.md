@@ -181,3 +181,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1740047602722-b4993b79e4b7
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1778694276998-4cfd1f84bfe1.jpg
+- Used on: the blog › do sound baths work page
+- Source: https://images.unsplash.com/photo-1778694276998-4cfd1f84bfe1
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
