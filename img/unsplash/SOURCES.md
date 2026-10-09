@@ -79,3 +79,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1687945512099-400cbe94460c
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1525569815264-42cac54bfd4c.jpg
+- Used on: the blog › how loud should background music be page
+- Source: https://images.unsplash.com/photo-1525569815264-42cac54bfd4c
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
