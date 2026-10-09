@@ -97,3 +97,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1738156674456-97cdf7793bb7
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1738156793840-e7ad46384761.jpg
+- Used on: the blog › karaoke team building page
+- Source: https://images.unsplash.com/photo-1738156793840-e7ad46384761
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
