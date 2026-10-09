@@ -13,3 +13,9 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1655459765544-39065b741a9e
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
+
+## photo-1714972383570-44ddc9738355.jpg
+- Used on: the blog › how to get people to dance at a wedding page
+- Source: https://images.unsplash.com/photo-1714972383570-44ddc9738355
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-10-08 with CopyDesk
