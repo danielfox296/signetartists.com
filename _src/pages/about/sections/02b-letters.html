@@ -8,8 +8,9 @@
      Nothing else: no eyebrow, no caption, no control. His call, 2026-10-10:
      "kill the thirteen letters shit. no note below either."
 
-     Runs only while in view, holds while the pointer is on the word, and
-     stands still under reduced motion. Without JS the name is plain text. Clicking the word
+     Runs while in view and stands still under reduced motion. No pause
+     under the pointer: there was one, and it read as the thing not working
+     (2026-10-10, "why paused on hover. seems weird"). Without JS the name is plain text. Clicking the word
      advances it; that is a nudge, not a control, so nothing is labelled.
      Page-scoped rules, every class prefixed letters-. No library. -->
 <style>
@@ -236,7 +237,7 @@
     return delay + dur;
   }
 
-  var idx = 0, timer = 0, inView = false, held = false;
+  var idx = 0, timer = 0, inView = false;
 
   function go(j, instant) {
     idx = j;
@@ -266,7 +267,7 @@
 
   function schedule(after) {
     clearTimeout(timer);
-    if (!inView || held || reduce.matches || doc.hidden) { return; }
+    if (!inView || reduce.matches || doc.hidden) { return; }
     timer = setTimeout(next, (after || 0) + (idx === 0 ? HOLD_NAME : HOLD));
   }
 
@@ -291,11 +292,6 @@
       if (inView) { schedule(); } else { clearTimeout(timer); }
     }, { threshold: 0.35 }).observe(section);
 
-    /* The hold is on the word, not the band: the band is the full width of
-       the page, and a cursor resting anywhere in it froze the cycle
-       (2026-10-10, "does it not animate on its own?"). */
-    block.addEventListener('pointerenter', function () { held = true; clearTimeout(timer); });
-    block.addEventListener('pointerleave', function () { held = false; schedule(); });
     doc.addEventListener('visibilitychange', function () { if (doc.hidden) { clearTimeout(timer); } else { schedule(); } });
     if (reduce.addEventListener) { reduce.addEventListener('change', function () { schedule(); }); }
 
