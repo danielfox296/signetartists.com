@@ -1,0 +1,309 @@
+<!-- The letters of the name, 2026-10-10. The page argues from the name, and
+     this is the name taken apart: the same thirteen letters set into the
+     phrases Daniel picked from the anagram list, in his order, then put back.
+     One element per letter in the site's display type; each phrase is
+     measured in real text flow so it wraps where text wraps, and the letters
+     travel to those boxes along a lifted arc, brass in flight and ink on
+     landing. When they come home to the name a brass line draws under it.
+     Nothing else: no eyebrow, no caption, no control. His call, 2026-10-10:
+     "kill the thirteen letters shit. no note below either."
+
+     Runs only while in view, holds under the pointer, and stands still under
+     reduced motion. Without JS the name is plain text. Clicking the word
+     advances it; that is a nudge, not a control, so nothing is labelled.
+     Page-scoped rules, every class prefixed letters-. No library. -->
+<style>
+.letters__frame { position: relative; max-width: 58rem; }
+.letters__word,
+.letters__stage {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(2.5rem, 1.4rem + 6.4vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.letters__word { position: relative; }
+/* The measuring copy: the next phrase is set here, invisibly, in real text
+   flow, and each glyph's box is read off it. The visible glyphs then travel
+   to those boxes. */
+.letters__stage { position: absolute; left: 0; right: 0; top: 0; visibility: hidden; pointer-events: none; }
+.letters__w { display: inline-block; white-space: nowrap; }
+.letters__g { display: inline-block; }
+.letters__word .letters__g { position: absolute; left: 0; top: 0; transform-origin: 50% 60%; }
+.letters__word .letters__g.is-flying { z-index: 2; will-change: transform; }
+/* A mark that is not one of the thirteen letters (the apostrophe in IT'S)
+   is parked out of sight until its phrase lands, then fades in. */
+.letters__word .letters__g--x { opacity: 0; transition: opacity 0.4s ease; }
+.letters--live .letters__word { cursor: pointer; }
+/* The press line: a brass rule that draws under the name when the letters
+   come home, and clears when they leave. Transform only. */
+.letters__rule {
+  position: absolute; left: 0; height: 2px; width: 0;
+  background: var(--brass);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition: transform 0.55s cubic-bezier(0.2, 0, 0, 1);
+}
+.letters__rule.is-on { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .letters__rule { transition: none; }
+}
+</style>
+<section class="section section--ruled letters" aria-label="The letters of the name">
+  <div class="wrap">
+    <div class="letters__frame">
+      <p class="letters__word" data-letters>Signet Artists</p>
+      <span class="letters__rule" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  'use strict';
+  var doc = document;
+  var block = doc.querySelector('[data-letters]');
+  if (!block || !('animate' in Element.prototype) || !('IntersectionObserver' in window)) { return; }
+
+  /* Daniel's list, 2026-10-10, in his order. The name first and the name
+     is where the cycle returns. */
+  var PHRASES = [
+    'SIGNET ARTISTS',
+    'TASTIEST GRINS',
+    'NASTIEST GRITS',
+    'A SETTING STIRS',
+    "IT'S AGENTS STIR",
+    'GEAR STINTS ITS',
+    'IT TARGETS SINS',
+    'ARTISTES STING',
+    'STARTS IGNITES',
+    'ATTESTING SIRS',
+    'STRATEGISTS IN'
+  ];
+  var HOLD = 2600, HOLD_NAME = 4200, STAGGER = 42;
+
+  var section = block.closest('.letters');
+  var frame = block.parentNode;
+  var rule = frame.querySelector('.letters__rule');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* The glyph pool is the name's own letters; every phrase is a permutation
+     of them, which is the whole point and is checked here so a typo in the
+     list fails loud in the console rather than quietly dropping a letter.
+     Anything that is not a letter (the apostrophe) is an extra glyph. */
+  function lettersOf(p) { return p.toUpperCase().replace(/[^A-Z]/g, ''); }
+  var pool = lettersOf(PHRASES[0]).split('');
+  var key = pool.slice().sort().join('');
+  PHRASES = PHRASES.map(function (p) { return p.toUpperCase(); }).filter(function (p) {
+    var ok = lettersOf(p).split('').sort().join('') === key;
+    if (!ok) { console.warn('letters: "' + p + '" is not an anagram of "' + PHRASES[0] + '"'); }
+    return ok;
+  });
+  var extraCount = {};
+  PHRASES.forEach(function (p) {
+    var c = {};
+    p.replace(/[A-Z\s]/g, '').split('').forEach(function (ch) { c[ch] = (c[ch] || 0) + 1; });
+    Object.keys(c).forEach(function (ch) { extraCount[ch] = Math.max(extraCount[ch] || 0, c[ch]); });
+  });
+
+  var stage = doc.createElement('p');
+  stage.className = 'letters__stage';
+  stage.setAttribute('aria-hidden', 'true');
+  frame.insertBefore(stage, block);
+
+  var sr = doc.createElement('span');
+  sr.className = 'visually-hidden';
+  sr.textContent = block.textContent.trim();
+  var layer = doc.createElement('span');
+  layer.setAttribute('aria-hidden', 'true');
+  function makeGlyph(ch, extra) {
+    var el = doc.createElement('span');
+    el.className = 'letters__g' + (extra ? ' letters__g--x' : '');
+    el.textContent = ch;
+    layer.appendChild(el);
+    return { ch: ch, el: el, x: 0, y: 0, extra: extra, parked: extra };
+  }
+  var glyphs = pool.map(function (ch) { return makeGlyph(ch, false); });
+  Object.keys(extraCount).forEach(function (ch) {
+    for (var n = 0; n < extraCount[ch]; n++) { glyphs.push(makeGlyph(ch, true)); }
+  });
+
+  var layouts = [], H = 0, nameW = 0, nameH = 0, fontPx = 48;
+
+  function measure(phrase) {
+    stage.textContent = '';
+    var slots = [];
+    phrase.split(' ').forEach(function (w, wi) {
+      if (wi) { stage.appendChild(doc.createTextNode(' ')); }
+      var word = doc.createElement('span');
+      word.className = 'letters__w';
+      w.split('').forEach(function (ch) {
+        var g = doc.createElement('span');
+        g.className = 'letters__g';
+        g.textContent = ch;
+        word.appendChild(g);
+        slots.push({ ch: ch, el: g });
+      });
+      stage.appendChild(word);
+    });
+    var box = stage.getBoundingClientRect();
+    var right = 0;
+    var out = slots.map(function (s) {
+      var r = s.el.getBoundingClientRect();
+      right = Math.max(right, r.right - box.left);
+      return { ch: s.ch, x: r.left - box.left, y: r.top - box.top };
+    });
+    return { slots: out, h: box.height, w: right };
+  }
+
+  function layoutAll() {
+    fontPx = parseFloat(getComputedStyle(block).fontSize) || fontPx;
+    layouts = PHRASES.map(measure);
+    H = 0;
+    layouts.forEach(function (l) { H = Math.max(H, l.h); });
+    nameW = layouts[0].w;
+    nameH = layouts[0].h;
+    block.style.height = H + 'px';
+    var ruleTop = nameH + Math.round(fontPx * 0.22);
+    rule.style.width = nameW + 'px';
+    rule.style.top = ruleTop + 'px';
+    /* The frame holds the rule when the name is the shortest layout. */
+    frame.style.paddingBottom = Math.max(0, ruleTop + 2 - H) + 'px';
+    stage.textContent = '';
+  }
+
+  /* Pair each glyph with a slot of the same character in reading order on
+     both sides, which keeps the paths from crossing and the travel short.
+     An extra glyph with no slot in this phrase is parked. */
+  function plan(L) {
+    var free = {};
+    L.slots.forEach(function (s, i) { (free[s.ch] = free[s.ch] || []).push(i); });
+    var moves = [], parks = [];
+    glyphs.slice().sort(function (a, b) { return (a.y - b.y) || (a.x - b.x); }).forEach(function (g) {
+      var list = free[g.ch];
+      if (list && list.length) {
+        var i = list.shift();
+        moves.push({ g: g, x: L.slots[i].x, y: L.slots[i].y });
+      } else if (g.extra) {
+        parks.push(g);
+      }
+    });
+    moves.sort(function (a, b) { return (a.y - b.y) || (a.x - b.x); });
+    return { moves: moves, parks: parks };
+  }
+
+  function place(g, x, y) {
+    g.x = x; g.y = y;
+    g.el.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+  }
+
+  var ink = '', brass = '';
+  function colours() {
+    ink = getComputedStyle(block).color;
+    var cs = getComputedStyle(doc.documentElement);
+    brass = (cs.getPropertyValue('--brass-bright') || '').trim() || ink;
+  }
+
+  /* An arc from the current box to the next: a quadratic curve lifted above
+     the straight line, sampled into keyframes, eased as one. Long trips rise
+     more. A small tilt in the direction of travel, straight on landing. */
+  function fly(g, tx, ty, delay) {
+    var dx = tx - g.x, dy = ty - g.y;
+    var dist = Math.sqrt(dx * dx + dy * dy);
+    var lift = -(Math.min(fontPx * 0.62, dist * 0.3) + fontPx * 0.1);
+    var cx = g.x + dx / 2, cy = g.y + dy / 2 + lift;
+    var tilt = dx > 0 ? 2.2 : (dx < 0 ? -2.2 : 0);
+    var frames = [];
+    var N = 10;
+    for (var i = 0; i <= N; i++) {
+      var t = i / N, u = 1 - t;
+      var x = u * u * g.x + 2 * u * t * cx + t * t * tx;
+      var y = u * u * g.y + 2 * u * t * cy + t * t * ty;
+      var s = 1 + 0.07 * Math.sin(Math.PI * t);
+      var r = tilt * Math.sin(Math.PI * t);
+      frames.push({
+        transform: 'translate(' + x + 'px, ' + y + 'px) scale(' + s + ') rotate(' + r + 'deg)',
+        color: t > 0.25 && t < 0.75 ? brass : ink
+      });
+    }
+    var dur = 720 + Math.min(560, dist * 0.9);
+    g.el.classList.add('is-flying');
+    var a = g.el.animate(frames, { duration: dur, delay: delay, easing: 'cubic-bezier(0.22, 0, 0.08, 1)', fill: 'forwards' });
+    a.onfinish = function () { place(g, tx, ty); a.cancel(); g.el.classList.remove('is-flying'); };
+    g.x = tx; g.y = ty;
+    return delay + dur;
+  }
+
+  var idx = 0, timer = 0, inView = false, held = false;
+
+  function go(j, instant) {
+    idx = j;
+    var p = plan(layouts[j]);
+    var end = 0, k = 0, appear = [];
+    rule.classList.remove('is-on');
+    p.parks.forEach(function (g) {
+      if (!g.parked) { g.parked = true; g.el.style.opacity = '0'; }
+    });
+    p.moves.forEach(function (m) {
+      var g = m.g;
+      if (g.extra && g.parked) { place(g, m.x, m.y); g.parked = false; appear.push(g); return; }
+      if (instant || (Math.abs(m.x - g.x) < 0.5 && Math.abs(m.y - g.y) < 0.5)) { place(g, m.x, m.y); return; }
+      end = Math.max(end, fly(g, m.x, m.y, k * STAGGER));
+      k++;
+    });
+    appear.forEach(function (g) {
+      if (instant) { g.el.style.opacity = '1'; return; }
+      setTimeout(function () { if (!g.parked) { g.el.style.opacity = '1'; } }, Math.max(0, end - 350));
+    });
+    if (j === 0) {
+      if (instant) { rule.classList.add('is-on'); }
+      else { setTimeout(function () { if (idx === 0) { rule.classList.add('is-on'); } }, Math.max(0, end - 200)); }
+    }
+    return end;
+  }
+
+  function schedule(after) {
+    clearTimeout(timer);
+    if (!inView || held || reduce.matches || doc.hidden) { return; }
+    timer = setTimeout(next, (after || 0) + (idx === 0 ? HOLD_NAME : HOLD));
+  }
+
+  function next() {
+    var travel = go((idx + 1) % PHRASES.length, reduce.matches);
+    schedule(travel);
+  }
+
+  function init() {
+    colours();
+    layoutAll();
+    block.textContent = '';
+    block.appendChild(sr);
+    block.appendChild(layer);
+    section.classList.add('letters--live');
+    go(0, true);
+
+    block.addEventListener('click', function () { clearTimeout(timer); next(); });
+
+    new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView) { schedule(); } else { clearTimeout(timer); }
+    }, { threshold: 0.35 }).observe(section);
+
+    section.addEventListener('pointerenter', function () { held = true; clearTimeout(timer); });
+    section.addEventListener('pointerleave', function () { held = false; schedule(); });
+    doc.addEventListener('visibilitychange', function () { if (doc.hidden) { clearTimeout(timer); } else { schedule(); } });
+    if (reduce.addEventListener) { reduce.addEventListener('change', function () { schedule(); }); }
+
+    var rt = 0;
+    window.addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { colours(); layoutAll(); go(idx, true); }, 120);
+    });
+  }
+
+  if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(init); } else { init(); }
+})();
+</script>
