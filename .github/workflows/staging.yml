@@ -1,0 +1,104 @@
+name: Deploy staging.signetartists.com
+
+# Builds the staging branch and pushes the output to danielfox296/signet-staging,
+# whose Pages site serves staging.signetartists.com. This workflow has no Pages
+# permission in this repo, and its one key (STAGING_DEPLOY_KEY, a deploy key on
+# signet-staging) opens nothing else, so it cannot reach signetartists.com.
+
+on:
+  push:
+    branches: [staging]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: staging
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Full history, as in deploy.yml: the sitemap's <lastmod> comes from git.
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install jinja2 markdown pyyaml
+
+      - name: Build site
+        run: python3 build.py
+
+      # Same staging as deploy.yml.
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_src' \
+            --exclude='_site' \
+            --exclude='build.py' \
+            --exclude='*.md' \
+            --exclude='.gitignore' \
+            --exclude='__pycache__' \
+            --exclude='scripts' \
+            ./ _site/
+
+      # The staging domain, plain HTML (no Jekyll), and nothing for search
+      # engines: robots.txt disallows everything and every page carries
+      # noindex. The run fails if any page can't take the tag.
+      - name: Make it staging
+        run: |
+          echo "staging.signetartists.com" > _site/CNAME
+          : > _site/.nojekyll
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          python3 - <<'EOF'
+          import pathlib, re, sys
+          tag = '<meta name="robots" content="noindex">'
+          robots = re.compile(r'<meta\s+name=["\']robots["\'][^>]*>', re.I)
+          head = re.compile(r'<head(\s[^>]*)?>', re.I)
+          pages, missing = 0, []
+          for p in sorted(pathlib.Path('_site').rglob('*.html')):
+              s = p.read_text(encoding='utf-8')
+              s, n = robots.subn(tag, s)
+              if not n:
+                  s, n = head.subn(lambda m: m.group(0) + '\n' + tag, s, count=1)
+              if not n:
+                  missing.append(str(p))
+                  continue
+              p.write_text(s, encoding='utf-8')
+              pages += 1
+          if missing:
+              sys.exit('No <head> to take noindex: ' + ', '.join(missing))
+          print(f'noindex on {pages} pages')
+          EOF
+
+      - name: Push to signet-staging
+        env:
+          DEPLOY_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/staging_key
+          chmod 600 ~/.ssh/staging_key
+          echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > ~/.ssh/known_hosts
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/staging_key -o IdentitiesOnly=yes"
+          git clone --depth 1 git@github.com:danielfox296/signet-staging.git ../out
+          rsync -a --delete --exclude='.git' _site/ ../out/
+          cd ../out
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No change to the built site"
+            exit 0
+          fi
+          git commit -q -m "Build of signetartists.com@${GITHUB_SHA::8}"
+          git push origin HEAD:main
