@@ -1,0 +1,94 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/vail/",
+   "title": "Live music for Vail corporate retreat evenings | Signet Artists",
+   "description": "Evening activities for a Vail corporate retreat, duos to quartets. Load-in planned for a pedestrian village at 8,150 feet, travel itemised on the quote.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Vail",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "Live music for corporate retreats, incentive events and private celebrations at Vail venues, solo through quartet.",
+     "areaServed": [
+      "Vail"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Tier 2 resort spoke, built 2026-08-20 for the SEO buildout. Corporate-retreat and private-event angle only. Argument: incentive and leadership-offsite country, pedestrian-village logistics (docks, elevator windows), 8,150 ft as a working fact. Facts restated from planners/mountain are brief and linked; that page holds the citations.",
+    "reader": "Whoever is planning a corporate retreat or incentive trip in Vail and wants the evenings, and the closing night most of all, to land."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-1",
+    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Corporate retreats</p>\n      <h1 class=\"h2 display\">Vail corporate retreats, planned for a pedestrian village.</h1>\n      <p class=\"lede\">Dinner in a lodge with the mountain going dark through the glass, a band playing, and a leadership team talking to each other like people for the first time all week. A Vail retreat books music at three moments, a welcome reception, dinner at conversation volume and one night where the dance floor is the objective, and solo through quartet covers all three on one contract.</p>\n      <p class=\"prose\">Vail is where Colorado&rsquo;s incentive trips and leadership offsites land, with pedestrian village cores and 8,150 feet of altitude, and we plan for both before the date. The way we work every resort town starts on the <a href=\"/corporate/retreats/\">corporate retreats page</a>, and eight evening ideas, from the welcome reception to the closing night, are in <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas in Vail</a>.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>\n  </div>\n</section>",
+    "_notes": "Vail retreat spoke. Argument: incentive and leadership-offsite country,\n     village logistics, 8,150 ft as a working fact. Rate-card link in the\n     first screen per the conversion spine.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is planning a Vail retreat or incentive trip and wants the closing night to land. The venues stay as local fact; the logistics section (dock, freight elevator, power, altitude, cap) is the FAQ, where the cited cap figure sits; FAQs restating the travel and venue sections are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-2",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The look</p>\n      <h2 class=\"h2\">An outdoor evening in Vail.</h2>\n      <p class=\"lede\">A covered stage deck under a tent, the way a resort lawn or deck evening is set before the group arrives.</p>\n    </div>\n    <div class=\"media-grid\">\n      <figure><img src=\"/img/outdoor.jpg\" alt=\"A frame tent on grass with a plywood stage deck under it.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n      <figure><img style=\"object-position: 50% 25%;\" src=\"/img/acts/acoustic-outdoor.jpg\" alt=\"A guitarist playing outdoors at a wedding.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n    </div>\n  </div>\n</section>",
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-3",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The venues</p>\n      <h2 class=\"h2\">Vail venues.</h2>\n      <p class=\"lede\">Six venues carry most of the corporate calendar here, and each one books a different kind of evening.</p>\n    </div>\n    <p class=\"prose\">The village hotels hold the classic retreat plan: a general session by day, an awards dinner at night. The Sonnenalp and the Four Seasons Resort Vail anchor that calendar in Vail Village, The Arrabelle at Vail Square and The Hythe carry it in Lionshead, and the Grand Hyatt Vail runs the same program at the west end of town, a step removed from the village core. Their ballrooms take a quartet without strain, and their private dining floors are built for a duo at dinner volume.</p>\n    <p class=\"prose\">Donovan Pavilion is the town's own event venue on Gore Creek, and the one to book when the group wants a single floor with its own vendors and its own run of show rather than a hotel package around it.</p>\n    <p class=\"prose\">Where one act should carry the whole evening, Tejas Singh can start as a duo and finish as a quartet on the same contract, so guests hear one band getting bigger. Where the program wants dinner music and nothing louder, a jazz duo holds the evening at a volume you can talk across.</p>\n  </div>\n</section>",
+    "_notes": "Venues as the market's places, never our history (arch §7/§8). All six\n     are on the vetted Vail list.",
+    "_file": "02-venues.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-4",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The quote</p>\n      <h2 class=\"h2\">What a Vail date adds.</h2>\n      <p class=\"lede\">There are two, and both are on the quote as their own lines.</p>\n    </div>\n\n    <p class=\"prose\">The first is travel. Vail is up I-70, a mountain highway with weather on it, and the drive is planned around the dock window. It&rsquo;s a longer day than a Denver evening and it&rsquo;s priced as one.</p>\n\n    <p class=\"prose\">The second is the calendar. A holiday weekend in Vail is the busiest thing the corridor does, and this market prices those dates above a standard one. A late curfew or a closing night that runs long can add a night&rsquo;s lodging, which is on the quote before you sign.</p>\n\n    <p class=\"prose\">What doesn&rsquo;t change is the fee for the music itself: a duo through a welcome dinner in Vail is the same booking it is in Denver, playing the same set at the same volume. The wider Colorado market is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.</p>\n  </div>\n</section>",
+    "_notes": "Was the resort rate module. Since 2026-09-04 it is what a Vail date adds,\n     in words. No figure: the corridor's market figure is on the retreats hub\n     and in the cost guide, and repeating it on four spokes would be four\n     copies of one sentence.",
+    "_file": "04-rates.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-5",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">The same venues host private celebrations.</h2>\n    <p class=\"prose\">Milestone birthdays, anniversaries and family gatherings book Vail the same way a company does: the same venues, one contract. The occasions themselves are gathered on the <a href=\"/private-parties/\">private parties page</a>.</p>\n    <p class=\"prose\">If the group is staying down the valley, <a href=\"/corporate/retreats/beaver-creek/\">Beaver Creek</a> is a different load-in question entirely, from a terraced village to venues gear reaches over snow, and it has its own page.</p>\n  </div>\n</section>",
+    "_notes": "The private-event angle folded in, plus the sibling and hub links the\n     internal-link contract requires.",
+    "_file": "05-private.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-6",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Questions</p>\n      <h2 class=\"h2\">Vail booking questions.</h2>\n    </div>\n    <p class=\"note\">Every mountain town&rsquo;s sound cap, cited and dated, is on the <a href=\"/planners/mountain/\">mountain corridor page</a>, and stage sizes and power are <a href=\"/planners/technical/\">set out by band size</a>, so you can forward the venue a link with every answer on it.</p>\n    <dl class=\"faq-list\"><div class=\"faq-row\"><dt>How does setup work at a Vail hotel?</dt><dd>Through the dock, on a scheduled window. Vail Village and Lionshead keep cars out of their cores, so hotels receive vendors at loading docks and move gear by freight elevator. We settle the dock time, the elevator window, the route to the floor and where cases wait once the evening starts with the venue in writing before the day. Signet Artists books Vail retreat evenings from Denver.</dd></div><div class=\"faq-row\"><dt>What power does the band need?</dt><dd>One or two dedicated 20-amp circuits depending on its size, and dedicated means not shared with anything else.</dd></div><div class=\"faq-row\"><dt>Does the altitude change the performance?</dt><dd>It changes the plan more than the sound. At 8,150 feet singers and horns pace differently in thin, dry air, instruments drift with the temperature swing between sound check and the last set, and we plan a longer sound check. The fee for the music doesn&#x27;t change.</dd></div><div class=\"faq-row\"><dt>How loud can it be, indoors and out?</dt><dd>Dinner plays at the level of the conversation, and the closing night plays like a dance band, up to what the venue allows. Outdoors, part of the evening can run on a covered, level and dry performance area with power run to it. Vail&#x27;s outdoor cap in the resort villages was reported at 65 dBA, measured ten feet from the permitted area, and the town was reviewing its rules when we checked, so we confirm the current figure with your venue. The cap is a question for the late set more than for dinner.</dd></div></dl>\n  </div>\n</section>",
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-7",
+    "html": "<section class=\"section section--ruled\"><div class=\"wrap\"><div class=\"close-row\"><div style=\"max-width: 32rem;\"><h2 class=\"h2\">Tell us the Vail dates and we&#x27;ll plan the closing night with you.</h2><p class=\"lede\">Live music for your event, from a solo musician to a full band, with sound support that&rsquo;s the right size for the venue and a personal contact for the night.</p></div><div class=\"btn-row\"><a class=\"btn\" href=\"/contact/\">Check a Date</a></div></div></div></section>",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

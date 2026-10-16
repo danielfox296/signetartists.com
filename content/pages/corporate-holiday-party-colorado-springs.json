@@ -1,0 +1,96 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/holiday-party/colorado-springs/",
+   "title": "Corporate holiday party music in Colorado Springs | Signet Artists",
+   "description": "Live music for Colorado Springs corporate holiday parties: Broadmoor-class ballrooms and downtown dinners, solo to quartet, net-30 on approval.",
+   "titleExact": true,
+   "nav": "corporate",
+   "breadcrumb": "Colorado Springs",
+   "schema": {
+    "service": {
+     "name": "Corporate holiday party entertainment in Colorado Springs",
+     "serviceType": "Live music and DJ for corporate holiday parties",
+     "description": "Live music for Colorado Springs corporate holiday parties, duo through quartet plus DJ, with one short Front Range travel line.",
+     "areaServed": [
+      "Colorado Springs"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Colorado Springs spoke of the holiday occasion, built 2026-08-20 with the SEO buildout. The argument is the garrison-and-HQ market: defense contractors, Academy-adjacent firms and headquartered nonprofits that put a band booking through procurement, plus the Broadmoor class of resort ballroom calendar. Deliberately paperwork-led where the Denver spoke is inventory-led.",
+    "reader": "Whoever books the company holiday party in Colorado Springs, often at a firm with a formal vendor process.",
+    "schema_note": "Colorado Springs holiday spoke. City-specific set: the pricing-column fact, the vendor process, ballroom sizing, and where the season's dates live. No dollar figures in answers; the Offers this file emits carry the ranges. No availability claims (2026-08-27): the booking calendar is private."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-1",
+    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Colorado Springs holiday parties</p>\n      <h1 class=\"h2 display\">Corporate holiday parties in Colorado Springs, November and December.</h1>\n      <p class=\"lede\">A resort ballroom with the whole company in it, dinner at a volume people can talk across, and a dance floor that fills once the thank-yous are done. That&rsquo;s the Colorado Springs company party, from a duo through dinner to a quartet on the floor, on one contract.</p>\n      <p class=\"prose\">The venues are decided early. The Broadmoor&rsquo;s December calendar stacks company parties onto the same Fridays and Saturdays as the rest of the Front Range, and the ballrooms at Garden of the Gods Resort and Club and Cheyenne Mountain Resort fill the same way.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>\n  </div>\n</section>",
+    "_notes": "The Springs argument: this market's buyers are contractors, Academy-adjacent\n     firms and headquartered nonprofits, so the booking is won on paperwork and\n     lead time. Rate-card link in the first screen per the spine.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever books the company party in Colorado Springs, often at a firm with a formal vendor process. The third-person 'the buyers who book it' paragraph became the vendor FAQ; the real resorts and downtown venues stay as local fact; dBA left the venue tiers; FAQs restating the tiers and the dates are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-2",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Photos</p>\n      <h2 class=\"h2\">What the night looks like.</h2>\n      <p class=\"lede\">A band on a stage, and Tony Medina, one of our named acts, on the bill.</p>\n    </div>\n    <div class=\"media-grid\">\n      <figure><img src=\"/img/headliners.jpg\" alt=\"A snare drum with sticks laid across it and a close microphone.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n      <figure><img src=\"/img/acts/medina-marquee.jpg\" alt=\"Tony Medina playing an acoustic guitar under string lights, black and white.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n    </div>\n  </div>\n</section>",
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-3",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Sizes</p>\n      <h2 class=\"h2\">Two common configurations of a Springs party.</h2>\n      <p class=\"lede\">A duo holds a firm's dinner at conversation volume for the whole evening. A quartet is the booking when a ballroom floor has to fill. Colorado Springs is a Front Range drive rather than a mountain one, so travel on a Springs quote is a short line and the date is the main factor that affects the price.</p>\n    </div>\n    <p class=\"prose\">A Springs party is usually a ballroom with remarks in it and a dance floor that has to fill afterwards. The duo holds the first half so people can hear each other across a table; the quartet takes the second half and gets loud on cue when the program ends.</p>\n    <p class=\"prose\">When one act should cover dinner and the dance floor both, Tejas Singh can start as a duo and finish as a quartet on a single contract, with the same voice through both halves and one invoice at the end.</p>\n    <p class=\"note\">A December Saturday and a Tuesday in November are two different quotes, so the date is the first thing we&rsquo;ll ask for.</p>\n  </div>\n</section>",
+    "_notes": "Was the rate module. Since 2026-09-04 it is the two shapes described, with\n     the Springs fact that survives the change: it is a Front Range drive, not\n     a corridor one, so the travel line is short and the date is the variable.",
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-4",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Where the parties happen</p>\n      <h2 class=\"h2\">Colorado Springs venues, by tier.</h2>\n      <p class=\"lede\">The Springs season runs in tiers, and each tier books a different size of night.</p>\n    </div>\n    <dl class=\"def-list def-list--stack\">\n      <div class=\"def-row\">\n        <dt>The resort tier</dt>\n        <dd>The Broadmoor, Garden of the Gods Resort and Club, Cheyenne Mountain Resort. Their ballroom calendars hold the market&rsquo;s biggest company parties and stack them onto the same few peak December Saturdays. These are quartet bookings once the dance floor opens, with dinner and remarks held at conversation volume before it.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The downtown tier</dt>\n        <dd>The Mining Exchange and the Antlers: a private floor or a dinner for the firm that wants the night walkable from the office. These are duo and trio bookings, quiet under dinner, with a lift for the toasts.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The restaurant buyout</dt>\n        <dd>The whole company at tables, with the music under the conversation for the entire night. It&rsquo;s a solo or a duo, the simplest way a small company does December.</dd>\n      </div>\n    </dl>\n    <p class=\"note\">The same three resorts anchor the retreat season, and <a href=\"/corporate/retreats/\">corporate retreats</a> get their own page.</p>\n  </div>\n</section>",
+    "_notes": "The three tiers of the Springs season, venues named as the market's places.\n     Cross-link to retreats, which the same resorts anchor.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-5",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">August through October</p>\n      <h2 class=\"h2\">When the Springs season is decided.</h2>\n    </div>\n    <p class=\"prose\">The season is decided August through October here as it is everywhere on the Front Range, and New Year&rsquo;s Eve goes first.</p>\n    <p class=\"prose\">For a ballroom night with remarks and an award in it, the <a href=\"/planners/run-of-show/\">run of show page</a> shows how the music is built around a program. The season&rsquo;s dates, with the peak dates marked, are on the <a href=\"/corporate/holiday-party/\">holiday season page</a>, and the <a href=\"/corporate/holiday-party/denver/\">Denver page</a> carries the same dates for the downtown season.</p>\n  </div>\n</section>",
+    "_notes": "The clock and the logistics: the published window plus the buyer's own\n     procurement time, then the travel-and-load-in facts. Links UP to the hub,\n     ACROSS to the Denver sibling, and to run-of-show.",
+    "_file": "04-clock.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-6",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">FAQ</p>\n      <h2 class=\"h2\">Colorado Springs booking questions.</h2>\n    </div>\n    <dl class=\"faq-list\"><div class=\"faq-row\"><dt>Can you clear a defense contractor&#x27;s vendor process?</dt><dd>Yes. Many Springs buyers, defense contractors, firms around the Air Force Academy and the bases, and national nonprofits headquartered in town, bring vendor onboarding and purchase orders to a band booking. We can be set up as a vendor and quote against a PO, and the W-9 and certificate of insurance come with the contract. Start the vendor file when you shortlist the venue; it&#x27;s usually the slowest step.</dd></div><div class=\"faq-row\"><dt>How loud is it?</dt><dd>Through dinner and the remarks, quiet enough that a table talks across it; once the program ends, the quartet plays like a dance band, up to what the ballroom allows.</dd></div><div class=\"faq-row\"><dt>What does travel and setup look like?</dt><dd>Front Range travel is one short line on the quote covering the drive down from Denver, with no lodging line. Setup runs 45 to 90 minutes depending on size, with sound support that&#x27;s the right size for the venue, and the dock and unloading are settled with the venue before the day. Signet Artists books Colorado Springs company parties from Denver.</dd></div></dl>\n  </div>\n</section>",
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-7",
+    "html": "<section class=\"section section--ruled\"><div class=\"wrap\"><div class=\"close-row\"><div style=\"max-width: 32rem;\"><h2 class=\"h2\">Tell us the date and the venue in Colorado Springs, and we&#x27;ll take it from there.</h2><p class=\"lede\">Live music for your event, from a solo musician to a full band, with sound support that&rsquo;s the right size for the venue and a personal contact for the night.</p></div><div class=\"btn-row\"><a class=\"btn\" href=\"/contact/\">Check a Date</a></div></div></div></section>",
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

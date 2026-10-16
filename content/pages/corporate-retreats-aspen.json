@@ -1,0 +1,103 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/aspen/",
+   "title": "Live music for Aspen corporate retreat evenings | Signet Artists",
+   "description": "Evening activities for an Aspen corporate retreat. Four hours from Denver each way, fee, travel and lodging itemised, formats sized to the dinner calendar.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Aspen",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "Live music for corporate retreats and private celebrations at Aspen venues, solo through quartet, with travel and lodging.",
+     "areaServed": [
+      "Aspen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Tier 2 resort spoke, built 2026-08-20 for the SEO buildout. Corporate-retreat and private-event angle only. Argument: the far-resort math stated plainly (about four hours from Denver, travel plus lodging at cost, and why both are itemised), the Little Nell class calendar, and small format as what these venues book at dinner. The four-hour figure is from the buildout brief; Independence Pass routing is from planners/mountain. Figures came off 2026-09-04.",
+    "reader": "Whoever is planning a corporate retreat in Aspen and has to get the evenings, and what a far resort adds, through finance."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-1",
+    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Corporate retreats</p>\n      <h1 class=\"h2 display\">Aspen corporate retreats, and what a far-resort date adds to a quote.</h1>\n      <p class=\"lede\">Dinner in a private space most of your guests will never get into again, and a dance floor that fills late. The Aspen evenings are the part of the trip people talk about for years afterward, and a retreat here books like any other: a welcome night, dinner at conversation volume, one evening with a dance floor.</p>\n      <p class=\"prose\">Aspen sits about four hours from Denver when the roads cooperate, and longer in winter, when Independence Pass closes and the drive runs the long way through Glenwood Springs, which makes an Aspen date a two-day trip for a band. The quote shows what that adds, line by line. The way we work every resort town starts on the <a href=\"/corporate/retreats/\">corporate retreats page</a>, and eight evening ideas, with the size each one needs, are in <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>\n  </div>\n</section>",
+    "_notes": "Aspen retreat spoke. Argument: the far-resort math stated plainly, and\n     small format as what the dinner calendar books.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is planning an Aspen retreat and has to get the evenings, and their far-resort costs, through finance. The drive, the altitude, the venues and the town's outdoor cutoff stay as local fact; the cited cap figure lives in the FAQ beside the words; paperwork and footprints went to the FAQ; FAQs restating the quote lines, the drive and the dinner size are gone; afterwards/itemised/neighbours fixed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-2",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The look</p>\n      <h2 class=\"h2\">An outdoor evening in Aspen.</h2>\n      <p class=\"lede\">An acoustic act outdoors, and the cases that made the drive over the passes.</p>\n    </div>\n    <div class=\"media-grid\">\n      <figure><img style=\"object-position: 50% 25%;\" src=\"/img/acts/acoustic-outdoor.jpg\" alt=\"A guitarist playing outdoors at a wedding.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n      <figure><img src=\"/img/loadin.jpg\" alt=\"Road cases stacked in a dark backstage hall.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n    </div>\n  </div>\n</section>",
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-3",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The quote</p>\n      <h2 class=\"h2\">The lines on an Aspen quote.</h2>\n      <p class=\"lede\">There are three, and the second and third are what make an Aspen date different from a Denver one.</p>\n    </div>\n    <dl class=\"def-list def-list--stack\">\n      <div class=\"def-row\">\n        <dt>The fee for the music</dt>\n        <dd>The fee covers the band, sound support that&rsquo;s the right size for the venue, setup, the sound check, pack-down and a personal contact for the night. A duo through cocktails and dinner or a quartet when the dance floor is the point, whichever the evening needs.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Travel</dt>\n        <dd>Travel is its own line on the quote. Aspen is roughly four hours from Denver each way in good conditions, over passes that don&rsquo;t always give you good conditions, and that&rsquo;s most of a working day at both ends of the evening.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Lodging, at cost</dt>\n        <dd>A band that has played a late set isn&rsquo;t driving four hours of mountain highway home that night. Lodging bills at cost, on its own line. That&rsquo;s the difference between a far resort and the I-70 towns, which mostly don&rsquo;t need it.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Why it&rsquo;s itemized</dt>\n        <dd>A retreat budget goes through finance, and a quote that separates fee, travel and lodging is easier to forward, question and approve.</dd>\n      </div>\n    </dl>\n    <p class=\"note\">A holiday weekend prices above a standard date across this market, and the <a href=\"/guides/live-music-cost-colorado/\">Colorado cost guide</a> sets the mountain towns against the wider market.</p>\n  </div>\n</section>",
+    "_notes": "The far-resort math, this page's core argument. It was three published\n     Signet lines; since 2026-09-04 it is the three lines a far-resort quote\n     is made of, described rather than priced.",
+    "_file": "02-math.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-4",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The venues</p>\n      <h2 class=\"h2\">Aspen venues.</h2>\n    </div>\n    <p class=\"prose\">The Little Nell at the base of Aspen Mountain and the Hotel Jerome in the town's core anchor the dinner calendar, The St. Regis Aspen carries the ballroom end of it, and Aspen Meadows is the campus a working offsite actually runs on, sessions by day and dinner on the property at night. The Limelight holds the more casual end of the market, welcome nights and closing parties.</p>\n    <p class=\"prose\">Where the retreat wants one act across the whole evening, Tejas Singh can start as a duo and finish as a quartet on the same contract. Where it wants dinner music and no more, a jazz duo of upright bass and guitar holds the evening at a volume the table talks across.</p>\n  </div>\n</section>",
+    "_notes": "Venues as the market's places. All five are on the vetted Aspen list.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-5",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3 h3--lead\">Dinner at this class of venue books small.</h2>\n    <p class=\"prose\">The evenings here happen on dining floors and terraces built at human scale, and dinner asks for a duo or a trio at the level a table of executives talks across without effort. A quartet is the booking when a dance floor has to fill.</p>\n    <p class=\"prose\">The town&rsquo;s rules push the same way: outdoor amplified sound at a private event stops at eight in the evening, so the loud chapter of the night moves indoors, where a small format does its best work. The figures, cited and dated, are on the <a href=\"/planners/mountain/\">mountain corridor page</a>.</p>\n    <p class=\"prose\">At 7,908 feet the altitude is gentler than Vail&rsquo;s and well under Breckenridge&rsquo;s, and we still plan a longer sound check for it.</p>\n  </div>\n</section>",
+    "_notes": "The small-format argument. The 80 dBA / 8pm / 250 ft figures restate\n     planners/mountain, which holds the citations.",
+    "_file": "04-format.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-6",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Private celebrations in Aspen.</h2>\n    <p class=\"prose\">Milestone birthdays, anniversaries and family gatherings book Aspen on the same three lines: the fee, the travel and the lodging at cost, on one contract. The occasions themselves are gathered on the <a href=\"/private-parties/\">private parties page</a>.</p>\n    <p class=\"prose\">If the drive is the deciding factor, the I-70 towns are a shorter day and mostly do without the lodging line, and <a href=\"/corporate/retreats/vail/\">Vail</a> has its own page.</p>\n  </div>\n</section>",
+    "_notes": "Private-event angle, plus the sibling and hub links.",
+    "_file": "05-private.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-7",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Questions</p>\n      <h2 class=\"h2\">Aspen booking questions.</h2>\n    </div>\n    <p class=\"note\">Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to the venue.</p>\n    <dl class=\"faq-list\"><div class=\"faq-row\"><dt>Can the party run outdoors in Aspen?</dt><dd>Yes, until eight in the evening. Outdoor amplified sound at a private event was capped at 80 dBA at the perimeter, between 9am and 8pm, when we checked, with neighbors within 250 feet owed seven days&#x27; notice. Evenings move indoors from there, and we confirm the current figures with your venue. Signet Artists books Aspen retreat evenings from Denver.</dd></div><div class=\"faq-row\"><dt>What do Aspen venues need from the band?</dt><dd>Venues at this level hold vendors to their standards: a certificate of insurance, which comes with the contract, setup on the venue&#x27;s schedule, and the sound cap and curfew kept as written.</dd></div><div class=\"faq-row\"><dt>How much space and power does it need?</dt><dd>A duo takes a corner of about 8 by 6 feet and one dedicated 20-amp circuit; a quartet takes about 14 by 10 feet and two. Setup runs 45 to 90 minutes depending on size, and the drive&#x27;s margin is built into the setup day.</dd></div></dl>\n  </div>\n</section>",
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-8",
+    "html": "<section class=\"section section--ruled\"><div class=\"wrap\"><div class=\"close-row\"><div style=\"max-width: 32rem;\"><h2 class=\"h2\">Send us the Aspen dates, and travel and lodging come back as their own lines on the quote.</h2><p class=\"lede\">Live music for your event, from a solo musician to a full band, with sound support that&rsquo;s the right size for the venue and a personal contact for the night.</p></div><div class=\"btn-row\"><a class=\"btn\" href=\"/contact/\">Check a Date</a></div></div></div></section>",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

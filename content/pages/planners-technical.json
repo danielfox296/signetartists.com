@@ -1,0 +1,88 @@
+{
+ "root": {
+  "props": {
+   "path": "/planners/technical/",
+   "title": "What we need from your venue",
+   "description": "Stage footprint, power, channel counts, load-in times and volume at every size we sell, solo to quartet, plus the DJ. Published so a planner can forward them to the venue.",
+   "nav": "planners",
+   "breadcrumb": "Your venue"
+  }
+ },
+ "content": [
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-1",
+    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Technical</p>\n      <h1 class=\"h2 display\">What we need from your venue.</h1>\n      <p class=\"lede\">Every question a venue asks before it will confirm a band, answered on one page. It covers stage, power, channels, load-in and volume, from solo to quartet, plus the DJ. Send the link to the venue and to your AV lead; the six things worth confirming at contract are at the bottom.</p>\n    </div>\n  </div>\n</section>",
+    "_notes": "The technical pack. The competence pillar stops being a claim here and\n     becomes a document: everything a venue asks a planner for, published, so\n     the planner forwards a link instead of chasing us for a PDF. Nothing on\n     this page is a promise about how we behave. It is all measurements.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-2",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">The stage</h2>\n    <p class=\"prose\">Published stage-rental guidance for a seven to ten-piece band runs to <strong class=\"num-accent\">24 by 24 feet</strong>. That figure is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. Renting to it costs you a chunk of floor your guests wanted.</p>\n    <figure class=\"stage-plot\">\n<svg viewBox=\"-8 -8 496 496\" role=\"img\"\n     aria-label=\"Two stage footprints at the same scale. Published rental\n     guidance is 24 by 24 feet. A quartet takes 14 by 10 feet,\n     about 76 percent less floor.\">\n  <rect x=\"0\" y=\"0\" width=\"480\" height=\"480\" class=\"plot-guide\"/>\n  <rect x=\"100.0\" y=\"280\" width=\"280\" height=\"200\" class=\"plot-actual\"/>\n  <text x=\"240.0\" y=\"140.0\" class=\"plot-label\" text-anchor=\"middle\">\n    24 &#215; 24 ft\n  </text>\n  <text x=\"240.0\" y=\"166.0\" class=\"plot-sub\" text-anchor=\"middle\">\n    what the rental guide says\n  </text>\n  <text x=\"240.0\" y=\"376.0\" class=\"plot-label\" text-anchor=\"middle\">\n    14 &#215; 10 ft\n  </text>\n  <text x=\"240.0\" y=\"402.0\" class=\"plot-sub\" text-anchor=\"middle\">\n    what a quartet takes\n  </text>\n</svg>\n<figcaption class=\"note\">Both drawn to the same scale. The difference is\n436 square feet of floor, which is a few hundred dollars of riser and about\n44 guests standing.</figcaption>\n</figure>\n\n    <p class=\"prose\">So there are two numbers below. The first is what we ask for, where the band is comfortable and the sightlines work. The second is the smallest we'll play on. Between them nothing breaks; the band just gets tighter.</p>\n\n    <div class=\"table-scroll\" data-provisional=\"true\"><table class=\"rate-table tnum\"><thead><tr><th>Size</th><th>Footprint we ask for</th><th>Smallest we will take</th><th>Who is on it</th></tr></thead><tbody><tr><td class=\"rate-size\">Solo</td><td>6 by 4 ft</td><td>5 by 4 ft</td><td>One voice, one instrument</td></tr><tr><td class=\"rate-size\">Duo</td><td>8 by 6 ft</td><td>6 by 5 ft</td><td>Guitar and upright bass</td></tr><tr><td class=\"rate-size\">Trio</td><td>12 by 8 ft</td><td>10 by 6 ft</td><td>Guitar, bass and drums</td></tr><tr><td class=\"rate-size\">Quartet</td><td>14 by 10 ft</td><td>12 by 8 ft</td><td>Trio plus a horn or a voice</td></tr><tr><td class=\"rate-size\">DJ</td><td>6 by 4 ft</td><td>6 by 3 ft</td><td>Booth, controller and the house of our own PA</td></tr></tbody></table></div>\n\n    <p class=\"note\">Depth before width if you have to choose. A band squeezed narrow still works; a band with no depth puts the drums in the singer&rsquo;s back.</p>\n  </div>\n</section>",
+    "_notes": "The stage section. Carries the page's one brass fact (§6.3): the gap\n     between published stage-rental guidance and what a band actually takes.\n     That gap is the most useful thing on the page for a planner pricing a\n     riser, and it is the argument for the whole document.",
+    "_file": "02-stage.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-3",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Risers, floors and ceilings</h2>\n    <dl class=\"def-list def-list--stack\">\n      <div class=\"def-row\">\n        <dt>We don't require a stage</dt>\n        <dd>A band plays fine on a floor, and most of our Denver bookings are on one. A riser is a sightline decision for events over about 150 guests.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>We don't supply one either</dt>\n        <dd>If you want a riser, it comes from the venue or your production company. Tell us the height and we'll plan the load-in around it; 12 to 24 inches is normal and anything over 24 needs a rail behind the drums.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Ceiling height</dt>\n        <dd>Ten feet clear above the stage surface. Lighting stands go to nine, and a low ceiling over a riser is the one constraint that can't be solved on the day.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Surface</dt>\n        <dd>Level and solid. Deck that flexes under a drummer will be heard through every microphone on the stage. Carpet is fine; grass and gravel need a deck under the band.</dd>\n      </div>\n    </dl>\n  </div>\n</section>",
+    "_file": "02-stage.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-4",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Power</h2>\n    <p class=\"prose\">This is the requirement venues get wrong most often. <strong>Dedicated</strong> is the operative word. A 20-amp circuit shared with catering warmers, a coffee urn or a lighting truss will trip, and it will trip at the moment everything is switched on at once, which is the moment the venue is full.</p>\n    <p class=\"prose\">Circuits need to be within about 50 feet of the stage. We bring our own distribution and cable and don't need the venue to supply either. What we need from the venue is the circuits, confirmed in writing, before the day.</p>\n\n    <div class=\"table-scroll\" data-provisional=\"true\"><table class=\"rate-table tnum\"><thead><tr><th>Size</th><th>Channels at the desk</th><th>Dedicated 20A circuits</th></tr></thead><tbody><tr><td class=\"rate-size\">Solo</td><td>3</td><td>1</td></tr><tr><td class=\"rate-size\">Duo</td><td>3</td><td>1</td></tr><tr><td class=\"rate-size\">Trio</td><td>8</td><td>1</td></tr><tr><td class=\"rate-size\">Quartet</td><td>10</td><td>2</td></tr><tr><td class=\"rate-size\">DJ</td><td>3</td><td>1</td></tr></tbody></table></div>\n\n    <p class=\"note\">Channel counts are what arrives at the desk, including one announcement microphone on its own channel. Your AV lead will ask for this number.</p>\n  </div>\n</section>",
+    "_file": "03-power.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-5",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Outdoors, and other places without a wall socket</h2>\n    <p class=\"prose\">A generator works if it's a quiet one, properly grounded, and sized with headroom above the figures above. A domestic generator at the edge of a lawn isn't that, and the noise floor it adds sits underneath every quiet moment of the evening.</p>\n    <p class=\"prose\">Cover over the band and over the desk isn't optional outdoors, in any forecast. Colorado evenings cool fast enough that by the end of a damp night the musicians are retuning between songs. If there's a move-indoors plan, it needs a decision time written into the run of show and a person named to make the call.</p>\n  </div>\n</section>",
+    "_file": "03-power.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-6",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Load-in and strike</h2>\n    <p class=\"prose\">Times below are from the vehicle arriving to the band being ready for sound check, assuming a ground-floor space with parking within a reasonable push. Add 30 minutes for an elevator, and add 30 more if the elevator is shared with catering during their load-in.</p>\n\n    <div class=\"table-scroll\" data-provisional=\"true\"><table class=\"rate-table tnum\"><thead><tr><th>Size</th><th>Load-in and setup</th><th>Strike</th><th>Vehicles</th></tr></thead><tbody><tr><td class=\"rate-size\">Solo</td><td>45 min</td><td>30 min</td><td>1</td></tr><tr><td class=\"rate-size\">Duo</td><td>60 min</td><td>45 min</td><td>1</td></tr><tr><td class=\"rate-size\">Trio</td><td>60 min</td><td>45 min</td><td>1</td></tr><tr><td class=\"rate-size\">Quartet</td><td>90 min</td><td>60 min</td><td>1</td></tr><tr><td class=\"rate-size\">DJ</td><td>45 min</td><td>30 min</td><td>1</td></tr></tbody></table></div>\n\n    <dl class=\"def-list def-list--stack\">\n      <div class=\"def-row\">\n        <dt>Doors and corridors</dt>\n        <dd>36 inches clear. The widest single item is the bass amp or a keyboard case; nothing needs a double door, but a 30-inch doorway with a turn in it will cost you 20 minutes.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Elevator</dt>\n        <dd>A car of about 4 by 6 feet takes everything in several trips. Tell us the window we have it in and we'll plan inside it.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Sound check</dt>\n        <dd>30 minutes once the band is set, and it finishes 60 minutes before the first guest arrives. That gap is where the problems found at sound check get fixed.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Where the cases live</dt>\n        <dd>Out of sight of guests, and not in the kitchen path. Any back-of-house corner works. If there's nowhere, tell us at contract and the cases go back to the vehicles, which adds 20 minutes to the strike.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Strike</dt>\n        <dd>Begins after the last note. We don't break down during the final set, and nothing gets carried through a space with guests still in it unless the venue requires it.</dd>\n      </div>\n    </dl>\n  </div>\n</section>",
+    "_file": "04-loadin.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-7",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Volume</h2>\n    <p class=\"prose\">Volume is a decision somebody makes in advance and writes into the run of show. Left undecided, it gets made on the night by whoever is standing nearest the desk.</p>\n    <dl class=\"def-list\">\n      <div class=\"def-row\">\n        <dt>Ceremony, cocktails and dinner, measured at the nearest table</dt>\n        <dd class=\"tnum\">60 to 65 dBA</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Remarks, awards and anything on a microphone that is not us</dt>\n        <dd class=\"tnum\">Silent</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Dancing, measured on the floor</dt>\n        <dd class=\"tnum\">88 to 95 dBA</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>Peaks during the last hour</dt>\n        <dd class=\"tnum\">100 dBA</dd>\n      </div>\n    </dl>\n    <p class=\"prose\">If the venue enforces a cap, give us the number when you book. A band that knows at contract the ceiling is 95 dBA chooses arrangements and instrumentation that land inside it. A band told on the night just gets quieter.</p>\n    <p class=\"prose\">Curfews are honored as written. Where there's one, the last twenty minutes are planned so the night ends on the right song.</p>\n  </div>\n</section>",
+    "_file": "05-volume.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-8",
+    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3 h3--lead\">What we need confirmed, and when</h2>\n    <p class=\"prose\">There are six, and all of them are answers the venue already has. None of them takes longer than one email to get.</p>\n    <ul class=\"spec-list\">\n      <li><span class=\"dash\" aria-hidden=\"true\"></span>The circuits, by count, and that they are dedicated</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span>The stage or the floor area, in feet, and the riser height if there is one</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span>The load-in door, the route, and the elevator window if there is an elevator</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span>Where the vehicles park and for how long</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span>Any decibel cap, as a number, and any curfew, as a time</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span>Somewhere out of sight for cases and for the musicians to change</li>\n    </ul>\n    <p class=\"note\">Not sure of an answer? Send us the venue name and we'll call them ourselves.</p>\n  </div>\n</section>",
+    "_notes": "The checklist is the point of the page. Everything above it is reference;\n     this is the bit a planner actually copies into an email to the venue.",
+    "_file": "06-checklist.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-9",
+    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"close-row\">\n      <div style=\"max-width: 32rem;\">\n        <h2 class=\"h2\">Anything here that your venue disagrees with?</h2>\n        <p class=\"lede\">Send us the venue and we'll work it out with them directly.</p>\n      </div>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n      </div>\n    </div>\n    <p class=\"note\">More for planners: the <a href=\"../run-of-show/\">run of show templates</a> and the <a href=\"../faq/\">full question list</a>.</p>\n  </div>\n</section>",
+    "_file": "06-checklist.html"
+   }
+  }
+ ]
+}

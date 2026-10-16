@@ -1,0 +1,167 @@
+{
+ "root": {
+  "props": {
+   "draft": true,
+   "title": "A sample post for the blog kit",
+   "slug": "sample-post",
+   "eyebrow": "NOTES",
+   "dek": "Every typed block in one draft. This is the authoring reference for the kit; it never deploys.",
+   "date": "2026-08-03",
+   "author": {
+    "name": "Signet Artists"
+   },
+   "meta_description": "Authoring reference for the signetartists.com blog kit. This draft never deploys.",
+   "hero": {
+    "src": "/img/standards.jpg",
+    "alt": "A trumpet resting on a table."
+   },
+   "readingTime": 1
+  }
+ },
+ "content": [
+  {
+   "type": "KeyTakeaways",
+   "props": {
+    "id": "KeyTakeaways-1",
+    "items": [
+     "Posts are YAML files with typed blocks; the build renders, lists, and feeds them.",
+     "Reading time, RSS, sitemap lastmod and the Article schema are computed, never hand-written.",
+     "Run python3 build.py --lint before committing a post."
+    ]
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-2",
+    "html": "<p>Body copy is Markdown. <strong>Bold</strong> becomes the site&rsquo;s medium weight,\n<a href=\"https://signetartists.com/pricing/\">links</a> pick up the brass underline,\nand paragraphs are separated by blank lines.</p>\n<p>Lists work too:</p>\n<ul>\n<li>One item</li>\n<li>Another item</li>\n</ul>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-3",
+    "text": "Subheads get anchor links"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-4",
+    "html": "<p>Hover a subhead to see the anchor link; clicking it copies the section\nURL. A subhead whose text ends in a question mark reads like an FAQ,\nwhich suits answer engines.</p>"
+   }
+  },
+  {
+   "type": "Pullquote",
+   "props": {
+    "id": "Pullquote-5",
+    "text": "One line worth pulling out of the flow, set in the display italic.",
+    "attribution": "A sample attribution"
+   }
+  },
+  {
+   "type": "StatCallout",
+   "props": {
+    "id": "StatCallout-6",
+    "number": "240",
+    "label": "Sample statistic label. The number carries the page's brass accent.",
+    "source": "Sample source, 2026"
+   }
+  },
+  {
+   "type": "Aside",
+   "props": {
+    "id": "Aside-7",
+    "title": "An aside",
+    "html": "<p>A short sidebar note in a sunk panel. Markdown works here too.</p>"
+   }
+  },
+  {
+   "type": "ComparisonTable",
+   "props": {
+    "id": "ComparisonTable-8",
+    "title": "A sample comparison",
+    "columns": [
+     "Option",
+     "Column two",
+     "Column three"
+    ],
+    "rows": [
+     [
+      "First row",
+      "Value",
+      "Value"
+     ],
+     [
+      "Second row",
+      "Value",
+      "Value"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "DataViz",
+   "props": {
+    "id": "DataViz-9",
+    "chart_type": "bar",
+    "title": "Sample chart title",
+    "data": [
+     {
+      "label": "One",
+      "value": 3
+     },
+     {
+      "label": "Two",
+      "value": 5
+     },
+     {
+      "label": "Three",
+      "value": 2
+     }
+    ],
+    "caption": "Sample caption for a generated SVG bar chart.",
+    "source": "Sample source"
+   }
+  },
+  {
+   "type": "Methodology",
+   "props": {
+    "id": "Methodology-10",
+    "what_we_measured": "What the numbers above actually count.",
+    "sample": "Where they came from and how many.",
+    "date_range": "When they were collected.",
+    "caveats": "What they cannot tell you."
+   }
+  },
+  {
+   "type": "Figure",
+   "props": {
+    "id": "Figure-11",
+    "src": "/img/dj.jpg",
+    "alt": "Faders and knobs on a mixing console.",
+    "caption": "A figure with a caption.",
+    "source": "Sample source"
+   }
+  },
+  {
+   "type": "References",
+   "props": {
+    "id": "References-12",
+    "items": [
+     "Sample Author (2026). Sample citation for the references block. Sample Journal."
+    ]
+   }
+  },
+  {
+   "type": "PostCta",
+   "props": {
+    "id": "PostCta-13",
+    "headline": "Tell us the event and we'll tell you what fits.",
+    "html": "<p>The pricing page shows how the number is built before you ever write to us.</p>",
+    "link": "/contact/",
+    "link_text": "Check a Date"
+   }
+  }
+ ]
+}

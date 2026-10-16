@@ -1,0 +1,75 @@
+{
+ "id": "dirty-flamenco",
+ "name": "Dirty Flamenco",
+ "presentation": "face",
+ "status": "flagship",
+ "page": "ensembles/flamenco-trio/",
+ "style": "Flamenco",
+ "face": "Gary Meyers",
+ "material": "Traditional and covers",
+ "bucket_tags": [
+  "specialty",
+  "cocktail"
+ ],
+ "config_tags": [
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "flamenco"
+ ],
+ "vocals": "instrumental",
+ "from": "trio",
+ "_configRangeLabel_note": "Overrides the derived range, which would read 'Trio to quartet'. The quartet here is the trio plus a dancer, which is an addition you ask for rather than a size off the ladder, so the card sells the trio and says the rest out loud.",
+ "configRangeLabel": "Trio, larger by request",
+ "img": "flamenco-card.jpg",
+ "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
+ "_video_note": "LANDED 2026-08-28, the first real footage on the roster. Daniel's phone video from a live date ('monarch 1' in his archive): 53 seconds of the trio playing, guitar, bass and percussion, under the venue's uplights. Shot vertical with the 16:9 image letterboxed inside, so the black bars are cropped at the source and the published file is native 16:9; 99MB re-encoded to 14.5MB, H.264, faststart. A site-relative path here renders as a native player (an http URL still renders as an embed). The poster is a frame from the footage itself, which also serves as the page's og_image, and the venue is deliberately not named anywhere it publishes. REPLACED 2026-09-20 by a second clip from the same room: Daniel's iPhone footage of 2026-09-19, trimmed to 65 seconds in QuickTime (his export, 'Untitled.mov'), better lit and framed than the August clip, all three players in frame. Re-encoded from the 720p export to 15.0MB H.264, faststart, native 16:9, 24fps. It carries both roster cards and leads the flamenco page again as a native player, with the schema VideoObject describing it; the August clip stays in the page's footage grid. The venue is still not named.",
+ "video": "media/dirty-flamenco-2.mp4",
+ "video_poster": "media/dirty-flamenco-2-poster.jpg",
+ "blurb": "Brilliant, guitar-based flamenco musical act and one of the only in Colorado available for private events. Dirty flamenco plays real palos, and rhumba both authentically and with a soulful twist. Their polish as a working group is matched by their extensive standing repertoire.",
+ "seo_title": "Dirty Flamenco: flamenco trio for private events in Denver",
+ "meta_description": "Flamenco for weddings, corporate dinners and private events in Denver and the Colorado mountains. Trio, or a quartet with a dancer for a program that wants a set piece.",
+ "identity": [
+  "Flamenco is the booking on this roster that almost nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing repertoire, sold at private event scale.",
+  "Most live music at a private event is designed to be felt and not watched. This is the opposite booking, and its work is the set moment: a cultural centerpiece, a corporate dinner that has to be memorable, a reception that wants something guests will describe to people who were not there.",
+  "The repertoire is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
+  "This is a named act rather than a format, an existing group booked under its own name. Any change to the lineup is named to you in advance."
+ ],
+ "ladder": [
+  {
+   "config": "trio",
+   "build": "Flamenco guitar, bass, cajon",
+   "bestFor": "Cocktails and dinner. It plays anywhere from background to full volume, and it doesn't need a dance floor."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus a dancer",
+   "bestFor": "A program with a set piece in it."
+  }
+ ],
+ "setlist": {
+  "note": "Flamenco is organized by palo, the traditional form, rather than by song title. A set is built from these and shaped to the crowd on the night, so the list here is a sample.",
+  "items": [
+   "Bulerias",
+   "Solea",
+   "Alegrias",
+   "Tangos",
+   "Rumba",
+   "Fandangos",
+   "Sevillanas",
+   "Guajiras"
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "MusicGroup",
+  "sameAs": [
+   "https://dirtyflamenco.com/"
+  ]
+ }
+}

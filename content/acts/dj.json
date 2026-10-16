@@ -1,0 +1,44 @@
+{
+ "id": "dj",
+ "name": "DJ",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/dj/",
+ "style": "Open format",
+ "spec": "Decks, and a PA sized to the venue",
+ "material": "Open format",
+ "bucket_tags": [
+  "party"
+ ],
+ "_config_note": "CORRECTED 2026-08-27, Daniel's catch on the critical pass. Was ['solo', 'duo'], which read the band-size ladder onto a booking that is not on it: the roster card and llms.txt printed 'Configurations: Solo to duo', the size filter offered the DJ as a duo, and act_offers priced the structured-data Offers off the solo and duo BAND rows, pricing the DJ off the wrong row entirely. The DJ's one config is the rate card's own dj row, which is what this page's schema.json always said. The two-person version of this booking is the hybrid below, an add-on inside the dj row's range, not a size.",
+ "config_tags": [
+  "dj"
+ ],
+ "genre_tags": [
+  "dj"
+ ],
+ "vocals": "instrumental",
+ "_configRangeLabel_note": "Without the override the card would print 'Configurations: DJ' under the name DJ. This states the actual choice, and it is the dj rate row's own note in card grammar.",
+ "configRangeLabel": "solo to duo",
+ "from": "dj",
+ "img": "dj.jpg",
+ "alt": "Faders and knobs on a mixing console.",
+ "video": null,
+ "_was_note": "Listed as 'Josh' until 2026-08-16. A bare first name read thin next to the named acts and promised a specific person for a service that is bought as a format.",
+ "blurb": "Book a DJ on their own or to carry a late night set after the band wraps their set. All run by the same team, with the same contract. A solid DJ gets people moving and is the most common single booking of the corporate season.",
+ "hybrid": {
+  "label": "DJ plus live instrument",
+  "instruments": [
+   "Bass",
+   "Saxophone"
+  ],
+  "_stat_note": "TRIMMED 2026-08-27 critical pass. The copy claimed 'Roughly one couple in six now asks for this format', an unsourced adoption stat, wedding-framed on a corporate-first product, published under a company in its first season. If the number is real from Daniel's own books it can come back with that framing; the priced-on-the-card fact stands without it.",
+  "copy": "This is a live musician on the floor, playing over the DJ set. It's the difference between a playlist and a crowd watching something happen, and it keeps a dance floor going through the hours when a band would already have gone home. It's quoted as its own line when you ask for it."
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "_bucket_note": "The 'dj' bucket retired 2026-09-23; see _buckets_note. Party is the kind of night a DJ is booked for, and Size and Genre still say DJ."
+}

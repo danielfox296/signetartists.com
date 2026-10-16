@@ -1,0 +1,49 @@
+{
+ "id": "solo-piano",
+ "name": "Solo Piano",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/solo-piano/",
+ "style": "Cocktail piano",
+ "spec": "Piano, with a voice when the evening wants one",
+ "material": "Standards and covers",
+ "bucket_tags": [
+  "cocktail",
+  "budget"
+ ],
+ "config_tags": [
+  "solo"
+ ],
+ "genre_tags": [
+  "jazz",
+  "pop-covers"
+ ],
+ "vocals": "optional",
+ "from": "solo",
+ "img": "ballroom.jpg",
+ "alt": "An empty banquet hall set for dinner.",
+ "video": null,
+ "_note": "ADDED 2026-09-14 on Daniel's call. Organizers ask for 'a piano player' by name in the planner threads, galas seat a pianist at dinner, and hotels sell the ballroom and leave the music to the planner. Listing only until 2026-09-23, when Daniel asked for a page (\"build pages for solo piano and last consulate too\"). No Denver phrase for a pianist autocompletes, so the page carries the generic head terms that do (\"pianist for hire\", \"pianist for events\", \"piano player denver\") and the occasions the site already sends a pianist to.",
+ "blurb": "A pianist through arrival, cocktails and dinner, standards and covers at a level the table talks across, with a voice added when the evening wants singing. This is the booking for a hotel ballroom or a client dinner.",
+ "occasion_tags": [
+  "corporate",
+  "private-parties",
+  "daytime"
+ ],
+ "setlist": {
+  "_note": "Explicit list from copy pass batch 1, 2026-09-24. The from_repertoire pick (arrival + dinner moments) printed Blackbird twice and no standards on a page that sells standards. Standards are the ones the jazz duo list already publishes; covers are repertoire titles a piano carries.",
+  "note": "Standards, and the covers a piano carries best. Requests are welcome.",
+  "items": [
+   "Autumn Leaves",
+   "All of Me",
+   "The Girl from Ipanema",
+   "All the Things You Are",
+   "Someday My Prince Will Come",
+   "Your Song",
+   "Piano Man",
+   "Let It Be",
+   "Can't Help Falling in Love",
+   "Tiny Dancer"
+  ]
+ }
+}

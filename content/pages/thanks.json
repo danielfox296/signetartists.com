@@ -1,0 +1,21 @@
+{
+ "root": {
+  "props": {
+   "path": "/thanks/",
+   "title": "Enquiry received",
+   "description": "Your enquiry has been received. A person replies with availability and an exact number.",
+   "robots": "noindex, follow"
+  }
+ },
+ "content": [
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-1",
+    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"panel\" style=\"max-width: 34rem;\">\n      \n      <h1 class=\"h3\">Received. <span class=\"smile\">Consider it started.</span></h1>\n      <p class=\"prose\">One of us will reply with availability and an exact number.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>\n  </div>\n</section>",
+    "_notes": "\"Consider it started.\" is the page's wink (§6.4). The reply window\n           came out 2026-08-18 per Daniel; it now lives on the contact page\n           and in the booking-page steps table only.",
+    "_file": "01-thanks.html"
+   }
+  }
+ ]
+}

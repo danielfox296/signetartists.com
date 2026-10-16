@@ -1,0 +1,111 @@
+{
+ "root": {
+  "props": {
+   "draft": true,
+   "title": "[Ensemble] at [Venue], [City]: [the occasion]",
+   "seo_title": "[Ensemble] at [Venue], [City]: live music for a [wedding cocktail hour | holiday party | client dinner]",
+   "slug": "venue-post-template",
+   "eyebrow": "NOTES",
+   "dek": "[One sentence a guest would say the next morning. The floor, the light, the moment the music did its job. No adjectives that could sit on any venue.]",
+   "date": "2026-09-06",
+   "last_updated": "2026-09-06",
+   "author": {
+    "name": "Signet Artists"
+   },
+   "meta_description": "[Ensemble] played [the occasion] at [Venue] in [City]. What the terrace hears, how the set sat under the evening, and what the venue needs from a small ensemble.",
+   "llms_description": "A real event: [ensemble] at [Venue], [City], for [the occasion]. The acoustic character of the space for a small ensemble, the set that fitted it, and the venue's practical notes for live music. No prices published.",
+   "hero": {
+    "src": "/img/events/[venue-slug]-[yyyy-mm].jpg",
+    "alt": "[What is in the frame: the ensemble, where in the venue, the light. Name a face only if the act is fronted.]",
+    "caption": "[Venue], [Month Year]. Photo: [Photographer], used with permission."
+   },
+   "video": {
+    "id": "[YOUTUBE_ID]",
+    "title": "[Ensemble] at [Venue], [City]: [occasion] | Signet Artists"
+   },
+   "readingTime": 2
+  }
+ },
+ "content": [
+  {
+   "type": "KeyTakeaways",
+   "props": {
+    "id": "KeyTakeaways-1",
+    "items": [
+     "[The moment. What the night was like at the point the music mattered most.]",
+     "[What the venue is like to play: the surface the sound lands on, where the ensemble sat, what carried and what did not.]",
+     "[The one practical fact a planner booking this venue would want first: power, load-in route, the sound policy, the altitude if it applies.]"
+    ]
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-2",
+    "html": "<p>[Open on the night, not the booking. Two short paragraphs: where the\nguests were, what the ensemble was doing under it, the moment someone\nnoticed. This is the part a buyer forwards.]</p>"
+   }
+  },
+  {
+   "type": "Video",
+   "props": {
+    "id": "Video-3"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-4",
+    "text": "What the terrace hears at [Venue]"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-5",
+    "html": "<p>[The venue as an instrument. Stone or timber, glass or garden, ceiling\nheight, where the bar is relative to where the ensemble sat, and what\nthat did to the sound. Say what size of act the space wants and why.\nThis is the paragraph nobody else writes and the reason the post ranks.]</p>"
+   }
+  },
+  {
+   "type": "Aside",
+   "props": {
+    "id": "Aside-6",
+    "title": "For the planner",
+    "html": "<p>[Three to five lines of fact, no times of day: load-in route and door,\npower at the position, the venue&rsquo;s sound policy or dBA cap if it has\none, weather plan if outdoors, altitude if it applies. Facts only;\nconfirm them with the venue and say so.]</p>"
+   }
+  },
+  {
+   "type": "Pullquote",
+   "props": {
+    "id": "Pullquote-7",
+    "text": "[One sentence from the client or planner, verbatim, with written permission.]",
+    "attribution": "[First name and role, or the company where permitted]"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-8",
+    "html": "<p>[Close on the floor at the end of the night. One paragraph. Then a\nsingle line that routes to the occasion page this venue belongs to,\ne.g. the cocktail-hour page, the holiday-party page, the client-dinner\npage. Market figure, if any, only as a token.]</p>"
+   }
+  },
+  {
+   "type": "PostCta",
+   "props": {
+    "id": "PostCta-9",
+    "headline": "Tell us the venue and the night, and we'll tell you what fits.",
+    "html": "<p>Every act on the roster has footage on its page, and the pricing page shows how the number is built before you write to us.</p>",
+    "link": "/contact/",
+    "link_text": "Check a Date"
+   }
+  },
+  {
+   "type": "RelatedPosts",
+   "props": {
+    "id": "RelatedPosts-10",
+    "posts": [
+     "[the occasion post this belongs with, e.g. office-holiday-party-ideas-denver]"
+    ]
+   }
+  }
+ ]
+}
