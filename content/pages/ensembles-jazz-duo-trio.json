@@ -1,0 +1,321 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/jazz-duo-trio/",
+   "title": "Jazz duo and trio for hire in Denver, for weddings and events | Signet Artists",
+   "description": "A Denver jazz duo or trio for hire: weddings, cocktail hours, corporate events and dinners. Standards on upright bass and guitar at conversation volume.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "nav": "music",
+   "breadcrumb": "Jazz duo and trio",
+   "schema": {
+    "service": {
+     "name": "Jazz duo and trio for hire",
+     "serviceType": "Jazz duo and trio for hire for weddings, corporate events, cocktail hours and dinners",
+     "description": "Jazz standards on upright bass and guitar, with a trio adding drums played with brushes for larger floors, for cocktail hours, client dinners and private events across Denver and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio"
+     ]
+    },
+    "act": "jazz-duo",
+    "video": {
+     "name": "Jazz duo for a cocktail hour: Autumn Leaves on guitar and upright bass",
+     "description": "Fifty-nine seconds of the jazz duo playing Autumn Leaves, guitar and upright bass, at cocktail-hour volume.",
+     "uploadDate": "2026-09-06",
+     "duration": "PT59S"
+    }
+   },
+   "notes": {
+    "_note": "Title and H1 line reframed 2026-09-06: the bare Denver jazz SERP is clubs (Nocturne, Dazzle, KUVO) and hire intent lives under \"jazz trio for hire\", \"jazz band for wedding\", \"jazz trio for cocktail hour\", so the page now says for hire, for weddings and for events. Format spoke of the 2026-08-20 SEO buildout (Tier 3). One page for the duo and the trio: the duo is the standard cocktail-and-dinner booking, the trio adds drums played with brushes for larger floors. Replaces /music/jazz-duo/; build.py REDIRECTS carries the stub, and acts.json jazz-duo.page points here so every roster card follows. Identity copy draws on the ratified acts.json jazz-duo paragraphs.",
+    "reader": "Whoever wants cocktails and dinner where the conversation is the point and the music sounds polished: a wedding's ceremony and cocktail hour, a client dinner, a reception, a dinner party, a brunch."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Standards for cocktails and dinner",
+       "slab": true,
+       "title": "Jazz duo and trio for hire, for weddings and for events.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Guests walk in to Autumn Leaves on upright bass and guitar, pick up a drink, and talk across it all evening. The jazz duo plays standards at a volume the conversation sits on top of, for a single hour or for cocktails and dinner together, and the trio adds drums played with brushes for a bigger crowd.",
+       "headingText": [
+        {
+         "html": "Weddings book it for the ceremony and the cocktail hour, and companies book it for client dinners and receptions. Standards are the book because guests recognize them without needing to name them."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=jazz-duo",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+       "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "Format spoke (Tier 3). The jazz duo is spec'd on purpose: instrumentation,\n     repertoire and volume publish, players never do. The intro reuses the\n     ratified identity copy from acts.json jazz-duo. Rate-card link in the\n     first screen per the conversion spine.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants cocktails and dinner where the conversation is the point and the music sounds polished. The sizes were stated twice (the hand-written rows and the ladder token); the ladder token is gone from this page and the rows carry the sizes. dBA, footprints and the 'booked as a format' taxonomy line are gone from the body; the brunch and memorial row split in two.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Sizes",
+       "title": "The duo, or the trio with brushes.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "The duo",
+         "text": "Upright bass and guitar, for cocktails and dinner together or a single hour on its own. It fits in a corner, so it plays venues a band can’t."
+        },
+        {
+         "term": "The trio",
+         "text": "The duo plus drums, played with brushes. Brushes keep the drums at dinner level and give a bigger crowd the pulse a two-piece can’t."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-9",
+       "html": "“[He] was fantastic, he struck the right note (pardon the pun) with our guests by not only playing beautifully, but also by playing quietly in the background so as not to disturb the conversation of our guests. Everyone loved him and would 100% hire him again. He is a tru pro!”",
+       "by": "Mara S., cocktail hour, February 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "For a night that ends on a dance floor, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> starts as a duo and grows to a quartet. For a jazz trio with names on it, <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> plays the standards with a modern edge.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The two sizes, the page's one statement of them (the ladder token was\n     removed in copy pass batch 1, 2026-09-24). Tejas Singh and Changes are\n     the named acts pointed at, for the dance floor and the named trio.\n\nAdded 2026-09-06. Provenance in _src/data/reviews.json. She states the\n         volume argument in a buyer's words, which is why this quote is on this\n         page and not another one. Verbatim, including her typo. Attribution\n         names the profile it came from; no link, the paid channel stays\n         unrouted.",
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books a jazz duo or trio.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "Twenty at one table or eighty at ten, where the conversation is the event and the duo plays under it all night."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Company evenings with a program</a>",
+         "text": "Dinner around remarks and awards, with the music stopping for the speeches and starting again after them, planned with your <a href=\"/planners/run-of-show/\">run of show</a>. The <a href=\"/corporate/jazz-band/\">corporate jazz band page</a> goes through a company evening part by part."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "The hour between the ceremony and dinner, and the ceremony itself if you want it. For jazz from the processional to the last dance, the <a href=\"/weddings/jazz-band/\">jazz band for a wedding</a> sizes the whole day."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties at home or at a club</a>",
+         "text": "A duo fits a house or a club without moving the furniture, in <a href=\"/private-parties/denver/\">Denver</a> or anywhere on the Front Range."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "The standards the residents grew up with, played in the common area on a standing weekday afternoon."
+        },
+        {
+         "term": "<a href=\"/daytime/brunch/\">Sunday brunch</a>",
+         "text": "The duo under a restaurant’s or a hotel’s Sunday brunch, from the first table to the last."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Memorial receptions</a>",
+         "text": "The reception or the celebration of life after a service, with the songs the family chooses."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "The <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> is the same size playing singer-songwriter and folk-rock covers, and in December this trio plays the season’s book as the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a>. <a href=\"/blog/what-a-jazz-band-costs-denver/\">What a jazz band costs in Denver</a> sets out the market, size by size.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the format lands (handoff §3: format pages answer occasions, never\n     organize by size for its own sake). Links UP to the occasion pages and\n     ACROSS to the Denver private parties page.",
+    "_file": "03-occasions.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-19",
+    "act": "jazz-duo",
+    "title": "A sample of the set",
+    "_notes": "The sample set, rendered from acts.json. The ladder token left this page in\n     copy pass batch 1 (2026-09-24): the sizes section above already states\n     both sizes, and saying them twice was Layer 8 restatement.",
+    "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Jazz duo and trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>, and the rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>. The instruments at every size, from a duo to a big band, are in <a href=\"/blog/jazz-band-instruments/\">jazz band instruments</a>, and the trio’s lineups are in <a href=\"/blog/what-is-a-jazz-trio/\">what is a jazz trio</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "What is a jazz trio?",
+         "a": "Three musicians. The traditional combos are piano, bass and drums, or organ, guitar and drums. The one we usually send to a private event is guitar, upright bass and drums played with brushes, because brushes let the drums sit under a conversation. A quartet is the same three with a horn or a voice added. Signet Artists books jazz duos and trios across Denver and the Colorado mountains."
+        },
+        {
+         "q": "Can we hire a jazz trio for a wedding?",
+         "a": "Yes, and it's usually hired for the ceremony and the cocktail hour. The trio plays a processional and a recessional as readily as it plays standards, and the same booking carries straight through dinner."
+        },
+        {
+         "q": "Is a jazz duo enough for a dinner of sixty guests?",
+         "a": "Yes. The duo plays at about the level of the conversation at the table, so guests talk across it without raising their voices, and it holds that from twenty guests at one table to eighty at ten. Past that, or when the guests are spread across a big floor, the trio is the size to book."
+        },
+        {
+         "q": "Can one booking cover cocktails and dinner?",
+         "a": "Yes, and that's the most common booking. The duo covers arrival, cocktails and dinner, with sound included and music through the breaks. A single hour on its own is a real booking too, and another half hour is easy to add on the night. One learned song of your choosing comes with every booking."
+        },
+        {
+         "q": "How much space and power does it need?",
+         "a": "The duo sets up in a corner of about 8 by 6 feet on one dedicated circuit. The trio plays fine on the floor in about 12 by 8 feet, still on one dedicated 20-amp circuit, with about an hour to set up. If you want a riser, the venue or your production company provides it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Visible FAQ renders from this dir's schema.json, so answers and FAQPage\n     markup cannot drift. The offer_close token is the last thing on the page.",
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring the jazz duo for cocktails and dinner.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

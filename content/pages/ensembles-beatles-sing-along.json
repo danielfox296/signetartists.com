@@ -1,0 +1,262 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/beatles-sing-along/",
+   "title": "Your Bird Can Sing: a Beatles sing-along in Denver | Signet Artists",
+   "description": "A Beatles sing-along for parties, company events, weddings, community programs and senior living in Denver. Two musicians play, and everyone sings.",
+   "titleExact": true,
+   "ogImage": "img/your-bird-can-sing-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Beatles Sing-Along",
+   "schema": {
+    "service": {
+     "name": "Beatles sing-along duo",
+     "serviceType": "A Beatles sing-along for parties, company events, weddings, community programs and senior living",
+     "description": "Your Bird Can Sing is a Beatles sing-along led by two musicians. The duo plays the songs and leads the audience through them, and it books as one duo across the Denver area, the Front Range and the mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo"
+     ]
+    },
+    "act": "your-bird-can-sing"
+   },
+   "notes": {
+    "_note": "Built 2026-09-22 from Daniel's brief for Your Bird Can Sing. The URL is his ruling: 'beatles-sing-along, it's not a cover band or impersonation or tribute.' Autocomplete the same day put 'beatles tribute band denver' and 'beatles cover band denver' at the top of their stems, and both describe an act this is not, so the page reaches buyers on the sing-along family instead: 'sing along music for seniors', 'sing along songs for seniors', 'beatles sing along songs' all complete, and the senior living spoke was already naming the Beatles twice in its own copy. The title carries the act name because he ruled the act publishes under its name. One FAQ answers the tribute question outright, since that is the query most likely to land here. REWRITTEN 2026-09-24 in the copy critique Daniel asked for: the page had restated its five facts in every section, listed venues four times, and carried the site's own taxonomy and the artwork's provenance on the buyer's page. Two sections deleted (identity, artwork), FAQs replaced, meta rewritten. The critique and the mechanisms are Layer 8 of the site-ops tells catalog.",
+    "reader": "Whoever wants the whole crowd singing, from five to ninety: a family party, a company event, a wedding weekend, a community program, senior living."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Beatles songs, and everybody sings",
+       "slab": true,
+       "title": "Your Bird Can Sing",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "A Beatles sing-along led by two musicians, for everyone from five to ninety.",
+       "lede": "You know the part of Hey Jude where everyone starts singing. A Beatles sing-along is a playful hour of that. Two musicians play and lead the singing, and by the second song that’s your whole crowd.",
+       "headingText": [
+        {
+         "html": "It books for a fiftieth anniversary or an eightieth birthday, a company picnic or holiday party, a wedding welcome party, a school or library program, and an afternoon at a senior living community. Every crowd in that list already knows these songs."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=your-bird-can-sing",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/your-bird-can-sing-card.jpg",
+        "alt": "A flock of birds in silhouette flying into a sunburst, drawn in the flat color of a sixties record sleeve.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "THE ONE READER: whoever wants the whole crowd singing. Daniel's\n     correction, 2026-09-24, after a pass that wrote the page to the senior\n     living activity director: \"this is WAY too focused on senior living.\n     that is ONE potential client ... it excludes so many other booking\n     possibilities.\" His brief: kids through seniors, marketed into senior\n     living among other places but not only there. So the reader is defined\n     by the desire, not the institution; the hero speaks to that desire, the\n     second paragraph names the breadth once, and the occasions section\n     gives each buyer a row of their own: family parties, company events,\n     weddings, community events, senior living.\n\n     Fourth pass, 2026-09-24, against the fifteen copywriting rules drafted\n     in this session (in chat, pending Daniel's ratification, not yet global).\n\n     Fifth pass, 2026-09-24, on Daniel's ruling: \"the focus on booklets is\n     an ops detail that needs mentioned only in faq. it's not a feature of\n     the act. similarly decibel levels in numbers is a misread of the\n     audience.\" The feature is two musicians getting a whole crowd singing;\n     the booklets are how, and how lives in the FAQ with the footprint, the\n     outlet, the arrival time, the paperwork and the standing date. The\n     \"How it runs\" and \"Booking it\" sections are gone (the sitewide close\n     already asks for the date and the venue). \"Multi-instrumental\" left\n     the caption because with no instrument named it tells a buyer nothing;\n     it stays in the repo note as his fact.\n\n     Named act, spec'd presentation: the name publishes and no musician does\n     (Daniel, 2026-09-22: \"publish under the act name. no additional names\").\n     Act-hero shape, the same one Firstwater uses, with the style as the\n     eyebrow and the name as the h1.\n\n     Rewritten 2026-09-24 in the copy critique Daniel asked for. The first\n     version said the same five facts in every section (booklets fourteen\n     times, the duo twenty-three times), listed venues in four paragraphs,\n     and put the site's own taxonomy on the page (\"a named act\", \"books as\n     one duo\"). The identity section that restated it is gone.\n\n     The lede was rewritten a second time the same day, after Daniel read the\n     first rewrite's opener (\"Two musicians play the Beatles and hand out\n     lyric booklets, and everyone sings, from the grandchildren to the\n     great-grandparents\") and asked whether a copywriter would stand behind\n     it. It was a spec sentence: the apparatus first, the range hung off the\n     end, and the eyebrow and act-face above it already said \"everybody\n     sings\" and \"lyric booklets\". The opener now is the moment the buyer is\n     paying for, in her own memory of it, and the mechanism comes second as\n     what makes it happen. AI-TELLS Layer 8, pattern 10.\n\n     The media slot carries the act's own artwork (scripts/bird_art.py, with\n     a provenance row) in the act-video-photo pattern. Footage and\n     photography are both still open asks: the day either arrives, the clip\n     takes this slot.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-8",
+    "act": "your-bird-can-sing",
+    "title": "A sample of the set",
+    "_notes": "The book. The token renders acts.json setlist.items, which are the eleven\n     Beatles titles already published on /repertoire/ (Hey Jude and Let It Be\n     carry the singalong flag there). Nothing is named here that the site does\n     not already list, because the act has no channel to check it against.",
+    "_file": "03-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-9",
+       "eyebrow": "Occasions",
+       "title": "Who books a Beatles sing-along.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-10",
+       "rows": [
+        {
+         "term": "Family parties",
+         "text": "An <a href=\"/private-parties/anniversary-party/\">anniversary</a>, a <a href=\"/private-parties/birthday-party/\">milestone birthday</a>, a <a href=\"/private-parties/retirement-party/\">retirement send-off</a> or a <a href=\"/private-parties/backyard-party/\">backyard party</a>, at the house or at a rented space. Whoever the party is for grew up on these records, and their grandchildren end up singing them too."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Company events</a>",
+         "text": "A summer picnic, the <a href=\"/corporate/holiday-party/\">holiday party</a> or the last night of a <a href=\"/corporate/retreats/\">retreat</a>. It’s the one thing the whole company does together, and it plays at a volume the tables can still talk across."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "A welcome party, a rehearsal dinner or the after-party. The two families meet for the first time that weekend, and they all know these songs, so it’s the first thing they do together."
+        },
+        {
+         "term": "<a href=\"/daytime/community-programs/\">Community events</a>",
+         "text": "A library’s summer program, a school’s family night, a church picnic, a block party or a farmers market. It’s open to whoever walks up, so the audience is every age at once, and this is one of the few programs that works for the toddlers and the retirees in the same hour."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living and memory care</a>",
+         "text": "The residents know every one of these songs from the first time around. In memory care the same duo plays a shorter, quieter set to a smaller group."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Who books it, one row per buyer, each linking the hub or spoke that\n     ranks for it. Five rows on Daniel's ruling of 2026-09-24 (\"that is ONE\n     potential client ... it excludes so many other booking possibilities\"):\n     family parties, company events, weddings, community events, senior\n     living. Each row carries the one fact that buyer needs and none assigns\n     the act to an hour of anybody's day. Senior living is last, not first,\n     because it is one of five. Fifth pass: no booklet and no volume figure\n     in any row; the prop and the ops live in the FAQ.",
+    "_file": "05-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Your Bird Can Sing questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "The operational questions, from substitutions to decibel caps, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-15",
+       "items": [
+        {
+         "q": "What is Your Bird Can Sing?",
+         "a": "A Beatles sing-along led by two musicians, booked through Signet Artists in Denver, for family parties, company events, weddings, community programs and senior living."
+        },
+        {
+         "q": "Is this a Beatles tribute band?",
+         "a": "No. Two musicians play the Beatles songbook as themselves and lead the audience through the songs."
+        },
+        {
+         "q": "Does anyone need to know the words?",
+         "a": "No. Everyone gets a lyric booklet and the duo leads the melody, so anyone who wants to sing can, and anyone who would rather sit and listen is welcome to."
+        },
+        {
+         "q": "How long is it?",
+         "a": "One set of 45 to 60 minutes, or two shorter sets with a break. Requests are welcome."
+        },
+        {
+         "q": "What do we need to have ready?",
+         "a": "About 8 by 6 feet of floor and one standard outlet. The duo brings sound support that's the right size for the venue, so you don't need a system of your own, and the musicians arrive about an hour before the start. Outdoors it needs shade over the musicians and an outlet within reach, and what happens if it rains is on the technical page."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "About as loud as a conversation. People at the back hear the melody and the front table can keep talking. The duo sets the volume to the space and the crowd, so in a small space it plays with no amplification at all, and in a courtyard it plays louder to reach the back."
+        },
+        {
+         "q": "Can we book it every month?",
+         "a": "Yes. It books as a standing date, the same afternoon each month or every other week, on one contract with one personal contact for the whole run, and the set changes from visit to visit."
+        },
+        {
+         "q": "Do you have a certificate of insurance and a W-9?",
+         "a": "Yes. Both come in the same email as the contract, with an invoice that matches your purchase order, so a business office can set the vendor up before the date."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The FAQ is where the ops live, on Daniel's ruling of 2026-09-24: the\n     booklets, the set length, the floor space and the outlet, the sound,\n     the volume in words rather than decibels, the standing date, outdoors,\n     and the paperwork. None of it is on the page above, because none of it\n     is a feature of the act. The definition is first for the entity, and\n     the tribute question is second on purpose: \"beatles tribute band\n     denver\" is the strongest local query in this family and the answer is\n     no, so the page says no where a reader will find it.",
+    "_file": "08-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-18",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the date and the crowd, and everybody sings.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "08-faqs.html"
+   }
+  }
+ ]
+}

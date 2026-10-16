@@ -1,0 +1,387 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/holiday-party/denver/",
+   "title": "Corporate holiday party entertainment in Denver | Signet Artists",
+   "description": "Live music for Denver corporate holiday parties: 21 party dates across November and December, 10 of them in December, and downtown load-in solved.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate holiday party entertainment in Denver",
+     "serviceType": "Live music and DJ for corporate holiday parties",
+     "description": "Live music for Denver corporate holiday parties, duo through quartet plus DJ, across the season's 21 November and December dates.",
+     "areaServed": [
+      "Denver"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Denver spoke of the holiday occasion, built 2026-08-20 with the SEO buildout. The argument is date inventory plus downtown hotel logistics: 21 published party dates, 10 in December, and the dock-and-elevator reality of a 17th Street load-in. The hub at corporate/holiday-party/ carries the leads and the season narrative; this page embeds the season's dates once, premiums tagged. No availability is published (2026-08-27): the booking calendar is private.",
+    "reader": "Whoever books the company holiday party in Denver, usually in a downtown hotel or a club.",
+    "_seasonal_note": "Same staleness clock as the hub: the 21-date count and the embedded dates describe the 2026 season. When the hub rolls to 2027 or gets its noindex, this page rolls with it.",
+    "schema_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the December calendar, the booking window. Answers answer in the first sentence. Any figure is a {{market:<id>}} token off market-rates.json and the page prints its source; no Signet figure appears here or anywhere since 2026-09-04."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver holiday parties",
+       "slab": true,
+       "title": "A Denver corporate holiday party has 21 dates to land on.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The program ends, the duo that played dinner hands the floor to the DJ without a gap, and a ballroom off 17th Street fills up. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 party dates, ten of them in December, and the whole market wants the same peak weekends, marked below.",
+       "headingText": [
+        {
+         "html": "The season is decided August through October, and New Year’s Eve books earliest of all. Downtown it’s tighter still: the companies filling the December calendars at the Brown Palace, the Four Seasons and the Oxford are choosing from the same short list of Saturdays."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The Denver argument is scarcity you can count: 21 published dates, 10 in\n     December, and a market that all wants the same Saturdays. Rate-card link\n     in the first screen per the conversion spine.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever books the company holiday party in downtown Denver. The dock and power paragraphs are the FAQ now; the downtown venues stay as local fact; the reassurance negations in the pairing section are gone; FAQs restating the date count and the booking window are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "A December ballroom and a band that fills it.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The kind of venue the downtown season books, and Tony Medina’s band on a stage the size a company party needs."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-7",
+       "images": [
+        {
+         "src": "/img/ballroom.jpg",
+         "alt": "An empty banquet hall set for dinner.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The pairing",
+       "title": "A duo through dinner, a DJ to close.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A Denver holiday party has two halves: dinner, which has to work at conversation volume, and a dance floor that has to fill. The pairing that covers both is a duo through cocktails and dinner with a DJ carrying the back half, through one sound system on one contract."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Still at the ideas stage? <a href=\"/blog/office-holiday-party-ideas-denver/\">Seven holiday party ideas</a>, from the DJ night to live band karaoke, are written up on the blog.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "When one act should carry the whole night instead, Tejas Singh starts as a duo and finishes as a quartet on a single contract, with the same voice out front all night. Either way it’s one sound system and one invoice, and the handoff is planned so the music runs from the first drink to the last song.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Was the rate module, three figures and the premiums. Since 2026-09-04 it\n     is the pairing argument, which was always the point of the section, plus\n     the Denver holiday-weekend figure the market publishes. Tejas Singh is\n     the one act named, leading per the one-headline-act rule.",
+    "_file": "02-pairing.html"
+   }
+  },
+  {
+   "type": "SeasonBoard",
+   "props": {
+    "id": "SeasonBoard-19",
+    "band": "sunk",
+    "anchor": "board",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "November through New Year's Eve",
+       "title": "The Denver season, date by date.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Every Thursday, Friday and Saturday of the season, with the peak dates marked: the same dates as the <a href=\"/corporate/holiday-party/\">holiday season page</a>."
+      }
+     },
+     {
+      "type": "Season",
+      "props": {
+       "id": "Season-16",
+       "dates": [
+        {
+         "date": "2026-11-05"
+        },
+        {
+         "date": "2026-11-06"
+        },
+        {
+         "date": "2026-11-07"
+        },
+        {
+         "date": "2026-11-12"
+        },
+        {
+         "date": "2026-11-13"
+        },
+        {
+         "date": "2026-11-14"
+        },
+        {
+         "date": "2026-11-19"
+        },
+        {
+         "date": "2026-11-20"
+        },
+        {
+         "date": "2026-11-21"
+        },
+        {
+         "date": "2026-11-27"
+        },
+        {
+         "date": "2026-11-28"
+        },
+        {
+         "date": "2026-12-03"
+        },
+        {
+         "date": "2026-12-04"
+        },
+        {
+         "date": "2026-12-05",
+         "peak": true
+        },
+        {
+         "date": "2026-12-10"
+        },
+        {
+         "date": "2026-12-11",
+         "peak": true
+        },
+        {
+         "date": "2026-12-12",
+         "peak": true
+        },
+        {
+         "date": "2026-12-17"
+        },
+        {
+         "date": "2026-12-18",
+         "peak": true
+        },
+        {
+         "date": "2026-12-19",
+         "peak": true
+        },
+        {
+         "date": "2026-12-31",
+         "note": "New Year's Eve"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "New Year's Eve books first and is marked as a peak date. Booking the party in Colorado Springs instead? That market has <a href=\"/corporate/holiday-party/colorado-springs/\">its own page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The one embed of the season dates outside the hub. No availability:\n     Daniel killed the published \"board\" 2026-08-27; the booking calendar is\n     private. Links UP to the hub and ACROSS to the Colorado Springs sibling.",
+    "_file": "03-board.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "eyebrow": "Downtown venues",
+       "title": "Downtown hotels and clubs.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Denver's December concentrates in the hotels off 17th Street, the Brown Palace and the Oxford among them, with the Four Seasons a few blocks south and the club floors at the University Club of Denver and the Denver Athletic Club holding the member events. One kind of night runs through all of them: a program with remarks in it, dinner at conversation volume, and a dance floor that has to fill once the program ends."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-21",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [],
+       "c2": []
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Footprints, power and load-in by size are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to your venue contact. If the venue itself is still open, <a href=\"/blog/corporate-holiday-party-venues-denver/\">the Denver venue guide</a> covers sixteen of this market's spaces one by one.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The Denver-specific logistics section: docks, service elevators, dedicated\n     circuits. Venues named as the market's places, never as our history.",
+    "_file": "04-downtown.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-28",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "FAQ",
+       "title": "Denver holiday party questions.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-26",
+       "items": [
+        {
+         "q": "What does setup look like at a downtown Denver hotel?",
+         "a": "Through the dock and the service elevator, inside the windows the venue sets, and the banquet team wants footprint, power and timing before either is confirmed, so we settle all three before the day. A quartet takes about 14 by 10 feet, 90 minutes and two dedicated 20-amp circuits; a duo takes 8 by 6 feet, one circuit and an hour. Sharing a circuit with catering warmers is the usual cause of trouble, so ask for dedicated lines. Signet Artists books company parties across Denver."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "Through dinner and the remarks, quiet enough that a table talks across it; once the program ends, a quartet or the DJ plays like a dance floor, up to what the hotel allows."
+        },
+        {
+         "q": "Do December dates in Denver cost more?",
+         "a": "Yes. December weekends cost more than a standard date everywhere in this market, and New Year's Eve is a peak date of its own. What that means for your date is its own line on the quote."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-29",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the date and the Denver venue, and we'll recommend the act for the night.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

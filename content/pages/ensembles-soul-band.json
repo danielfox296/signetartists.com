@@ -1,0 +1,307 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/soul-band/",
+   "title": "Soul and R&B band for Denver parties, galas and weddings | Signet Artists",
+   "description": "A soul and R&B band for Denver holiday parties, galas, after-parties and wedding receptions: Stevie Wonder, Aretha Franklin, Al Green and the Motown songbook.",
+   "titleExact": true,
+   "ogImage": "img/soul-band-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Soul and R&B band",
+   "schema": {
+    "service": {
+     "name": "Soul and R&B band",
+     "serviceType": "Soul and R&B cover band for company holiday parties, galas, after-parties and wedding receptions",
+     "description": "A soul and R&B band singing Stevie Wonder, Aretha Franklin, Al Green, Bill Withers, Marvin Gaye and the Motown songbook, a quartet or a five to six piece with a horn, for company holiday parties, galas, after-parties, milestone birthdays and wedding receptions across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "soul-rnb"
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-23 with the roster rebuild, from the soul-rnb entry in acts.json (a card since 2026-09-14). Evidence: 'soul band denver', 'soul music denver' and 'r&b bands denver' autocomplete on 2026-09-23; on 2026-09-14 'soul band for hire denver' did not, which is why it stayed a card then. The sung partner of the funk band. Spec'd, no names.",
+    "reader": "Whoever wants a dance floor that every generation at the party knows the words to: the company holiday party, the gala after the last award, the wedding reception, the fiftieth."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Aretha, Stevie and Motown",
+       "slab": true,
+       "title": "A soul and R&amp;B band for holiday parties, galas and wedding receptions.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The horn hits the opening of Signed, Sealed, Delivered, and the floor fills before the first verse is over. It takes a singer who can carry Aretha, a horn on the lines the records gave it, and a rhythm section that can play quietly through dinner and then open the floor.",
+       "headingText": [
+        {
+         "html": "It books for a company holiday party, the floor after a gala’s last award, a wedding reception and a fiftieth birthday."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=soul-rnb",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/soul-band-card.jpg",
+        "alt": "A black 45 with a rose label on a cream field, drawn flat, with the words soul and R&B band beside it.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd. The h1 and lede carry the buyer's words. No player is\n     named anywhere on this page. The tile in the hero is the act's own drawn\n     artwork (scripts/format_art.py): a 45 on the turntable, because a spec'd\n     format has no face to photograph and the picture should be the thing it\n     sells.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants every generation singing the chorus back on the floor. The 'every variety band in Colorado carries Motown' paragraph argued with a competitor and is gone. Footprints, power, dBA, the emcee cue and added time moved to the FAQ; Booking it deleted, its pairing links moved into the sizes note.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set",
+       "title": "Respect, Let’s Stay Together, Lean on Me.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The set runs from Sam Cooke and Otis Redding through Stevie Wonder, Aretha Franklin, Al Green, Bill Withers, Marvin Gaye and the Motown catalog, with Amy Winehouse and Leon Bridges beside them."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The singer takes the ballads while people eat. Once the floor opens the horn comes out front and the songs stretch out, because a soul chorus is made to be sung back. For the same songwriters played without a singer, book the <a href=\"/ensembles/funk-band/\">funk band</a>. The rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "The quartet, and the full band with a horn.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The quartet",
+         "text": "A singer, keys, bass and drums, with the keys covering the horn lines and the guitar parts. It’s the size for a company party of eighty to two hundred or a wedding reception in a restaurant."
+        },
+        {
+         "term": "Five to six piece",
+         "text": "The quartet plus guitar and a horn, and a second voice for a ballroom or a crowd past two hundred. With the horn on the choruses and the guitar beside the keys, it’s the version that sounds most like the records."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> or the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> can play the drinks hour before the band on the same contract, and the <a href=\"/ensembles/dj/\">DJ</a> can take over afterward through the same sound system.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Who books a soul and R&amp;B band.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "The dance floor act for a company party in a hotel ballroom, for a staff whose ages run from twenty-two to sixty-five. <a href=\"/blog/office-holiday-party-ideas-denver/\">Office holiday party ideas</a> puts this band beside the other ways a party can go."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "A gala with a program in it, and a floor to open once the last award is given. The band plays that floor as the <a href=\"/corporate/after-party/\">after-party</a> or as the second half of the gala itself."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Wedding receptions</a>",
+         "text": "For a couple who wants a band on the floor, with their first dance learned for the night and the ceremony and cocktail hour on the same contract."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays and anniversaries</a>",
+         "text": "A fiftieth or a sixtieth for a crowd that grew up on these records, at a club or a restaurant buyout, or an <a href=\"/private-parties/anniversary-party/\">anniversary</a> with the couple’s song in the set."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Soul and R&amp;B band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "What does the soul and R&amp;B band play?",
+         "a": "Stevie Wonder, Aretha Franklin, Al Green, Bill Withers, Marvin Gaye, Otis Redding, The Temptations and the Motown songbook, sung out front with a horn on the big choruses. It's booked through Signet Artists in Denver as a quartet or a five to six piece."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "While people eat, the singer takes the ballads at a level the tables talk across. Once the floor opens it plays like a dance band, loud enough that the chorus reaches the back of a ballroom. The band sets the level to the space and the crowd, and if your venue has a sound limit, give us the number and the set stays under it."
+        },
+        {
+         "q": "How much space and power does it need?",
+         "a": "The quartet sets up in about 14 by 10 feet on two dedicated 20-amp circuits and needs 90 minutes to set up. The five to six piece needs a little more width. Sound support that's the right size for the venue comes with every booking."
+        },
+        {
+         "q": "Can the band work around speeches and awards?",
+         "a": "Yes. An announcement microphone is ready for the remarks and the thank-yous, and we plan the sets around your program with you so the music stops before the emcee reaches the microphone."
+        },
+        {
+         "q": "Can the band learn our first dance?",
+         "a": "Yes. One learned song of your choosing comes with every booking, and for a wedding it's usually the first dance. If the night runs long, another half hour is easy to add on the night."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring the soul band and the horn.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

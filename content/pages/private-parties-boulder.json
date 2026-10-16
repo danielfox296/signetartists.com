@@ -1,0 +1,304 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/boulder/",
+   "title": "Live music for private parties in Boulder | Signet Artists",
+   "description": "Live music for Boulder dinner parties and milestones, solo to trio, dinner at 60 to 65 dBA. Caps and curfews honoured as written.",
+   "titleExact": true,
+   "nav": "private",
+   "schema": {
+    "service": {
+     "name": "Private party entertainment in Boulder",
+     "serviceType": "Live music for dinner parties and private celebrations",
+     "description": "Live music for Boulder private parties, solo to trio, with caps and curfews honoured as written.",
+     "areaServed": [
+      "Boulder"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Boulder spoke of the private-parties occasion, built 2026-08-20 with the SEO buildout. The argument is scale and sound: home-and-club venues (Chautauqua, the Boulderado, the St Julien, Flagstaff House), solo-to-trio as the honest sizes, curfews and caps treated as design inputs honoured as written, and the flat Front Range travel line published via the extras list rather than typed.",
+    "reader": "Whoever is hosting a dinner party, anniversary or milestone in Boulder and wants it to sound like a Boulder evening.",
+    "schema_note": "Boulder private-parties spoke. City-specific set: the curfew reality, the travel line, venue sizing at Chautauqua and the Boulderado, and outdoor play at a Boulder home. No dollar figures in answers; the Offers this file emits carry the ranges."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Boulder private parties",
+       "slab": true,
+       "title": "Live music for private parties in Boulder.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A long table on the Chautauqua porch, a duo just inside the doors, and the Flatirons going pink over dinner. Boulder evenings are built for this, and a solo, duo or trio is usually the size that suits them.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, for dinner parties, anniversaries and milestones at home, at the downtown hotels or up at Chautauqua."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Reopened 2026-08-20 (buyer-path audit): the porch dinner now comes before\n     the sound policy. The constraint is still the plan, and it still gets the\n     h1; the first image belongs to the evening the host is actually buying.\n     Rate-card link in the first screen per the spine; hub link UP early.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is hosting a dinner or a milestone in Boulder and wants it to sound like a Boulder evening. The real venues and the neighborhood sound facts stay; the logistics section (travel, parking, setup, curfew) is the FAQ now, with the extras list; dBA left the body; honour/neighbours fixed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "Outdoors, one musician or two.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "An acoustic guitarist in the open air and a solo musician on a bridge: the sizes a Boulder patio party books."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/solo-bridge.jpg",
+         "alt": "A guitarist playing an acoustic set on a Denver bridge.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-12",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The sizes",
+       "title": "The sizes Boulder books.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A quartet is for a dance floor that has to fill. Most Boulder evenings are conversation first, in venues and neighborhoods that sit close together, and a solo, duo or trio covers that while staying under the volume ceiling. When a date wants four pieces, we'll say so."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "A solo through a patio dinner is the smallest of these and the one Boulder books most. A trio is the biggest size most Boulder venues allow, and it fills a dance floor without needing a stage.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Boulder is a short Front Range drive from Denver, so the travel line is short, and the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out the Colorado figures.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Was the rate module. Since 2026-09-04 it is the sizing argument, which\n     was always this section's real content: Boulder's ceiling is the venue and\n     the neighbours, not the budget.",
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "The venues",
+       "title": "Chautauqua to the St Julien, and the houses in between.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Boulder’s private events concentrate in a short list of venues. Chautauqua’s Community House and Dining Hall carry the milestone dinners and anniversaries. The Hotel Boulderado and the St Julien hold the downtown celebrations. Flagstaff House holds the dinner that is booked for its view.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Each has its own reasons to watch the volume. Chautauqua sits inside a residential historic district. The Boulderado and the St Julien put their event floors a corridor away from sleeping guests. Flagstaff House sits up a mountain road with the city below it. At all of them, ask for the venue’s sound policy early, choose a size that sits comfortably under it, and put the number in the contract.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The same applies at home. Boulder neighborhoods sit close, and for half the year the evening wants to be outdoors: a solo or a duo on the patio, quiet enough that the table talks across it, keeps the evening on the right side of the fence line. A trio plays indoors.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The Boulder venue set, each with its sound reality named. Venues as the\n     market's places, never as our history.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Asked about Boulder bookings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Stage sizes and power for every size are on the <a href=\"/planners/technical/\">technical page</a>, and the <a href=\"/private-parties/denver/\">Denver page</a> carries the house-booking detail at metro scale.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "How late can a band play in Boulder?",
+         "a": "As late as your venue's own rules allow, and Boulder venues and neighborhoods set earlier limits than Denver's. Give us the cap and the cut-off at contract, and both go into the plan, including how the last set lands on the cut-off. Signet Artists books private-party musicians in Boulder from Denver."
+        },
+        {
+         "q": "Does travel from Denver add to a Boulder quote?",
+         "a": "One short line on the quote, covering the whole trip there and back. There's no mileage arithmetic and no lodging line, because the band drives home from Boulder, and the fee for the music itself is the same one a Denver host sees."
+        },
+        {
+         "q": "Can music play outside at a Boulder home?",
+         "a": "Yes, at dinner volume, on a covered, level and dry spot with power run to it. Colorado evenings cool fast, so the music comes indoors as the night does."
+        },
+        {
+         "q": "What does a Boulder booking need for setup and parking?",
+         "a": "One van, 45 to 60 minutes of setup through whichever door the venue prefers, and for a solo, about 6 by 4 feet with one dedicated circuit. Parking is the Boulder question worth settling early: downtown is metered, Chautauqua shares its lot with a trailhead that fills on summer evenings, and a house on the Hill shares its curb with students during the university year. Tell us the address and we plan the carry."
+        },
+        {
+         "q": "When do Boulder dates book?",
+         "a": "Most any time, except November and December, which run on the corporate season's clock, decided August through October. New Year's Eve books first."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-22",
+       "html": "Extras that can appear on a quote.",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-23",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-26",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the Boulder venue, and we'll check the sound rules for you.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

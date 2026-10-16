@@ -1,0 +1,249 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/",
+   "title": "Daytime live music in Denver: senior living, memorials, brunch | Signet Artists",
+   "description": "Live music during the day in Denver: a jazz duo for senior living, a guitarist for a memorial, brunch music, a lunchtime sound bath, a singer at a market.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "schema": {
+    "service": {
+     "name": "Daytime live music and sound baths",
+     "serviceType": "Live music and sound baths during the day for senior living communities, memorial services, brunches, workplaces, yoga studios, farmers markets, libraries and rec centers",
+     "description": "Solo musicians, duos and a sound bath for daytime bookings across Denver, the Front Range and the Colorado mountain corridor: a jazz duo for senior living and memory care, a guitarist or pianist for a funeral or memorial service, live music for Sunday brunch, a daytime sound bath for studios, offices, senior centers and schools, and musicians for farmers markets, libraries and rec center programs, on one contract with sound included.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "The daytime hub, built 2026-09-19 on Daniel's brief: a hub-and-spoke set for the bookings that happen while the sun is up and are bought by a program person with a budget line rather than a party host. Five spokes: senior living and memory care, funerals and memorials, the daytime sound bath, Sunday brunch, and farmers markets, libraries and rec centers. Each spoke's config carries its own autocomplete evidence; the hub's phrases ('daytime live music', 'live music during the day denver', 'daytime entertainment') autocomplete on Google, checked 2026-09-19. The hub routes; the spokes carry the venue detail. No header slot: the nav row has been full at eight since the weddings hub (2026-09-06), so the hub is reached from the footer's Daytime column and from the bodies of the three occasion hubs. The close on every page in this tree is {{offer_close_day:...}}, the sitewide close with 'the night' read as 'the day'.",
+    "reader": "Whoever books music during the day, usually with a program to fill and a budget line to fill it from: an activity director, a family, a restaurant, a coordinator.",
+    "schema_note": "Authored 2026-09-19 with the daytime tree. Every answer traces to site.json configurations, the included list, and the facts already published on the solo guitarist, proposals, private parties and Firstwater pages. Questions are worded the way coordinators search. No figure, no reply window."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Daytime bookings",
+       "slab": true,
+       "title": "Live music and sound baths during the day.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "While the sun is up, the music is smaller and the reasons are different: the standards in a senior living common area on a weekday afternoon, the prelude at a memorial service, a jazz duo under a Sunday brunch, a sound bath in an office at lunchtime, a singer at a Saturday farmers market. The person booking usually has a program to fill and a budget line to fill it from, and the booking often repeats.",
+       "headingText": [
+        {
+         "html": "Each one has its own page: <a href=\"/daytime/senior-living/\">senior living and memory care</a>, <a href=\"/daytime/funerals-and-memorials/\">funerals, memorial services and celebrations of life</a>, the <a href=\"/daytime/sound-bath/\">daytime sound bath</a> with Firstwater, <a href=\"/daytime/brunch/\">Sunday brunch</a>, and <a href=\"/daytime/community-programs/\">farmers markets, libraries and rec centers</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Hub intro. The day leads, the formats answer. Links DOWN to all five\n     spokes inside the first screen, which is what a hub is for. The buyer's\n     phrases (daytime live music, live music during the day) sit in the h1\n     and the first paragraph.\n\nCopy pass batch 4, 2026-09-24. THE ONE READER: whoever books music during the day, often with a program and a budget line. The self-referencing opener ('The rest of this site is built around evenings') is gone; the rows lost their 'the X page covers' tails and dBA; the practical section is the FAQ; the standing-date answer no longer explains the contract's taxonomy.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The bookings",
+       "title": "Five kinds of daytime booking, and what each one wants.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The evening rules mostly still hold: the music sits at a level people talk across, the footprint is a corner, and one contract covers the date. What changes during the day is who is listening and why."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living and memory care</a>",
+         "text": "An activity director books a musician for the residents of an assisted living, memory care or independent living community, usually on a weekday afternoon and usually as a standing date. The set is the standards and the Great American Songbook on upright bass and guitar, or one singer with a guitar working the decades the residents grew up with, played in the common area at the level of a conversation."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals, memorial services and celebrations of life</a>",
+         "text": "A guitarist for the prelude and the one song at a funeral or a memorial service, <a href=\"/ensembles/solo-piano/\">a pianist</a> where the chapel has a piano, and a jazz duo through the reception or the celebration of life afterward. A funeral is usually arranged inside a week, the music is exposed because nobody is talking over it, and the songs are the ones the family chooses. The funerals page sets out where the music goes in a service and how it’s planned with the officiant or the funeral director."
+        },
+        {
+         "term": "<a href=\"/daytime/sound-bath/\">The daytime sound bath</a>",
+         "text": "Firstwater brings a seventy-five-minute sound bath to a yoga studio’s Sunday morning schedule, a conference space at lunchtime, a senior center, a hospice or a recovery center, a school’s staff day, or the morning that opens a retreat. People lie down in low light, there’s nothing to do and nothing to say, and the facilitator brings the sound system, the mats and the blankets."
+        },
+        {
+         "term": "<a href=\"/daytime/brunch/\">Sunday brunch</a>",
+         "text": "Upright bass and guitar, a solo guitarist or a pianist under a Sunday brunch at a restaurant, a hotel or a club, booked as a standing Sunday or for one date, and the same music for a private brunch: the morning after a wedding, a bridal brunch, a shower, a birthday."
+        },
+        {
+         "term": "<a href=\"/daytime/community-programs/\">Farmers markets, libraries and rec centers</a>",
+         "text": "A singer with a guitar at a Saturday market on a battery-powered system, a duo in a library’s meeting space for an adult program or on the lawn for a summer concert, an Americana band for a rec center’s community evening. These are public programs with a coordinator, a season and a purchase order."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The acts are the ones on the rest of the roster. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, the <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> and the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> play most of these; <a href=\"/artists/firstwater/\">Firstwater</a> is the sound bath.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The routing section: five bookings, five pages. Each row is a full\n     argument rather than a label with a link hanging off it, because this is\n     the hub's real work. No o'clocks anywhere in the tree: \"a weekday\n     afternoon\", \"lunchtime\" and \"a Sunday morning\" are calendar facts, not a\n     script for anyone's day.",
+    "_file": "02-the-bookings.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Questions",
+       "title": "Asked about daytime bookings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Stage sizes and circuits for every size are on the <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-13",
+       "items": [
+        {
+         "q": "Do you book live music during the day, on weekdays?",
+         "a": "Yes. A weekday afternoon at a senior living community, a lunchtime sound bath at an office, a weekday morning memorial service and a Saturday farmers market are all bookings we take, usually a solo or a duo. Send the date and the venue and we'll come back with a recommendation and a price. Signet Artists books daytime music across Denver and the Front Range."
+        },
+        {
+         "q": "Which sizes play daytime events?",
+         "a": "Solo and duo, almost always: one musician with a guitar or a piano, or upright bass and guitar, at the level of a conversation and in a corner with no stage. In a small space the guitar plays without amplification at all. A trio plays a brunch or a community evening where the space is bigger, and the sound bath is one facilitator."
+        },
+        {
+         "q": "What does a daytime venue need?",
+         "a": "A solo sets up in about 6 by 4 feet and a duo in 8 by 6, on the floor, with one dedicated 20-amp circuit; outdoors with no power, a guitarist plays on a battery-powered system. Setup is 45 minutes for a solo and an hour for a duo, before the program starts, and packing up takes 30 to 45 minutes. A sound bath needs enough floor for everyone to lie down and sets up about ninety minutes ahead of doors. Sets run 45 to 60 minutes with music through the breaks."
+        },
+        {
+         "q": "Can we book the same act every month?",
+         "a": "Yes. A standing date, monthly or every other week, runs on one contract with one personal contact for the whole run. A community that books the jazz duo gets upright bass and guitar playing the standards on every visit, and a named act, Tejas Singh or Firstwater, is the same act on every date."
+        },
+        {
+         "q": "Do you provide the vendor paperwork a facility or a city needs?",
+         "a": "Yes. A certificate of insurance naming your venue as additional insured, a W-9 and one itemized invoice come in the same email as the contract, which is usually what a business office needs to set up a vendor before the first date."
+        },
+        {
+         "q": "Do you play outdoors, at a market or in a park?",
+         "a": "Yes, on three conditions written down before the day: a covered, level and dry performance area, power run to it or a battery-powered system agreed in advance, and a rain call agreed with the coordinator, because Colorado weather changes fast."
+        },
+        {
+         "q": "How much does daytime live music cost?",
+         "a": "It depends on the size, the length and the date, and we publish no prices of our own. What live music costs in this market, with the source for each figure, is on the pricing page, and each date or run of dates is priced as its own job."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-16",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the date, the space and who will be listening, and we'll recommend the act for it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

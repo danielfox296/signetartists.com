@@ -1,0 +1,322 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/jazz-band/",
+   "title": "Jazz band for a corporate event in Denver: reception to after-party | Signet Artists",
+   "description": "A jazz band for a Denver corporate event: a duo as the doors open, a trio through dinner, silence for the remarks, a quartet with a horn once the program ends, on one contract with sound and an announcement microphone included.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Jazz band for a corporate event",
+     "serviceType": "Jazz band for corporate events, receptions, dinners, awards nights and holiday parties in Denver",
+     "description": "A jazz band for corporate events in Denver and Colorado, sized to the evening: a jazz duo as the doors open, a trio with brushes through dinner at conversation volume, silence through the remarks and awards, and a quartet with a horn or a voice once the program ends, on one contract with sound, an announcement microphone, a certificate of insurance and one itemised invoice.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "videos": [
+     {
+      "id": "hIPHFuxl9YI",
+      "name": "Solo jazz guitarist for a client dinner: Autumn Leaves",
+      "description": "The smallest corporate jazz booking, one guitarist playing Autumn Leaves at dinner volume.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M14S"
+     },
+     {
+      "id": "cA2KwgmJqGc",
+      "name": "Jazz trio for a cocktail hour: Sunny",
+      "description": "The dinner size of a corporate jazz band, guitar, upright bass and drums with brushes, on Sunny.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M9S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-16 on Daniel's call (he wanted the page rather than a section on client dinners). Evidence: 'jazz band for corporate event', 'bands for corporate events', 'jazz band for events' and 'corporate event jazz music' autocomplete as their own family. The argument is the corporate evening slot by slot and what a jazz band does in each, plus how to brief it; the client dinners page is the volume argument for dinners alone, the galas page is the program cues, and the corporate hub is the three shapes. Uniqueness gate: registered as a corporate-jazz sibling of client dinners and as a jazz sibling. No figures on the page; the cost question links the calibration post.",
+    "reader": "Whoever is planning a corporate evening and wants one jazz band to carry it from the doors to the dance floor."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Jazz band for a corporate event",
+       "slab": true,
+       "title": "A jazz band for a corporate event, sized to the evening.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The duo is playing Autumn Leaves as the first guests find their name badges, and three hours later a horn is leading the same songbook onto a dance floor. A jazz band fits every part of a corporate evening: under the conversation at the doors, through dinner, silent for the program, and loud after it. The songbook stays the same all night, and what changes is how many musicians are playing it.",
+       "headingText": [
+        {
+         "html": "It’s the jazz branch of <a href=\"/corporate/\">our corporate work</a>, for receptions, client dinners, awards nights, holiday parties and member evenings, on one contract with one personal contact for the night."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Corporate jazz page. The evening leads, slot by slot; the sizes answer.\n     The family this page targets (jazz band for corporate event, bands for\n     corporate events) sits in the h1 and the first paragraph. Hub link UP\n     in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is planning a corporate evening and wants one band to carry it from the doors to the dance floor. 'This is the slot most bands get wrong' argued with a competitor and is gone; dBA, set lengths and paperwork went to the FAQ; FAQs that restated the evening rows are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip. For a corporate buyer spending someone else's budget,\n     the names are the first thing that matters.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Dinner volume, and the trio with the drums in.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Autumn Leaves on one guitar, which is the size for a client dinner of twenty, and Sunny with brushes, which is the size for a dinner of two hundred."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+         "title": "A solo jazz guitarist playing Autumn Leaves at dinner volume",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny with drums played with brushes",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: the smallest booking at dinner volume and the\n     trio with brushes. No player named; the format is spec'd.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The evening",
+       "title": "Doors, dinner, the program, and after.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Each part of the evening wants a different amount of music, and the program wants none."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "As the doors open",
+         "text": "The duo, upright bass and guitar, plays the standards while guests find their names and their people. You can tell the music is live from across the venue, and it stays under the first hour of conversation."
+        },
+        {
+         "term": "Through dinner",
+         "text": "The trio, with the drums played with brushes, plays at a level the whole table talks across. <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> plays this size as a named group, with a modern edge on the songbook."
+        },
+        {
+         "term": "The remarks and the awards",
+         "text": "Silence, on cue. The band plays up to the moment and stops while your speaker is still steps from the microphone, and a walk-up for each award is planned on the <a href=\"/planners/run-of-show/\">run of show</a>."
+        },
+        {
+         "term": "After the program",
+         "text": "The quartet, the trio plus a horn or a singer out front, plays the swing and the soul end of the songbook for the hour the dance floor opens. When the night should run past that, the <a href=\"/ensembles/dj/\">DJ</a> or a covers band carries the <a href=\"/corporate/after-party/\">after-party</a> through the same sound system, on the same contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The corporate evening slot by slot, with the jazz size for each. This\n     is the page's argument and what keeps it apart from client dinners (one\n     slot, the volume mechanism) and galas (the cues). Links ACROSS to the\n     run of show, the after-party page and the named trio.",
+    "_file": "02-the-evening.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Occasions",
+       "title": "The corporate nights that book a jazz band.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member evenings</a>",
+         "text": "The duo plays the whole evening, for twenty at one table or eighty at ten, and the conversation is the event."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "The trio plays through dinner, goes silent for the program, and comes back as the quartet after it. A gala is where the horn is worth having."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Holiday parties</a>",
+         "text": "The trio plays drinks and dinner, then the quartet with a singer takes the first hour of the dance floor, or hands off to the DJ. In December the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "The duo plays a lodge dinner, with the mountain going dark through the glass."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "What a jazz band costs across this market, size by size and with its sources, is set out in <a href=\"/blog/what-a-jazz-band-costs-denver/\">what a jazz band costs in Denver</a>. A corporate evening that wants to sound like this decade instead of the standards books <a href=\"/artists/last-consulate/\">Last Consulate</a>, one musician on upright bass and electronics at the same volume.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the corporate jazz band lands: the occasion pages it serves,\n     each with the size it usually books. Links UP to the spokes.",
+    "_file": "03-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Asked about jazz bands for corporate events.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Which size of jazz band does a corporate event need?",
+         "a": "A reception or a dinner for up to eighty wants the duo or the trio. A ballroom of two hundred wants the trio through dinner and the quartet, with a horn or a singer out front, once the program ends. Tell us the headcount, the venue and whether the evening has a dance floor, and we'll recommend the size. Signet Artists books jazz bands across Denver and the Colorado mountains."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "At the doors and through dinner, about the level of the conversation, so a table talks across it without raising voices. For the program, silent. After it, the quartet plays like a dance band, up to what the venue allows."
+        },
+        {
+         "q": "How long are the sets?",
+         "a": "Sets run 45 to 60 minutes with music through every break, so the evening never goes quiet by accident. An announcement microphone is ready from sound check."
+        },
+        {
+         "q": "What do you need from us to quote it?",
+         "a": "The date, the venue, the headcount and a rough outline of the evening: doors, dinner, a program, a dance floor or not. From that we recommend a size and send one figure with sound, setup and pack-down inside it, plus a certificate of insurance and a W-9, and the venue gets the footprint and power list to check line by line."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the venue and how the evening runs, and we'll size the band to it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

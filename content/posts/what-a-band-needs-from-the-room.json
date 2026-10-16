@@ -1,0 +1,259 @@
+{
+ "root": {
+  "props": {
+   "title": "What a band needs from the venue",
+   "slug": "what-a-band-needs-from-the-room",
+   "eyebrow": "PLANNING",
+   "parent": "planners/technical/",
+   "dek": "Stage footprint, power, load-in and the paperwork your venue and your finance team will both ask for. Including why published stage-size guidance runs to more than double what our own bands ask for.",
+   "date": "2026-08-05",
+   "last_updated": "2026-08-18",
+   "author": {
+    "name": "Signet Artists"
+   },
+   "meta_description": "Stage size, electrical circuits, load-in and insurance paperwork for a live band at a corporate event, with published stage dimensions compared against what a duo, trio, quartet and DJ actually ask for.",
+   "hero": {
+    "src": "/img/unsplash/photo-1510076857177-7470076d4098.jpg",
+    "alt": "Road cases stacked backstage in a dark hall."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "KeyTakeaways",
+   "props": {
+    "id": "KeyTakeaways-1",
+    "items": [
+     {
+      "text": "Stage-rental guidance for a seven to ten-piece band runs to 24 ft by 24 ft. A quartet asks for 14 ft by 10 ft and will play on 12 ft by 8 ft."
+     },
+     {
+      "text": "Power is the requirement venues most often get wrong. A band needs its own dedicated circuits, within reach of the stage."
+     },
+     {
+      "text": "Ask the band for its rider before you promise the venue anything. The rider is the figure that binds."
+     },
+     {
+      "text": "Insurance, a W-9 and one itemized invoice are each a gate somebody else controls, and each gate has a queue, so they should arrive with the contract."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-2",
+    "html": "<p>You booked the band. A week later the venue sends a form with four\nquestions on it, and three of them are about things you&rsquo;ve never had a\nreason to think about. How much stage. How much power. What time the\ntruck arrives. There&rsquo;s usually a fourth box asking for a certificate of\ninsurance, and that one has a deadline.</p>\n<p>None of these are hard questions. They&rsquo;re just questions somebody has to\nactually ask the band, and what usually goes wrong is that nobody does\nuntil the week of, at which point the answer has consequences for a floor\nplan that was signed off in June.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-3",
+    "text": "How much stage does a band need?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-4",
+    "html": "<p>Search this and you&rsquo;ll land on stage-rental companies, who publish\nrecommendations by band size. <a href=\"https://www.stagerental.com/what-size-stage-do-i-need-for-my-event/\">Stage\nRental</a>\nputs a seven to ten-piece band on 20 ft by 24 ft at the small end and 24\nft by 24 ft in the middle, all at 4 ft of height.</p>\n<p>Then look at what the bands you&rsquo;d actually book here ask for. Our\nfootprints are published, size by size, on <a href=\"https://signetartists.com/planners/technical/\">the technical\npage</a>: the footprint the\nband is comfortable on, and beside it the smallest stage the band will\nplay on.</p>"
+   }
+  },
+  {
+   "type": "ComparisonTable",
+   "props": {
+    "id": "ComparisonTable-5",
+    "title": "Published guidance against this roster's own asks",
+    "columns": [
+     {
+      "text": "Band size"
+     },
+     {
+      "text": "Stage-rental guidance"
+     },
+     {
+      "text": "What we ask for"
+     }
+    ],
+    "rows": [
+     {
+      "cells": [
+       {
+        "text": "Duo"
+       },
+       {
+        "text": "8 ft x 8 ft small, 8 ft x 12 ft medium"
+       },
+       {
+        "text": "8 ft x 6 ft, takes 6 ft x 5 ft"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Trio"
+       },
+       {
+        "text": "12 ft x 16 ft small, 16 ft x 20 ft medium"
+       },
+       {
+        "text": "12 ft x 8 ft, takes 10 ft x 6 ft"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Quartet"
+       },
+       {
+        "text": "12 ft x 16 ft small, 16 ft x 20 ft medium"
+       },
+       {
+        "text": "14 ft x 10 ft, takes 12 ft x 8 ft"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "DJ"
+       },
+       {
+        "text": "Not published at this granularity"
+       },
+       {
+        "text": "6 ft x 4 ft, takes 6 ft x 3 ft"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-6",
+    "html": "<p>The gap is the useful part. Take the quartet. The rental company&rsquo;s\nmiddle recommendation for a band that size works out to 320 square\nfeet. The quartet asks for 140 and will play on 96.</p>\n<p>Both figures are right, and they answer different questions. The rental\ncompany is sizing for sight lines, for audiences who need to see over\nseated tables, and for events where the stage is a rented structure\nin a venue that has none. The band is describing the\nsmallest footprint where nobody hits anybody. In a hotel ballroom with a\nbuilt-in riser and eleven round tables you&rsquo;d like to keep, the\ndifference between those two numbers is a couple of those tables.</p>\n<p>So the number that binds is the band&rsquo;s, and it should come from the band. Ask for the rider before you promise the\nvenue a footprint.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-7",
+    "text": "Power, which is where it usually goes wrong"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-8",
+    "html": "<p>The John Parker Band&rsquo;s published requirement is two standard 20-amp,\n120-volt circuits within 25 feet of the stage, with 15 amps as the floor.\nThat kind of requirement is typical, and there are two words in it doing\nmost of the work.</p>\n<p><strong>Circuits.</strong> Two outlets on the same wall are very often the same\ncircuit, which means the requirement gets ticked off on paper while the\nband still has one circuit. When that fails it fails at the worst\npossible moment, because everything switches on at once, and that moment\nis the downbeat of the first song.</p>\n<p><strong>Within 25 feet.</strong> Distance is a hard constraint. A band running power\nfrom across a ballroom is running cable across a path that guests and\nservers will walk for four hours.</p>\n<p>The person who can answer both of these is the venue&rsquo;s engineer or head\nof operations. Your sales contact will forward the question to them\nanyway, so start there, and ask early enough that the answer can still\nchange something.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-9",
+    "text": "Load-in"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-10",
+    "html": "<p>We coordinate load-in with the venue in advance, and the questions are\nalways the same ones: dock times, elevator windows, how far the door is\nfrom the stage, where the cases sit during dinner, and what time the space\nhas to be clear at the end.</p>\n<p>That last one is worth pinning down before you sign anything. Strike\ntakes as long as it takes, and it starts after the last song, so a hard\ncurfew on the venue sets the time the music has to end.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-11",
+    "text": "Mountain venues"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-12",
+    "html": "<p>Properties in the mountain corridor run on their own rules, and those\nrules differ by property rather than by town. Decibel limits and curfews are set by\nthe venue, written into your contract with them, and honored as written.\nGet them in writing from the property and send them to the band.</p>\n<p>Travel is its own line. The I-70 corridor, meaning Vail, Beaver Creek,\nBreckenridge and Winter Park, adds a drive. Aspen, Telluride, Steamboat\nand Crested Butte add that drive plus a night&rsquo;s lodging, billed as what\nit actually cost, which in that corridor is a number worth confirming\nbefore you commit to a date in February.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-13",
+    "text": "The paperwork your finance team will ask for"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-14",
+    "html": "<p>This is the part that stops bookings, and it stops them late. A venue\nwon&rsquo;t let a vendor load in without a certificate of insurance, and\naccounts payable won&rsquo;t pay an invoice that arrives without a W-9 on\nfile.</p>\n<p>Three documents settle it:</p>\n<ul>\n<li><strong>A certificate of insurance</strong> naming your venue as additional insured.\n  The venue is checking that document for its own name on it.</li>\n<li><strong>A W-9</strong>, before accounts payable asks for it.</li>\n<li><strong>One itemized invoice</strong>, with everything on separate lines, in a form\n  finance will accept the first time.</li>\n</ul>\n<p>Ours arrive in the same email as the contract. The reason to send them\nunprompted is that every one of them is a gate somebody else controls,\nand each gate has a queue.</p>"
+   }
+  },
+  {
+   "type": "Aside",
+   "props": {
+    "id": "Aside-15",
+    "title": "The four things to ask the band first",
+    "html": "<p>Ask for the footprint and height, the circuits and their distance from\nthe stage, the load-in and strike windows, and a certificate of\ninsurance with your venue named. A band should be able to answer all\nfour in a single email.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-16",
+    "text": "Why the venue's questions come to you"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-17",
+    "html": "<p>The venue asks you. You&rsquo;re the contract holder, so the form comes to\nyour inbox with a date on it.</p>\n<p>It works when you can forward the question and get an answer the same\nday from somebody who has loaded into that building before. Every\nbooking here comes with a personal contact for the night. That&rsquo;s what\nthey&rsquo;re for, and the job starts weeks before anybody plays a note.</p>"
+   }
+  },
+  {
+   "type": "References",
+   "props": {
+    "id": "References-18",
+    "items": [
+     {
+      "text": "Stage Rental. \"What Size Stage Do I Need For My Event?\" stagerental.com. Stage dimensions by band size, retrieved 2026-08-05."
+     },
+     {
+      "text": "John Parker Band. \"Setup: Staging, Electrical, Seating, etc.\" jpband.com. Published stage and electrical requirements, retrieved 2026-08-05."
+     }
+    ]
+   }
+  },
+  {
+   "type": "PostCta",
+   "props": {
+    "id": "PostCta-19",
+    "headline": "Send us the venue and we'll send you the requirements.",
+    "html": "<p>Certificate of insurance, W-9 and one itemized invoice come with the contract at every size.</p>",
+    "link": "/contact/",
+    "link_text": "Check a Date"
+   }
+  },
+  {
+   "type": "RelatedPosts",
+   "props": {
+    "id": "RelatedPosts-20",
+    "posts": [
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     },
+     {
+      "slug": "playing-around-a-program"
+     }
+    ]
+   }
+  }
+ ]
+}

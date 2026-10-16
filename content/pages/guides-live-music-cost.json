@@ -1,0 +1,679 @@
+{
+ "root": {
+  "props": {
+   "path": "/guides/live-music-cost-colorado/",
+   "title": "What live music costs in Colorado",
+   "description": "What live music costs in Colorado: the market runs $2,500 to $8,000 for a Denver band, each figure sourced, plus how a quote is built.",
+   "titleExact": false,
+   "nav": "pricing",
+   "breadcrumb": "What live music costs",
+   "schema": {
+    "service": {
+     "name": "Live music pricing guide for Colorado",
+     "serviceType": "Live music for private and corporate events",
+     "description": "Sourced market figures and worked cost explanation for live music at corporate events, private parties and wedding cocktail hours across Denver, the Front Range and the Colorado resort corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "The cost guide, Tier 1c of the 2026-08-20 SEO buildout. Built to be the quoted source for cost queries, which are budget calibration. REWRITTEN 2026-09-04: the page now answers with the market's figures, every one a {{market:<id>}} token off market-rates.json with its source printed under the table, and no Signet figure anywhere. Title, H1, URL and the five FAQ questions are unchanged; this page ranks on them.",
+    "_title_note": "Trimmed 2026-08-20 from the 84-character colon form; the occasion list lives in the lede and the occasion sections rather than the title. The build appends the brand.",
+    "schema_note": "REWRITTEN 2026-09-04 with the no-published-price decision. The five questions are unchanged: this page ranks on them. The answers carry the market's figures instead of ours, as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text and registers against the page, so the Sources note under the market table names every source a crawler can quote from this file. Never type a figure into an answer, and never put any other token here."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "The cost guide",
+       "slab": true,
+       "title": "What live music costs in Colorado.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "For weddings, Colorado couples budget $2,338 to $2,858 for a live band for their wedding. The Denver market runs about $2,500 to $8,000, with a trio at the cheaper end of the spectrum, and a full band, complete with horns at the expensive end. <br><br>Those figures are based on published market pricing research in 2026. This page addresses what the money covers, why the spread is so large, and what can be modified to save money (or spend more).",
+       "headingText": [
+        {
+         "html": "Each Signet Artists has different pricing and availability, tell us the date and what you have in mind for the event, and we'll reply with a recommendation and a price."
+        }
+       ]
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-2",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Answer-first intro. Title, H1 and URL are unchanged: this page ranks and\n     the 2026-09-04 rewrite is a body rewrite. Every figure is a\n     {{market:<id>}} token off market-rates.json and belongs to the market;\n     the Sources note under the table names where each one was read.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-8",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-5"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-6",
+       "images": [
+        {
+         "src": "/img/loadin.jpg",
+         "alt": "Road cases stacked in a dark backstage hall.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders; provenance in\n     img/SOURCES.md.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-9",
+       "html": "What the Price covers",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "With most acts in this market, the figure has two parts. A <strong>call-out</strong> covers the whole event commitment, whatever its length: the drive, load-in, setup, sound check, strike and production. In addition to that, a rate for performance time covers the music. That split is why a 1-hour cocktail set costs more than 1/4th of a 4 hour reception.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Overtime is the next thing to look for on a quote. This market charges $200 to $400 for time beyond the contracted set, which is worth knowing before the night. Added time with us costs what the earlier hours did.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Beyond that, you may have travel beyond the Denver metro area, lodging for the talent if it's outside our metro service area, and a bit more for holiday weekends.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "How the market builds a figure. This was our own arithmetic; it is now\n     the mechanism a buyer meets from any act here, written so two quotes can\n     be held against each other. No Signet figure.",
+    "_file": "02-mechanism.html"
+   }
+  },
+  {
+   "type": "RateTable",
+   "props": {
+    "id": "RateTable-20",
+    "band": "sunk",
+    "anchor": "rate-card",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "The market",
+       "title": "The price of live music in Denver, Colorado and The US market, number by number.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "These are published numbers from cost guides, a wedding-budget dataset and one booking marketplace."
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-16",
+       "caption": "Published 2026 market figures for live music in Colorado and the US. These are not Signet prices.",
+       "captionCls": "rate-caption",
+       "head": [
+        {
+         "html": "2 hours of live music performance"
+        },
+        {
+         "html": "Market rate"
+        },
+        {
+         "html": "Market"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "trio to a full band with horns",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$2,500 to $8,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "Denver"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "four to six-piece bands,  Denver mid-market",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$4,000 to $6,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "Denver"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "A cover or jazz band for a corporate event",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$2,500 to $8,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "United States"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "average budget for a live wedding band",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$2,338 to $2,858",
+           "cls": "num-accent"
+          },
+          {
+           "html": "Colorado"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "What most couples pay for a wedding band",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$3,000 to $8,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "United States"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "A seven to nine piece show band",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$7,500 to $17,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "United States"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "These figures come from published 2026 market guides, read September 2026. Signet provides prices for a specific date on request.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Resort bookings cost more than Denver metro bookings everywhere in this market for the same two reasons: the drive, and the lodging. Altitude, town noise rules, curfews and the rest of the mountain corridor's working detail are on <a href=\"/planners/mountain/\">the mountain venues page</a>, and <a href=\"/corporate/retreats/\">corporate retreats</a> is where we go into resort booking with more detail",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Was the full published card. Since 2026-09-04 it is the market table:\n     {{market_table}} from market-rates.json with {{market_sources}} under it.\n     The section id stays #rate-card so inbound anchors and the internal links\n     that point at it do not break.",
+    "_file": "03-rate-card.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "Market context",
+       "title": "Why the figures spread this far.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Live music in Colorado is priced in tiers, and each tier buys a different thing. Reading a number without knowing which tier it came from is how two quotes end up looking like the same purchase."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-22",
+       "rows": [
+        {
+         "term": "The marketplace tier",
+         "text": "One online booking marketplace shows that the average cost for a Denver party band is $1,150. But the listings show prices that range from $230 to $3,550. You're seeing a price that buys the act, but what else is included (sound, insurance, travel, production) varies listing by listing. Two quotes for the same raw material, can cover two <strong>very</strong> different evenings."
+        },
+        {
+         "term": "The working middle",
+         "text": "The Denver market treats the 4-6 piece band as its median: priced at $4,000 to $6,000, and for weddings, a Colorado couple's budget $2,338 to $2,858 for a band is reflected in market prices Colorado-wide. <br><br>In the resort corridor, a 5-6 piece band runs $2,500 to $6,500 in Mountain West markets. Nationally, regarding wedding bookings, most couples land in the $3,000 to $8,000 range, with the average sitting around $4,500. Which is very similar to the range private and corporate events are booked at as well."
+        },
+        {
+         "term": "The production tier",
+         "text": "A 7-9 piece show band runs $7,500 to $17,000, and full production adds costs like show direction, lighting, staffing and a program designed around the act. For a gala carrying a production budget, it's the right purchase."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "What a Signet night comes to depends on the night. A solo musician through a dinner for twelve and a quartet filling a dance floor all night all have different jobs.",
+       "cls": "prose",
+       "style": "max-width: 64rem;"
+      }
+     }
+    ],
+    "_notes": "Market tiers. The old version carried two anchors with no source on file,\n     a commodity average and a boutique floor. Both are sourced figures now,\n     off market-rates.json, and the section says which market each belongs to.\n     Never name a competitor or a directory in the copy.",
+    "_file": "04-market.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-26",
+       "title": "jazz trio &amp; Acoustic duo costs",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "These are the two sizes most Colorado event planners actually book for different parts of the evening, and they're the two most market published rate guides have the least information about. The prices below are published market rates for each."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-27",
+       "rows": [
+        {
+         "term": "The jazz trio",
+         "text": "A trio across a four-hour evening runs $2,000 to $3,500 in this market. For a dinner rather than a full evening, a jazz trio or acoustic duo runs $500 to $3,000, and the spread inside that is how long the music plays and how much production travels with it. Denver has no trio figure of its own in print: the Denver band range of $2,500 to $8,000 begins at the trio and ends at a full band with horns, so the trio sits at the bottom of that range rather than in the middle of it."
+        },
+        {
+         "term": "The acoustic duo",
+         "text": "An acoustic duo across a 4-hour evening can run $1,500 to $2,500. It's the smallest full-evening price published anywhere in the Colorado market. <br><br>Two musicians cover a dinner or a cocktail hour without a stage, and for a short booking the Denver market puts a duo or trio at a ceremony or cocktail hour at $800 to $2,000. A duo evening and a trio evening are one musician apart, and the market prices that one musician as the difference between $1,500 to $2,500 and $2,000 to $3,500."
+        },
+        {
+         "term": "What changes the prices?",
+         "text": "How many musicians there are, how many hours they play, and what the date is. A December Saturday in Denver carries 20 to 30 percent across this market, and a resort date carries the drive and a night's lodging at the far end of it."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-28",
+       "html": "What is a jazz trio?",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Three musicians, and the instrument list is the part people are usually asking about. The traditional combos are piano, bass and drums, or organ, guitar and drums. The one that works at a private event is guitar, upright bass and drums played with brushes, because brushes are what let a drum kit sit under a conversation instead of over it. A quartet is the same three with a horn or a voice added.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-30",
+       "html": "At an event the trio does a specific job. It holds 60 to 65 dBA at the nearest table, which is a level guests talk across without leaning in, and it covers a larger floor and a longer guest list than a duo at that same level. It takes 12 by 8 feet, one dedicated 20-amp circuit and about an hour to load in, so it fits a private dining venue as readily as a ballroom. What it plays is standards.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-31",
+       "html": "The instrumentation, the trio and duo configurations and a sample set are on the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio page</a>. The singer-songwriter version of the same footprint is the <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a>, and the hour these two are most often booked for is the <a href=\"/weddings/cocktail-hour/\">wedding cocktail hour</a>. The whole size ladder, solo to quartet, hour by hour, is in <a href=\"/blog/what-a-jazz-band-costs-denver/\">what a jazz band costs in Denver</a>, and the DJ figures are in <a href=\"/blog/what-a-dj-costs-denver/\">what a DJ costs in Denver</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Added 2026-09-06 from the demand harvest. \"how much does a jazz trio\n     cost\" has no Colorado page answering it (a marketplace pricing page is\n     first, a UK agency third), and \"what is a jazz trio\" surfaced from 13\n     seeds with its own instrument tails. Both are answered here, the figures\n     market tokens only, and the explainer hands off to the ensemble page.\n     Section alternation: this lands sunk, so 05, 06 and 07 flipped with it.",
+    "_file": "04b-trio-duo.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-34",
+       "eyebrow": "By occasion",
+       "title": "What each kind of night comes to.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Four bookings cover most of the enquiries we see. Each one is a different configuration, and the market prices them differently."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-35",
+       "rows": [
+        {
+         "term": "The corporate holiday party",
+         "text": "A cover or jazz band for a corporate event runs $2,500 to $8,000 nationally, and December is the month this market charges above a standard date for: 20 to 30 percent on a holiday weekend in Denver. The season is decided August through October, and the formats a holiday party takes are on <a href=\"/corporate/holiday-party/\">the holiday party page</a>."
+        },
+        {
+         "term": "The client dinner",
+         "text": "The conversation is the event, so the music sits under it: 60 to 65 dBA at the nearest table, a level guests talk across. A jazz trio or acoustic duo for a dinner runs $500 to $3,000 in this market, the spread being how long the music plays and how much production comes with it. The format and the paperwork are on <a href=\"/corporate/client-dinners/\">the client dinners page</a>."
+        },
+        {
+         "term": "The private party",
+         "text": "A cover or acoustic band for a private party runs $3,000 to $8,000, and a smaller build for the same music sits well under that: an acoustic duo over a four-hour reception runs $1,500 to $2,500 and a trio $2,000 to $3,500. What fits a home against what fits a club is on <a href=\"/private-parties/\">the private parties page</a>."
+        },
+        {
+         "term": "The wedding cocktail hour",
+         "text": "One hour between ceremony and reception, and the smallest real booking on this list. A classical duo or trio for a ceremony or cocktail hour runs $800 to $2,000 in Denver. What should play, and how the hour is timed against the ceremony, is on <a href=\"/weddings/cocktail-hour/\">the cocktail hour page</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-36",
+       "html": "The corporate formats, holiday parties, client dinners and <a href=\"/corporate/retreats/\">retreats in the resort corridor</a>, sit together on <a href=\"/corporate/\">the corporate page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Cost by occasion. Each row now gives the market's figure for that shape\n     and hands off to the occasion's own page. The dB band and the booking\n     window are site.json facts.",
+    "_file": "05-occasions.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-47",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-45",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-39",
+          "html": "Included in the fee",
+          "tag": "h2",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "SpecList",
+         "props": {
+          "id": "SpecList-40",
+          "source": "included",
+          "cols": false
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-41",
+          "html": "Sound is included at every size. Stage lighting and a dedicated front-of-house engineer are add-ons, quoted as their own line.",
+          "cls": "note"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-42",
+          "html": "Quoted separately",
+          "tag": "h2",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-43",
+          "html": "These sit outside the fee on any quote. This market charges 20 to 30 percent for a holiday weekend.",
+          "cls": "prose"
+         }
+        },
+        {
+         "type": "SpecList",
+         "props": {
+          "id": "SpecList-44",
+          "source": "extras",
+          "cols": false
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "What sits inside a figure, and what arrives as its own line. Both lists\n     render from site.json, same as the pricing page, so the surfaces cannot\n     disagree; the copy around them is this page's own.",
+    "_file": "06-included.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-52",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-48",
+       "html": "Cost questions, answered.",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-49",
+       "html": "The operational set, substitutions, power, curfews and outdoor cover, is on the <a href=\"/planners/faq/\">planner question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-50",
+       "items": [
+        {
+         "q": "How much does a live band cost in Colorado?",
+         "a": "Colorado couples budget $2,338 to $2,858 for a live band, and the Denver market runs $2,500 to $8,000, with a trio at the bottom of that and a full band with horns at the top. Nationally most couples land $3,000 to $8,000. Those are the market's published figures. Signet doesn't publish prices, so send us the date and the size of the night and we'll price that night."
+        },
+        {
+         "q": "Why do live music prices vary so much in Colorado?",
+         "a": "Because the market runs in tiers and quotes cover different scopes. One booking marketplace averages $1,150 for a Denver party band, the Denver market treats the four to six piece as its middle at $4,000 to $6,000, and a seven to nine piece show band runs $7,500 to $17,000. What sits inside a figure, sound above all, varies as much as the figure."
+        },
+        {
+         "q": "What does the mountain premium cover?",
+         "a": "Travel and lodging. A resort date costs more than a metro date everywhere in this market for two reasons: the drive over the passes, and the night in a bed at the far end of it, because a band that struck late in Aspen isn't driving back over the passes the same night. Both belong on their own lines on a quote."
+        },
+        {
+         "q": "Is a band or a DJ cheaper?",
+         "a": "A DJ, usually, and the gap narrows as the night gets longer. A Denver DJ carrying a night with production lighting runs $2,500 to $6,000, against $2,500 to $8,000 for a Denver band. A corporate night can use both, a duo through dinner and the DJ carrying the floor, on one contract and one invoice, which is cheaper than hiring twice."
+        },
+        {
+         "q": "Does booking early get a lower price?",
+         "a": "No. Booking early buys availability, which on a December Saturday is worth more than a discount would be. What does change the price is the date itself: this market charges 20 to 30 percent for a holiday weekend, and New Year's Eve is its own case everywhere. Corporate holiday dates are decided August through October."
+        },
+        {
+         "q": "How much does a jazz trio cost?",
+         "a": "A trio across a four-hour evening runs $2,000 to $3,500 in this market, and a jazz trio or acoustic duo for a dinner runs $500 to $3,000. Denver publishes no separate trio figure: the Denver band range of $2,500 to $8,000 starts at the trio. Signet doesn't publish prices; send us the date and the length of the evening and we'll come back with a price."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ renders from schema.json, one source for the visible list\n     and the FAQPage markup. The offer close ends the page; nothing after it.",
+    "_file": "07-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-55",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-53",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and we'll come back with a recommendation and a price.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-faqs.html"
+   }
+  }
+ ]
+}

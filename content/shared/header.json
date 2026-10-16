@@ -1,0 +1,93 @@
+{
+ "tagline": "BOOK LIVE MUSIC IN COLORADO",
+ "nav": [
+  {
+   "label": "Artist Roster",
+   "href": "/music/",
+   "key": "music"
+  },
+  {
+   "label": "Songs",
+   "href": "/repertoire/",
+   "key": "repertoire"
+  },
+  {
+   "label": "Pricing",
+   "href": "/pricing/",
+   "key": "pricing"
+  },
+  {
+   "label": "Corporate",
+   "href": "/corporate/",
+   "key": "corporate"
+  },
+  {
+   "label": "Weddings",
+   "href": "/weddings/",
+   "key": "weddings"
+  },
+  {
+   "label": "Private Parties",
+   "href": "/private-parties/",
+   "key": "private"
+  },
+  {
+   "label": "For Planners",
+   "href": "/planners/",
+   "key": "planners"
+  },
+  {
+   "label": "Check a Date",
+   "href": "/contact/",
+   "cls": "btn btn--sm",
+   "key": "contact"
+  }
+ ],
+ "navMobile": [
+  {
+   "label": "Artist Roster",
+   "href": "/music/",
+   "key": "music"
+  },
+  {
+   "label": "Songs",
+   "href": "/repertoire/",
+   "key": "repertoire"
+  },
+  {
+   "label": "Pricing",
+   "href": "/pricing/",
+   "key": "pricing"
+  },
+  {
+   "label": "Corporate",
+   "href": "/corporate/",
+   "key": "corporate"
+  },
+  {
+   "label": "Weddings",
+   "href": "/weddings/",
+   "key": "weddings"
+  },
+  {
+   "label": "Private Parties",
+   "href": "/private-parties/",
+   "key": "private"
+  },
+  {
+   "label": "Daytime",
+   "href": "/daytime/"
+  },
+  {
+   "label": "For Planners",
+   "href": "/planners/",
+   "key": "planners"
+  },
+  {
+   "label": "Check a Date",
+   "href": "/contact/",
+   "cls": "btn nav-mobile-cta",
+   "key": "contact"
+  }
+ ]
+}

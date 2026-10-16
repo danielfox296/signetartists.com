@@ -1,0 +1,295 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/solo-piano/",
+   "title": "Pianist for hire in Denver, for cocktails, dinners and galas | Signet Artists",
+   "description": "A solo pianist for Denver client dinners, galas, hotel ballrooms and dinner parties: standards and covers at a level the table talks across.",
+   "titleExact": true,
+   "ogImage": "img/ballroom.jpg",
+   "nav": "music",
+   "breadcrumb": "Solo piano",
+   "schema": {
+    "service": {
+     "name": "Solo piano",
+     "serviceType": "Solo pianist for cocktail hours, client dinners, galas and dinner parties",
+     "description": "A solo pianist playing standards and covers at conversation volume for client dinners, galas, hotel ballroom dinners, dinner parties, Sunday brunches and memorial services across Denver, the Front Range and the Colorado mountain corridor, with a voice added when the evening wants singing.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "solo-piano"
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-23 on Daniel's call ('build pages for solo piano and last consulate too'), from the solo-piano entry in acts.json (a card since 2026-09-14). No Denver phrase for a pianist autocompletes; 'pianist for hire', 'pianist for events' and 'piano player denver' do, so the title carries those and the occasions come from the pages that already send a pianist somewhere (client dinners, galas, brunch, memorials, senior living). Spec'd, no names.",
+    "reader": "Whoever wants a dinner where the conversation is the point and a piano under it: client dinners, galas, the dinner-shaped holiday party, brunch, a memorial, a dinner party at home."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Standards and covers",
+       "slab": true,
+       "title": "A pianist for cocktails, dinners and galas.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Someone at the piano is playing All of Me while your guests find their tables, and the conversation carries on over it all night. A solo pianist plays standards and covers through arrival, cocktails and dinner, on the venue’s piano or on a stage piano we bring, and a singer joins when the evening wants one.",
+       "headingText": [
+        {
+         "html": "It books for a client dinner in a private dining space, the doors and dinner of a gala, a holiday party that’s a dinner rather than a dance, and a Sunday brunch."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=solo-piano",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/ballroom.jpg",
+        "alt": "An empty banquet hall set for dinner.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd. The h1 and lede carry the buyer's words. No player is\n     named anywhere on this page. The still is the interim ballroom photograph\n     the card has carried since 2026-09-14; a photograph of a pianist at work\n     replaces it through scripts/act_media.py when one exists.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a dinner where the talking is the point and the music sounds like a good hotel. Footprint, power, dBA and added time moved to the FAQ; Booking it deleted, its pairing links moved into the note under the piano section; the brunch/memorial/senior living row split into a row per buyer; the set list is now explicit (see acts.json).",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-8",
+    "act": "solo-piano",
+    "title": "A sample of the set",
+    "_notes": "The set, pulled from the repertoire data by the token (acts.json\n     solo-piano.setlist, from_repertoire: the arrival and dinner moments), so\n     every title here is one the site already publishes on the song list.",
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-9",
+       "eyebrow": "The booking",
+       "title": "One musician, the piano, and a voice when you want one.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-10",
+       "rows": [
+        {
+         "term": "The piano",
+         "text": "When the venue has a piano, the pianist plays it, and a hotel lobby or a club dining space usually has one. When it doesn’t, a stage piano comes with the booking, and from the tables it sounds like a piano in the corner."
+        },
+        {
+         "term": "With a voice",
+         "text": "On its own the piano is instrumental, which is the version most client dinners and galas book. When the evening wants singing, a voice joins for a set or for the night, on the same line of the contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "For a bigger crowd, a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> plays the same hours. When the night wants a dance floor after dinner, a <a href=\"/ensembles/soul-band/\">band</a> or the <a href=\"/ensembles/dj/\">DJ</a> takes over through the same sound system on the same contract. The rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Occasions",
+       "title": "Who books a pianist.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "Twenty at one table or eighty at ten, in a private dining space or a club, where the conversation is the event."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "The doors and the dinner, before the program. <a href=\"/blog/gala-entertainment-ideas/\">Gala entertainment ideas</a> has the smaller gala where the piano is the whole evening."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">The low-key company dinner</a>",
+         "text": "A holiday party that’s a dinner rather than a dance floor, or the <a href=\"/blog/january-office-party-ideas/\">January office party</a> after the December rush."
+        },
+        {
+         "term": "<a href=\"/daytime/brunch/\">Sunday brunch</a>",
+         "text": "A jazz brunch at a club, a hotel or a restaurant, with standards under the whole service."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Memorial services</a>",
+         "text": "The prelude as people arrive, and the songs the family chooses, when the chapel or the reception has a piano."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "A standing afternoon at a community, with the residents’ own songs from the Great American Songbook."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties at home</a>",
+         "text": "A house with a piano in it, and a table of twelve."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Pianist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What does the pianist play?",
+         "a": "Standards and covers, from the Great American Songbook to Elton John and Billy Joel, played through arrival, cocktails and dinner. The set can lean jazz, lean pop or move between the two as the evening goes on. It's booked through Signet Artists in Denver."
+        },
+        {
+         "q": "Does the venue need a piano?",
+         "a": "No. When the venue has one, the pianist plays it, and it only needs the tuning the venue already keeps up. When it doesn't, a stage piano and a small sound system come with the booking, set up in a corner of about 6 by 4 feet with one dedicated 20-amp circuit and 45 minutes to set up."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "About as loud as the conversation at the table, so two people across from each other hear each other and the piano both. A pianist sets the level to the space: in a small dining space the stage piano plays barely amplified, and in a ballroom the sound support carries it to the back tables without getting loud at the front ones."
+        },
+        {
+         "q": "Can we ask for a song, or add time?",
+         "a": "Yes. The pianist learns one song of your choosing as part of every booking, and if the dinner runs long, another half hour is easy to add on the night. An announcement microphone is ready for the toast or the remarks."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring a pianist for cocktails and dinner.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

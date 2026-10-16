@@ -1,0 +1,773 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/rene-moffatt/",
+   "title": "René Moffatt: folk singer-songwriter for events in Denver | Signet Artists",
+   "description": "Original folk and Americana songs for private events in Denver and the Colorado mountains. Solo voice and acoustic guitar, a trio, or his four piece band.",
+   "titleExact": true,
+   "ogImage": "img/rene-moffatt-card.jpg",
+   "nav": "music",
+   "breadcrumb": "René Moffatt",
+   "schema": {
+    "service": {
+     "name": "Folk and Americana singer-songwriter",
+     "serviceType": "Original folk and Americana songs, solo or with a band, for private and corporate events",
+     "description": "Original folk and Americana songs written and sung by René Moffatt, booked from solo voice and acoustic guitar through a duo and a trio to a four piece band, for private and corporate events in Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "rene-moffatt",
+    "video": {
+     "name": "René Moffatt live: an original singer-songwriter on voice and acoustic guitar, for private events in Denver",
+     "description": "René Moffatt playing his own song Hope For Better Things on voice and acoustic guitar in a studio: the sound he brings to a wedding ceremony, a retreat evening or a dinner where people listen.",
+     "uploadDate": "2026-02-27",
+     "duration": "PT4M40S"
+    },
+    "videos": [
+     {
+      "id": "BxS4mPn-xmE",
+      "name": "René Moffatt and his band live: Calendar Year",
+      "description": "The four piece, René Moffatt & The Moonshadows, playing his song Calendar Year on a Denver club stage: the size for a park stage or a summer party.",
+      "uploadDate": "2026-04-22",
+      "duration": "PT5M53S"
+     },
+     {
+      "id": "KG7tYir5GtI",
+      "name": "René Moffatt as a trio: Heirloom Winnebago",
+      "description": "René Moffatt playing his song Heirloom Winnebago with lead guitar and bass at an album release show in Denver: the trio size, a fuller sound without drums.",
+      "uploadDate": "2024-05-03",
+      "duration": "PT3M37S"
+     },
+     {
+      "id": "lVHtUSmifhk",
+      "name": "René Moffatt and his band live: Stuck Inside",
+      "description": "The band playing his song Stuck Inside live in Denver, the song Alex Dezen of The Damnwells called equally whimsical and profound.",
+      "uploadDate": "2025-06-20",
+      "duration": "PT2M51S"
+     },
+     {
+      "id": "r0IbuKXg5UE",
+      "name": "René Moffatt solo at a listening venue: Standing In The Shadow Of The Moon",
+      "description": "René Moffatt playing his song Standing In The Shadow Of The Moon solo, voice and acoustic guitar, recorded live at a Colorado listening venue in February 2026.",
+      "uploadDate": "2026-02-27",
+      "duration": "PT3M30S"
+     },
+     {
+      "id": "Sgg7WRZ6Yfw",
+      "name": "René Moffatt acoustic: If You Were Near",
+      "description": "An acoustic studio take of his song If You Were Near, recorded in Denver: the solo sound at conversation volume.",
+      "uploadDate": "2019-04-13",
+      "duration": "PT4M6S"
+     },
+     {
+      "id": "wRKgmy8O9i8",
+      "name": "René Moffatt covers Blackbird by The Beatles",
+      "description": "René Moffatt playing an acoustic cover of Blackbird: the covers side of a set that leads with his own songs.",
+      "uploadDate": "2021-01-31",
+      "duration": "PT2M34S"
+     },
+     {
+      "id": "C5N49ufwCys",
+      "name": "René Moffatt live: Goodnight, Texas",
+      "description": "René Moffatt playing his song Goodnight, Texas on a Denver club stage in March 2026, voice and acoustic guitar out front.",
+      "uploadDate": "2026-03-15",
+      "duration": "PT4M45S"
+     },
+     {
+      "id": "Uvp9zMRJrhI",
+      "name": "René Moffatt covers Willie Nelson: Mammas Don't Let Your Babies Grow Up To Be Cowboys",
+      "description": "René Moffatt's studio recording of the Willie Nelson song, with a band behind him: the covers side of a set that leads with his own songs.",
+      "uploadDate": "2024-01-15",
+      "duration": "PT3M46S"
+     },
+     {
+      "id": "slDDPdqT-yU",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Stuck Inside",
+      "description": "The full band playing his song Stuck Inside on the Underground Music Showcase stage in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT4M22S"
+     },
+     {
+      "id": "e5_wJKu9Vis",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Calendar Year",
+      "description": "The full band playing his song Calendar Year at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT6M2S"
+     },
+     {
+      "id": "q334v4El878",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Come Of Age",
+      "description": "The full band playing his song Come Of Age at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT2M43S"
+     },
+     {
+      "id": "yv9nFHyOkdg",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Drive, a Cars cover",
+      "description": "The full band playing Drive by The Cars at the Underground Music Showcase in Denver, summer 2026: a cover inside a set of his own songs.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT3M46S"
+     },
+     {
+      "id": "dwTKERf-wzc",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Goodnight, Texas",
+      "description": "The full band playing his song Goodnight, Texas at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT4M33S"
+     },
+     {
+      "id": "ZSLcTTgcDp0",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Halfway Home",
+      "description": "The full band playing his song Halfway Home at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT3M30S"
+     },
+     {
+      "id": "CjsWkRRXCfk",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Iron Gates Of Love",
+      "description": "The full band playing his song Iron Gates Of Love at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT4M30S"
+     },
+     {
+      "id": "e16WAGZRGp4",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: Waterfall",
+      "description": "The full band playing his song Waterfall at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT5M34S"
+     },
+     {
+      "id": "8X5M_u9PwSM",
+      "name": "René Moffatt & The Moonshadows at the Underground Music Showcase: What If I, What If You",
+      "description": "The full band playing his song What If I, What If You at the Underground Music Showcase in Denver, summer 2026.",
+      "uploadDate": "2026-07-27",
+      "duration": "PT5M3S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Authored 2026-09-20, the day René Moffatt joined the roster under his own name (Daniel: 'we've added a new artist, an original singer songwriter'). Mirrors the artists-tony-medina dir: acts.json carries page: 'artists/rene-moffatt/', so build.py links every card and every llms.txt line here and generates nothing at /music/rene-moffatt/. Identity copy is the ratified acts.json paragraphs; the ladder resolves from the token. The title targets the buyer's phrase (singer-songwriter for events) with his name in front, since 'singer-songwriter denver' on its own returns artists and clubs rather than bookings. No prices anywhere.",
+    "reader": "Whoever wants songs worth listening to, from a songwriter: a ceremony and cocktail hour, a dinner or house concert, a retreat evening, a library or summer stage.",
+    "_title_note": "57 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Original singer-songwriter",
+       "slab": true,
+       "title": "René Moffatt",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "His own songs and covers, solo to four piece.",
+       "lede": "A song nobody at the table has heard before, sung over an acoustic guitar, and by the second chorus the conversation has stopped to listen. René Moffatt writes his own folk and Americana songs, the kind that sit on a playlist beside Josh Ritter and The Avett Brothers. He plays solo for welcome drinks, a patio or a dinner where people listen, brings his band, René Moffatt &amp; The Moonshadows, when the night wants one, and plays covers beside his own songs when you ask.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=rene-moffatt",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ],
+       "headingNote": "Hear him first: <a href=\"https://renemoffatt.com/\">renemoffatt.com</a> and <a href=\"https://www.youtube.com/@renemoffatt\">his channel</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/DEvhVzOZeQg?rel=0",
+       "title": "René Moffatt playing his own song Hope For Better Things on voice and acoustic guitar",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name\n     is the h1, the byline is the face line, the blurb is the lede. Written\n     2026-09-20, the day he joined. He arrived with his own site, his own\n     channel, six records and a band under his name, so the footage slot is\n     real from the first build: his own solo take of Hope For Better Things,\n     the version he published without title cards.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants songs worth listening to, from a songwriter, at a dinner, a ceremony, a retreat evening or a summer stage. 'A named act' left the act-face; the identity paragraphs that restated the ladder and the covers balance, and the named-act line, are gone; the third-person couples sentence in the wedding row is rewritten; FAQs that restated the ladder are gone and volume is answered in words.\n\nThe named-acts promise on /music/ is \"you can go and look them up\";\n           these are the look-up. Both verified against his own site 2026-09-20.",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, the same block the other act pages carry.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "He’s a folk and Americana songwriter based just outside Denver, with six records behind him, King of the Mountain and Here and Now Is Home among them, and an NPR Tiny Desk Contest entry every year since 2019. He calls it heady folk for the open-hearted. He joined the <a href=\"/music/\">roster</a> under his own name in September 2026.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Solo, he’s played the listening venues around Denver, Swallow Hill and the Black Rose Acoustic Society among them, and stages at the Denver Botanic Gardens and the Clyfford Still Museum. With the four piece, the same songs get lead guitar, bass and drums under them, which is the band you can watch on a Denver club stage and at the Underground Music Showcase in the footage below, and the band that played the Boulder Roots Music Fest.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Every claim traces to something he publishes: the records and the Tiny\n     Desk entries to his music and tiny desk pages, the venues and festivals\n     to his EPK, the playlist company and his own line for the music to his\n     about page, the band's build to the footage below (the trio clip names\n     lead guitar and bass, the club clips add drums). The venues named are\n     his, from his EPK, never Signet's credits strip.",
+    "_file": "02-identity.html"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "rene-moffatt",
+    "title": "Configurations",
+    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "_notes": "The configuration ladder, rendered from acts.json by the token: size,\n     build, and where each rung lands. Four rungs, solo to the band; the duo\n     was added on Daniel's word 2026-09-20.",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books René Moffatt.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">Wedding ceremonies and the hour after</a>",
+         "text": "Solo voice and acoustic guitar plays the ceremony, then the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a> at a volume the receiving line talks across. It sounds like one person singing to the people in front of him, and the hour can be his own songs, covers, or both."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "The evening after a day of sessions, on a deck or around a fire, solo or with the trio, at a level people can talk over and worth listening to when they stop."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and house concerts</a>",
+         "text": "A dinner for twenty or a house concert for fifty, where his own songs get the whole crowd’s attention. Solo is the size indoors, and the trio fits a backyard."
+        },
+        {
+         "term": "<a href=\"/daytime/community-programs/\">Farmers markets, libraries and summer series</a>",
+         "text": "He’s a featured artist of the Denver Public Library’s Volume Denver program, so a library afternoon or a market morning is a natural solo booking, and the band plays the park stage a city’s summer series books. Send us the call for performers and we answer it with the size that fits the stage."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the ladder lands: up-links to the occasion pages this act serves,\n     written as repertoire and format range only. The four picked are the\n     ones a songwriter with his own catalogue actually suits, which is a\n     different four from the covers acts: the ceremony and the hour after it,\n     the retreat evening, the dinner party or house concert, and the daytime\n     programs (he is a Denver Public Library Volume Denver featured artist,\n     per his channel). No o'clocks, no assigning him to hours. Down-link\n     idiom mirrors the corporate hub's def-list block.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "The book",
+       "title": "A sample of the book.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Every song here is one you can watch him play on this page. His own songs lead a set, and covers sit beside them when you want them."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-25",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "His own songs",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-20",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Hope For Better Things</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Calendar Year</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Heirloom Winnebago</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Stuck Inside</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Standing In The Shadow Of The Moon</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">If You Were Near</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Goodnight, Texas</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Come Of Age</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Halfway Home</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Iron Gates Of Love</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Waterfall</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What If I, What If You</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-21",
+          "html": "Covers he plays",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-22",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Blackbird</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Mammas Don’t Let Your Babies Grow Up To Be Cowboys</span> <span class=\"song-artist\">Willie Nelson</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Drive</span> <span class=\"song-artist\">The Cars</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-23",
+          "html": "The records",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-24",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Here and Now Is Home</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What If I, What If You</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Overheard: Live &amp; Acoustic</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">All My Revelations</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">King of the Mountain</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Our Love Will Be A Voice</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "The records are on Spotify, Apple Music and Bandcamp, and his site links all three. If you want a covers set with a few of his own songs inside it, say so when you write to us and he builds the set that way. The wider covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The book. Authored rather than {{act_setlist:rene-moffatt}} on purpose:\n     his set is his own catalogue, which the repertoire page does not carry,\n     and the token's flat branch prints one column with no link out. Every\n     title here is one you can watch him play on this page. The record titles\n     are the six releases on his music page. The titles match acts.json\n     setlist.items.",
+    "_file": "05-book.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "The footage",
+       "title": "His own songs, solo and with the trio.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Hope For Better Things plays above, solo. Below: a solo set at a listening venue, a Denver club show, the trio on Heirloom Winnebago, his Willie Nelson cover with a band behind him, an acoustic studio take of If You Were Near, and a Beatles cover so you can hear what he does with a song that isn’t his."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/r0IbuKXg5UE?rel=0",
+         "title": "René Moffatt playing his song Standing In The Shadow Of The Moon solo at a listening venue",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C5N49ufwCys?rel=0",
+         "title": "René Moffatt playing his song Goodnight, Texas live on a Denver club stage",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/KG7tYir5GtI?rel=0",
+         "title": "René Moffatt playing his song Heirloom Winnebago as a trio with lead guitar and bass",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Uvp9zMRJrhI?rel=0",
+         "title": "René Moffatt covering Mammas Don't Let Your Babies Grow Up To Be Cowboys by Willie Nelson",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Sgg7WRZ6Yfw?rel=0",
+         "title": "René Moffatt playing an acoustic studio take of his song If You Were Near",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wRKgmy8O9i8?rel=0",
+         "title": "René Moffatt playing an acoustic cover of Blackbird by The Beatles",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/rene-moffatt-stage.jpg",
+         "alt": "René Moffatt singing at a microphone with an acoustic guitar, in a hat under warm stage light.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/rene-moffatt-festival.jpg",
+         "alt": "René Moffatt singing into a microphone on a festival stage, guitar strap over his shoulder.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/rene-moffatt-cafe.jpg",
+         "alt": "René Moffatt playing an acoustic guitar in front of a large abstract painting, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/rene-moffatt-seated.jpg",
+         "alt": "René Moffatt seated in an orange armchair with an acoustic guitar against a plain backdrop.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/rene-moffatt-portrait.jpg",
+         "alt": "René Moffatt seated with an acoustic guitar beside a studio microphone.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/rene-moffatt-stool.jpg",
+         "alt": "René Moffatt on a stool playing an acoustic guitar, in a scarf, against a white backdrop.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Real media, loaded 2026-09-20 from his own site and channel. Per-asset\n     provenance: _src/data/media-sources.json. Every embed on this page passed\n     scripts/act_media.py embed (playableInEmbed) the day it was placed, and\n     every one sits on his own channel, so nothing here depends on a channel\n     we do not control. This section is the solo, duo and trio footage plus\n     the photographs; the band has the section after it. Between the two\n     grids and the hero, every title in the book above plays on this page.\n     Daniel's rulings 2026-09-20: the Willie Nelson cover and the whole\n     Underground Music Showcase set publish, and there is no memorial rule\n     and no sponsorship or alcohol rule on this site. Left off as curation\n     only: the other Tiny Desk entries (older home recordings of songs the\n     page already plays; the 2026 one is the hero, published without\n     titles), the 90-second why-I-write-songs story (not a performance), the\n     2024 clip under an earlier band name, and the older DC-era gallery, the\n     headshots and the logos among the photographs.",
+    "_file": "05b-footage.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-37",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-34",
+       "eyebrow": "The band",
+       "title": "René Moffatt &amp; The Moonshadows, live.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The four piece on a Denver club stage playing Calendar Year and Stuck Inside, then nine songs from their set at the Underground Music Showcase in the summer of 2026, eight of his own and a Cars cover."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-35",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/BxS4mPn-xmE?rel=0",
+         "title": "René Moffatt and his band playing his song Calendar Year on a club stage",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/lVHtUSmifhk?rel=0",
+         "title": "René Moffatt and his band playing his song Stuck Inside live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/slDDPdqT-yU?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Stuck Inside at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/e5_wJKu9Vis?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Calendar Year at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/q334v4El878?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Come Of Age at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/yv9nFHyOkdg?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Drive by The Cars at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/dwTKERf-wzc?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Goodnight, Texas at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/ZSLcTTgcDp0?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Halfway Home at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/CjsWkRRXCfk?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Iron Gates Of Love at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/e16WAGZRGp4?rel=0",
+         "title": "René Moffatt and The Moonshadows playing Waterfall at the Underground Music Showcase",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/8X5M_u9PwSM?rel=0",
+         "title": "René Moffatt and The Moonshadows playing What If I, What If You at the Underground Music Showcase",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "The band's footage, its own section because there is a lot of it and\n     because a buyer choosing the four piece wants to see the four piece. Two\n     Roxy On Broadway clips and the whole Underground Music Showcase 2026 set,\n     nine songs, published on Daniel's word 2026-09-20 ('publish all ums').\n     All on his own channel, all checked playableInEmbed the day they were\n     placed. VideoObjects for each are authored in schema.json videos[].",
+    "_file": "05c-band.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-42",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-38",
+       "html": "René Moffatt questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-39",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-40",
+       "items": [
+        {
+         "q": "What does René Moffatt play?",
+         "a": "His own songs. He's a folk and Americana songwriter on voice and acoustic guitar with six records behind him, booked through Signet Artists in Denver, and the footage on this page is him playing his own songs solo and with his band. Covers go into the set when you ask for them."
+        },
+        {
+         "q": "Does he play covers at a private event?",
+         "a": "Yes, beside his own songs. The covers on this page run from Willie Nelson and The Beatles to The Cars, and a set can lean toward the songs your guests already know or toward his own, so tell us the night and the balance you want."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "Solo, it's a voice and a guitar at the level of the conversation, so a receiving line or a dinner table talks across it, and a listening crowd hears every word. The four piece with drums plays a park stage or a summer party like a band. He sets the level to the space and the crowd."
+        },
+        {
+         "q": "Can he play outdoors?",
+         "a": "Yes. Solo plays a patio, a garden or a farmers market on one circuit of power with the sound support included, and the band plays a park stage or a lawn with a sound system behind it. Tell us the venue and we'll bring the size that suits it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-45",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-43",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book René Moffatt for the night, solo or with his band.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close, per the conversion spine. Only the headline is\n     this page's own, and nothing follows it.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

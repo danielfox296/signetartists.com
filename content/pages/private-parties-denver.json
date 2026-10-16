@@ -1,0 +1,345 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/denver/",
+   "title": "Live music and party bands for private parties in Denver | Signet Artists",
+   "description": "Denver party bands and musicians for dinner parties, cocktail parties and milestones, at home or at a venue. A solo fits in 6 by 4 feet; dinner plays at 60 to 65 dBA.",
+   "titleExact": true,
+   "nav": "private",
+   "schema": {
+    "service": {
+     "name": "Private party entertainment in Denver",
+     "serviceType": "Live music for dinner parties, cocktail parties and milestone celebrations",
+     "description": "Live music for Denver private parties at home and at the city's venues, solo through quartet, with sound support that's the right size for the space.",
+     "areaServed": [
+      "Denver"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Denver spoke of the private-parties occasion, built 2026-08-20 with the SEO buildout. The argument is where these nights actually happen (historic-neighborhood homes, the clubs, the milestone landmarks) plus the measured home-booking ask: a solo in 6 by 4 feet on one dedicated circuit, 45-minute load-in, dinner at 60 to 65 dBA. Evening noise is stated as a planning reality, deliberately without ordinance citations. Title and meta retouched 2026-09-20 to carry 'denver party bands' and 'party entertainment denver', the only local private-party heads that autocomplete (harvest of 2026-09-20).",
+    "reader": "Whoever is hosting a party in Denver, most often at home, sometimes at a club or a landmark venue.",
+    "schema_note": "Denver private-parties spoke. City-specific set: the house fit, the after-dark reality, milestone-venue sizing, and metro travel. No dollar figures in answers; the Offers this file emits carry the ranges."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver private parties",
+       "slab": true,
+       "title": "Denver private parties, from a Hilltop dinner to a Botanic Gardens milestone.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Forty people fill the main floor of a Park Hill house, and in the corner the party already faces, a duo is playing standards just under the conversation. Most of what a Denver private party needs is small by design, a <a href=\"/ensembles/solo-guitarist/\">solo</a> or an <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> that fits where the party already is, and a milestone moves up a size and out of the house.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, for dinner parties, cocktail parties, birthdays and anniversaries, at home or at a venue."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The Denver private-party page: house-first, with the venues as the second\n     act. Rate-card link in the first screen per the spine; hub link UP early.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is hosting a party in Denver, most often at home. The opener was a list of party types; it's one house now. The real neighborhoods, clubs and milestone venues stay; the house-requirements section is the FAQ, and its client review moved into the where section; the FAQs that restated the after-dark and venue sections are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "A patio, and a band.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tony Medina on a patio at conversation volume, and the same act with a band behind him when the party wants a floor."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The sizes",
+       "title": "Solo and duo, sized for the house.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "These are the two sizes a Denver house usually books, with sound support that’s the right size for the space and a personal contact for the night."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "A solo carries cocktails and dinner for a party that stays at the table. A duo carries the whole evening and has the range to lift the last hour of it. Both can book for a single hour as readily as for a night.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out what each size costs in Colorado, house parties included.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Was the rate module. Since 2026-09-04 it is the two sizes a house books\n     and what makes a house different, with no figure: the market's figures for\n     this kind of night are on the hub and in the cost guide.",
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Where they happen",
+       "title": "The house, the club, or the landmark.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Most Denver private parties happen at home, and the homes that host them cluster in the historic neighborhoods: Country Club, Hilltop, Park Hill, the blocks around Washington Park. A main floor that holds forty guests holds a duo with ease, and the music belongs in the corner the party naturally faces, which is why we ask about power early.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "The club dinner is the second Denver habit: private dining at the University Club of Denver or the Denver Athletic Club, where the venue side is already solved and the music is the one decision left. That's duo territory, with upright bass and guitar playing standards under the conversation and the whole evening on one contract.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Milestones move up a size and out of the house. Mile High Station takes a quartet and a real dance floor happily; Grant-Humphreys Mansion hosts the anniversary with a century-old house around it; Denver Botanic Gardens carries the summer evening version, outdoors and early. All three are where Denver books exactly this kind of night. Where a milestone wants a floor, Tejas Singh is the act we lead with: one voice, a duo through dinner, a quartet for the dancing, one contract. A November or December date competes with the office-party calendar for the same Saturdays, and those dates are decided August through October.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-17",
+       "html": "“[He] came to play in our home for a party and did an amazing job! He is a talented musician and was extremely easy and responsive to work with. He was able to play exactly the type of music we were looking for. Thanks for taking our party up a notch!”",
+       "by": "Conner S., a party at home, November 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "The occasions a house throws across the year, from an <a href=\"/private-parties/engagement-party/\">engagement party</a> to a <a href=\"/private-parties/holiday-party/\">holiday party at home</a>, each have a page of their own on the <a href=\"/private-parties/\">private parties page</a>, with the sizes a house books for each and the dates that matter.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where Denver private parties happen: homes, clubs, landmarks. Venues as\n     the market's places. Tejas Singh is the one act led with, per the spine.\n\nAdded 2026-09-20: the two occasion spokes under this hub.",
+    "_file": "03-where.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "After dark",
+       "title": "Sound after dark in Denver.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Amplified sound outdoors at a residential evening event has a short life anywhere in this city, and the later the hour, the shorter it gets. We're not going to quote you an ordinance, because the rules vary by zone and they change. The planning fact is enough on its own: the loud part of a home party belongs early or indoors.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "So we'll propose a night that works with that. If your street, venue or HOA has a number in writing, give it to us at contract and we build the night under it, the same way we treat the <a href=\"/planners/mountain/\">published caps at the mountain venues</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Boulder runs earlier and tighter on all of this, and gets <a href=\"/private-parties/boulder/\">its own page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The city's noise reality, stated plainly and deliberately without citing\n     ordinances we have not verified. Links ACROSS to Boulder and to the\n     mountain caps page, where the published numbers do live.",
+    "_file": "05-evenings.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "Questions",
+       "title": "Asked about Denver house parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Stage sizes, power and setup times for every size are on the <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-29",
+       "items": [
+        {
+         "q": "Can a band fit in a Denver house?",
+         "a": "Yes, at the right size. A solo takes about 6 by 4 feet and one dedicated 20-amp circuit, sets up in 45 minutes and packs down in 30; a duo wants 8 by 6 feet, the same single circuit and an hour. That's the whole ask: a corner of the main floor, an outlet not shared with the kitchen, and a door we can carry through. Signet Artists books party musicians across Denver."
+        },
+        {
+         "q": "How loud is it at dinner?",
+         "a": "About the level of the conversation at the table, so nobody raises their voice. Sets run 45 to 60 minutes with music through the breaks, so the party never goes quiet."
+        },
+        {
+         "q": "What about parking and unloading?",
+         "a": "Setup at a Denver house is mostly a parking question. Tell us the block and which door is ours, alley, driveway or front walk, and we arrive with the smallest setup the night allows."
+        },
+        {
+         "q": "Do you charge travel inside Denver?",
+         "a": "No. Travel lines start outside the metro: one short line covers the Front Range, and the mountain lines work the same way. Inside Denver there's no travel line, and sound is included at every size."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-32",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about the party, at home or at the club, and we'll recommend the act.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/live-band-karaoke/",
+   "title": "Live band karaoke in Denver: the band plays the hits, your people take the mic | Signet Artists",
+   "description": "Live band karaoke for Denver company parties and after-parties. A real band plays the 80s and 90s hits on its own and hands the mic to anyone who wants a song, with the words on a screen and a host on the floor.",
+   "titleExact": true,
+   "ogImage": "img/live-band-karaoke-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Live Band Karaoke",
+   "schema": {
+    "service": {
+     "name": "Live band karaoke",
+     "serviceType": "Live band karaoke for company parties, after-parties and private events",
+     "description": "A live band that plays 80s and 90s hits as a party band and hands the microphone to guests who want to sing, with lyrics on a screen and a host, for company holiday parties, sales kickoffs, after-parties and private events across Denver and Colorado.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "live-band-karaoke"
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-14 from the corporate demand report. Evidence: zero Colorado corporate vendors sell live band karaoke, no Denver-metro act exists on The Bash or GigSalad, 'live karaoke denver' and 'live band karaoke near me' autocomplete, GigSalad's own corporate blog features the format, and planners say participatory formats are winning while 'casino night and photo booth' are the things to escape. Daniel's product decision the same day: the act plays the 80s and 90s hits as a party band on its own and hands the mic over, so the 80s and 90s cover-band ideas fold in here. Spec'd, no names.",
+    "reader": "Whoever wants the party where colleagues end up singing, most often a company holiday party or after-party, and a milestone birthday or a wedding's last hour."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Live band karaoke",
+       "slab": true,
+       "title": "The band plays the hits. Your people take the mic when they’re ready.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Somebody from accounting takes the mic for Livin’ on a Prayer, the band hits the key change behind them, and the whole party sings the last chorus. A real band plays the 80s and 90s hits on its own, sung out front, and hands the microphone to anyone who wants a song. The words are on a screen, a host works the floor, and the band follows whoever is singing: their tempo, the harmony and the high notes.",
+       "headingText": [
+        {
+         "html": "It books for an office holiday party, a sales kickoff or a team offsite, a conference <a href=\"/corporate/after-party/\">after-party</a> and the fortieth birthday of anyone who grew up on this songbook."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=live-band-karaoke",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/live-band-karaoke-card.jpg",
+        "alt": "A microphone on a stand beside a lyric screen with one line lit in brass, drawn flat on a dark field.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd. The h1 carries Daniel's selling point verbatim in\n     spirit: colleagues who do not want to sing do not have to, the band fills\n     the songs on its own and hands the mic over when people get brave. The\n     buyer's words (company party, after-party, songs everyone knows) sit in the\n     first screen.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the party where colleagues end up singing. Daniel's selling point (nobody has to sing) now lives positively in the h1 and as the first FAQ, since negation cannot carry a line (rule 11). The casino-night comparison is gone. The mic section (printed songbook, sign-up list) and the booking checklists are props and ops (rule 13) and moved to the FAQ; the three-step mechanism's benefit (the band follows the singer) is in the lede.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide since 2026-09-05. Directly under the intro so\n     the names land on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The songbook",
+       "title": "The songs an office of every age already knows.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The book runs from the 80s and 90s onward, because those are the songs a twenty-six-year-old and a fifty-eight-year-old can both sing without looking at the screen: Journey, Bon Jovi, Whitney Houston, Prince, Madonna, Queen, Oasis, No Doubt, Alanis Morissette, TLC, the Backstreet Boys, Outkast and the Killers."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Between singers the band plays the same book as a party band, sung out front, and the floor keeps dancing. A song for one particular person, the CEO’s karaoke song or the retiring colleague’s, is a request we take the week before if it’s already in the book, and a learned song with four weeks’ notice if it isn’t. The band’s straight party set is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The songbook. The 80s and 90s cover-band ideas fold into this act\n     (Daniel, 2026-09-14), so the decades are named here rather than sold as\n     separate bands. No count of songs: the book grows.",
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "A four-piece with a host, or a bigger band with a horn.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The four-piece",
+         "text": "Voice and guitar, keys, bass and drums, with one of the musicians hosting from the stage. It’s the usual size for a company party of eighty to two hundred."
+        },
+        {
+         "term": "Five to six piece",
+         "text": "The four-piece plus a host of its own on the floor and a horn or a second voice. It’s the size for a ballroom, a conference after-party or a crowd past two hundred, where getting the first singers up is a full-time job and the choruses want the extra weight."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "When the party should keep going after the band, the <a href=\"/ensembles/dj/\">DJ</a> takes over through the same sound system on the same contract.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Two builds, off the rate card's quartet and five-to-six rows. Footprint\n     and power facts from site.json configurations.",
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Who books live band karaoke.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "The party where the accounting team turns out to have a Bon Jovi problem. <a href=\"/blog/office-holiday-party-ideas-denver/\">Office holiday party ideas in Denver</a> puts this act beside the other ways a party can go."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Sales kickoffs and team offsites</a>",
+         "text": "The evening after a day of sessions, for a group that spent eight hours in a ballroom and wants to make noise together, in Denver or on a <a href=\"/corporate/retreats/\">mountain retreat</a>."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties</a>",
+         "text": "After a conference dinner or a gala program, on the sound system that’s already set up in the ballroom."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "The last hour of a reception, or the welcome party the night before, for a couple whose friends will fight over the Whitney Houston."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays and parties at home</a>",
+         "text": "A fortieth or a fiftieth with a crowd that grew up on this songbook, a <a href=\"/private-parties/halloween-party/\">Halloween party</a> in costume, or a <a href=\"/private-parties/holiday-party/\">holiday party at home</a> with a big main floor."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Where the format lands. Links UP to the occasion pages.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Live band karaoke questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "Does anyone have to sing?",
+         "a": "No. The band plays a full set of 80s and 90s hits on its own, sung out front, so the night works as a party even if the mic never leaves the stage, and the host never puts anyone on the spot. The first singers are almost always a pair or a group, and once two or three songs have gone well, the list fills on its own."
+        },
+        {
+         "q": "How does a guest get on the list?",
+         "a": "The songbook is printed for the tables and shown on the screen. A guest picks a song and gives the host their name, and the host keeps a paper sign-up list and calls each singer up. There's no app and nothing to download, and two or three colleagues can go up together on one song."
+        },
+        {
+         "q": "How is this different from a karaoke DJ?",
+         "a": "With a backing track the singer is on their own. With a band, the tempo follows the singer, the band keeps the song going if somebody loses the verse, a second voice comes in on the chorus, and the song ends when it should. The words are on a screen either way."
+        },
+        {
+         "q": "How many people get a turn?",
+         "a": "About six to ten guest songs fit in an hour, so at a party of two hundred most people sing along from the floor. If the list is still long when the booked time ends, you can add another half hour on the night at the same rate as the rest of the evening."
+        },
+        {
+         "q": "Who decides what's appropriate?",
+         "a": "The person booking. Say when you book whether the songs run clean or as recorded, and the host keeps to it on the night."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "The same band can play dinner first at a level the tables talk across, then turn up when the program ends and the karaoke starts. From there it's as loud as a party band, with its own monitors so the singer can hear themselves. If your venue has a sound limit, give us the number and it stays under it."
+        },
+        {
+         "q": "What comes with the booking?",
+         "a": "The band and the host, sound support that's the right size for the venue, two lyric screens (one facing the singer and one facing the crowd), the printed songbook, an announcement microphone for remarks and a raffle, and the certificate of insurance and W-9 your office needs."
+        },
+        {
+         "q": "What does the venue need to provide?",
+         "a": "For the four-piece, a performance area of about 14 by 10 feet, two dedicated 20-amp circuits, 90 minutes to set up before the first set, and a venue contact for setup and sound check. The bigger band's footprint is on the technical page."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the date and the headcount, and we'll bring the band and the songbook.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

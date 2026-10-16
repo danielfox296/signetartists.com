@@ -1,0 +1,35 @@
+{
+ "id": "yacht-rock",
+ "name": "Yacht Rock Band",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/yacht-rock/",
+ "style": "Yacht rock",
+ "spec": "Three voices, keys, guitar, bass, drums and saxophone",
+ "material": "Covers",
+ "bucket_tags": [
+  "party",
+  "patio"
+ ],
+ "config_tags": [
+  "quartet",
+  "quintet"
+ ],
+ "genre_tags": [
+  "yacht-rock",
+  "pop-covers"
+ ],
+ "vocals": "sung",
+ "from": "quartet",
+ "img": "yacht-rock.jpg",
+ "alt": "Two sailboats moored on still water at sunset.",
+ "video": null,
+ "_note": "ADDED 2026-09-14 from the corporate demand report: 'yacht rock cover band denver' and ten neighbouring phrases autocomplete, no Colorado act exists and no marketplace carries the category. Spec'd, no names.",
+ "blurb": "Doobie Brothers, Steely Dan, Hall and Oates, Toto and Christopher Cross, sung in harmony with the saxophone out front. It's the summer party band, and the late set a whole crowd knows the words to.",
+ "_img_note": "REPLACED 2026-09-19, Daniel: 'the yacht rock image is stupid.' The card had been borrowing outdoor.jpg (a frame tent over a plywood stage, the outdoor-reception post's still). Now its own interim still, scripts/stills.py slug yacht-rock: two sailboats at dusk, Wikimedia Commons CC BY 2.0, duotoned like every other interim still, provenance in img/SOURCES.md. The genre's own picture, no people, and no claim about where the band plays.",
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "signet-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "convert": "python3 scripts/convert.py",
+    "proof": "python3 scripts/proof.py",
+    "dev": "vite --port 5793 --strictPort"
+  },
+  "dependencies": {
+    "@puckeditor/core": "0.23.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.1",
+    "esbuild": "0.28.2",
+    "vite": "8.3.1"
+  }
+}

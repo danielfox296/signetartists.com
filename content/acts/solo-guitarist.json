@@ -1,0 +1,34 @@
+{
+ "id": "solo-guitarist",
+ "name": "Solo Guitarist",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/solo-guitarist/",
+ "_note": "ADDED 2026-09-23 with the roster rebuild. The page has existed since the 2026-08-20 buildout with no roster entry behind it, so it was on no card, in no filter, missing from the contact picker, the roster's structured data and the llms.txt acts list. The entry lifts its facts from the page; nothing new is claimed.",
+ "style": "Blues, roots, jazz and Spanish flavors",
+ "spec": "One guitarist, sung or instrumental",
+ "material": "Covers and standards",
+ "bucket_tags": [
+  "cocktail",
+  "budget"
+ ],
+ "config_tags": [
+  "solo"
+ ],
+ "genre_tags": [
+  "blues",
+  "jazz"
+ ],
+ "vocals": "optional",
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties",
+  "daytime"
+ ],
+ "from": "solo",
+ "img": "acts/solo-bridge.jpg",
+ "alt": "A guitarist in a tan jacket playing an acoustic guitar on a bridge, with autumn trees behind him.",
+ "video": null,
+ "blurb": "One guitarist for cocktail hours, client dinners and private dinners, playing blues, roots, jazz and Spanish flavors at a volume the table talks over. It's the smallest live booking on the roster, sung or instrumental, and it fits in a corner where a band can't."
+}

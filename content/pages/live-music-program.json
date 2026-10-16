@@ -1,0 +1,348 @@
+{
+ "root": {
+  "props": {
+   "path": "/live-music-program/",
+   "title": "A weekly live music program for your bar | Signet Artists",
+   "description": "A standing live music program for hotel bars, restaurants and lounges in Denver and Colorado: the same solo act on the nights you pick, a sub from the roster for any missed night, one invoice a month.",
+   "titleExact": true,
+   "robots": "noindex, follow",
+   "schema": {
+    "service": {
+     "name": "Weekly live music program",
+     "serviceType": "Standing live music program for hotel bars, restaurants and lounges",
+     "description": "A weekly live music program for hotel bars, restaurants and lounges in Denver and Colorado: one solo act from the Signet roster on the nights the venue picks, a sub from the same roster for any missed night, sound sized for a bar, and one itemized invoice a month.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "The venue programming offer, 2026-09-25, on Daniel's call ('yes. i do want #2') after reading Colorado Professional Performers: a standing weekly live-music slot at a hotel bar, restaurant or lounge, covered by the roster's solo acts, with a sub for any missed night, one invoice a month, and the act swapped on request. It is the roster version of the Last Consulate residency (LAST-CONSULATE-RESIDENCY.md, which is one musician, two weeknights, original material). A PRIVATE SHARE like /jam/: linked from no nav and no footer, noindex keeps it out of the sitemap, llms.txt and search; Daniel hands the link to a venue after a first conversation (Gaylord Rockies' Grand Lodge, which runs local musicians nightly, is the first). No figure anywhere on the page: the per-night price is quoted per venue by Daniel. No availability, no night named as open. Nobody named except the fronted acts. Ops live in the questions.",
+    "reader": "The person who runs a hotel bar, a restaurant or a lounge and wants live music on the calendar every week without running it themselves."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Hotels, restaurants and lounges",
+       "slab": true,
+       "title": "Live music on your calendar, every week.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The same night every week, a musician on your floor, and the tables that would have paid up stay for one more round.",
+       "headingText": [
+        {
+         "html": "Signet puts one of its solo acts on your stage on the nights you pick, for the term we agree. The same musician plays week after week, so your regulars get to know them, and a sub from the same roster plays any night they can’t. You get one invoice a month."
+        },
+        {
+         "html": "It’s built for a hotel lobby bar, a restaurant bar, a cocktail lounge or a member club, on a night that’s already busy or the one you want to build."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See the roster",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The venue's page. Reader: the F&B director, GM or owner of a bar\n     that wants live music every week and none of the running of it.\n     Moment first, then the mechanism, then breadth once.",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-7",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The program",
+       "title": "What you get.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-5",
+       "rows": [
+        {
+         "term": "The same musician every week",
+         "text": "One act, picked for your bar and your crowd, on the same nights for the whole term. Regulars come back for the person as much as the music."
+        },
+        {
+         "term": "A sub who fits",
+         "text": "When the regular musician can’t play, another act from the roster plays the night, in the same style and at the same volume. You hear about it from us before the night, and the night goes ahead."
+        },
+        {
+         "term": "A change if the first fit is wrong",
+         "text": "If the act isn’t right for the crowd after the first weeks, we swap it. Say so and a different act plays the following week."
+        },
+        {
+         "term": "Extra nights when you want them",
+         "text": "A private party, a holiday or a game night gets added to the same program, with the same act if you want them."
+        },
+        {
+         "term": "Sound sized for a bar",
+         "text": "The act brings a small PA and runs it, or plugs into your house system. Sets sit at the level of a conversation at the next table, and the musician turns down the moment the floor asks."
+        },
+        {
+         "term": "One invoice a month",
+         "text": "One itemized invoice from one company, with the paperwork your venue asks for, every month of the term."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "What the venue gets. Paperwork specifics live in the questions.",
+    "_file": "02-what.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The acts",
+       "title": "Who plays.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Solo acts from the roster, and the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> when the floor is big enough for two."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "<a href=\"/ensembles/singer-guitarist/\">A singer and guitarist</a>",
+         "text": "Acoustic covers everybody knows, sung."
+        },
+        {
+         "term": "<a href=\"/ensembles/spanish-guitarist/\">A Spanish guitarist</a>",
+         "text": "Nylon strings, a rumba under the first drink."
+        },
+        {
+         "term": "<a href=\"/ensembles/solo-guitarist/\">A solo guitarist</a>",
+         "text": "Blues, roots and jazz, instrumental."
+        },
+        {
+         "term": "<a href=\"/ensembles/solo-piano/\">Solo piano</a>",
+         "text": "Cocktail piano for a lobby bar."
+        },
+        {
+         "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
+         "text": "Blues, rock and roots, one voice and a guitar."
+        },
+        {
+         "term": "<a href=\"/artists/rene-moffatt/\">René Moffatt</a>",
+         "text": "Original songs from a Denver singer-songwriter."
+        },
+        {
+         "term": "<a href=\"/artists/last-consulate/\">Last Consulate</a>",
+         "text": "Instrumental downtempo for a lounge that wants the volume low and the tempo slow."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The acts that play it: the roster's solo acts, named only where the\n     act is fronted. No count.",
+    "_file": "03-who.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Getting started",
+       "title": "How it starts.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "A conversation",
+         "text": "Tell us the venue, the nights you have in mind and what the bar sounds like now. We come back with the act we’d put there and a price per night for your venue."
+        },
+        {
+         "term": "One evening at your bar",
+         "text": "Before the first night, one of us spends an evening at the bar to hear the crowd and the volume the floor can take. The set gets built to that."
+        },
+        {
+         "term": "The first night, then every week",
+         "text": "The act loads in, plays, and comes back on the same night the next week. We check in with you every month and adjust the set, the volume or the act."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "How it starts. The observed evening is the onboarding step from the\n     Last Consulate residency, kept because it is what makes the set fit.",
+    "_file": "04-how.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-17",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "05-credits.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Questions a venue asks",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-19",
+       "items": [
+        {
+         "q": "What if the musician can't make a night?",
+         "a": "Another act from the roster plays it, in the same style and at the same volume. You hear from us before the night, and the invoice stays the same."
+        },
+        {
+         "q": "Can we change the act?",
+         "a": "Yes. Tell us it isn't the right fit for the crowd and a different act plays the following week."
+        },
+        {
+         "q": "What does the venue provide?",
+         "a": "A corner of the floor about 6 by 4 feet, one outlet on its own circuit, and a stool. The act brings its own sound or plugs into yours, and sets up in about 45 minutes."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "About as loud as a conversation at the next table. The musician sets the level to the crowd and the space, and turns down the moment the floor asks."
+        },
+        {
+         "q": "Which nights can we pick?",
+         "a": "The ones that suit the bar. They stay fixed for the term, so your guests learn them, and we agree them before the first night."
+        },
+        {
+         "q": "How long is the term, and what does it cost?",
+         "a": "We agree the term and the nights before the first night, and the price is quoted per night for your venue. Send us the venue and the nights you have in mind and the number comes back with the act we'd put there."
+        },
+        {
+         "q": "What about holidays and extra hours?",
+         "a": "A holiday night is quoted on its own. An extra hour on a regular night is added at the same rate as the hours before it."
+        },
+        {
+         "q": "Can the program cover a private party at the venue?",
+         "a": "Yes. A party on the patio or in your back space is added to the program, with the same act or a bigger one from the roster."
+        },
+        {
+         "q": "What paperwork comes with it?",
+         "a": "A written contract naming the nights, the hours, the term and the price, a certificate of insurance naming your venue as additional insured, a W-9, and one itemized invoice a month."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Visible questions render from this dir's schema.json.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-22",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the nights you have in mind.",
+       "lede": "Tell us the venue and the nights, and we’ll come back with the act we’d put there and a price per night."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "If you’d rather ask something first, email <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The page's own close: the venue's action is the same form, in the\n     venue's words.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

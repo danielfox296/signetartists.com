@@ -1,0 +1,397 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/vail/",
+   "title": "Wedding music in Vail: ceremony guitarist, jazz duo, band and DJ | Signet Artists",
+   "description": "Live music for a Vail wedding: a guitarist for a ceremony at altitude, a duo on the terrace, a band or DJ for the ballroom floor under the village noise cap, on one contract with one I-70 travel line.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "nav": "weddings",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Vail",
+     "serviceType": "Live music for weddings in Vail: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "Live wedding music in Vail and the Vail Valley: an acoustic, jazz or Spanish guitarist for an outdoor ceremony, a jazz or acoustic duo for the cocktail hour, a band or DJ for the reception, on one contract with sound included and one I-70 travel line.",
+     "areaServed": [
+      "Vail",
+      "Beaver Creek",
+      "Avon",
+      "Edwards",
+      "Minturn"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "A ceremony processional on nylon-string guitar, the size that plays an outdoor Vail ceremony inside the village noise cap.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Vail spoke of the weddings hub, built 2026-09-16. Evidence: 'vail wedding band' is the only mountain phrase that autocompletes for wedding music (Boulder, Breckenridge, Aspen and Beaver Creek return nothing music-related), and the weddings tree had no mountain spoke. The argument is the Vail wedding day itself: a ceremony outdoors at 8,150 feet, a terrace hour, a ballroom floor under a village noise cap, with the I-70 drive as one travel line and no lodging line. That keeps it apart from the Vail retreats spoke (incentive groups, dock windows, a program) and from the Springs wedding spoke (a Front Range drive). Venues are the vetted Vail list in SEO-BUILDOUT-ARCH section 8. Uniqueness gate: registered as a weddings sibling.",
+    "reader": "The couple getting married in Vail, planning the day around the light, the cold and the village noise cap."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Vail weddings",
+       "slab": true,
+       "title": "Live music for a Vail wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A Vail wedding happens at 8,150 feet, and the day is shaped by it. The ceremony is outdoors while the light is on the mountain, the cocktail hour is on a terrace that cools the moment the sun drops behind the ridge, and the floor fills a ballroom in a village that measures its sound at the property line. So the music is a guitarist for the vows, a duo for the hour after them, and a band or a DJ for the dancing.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/weddings/\">weddings</a> bookings: one part of the day or all of it, on one contract with a personal contact through the day and one travel line for the drive up I-70."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Vail wedding spoke. The day leads: a ceremony at altitude, a terrace, a\n     ballroom floor. The phrase the page targets (Vail wedding band, wedding\n     music Vail) sits in the h1 line and the first paragraph. Hub link UP\n     in the first screen per the internal-link contract.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: the couple marrying in Vail, planning around the light, the cold and the village cap. Venues, light, cap and altitude stay as local fact, the cited cap figure in the FAQ; the drive and setup went to the FAQ with the extras list; 'the move indoors' and colour fixed; the altitude FAQ restated the body and is gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. A landing surface for city search, so the\n     names sit on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "A processional on nylon strings, and a guitarist outdoors.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Can’t Help Falling in Love on Spanish guitar, the size that plays a mountain ceremony inside the noise cap, and an acoustic set on a lawn."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Spanish guitar playing Can't Help Falling in Love for a wedding ceremony",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing an acoustic set outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_notes": "The visual every page carries: a ceremony clip from the Signet channel\n     and the outdoor acoustic still. Provenance in media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "The day",
+       "title": "The three parts of a Vail wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The mountain sets the clock. The light leaves the ceremony site early, the terrace turns cold fast, and the village has a noise limit the floor has to respect. The music follows the guests from one to the next."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony, on a deck or a lawn</a>",
+         "text": "One guitarist, acoustic, jazz or Spanish, on a covered spot near the aisle with a small system that carries the officiant’s microphone too. The system is small on purpose: it sits inside the village cap on its own, and the guitarist stretches the processional to however long the walk takes."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour, on the terrace</a>",
+         "text": "A jazz duo or an acoustic duo at a level guests talk across. The one thing a Vail terrace asks of a duo is the cold: fingers and strings both slow down once the sun is behind the ridge, so the hour is timed to the light and moving indoors is agreed before the day."
+        },
+        {
+         "term": "The floor, in the ballroom",
+         "text": "A <a href=\"/weddings/jazz-band/\">jazz band</a> that grew through the day, a covers band like <a href=\"/artists/tejas-singh/\">Tejas Singh</a> that starts as a duo and finishes as a quartet, or the <a href=\"/ensembles/dj/\">DJ</a> from the end of dinner to the last song. Indoors the cap is the venue’s own, and the hotel ballrooms take a quartet without strain."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "The whole song list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The three bookings of the day, written to a mountain wedding rather\n     than restating the hub's argument: the light, the cold on the terrace,\n     the cap on the floor. Links ACROSS to the ceremony, cocktail hour, jazz\n     band, Tejas and DJ pages.",
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "The venues",
+       "title": "The venues, and what each one asks of the music.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "The village hotels hold the classic Vail wedding: a ceremony on a lawn or a deck with the mountain behind it, the cocktail hour on the terrace, and the reception in the ballroom once the cold comes down. The Sonnenalp and the Four Seasons Resort Vail anchor that day in Vail Village, The Arrabelle at Vail Square and The Hythe carry it in Lionshead, and the Grand Hyatt Vail runs the same day at the west end of town along the creek. Their ballrooms take a quartet or a full band, their terraces take a duo, and a ceremony guitarist reaches any of their outdoor sites with one small case.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Donovan Pavilion is the town’s own venue on Gore Creek, and the one to book when a couple wants a single floor with their own vendors and their own timeline. The ceremony and the reception happen in one building, so a duo through the hour and a band for the floor share one load-in, and the creek outside is the backdrop for the ceremony music.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "A ceremony up the mountain, reached by gondola, is a different plan: the guitarist and a small system ride up with the guests, the music is battery powered or runs on the venue’s own circuit, and the reception happens back in the village afterward. Tell us the site and we plan the ride.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Venues as the market's places (the vetted Vail list), never our\n     history. Written to the ceremony site and the floor, which separates it\n     from the Vail retreats spoke's dock-and-program read of the same six.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "The mountain",
+       "title": "Light, cold, a noise cap and thin air.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "An outdoor ceremony in Vail is planned around the light. The sun goes behind the ridge early, the color on the mountain goes with it, and a ceremony timed for that light has a fixed start the music is built around. The guitarist is set up and sound-checked well before it, on a covered, level and dry spot with power run to it, because a summer afternoon can turn to rain and a fall afternoon to snow in the time it takes to seat the guests.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "The village measures outdoor sound at the edge of the permitted area, so the dance floor goes indoors or onto a terrace the venue has already permitted, and a ceremony guitarist and a cocktail hour duo sit inside the cap on their own. Every mountain town’s number, cited and dated, is on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "The altitude reaches the gear as well as the guests: strings drift between an afternoon ceremony and an evening set and get retuned, and anyone singing or playing a horn paces a set differently in thin air, which is why the sound check is longer here than in the city.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "How far ahead couples tend to book is in <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. A corporate group in the same hotels is on the <a href=\"/corporate/retreats/vail/\">Vail retreats page</a>, and a wedding on the Front Range is on the <a href=\"/weddings/colorado-springs/\">Colorado Springs wedding page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The location-specific logistics paragraph the uniqueness gate requires,\n     written to a wedding day: the light, the cold, the cap, the drive. The\n     65 dBA figure is the reported cap on the mountain corridor page, which\n     holds the citation; this page links rather than re-argues.",
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Questions",
+       "title": "Asked about Vail weddings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-30",
+       "html": "Stage sizes, circuits and input lists for every size are on the <a href=\"/planners/technical/\">technical page</a>, in a form a venue’s events office can check line by line.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-31",
+       "items": [
+        {
+         "q": "Do you play weddings in Vail?",
+         "a": "Yes, the whole day or any one part of it, at the fee a Denver wedding sees plus one travel line for the drive, with no lodging line. Every size arrives with sound, setup and pack-down, a certificate of insurance and a W-9. Signet Artists books Vail weddings from Denver."
+        },
+        {
+         "q": "What does the Vail travel line cover?",
+         "a": "The drive up I-70 and back over Vail Pass for the musicians and the gear, as one line on the quote. Vail sits inside the corridor we price as a single travel line, so there's no mileage arithmetic and no night's lodging, which the far resorts like Aspen and Telluride do carry. On a winter date the musicians travel early and the venue knows it."
+        },
+        {
+         "q": "Can a band play an outdoor wedding in Vail?",
+         "a": "Yes, with the village noise cap in the plan from the start. Vail's outdoor limit in the resort villages was reported at 65 dBA measured ten feet from the permitted area, which a ceremony guitarist and a cocktail hour duo sit inside on their own. A dance floor runs louder than that by design, so it goes indoors or onto a permitted terrace, and we confirm the current figure with the venue before the day."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Vail?",
+         "a": "Earlier than in the city. A mountain venue books its Saturdays twelve to eighteen months out, and couples tend to book music after the venue and before most of the rest of the list. Tell us the date and we'll come back quickly with an answer and a price."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-32",
+       "html": "Extras that can appear on a quote.",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-33",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-36",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the venue and the ceremony site, and we'll plan the rest for the altitude.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,266 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/firstwater/",
+   "title": "Firstwater: corporate sound bath and sound healing, Denver | Signet Artists",
+   "description": "A corporate sound bath in Denver for wellness weeks, team building days, offsites and retreats: seventy-five minutes of live sound healing on the floor.",
+   "titleExact": true,
+   "ogImage": "img/sound-bath.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Corporate sound bath",
+     "serviceType": "Sound bath and sound healing for corporate wellness weeks, team building days, offsites, retreats, transition days, wedding weekends and bachelorettes",
+     "description": "A seventy-five-minute group sound bath from Firstwater, a sound healing session brought to offices, offsites and retreats or held in a partner space in Denver, for companies, event planners, hospitals, hospices, libraries, schools and conference organizers across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "firstwater"
+   },
+   "notes": {
+    "_note": "Authored 2026-09-19 with the signet-new-act skill (scripts/new_act_page.py --kind artists --shape artist), for Daniel's own sound-bath practice, the first non-band act on the roster. acts.json firstwater.page points here so every card and llms line follows. Ladder, book and footage sections deleted: one configuration, no titles, no footage; the hero carries the interim sound-bath still (scripts/stills.py) in the act-video-photo slot in place of a footage label, the act's portrait having been removed on Daniel's call the same day. No price of any kind: the act's own corporate page publishes a starting figure and it stays there. Rewritten the same day on Daniel's rulings: nobody named, buyer search terms throughout.",
+    "reader": "Whoever wants to give a team, an offsite or a wedding party seventy-five minutes of rest together.",
+    "_title_note": "58 chars before the pipe. The name leads because it is a named act; 'corporate sound bath' is the head term Google autocompletes (with 'corporate wellness sound bath' and 'sound bath corporate event' beside it), 'sound healing' is the second head term, and Denver is the market.",
+    "schema_note": "Authored 2026-09-19, rewritten the same day on Daniel's rulings (nobody named; buyer search terms). Every answer traces to thefirstwater.co (the FAQ, the corporate page, the home page's plain description of the night). Questions are worded the way buyers search. No figure, no reply window, no video block: the act carries no footage."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Sound bath and sound healing",
+       "slab": true,
+       "title": "Firstwater",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "One facilitator, seventy-five minutes.",
+       "lede": "Your people lie down in low light, under blankets, with nothing to do and nothing to say for seventy-five minutes, while live instruments play over composed music. Firstwater brings the session to your venue or holds it in a partner space in Denver, and companies book it for wellness weeks, team building days, offsites and retreats.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=firstwater",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ],
+       "headingNote": "Read about it first: <a href=\"https://thefirstwater.co/\">Firstwater’s own site</a>, and <a href=\"https://thefirstwater.co/faq/\">the plain answers to what happens at a sound bath</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/sound-bath.jpg",
+        "alt": "Three singing bowls on cushions with a mallet beside them.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style (the two\n     head search terms, on Daniel's ruling 2026-09-19 that labels are buyer\n     search terms), the name is the h1, the act-face line is the build, the\n     blurb is the opening paragraph. Nobody is named anywhere on this page\n     (Daniel, 2026-09-19). The media slot carries a still in the act-video-photo\n     pattern the solo guitarist page uses, in place of the footage-slot\n     placeholder: no footage of a sound bath exists and none is likely, because\n     phones stay in bags at one, so a permanent \"not yet\" label would be the\n     wrong claim. The still is interim stock (scripts/stills.py slug sound-bath,\n     three singing bowls, duotoned, provenance in img/SOURCES.md), on Daniel's\n     call the same day in place of the act's portrait.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants to give a team, or a wedding party, seventy-five minutes of rest. The first two identity paragraphs come from thefirstwater.co and stay; the paragraph that listed every buyer and the ops, the pointer to Firstwater's own site (already under the hero) and the named-act line are gone. Daniel is never named here (firstwater-on-signet).\n\nThe named-acts promise on /music/ is \"you can go and look them up\";\n           this is the look-up. Both links verified against the site 2026-09-19.\n           Its corporate page is deliberately not deep-linked: it publishes a\n           starting price, and no figure crosses to a Signet surface.",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, the same block the other act pages carry.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Firstwater is a sound bath led by one facilitator, and if you’ve been to one you already know how to arrive: lie down, get warm, and rest. The facilitator composes the music for each session, plays live instruments over it, and mixes the whole thing from the floor, lying where your people will lie. The facilitator treats the venue like a studio and tunes the sound system to it, so if you have a space, Firstwater can make it sound like a different one.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Your people come in to low light and lie down, and the mats and blankets are already there. The session opens with ceremony, then there are seventy-five minutes of sound strong enough to feel in your chest and soft enough to rest inside, with real silence partway through, and it closes the same way. Nobody is asked to share, to speak, or to be anywhere but on the floor. Some people follow the guidance closely, some drift, and some sleep, and each of those is a fine way to spend the hour. Afterward there’s tea near the door, and people stay awhile or slip out as they please.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Nobody is named: Daniel 2026-09-19, \"do not cite my name. no daniel, no\n     daniel fox. firstwater.\"",
+    "_file": "02-identity.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Occasions",
+       "title": "Four ways a sound bath gets booked.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/\">The team session</a>",
+         "text": "One venue and one session, at your office or in a partner space in Denver, for a wellness week, a quarter close, or the month a team earned something quiet. It’s the simplest of the four."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Offsites and retreats</a>",
+         "text": "Firstwater builds one or more sessions into the agenda with you, and uses them to close an evening or open a morning, which is where a sound bath does its best work. A team that has spent the day in meetings gets seventy-five minutes with nothing to do."
+        },
+        {
+         "term": "<a href=\"https://thefirstwater.co/sessions/laid-off/\">Transition days</a>",
+         "text": "When a company is doing a hard thing well, this is a session for the people leaving and for the team that stays, and it’s usually the employer who books it. The page for it on Firstwater’s own site is called Laid Off, and it’s written for the people who’ll be in it."
+        },
+        {
+         "term": "<a href=\"https://thefirstwater.co/weddings/\">Wedding weekends and bachelorettes</a>",
+         "text": "A private sound bath for the wedding party, the bachelorette, or the couple, at the house you rented, your venue, or a partner space in Denver. It goes into the weekend as the welcome evening, the morning of, or the day after for whoever stayed, and the <a href=\"/weddings/\">weddings page</a> covers the music for the rest of it."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Where a sound bath sits in an offsite week, beside the evenings the music covers, is in <a href=\"/blog/company-offsite-ideas-colorado-remote-teams/\">company offsite ideas in Colorado for remote teams</a>. During the day, for a yoga studio, a senior center, a hospice, a school or an office at lunchtime, the <a href=\"/daytime/sound-bath/\">daytime sound bath page</a> covers where it books and what a venue needs.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The occasions block, in the shape of the other act pages. Three rows from\n     the act's own corporate page, and a fourth from its weddings page (added the\n     same day, 2026-09-19: thefirstwater.co/weddings/, so the wedding claim traces\n     to the act's site). Two rows link the Signet page for the evening around the\n     session; the transition-day row links the act's own Laid Off page and the\n     wedding row its weddings page, the only pages anywhere that describe those\n     bookings. No o'clocks, no assigning the session to an hour of anyone's day.\n     Nobody named.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-16",
+       "html": "Firstwater questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "The longer answers, what people wear, whether anyone has to talk, what happens if someone feels a lot or nothing, are on <a href=\"https://thefirstwater.co/faq/\">Firstwater’s own FAQ</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-18",
+       "items": [
+        {
+         "q": "What is a corporate sound bath?",
+         "a": "A group sound bath brought to a company, with a ceremony to open and close it and seventy-five minutes of live sound while your people rest. Some people call it sound healing or sound meditation, and it's the same session. Firstwater is booked through Signet Artists in Denver."
+        },
+        {
+         "q": "Can Firstwater bring a sound bath to our office or offsite venue?",
+         "a": "Yes. Firstwater brings the sound system, the mats, the blankets and the waivers to your venue, or the session runs in a partner space in Denver."
+        },
+        {
+         "q": "How much space does a sound bath need?",
+         "a": "Enough floor for your people to lie down, a standard outlet, and about ninety minutes ahead of doors. Everything else, from the mats to the waivers, arrives with the facilitator."
+        },
+        {
+         "q": "Who books it besides companies?",
+         "a": "Hospitals, hospices, libraries, schools and conference organizers, and couples for a private sound bath on a wedding weekend or a bachelorette, at the house they rented or a partner space in Denver."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block and the\n     FAQPage markup can never drift apart. The questions are worded the way buyers\n     search (corporate sound bath, how much space, team building). The note points\n     at the act's own FAQ rather than the technical page: footprints and power are\n     band facts, and what a sound bath needs from a venue is answered below.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-21",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book a Firstwater sound bath for your team, your offsite or your retreat.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing\n     follows it.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

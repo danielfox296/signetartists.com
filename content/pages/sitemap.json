@@ -1,0 +1,115 @@
+{
+ "root": {
+  "props": {
+   "path": "/sitemap/",
+   "title": "All pages",
+   "description": "Every page on signetartists.com: the occasions, the configurations, the artists, the planning pages and the notes.",
+   "nav": "",
+   "breadcrumb": "All pages",
+   "notes": {
+    "_note": "The HTML sitemap, 2026-09-22, built with the footer cull. It is the backstop that lets the footer stop being one: every page on the site, one hop from every page, in a single link. The list is rendered by site_index() in build.py from the same `built` list that writes sitemap.xml and llms.txt, so it cannot go stale by hand. Indexed and linked from the footer's bottom bar. Nothing on it is a price, a status or a count."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "AllPages",
+   "props": {
+    "id": "AllPages-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "All pages",
+       "title": "Everything on this site.",
+       "titleTag": "h1",
+       "titleClass": "h1",
+       "lede": "The occasions, the configurations, the artists and the planning pages, in one list."
+      }
+     },
+     {
+      "type": "PageIndex",
+      "props": {
+       "id": "PageIndex-2",
+       "top": [
+        {
+         "output": "index.html"
+        },
+        {
+         "output": "music/index.html"
+        },
+        {
+         "output": "repertoire/index.html"
+        },
+        {
+         "output": "pricing/index.html"
+        },
+        {
+         "output": "about/index.html"
+        },
+        {
+         "output": "contact/index.html"
+        },
+        {
+         "output": "blog/index.html"
+        },
+        {
+         "output": "for-artists/index.html"
+        },
+        {
+         "output": "thanks/index.html"
+        }
+       ],
+       "groups": [
+        {
+         "prefix": "corporate/",
+         "heading": "Corporate"
+        },
+        {
+         "prefix": "weddings/",
+         "heading": "Weddings"
+        },
+        {
+         "prefix": "private-parties/",
+         "heading": "Private parties"
+        },
+        {
+         "prefix": "daytime/",
+         "heading": "Daytime"
+        },
+        {
+         "prefix": "ensembles/",
+         "heading": "Configurations",
+         "lanes": true
+        },
+        {
+         "prefix": "artists/",
+         "heading": "Named acts"
+        },
+        {
+         "prefix": "planners/",
+         "heading": "For planners"
+        },
+        {
+         "prefix": "preferred-vendors/",
+         "heading": "Preferred vendors"
+        },
+        {
+         "prefix": "guides/",
+         "heading": "Guides"
+        },
+        {
+         "prefix": "video/",
+         "heading": "Video clips"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-index.html"
+   }
+  }
+ ]
+}

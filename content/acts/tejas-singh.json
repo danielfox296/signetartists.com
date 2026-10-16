@@ -1,0 +1,88 @@
+{
+ "id": "tejas-singh",
+ "name": "Tejas Singh",
+ "presentation": "face",
+ "status": "flagship",
+ "page": "artists/tejas-singh/",
+ "style": "Singer-songwriter covers",
+ "face": "Tejas Singh",
+ "material": "Covers",
+ "bucket_tags": [
+  "cocktail",
+  "party"
+ ],
+ "config_tags": [
+  "duo",
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "singer-songwriter",
+  "pop-covers"
+ ],
+ "vocals": "sung",
+ "from": "duo",
+ "img": "tejas-card.jpg",
+ "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
+ "video": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+ "blurb": "Authentic and intimate with a specialty in building familiar songs from the ground up with his amazing ear and looping tech, Tejas brings a wide variety of fan favorite songs and is also available to play his original, singer-songwriter material to your event.",
+ "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
+ "meta_description": "Voice-fronted covers for private events in Denver and the Colorado mountains. A duo through cocktails, a quartet for the dance floor. Send a date and we price the night.",
+ "identity": [
+  "One act, three sizes. This is the only booking on the roster that changes shape during the night instead of being replaced.",
+  "The reason to care is the contract. Most events buy the front of the night and the back of the night from two different acts, which means two load-ins, two sound checks, two sets of names to keep straight and a seam in the middle that guests can hear. This ladders instead: a duo through arrival and dinner, then the rhythm section arrives and the same voice fronts the dance floor. The party sees one band getting bigger.",
+  "At quartet it stops being a cocktail act. The full rhythm section behind one voice, keys or a second guitar on top, playing a covers set built for a floor.",
+  "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing.",
+  "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
+ ],
+ "ladder": [
+  {
+   "config": "duo",
+   "build": "A singer-guitarist, plus bass",
+   "bestFor": "Arrival, cocktails and dinner."
+  },
+  {
+   "config": "trio",
+   "build": "Voice and guitar, bass, drums",
+   "bestFor": "Small venues, and parties that want a dance floor without a full band."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus keys or a second guitar",
+   "bestFor": "The dance floor booking. Weddings and corporate parties."
+  }
+ ],
+ "setlist": {
+  "note": "A sample from the song list, from dinner to the dance floor. Requests are welcome.",
+  "from_repertoire": true,
+  "groups": [
+   {
+    "label": "Arrival and dinner",
+    "moment": "dinner",
+    "count": 6
+   },
+   {
+    "label": "The lift",
+    "moment": "lift",
+    "count": 6
+   },
+   {
+    "label": "The floor",
+    "moment": "dance",
+    "count": 6
+   }
+  ]
+ },
+ "video_poster": "img/acts/tejas-live-poster.jpg",
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person",
+  "sameAs": [
+   "https://www.tejassinghmusic.com/"
+  ]
+ }
+}

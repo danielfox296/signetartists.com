@@ -1,0 +1,54 @@
+{
+ "root": {
+  "props": {
+   "path": "/blog/",
+   "title": "Blog",
+   "description": "Occasional writing on live music for private events: planning it, pricing it, and the music itself. From Signet Artists in Denver.",
+   "breadcrumb": "Notes",
+   "notes": {
+    "_note": "The blog index is auto-built: {{blog_cards}} in the section fills with one row per published post, newest first, or the empty state until the first post ships. The RSS channel description reuses meta_description verbatim, so editing it here updates both."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Blog",
+       "slab": true,
+       "title": "Writing on live music for events.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Occasional written notes about planning and pricing music and how it effects people."
+      }
+     }
+    ],
+    "_notes": "Placeholder copy pending the voice/ICP content pass. The listing itself\n     is generated: {{blog_cards}} renders published posts newest first, or a\n     quiet empty state while there are none.",
+    "_file": "01-blog.html"
+   }
+  },
+  {
+   "type": "BlogList",
+   "props": {
+    "id": "BlogList-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "BlogPosts",
+      "props": {
+       "id": "BlogPosts-4"
+      }
+     }
+    ],
+    "_file": "01-blog.html"
+   }
+  }
+ ]
+}

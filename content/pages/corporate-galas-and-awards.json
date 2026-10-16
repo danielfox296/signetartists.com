@@ -1,0 +1,351 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/galas-and-awards/",
+   "title": "Live music for galas and award nights in Denver: a band that knows where the program is | Signet Artists",
+   "description": "Live music for Denver galas, fundraisers and award nights: a reception act, dinner music the tables talk across, silence on the emcee's cue, and a floor after the last award, on one contract with the certificate of insurance attached.",
+   "titleExact": true,
+   "ogImage": "img/ballroom.jpg",
+   "nav": "corporate",
+   "breadcrumb": "Galas and award nights",
+   "schema": {
+    "service": {
+     "name": "Gala and award night entertainment",
+     "serviceType": "Live music for galas, fundraisers, award dinners and annual meetings",
+     "description": "Live music for nonprofit galas, association award nights, chamber annual dinners and company award ceremonies in Denver and across Colorado: reception acts, dinner ensembles and dance bands that work around remarks, auctions, videos and walk-ups, on one contract.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "quintet",
+      "dj"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Corporate spoke built 2026-09-14 from the corporate demand report. Evidence: galas and award nights are the second most-named corporate occasion on Colorado vendors' pages (7 of 35), the program-cue competence is undemonstrated by every Colorado band since the July audit, the Denver Health Foundation gala layered four acts through one night while the Colorado Technology Association's Apex Awards seated 573 people with no music at all, and 'gala dinner entertainment ideas' autocompletes. Not a search-acquisition page: 'gala band' is polluted. It is the page a committee is sent, and the forwarded proposal. Small-format scale throughout.",
+    "reader": "The gala committee or event lead who needs the music to work around every cue in the program."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Galas and award nights",
+       "slab": true,
+       "title": "Music that works around your program.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The emcee steps toward the podium and the music has already stopped, and the last honoree reaches the stage on the final bar of their walk-up. A gala runs on a program, and the music’s job is to know where every cue is: a reception act as the doors open, dinner music the tables talk across, silence for the emcee, and a dance floor after the last award.",
+       "headingText": [
+        {
+         "html": "Nonprofit galas and fundraisers, association award nights, chamber annual dinners and company award ceremonies book it, and the cues below are written so you can forward them to whoever signs."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Corporate spoke, the program-driven evening. Written for the development\n     director, the gala committee and the association's event manager, and for\n     the board member the proposal gets forwarded to. The claim is competence\n     against a program, which the July audit found undemonstrated by every\n     Colorado band. No gala-scale production is implied.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the gala committee or event lead who needs the music to work around the program. The cue list is the product for this buyer and stays; the venue list is gone (occasion spokes carry no venue lists); ops and paperwork to the FAQ; FAQs restating cue rows are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide since 2026-09-05. Directly under the intro so\n     the names land on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Footage",
+       "title": "Hear the jazz duo at reception volume.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Guitar and upright bass on a standard, at the level a gala’s doors and dinner run at. The dance floor after the last award is a different act on the same contract."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass at dinner volume",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
+    "_file": "01b-footage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Doors to dance floor",
+       "title": "What the band does at every cue in the program.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The run of show is planned with whoever is running the program, and on the night the bandleader watches the emcee."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The doors",
+         "text": "A reception act is already playing when the first guest walks in, at a level the check-in table can hear itself over: a duo, <a href=\"/ensembles/solo-piano/\">a solo pianist</a> or a Spanish guitarist, depending on what the evening should feel like in its first ten minutes."
+        },
+        {
+         "term": "Remarks and the welcome",
+         "text": "The music stops while the speaker is still steps from the podium, and the speaker gets an announcement microphone of their own."
+        },
+        {
+         "term": "Dinner",
+         "text": "The band plays at the level of the conversation from the first course to the coffee. A trio usually does this better than a full band turned down."
+        },
+        {
+         "term": "The video",
+         "text": "The band goes silent, with the handoff to the house audio planned in advance, and comes back in on the applause."
+        },
+        {
+         "term": "The auction and the paddle raise",
+         "text": "Silence through the bidding unless the auctioneer wants music low under it, and a short piece as each lot closes if the program calls for it."
+        },
+        {
+         "term": "The walk-ups",
+         "text": "Each honoree gets music from the moment the name is read to the moment they reach the podium, cut on arrival, never faded over their first sentence. We take the names and the order ahead of the night."
+        },
+        {
+         "term": "The turn",
+         "text": "When the last award is given, the night gets loud on cue: a dance band or the DJ through the same system, with no changeover the guests can see."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The cues. Facts from site.json plannerFaqs: the announcement mic on its\n     own channel from the end of sound check, the dinner dBA band.",
+    "_file": "02-cues.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Who plays each part",
+       "title": "A reception act, a dinner act and a dance floor act, on one contract.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They can be the same musicians all night or three different sounds. The contract and the sound system stay the same."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "As the doors open",
+         "text": "The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> on upright bass and guitar, <a href=\"/ensembles/solo-piano/\">a solo pianist</a>, a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, a <a href=\"/ensembles/string-quartet/\">string quartet</a> for a black-tie evening, or <a href=\"/artists/last-consulate/\">Last Consulate</a> for an evening that wants to sound like this decade."
+        },
+        {
+         "term": "Through dinner",
+         "text": "The <a href=\"/ensembles/jazz-duo-trio/\">jazz trio</a> with drums played with brushes, or the <a href=\"/ensembles/americana-band/\">Americana trio</a> when the gala is a ranch, a barn or a mountain evening."
+        },
+        {
+         "term": "After the last award",
+         "text": "The <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> on a ballroom floor, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> for a crowd that wants to sing, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> when the committee wants the after-party to be the thing people describe, or the <a href=\"/ensembles/dj/\">DJ</a> on its own or with a live musician over the set."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Ideas for the whole evening, music and otherwise, are in <a href=\"/blog/gala-entertainment-ideas/\">gala entertainment ideas</a>. The hour after the program has <a href=\"/corporate/after-party/\">its own page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The acts, by slot. Links ACROSS to the ensemble pages.",
+    "_file": "03-shapes.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "title": "Related evenings",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "When the award night belongs to a company rather than a cause, the <a href=\"/corporate/\">corporate page</a> covers vendor setup and purchase orders, and <a href=\"/corporate/client-dinners/\">client dinners</a> have their own page. When it’s the last night of a retreat, the <a href=\"/corporate/retreats/\">retreats page</a> covers the mountain evening.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Venues as the market's places, never as our history.",
+    "_file": "04-where.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Questions",
+       "title": "Gala and award night questions",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to the venue as it stands, and more booking questions are on the <a href=\"/planners/faq/\">planners question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-25",
+       "items": [
+        {
+         "q": "Do you play during the live auction and the paddle raise?",
+         "a": "Only if the auctioneer wants music low under the bidding, and most don't. The usual plan is silence through the auction, a short piece as each lot closes if the program calls for it, and the band back in when the auctioneer hands the microphone back. The auctioneer gets a microphone of their own."
+        },
+        {
+         "q": "How loud is the music at dinner?",
+         "a": "Quiet enough that a table of ten talks across it, and the band stops for every speaker. After the last award it plays like a dance band, up to whatever the venue allows. Give us the venue's sound cap and curfew when we sign and the night is built under them."
+        },
+        {
+         "q": "What do you need from the venue?",
+         "a": "A dock time and an elevator window if it's a hotel, one or two dedicated 20-amp circuits depending on the size of the act, the sound cap and curfew if there are any, and the run of show with the program's cues on it. The W-9, the certificate of insurance and one itemized invoice come with the contract."
+        },
+        {
+         "q": "Do you work with our emcee and auctioneer?",
+         "a": "Yes. The run of show is planned with whoever is running the program, the emcee gets an announcement microphone of their own, and the bandleader takes cues from the emcee on the night. If your emcee is a board member doing it for the first time, we're glad to walk through it with them before the doors open."
+        },
+        {
+         "q": "How far ahead do galas book entertainment?",
+         "a": "Committees usually work a year out, because the venue and the honorees are settled first and the entertainment follows. Tell us the date and the venue, and we'll come back with a recommendation and a price."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-28",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the run of show and we'll plan the music around every cue.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/changes-jazz-trio/",
+   "title": "Changes Jazz Trio: modern jazz trio for hire in Denver | Signet Artists",
+   "description": "A Denver guitar trio playing the standards with a modern edge: guitar, fretless bass and drums for cocktails, dinners and galas, or a quartet with saxophone.",
+   "titleExact": true,
+   "ogImage": "img/hero.jpg",
+   "nav": "music",
+   "breadcrumb": "Changes Jazz Trio",
+   "schema": {
+    "service": {
+     "name": "Modern jazz trio",
+     "serviceType": "Modern jazz guitar trio for cocktail hours, dinners, galas and private events",
+     "description": "A Denver jazz guitar trio, Doug Emery, Sri Viswanath and Brian Jaffe, playing the standards with a modern edge as a trio or as a quartet with saxophone, for cocktail hours, dinners, galas, weddings and private events across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "changes-jazz-trio"
+   },
+   "notes": {
+    "_note": "Authored 2026-09-16, the first page published with the signet-new-act skill (scripts/new_act_page.py --kind ensembles --shape artist). A named group of three equals at an ensembles URL, the same placement as Dirty Flamenco; acts.json changes-jazz-trio.page points here so every card and llms line follows. The hero is the empty footage slot over the interim still: their site has no photograph and no footage, only two studio recordings, which the hero note links. No prices anywhere.",
+    "reader": "Whoever wants real jazz under a dinner, a cocktail hour or a gala, played by musicians they can look up first.",
+    "_title_note": "54 chars before the pipe. 'for hire' because the bare Denver jazz SERP is clubs (the jazz-duo-trio page's lesson); the name leads because the name is the product.",
+    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Modern jazz",
+       "slab": true,
+       "title": "Changes Jazz Trio",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Doug Emery, guitar. Sri Viswanath, fretless bass. Brian Jaffe, drums. Standards, trio to quartet.",
+       "lede": "A standard you know, taken somewhere new: the guitar stretches the melody, the fretless bass slides under it, and the drums stay quiet enough to talk across. Changes is a Denver guitar trio playing the standards with a modern edge, and a saxophone joins when the evening wants a featured set.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=changes-jazz-trio",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ],
+       "headingNote": "Hear them first: <a href=\"https://changesjazz.base44.app/music\">two studio recordings on their site</a>, with the three bios beside them."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/hero.jpg",
+        "alt": "An empty stage set with drums, keys and microphones.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name is\n     the h1, the byline names the three players (a group of equals, so acts.json\n     carries a `byline` instead of a front person), the blurb is the lede. The\n     footage slot is the act_hero empty-video pattern over the interim still,\n     because the trio has published no photograph and no footage: their site's\n     images are generated illustrations and were not taken. The note links the\n     two studio recordings on their site, which is the look-up for this act.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants real jazz under a dinner or a gala, from musicians they can look up. 'A named act' left the act-face (taxonomy); the identity section kept the playing and the bios and lost the paragraphs restating the hero, the ladder and the hear-them-first link; pointer sentences left the occasion rows.\n\nThe named-acts promise on /music/ is \"you can go and look them up\";\n           this is the look-up. Verified against their site 2026-09-16.",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, the same block the other act pages carry.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "They play the standards the way a working trio plays them, with the arrangements left open and a little risk in the solos. Under a dinner they sit at the level of the conversation, and when the crowd turns to listen, they give it something to listen to.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Doug Emery studied guitar performance at Berklee, played more than three thousand dates across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri Viswanath spent decades as a working bassist in New York, on stages from Smalls to the Plaza Hotel, and played on Radha Thomas’s 2019 tribute to Chet Baker. Brian Jaffe came through the Lamont School of Music at the University of Denver and has played more than a hundred theater productions in the Denver pit orchestras since 2011.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.",
+    "_file": "02-identity.html"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "changes-jazz-trio",
+    "title": "Configurations",
+    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "_notes": "The configuration ladder, rendered from acts.json by the token.",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books Changes.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
+         "text": "The trio sits under the conversation with the drums played soft, and the quartet with saxophone turns the same booking into a featured set when the dinner has a program in it. It books like the rest of a <a href=\"/corporate/\">company event</a>, on one contract with the paperwork your office needs."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "The trio plays the hour after the ceremony at a volume guests can talk across, and a modern take on the standards suits a couple who want jazz in the hour without the lounge feel."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "A listening act for the stretch between the seating and the program. The quartet with saxophone is the size for a gala that wants the music to be one of the things guests remember, and it stops on the emcee’s cue like every act on the roster."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and milestone birthdays</a>",
+         "text": "A dinner party for thirty, or a sixtieth birthday that wants real jazz in the house. The trio fits a home or a patio."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the ladder lands: up-links to the occasion pages this trio suits,\n     written as repertoire and format range only. Four nights a modern jazz\n     trio actually plays, which is a different four from the blues and rock\n     pages. Down-link idiom mirrors the corporate hub's def-list block.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Changes Jazz Trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>. The classic trio lineups are in <a href=\"/blog/what-is-a-jazz-trio/\">what is a jazz trio</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What does Changes Jazz Trio play?",
+         "a": "Jazz standards, played by a Denver guitar trio with a modern edge: guitar, fretless bass and drums, with the arrangements left open. It's instrumental, so it sits under a dinner, and it holds a listening crowd when the evening gives it one. Their site carries two studio recordings."
+        },
+        {
+         "q": "How is this different from the jazz duo?",
+         "a": "The jazz duo is upright bass and guitar playing standards for cocktails and dinner, with the musicians matched to your date. Changes is a working trio with drums and a fretless bass, a more modern sound, and three musicians you can look up before you book."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "Under cocktails and dinner the trio plays at the level of the table's conversation, with the drums kept soft. A featured set with the saxophone is louder on purpose, because that's the part people stop to hear. If your venue has a sound limit, give us the number and the set is built under it."
+        },
+        {
+         "q": "Where is the trio based?",
+         "a": "Denver. All three musicians live and work in the Denver metro, and the trio plays the Front Range and the mountain towns."
+        },
+        {
+         "q": "Can Changes play outdoors?",
+         "a": "Yes, with a covered, level and dry spot and power run to it. We agree a plan for moving indoors with you ahead of time, because Colorado evenings turn fast."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block and the\n     FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the night, and Changes brings the trio or the quartet.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing\n     follows it.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

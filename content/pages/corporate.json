@@ -1,0 +1,552 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/",
+   "title": "Corporate entertainment company in Denver: live music for company parties, galas and after-parties | Signet Artists",
+   "description": "A Denver corporate entertainment company: live bands, ensembles, a DJ and live band karaoke for office holiday parties, galas and award nights, client dinners, mountain retreats and after-parties, all on one contract.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate event entertainment",
+     "serviceType": "Live music for office holiday parties, galas and award nights, client dinners, corporate retreats and after-parties",
+     "description": "A Denver corporate entertainment company: live bands, small ensembles, a DJ and live band karaoke for corporate events across Colorado, with a certificate of insurance with the contract and net-30 on approval.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   },
+   "notes": {
+    "reader": "Whoever books entertainment for a company, from the holiday party to the gala, the client dinner and the retreat.",
+    "_note_2026_09_14": "Retitled and re-led from the corporate demand report (2026-09-14): the growing search is 'corporate entertainment company', related queries are provider-shaped (company, agency, service, hire), and the buyer says 'entertainment' and 'evening', never 'music'. Two spokes added: galas-and-awards and after-party. Daniel's h1 and lede from the 2026-08-27 pass are untouched.",
+    "schema_reviews_note": "EMPTIED 2026-08-27. The Annette M. review (5 stars, 2026-08-21) moved onto the visible page in 01b-shapes.html: no buyer could read it here, and first-party Review markup on your own LocalBusiness is the self-serving pattern Google's review-snippet guidelines reject. Third-party profiles (Google Business Profile, marketplaces) are where star markup belongs; do not repopulate this key."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "headingStyle": "max-width: 51.5rem;",
+       "eyebrow": "Corporate events",
+       "slab": true,
+       "title": "Everyone remembers <em>that one party</em>.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "titleStyle": "max-width: 51.5rem;",
+       "lede": ". . .The one where <em></em> everyone <em>actually</em> danced, and few who usually leave after dinner were still hanging all the way to the end. That party is a <strong>bookable</strong> thing, and it comes down to how sensitive the entertainment is to the flow of the evening.",
+       "ledeStyle": "max-width: 51rem;",
+       "headingText": [
+        {
+         "html": "Signet Artists is a Denver corporate entertainment company: bands, small ensembles, DJs and even live band karaoke. An excellent choice for office holiday parties, galas and award nights, client dinners, mountain retreats and after-parties. Our musicians have done this for Amazon, NBCUniversal, Charles Schwab and the Denver Art Museum, just to name a few.",
+         "style": "max-width: 51rem;"
+        }
+       ],
+       "image": {
+        "src": "/img/unsplash/photo-1515169067868-5387ec356754.jpg",
+        "alt": "",
+        "width": "1600",
+        "height": "1067",
+        "loading": "lazy",
+        "decoding": "async",
+        "style": "margin-top: 2rem; width: 43.5rem; height: auto;"
+       },
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Copy pass batch 4, 2026-09-24. Agent sections only: Daniel's opener, his shapes heading and his program paragraphs are untouched. The pointer clauses left the intro; the occasion rows say what each occasion is instead of what 'that page covers'; the finance section is the FAQ; the mountain section no longer points at 'the rates on the pricing page' (there are none); dBA went to words with the figure beside it for planners.\n\nRewritten 2026-08-27 on the de-prescription pass: the retold-hour\n           thesis scripted the buyer's evening. The claim that survives is the\n           demand fact; the pricing differentiator moves up into the lede.\n\nRewritten 2026-09-14 from the corporate demand report. The buyer who\n           searches is looking for a corporate entertainment company, not a band,\n           and the occasions below are the ones Colorado vendors actually get\n           booked for. No count of acts, per the 2026-09-07 rule.\n\nbtn-row added 2026-08-20 with the SEO buildout: the conversion spine\n           wants the pricing page reachable in the first screen of every occasion\n           page. Copy above is unchanged.\n\nThe finance section lived here, directly under the intro, until 2026-08-20.\n     The buyer-path audit called the inversion: the page promised the retold\n     hour and then led with net-30. It now sits in 02b-finance.html, after the\n     priced nights and the occasions.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "PagesAndPosts",
+   "props": {
+    "id": "PagesAndPosts-5",
+    "band": "ruled",
+    "heading": "more details about our corporate events",
+    "groups": [
+     {
+      "label": "Occasions",
+      "pages": [
+       {
+        "path": "holiday-party"
+       },
+       {
+        "path": "galas-and-awards"
+       },
+       {
+        "path": "client-dinners"
+       },
+       {
+        "path": "after-party"
+       },
+       {
+        "path": "retreats"
+       }
+      ]
+     },
+     {
+      "label": "Holiday parties by city",
+      "pages": [
+       {
+        "path": "holiday-party/denver"
+       },
+       {
+        "path": "holiday-party/colorado-springs"
+       }
+      ]
+     },
+     {
+      "label": "Retreats by town",
+      "pages": [
+       {
+        "path": "retreats/vail"
+       },
+       {
+        "path": "retreats/beaver-creek"
+       },
+       {
+        "path": "retreats/breckenridge"
+       },
+       {
+        "path": "retreats/aspen"
+       }
+      ]
+     },
+     {
+      "label": "By act",
+      "pages": [
+       {
+        "path": "jazz-band"
+       }
+      ]
+     }
+    ],
+    "_notes": "The list of every page under this hub, 2026-10-03. Generated by build.py\n     (HUB_INDEX): the pages grouped, then the hub's articles. It sits directly\n     under the opening because a visitor who clicks this hub in a breadcrumb\n     is looking for the other pages in it. To move it, rename this file; the\n     sections build in filename order.",
+    "_file": "01-pages.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-8",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "blocks": [
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-6",
+       "html": "“[our act] naturally read the vibe and flow of the crowd, adjusting intensity and volume of the performance accordingly. He checked in during the event to ensure he was delivering what was asked for, but there was no direction needed.”",
+       "by": "Lindy R., a four-hour outdoor company picnic for 101 to 150, October 2025."
+      }
+     }
+    ],
+    "_notes": "The client strip, 2026-09-03. Same block as the home page, minus the\n     venue sentence: a corporate buyer reads Amazon and Schwab, not Cervantes.\n     Directly under the intro so the names are on the first screen with the\n     rate-card button, ahead of the priced shapes.\n\nAdded 2026-09-06. Provenance in _src/data/reviews.json. This one sits\n         under the logo strip on purpose: the NBCUniversal mark is two inches\n         above it and this is the client saying what happened at that booking,\n         so the credit and the review carry each other on one screen. It is\n         the only review on the profile that corroborates a name the site\n         already claims. Excerpted; the cuts are recorded in the ledger.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-9",
+       "headingStyle": "max-width: 49.5rem;",
+       "title": "A Few Examples of who's to book",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 49.5rem;",
+       "lede": "You also get sound support and a personal point of contact for the night - spec'd in every booking."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-10",
+       "source": "picks",
+       "picks": [
+        {
+         "act": "tejas-singh",
+         "config": "quartet",
+         "kicker": "The office holiday party",
+         "why": "Whether Tejas is performing solo, duo or has a full band for a bigger occasion, you're going to get sophisticated covers of some of your guests' favorite tunes. . . and more than one aside in the conversation saying \"These guys are really good\"",
+         "face": "config"
+        },
+        {
+         "act": "jazz-duo",
+         "config": "duo",
+         "kicker": "The client dinner",
+         "why": "This is the act to book when you want sophistication without drawing an insane amount of attention. We know your conversations are the main event, so the music sits under it for the whole night and nobody has to raise their voice to be heard across the table.",
+         "face": "config"
+        },
+        {
+         "act": "dirty-flamenco",
+         "config": "trio",
+         "kicker": "themed association event",
+         "why": "Bring a little Latin flavor to an evening. Flamenco / Spanish guitar with a soulful, danceable vibe in the trio configuration, or a mysterious European guitar tradition punctuating the evening as a soloist. ",
+         "face": "config"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-11",
+       "html": "“Their music created the perfect atmosphere, elegant, sophisticated and beautifully understated, while still adding something truly special to the evening. They were professional, polished and elevated the entire event.”",
+       "by": "Annette M., August 2026"
+      }
+     }
+    ],
+    "_notes": "The small-format examples, added 2026-08-17 with the Q4 refocus. The page\n     opened on the after-dinner hour and then went straight to finance, with\n     nothing in between saying what a corporate booking actually is or costs.\n     Rendered from site.json corporateShapes by build.py: occasion and copy are\n     data, act name and configuration resolve off acts.json. The price columns\n     came off 2026-09-04 with the published card.\n\nThe first review, verbatim, made visible 2026-08-27. It sat in this\n         page's schema.json as Review markup no buyer could read, which is\n         also the self-serving pattern Google's guidelines reject. Attribution\n         as received; no platform link, the paid channel stays unrouted.",
+    "_file": "01b-shapes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Common types of corporate occasions",
+       "title": "Five formats for your corporate event",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "Booking from late November into January, the holiday party is something special for your employees and associates.",
+         "termStyle": "zoom: 1.3;"
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "An evening built around your programming (likely including remarks, an auction, videos and walks to the stage). We work together on cues so the music flows seamlessly with the night.",
+         "termStyle": "zoom: 1.3;"
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "Dinners where the conversation is the event. Many times we recommend a jazz duo playing low enough to add a sense of class to the ambience without demanding attention away from developing relationships.",
+         "termStyle": "zoom: 1.3;"
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Corporate retreats</a>",
+         "text": "Retreats and incentive trips in the mountain corridor, Vail through Aspen, and the Colorado foothills. We create the evening to meet the expectations of a group that flew in for it.",
+         "termStyle": "zoom: 1.3;"
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties</a>",
+         "text": "You know your people <em>better than we do</em> - and some people like to <strong>keep going</strong> after the first party ends. The hour after a conference dinner, a gala program or the holiday party’s speeches, with a DJ alone (or a DJ plus a live musician over top), a band that lets the crowd sing, or live band karaoke.",
+         "termStyle": "zoom: 1.3;"
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "A jazz band across the whole evening, from the moment the doors open to the after-party, is on the <a href=\"/corporate/jazz-band/\">corporate jazz band page</a>. What each size costs in this market is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>. Want some more ideas? Check out our thoughts on the whole evening in <a href=\"/blog/corporate-event-entertainment-ideas-denver/\">corporate event entertainment ideas in Denver</a>. More ideas for a fundraiser or an award night are in <a href=\"/blog/gala-entertainment-ideas/\">gala dinner entertainment ideas</a>. Even more out of the box: you can book a seventy-five-minute corporate sound bath for a wellness week, an offsite or a transition day, with the whole team enjoying some deep, meditative rest. Find out more on the <a href=\"/daytime/sound-bath/\">daytime sound bath page</a>. A <a href=\"/private-parties/retirement-party/\">retirement party</a> the company throws is one of the things we would love to help you spoil a VIP with.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Added 2026-08-20 with the SEO buildout as the down-link block for three\n     children. Extended 2026-09-14 from the corporate demand report: galas and\n     award nights, and the after-party, are the two occasions Colorado vendors\n     get booked for and nobody writes a page about. Body prose per the\n     internal-link contract, two sentences of real description per child.\n     Firstwater joined the closing note 2026-09-19: not a sixth occasion page,\n     the one act on the roster a wellness week or a transition day books.",
+    "_file": "01c-occasions.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "headingStyle": "max-width: 47.5rem;",
+       "eyebrow": "Video Clips",
+       "title": "Get the vibe: Tejas Singh original",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Solo to quartet version of Tejas can be available for your office holiday party.",
+       "ledeStyle": "max-width: 47.5rem;"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-20",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+         "title": "Tejas Singh performing live at a Sofar Sounds session",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
+    "_file": "01d-footage.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-23",
+       "html": "We Work around your event's program",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Every great corporate evening runs on great programming. You've got remarks from leadership, maybe an an award or auction, a window of time where people need to hear each other talk. Dinner and networking are served with live music at conversation volume, and the night can get loud later, when loud is exactly the point.",
+       "cls": "prose",
+       "style": "max-width: 63rem;"
+      }
+     },
+     {
+      "type": "Picture",
+      "props": {
+       "id": "Picture-25",
+       "image": {
+        "src": "/img/unsplash/photo-1700514077430-3659e38eb5e7.jpg",
+        "alt": "",
+        "width": "1600",
+        "height": "1067",
+        "loading": "lazy",
+        "decoding": "async",
+        "style": "width: 41.5rem; height: auto; margin-top: 2rem;"
+       }
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "The music stops while your CEO is still three steps from the microphone. Transitions are planned with the run of show.",
+       "cls": "prose",
+       "style": "max-width: 62.5rem;"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-27",
+       "html": "We work awards dinners, auctions, remarks and a video the same way: music up to the moment, silence through it, music again when the applause starts. If the program wants a louder set, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is its own act: the band plays the hits on its own and hands the mic to whoever wants a song.",
+       "cls": "prose",
+       "style": "max-width: 63rem;"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Galas and fundraisers book this way too, at the same sizes. A reception set plays through arrival, dinner music runs around the program, and the auction, the paddle raise and the thank-yous are treated as cues the band works around. The <a href=\"/corporate/galas-and-awards/\">galas and award nights page</a> covers every cue.",
+       "cls": "prose",
+       "style": "max-width: 60.5rem;"
+      }
+     }
+    ],
+    "_notes": "The program section. The middle paragraph is Daniel-approved verbatim\n     (WEBSITE-PLAN.md §1); the third extends the section per plan §4.\n\nGalas line added 2026-08-20 per the SEO buildout: galas framed at\n         small-format scale, reception sets and dinner music around a program,\n         never gala-scale production.",
+    "_file": "02-program.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-37",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "Playing the mountain corridor",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-32",
+       "html": "Mountain venues run on their own rules, and where there’s a sound cap we want the number in the contract: a band that knows the limit in advance chooses arrangements and instrumentation that stay inside it, which sounds better than a band turning down. Every town’s cap, cited and dated, is on the <a href=\"/planners/mountain/\">mountain page</a>.",
+       "cls": "prose",
+       "style": "max-width: 64rem;"
+      }
+     },
+     {
+      "type": "Picture",
+      "props": {
+       "id": "Picture-33",
+       "image": {
+        "src": "/img/unsplash/photo-1578451779798-c250e75fd0e1.jpg",
+        "alt": "",
+        "width": "1600",
+        "height": "2400",
+        "loading": "lazy",
+        "decoding": "async",
+        "style": "width: 29.5rem; height: auto; margin-top: 2rem;"
+       }
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-34",
+       "html": "We settle setup with the venue before the day, from dock times to where the cases sit during dinner, and all of it is <a href=\"/planners/technical/\">written down by band size</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Travel is its own line on the quote, and so is a night’s lodging past the passes. The <a href=\"/corporate/retreats/\">retreats page</a> covers the resort towns one by one.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Added per WEBSITE-PLAN.md §4: mountain-corridor logistics as a competence\n     proof, written for the venue manager or DMC reading it. Facts only.",
+    "_file": "03-mountain.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-42",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-38",
+       "html": "Corporate booking questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-39",
+       "html": "The full set, from substitutions to decibel caps, is on the <a href=\"/planners/faq/\">planners question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-40",
+       "items": [
+        {
+         "q": "What does live music cost for a corporate event in Denver?",
+         "a": "It depends on the size of the act, the hours it plays and the date. We don't publish prices, because one figure would be wrong for most of the nights somebody read it on. What live music costs across this market is on our pricing page, with its sources. Send the date, the venue and the guest count and you get our number for that night."
+        },
+        {
+         "q": "How far in advance should we book?",
+         "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Client dinners and retreats run on shorter windows, and any date gets a straight yes or no by email."
+        },
+        {
+         "q": "Can you work with our procurement process?",
+         "a": "Yes. We can be set up as a vendor, quote against a purchase order, and invoice net-30 on approval. A certificate of insurance naming your venue, a W-9 and one itemized invoice, with everything on separate lines, arrive in the same email as the contract. Vendor onboarding is usually the slowest step, so start it early."
+        },
+        {
+         "q": "How loud is the band during dinner and networking?",
+         "a": "Quiet enough to talk across without raising your voice, about 60 to 65 dBA at the nearest table for a planner who wants the number. The dance floor later in the night runs around 88 to 95 dBA, when loud is the point. If your venue enforces a cap, give us the number when we sign and the night is built under it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Added 2026-08-20 with the SEO buildout: the page FAQ, rendered from this\n     dir's schema.json so the visible block and the FAQPage markup can never\n     drift apart.",
+    "_file": "03b-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-45",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-43",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about your event, and we'll help put the night together.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "04-close.html"
+   }
+  }
+ ]
+}

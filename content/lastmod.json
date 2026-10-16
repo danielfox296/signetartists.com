@@ -1,0 +1,692 @@
+{
+ "404.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/404.json",
+  "sha1": "7eb2166de47b72ae19aa981dcb02431b34f0cacd"
+ },
+ "about/index.html": {
+  "date": "2026-10-10",
+  "file": "content/pages/about.json",
+  "sha1": "30eab2a4c0ee6d7e219a334ec6e0623bd08acba7"
+ },
+ "artists/firstwater/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/artists-firstwater.json",
+  "sha1": "e8e9d910cda33ecb7b529138d8e5ecc8700c9e31"
+ },
+ "artists/last-consulate/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/artists-last-consulate.json",
+  "sha1": "4269be0e020897f21fe65565eaf972bb7d330d49"
+ },
+ "artists/rene-moffatt/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/artists-rene-moffatt.json",
+  "sha1": "6f718c267fb3dae9293cc073463495830e8420f6"
+ },
+ "artists/tejas-singh/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/artists-tejas-singh.json",
+  "sha1": "d7aa915f8deebd38d020337d64fc1514e9e53416"
+ },
+ "artists/tony-medina/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/artists-tony-medina.json",
+  "sha1": "7397df8ad3b6cdc1e3cf01611f511536b9fd3c93"
+ },
+ "blog/index.html": {
+  "date": "2026-10-04",
+  "file": "content/pages/blog-index.json",
+  "sha1": "c9c774584c091c4d04e8b167d4c0e01390e795a6"
+ },
+ "contact/index.html": {
+  "date": "2026-09-23",
+  "file": "content/pages/contact.json",
+  "sha1": "54fff13e1eb8bef15d8b7017009e9d8c94ddd750"
+ },
+ "corporate/index.html": {
+  "date": "2026-10-09",
+  "file": "content/pages/corporate.json",
+  "sha1": "bbf8b8475dad8b2767a540fa668f58f91f167b8e"
+ },
+ "corporate/after-party/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-after-party.json",
+  "sha1": "89611980b5f02a1f423ab35d09b2f3ee276a69c7"
+ },
+ "corporate/client-dinners/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/corporate-client-dinners.json",
+  "sha1": "5ea8f2ef21b3787df03f068b2ad3e4379f000717"
+ },
+ "corporate/galas-and-awards/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/corporate-galas-and-awards.json",
+  "sha1": "d25e496a3c2420dcbd682a50d91c60e282c6415f"
+ },
+ "corporate/holiday-party/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/corporate-holiday-party.json",
+  "sha1": "db8b942ceedceb642d0f83efbc652e19b79d742e"
+ },
+ "corporate/holiday-party/colorado-springs/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-holiday-party-colorado-springs.json",
+  "sha1": "ddc1ed7c6094083aba87bf5974cd1c8bd5955ffa"
+ },
+ "corporate/holiday-party/denver/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-holiday-party-denver.json",
+  "sha1": "6868ead677487f890a929d434b2e430f70289cd4"
+ },
+ "corporate/jazz-band/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-jazz-band.json",
+  "sha1": "c4670722fbaa75d3a48b4fbf69c7a618ea9e17da"
+ },
+ "corporate/retreats/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-retreats.json",
+  "sha1": "243d2b9aca8f3f8b22b54b9ac9575a0aa63abd2a"
+ },
+ "corporate/retreats/aspen/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-retreats-aspen.json",
+  "sha1": "27b2e6fb3e85e7ca16afaeff82422979bba9a4ad"
+ },
+ "corporate/retreats/beaver-creek/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-retreats-beaver-creek.json",
+  "sha1": "b58df051b6dd93da1af27883d06e043e029fbdb1"
+ },
+ "corporate/retreats/breckenridge/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-retreats-breckenridge.json",
+  "sha1": "30b711912829c8cffcf9c88774fa8ecf542719bf"
+ },
+ "corporate/retreats/vail/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/corporate-retreats-vail.json",
+  "sha1": "5033c9e17affe8bc0f721264118a1df941f22748"
+ },
+ "daytime/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/daytime.json",
+  "sha1": "8da4101e6324a506b4f194873513aab7fb6751d7"
+ },
+ "daytime/brunch/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/daytime-brunch.json",
+  "sha1": "cc66d4495c786859909cbad4fc242899a2544d09"
+ },
+ "daytime/community-programs/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/daytime-community-programs.json",
+  "sha1": "37137acfc66c0ad05938c67af2b7a12190303dfe"
+ },
+ "daytime/funerals-and-memorials/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/daytime-funerals-and-memorials.json",
+  "sha1": "92138c878d1cf5c8bc0edb90755fa56bee67813e"
+ },
+ "daytime/senior-living/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/daytime-senior-living.json",
+  "sha1": "e75d3198a584c99eddfbf1843b0feca929dca8c9"
+ },
+ "daytime/sound-bath/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/daytime-sound-bath.json",
+  "sha1": "82e31bce4a3ee892787bf64c5aebb930984e4089"
+ },
+ "ensembles/acoustic-duo/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/ensembles-acoustic-duo.json",
+  "sha1": "ad06b6aae8e7b9da1275742d9a19c7c74e0ee2bb"
+ },
+ "ensembles/americana-band/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-americana-band.json",
+  "sha1": "6ed17203fe1a0a62b2004e2716f2072177f40d86"
+ },
+ "ensembles/beatles-sing-along/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/ensembles-beatles-sing-along.json",
+  "sha1": "10f6e522a1237dea610a7fbb3a14c1d11653caa7"
+ },
+ "ensembles/changes-jazz-trio/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-changes-jazz-trio.json",
+  "sha1": "739e530bf24b4dc7714a6373cd35210cb229a8c4"
+ },
+ "ensembles/christmas-jazz-trio/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/ensembles-christmas-jazz-trio.json",
+  "sha1": "f22b864e6888aa30b19240c557b6124db02eb148"
+ },
+ "ensembles/dj/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-dj.json",
+  "sha1": "f6fb0f22f1b0db79c5be1354428f7264868b44b6"
+ },
+ "ensembles/flamenco-trio/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/ensembles-flamenco-trio.json",
+  "sha1": "c3e87c45d6094608430874ade80ebfb86ab99f35"
+ },
+ "ensembles/funk-band/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-funk-band.json",
+  "sha1": "0e4bf58a8ca486eb3ecc29930dfda5d6126eb9de"
+ },
+ "ensembles/jazz-duo-trio/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-jazz-duo-trio.json",
+  "sha1": "dbe963624d14f84e25c17aafd7ae002641217b04"
+ },
+ "ensembles/live-band-karaoke/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-live-band-karaoke.json",
+  "sha1": "69623590295ee221ec08cd47b7a4759278d88a8c"
+ },
+ "ensembles/singer-guitarist/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/ensembles-singer-guitarist.json",
+  "sha1": "c68fb2cb9c6b3e976a7c8c8f8279be5103532779"
+ },
+ "ensembles/solo-guitarist/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/ensembles-solo-guitarist.json",
+  "sha1": "d5eb360470f087f4f4e5779d1240ea10ac32ec27"
+ },
+ "ensembles/solo-piano/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-solo-piano.json",
+  "sha1": "96d75870a67648461392b7153d102ac9b67fab07"
+ },
+ "ensembles/soul-band/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-soul-band.json",
+  "sha1": "50ad4b4b1f2af7d9968b7cfaaa716125b6c15961"
+ },
+ "ensembles/spanish-guitarist/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/ensembles-spanish-guitarist.json",
+  "sha1": "915ccd0aec24b944bbeebcc397934603947aff75"
+ },
+ "ensembles/string-quartet/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-string-quartet.json",
+  "sha1": "87cd8e5eb7ba71f95c8ac966c21cfea65068f35c"
+ },
+ "ensembles/yacht-rock/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/ensembles-yacht-rock.json",
+  "sha1": "2cda418b1b45f8e6e45eb4321dfb4333f94be439"
+ },
+ "for-artists/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/for-artists.json",
+  "sha1": "87f0f94de5959505dfb9e50729aa3aeb4404418f"
+ },
+ "guides/live-music-cost-colorado/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/guides-live-music-cost.json",
+  "sha1": "f69a806510cc3273e6f6770fec3e995ed4cd8eb3"
+ },
+ "index.html": {
+  "date": "2026-10-09",
+  "file": "content/pages/home.json",
+  "sha1": "e7a6200b42fa280d67076eefd42e78968e9b9530"
+ },
+ "jam/index.html": {
+  "date": "2026-09-22",
+  "file": "content/pages/jam.json",
+  "sha1": "5e8a2a9f3a2663a5b002239bc9f8a5664b1657dc"
+ },
+ "live-music-program/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/live-music-program.json",
+  "sha1": "d7850b5f5005a15772322bcd4b8c00c6f8511f9f"
+ },
+ "music/index.html": {
+  "date": "2026-10-09",
+  "file": "content/pages/music.json",
+  "sha1": "d9f1f013cad856ae48692ee01d4629300ad32761"
+ },
+ "planners/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/planners.json",
+  "sha1": "44bb5770f67f6ab1974b10391cec740f32deff1d"
+ },
+ "planners/booking/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/planners-booking.json",
+  "sha1": "09faab8b4d745c3721257c102120bcb674bfbd65"
+ },
+ "planners/faq/index.html": {
+  "date": "2026-09-22",
+  "file": "content/pages/planners-faq.json",
+  "sha1": "09c2a3ccbff1146c67fd64353324b6c6dac43c8f"
+ },
+ "planners/mountain/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/planners-mountain.json",
+  "sha1": "f1bfc731745f3bf50229a9eea7edadb8b32217d3"
+ },
+ "planners/run-of-show/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/planners-run-of-show.json",
+  "sha1": "ee14eb6da4247739497342846e76105a3aabbb21"
+ },
+ "planners/technical/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/planners-technical.json",
+  "sha1": "c085bd6972597fca37f5718fa5092b852fcef03c"
+ },
+ "preferred-vendors/index.html": {
+  "date": "2026-09-22",
+  "file": "content/pages/preferred-vendors.json",
+  "sha1": "6f3638524352b2600f91f590acd1ef0bfffb9ed0"
+ },
+ "preferred-vendors/join/index.html": {
+  "date": "2026-09-22",
+  "file": "content/pages/preferred-vendors-join.json",
+  "sha1": "dfdda7ad9fad91605701700a7fbebb67c50d8e65"
+ },
+ "pricing/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/pricing.json",
+  "sha1": "3a07a3242e8044bfa3993e53a4f330863af80973"
+ },
+ "private-parties/index.html": {
+  "date": "2026-10-04",
+  "file": "content/pages/private-parties.json",
+  "sha1": "88aaabe6382a7054f5068b9ca9ecbfdb4c0478a2"
+ },
+ "private-parties/anniversary-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-anniversary-party.json",
+  "sha1": "5749db823e77e61923026c4f59bcc192ad00eff5"
+ },
+ "private-parties/backyard-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-backyard-party.json",
+  "sha1": "bec6c9ee5434852f3bcc95ef6dfd4bd970252eba"
+ },
+ "private-parties/birthday-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-birthday-party.json",
+  "sha1": "22000e97cf2dc0db82e8d047881b59023832a4e8"
+ },
+ "private-parties/boulder/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-boulder.json",
+  "sha1": "c6deae9fad7ce8ae8dbc4a8184df3feb2f20d888"
+ },
+ "private-parties/colorado-springs/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-colorado-springs.json",
+  "sha1": "c75541e7be17061def7a26a2c89f39e148eb1397"
+ },
+ "private-parties/denver/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-denver.json",
+  "sha1": "44983eeaa51d46efb0e0d7d00072bbfad869b13d"
+ },
+ "private-parties/engagement-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-engagement-party.json",
+  "sha1": "ed2f484cabe4fc936a9586e8c3daa428513d359a"
+ },
+ "private-parties/graduation-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-graduation-party.json",
+  "sha1": "e5da3cff30cb5d322e37b58ae31b0b03f3859e53"
+ },
+ "private-parties/halloween-party/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/private-parties-halloween-party.json",
+  "sha1": "c3d7454ec83439ebb2abc6ba86c375654c54a784"
+ },
+ "private-parties/holiday-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-holiday-party.json",
+  "sha1": "0166cde963329fa2511dcaa92681bb04372bb765"
+ },
+ "private-parties/proposals/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/private-parties-proposals.json",
+  "sha1": "da7beb5c33f49c2905471de5ce02bfb07ee37254"
+ },
+ "private-parties/retirement-party/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-retirement-party.json",
+  "sha1": "1b573d502970718693f6d473b69ac765bc454fcd"
+ },
+ "private-parties/showers/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/private-parties-showers.json",
+  "sha1": "131fb38d3772ddcddd6356e8f58a80edb03b15ea"
+ },
+ "repertoire/index.html": {
+  "date": "2026-10-09",
+  "file": "content/pages/repertoire.json",
+  "sha1": "35e9da4555882d1cfa32720321fda5b051bdb1b4"
+ },
+ "sitemap/index.html": {
+  "date": "2026-09-22",
+  "file": "content/pages/sitemap.json",
+  "sha1": "0d33a52623c049697ff98901fe5a80ca83952388"
+ },
+ "thanks/index.html": {
+  "date": "2026-09-22",
+  "file": "content/pages/thanks.json",
+  "sha1": "835f0b78a8bba566671dc848f863ea66596e4ec9"
+ },
+ "weddings/index.html": {
+  "date": "2026-10-03",
+  "file": "content/pages/weddings.json",
+  "sha1": "b49174b5ec75ea94f646fb388b5feb7a2584663b"
+ },
+ "weddings/boulder/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/weddings-boulder.json",
+  "sha1": "66f4a990bb2a8f08c134cf0a3abc63928715a917"
+ },
+ "weddings/ceremony/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/weddings-ceremony.json",
+  "sha1": "fb73af88fc03579ddd3202e300063111d995d249"
+ },
+ "weddings/cocktail-hour/index.html": {
+  "date": "2026-09-29",
+  "file": "content/pages/weddings-cocktail-hour.json",
+  "sha1": "5826b3125e324670f88eaee7913c941e562dfd47"
+ },
+ "weddings/cocktail-hour/denver/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/weddings-cocktail-hour-denver.json",
+  "sha1": "5664c71370635bdb964fcc3334cdf1f49821fcf8"
+ },
+ "weddings/colorado-springs/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/weddings-colorado-springs.json",
+  "sha1": "c95ae7b8e1809097fbebaf6bec5fb59d9e84a699"
+ },
+ "weddings/fort-collins/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/weddings-fort-collins.json",
+  "sha1": "8ef1d5d1a689817ee5d8a95ca2b5ffd3081d72f1"
+ },
+ "weddings/jazz-band/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/weddings-jazz-band.json",
+  "sha1": "825f530cb9f733273759c2b431d0283e25d16781"
+ },
+ "weddings/telluride/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/weddings-telluride.json",
+  "sha1": "e0a0dab70df55aee460f212ff09677463fd89dbe"
+ },
+ "weddings/vail/index.html": {
+  "date": "2026-09-24",
+  "file": "content/pages/weddings-vail.json",
+  "sha1": "3fd387dbf2527ab1cb495503331b8eb354fea46a"
+ },
+ "video/tejas-singh-life-crime/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/tejas-singh-life-crime.json",
+  "sha1": "0d0aa8b753fb1e9c666eef057223ace98ff776e5"
+ },
+ "video/tejas-singh-live-acoustic-singer-guitarist-private-parties-weddings/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/tejas-singh-live-acoustic-singer-guitarist-private-parties-weddings.json",
+  "sha1": "5892ee5d56cb3e02f976171d07060ba0326f6d40"
+ },
+ "video/acoustic-singer-songwriter-wedding-cocktail-hour-tejas-singh-thirty-days/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/acoustic-singer-songwriter-wedding-cocktail-hour-tejas-singh-thirty-days.json",
+  "sha1": "6d0ace01ee16cf9fc0b14e0ee01ca6176bc6d484"
+ },
+ "video/live-band-holiday-party-tejas-singh-quartet/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/live-band-holiday-party-tejas-singh-quartet.json",
+  "sha1": "10433b9ea7d452b214564e8cf3bf843209cc5f32"
+ },
+ "video/singer-guitarist-private-party-tejas-singh-live-looping-no-woman-no-cry/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/singer-guitarist-private-party-tejas-singh-live-looping-no-woman-no-cry.json",
+  "sha1": "f18e5740ae0ebd7ab6ffd0f2e02b28841b4724fd"
+ },
+ "video/jazz-duo-cocktail-hour-autumn-leaves-guitar-upright-bass/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/jazz-duo-cocktail-hour-autumn-leaves-guitar-upright-bass.json",
+  "sha1": "21559aa2242ce8516821f4c1b77ddf16bb475ba0"
+ },
+ "video/jazz-trio-cocktail-hour-sunny/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/jazz-trio-cocktail-hour-sunny.json",
+  "sha1": "5377c94c0439e7c2061bd7067b122a3b5b2533f6"
+ },
+ "video/dirty-flamenco-live-earlier-night/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/dirty-flamenco-live-earlier-night.json",
+  "sha1": "faba28e9ec0f2cdbd336b478ecffd5ed2a00a444"
+ },
+ "video/flamenco-guitar-cocktail-hour-tangos-dirty-flamenco/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/flamenco-guitar-cocktail-hour-tangos-dirty-flamenco.json",
+  "sha1": "1099aaa17f99ded836e2279b45e1f0b3be2de12f"
+ },
+ "video/flamenco-guitar-garden-party-barts-rumba-dirty-flamenco/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/flamenco-guitar-garden-party-barts-rumba-dirty-flamenco.json",
+  "sha1": "3a7eade6e014285b131aa410b64438a007911af8"
+ },
+ "video/flamenco-trio-private-party-rumba-dirty-flamenco/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/flamenco-trio-private-party-rumba-dirty-flamenco.json",
+  "sha1": "3ccd1c69bbe5b337ffbe55a854927f94cbc1bdfb"
+ },
+ "video/spanish-guitar-dinner-party-farruca-dirty-flamenco/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/spanish-guitar-dinner-party-farruca-dirty-flamenco.json",
+  "sha1": "c8c6a5a8dfb3f18d86bd103eae25ab51c3e2641e"
+ },
+ "video/spanish-guitar-private-party-sabicas-verdiales/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/spanish-guitar-private-party-sabicas-verdiales.json",
+  "sha1": "fd360461aa1b12c388a3ec6215b999bf5562fe79"
+ },
+ "video/spanish-guitar-wedding-ceremony-cant-help-falling-love/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/spanish-guitar-wedding-ceremony-cant-help-falling-love.json",
+  "sha1": "949a1eaa573d40f6d77852e3e1d72c1f13295552"
+ },
+ "video/spanish-guitar-wedding-ceremony-malaguena-dirty-flamenco/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/spanish-guitar-wedding-ceremony-malaguena-dirty-flamenco.json",
+  "sha1": "2f40726617e42d0fa283015d3e1f2edd52539dba"
+ },
+ "video/three-spanish-guitars-corporate-event-entre-dos-aguas/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/three-spanish-guitars-corporate-event-entre-dos-aguas.json",
+  "sha1": "1a0d2e3f96f003aabafa6c653902630a956b7cb2"
+ },
+ "video/dirty-flamenco-live/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/dirty-flamenco-live.json",
+  "sha1": "f0e1054b2af4c59f0320b49d89d9c703be1a7898"
+ },
+ "video/tony-medina-as-duo-going-down-freddie-king-standard/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/tony-medina-as-duo-going-down-freddie-king-standard.json",
+  "sha1": "b5e7eb22cdf6a2f467db42d550cecc132c825c9a"
+ },
+ "video/tony-medina-as-duo-dont-drink-water-dave-matthews-band-cover/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/tony-medina-as-duo-dont-drink-water-dave-matthews-band-cover.json",
+  "sha1": "8706df030d2204953d7d1c8d5a13fae736ead491"
+ },
+ "video/blues-guitar-private-party-thrill-is-gone-tony-medina/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/blues-guitar-private-party-thrill-is-gone-tony-medina.json",
+  "sha1": "66899e1eb591e71e3a76863d3ac6dbc57793def6"
+ },
+ "video/classic-rock-covers-office-party-drive-tony-medina/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/classic-rock-covers-office-party-drive-tony-medina.json",
+  "sha1": "d7bae03ae4365562c845df113a891a3bf45e9e24"
+ },
+ "video/singer-guitarist-welcome-drinks-tony-medina-headline/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/singer-guitarist-welcome-drinks-tony-medina-headline.json",
+  "sha1": "43ed0bc2390c5c8fc601149c8698696974787890"
+ },
+ "video/tony-medina-live-blues-rock-voice-guitar-private-events-denver/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/tony-medina-live-blues-rock-voice-guitar-private-events-denver.json",
+  "sha1": "2b7b2386bd1f2901d32188f5ed571f6ba12780b6"
+ },
+ "video/rene-moffatt-acoustic-if-you-were-near/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-acoustic-if-you-were-near.json",
+  "sha1": "99b8459663dd81a487697eef9152c7b2c166aa31"
+ },
+ "video/rene-moffatt-covers-blackbird-beatles/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-covers-blackbird-beatles.json",
+  "sha1": "c65f1b009f4119bd2c42e83bd552b29841827436"
+ },
+ "video/rene-moffatt-covers-willie-nelson-mammas-dont-let-your-babies/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-covers-willie-nelson-mammas-dont-let-your-babies.json",
+  "sha1": "a37df3b067625bae2eaa0b2d81b846ae6a0ab784"
+ },
+ "video/rene-moffatt-as-trio-heirloom-winnebago/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-as-trio-heirloom-winnebago.json",
+  "sha1": "a1bc17a8f2d99fbf19efc9018b8e674587c4976b"
+ },
+ "video/rene-moffatt-band-live-stuck-inside/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-band-live-stuck-inside.json",
+  "sha1": "59f1a4a25cff86c18cee3ea148b69be254bc62a0"
+ },
+ "video/rene-moffatt-live-original-singer-songwriter-voice-acoustic-guitar-private-events-denver/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-live-original-singer-songwriter-voice-acoustic-guitar-private-events-denver.json",
+  "sha1": "2f0e111af20435d6528a1bd5388c7bcabd26abb4"
+ },
+ "video/rene-moffatt-solo-listening-venue-standing-shadow-moon/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-solo-listening-venue-standing-shadow-moon.json",
+  "sha1": "78573008f4924f8726ddd520093f6d93e139c17b"
+ },
+ "video/rene-moffatt-live-goodnight-texas/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-live-goodnight-texas.json",
+  "sha1": "0372f34779f84b25686504b67f5df57ca4a4e8bf"
+ },
+ "video/rene-moffatt-band-live-calendar-year/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-band-live-calendar-year.json",
+  "sha1": "37c8fee46b89d8e208074a37c358c1c17d2860aa"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-calendar-year/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-calendar-year.json",
+  "sha1": "6ac608d163c41927cfc6a769bc6b872f38719491"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-come-age/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-come-age.json",
+  "sha1": "15aeea92ed59bcd0d1d2c7a3aefa4f7e3b810b61"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-drive-cars-cover/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-drive-cars-cover.json",
+  "sha1": "04b464a8acdada0aa3f51429d13f23dc662bf853"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-goodnight-texas/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-goodnight-texas.json",
+  "sha1": "fa56e9f3d308de8bfdf74de8b4ea7d1446352bb3"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-halfway-home/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-halfway-home.json",
+  "sha1": "60eb5736928693c6bdca0cb203a595f1afa001d7"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-iron-gates-love/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-iron-gates-love.json",
+  "sha1": "527cf6f15f2c4c48b93af6a441195b7f7af2d59c"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-stuck-inside/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-stuck-inside.json",
+  "sha1": "3bd96d383e6d95f5827b1d090a33686af704d510"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-waterfall/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-waterfall.json",
+  "sha1": "28079c1cdbb645a3ca390f1503f0422df3adad39"
+ },
+ "video/rene-moffatt-moonshadows-underground-music-showcase-what-if-i-what-if-you/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/rene-moffatt-moonshadows-underground-music-showcase-what-if-i-what-if-you.json",
+  "sha1": "9cf9dc1eaa07772faf35726082cf99abb3291feb"
+ },
+ "video/solo-jazz-guitar-cocktail-hour-blues-after-grant-green/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/solo-jazz-guitar-cocktail-hour-blues-after-grant-green.json",
+  "sha1": "8dc6d62b824703b853ef7aad29b2d5a9e64be215"
+ },
+ "video/solo-jazz-guitarist-client-dinner-autumn-leaves/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/solo-jazz-guitarist-client-dinner-autumn-leaves.json",
+  "sha1": "7db556f6b357748cae1365d027afb369e6e7c366"
+ },
+ "video/acoustic-singer-guitarist-private-party-last-dance-mary-jane/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/acoustic-singer-guitarist-private-party-last-dance-mary-jane.json",
+  "sha1": "6f33923400d02100a77ffbccb6dadddc8b95cfc2"
+ },
+ "video/solo-jazz-guitar-holiday-party-white-christmas/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/solo-jazz-guitar-holiday-party-white-christmas.json",
+  "sha1": "3b3dff0cfa0c036c659309d63864049063938c2c"
+ },
+ "video/string-quartet-gala-or-wedding-beethovens-op-18-no-6/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/string-quartet-gala-or-wedding-beethovens-op-18-no-6.json",
+  "sha1": "84f6789bf67d59ca04a704c1bb1c9bd00680a564"
+ },
+ "video/solo-violin-wedding-ceremony-andante-bachs-sonata-no-2/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/solo-violin-wedding-ceremony-andante-bachs-sonata-no-2.json",
+  "sha1": "0933455181f46e6fa71f6a52c4f82c032f8817e6"
+ },
+ "video/solo-violin-paganinis-caprice-no-19/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/solo-violin-paganinis-caprice-no-19.json",
+  "sha1": "546ec8bd1eae2937e3ea2938f3e22d919472d14c"
+ },
+ "video/solo-violin-allegro-bachs-sonata-no-2/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/solo-violin-allegro-bachs-sonata-no-2.json",
+  "sha1": "911f0d8dd5c5f12a18f2f3c63033df4029d88484"
+ },
+ "video/violin-first-movement-sibelius-violin-concerto/index.html": {
+  "date": "2026-09-25",
+  "file": "content/videos/violin-first-movement-sibelius-violin-concerto.json",
+  "sha1": "4e29ef81a6dc548b514e0ac74ca64856aceeba26"
+ },
+ "video/index.html": {
+  "date": "2026-09-25",
+  "file": "content/pages/video.json",
+  "sha1": "a65105abbd204232cf15710dda00e831e3d41300"
+ }
+}

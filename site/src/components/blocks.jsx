@@ -1,0 +1,547 @@
+/* The blocks a section is made of. A section holds them in order, so any
+   arrangement the site uses (a table between two paragraphs, a quote after
+   the rows) is a list of these. Copy is inline HTML; links are stored from
+   the site root and written relative to the page. */
+import { Fragment } from "react";
+import { css, cx, esc } from "../lib/util.js";
+import { buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite } from "./parts.jsx";
+
+const { rich, text } = F;
+const select = (label, values) => ({ type: "select", label, options: values.map((v) => (typeof v === "string" ? { label: v, value: v } : v)) });
+const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0, 48) : "");
+
+// ------------------------------------------------------------------ copy
+
+export const Heading = {
+  label: "Heading",
+  fields: { ...headingFields, slab: headingFields.slab },
+  defaultProps: { eyebrow: "Eyebrow", title: "Title", titleTag: "h2", titleClass: "h2", lede: "Lede" },
+  render: (p) => (
+    <div className="heading" style={css(p.headingStyle)}>
+      {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
+      {p.title != null ? <H as={p.titleTag || "h2"} className={p.titleClass || "h2"} style={css(p.titleStyle)} html={p.title} /> : null}
+      {p.face != null ? <H as="p" className="act-face" html={p.face} /> : null}
+      {p.imageFirst ? <Img im={p.image} /> : null}
+      {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
+      {(p.headingText || []).map((t, i) => (
+        <H key={i} as="p" className={t.cls || "prose"} style={css(t.style)} html={t.html} />
+      ))}
+      {p.imageFirst ? null : <Img im={p.image} />}
+      <Buttons items={p.buttons} />
+      {p.headingNote != null ? <H as="p" className="note" html={p.headingNote} /> : null}
+    </div>
+  ),
+};
+
+export const Paragraph = {
+  label: "Paragraph",
+  fields: { html: rich("Text"), cls: select("Style", [{ label: "Text", value: "prose" }, { label: "Note", value: "note" }, { label: "Small note", value: "note note--small" }, { label: "Lede", value: "lede" }]), style: text("Style") },
+  defaultProps: { html: "Text", cls: "prose" },
+  render: ({ html, cls, style }) => <H as="p" className={cls || undefined} style={css(style)} html={html} />,
+};
+
+export const Title = {
+  label: "Title",
+  fields: { html: rich("Title"), tag: select("Level", ["h2", "h3", "h4", "h5"]), cls: select("Size", ["h2", "h3", "h3 h3--lead", "h5"]), style: text("Style") },
+  defaultProps: { html: "Title", tag: "h2", cls: "h3" },
+  render: ({ html, tag, cls, style }) => <H as={tag || "h2"} className={cls || undefined} style={css(style)} html={html} />,
+};
+
+export const Quote = {
+  label: "Quote",
+  fields: { html: rich("Quote"), by: rich("By") },
+  defaultProps: { html: "Quote", by: "Name" },
+  render: ({ html, by }) => (
+    <figure className="review-pull">
+      <H as="blockquote" html={html} />
+      <H as="figcaption" html={by} />
+    </figure>
+  ),
+};
+
+export const Picture = {
+  label: "Picture",
+  fields: { image: { type: "object", label: "Picture", objectFields: imageFields } },
+  render: ({ image }) => <Img im={image} />,
+};
+
+export const ButtonRow = {
+  label: "Buttons",
+  fields: { buttons: buttonFields },
+  defaultProps: { buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
+  render: ({ buttons, cls }) => <Buttons items={buttons || []} cls={cls} />,
+};
+
+export const List = {
+  label: "List",
+  fields: { items: { type: "array", label: "Items", getItemSummary: (x) => plain(x.html), arrayFields: { html: rich("Item") } }, cls: text("Style") },
+  render: ({ tag, cls, style, items }) => {
+    const Tag = tag || "ul";
+    return (
+      <Tag className={cls || undefined} style={css(style)}>
+        {(items || []).map((it, i) => <H key={i} as="li" html={it.html} />)}
+      </Tag>
+    );
+  },
+};
+
+// A dash list; the included and extras lists are the site's own, shared by
+// every page that shows them.
+export const SpecList = {
+  label: "Spec list",
+  fields: {
+    source: select("List", [{ label: "This list", value: "own" }, { label: "What's included", value: "included" }, { label: "Quoted separately", value: "extras" }]),
+    items: { type: "array", label: "Items", getItemSummary: (x) => plain(x.html), arrayFields: { html: rich("Item") } },
+    cols: { type: "radio", label: "Columns", options: [{ label: "One", value: false }, { label: "Two", value: true }] },
+  },
+  defaultProps: { source: "own", items: [{ html: "Item" }], cols: false },
+  render: function SpecListRender({ source, items, cols }) {
+    const s = useSite();
+    const DASH = '<span class="dash" aria-hidden="true"></span>';
+    const list = source && source !== "own" ? s.model.site.lists[source].map((t) => DASH + esc(t)) : (items || []).map((it) => DASH + it.html);
+    return (
+      <ul className={cx("spec-list", cols && "spec-list--cols")}>
+        {list.map((h, i) => <H key={i} as="li" html={h} />)}
+      </ul>
+    );
+  },
+};
+
+// ------------------------------------------------------------------ rows
+
+export const DefRows = {
+  label: "Rows",
+  fields: {
+    rows: {
+      type: "array",
+      label: "Rows",
+      getItemSummary: (r) => plain(r.term),
+      arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
+    },
+    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Side by side", value: "def-list" }]),
+    bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
+    style: text("Style"),
+  },
+  defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
+  render: ({ cls, style, bare, rows }) => (
+    <dl className={cls || "def-list def-list--stack"} style={css(style)}>
+      {(rows || []).map((r, i) => {
+        const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
+        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={r.text} />;
+        return bare ? (
+          <Fragment key={i}>{dt}{dd}</Fragment>
+        ) : (
+          <div className="def-row" key={i}>{dt}{dd}</div>
+        );
+      })}
+    </dl>
+  ),
+};
+
+// The questions a page shows. With "schema" on, they are also the page's
+// FAQPage structured data; an answer marked open is shown but kept out.
+export const Faq = {
+  label: "Questions",
+  fields: {
+    items: {
+      type: "array",
+      label: "Questions",
+      getItemSummary: (q) => plain(q.q),
+      arrayFields: { q: rich("Question"), a: rich("Answer"), open: { type: "radio", label: "Settled", options: [{ label: "Yes", value: false }, { label: "Open", value: true }] } },
+    },
+    schema: { type: "radio", label: "Search results", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
+    style: text("Style"),
+  },
+  defaultProps: { items: [{ q: "Question", a: "Answer" }], schema: true },
+  render: ({ items, style }) => (
+    <dl className="faq-list" style={css(style)}>
+      {(items || []).map((f, i) => (
+        <div className="faq-row" key={i}>
+          <H as="dt" html={f.q} />
+          {f.open ? (
+            <dd><H as="span" data-tbd="true" html={f.a} /></dd>
+          ) : (
+            <H as="dd" html={f.a} />
+          )}
+        </div>
+      ))}
+    </dl>
+  ),
+};
+
+// ----------------------------------------------------------------- media
+
+const figureFields = { ...imageFields, caption: rich("Caption") };
+
+export const MediaGrid = {
+  label: "Images",
+  fields: { images: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: figureFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
+  defaultProps: { images: [], single: false },
+  render: ({ images, single }) => (
+    <div className={cx("media-grid", single && "media-grid--single")}>
+      {(images || []).map((im, i) => (
+        <figure key={i}>
+          <Img im={im} />
+          {im.caption != null ? <H as="figcaption" html={im.caption} /> : null}
+        </figure>
+      ))}
+    </div>
+  ),
+};
+
+const ALLOW = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+
+export function Player({ v }) {
+  const href = useHref();
+  if (v.kind === "video") {
+    return <video src={href(v.src)} poster={v.poster ? href(v.poster) : undefined} title={v.title} controls preload="metadata" playsInline />;
+  }
+  if (v.kind === "photo") {
+    return <Img im={{ cls: "act-video-photo", ...v.image }} />;
+  }
+  return <iframe src={v.src} title={v.title} loading={v.loading || undefined} allow={v.allow || ALLOW} allowFullScreen />;
+}
+
+const videoFields = {
+  kind: select("Kind", [{ label: "YouTube", value: "iframe" }, { label: "Video file", value: "video" }, { label: "Photo", value: "photo" }]),
+  src: text("Address"),
+  title: text("Title"),
+  poster: text("Poster"),
+  loading: select("Loading", [{ label: "Default", value: "" }, { label: "Lazy", value: "lazy" }]),
+  allow: text("Allow"),
+  image: { type: "object", label: "Photo", objectFields: imageFields },
+};
+
+export const VideoGrid = {
+  label: "Videos",
+  fields: { videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: videoFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
+  defaultProps: { videos: [], single: false },
+  render: ({ videos, single }) => (
+    <div className={cx("video-grid", single && "video-grid--single")}>
+      {(videos || []).map((v, i) => (
+        <div className="act-video" key={i}>
+          <Player v={v} />
+        </div>
+      ))}
+    </div>
+  ),
+};
+
+// The picture or the clip beside an act's heading.
+export const ActVideo = {
+  label: "Act video",
+  fields: videoFields,
+  defaultProps: { kind: "iframe", src: "", title: "" },
+  render: (v) => (
+    <div className="act-video">
+      <Player v={v} />
+    </div>
+  ),
+};
+
+// --------------------------------------------------------------- columns
+
+const SLOTS = ["c1", "c2", "c3", "c4", "c5", "c6"];
+
+export const Columns = {
+  label: "Columns",
+  fields: {
+    cls: select("Columns", [{ label: "Two", value: "split split--two" }, { label: "Three", value: "split split--three" }]),
+    n: { type: "number", label: "Boxes", min: 1, max: 6 },
+    ...Object.fromEntries(SLOTS.map((k, i) => [k, { type: "slot", label: `Box ${i + 1}` }])),
+  },
+  defaultProps: { cls: "split split--two", n: 2, c1: [], c2: [], c3: [], c4: [], c5: [], c6: [] },
+  render: (p) => {
+    const count = p.n || (/three/.test(p.cls || "") ? 3 : 2);
+    return (
+      <div className={p.cls || "split split--two"}>
+        {SLOTS.slice(0, count).map((k, i) => {
+          const Col = p[k];
+          return <div key={k} style={css(p.styles && p.styles[i])}>{Col ? <Col /> : null}</div>;
+        })}
+      </div>
+    );
+  },
+};
+
+// A boxed group of blocks.
+export const Panel = {
+  label: "Panel",
+  fields: { style: text("Width"), blocks: { type: "slot", label: "Blocks" } },
+  defaultProps: { blocks: [] },
+  render: ({ style, blocks: Blocks }) => <div className="panel" style={css(style)}>{Blocks ? <Blocks /> : null}</div>,
+};
+
+// ----------------------------------------------------------------- table
+
+const cellFields = { html: rich("Text"), tag: select("Cell", [{ label: "Data", value: "" }, { label: "Header", value: "th" }, { label: "Data cell", value: "td" }]), cls: text("Class"), scope: text("Scope") };
+export const Table = {
+  label: "Rate table",
+  fields: {
+    caption: rich("Caption"),
+    captionCls: text("Caption class"),
+    provisional: { type: "radio", label: "Provisional", options: [{ label: "No", value: false }, { label: "Yes", value: true }] },
+    tableCls: text("Class"),
+    head: { type: "array", label: "Header", getItemSummary: (c) => plain(c.html), arrayFields: cellFields },
+    rows: { type: "array", label: "Rows", getItemSummary: (r) => plain((r.cells || [])[0] && r.cells[0].html), arrayFields: { cells: { type: "array", label: "Cells", arrayFields: cellFields } } },
+  },
+  render: ({ caption, captionCls, head, rows, provisional, tableCls }) => (
+    <div className="table-scroll" data-provisional={provisional ? "true" : undefined}>
+      <table className={tableCls || "rate-table tnum"}>
+        {caption != null ? <H as="caption" className={captionCls || undefined} html={caption} /> : null}
+        {head ? (
+          <thead>
+            <tr>
+              {head.map((c, i) => <Cell key={i} c={c} tag="th" />)}
+            </tr>
+          </thead>
+        ) : null}
+        <tbody>
+          {(rows || []).map((r, i) => (
+            <tr key={i}>
+              {(r.cells || []).map((c, j) => <Cell key={j} c={c} tag="td" />)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ),
+};
+
+function Cell({ c, tag }) {
+  return <H as={c.tag || tag} scope={c.scope || undefined} className={c.cls || undefined} html={c.html} />;
+}
+
+// -------------------------------------------------------- call to action
+
+export const CloseRow = {
+  label: "Call to action",
+  fields: {
+    title: rich("Title"),
+    lede: rich("Text"),
+    buttons: buttonFields,
+    boxed: { type: "radio", label: "Box", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
+    boxStyle: text("Width"),
+    titleStyle: text("Title style"),
+    titleCls: text("Title size"),
+    ledeStyle: text("Text style"),
+    image: { type: "object", label: "Picture", objectFields: imageFields },
+  },
+  defaultProps: { boxed: true, boxStyle: "max-width: 32rem;", title: "Title", lede: "Text", buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
+  render: (p) => {
+    const words = (
+      <>
+        <H as="h2" className={p.titleCls || "h2"} style={css(p.titleStyle)} html={p.title} />
+        {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
+        <Img im={p.image} />
+      </>
+    );
+    return (
+      <div className="close-row">
+        {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
+        <Buttons items={p.buttons || []} />
+      </div>
+    );
+  },
+};
+
+// ------------------------------------------------------- acts and dates
+
+function ActCard({ a, compact }) {
+  const s = useSite();
+  const m = s.model;
+  const flagship = a.status === "flagship";
+  const href = useHref();
+  return (
+    <article
+      className={compact ? "card act-card act-card--compact" : "card act-card"}
+      id={`act-${a.id}`}
+      data-lane={m.actLane(a)}
+      data-buckets={a.bucket_tags.join(" ")}
+      data-configs={a.config_tags.join(" ")}
+      data-genres={(a.genre_tags || []).join(" ")}
+      data-vocals={m.VOCALS_MATCH[a.vocals || "instrumental"]}
+      data-areas={m.actAreaIds(a).join(" ")}
+      data-occasions={(a.occasion_tags || []).join(" ")}
+      data-status={a.status}
+      data-name={a.name}
+    >
+      {compact ? null : <CardMedia a={a} />}
+      <div className="act-card-body">
+        <p className="act-kind">{a.style}</p>
+        <h3 className="act-name">{a.name}</h3>
+        <p className="act-face">{m.actByline(a)}</p>
+        <ul className="pill-row">
+          {a.bucket_tags.map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
+        </ul>
+        <p className="act-blurb">{compact ? m.actCardLine(a) : a.blurb}</p>
+        <dl className="act-facts">
+          <dt>Configurations</dt>
+          <dd>{m.actConfigRange(a)}</dd>
+        </dl>
+        {flagship || a.page ? (
+          <a className="act-card-link" href={m.actUrl(a, s.prefix)}>{"See " + a.name}</a>
+        ) : (
+          <a className="act-card-link" href={href(`/contact/?act=${a.id}`)}>Inquire</a>
+        )}
+      </div>
+    </article>
+  );
+}
+
+function CardMedia({ a }) {
+  const s = useSite();
+  if (a.video) {
+    if (/^https?:\/\//.test(a.video)) {
+      return (
+        <div className="act-card-video">
+          <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />
+        </div>
+      );
+    }
+    return (
+      <div className="act-card-video">
+        <video src={s.prefix + a.video} poster={a.video_poster ? s.prefix + a.video_poster : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />
+      </div>
+    );
+  }
+  return <Pic class="act-card-img" src={`${s.prefix}img/${a.img}`} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" />;
+}
+
+export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) {
+  return (
+    <div className={cls} id={id}>
+      {acts.map((a) => <ActCard key={a.id} a={a} compact={compact} />)}
+    </div>
+  );
+}
+
+// Act cards: the flagships, a lane of the roster, or a short list of picks
+// with a line on why each one suits the night.
+export const Cards = {
+  label: "Act cards",
+  fields: {
+    source: select("Acts", [{ label: "Flagships", value: "flagships" }, { label: "Picks", value: "picks" }]),
+    picks: {
+      type: "array",
+      label: "Picks",
+      getItemSummary: (p) => p.act,
+      arrayFields: { act: text("Act"), config: text("Size"), kicker: text("Kicker"), why: { type: "textarea", label: "Why" }, face: select("Second line", [{ label: "Size", value: "config" }, { label: "Style", value: "style" }]) },
+    },
+  },
+  defaultProps: { source: "flagships", picks: [] },
+  render: function CardsRender({ source, picks }) {
+    const s = useSite();
+    const m = s.model;
+    const href = useHref();
+    if (source !== "picks") return <CardGrid acts={m.FLAGSHIPS} />;
+    return (
+      <div className="card-grid card-grid--3">
+        {(picks || []).map((p, i) => {
+          const a = m.ACT_BY_ID[p.act];
+          const r = m.RATE_BY_ID[p.config];
+          return (
+            <article className="card" key={i}>
+              <p className="act-kind">{p.kicker}</p>
+              <h3 className="act-name">{a.name}</h3>
+              <p className="act-face">{`${p.face === "style" ? a.style : r.label}. ${m.actByline(a)}.`}</p>
+              <p className="act-blurb">{p.why}</p>
+              <dl className="act-facts">
+                <dt>Configuration</dt>
+                <dd>{`${r.label}, ${r.pieces} ${r.pieces === 1 ? "musician" : "musicians"}`}</dd>
+              </dl>
+              <a className="act-card-link" href={href(`/contact/?act=${a.id}`)}>Check a date</a>
+            </article>
+          );
+        })}
+      </div>
+    );
+  },
+};
+
+const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// The season's dates, peak dates marked, and the count under them.
+export const Season = {
+  label: "Season board",
+  fields: {
+    dates: { type: "array", label: "Dates", getItemSummary: (d) => d.date, arrayFields: { date: text("Date"), peak: { type: "radio", label: "Peak", options: [{ label: "No", value: false }, { label: "Yes", value: true }] }, note: text("Tag") } },
+  },
+  defaultProps: { dates: [] },
+  render: ({ dates }) => (
+    <>
+      <ul className="season-board">
+        {(dates || []).map((d, i) => {
+          const [y, mo, da] = d.date.split("-").map(Number);
+          const dt = new Date(Date.UTC(y, mo - 1, da));
+          const label = `${DAYS[dt.getUTCDay()]} ${MON[dt.getUTCMonth()]} ${dt.getUTCDate()}`;
+          return (
+            <li key={i} className={cx("season-date", d.peak && "season-date--peak")}>
+              <span className="season-day">{label}</span>
+              <span className="season-tag">{d.note ? d.note : d.peak ? "Peak date" : "Standard date"}</span>
+            </li>
+          );
+        })}
+      </ul>
+      <p className="note">
+        <strong className="num-accent">{String((dates || []).length)}</strong>
+        {" party dates: Thursdays, Fridays and Saturdays across November and December, plus New Year's Eve. A peak date and a Thursday in November aren't the same job, and New Year's Eve is its own case. Send the date and we price that night."}
+      </p>
+    </>
+  ),
+};
+
+// The technical page's stage drawing: the rental guide's footprint and a
+// quartet's, to the same scale.
+export const StagePlot = {
+  label: "Stage drawing",
+  fields: { guide: { type: "number", label: "Guide (ft)" }, width: { type: "number", label: "Width (ft)" }, depth: { type: "number", label: "Depth (ft)" } },
+  defaultProps: { guide: 24, width: 14, depth: 10 },
+  render: ({ guide, width: w, depth: d }) => {
+    const U = 20;
+    const gw = guide * U;
+    const aw = w * U;
+    const ad = d * U;
+    const ax = (gw - aw) / 2;
+    const ay = gw - ad;
+    const saved = guide * guide - w * d;
+    const f = (x) => (Number.isInteger(x) ? `${x}.0` : String(x));
+    const pct = Math.round(100 * (1 - (w * d) / (guide * guide)));
+    const html = `<figure class="stage-plot">
+<svg viewBox="-8 -8 ${gw + 16} ${gw + 16}" role="img"
+     aria-label="Two stage footprints at the same scale. Published rental
+     guidance is ${guide} by ${guide} feet. A quartet takes ${w} by ${d} feet,
+     about ${pct} percent less floor.">
+  <rect x="0" y="0" width="${gw}" height="${gw}" class="plot-guide"/>
+  <rect x="${f(ax)}" y="${ay}" width="${aw}" height="${ad}" class="plot-actual"/>
+  <text x="${f(gw / 2)}" y="${f(ay / 2)}" class="plot-label" text-anchor="middle">
+    ${guide} &#215; ${guide} ft
+  </text>
+  <text x="${f(gw / 2)}" y="${f(ay / 2 + 26)}" class="plot-sub" text-anchor="middle">
+    what the rental guide says
+  </text>
+  <text x="${f(gw / 2)}" y="${f(ay + ad / 2 - 4)}" class="plot-label" text-anchor="middle">
+    ${w} &#215; ${d} ft
+  </text>
+  <text x="${f(gw / 2)}" y="${f(ay + ad / 2 + 22)}" class="plot-sub" text-anchor="middle">
+    what a quartet takes
+  </text>
+</svg>
+<figcaption class="note">Both drawn to the same scale. The difference is
+${saved} square feet of floor, which is a few hundred dollars of riser and about
+${Math.round(saved / 10)} guests standing.</figcaption>
+</figure>`;
+    return <Raw html={html} />;
+  },
+};
+
+// A run of markup the other blocks don't cover, kept exactly as written.
+export const HtmlBlock = {
+  label: "HTML",
+  fields: { html: { type: "textarea", label: "HTML" } },
+  defaultProps: { html: "" },
+  render: ({ html }) => <Raw html={html} />,
+};
+
+export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };

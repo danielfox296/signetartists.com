@@ -1,0 +1,279 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/solo-guitarist/",
+   "title": "Solo guitarist for cocktail hours and dinners in Denver | Signet Artists",
+   "description": "Solo guitarist for cocktail hours, client dinners and private dinners: blues, roots, jazz and Spanish flavors, in a 6 by 4 ft footprint.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Solo guitarist",
+     "serviceType": "Solo guitarist for cocktail hours, client dinners and private dinners",
+     "description": "One voice and a guitar, or instrumental guitar, playing blues, roots, jazz and Spanish-tinged sets for cocktail hours, client dinners and private dinners across Denver and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "solo-guitarist"
+   },
+   "notes": {
+    "_note": "Format spoke of the 2026-08-20 SEO buildout (Tier 3). The budget end done honestly: one guitarist, sung or instrumental, at the smallest figure on the card. Spec'd format, no player names. Space and power facts come from site.json configurations (solo row).",
+    "reader": "Whoever wants one musician under a dinner or a cocktail hour, often in a space too small for a band: a client dinner, a dinner at home, a wedding cocktail hour, a reception, a memorial."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Blues, roots, jazz and Spanish flavors",
+       "slab": true,
+       "title": "A solo guitarist for cocktail hours and dinners.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A guitarist in the corner of a private dining space plays Blue Bossa under a long dinner for twelve, and the table hears it between sentences. The solo guitarist is one musician playing blues, roots, jazz standards and Spanish-tinged sets, sung or instrumental, at a volume the table talks across.",
+       "headingText": [
+        {
+         "html": "It books for a cocktail hour, a client dinner, a dinner at home, a company reception and a memorial service, in Denver, Boulder, Colorado Springs and the mountain towns."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=solo-guitarist",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/acts/solo-bridge.jpg",
+        "alt": "A guitarist playing an acoustic set on a Denver bridge.",
+        "width": "1600",
+        "height": "1066",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format spoke (Tier 3): the smallest booking on the card, sold honestly.\n     \"Real playing rather than a playlist\" reuses the ratified blues-rock\n     blurb from acts.json. Rate-card link in the first screen per the spine.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants one musician under a dinner or a cocktail hour, often in a space too small for a band. The footprint section and Booking it are gone (ops to the FAQ, the fit-anywhere benefit kept as one sentence in the set section, the next-size links moved there too); 'booked as a format' taxonomy cut; memorials and senior living split into a row each.\n\nReal photo, the artist's own (provenance: _src/data/media-sources.json).\n         A photo rather than an embed: this player's YouTube uploads are\n         Shorts, and his Shorts return \"Video unavailable\" inside iframes,\n         verified live 2026-08-28. The one regular upload embeds fine and\n         leads the jazz page.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set",
+       "title": "One voice and a guitar, or the guitar alone.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Sung, it’s one voice and a guitar working blues, roots and the singer-songwriter catalog, and a cocktail hour or a patio takes a voice well. Instrumental, it’s jazz standards and Spanish-tinged sets, which sit easiest under dinner conversation. The nylon-string version is the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, and the sung version has its own page as the <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "One musician with a small sound system fits where a band can’t: a private dining space at a restaurant, a gallery evening set between the works, a house where nobody wants the furniture moved. When the guest list outgrows one instrument, the <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> and the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> are the next sizes up. The covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "What it plays: the two ways to run one guitarist. The 60 to 65 dBA band\n     is the sitewide dinner discipline from site.json.",
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Occasions",
+       "title": "Who books a solo guitarist.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Cocktail hours</a>",
+         "text": "The hour between the ceremony and dinner, for a shorter guest list or a second space the crowd passes through."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
+         "text": "A dinner where the conversation is the event and the guitar sits under it all night."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Private dinners at home</a>",
+         "text": "A dining table’s evening, in <a href=\"/private-parties/denver/\">Denver</a> or anywhere on the Front Range, with the house left as it is."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Company receptions</a>",
+         "text": "The arrival hour before a program starts, or background music through a reception."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals and memorials</a>",
+         "text": "The prelude and the one song at a service, and the graveside after it on a battery-powered system."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "An afternoon in a memory care neighborhood, played with no amplification at all."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "What live music costs across Colorado, size by size, is in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the format lands. Links UP to the occasion pages, ACROSS to the\n     Denver private parties page.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-16",
+       "html": "Solo guitarist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Stage sizes and power for every size are on the <a href=\"/planners/technical/\">technical page</a>, written so you can hand your venue the link, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-18",
+       "items": [
+        {
+         "q": "How much space and power does a solo guitarist need?",
+         "a": "A corner of about 6 by 4 feet, one dedicated 20-amp circuit, 45 minutes to set up and 30 to pack down. The circuit should be one the caterer isn't also using, which is the detail most often missed. Sound support that's the right size for the venue comes with the booking."
+        },
+        {
+         "q": "Is one guitarist enough for a cocktail hour?",
+         "a": "For a shorter guest list, yes. One guitar sounds like live music from anywhere in the space and stays under the conversation, and the nearest table carries on talking over it. When the crowd is big enough that one instrument disappears into it, the duo is the next size up."
+        },
+        {
+         "q": "Who plays a solo booking?",
+         "a": "A working guitarist from our roster, matched to the set you want, sung or instrumental. We name them to you when the contract is written."
+        },
+        {
+         "q": "Can we ask for a song?",
+         "a": "Yes. Send a do-not-play list or build the set with us, and the guitarist learns one song of your choosing as part of every booking. If the night runs long, another half hour is easy to add on the night."
+        },
+        {
+         "q": "Can the solo guitarist play outdoors?",
+         "a": "Yes, and patios and courtyards are regular work. It needs a covered, level and dry spot with power run to it, and we agree a plan for moving indoors with you ahead of time, because Colorado evenings turn cold fast."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-21",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring a guitarist for your dinner or cocktail hour.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

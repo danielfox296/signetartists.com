@@ -1,0 +1,396 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/funerals-and-memorials/",
+   "title": "Musicians for a funeral or memorial service in Denver | Signet Artists",
+   "description": "Hire a musician for a funeral or memorial service in Denver: a guitarist or pianist for the prelude and the one song, a jazz duo for the reception after it.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-window.jpg",
+   "schema": {
+    "service": {
+     "name": "Musicians for funerals, memorial services and celebrations of life",
+     "serviceType": "A guitarist, pianist, singer or jazz duo for a funeral, a memorial service, a graveside and the celebration of life afterward",
+     "description": "A solo guitarist, Spanish guitarist, pianist or singer for the prelude, the one song and the recessional at a funeral or memorial service, and a jazz duo or trio for the reception or celebration of life afterward, across Denver, the Front Range and the Colorado mountain corridor, planned with the officiant or the funeral director and booked on short notice.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a memorial service: Can't Help Falling in Love",
+      "description": "Can't Help Falling in Love on one nylon-string guitar, the kind of song a family asks for during a service.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     },
+     {
+      "id": "hIPHFuxl9YI",
+      "name": "Solo guitarist for a celebration of life: Autumn Leaves",
+      "description": "One guitar playing Autumn Leaves at conversation volume, which is what the reception after a service sounds like.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M14S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-19 on Daniel's brief (funerals and memorials as a daytime booking). Autocomplete evidence, Google and Bing, 2026-09-19: 'hire musician for funeral', 'hire singer for funeral', 'funeral singers near me', 'funeral musicians near me', 'live music for funerals', 'live band for funeral', 'music for memorial service', 'instrumental music for memorial service', 'prelude music for memorial service', 'celebration of life music', 'celebration of life music ideas', 'songs for celebration of life service', 'jazz band for funeral', 'jazz standards for funerals', 'guitarist for funeral', 'pianist for funeral', 'singer for funeral service', 'background music for a wake'. The calibration family ('how much do you pay a singer at a funeral', 'funeral singer cost', 'pianist fee for funeral') is answered in the FAQ with the pricing link and no figure. The 2026-09-16 demand build ruled funerals out only because they had not been raised with him; he raised them. The client strip is deliberately absent on this page: the logos are a corporate buyer's proof and read wrong beside a service. Uniqueness gate: registered as a daytime sibling.",
+    "reader": "Whoever is arranging a funeral, memorial or celebration of life, often the family in a hard week, who wants the music handled without having to think about it.",
+    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to the ceremony page (prelude length), the solo guitarist page (first learned song), the proposals page (battery-powered system, a song at a graveside), site.json (60 to 65 dBA, footprints) and repertoire.json. Questions are worded the way families and funeral directors search. No reply window, no figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Funerals and memorials",
+       "slab": true,
+       "title": "A musician for a funeral, a memorial service or a celebration of life.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "As people find their seats, a guitarist is playing the hymn the family chose, and later in the service, the one song that was theirs. A funeral or a memorial has three or four places where music goes, from the prelude to the reception afterward. One guitarist or a pianist covers the service, upright bass and guitar cover the reception, and a service a few days away is a normal request.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/daytime/\">daytime bookings</a>, arranged with whoever is leading the service, the family, the funeral director, the officiant or the church, with one personal contact from the first email to the last song."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The funerals spoke. The service leads; the instruments answer. The\n     buyer's phrases (musician for a funeral, memorial service, celebration\n     of life) sit in the h1 and the first paragraph. Plain register: no\n     sentence manages the reader's feelings, no sentence names their grief.\n     Hub link UP in the first screen. No client strip on this page.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is arranging the service, often the family in a hard week. Written plainly and without persuasion. The self-referencing 'this page is written for' line is gone; dBA and footprints left the rows; venue rules, paperwork and pricing moved to the FAQ; FAQs that restated the rows are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Hear it",
+       "title": "The one song, and the hour after.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Can’t Help Falling in Love on one nylon-string guitar, which is the kind of song a family asks for during the service, and Autumn Leaves on one guitar at conversation volume, which is what the reception sounds like."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-5",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Spanish guitar playing Can't Help Falling in Love",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+         "title": "A solo jazz guitarist playing Autumn Leaves at conversation volume",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: the kind of song a family asks for during the\n     service, on nylon-string guitar, and what the reception sounds like.\n     No player named; both formats are spec'd.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-11",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The service",
+       "title": "Where the music goes in a funeral or a memorial.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The order is the officiant’s or the family’s. These are the four places a musician usually plays, and any one of them can be booked on its own."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "As people arrive",
+         "text": "Twenty to thirty minutes of prelude while people find a seat, played by one guitarist or <a href=\"/ensembles/solo-piano/\">a pianist</a>: hymns, the standards, and the songs the family names. It’s the easiest part to add, and it means the service begins in music."
+        },
+        {
+         "term": "During the service",
+         "text": "One song, or two, at the point the officiant or the family chooses: after a reading, during a slideshow, before the eulogy. The song is the one that was theirs, instrumental on guitar or piano or sung, with the timing agreed with the officiant beforehand so the musician takes the cue from them."
+        },
+        {
+         "term": "The recessional and the graveside",
+         "text": "Music as everyone stands and leaves, and at the graveside if the family wants it there. The same guitarist who played the chapel plays the graveside, without power, on a battery-powered system or none at all."
+        },
+        {
+         "term": "The reception or the celebration of life",
+         "text": "An hour or two of music under the conversation at the church hall, the restaurant, the club or the house afterward, from a duo playing the standards or a singer with a guitar playing the songs the person loved. Where the family wants a jazz band, this is the place for it, and the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio page</a> covers the sizes."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Where the music goes, in the order a service runs. Facts: the prelude\n     length from the ceremony page (twenty to thirty minutes), the\n     first-learned-song line from the solo guitarist page, the battery-powered\n     line from the proposals page, the 60 to 65 dBA band from site.json. The\n     order of service is the officiant's; the musician takes the cue.",
+    "_file": "02-the-service.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Who plays it",
+       "title": "Guitar, piano, strings, or a voice.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-19",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-13",
+          "html": "Acoustic or Spanish guitar",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-14",
+          "html": "The <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays hymns, standards and the songs the family names on steel strings, and the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> plays the same service on nylon strings, which is the sound in the clip above. Either one plays a small chapel without amplification and moves to the graveside.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-15",
+          "html": "Piano",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-16",
+          "html": "Where the chapel, the church or the funeral home has a piano, a <a href=\"/ensembles/solo-piano/\">pianist</a> plays the prelude, the song and the recessional on it, and sings when the family wants the words.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-17",
+          "html": "A singer",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-18",
+          "html": "The <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is the booking when the words matter: a hymn sung, a country song, the one from the year they married. One voice and a guitar, and the same musician plays the prelude instrumentally.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "When the family wants strings, <a href=\"/ensembles/string-quartet/\">a violinist</a>, or violin and cello, plays Ave Maria and the hymns in the chapel and at the graveside. For the reception, the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> or the trio plays the hour after. When a celebration of life at a home or a club runs into the evening, the <a href=\"/private-parties/\">private parties page</a> covers a longer booking.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Which instrument, and which page covers it. Links ACROSS to the solo\n     guitarist, the Spanish guitarist, the singer and guitarist, the jazz duo\n     and the roster (solo piano is a listing without a page).",
+    "_file": "03-who-plays.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Booking it",
+       "title": "Planned with the officiant, on short notice.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Send the date, the venue and the time of the service as soon as you have them, even if the service is this week. The musician and the officiant or the funeral director then agree the order of service and the cues, so on the day nobody has to signal anything from a pew.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "The songs are yours to choose. Hymns, the standards, a folk song, the song from a first dance forty years ago: tell us the titles and the musician learns what isn’t already in the set. Where a family isn’t sure, the musician suggests from what’s usually asked for, and the song list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Booking it: the short notice, the songs, the venues' rules, the\n     paperwork. No reply-window promise (that lives on the contact and\n     booking pages only). \"Booking calendar\" is the real object's name.",
+    "_file": "04-booking.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Questions",
+       "title": "Asked about music for a funeral or a memorial.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-29",
+       "items": [
+        {
+         "q": "Can we hire a musician for a funeral on short notice?",
+         "a": "Yes. A funeral is usually arranged inside a week, and a date a few days away is a normal request. Send the date, the venue and the time of the service, and we'll come back with a recommendation and a price. Signet Artists books funeral and memorial musicians across Denver and the Front Range."
+        },
+        {
+         "q": "Can a musician play at the graveside?",
+         "a": "Yes. A guitar plays a graveside or a scattering without power, on a battery-powered system or none at all, and the same guitarist can play the service before it. Cemeteries have their own rules about where a musician stands and whether amplification is allowed, and we ask them beforehand."
+        },
+        {
+         "q": "What does the church or funeral home need to do?",
+         "a": "Very little. Churches, funeral homes and cemeteries each have their own rules about amplification and where a musician can stand, and we ask them before the day. Sound support comes with the booking where the venue has none, and a certificate of insurance, a W-9 and one invoice go to any venue that asks."
+        },
+        {
+         "q": "Can the service and the reception be one booking?",
+         "a": "Yes. A service is priced as its own date, and a service and its reception together are one booking, with one learned song included."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-32",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the venue and the songs, and we'll plan the music with whoever is leading the service.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-33",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

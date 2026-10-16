@@ -1,0 +1,272 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/sound-bath/",
+   "title": "Daytime sound bath in Denver: studios, offices, senior centers | Signet Artists",
+   "description": "Book a daytime sound bath in Denver with Firstwater: a yoga studio's Sunday morning, a lunchtime session at the office, a senior center, a staff day.",
+   "titleExact": true,
+   "ogImage": "img/sound-bath.jpg",
+   "schema": {
+    "service": {
+     "name": "Daytime sound bath",
+     "serviceType": "Sound bath for yoga studios, workplaces, senior centers, hospices, recovery centers, schools and retreats during the day",
+     "description": "A seventy-five-minute sound bath from Firstwater booked during the day: a Sunday morning class at a yoga studio, a lunchtime session at an office, an afternoon at a senior center or a senior living community, a staff day at a school, a session at a hospice or a recovery center, or the morning that opens a retreat, across Denver, the Front Range and the Colorado mountain corridor, with the sound system, mats, blankets and waivers brought to the venue.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "firstwater"
+   },
+   "notes": {
+    "_note": "Built 2026-09-19 on Daniel's brief: Firstwater as an act in daytime hours, for yoga studio mornings, corporate lunchtime sessions, senior centers, hospice and recovery centers, schools and retreats. Autocomplete evidence, Google and Bing, 2026-09-19: 'daytime sound bath' and 'daytime sound bath near me' (Google), 'morning sound bath', 'sunday morning sound bath', 'sound bath yoga studio', 'sound bath yoga class near me', 'book a sound bath', 'book private sound bath', 'private sound bath near me', 'sound bath at work', 'sound bath workshop near me', 'corporate sound bath', 'sound bath for seniors' (Google), 'sound bath for elderly', 'sound bath in schools', 'sound bath for kids', 'sound bath at the library' (Bing), 'sound bath events denver', 'sound bath denver'. Nobody is named anywhere on this page (Daniel, 2026-09-19); the act's own corporate page publishes a price and is not deep-linked; every fact traces to thefirstwater.co or the act's roster page. The seated-or-in-a-recliner line for seniors and hospice is an inference from his brief (he named senior centers and hospice), flagged in the handback. Uniqueness gate: registered as a daytime sibling and as a sibling of /artists/firstwater/.",
+    "reader": "Whoever runs a studio schedule, an office wellness week, a senior or care program or a school staff day, and wants a sound bath in it.",
+    "schema_note": "Authored 2026-09-19 with the daytime tree. Every answer traces to thefirstwater.co and the act's roster page; the seated-or-recliner line is an inference from Daniel's brief (senior centers, hospice), flagged in the handback. Nobody is named. No figure. 'act' attaches Firstwater's Service node to this page."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Daytime sound bath",
+       "slab": true,
+       "title": "A daytime sound bath for your studio, your office or your program.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A studio full of people lies down on mats in the middle of a Sunday morning, the lights go low, and for seventy-five minutes nobody has anywhere to be. Firstwater’s sound bath books during the day as well as for teams and retreats: one facilitator who brings the sound system, the mats and the blankets to your space, or holds the session in a partner space in Denver.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/daytime/\">daytime bookings</a>, and the act itself is on <a href=\"/artists/firstwater/\">Firstwater’s roster page</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=firstwater",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/sound-bath.jpg",
+        "alt": "Three singing bowls on cushions with a mallet beside them.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "The daytime sound bath spoke. The buyer's phrases (daytime sound bath,\n     sound bath for a yoga studio, sound bath at work, sound bath for seniors)\n     sit in the h1 and the first paragraph. Nobody is named. The photograph is\n     the act's interim still in the act-video-photo pattern, as on the act\n     page: no footage of a sound bath exists and none is expected. Hub link UP\n     and act link ACROSS in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever runs a studio schedule, an office wellness week or a program and wants a session in it. The opener listed all six places the rows list again; it's one Sunday morning now. The venue requirements are the FAQ; FAQs that restated the six rows are gone. Daniel is never named (firstwater-on-signet).",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Where it books",
+       "title": "Six places a sound bath fits during the day.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The session is the same in each of them. What changes is who is lying on the floor and what the venue needs to supply."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "A yoga studio’s schedule",
+         "text": "A studio adds it as a class or a workshop on its own schedule: a Sunday morning, a Saturday afternoon, the session before a retreat weekend. The studio’s students lie down, the facilitator tunes the sound system to the studio, and for seventy-five minutes the space sounds like a different one."
+        },
+        {
+         "term": "An office at lunchtime",
+         "text": "A session in a conference space or on a cleared floor, inside a long lunch, for a wellness week or the week after a hard quarter. The lights go low, and the session has a stretch of real silence in the middle of it."
+        },
+        {
+         "term": "A senior center or a senior living community",
+         "text": "A sound bath for seniors is the same session with the lights low and the floor covered in mats and blankets, and a resident who can’t get down to a mat rests in a seat or a recliner instead. Nobody is asked to do anything but rest, and the facilitator tunes the sound system to the space."
+        },
+        {
+         "term": "A hospice or a recovery center",
+         "text": "A session for the people in care, for their families, or for the staff. The session is guided in the lightest way, nobody is asked to speak or to share, and someone who can’t lie on a mat rests where they are."
+        },
+        {
+         "term": "A school",
+         "text": "A staff day, a session for teachers at the end of a term, or a session built into a student program. A gym or a hall holds a whole staff on mats."
+        },
+        {
+         "term": "A retreat morning",
+         "text": "The morning that opens a retreat, at a lodge in the mountains or a house on the Front Range. A sound bath in the morning and live music that night is one booking on one contract, and the <a href=\"/corporate/retreats/\">corporate retreats page</a> covers the evenings."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Where a daytime session books, one row per venue type from Daniel's\n     brief. Every fact about the session itself traces to thefirstwater.co\n     and the act's roster page; nothing about what a session does for anyone\n     is claimed. No o'clocks. Nobody named.",
+    "_file": "02-where.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-15",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "The session",
+       "title": "Seventy-five minutes.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "The lights go down, everyone lies down, and the facilitator opens the session with a short ceremony. For seventy-five minutes there are live instruments played over music composed for the session, with bass deep enough to feel in your chest, and a stretch of real silence in the middle. It closes the way it opened. There’s nothing to follow and nothing to get right, and someone who sleeps through the second half has used the hour well.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Send the headcount and the space and we’ll tell you whether it fits, or hold the session in a partner space in Denver instead. The plain answers to what happens at a sound bath, what to wear and what it’s like to be in one are on <a href=\"https://thefirstwater.co/faq/\">Firstwater’s own FAQ</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The session and what the venue supplies, written fresh rather than\n     lifted from the act page so the two pages read as two pages. Facts: the\n     ceremony, the seventy-five minutes, the live instruments over composed\n     music, the silence, the mats, blankets, waivers and sound system, the\n     floor, the outlet and the ninety minutes, all from thefirstwater.co.",
+    "_file": "03-the-session.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Questions",
+       "title": "Asked about booking a daytime sound bath.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-17",
+       "items": [
+        {
+         "q": "What does a venue need to host a sound bath?",
+         "a": "Enough floor for everyone to lie down with a little space between the mats, a standard outlet, low light, and about ninety minutes before doors for the facilitator to set up and tune the sound system to the space. The sound system, the mats, the blankets and the waivers arrive with the facilitator. If your space won't work, the session runs in a partner space in Denver. Firstwater is booked through Signet Artists."
+        },
+        {
+         "q": "Can someone who can't lie on a mat take part?",
+         "a": "Yes. They rest in a seat or a recliner instead, which is how a session at a senior center, a senior living community or a hospice usually runs."
+        },
+        {
+         "q": "What should people bring?",
+         "a": "Comfortable clothes, and nothing else. Phones stay in bags for the length of the session, and the longer answers, from what to wear to what it's like to be in one, are on Firstwater's own FAQ."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-20",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the date, the headcount and the space, and we'll bring the sound bath to it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

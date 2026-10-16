@@ -1,0 +1,389 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/fort-collins/",
+   "title": "Wedding music in Fort Collins: guitarist, duo, band and DJ | Signet Artists",
+   "description": "Live music for a Fort Collins wedding: a ceremony guitarist in the foothills, a duo for the Old Town cocktail hour, a band or DJ for the floor, one flat Front Range travel line.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "nav": "weddings",
+   "breadcrumb": "Fort Collins",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Fort Collins",
+     "serviceType": "Live music for weddings in Fort Collins: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "Live wedding music in Fort Collins and northern Colorado: an acoustic, jazz or Spanish guitarist for a ceremony in the foothills, on a ranch or in the Poudre canyon, a jazz or acoustic duo for an Old Town cocktail hour, a band or the DJ for a ballroom or barn reception, on one contract with sound included and one flat Front Range travel line.",
+     "areaServed": [
+      "Fort Collins",
+      "Loveland",
+      "Windsor",
+      "Wellington",
+      "LaPorte"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "NI0kunpQQiA",
+      "name": "Singer with a guitar for a Fort Collins wedding cocktail hour: Tejas Singh",
+      "description": "Tejas Singh singing at a wedding cocktail hour, the size an Old Town courtyard or a ranch patio books for the hour after the ceremony.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M9S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Fort Collins spoke of the weddings hub, built 2026-09-23 on Daniel's call after the audit. Outside evidence: 'fort collins wedding bands' autocompletes on 2026-09-23; the August architecture had cut Fort Collins pending Search Console signals, a gate Daniel withdrew the same day. The argument is the Fort Collins wedding day: a ceremony in the foothills or the Poudre canyon, the cocktail hour in Old Town, the floor in a ballroom or a barn, an hour up I-25 as one flat Front Range travel line. Venues were read from wedding-venue listings on 2026-09-23 and RATIFIED by Daniel the same day (\"the venues are fine, leave them\"); they are now on the vetted list in SEO-BUILDOUT-ARCH section 8, named as the market's places, never as our history. Uniqueness gate: registered as a weddings sibling.",
+    "reader": "The couple getting married in or around Fort Collins, often outdoors with the wind to plan for."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Fort Collins weddings",
+       "slab": true,
+       "title": "Live music for a Fort Collins wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A Fort Collins wedding has a long horizon in it: the ceremony on a ranch with the foothills behind it, beside the Poudre with the river running under the vows, or in a courtyard in Old Town, the cocktail hour on a patio with a breeze off the plains, and the floor in a ballroom, a barn or a taproom’s event space. The music is a guitarist with a small system that reaches the last row outdoors, a duo for the hour, and a band or the DJ for the dancing.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/weddings/\">weddings</a> bookings: one part of the day or all of it, on one contract with a personal contact through the day and one flat Front Range travel line for the hour up I-25."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Fort Collins wedding spoke, 2026-09-23. The day between the plains and\n     the canyon, an hour up I-25. Venues read from listings the same day and\n     named as the market's places; the sound rule is the venue's own, no\n     figure claimed.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: the couple marrying in or around Fort Collins, often outdoors with the wind to plan for. The venues, the canyon and the wind stay as local fact; travel and setup went to the FAQ with the extras list; dBA left the body; neighbours fixed; FAQs restating the venues and the outdoor section are trimmed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "A singer at a cocktail hour, and a guitarist on a bridge.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tejas Singh at a wedding cocktail hour, the size an Old Town courtyard or a ranch patio books for the hour after the ceremony, and one musician with a guitar beside the water."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/NI0kunpQQiA?rel=0",
+         "title": "Tejas Singh singing at a wedding cocktail hour",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/solo-bridge.jpg",
+         "alt": "A singer and guitarist playing on a bridge over a river, with autumn trees behind him.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "The day",
+       "title": "The three parts of a Fort Collins wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The wind sets the ceremony plan, Old Town sets the cocktail hour, and the reception is a ballroom or a barn. The music moves with the guests from one to the next."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony, on a ranch, by the river or in a courtyard</a>",
+         "text": "One guitarist, acoustic, jazz or Spanish, with a small system that carries the officiant’s microphone and reaches the last row across a lawn or over the sound of the Poudre. Outdoors here the system matters more than in the city, because a breeze off the plains takes an unamplified guitar with it."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour, in Old Town or on the patio</a>",
+         "text": "A jazz duo or an acoustic duo, quiet enough that the conversation sits on top of it, in a hotel courtyard, a taproom’s event space or on a ranch patio while the couple is off with the photographer. A <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is the one-musician version of the same hour."
+        },
+        {
+         "term": "The floor, in a ballroom or a barn",
+         "text": "A trio fills a barn floor without a stage, a quartet carries a ballroom past a hundred and fifty, and the <a href=\"/ensembles/dj/\">DJ</a> takes the same sound system from the end of dinner to the last song. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> starts as a duo and finishes as a quartet on one contract, the <a href=\"/ensembles/americana-band/\">Americana band</a> is the one for a ranch wedding with the Colorado songbook in it, and the <a href=\"/weddings/jazz-band/\">wedding jazz band</a> grows through the day the same way."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "The whole song list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "The venues",
+       "title": "Old Town, the foothills, and the plains.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Old Town holds the downtown wedding. The Elizabeth Hotel and the Armstrong Hotel put the ceremony, the cocktail hour and the reception within a block of each other, Block One on Linden Street is the contemporary hall for a couple who want one floor and their own vendors, and the Lincoln Center is the city’s own hall for a bigger guest list. Their courtyards and terraces take a duo, their halls take a trio or a quartet, and parking downtown is the question to settle with the venue early.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "West of town the foothills hold the estate wedding: Tapestry House, the 1890 manor with its lawns, and the ranches along the Poudre, where a ceremony beside the river books a guitarist with a system that carries the vows over the water and a reception in a barn books a trio. The Mishawaka, up the canyon on the river, is the venue for a couple who want the water in every photograph, and the canyon road is part of the plan rather than the price.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "East and north, on the plains, Windsong Estate sits on a hill with the whole Front Range in view, and the wind that goes with the view is why an outdoor ceremony there gets a covered spot and a small system rather than an unamplified guitar. A ranch wedding out that way is where the <a href=\"/ensembles/americana-band/\">Americana band</a> does its best work.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "The wind",
+       "title": "Wind, weather, a river, and the sound rules.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "The wind is the Fort Collins fact. The plains east of town and the foothills west of it both get an afternoon wind and a fast afternoon storm, and an unamplified guitar on a lawn disappears in the first gust. An outdoor ceremony gets a covered, level and dry spot with power run to it, a small system that reaches the last row, and a move-indoors plan agreed before the day. A ranch without a circuit near the site needs a generator, and what that involves is in <a href=\"/blog/outdoor-reception/\">what changes when the reception is outdoors</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "The sound rule is the venue’s own. A ballroom or a barn sets a number, a ranch near houses has neighbors, and Old Town has a city ordinance on evening sound, so tell us the number and the cut-off when you book and both go into the contract. A ceremony guitarist and a cocktail hour duo sit inside any of them on their own, and the dance floor is indoors or in a barn with the doors shut.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "How far ahead couples tend to book is in <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. The wedding half an hour south is on the <a href=\"/weddings/boulder/\">Boulder wedding page</a>, and the wedding at altitude is on the <a href=\"/weddings/vail/\">Vail wedding page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Questions",
+       "title": "Asked about Fort Collins weddings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Stage sizes, circuits and input lists for every size are on the <a href=\"/planners/technical/\">technical page</a>, in a form a venue’s events office can check line by line.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-30",
+       "items": [
+        {
+         "q": "Do you play weddings in Fort Collins?",
+         "a": "Yes, the whole day or any one part of it. Fort Collins is about an hour up I-25 from Denver, so the music is quoted at the fee a Denver wedding sees plus one flat Front Range travel line, with no lodging. Every size arrives with sound, setup and pack-down, a certificate of insurance and a W-9. Signet Artists books Fort Collins weddings from Denver."
+        },
+        {
+         "q": "What does the Fort Collins travel line cover?",
+         "a": "The drive up I-25 and back for the musicians and the gear, as one flat line, the same line a Colorado Springs or Boulder date carries. A ceremony up the Poudre canyon adds the canyon road and a drop in cell coverage to the plan rather than to the price, so setup is timed with the venue and the musicians leave early."
+        },
+        {
+         "q": "Is a duo enough for a taproom or courtyard reception in Old Town?",
+         "a": "For the cocktail hour and dinner, yes. A jazz or acoustic duo, in a corner of about 8 by 6 feet on one circuit, is the size an Old Town courtyard or a taproom's event space books. When the same night wants a floor, a trio fills one without a stage and the DJ takes the same sound system when the band is done."
+        },
+        {
+         "q": "How much setup time does it need?",
+         "a": "Setup runs 45 to 60 minutes for a solo, a duo or a trio and 90 for a quartet, through whichever door the venue prefers. Parking in Old Town is the question to settle with the venue early."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Fort Collins?",
+         "a": "The Old Town hotels and the ranch venues book their summer and fall Saturdays a year or more out, and the university's calendar fills the hotels on some weekends, so the venue and the date come first and the music right after. Tell us the date and we'll come back quickly with an answer and a price."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "Extras that can appear on a quote.",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-32",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-37",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-35",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the venue and the ceremony site, and we'll plan the rest around the wind.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}
