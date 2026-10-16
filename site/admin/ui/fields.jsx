@@ -143,7 +143,7 @@ export const imageField = (label) => ({ type: "custom", label, render: ImageInpu
 function UrlInput({ field, value, onChange, readOnly }) {
   const [v, setV] = useState(value || "");
   useEffect(() => setV(value || ""), [value]);
-  const fixed = typeof value === "string" && value.endsWith(".html");
+  const fixed = typeof value === "string" && (value === "/" || value.endsWith(".html"));
   const next = normPath(v);
   const problem = next !== value ? pathProblem(session.repo, next, place.slug) : null;
   const apply = () => {
