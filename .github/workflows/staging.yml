@@ -52,13 +52,15 @@ jobs:
             --exclude='scripts' \
             ./ _site/
 
-      # The staging domain, plain HTML (no Jekyll), and nothing for search
-      # engines: robots.txt disallows everything and every page carries
-      # noindex. The run fails if any page can't take the tag.
+      # The staging domain, plain HTML (no Jekyll), the commit it was built
+      # from at /commit.txt, and nothing for search engines: robots.txt
+      # disallows everything and every page carries noindex. The run fails if
+      # any page can't take the tag.
       - name: Make it staging
         run: |
           echo "staging.signetartists.com" > _site/CNAME
           : > _site/.nojekyll
+          echo "$GITHUB_SHA" > _site/commit.txt
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
           python3 - <<'EOF'
           import pathlib, re, sys
