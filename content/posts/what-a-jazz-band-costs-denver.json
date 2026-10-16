@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1531971772042-d189c2021395.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 7
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A jazz trio or acoustic duo for a dinner runs $500 to $3,000 across this market, and a solo musician or duo for a cocktail hour runs $200 to $700.",
-     "Across a four-hour evening the market puts a duo at $1,500 to $2,500 and a trio at $2,000 to $3,500. One more musician in the band is the difference between those two figures.",
-     "Denver bands run $2,500 to $8,000, a trio at the bottom of that and a full band with horns at the top. The top of the national market, a California jazz trio for a cocktail hour, runs $3,450 to $6,450.",
-     "The number moves on three things: how many musicians, how many hours, and the date. A Denver holiday weekend carries 20 to 30 percent across this market."
+     {
+      "text": "A jazz trio or acoustic duo for a dinner runs $500 to $3,000 across this market, and a solo musician or duo for a cocktail hour runs $200 to $700."
+     },
+     {
+      "text": "Across a four-hour evening the market puts a duo at $1,500 to $2,500 and a trio at $2,000 to $3,500. One more musician in the band is the difference between those two figures."
+     },
+     {
+      "text": "Denver bands run $2,500 to $8,000, a trio at the bottom of that and a full band with horns at the top. The top of the national market, a California jazz trio for a cocktail hour, runs $3,450 to $6,450."
+     },
+     {
+      "text": "The number moves on three things: how many musicians, how many hours, and the date. A Denver holiday weekend carries 20 to 30 percent across this market."
+     }
     ]
    }
   },
@@ -81,56 +88,134 @@
     "id": "ComparisonTable-8",
     "title": "What a jazz band costs, size by size",
     "columns": [
-     "What you're booking",
-     "What the market charges",
-     "Whose market"
+     {
+      "text": "What you're booking"
+     },
+     {
+      "text": "What the market charges"
+     },
+     {
+      "text": "Whose market"
+     }
     ],
     "rows": [
-     [
-      "A solo musician or duo for a cocktail hour",
-      "$200 to $700",
-      "United States"
-     ],
-     [
-      "A jazz trio or acoustic duo for a dinner",
-      "$500 to $3,000",
-      "United States"
-     ],
-     [
-      "An acoustic duo across a four-hour evening",
-      "$1,500 to $2,500",
-      "United States"
-     ],
-     [
-      "A trio across a four-hour evening",
-      "$2,000 to $3,500",
-      "United States"
-     ],
-     [
-      "A four-to-five-piece band for an event",
-      "$1,000 to $5,000",
-      "United States"
-     ],
-     [
-      "A cover or jazz band for a corporate event",
-      "$2,500 to $8,000",
-      "United States"
-     ],
-     [
-      "A Denver band, trio up to a full band with horns",
-      "$2,500 to $8,000",
-      "Denver"
-     ],
-     [
-      "A jazz trio for a cocktail hour, the top of the market",
-      "$3,450 to $6,450",
-      "California"
-     ],
-     [
-      "A jazz quartet for a reception, the top of the market",
-      "$4,250 to $7,250",
-      "California"
-     ]
+     {
+      "cells": [
+       {
+        "text": "A solo musician or duo for a cocktail hour"
+       },
+       {
+        "text": "$200 to $700"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A jazz trio or acoustic duo for a dinner"
+       },
+       {
+        "text": "$500 to $3,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "An acoustic duo across a four-hour evening"
+       },
+       {
+        "text": "$1,500 to $2,500"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A trio across a four-hour evening"
+       },
+       {
+        "text": "$2,000 to $3,500"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A four-to-five-piece band for an event"
+       },
+       {
+        "text": "$1,000 to $5,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A cover or jazz band for a corporate event"
+       },
+       {
+        "text": "$2,500 to $8,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A Denver band, trio up to a full band with horns"
+       },
+       {
+        "text": "$2,500 to $8,000"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A jazz trio for a cocktail hour, the top of the market"
+       },
+       {
+        "text": "$3,450 to $6,450"
+       },
+       {
+        "text": "California"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A jazz quartet for a reception, the top of the market"
+       },
+       {
+        "text": "$4,250 to $7,250"
+       },
+       {
+        "text": "California"
+       }
+      ]
+     }
     ]
    }
   },
@@ -219,9 +304,15 @@
    "props": {
     "id": "RelatedPosts-20",
     "posts": [
-     "what-is-a-jazz-trio",
-     "what-a-dj-costs-denver",
-     "how-to-read-a-band-quote"
+     {
+      "slug": "what-is-a-jazz-trio"
+     },
+     {
+      "slug": "what-a-dj-costs-denver"
+     },
+     {
+      "slug": "how-to-read-a-band-quote"
+     }
     ]
    }
   }

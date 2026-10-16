@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1531845116688-48819b3b68d9.jpg",
     "alt": "A guitarist playing outdoors at a wedding."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In a 2021 study of 657 British adults, memories brought back by music were relived more strongly and felt more personally important than memories brought back by TV shows.",
-     "The songs that bring back the most memories are usually from a person's teens, peaking around age 14 in a 2020 study.",
-     "Nostalgic songs feel good to most people, though in a 2024 study, people who tend toward sadness felt worse with them."
+     {
+      "text": "In a 2021 study of 657 British adults, memories brought back by music were relived more strongly and felt more personally important than memories brought back by TV shows."
+     },
+     {
+      "text": "The songs that bring back the most memories are usually from a person's teens, peaking around age 14 in a 2020 study."
+     },
+     {
+      "text": "Nostalgic songs feel good to most people, though in a 2024 study, people who tend toward sadness felt worse with them."
+     }
     ]
    }
   },
@@ -147,9 +152,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "party-music-for-all-ages",
-     "last-song-of-the-night-wedding",
-     "how-does-music-affect-people-at-a-party"
+     {
+      "slug": "party-music-for-all-ages"
+     },
+     {
+      "slug": "last-song-of-the-night-wedding"
+     },
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     }
     ]
    }
   }

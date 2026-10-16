@@ -15,8 +15,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1630300727308-fe49b6ae8a62.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -25,10 +24,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A corporate evening runs on a run of show. The band's job is scheduled against that document, the same as catering and AV.",
-     "The music ends before the speaker reaches the microphone, so nobody stands at the side of the stage waiting for a song to end.",
-     "Every program moment needs one person who calls it, agreed at sound check.",
-     "Dinner volume is a decision somebody makes in advance and writes into the run of show."
+     {
+      "text": "A corporate evening runs on a run of show. The band's job is scheduled against that document, the same as catering and AV."
+     },
+     {
+      "text": "The music ends before the speaker reaches the microphone, so nobody stands at the side of the stage waiting for a song to end."
+     },
+     {
+      "text": "Every program moment needs one person who calls it, agreed at sound check."
+     },
+     {
+      "text": "Dinner volume is a decision somebody makes in advance and writes into the run of show."
+     }
     ]
    }
   },
@@ -87,41 +94,95 @@
     "id": "ComparisonTable-9",
     "title": "Who calls what",
     "columns": [
-     "Moment",
-     "What the band does",
-     "Who calls it"
+     {
+      "text": "Moment"
+     },
+     {
+      "text": "What the band does"
+     },
+     {
+      "text": "Who calls it"
+     }
     ],
     "rows": [
-     [
-      "Dinner",
-      "Conversation volume, instrumental, no vocal over the tables",
-      "Bandleader, against the run of show"
-     ],
-     [
-      "Remarks",
-      "Silence, ending the song before the speaker walks",
-      "Whoever holds the run of show"
-     ],
-     [
-      "Award walk-on",
-      "A short cue per recipient, ending under the applause",
-      "Emcee, agreed at sound check"
-     ],
-     [
-      "Auction",
-      "Silence through bidding, music on the hammer",
-      "Auctioneer"
-     ],
-     [
-      "Video package",
-      "Muted, house audio takes over",
-      "AV vendor, agreed before doors"
-     ],
-     [
-      "Dancing",
-      "Loud, read song by song",
-      "Bandleader"
-     ]
+     {
+      "cells": [
+       {
+        "text": "Dinner"
+       },
+       {
+        "text": "Conversation volume, instrumental, no vocal over the tables"
+       },
+       {
+        "text": "Bandleader, against the run of show"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Remarks"
+       },
+       {
+        "text": "Silence, ending the song before the speaker walks"
+       },
+       {
+        "text": "Whoever holds the run of show"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Award walk-on"
+       },
+       {
+        "text": "A short cue per recipient, ending under the applause"
+       },
+       {
+        "text": "Emcee, agreed at sound check"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Auction"
+       },
+       {
+        "text": "Silence through bidding, music on the hammer"
+       },
+       {
+        "text": "Auctioneer"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Video package"
+       },
+       {
+        "text": "Muted, house audio takes over"
+       },
+       {
+        "text": "AV vendor, agreed before doors"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Dancing"
+       },
+       {
+        "text": "Loud, read song by song"
+       },
+       {
+        "text": "Bandleader"
+       }
+      ]
+     }
     ]
    }
   },
@@ -204,8 +265,12 @@
    "props": {
     "id": "RelatedPosts-20",
     "posts": [
-     "what-live-music-costs-corporate-event",
-     "what-a-band-needs-from-the-room"
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     },
+     {
+      "slug": "what-a-band-needs-from-the-room"
+     }
     ]
    }
   }

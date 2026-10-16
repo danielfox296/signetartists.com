@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1498145645178-ab2c7cebc433.jpg",
     "alt": "Two sailboats moored on still water at sunset."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Yacht rock is the smooth, studio-polished soft rock of roughly the mid-1970s to the early 1980s, the sound of the Doobie Brothers' What a Fool Believes and Toto's Africa.",
-     "The name came decades after the records, from a comedy web series called Yacht Rock that began in 2005.",
-     "It's one part of soft rock, the slick studio end of it, played by a circle of Los Angeles session musicians.",
-     "A yacht rock party starts with the music and adds a dress code of white, navy, boat shoes and captain's hats. A live band brings the harmonies and the saxophone the records are made of."
+     {
+      "text": "Yacht rock is the smooth, studio-polished soft rock of roughly the mid-1970s to the early 1980s, the sound of the Doobie Brothers' What a Fool Believes and Toto's Africa."
+     },
+     {
+      "text": "The name came decades after the records, from a comedy web series called Yacht Rock that began in 2005."
+     },
+     {
+      "text": "It's one part of soft rock, the slick studio end of it, played by a circle of Los Angeles session musicians."
+     },
+     {
+      "text": "A yacht rock party starts with the music and adds a dress code of white, navy, boat shoes and captain's hats. A live band brings the harmonies and the saxophone the records are made of."
+     }
     ]
    }
   },
@@ -125,9 +132,15 @@
    "props": {
     "id": "RelatedPosts-14",
     "posts": [
-     "band-or-dj-denver",
-     "company-picnic-entertainment-ideas-denver",
-     "what-is-a-jazz-trio"
+     {
+      "slug": "band-or-dj-denver"
+     },
+     {
+      "slug": "company-picnic-entertainment-ideas-denver"
+     },
+     {
+      "slug": "what-is-a-jazz-trio"
+     }
     ]
    }
   }

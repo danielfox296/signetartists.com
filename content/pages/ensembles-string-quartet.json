@@ -136,9 +136,9 @@
    }
   },
   {
-   "type": "Text",
+   "type": "TwoColumns",
    "props": {
-    "id": "Text-10",
+    "id": "TwoColumns-22",
     "band": "sunk",
     "blocks": [
      {
@@ -153,10 +153,566 @@
       }
      },
      {
-      "type": "HtmlBlock",
+      "type": "Columns",
       "props": {
-       "id": "HtmlBlock-8",
-       "html": "<div class=\"split split--three\">\n      <div>\n        <h3 class=\"h5\">Classical and traditional</h3>\n        <ul class=\"setlist\">\n          <li><span class=\"song-title\">Air from Suite in D (Air on the G String)</span> <span class=\"song-artist\">J.S. Bach</span></li>\n          <li><span class=\"song-title\">Allegro from Eine Kleine Nachtmusik</span> <span class=\"song-artist\">W.A. Mozart</span></li>\n          <li><span class=\"song-title\">Arioso</span> <span class=\"song-artist\">J.S. Bach</span></li>\n          <li><span class=\"song-title\">Arrival of the Queen of Sheba</span> <span class=\"song-artist\">G.F. Handel</span></li>\n          <li><span class=\"song-title\">Ave Maria</span> <span class=\"song-artist\">Franz Schubert</span></li>\n          <li><span class=\"song-title\">Ave Verum Corpus</span> <span class=\"song-artist\">W.A. Mozart</span></li>\n          <li><span class=\"song-title\">Bridal Chorus (“Here Comes the Bride”)</span> <span class=\"song-artist\">Richard Wagner</span></li>\n          <li><span class=\"song-title\">Canon in D</span> <span class=\"song-artist\">Johann Pachelbel</span></li>\n          <li><span class=\"song-title\">Clair de Lune</span> <span class=\"song-artist\">Claude Debussy</span></li>\n          <li><span class=\"song-title\">Jesu, Joy of Man’s Desiring</span> <span class=\"song-artist\">J.S. Bach</span></li>\n          <li><span class=\"song-title\">Meditation from Thaïs</span> <span class=\"song-artist\">Jules Massenet</span></li>\n          <li><span class=\"song-title\">Ode to Joy</span> <span class=\"song-artist\">Ludwig van Beethoven</span></li>\n          <li><span class=\"song-title\">Pavane</span> <span class=\"song-artist\">Gabriel Fauré</span></li>\n          <li><span class=\"song-title\">Rondeau</span> <span class=\"song-artist\">Jean-Joseph Mouret</span></li>\n          <li><span class=\"song-title\">Salut d’Amour</span> <span class=\"song-artist\">Edward Elgar</span></li>\n          <li><span class=\"song-title\">Sheep May Safely Graze</span> <span class=\"song-artist\">J.S. Bach</span></li>\n          <li><span class=\"song-title\">Spring</span> <span class=\"song-artist\">Antonio Vivaldi</span></li>\n          <li><span class=\"song-title\">The Swan</span> <span class=\"song-artist\">Camille Saint-Saëns</span></li>\n          <li><span class=\"song-title\">Trumpet Tune</span> <span class=\"song-artist\">Jeremiah Clarke</span></li>\n          <li><span class=\"song-title\">Trumpet Voluntary</span> <span class=\"song-artist\">Jeremiah Clarke</span></li>\n          <li><span class=\"song-title\">Vocalise</span> <span class=\"song-artist\">Sergei Rachmaninoff</span></li>\n          <li><span class=\"song-title\">Wedding March</span> <span class=\"song-artist\">Felix Mendelssohn</span></li>\n          <li><span class=\"song-title\">Winter (Largo)</span> <span class=\"song-artist\">Antonio Vivaldi</span></li>\n          <li><span class=\"song-title\">Come Again: Sweet Love Doth Now Invite</span> <span class=\"song-artist\">John Dowland</span></li>\n          <li><span class=\"song-title\">Concerto in G (“Alla Rustica”)</span> <span class=\"song-artist\">Antonio Vivaldi</span></li>\n          <li><span class=\"song-title\">Hornpipe from Water Music</span> <span class=\"song-artist\">G.F. Handel</span></li>\n          <li><span class=\"song-title\">La Réjouissance</span> <span class=\"song-artist\">G.F. Handel</span></li>\n          <li><span class=\"song-title\">Prelude from Te Deum</span> <span class=\"song-artist\">Marc-Antoine Charpentier</span></li>\n          <li><span class=\"song-title\">Por Una Cabeza</span> <span class=\"song-artist\">Carlos Gardel</span></li>\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"h5\">Hymns and worship songs</h3>\n        <ul class=\"setlist\">\n          <li><span class=\"song-title\">Amazing Grace</span></li>\n          <li><span class=\"song-title\">Be Thou My Vision</span></li>\n          <li><span class=\"song-title\">Come Thou Fount of Every Blessing</span></li>\n          <li><span class=\"song-title\">Great Is Thy Faithfulness</span></li>\n          <li><span class=\"song-title\">How Great Thou Art</span></li>\n          <li><span class=\"song-title\">Holy, Holy, Holy</span></li>\n          <li><span class=\"song-title\">It Is Well with My Soul</span></li>\n          <li><span class=\"song-title\">Jesus Paid It All</span></li>\n          <li><span class=\"song-title\">A Mighty Fortress Is Our God</span></li>\n          <li><span class=\"song-title\">Praise to the Lord, the Almighty</span></li>\n          <li><span class=\"song-title\">Rock of Ages</span></li>\n          <li><span class=\"song-title\">The Old Rugged Cross</span></li>\n          <li><span class=\"song-title\">What a Friend We Have in Jesus</span></li>\n          <li><span class=\"song-title\">’Tis So Sweet to Trust in Jesus</span></li>\n          <li><span class=\"song-title\">Goodness of God</span></li>\n          <li><span class=\"song-title\">10,000 Reasons (Bless the Lord)</span></li>\n          <li><span class=\"song-title\">In Christ Alone</span></li>\n          <li><span class=\"song-title\">Oceans (Where Feet May Fail)</span></li>\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"h5\">Love songs</h3>\n        <ul class=\"setlist\">\n          <li><span class=\"song-title\">All I Ask of You</span> <span class=\"song-artist\">Andrew Lloyd Webber</span></li>\n          <li><span class=\"song-title\">All of Me</span> <span class=\"song-artist\">John Legend</span></li>\n          <li><span class=\"song-title\">And I Love Her</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">At Last</span> <span class=\"song-artist\">Etta James</span></li>\n          <li><span class=\"song-title\">Can’t Help Falling in Love</span> <span class=\"song-artist\">Elvis Presley</span></li>\n          <li><span class=\"song-title\">Everything</span> <span class=\"song-artist\">Michael Bublé</span></li>\n          <li><span class=\"song-title\">Faithfully</span> <span class=\"song-artist\">Journey</span></li>\n          <li><span class=\"song-title\">Forever and for Always</span> <span class=\"song-artist\">Shania Twain</span></li>\n          <li><span class=\"song-title\">First Day of My Life</span> <span class=\"song-artist\">Bright Eyes</span></li>\n          <li><span class=\"song-title\">Here, There, and Everywhere</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">I Choose You</span> <span class=\"song-artist\">Sara Bareilles</span></li>\n          <li><span class=\"song-title\">I’m Yours</span> <span class=\"song-artist\">Jason Mraz</span></li>\n          <li><span class=\"song-title\">In My Life</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">Just the Way You Are</span> <span class=\"song-artist\">Bruno Mars</span></li>\n          <li><span class=\"song-title\">Lego House</span> <span class=\"song-artist\">Ed Sheeran</span></li>\n          <li><span class=\"song-title\">Love Me Tender</span> <span class=\"song-artist\">Elvis Presley</span></li>\n          <li><span class=\"song-title\">Love Song</span> <span class=\"song-artist\">Sara Bareilles</span></li>\n          <li><span class=\"song-title\">Love Story</span> <span class=\"song-artist\">Taylor Swift</span></li>\n          <li><span class=\"song-title\">Lovesong</span> <span class=\"song-artist\">The Cure</span></li>\n          <li><span class=\"song-title\">The Luckiest</span> <span class=\"song-artist\">Ben Folds</span></li>\n          <li><span class=\"song-title\">Make You Feel My Love</span> <span class=\"song-artist\">Bob Dylan</span></li>\n          <li><span class=\"song-title\">Marry Me</span> <span class=\"song-artist\">Train</span></li>\n          <li><span class=\"song-title\">Moon River</span> <span class=\"song-artist\">Henry Mancini</span></li>\n          <li><span class=\"song-title\">One Hand, One Heart</span> <span class=\"song-artist\">Leonard Bernstein</span></li>\n          <li><span class=\"song-title\">A Thousand Years</span> <span class=\"song-artist\">Christina Perri</span></li>\n          <li><span class=\"song-title\">Thinking Out Loud</span> <span class=\"song-artist\">Ed Sheeran</span></li>\n          <li><span class=\"song-title\">’Til There Was You</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">Turning Page</span> <span class=\"song-artist\">Sleeping at Last</span></li>\n          <li><span class=\"song-title\">We Belong Together</span> <span class=\"song-artist\">Mariah Carey</span></li>\n          <li><span class=\"song-title\">What Makes You Beautiful</span> <span class=\"song-artist\">One Direction</span></li>\n          <li><span class=\"song-title\">Wonderful Tonight</span> <span class=\"song-artist\">Eric Clapton</span></li>\n          <li><span class=\"song-title\">Yellow</span> <span class=\"song-artist\">Coldplay</span></li>\n          <li><span class=\"song-title\">Yesterday</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">You’re Beautiful</span> <span class=\"song-artist\">James Blunt</span></li>\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"h5\">Pop, rock and indie</h3>\n        <ul class=\"setlist\">\n          <li><span class=\"song-title\">All You Need Is Love</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">Baba O’Riley</span> <span class=\"song-artist\">The Who</span></li>\n          <li><span class=\"song-title\">Beautiful Day</span> <span class=\"song-artist\">U2</span></li>\n          <li><span class=\"song-title\">Best Day of My Life</span> <span class=\"song-artist\">American Authors</span></li>\n          <li><span class=\"song-title\">Bittersweet Symphony</span> <span class=\"song-artist\">The Verve</span></li>\n          <li><span class=\"song-title\">Brave</span> <span class=\"song-artist\">Sara Bareilles</span></li>\n          <li><span class=\"song-title\">Brown Eyed Girl</span> <span class=\"song-artist\">Van Morrison</span></li>\n          <li><span class=\"song-title\">Call Me Maybe</span> <span class=\"song-artist\">Carly Rae Jepsen</span></li>\n          <li><span class=\"song-title\">Clocks</span> <span class=\"song-artist\">Coldplay</span></li>\n          <li><span class=\"song-title\">Dancing on My Own</span> <span class=\"song-artist\">Robyn</span></li>\n          <li><span class=\"song-title\">Digital Love</span> <span class=\"song-artist\">Daft Punk</span></li>\n          <li><span class=\"song-title\">Don’t Stop Believin’</span> <span class=\"song-artist\">Journey</span></li>\n          <li><span class=\"song-title\">Don’t Worry Baby</span> <span class=\"song-artist\">The Beach Boys</span></li>\n          <li><span class=\"song-title\">Eleanor Rigby</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">Falling Slowly</span> <span class=\"song-artist\">Glen Hansard and Markéta Irglová</span></li>\n          <li><span class=\"song-title\">Firework</span> <span class=\"song-artist\">Katy Perry</span></li>\n          <li><span class=\"song-title\">Good Vibrations</span> <span class=\"song-artist\">The Beach Boys</span></li>\n          <li><span class=\"song-title\">Here Comes the Sun</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">Hey Soul Sister</span> <span class=\"song-artist\">Train</span></li>\n          <li><span class=\"song-title\">Hey There Delilah</span> <span class=\"song-artist\">Plain White T’s</span></li>\n          <li><span class=\"song-title\">Hold On, We’re Going Home</span> <span class=\"song-artist\">Drake</span></li>\n          <li><span class=\"song-title\">Home</span> <span class=\"song-artist\">Edward Sharpe and the Magnetic Zeros</span></li>\n          <li><span class=\"song-title\">I Gotta Feeling</span> <span class=\"song-artist\">The Black Eyed Peas</span></li>\n          <li><span class=\"song-title\">Mr. Brightside</span> <span class=\"song-artist\">The Killers</span></li>\n          <li><span class=\"song-title\">Paradise</span> <span class=\"song-artist\">Coldplay</span></li>\n          <li><span class=\"song-title\">Please, Please, Please Let Me Get What I Want</span> <span class=\"song-artist\">The Smiths</span></li>\n          <li><span class=\"song-title\">Rolling in the Deep</span> <span class=\"song-artist\">Adele</span></li>\n          <li><span class=\"song-title\">Shake It Off</span> <span class=\"song-artist\">Taylor Swift</span></li>\n          <li><span class=\"song-title\">Seven Nation Army</span> <span class=\"song-artist\">The White Stripes</span></li>\n          <li><span class=\"song-title\">Smells Like Teen Spirit</span> <span class=\"song-artist\">Nirvana</span></li>\n          <li><span class=\"song-title\">Smooth Criminal</span> <span class=\"song-artist\">Michael Jackson</span></li>\n          <li><span class=\"song-title\">Somewhere Only We Know</span> <span class=\"song-artist\">Keane</span></li>\n          <li><span class=\"song-title\">Starlight</span> <span class=\"song-artist\">Muse</span></li>\n          <li><span class=\"song-title\">Such Great Heights</span> <span class=\"song-artist\">The Postal Service</span></li>\n          <li><span class=\"song-title\">Sugar, We’re Goin’ Down</span> <span class=\"song-artist\">Fall Out Boy</span></li>\n          <li><span class=\"song-title\">Teenage Dream</span> <span class=\"song-artist\">Katy Perry</span></li>\n          <li><span class=\"song-title\">Today</span> <span class=\"song-artist\">The Smashing Pumpkins</span></li>\n          <li><span class=\"song-title\">Underneath It All</span> <span class=\"song-artist\">No Doubt</span></li>\n          <li><span class=\"song-title\">Viva La Vida</span> <span class=\"song-artist\">Coldplay</span></li>\n          <li><span class=\"song-title\">We Found Love</span> <span class=\"song-artist\">Calvin Harris and Rihanna</span></li>\n          <li><span class=\"song-title\">With a Little Help from My Friends</span> <span class=\"song-artist\">The Beatles</span></li>\n          <li><span class=\"song-title\">With or Without You</span> <span class=\"song-artist\">U2</span></li>\n          <li><span class=\"song-title\">Without You</span> <span class=\"song-artist\">David Guetta and Usher</span></li>\n          <li><span class=\"song-title\">Yeah!</span> <span class=\"song-artist\">Usher</span></li>\n          <li><span class=\"song-title\">You’re All I Need to Get By</span> <span class=\"song-artist\">Marvin Gaye</span></li>\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"h5\">Soul, jazz and Motown</h3>\n        <ul class=\"setlist\">\n          <li><span class=\"song-title\">For Once in My Life</span> <span class=\"song-artist\">Stevie Wonder</span></li>\n          <li><span class=\"song-title\">It Don’t Mean a Thing (If It Ain’t Got That Swing)</span> <span class=\"song-artist\">Duke Ellington</span></li>\n          <li><span class=\"song-title\">It Was a Very Good Year</span> <span class=\"song-artist\">Frank Sinatra</span></li>\n          <li><span class=\"song-title\">The Lady Is a Tramp</span> <span class=\"song-artist\">Frank Sinatra</span></li>\n          <li><span class=\"song-title\">Like a Virgin</span> <span class=\"song-artist\">Madonna</span></li>\n          <li><span class=\"song-title\">Moondance</span> <span class=\"song-artist\">Van Morrison</span></li>\n          <li><span class=\"song-title\">No One</span> <span class=\"song-artist\">Alicia Keys</span></li>\n          <li><span class=\"song-title\">Rocket Love</span> <span class=\"song-artist\">Stevie Wonder</span></li>\n          <li><span class=\"song-title\">Signed, Sealed, Delivered (I’m Yours)</span> <span class=\"song-artist\">Stevie Wonder</span></li>\n          <li><span class=\"song-title\">Smash Into You</span> <span class=\"song-artist\">Beyoncé</span></li>\n          <li><span class=\"song-title\">Stand by Me</span> <span class=\"song-artist\">Ben E. King</span></li>\n          <li><span class=\"song-title\">Stepping Out with My Baby</span> <span class=\"song-artist\">Tony Bennett</span></li>\n          <li><span class=\"song-title\">Strangers in the Night</span> <span class=\"song-artist\">Frank Sinatra</span></li>\n        </ul>\n      </div>\n      <div>\n        <h3 class=\"h5\">Film themes</h3>\n        <ul class=\"setlist\">\n          <li><span class=\"song-title\">Across the Stars</span> <span class=\"song-artist\">John Williams</span></li>\n          <li><span class=\"song-title\">Concerning Hobbits</span> <span class=\"song-artist\">Howard Shore</span></li>\n          <li><span class=\"song-title\">Linus and Lucy</span> <span class=\"song-artist\">Vince Guaraldi</span></li>\n          <li><span class=\"song-title\">Married Life (from Up)</span> <span class=\"song-artist\">Michael Giacchino</span></li>\n          <li><span class=\"song-title\">Storybook Love</span> <span class=\"song-artist\">Mark Knopfler</span></li>\n          <li><span class=\"song-title\">The Throne Room (Star Wars)</span> <span class=\"song-artist\">John Williams</span></li>\n        </ul>\n      </div>\n    </div>"
+       "id": "Columns-20",
+       "cls": "split split--three",
+       "n": 6,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-8",
+          "html": "Classical and traditional",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-9",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Air from Suite in D (Air on the G String)</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Allegro from Eine Kleine Nachtmusik</span> <span class=\"song-artist\">W.A. Mozart</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Arioso</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Arrival of the Queen of Sheba</span> <span class=\"song-artist\">G.F. Handel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Ave Maria</span> <span class=\"song-artist\">Franz Schubert</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Ave Verum Corpus</span> <span class=\"song-artist\">W.A. Mozart</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Bridal Chorus (“Here Comes the Bride”)</span> <span class=\"song-artist\">Richard Wagner</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Canon in D</span> <span class=\"song-artist\">Johann Pachelbel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Clair de Lune</span> <span class=\"song-artist\">Claude Debussy</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Jesu, Joy of Man’s Desiring</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Meditation from Thaïs</span> <span class=\"song-artist\">Jules Massenet</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Ode to Joy</span> <span class=\"song-artist\">Ludwig van Beethoven</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Pavane</span> <span class=\"song-artist\">Gabriel Fauré</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rondeau</span> <span class=\"song-artist\">Jean-Joseph Mouret</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Salut d’Amour</span> <span class=\"song-artist\">Edward Elgar</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Sheep May Safely Graze</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Spring</span> <span class=\"song-artist\">Antonio Vivaldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Swan</span> <span class=\"song-artist\">Camille Saint-Saëns</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Trumpet Tune</span> <span class=\"song-artist\">Jeremiah Clarke</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Trumpet Voluntary</span> <span class=\"song-artist\">Jeremiah Clarke</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Vocalise</span> <span class=\"song-artist\">Sergei Rachmaninoff</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Wedding March</span> <span class=\"song-artist\">Felix Mendelssohn</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Winter (Largo)</span> <span class=\"song-artist\">Antonio Vivaldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Come Again: Sweet Love Doth Now Invite</span> <span class=\"song-artist\">John Dowland</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Concerto in G (“Alla Rustica”)</span> <span class=\"song-artist\">Antonio Vivaldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hornpipe from Water Music</span> <span class=\"song-artist\">G.F. Handel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">La Réjouissance</span> <span class=\"song-artist\">G.F. Handel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Prelude from Te Deum</span> <span class=\"song-artist\">Marc-Antoine Charpentier</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Por Una Cabeza</span> <span class=\"song-artist\">Carlos Gardel</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-10",
+          "html": "Hymns and worship songs",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-11",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Amazing Grace</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Be Thou My Vision</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Come Thou Fount of Every Blessing</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Great Is Thy Faithfulness</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">How Great Thou Art</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Holy, Holy, Holy</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">It Is Well with My Soul</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Jesus Paid It All</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">A Mighty Fortress Is Our God</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Praise to the Lord, the Almighty</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rock of Ages</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Old Rugged Cross</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What a Friend We Have in Jesus</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">’Tis So Sweet to Trust in Jesus</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Goodness of God</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">10,000 Reasons (Bless the Lord)</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">In Christ Alone</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Oceans (Where Feet May Fail)</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-12",
+          "html": "Love songs",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-13",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">All I Ask of You</span> <span class=\"song-artist\">Andrew Lloyd Webber</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">All of Me</span> <span class=\"song-artist\">John Legend</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">And I Love Her</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">At Last</span> <span class=\"song-artist\">Etta James</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Can’t Help Falling in Love</span> <span class=\"song-artist\">Elvis Presley</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Everything</span> <span class=\"song-artist\">Michael Bublé</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Faithfully</span> <span class=\"song-artist\">Journey</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Forever and for Always</span> <span class=\"song-artist\">Shania Twain</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">First Day of My Life</span> <span class=\"song-artist\">Bright Eyes</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Here, There, and Everywhere</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I Choose You</span> <span class=\"song-artist\">Sara Bareilles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I’m Yours</span> <span class=\"song-artist\">Jason Mraz</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">In My Life</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Just the Way You Are</span> <span class=\"song-artist\">Bruno Mars</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Lego House</span> <span class=\"song-artist\">Ed Sheeran</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Love Me Tender</span> <span class=\"song-artist\">Elvis Presley</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Love Song</span> <span class=\"song-artist\">Sara Bareilles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Love Story</span> <span class=\"song-artist\">Taylor Swift</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Lovesong</span> <span class=\"song-artist\">The Cure</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Luckiest</span> <span class=\"song-artist\">Ben Folds</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Make You Feel My Love</span> <span class=\"song-artist\">Bob Dylan</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Marry Me</span> <span class=\"song-artist\">Train</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Moon River</span> <span class=\"song-artist\">Henry Mancini</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">One Hand, One Heart</span> <span class=\"song-artist\">Leonard Bernstein</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">A Thousand Years</span> <span class=\"song-artist\">Christina Perri</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Thinking Out Loud</span> <span class=\"song-artist\">Ed Sheeran</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">’Til There Was You</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Turning Page</span> <span class=\"song-artist\">Sleeping at Last</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">We Belong Together</span> <span class=\"song-artist\">Mariah Carey</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What Makes You Beautiful</span> <span class=\"song-artist\">One Direction</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Wonderful Tonight</span> <span class=\"song-artist\">Eric Clapton</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Yellow</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Yesterday</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">You’re Beautiful</span> <span class=\"song-artist\">James Blunt</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c4": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-14",
+          "html": "Pop, rock and indie",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-15",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">All You Need Is Love</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Baba O’Riley</span> <span class=\"song-artist\">The Who</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Beautiful Day</span> <span class=\"song-artist\">U2</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Best Day of My Life</span> <span class=\"song-artist\">American Authors</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Bittersweet Symphony</span> <span class=\"song-artist\">The Verve</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Brave</span> <span class=\"song-artist\">Sara Bareilles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Brown Eyed Girl</span> <span class=\"song-artist\">Van Morrison</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Call Me Maybe</span> <span class=\"song-artist\">Carly Rae Jepsen</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Clocks</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Dancing on My Own</span> <span class=\"song-artist\">Robyn</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Digital Love</span> <span class=\"song-artist\">Daft Punk</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Don’t Stop Believin’</span> <span class=\"song-artist\">Journey</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Don’t Worry Baby</span> <span class=\"song-artist\">The Beach Boys</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Eleanor Rigby</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Falling Slowly</span> <span class=\"song-artist\">Glen Hansard and Markéta Irglová</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Firework</span> <span class=\"song-artist\">Katy Perry</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Good Vibrations</span> <span class=\"song-artist\">The Beach Boys</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Here Comes the Sun</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hey Soul Sister</span> <span class=\"song-artist\">Train</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hey There Delilah</span> <span class=\"song-artist\">Plain White T’s</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hold On, We’re Going Home</span> <span class=\"song-artist\">Drake</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Home</span> <span class=\"song-artist\">Edward Sharpe and the Magnetic Zeros</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I Gotta Feeling</span> <span class=\"song-artist\">The Black Eyed Peas</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Mr. Brightside</span> <span class=\"song-artist\">The Killers</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Paradise</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Please, Please, Please Let Me Get What I Want</span> <span class=\"song-artist\">The Smiths</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rolling in the Deep</span> <span class=\"song-artist\">Adele</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Shake It Off</span> <span class=\"song-artist\">Taylor Swift</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Seven Nation Army</span> <span class=\"song-artist\">The White Stripes</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Smells Like Teen Spirit</span> <span class=\"song-artist\">Nirvana</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Smooth Criminal</span> <span class=\"song-artist\">Michael Jackson</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Somewhere Only We Know</span> <span class=\"song-artist\">Keane</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Starlight</span> <span class=\"song-artist\">Muse</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Such Great Heights</span> <span class=\"song-artist\">The Postal Service</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Sugar, We’re Goin’ Down</span> <span class=\"song-artist\">Fall Out Boy</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Teenage Dream</span> <span class=\"song-artist\">Katy Perry</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Today</span> <span class=\"song-artist\">The Smashing Pumpkins</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Underneath It All</span> <span class=\"song-artist\">No Doubt</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Viva La Vida</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">We Found Love</span> <span class=\"song-artist\">Calvin Harris and Rihanna</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">With a Little Help from My Friends</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">With or Without You</span> <span class=\"song-artist\">U2</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Without You</span> <span class=\"song-artist\">David Guetta and Usher</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Yeah!</span> <span class=\"song-artist\">Usher</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">You’re All I Need to Get By</span> <span class=\"song-artist\">Marvin Gaye</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c5": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-16",
+          "html": "Soul, jazz and Motown",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-17",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">For Once in My Life</span> <span class=\"song-artist\">Stevie Wonder</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">It Don’t Mean a Thing (If It Ain’t Got That Swing)</span> <span class=\"song-artist\">Duke Ellington</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">It Was a Very Good Year</span> <span class=\"song-artist\">Frank Sinatra</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Lady Is a Tramp</span> <span class=\"song-artist\">Frank Sinatra</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Like a Virgin</span> <span class=\"song-artist\">Madonna</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Moondance</span> <span class=\"song-artist\">Van Morrison</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">No One</span> <span class=\"song-artist\">Alicia Keys</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rocket Love</span> <span class=\"song-artist\">Stevie Wonder</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Signed, Sealed, Delivered (I’m Yours)</span> <span class=\"song-artist\">Stevie Wonder</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Smash Into You</span> <span class=\"song-artist\">Beyoncé</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Stand by Me</span> <span class=\"song-artist\">Ben E. King</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Stepping Out with My Baby</span> <span class=\"song-artist\">Tony Bennett</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Strangers in the Night</span> <span class=\"song-artist\">Frank Sinatra</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c6": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-18",
+          "html": "Film themes",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-19",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Across the Stars</span> <span class=\"song-artist\">John Williams</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Concerning Hobbits</span> <span class=\"song-artist\">Howard Shore</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Linus and Lucy</span> <span class=\"song-artist\">Vince Guaraldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Married Life (from Up)</span> <span class=\"song-artist\">Michael Giacchino</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Storybook Love</span> <span class=\"song-artist\">Mark Knopfler</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Throne Room (Star Wars)</span> <span class=\"song-artist\">John Williams</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
       }
      }
     ],
@@ -167,13 +723,13 @@
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-15",
+    "id": "Rows-27",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-11",
+       "id": "Heading-23",
        "eyebrow": "Sizes",
        "title": "One violin for the aisle, a quartet for the ballroom.",
        "titleTag": "h2",
@@ -183,7 +739,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-12",
+       "id": "DefRows-24",
        "rows": [
         {
          "term": "Solo violin",
@@ -208,7 +764,7 @@
      {
       "type": "Paragraph",
       "props": {
-       "id": "Paragraph-13",
+       "id": "Paragraph-25",
        "html": "For a ceremony on guitar, the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays it on steel strings and the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> on nylon. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> can take the cocktail hour after a strings ceremony, and the <a href=\"/ensembles/dj/\">DJ</a> the dancing, on the same contract.",
        "cls": "note"
       }
@@ -221,13 +777,13 @@
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-19",
+    "id": "Rows-31",
     "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-16",
+       "id": "Heading-28",
        "eyebrow": "Occasions",
        "title": "Who books classical strings.",
        "titleTag": "h2",
@@ -237,7 +793,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-17",
+       "id": "DefRows-29",
        "rows": [
         {
          "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony</a>",
@@ -279,13 +835,13 @@
   {
    "type": "Videos",
    "props": {
-    "id": "Videos-24",
+    "id": "Videos-36",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-20",
+       "id": "Heading-32",
        "eyebrow": "The footage",
        "title": "A Beethoven quartet, and one violin on its own.",
        "titleTag": "h2",
@@ -296,7 +852,7 @@
      {
       "type": "VideoGrid",
       "props": {
-       "id": "VideoGrid-21",
+       "id": "VideoGrid-33",
        "videos": [
         {
          "kind": "iframe",
@@ -329,7 +885,7 @@
      {
       "type": "MediaGrid",
       "props": {
-       "id": "MediaGrid-22",
+       "id": "MediaGrid-34",
        "images": [
         {
          "src": "/img/acts/classical-strings-ballroom.jpg",
@@ -361,13 +917,13 @@
   {
    "type": "Questions",
    "props": {
-    "id": "Questions-30",
+    "id": "Questions-42",
     "band": "sunk",
     "blocks": [
      {
       "type": "Title",
       "props": {
-       "id": "Title-25",
+       "id": "Title-37",
        "html": "String quartet questions",
        "tag": "h2",
        "cls": "h3"
@@ -376,7 +932,7 @@
      {
       "type": "Paragraph",
       "props": {
-       "id": "Paragraph-26",
+       "id": "Paragraph-38",
        "html": "The questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>. The four instruments, and how a trio or a duo compares, are in <a href=\"/blog/what-is-a-string-quartet/\">what is a string quartet</a>.",
        "cls": "note"
       }
@@ -384,7 +940,7 @@
      {
       "type": "Faq",
       "props": {
-       "id": "Faq-27",
+       "id": "Faq-39",
        "items": [
         {
          "q": "What does a string quartet cost for a wedding in Denver?",
@@ -417,7 +973,7 @@
      {
       "type": "Paragraph",
       "props": {
-       "id": "Paragraph-28",
+       "id": "Paragraph-40",
        "html": "This figure comes from published 2026 market guides, read September 2026. Signet provides prices for a specific date on request.",
        "cls": "note"
       }
@@ -430,13 +986,13 @@
   {
    "type": "CallToAction",
    "props": {
-    "id": "CallToAction-33",
+    "id": "CallToAction-45",
     "band": "ruled",
     "blocks": [
      {
       "type": "CloseRow",
       "props": {
-       "id": "CloseRow-31",
+       "id": "CloseRow-43",
        "buttons": [
         {
          "label": "Check a Date",

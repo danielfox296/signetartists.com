@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1778694276998-4cfd1f84bfe1.jpg",
     "alt": "Three singing bowls on cushions with a mallet beside them."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "People often say they feel calmer and less tense after a sound bath, and a few small studies found the same.",
-     "No health benefit is proven. A 2020 review couldn't recommend singing bowl therapies, and a 2025 review said they \"may have potential\" for anxiety, low mood and sleep.",
-     "What people say they feel and what instruments measure don't always match, with singing bowls and with music for sleep."
+     {
+      "text": "People often say they feel calmer and less tense after a sound bath, and a few small studies found the same."
+     },
+     {
+      "text": "No health benefit is proven. A 2020 review couldn't recommend singing bowl therapies, and a 2025 review said they \"may have potential\" for anxiety, low mood and sleep."
+     },
+     {
+      "text": "What people say they feel and what instruments measure don't always match, with singing bowls and with music for sleep."
+     }
     ]
    }
   },
@@ -143,9 +148,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "how-does-music-affect-people-at-a-party",
-     "company-offsite-ideas-colorado-remote-teams",
-     "live-music-for-memory-care-residents"
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     },
+     {
+      "slug": "company-offsite-ideas-colorado-remote-teams"
+     },
+     {
+      "slug": "live-music-for-memory-care-residents"
+     }
     ]
    }
   }

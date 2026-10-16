@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1641957449475-31200d42b183.jpg",
     "alt": "Stage lights over instruments set up before an evening event."
-   },
-   "readingTime": 7
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "The daytime program plans itself. The evenings are the part people remember and the part that gets decided last.",
-     "Eight evening activities that work in the valley, each with the size of act it actually needs.",
-     "Vail's outdoor sound limit in the resort villages was reported at 65 dBA measured ten feet from the permitted area, and the town was reviewing its rules, so confirm the current number with the venue.",
-     "A cover or jazz band for a corporate event runs $2,500 to $8,000 across this market, and a jazz trio or acoustic duo for a dinner runs $500 to $3,000."
+     {
+      "text": "The daytime program plans itself. The evenings are the part people remember and the part that gets decided last."
+     },
+     {
+      "text": "Eight evening activities that work in the valley, each with the size of act it actually needs."
+     },
+     {
+      "text": "Vail's outdoor sound limit in the resort villages was reported at 65 dBA measured ten feet from the permitted area, and the town was reviewing its rules, so confirm the current number with the venue."
+     },
+     {
+      "text": "A cover or jazz band for a corporate event runs $2,500 to $8,000 across this market, and a jazz trio or acoustic duo for a dinner runs $500 to $3,000."
+     }
     ]
    }
   },
@@ -158,51 +165,121 @@
     "id": "ComparisonTable-19",
     "title": "The eight evenings and what each one books",
     "columns": [
-     "The evening",
-     "The booking",
-     "What it needs from the venue"
+     {
+      "text": "The evening"
+     },
+     {
+      "text": "The booking"
+     },
+     {
+      "text": "What it needs from the venue"
+     }
     ],
     "rows": [
-     [
-      "The welcome reception",
-      "Duo, conversation volume",
-      "A corner and one dedicated circuit"
-     ],
-     [
-      "The listening dinner",
-      "Jazz duo or trio",
-      "A private dining floor"
-     ],
-     [
-      "The awards night",
-      "Duo to quartet, plus an announcement mic",
-      "A program and a sound plan for it"
-     ],
-     [
-      "The off-site dinner up the mountain",
-      "Solo or compact duo",
-      "A ride up, and a ride down for the gear"
-     ],
-     [
-      "The flamenco set piece",
-      "Flamenco trio, dancer optional",
-      "Sightlines and a hard floor"
-     ],
-     [
-      "The closing night with a floor",
-      "Quartet",
-      "14 by 10 ft and two dedicated circuits"
-     ],
-     [
-      "The late half after the band",
-      "DJ, same system",
-      "A curfew you've checked"
-     ],
-     [
-      "The evening you leave alone",
-      "Nothing",
-      "Nothing"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The welcome reception"
+       },
+       {
+        "text": "Duo, conversation volume"
+       },
+       {
+        "text": "A corner and one dedicated circuit"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The listening dinner"
+       },
+       {
+        "text": "Jazz duo or trio"
+       },
+       {
+        "text": "A private dining floor"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The awards night"
+       },
+       {
+        "text": "Duo to quartet, plus an announcement mic"
+       },
+       {
+        "text": "A program and a sound plan for it"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The off-site dinner up the mountain"
+       },
+       {
+        "text": "Solo or compact duo"
+       },
+       {
+        "text": "A ride up, and a ride down for the gear"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The flamenco set piece"
+       },
+       {
+        "text": "Flamenco trio, dancer optional"
+       },
+       {
+        "text": "Sightlines and a hard floor"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The closing night with a floor"
+       },
+       {
+        "text": "Quartet"
+       },
+       {
+        "text": "14 by 10 ft and two dedicated circuits"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The late half after the band"
+       },
+       {
+        "text": "DJ, same system"
+       },
+       {
+        "text": "A curfew you've checked"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The evening you leave alone"
+       },
+       {
+        "text": "Nothing"
+       },
+       {
+        "text": "Nothing"
+       }
+      ]
+     }
     ]
    }
   },
@@ -265,8 +342,12 @@
    "props": {
     "id": "RelatedPosts-27",
     "posts": [
-     "playing-around-a-program",
-     "office-holiday-party-ideas-denver"
+     {
+      "slug": "playing-around-a-program"
+     },
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     }
     ]
    }
   }

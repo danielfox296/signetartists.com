@@ -15,8 +15,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1510076857177-7470076d4098.jpg",
     "alt": "Road cases stacked backstage in a dark hall."
-   },
-   "readingTime": 6
+   }
   }
  },
  "content": [
@@ -25,10 +24,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Stage-rental guidance for a seven to ten-piece band runs to 24 ft by 24 ft. A quartet asks for 14 ft by 10 ft and will play on 12 ft by 8 ft.",
-     "Power is the requirement venues most often get wrong. A band needs its own dedicated circuits, within reach of the stage.",
-     "Ask the band for its rider before you promise the venue anything. The rider is the figure that binds.",
-     "Insurance, a W-9 and one itemized invoice are each a gate somebody else controls, and each gate has a queue, so they should arrive with the contract."
+     {
+      "text": "Stage-rental guidance for a seven to ten-piece band runs to 24 ft by 24 ft. A quartet asks for 14 ft by 10 ft and will play on 12 ft by 8 ft."
+     },
+     {
+      "text": "Power is the requirement venues most often get wrong. A band needs its own dedicated circuits, within reach of the stage."
+     },
+     {
+      "text": "Ask the band for its rider before you promise the venue anything. The rider is the figure that binds."
+     },
+     {
+      "text": "Insurance, a W-9 and one itemized invoice are each a gate somebody else controls, and each gate has a queue, so they should arrive with the contract."
+     }
     ]
    }
   },
@@ -59,31 +66,69 @@
     "id": "ComparisonTable-5",
     "title": "Published guidance against this roster's own asks",
     "columns": [
-     "Band size",
-     "Stage-rental guidance",
-     "What we ask for"
+     {
+      "text": "Band size"
+     },
+     {
+      "text": "Stage-rental guidance"
+     },
+     {
+      "text": "What we ask for"
+     }
     ],
     "rows": [
-     [
-      "Duo",
-      "8 ft x 8 ft small, 8 ft x 12 ft medium",
-      "8 ft x 6 ft, takes 6 ft x 5 ft"
-     ],
-     [
-      "Trio",
-      "12 ft x 16 ft small, 16 ft x 20 ft medium",
-      "12 ft x 8 ft, takes 10 ft x 6 ft"
-     ],
-     [
-      "Quartet",
-      "12 ft x 16 ft small, 16 ft x 20 ft medium",
-      "14 ft x 10 ft, takes 12 ft x 8 ft"
-     ],
-     [
-      "DJ",
-      "Not published at this granularity",
-      "6 ft x 4 ft, takes 6 ft x 3 ft"
-     ]
+     {
+      "cells": [
+       {
+        "text": "Duo"
+       },
+       {
+        "text": "8 ft x 8 ft small, 8 ft x 12 ft medium"
+       },
+       {
+        "text": "8 ft x 6 ft, takes 6 ft x 5 ft"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Trio"
+       },
+       {
+        "text": "12 ft x 16 ft small, 16 ft x 20 ft medium"
+       },
+       {
+        "text": "12 ft x 8 ft, takes 10 ft x 6 ft"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Quartet"
+       },
+       {
+        "text": "12 ft x 16 ft small, 16 ft x 20 ft medium"
+       },
+       {
+        "text": "14 ft x 10 ft, takes 12 ft x 8 ft"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "DJ"
+       },
+       {
+        "text": "Not published at this granularity"
+       },
+       {
+        "text": "6 ft x 4 ft, takes 6 ft x 3 ft"
+       }
+      ]
+     }
     ]
    }
   },
@@ -177,8 +222,12 @@
    "props": {
     "id": "References-18",
     "items": [
-     "Stage Rental. \"What Size Stage Do I Need For My Event?\" stagerental.com. Stage dimensions by band size, retrieved 2026-08-05.",
-     "John Parker Band. \"Setup: Staging, Electrical, Seating, etc.\" jpband.com. Published stage and electrical requirements, retrieved 2026-08-05."
+     {
+      "text": "Stage Rental. \"What Size Stage Do I Need For My Event?\" stagerental.com. Stage dimensions by band size, retrieved 2026-08-05."
+     },
+     {
+      "text": "John Parker Band. \"Setup: Staging, Electrical, Seating, etc.\" jpband.com. Published stage and electrical requirements, retrieved 2026-08-05."
+     }
     ]
    }
   },
@@ -197,8 +246,12 @@
    "props": {
     "id": "RelatedPosts-20",
     "posts": [
-     "what-live-music-costs-corporate-event",
-     "playing-around-a-program"
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     },
+     {
+      "slug": "playing-around-a-program"
+     }
     ]
    }
   }

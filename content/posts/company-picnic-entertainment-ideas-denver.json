@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1592153978217-6913256c7e1e.jpg",
     "alt": "A frame tent with a plywood stage deck under it."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A picnic is the one company event where the entertainment has to work for families in the afternoon and for the crowd that stays into the evening, and those are two different bookings.",
-     "In Colorado the afternoon weather decides the stage. It has to be covered, level and dry, with power run to it, and the move-indoors call has to be agreed in writing before the day.",
-     "The lists you find for a company picnic are games lists. Music is the missing idea, and it's the one that reaches the whole lawn at once.",
-     "The picnic that turns into a party at dusk is one booking: an acoustic act through the afternoon, a band or a DJ when the sun goes down."
+     {
+      "text": "A picnic is the one company event where the entertainment has to work for families in the afternoon and for the crowd that stays into the evening, and those are two different bookings."
+     },
+     {
+      "text": "In Colorado the afternoon weather decides the stage. It has to be covered, level and dry, with power run to it, and the move-indoors call has to be agreed in writing before the day."
+     },
+     {
+      "text": "The lists you find for a company picnic are games lists. Music is the missing idea, and it's the one that reaches the whole lawn at once."
+     },
+     {
+      "text": "The picnic that turns into a party at dusk is one booking: an acoustic act through the afternoon, a band or a DJ when the sun goes down."
+     }
     ]
    }
   },
@@ -158,51 +165,121 @@
     "id": "ComparisonTable-19",
     "title": "Eight picnic ideas and what each one needs",
     "columns": [
-     "The idea",
-     "The booking",
-     "What it needs from the site"
+     {
+      "text": "The idea"
+     },
+     {
+      "text": "The booking"
+     },
+     {
+      "text": "What it needs from the site"
+     }
     ],
     "rows": [
-     [
-      "The Americana band on the lawn",
-      "Trio or quartet",
-      "A covered deck, one or two circuits"
-     ],
-     [
-      "The acoustic duo by the food line",
-      "Duo, the afternoon",
-      "An 8 by 6 foot corner, one circuit"
-     ],
-     [
-      "The DJ afternoon",
-      "DJ",
-      "Shade for the booth, one circuit"
-     ],
-     [
-      "The yacht rock evening",
-      "Four to six musicians",
-      "A covered stage, two circuits"
-     ],
-     [
-      "The solo guitarist",
-      "Solo",
-      "A pavilion roof, one circuit"
-     ],
-     [
-      "Games and activities",
-      "A rental company",
-      "Lawn"
-     ],
-     [
-      "The family hour into the evening",
-      "Acoustic act, then a band or the DJ",
-      "One stage, one load-in"
-     ],
-     [
-      "The picnic that stays a picnic",
-      "Whichever act, the afternoon only",
-      "Whatever the park allows"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The Americana band on the lawn"
+       },
+       {
+        "text": "Trio or quartet"
+       },
+       {
+        "text": "A covered deck, one or two circuits"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The acoustic duo by the food line"
+       },
+       {
+        "text": "Duo, the afternoon"
+       },
+       {
+        "text": "An 8 by 6 foot corner, one circuit"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The DJ afternoon"
+       },
+       {
+        "text": "DJ"
+       },
+       {
+        "text": "Shade for the booth, one circuit"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The yacht rock evening"
+       },
+       {
+        "text": "Four to six musicians"
+       },
+       {
+        "text": "A covered stage, two circuits"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The solo guitarist"
+       },
+       {
+        "text": "Solo"
+       },
+       {
+        "text": "A pavilion roof, one circuit"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Games and activities"
+       },
+       {
+        "text": "A rental company"
+       },
+       {
+        "text": "Lawn"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The family hour into the evening"
+       },
+       {
+        "text": "Acoustic act, then a band or the DJ"
+       },
+       {
+        "text": "One stage, one load-in"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The picnic that stays a picnic"
+       },
+       {
+        "text": "Whichever act, the afternoon only"
+       },
+       {
+        "text": "Whatever the park allows"
+       }
+      ]
+     }
     ]
    }
   },
@@ -221,9 +298,15 @@
    "props": {
     "id": "RelatedPosts-21",
     "posts": [
-     "outdoor-reception",
-     "corporate-event-entertainment-ideas-denver",
-     "client-appreciation-event-ideas-denver"
+     {
+      "slug": "outdoor-reception"
+     },
+     {
+      "slug": "corporate-event-entertainment-ideas-denver"
+     },
+     {
+      "slug": "client-appreciation-event-ideas-denver"
+     }
     ]
    }
   }

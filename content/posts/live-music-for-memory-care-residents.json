@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1762955911431-4c44c7c3f408.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In two small studies, residents were more engaged during live music than during recorded music or silence, and a 2020 review credited live music with better communication and relationships.",
-     "The most careful review of the trials found that therapeutic music programs probably reduce symptoms of depression slightly, with no effect on agitation and nothing that lasted four weeks after the sessions ended.",
-     "The songs that feel most personal are usually the ones released when a listener was about 10 to 30, which for a resident who's 80 or 85 in 2026 is roughly 1951 to 1976."
+     {
+      "text": "In two small studies, residents were more engaged during live music than during recorded music or silence, and a 2020 review credited live music with better communication and relationships."
+     },
+     {
+      "text": "The most careful review of the trials found that therapeutic music programs probably reduce symptoms of depression slightly, with no effect on agitation and nothing that lasted four weeks after the sessions ended."
+     },
+     {
+      "text": "The songs that feel most personal are usually the ones released when a listener was about 10 to 30, which for a resident who's 80 or 85 in 2026 is roughly 1951 to 1976."
+     }
     ]
    }
   },
@@ -181,9 +186,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "party-music-for-all-ages",
-     "how-loud-should-background-music-be",
-     "how-does-music-affect-people-at-a-party"
+     {
+      "slug": "party-music-for-all-ages"
+     },
+     {
+      "slug": "how-loud-should-background-music-be"
+     },
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     }
     ]
    }
   }

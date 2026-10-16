@@ -15,8 +15,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1783314870559-b93cdcf6db7a.jpg",
     "alt": "A frame tent on grass with a plywood stage deck under it."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -25,10 +24,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "An outdoor site works against volume twice: no walls to reflect sound back toward the floor, and a clear path for it to travel to the property line.",
-     "Colorado caps noise at 55 dB(A) in a residential zone during the day and 50 dB(A) after 7pm, measured 25 feet or more beyond the property line.",
-     "Cover over the band and over the mixing desk goes in the plan whatever the forecast says. Dew on its own will end an evening early.",
-     "The move-indoors call needs one named person and a stated time, written into the run of show before the day."
+     {
+      "text": "An outdoor site works against volume twice: no walls to reflect sound back toward the floor, and a clear path for it to travel to the property line."
+     },
+     {
+      "text": "Colorado caps noise at 55 dB(A) in a residential zone during the day and 50 dB(A) after 7pm, measured 25 feet or more beyond the property line."
+     },
+     {
+      "text": "Cover over the band and over the mixing desk goes in the plan whatever the forecast says. Dew on its own will end an evening early."
+     },
+     {
+      "text": "The move-indoors call needs one named person and a stated time, written into the run of show before the day."
+     }
     ]
    }
   },
@@ -131,46 +138,108 @@
     "id": "ComparisonTable-15",
     "title": "Indoors and outdoors, same band",
     "columns": [
-     "",
-     "Indoors",
-     "Outdoors"
+     {
+      "text": ""
+     },
+     {
+      "text": "Indoors"
+     },
+     {
+      "text": "Outdoors"
+     }
     ],
     "rows": [
-     [
-      "Reinforcement from the building",
-      "Walls and ceiling reflect sound back",
-      "None"
-     ],
-     [
-      "PA needed for the same floor volume",
-      "Less",
-      "More"
-     ],
-     [
-      "Where the limit is measured",
-      "Usually a house policy",
-      "25 ft past the property line"
-     ],
-     [
-      "Power",
-      "House circuits",
-      "House circuits or a sized, grounded generator"
-     ],
-     [
-      "Cover",
-      "Not applicable",
-      "Over the band and the desk, always"
-     ],
-     [
-      "Retuning across the night",
-      "Occasional",
-      "Frequent as the temperature drops"
-     ],
-     [
-      "Contingency",
-      "Rarely needed",
-      "A named person and a stated time"
-     ]
+     {
+      "cells": [
+       {
+        "text": "Reinforcement from the building"
+       },
+       {
+        "text": "Walls and ceiling reflect sound back"
+       },
+       {
+        "text": "None"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "PA needed for the same floor volume"
+       },
+       {
+        "text": "Less"
+       },
+       {
+        "text": "More"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Where the limit is measured"
+       },
+       {
+        "text": "Usually a house policy"
+       },
+       {
+        "text": "25 ft past the property line"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Power"
+       },
+       {
+        "text": "House circuits"
+       },
+       {
+        "text": "House circuits or a sized, grounded generator"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Cover"
+       },
+       {
+        "text": "Not applicable"
+       },
+       {
+        "text": "Over the band and the desk, always"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Retuning across the night"
+       },
+       {
+        "text": "Occasional"
+       },
+       {
+        "text": "Frequent as the temperature drops"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Contingency"
+       },
+       {
+        "text": "Rarely needed"
+       },
+       {
+        "text": "A named person and a stated time"
+       }
+      ]
+     }
     ]
    }
   },
@@ -193,8 +262,12 @@
    "props": {
     "id": "References-18",
     "items": [
-     "Colorado Revised Statutes 25-12-103, Maximum permissible noise levels.",
-     "Colorado Supreme Court decision on municipal amplified-sound permits and state noise limits, 8 September 2025, as reported by Colorado Politics."
+     {
+      "text": "Colorado Revised Statutes 25-12-103, Maximum permissible noise levels."
+     },
+     {
+      "text": "Colorado Supreme Court decision on municipal amplified-sound permits and state noise limits, 8 September 2025, as reported by Colorado Politics."
+     }
     ]
    }
   },

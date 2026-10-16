@@ -349,7 +349,16 @@ def post_doc(data):
             chapters = [{**{k: v for k, v in c.items() if k != "body"}, **({"html": md(c["body"])} if c.get("body") else {})} for c in b.get("chapters", [])]
             blocks.append(item("Transcript", {"chapters": chapters}))
         elif t == "related":
-            blocks.append(item("RelatedPosts", {"posts": [p.get("slug") if isinstance(p, dict) else p for p in b.get("posts", [])]}))
+            blocks.append(item("RelatedPosts", {"posts": [{"slug": p.get("slug") if isinstance(p, dict) else p} for p in b.get("posts", [])]}))
+        elif t == "comparison_table":
+            blocks.append(item("ComparisonTable", {**{k: v for k, v in rest.items() if k not in ("columns", "rows")},
+                                                   "columns": [{"text": c} for c in b.get("columns", [])],
+                                                   "rows": [{"cells": [{"text": c} for c in r]} for r in b.get("rows", [])]}))
+        elif t == "key_takeaways":
+            blocks.append(item("KeyTakeaways", {**{k: v for k, v in rest.items() if k != "items"}, "items": [{"text": x} for x in b.get("items", [])]}))
+        elif t == "references":
+            blocks.append(item("References", {**{k: v for k, v in rest.items() if k != "items"},
+                                              "items": [x if isinstance(x, dict) else {"text": x} for x in b.get("items", [])]}))
         else:
             name = {"subhead": "Subhead", "pullquote": "Pullquote", "stat_callout": "StatCallout", "data_viz": "DataViz",
                     "comparison_table": "ComparisonTable", "key_takeaways": "KeyTakeaways", "methodology": "Methodology",
@@ -358,7 +367,6 @@ def post_doc(data):
     props = {k: v for k, v in data.items() if k not in ("sections", "dir_name", "post_dir")}
     if isinstance(props.get("hero"), dict) and props["hero"].get("src"):
         props["hero"] = {**props["hero"], "src": root_rel(props["hero"]["src"])}
-    props["readingTime"] = BR.calculate_reading_time(data.get("sections", []))
     return {"root": {"props": props}, "content": market_words(blocks)}
 
 
@@ -479,6 +487,26 @@ def main():
                 candidates.append({"page": page_dir.name, "index": len(doc["content"]) - 1, "item": item, "custom": custom,
                                    "expected": piece, "prefix": prefix, "output": output, "url": url})
 
+    # A one-off written as a style, a section and a script in one file is
+    # one Custom HTML section, not three.
+    for name, (doc, output) in page_docs.items():
+        merged = []
+        for item in doc["content"]:
+            prev = merged[-1] if merged else None
+            if (prev and item["type"] == "CustomHtml" and prev["type"] == "CustomHtml"
+                    and item["props"]["_file"] == prev["props"]["_file"]):
+                prev["props"]["html"] += "\n" + item["props"]["html"]
+                for c in candidates:
+                    if c["page"] == name and c["item"] is item:
+                        c["merged"] = True
+            else:
+                merged.append(item)
+        doc["content"] = merged
+    candidates = [c for c in candidates if not c.get("merged")]
+    for c in candidates:
+        doc, _ = page_docs[c["page"]]
+        c["index"] = next(n for n, x in enumerate(doc["content"]) if x is c["item"])
+
     # The video index is generated today; it becomes a page with a list.
     vcall = calls["video/index.html"]
     page_docs["video"] = ({"root": {"props": {"path": "/video/", "title": vcall["title"], "description": vcall["meta_description"],
@@ -494,8 +522,8 @@ def main():
     rendered = render_items(typed)
     fallbacks = []
     for c, html in zip(typed, rendered):
-        problem = domdiff.differs(c["expected"], html)
-        if problem:
+        problem = domdiff.differs(c["expected"], html, limit=10000)
+        if problem and not known_difference(problem):
             fallbacks.append((c, problem))
             doc, _ = page_docs[c["page"]]
             doc["content"][c["index"]] = c["custom"]
@@ -505,6 +533,14 @@ def main():
     write_json(OUT / "lastmod.json", lastmod_seed(calls))
 
     report(page_docs, fallbacks)
+
+
+def known_difference(problem):
+    """Differences the new build makes on purpose, listed in the proof for
+    Daniel: a post's reading time now counts market figures as the words a
+    reader sees ("$2,500 to $8,000"), where build.py counted each as one."""
+    changed = [x.strip() for x in problem.split(" | ") if x.strip()[:1] in "+-"]
+    return bool(changed) and all(re.fullmatch(r"[-+]T \d+ min read", x) for x in changed)
 
 
 def render_items(items):

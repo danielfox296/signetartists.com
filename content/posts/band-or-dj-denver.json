@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1660211934853-e33d8a02201d.jpg",
     "alt": "Faders and knobs on a mixing console."
-   },
-   "readingTime": 6
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A band is something guests watch. A DJ is something guests dance to.",
-     "A DJ carrying a night with production lighting runs $2,500 to $6,000 across this market. Denver bands run $2,500 to $8,000, a trio at the bottom of that and a full band with horns at the top.",
-     "A DJ plays recordings, so a venue or a program that asks for live musicians means a band, or a live instrument over the DJ set.",
-     "For a full evening the common answer is both in order, live musicians through arrival and dinner and a DJ carrying the late end, which costs far less as one booking than as two."
+     {
+      "text": "A band is something guests watch. A DJ is something guests dance to."
+     },
+     {
+      "text": "A DJ carrying a night with production lighting runs $2,500 to $6,000 across this market. Denver bands run $2,500 to $8,000, a trio at the bottom of that and a full band with horns at the top."
+     },
+     {
+      "text": "A DJ plays recordings, so a venue or a program that asks for live musicians means a band, or a live instrument over the DJ set."
+     },
+     {
+      "text": "For a full evening the common answer is both in order, live musicians through arrival and dinner and a DJ carrying the late end, which costs far less as one booking than as two."
+     }
     ]
    }
   },
@@ -74,46 +81,108 @@
     "id": "ComparisonTable-7",
     "title": "What each one actually does",
     "columns": [
-     "",
-     "A band",
-     "A DJ"
+     {
+      "text": ""
+     },
+     {
+      "text": "A band"
+     },
+     {
+      "text": "A DJ"
+     }
     ],
     "rows": [
-     [
-      "What guests watch",
-      "People playing, which is half the entertainment",
-      "The floor, and each other"
-     ],
-     [
-      "The song list",
-      "What the act plays, arranged their way",
-      "Effectively anything recorded"
-     ],
-     [
-      "The version guests know",
-      "A live reading of it",
-      "The record, exactly as they know it"
-     ],
-     [
-      "Between songs",
-      "Air, applause, a word from the stage",
-      "Continuous, mixed, no gap"
-     ],
-     [
-      "Floor space",
-      "12 by 8 ft for a trio, 14 by 10 for a quartet",
-      "6 by 4 ft for the booth"
-     ],
-     [
-      "Volume control",
-      "Held by ear, at conversation level through dinner",
-      "Held at the console, same discipline"
-     ],
-     [
-      "How long it can play",
-      "Sets of 45 to 60 minutes with breaks",
-      "All night without stopping"
-     ]
+     {
+      "cells": [
+       {
+        "text": "What guests watch"
+       },
+       {
+        "text": "People playing, which is half the entertainment"
+       },
+       {
+        "text": "The floor, and each other"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The song list"
+       },
+       {
+        "text": "What the act plays, arranged their way"
+       },
+       {
+        "text": "Effectively anything recorded"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The version guests know"
+       },
+       {
+        "text": "A live reading of it"
+       },
+       {
+        "text": "The record, exactly as they know it"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Between songs"
+       },
+       {
+        "text": "Air, applause, a word from the stage"
+       },
+       {
+        "text": "Continuous, mixed, no gap"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Floor space"
+       },
+       {
+        "text": "12 by 8 ft for a trio, 14 by 10 for a quartet"
+       },
+       {
+        "text": "6 by 4 ft for the booth"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Volume control"
+       },
+       {
+        "text": "Held by ear, at conversation level through dinner"
+       },
+       {
+        "text": "Held at the console, same discipline"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "How long it can play"
+       },
+       {
+        "text": "Sets of 45 to 60 minutes with breaks"
+       },
+       {
+        "text": "All night without stopping"
+       }
+      ]
+     }
     ]
    }
   },
@@ -196,9 +265,15 @@
    "props": {
     "id": "RelatedPosts-18",
     "posts": [
-     "what-a-dj-costs-denver",
-     "how-to-read-a-band-quote",
-     "what-live-music-costs-corporate-event"
+     {
+      "slug": "what-a-dj-costs-denver"
+     },
+     {
+      "slug": "how-to-read-a-band-quote"
+     },
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     }
     ]
    }
   }

@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1527529482837-4698179dc6ce.jpg",
     "alt": "Stage lights over instruments set up before an evening event."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "On average, the songs people remember best are from their teens. Two recent studies put the peak at around age 14 and at age 17.",
-     "Younger guests often know their parents' music too, which researchers put down to hearing it at home as children.",
-     "In a small study of older adults, songs from across five decades of their lives still brought back memories.",
-     "These are averages, so any one guest may love music from a different decade."
+     {
+      "text": "On average, the songs people remember best are from their teens. Two recent studies put the peak at around age 14 and at age 17."
+     },
+     {
+      "text": "Younger guests often know their parents' music too, which researchers put down to hearing it at home as children."
+     },
+     {
+      "text": "In a small study of older adults, songs from across five decades of their lives still brought back memories."
+     },
+     {
+      "text": "These are averages, so any one guest may love music from a different decade."
+     }
     ]
    }
   },
@@ -74,41 +81,95 @@
     "id": "ComparisonTable-7",
     "title": "The years each age grew up with, as of 2026",
     "columns": [
-     "Guest's age",
-     "The years they were 10 to 30",
-     "Strongest around"
+     {
+      "text": "Guest's age"
+     },
+     {
+      "text": "The years they were 10 to 30"
+     },
+     {
+      "text": "Strongest around"
+     }
     ],
     "rows": [
-     [
-      "80",
-      "1956 to 1976",
-      "1960 to 1963"
-     ],
-     [
-      "70",
-      "1966 to 1986",
-      "1970 to 1973"
-     ],
-     [
-      "60",
-      "1976 to 1996",
-      "1980 to 1983"
-     ],
-     [
-      "50",
-      "1986 to 2006",
-      "1990 to 1993"
-     ],
-     [
-      "40",
-      "1996 to 2016",
-      "2000 to 2003"
-     ],
-     [
-      "30",
-      "2006 to 2026",
-      "2010 to 2013"
-     ]
+     {
+      "cells": [
+       {
+        "text": "80"
+       },
+       {
+        "text": "1956 to 1976"
+       },
+       {
+        "text": "1960 to 1963"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "70"
+       },
+       {
+        "text": "1966 to 1986"
+       },
+       {
+        "text": "1970 to 1973"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "60"
+       },
+       {
+        "text": "1976 to 1996"
+       },
+       {
+        "text": "1980 to 1983"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "50"
+       },
+       {
+        "text": "1986 to 2006"
+       },
+       {
+        "text": "1990 to 1993"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "40"
+       },
+       {
+        "text": "1996 to 2016"
+       },
+       {
+        "text": "2000 to 2003"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "30"
+       },
+       {
+        "text": "2006 to 2026"
+       },
+       {
+        "text": "2010 to 2013"
+       }
+      ]
+     }
     ]
    }
   },
@@ -199,9 +260,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "how-to-get-people-to-dance-at-a-wedding",
-     "live-music-for-memory-care-residents",
-     "how-loud-should-background-music-be"
+     {
+      "slug": "how-to-get-people-to-dance-at-a-wedding"
+     },
+     {
+      "slug": "live-music-for-memory-care-residents"
+     },
+     {
+      "slug": "how-loud-should-background-music-be"
+     }
     ]
    }
   }

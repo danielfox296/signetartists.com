@@ -56,7 +56,7 @@ export const blockSections = {
 // The client logos, one strip shared by every page that shows it.
 const LogoStrip = {
   label: "Logo strip",
-  fields: { band: shellFields.band, showAlso: { type: "radio", label: "Line under", options: [{ label: "No", value: false }, { label: "Yes", value: true }] }, blocks: { type: "slot", label: "After" } },
+  fields: { band: shellFields.band, label: shellFields.label, showAlso: { type: "radio", label: "Line under", options: [{ label: "No", value: false }, { label: "Yes", value: true }] }, blocks: { type: "slot", label: "After" } },
   defaultProps: { band: "ruled", label: "Trusted and booked by", showAlso: false, blocks: [] },
   render: function LogoStripRender({ band, label, showAlso, blocks: Blocks }) {
     const s = useSite();
@@ -84,6 +84,7 @@ const LogoStrip = {
 const PagesAndPosts = {
   label: "Pages and posts",
   fields: {
+    band: shellFields.band,
     heading: text("Heading"),
     groups: {
       type: "array",
@@ -135,10 +136,14 @@ const PagesAndPosts = {
 const HomeHero = {
   label: "Home hero",
   fields: {
+    label: shellFields.label,
     title: rich("Title"),
+    titleStyle: text("Title style"),
     lede: rich("Lede"),
+    ledeStyle: text("Lede style"),
     buttons: buttonFields,
     frames: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: imageFields },
+    framesHidden: text("Hidden"),
   },
   render: ({ label, frames, framesHidden, title, titleStyle, lede, ledeStyle, buttons }) => (
     <section className="hero-cine" aria-label={label || undefined}>
@@ -162,7 +167,7 @@ const HomeHero = {
 
 const RangeStrip = {
   label: "Range strip",
-  fields: { image: { type: "object", label: "Picture", objectFields: imageFields } },
+  fields: { label: shellFields.label, image: { type: "object", label: "Picture", objectFields: imageFields } },
   render: ({ label, image }) => (
     <section className="range-strip" aria-label={label || undefined}>
       <Img im={image} />
@@ -196,8 +201,11 @@ const CoverWall = {
     eyebrow: rich("Eyebrow"),
     title: rich("Title"),
     text: rich("Text"),
-    tiles: { type: "array", label: "Sleeves", getItemSummary: (t) => plain(t.song), arrayFields: { src: text("File"), alt: text("Alt text"), song: rich("Song"), credit: rich("Credit"), style: text("Place") } },
+    tiles: { type: "array", label: "Sleeves", getItemSummary: (t) => plain(t.song), arrayFields: { src: text("File"), alt: text("Alt text"), song: rich("Song"), credit: rich("Credit"), style: text("Place"), loading: imageFields.loading, decoding: imageFields.decoding } },
     notes: rich("Notes"),
+    textAt: { type: "number", label: "Words at", min: 0 },
+    titleStyle: text("Title style"),
+    textStyle: text("Text style"),
     flip: { type: "radio", label: "Side", options: [{ label: "Words left", value: false }, { label: "Words right", value: true }] },
   },
   render: function CoverWallRender({ flip, eyebrow, title, titleStyle, text: body, textStyle, textAt, tiles, notes }) {
@@ -270,7 +278,7 @@ const ActSizes = {
 // act's own list.
 const Setlist = {
   label: "Setlist",
-  fields: { act: text("Act"), title: rich("Title") },
+  fields: { act: text("Act"), title: rich("Title"), more: rich("Note") },
   render: function SetlistRender({ act, title, more }) {
     const s = useSite();
     const m = s.model;
@@ -358,9 +366,30 @@ const actsScript = (s) => `<script defer src="${s.prefix}acts.js"></script>`;
 const ContactForm = {
   label: "Contact form",
   fields: {
+    band: shellFields.band,
     ...headingFields,
     details: { type: "array", label: "Details", getItemSummary: (d) => plain(d.term), arrayFields: { term: rich("Label"), html: rich("Text") } },
+    action: text("Sends to"),
+    hidden: { type: "array", label: "Hidden fields", getItemSummary: (h) => h.name, arrayFields: { name: text("Name"), value: text("Value") } },
+    fields: {
+      type: "array",
+      label: "Fields",
+      getItemSummary: (f) => (f.kind === "acts" ? "Act" : plain(f.label)),
+      arrayFields: {
+        kind: { type: "select", label: "Kind", options: [{ label: "Text", value: "input" }, { label: "Long text", value: "textarea" }, { label: "Act", value: "acts" }] },
+        label: rich("Label"),
+        id: text("Id"),
+        name: text("Name"),
+        type: text("Type"),
+        autocomplete: text("Autocomplete"),
+        required: { type: "radio", label: "Required", options: [{ label: "No", value: false }, { label: "Yes", value: true }] },
+        full: { type: "radio", label: "Width", options: [{ label: "Half", value: false }, { label: "Full", value: true }] },
+        rows: text("Rows"),
+        placeholder: text("Placeholder"),
+      },
+    },
     button: text("Button"),
+    script: { type: "radio", label: "Act script", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
   },
   render: function ContactFormRender(p) {
     const s = useSite();
@@ -438,7 +467,9 @@ const Roster = {
     title: rich("Title"),
     note: rich("Note"),
     empty: rich("Nothing matches"),
-    lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
+    lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { lane: { type: "select", label: "Acts", options: [{ label: "Configurations", value: "format" }, { label: "Named acts", value: "named" }] }, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
+    band: shellFields.band,
+    script: { type: "radio", label: "Act script", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
   },
   render: function RosterRender({ band, title, note, empty, lanes, script }) {
     const s = useSite();
@@ -517,7 +548,93 @@ function RosterFilters() {
   );
 }
 
-export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActSizes, Setlist, VendorList, ContactForm, Roster };
+// The whole song book, searchable: rows and filter chips come from the
+// song list, so a song added there joins the page and its chips.
+const MOMENTS = [["arrival", "Arrival"], ["dinner", "Dinner"], ["lift", "The turn"], ["dance", "Dancing"], ["closer", "Closer"], ["ceremony", "Ceremony"]];
+const FLAGS = [["singalong", "Everyone knows it"], ["firstdance", "First dance"], ["request", "Requested often"], ["band", "Needs the full band"], ["lyric-trap", "Read the lyrics first"], ["check-lyrics", "Clear with the client"]];
+const CATALOG_JS = `<script>
+    // Progressive enhancement only: the full list is in the HTML and readable
+    // with JS off, which is why the controls ship hidden and this reveals them.
+    (function () {
+      var root = document.getElementById('catalog');
+      if (!root) return;
+      var controls = root.querySelector('[data-catalog-controls]');
+      var search = root.querySelector('[data-catalog-search]');
+      var count = root.querySelector('[data-catalog-count]');
+      var empty = root.querySelector('[data-catalog-empty]');
+      var rows = Array.prototype.slice.call(root.querySelectorAll('.catalog-row'));
+      var chips = Array.prototype.slice.call(root.querySelectorAll('.chip'));
+      if (!rows.length) return;
+      controls.hidden = false;
+      var active = [];
+      function apply() {
+        var q = (search.value || '').trim().toLowerCase();
+        var shown = 0;
+        rows.forEach(function (row) {
+          var tags = row.getAttribute('data-tags').split(' ');
+          var okTags = active.every(function (t) { return tags.indexOf(t) !== -1; });
+          var okText = !q || row.getAttribute('data-search').indexOf(q) !== -1;
+          var show = okTags && okText;
+          row.hidden = !show;
+          if (show) shown++;
+        });
+        count.textContent = shown === rows.length
+          ? rows.length + ' songs'
+          : shown + ' of ' + rows.length + ' songs';
+        empty.hidden = shown !== 0;
+      }
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var tag = chip.getAttribute('data-filter');
+          var i = active.indexOf(tag);
+          if (i === -1) { active.push(tag); } else { active.splice(i, 1); }
+          chip.setAttribute('aria-pressed', i === -1 ? 'true' : 'false');
+          apply();
+        });
+      });
+      search.addEventListener('input', apply);
+      apply();
+    })();
+  </script>`;
+
+const SongCatalog = {
+  label: "Song catalog",
+  fields: { band: shellFields.band, anchor: shellFields.anchor, blocks: { type: "slot", label: "Heading" }, empty: rich("Nothing found") },
+  defaultProps: { band: "sunk", anchor: "catalog", blocks: [], empty: "Nothing here by that name." },
+  render: function SongCatalogRender({ band, anchor, blocks: Blocks, empty }) {
+    const s = useSite();
+    const songs = s.model.c.repertoire;
+    const present = new Set(songs.flatMap((x) => [...x.moments, ...x.flags]));
+    const chips = [...MOMENTS, ...FLAGS].filter(([k]) => present.has(k));
+    const rows = songs
+      .map((x) => {
+        const tags = [...(x.energy ? [x.energy] : []), ...x.moments, ...x.flags].join(" ");
+        const hay = `${x.title} ${x.artist}`.toLowerCase();
+        return `<li class="catalog-row" data-tags="${esc(tags)}" data-search="${esc(hay)}"><span class="catalog-song">${esc(x.title)}</span><span class="catalog-artist">${esc(x.artist)}</span></li>`;
+      })
+      .join("\n");
+    const controls =
+      '<div class="catalog-controls" data-catalog-controls hidden>\n' +
+      '<label class="catalog-search">\n<span class="visually-hidden">Search the repertoire</span>\n' +
+      '<input type="search" placeholder="Search a song or artist" data-catalog-search autocomplete="off">\n</label>\n' +
+      '<div class="catalog-chips" role="group" aria-label="Filter by moment">\n' +
+      chips.map(([k, l]) => `<button type="button" class="chip" data-filter="${esc(k)}" aria-pressed="false">${esc(l)}</button>`).join("\n") +
+      '\n</div>\n<p class="catalog-count note" data-catalog-count aria-live="polite"></p>\n</div>\n' +
+      `<ul class="catalog-list" data-catalog-list>\n${rows}\n</ul>`;
+    return (
+      <section className={cx(bandClass(band), "catalog")} id={anchor || undefined}>
+        <div className="wrap">
+          {Blocks ? <Blocks /> : null}
+          <Raw html={controls} />
+          <H as="p" className="catalog-empty note" data-catalog-empty="" hidden html={empty} />
+        </div>
+        <Raw html={CATALOG_JS} />
+      </section>
+    );
+  },
+};
+
+export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActSizes, Setlist, VendorList, ContactForm, Roster, SongCatalog };
 
 export const components = { ...blockSections, ...fixedSections };
 

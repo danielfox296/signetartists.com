@@ -20,8 +20,7 @@
    "video": {
     "id": "O2A0PKE7CXE",
     "title": "A jazz duo playing Autumn Leaves: guitar and upright bass"
-   },
-   "readingTime": 7
+   }
   }
  },
  "content": [
@@ -30,10 +29,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A jazz band is built on a rhythm section of bass, drums and a piano or guitar, and in most bands a saxophone, a trumpet, a trombone or a singer plays the melody on top.",
-     "A small jazz band is called a combo and takes its name from how many musicians are in it, from a duo of two to a quintet of five and beyond.",
-     "A big band is around seventeen musicians, in sections of saxophones, trumpets and trombones over a rhythm section, playing written arrangements.",
-     "For a wedding, a dinner or a company event, a duo or a trio plays at a level guests can talk across, and a quartet with a horn or a singer out front is the size for a dance floor."
+     {
+      "text": "A jazz band is built on a rhythm section of bass, drums and a piano or guitar, and in most bands a saxophone, a trumpet, a trombone or a singer plays the melody on top."
+     },
+     {
+      "text": "A small jazz band is called a combo and takes its name from how many musicians are in it, from a duo of two to a quintet of five and beyond."
+     },
+     {
+      "text": "A big band is around seventeen musicians, in sections of saxophones, trumpets and trombones over a rhythm section, playing written arrangements."
+     },
+     {
+      "text": "For a wedding, a dinner or a company event, a duo or a trio plays at a level guests can talk across, and a quartet with a horn or a singer out front is the size for a dance floor."
+     }
     ]
    }
   },
@@ -135,9 +142,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "what-is-a-jazz-trio",
-     "what-a-jazz-band-costs-denver",
-     "how-loud-should-background-music-be"
+     {
+      "slug": "what-is-a-jazz-trio"
+     },
+     {
+      "slug": "what-a-jazz-band-costs-denver"
+     },
+     {
+      "slug": "how-loud-should-background-music-be"
+     }
     ]
    }
   }

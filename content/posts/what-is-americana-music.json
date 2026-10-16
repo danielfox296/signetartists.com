@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1593700861848-8455c0eeeece.jpg",
     "alt": "The Denver skyline with the Front Range behind it, seen from City Park."
-   },
-   "readingTime": 6
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Americana is an umbrella name for American roots music, the songs that draw on country, folk, bluegrass, blues and rock at once.",
-     "Country usually means the sound of country radio. Americana leans on older country records and on folk, and bluegrass is the strictest member of the family, with a traditional lineup and no drums.",
-     "The artists run from The Band and John Prine to Jason Isbell and Brandi Carlile, and Colorado has its own in Nathaniel Rateliff, Gregory Alan Isakov and the Lumineers.",
-     "For an event, the trio suits a reception or a dinner where people want to talk, and the quartet is the dance band."
+     {
+      "text": "Americana is an umbrella name for American roots music, the songs that draw on country, folk, bluegrass, blues and rock at once."
+     },
+     {
+      "text": "Country usually means the sound of country radio. Americana leans on older country records and on folk, and bluegrass is the strictest member of the family, with a traditional lineup and no drums."
+     },
+     {
+      "text": "The artists run from The Band and John Prine to Jason Isbell and Brandi Carlile, and Colorado has its own in Nathaniel Rateliff, Gregory Alan Isakov and the Lumineers."
+     },
+     {
+      "text": "For an event, the trio suits a reception or a dinner where people want to talk, and the quartet is the dance band."
+     }
     ]
    }
   },
@@ -125,9 +132,15 @@
    "props": {
     "id": "RelatedPosts-14",
     "posts": [
-     "corporate-retreat-evening-ideas-vail",
-     "company-picnic-entertainment-ideas-denver",
-     "what-is-a-jazz-trio"
+     {
+      "slug": "corporate-retreat-evening-ideas-vail"
+     },
+     {
+      "slug": "company-picnic-entertainment-ideas-denver"
+     },
+     {
+      "slug": "what-is-a-jazz-trio"
+     }
     ]
    }
   }

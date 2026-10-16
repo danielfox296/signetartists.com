@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/acts/acoustic-outdoor.jpg",
     "alt": "A guitarist playing outdoors at a wedding."
-   },
-   "readingTime": 6
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Couples report shopping for wedding music nine to fourteen months out. That's what they say to each other in the forums, not a rule anybody enforces.",
-     "The venue decision comes first and settles most of the music decisions for you: the sound cap, the curfew, the power, and whether the ceremony is outdoors.",
-     "Shorter timelines work. What shrinks is the choice of act, and songs learned specially need four weeks' notice.",
-     "Eight things make an enquiry answerable in one exchange instead of four. They're listed near the bottom of this page."
+     {
+      "text": "Couples report shopping for wedding music nine to fourteen months out. That's what they say to each other in the forums, not a rule anybody enforces."
+     },
+     {
+      "text": "The venue decision comes first and settles most of the music decisions for you: the sound cap, the curfew, the power, and whether the ceremony is outdoors."
+     },
+     {
+      "text": "Shorter timelines work. What shrinks is the choice of act, and songs learned specially need four weeks' notice."
+     },
+     {
+      "text": "Eight things make an enquiry answerable in one exchange instead of four. They're listed near the bottom of this page."
+     }
     ]
    }
   },
@@ -83,31 +90,69 @@
     "id": "ComparisonTable-8",
     "title": "What each part of the day actually asks for",
     "columns": [
-     "The part",
-     "What it needs",
-     "The usual size"
+     {
+      "text": "The part"
+     },
+     {
+      "text": "What it needs"
+     },
+     {
+      "text": "The usual size"
+     }
     ],
     "rows": [
-     [
-      "Ceremony",
-      "Cues, and music that lands on them",
-      "Solo or duo"
-     ],
-     [
-      "Cocktail hour",
-      "Volume you can talk across",
-      "Duo or trio"
-     ],
-     [
-      "Dinner",
-      "The same, held for a long stretch",
-      "Duo or trio"
-     ],
-     [
-      "Dancing",
-      "A floor that fills and stays full",
-      "Quartet, DJ, or both"
-     ]
+     {
+      "cells": [
+       {
+        "text": "Ceremony"
+       },
+       {
+        "text": "Cues, and music that lands on them"
+       },
+       {
+        "text": "Solo or duo"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Cocktail hour"
+       },
+       {
+        "text": "Volume you can talk across"
+       },
+       {
+        "text": "Duo or trio"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Dinner"
+       },
+       {
+        "text": "The same, held for a long stretch"
+       },
+       {
+        "text": "Duo or trio"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Dancing"
+       },
+       {
+        "text": "A floor that fills and stays full"
+       },
+       {
+        "text": "Quartet, DJ, or both"
+       }
+      ]
+     }
     ]
    }
   },
@@ -192,8 +237,12 @@
    "props": {
     "id": "RelatedPosts-19",
     "posts": [
-     "band-or-dj-denver",
-     "outdoor-reception"
+     {
+      "slug": "band-or-dj-denver"
+     },
+     {
+      "slug": "outdoor-reception"
+     }
     ]
    }
   }

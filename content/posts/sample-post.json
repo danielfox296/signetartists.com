@@ -14,8 +14,7 @@
    "hero": {
     "src": "/img/standards.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 1
+   }
   }
  },
  "content": [
@@ -24,9 +23,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Posts are YAML files with typed blocks; the build renders, lists, and feeds them.",
-     "Reading time, RSS, sitemap lastmod and the Article schema are computed, never hand-written.",
-     "Run python3 build.py --lint before committing a post."
+     {
+      "text": "Posts are YAML files with typed blocks; the build renders, lists, and feeds them."
+     },
+     {
+      "text": "Reading time, RSS, sitemap lastmod and the Article schema are computed, never hand-written."
+     },
+     {
+      "text": "Run python3 build.py --lint before committing a post."
+     }
     ]
    }
   },
@@ -82,21 +87,43 @@
     "id": "ComparisonTable-8",
     "title": "A sample comparison",
     "columns": [
-     "Option",
-     "Column two",
-     "Column three"
+     {
+      "text": "Option"
+     },
+     {
+      "text": "Column two"
+     },
+     {
+      "text": "Column three"
+     }
     ],
     "rows": [
-     [
-      "First row",
-      "Value",
-      "Value"
-     ],
-     [
-      "Second row",
-      "Value",
-      "Value"
-     ]
+     {
+      "cells": [
+       {
+        "text": "First row"
+       },
+       {
+        "text": "Value"
+       },
+       {
+        "text": "Value"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Second row"
+       },
+       {
+        "text": "Value"
+       },
+       {
+        "text": "Value"
+       }
+      ]
+     }
     ]
    }
   },
@@ -149,7 +176,9 @@
    "props": {
     "id": "References-12",
     "items": [
-     "Sample Author (2026). Sample citation for the references block. Sample Journal."
+     {
+      "text": "Sample Author (2026). Sample citation for the references block. Sample Journal."
+     }
     ]
    }
   },

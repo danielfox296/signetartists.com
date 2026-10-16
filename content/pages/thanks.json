@@ -11,14 +11,46 @@
   {
    "type": "Intro",
    "props": {
-    "id": "Intro-3",
+    "id": "Intro-6",
     "band": "top",
     "blocks": [
      {
-      "type": "HtmlBlock",
+      "type": "Panel",
       "props": {
-       "id": "HtmlBlock-1",
-       "html": "<div class=\"panel\" style=\"max-width: 34rem;\">\n      \n      <h1 class=\"h3\">Received. <span class=\"smile\">Consider it started.</span></h1>\n      <p class=\"prose\">One of us will reply with availability and an exact number.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>"
+       "id": "Panel-4",
+       "blocks": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-1",
+          "html": "Received. <span class=\"smile\">Consider it started.</span>",
+          "tag": "h1",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-2",
+          "html": "One of us will reply with availability and an exact number.",
+          "cls": "prose"
+         }
+        },
+        {
+         "type": "ButtonRow",
+         "props": {
+          "id": "ButtonRow-3",
+          "buttons": [
+           {
+            "label": "See Pricing",
+            "href": "/pricing/",
+            "cls": "btn btn--outline"
+           }
+          ]
+         }
+        }
+       ],
+       "style": "max-width: 34rem;"
       }
      }
     ],

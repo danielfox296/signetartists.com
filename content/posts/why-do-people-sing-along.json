@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1738156674456-97cdf7793bb7.jpg",
     "alt": "A microphone on a stand beside a lyric screen with one line lit in brass, drawn flat on a dark field."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In a study of 30 nights in five venues in the north of England, people sang along more later in the night, in bigger venues, in younger crowds and to songs that had spent four weeks or more in the charts.",
-     "The way a song was sung mattered too. People joined in more on songs sung with a full chest voice, a lot of vocal effort and clear consonants.",
-     "Singing together seems to help people feel close quickly. In one London study, the jump in closeness was bigger in a choir of 232, where most people didn't know each other, than in smaller groups."
+     {
+      "text": "In a study of 30 nights in five venues in the north of England, people sang along more later in the night, in bigger venues, in younger crowds and to songs that had spent four weeks or more in the charts."
+     },
+     {
+      "text": "The way a song was sung mattered too. People joined in more on songs sung with a full chest voice, a lot of vocal effort and clear consonants."
+     },
+     {
+      "text": "Singing together seems to help people feel close quickly. In one London study, the jump in closeness was bigger in a choir of 232, where most people didn't know each other, than in smaller groups."
+     }
     ]
    }
   },
@@ -135,9 +140,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "how-to-get-people-to-dance-at-a-wedding",
-     "karaoke-team-building",
-     "party-music-for-all-ages"
+     {
+      "slug": "how-to-get-people-to-dance-at-a-wedding"
+     },
+     {
+      "slug": "karaoke-team-building"
+     },
+     {
+      "slug": "party-music-for-all-ages"
+     }
     ]
    }
   }

@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1520799275532-15f68640b66b.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In a 2015 brain-scan study, the parts of the brain most involved in recognizing long-known songs had shrunk less in people with Alzheimer's disease than most of the rest of the brain. The researchers say that may explain why old songs stay.",
-     "In a small 2012 study, people with probable Alzheimer's disease recalled memories of their own lives that were more specific, came faster and carried more feeling after hearing music they had chosen than in silence.",
-     "Researchers who reviewed 30 trials found no clear effect of music programs on thinking and memory, so remembering a song doesn't mean other memory is coming back."
+     {
+      "text": "In a 2015 brain-scan study, the parts of the brain most involved in recognizing long-known songs had shrunk less in people with Alzheimer's disease than most of the rest of the brain. The researchers say that may explain why old songs stay."
+     },
+     {
+      "text": "In a small 2012 study, people with probable Alzheimer's disease recalled memories of their own lives that were more specific, came faster and carried more feeling after hearing music they had chosen than in silence."
+     },
+     {
+      "text": "Researchers who reviewed 30 trials found no clear effect of music programs on thinking and memory, so remembering a song doesn't mean other memory is coming back."
+     }
     ]
    }
   },
@@ -143,9 +148,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "live-music-for-memory-care-residents",
-     "what-music-do-80-year-olds-listen-to",
-     "sing-along-songs-for-seniors"
+     {
+      "slug": "live-music-for-memory-care-residents"
+     },
+     {
+      "slug": "what-music-do-80-year-olds-listen-to"
+     },
+     {
+      "slug": "sing-along-songs-for-seniors"
+     }
     ]
    }
   }

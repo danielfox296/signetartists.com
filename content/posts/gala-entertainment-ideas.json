@@ -17,8 +17,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1768508947825-0a63f7c46a2b.jpg",
     "alt": "An empty banquet hall set for dinner."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -27,10 +26,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A gala's entertainment is judged by how well it knows the program. Every idea here is placed against a cue: the doors, the remarks, dinner, the video, the auction, the walk-ups, the turn.",
-     "The best-documented Denver gala we found layered four acts through one night. Most award nights book none. Both facts are opportunities for a committee.",
-     "The after-party is where galas are spending now, and two of Denver's largest put it on headphones. A live act is the other way to fill that hour.",
-     "Music that plays through the remarks or over the auctioneer costs a gala money. Silence on cue is part of what you're booking."
+     {
+      "text": "A gala's entertainment is judged by how well it knows the program. Every idea here is placed against a cue: the doors, the remarks, dinner, the video, the auction, the walk-ups, the turn."
+     },
+     {
+      "text": "The best-documented Denver gala we found layered four acts through one night. Most award nights book none. Both facts are opportunities for a committee."
+     },
+     {
+      "text": "The after-party is where galas are spending now, and two of Denver's largest put it on headphones. A live act is the other way to fill that hour."
+     },
+     {
+      "text": "Music that plays through the remarks or over the auctioneer costs a gala money. Silence on cue is part of what you're booking."
+     }
     ]
    }
   },
@@ -173,51 +180,121 @@
     "id": "ComparisonTable-21",
     "title": "The ideas, placed against the program",
     "columns": [
-     "The cue",
-     "The idea",
-     "The booking"
+     {
+      "text": "The cue"
+     },
+     {
+      "text": "The idea"
+     },
+     {
+      "text": "The booking"
+     }
     ],
     "rows": [
-     [
-      "The doors",
-      "The reception act",
-      "Duo, solo piano or Spanish guitar"
-     ],
-     [
-      "Dinner",
-      "Music the tables talk across",
-      "Trio, brushes on the drums"
-     ],
-     [
-      "The awards",
-      "Music for the walk-ups",
-      "The same musicians, on cue"
-     ],
-     [
-      "The auction",
-      "Silence, handled",
-      "Nobody plays over the auctioneer"
-     ],
-     [
-      "The turn",
-      "The floor",
-      "Soul and R&B, yacht rock or the DJ"
-     ],
-     [
-      "The after-party",
-      "Live band karaoke",
-      "Four to six musicians and a host"
-     ],
-     [
-      "The barn or ranch",
-      "The Colorado evening",
-      "Americana trio or quartet"
-     ],
-     [
-      "The small dinner",
-      "Solo piano",
-      "One"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The doors"
+       },
+       {
+        "text": "The reception act"
+       },
+       {
+        "text": "Duo, solo piano or Spanish guitar"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Dinner"
+       },
+       {
+        "text": "Music the tables talk across"
+       },
+       {
+        "text": "Trio, brushes on the drums"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The awards"
+       },
+       {
+        "text": "Music for the walk-ups"
+       },
+       {
+        "text": "The same musicians, on cue"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The auction"
+       },
+       {
+        "text": "Silence, handled"
+       },
+       {
+        "text": "Nobody plays over the auctioneer"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The turn"
+       },
+       {
+        "text": "The floor"
+       },
+       {
+        "text": "Soul and R&B, yacht rock or the DJ"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The after-party"
+       },
+       {
+        "text": "Live band karaoke"
+       },
+       {
+        "text": "Four to six musicians and a host"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The barn or ranch"
+       },
+       {
+        "text": "The Colorado evening"
+       },
+       {
+        "text": "Americana trio or quartet"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The small dinner"
+       },
+       {
+        "text": "Solo piano"
+       },
+       {
+        "text": "One"
+       }
+      ]
+     }
     ]
    }
   },
@@ -267,9 +344,15 @@
    "props": {
     "id": "RelatedPosts-26",
     "posts": [
-     "playing-around-a-program",
-     "corporate-event-entertainment-ideas-denver",
-     "client-appreciation-event-ideas-denver"
+     {
+      "slug": "playing-around-a-program"
+     },
+     {
+      "slug": "corporate-event-entertainment-ideas-denver"
+     },
+     {
+      "slug": "client-appreciation-event-ideas-denver"
+     }
     ]
    }
   }

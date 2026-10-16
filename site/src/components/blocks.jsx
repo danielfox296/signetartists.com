@@ -116,8 +116,11 @@ export const DefRows = {
       type: "array",
       label: "Rows",
       getItemSummary: (r) => plain(r.term),
-      arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style") },
+      arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
     },
+    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Side by side", value: "def-list" }]),
+    bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
+    style: text("Style"),
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
   render: ({ cls, style, bare, rows }) => (
@@ -147,6 +150,7 @@ export const Faq = {
       arrayFields: { q: rich("Question"), a: rich("Answer"), open: { type: "radio", label: "Settled", options: [{ label: "Yes", value: false }, { label: "Open", value: true }] } },
     },
     schema: { type: "radio", label: "Search results", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
+    style: text("Style"),
   },
   defaultProps: { items: [{ q: "Question", a: "Answer" }], schema: true },
   render: ({ items, style }) => (
@@ -198,7 +202,15 @@ export function Player({ v }) {
   return <iframe src={v.src} title={v.title} loading={v.loading || undefined} allow={v.allow || ALLOW} allowFullScreen />;
 }
 
-const videoFields = { kind: select("Kind", [{ label: "YouTube", value: "iframe" }, { label: "Video file", value: "video" }, { label: "Photo", value: "photo" }]), src: text("Address"), title: text("Title"), poster: text("Poster") };
+const videoFields = {
+  kind: select("Kind", [{ label: "YouTube", value: "iframe" }, { label: "Video file", value: "video" }, { label: "Photo", value: "photo" }]),
+  src: text("Address"),
+  title: text("Title"),
+  poster: text("Poster"),
+  loading: select("Loading", [{ label: "Default", value: "" }, { label: "Lazy", value: "lazy" }]),
+  allow: text("Allow"),
+  image: { type: "object", label: "Photo", objectFields: imageFields },
+};
 
 export const VideoGrid = {
   label: "Videos",
@@ -229,29 +241,47 @@ export const ActVideo = {
 
 // --------------------------------------------------------------- columns
 
+const SLOTS = ["c1", "c2", "c3", "c4", "c5", "c6"];
+
 export const Columns = {
   label: "Columns",
-  fields: { c1: { type: "slot", label: "First" }, c2: { type: "slot", label: "Second" }, c3: { type: "slot", label: "Third" }, cls: select("Columns", [{ label: "Two", value: "split split--two" }, { label: "Three", value: "split split--three" }]) },
-  defaultProps: { cls: "split split--two", c1: [], c2: [], c3: [] },
-  render: ({ cls, c1: A, c2: Bc, c3: C, n, styles }) => {
-    const cols = [A, Bc, C].slice(0, n || (/three/.test(cls || "") ? 3 : 2));
+  fields: {
+    cls: select("Columns", [{ label: "Two", value: "split split--two" }, { label: "Three", value: "split split--three" }]),
+    n: { type: "number", label: "Boxes", min: 1, max: 6 },
+    ...Object.fromEntries(SLOTS.map((k, i) => [k, { type: "slot", label: `Box ${i + 1}` }])),
+  },
+  defaultProps: { cls: "split split--two", n: 2, c1: [], c2: [], c3: [], c4: [], c5: [], c6: [] },
+  render: (p) => {
+    const count = p.n || (/three/.test(p.cls || "") ? 3 : 2);
     return (
-      <div className={cls || "split split--two"}>
-        {cols.map((Col, i) => (
-          <div key={i} style={css(styles && styles[i])}>{Col ? <Col /> : null}</div>
-        ))}
+      <div className={p.cls || "split split--two"}>
+        {SLOTS.slice(0, count).map((k, i) => {
+          const Col = p[k];
+          return <div key={k} style={css(p.styles && p.styles[i])}>{Col ? <Col /> : null}</div>;
+        })}
       </div>
     );
   },
 };
 
+// A boxed group of blocks.
+export const Panel = {
+  label: "Panel",
+  fields: { style: text("Width"), blocks: { type: "slot", label: "Blocks" } },
+  defaultProps: { blocks: [] },
+  render: ({ style, blocks: Blocks }) => <div className="panel" style={css(style)}>{Blocks ? <Blocks /> : null}</div>,
+};
+
 // ----------------------------------------------------------------- table
 
-const cellFields = { html: rich("Text") };
+const cellFields = { html: rich("Text"), tag: select("Cell", [{ label: "Data", value: "" }, { label: "Header", value: "th" }, { label: "Data cell", value: "td" }]), cls: text("Class"), scope: text("Scope") };
 export const Table = {
   label: "Rate table",
   fields: {
     caption: rich("Caption"),
+    captionCls: text("Caption class"),
+    provisional: { type: "radio", label: "Provisional", options: [{ label: "No", value: false }, { label: "Yes", value: true }] },
+    tableCls: text("Class"),
     head: { type: "array", label: "Header", getItemSummary: (c) => plain(c.html), arrayFields: cellFields },
     rows: { type: "array", label: "Rows", getItemSummary: (r) => plain((r.cells || [])[0] && r.cells[0].html), arrayFields: { cells: { type: "array", label: "Cells", arrayFields: cellFields } } },
   },
@@ -286,7 +316,17 @@ function Cell({ c, tag }) {
 
 export const CloseRow = {
   label: "Call to action",
-  fields: { title: rich("Title"), lede: rich("Text"), buttons: buttonFields, boxStyle: text("Width") },
+  fields: {
+    title: rich("Title"),
+    lede: rich("Text"),
+    buttons: buttonFields,
+    boxed: { type: "radio", label: "Box", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
+    boxStyle: text("Width"),
+    titleStyle: text("Title style"),
+    titleCls: text("Title size"),
+    ledeStyle: text("Text style"),
+    image: { type: "object", label: "Picture", objectFields: imageFields },
+  },
   defaultProps: { boxed: true, boxStyle: "max-width: 32rem;", title: "Title", lede: "Text", buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
   render: (p) => {
     const words = (
@@ -504,4 +544,4 @@ export const HtmlBlock = {
   render: ({ html }) => <Raw html={html} />,
 };
 
-export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };
+export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };

@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1531058020387-3be344556be6.jpg",
     "alt": "A snare drum with sticks laid across it and a close microphone."
-   },
-   "readingTime": 8
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "The people planning these evenings say the same two things everywhere: not another casino night, not another photo booth. Every idea below is measured against that.",
-     "The formats that are winning ask the crowd to do something together. The ones fading ask the crowd to watch.",
-     "A cover or jazz band for a corporate event runs $2,500 to $8,000 in this market, and the number moves on how many musicians and how many hours far more than on which act.",
-     "Denver's corporate calendar has an after-party in it now: conferences at the convention center, galas at the hotels beside it, and the back half of the holiday party."
+     {
+      "text": "The people planning these evenings say the same two things everywhere: not another casino night, not another photo booth. Every idea below is measured against that."
+     },
+     {
+      "text": "The formats that are winning ask the crowd to do something together. The ones fading ask the crowd to watch."
+     },
+     {
+      "text": "A cover or jazz band for a corporate event runs $2,500 to $8,000 in this market, and the number moves on how many musicians and how many hours far more than on which act."
+     },
+     {
+      "text": "Denver's corporate calendar has an after-party in it now: conferences at the convention center, galas at the hotels beside it, and the back half of the holiday party."
+     }
     ]
    }
   },
@@ -214,66 +221,160 @@
     "id": "ComparisonTable-27",
     "title": "The ideas, and what each one asks of the crowd",
     "columns": [
-     "The idea",
-     "What it asks of the crowd",
-     "The size it needs"
+     {
+      "text": "The idea"
+     },
+     {
+      "text": "What it asks of the crowd"
+     },
+     {
+      "text": "The size it needs"
+     }
     ],
     "rows": [
-     [
-      "Live band karaoke",
-      "Volunteers, eventually",
-      "Four to six musicians and a host"
-     ],
-     [
-      "DJ with a live musician",
-      "Nothing, then dancing",
-      "One or two"
-     ],
-     [
-      "The jazz trio",
-      "Conversation",
-      "Three"
-     ],
-     [
-      "Yacht rock band",
-      "Singing along",
-      "Four to six"
-     ],
-     [
-      "Americana band",
-      "Listening, then dancing",
-      "Three or four"
-     ],
-     [
-      "Soul and R&B band",
-      "Dancing after the program",
-      "Four to six"
-     ],
-     [
-      "The flamenco set piece",
-      "Watching, for one chapter",
-      "Three, or four with a dancer"
-     ],
-     [
-      "Solo piano",
-      "Nothing at all",
-      "One"
-     ],
-     [
-      "Comedian",
-      "Seated attention",
-      "One"
-     ],
-     [
-      "Strolling magician",
-      "Small groups, in turn",
-      "One"
-     ],
-     [
-      "Casino tables",
-      "Queuing",
-      "A side table"
-     ]
+     {
+      "cells": [
+       {
+        "text": "Live band karaoke"
+       },
+       {
+        "text": "Volunteers, eventually"
+       },
+       {
+        "text": "Four to six musicians and a host"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "DJ with a live musician"
+       },
+       {
+        "text": "Nothing, then dancing"
+       },
+       {
+        "text": "One or two"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The jazz trio"
+       },
+       {
+        "text": "Conversation"
+       },
+       {
+        "text": "Three"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Yacht rock band"
+       },
+       {
+        "text": "Singing along"
+       },
+       {
+        "text": "Four to six"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Americana band"
+       },
+       {
+        "text": "Listening, then dancing"
+       },
+       {
+        "text": "Three or four"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Soul and R&B band"
+       },
+       {
+        "text": "Dancing after the program"
+       },
+       {
+        "text": "Four to six"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The flamenco set piece"
+       },
+       {
+        "text": "Watching, for one chapter"
+       },
+       {
+        "text": "Three, or four with a dancer"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Solo piano"
+       },
+       {
+        "text": "Nothing at all"
+       },
+       {
+        "text": "One"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Comedian"
+       },
+       {
+        "text": "Seated attention"
+       },
+       {
+        "text": "One"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Strolling magician"
+       },
+       {
+        "text": "Small groups, in turn"
+       },
+       {
+        "text": "One"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Casino tables"
+       },
+       {
+        "text": "Queuing"
+       },
+       {
+        "text": "A side table"
+       }
+      ]
+     }
     ]
    }
   },
@@ -299,9 +400,15 @@
    "props": {
     "id": "RelatedPosts-30",
     "posts": [
-     "office-holiday-party-ideas-denver",
-     "client-appreciation-event-ideas-denver",
-     "what-live-music-costs-corporate-event"
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "client-appreciation-event-ideas-denver"
+     },
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     }
     ]
    }
   }

@@ -17,8 +17,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1617136785693-54b279bddfeb.jpg",
     "alt": "Stage lights over instruments set up before an evening event."
-   },
-   "readingTime": 9
+   }
   }
  },
  "content": [
@@ -27,10 +26,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A cover or jazz band for a corporate event runs $2,500 to $8,000 in this market, and Denver bands run $2,500 to $8,000, a trio at the bottom of that and a full band with horns at the top.",
-     "Most acts bill two things: a call-out covering the evening they commit to, whatever its length, and a rate for performance time. That's why one hour is never a quarter of four.",
-     "Sound is the line that most often makes two quotes at the same number cover two different evenings. Ask whether it's inside the figure.",
-     "Travel beyond the Denver metro and a December weekend are separate lines on a quote. A Denver holiday weekend carries 20 to 30 percent across this market."
+     {
+      "text": "A cover or jazz band for a corporate event runs $2,500 to $8,000 in this market, and Denver bands run $2,500 to $8,000, a trio at the bottom of that and a full band with horns at the top."
+     },
+     {
+      "text": "Most acts bill two things: a call-out covering the evening they commit to, whatever its length, and a rate for performance time. That's why one hour is never a quarter of four."
+     },
+     {
+      "text": "Sound is the line that most often makes two quotes at the same number cover two different evenings. Ask whether it's inside the figure."
+     },
+     {
+      "text": "Travel beyond the Denver metro and a December weekend are separate lines on a quote. A Denver holiday weekend carries 20 to 30 percent across this market."
+     }
     ]
    }
   },
@@ -68,41 +75,95 @@
     "id": "ComparisonTable-6",
     "title": "What the market charges, by size",
     "columns": [
-     "What you're booking",
-     "What the market charges",
-     "Whose market"
+     {
+      "text": "What you're booking"
+     },
+     {
+      "text": "What the market charges"
+     },
+     {
+      "text": "Whose market"
+     }
     ],
     "rows": [
-     [
-      "A jazz trio or acoustic duo for a dinner",
-      "$500 to $3,000",
-      "United States"
-     ],
-     [
-      "A cover or jazz band for a corporate event",
-      "$2,500 to $8,000",
-      "United States"
-     ],
-     [
-      "A Denver band, trio up to a full band with horns",
-      "$2,500 to $8,000",
-      "Denver"
-     ],
-     [
-      "The four to six piece, the Denver middle",
-      "$4,000 to $6,000",
-      "Denver"
-     ],
-     [
-      "A DJ carrying a night with production lighting",
-      "$2,500 to $6,000",
-      "Denver"
-     ],
-     [
-      "A seven to nine piece show band",
-      "$7,500 to $17,000",
-      "United States"
-     ]
+     {
+      "cells": [
+       {
+        "text": "A jazz trio or acoustic duo for a dinner"
+       },
+       {
+        "text": "$500 to $3,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A cover or jazz band for a corporate event"
+       },
+       {
+        "text": "$2,500 to $8,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A Denver band, trio up to a full band with horns"
+       },
+       {
+        "text": "$2,500 to $8,000"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The four to six piece, the Denver middle"
+       },
+       {
+        "text": "$4,000 to $6,000"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A DJ carrying a night with production lighting"
+       },
+       {
+        "text": "$2,500 to $6,000"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A seven to nine piece show band"
+       },
+       {
+        "text": "$7,500 to $17,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     }
     ]
    }
   },
@@ -133,41 +194,95 @@
     "id": "ComparisonTable-10",
     "title": "What the market charges for a short booking and for a full evening",
     "columns": [
-     "What you're booking",
-     "What the market charges",
-     "Whose market"
+     {
+      "text": "What you're booking"
+     },
+     {
+      "text": "What the market charges"
+     },
+     {
+      "text": "Whose market"
+     }
     ],
     "rows": [
-     [
-      "A short booking, a ceremony or a cocktail hour",
-      "$800 to $2,000",
-      "Denver"
-     ],
-     [
-      "A jazz trio or acoustic duo for a dinner",
-      "$500 to $3,000",
-      "United States"
-     ],
-     [
-      "An acoustic duo across a four-hour evening",
-      "$1,500 to $2,500",
-      "United States"
-     ],
-     [
-      "A trio across a four-hour evening",
-      "$2,000 to $3,500",
-      "United States"
-     ],
-     [
-      "A cover or jazz band for a corporate evening",
-      "$2,500 to $8,000",
-      "United States"
-     ],
-     [
-      "Each hour past the contracted set",
-      "$200 to $400",
-      "Denver"
-     ]
+     {
+      "cells": [
+       {
+        "text": "A short booking, a ceremony or a cocktail hour"
+       },
+       {
+        "text": "$800 to $2,000"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A jazz trio or acoustic duo for a dinner"
+       },
+       {
+        "text": "$500 to $3,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "An acoustic duo across a four-hour evening"
+       },
+       {
+        "text": "$1,500 to $2,500"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A trio across a four-hour evening"
+       },
+       {
+        "text": "$2,000 to $3,500"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A cover or jazz band for a corporate evening"
+       },
+       {
+        "text": "$2,500 to $8,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Each hour past the contracted set"
+       },
+       {
+        "text": "$200 to $400"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     }
     ]
    }
   },
@@ -292,9 +407,15 @@
    "props": {
     "id": "RelatedPosts-27",
     "posts": [
-     "office-holiday-party-ideas-denver",
-     "playing-around-a-program",
-     "what-a-band-needs-from-the-room"
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "playing-around-a-program"
+     },
+     {
+      "slug": "what-a-band-needs-from-the-room"
+     }
     ]
    }
   }

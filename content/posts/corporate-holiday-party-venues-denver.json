@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1709689702529-6fa1f343e108.jpg",
     "alt": "A hotel banquet hall set for dinner before guests arrive."
-   },
-   "readingTime": 8
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Denver holiday dates get decided between August and October, and the mid-December Fridays and Saturdays go first.",
-     "The big three for scale are Mission Ballroom, Wings Over the Rockies and Mile High Station. The middle of the market, 75 to 200 guests, is the deepest bench.",
-     "Five venues in this guide already run live music as a house habit: Mission Ballroom, Nocturne, Ophelia's, Number Thirty Eight and the Brown Palace.",
-     "The fine print is where budgets slip: in-house catering mandates, approved-caterer lists, evening start-time rules, and one November maintenance closure."
+     {
+      "text": "Denver holiday dates get decided between August and October, and the mid-December Fridays and Saturdays go first."
+     },
+     {
+      "text": "The big three for scale are Mission Ballroom, Wings Over the Rockies and Mile High Station. The middle of the market, 75 to 200 guests, is the deepest bench."
+     },
+     {
+      "text": "Five venues in this guide already run live music as a house habit: Mission Ballroom, Nocturne, Ophelia's, Number Thirty Eight and the Brown Palace."
+     },
+     {
+      "text": "The fine print is where budgets slip: in-house catering mandates, approved-caterer lists, evening start-time rules, and one November maintenance closure."
+     }
     ]
    }
   },
@@ -142,8 +149,12 @@
    "props": {
     "id": "RelatedPosts-16",
     "posts": [
-     "office-holiday-party-ideas-denver",
-     "what-live-music-costs-corporate-event"
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     }
     ]
    }
   }

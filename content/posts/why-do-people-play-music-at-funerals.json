@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1553605379-9221b132f0ac.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 3
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In a Dutch study, families chose a song for what it meant in the person's life more than for what its words said.",
-     "In a small Swedish study, choosing the music together gave mourners something to do, and people who had chosen it in advance with the relative who was dying described that as a comfort.",
-     "It doesn't have to be a hymn. As funerals have become more personal, the music has moved from mostly sacred to often secular."
+     {
+      "text": "In a Dutch study, families chose a song for what it meant in the person's life more than for what its words said."
+     },
+     {
+      "text": "In a small Swedish study, choosing the music together gave mourners something to do, and people who had chosen it in advance with the relative who was dying described that as a comfort."
+     },
+     {
+      "text": "It doesn't have to be a hymn. As funerals have become more personal, the music has moved from mostly sacred to often secular."
+     }
     ]
    }
   },
@@ -143,8 +148,12 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "why-does-music-bring-back-memories",
-     "how-does-music-affect-people-at-a-party"
+     {
+      "slug": "why-does-music-bring-back-memories"
+     },
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     }
     ]
    }
   }

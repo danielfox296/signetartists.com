@@ -11,10 +11,40 @@
   ],
   "only_in_build_py": [],
   "only_in_new_build": [],
-  "files_differing": 0,
-  "differing_lines": 0,
+  "files_differing": 2,
+  "differing_lines": 4,
   "accepted": [],
-  "unaccepted": []
+  "unaccepted": [
+   "blog/company-offsite-ideas-colorado-remote-teams/index.html",
+   "blog/index.html"
+  ]
  },
- "differences": {}
+ "differences": {
+  "blog/company-offsite-ideas-colorado-remote-teams/index.html": [
+   {
+    "part": "body",
+    "lines": 2,
+    "diff": [
+     "@@ -147,3 +147,3 @@",
+     " <span >",
+     "-T 8 min read",
+     "+T 9 min read",
+     " </span>"
+    ]
+   }
+  ],
+  "blog/index.html": [
+   {
+    "part": "body",
+    "lines": 2,
+    "diff": [
+     "@@ -1012,3 +1012,3 @@",
+     " <span >",
+     "-T 8 min read",
+     "+T 9 min read",
+     " </span>"
+    ]
+   }
+  ]
+ }
 }

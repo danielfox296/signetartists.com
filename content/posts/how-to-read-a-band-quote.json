@@ -15,8 +15,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1445375011782-2384686778a0.jpg",
     "alt": "A snare drum with sticks laid across it and a close microphone."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -25,10 +24,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Two quotes are only comparable once they assume the same set count, the same sound arrangement and the same travel terms. Normalize first, compare second.",
-     "Sound is the line that most often separates two totals that otherwise look alike. Our sound support is included in the number at every size.",
-     "Travel is geography, and it belongs on its own line: a short one to the Front Range, a longer one to the I-70 corridor, and travel plus a night's lodging to the far resorts.",
-     "The four items that cost nothing on a quote and cost a week when they're missing: a certificate of insurance, a W-9, one itemized invoice and a personal contact."
+     {
+      "text": "Two quotes are only comparable once they assume the same set count, the same sound arrangement and the same travel terms. Normalize first, compare second."
+     },
+     {
+      "text": "Sound is the line that most often separates two totals that otherwise look alike. Our sound support is included in the number at every size."
+     },
+     {
+      "text": "Travel is geography, and it belongs on its own line: a short one to the Front Range, a longer one to the I-70 corridor, and travel plus a night's lodging to the far resorts."
+     },
+     {
+      "text": "The four items that cost nothing on a quote and cost a week when they're missing: a certificate of insurance, a W-9, one itemized invoice and a personal contact."
+     }
     ]
    }
   },
@@ -159,9 +166,15 @@
    "props": {
     "id": "RelatedPosts-19",
     "posts": [
-     "what-live-music-costs-corporate-event",
-     "what-a-band-needs-from-the-room",
-     "playing-around-a-program"
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     },
+     {
+      "slug": "what-a-band-needs-from-the-room"
+     },
+     {
+      "slug": "playing-around-a-program"
+     }
     ]
    }
   }

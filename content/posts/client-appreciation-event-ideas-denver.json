@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1728488260966-f8bb66288a8f.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 9
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A client appreciation evening is judged by how much talking it allowed. Every idea below is ranked by that.",
-     "The three groups want different evenings: advisors host a short program and a long social half, realtors host families in daylight, firms host small tables.",
-     "Live music is the idea that makes an evening feel hosted while leaving space for people to talk, which is why it sits under most of the others.",
-     "A jazz trio or acoustic duo for a dinner runs $500 to $3,000 across this market, and that's the figure to walk into a budget conversation with."
+     {
+      "text": "A client appreciation evening is judged by how much talking it allowed. Every idea below is ranked by that."
+     },
+     {
+      "text": "The three groups want different evenings: advisors host a short program and a long social half, realtors host families in daylight, firms host small tables."
+     },
+     {
+      "text": "Live music is the idea that makes an evening feel hosted while leaving space for people to talk, which is why it sits under most of the others."
+     },
+     {
+      "text": "A jazz trio or acoustic duo for a dinner runs $500 to $3,000 across this market, and that's the figure to walk into a budget conversation with."
+     }
     ]
    }
   },
@@ -158,51 +165,121 @@
     "id": "ComparisonTable-19",
     "title": "The eight ideas, ranked by how much talking they allow",
     "columns": [
-     "The idea",
-     "Guests",
-     "What it asks of them"
+     {
+      "text": "The idea"
+     },
+     {
+      "text": "Guests"
+     },
+     {
+      "text": "What it asks of them"
+     }
     ],
     "rows": [
-     [
-      "The chef's counter",
-      "8 to 12",
-      "Show up hungry and talk to the person beside them"
-     ],
-     [
-      "The dinner with music under it",
-      "20 to 80",
-      "Sit down for two hours and enjoy it"
-     ],
-     [
-      "The open house at your office",
-      "30 to 100",
-      "Drop in on the way home"
-     ],
-     [
-      "The tasting",
-      "20 to 60",
-      "Have an opinion about something"
-     ],
-     [
-      "The museum or gallery evening",
-      "40 to 200",
-      "Look at something first, talk second"
-     ],
-     [
-      "The seminar with a real evening after it",
-      "40 to 150",
-      "Learn something, then stay"
-     ],
-     [
-      "The family afternoon",
-      "50 to 300",
-      "Bring the kids"
-     ],
-     [
-      "The suite at the ballpark",
-      "12 to 40",
-      "Nothing at all, which is the point"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The chef's counter"
+       },
+       {
+        "text": "8 to 12"
+       },
+       {
+        "text": "Show up hungry and talk to the person beside them"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The dinner with music under it"
+       },
+       {
+        "text": "20 to 80"
+       },
+       {
+        "text": "Sit down for two hours and enjoy it"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The open house at your office"
+       },
+       {
+        "text": "30 to 100"
+       },
+       {
+        "text": "Drop in on the way home"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The tasting"
+       },
+       {
+        "text": "20 to 60"
+       },
+       {
+        "text": "Have an opinion about something"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The museum or gallery evening"
+       },
+       {
+        "text": "40 to 200"
+       },
+       {
+        "text": "Look at something first, talk second"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The seminar with a real evening after it"
+       },
+       {
+        "text": "40 to 150"
+       },
+       {
+        "text": "Learn something, then stay"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The family afternoon"
+       },
+       {
+        "text": "50 to 300"
+       },
+       {
+        "text": "Bring the kids"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The suite at the ballpark"
+       },
+       {
+        "text": "12 to 40"
+       },
+       {
+        "text": "Nothing at all, which is the point"
+       }
+      ]
+     }
     ]
    }
   },
@@ -301,8 +378,12 @@
    "props": {
     "id": "RelatedPosts-32",
     "posts": [
-     "office-holiday-party-ideas-denver",
-     "corporate-holiday-party-venues-denver"
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "corporate-holiday-party-venues-denver"
+     }
     ]
    }
   }

@@ -147,7 +147,8 @@ export const BlogPosts = {
   render: function BlogPostsRender() {
     const s = useSite();
     const m = s.model;
-    const posts = m.published.map((d) => d.root.props);
+    const docs = m.published;
+    const posts = docs.map((d) => d.root.props);
     if (!posts.length) {
       return (
         <>
@@ -174,7 +175,7 @@ export const BlogPosts = {
                 {sep}
                 <time dateTime={p.date}>{m.dateDisplay(p.date)}</time>
                 {sep}
-                <span>{`${p.readingTime} min read`}</span>
+                <span>{`${m.readingTime(docs[i])} min read`}</span>
               </p>
               <h2 className="blog-row-title">{p.title}</h2>
               <p className="blog-row-dek">{p.dek || ""}</p>
@@ -190,7 +191,10 @@ export const BlogPosts = {
 // then the posts. Built from the same list as sitemap.xml.
 export const PageIndex = {
   label: "All pages",
-  fields: {},
+  fields: {
+    top: { type: "array", label: "First", getItemSummary: (t) => t.output, arrayFields: { output: { type: "text", label: "Page" } } },
+    groups: { type: "array", label: "Groups", getItemSummary: (g) => g.heading, arrayFields: { prefix: { type: "text", label: "Folder" }, heading: { type: "text", label: "Heading" }, lanes: { type: "radio", label: "Acts by lane", options: [{ label: "No", value: false }, { label: "Yes", value: true }] } } },
+  },
   render: function PageIndexRender({ top, groups }) {
     const s = useSite();
     const m = s.model;
@@ -203,7 +207,7 @@ export const PageIndex = {
       group.forEach((b) => used.add(b.output));
       rows.push([heading, group.map((b) => ["/" + b.output.replace("index.html", ""), label(b)])]);
     };
-    const tops = (top || []).filter((o) => byOutput[o]).map((o) => byOutput[o]);
+    const tops = (top || []).map((t) => t.output).filter((o) => byOutput[o]).map((o) => byOutput[o]);
     if (tops.length) emit("The site", tops);
     const depth = (o) => (o.match(/\//g) || []).length;
     for (const g of groups || []) {

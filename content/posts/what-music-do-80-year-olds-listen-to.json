@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1616286608358-0e1b143f7d2f.jpg",
     "alt": "A snare drum with sticks laid across it and a close microphone."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "On average, the songs that mean the most to people come from their teens. Two recent studies put the peak at around 14 and at 17.",
-     "Someone who's 80 in 2026 was a teenager in the early 1960s, so the Beatles may suit them better than big band, which was their parents' music.",
-     "In one study, the oldest listeners liked music from the widest range of years.",
-     "These are averages, so the surest way to know what one person loves is to ask them or their family."
+     {
+      "text": "On average, the songs that mean the most to people come from their teens. Two recent studies put the peak at around 14 and at 17."
+     },
+     {
+      "text": "Someone who's 80 in 2026 was a teenager in the early 1960s, so the Beatles may suit them better than big band, which was their parents' music."
+     },
+     {
+      "text": "In one study, the oldest listeners liked music from the widest range of years."
+     },
+     {
+      "text": "These are averages, so the surest way to know what one person loves is to ask them or their family."
+     }
     ]
    }
   },
@@ -60,36 +67,82 @@
     "id": "ComparisonTable-5",
     "title": "The years each age grew up with, as of 2026",
     "columns": [
-     "Age",
-     "The years they were 10 to 30",
-     "Strongest around"
+     {
+      "text": "Age"
+     },
+     {
+      "text": "The years they were 10 to 30"
+     },
+     {
+      "text": "Strongest around"
+     }
     ],
     "rows": [
-     [
-      "75",
-      "1961 to 1981",
-      "1965 to 1968"
-     ],
-     [
-      "80",
-      "1956 to 1976",
-      "1960 to 1963"
-     ],
-     [
-      "85",
-      "1951 to 1971",
-      "1955 to 1958"
-     ],
-     [
-      "90",
-      "1946 to 1966",
-      "1950 to 1953"
-     ],
-     [
-      "95",
-      "1941 to 1961",
-      "1945 to 1948"
-     ]
+     {
+      "cells": [
+       {
+        "text": "75"
+       },
+       {
+        "text": "1961 to 1981"
+       },
+       {
+        "text": "1965 to 1968"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "80"
+       },
+       {
+        "text": "1956 to 1976"
+       },
+       {
+        "text": "1960 to 1963"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "85"
+       },
+       {
+        "text": "1951 to 1971"
+       },
+       {
+        "text": "1955 to 1958"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "90"
+       },
+       {
+        "text": "1946 to 1966"
+       },
+       {
+        "text": "1950 to 1953"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "95"
+       },
+       {
+        "text": "1941 to 1961"
+       },
+       {
+        "text": "1945 to 1948"
+       }
+      ]
+     }
     ]
    }
   },
@@ -186,9 +239,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "party-music-for-all-ages",
-     "sing-along-songs-for-seniors",
-     "why-do-dementia-patients-remember-music"
+     {
+      "slug": "party-music-for-all-ages"
+     },
+     {
+      "slug": "sing-along-songs-for-seniors"
+     },
+     {
+      "slug": "why-do-dementia-patients-remember-music"
+     }
     ]
    }
   }

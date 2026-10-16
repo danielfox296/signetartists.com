@@ -17,8 +17,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1655459765544-39065b741a9e.jpg",
     "alt": "The Denver skyline with the Front Range behind it, seen from City Park."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -27,9 +26,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "The volume of the music has a lot to do with how easily guests can talk, and crowds tend to move together most on songs they know.",
-     "People seem to move more when the musicians are in the same space, and to feel more connected to each other.",
-     "Several popular claims about music, like the idea that going to gigs adds years to your life, fall apart when you check where they came from."
+     {
+      "text": "The volume of the music has a lot to do with how easily guests can talk, and crowds tend to move together most on songs they know."
+     },
+     {
+      "text": "People seem to move more when the musicians are in the same space, and to feel more connected to each other."
+     },
+     {
+      "text": "Several popular claims about music, like the idea that going to gigs adds years to your life, fall apart when you check where they came from."
+     }
     ]
    }
   },
@@ -101,30 +106,64 @@
    "props": {
     "id": "ComparisonTable-11",
     "columns": [
-     "The claim",
-     "What we found"
+     {
+      "text": "The claim"
+     },
+     {
+      "text": "What we found"
+     }
     ],
     "rows": [
-     [
-      "Your favorite music is from when you were 23.",
-      "Three later studies put the peak at 14 to 17."
-     ],
-     [
-      "Going to a gig every two weeks adds nine years to your life.",
-      "It came from a marketing study paid for by a venue company, and it was never published as research."
-     ],
-     [
-      "Music reduces agitation in dementia.",
-      "The Cochrane review, which covered 30 trials in its 2025 update, found no effect on agitation."
-     ],
-     [
-      "Slow music makes diners spend more.",
-      "A 2024 experiment across 282 restaurant tables found slow music kept diners about 23 minutes longer (80 minutes against 57), and the bill was the same."
-     ],
-     [
-      "Making music together makes children kinder.",
-      "When researchers repeated the best-known study in kindergartens in 2021, they found no effect."
-     ]
+     {
+      "cells": [
+       {
+        "text": "Your favorite music is from when you were 23."
+       },
+       {
+        "text": "Three later studies put the peak at 14 to 17."
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Going to a gig every two weeks adds nine years to your life."
+       },
+       {
+        "text": "It came from a marketing study paid for by a venue company, and it was never published as research."
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Music reduces agitation in dementia."
+       },
+       {
+        "text": "The Cochrane review, which covered 30 trials in its 2025 update, found no effect on agitation."
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Slow music makes diners spend more."
+       },
+       {
+        "text": "A 2024 experiment across 282 restaurant tables found slow music kept diners about 23 minutes longer (80 minutes against 57), and the bill was the same."
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Making music together makes children kinder."
+       },
+       {
+        "text": "When researchers repeated the best-known study in kindergartens in 2021, they found no effect."
+       }
+      ]
+     }
     ]
    }
   },
@@ -200,9 +239,15 @@
    "props": {
     "id": "RelatedPosts-18",
     "posts": [
-     "how-to-get-people-to-dance-at-a-wedding",
-     "party-music-for-all-ages",
-     "is-live-music-better-than-recorded"
+     {
+      "slug": "how-to-get-people-to-dance-at-a-wedding"
+     },
+     {
+      "slug": "party-music-for-all-ages"
+     },
+     {
+      "slug": "is-live-music-better-than-recorded"
+     }
     ]
    }
   }

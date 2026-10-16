@@ -202,7 +202,10 @@ export const shellFields = {
     ],
   },
   anchor: { type: "text", label: "Anchor" },
+  label: { type: "text", label: "Label" },
   narrow: { type: "radio", label: "Width", options: [{ label: "Full", value: false }, { label: "Narrow", value: true }] },
+  wrapStyle: { type: "text", label: "Style" },
+  cls: { type: "text", label: "Class" },
 };
 
 const rich = (label) => ({ type: "richtext", label, contentEditable: true });
@@ -226,10 +229,14 @@ export const imageFields = {
   width: text("Width"),
   height: text("Height"),
   style: text("Style"),
+  loading: { type: "select", label: "Loading", options: [{ label: "Default", value: "" }, { label: "Lazy", value: "lazy" }, { label: "Eager", value: "eager" }] },
+  decoding: { type: "select", label: "Decoding", options: [{ label: "Default", value: "" }, { label: "Async", value: "async" }] },
+  fetchpriority: { type: "select", label: "Priority", options: [{ label: "Default", value: "" }, { label: "High", value: "high" }] },
 };
 
 export const headingFields = {
   eyebrow: rich("Eyebrow"),
+  face: rich("Act line"),
   slab: { type: "radio", label: "Eyebrow style", options: [{ label: "Plain", value: false }, { label: "Slab", value: true }] },
   title: rich("Title"),
   titleTag: { type: "select", label: "Title level", options: [{ label: "H1", value: "h1" }, { label: "H2", value: "h2" }, { label: "H3", value: "h3" }] },
@@ -241,6 +248,8 @@ export const headingFields = {
   buttons: buttonFields,
   headingNote: rich("Note"),
   headingStyle: text("Heading style"),
+  image: { type: "object", label: "Picture", objectFields: imageFields },
+  imageFirst: { type: "radio", label: "Picture", options: [{ label: "After the text", value: false }, { label: "Before the lede", value: true }] },
 };
 
 export const flowFields = (label) => ({

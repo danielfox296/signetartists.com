@@ -1,7 +1,7 @@
 /* The site as data: everything the components and the build derive from
    content/. Lists, trails, sibling links and act facts are computed here so
    that a page, a post or an act added to content/ joins them with no edit. */
-import { longDate } from "./util.js";
+import { decodeEntities, longDate } from "./util.js";
 
 export const outputFor = (path) => (path === "/" ? "index.html" : path.endsWith(".html") ? path.slice(1) : path.slice(1) + "index.html");
 export const urlFor = (output) => "/" + output.replace("index.html", "");
@@ -192,7 +192,20 @@ export function createModel(c) {
     return { rows, posts: ps.length ? postRows(ps) : null };
   };
 
-  const readingTime = (d) => d.root.props.readingTime;
+  // Minutes to read a post at 200 words a minute, from the text a reader
+  // sees in its prose, asides, key takeaways and pull quotes.
+  const words = (t) => decodeEntities(String(t ?? "").replace(/<[^>]+>/g, "")).replace(/[*_`~]+/g, "").split(/\s+/).filter(Boolean).length;
+  const readingTime = (d) => {
+    let n = 0;
+    for (const c of d.content) {
+      const p = c.props;
+      if (c.type === "Prose") n += words(p.html);
+      else if (c.type === "Aside") n += words(p.html) + words(p.title);
+      else if (c.type === "KeyTakeaways") for (const it of p.items || []) n += words(it.text);
+      else if (c.type === "Pullquote") n += words(p.text);
+    }
+    return Math.max(1, Math.ceil(n / 200));
+  };
   const dateDisplay = (iso) => longDate(iso);
 
   return {

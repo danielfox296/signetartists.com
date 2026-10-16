@@ -20,8 +20,7 @@
    "video": {
     "id": "cA2KwgmJqGc",
     "title": "A jazz trio playing Sunny: guitar, upright bass and drums with brushes"
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -30,10 +29,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A jazz trio is three musicians: a rhythm section of bass and drums with one instrument that carries the melody and the chords, most often piano or guitar.",
-     "The trio that works at a private event is guitar, upright bass and drums played with brushes, because brushes let a drum kit sit under a conversation instead of over it.",
-     "A quartet is the same three with a horn or a voice added. That's the size for a floor, and the size a wedding or a gala usually books after dinner.",
-     "Duo, trio or quartet is a question about the size of the crowd and whether anyone is going to dance, and the answer is usually smaller than people expect."
+     {
+      "text": "A jazz trio is three musicians: a rhythm section of bass and drums with one instrument that carries the melody and the chords, most often piano or guitar."
+     },
+     {
+      "text": "The trio that works at a private event is guitar, upright bass and drums played with brushes, because brushes let a drum kit sit under a conversation instead of over it."
+     },
+     {
+      "text": "A quartet is the same three with a horn or a voice added. That's the size for a floor, and the size a wedding or a gala usually books after dinner."
+     },
+     {
+      "text": "Duo, trio or quartet is a question about the size of the crowd and whether anyone is going to dance, and the answer is usually smaller than people expect."
+     }
     ]
    }
   },
@@ -135,9 +142,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "what-a-jazz-band-costs-denver",
-     "band-or-dj-denver",
-     "what-a-band-needs-from-the-room"
+     {
+      "slug": "what-a-jazz-band-costs-denver"
+     },
+     {
+      "slug": "band-or-dj-denver"
+     },
+     {
+      "slug": "what-a-band-needs-from-the-room"
+     }
     ]
    }
   }

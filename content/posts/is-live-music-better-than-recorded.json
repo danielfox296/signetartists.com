@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1483000805330-4eaf0a0d82da.jpg",
     "alt": "A trumpet resting on a table."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In the studies we found, people moved more and their bodies responded more when the musicians were playing in the same space.",
-     "People at a concert in person felt more connected to the rest of the audience than people watching it on a livestream.",
-     "Live music hasn't been shown to make the music itself more moving, and we found no study comparing live and recorded music at a wedding or a party."
+     {
+      "text": "In the studies we found, people moved more and their bodies responded more when the musicians were playing in the same space."
+     },
+     {
+      "text": "People at a concert in person felt more connected to the rest of the audience than people watching it on a livestream."
+     },
+     {
+      "text": "Live music hasn't been shown to make the music itself more moving, and we found no study comparing live and recorded music at a wedding or a party."
+     }
     ]
    }
   },
@@ -165,9 +170,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "band-or-dj-denver",
-     "how-to-get-people-to-dance-at-a-wedding",
-     "how-does-music-affect-people-at-a-party"
+     {
+      "slug": "band-or-dj-denver"
+     },
+     {
+      "slug": "how-to-get-people-to-dance-at-a-wedding"
+     },
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     }
     ]
    }
   }

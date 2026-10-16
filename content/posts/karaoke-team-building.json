@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1738156793840-e7ad46384761.jpg",
     "alt": "Stage lights over instruments set up before an evening event."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "We didn't find a study of karaoke at a company event. The closest research is on singing classes, a choir and a dance experiment.",
-     "In those studies, singing together seemed to help people feel close quickly, including in a choir of 232 where most people didn't know each other.",
-     "In a 2016 dance experiment, the groups that felt closer didn't cooperate any better on a game afterwards, and researchers in the field have warned that some of these effects haven't held up when repeated."
+     {
+      "text": "We didn't find a study of karaoke at a company event. The closest research is on singing classes, a choir and a dance experiment."
+     },
+     {
+      "text": "In those studies, singing together seemed to help people feel close quickly, including in a choir of 232 where most people didn't know each other."
+     },
+     {
+      "text": "In a 2016 dance experiment, the groups that felt closer didn't cooperate any better on a game afterwards, and researchers in the field have warned that some of these effects haven't held up when repeated."
+     }
     ]
    }
   },
@@ -139,9 +144,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "why-do-people-sing-along",
-     "company-offsite-ideas-colorado-remote-teams",
-     "how-does-music-affect-people-at-a-party"
+     {
+      "slug": "why-do-people-sing-along"
+     },
+     {
+      "slug": "company-offsite-ideas-colorado-remote-teams"
+     },
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     }
     ]
    }
   }

@@ -22,8 +22,7 @@
    "video": {
     "id": "[YOUTUBE_ID]",
     "title": "[Ensemble] at [Venue], [City]: [occasion] | Signet Artists"
-   },
-   "readingTime": 2
+   }
   }
  },
  "content": [
@@ -32,9 +31,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "[The moment. What the night was like at the point the music mattered most.]",
-     "[What the venue is like to play: the surface the sound lands on, where the ensemble sat, what carried and what did not.]",
-     "[The one practical fact a planner booking this venue would want first: power, load-in route, the sound policy, the altitude if it applies.]"
+     {
+      "text": "[The moment. What the night was like at the point the music mattered most.]"
+     },
+     {
+      "text": "[What the venue is like to play: the surface the sound lands on, where the ensemble sat, what carried and what did not.]"
+     },
+     {
+      "text": "[The one practical fact a planner booking this venue would want first: power, load-in route, the sound policy, the altitude if it applies.]"
+     }
     ]
    }
   },
@@ -103,7 +108,9 @@
    "props": {
     "id": "RelatedPosts-10",
     "posts": [
-     "[the occasion post this belongs with, e.g. office-holiday-party-ideas-denver]"
+     {
+      "slug": "[the occasion post this belongs with, e.g. office-holiday-party-ideas-denver]"
+     }
     ]
    }
   }

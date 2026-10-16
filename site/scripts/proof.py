@@ -12,8 +12,10 @@ Run from the repo root:  python3 site/scripts/proof.py [--keep]
    repo's own copy, since build.py never writes it.
 
 The report lands in site/proof/: report.md (the summary and every
-difference) and report.json. Exit status 0 when nothing differs, 1
-otherwise."""
+difference) and report.json. A difference made on purpose is listed in
+site/proof/accepted.json with its reason; it stops failing the proof only
+once it is marked "accepted": true. Exit status 0 when nothing unaccepted
+differs, 1 otherwise."""
 import difflib
 import json
 import os
@@ -105,7 +107,8 @@ def main():
     try:
         tree, old_files = old_build(work)
         new_dir, new_files = new_build(work)
-        accepted = json.loads(ACCEPTED.read_text()) if ACCEPTED.exists() else {}
+        listed = json.loads(ACCEPTED.read_text()) if ACCEPTED.exists() else {}
+        accepted = {k: v for k, v in listed.items() if v.get("accepted")}
         results = {}
         pairs = [(f, tree / f, new_dir / f) for f in old_files]
         pairs.append(("robots.txt", ROOT / "robots.txt", new_dir / "robots.txt"))
@@ -129,7 +132,7 @@ def main():
             "accepted": sorted(k for k in results if k in accepted),
             "unaccepted": sorted(unaccepted),
         }
-        write_report(summary, results, accepted)
+        write_report(summary, results, listed)
         print(json.dumps({k: (v if not isinstance(v, list) or len(v) < 12 else f"{len(v)} files") for k, v in summary.items()}, indent=1))
         if keep:
             print("kept:", work)
@@ -141,7 +144,7 @@ def main():
             shutil.rmtree(work, ignore_errors=True)
 
 
-def write_report(summary, results, accepted):
+def write_report(summary, results, listed):
     PROOF.mkdir(exist_ok=True)
     (PROOF / "report.json").write_text(json.dumps({"summary": summary, "differences": results}, indent=1, ensure_ascii=False) + "\n")
     lines = ["# Whole-site proof", "",
@@ -151,7 +154,10 @@ def write_report(summary, results, accepted):
              f"- Only in build.py's output: {', '.join(summary['only_in_build_py']) or 'none'}",
              f"- Only in the new build's output: {', '.join(summary['only_in_new_build']) or 'none'}", ""]
     for name, diffs in sorted(results.items()):
-        tag = f" (accepted: {accepted[name]})" if name in accepted else ""
+        entry = listed.get(name)
+        tag = ""
+        if entry:
+            tag = f" ({'accepted' if entry.get('accepted') else 'awaiting a decision'}: {entry['reason']})"
         lines.append(f"## {name}{tag}")
         for d in diffs:
             lines.append(f"{d['part']}: {d['lines']} differing tokens")

@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1600102975337-e66752d32557.jpg",
     "alt": "Faders and knobs on a mixing console."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A Denver DJ's four-hour block runs $350 to $700 across this market, and a Denver DJ carrying a night with production lighting runs $2,500 to $6,000. Those are two different purchases with one name.",
-     "Most US couples pay a wedding DJ $1,000 to $2,500, and the 2026 national average is $1,800. The premium tier runs $3,000 to $5,000.",
-     "A four-hour corporate party DJ runs $300 to $500, the cheapest live-entertainment line a company event can carry.",
-     "A DJ's time runs $100 to $200 for each hour, and the number moves on the gear and the extras far more than on the hours."
+     {
+      "text": "A Denver DJ's four-hour block runs $350 to $700 across this market, and a Denver DJ carrying a night with production lighting runs $2,500 to $6,000. Those are two different purchases with one name."
+     },
+     {
+      "text": "Most US couples pay a wedding DJ $1,000 to $2,500, and the 2026 national average is $1,800. The premium tier runs $3,000 to $5,000."
+     },
+     {
+      "text": "A four-hour corporate party DJ runs $300 to $500, the cheapest live-entertainment line a company event can carry."
+     },
+     {
+      "text": "A DJ's time runs $100 to $200 for each hour, and the number moves on the gear and the extras far more than on the hours."
+     }
     ]
    }
   },
@@ -81,51 +88,121 @@
     "id": "ComparisonTable-8",
     "title": "What a DJ costs, by what you're actually buying",
     "columns": [
-     "What you're booking",
-     "What the market charges",
-     "Whose market"
+     {
+      "text": "What you're booking"
+     },
+     {
+      "text": "What the market charges"
+     },
+     {
+      "text": "Whose market"
+     }
     ],
     "rows": [
-     [
-      "A Denver DJ, four hours",
-      "$350 to $700",
-      "Denver"
-     ],
-     [
-      "A DJ for a corporate party, four hours",
-      "$300 to $500",
-      "United States"
-     ],
-     [
-      "A DJ for a private event, four hours",
-      "$400 to $800",
-      "United States"
-     ],
-     [
-      "A wedding DJ, four hours",
-      "$600 to $1,200",
-      "United States"
-     ],
-     [
-      "What most couples pay a wedding DJ",
-      "$1,000 to $2,500",
-      "United States"
-     ],
-     [
-      "A wedding DJ in a larger city",
-      "$1,600 to $2,200",
-      "United States"
-     ],
-     [
-      "A Denver DJ carrying a night with production lighting",
-      "$2,500 to $6,000",
-      "Denver"
-     ],
-     [
-      "The premium tier: seasoned pros, major metros, full-day coverage",
-      "$3,000 to $5,000",
-      "United States"
-     ]
+     {
+      "cells": [
+       {
+        "text": "A Denver DJ, four hours"
+       },
+       {
+        "text": "$350 to $700"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A DJ for a corporate party, four hours"
+       },
+       {
+        "text": "$300 to $500"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A DJ for a private event, four hours"
+       },
+       {
+        "text": "$400 to $800"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A wedding DJ, four hours"
+       },
+       {
+        "text": "$600 to $1,200"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "What most couples pay a wedding DJ"
+       },
+       {
+        "text": "$1,000 to $2,500"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A wedding DJ in a larger city"
+       },
+       {
+        "text": "$1,600 to $2,200"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "A Denver DJ carrying a night with production lighting"
+       },
+       {
+        "text": "$2,500 to $6,000"
+       },
+       {
+        "text": "Denver"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The premium tier: seasoned pros, major metros, full-day coverage"
+       },
+       {
+        "text": "$3,000 to $5,000"
+       },
+       {
+        "text": "United States"
+       }
+      ]
+     }
     ]
    }
   },
@@ -186,9 +263,15 @@
    "props": {
     "id": "RelatedPosts-16",
     "posts": [
-     "band-or-dj-denver",
-     "what-a-jazz-band-costs-denver",
-     "what-live-music-costs-corporate-event"
+     {
+      "slug": "band-or-dj-denver"
+     },
+     {
+      "slug": "what-a-jazz-band-costs-denver"
+     },
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     }
     ]
    }
   }

@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1773227059529-3a2bd04ce5b0.jpg",
     "alt": "A flock of birds in silhouette flying into a sunburst, drawn in the flat color of a sixties record sleeve."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Songs released when people were about 10 to 30 tend to feel the most personal. For a resident who's 80 in 2026, that's roughly 1956 to 1976.",
-     "In a trial in San Francisco senior centers, six months of a weekly choir lowered loneliness and raised interest in life more than waiting did, though it didn't change memory, strength or symptoms of depression.",
-     "The researchers studied people who sang in a group week after week, and none of the studies took place in memory care."
+     {
+      "text": "Songs released when people were about 10 to 30 tend to feel the most personal. For a resident who's 80 in 2026, that's roughly 1956 to 1976."
+     },
+     {
+      "text": "In a trial in San Francisco senior centers, six months of a weekly choir lowered loneliness and raised interest in life more than waiting did, though it didn't change memory, strength or symptoms of depression."
+     },
+     {
+      "text": "The researchers studied people who sang in a group week after week, and none of the studies took place in memory care."
+     }
     ]
    }
   },
@@ -143,9 +148,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "what-music-do-80-year-olds-listen-to",
-     "live-music-for-memory-care-residents",
-     "why-do-people-sing-along"
+     {
+      "slug": "what-music-do-80-year-olds-listen-to"
+     },
+     {
+      "slug": "live-music-for-memory-care-residents"
+     },
+     {
+      "slug": "why-do-people-sing-along"
+     }
     ]
    }
   }

@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1687945512099-400cbe94460c.jpg",
     "alt": "The Denver skyline with the Front Range behind it, seen from City Park."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Music seems to change how long guests stay. In a 2024 experiment in Tel Aviv, tables stayed about 80 minutes with slow music and about 57 with fast music.",
-     "The studies disagree on whether guests spend more. The Tel Aviv experiment found no change in the check, while some older studies, each in one restaurant, found more spending at the bar or with classical music.",
-     "In one California restaurant, checks were larger with soft music than with loud.",
-     "We didn't find a study that compared live music with recorded music on what a restaurant or bar takes in."
+     {
+      "text": "Music seems to change how long guests stay. In a 2024 experiment in Tel Aviv, tables stayed about 80 minutes with slow music and about 57 with fast music."
+     },
+     {
+      "text": "The studies disagree on whether guests spend more. The Tel Aviv experiment found no change in the check, while some older studies, each in one restaurant, found more spending at the bar or with classical music."
+     },
+     {
+      "text": "In one California restaurant, checks were larger with soft music than with loud."
+     },
+     {
+      "text": "We didn't find a study that compared live music with recorded music on what a restaurant or bar takes in."
+     }
     ]
    }
   },
@@ -160,9 +167,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "is-live-music-better-than-recorded",
-     "how-loud-should-background-music-be",
-     "does-music-make-food-taste-better"
+     {
+      "slug": "is-live-music-better-than-recorded"
+     },
+     {
+      "slug": "how-loud-should-background-music-be"
+     },
+     {
+      "slug": "does-music-make-food-taste-better"
+     }
     ]
    }
   }

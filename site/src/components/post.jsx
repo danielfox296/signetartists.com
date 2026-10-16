@@ -62,7 +62,7 @@ export const blocks = {
   },
   DataViz: {
     label: "Chart",
-    fields: { chart_type: text("Chart"), title: text("Title"), caption: text("Caption"), source: text("Source") },
+    fields: { chart_type: text("Chart"), title: text("Title"), caption: text("Caption"), source: text("Source"), data: { type: "array", label: "Data", getItemSummary: (d) => d.label, arrayFields: { label: text("Label"), value: { type: "number", label: "Value" } } } },
     render: (b) => <Raw html={renderChart(b)} />,
   },
   Figure: {
@@ -96,7 +96,11 @@ export const blocks = {
   },
   ComparisonTable: {
     label: "Table",
-    fields: { title: text("Title") },
+    fields: {
+      title: text("Title"),
+      columns: { type: "array", label: "Columns", getItemSummary: (c) => c.text, arrayFields: { text: text("Heading") } },
+      rows: { type: "array", label: "Rows", getItemSummary: (r) => (r.cells && r.cells[0] ? r.cells[0].text : ""), arrayFields: { cells: { type: "array", label: "Cells", arrayFields: { text: text("Text") } } } },
+    },
     render: ({ title, columns = [], rows = [] }) => (
       <figure className="blog-comparison-table">
         {title ? <figcaption className="blog-comparison-title">{title}</figcaption> : null}
@@ -104,14 +108,14 @@ export const blocks = {
           <table>
             <thead>
               <tr>
-                {columns.map((c, i) => <th key={i} scope="col">{String(c)}</th>)}
+                {columns.map((c, i) => <th key={i} scope="col">{String(c.text)}</th>)}
               </tr>
             </thead>
             <tbody>
               {rows.map((r, i) => (
                 <tr key={i}>
-                  {r.map((cell, j) =>
-                    j === 0 ? <th key={j} scope="row" data-label={columns[0]}>{String(cell)}</th> : <td key={j} data-label={columns[j]}>{String(cell)}</td>
+                  {r.cells.map((cell, j) =>
+                    j === 0 ? <th key={j} scope="row" data-label={columns[0] && columns[0].text}>{String(cell.text)}</th> : <td key={j} data-label={columns[j] && columns[j].text}>{String(cell.text)}</td>
                   )}
                 </tr>
               ))}
@@ -128,7 +132,7 @@ export const blocks = {
       <div className="blog-takeaways">
         <div className="blog-takeaways-title">Key takeaways</div>
         <ul>
-          {items.map((it, i) => <li key={i}>{typeof it === "string" ? it : it.text}</li>)}
+          {items.map((it, i) => <li key={i}>{it.text}</li>)}
         </ul>
       </div>
     ),
@@ -168,11 +172,11 @@ export const blocks = {
   },
   RelatedPosts: {
     label: "Keep reading",
-    fields: {},
+    fields: { posts: { type: "array", label: "Posts", getItemSummary: (p) => p.slug, arrayFields: { slug: text("Post") } } },
     render: function RelatedRender({ posts = [] }) {
       const s = useSite();
       const href = useHref();
-      const found = posts.map((slug) => s.model.postBySlug[slug]).filter((d) => d && !d.root.props.draft).map((d) => d.root.props);
+      const found = posts.map((x) => s.model.postBySlug[x.slug]).filter((d) => d && !d.root.props.draft).map((d) => d.root.props);
       return (
         <section className="blog-related" aria-label="Related posts">
           <h2 className="blog-subhead blog-subhead--h2">Keep reading</h2>
@@ -228,7 +232,7 @@ export const blocks = {
   },
   Transcript: {
     label: "Chapters",
-    fields: {},
+    fields: { chapters: { type: "array", label: "Chapters", getItemSummary: (c) => c.label, arrayFields: { label: text("Label"), time: { type: "number", label: "Seconds" }, html: rich("Text") } } },
     render: function TranscriptRender({ chapters = [] }) {
       const s = useSite();
       const v = s.post && s.post.video;
@@ -271,22 +275,18 @@ export const blocks = {
   },
   References: {
     label: "References",
-    fields: { heading: text("Heading") },
+    fields: { heading: text("Heading"), items: { type: "array", label: "Sources", getItemSummary: (r) => r.text, arrayFields: { text: area("Citation"), url: text("Link"), link_text: text("Link text") } } },
     render: ({ heading, items = [] }) =>
       items.length ? (
         <div className="blog-references">
           <h2 className="blog-subhead blog-subhead--h2" id="references">{heading || "References"}</h2>
           <ol className="blog-references-list">
-            {items.map((it, i) =>
-              typeof it === "object" && it ? (
-                <li key={i}>
-                  {it.text}
-                  {it.url ? <>{" "}<a href={it.url} rel="noopener">{it.link_text || "Read the source"}</a></> : null}
-                </li>
-              ) : (
-                <li key={i}>{it}</li>
-              )
-            )}
+            {items.map((it, i) => (
+              <li key={i}>
+                {it.text}
+                {it.url ? <>{" "}<a href={it.url} rel="noopener">{it.link_text || "Read the source"}</a></> : null}
+              </li>
+            ))}
           </ol>
         </div>
       ) : null,
@@ -343,7 +343,7 @@ export function PostArticle({ doc }) {
                 {sep}{" "}
                 <time dateTime={p.date}>{s.model.dateDisplay(p.date)}</time>{" "}
                 {sep}{" "}
-                <span>{`${p.readingTime} min read`}</span>
+                <span>{`${s.model.readingTime(doc)} min read`}</span>
               </p>
             </header>
             {p.hero && p.hero.src ? (

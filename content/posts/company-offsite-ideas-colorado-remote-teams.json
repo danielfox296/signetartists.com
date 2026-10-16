@@ -17,8 +17,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1423450822265-fcd97e52ecb5.jpg",
     "alt": "The Denver skyline with the Front Range behind it, seen from City Park."
-   },
-   "readingTime": 8
+   }
   }
  },
  "content": [
@@ -27,10 +26,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "The people who organize company offsites are overwhelmingly remote or hybrid themselves: 91 percent of offsite organizers work that way, and 57 percent of fully remote companies call the offsite essential to the business.",
-     "Most companies gather once or twice a year for a few days, and September is the busiest month. Winter offsites are the growth segment, which in Colorado means a ski-town evening.",
-     "The agenda is meetings and team building by day. The evenings are where a team that has only met on video becomes a team, and the evening is the part the agenda usually leaves blank.",
-     "A third of planners now report more demand for locally flavored events, and Colorado is a place that can deliver one without a theme."
+     {
+      "text": "The people who organize company offsites are overwhelmingly remote or hybrid themselves: 91 percent of offsite organizers work that way, and 57 percent of fully remote companies call the offsite essential to the business."
+     },
+     {
+      "text": "Most companies gather once or twice a year for a few days, and September is the busiest month. Winter offsites are the growth segment, which in Colorado means a ski-town evening."
+     },
+     {
+      "text": "The agenda is meetings and team building by day. The evenings are where a team that has only met on video becomes a team, and the evening is the part the agenda usually leaves blank."
+     },
+     {
+      "text": "A third of planners now report more demand for locally flavored events, and Colorado is a place that can deliver one without a theme."
+     }
     ]
    }
   },
@@ -187,46 +194,108 @@
     "id": "ComparisonTable-23",
     "title": "Seven offsite evenings and what each one books",
     "columns": [
-     "The evening",
-     "Who it's for",
-     "The booking"
+     {
+      "text": "The evening"
+     },
+     {
+      "text": "Who it's for"
+     },
+     {
+      "text": "The booking"
+     }
     ],
     "rows": [
-     [
-      "The arrival night",
-      "Sixty people meeting in person for the first time",
-      "Acoustic duo or Americana trio at conversation volume"
-     ],
-     [
-      "The Colorado evening",
-      "A team that flew in for it",
-      "Americana band, trio at dinner, quartet for the floor"
-     ],
-     [
-      "Live band karaoke",
-      "The team that has done the trivia night",
-      "Four to six musicians and a host"
-     ],
-     [
-      "The last night",
-      "The whole company on one floor",
-      "Yacht rock band, soul and R&B band, or the DJ with a live musician"
-     ],
-     [
-      "The winter offsite",
-      "The December-to-March gathering",
-      "Americana band by the fire, solo piano, or karaoke in the bought-out bar"
-     ],
-     [
-      "The unstructured evening",
-      "The engineers who asked not to be overbooked",
-      "Jazz duo or solo piano under a long table"
-     ],
-     [
-      "The founder's fireside",
-      "The evening with remarks in it",
-      "Spanish guitar or acoustic duo, silent for the talk"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The arrival night"
+       },
+       {
+        "text": "Sixty people meeting in person for the first time"
+       },
+       {
+        "text": "Acoustic duo or Americana trio at conversation volume"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The Colorado evening"
+       },
+       {
+        "text": "A team that flew in for it"
+       },
+       {
+        "text": "Americana band, trio at dinner, quartet for the floor"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Live band karaoke"
+       },
+       {
+        "text": "The team that has done the trivia night"
+       },
+       {
+        "text": "Four to six musicians and a host"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The last night"
+       },
+       {
+        "text": "The whole company on one floor"
+       },
+       {
+        "text": "Yacht rock band, soul and R&B band, or the DJ with a live musician"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The winter offsite"
+       },
+       {
+        "text": "The December-to-March gathering"
+       },
+       {
+        "text": "Americana band by the fire, solo piano, or karaoke in the bought-out bar"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The unstructured evening"
+       },
+       {
+        "text": "The engineers who asked not to be overbooked"
+       },
+       {
+        "text": "Jazz duo or solo piano under a long table"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The founder's fireside"
+       },
+       {
+        "text": "The evening with remarks in it"
+       },
+       {
+        "text": "Spanish guitar or acoustic duo, silent for the talk"
+       }
+      ]
+     }
     ]
    }
   },
@@ -252,9 +321,15 @@
    "props": {
     "id": "RelatedPosts-26",
     "posts": [
-     "corporate-retreat-evening-ideas-vail",
-     "corporate-event-entertainment-ideas-denver",
-     "how-far-ahead-to-book-corporate-event-entertainment"
+     {
+      "slug": "corporate-retreat-evening-ideas-vail"
+     },
+     {
+      "slug": "corporate-event-entertainment-ideas-denver"
+     },
+     {
+      "slug": "how-far-ahead-to-book-corporate-event-entertainment"
+     }
     ]
    }
   }

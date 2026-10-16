@@ -17,8 +17,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1546512347-3ad629c193c5.jpg",
     "alt": "Faders and knobs on a mixing console."
-   },
-   "readingTime": 9
+   }
   }
  },
  "content": [
@@ -27,10 +26,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Every idea here is a format with a size attached, so the pitch and the build arrive together.",
-     "A cover or jazz band for a corporate event runs $2,500 to $8,000 in this market, which is the figure to take into a budget conversation.",
-     "Denver holiday dates get decided between August and October, and a holiday weekend carries 20 to 30 percent across this market. New Year's Eve is a case of its own.",
-     "The venue is a separate decision from the entertainment. Sixteen venues that host this market are covered one by one in our venue guide."
+     {
+      "text": "Every idea here is a format with a size attached, so the pitch and the build arrive together."
+     },
+     {
+      "text": "A cover or jazz band for a corporate event runs $2,500 to $8,000 in this market, which is the figure to take into a budget conversation."
+     },
+     {
+      "text": "Denver holiday dates get decided between August and October, and a holiday weekend carries 20 to 30 percent across this market. New Year's Eve is a case of its own."
+     },
+     {
+      "text": "The venue is a separate decision from the entertainment. Sixteen venues that host this market are covered one by one in our venue guide."
+     }
     ]
    }
   },
@@ -173,46 +180,108 @@
     "id": "ComparisonTable-21",
     "title": "The seven ideas and what each one books",
     "columns": [
-     "The idea",
-     "The booking",
-     "Where it sits"
+     {
+      "text": "The idea"
+     },
+     {
+      "text": "The booking"
+     },
+     {
+      "text": "Where it sits"
+     }
     ],
     "rows": [
-     [
-      "The DJ night",
-      "DJ, four hours",
-      "The cheapest way to cover a whole evening"
-     ],
-     [
-      "The jazz duo dinner",
-      "Jazz duo, three hours",
-      "A seated night with a toast in it"
-     ],
-     [
-      "The in-office afternoon",
-      "Acoustic duo, one hour",
-      "The smallest real booking on the list"
-     ],
-     [
-      "The dance floor",
-      "Quartet, four hours",
-      "A ballroom floor that has to fill"
-     ],
-     [
-      "The band into the DJ",
-      "Quartet three hours, DJ hour after",
-      "A crowd that will outlast the band"
-     ],
-     [
-      "Live band karaoke",
-      "Its own act, four to six musicians and a host",
-      "The night people talk about on Monday"
-     ],
-     [
-      "The flamenco set piece",
-      "Flamenco trio, with or without a dancer",
-      "A program that wants a moment in it"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The DJ night"
+       },
+       {
+        "text": "DJ, four hours"
+       },
+       {
+        "text": "The cheapest way to cover a whole evening"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The jazz duo dinner"
+       },
+       {
+        "text": "Jazz duo, three hours"
+       },
+       {
+        "text": "A seated night with a toast in it"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The in-office afternoon"
+       },
+       {
+        "text": "Acoustic duo, one hour"
+       },
+       {
+        "text": "The smallest real booking on the list"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The dance floor"
+       },
+       {
+        "text": "Quartet, four hours"
+       },
+       {
+        "text": "A ballroom floor that has to fill"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The band into the DJ"
+       },
+       {
+        "text": "Quartet three hours, DJ hour after"
+       },
+       {
+        "text": "A crowd that will outlast the band"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Live band karaoke"
+       },
+       {
+        "text": "Its own act, four to six musicians and a host"
+       },
+       {
+        "text": "The night people talk about on Monday"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The flamenco set piece"
+       },
+       {
+        "text": "Flamenco trio, with or without a dancer"
+       },
+       {
+        "text": "A program that wants a moment in it"
+       }
+      ]
+     }
     ]
    }
   },
@@ -276,9 +345,15 @@
    "props": {
     "id": "RelatedPosts-29",
     "posts": [
-     "january-office-party-ideas",
-     "corporate-holiday-party-venues-denver",
-     "what-live-music-costs-corporate-event"
+     {
+      "slug": "january-office-party-ideas"
+     },
+     {
+      "slug": "corporate-holiday-party-venues-denver"
+     },
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     }
     ]
    }
   }

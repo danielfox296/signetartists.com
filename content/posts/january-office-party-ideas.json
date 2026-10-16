@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1576267460635-dad0eede4415.jpg",
     "alt": "An empty banquet hall set for dinner."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A growing share of companies hold the holiday party in January, and the venues have followed: several Denver-area holiday offers now run into the third week of January and past it.",
-     "In January the party is the only invitation your people have that week. In December it competes with everyone else's.",
-     "Nothing about the music changes. Standards, covers and a dance set were never seasonal, so a January party books the same acts as a December one.",
-     "The formats that want the crowd's attention, live band karaoke above all, get more of it in January than they ever get in December."
+     {
+      "text": "A growing share of companies hold the holiday party in January, and the venues have followed: several Denver-area holiday offers now run into the third week of January and past it."
+     },
+     {
+      "text": "In January the party is the only invitation your people have that week. In December it competes with everyone else's."
+     },
+     {
+      "text": "Nothing about the music changes. Standards, covers and a dance set were never seasonal, so a January party books the same acts as a December one."
+     },
+     {
+      "text": "The formats that want the crowd's attention, live band karaoke above all, get more of it in January than they ever get in December."
+     }
     ]
    }
   },
@@ -144,46 +151,108 @@
     "id": "ComparisonTable-17",
     "title": "Seven January parties and what each one books",
     "columns": [
-     "The party",
-     "The booking",
-     "Who it suits"
+     {
+      "text": "The party"
+     },
+     {
+      "text": "The booking"
+     },
+     {
+      "text": "Who it suits"
+     }
     ],
     "rows": [
-     [
-      "The January holiday party",
-      "Duo through dinner, DJ or band after",
-      "The office that wants the December party, attended"
-     ],
-     [
-      "The kickoff dinner",
-      "Jazz trio at conversation volume",
-      "A sales team in one place for the week"
-     ],
-     [
-      "The live band karaoke night",
-      "Four to six musicians and a host",
-      "The crowd that has done the casino night"
-     ],
-     [
-      "The awards-and-dance night",
-      "Dinner set, silence for the program, a floor after",
-      "The company with a year to review"
-     ],
-     [
-      "The low-key dinner",
-      "Solo piano",
-      "The firm that wants a reset"
-     ],
-     [
-      "The apres-ski evening",
-      "Americana band in the mountains",
-      "The company with a Vail or Breckenridge date"
-     ],
-     [
-      "The no-theme party",
-      "Whatever the crowd is",
-      "Everyone else"
-     ]
+     {
+      "cells": [
+       {
+        "text": "The January holiday party"
+       },
+       {
+        "text": "Duo through dinner, DJ or band after"
+       },
+       {
+        "text": "The office that wants the December party, attended"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The kickoff dinner"
+       },
+       {
+        "text": "Jazz trio at conversation volume"
+       },
+       {
+        "text": "A sales team in one place for the week"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The live band karaoke night"
+       },
+       {
+        "text": "Four to six musicians and a host"
+       },
+       {
+        "text": "The crowd that has done the casino night"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The awards-and-dance night"
+       },
+       {
+        "text": "Dinner set, silence for the program, a floor after"
+       },
+       {
+        "text": "The company with a year to review"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The low-key dinner"
+       },
+       {
+        "text": "Solo piano"
+       },
+       {
+        "text": "The firm that wants a reset"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The apres-ski evening"
+       },
+       {
+        "text": "Americana band in the mountains"
+       },
+       {
+        "text": "The company with a Vail or Breckenridge date"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The no-theme party"
+       },
+       {
+        "text": "Whatever the crowd is"
+       },
+       {
+        "text": "Everyone else"
+       }
+      ]
+     }
     ]
    }
   },
@@ -202,9 +271,15 @@
    "props": {
     "id": "RelatedPosts-19",
     "posts": [
-     "office-holiday-party-ideas-denver",
-     "corporate-event-entertainment-ideas-denver",
-     "corporate-holiday-party-venues-denver"
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "corporate-event-entertainment-ideas-denver"
+     },
+     {
+      "slug": "corporate-holiday-party-venues-denver"
+     }
     ]
    }
   }

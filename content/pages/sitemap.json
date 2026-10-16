@@ -34,15 +34,33 @@
       "props": {
        "id": "PageIndex-2",
        "top": [
-        "index.html",
-        "music/index.html",
-        "repertoire/index.html",
-        "pricing/index.html",
-        "about/index.html",
-        "contact/index.html",
-        "blog/index.html",
-        "for-artists/index.html",
-        "thanks/index.html"
+        {
+         "output": "index.html"
+        },
+        {
+         "output": "music/index.html"
+        },
+        {
+         "output": "repertoire/index.html"
+        },
+        {
+         "output": "pricing/index.html"
+        },
+        {
+         "output": "about/index.html"
+        },
+        {
+         "output": "contact/index.html"
+        },
+        {
+         "output": "blog/index.html"
+        },
+        {
+         "output": "for-artists/index.html"
+        },
+        {
+         "output": "thanks/index.html"
+        }
        ],
        "groups": [
         {

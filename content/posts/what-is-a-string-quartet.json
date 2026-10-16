@@ -20,8 +20,7 @@
    "video": {
     "id": "K-ADcBUHePE",
     "title": "A string quartet playing Beethoven: two violins, viola and cello"
-   },
-   "readingTime": 7
+   }
   }
  },
  "content": [
@@ -30,10 +29,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "A string quartet is two violins, a viola and a cello. The first violin usually plays the tune, the cello plays the bass line, and the second violin and the viola fill in the harmony between them.",
-     "The viola is the instrument between the violin and the cello. It's a little larger than a violin, held under the chin the same way, and tuned lower.",
-     "A string trio plays the music in three parts, and a duo of violin and cello keeps just the tune and the bass line. A solo violinist plays the tune on its own.",
-     "At a wedding, strings play classical processionals, hymns and arrangements of pop songs. One violinist suits a proposal or a small ceremony, and a quartet suits a church, a ballroom or a gala."
+     {
+      "text": "A string quartet is two violins, a viola and a cello. The first violin usually plays the tune, the cello plays the bass line, and the second violin and the viola fill in the harmony between them."
+     },
+     {
+      "text": "The viola is the instrument between the violin and the cello. It's a little larger than a violin, held under the chin the same way, and tuned lower."
+     },
+     {
+      "text": "A string trio plays the music in three parts, and a duo of violin and cello keeps just the tune and the bass line. A solo violinist plays the tune on its own."
+     },
+     {
+      "text": "At a wedding, strings play classical processionals, hymns and arrangements of pop songs. One violinist suits a proposal or a small ceremony, and a quartet suits a church, a ballroom or a gala."
+     }
     ]
    }
   },
@@ -135,9 +142,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "what-is-a-jazz-trio",
-     "how-far-ahead-to-book-wedding-musicians-colorado",
-     "how-loud-should-background-music-be"
+     {
+      "slug": "what-is-a-jazz-trio"
+     },
+     {
+      "slug": "how-far-ahead-to-book-wedding-musicians-colorado"
+     },
+     {
+      "slug": "how-loud-should-background-music-be"
+     }
     ]
    }
   }

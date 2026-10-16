@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1594035900144-17151c9910af.jpg",
     "alt": "A hotel banquet hall set for dinner before guests arrive."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Music of any kind seems to speed up drinking compared with silence, at least in lab studies.",
-     "The famous finding that louder music means more drinking comes from one small 2008 study by a research group whose work is in question, and no other group has repeated it in a bar.",
-     "Once a party gets loud enough, guests can only talk to the person right beside them, so it helps to keep the talking part of the evening at a level people can talk across."
+     {
+      "text": "Music of any kind seems to speed up drinking compared with silence, at least in lab studies."
+     },
+     {
+      "text": "The famous finding that louder music means more drinking comes from one small 2008 study by a research group whose work is in question, and no other group has repeated it in a bar."
+     },
+     {
+      "text": "Once a party gets loud enough, guests can only talk to the person right beside them, so it helps to keep the talking part of the evening at a level people can talk across."
+     }
     ]
    }
   },
@@ -139,9 +144,15 @@
    "props": {
     "id": "RelatedPosts-13",
     "posts": [
-     "how-loud-should-background-music-be",
-     "office-holiday-party-ideas-denver",
-     "how-does-music-affect-people-at-a-party"
+     {
+      "slug": "how-loud-should-background-music-be"
+     },
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "how-does-music-affect-people-at-a-party"
+     }
     ]
    }
   }

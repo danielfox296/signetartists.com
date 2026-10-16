@@ -272,7 +272,7 @@ def block(children, i, ctx):
         if all(li.tag == "li" and not li.attrib for li in kids(el)) and not loose_text(el):
             return item("List", opt({"items": [{"html": inner(li)} for li in kids(el)]}, tag=tag if tag != "ul" else None, cls=el.get("class"), style=el.get("style"))), 1
     elif tag == "dl" and "site_index" in ctx.tokens and "def-list" in cs:
-        return item("PageIndex", {"top": SITE_TOP, "groups": SITE_GROUPS}), 1
+        return item("PageIndex", {"top": [{"output": o} for o in SITE_TOP], "groups": SITE_GROUPS}), 1
     elif tag == "dl" and cs and cs[0] == "def-list":
         rows = def_rows(el)
         if rows is not None:
@@ -296,7 +296,7 @@ def block(children, i, ctx):
             return item("ActVideo", v), 1
     elif tag == "div" and cs and cs[0] == "split" and set(cs) <= {"split", "split--two", "split--three"}:
         cols = kids(el)
-        if 1 <= len(cols) <= 3 and all(c.tag == "div" and not c.get("class") for c in cols) and not loose_text(el):
+        if 1 <= len(cols) <= 6 and all(c.tag == "div" and not c.get("class") for c in cols) and not loose_text(el):
             p = {"cls": el.get("class"), "n": len(cols)}
             styles = [c.get("style") for c in cols]
             if any(styles):
@@ -308,6 +308,8 @@ def block(children, i, ctx):
                 p[f"c{n + 1}"] = blocks
             else:
                 return item("Columns", p), 1
+    elif tag == "div" and cs == ["panel"] and set(el.attrib) <= {"class", "style"}:
+        return item("Panel", opt({"blocks": read_blocks(el, ctx)}, style=el.get("style"))), 1
     elif tag == "div" and cs == ["table-scroll"]:
         t = table(el)
         if t is not None:
@@ -545,7 +547,9 @@ def classify(html, ctx):
             return {"type": kind, "props": props}
     if script is not None:
         return None
-    if "catalog" in cs or "letters" in cs or any(c.startswith("jam-") for c in cs):
+    if "catalog" in cs:
+        return song_catalog(sec, cs, ctx)
+    if "letters" in cs or any(c.startswith("jam-") for c in cs):
         return None
     p = shell(sec)
     if p is None:
@@ -765,6 +769,25 @@ def roster(sec, cs, ctx):
         lanes.append({"lane": lane.get("data-lane"), "eyebrow": inner(hk[0]), "title": inner(hk[1]), "lede": inner(hk[2])})
     p["lanes"] = lanes
     return "Roster", p
+
+
+def song_catalog(sec, cs, ctx):
+    p = shell(sec)
+    sk = kids(sec)
+    if p is None or p.get("cls") != "catalog" or [x.tag for x in sk] != ["div", "script"] or loose_text(sec):
+        return None
+    p.pop("cls")
+    w = sk[0]
+    k = kids(w)
+    if [x.tag for x in k[-3:]] != ["div", "ul", "p"] or "catalog-empty" not in cls(k[-1]):
+        return None
+    k = k + [None]
+    holder = LH.Element("div")
+    for c in k[:-4]:
+        holder.append(copy.deepcopy(c))
+    p["blocks"] = read_blocks(holder, ctx)
+    p["empty"] = inner(k[-2])
+    return {"type": "SongCatalog", "props": p}
 
 
 def video_index_sections(B):

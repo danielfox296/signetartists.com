@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1714972383570-44ddc9738355.jpg",
     "alt": "A snare drum with sticks laid across it and a close microphone."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "In a 2016 study at a London club, the crowd moved most in time with each other on the better-known songs.",
-     "In a lab study, people most wanted to move to drum patterns at around 100 to 120 beats per minute, which is close to the pace people walk.",
-     "At a concert at McMaster University, people moved about 12% more when speakers played bass too low to hear.",
-     "Several of these studies looked at a single night or a single show, so treat them as a good starting point."
+     {
+      "text": "In a 2016 study at a London club, the crowd moved most in time with each other on the better-known songs."
+     },
+     {
+      "text": "In a lab study, people most wanted to move to drum patterns at around 100 to 120 beats per minute, which is close to the pace people walk."
+     },
+     {
+      "text": "At a concert at McMaster University, people moved about 12% more when speakers played bass too low to hear."
+     },
+     {
+      "text": "Several of these studies looked at a single night or a single show, so treat them as a good starting point."
+     }
     ]
    }
   },
@@ -190,9 +197,15 @@
    "props": {
     "id": "RelatedPosts-19",
     "posts": [
-     "band-or-dj-denver",
-     "party-music-for-all-ages",
-     "is-live-music-better-than-recorded"
+     {
+      "slug": "band-or-dj-denver"
+     },
+     {
+      "slug": "party-music-for-all-ages"
+     },
+     {
+      "slug": "is-live-music-better-than-recorded"
+     }
     ]
    }
   }

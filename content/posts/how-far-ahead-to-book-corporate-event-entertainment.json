@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1649298173603-9c95aa950879.jpg",
     "alt": "Road cases stacked in a dark backstage hall."
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -26,10 +25,18 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Denver's own venue planning guides put the search for a December Friday or Saturday at six to nine months before the date, and companies that start in September are choosing among Thursdays and January.",
-     "Galas work a year out. Sales kickoffs are booked in the autumn for January and February. Summer picnics are planned in spring.",
-     "Planners on the corporate event forums give the same order every time: budget, venue, food and drink, entertainment, decor. The entertainment decision is fourth, which is why it's the one that arrives late.",
-     "Vendor onboarding is the slowest step in a corporate booking, and it's the one nobody schedules."
+     {
+      "text": "Denver's own venue planning guides put the search for a December Friday or Saturday at six to nine months before the date, and companies that start in September are choosing among Thursdays and January."
+     },
+     {
+      "text": "Galas work a year out. Sales kickoffs are booked in the autumn for January and February. Summer picnics are planned in spring."
+     },
+     {
+      "text": "Planners on the corporate event forums give the same order every time: budget, venue, food and drink, entertainment, decor. The entertainment decision is fourth, which is why it's the one that arrives late."
+     },
+     {
+      "text": "Vendor onboarding is the slowest step in a corporate booking, and it's the one nobody schedules."
+     }
     ]
    }
   },
@@ -130,46 +137,108 @@
     "id": "ComparisonTable-15",
     "title": "The corporate calendar and when each evening is planned",
     "columns": [
-     "The evening",
-     "When it's planned",
-     "Who plans it"
+     {
+      "text": "The evening"
+     },
+     {
+      "text": "When it's planned"
+     },
+     {
+      "text": "Who plans it"
+     }
     ],
     "rows": [
-     [
-      "December holiday party",
-      "Venue search January to March; entertainment through the autumn",
-      "Office manager, EA or HR"
-     ],
-     [
-      "January party",
-      "Autumn, alongside the December party",
-      "The same person"
-     ],
-     [
-      "Sales kickoff evening",
-      "Autumn, for January and February",
-      "Sales operations or the EA"
-     ],
-     [
-      "Gala or award night",
-      "A year out; committee meets monthly",
-      "Development staff or a producer"
-     ],
-     [
-      "Conference after-party",
-      "The months before the conference",
-      "Hospitality team or a DMC"
-     ],
-     [
-      "Summer picnic",
-      "Spring, for June through August",
-      "HR or the office manager"
-     ],
-     [
-      "Client appreciation evening",
-      "A quarter ahead",
-      "The partner's assistant or marketing"
-     ]
+     {
+      "cells": [
+       {
+        "text": "December holiday party"
+       },
+       {
+        "text": "Venue search January to March; entertainment through the autumn"
+       },
+       {
+        "text": "Office manager, EA or HR"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "January party"
+       },
+       {
+        "text": "Autumn, alongside the December party"
+       },
+       {
+        "text": "The same person"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Sales kickoff evening"
+       },
+       {
+        "text": "Autumn, for January and February"
+       },
+       {
+        "text": "Sales operations or the EA"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Gala or award night"
+       },
+       {
+        "text": "A year out; committee meets monthly"
+       },
+       {
+        "text": "Development staff or a producer"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Conference after-party"
+       },
+       {
+        "text": "The months before the conference"
+       },
+       {
+        "text": "Hospitality team or a DMC"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Summer picnic"
+       },
+       {
+        "text": "Spring, for June through August"
+       },
+       {
+        "text": "HR or the office manager"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Client appreciation evening"
+       },
+       {
+        "text": "A quarter ahead"
+       },
+       {
+        "text": "The partner's assistant or marketing"
+       }
+      ]
+     }
     ]
    }
   },
@@ -188,9 +257,15 @@
    "props": {
     "id": "RelatedPosts-17",
     "posts": [
-     "how-to-read-a-band-quote",
-     "what-live-music-costs-corporate-event",
-     "office-holiday-party-ideas-denver"
+     {
+      "slug": "how-to-read-a-band-quote"
+     },
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     },
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     }
     ]
    }
   }

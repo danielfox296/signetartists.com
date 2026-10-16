@@ -16,8 +16,7 @@
    "hero": {
     "src": "/img/unsplash/photo-1735547928473-c099d7ef0628.jpg",
     "alt": "Faders and knobs on a mixing console."
-   },
-   "readingTime": 4
+   }
   }
  },
  "content": [
@@ -26,9 +25,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "How people remember an experience tends to follow its high point and its ending, and how long it lasted makes little difference. A 2022 review of 174 results found this for good experiences too.",
-     "In a small lab study of music, the strongest moment of a piece counted most in how people remembered it, and the last moment counted too.",
-     "The rest of the night probably still matters. In a 2014 study, how people felt all the way through a song predicted their memory of it slightly better than the high point and the ending did."
+     {
+      "text": "How people remember an experience tends to follow its high point and its ending, and how long it lasted makes little difference. A 2022 review of 174 results found this for good experiences too."
+     },
+     {
+      "text": "In a small lab study of music, the strongest moment of a piece counted most in how people remembered it, and the last moment counted too."
+     },
+     {
+      "text": "The rest of the night probably still matters. In a 2014 study, how people felt all the way through a song predicted their memory of it slightly better than the high point and the ending did."
+     }
     ]
    }
   },
@@ -157,9 +162,15 @@
    "props": {
     "id": "RelatedPosts-15",
     "posts": [
-     "how-to-get-people-to-dance-at-a-wedding",
-     "party-music-for-all-ages",
-     "band-or-dj-denver"
+     {
+      "slug": "how-to-get-people-to-dance-at-a-wedding"
+     },
+     {
+      "slug": "party-music-for-all-ages"
+     },
+     {
+      "slug": "band-or-dj-denver"
+     }
     ]
    }
   }

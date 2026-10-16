@@ -21,8 +21,7 @@
    "video": {
     "id": "O2A0PKE7CXE",
     "title": "A jazz duo playing Autumn Leaves on guitar and upright bass at cocktail-hour volume"
-   },
-   "readingTime": 5
+   }
   }
  },
  "content": [
@@ -31,9 +30,15 @@
    "props": {
     "id": "KeyTakeaways-1",
     "items": [
-     "Background music at a party sits under the talk, so everyone talks in their normal voice. For a planner, that's 60 to 65 dBA at the table nearest the musicians.",
-     "A live act follows the crowd's own volume through the evening, one song at a time.",
-     "Instrumental music is the easier kind to talk over, and a singer with a guitar plays at the same conversation level."
+     {
+      "text": "Background music at a party sits under the talk, so everyone talks in their normal voice. For a planner, that's 60 to 65 dBA at the table nearest the musicians."
+     },
+     {
+      "text": "A live act follows the crowd's own volume through the evening, one song at a time."
+     },
+     {
+      "text": "Instrumental music is the easier kind to talk over, and a singer with a guitar plays at the same conversation level."
+     }
     ]
    }
   },
@@ -64,31 +69,69 @@
     "id": "ComparisonTable-5",
     "title": "The levels of an evening",
     "columns": [
-     "",
-     "What guests hear",
-     "Measured"
+     {
+      "text": ""
+     },
+     {
+      "text": "What guests hear"
+     },
+     {
+      "text": "Measured"
+     }
     ],
     "rows": [
-     [
-      "Cocktails and dinner",
-      "Music under the talk; the nearest table talks in normal voices",
-      "60 to 65 dBA at the nearest table"
-     ],
-     [
-      "Speeches, awards, anyone else on a microphone",
-      "The music stops",
-      "Silent"
-     ],
-     [
-      "Dancing",
-      "Loud enough to dance to, too loud to hold a conversation on the floor",
-      "88 to 95 dBA on the floor"
-     ],
-     [
-      "The last hour of dancing",
-      "The loudest point of the night",
-      "Peaks of 100 dBA"
-     ]
+     {
+      "cells": [
+       {
+        "text": "Cocktails and dinner"
+       },
+       {
+        "text": "Music under the talk; the nearest table talks in normal voices"
+       },
+       {
+        "text": "60 to 65 dBA at the nearest table"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Speeches, awards, anyone else on a microphone"
+       },
+       {
+        "text": "The music stops"
+       },
+       {
+        "text": "Silent"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Dancing"
+       },
+       {
+        "text": "Loud enough to dance to, too loud to hold a conversation on the floor"
+       },
+       {
+        "text": "88 to 95 dBA on the floor"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The last hour of dancing"
+       },
+       {
+        "text": "The loudest point of the night"
+       },
+       {
+        "text": "Peaks of 100 dBA"
+       }
+      ]
+     }
     ]
    }
   },
@@ -222,10 +265,18 @@
    "props": {
     "id": "RelatedPosts-21",
     "posts": [
-     "playing-around-a-program",
-     "what-is-a-jazz-trio",
-     "office-holiday-party-ideas-denver",
-     "does-loud-music-make-people-drink-more"
+     {
+      "slug": "playing-around-a-program"
+     },
+     {
+      "slug": "what-is-a-jazz-trio"
+     },
+     {
+      "slug": "office-holiday-party-ideas-denver"
+     },
+     {
+      "slug": "does-loud-music-make-people-drink-more"
+     }
     ]
    }
   }
