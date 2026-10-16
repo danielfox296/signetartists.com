@@ -2,14 +2,14 @@
    that changed; the saves since; revert for either; and the button that
    merges staging into the live branch (off until the cutover). */
 import { useCallback, useEffect, useState } from "react";
-import { GO_LIVE, STAGING_URL } from "../config.js";
+import { GO_LIVE, GO_LIVE_NEEDS_BUILD, OWNER, REPO, STAGING_URL } from "../config.js";
 import { baseline, goLive, history, liveRun, pendingFiles, revertCommit, revertFile, revertPlan, textAt } from "../lib/publish.js";
 import { jsonDiff, wordDiff } from "../lib/diff.js";
 import { fileKind, fileLabel } from "../lib/labels.js";
 import { slugOf } from "../lib/site.js";
 import { ask, go, session, toast, ui, useRepo } from "../state.js";
 import { when } from "./common.jsx";
-import { adminPageConfig, pageSettingsFields, previewUrl } from "./fields.jsx";
+import { adminPageConfig, assetUrl, pageSettingsFields } from "./fields.jsx";
 import { SHARED } from "./Editor.jsx";
 
 const ORDER = { page: 0, shared: 1, data: 2, media: 3 };
@@ -37,6 +37,9 @@ async function describe(repo, base, item) {
   }
   return jsonDiff(pa, pb, adminPageConfig.components, SHARED_FIELDS[path] || null);
 }
+
+// A committed file as it is at a commit, before staging has built it.
+const rawUrl = (path, sha) => assetUrl("/" + path) || `https://raw.githubusercontent.com/${OWNER}/${REPO}/${sha}/${path}`;
 
 function Parts({ parts }) {
   return parts.map((p, i) => (p.t === "del" ? <del key={i}>{p.s}</del> : p.t === "ins" ? <ins key={i}>{p.s}</ins> : <span key={i}>{p.s}</span>));
@@ -118,11 +121,16 @@ export function GoLiveDrawer({ status }) {
     try {
       const plan = await revertPlan(api, repo, c.sha);
       const title = `Revert ${plan.message}`;
-      const ok = plan.later.length
-        ? await ask({ title, body: <ul className="plain-list">{plan.later.map((p) => <li key={p}>{fileLabel(p, repo.get(p))}</li>)}</ul>, buttons: [{ label: "Cancel", value: false }, { label: "Revert anyway", value: true, danger: true }] })
-        : await confirm(title, "Revert");
-      if (!ok) return;
-      await revertCommit(repo, plan, title);
+      let anyway = false;
+      if (plan.clash.length) {
+        anyway = await ask({
+          title,
+          body: <ul className="plain-list">{plan.clash.map((p) => <li key={p}>{fileLabel(p, repo.get(p))}</li>)}</ul>,
+          buttons: [{ label: "Cancel", value: false }, { label: "Revert anyway", value: true, danger: true }],
+        });
+        if (!anyway) return;
+      } else if (!(await confirm(title, "Revert"))) return;
+      await revertCommit(repo, plan, title, { anyway });
       toast("Reverted");
     } catch (e) {
       toast(String(e.message || e));
@@ -141,14 +149,21 @@ export function GoLiveDrawer({ status }) {
       const merge = await goLive(api, `Go live: ${n} ${n === 1 ? "change" : "changes"}`);
       const sha = merge ? merge.sha : null;
       setLive({ step: 1, sha });
+      let seen = false;
       for (let i = 0; sha && i < 120; i++) {
         await new Promise((r) => setTimeout(r, 5000));
         const run = await liveRun(api, sha);
         if (run && run.status === "completed") {
-          setLive({ step: run.conclusion === "success" ? 3 : -1, sha, run });
+          setLive({ step: run.conclusion === "success" ? 3 : -1, sha, run, error: run.conclusion === "success" ? null : "Build failed" });
           break;
         }
-        if (run) setLive({ step: 2, sha, run });
+        if (run) {
+          seen = true;
+          setLive({ step: run.status === "in_progress" ? 2 : 1, sha, run });
+        } else if (!seen && i >= 24) {
+          setLive({ step: -1, sha, error: "No build started" });
+          break;
+        }
       }
       if (!sha) setLive({ step: 3, sha: null });
       await load();
@@ -160,7 +175,7 @@ export function GoLiveDrawer({ status }) {
   };
 
   const items = data ? data.items : [];
-  const canGo = GO_LIVE && !busy && data && items.length > 0 && status.state === "live";
+  const canGo = GO_LIVE && !busy && data && items.length > 0 && (status.state === "live" || !GO_LIVE_NEEDS_BUILD);
   const STEPS = ["Merging", "Building", "Publishing", "Live"];
   return (
     <>
@@ -216,9 +231,9 @@ export function GoLiveDrawer({ status }) {
                         Revert
                       </button>
                     </div>
-                    {it.kind === "media" && it.status !== "removed" ? (
+                    {/\.(jpe?g|png|gif|webp|svg)$/i.test(it.path) && it.status !== "removed" ? (
                       <div className="change">
-                        <img className="img-thumb" src={previewUrl("/" + it.path)} alt="" />
+                        <img className="img-thumb" src={rawUrl(it.path, repo.head)} alt="" />
                       </div>
                     ) : null}
                     {it.changes.slice(0, 40).map((c, i) => (

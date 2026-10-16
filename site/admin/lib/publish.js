@@ -3,6 +3,7 @@
    branch, and is off until the cutover (config GO_LIVE). */
 import { BASE_TAG, GO_LIVE, LIVE, LIVE_WORKFLOW, STAGING } from "../config.js";
 import { isText } from "./repo.js";
+import { merge3 } from "./merge3.js";
 
 const TRACKED = (p) => p.startsWith("content/") || p.startsWith("img/");
 
@@ -55,25 +56,49 @@ export async function revertFile(repo, base, path, message) {
   if (repo.st.error) throw repo.st.error;
 }
 
-// Undo one save: each file it changed goes back to what it was before it.
-// Files changed again since are listed in `later` for the caller to ask about.
+// Undo one save. A file nothing has changed since goes back to what it was
+// before the save; a file changed again since has just this save's change
+// taken out, line by line. Where that can't be done cleanly the file is in
+// `clash`, and the caller asks before putting the whole file back.
 export async function revertPlan(api, repo, sha) {
   const d = await api.commitFiles(sha);
   const files = (d.files || []).map((f) => f.filename).filter(TRACKED);
   const parent = d.parents[0].sha;
   const after = await api.compare(sha, STAGING);
-  const later = new Set((after.files || []).map((f) => f.filename));
-  return { message: d.commit.message.split("\n")[0], parent, files, later: files.filter((f) => later.has(f)) };
+  const changedSince = new Set((after.files || []).map((f) => f.filename));
+  const [before, at] = await Promise.all([repo.readTree(parent), repo.readTree(sha)]);
+  const plan = new Map();
+  const whole = new Map();
+  const clash = [];
+  for (const p of files) {
+    const old = before.get(p);
+    const restore = !old ? null : isText(p) ? await repo.readText(p, old, parent) : { sha: old };
+    whole.set(p, restore);
+    if (!changedSince.has(p)) {
+      plan.set(p, restore);
+      continue;
+    }
+    const mid = at.get(p);
+    const now = repo.base(p);
+    if (isText(p) && old && mid && now != null) {
+      const merged = merge3(await repo.readText(p, mid, sha), now, restore);
+      if (merged != null) {
+        plan.set(p, merged);
+        continue;
+      }
+    }
+    clash.push(p);
+  }
+  return { message: d.commit.message.split("\n")[0], plan, whole, clash };
 }
 
-export async function revertCommit(repo, plan, message) {
+export async function revertCommit(repo, rp, message, { anyway = false } = {}) {
   await repo.save();
-  const before = await repo.readTree(plan.parent);
-  for (const p of plan.files) {
-    const sha = before.get(p);
-    if (!sha) repo.remove(p);
-    else if (isText(p)) repo.set(p, await repo.readText(p, sha, plan.parent));
-    else repo.putSha(p, sha);
+  for (const p of rp.clash) if (anyway) rp.plan.set(p, rp.whole.get(p));
+  for (const [p, v] of rp.plan) {
+    if (v === null) repo.remove(p);
+    else if (typeof v === "string") repo.set(p, v);
+    else repo.putSha(p, v.sha);
   }
   await repo.save(message);
   if (repo.st.error) throw repo.st.error;

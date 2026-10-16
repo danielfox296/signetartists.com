@@ -118,16 +118,18 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
 
   // ------------------------------------------------------------ editing
 
-  function set(p, text) {
+  // `source` names who made the edit, so an editor knows a change it
+  // didn't make and reloads.
+  function set(p, text, source) {
     if (st.files.has(p) && st.text.get(p) === text) st.local.delete(p);
     else st.local.set(p, { text });
-    emit({ edit: p });
+    emit({ edit: p, source });
     schedule();
   }
-  function remove(p) {
+  function remove(p, source) {
     if (!st.files.has(p)) st.local.delete(p);
     else st.local.set(p, null);
-    emit({ edit: p });
+    emit({ edit: p, source });
     schedule();
   }
   function putBinary(p, b64, url) {
@@ -252,7 +254,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
         if (!st.local.size) break;
         const snapshot = new Map(st.local);
         try {
-          const sha = await commit(snapshot, msg || (message ? message([...snapshot.keys()]) : "Admin edit"));
+          const sha = await commit(snapshot, msg || (message ? message([...snapshot.keys()], snapshot) : "Admin edit"));
           if (sha) await settle(snapshot, sha);
           else for (const [p, e] of snapshot) if (st.local.get(p) === e) st.local.delete(p);
           break;

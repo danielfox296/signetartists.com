@@ -4,11 +4,12 @@
    section so one that can't render shows as such instead of stopping the
    editor. */
 import { Component, useEffect, useRef, useState } from "react";
-import { FieldLabel } from "@puckeditor/core";
+import { createUsePuck, FieldLabel, setDeep, useGetPuck } from "@puckeditor/core";
 import { pageConfig } from "../../src/components/config.jsx";
 import { inline } from "../../src/components/parts.jsx";
 import { normPath, pathProblem } from "../lib/site.js";
 import { fileSlug, freePath, resize, sourcesEntry } from "../lib/images.js";
+import { RICH } from "../lib/richtext.jsx";
 import { STAGING_URL } from "../config.js";
 import { ask, session } from "../state.js";
 import { Field, Modal, Toggle } from "./common.jsx";
@@ -80,10 +81,33 @@ export async function uploadPicture(file) {
   return "/" + path;
 }
 
-function ImageInput({ field, value, onChange, readOnly }) {
+const usePuck = createUsePuck();
+const getDeep = (o, path) => path.split(".").reduce((cur, part) => {
+  if (cur == null) return cur;
+  const [prop, i] = part.replace("]", "").split("[");
+  const v = cur[prop];
+  return i !== undefined ? (v || [])[Number(i)] : v;
+}, o);
+
+function ImageInput({ field, name, value, onChange, readOnly }) {
   const input = useRef(null);
   const [busy, setBusy] = useState(false);
+  const selected = usePuck((s) => s.selectedItem);
+  const getSelector = usePuck((s) => s.getSelectorForId);
+  const dispatch = usePuck((s) => s.dispatch);
   const v = typeof value === "string" ? value : "";
+  // A new picture brings its own width and height, where the item has them.
+  const setPicture = (p) => {
+    const up = uploads.get(p.replace(/^\/+/, ""));
+    const sel = selected && getSelector(selected.props.id);
+    if (!up || !sel || !name || !name.endsWith("src")) return onChange(p);
+    const base = name.slice(0, -3).replace(/\.$/, "");
+    let props = setDeep(selected.props, name, p);
+    const parent = base ? getDeep(props, base) : props;
+    for (const k of ["width", "height"])
+      if (parent && k in parent) props = setDeep(props, (base ? base + "." : "") + k, typeof parent[k] === "number" ? up[k] : String(up[k]));
+    dispatch({ type: "replace", destinationIndex: sel.index, destinationZone: sel.zone, data: { ...selected, props } });
+  };
   const pick = async (e) => {
     const file = e.target.files && e.target.files[0];
     e.target.value = "";
@@ -91,7 +115,7 @@ function ImageInput({ field, value, onChange, readOnly }) {
     setBusy(true);
     try {
       const p = await uploadPicture(file);
-      if (p) onChange(p);
+      if (p) setPicture(p);
     } finally {
       setBusy(false);
     }
@@ -170,6 +194,9 @@ function mapFields(fields) {
   for (const [k, f] of Object.entries(fields || {})) {
     if (!f) continue;
     if (PICTURE_KEYS.has(k) && f.type === "text") out[k] = imageField(f.label === "File" ? "Picture" : f.label);
+    else if (f.type === "richtext") out[k] = { ...f, ...RICH };
+    // Inline CSS fields say so, so they don't read as a second "Style".
+    else if (f.type === "text" && /style$/i.test(k) && f.label) out[k] = { ...f, label: f.label.replace(/\bStyle\b/, "CSS").replace(/\bstyle\b/, "CSS") };
     else if (f.type === "object") out[k] = { ...f, objectFields: mapFields(f.objectFields) };
     else if (f.type === "array") out[k] = { ...f, arrayFields: mapFields(f.arrayFields) };
     else out[k] = f;
@@ -216,19 +243,56 @@ class Guard extends Component {
   }
 }
 
+// Puck hands a component an inline editor for every rich text field, even
+// one the stored item doesn't have; the component would then draw an empty
+// paragraph the site doesn't have. Those fields are passed as absent.
+function present(props, raw, fields) {
+  if (!raw || !fields) return props;
+  let out = props;
+  for (const [k, f] of Object.entries(fields)) {
+    if (!f) continue;
+    if (f.type === "richtext" && raw[k] == null && props[k] != null) {
+      if (out === props) out = { ...props };
+      out[k] = undefined;
+    } else if (f.type === "array" && Array.isArray(props[k]) && Array.isArray(raw[k])) {
+      const items = props[k].map((it, i) => present(it, raw[k][i], f.arrayFields));
+      if (items.some((it, i) => it !== props[k][i])) {
+        if (out === props) out = { ...props };
+        out[k] = items;
+      }
+    } else if (f.type === "object" && props[k] && raw[k]) {
+      const o = present(props[k], raw[k], f.objectFields);
+      if (o !== props[k]) {
+        if (out === props) out = { ...props };
+        out[k] = o;
+      }
+    }
+  }
+  return out;
+}
+
 export function guarded(components) {
   const out = {};
   for (const [name, c] of Object.entries(components)) {
     const R = c.render;
     if (c.defaultProps) STARTS[name] = c.defaultProps;
+    const fields = mapFields(c.fields);
     out[name] = {
       ...c,
-      fields: mapFields(c.fields),
+      fields,
       defaultProps: undefined,
       render: function Guarded(props) {
+        const getPuck = useGetPuck();
+        let p = props;
+        try {
+          const item = props.id ? getPuck().getItemById(props.id) : null;
+          if (item) p = present(props, item.props, fields);
+        } catch {
+          p = props;
+        }
         return (
           <Guard name={c.label || name}>
-            <R {...props} />
+            <R {...p} />
           </Guard>
         );
       },
@@ -300,6 +364,7 @@ export function conform(next, prev, config) {
       for (const k of keys) {
         const x = v.props[k];
         if (old && !(k in old) && fields[k] && fields[k].type === "slot" && Array.isArray(x) && !x.length) continue;
+        if (old && !(k in old) && fields[k] && fields[k].type === "richtext" && (x === "" || x === "<p></p>")) continue;
         props[k] = fix(x);
       }
       return { ...v, props };

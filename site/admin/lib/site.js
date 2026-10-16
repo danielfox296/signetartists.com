@@ -141,5 +141,8 @@ export function copyPage(doc, path, title) {
   for (const k of keep) if (k in d.root.props) props[k] = d.root.props[k];
   if (props.titleExact) props.titleExact = false;
   d.root.props = props;
+  // A hub's list names pages relative to its own URL; at a new URL it
+  // starts empty and lists whatever sits under it.
+  for (const s of d.content) if (s.type === "PagesAndPosts") s.props.groups = [];
   return d;
 }

@@ -1,6 +1,6 @@
 /* Sign-in, then the admin: the rail, the top bar with staging status,
    saving and Go live, and the screen for the route. */
-import { useEffect, useState } from "react";
+import { Component, useEffect, useState } from "react";
 import { API_BASE, OWNER, REPO, STAGING, STAGING_URL, STAGING_WORKFLOW, SAVE_AFTER_MS } from "../config.js";
 import { baseline, pendingFiles } from "../lib/publish.js";
 import { github } from "../lib/github.js";
@@ -296,13 +296,39 @@ function Shell() {
             Go live
           </button>
         </header>
-        <div className={"content" + (full ? " full" : "")}>{screen}</div>
+        <div className={"content" + (full ? " full" : "")}>
+          <Catch route={route.join("/")}>{screen}</Catch>
+        </div>
       </main>
       {drawer === "golive" ? <GoLiveDrawer status={status} /> : null}
       <DialogHost />
       <Toast />
     </div>
   );
+}
+
+// Anything that throws while drawing a screen shows here, not as a blank window.
+class Catch extends Component {
+  state = { error: null };
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+  componentDidUpdate(prev) {
+    if (prev.route !== this.props.route && this.state.error) this.setState({ error: null });
+  }
+  render() {
+    if (!this.state.error) return this.props.children;
+    return (
+      <div className="screen">
+        <p className="warn-line">{String(this.state.error.message || this.state.error)}</p>
+        <p>
+          <button className="btn" onClick={() => location.reload()}>
+            Reload
+          </button>
+        </p>
+      </div>
+    );
+  }
 }
 
 // ------------------------------------------------------------ boot
@@ -336,7 +362,17 @@ function Workspace({ token, onSignOut }) {
       branch: STAGING,
       cache: idbCache(),
       ask: askConflicts,
-      message: (paths) => commitMessage(paths.map((p) => fileLabel(p, repo.get(p) ?? repo.base(p)))),
+      message: (paths, entries) =>
+        commitMessage(
+          paths
+            .filter((p) => p !== "img/SOURCES.md" || paths.length === 1)
+            .map((p) => {
+              const label = fileLabel(p, repo.get(p) ?? repo.base(p));
+              if (entries.get(p) === null) return `Delete ${label}`;
+              if (!repo.baseHas(p)) return `New ${label}`;
+              return label;
+            })
+        ),
     });
     repo.st.delay = SAVE_AFTER_MS;
     session.api = api;

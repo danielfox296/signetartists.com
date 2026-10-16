@@ -3,22 +3,22 @@ import { useMemo, useState } from "react";
 import { blankPage, copyPage, normPath, pageByPath, pagePath, pagesList, pathProblem, repoint, serialize, slugForPath } from "../lib/site.js";
 import { createModel } from "../../src/lib/model.js";
 import { contentFrom } from "../lib/site.js";
-import { go, session, toast, ui, useRepo } from "../state.js";
+import { ask, go, session, toast, ui, useRepo } from "../state.js";
 import { Field, Modal, Toggle } from "./common.jsx";
 
 const shortTitle = (t) => String(t || "").replace(/\s*\|\s*Signet Artists\s*$/, "");
 
 // Write a page's new version, and fix what points at it if its URL moved.
-export function writePage(slug, next) {
+export function writePage(slug, next, source) {
   const repo = session.repo;
   const file = pagePath(slug);
   const cur = repo.json(file);
   const from = cur && cur.root.props.path;
   const to = next.root.props.path;
   if (cur && from !== to) {
-    for (const [f, v] of repoint(repo, from, to)) if (f !== file) repo.set(f, serialize(v));
+    for (const [f, v] of repoint(repo, from, to)) if (f !== file) repo.set(f, serialize(v), source);
   }
-  repo.set(file, serialize(next));
+  repo.set(file, serialize(next), source);
 }
 
 function groupOf(path) {
@@ -48,7 +48,7 @@ export function PagesScreen() {
       <div className="screen-head">
         <h1>Pages</h1>
         <span className="grow" />
-        <button className="btn primary" onClick={() => ui.set({ dialog: { render: (close) => <NewPage close={close} /> } })}>
+        <button className="btn primary" onClick={() => ask({ render: (close) => <NewPage close={close} /> })}>
           New page
         </button>
       </div>
@@ -81,10 +81,10 @@ export function PagesScreen() {
                   <td className="row-acts" onClick={(e) => e.stopPropagation()}>
                     {dirty.has(p.file) ? <span className="badge wait">Unsaved</span> : null}
                     {p.robots.startsWith("noindex") ? <span className="badge draft">noindex</span> : null}
-                    <button className="btn ghost sm" onClick={() => ui.set({ dialog: { render: (close) => <Settings slug={p.slug} close={close} /> } })}>
+                    <button className="btn ghost sm" onClick={() => ask({ render: (close) => <Settings slug={p.slug} close={close} /> })}>
                       Settings
                     </button>
-                    <button className="btn ghost sm danger" onClick={() => ui.set({ dialog: { render: (close) => <DeletePage slug={p.slug} close={close} /> } })}>
+                    <button className="btn ghost sm danger" onClick={() => ask({ render: (close) => <DeletePage slug={p.slug} close={close} /> })}>
                       Delete
                     </button>
                   </td>
@@ -143,7 +143,7 @@ function NewPage({ close }) {
         <input className="input" value={title} onChange={(e) => setTitle(e.target.value)} autoFocus />
       </Field>
       <Field label="URL" error={problem}>
-        <input className="input mono" value={url} placeholder="/weddings/new-page/" onChange={(e) => setUrl(e.target.value)} />
+        <input className="input mono" value={url} onChange={(e) => setUrl(e.target.value)} />
       </Field>
       <div className="field">
         <span className="flabel">Start from</span>

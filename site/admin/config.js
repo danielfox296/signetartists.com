@@ -14,6 +14,9 @@ export const LIVE_WORKFLOW = "deploy.yml";
 // cutover (Phase 3): the list and the button are built, the merge is not
 // sent. VITE_GO_LIVE=1 turns it on, for a test against a throwaway branch.
 export const GO_LIVE = env.VITE_GO_LIVE === "1";
+// Go live waits for staging to have built and rendered what it would send,
+// except in that test, where the branch has no staging build.
+export const GO_LIVE_NEEDS_BUILD = env.VITE_GO_LIVE_UNBUILT !== "1";
 
 // What counts as live before the cutover, while main has no content/:
 // the staging commit the converter's content first arrived in.

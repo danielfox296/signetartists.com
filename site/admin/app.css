@@ -56,6 +56,7 @@ html, body { height: 100%; }
 .k-overlay.k-shared { --zc: #b799e2; }
 .k-overlay.k-data { --zc: #63c5ba; }
 .k-overlay.k-layout { --zc: #e8a172; }
+.k-context { opacity: .45; pointer-events: none; }
 
 body.admin {
   /* Puck's panels in the admin's colours. */
@@ -343,7 +344,10 @@ body.admin {
   .layer { width: 100%; text-align: left; background: none; font: inherit; }
   .layer .handle { cursor: grab; color: var(--ink-faint); font-size: 12px; letter-spacing: -2px; opacity: 0; user-select: none; }
   .layer:hover .handle { opacity: 1; }
-  .layer.end { min-height: 10px; padding: 0; }
+  .layer.dragging { opacity: .5; }
+  .layer.dropafter { box-shadow: 0 2px 0 var(--brass); }
+  .layers { user-select: none; }
+  .layer .handle { touch-action: none; }
   .add-row { display: flex; gap: 6px; flex-wrap: wrap; padding: 4px 0; }
   .add-wrap { position: relative; }
   .add-btn { border-style: dashed; }
@@ -363,6 +367,8 @@ body.admin {
   .insp-head { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--card); z-index: 2; }
   .insp-head b { font-size: 14px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .img-field { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; align-items: start; }
+  .drawer-body { grid-auto-rows: max-content; }
+  .change .img-thumb { width: 120px; height: 80px; }
   .img-thumb { width: 64px; height: 48px; border-radius: 6px; object-fit: cover; background: var(--sunk); display: block; border: 1px solid var(--line); }
   .img-side { display: grid; gap: 6px; justify-items: start; }
   .img-side .input { width: 100%; font-size: 12px; padding: 6px 8px; }

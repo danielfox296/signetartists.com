@@ -4,7 +4,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createUsePuck, Puck } from "@puckeditor/core";
 import "@puckeditor/core/puck.css";
-import { Site } from "../../src/components/parts.jsx";
+import { Site, useSite } from "../../src/components/parts.jsx";
+import { Item } from "../../src/components/registry.jsx";
 import { Footer, Header } from "../../src/components/layout.jsx";
 import { fixedSections } from "../../src/components/sections.jsx";
 import { STAGING_URL } from "../config.js";
@@ -74,62 +75,90 @@ function SectionList({ config }) {
   const content = usePuck((s) => s.appState.data.content);
   const sel = usePuck((s) => s.appState.ui.itemSelector);
   const selected = usePuck((s) => s.selectedItem);
-  const getParent = usePuck((s) => s.getParentById);
+  const getSelector = usePuck((s) => s.getSelectorForId);
   const dispatch = usePuck((s) => s.dispatch);
-  const [drag, setDrag] = useState(null);
-  const [over, setOver] = useState(null);
+  const list = useRef(null);
+  const [drag, setDrag] = useState(null); // {from, to}
   // The top-level section the selection sits in.
   let top = sel && sel.zone === ROOT ? sel.index : null;
   if (top == null && selected) {
-    let cur = selected;
-    for (let i = 0; i < 20 && cur; i++) {
-      const p = getParent(cur.props.id);
-      if (!p) break;
-      cur = p;
+    const ids = new Set(content.map((c) => c.props.id));
+    let id = selected.props.id;
+    for (let i = 0; i < 20 && id && !ids.has(id); i++) {
+      const s = getSelector(id);
+      id = s && s.zone ? s.zone.split(":")[0] : null;
     }
-    top = cur ? content.findIndex((c) => c.props.id === cur.props.id) : null;
+    top = id ? content.findIndex((c) => c.props.id === id) : null;
   }
   const pick = (i) => {
     dispatch({ type: "setUi", ui: { itemSelector: { index: i, zone: ROOT } } });
     const id = content[i] && content[i].props.id;
-    const frame = document.querySelector("#preview-frame, .pe-canvas iframe");
+    const frame = document.querySelector(".pe-canvas iframe");
     const doc = frame && frame.contentDocument;
     const el = doc && doc.querySelector(`[data-puck-component="${id}"]`);
     if (el) el.scrollIntoView({ block: "start" });
   };
-  const drop = (i) => {
-    if (drag != null && drag !== i) dispatch({ type: "reorder", sourceIndex: drag, destinationIndex: drag < i ? i - 1 : i, destinationZone: ROOT });
-    setDrag(null);
-    setOver(null);
+  const move = (from, to) => {
+    if (to < 0 || to >= content.length || from === to) return;
+    dispatch({ type: "reorder", sourceIndex: from, destinationIndex: to, destinationZone: ROOT });
+    dispatch({ type: "setUi", ui: { itemSelector: { index: to, zone: ROOT } } });
+  };
+  // Drag with the pointer: rows move once it has travelled a few pixels.
+  const down = (i) => (e) => {
+    if (e.button !== 0) return;
+    // On a touch screen only the handle drags; the rest of the row scrolls.
+    if (e.pointerType === "touch" && !e.target.closest(".handle")) {
+      const off = () => (window.removeEventListener("pointerup", end), window.removeEventListener("pointercancel", off));
+      const end = () => (off(), pick(i));
+      window.addEventListener("pointerup", end);
+      window.addEventListener("pointercancel", off);
+      return;
+    }
+    const y0 = e.clientY;
+    let moved = false;
+    const rows = [...list.current.querySelectorAll("[data-row]")].map((el) => el.getBoundingClientRect());
+    const at = (y) => {
+      let t = rows.findIndex((r) => y < r.top + r.height / 2);
+      if (t === -1) t = rows.length;
+      return t > i ? t - 1 : t;
+    };
+    const mv = (ev) => {
+      if (!moved && Math.abs(ev.clientY - y0) < 5) return;
+      moved = true;
+      setDrag({ from: i, to: at(ev.clientY) });
+    };
+    const up = (ev) => {
+      window.removeEventListener("pointermove", mv);
+      window.removeEventListener("pointerup", up);
+      setDrag(null);
+      if (moved) move(i, at(ev.clientY));
+      else pick(i);
+    };
+    window.addEventListener("pointermove", mv);
+    window.addEventListener("pointerup", up);
   };
   return (
-    <div className="layers" onDragLeave={() => setOver(null)}>
+    <div className="layers" ref={list}>
       <button className="layer" onClick={() => go("header")}>
         <span className="kdot shared" />
         <span className="t">Header</span>
       </button>
       {content.map((c, i) => {
         const n = sectionName(c, config.components);
+        const target = drag && drag.to === i && drag.from !== i;
         return (
           <div
             key={c.props.id}
-            className={"layer" + (top === i ? " sel" : "") + (over === i ? " dragover" : "")}
-            draggable
-            onDragStart={(e) => {
-              setDrag(i);
-              e.dataTransfer.effectAllowed = "move";
-            }}
-            onDragOver={(e) => {
-              if (drag == null) return;
-              e.preventDefault();
-              setOver(i);
-            }}
-            onDrop={() => drop(i)}
-            onDragEnd={() => (setDrag(null), setOver(null))}
-            onClick={() => pick(i)}
+            data-row
+            className={"layer" + (top === i ? " sel" : "") + (drag && drag.from === i ? " dragging" : "") + (target ? (drag.to > drag.from ? " dropafter" : " dragover") : "")}
+            onPointerDown={down(i)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && pick(i)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") pick(i);
+              if (e.altKey && e.key === "ArrowUp") (e.preventDefault(), move(i, i - 1));
+              if (e.altKey && e.key === "ArrowDown") (e.preventDefault(), move(i, i + 1));
+            }}
           >
             <span className={"kdot " + kindOf(c.type)} />
             <span className="t" title={n.text || n.kind}>
@@ -141,7 +170,6 @@ function SectionList({ config }) {
           </div>
         );
       })}
-      {content.length && drag != null ? <div className={"layer end" + (over === content.length ? " dragover" : "")} onDragOver={(e) => (e.preventDefault(), setOver(content.length))} onDrop={() => drop(content.length)} /> : null}
       <button className="layer" onClick={() => go("footer")}>
         <span className="kdot shared" />
         <span className="t">Footer</span>
@@ -151,17 +179,25 @@ function SectionList({ config }) {
 }
 
 function AddMenu({ label, groups, onPick }) {
-  const [open, setOpen] = useState(false);
+  const [at, setAt] = useState(null);
   const [q, setQ] = useState("");
-  const ref = useOutside(() => setOpen(false));
+  const ref = useOutside(() => setAt(null));
+  const btn = useRef(null);
   const items = groups.flatMap((g) => g.items.map((it) => ({ ...it, group: g.title }))).filter((it) => !q || it.label.toLowerCase().includes(q.toLowerCase()));
+  const toggle = () => {
+    if (at) return setAt(null);
+    const r = btn.current.getBoundingClientRect();
+    const h = Math.min(380, window.innerHeight - 24);
+    const top = r.bottom + 6 + h > window.innerHeight ? Math.max(12, r.top - 6 - h) : r.bottom + 6;
+    setAt({ left: Math.max(8, r.left), top, maxHeight: h });
+  };
   return (
     <div className="add-wrap" ref={ref}>
-      <button className="btn sm add-btn" onClick={() => setOpen(!open)}>
+      <button ref={btn} className="btn sm add-btn" onClick={toggle}>
         + {label}
       </button>
-      {open ? (
-        <div className="popover in-flow">
+      {at ? (
+        <div className="popover" style={at}>
           <input className="input" placeholder="Search" value={q} onChange={(e) => setQ(e.target.value)} autoFocus />
           <div className="pop-list">
             {items.map((it) => (
@@ -171,7 +207,7 @@ function AddMenu({ label, groups, onPick }) {
                 role="button"
                 tabIndex={0}
                 onClick={() => {
-                  setOpen(false);
+                  setAt(null);
                   setQ("");
                   onPick(it.name);
                 }}
@@ -362,7 +398,7 @@ function useExternal(path) {
   useEffect(
     () =>
       session.repo.subscribe((ev) => {
-        if ((ev.remote && ev.remote.includes(path) && !session.repo.st.local.has(path)) || (ev.reload && ev.reload.includes(path))) setK((x) => x + 1);
+        if ((ev.remote && ev.remote.includes(path) && !session.repo.st.local.has(path)) || (ev.edit === path && ev.source !== "editor")) setK((x) => x + 1);
       }),
     [path]
   );
@@ -391,7 +427,7 @@ export function PageEditor({ slug }) {
       return { error: e };
     }
   }, [rev]); // eslint-disable-line react-hooks/exhaustive-deps
-  const initial = useMemo(() => (doc ? structuredClone(doc) : null), [k, slug]); // eslint-disable-line react-hooks/exhaustive-deps
+  const initial = useMemo(() => (doc ? structuredClone(doc) : null), [k, slug, !!doc]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!doc) return <div className="screen"><p className="muted">No such page</p></div>;
   if (site.error) return <div className="screen"><p className="warn-line">{String(site.error.message)}</p></div>;
   const p = doc.root.props;
@@ -403,7 +439,7 @@ export function PageEditor({ slug }) {
     if (!cur) return;
     const c = clean(data, adminPageConfig);
     const next = ordered(cur, { ...cur, root: { ...cur.root, props: ordered(cur.root.props, c.root.props) }, content: conform(c.content, cur.content, adminPageConfig) });
-    if (serialize(next) !== repo.get(path)) writePage(slug, next);
+    if (serialize(next) !== repo.get(path)) writePage(slug, next, "editor");
   };
   return (
     <Site.Provider value={currentCtx}>
@@ -432,6 +468,14 @@ const link = (styles) => ({
 });
 const summary = (x) => x.label || x.title || x.name || x.text || "";
 
+// A little of the home page around a header or footer, for context.
+function HomeSections({ from, to }) {
+  const s = useSite();
+  const home = s.model.c.pages.find((d) => d.root.props.path === "/");
+  if (!home) return null;
+  return home.content.slice(from, to).map((x) => <Item key={x.props.id} c={x} />);
+}
+
 function LogoStripPreview(props) {
   const L = fixedSections.LogoStrip.render;
   return <L band="ruled" label={props.label} showAlso={!!props.also} />;
@@ -447,7 +491,14 @@ export const SHARED = {
       navMobile: { type: "array", label: "Phone menu", getItemSummary: summary, arrayFields: link([{ label: "Link", value: "" }, { label: "Button", value: "btn nav-mobile-cta" }]) },
     },
     part: "header",
-    render: () => <Header nav="" />,
+    render: () => (
+      <>
+        <Header nav="" />
+        <div className="k-context">
+          <HomeSections from={0} to={2} />
+        </div>
+      </>
+    ),
   },
   footer: {
     file: "content/shared/footer.json",
@@ -460,7 +511,14 @@ export const SHARED = {
       meta: { type: "array", label: "Small print", getItemSummary: summary, arrayFields: { text: text("Text") } },
     },
     part: "footer",
-    render: () => <Footer />,
+    render: () => (
+      <>
+        <div className="k-context">
+          <HomeSections from={-1} />
+        </div>
+        <Footer />
+      </>
+    ),
   },
   logos: {
     file: "content/shared/logo-strip.json",
@@ -529,7 +587,7 @@ export function SharedEditor({ which }) {
     const cur = repo.json(s.file);
     const { puck, editMode, children, ...props } = data.root.props || {}; // eslint-disable-line no-unused-vars
     const text = serialize(ordered(cur, props));
-    if (text !== repo.get(s.file)) repo.set(s.file, text);
+    if (text !== repo.get(s.file)) repo.set(s.file, text, "editor");
   };
   return (
     <Site.Provider value={currentCtx}>

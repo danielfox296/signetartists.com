@@ -28,7 +28,7 @@ export function Modal({ title, onClose, children, foot, wide }) {
         <div className="modal-head">
           <h2>{title}</h2>
         </div>
-        <div className="modal-body">{children}</div>
+        {children ? <div className="modal-body">{children}</div> : null}
         {foot ? <div className="modal-foot">{foot}</div> : null}
       </div>
     </>
