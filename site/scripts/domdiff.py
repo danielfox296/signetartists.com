@@ -1,6 +1,7 @@
 """The normalised-DOM comparison the proof and the converter share.
 
-Both documents are parsed with lxml and reduced to one stream of tokens:
+Both documents are parsed the way a browser parses them (the HTML5
+algorithm, via html5lib) and reduced to one stream of tokens:
 each element with its attributes (in any order, classes sorted, inline
 styles normalised), and each run of text with whitespace collapsed the way a
 browser renders it. Whitespace between two blocks is dropped; whitespace
@@ -11,7 +12,11 @@ import difflib
 import json
 import re
 
-from lxml import html as LH
+import warnings
+
+import html5lib
+
+warnings.filterwarnings("ignore", module="html5lib")
 
 BLOCK = {
     "html", "head", "body", "header", "main", "footer", "nav", "section", "article", "aside", "div", "p", "h1", "h2", "h3",
@@ -35,7 +40,7 @@ def norm_style(v):
 
 def attrs(e):
     out = []
-    for k, v in sorted(e.attrib.items()):
+    for k, v in sorted((local(k), v) for k, v in e.attrib.items()):
         if k == "class":
             v = " ".join(sorted(v.split()))
             if not v:
@@ -46,16 +51,25 @@ def attrs(e):
     return out
 
 
+def local(name):
+    return name.rsplit("}", 1)[-1]
+
+
 def is_block(e):
-    return isinstance(e.tag, str) and e.tag in BLOCK
+    return isinstance(e.tag, str) and local(e.tag) in BLOCK
 
 
 def in_svg(e):
     while e is not None:
-        if isinstance(e.tag, str) and e.tag == "svg":
+        if isinstance(e.tag, str) and local(e.tag) == "svg":
             return True
         e = e.getparent()
     return False
+
+
+def parse(html):
+    """A whole document, parsed as a browser would."""
+    return html5lib.parse(html, treebuilder="lxml", namespaceHTMLElements=False)
 
 
 def tokens(root, out=None):
@@ -65,7 +79,7 @@ def tokens(root, out=None):
     def text(s, before_block, after_block, parent):
         if not s:
             return
-        tag = parent.tag if isinstance(parent.tag, str) else ""
+        tag = local(parent.tag) if isinstance(parent.tag, str) else ""
         if tag in ("script", "style"):
             out.append("RAW " + s.strip())
             return
@@ -87,7 +101,8 @@ def tokens(root, out=None):
     def walk(e):
         if not isinstance(e.tag, str):  # comment / processing instruction
             return
-        if e.tag == "script" and (e.get("type") or "") == "application/ld+json":
+        name = local(e.tag)
+        if name == "script" and (e.get("type") or "") == "application/ld+json":
             try:
                 data = json.loads(e.text or "")
             except ValueError:
@@ -97,7 +112,7 @@ def tokens(root, out=None):
                 out.extend("LD " + line for line in flatten(data))
                 out.append("</script>")
                 return
-        out.append(f"<{e.tag} " + " ".join(attrs(e)) + ">")
+        out.append(f"<{name} " + " ".join(attrs(e)) + ">")
         kids = [c for c in e if isinstance(c.tag, str)]
         block_ctx = is_block(e)
         first = kids[0] if kids else None
@@ -107,7 +122,7 @@ def tokens(root, out=None):
             walk(c)
             nxt = next((x for x in elems[i + 1:] if isinstance(x.tag, str)), None)
             text(c.tail, is_block(c) if isinstance(c.tag, str) else False, (nxt is not None and is_block(nxt)) or (nxt is None and block_ctx), e)
-        out.append(f"</{e.tag}>")
+        out.append(f"</{name}>")
 
     walk(root)
     return _merge(out)
@@ -141,8 +156,10 @@ def _merge(toks):
 
 
 def fragment_tokens(s):
-    """Tokens for an HTML fragment (any number of top-level nodes)."""
-    wrapper = LH.fragment_fromstring(s, create_parent="div")
+    """Tokens for an HTML fragment (any number of top-level nodes), parsed
+    as the contents of a page's <main>."""
+    doc = parse('<!DOCTYPE html><html><head></head><body><main id="__f">' + s + "</main></body></html>")
+    wrapper = doc.getroot().find(".//main")
     toks = tokens(wrapper)
     return toks[1:-1]
 

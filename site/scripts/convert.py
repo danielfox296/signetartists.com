@@ -117,7 +117,9 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "met
 
 
 class _Top(HTMLParser):
-    """Finds where each top-level element starts and ends in a string."""
+    """Finds where each top-level element starts and ends in a string. An
+    end tag closes everything opened inside its element, as a browser does,
+    so a missing </div> cannot swallow the next section."""
 
     def __init__(self, text):
         super().__init__(convert_charrefs=False)
@@ -125,7 +127,7 @@ class _Top(HTMLParser):
         self.lines = [0]
         for m in re.finditer("\n", text):
             self.lines.append(m.end())
-        self.depth = 0
+        self.stack = []
         self.spans = []
         self.start = None
 
@@ -134,23 +136,24 @@ class _Top(HTMLParser):
         return self.lines[line - 1] + col
 
     def handle_starttag(self, tag, attrs):
-        if self.depth == 0:
+        if not self.stack:
             self.start = self.off()
         if tag in VOID:
-            if self.depth == 0:
+            if not self.stack:
                 self.spans.append((self.start, self.off() + len(self.get_starttag_text())))
             return
-        self.depth += 1
+        self.stack.append(tag)
 
     def handle_startendtag(self, tag, attrs):
-        if self.depth == 0:
+        if not self.stack:
             self.spans.append((self.off(), self.off() + len(self.get_starttag_text())))
 
     def handle_endtag(self, tag):
-        if tag in VOID:
+        if tag in VOID or tag not in self.stack:
             return
-        self.depth -= 1
-        if self.depth == 0:
+        while self.stack.pop() != tag:
+            pass
+        if not self.stack:
             end = self.text.index(">", self.off()) + 1
             self.spans.append((self.start, end))
 
@@ -445,28 +448,33 @@ def main():
         doc = {"root": {"props": root_props(cfg, schema, page_dir)}, "content": []}
         page_docs[page_dir.name] = (doc, output)
         files = dict(marked_sections(pages_html[output]))
-        n = 0
+        ids = S.new_ids()
         for f in sorted((page_dir / "sections").glob("*.html")):
             key = f"{page_dir.name}/{f.name}"
             raw = f.read_text(encoding="utf-8")
             notes = strip_comments_notes(raw)
             live = files.get(key, "")
             tokens = set(re.findall(r"\{\{([a-z_]+)(?::[^}]*)?\}\}", B.COMMENT.sub("", raw)))
-            for i, piece in enumerate(top_nodes(live)):
-                n += 1
+            pieces = []
+            for piece in top_nodes(live):
+                # The roster's and the form's script travels with its section.
+                if pieces and re.fullmatch(r"<script\b[^>]*acts\.js[^>]*></script>", piece.strip()):
+                    pieces[-1] += "\n" + piece
+                else:
+                    pieces.append(piece)
+            for i, piece in enumerate(pieces):
                 ctx = S.Ctx(B=B, page=page_dir.name, url=url, prefix=prefix, output=output, file=f.name, tokens=tokens,
-                            cfg=cfg, schema=schema, raw=B.COMMENT.sub("", raw))
+                            cfg=cfg, schema=schema, raw=B.COMMENT.sub("", raw), ids=ids)
                 rooted = to_root(piece, prefix, url)
                 typed = S.classify(rooted, ctx)
-                custom = {"type": "CustomHtml", "props": {"html": rooted}}
+                custom = {"type": "CustomHtml", "props": {"id": ctx.id("CustomHtml"), "html": rooted}}
                 item = typed or custom
-                item["props"] = {"id": f"{item['type']}-{n}", **item["props"]}
-                custom["props"] = {"id": f"CustomHtml-{n}", **custom["props"]}
-                if i == 0 and notes:
-                    item["props"]["_notes"] = notes
-                    custom["props"]["_notes"] = notes
-                item["props"]["_file"] = f.name
-                custom["props"]["_file"] = f.name
+                if typed:
+                    item["props"] = {"id": ctx.id(item["type"]), **item["props"]}
+                for it in (item, custom):
+                    if i == 0 and notes:
+                        it["props"]["_notes"] = notes
+                    it["props"]["_file"] = f.name
                 doc["content"].append(item)
                 candidates.append({"page": page_dir.name, "index": len(doc["content"]) - 1, "item": item, "custom": custom,
                                    "expected": piece, "prefix": prefix, "output": output, "url": url})

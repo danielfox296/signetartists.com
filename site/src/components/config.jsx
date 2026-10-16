@@ -2,8 +2,8 @@
    with these same components, calling each one's render directly. */
 import { Body } from "./layout.jsx";
 import { useSite } from "./parts.jsx";
-import * as sections from "./sections.jsx";
-import { CustomHtml, VideoIndex } from "./generated.jsx";
+import { categories as sectionCategories } from "./sections.jsx";
+import { blocks, registry, sections } from "./registry.jsx";
 import { blocks as postBlocks, PostArticle } from "./post.jsx";
 
 const text = (label) => ({ type: "text", label });
@@ -17,7 +17,7 @@ export const pageRootFields = {
   ogImage: text("Share image"),
 };
 
-export const pageComponents = { ...sections.components, CustomHtml, VideoIndex };
+export const pageComponents = registry;
 
 export const pageConfig = {
   root: {
@@ -31,7 +31,11 @@ export const pageConfig = {
       );
     },
   },
-  categories: sections.categories,
+  categories: {
+    ...sectionCategories,
+    other: { title: "Other", components: ["CustomHtml", "VideoIndex"] },
+    blocks: { title: "Blocks", components: Object.keys(blocks) },
+  },
   components: pageComponents,
 };
 

@@ -9,44 +9,324 @@
  },
  "content": [
   {
-   "type": "CustomHtml",
+   "type": "Intro",
    "props": {
-    "id": "CustomHtml-1",
-    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Booking</p>\n      <h1 class=\"h2 display\">From the first email to the last invoice.</h1>\n      <p class=\"lede\">Here's what happens at each step, who does it, and how long it takes. The contract, the certificate of insurance and the W-9 arrive in one email.</p>\n    </div>\n  </div>\n</section>",
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Booking",
+       "slab": true,
+       "title": "From the first email to the last invoice.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Here's what happens at each step, who does it, and how long it takes. The contract, the certificate of insurance and the W-9 arrive in one email."
+      }
+     }
+    ],
     "_notes": "The booking process, start to finish. Written 2026-08-07 against BASE-VOICE\n     (~/Desktop/site-ops/BASE-VOICE.md) rather than inferred from shipped copy.\n\n     Deliberately a map, not a source. Every fact on this page is already\n     canonical somewhere else and links back to it: reply time from the contact\n     page, paperwork from pricing, load-in and sound check from the technical\n     page, deposit and payment terms from the FAQ where they are still flagged\n     open. Nothing new is asserted here, so nothing here can drift out of step\n     with the page that owns it.",
     "_file": "01-intro.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "RateTable",
    "props": {
-    "id": "CustomHtml-2",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3 h3--lead\">The steps</h2>\n    <p class=\"note\">Timings assume a date six months out. A booking made three weeks before the event goes through the same steps in the same order, only faster. For a wedding, what couples report about their own timing is set out in <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>.</p>\n\n    <div class=\"table-scroll\">\n      <table class=\"rate-table tnum\">\n        <thead>\n          <tr><th>Step</th><th>When</th><th>What happens</th></tr>\n        </thead>\n        <tbody>\n          <tr><td class=\"rate-size\">1. You write</td><td>24 to 48 hrs</td><td>Availability and an exact number, itemized</td></tr>\n          <tr><td class=\"rate-size\">2. You hold the date</td><td>The day we agree</td><td>Contract, insurance certificate, W-9 and invoice, one email</td></tr>\n          <tr><td class=\"rate-size\">3. Your contact reaches you</td><td>Before the event</td><td>Your personal contact for the night, with a name and cell number</td></tr>\n          <tr><td class=\"rate-size\">4. You send the run of show</td><td>Any time</td><td>We fill in the band&rsquo;s rows and send it back</td></tr>\n          <tr><td class=\"rate-size\">5. We agree the cues</td><td>The week before</td><td>One person owns each program moment</td></tr>\n          <tr><td class=\"rate-size\">6. The venue confirms</td><td>The week before</td><td>Power, stage, load-in route, decibel cap</td></tr>\n          <tr><td class=\"rate-size\">7. Load-in and sound check</td><td>The day</td><td>The space handed back to you, ready</td></tr>\n          <tr><td class=\"rate-size\">8. The night</td><td>The night</td><td>Your contact is reachable, load-in to load-out</td></tr>\n          <tr><td class=\"rate-size\">9. The invoice</td><td>After the event</td><td>One page, everything on its own line</td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <p class=\"note\">Deposit, balance timing and payment methods are on the <a href=\"../faq/\">question list</a>. Load-in and sound-check times by band size, and the six venue answers in step 6, are on <a href=\"../technical/\">what we need from your venue</a>.</p>\n  </div>\n</section>",
+    "id": "RateTable-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "The steps",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "Timings assume a date six months out. A booking made three weeks before the event goes through the same steps in the same order, only faster. For a wedding, what couples report about their own timing is set out in <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-6",
+       "head": [
+        {
+         "html": "Step"
+        },
+        {
+         "html": "When"
+        },
+        {
+         "html": "What happens"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "1. You write",
+           "cls": "rate-size"
+          },
+          {
+           "html": "24 to 48 hrs"
+          },
+          {
+           "html": "Availability and an exact number, itemized"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "2. You hold the date",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The day we agree"
+          },
+          {
+           "html": "Contract, insurance certificate, W-9 and invoice, one email"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "3. Your contact reaches you",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Before the event"
+          },
+          {
+           "html": "Your personal contact for the night, with a name and cell number"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "4. You send the run of show",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Any time"
+          },
+          {
+           "html": "We fill in the band’s rows and send it back"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "5. We agree the cues",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The week before"
+          },
+          {
+           "html": "One person owns each program moment"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6. The venue confirms",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The week before"
+          },
+          {
+           "html": "Power, stage, load-in route, decibel cap"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "7. Load-in and sound check",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The day"
+          },
+          {
+           "html": "The space handed back to you, ready"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8. The night",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The night"
+          },
+          {
+           "html": "Your contact is reachable, load-in to load-out"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9. The invoice",
+           "cls": "rate-size"
+          },
+          {
+           "html": "After the event"
+          },
+          {
+           "html": "One page, everything on its own line"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Deposit, balance timing and payment methods are on the <a href=\"../faq/\">question list</a>. Load-in and sound-check times by band size, and the six venue answers in step 6, are on <a href=\"../technical/\">what we need from your venue</a>.",
+       "cls": "note"
+      }
+     }
+    ],
     "_notes": "Three columns, not four. A \"what we need from you\" column pushed the table\n     past the viewport at desktop width and put \"When\" off-screen behind a\n     horizontal scroll nobody would discover. That column's content is the\n     next section's whole job anyway, so it moved there instead of shrinking.\n\n     \"When\" moved to second, 2026-08-07: the same problem the note above\n     describes was still happening on a phone, where most of the table sits off\n     screen and \"What happens\" is the widest column. Step and When are what a\n     planner is here for, so they are the two that survive a 375px viewport.",
     "_file": "02-steps.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Rows",
    "props": {
-    "id": "CustomHtml-3",
-    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Three things we need from you</h2>\n    <p class=\"prose\">Six of those nine steps need nothing from you at all. Three do, and they're the three that stall a booking when they arrive late.</p>\n    <dl class=\"def-list def-list--stack\">\n      <div class=\"def-row\">\n        <dt>The date and the venue, to get a number</dt>\n        <dd>A city works if the venue isn't chosen yet. We can price a night without a signed venue and re-price it when you have one, because travel is its own line on the quote.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The venue name, to raise the certificate of insurance</dt>\n        <dd>The certificate names your venue as additional insured, so it can't be issued before the venue is chosen.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The run of show, whenever it exists</dt>\n        <dd>Send us the draft, even if it's nowhere near final. We'll fill in the band's rows against whatever you have and send it back, whether or not you've booked us.</dd>\n      </div>\n    </dl>\n  </div>\n</section>",
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-10",
+       "html": "Three things we need from you",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Six of those nine steps need nothing from you at all. Three do, and they're the three that stall a booking when they arrive late.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The date and the venue, to get a number",
+         "text": "A city works if the venue isn't chosen yet. We can price a night without a signed venue and re-price it when you have one, because travel is its own line on the quote."
+        },
+        {
+         "term": "The venue name, to raise the certificate of insurance",
+         "text": "The certificate names your venue as additional insured, so it can't be issued before the venue is chosen."
+        },
+        {
+         "term": "The run of show, whenever it exists",
+         "text": "Send us the draft, even if it's nowhere near final. We'll fill in the band's rows against whatever you have and send it back, whether or not you've booked us."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
     "_file": "03-from-you.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Text",
    "props": {
-    "id": "CustomHtml-4",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">If something changes</h2>\n    <p class=\"prose\">Guest counts move, programs get rewritten, a venue falls through. Tell us and we'll re-quote. Added performance time costs what the earlier hours did, a smaller build re-prices down, and a changed date is something we'll talk through with you.</p>\n    <p class=\"prose\">If a musician can't make the date, you get the substitute's name and the reason as soon as we have them.</p>\n  </div>\n</section>",
+    "id": "Text-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-15",
+       "html": "If something changes",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Guest counts move, programs get rewritten, a venue falls through. Tell us and we'll re-quote. Added performance time costs what the earlier hours did, a smaller build re-prices down, and a changed date is something we'll talk through with you.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "If a musician can't make the date, you get the substitute's name and the reason as soon as we have them.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_file": "03-from-you.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "CallToAction",
    "props": {
-    "id": "CustomHtml-5",
-    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"close-row\">\n      <div style=\"max-width: 32rem;\">\n        <h2 class=\"h2\">Send us the date and the venue.</h2>\n        <p class=\"lede\">That's enough for us to come back with an exact number.</p>\n      </div>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n      </div>\n    </div>\n    <p class=\"note\">Also for planners: <a href=\"../technical/\">what we need from your venue</a>, the <a href=\"../run-of-show/\">run of show templates</a> and the <a href=\"../faq/\">full question list</a>.</p>\n  </div>\n</section>",
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-20",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the venue.",
+       "lede": "That's enough for us to come back with an exact number."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Also for planners: <a href=\"../technical/\">what we need from your venue</a>, the <a href=\"../run-of-show/\">run of show templates</a> and the <a href=\"../faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
     "_file": "03-from-you.html"
    }
   }

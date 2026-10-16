@@ -9,51 +9,954 @@
  },
  "content": [
   {
-   "type": "CustomHtml",
+   "type": "Intro",
    "props": {
-    "id": "CustomHtml-1",
-    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Run of show</p>\n      <h1 class=\"h2 display\">Three run of show templates, already timed.</h1>\n      <p class=\"lede\">Most run-of-show documents carry the band as one row that says <em>band plays</em>, and the detail gets filled in during the week of the event, by email, at speed. Here's that detail already worked out for the three kinds of night we see most. Take them, change the times, delete what doesn't apply.</p>\n    </div>\n  </div>\n</section>",
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Run of show",
+       "slab": true,
+       "title": "Three run of show templates, already timed.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Most run-of-show documents carry the band as one row that says <em>band plays</em>, and the detail gets filled in during the week of the event, by email, at speed. Here's that detail already worked out for the three kinds of night we see most. Take them, change the times, delete what doesn't apply."
+      }
+     }
+    ],
     "_notes": "Run of show templates. The most useful thing on the site for a planner\n     who has not hired us: it is work they have to do anyway, done. The band\n     rows are the ones normally left as \"band plays\" until the week of.",
     "_file": "01-intro.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Text",
    "props": {
-    "id": "CustomHtml-2",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">How to read these</h2>\n    <p class=\"prose\">The <strong>cue</strong> column is the one worth settling before the day. Every moment in an evening belongs to somebody, and what usually goes wrong is two people each assuming the other was going to nod at the band, or nobody knowing who decides the speeches are running long.</p>\n    <p class=\"prose\">Agree the cue column at sound check with the person holding the master document. Our bandleader takes their cues from that one person.</p>\n  </div>\n</section>",
+    "id": "Text-8",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "How to read these",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "The <strong>cue</strong> column is the one worth settling before the day. Every moment in an evening belongs to somebody, and what usually goes wrong is two people each assuming the other was going to nod at the band, or nobody knowing who decides the speeches are running long.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-6",
+       "html": "Agree the cue column at sound check with the person holding the master document. Our bandleader takes their cues from that one person.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_file": "01-intro.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "RateTable",
    "props": {
-    "id": "CustomHtml-3",
-    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3 h3--lead\">A corporate gala</h2>\n    <p class=\"note\">Four hundred guests, a quartet with a DJ, an 11:30pm curfew. This is the way most awards dinners and fundraisers run.</p>\n\n    <div class=\"table-scroll\">\n      <table class=\"rate-table tnum\">\n        <thead>\n          <tr><th>Time</th><th>What happens</th><th>The band</th><th>Who cues it</th></tr>\n        </thead>\n        <tbody>\n          <tr><td class=\"rate-size\">3:30pm</td><td>Load-in and setup</td><td>Vehicles at the dock</td><td>Venue</td></tr>\n          <tr><td class=\"rate-size\">5:00pm</td><td>Sound check complete</td><td>Cue column agreed with you</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">6:00pm</td><td>Doors, cocktails</td><td>Trio, 63 dBA</td><td>Venue opens</td></tr>\n          <tr><td class=\"rate-size\">7:00pm</td><td>Call to dinner</td><td>Plays guests in, then down</td><td>You</td></tr>\n          <tr><td class=\"rate-size\">7:15pm</td><td>Dinner service</td><td>Trio, 63 dBA</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">8:00pm</td><td>Remarks from leadership</td><td>Silent. Announcement mic live</td><td>You, two minutes out</td></tr>\n          <tr><td class=\"rate-size\">8:20pm</td><td>Awards</td><td>Silent. Walk-on stings if wanted</td><td>You</td></tr>\n          <tr><td class=\"rate-size\">8:40pm</td><td>Video package</td><td>PA handed to AV</td><td>AV lead</td></tr>\n          <tr><td class=\"rate-size\">8:50pm</td><td>Auction</td><td>Silent</td><td>Auctioneer</td></tr>\n          <tr><td class=\"rate-size\">9:15pm</td><td>Changeover</td><td>DJ covers the gap</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">9:30pm</td><td>Dancing, first set</td><td>Quartet, 90 dBA</td><td>You</td></tr>\n          <tr><td class=\"rate-size\">10:30pm</td><td>Break</td><td>DJ, continuous</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">10:45pm</td><td>Dancing, second set</td><td>Quartet, peak</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">11:30pm</td><td>Last song, curfew</td><td>Shaped to finish, not cut</td><td>Bandleader</td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <p class=\"prose\">Two of those rows are worth a second look. The <strong>7:00pm</strong> call to dinner is the surest way to move four hundred people from a bar into a seated dinner, and the band plays them in. The <strong>9:15pm</strong> changeover matters because a quartet can't get from a dinner setup to a dance setup silently, so the DJ covers that gap.</p>\n  </div>\n</section>",
+    "id": "RateTable-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-9",
+       "html": "A corporate gala",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Four hundred guests, a quartet with a DJ, an 11:30pm curfew. This is the way most awards dinners and fundraisers run.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-11",
+       "head": [
+        {
+         "html": "Time"
+        },
+        {
+         "html": "What happens"
+        },
+        {
+         "html": "The band"
+        },
+        {
+         "html": "Who cues it"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "3:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Load-in and setup"
+          },
+          {
+           "html": "Vehicles at the dock"
+          },
+          {
+           "html": "Venue"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "5:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Sound check complete"
+          },
+          {
+           "html": "Cue column agreed with you"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Doors, cocktails"
+          },
+          {
+           "html": "Trio, 63 dBA"
+          },
+          {
+           "html": "Venue opens"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "7:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Call to dinner"
+          },
+          {
+           "html": "Plays guests in, then down"
+          },
+          {
+           "html": "You"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "7:15pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dinner service"
+          },
+          {
+           "html": "Trio, 63 dBA"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Remarks from leadership"
+          },
+          {
+           "html": "Silent. Announcement mic live"
+          },
+          {
+           "html": "You, two minutes out"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:20pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Awards"
+          },
+          {
+           "html": "Silent. Walk-on stings if wanted"
+          },
+          {
+           "html": "You"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:40pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Video package"
+          },
+          {
+           "html": "PA handed to AV"
+          },
+          {
+           "html": "AV lead"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:50pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Auction"
+          },
+          {
+           "html": "Silent"
+          },
+          {
+           "html": "Auctioneer"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9:15pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Changeover"
+          },
+          {
+           "html": "DJ covers the gap"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dancing, first set"
+          },
+          {
+           "html": "Quartet, 90 dBA"
+          },
+          {
+           "html": "You"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "10:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Break"
+          },
+          {
+           "html": "DJ, continuous"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "10:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dancing, second set"
+          },
+          {
+           "html": "Quartet, peak"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "11:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Last song, curfew"
+          },
+          {
+           "html": "Shaped to finish, not cut"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Two of those rows are worth a second look. The <strong>7:00pm</strong> call to dinner is the surest way to move four hundred people from a bar into a seated dinner, and the band plays them in. The <strong>9:15pm</strong> changeover matters because a quartet can't get from a dinner setup to a dance setup silently, so the DJ covers that gap.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_file": "02-gala.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "RateTable",
    "props": {
-    "id": "CustomHtml-4",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">A wedding, ceremony through late night</h2>\n    <p class=\"note\">A hundred and eighty guests, one venue, a duo for the ceremony and a quartet for the floor. The whole night is booked as one contract.</p>\n\n    <div class=\"table-scroll\">\n      <table class=\"rate-table tnum\">\n        <thead>\n          <tr><th>Time</th><th>What happens</th><th>The band</th><th>Who cues it</th></tr>\n        </thead>\n        <tbody>\n          <tr><td class=\"rate-size\">2:00pm</td><td>Load-in, both setups</td><td>Ceremony and reception at once</td><td>Venue</td></tr>\n          <tr><td class=\"rate-size\">4:00pm</td><td>Sound check complete</td><td>Before any guest is on site</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">4:30pm</td><td>Guests arrive</td><td>Duo, prelude, 60 dBA</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">5:00pm</td><td>Processional</td><td>Duo. Your song, learned</td><td>Planner or officiant</td></tr>\n          <tr><td class=\"rate-size\">5:25pm</td><td>Recessional</td><td>Duo, up and loud</td><td>Officiant</td></tr>\n          <tr><td class=\"rate-size\">5:30pm</td><td>Cocktails</td><td>Trio, 63 dBA</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">6:30pm</td><td>Guests seated, entrances</td><td>Band up for the walk-in</td><td>Planner</td></tr>\n          <tr><td class=\"rate-size\">6:45pm</td><td>First dance</td><td>Quartet. Learned, arranged to length</td><td>Planner</td></tr>\n          <tr><td class=\"rate-size\">6:50pm</td><td>Dinner service</td><td>Trio, 63 dBA</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">7:45pm</td><td>Toasts</td><td>Silent. Announcement mic live</td><td>Planner</td></tr>\n          <tr><td class=\"rate-size\">8:15pm</td><td>Parent dances</td><td>Quartet</td><td>Planner</td></tr>\n          <tr><td class=\"rate-size\">8:30pm</td><td>Dancing, first set</td><td>Quartet, 90 dBA</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">9:30pm</td><td>Break</td><td>DJ, continuous</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">9:45pm</td><td>Dancing, second set</td><td>Quartet, peak</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">10:45pm</td><td>Last song</td><td>Quartet</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">11:00pm</td><td>Late night</td><td>DJ alone</td><td>Standing</td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <p class=\"prose\">The row people move most often is <strong>6:45pm</strong>. A first dance immediately after the entrances, before anyone has picked up a fork, keeps the whole crowd watching. Held back until after dinner it competes with coffee, and half the guests are outside.</p>\n  </div>\n</section>",
+    "id": "RateTable-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-15",
+       "html": "A wedding, ceremony through late night",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "A hundred and eighty guests, one venue, a duo for the ceremony and a quartet for the floor. The whole night is booked as one contract.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-17",
+       "head": [
+        {
+         "html": "Time"
+        },
+        {
+         "html": "What happens"
+        },
+        {
+         "html": "The band"
+        },
+        {
+         "html": "Who cues it"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "2:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Load-in, both setups"
+          },
+          {
+           "html": "Ceremony and reception at once"
+          },
+          {
+           "html": "Venue"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "4:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Sound check complete"
+          },
+          {
+           "html": "Before any guest is on site"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "4:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Guests arrive"
+          },
+          {
+           "html": "Duo, prelude, 60 dBA"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "5:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Processional"
+          },
+          {
+           "html": "Duo. Your song, learned"
+          },
+          {
+           "html": "Planner or officiant"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "5:25pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Recessional"
+          },
+          {
+           "html": "Duo, up and loud"
+          },
+          {
+           "html": "Officiant"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "5:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Cocktails"
+          },
+          {
+           "html": "Trio, 63 dBA"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Guests seated, entrances"
+          },
+          {
+           "html": "Band up for the walk-in"
+          },
+          {
+           "html": "Planner"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "First dance"
+          },
+          {
+           "html": "Quartet. Learned, arranged to length"
+          },
+          {
+           "html": "Planner"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6:50pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dinner service"
+          },
+          {
+           "html": "Trio, 63 dBA"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "7:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Toasts"
+          },
+          {
+           "html": "Silent. Announcement mic live"
+          },
+          {
+           "html": "Planner"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:15pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Parent dances"
+          },
+          {
+           "html": "Quartet"
+          },
+          {
+           "html": "Planner"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dancing, first set"
+          },
+          {
+           "html": "Quartet, 90 dBA"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Break"
+          },
+          {
+           "html": "DJ, continuous"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dancing, second set"
+          },
+          {
+           "html": "Quartet, peak"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "10:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Last song"
+          },
+          {
+           "html": "Quartet"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "11:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Late night"
+          },
+          {
+           "html": "DJ alone"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "The row people move most often is <strong>6:45pm</strong>. A first dance immediately after the entrances, before anyone has picked up a fork, keeps the whole crowd watching. Held back until after dinner it competes with coffee, and half the guests are outside.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_file": "03-wedding.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "RateTable",
    "props": {
-    "id": "CustomHtml-5",
-    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">A company holiday party</h2>\n    <p class=\"note\">Two hundred staff, a quartet, a hotel ballroom, an early hard stop. It's shorter and looser, and it's the one where the program is smallest and the dance floor matters most.</p>\n\n    <div class=\"table-scroll\">\n      <table class=\"rate-table tnum\">\n        <thead>\n          <tr><th>Time</th><th>What happens</th><th>The band</th><th>Who cues it</th></tr>\n        </thead>\n        <tbody>\n          <tr><td class=\"rate-size\">4:30pm</td><td>Load-in and setup</td><td>Before the space is dressed if possible</td><td>Venue</td></tr>\n          <tr><td class=\"rate-size\">6:00pm</td><td>Sound check complete</td><td>Space handed back to you</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">6:30pm</td><td>Doors, drinks</td><td>Duo, 63 dBA</td><td>Venue opens</td></tr>\n          <tr><td class=\"rate-size\">7:15pm</td><td>Dinner or stations open</td><td>Duo, 63 dBA</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">8:00pm</td><td>Remarks and service awards</td><td>Silent. Announcement mic live</td><td>You, two minutes out</td></tr>\n          <tr><td class=\"rate-size\">8:30pm</td><td>Full band up, first set</td><td>Quartet, 88 dBA</td><td>You</td></tr>\n          <tr><td class=\"rate-size\">9:30pm</td><td>Break</td><td>DJ, continuous</td><td>Standing</td></tr>\n          <tr><td class=\"rate-size\">9:45pm</td><td>Second set</td><td>Quartet, peak</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">10:45pm</td><td>Last song</td><td>Quartet</td><td>Bandleader</td></tr>\n          <tr><td class=\"rate-size\">11:00pm</td><td>Guests out, strike</td><td>Nothing moves before this</td><td>Standing</td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <p class=\"prose\">The row to watch on this night is <strong>8:00pm</strong>. Remarks at a holiday party start late, run long, and land on a crowd that has been drinking since doors opened. Put a hard finish on them in the document, give it to whoever is speaking in advance, and put the band back up on time regardless.</p>\n    <p class=\"prose\">If the program wants a louder set, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is its own line on the quote.</p>\n  </div>\n</section>",
+    "id": "RateTable-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-21",
+       "html": "A company holiday party",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Two hundred staff, a quartet, a hotel ballroom, an early hard stop. It's shorter and looser, and it's the one where the program is smallest and the dance floor matters most.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-23",
+       "head": [
+        {
+         "html": "Time"
+        },
+        {
+         "html": "What happens"
+        },
+        {
+         "html": "The band"
+        },
+        {
+         "html": "Who cues it"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "4:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Load-in and setup"
+          },
+          {
+           "html": "Before the space is dressed if possible"
+          },
+          {
+           "html": "Venue"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Sound check complete"
+          },
+          {
+           "html": "Space handed back to you"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Doors, drinks"
+          },
+          {
+           "html": "Duo, 63 dBA"
+          },
+          {
+           "html": "Venue opens"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "7:15pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Dinner or stations open"
+          },
+          {
+           "html": "Duo, 63 dBA"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Remarks and service awards"
+          },
+          {
+           "html": "Silent. Announcement mic live"
+          },
+          {
+           "html": "You, two minutes out"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Full band up, first set"
+          },
+          {
+           "html": "Quartet, 88 dBA"
+          },
+          {
+           "html": "You"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9:30pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Break"
+          },
+          {
+           "html": "DJ, continuous"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Second set"
+          },
+          {
+           "html": "Quartet, peak"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "10:45pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Last song"
+          },
+          {
+           "html": "Quartet"
+          },
+          {
+           "html": "Bandleader"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "11:00pm",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Guests out, strike"
+          },
+          {
+           "html": "Nothing moves before this"
+          },
+          {
+           "html": "Standing"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "The row to watch on this night is <strong>8:00pm</strong>. Remarks at a holiday party start late, run long, and land on a crowd that has been drinking since doors opened. Put a hard finish on them in the document, give it to whoever is speaking in advance, and put the band back up on time regardless.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "If the program wants a louder set, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is its own line on the quote.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_file": "04-holiday.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "CallToAction",
    "props": {
-    "id": "CustomHtml-6",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"close-row\">\n      <div style=\"max-width: 32rem;\">\n        <h2 class=\"h2\">Send us your version.</h2>\n        <p class=\"lede\">Whatever state it's in. We'll fill in the band&rsquo;s rows and send it back, whether or not you've booked us.</p>\n      </div>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n      </div>\n    </div>\n    <p class=\"note\">Also for planners: <a href=\"../technical/\">what we need from your venue</a> and the <a href=\"../faq/\">full question list</a>.</p>\n  </div>\n</section>",
+    "id": "CallToAction-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-28",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us your version.",
+       "lede": "Whatever state it's in. We'll fill in the band’s rows and send it back, whether or not you've booked us."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Also for planners: <a href=\"../technical/\">what we need from your venue</a> and the <a href=\"../faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
     "_file": "04-holiday.html"
    }
   }

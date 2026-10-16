@@ -12,7 +12,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { createModel, outputFor, prefixFor, pySort } from "../lib/model.js";
 import { Site } from "../components/parts.jsx";
 import { Body } from "../components/layout.jsx";
-import { pageComponents } from "../components/config.jsx";
+import { Item } from "../components/registry.jsx";
 import { PostArticle } from "../components/post.jsx";
 import { WatchPage, watchHeadExtra } from "../components/generated.jsx";
 import { makeSchema } from "./schema.js";
@@ -77,11 +77,21 @@ export function photoFocus(m, html) {
   });
 }
 
-function Section({ c }) {
-  const C = pageComponents[c.type];
-  if (!C) throw new Error(`No component for section type ${c.type}`);
-  const R = C.render;
-  return <R {...c.props} puck={{ isEditing: false }} />;
+const Section = Item;
+
+// Every page the build writes, in build.py's order, before any is rendered:
+// the all-pages index and the feeds read this list.
+export function plan(c, m) {
+  const LAST = ["video", "sitemap"];
+  const entry = (d) => {
+    const p = d.root.props;
+    return { output: outputFor(p.path), title: p.title, description: p.description || "", robots: p.robots || "index, follow", indexLabel: p.indexLabel, watch: false, file: `content/pages/${d.slug}.json` };
+  };
+  const list = c.pages.filter((d) => !LAST.includes(d.slug)).map(entry);
+  for (const v of m.FOOTAGE) list.push({ output: m.watchOutput(v), title: v.name, description: v.description, robots: "index, follow", indexLabel: v.name, watch: true, file: `content/videos/${v.slug}.json` });
+  const video = c.pages.find((d) => d.slug === "video");
+  if (video) list.push(entry(video));
+  return list;
 }
 
 function renderStatic(el, ctx) {
@@ -96,14 +106,14 @@ export function makeSite(c) {
   const OG_DEFAULT = `${m.SITE_URL}/img/og-default.png`;
   const brandTitle = (t, exact) => (exact ? t : `${t} | ${m.brand.name}`);
   const absImg = (src) => (!src ? "" : /^https?:\/\//.test(src) ? src : `${m.SITE_URL}/${src.replace(/^\/+/, "")}`);
-  const base = { model: m, hubs };
+  const base = { model: m, hubs, built: plan(c, m) };
   return { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base };
 }
 
 export function renderSections(c, reqs) {
   const { m, base } = makeSite(c);
   return reqs.map((r) => {
-    const ctx = { ...base, prefix: r.prefix, output: r.output, url: "/" + r.output.replace("index.html", ""), page: m.pages.find((d) => d.slug === r.page), raw: [], built: [] };
+    const ctx = { ...base, prefix: r.prefix, output: r.output, url: "/" + r.output.replace("index.html", ""), page: m.pages.find((d) => d.slug === r.page), raw: [] };
     return photoFocus(m, renderStatic(<Section c={r.item} />, ctx));
   });
 }
@@ -117,7 +127,7 @@ export function buildSite(c, out) {
   };
 
   const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, headExtra, schema }) => {
-    const ctx = { ...base, prefix, output, url: "/" + output.replace("index.html", ""), trail, indexed, raw: [], built, ...ctxExtra };
+    const ctx = { ...base, prefix, output, url: "/" + output.replace("index.html", ""), trail, indexed, raw: [], ...ctxExtra };
     const body = renderStatic(
       <Body nav={nav} trail={trail} output={output} hubs={hubs} indexed={indexed}>
         {content}

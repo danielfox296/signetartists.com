@@ -28,46 +28,222 @@
  },
  "content": [
   {
-   "type": "CustomHtml",
+   "type": "Intro",
    "props": {
-    "id": "CustomHtml-1",
-    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Denver weddings</p>\n      <h1 class=\"h2 display\">Live music for cocktail hour at a Denver wedding.</h1>\n      <p class=\"lede\">The ceremony ends, the couple leaves for photographs, and the guests find a first drink in a hotel lobby, on a gallery floor or on a garden terrace, which is where this city holds its cocktail hours. A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> plays that hour at a volume guests can talk across.</p>\n      <p class=\"prose\">Denver is our home market, so a metro date carries no travel line, and the same duo can keep playing through dinner on the same contract. What should play and how long the hour runs are on the <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>, and the ceremony before it and the reception after it route from <a href=\"/weddings/\">the weddings page</a>.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>\n  </div>\n</section>",
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver weddings",
+       "slab": true,
+       "title": "Live music for cocktail hour at a Denver wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The ceremony ends, the couple leaves for photographs, and the guests find a first drink in a hotel lobby, on a gallery floor or on a garden terrace, which is where this city holds its cocktail hours. A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> plays that hour at a volume guests can talk across.",
+       "headingText": [
+        {
+         "html": "Denver is our home market, so a metro date carries no travel line, and the same duo can keep playing through dinner on the same contract. What should play and how long the hour runs are on the <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>, and the ceremony before it and the reception after it route from <a href=\"/weddings/\">the weddings page</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
     "_notes": "Denver variant. The parent answers the question set; this page is the\n     city: where the hour happens and what downtown does to load-in, parking\n     and power. The figure-pair is the conversion-spine rate module.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: the couple with a Denver venue deciding what the hour after the ceremony sounds like. The venue types and named venues stay as local fact; the 'this page is the Denver part' self-reference and the setup section are gone (setup, parking and power are the FAQ); dBA left the body; FAQs restating the venue rows are gone.",
     "_file": "01-intro.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Videos",
    "props": {
-    "id": "CustomHtml-2",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Hear it</p>\n      <h2 class=\"h2\">The cocktail hour sound.</h2>\n      <p class=\"lede\">Guitar and upright bass on a standard, at the volume a Denver cocktail hour talks across.</p>\n    </div>\n    <div class=\"video-grid video-grid--single\">\n      <div class=\"act-video\">\n        <iframe src=\"https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0\" title=\"Jazz duo playing Autumn Leaves on guitar and upright bass at cocktail hour volume\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture\" allowfullscreen></iframe>\n      </div>\n    </div>\n  </div>\n</section>",
+    "id": "Videos-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Hear it",
+       "title": "The cocktail hour sound.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Guitar and upright bass on a standard, at the volume a Denver cocktail hour talks across."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-5",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass at cocktail hour volume",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
     "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
     "_file": "01b-footage.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Rows",
    "props": {
-    "id": "CustomHtml-3",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Where the hour happens</p>\n      <h2 class=\"h2\">Hotel mezzanines, gallery floors, garden terraces.</h2>\n      <p class=\"lede\">The cocktail hour rarely gets the main floor, because the main floor is being set for dinner. It gets the lobby, the mezzanine, the gallery, the terrace, and a duo is built for exactly those: it fits a corner and plays at a level that suits marble as well as open air.</p>\n    </div>\n    <dl class=\"def-list def-list--stack\">\n      <div class=\"def-row\">\n        <dt>The grand hotels</dt>\n        <dd>Downtown weddings keep the hour one floor away from dinner, in the lobby lounge or on the mezzanine. The Brown Palace runs it under the atrium lobby, and at the Four Seasons and The Oxford it lands in spaces where a banquet team is already working a tight service window. A duo that's set up and sound-checked before guests arrive fits the way these buildings run.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The galleries</dt>\n        <dd>Space Gallery on Santa Fe Drive is the pattern: concrete floors, white walls, art on every one of them. Hard surfaces carry sound further than carpet and drapery do, so the duo starts the hour lower than it would in a ballroom and lets the walls do the projecting.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The gardens</dt>\n        <dd>Denver Botanic Gardens puts the hour outdoors, where the evening gets cold fast after sunset, so moving indoors is agreed before the day. Open air also has no walls to hand the sound back: a guitar sounds close and detailed near the terrace rail and thins across a lawn, where a trio's upright bass carries to the far edge of the crowd. The <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a> covers both.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The mansions and clubs</dt>\n        <dd>Grant-Humphreys Mansion and the University Club of Denver spread the crowd across parlors and landings rather than one open floor. The duo sets up within sight of the bar, where the crowd pools, and the far parlors stay usable for conversation.</dd>\n      </div>\n      <div class=\"def-row\">\n        <dt>The industrial floors</dt>\n        <dd>Mile High Station holds ceremony, cocktails and dinner under one roof, which makes it the venue flip in its purest form: the hour runs at one end of the building while the floor turns at the other, and the duo is what keeps the turn from feeling like a delay.</dd>\n      </div>\n    </dl>\n    <p class=\"prose\">Nearly every Denver cocktail hour lands in one of these five kinds of venue, which is why the venue name is the first thing we ask for. Tell us the venue and the date, and we'll come back with a recommendation and a price for that hour.</p>\n  </div>\n</section>",
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Where the hour happens",
+       "title": "Hotel mezzanines, gallery floors, garden terraces.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The cocktail hour rarely gets the main floor, because the main floor is being set for dinner. It gets the lobby, the mezzanine, the gallery, the terrace, and a duo is built for exactly those: it fits a corner and plays at a level that suits marble as well as open air."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "The grand hotels",
+         "text": "Downtown weddings keep the hour one floor away from dinner, in the lobby lounge or on the mezzanine. The Brown Palace runs it under the atrium lobby, and at the Four Seasons and The Oxford it lands in spaces where a banquet team is already working a tight service window. A duo that's set up and sound-checked before guests arrive fits the way these buildings run."
+        },
+        {
+         "term": "The galleries",
+         "text": "Space Gallery on Santa Fe Drive is the pattern: concrete floors, white walls, art on every one of them. Hard surfaces carry sound further than carpet and drapery do, so the duo starts the hour lower than it would in a ballroom and lets the walls do the projecting."
+        },
+        {
+         "term": "The gardens",
+         "text": "Denver Botanic Gardens puts the hour outdoors, where the evening gets cold fast after sunset, so moving indoors is agreed before the day. Open air also has no walls to hand the sound back: a guitar sounds close and detailed near the terrace rail and thins across a lawn, where a trio's upright bass carries to the far edge of the crowd. The <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a> covers both."
+        },
+        {
+         "term": "The mansions and clubs",
+         "text": "Grant-Humphreys Mansion and the University Club of Denver spread the crowd across parlors and landings rather than one open floor. The duo sets up within sight of the bar, where the crowd pools, and the far parlors stay usable for conversation."
+        },
+        {
+         "term": "The industrial floors",
+         "text": "Mile High Station holds ceremony, cocktails and dinner under one roof, which makes it the venue flip in its purest form: the hour runs at one end of the building while the floor turns at the other, and the duo is what keeps the turn from feeling like a delay."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Nearly every Denver cocktail hour lands in one of these five kinds of venue, which is why the venue name is the first thing we ask for. Tell us the venue and the date, and we'll come back with a recommendation and a price for that hour.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_notes": "The uniqueness-gate core: the market's venues, named as the market's\n     places and never as our history, each read through what the cocktail\n     hour does there. All eight names are on the arch doc's vetted list.",
     "_file": "02-venues.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Questions",
    "props": {
-    "id": "CustomHtml-4",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Denver questions</h2>\n    <p class=\"note\">The general questions, what plays, how long, duo or DJ, are on the <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>, and the same duo plays <a href=\"/private-parties/denver/\">private parties across the city</a>. Stage sizes and circuits are on the <a href=\"/planners/technical/\">technical page</a>, timing against the caterer and the dinner call is on the <a href=\"/planners/run-of-show/\">run of show page</a>, and the rest of the working documents are on the <a href=\"/planners/\">planners resources page</a>.</p>\n    <dl class=\"faq-list\"><div class=\"faq-row\"><dt>What does setup look like at a downtown Denver venue?</dt><dd>It&#x27;s small and early. A duo is one van and one trip: setup runs about 60 minutes and pack-down 45, through the service entrance, with dock windows and freight elevators settled with the banquet office before the day, so no cases cross the lobby. Where ceremony and reception share a building, the duo is set up and sound-checked before guests are seated. Signet Artists books Denver wedding cocktail hours.</dd></div><div class=\"faq-row\"><dt>What does the duo need for space, power and parking?</dt><dd>A corner of about 8 by 6 feet and one dedicated 20-amp circuit, and dedicated is the word that matters: sharing with catering warmers is the most common cause of trouble. Parking is settled at contract: a hotel dock has a window, a gallery has a curb, and either way the van is gone before guests arrive.</dd></div><div class=\"faq-row\"><dt>Is there a travel charge for a Denver wedding?</dt><dd>No. Denver is our home market, so a metro date carries no travel line. Travel appears on a quote only outside the metro: Boulder and Colorado Springs are a short Front Range line, and mountain venues carry their own.</dd></div><div class=\"faq-row\"><dt>Can the duo play an outdoor cocktail hour at a Denver garden venue?</dt><dd>Yes, on a covered, level and dry performance area with power run to it, and the move-indoors time written before the day, because Denver evenings get cold fast after sunset. Garden terraces with a pavilion make this the easiest outdoor booking on the calendar.</dd></div><div class=\"faq-row\"><dt>Is a duo enough for a cocktail hour at a Denver hotel?</dt><dd>Yes, for the guest counts these buildings hold at cocktail hour. Two musicians carry a lobby lounge or a mezzanine at a level guests who have just met can talk across. The trio is the size to book when the crowd spreads across a full ballroom.</dd></div></dl>\n  </div>\n</section>",
+    "id": "Questions-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Denver questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "The general questions, what plays, how long, duo or DJ, are on the <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>, and the same duo plays <a href=\"/private-parties/denver/\">private parties across the city</a>. Stage sizes and circuits are on the <a href=\"/planners/technical/\">technical page</a>, timing against the caterer and the dinner call is on the <a href=\"/planners/run-of-show/\">run of show page</a>, and the rest of the working documents are on the <a href=\"/planners/\">planners resources page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-15",
+       "items": [
+        {
+         "q": "What does setup look like at a downtown Denver venue?",
+         "a": "It's small and early. A duo is one van and one trip: setup runs about 60 minutes and pack-down 45, through the service entrance, with dock windows and freight elevators settled with the banquet office before the day, so no cases cross the lobby. Where ceremony and reception share a building, the duo is set up and sound-checked before guests are seated. Signet Artists books Denver wedding cocktail hours."
+        },
+        {
+         "q": "What does the duo need for space, power and parking?",
+         "a": "A corner of about 8 by 6 feet and one dedicated 20-amp circuit, and dedicated is the word that matters: sharing with catering warmers is the most common cause of trouble. Parking is settled at contract: a hotel dock has a window, a gallery has a curb, and either way the van is gone before guests arrive."
+        },
+        {
+         "q": "Is there a travel charge for a Denver wedding?",
+         "a": "No. Denver is our home market, so a metro date carries no travel line. Travel appears on a quote only outside the metro: Boulder and Colorado Springs are a short Front Range line, and mountain venues carry their own."
+        },
+        {
+         "q": "Can the duo play an outdoor cocktail hour at a Denver garden venue?",
+         "a": "Yes, on a covered, level and dry performance area with power run to it, and the move-indoors time written before the day, because Denver evenings get cold fast after sunset. Garden terraces with a pavilion make this the easiest outdoor booking on the calendar."
+        },
+        {
+         "q": "Is a duo enough for a cocktail hour at a Denver hotel?",
+         "a": "Yes, for the guest counts these buildings hold at cocktail hour. Two musicians carry a lobby lounge or a mezzanine at a level guests who have just met can talk across. The trio is the size to book when the crowd spreads across a full ballroom."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
     "_notes": "City-specific FAQ from this dir's schema.json (the gate asks for at\n     least two; there are four, three of them Denver-specific). Nothing\n     follows the close token.",
     "_file": "04-faqs.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "CallToAction",
    "props": {
-    "id": "CustomHtml-5",
-    "html": "<section class=\"section section--ruled\"><div class=\"wrap\"><div class=\"close-row\"><div style=\"max-width: 32rem;\"><h2 class=\"h2\">Tell us the Denver venue and the date, and we&#x27;ll plan the cocktail hour with you.</h2><p class=\"lede\">Live music for your event, from a solo musician to a full band, with sound support that&rsquo;s the right size for the venue and a personal contact for the night.</p></div><div class=\"btn-row\"><a class=\"btn\" href=\"/contact/\">Check a Date</a></div></div></div></section>",
+    "id": "CallToAction-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-18",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the Denver venue and the date, and we'll plan the cocktail hour with you.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
     "_file": "04-faqs.html"
    }
   }

@@ -32,63 +32,292 @@
  },
  "content": [
   {
-   "type": "CustomHtml",
+   "type": "Intro",
    "props": {
-    "id": "CustomHtml-1",
-    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">Corporate retreats</p>\n      <h1 class=\"h2 display\">Beaver Creek corporate retreats, in the village or up the mountain.</h1>\n      <p class=\"lede\">Snow falling on the plaza outside, the village quiet, and inside a band playing for a group of colleagues who have stopped checking their email. A Beaver Creek retreat books a welcome night, dinner at conversation volume and a closing night with a dance floor, solo through quartet on one contract, in the village or up the mountain.</p>\n      <p class=\"prose\">Beaver Creek&rsquo;s event calendar is split in two: hotels on a terraced, pedestrian village where escalators do the climbing, and venues up the mountain that gear reaches over snow in winter. Which half your evening books into decides the setup, and we settle it with the venue before the day. Every resort town starts from the <a href=\"/corporate/retreats/\">corporate retreats page</a>, and the off-site dinner up the mountain this valley is known for is among the <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>.</p>\n      <div class=\"btn-row\">\n        <a class=\"btn\" href=\"/contact/\">Check a Date</a>\n        <a class=\"btn btn--outline\" href=\"/pricing/\">See Pricing</a>\n      </div>\n    </div>\n  </div>\n</section>",
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Corporate retreats",
+       "slab": true,
+       "title": "Beaver Creek corporate retreats, in the village or up the mountain.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Snow falling on the plaza outside, the village quiet, and inside a band playing for a group of colleagues who have stopped checking their email. A Beaver Creek retreat books a welcome night, dinner at conversation volume and a closing night with a dance floor, solo through quartet on one contract, in the village or up the mountain.",
+       "headingText": [
+        {
+         "html": "Beaver Creek’s event calendar is split in two: hotels on a terraced, pedestrian village where escalators do the climbing, and venues up the mountain that gear reaches over snow in winter. Which half your evening books into decides the setup, and we settle it with the venue before the day. Every resort town starts from the <a href=\"/corporate/retreats/\">corporate retreats page</a>, and the off-site dinner up the mountain this valley is known for is among the <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
     "_notes": "Beaver Creek retreat spoke. Argument: village venues and on-mountain\n     venues are two different load-in questions, both settled before the day.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is planning a Beaver Creek retreat, in the village or up the mountain. The minted closer ('the night the whole offsite gets remembered for') is gone; the venues and the two-halves fact stay; the load-in section is the FAQ; FAQs restating the travel and the dinner size are gone.",
     "_file": "01-intro.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Images",
    "props": {
-    "id": "CustomHtml-2",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The look</p>\n      <h2 class=\"h2\">The village evening.</h2>\n      <p class=\"lede\">An outdoor stage under cover, and a patio set at conversation volume.</p>\n    </div>\n    <div class=\"media-grid\">\n      <figure><img src=\"/img/outdoor.jpg\" alt=\"A frame tent on grass with a plywood stage deck under it.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n      <figure><img src=\"/img/acts/medina-patio.jpg\" alt=\"Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.\" loading=\"lazy\" decoding=\"async\" width=\"1600\" height=\"1200\"></figure>\n    </div>\n  </div>\n</section>",
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "The village evening.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "An outdoor stage under cover, and a patio set at conversation volume."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent on grass with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
     "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
     "_file": "01b-media.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Text",
    "props": {
-    "id": "CustomHtml-3",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The venues</p>\n      <h2 class=\"h2\">The village venues and the mountain venues.</h2>\n    </div>\n    <p class=\"prose\">The village half is the hotel calendar. The Park Hyatt Beaver Creek sits on the plaza at the center of the village, The Pines Lodge holds the smaller, higher end of it a short climb above the core, and The Ritz-Carlton Bachelor Gulch runs the same program from its own enclave, with its own approach road and its own dock. Ballroom awards nights and twenty-seat dinners both happen here.</p>\n    <p class=\"prose\">The mountain half is what makes this market different from the other resort towns. Beano's Cabin sits on the mountain itself and Saddle Ridge at the upper edge of the village, and an evening at either one is the night the group plans the whole trip around: dinner first, then live music in a venue the guests themselves had to ride to.</p>\n    <p class=\"prose\">Where one act should carry the whole evening, Tejas Singh can start as a duo at dinner and become the quartet on the dance floor, on one contract for the whole night. Where the dinner is the whole event, a jazz duo holds it with conversation sitting comfortably on top.</p>\n  </div>\n</section>",
+    "id": "Text-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The venues",
+       "title": "The village venues and the mountain venues.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "The village half is the hotel calendar. The Park Hyatt Beaver Creek sits on the plaza at the center of the village, The Pines Lodge holds the smaller, higher end of it a short climb above the core, and The Ritz-Carlton Bachelor Gulch runs the same program from its own enclave, with its own approach road and its own dock. Ballroom awards nights and twenty-seat dinners both happen here.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "The mountain half is what makes this market different from the other resort towns. Beano's Cabin sits on the mountain itself and Saddle Ridge at the upper edge of the village, and an evening at either one is the night the group plans the whole trip around: dinner first, then live music in a venue the guests themselves had to ride to.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Where one act should carry the whole evening, Tejas Singh can start as a duo at dinner and become the quartet on the dance floor, on one contract for the whole night. Where the dinner is the whole event, a jazz duo holds it with conversation sitting comfortably on top.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_notes": "Venues as the market's places. All five are on the vetted Beaver Creek\n     list. Saddle Ridge is placed at the upper edge of the village, flagged\n     for Daniel in the handback.",
     "_file": "02-venues.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Text",
    "props": {
-    "id": "CustomHtml-4",
-    "html": "<section class=\"section section--ruled section--sunk\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">The quote</p>\n      <h2 class=\"h2\">What a Beaver Creek date adds.</h2>\n      <p class=\"lede\">The mountain drive is one, and the other is which half of the resort your evening books into.</p>\n    </div>\n\n    <p class=\"prose\">Travel is its own line on the quote, covering the I-70 drive from Denver and the hours around it, and it&rsquo;s the same line whether the evening is a welcome night or a closing party.</p>\n\n    <p class=\"prose\">The second variable is the venue. A plaza hotel with an escalator to the ballroom and a venue up the mountain that gear reaches over snow are different days of work, and we settle which one it is with the venue before the date.</p>\n\n    <p class=\"prose\">A holiday weekend prices above a standard date across this market, and the strong dates at Beaver Creek are decided early. The wider Colorado market is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>. Tell us the date and which venue your evening books into, and we&rsquo;ll come back with a recommendation and a price.</p>\n  </div>\n</section>",
+    "id": "Text-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "The quote",
+       "title": "What a Beaver Creek date adds.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The mountain drive is one, and the other is which half of the resort your evening books into."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Travel is its own line on the quote, covering the I-70 drive from Denver and the hours around it, and it’s the same line whether the evening is a welcome night or a closing party.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The second variable is the venue. A plaza hotel with an escalator to the ballroom and a venue up the mountain that gear reaches over snow are different days of work, and we settle which one it is with the venue before the date.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "A holiday weekend prices above a standard date across this market, and the strong dates at Beaver Creek are decided early. The wider Colorado market is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>. Tell us the date and which venue your evening books into, and we’ll come back with a recommendation and a price.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_notes": "Was the resort rate module. Since 2026-09-04 it is what a Beaver Creek\n     date adds, in words, and the village-versus-mountain split is the part\n     that actually moves the day here.",
     "_file": "04-rates.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Text",
    "props": {
-    "id": "CustomHtml-5",
-    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <h2 class=\"h3\">Private celebrations book the same way.</h2>\n    <p class=\"prose\">Milestone birthdays, anniversaries and family gatherings use the same venues and the same single contract. The wider set of occasions is on the <a href=\"/private-parties/\">private parties page</a>.</p>\n    <p class=\"prose\">Groups splitting the trip between resorts can book one plan that covers both: <a href=\"/corporate/retreats/vail/\">Vail</a>, the next resort along I-70, runs on docks and freight elevators rather than snow routes, and its page covers that.</p>\n  </div>\n</section>",
+    "id": "Text-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Private celebrations book the same way.",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Milestone birthdays, anniversaries and family gatherings use the same venues and the same single contract. The wider set of occasions is on the <a href=\"/private-parties/\">private parties page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Groups splitting the trip between resorts can book one plan that covers both: <a href=\"/corporate/retreats/vail/\">Vail</a>, the next resort along I-70, runs on docks and freight elevators rather than snow routes, and its page covers that.",
+       "cls": "prose"
+      }
+     }
+    ],
     "_notes": "Private-event angle, plus the sibling and hub links.",
     "_file": "05-private.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "Questions",
    "props": {
-    "id": "CustomHtml-6",
-    "html": "<section class=\"section section--ruled\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow\">Questions</p>\n      <h2 class=\"h2\">Beaver Creek booking questions.</h2>\n    </div>\n    <p class=\"note\">Stage sizes and power are <a href=\"/planners/technical/\">set out by size</a>, and every mountain town&rsquo;s cap, where one is published, is on the <a href=\"/planners/mountain/\">mountain corridor page</a>.</p>\n    <dl class=\"faq-list\"><div class=\"faq-row\"><dt>How does gear reach Beano&#x27;s Cabin or another on-mountain venue?</dt><dd>The way the venue runs its access: by sleigh, snowcat or gondola in winter, by vehicle in summer. We settle the route, the schedule and where cases wait through dinner with the venue in writing before the day, because those answers decide what gear we bring and when it travels. Signet Artists books Beaver Creek retreat evenings from Denver.</dd></div><div class=\"faq-row\"><dt>How does setup work in the village core?</dt><dd>By dock and service route, on a window the hotel schedules; the escalators are for guests. We measure the distance from the dock to the floor and plan for it. Setup runs 45 to 90 minutes depending on the size of the band, which needs one or two dedicated 20-amp circuits and from about 6 by 4 feet for a solo to 14 by 10 for a quartet. The village sits near 8,100 feet, so we plan a longer sound check, with a retune between sets.</dd></div><div class=\"faq-row\"><dt>Is there a published noise cap in Beaver Creek?</dt><dd>We haven&#x27;t confirmed one, and our mountain corridor page says so. Each venue sets its own event rules, so send us the venue name and we&#x27;ll get the number in writing before the contract. Dinner plays at the level of the conversation either way.</dd></div></dl>\n  </div>\n</section>",
+    "id": "Questions-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "Questions",
+       "title": "Beaver Creek booking questions.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Stage sizes and power are <a href=\"/planners/technical/\">set out by size</a>, and every mountain town’s cap, where one is published, is on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "How does gear reach Beano's Cabin or another on-mountain venue?",
+         "a": "The way the venue runs its access: by sleigh, snowcat or gondola in winter, by vehicle in summer. We settle the route, the schedule and where cases wait through dinner with the venue in writing before the day, because those answers decide what gear we bring and when it travels. Signet Artists books Beaver Creek retreat evenings from Denver."
+        },
+        {
+         "q": "How does setup work in the village core?",
+         "a": "By dock and service route, on a window the hotel schedules; the escalators are for guests. We measure the distance from the dock to the floor and plan for it. Setup runs 45 to 90 minutes depending on the size of the band, which needs one or two dedicated 20-amp circuits and from about 6 by 4 feet for a solo to 14 by 10 for a quartet. The village sits near 8,100 feet, so we plan a longer sound check, with a retune between sets."
+        },
+        {
+         "q": "Is there a published noise cap in Beaver Creek?",
+         "a": "We haven't confirmed one, and our mountain corridor page says so. Each venue sets its own event rules, so send us the venue name and we'll get the number in writing before the contract. Dinner plays at the level of the conversation either way."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
     "_file": "06-faq.html"
    }
   },
   {
-   "type": "CustomHtml",
+   "type": "CallToAction",
    "props": {
-    "id": "CustomHtml-7",
-    "html": "<section class=\"section section--ruled\"><div class=\"wrap\"><div class=\"close-row\"><div style=\"max-width: 32rem;\"><h2 class=\"h2\">Send us the Beaver Creek dates and we&#x27;ll sort the load-in with the venue.</h2><p class=\"lede\">Live music for your event, from a solo musician to a full band, with sound support that&rsquo;s the right size for the venue and a personal contact for the night.</p></div><div class=\"btn-row\"><a class=\"btn\" href=\"/contact/\">Check a Date</a></div></div></div></section>",
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the Beaver Creek dates and we'll sort the load-in with the venue.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
     "_file": "07-close.html"
    }
   }

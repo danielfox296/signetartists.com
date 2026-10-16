@@ -138,3 +138,102 @@ export const watchHeadExtra = (m, v) =>
   v.id
     ? `<meta property="og:video" content="https://www.youtube.com/embed/${esc(v.id)}">`
     : `<meta property="og:video" content="${m.SITE_URL}/${esc(v.file)}"><meta property="og:video:type" content="video/mp4">`;
+
+// The blog index list: every published post, newest first, the category as
+// the eyebrow. Written for the blog index page, so links are its own.
+export const BlogPosts = {
+  label: "Blog list",
+  fields: {},
+  render: function BlogPostsRender() {
+    const s = useSite();
+    const m = s.model;
+    const posts = m.published.map((d) => d.root.props);
+    if (!posts.length) {
+      return (
+        <>
+          <p className="prose">The first entry is on its way.</p>
+          <p className="note">{"There is an "}<a href="../rss.xml">RSS feed</a>{" if you would rather subscribe than check back."}</p>
+        </>
+      );
+    }
+    const sep = <span className="blog-row-sep" aria-hidden="true">{"·"}</span>;
+    const thumb = (src) => {
+      const rel = src.replace(/^\//, "");
+      if (/^(https?:)?\/\//.test(src)) return src;
+      const t = `img/thumbs/${rel.split("/").pop()}`;
+      return m.c.exists(t) ? t : rel;
+    };
+    return (
+      <div className="blog-list">
+        {posts.map((p, i) => (
+          <a className="blog-row" href={`${p.slug}/`} key={p.slug}>
+            {p.hero && p.hero.src ? <Pic class="blog-row-thumb" src={s.prefix + thumb(p.hero.src)} alt="" width="640" height="360" loading={i < 2 ? "eager" : "lazy"} decoding="async" /> : null}
+            <div className="blog-row-text">
+              <p className="blog-row-meta">
+                <span className="blog-row-eyebrow">{p.eyebrow || ""}</span>
+                {sep}
+                <time dateTime={p.date}>{m.dateDisplay(p.date)}</time>
+                {sep}
+                <span>{`${p.readingTime} min read`}</span>
+              </p>
+              <h2 className="blog-row-title">{p.title}</h2>
+              <p className="blog-row-dek">{p.dek || ""}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    );
+  },
+};
+
+// The HTML sitemap: every indexed page by tree, in the header's order,
+// then the posts. Built from the same list as sitemap.xml.
+export const PageIndex = {
+  label: "All pages",
+  fields: {},
+  render: function PageIndexRender({ top, groups }) {
+    const s = useSite();
+    const m = s.model;
+    const live = (s.built || []).filter((b) => !(b.robots || "").startsWith("noindex") && b.output !== "404.html");
+    const byOutput = Object.fromEntries(live.map((b) => [b.output, b]));
+    const used = new Set();
+    const rows = [];
+    const label = (b) => b.indexLabel || b.title.split("|")[0].split(":")[0].trim();
+    const emit = (heading, group) => {
+      group.forEach((b) => used.add(b.output));
+      rows.push([heading, group.map((b) => ["/" + b.output.replace("index.html", ""), label(b)])]);
+    };
+    const tops = (top || []).filter((o) => byOutput[o]).map((o) => byOutput[o]);
+    if (tops.length) emit("The site", tops);
+    const depth = (o) => (o.match(/\//g) || []).length;
+    for (const g of groups || []) {
+      if (g.lanes) {
+        for (const [heading, acts] of [["Configurations", m.FORMAT_ACTS], ["Named acts", m.NAMED_ACTS]]) {
+          const group = acts.filter((a) => a.page && byOutput[a.page + "index.html"] && !used.has(a.page + "index.html")).map((a) => byOutput[a.page + "index.html"]);
+          if (group.length) emit(heading, group);
+        }
+      }
+      const group = live.filter((b) => b.output.startsWith(g.prefix) && !used.has(b.output)).sort((a, b) => depth(a.output) - depth(b.output) || (a.output < b.output ? -1 : a.output > b.output ? 1 : 0));
+      if (group.length) emit(g.heading, group);
+    }
+    const rest = live.filter((b) => !used.has(b.output)).sort((a, b) => (a.output < b.output ? -1 : a.output > b.output ? 1 : 0));
+    if (rest.length) emit("Elsewhere", rest);
+    const posts = m.indexedPosts.map((d) => d.root.props);
+    if (posts.length) rows.push(["Notes", posts.map((p) => [`/blog/${p.slug}/`, p.title])]);
+    const href = (u) => s.prefix + u.slice(1);
+    return (
+      <dl className="def-list def-list--stack">
+        {rows.map(([heading, links], i) => (
+          <div className="def-row" key={i}>
+            <dt>{heading}</dt>
+            <dd>
+              <ul className="index-list">
+                {links.map(([u, t], j) => <li key={j}><a href={href(u)}>{t}</a></li>)}
+              </ul>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    );
+  },
+};

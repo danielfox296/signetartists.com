@@ -1,6 +1,6 @@
 /* Pieces every section shares: the site context, rich text, the section
    frame, the heading block and the run of paragraphs around a section's body. */
-import { createContext, useContext } from "react";
+import { createContext, Fragment, useContext } from "react";
 import { css, cx, relHtml, relUrl } from "../lib/util.js";
 
 // What a component needs to know about the page it is on: the link prefix
@@ -106,12 +106,16 @@ export function Img({ im }) {
 export function Buttons({ items, cls }) {
   const href = useHref();
   if (items == null) return null;
+  // Buttons sit on their own lines in the markup, so a space separates them.
   return (
     <div className={cx("btn-row", cls)}>
       {items.map((b, i) => (
-        <a key={i} className={b.cls || "btn"} href={href(b.href)} target={b.target || undefined} rel={b.rel || undefined}>
-          {b.label}
-        </a>
+        <Fragment key={i}>
+          {i ? " " : null}
+          <a className={b.cls || "btn"} href={href(b.href)} target={b.target || undefined} rel={b.rel || undefined}>
+            {b.label}
+          </a>
+        </Fragment>
       ))}
     </div>
   );

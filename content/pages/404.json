@@ -10,10 +10,79 @@
  },
  "content": [
   {
-   "type": "CustomHtml",
+   "type": "Specs",
    "props": {
-    "id": "CustomHtml-1",
-    "html": "<section class=\"section section--top\">\n  <div class=\"wrap\">\n    <div class=\"heading\">\n      <p class=\"eyebrow eyebrow--slab\">404</p>\n      \n      <h1 class=\"h2 smile\">This page ends earlier than our sets do.</h1>\n      <p class=\"lede\">The link may be old, or the address mistyped. Everything on the site is one click away below.</p>\n    </div>\n\n    \n    <ul class=\"spec-list\">\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/corporate/\">Corporate</a>: company parties, galas, client dinners and retreats</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/weddings/\">Weddings</a>: the ceremony, the cocktail hour and the floor</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/private-parties/\">Private Parties</a>: at home, in a yard, or in a space you booked</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/daytime/\">Daytime</a>: senior living, memorials, brunch and community programs</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/music/\">Artist Roster</a>: the acts and every configuration</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/repertoire/\">Songs</a>: the whole song book</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/pricing/\">Pricing</a>: what live music costs in this market</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/planners/\">For Planners</a>: how we work with professionals</li>\n      <li><span class=\"dash\" aria-hidden=\"true\"></span><a href=\"/sitemap/\">All pages</a>: every page on the site, in one list</li>\n    </ul>\n\n    <div class=\"btn-row\">\n      <a class=\"btn\" href=\"/\">Back to the start</a>\n      <a class=\"btn btn--outline\" href=\"/contact/\">Check a Date</a>\n    </div>\n  </div>\n</section>",
+    "id": "Specs-5",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "404",
+       "slab": true,
+       "title": "This page ends earlier than our sets do.",
+       "titleTag": "h1",
+       "titleClass": "h2 smile",
+       "lede": "The link may be old, or the address mistyped. Everything on the site is one click away below."
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-2",
+       "source": "own",
+       "cols": false,
+       "items": [
+        {
+         "html": "<a href=\"/corporate/\">Corporate</a>: company parties, galas, client dinners and retreats"
+        },
+        {
+         "html": "<a href=\"/weddings/\">Weddings</a>: the ceremony, the cocktail hour and the floor"
+        },
+        {
+         "html": "<a href=\"/private-parties/\">Private Parties</a>: at home, in a yard, or in a space you booked"
+        },
+        {
+         "html": "<a href=\"/daytime/\">Daytime</a>: senior living, memorials, brunch and community programs"
+        },
+        {
+         "html": "<a href=\"/music/\">Artist Roster</a>: the acts and every configuration"
+        },
+        {
+         "html": "<a href=\"/repertoire/\">Songs</a>: the whole song book"
+        },
+        {
+         "html": "<a href=\"/pricing/\">Pricing</a>: what live music costs in this market"
+        },
+        {
+         "html": "<a href=\"/planners/\">For Planners</a>: how we work with professionals"
+        },
+        {
+         "html": "<a href=\"/sitemap/\">All pages</a>: every page on the site, in one list"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-3",
+       "buttons": [
+        {
+         "label": "Back to the start",
+         "href": "/",
+         "cls": "btn"
+        },
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
     "_notes": "The page's playful line is the headline itself, so the .smile\n           italic rides the h2 size (§6.4).\n\nRebuilt 2026-09-22. It had offered five links, two of them under names\n         the site stopped using: \"The Music\" (the roster is Artist Roster in\n         the nav row and the footer) and \"Corporate &amp; Galas\" (retired in the\n         17 Aug audit, when galas became a section of the corporate hub rather\n         than a co-headline). It also offered no way into Weddings, Private\n         Parties or Daytime — three of the four occasion trees. It now carries\n         what the footer carries, in the same words, plus the full index.\n         Labels match the nav row character for character; scripts/nav_lint.py\n         reads this list along with the header and the footer.",
     "_file": "01-404.html"
    }

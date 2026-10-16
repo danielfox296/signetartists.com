@@ -59,8 +59,17 @@ export function makeSchema(m) {
 
   // The questions a page shows and offers to search: its Questions sections
   // marked for it, leaving out any answer still marked open.
-  const pageFaqs = (doc) =>
-    doc.content.filter((c) => c.type === "Questions" && c.props.schema).flatMap((c) => (c.props.items || []).filter((f) => !f.open));
+  const pageFaqs = (doc) => {
+    const out = [];
+    const walk = (items) => {
+      for (const c of items || []) {
+        if (c.type === "Faq" && c.props.schema) out.push(...(c.props.items || []).filter((f) => !f.open));
+        for (const v of Object.values(c.props || {})) if (Array.isArray(v) && v.length && v[0] && v[0].type && v[0].props) walk(v);
+      }
+    };
+    walk(doc.content);
+    return out;
+  };
 
   const ogFor = (p) => {
     const og = p.ogImage || "";

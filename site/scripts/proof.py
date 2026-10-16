@@ -24,7 +24,6 @@ import sys
 import tempfile
 import time
 
-from lxml import html as LH
 
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -71,7 +70,7 @@ def new_build(work):
 
 
 def page_tokens(path):
-    doc = LH.fromstring(path.read_bytes())
+    doc = domdiff.parse(path.read_text(encoding="utf-8")).getroot()
     head = doc.find("head")
     body = doc.find("body")
     return {
