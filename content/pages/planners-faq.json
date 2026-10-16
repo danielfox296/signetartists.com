@@ -1,0 +1,276 @@
+{
+ "root": {
+  "props": {
+   "path": "/planners/faq/",
+   "title": "Questions",
+   "description": "The full question list for a live band booking: personnel and subs, deposits and payment, sets and breaks, microphones for speeches, stage and power, decibel caps, song choice.",
+   "nav": "planners",
+   "breadcrumb": "Questions",
+   "schemaKind": "plannerfaq"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Questions",
+       "slab": true,
+       "title": "The full question list.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The questions are grouped by the part of the job each one belongs to. If the answer you need isn't here, we're glad to be asked."
+      }
+     }
+    ],
+    "_notes": "The deep FAQ. The pricing page keeps its own short set (site.json \"faqs\",\n     six questions, all about money); this is everything else, from\n     site.json \"plannerFaqs\". Entries flagged \"open\" render with the dotted\n     underline, so an undecided policy is visible rather than quietly shipped\n     as though it were settled.",
+    "_file": "01-faq.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-15",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "The band and the people",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-5",
+       "items": [
+        {
+         "q": "Do you have regular personnel, or is the band filled with whoever is available?",
+         "a": "The contract names a configuration: the size, the instrumentation and the repertoire, and that's exactly what performs on your date. Behind it, every act on the roster is an existing group with its own repertoire and regular personnel, and a named act is published under the name of the person who fronts it. Any substitution, front person included, is named to you in advance along with the reason."
+        },
+        {
+         "q": "What happens if a musician cannot make the date?",
+         "a": "Any substitution is named to you in advance. Every roster in this business uses subs from time to time, and you get the name and the reason as soon as we know."
+        },
+        {
+         "q": "Who do we deal with on the night?",
+         "a": "One personal contact. You get their name and mobile number before the event, and they're reachable from load-in to load-out."
+        },
+        {
+         "q": "Can we see the band play before we book?",
+         "a": "These are private-event groups, so there's usually no public date to attend and we don't stage showcases. Video on each act's page is the best way to hear them before you book."
+        },
+        {
+         "q": "What do the musicians wear?",
+         "a": "Black tie, business formal or all black, whichever your event calls for. Tell us the dress code you've set for guests and we'll sit one notch inside it. If you need something specific, put it in the contract and that's what the musicians wear."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-6",
+       "html": "Booking and paperwork",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-7",
+       "items": [
+        {
+         "q": "What holds a date?",
+         "a": "A signed contract and a deposit, both at booking. Until both are in, the date stays open. Approved corporate accounts can hold the date with a signature alone and be invoiced after the event."
+        },
+        {
+         "q": "When is the balance due, and how do we pay?",
+         "a": "The balance is due 14 days before the event. ACH, a check made out to the name on the contract, or card through Stripe, all at no fee. Every method costs you the same, so pick whichever your finance process prefers. Corporate clients can be approved for net-30 instead, invoiced at the event and due 30 days after it, with a purchase order number on the invoice if your finance team uses one."
+        },
+        {
+         "q": "What is the cancellation policy?",
+         "a": "Postponing is almost always cheaper than cancelling and we will say so at the time. One move to a new date inside twelve months is free, subject to availability, and everything paid transfers. If we cannot make any date that works, you get everything back. A straight cancellation more than 90 days out costs the deposit and nothing further. At 90 days or fewer the fee is due, less any travel and lodging we have not already spent. If we ever cancel on you, you get everything back and we help you find the replacement."
+        },
+        {
+         "q": "Do you carry liability insurance?",
+         "a": "Yes. A certificate naming your venue as additional insured comes with the contract, along with a W-9 and one itemized invoice."
+        },
+        {
+         "q": "Can you work with our procurement or AP process?",
+         "a": "Yes. We can be set up as a vendor, quote against a purchase order, and invoice in whatever form your finance team needs. Ask early; vendor onboarding is usually the slowest thing on a corporate booking."
+        },
+        {
+         "q": "How far in advance should we book?",
+         "a": "Corporate holiday parties are typically decided August through October for November and December dates, and New Year's Eve books earliest of all. Weddings and galas run longer: ten to twelve months, and twelve to eighteen for a mountain venue or a fall Saturday."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-8",
+       "html": "The night itself",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-9",
+       "items": [
+        {
+         "q": "How long are the sets, and how long are the breaks?",
+         "a": "Sets run 45 to 60 minutes with 15 to 20 minutes between them, set against your run of show rather than a fixed clock. Audio continues through every break at every size, so the night never goes silent."
+        },
+        {
+         "q": "Can we use your microphones for speeches?",
+         "a": "Yes. An announcement microphone is ready at every size from the end of sound check. Hand it to whoever is speaking."
+        },
+        {
+         "q": "Will you learn a song we choose?",
+         "a": "Yes. Send it at least four weeks out, with the version you mean, since there are usually several and they aren't the same arrangement. The first one is included in every booking, and each one after that is its own line on the quote."
+        },
+        {
+         "q": "Do you make announcements or act as MC?",
+         "a": "The bandleader will make short announcements from the stage: dinner is served, the dance floor is open, please welcome your speaker. We don't run the evening as an MC. If your program needs a host, that's a separate hire and we'll work to their cues."
+        },
+        {
+         "q": "Can we add time on the night?",
+         "a": "Yes. Added time costs what the earlier hours did, in 30-minute increments, agreed on the night with whoever holds the budget."
+        },
+        {
+         "q": "How loud is it, really?",
+         "a": "Dinner and cocktails run 60 to 65 dBA at the nearest table, which is a volume you can talk across without raising your voice. Dancing runs 88 to 95 dBA on the floor. If your venue enforces a cap, tell us the number at contract and we'll build the night under it."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-10",
+       "html": "The venue and the gear",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-11",
+       "items": [
+        {
+         "q": "Do you provide sound and lighting?",
+         "a": "Sound support that's the right size for the venue is included at every size. Stage lighting and a dedicated front-of-house engineer are optional add-ons, quoted as their own line. We don't light the space, the tables or the dance floor as a design element. That's your lighting vendor's work, and we'll coordinate with them."
+        },
+        {
+         "q": "The venue has its own AV company. Whose sound system runs the night?",
+         "a": "Ours, unless you or the venue have hired a sound contractor, in which case sound support is their domain: we advance the plan with them before the night and play through what they run. Either way it's settled at contract rather than at load-in."
+        },
+        {
+         "q": "Do you need a stage, and do you provide one?",
+         "a": "We don't require one and we don't supply one. A band plays fine on a floor. If you want a riser, the venue or your production company provides it, and the footprints we need at each size are published on the technical page."
+        },
+        {
+         "q": "What power do you need?",
+         "a": "Dedicated 20-amp circuits within reach of the stage, one or two of them depending on the size of the band. The requirement most often missed is that they be dedicated: sharing a circuit with catering warmers or a lighting truss is the single most common cause of a problem at load-in. Exact counts are on the technical page."
+        },
+        {
+         "q": "Can you play outdoors?",
+         "a": "Yes, on a covered, level and dry performance area, with power run to it and a plan for the weather written before the day. Colorado evenings get cold fast, and instruments and electronics both stop behaving in the cold and the wet. Cover is not optional and neither is a defined move-indoors call time."
+        },
+        {
+         "q": "The venue has a curfew and a decibel limit. Is that a problem?",
+         "a": "No. Mountain and residential venues run on their own rules and we honor them as written. Tell us the cap and the curfew when you book and both go into the plan, including how the last twenty minutes are shaped so the night ends on a high note rather than a cut-off."
+        },
+        {
+         "q": "Do the musicians need a green room or meals?",
+         "a": "Neither is a requirement. A green room, where one exists, does more for your event than for us: it keeps cases and spare gear out of your guests' sightline and gives the band somewhere to change that isn't a corridor. We don't ask for meals. If meals are being served, the band would like them, and a vendor meal is exactly right."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-12",
+       "html": "The music",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-13",
+       "items": [
+        {
+         "q": "How much say do we get over the songs?",
+         "a": "As much or as little as you want. You can build the list yourself, hand us a do-not-play list and leave the rest, or describe the crowd and let the band read it song by song. Most clients do the middle one, and the do-not-play list is the part worth spending time on."
+        },
+        {
+         "q": "Do you take requests during the event?",
+         "a": "From you, yes, and from guests where it fits. The bandleader's job is reading the dance floor, so a request that would empty it gets a straight answer and an alternative rather than a yes and a bad twenty minutes."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "01-faq.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-16",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask us the one that's missing.",
+       "lede": "Send it along with your date and we'll come back with the answer."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Pricing questions are answered on the <a href=\"/pricing/\">pricing page</a>. Venue and gear questions are answered in more detail on <a href=\"../technical/\">what we need from your venue</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "01-faq.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "live-band-karaoke",
+ "name": "Live Band Karaoke",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/live-band-karaoke/",
+ "style": "Party covers, the 80s and 90s onward",
+ "spec": "Voice and guitar, keys, bass, drums, and a host working the mic",
+ "material": "Covers",
+ "bucket_tags": [
+  "party"
+ ],
+ "config_tags": [
+  "quartet",
+  "quintet"
+ ],
+ "genre_tags": [
+  "pop-covers",
+  "classic-rock"
+ ],
+ "vocals": "sung",
+ "from": "quartet",
+ "img": "live-band-karaoke-card.jpg",
+ "alt": "A microphone on a stand beside a lyric screen with one line lit in brass, drawn flat on a dark field.",
+ "video": null,
+ "_note": "ADDED 2026-09-14 from the corporate demand report. Zero Colorado corporate vendors sell live band karaoke, no Denver-metro act exists on The Bash or GigSalad, and 'live karaoke denver' autocompletes. Daniel folded the 80s and 90s cover-band ideas into this act the same day: it plays as a party band on its own and hands the mic over. Spec'd, no names.",
+ "blurb": "A party band that plays the 80s and 90s hits on its own, then hands the mic to anyone in the crowd who wants a song, with the words on a screen and the band following whoever is singing.",
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "_img_note": "2026-09-23: its own drawn tile from scripts/format_art.py, replacing the shared headliners.jpg. The page hero poster and og_image follow it."
+}

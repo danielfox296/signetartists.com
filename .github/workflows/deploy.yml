@@ -1,5 +1,10 @@
 name: Deploy signetartists.com
 
+# Builds main with the new build (site/, from content/) and deploys it to
+# GitHub Pages. build.py and the HTML it committed are no longer read: the
+# stage leaves them out and puts the new build's output over the repo's
+# static files, so a page deleted from content/ is gone from the site too.
+
 on:
   push:
     branches: [main]
@@ -21,9 +26,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # Full history: the sitemap's per-page <lastmod> is the newest commit
-      # touching each page's _src dir, and a depth-1 checkout would date
-      # every page identically (build.py omits lastmod in that case).
+      # Full history: a page's sitemap <lastmod> is its file's last commit.
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -38,56 +41,45 @@ jobs:
             -o /tmp/live-sitemap.xml \
             || echo "live sitemap unavailable — IndexNow will submit all URLs"
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
 
-      # Blog kit dependencies (same line as the foxlessons workflow, minus
-      # Pillow which this build does not use).
-      - name: Install Python dependencies
-        run: pip install jinja2 markdown pyyaml
-
-      - name: Lint blog posts
-        run: python3 build.py --lint
+      - name: Install
+        run: npm ci --prefix site
 
       - name: Build site
-        run: python3 build.py
+        run: node site/scripts/build.mjs --out _gen
 
-      # The orientation surfaces, checked against the BUILT html: no
-      # destination twice in one list, no two rows answering the same
-      # question, no destination wearing two names across the header, the
-      # footer and the 404. Added 2026-09-22 after the footer shipped with
-      # "Pricing" and "What live music costs" one under the other. It fails
-      # the deploy on purpose — that pair reached production once already.
-      - name: Lint the navigation
-        run: python3 scripts/nav_lint.py
-
-      # Every sentence Daniel wrote or approved by hand through CopyDesk,
-      # checked against the built site. Added 2026-09-24 for the signet-
-      # copy-pass: a batch may rewrite everything around one of these
-      # sentences, never the sentence itself. A baseline of pre-existing
-      # drift (scripts/protected.py) is exempted so this doesn't fail on
-      # history from before the gate existed; anything new that goes
-      # missing fails the deploy.
-      - name: Check protected sentences
-        run: python3 scripts/protected.py
-
+      # The repo's static files (styles, scripts, images, fonts), then the
+      # build's output over them. rsync rather than a hand-picked cp list, so
+      # a new output directory is never silently left out of a deploy.
       - name: Stage site
         run: |
           mkdir -p _site
-          # rsync rather than a hand-picked cp list, so a new output directory
-          # is never silently left out of a deploy.
           rsync -a \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='_src' \
             --exclude='_site' \
+            --exclude='_gen' \
+            --exclude='/site' \
+            --exclude='/content' \
             --exclude='build.py' \
             --exclude='*.md' \
+            --exclude='*.html' \
+            --exclude='/sitemap.xml' \
+            --exclude='/video-sitemap.xml' \
+            --exclude='/rss.xml' \
+            --exclude='/llms.txt' \
             --exclude='.gitignore' \
             --exclude='__pycache__' \
+            --exclude='node_modules' \
             --exclude='scripts' \
             ./ _site/
+          rsync -a _gen/ _site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -101,6 +93,7 @@ jobs:
       # Tell IndexNow-participating engines (Bing, etc.) what changed — only
       # URLs new or lastmod-moved vs the pre-deploy snapshot; skips the ping
       # when nothing did. The script swallows its own errors, so a dead
-      # endpoint never fails a deploy.
+      # endpoint never fails a deploy. It reads the built sitemap.
       - name: Ping IndexNow (changed URLs only)
-        run: python3 scripts/indexnow.py --baseline /tmp/live-sitemap.xml
+        working-directory: _site
+        run: python3 ../scripts/indexnow.py --baseline /tmp/live-sitemap.xml

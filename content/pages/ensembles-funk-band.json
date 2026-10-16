@@ -1,0 +1,311 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/funk-band/",
+   "title": "Funk band for hire in Denver, for parties and after-parties | Signet Artists",
+   "description": "An instrumental funk and soul band for Denver parties, company after-parties and patios: guitar, bass and drums, or a quartet with a horn or keys.",
+   "titleExact": true,
+   "ogImage": "img/funk-band-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Funk band",
+   "schema": {
+    "service": {
+     "name": "Funk band",
+     "serviceType": "Instrumental funk and soul band for parties, after-parties and corporate events",
+     "description": "An instrumental funk and soul band, guitar, bass and drums as a trio or a quartet with a horn or keys, for private parties, company after-parties, summer picnics and retreat evenings across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "funk-trio"
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-23 with the roster rebuild, from the funk-trio entry in acts.json (id unchanged, name now Funk Band). Evidence: 'funk band denver', 'funk music denver' and 'funk band for hire' autocomplete on 2026-09-23, which is the demand the skill asks for before a spec'd listing earns a page. The instrumental partner of the soul and R&B band: same songwriters, no singer. Spec'd, no names; the two acts behind it are availability depth in acts.json.",
+    "reader": "Whoever wants the floor full after dinner without waiting for a singer: a milestone party, a company after-party, a summer picnic, the last night of a retreat."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Instrumental funk and soul",
+       "slab": true,
+       "title": "A funk band for parties, after-parties and patios.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The drums and the bass lock into a Meters groove, the guitar comes in over the top, and the tables nearest the floor empty first. This is an instrumental funk band, so one song runs straight into the next and the floor stays full for as long as you want it.",
+       "headingText": [
+        {
+         "html": "It books for a milestone birthday at a club or at home, the hour after a company dinner, a summer picnic on a lawn, and the last night of a retreat."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=funk-trio",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/funk-band-card.jpg",
+        "alt": "A row of level meters lit up in mustard and cream on a teal field, drawn flat, with the words funk band above them.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd. The h1 and lede carry the buyer's words. No player is\n     named anywhere on this page. The tile in the hero is the act's own drawn\n     artwork (scripts/format_art.py), not a placeholder: a spec'd format has no\n     face to photograph, so the picture is the thing it sells.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the floor full after dinner. Opener is the groove that empties the tables; the mechanism (instrumental, three or four musicians) follows. Footprints, power, dBA, outdoors and added time moved to the FAQ; the Booking it section is gone (the sitewide close already asks for the date), and its pairing links moved into the sizes note.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set",
+       "title": "James Brown to Prince, played as instrumentals.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "James Brown, the Meters, Stevie Wonder, Herbie Hancock, Sly and the Family Stone, Prince, Earth, Wind &amp; Fire and the funk side of Motown. Your guests know these records by the bass line and the horn parts, and that’s what the band plays."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "While people eat, the band plays the slower, warmer end of the book, and the tempos come up once the floor opens. When you want the same songwriters sung, the <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> is this band with a singer out front. The rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "A trio, or a quartet with a horn or keys.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The trio",
+         "text": "Guitar, bass and drums. It’s the size for a floor that sits close to the tables: a club dining space, a restaurant buyout, a backyard with a patio."
+        },
+        {
+         "term": "The quartet",
+         "text": "The trio plus a horn or keys, for a ballroom or a crowd past two hundred, where three musicians start to sound thin across a wide floor. A horn plays the lines the records gave it, and keys fill in under the guitar solos."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> or a <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> can play the drinks hour before the band on the same contract, and the <a href=\"/ensembles/dj/\">DJ</a> can keep the party going afterward through the same sound system.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Who books a funk band.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays and private parties</a>",
+         "text": "A fortieth or a fiftieth at a club, a restaurant or the house. The trio fills a floor without a stage, which is why it’s the size most of these parties book."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">Company after-parties</a>",
+         "text": "The hour after a company dinner or a conference program, played on the sound system that’s already set up for the evening. It books like the rest of a <a href=\"/corporate/\">company event</a>, on one contract with the paperwork your office needs."
+        },
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Summer picnics and patios</a>",
+         "text": "A lawn or a rooftop in July. Instrumental funk works from anywhere on the lawn, so people can dance near the band or keep eating at the far tables."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">The last night of a retreat</a>",
+         "text": "The one night the whole company is in one place with the agenda finished, at a mountain venue or back in Denver."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Funk band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "What is the funk band?",
+         "a": "An instrumental funk and soul band booked through Signet Artists in Denver: guitar, bass and drums as a trio, or a quartet with a horn or keys, playing James Brown, the Meters, Stevie Wonder, Prince and Earth, Wind &amp; Fire for parties, company after-parties and summer events."
+        },
+        {
+         "q": "Is there a singer?",
+         "a": "No, it's an instrumental band, so the songs can run into each other for as long as the floor wants. The soul and R&amp;B band plays the same songwriters with a singer out front and a horn on the choruses."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "While people eat, it plays at a level the tables talk across, with the drums kept light. Once the floor opens it plays like a band at a party, with the bass felt at the back of the floor and the guitar kept comfortable for the front tables. It sets the level to the space and the crowd, and if your venue has a sound limit, give us the number and it stays under it."
+        },
+        {
+         "q": "How much space and power does it need?",
+         "a": "The trio sets up in about 12 by 8 feet on one dedicated 20-amp circuit and needs about an hour to set up. The quartet takes about 14 by 10 feet, two dedicated circuits and 90 minutes. Sound support that's the right size for the venue comes with every booking."
+        },
+        {
+         "q": "Can it play outdoors?",
+         "a": "Yes, and patios and lawns are a lot of its work. It needs a covered, level and dry spot with power run to it, and we agree a plan for moving indoors with you ahead of time, because a Colorado afternoon can turn fast."
+        },
+        {
+         "q": "Can we add time or ask for a song?",
+         "a": "Yes. If the night runs long, another half hour is easy to add on the night, and the band learns one song of your choosing as part of every booking."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and the funk band brings the floor.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

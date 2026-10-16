@@ -1,0 +1,389 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/boulder/",
+   "title": "Wedding music in Boulder: guitarist, duo, band and DJ | Signet Artists",
+   "description": "Live music for a Boulder wedding: a ceremony guitarist, a duo at dinner volume, a trio or the DJ indoors under the venue's sound cap, on one contract with a short travel line.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "nav": "weddings",
+   "breadcrumb": "Boulder",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Boulder",
+     "serviceType": "Live music for weddings in Boulder: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "Live wedding music in Boulder and Boulder County: an acoustic, jazz or Spanish guitarist for a ceremony on a lawn or a porch, a jazz or acoustic duo for the cocktail hour at a volume the neighbours never hear, a trio or the DJ for the reception indoors under the venue's sound policy, on one contract with sound included and a short Front Range travel line.",
+     "areaServed": [
+      "Boulder",
+      "Louisville",
+      "Lafayette",
+      "Longmont",
+      "Niwot"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a Boulder wedding cocktail hour: Autumn Leaves on upright bass and guitar",
+      "description": "Autumn Leaves on upright bass and guitar, the size a Boulder cocktail hour books because it sits under the venue's cap on its own.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Boulder spoke of the weddings hub, built 2026-09-23 on Daniel's call after the audit. Outside evidence: 'boulder wedding bands' and 'wedding bands boulder co' autocomplete on 2026-09-23 (the 2026-09-16 Vail note said Boulder returned nothing; it does now). The argument is the Boulder wedding day at close quarters: Chautauqua and the downtown hotels, a ceremony on a lawn or a porch, the cocktail hour at dinner volume because the neighbours are near, and a floor indoors under the venue's own cap, with a short Front Range travel line. That keeps it apart from the Boulder private-parties spoke (dinner parties and milestones) and from the Vail and Springs wedding spokes (altitude; a longer drive). Venues are the vetted Boulder list in SEO-BUILDOUT-ARCH section 8. Uniqueness gate: registered as a weddings sibling.",
+    "reader": "The couple getting married in Boulder, where the neighbors and the venue set the volume."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Boulder weddings",
+       "slab": true,
+       "title": "Live music for a Boulder wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A Boulder wedding happens close to other people: the ceremony on a lawn with houses beyond the trees, the cocktail hour on a porch with the Flatirons going pink behind it, and the floor in a dining hall or a hotel ballroom with a sound policy on the wall. So the music is a guitarist for the vows, a duo for the hour after them, and a trio or the DJ for the dancing, indoors, under whatever number the venue sets.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/weddings/\">weddings</a> bookings: one part of the day or all of it, on one contract with a personal contact through the day and one short travel line for the drive up from Denver."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Boulder wedding spoke, 2026-09-23. The day at close quarters: neighbours\n     near, venues few, the sound policy first. Facts from the Boulder\n     private-parties spoke and the vetted venue list; no figure without a\n     source.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: the couple marrying in Boulder, where the neighbors and the venue set the volume. Chautauqua, the downtown hotels and the neighborhood facts stay; dBA, footprints, parking and travel left the body for the FAQ, with the extras list; 'the move indoors' (a Layer 2 phrase) and neighbour/neighbourhood are fixed; FAQs restating the sound-rules section are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "A duo at cocktail-hour volume, and a guitarist outdoors.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Autumn Leaves on upright bass and guitar, the size a Boulder cocktail hour books because it sits under the cap on its own, and an acoustic set on a lawn."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo, upright bass and guitar, playing Autumn Leaves at cocktail-hour volume",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing an acoustic set outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "The day",
+       "title": "The three parts of a Boulder wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The neighbors set the volume and the venue sets the size. A guitarist and a duo fit anywhere in Boulder on their own; the floor is the part that has to be planned."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony, on a lawn or a porch</a>",
+         "text": "One guitarist, acoustic, jazz or Spanish, on a covered spot near the aisle with a small system that carries the officiant’s microphone as well. The system only has to reach the last row, and a guitarist stretches the processional to however long the walk takes."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour, on the porch</a>",
+         "text": "A jazz duo or an acoustic duo, quiet enough that the fence line never hears it and the conversation sits on top of it. On a Chautauqua porch or a hotel terrace this is the whole hour, and moving indoors when the evening cools is agreed before the day."
+        },
+        {
+         "term": "The floor, indoors",
+         "text": "A trio of guitar, bass and drums fills a Boulder floor without a stage, and it’s often the biggest size the venue allows. Where the venue takes four, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> starts as a duo and finishes as a quartet, and the <a href=\"/weddings/jazz-band/\">wedding jazz band</a> grows the same way through the day. The <a href=\"/ensembles/dj/\">DJ</a> takes the same sound system from the end of dinner to the last song, and the venue’s cut-off is the one the last set lands on."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "The whole song list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "The venues",
+       "title": "Chautauqua, the downtown hotels, and the backyards between them.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Chautauqua holds the Boulder wedding people picture: the ceremony on the lawn with the Flatirons behind it, the cocktail hour on the porch, the dinner in the Dining Hall or the floor in the Community House. It also sits inside a residential historic district, so its sound policy is the first document to ask for, and the sizes that book there are a guitarist for the ceremony, a duo for the hour and a duo or a trio inside for the rest.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "The Hotel Boulderado and the St Julien carry the downtown wedding, with the ceremony and the reception a corridor apart and sleeping guests on the floors above, which is why their event floors have a number on evening sound. Both ballrooms take a quartet or the DJ. Flagstaff House holds the dinner that is booked for its view, up a mountain road with the city below it, and a duo on its terrace is the size that suits the terrace. Rembrandt Yard is the downtown gallery a block off the mall, one floor that takes a ceremony, a dinner and a trio in turn.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "A backyard wedding on Mapleton Hill or in a neighborhood off Broadway is a Boulder wedding too, and the plan for it is the plan for a house: a solo or a duo on the patio, a trio indoors, and the number the neighbors and the city put on evening sound written into the contract before the invitations go out. What a house has to provide is on the <a href=\"/private-parties/boulder/\">Boulder private parties page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "The sound policy",
+       "title": "A number on every venue, and a cool evening.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Boulder has its own rules on evening sound, and every venue in it has a policy on top, so the first question we ask about a Boulder date is the number. Whatever your venue, HOA or rental agreement puts on evening sound, and whatever cut-off it sets, both go into the contract. A ceremony guitarist and a cocktail hour duo sit inside any of those numbers on their own, and the dance floor goes indoors, which is why a trio is the size most Boulder venues allow for it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "The evening cools fast once the sun is behind the Flatirons, so an outdoor cocktail hour is timed to the light, and the ceremony gets a covered, level and dry spot with power run to it in case a summer afternoon turns.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "How far ahead couples tend to book is in <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. A dinner party or a milestone in the same venues is on the <a href=\"/private-parties/boulder/\">Boulder private parties page</a>, a wedding at altitude is on the <a href=\"/weddings/vail/\">Vail wedding page</a>, and the wedding an hour north is on the <a href=\"/weddings/fort-collins/\">Fort Collins wedding page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Questions",
+       "title": "Asked about Boulder weddings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Stage sizes, circuits and input lists for every size are on the <a href=\"/planners/technical/\">technical page</a>, in a form a venue’s events office can check line by line.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-30",
+       "items": [
+        {
+         "q": "Do you play weddings in Boulder?",
+         "a": "Yes, the whole day or any one part of it, at the fee a Denver wedding sees plus one short travel line up from Denver and back, with no mileage arithmetic and no lodging. Every size arrives with sound, setup and pack-down, a certificate of insurance and a W-9. Signet Artists books Boulder weddings from Denver."
+        },
+        {
+         "q": "Can we have a band at Chautauqua?",
+         "a": "Yes, at the size the site allows. Chautauqua sits inside a residential historic district, so its sound policy is the first thing to ask for, and a duo through dinner or a trio indoors in the Community House is what most weddings there book."
+        },
+        {
+         "q": "Is a trio enough for a Boulder wedding reception?",
+         "a": "For most Boulder venues, yes, and it's often the biggest size the venue allows. A trio fills a floor without a stage, and the DJ takes the same sound system when the band is done. The Boulderado and the St Julien ballrooms take a quartet, and we'll say so when a date wants four pieces."
+        },
+        {
+         "q": "What about parking and setup?",
+         "a": "Parking is the Boulder question worth settling early: downtown is metered, Chautauqua shares its lot with a trailhead that fills on summer evenings, and a house on the Hill shares its curb with students during the university year. Tell us the address and we plan the carry. A solo needs about 6 by 4 feet and one dedicated circuit, a duo 8 by 6 and a trio 12 by 8, and setup is one van and 45 to 60 minutes."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Boulder?",
+         "a": "Boulder's short list of venues books its Saturdays a year or more out, and couples tend to book music after the venue and before most of the rest of the list. Tell us the date and the venue and we'll come back quickly, with the venue's sound rules checked."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "Extras that can appear on a quote.",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-32",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-37",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-35",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the Boulder venue, and we'll check its sound rules before we price the day.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

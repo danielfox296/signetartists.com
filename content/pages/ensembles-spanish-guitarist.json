@@ -1,0 +1,393 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/spanish-guitarist/",
+   "title": "Spanish guitarist for weddings, dinners and events in Denver | Signet Artists",
+   "description": "A solo Spanish guitarist for wedding ceremonies, cocktail hours, dinner parties and milestone birthdays in Denver, the Front Range and the mountains. Nylon strings at conversation volume, no stage required.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-colonnade.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Spanish guitarist",
+     "serviceType": "Solo Spanish guitarist for wedding ceremonies, cocktail hours, dinner parties and corporate dinners",
+     "description": "One Spanish guitarist on nylon strings: Malaguena, rumbas, farrucas and familiar songs played flamenco-style, for wedding ceremonies, cocktail hours, dinner parties, milestone birthdays and corporate dinners across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "spanish-guitarist",
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for a wedding ceremony: Malaguena",
+      "description": "A Malaguena on solo Spanish guitar, the prelude and processional sound, played live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     },
+     {
+      "id": "Npuomaienyo",
+      "name": "Spanish guitar for a dinner party: farruca",
+      "description": "A farruca at dinner volume, the slow form a table talks over and remembers.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT3M49S"
+     },
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "The song everyone knows on one Spanish guitar, at the pace of a walk down an aisle.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     },
+     {
+      "id": "CXqYXJGUuRc",
+      "name": "Spanish guitar for a private party: the Sabicas verdiales",
+      "description": "The Sabicas verdiales, the piece a dinner party remembers without knowing its name.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT48S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-13. Evidence: 'spanish guitar' autocompletes in ten wedding and event forms and 'spanish guitar denver' / 'spanish guitarist near me' echo their own words back, while 'flamenco' autocompletes as dresses and dance; the 2026-09-12 enquiry to hello@ asked for 'a Spanish guitarist', singular, and Daniel's reply named more than one Spanish guitar player on the roster. Until today the only Spanish guitar surface was the Dirty Flamenco trio page. Spec'd format, no player names on the page: it is the solo booking, and whichever working Spanish guitarist plays it is named at contract. Footage is the Signet channel's own copies of Gary Meyers' clips, embedded with permission (media-sources.json); the VideoObject nodes carry the artist, the page copy does not.",
+    "reader": "Whoever wants the sound of Spain under a wedding ceremony, a cocktail hour or a long dinner, from one musician who fits anywhere."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Nylon strings, solo",
+       "slab": true,
+       "title": "A Spanish guitarist for weddings, dinners and events.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A rumba under the first drink, a Malagueña as your guests sit down, and one hand keeping time on the body of the guitar. A Spanish guitarist is one musician on nylon strings, playing from a corner of a courtyard, the end of a long table or the landing of a staircase.",
+       "headingText": [
+        {
+         "html": "It books for a wedding ceremony and the hour after it, a dinner party for twenty, a milestone birthday, a corporate dinner, and a proposal or a toast that only needs an hour. When the night wants full flamenco, with bass, cajón and a set piece the crowd stops to watch, that’s <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>, the trio this booking is the solo version of."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=spanish-guitarist",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+       "title": "A Malaguena on solo Spanish guitar, played live",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "Format spoke, the solo Spanish guitar booking, spec'd. The h1 line and\n     the lede carry the words the buyer uses (Spanish guitarist, wedding,\n     dinner) and the first paragraph says what the instrument is, because\n     \"Spanish guitar\" is what people ask for and flamenco is what they are\n     picturing. Trio link ACROSS in the first screen.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the sound of Spain under a ceremony, a cocktail hour or a long dinner. dBA and the footprint section left the body (the fit-anywhere benefit is in the lede); 'afterwards' and 'back garden' were locale drift; the pricing pointer in the occasions note was the third and is gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide since 2026-09-05.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set",
+       "title": "The Spanish pieces, and the familiar songs.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A Malagueña, rumbas, a farruca, tangos, Entre dos Aguas: the pieces that sound like Spain even to guests who couldn’t name them. Around those sit familiar songs played on nylon strings in the same style, which is how Can’t Help Falling in Love ends up in a processional and a Beatles song ends up under dessert."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "It’s instrumental, and the guitarist watches the guests, so a prelude stretches while people find their seats and a processional ends when the wedding party reaches the front. The set is built with you before the date, and one learned song of your choosing comes with every booking.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "For one musician on steel strings working blues, roots, jazz and the singer-songwriter catalog, book the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>. The wider covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "What it plays, and the line between this booking and its two\n     neighbours: the trio (the form, with a set piece) and the solo guitarist\n     page (blues, roots, jazz, sung). Links ACROSS to both.",
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-16",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Occasions",
+       "title": "Who books a Spanish guitarist.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony</a>",
+         "text": "Prelude, processional, an interlude if the ceremony has a still moment in it, and the recessional, on nylon strings. It’s what a lot of couples are picturing when they want something warmer than a string quartet."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour</a>",
+         "text": "An hour of rumbas and familiar songs on a terrace, at a level two guests who have just met can talk across."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">The dinner party, and the milestone birthday</a>",
+         "text": "Twenty around a long table, a courtyard or a backyard with the lights strung, with Spanish guitar under the whole meal, in <a href=\"/private-parties/denver/\">Denver</a> or up in the mountains."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">The corporate dinner</a>",
+         "text": "A client dinner or a member event that wants one instrument to make the evening feel hosted."
+        },
+        {
+         "term": "The single hour",
+         "text": "A proposal on a terrace, the toast at a sixtieth, or a surprise at the end of an anniversary dinner: one musician for one hour, on the same contract as a full night."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Memorial services</a>",
+         "text": "A service or a graveside on nylon strings, with the pieces the family chooses."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "What live music costs across Colorado, size by size, is in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the booking lands, the hour-long booking included: proposals,\n     toasts and birthday surprises autocomplete as \"hire a musician for a\n     proposal\" and \"hire a band to sing happy birthday\", and nobody in\n     Colorado answers them. Links UP to the occasion pages.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-21",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-17",
+       "eyebrow": "The footage",
+       "title": "A farruca, a processional, and the verdiales.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Three pieces played live: a farruca at dinner volume, Can't Help Falling in Love at processional pace, and the Sabicas verdiales."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-18",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Npuomaienyo?rel=0",
+         "title": "A farruca on solo Spanish guitar, at dinner volume",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Can't Help Falling in Love on solo Spanish guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/CXqYXJGUuRc?rel=0",
+         "title": "The Sabicas verdiales on solo Spanish guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-19",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-colonnade.jpg",
+         "alt": "A Spanish guitarist playing under a colonnade.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-stone.jpg",
+         "alt": "A Spanish guitarist playing against a stone wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-window.jpg",
+         "alt": "A Spanish guitarist playing beneath a shuttered window, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Footage from the Signet channel's own copies (media-sources.json,\n     reuploaded 2026-09-06 with the artist's permission). Three cuts chosen\n     for the three jobs on this page: dinner, the aisle, the party. No player\n     name on the page; the VideoObject nodes carry it.",
+    "_file": "05-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-22",
+       "html": "Spanish guitarist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Stage sizes and power for every size are on the <a href=\"/planners/technical/\">technical page</a>, written so you can hand your venue the link, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "What does a Spanish guitarist play?",
+         "a": "The pieces people mean when they say Spanish guitar, from a Malaguena to Entre dos Aguas, and familiar songs played in the same style. It's booked through Signet Artists in Denver."
+        },
+        {
+         "q": "Is a Spanish guitarist the same as flamenco?",
+         "a": "It's the solo version of it. Flamenco is an art form of its own, played here by Dirty Flamenco as a trio of guitar, bass and cajon with a set piece in the evening. A Spanish guitarist is one musician on nylon strings doing the quieter job: a ceremony, a cocktail hour, a dinner."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "About as loud as a conversation at the next table. Indoors, nylon strings carry a prelude and a processional in most spaces with nothing plugged in at all. Outdoors, or where the officiant needs to be heard at the back, a small sound system on the same stand carries the guitar and a microphone, and the guitarist sets the level to the space."
+        },
+        {
+         "q": "Who plays a Spanish guitar booking?",
+         "a": "A working Spanish guitarist from our roster, and we name them to you when the contract is written. For a particular group by name, ask for Dirty Flamenco, the trio."
+        },
+        {
+         "q": "Can a Spanish guitarist play a wedding ceremony outdoors?",
+         "a": "Yes. The site needs to be covered, level and dry with power run to it, and we agree a plan for moving indoors with you ahead of time."
+        },
+        {
+         "q": "How much space does one Spanish guitarist need?",
+         "a": "A corner of about 6 by 4 feet, with one dedicated 20-amp circuit when the sound system is used, 45 minutes to set up and 30 to pack down."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring a Spanish guitarist for the ceremony, the cocktail hour or dinner.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

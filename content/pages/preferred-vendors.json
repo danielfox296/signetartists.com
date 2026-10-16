@@ -1,0 +1,143 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/",
+   "title": "Preferred Vendor List | Signet Artists",
+   "description": "The photographers, planners, videographers, caterers, florists and venues we'd hand to our own clients in Denver, the Front Range and the Colorado mountain towns, each with a link to their site. The list is short on purpose.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Preferred Vendor List",
+   "notes": {
+    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "For clients and planners",
+       "slab": true,
+       "title": "Preferred Vendor List.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Putting on an event means hiring six or seven people who have to work well together on the day. These are the ones we’d hand to our own clients, and the list stays short on purpose. If someone here isn’t right for your event, we’ll tell you.",
+       "headingText": [
+        {
+         "html": "Every name links to the vendor’s own site, and each one is here because we’ve seen their work up close and would book them again."
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The buyer's page: why the list exists, what short means, what a name\n     on it means. The categories and cards follow from vendors.json.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "VendorList",
+   "props": {
+    "id": "VendorList-5",
+    "categories": [
+     {
+      "id": "venues",
+      "label": "Venues",
+      "ask": "Ask us where we’d hold it, and we’ll name a venue we’ve played and tell you what it’s like to work in."
+     },
+     {
+      "id": "planning",
+      "label": "Planning and coordination",
+      "ask": "Ask us which planner we’d want running the day, and we’ll give you a name we’ve worked beside."
+     },
+     {
+      "id": "photography",
+      "label": "Photography",
+      "ask": "Ask us who should shoot it, and we’ll give you the name of a photographer we’ve worked with."
+     },
+     {
+      "id": "videography",
+      "label": "Videography",
+      "ask": "Ask us who should film it, and we’ll give you the name of a videographer we’ve worked with."
+     },
+     {
+      "id": "catering",
+      "label": "Catering",
+      "ask": "Ask us who should feed the crowd, and we’ll give you the name of a caterer we’ve worked with."
+     },
+     {
+      "id": "design-florals",
+      "label": "Design and florals",
+      "ask": "Ask us who should dress the venue, and we’ll give you the name of a designer we’ve worked with."
+     }
+    ],
+    "vendors": [],
+    "_notes": "Six categories from vendors.json, in order, each with its cards or the\n     ask-us line. Rendered by build.py vendor_list().",
+    "_file": "02-list.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-7",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide.",
+    "_file": "03-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Work in events and want to be on this list? <a href=\"join/\">Here’s how to apply.</a>",
+       "cls": "note note--small"
+      }
+     }
+    ],
+    "_notes": "The way onto the list, for a vendor who lands here. Small and faint by\n     design: it must never read as a second call to action beside the\n     listings.",
+    "_file": "04-join.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-11",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book the music with us.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

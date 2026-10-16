@@ -1,0 +1,39 @@
+{
+ "id": "funk-trio",
+ "name": "Funk Band",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/funk-band/",
+ "style": "Funk and soul",
+ "spec": "Guitar, bass and drums, with a horn or keys at quartet size",
+ "material": "Covers",
+ "bucket_tags": [
+  "party"
+ ],
+ "config_tags": [
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "funk",
+  "soul"
+ ],
+ "vocals": "instrumental",
+ "from": "trio",
+ "img": "funk-band-card.jpg",
+ "alt": "A row of level meters lit up in mustard and cream on a teal field, drawn flat, with the words funk band above them.",
+ "video": null,
+ "_merged_note": "MERGED 2026-08-16 from two listings, 'Dan Steele (funk trio)' and 'DF Funk'. The workbook flagged the direct overlap and said pick one or merge; Daniel's ruling is that they are interchangeable, so this is one format with both behind it as availability depth. The first pass differentiated them on voice-fronted versus guitar-fronted, which rested on a face chair the workbook marks 'assumed'. That copy is gone and is not to be reinstated without confirming the chair.",
+ "depth": [
+  "Dan Steele trio",
+  "DF Funk"
+ ],
+ "blurb": "Instrumental funk and soul covers for a party where the dance floor is close to the tables. It books as a trio of guitar, bass and drums, or as a quartet with a horn or keys when the floor wants more.",
+ "occasion_tags": [
+  "corporate",
+  "private-parties"
+ ],
+ "_name_note": "RENAMED 2026-09-23 from 'Funk Trio to quartet', which was a size range wearing a name. config_tags now carry both sizes the old name promised. The id stays funk-trio: it is in every ?act= link and the roster's data attributes.",
+ "_page_note": "PAGE 2026-09-23: 'funk band denver' and 'funk band for hire' autocomplete, which is the demand evidence the skill asks for before a spec'd listing earns a page. Scaffolded with scripts/new_act_page.py --slug funk-band.",
+ "_img_note": "2026-09-23: its own drawn tile from scripts/format_art.py, replacing headliners.jpg, the interim snare-drum still that three party formats were sharing on the roster."
+}

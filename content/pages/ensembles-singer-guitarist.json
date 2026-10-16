@@ -1,0 +1,364 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/singer-guitarist/",
+   "title": "Singer and guitarist for hire in Denver, for weddings and parties | Signet Artists",
+   "description": "An acoustic singer and guitarist for hire in Denver: one voice and a guitar for cocktail hours, welcome drinks, patios, dinner parties and small weddings, at a volume guests talk across, with sound included.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "nav": "music",
+   "breadcrumb": "Singer and guitarist",
+   "schema": {
+    "service": {
+     "name": "Singer and guitarist",
+     "serviceType": "Acoustic singer and guitarist for cocktail hours, welcome drinks, patios, dinner parties and small weddings",
+     "description": "One voice and a guitar, playing singer-songwriter, pop, soul and classic rock covers at a volume guests talk across, for cocktail hours, welcome drinks, patios, dinner parties, rehearsal dinners and small weddings across Denver, the Front Range and the Colorado mountain corridor, with sound included.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "singer-guitarist",
+    "videos": [
+     {
+      "id": "nzVtbiEF5ak",
+      "name": "Acoustic singer and guitarist for a private party: Last Dance With Mary Jane",
+      "description": "One voice and a guitar on a Tom Petty song, the format this page sells.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M"
+     },
+     {
+      "id": "wt2SnYjWxKs",
+      "name": "Singer and guitarist for welcome drinks: Tony Medina, Headline",
+      "description": "Tony Medina, the named solo voice and guitar on the roster, playing one of his own songs.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT5M20S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-16 from the marketplace read: Singing Guitarist is the most-booked category on GigSalad in Denver by a wide margin (every listed vendor booked, 2026-09-03), and the one competitor that autocompletes by name in the demand harvest is an acoustic duo. No page targeted the solo sung booking: the solo guitarist page is the instrumental jazz and Spanish guitar, the acoustic duo page starts at two. This is one voice and a guitar, sold as a format, with Tony Medina and Tejas Singh as the named options at that size. Uniqueness gate: registered as a guitar sibling. No prices.",
+    "reader": "Whoever wants one voice singing the songs their guests know, under a cocktail hour, a patio, a dinner party or a small wedding."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "One voice and a guitar",
+       "slab": true,
+       "title": "A singer and guitarist for hire, for cocktail hours, patios and small weddings.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "One voice and a guitar singing Brown Eyed Girl on a patio, loud enough to hear from the bar and quiet enough to talk across. A singer and guitarist sings the songs your guests know the words to, and it’s one of the most booked sizes in this city, because it sounds like live music from across a terrace and fits in a corner.",
+       "headingText": [
+        {
+         "html": "It books for welcome drinks before a rehearsal dinner, a cocktail hour on a patio, a dinner party at home, a company picnic, and a small wedding where one musician plays the ceremony and sings the hour after it."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=singer-guitarist",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/nzVtbiEF5ak?rel=0",
+       "title": "An acoustic singer and guitarist playing Last Dance With Mary Jane at a private party",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd: one voice and a guitar. The h1 carries the\n     buyer's phrase (singer and guitarist for hire). The named options are\n     pointed at, never sold as this format. The hero is the Signet copy of an\n     acoustic singer-guitarist clip; the iframe title names no player.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants one voice singing the songs their guests know, under a cocktail hour, a patio or a small wedding. dBA and set lengths left the set section for the FAQ; the 'as a format' taxonomy row now says what the buyer gets; pointer sentences in the occasion rows are gone and the senior living clause got its own row.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set",
+       "title": "The songs people sing along to under their breath.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The singer-songwriter book, pop and soul from the last sixty years, and the acoustic side of classic rock: Tom Petty, Bill Withers, the Beatles ballads. The voice sings the song and the guitar carries the rest of the record."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The ballads play while people eat, and the songs with a pulse come out once people are standing. The whole covers list is on the <a href=\"/repertoire/\">repertoire page</a>, and one learned song of your choosing comes with every booking, which for a wedding is usually the first dance or the processional.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "What it plays, and the two things that make one musician work at an\n     event: the book and the volume. The dBA band is the sitewide dinner\n     discipline.",
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Who plays it",
+       "title": "Any of our singers, or one by name.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The singer and guitarist",
+         "text": "One of the working singers who play this size, matched to your date and your crowd. Book it when the sound and the date matter more than the name."
+        },
+        {
+         "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
+         "text": "A smoky voice and a guitar played with a funk guitarist’s right hand. He plays blues and classic rock, solo for welcome drinks and dinner and up to a four piece when the night wants a floor, with his own footage on his page."
+        },
+        {
+         "term": "<a href=\"/artists/rene-moffatt/\">René Moffatt</a>",
+         "text": "A songwriter with his own catalog, folk and Americana on voice and acoustic guitar, who plays covers beside his own songs when the hour wants them. Solo for a ceremony, a cocktail hour or a dinner where people listen, and up to a four piece with his band, with his own footage on his page."
+        },
+        {
+         "term": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a>",
+         "text": "A singer-songwriter who builds familiar songs from the ground up with live looping, fronting a duo that grows to a quartet on one contract. It’s the booking when the hour should be one voice and the night should end on a dance floor."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "If you want instrumental guitar with no voice, jazz standards and Spanish-tinged sets, that’s the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>. The same voice and guitar with a second musician is the <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a>, which is the size for a crowd past a hundred.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The ways to book one voice and a guitar: the format, and the named\n     acts that play at that size. Named acts may be named on a spec'd page\n     as the alternative; the format itself names nobody. Links ACROSS to\n     Tony Medina, René Moffatt (added 2026-09-20, the day he joined), Tejas\n     Singh, the solo guitarist and the acoustic duo.",
+    "_file": "03-who.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-21",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Who books a singer and guitarist.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours and welcome drinks</a>",
+         "text": "The hour after the ceremony, or the night before it, with one voice singing the songs both families know. The same musician can play the <a href=\"/weddings/ceremony/\">ceremony</a> first."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties, patios and milestone birthdays</a>",
+         "text": "A table of twelve at home, a backyard in July, a sixtieth that wants the songs of one particular decade sung well."
+        },
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Company picnics and client appreciation evenings</a>",
+         "text": "A lawn or a rooftop for a <a href=\"/corporate/\">company</a>, or a client evening that should feel hosted."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "A deck or a fire after a day of sessions, with the acoustic end of the book."
+        },
+        {
+         "term": "<a href=\"/daytime/community-programs/\">Farmers markets and daytime programs</a>",
+         "text": "One voice and a guitar on a battery-powered system at a Saturday market or a library’s summer series."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "The songs of the sixties and seventies, sung in a community’s common area on a weekday afternoon."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-18",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Tony Medina singing his own song Headline with an acoustic guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Sourced market figures for what one musician costs for a cocktail hour are in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where one voice and a guitar lands. Links UP to the occasion pages.\n     Includes the second Signet-channel clip, Tony's own song at welcome-drinks\n     volume, in the footage idiom.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-22",
+       "html": "Singer and guitarist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Is one singer with a guitar enough for a cocktail hour?",
+         "a": "For most cocktail hours and patios, yes. One voice and a guitar sound like live music from across a terrace and stay under the conversation. Above about a hundred guests spread across a ballroom, the acoustic duo adds a second musician to fill the space."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "About the level of two guests talking who have just met. People at the next table can hear the words and keep talking at their own level. One musician sets the level to the space, and a voice and a guitar stay there all night."
+        },
+        {
+         "q": "Can a singer and guitarist play a wedding ceremony and the cocktail hour?",
+         "a": "Yes, and it's a common booking: an instrumental prelude and processional, then the same musician sings the cocktail hour on the terrace. The small sound system runs the officiant's microphone too, so the ceremony and the hour are one setup and one contract."
+        },
+        {
+         "q": "How long are the sets?",
+         "a": "Sets run 45 to 60 minutes with music through the breaks, for a single hour or from arrival through dinner. If the night runs long, another half hour is easy to add on the night."
+        },
+        {
+         "q": "How is this different from the solo guitarist?",
+         "a": "The voice. The solo guitarist is instrumental: jazz standards and Spanish-tinged sets that sit under a dinner. The singer and guitarist sings the songs out front, for the hours where guests want to hear a voice and know the words."
+        },
+        {
+         "q": "Does it play outdoors?",
+         "a": "Yes, and patios and lawns are its regular work. It needs a covered, level and dry spot with power run to it, and we agree a plan for moving indoors with you ahead of time, because Colorado evenings cool fast and a guitar and a voice both slow down in the cold."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring one voice and a guitar.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

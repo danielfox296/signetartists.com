@@ -1,0 +1,289 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/community-programs/",
+   "title": "Musicians for farmers markets, libraries and rec centers, Denver | Signet Artists",
+   "description": "Performers for farmers markets, library programs and rec centers in Denver: a singer on a battery-powered system, a duo at 60 to 65 dBA, a band for the park.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "breadcrumb": "Farmers markets and libraries",
+   "schema": {
+    "service": {
+     "name": "Musicians for farmers markets, libraries and rec centers",
+     "serviceType": "Performers for farmers markets, library programs and concert series, recreation center events and summer concert series",
+     "description": "A singer with a guitar, a solo guitarist, an acoustic duo, a jazz duo, an Americana band or a sound bath for farmers markets, library programs and concert series, rec center and community center events and summer concert series across Denver, the Front Range and the Colorado mountain corridor, on a battery-powered system where there's no power, with a certificate of insurance, a W-9 and an invoice that matches the purchase order.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer and guitarist for a farmers market: Tejas Singh live-looping No Woman No Cry",
+      "description": "One musician building No Woman No Cry from the ground up, the kind of set one musician plays at a market.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+     },
+     {
+      "id": "IGww0fFkjyg",
+      "name": "Flamenco trio for a summer concert: rumba, Dirty Flamenco",
+      "description": "Guitar, bass and percussion on a rumba, the sound of a trio on a lawn.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M31S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-19 on Daniel's brief (farmers-market and library/rec-center programs). Autocomplete evidence, Google and Bing, 2026-09-19: 'farmers market musicians', 'farmers market band', 'farmers market performers', 'farmers market live music near me', 'sunday farmers market near me with live music', 'performers for libraries' (Google), 'library concert series', 'library concert series near me', 'library music series', 'library programs for adults', 'library programs for older adults', 'live music at the library', 'recreation center events', 'adult recreation center events', 'community concert series', 'summer concert series colorado' and 'summer concert series denver'. The hire-side phrases are thin, so the page carries the program words the coordinators use (programs, series, performers) and the head terms in the title. Uniqueness gate: registered as a daytime sibling. No figure on the page.",
+    "reader": "The program coordinator at a market, library, rec center or summer series with a season of dates to fill.",
+    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json configurations and the included list, the proposals page (battery-powered system), the private parties page (the three outdoor conditions), the ceremony page (unamplified in a small space), acts.json (the Americana band's build) and thefirstwater.co (libraries). Questions are worded the way coordinators search. No figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Community programs",
+       "slab": true,
+       "title": "Musicians for farmers markets, library programs and rec centers.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Saturday morning at the farmers market: a singer with a guitar between the peach stand and the bakery, playing Take It Easy loud enough to hear from the next stall. Markets, libraries, rec centers and summer series book the same roster as everyone else, from one singer on a battery-powered system to the Americana band on a park stage, on one contract with sound included and one personal contact.",
+       "headingText": [
+        {
+         "html": "It’s the community side of our <a href=\"/daytime/\">daytime bookings</a>, with the <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>, the <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a>, the <a href=\"/ensembles/americana-band/\">Americana band</a>, the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> and <a href=\"/artists/firstwater/\">Firstwater’s sound bath</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The community programs spoke. The buyer's phrases (farmers market\n     musicians, library programs, concert series, rec center) sit in the h1\n     and the first paragraph. Written for the coordinator with a season to\n     fill. Hub link UP and act links ACROSS in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the program coordinator with a season to fill. The opener was a list of three institutions; it's one market morning now, and the institutions are the rows. The practical section (power, weather, permits, paperwork, footprint) is the FAQ; dBA and the sing-along booklets left the rows.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "One musician with a loop pedal, and a trio outdoors.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tejas Singh building No Woman No Cry from the ground up on his own, which is the kind of set one musician plays at a market, and Dirty Flamenco’s rumba, the sound of a trio on a lawn."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live-looping No Woman No Cry",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/IGww0fFkjyg?rel=0",
+         "title": "Dirty Flamenco playing a rumba flamenca live",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: one musician building a song alone, which is\n     the market booking, and a trio outdoors. Tejas Singh is a named act and\n     may be named; the flamenco trio is Dirty Flamenco, also named.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The programs",
+       "title": "Markets, libraries, rec centers, and the summer series.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "Farmers markets",
+         "text": "A singer with a guitar, a solo guitarist or an acoustic duo, playing a market morning in sets, on a battery-powered system or none at all where the market has no power. The musician plays the folk, country and singer-songwriter songs people know the words to, at a volume the stall next door can still sell over, and a whole season of Saturdays can be booked with one enquiry."
+        },
+        {
+         "term": "Libraries",
+         "text": "An adult program in the meeting space, a concert series on the lawn in summer, an older adults’ afternoon with the standards, a Sunday jazz duo in the atrium, or a sound bath for a wellness program with the lights down. A library is built for quiet, so the sizes are solo and duo, and a guitarist plays a meeting space without amplification at all. <a href=\"/artists/rene-moffatt/\">René Moffatt</a> is a featured artist of the Denver Public Library’s own Volume Denver program, and <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> plays the Beatles for an all-ages afternoon, the songbook a hall of strangers between six and ninety already shares."
+        },
+        {
+         "term": "Rec centers and community centers",
+         "text": "A community evening, a holiday open house, a summer concert in the park behind the building, an older adults’ lunch with a guitarist, a family day with a singer. The Americana band plays the outdoor evening at trio or quartet size, and a solo or a duo plays everything indoors."
+        },
+        {
+         "term": "Summer concert series",
+         "text": "A city’s or a district’s summer series is booked months ahead, often through a call for performers. The acts that play a park stage with a real sound system are the Americana band, <a href=\"/artists/tejas-singh/\">Tejas Singh</a>, <a href=\"/artists/tony-medina/\">Tony Medina</a>, René Moffatt with his band, and the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a>. Send the call and we’ll answer it with the act that fits the stage."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The programs, one row each: markets, libraries, rec centers, summer\n     series. Facts: the battery line from the proposals page, the 60 to 65\n     dBA band and set lengths from site.json, the unamplified line from the\n     ceremony page, the Americana band's build and buckets from acts.json,\n     Firstwater's libraries line from thefirstwater.co. Named acts are named;\n     spec'd formats are not.",
+    "_file": "02-programs.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Questions",
+       "title": "Asked by program coordinators.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Stage sizes and power for every size are on the <a href=\"/planners/technical/\">technical page</a>, written so a facilities office can check it line by line, and a program in a resort town is covered on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-16",
+       "items": [
+        {
+         "q": "Do you book musicians for farmers markets?",
+         "a": "Yes, for a morning or a whole season of Saturdays in one enquiry. Tell us the market, the hours and whether there's power, and we'll come back with a recommendation and a price. Signet Artists books community performers across Denver and the Front Range."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "At a market, loud enough to hear from the next stall and quiet enough that the stall can still sell. In a library, about the level of a conversation, and a guitarist in a meeting space plays with no amplification at all. On a park stage, a band plays like a band, within whatever the permit allows."
+        },
+        {
+         "q": "What do you need outdoors?",
+         "a": "Not much for a guitarist or a singer with a guitar, who play on a battery-powered system or without one. A band with drums needs one dedicated 20-amp circuit, and a park stage with its own sound system needs a word with whoever runs it beforehand. Every size needs a covered, level and dry spot and a rain call written down before the day. A park or a plaza sometimes needs a permit for amplified sound, usually held by the market or the city; where the answer is no amplification, the acoustic sizes play without it."
+        },
+        {
+         "q": "How much space does it need?",
+         "a": "About 6 by 4 feet for a solo, 8 by 6 for a duo and 12 by 8 for a trio, on the ground or on a stage. Setup takes 45 minutes for a solo and an hour for a duo or a trio, before the program starts."
+        },
+        {
+         "q": "Do you work with purchase orders and city vendor paperwork?",
+         "a": "Yes. A W-9, a certificate of insurance naming the city, the district or the library as additional insured, and one itemized invoice that matches the purchase order come in the same email as the contract, so a business office can set up the vendor before the first date."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-19",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the season, the venue and whether there's power, and we'll recommend the act for it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

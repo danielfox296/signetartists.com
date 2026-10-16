@@ -1,0 +1,522 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/tony-medina/",
+   "title": "Tony Medina: blues and rock band in Denver | Signet Artists",
+   "description": "Blues, classic rock and originals for private events in Denver and the Colorado mountains. Solo voice and guitar through a four piece with a dance floor.",
+   "titleExact": true,
+   "ogImage": "img/tony-medina-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Tony Medina",
+   "schema": {
+    "service": {
+     "name": "Blues and rock band",
+     "serviceType": "Blues and rock covers for private and corporate events",
+     "description": "Blues, classic rock and original material fronted by Tony Medina, booked from solo voice and guitar up to a four piece, for private and corporate events in Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "tony-medina",
+    "video": {
+     "name": "Tony Medina live: blues and rock voice and guitar for private events in Denver",
+     "description": "Tony Medina playing the Prince song Purple Rain on voice and acoustic guitar: the sound he brings to a milestone birthday, an office party or a rehearsal dinner.",
+     "uploadDate": "2026-09-06",
+     "duration": "PT7M13S"
+    }
+   },
+   "notes": {
+    "_note": "Authored 2026-09-06, the day Tony Medina was promoted out of the spec'd Blues Rock format on Daniel's call. Mirrors the artists-tejas-singh dir exactly: acts.json carries page: 'artists/tony-medina/', so build.py links every card and every llms.txt line here and generates nothing at /music/tony-medina/. Blues Rock never had a URL of its own (it was a listing), so there is nothing to redirect. Identity copy is the ratified acts.json paragraphs; the ladder resolves from the token. No prices anywhere.",
+    "reader": "Whoever wants a night with some grit in it, from welcome drinks under one guitar to a four piece on the dance floor.",
+    "_title_note": "55 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Blues, rock and roots",
+       "slab": true,
+       "title": "Tony Medina",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers and originals, solo to four piece.",
+       "lede": "Tony Medina sings The Thrill Is Gone with gravel in his voice and plays guitar with a funk guitarist’s right hand, and the crowd that came for background music turns around to watch. He plays the blues and the rock and roll that came out of it, from one musician under the conversation to a four piece with a dance floor in front of it.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=tony-medina",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ],
+       "headingNote": "Hear him first: <a href=\"https://www.medinablues.com/\">medinablues.com</a> and <a href=\"https://www.youtube.com/channel/UCT_kK_ICXECSuo2QHP3tbjQ\">his channel</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+       "title": "Tony Medina playing a Prince cover, Purple Rain",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name\n     is the h1, the byline is the face line, the blurb is the lede. Unlike the\n     Tejas hero on the day it was written, the footage slot here is real from\n     the first build: he arrived with his own site, his own channel and his own\n     photographs, which is most of the argument for naming him at all.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a night with some grit in it, from welcome drinks to a dance floor. 'A named act' left the act-face; the identity paragraphs that restated the hero and the ladder, and the named-act line, are gone; dBA left the FAQ for words; the occasion rows lost their pointer sentences.\n\nThe named-acts promise on /music/ is \"you can go and look them up\";\n           these are the look-up. Both verified against his own site.",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, the same block the other act pages carry.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "The book is the blues and most of what the blues turned into. Freddie King and B.B. King sit at one end, The Cars, Prince and the rock records of the seventies and nineties at the other, and his own songs are threaded through. Guests recognize nearly all of it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "He’s a working Denver musician with his own catalog, his own site and his own channel, and he joined the <a href=\"/music/\">roster</a> under his own name in September 2026. The footage on this page is his.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Every claim here traces to something published: the covers to the footage\n     below, the sizes to the ladder, the catalogue to his own channel. He is a\n     working Denver player, so unlike the Tejas page this one is allowed to say\n     so. It still claims no client list and no venue history of its own.",
+    "_file": "02-identity.html"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "tony-medina",
+    "title": "Configurations",
+    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "_notes": "The configuration ladder, rendered from acts.json by the token: size,\n     build, and where each rung lands. Four rungs, the widest on the roster.",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books Tony Medina.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
+         "text": "A fiftieth or a sixtieth for a crowd that grew up on these records, with a size that lets people talk over dinner and a size that fills a floor after it."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "Classic rock fills a floor at a company party of every age, because the whole staff knows the songs whatever decade they grew up in. The four piece is the dance floor size, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or your own office."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "The evening after a day of sessions, on a deck or by a fire, with the acoustic end of his songbook played solo or as a duo."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Welcome drinks and rehearsal dinners</a>",
+         "text": "The night before, and the hour after the ceremony, with solo voice and guitar under the conversation, for a couple who wants more grit in the music than a jazz set."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the ladder lands: up-links to the occasion pages this act serves,\n     written as repertoire and format range only. The four picked are the ones\n     blues and rock actually suit, which is a different four from the Tejas\n     page. Down-link idiom mirrors the corporate hub's def-list block.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "The book",
+       "title": "A sample of the book.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Every cover here is one you can watch him play on this page."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-25",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "The blues end",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-20",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Going Down</span> <span class=\"song-artist\">Freddie King</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Thrill Is Gone</span> <span class=\"song-artist\">B.B. King</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-21",
+          "html": "What the crowd sings",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-22",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Purple Rain</span> <span class=\"song-artist\">Prince</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Drive</span> <span class=\"song-artist\">The Cars</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Don’t Drink the Water</span> <span class=\"song-artist\">Dave Matthews Band</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-23",
+          "html": "His own",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-24",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Headline</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Breathe In Deep</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">How Love Saved My Life</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "The wider covers book runs from sixties soul and classic rock through nineties alternative, and the rest of it is on the <a href=\"/repertoire/\">repertoire page</a>. His own catalog is on his channel, and originals sit inside an event set only if you ask for them.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The book. Authored rather than {{act_setlist:tony-medina}} on purpose:\n     the token's two branches are a repertoire pull (which would print the same\n     first-N titles as the Tejas page, duplicate prose across two act pages) or\n     a flat title list with no link out. This says the more useful thing, which\n     is that every cover named here is a cover you can watch him play on this\n     page. The titles match acts.json setlist.items plus the hero.",
+    "_file": "05-book.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "The footage",
+       "title": "The blues, the covers, and one of his own.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A Prince cover plays above. Below: B.B. King live at a blues jam, The Cars, two duo versions with a second guitarist on Freddie King and Dave Matthews, and one of his own songs so you can hear what he writes."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/B7ZnhTflOfs?rel=0",
+         "title": "Tony Medina playing The Thrill Is Gone live at a blues jam",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
+         "title": "Tony Medina playing a cover of Drive by The Cars",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/t_s2FavrDew?rel=0",
+         "title": "Tony Medina playing the Freddie King standard Going Down as a duo",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/qf4_7lKu3iE?rel=0",
+         "title": "Tony Medina playing a Dave Matthews cover as a duo",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Tony Medina playing his original song Headline",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/medina-marquee.jpg",
+         "alt": "Tony Medina playing an acoustic guitar under string lights, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-street.jpg",
+         "alt": "Tony Medina playing an outdoor set at night beside a streetlight.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-portrait.jpg",
+         "alt": "Tony Medina in a hat and waistcoat outside a bar at night.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-glass.jpg",
+         "alt": "Tony Medina holding a drink up to the light in dappled shade.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-inlay.jpg",
+         "alt": "His surname inlaid in abalone along a guitar fretboard.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-soundhole.jpg",
+         "alt": "The soundhole and strings of his acoustic guitar, close up.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Real media, loaded 2026-09-06 from his own site and channel with his\n     permission. Per-asset provenance: _src/data/media-sources.json. Between\n     this grid and the hero, every title named in \"The book\" above is playable\n     on this page. Purple Rain moved up to the hero 2026-09-06 and Going Down\n     came down here in its place: the hero now sits on a video Signet hosts\n     rather than on the SIDEHATCH ARTS channel, so nothing at the top of the\n     page depends on a channel we do not control. Held back deliberately, and not to be\n     reinstated without asking him: a memorial video for a family member, the\n     family-update and show-alert vlogs, a poster graphic with baked-in text,\n     the wall-signing photographs of identifiable third parties, and a shot\n     whose backdrop is a plasma-donation advertisement.",
+    "_file": "05b-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Tony Medina questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "items": [
+        {
+         "q": "What does Tony Medina play?",
+         "a": "Blues and the rock and roll that came out of it, plus his own songs. The covers run from Freddie King and B.B. King through the classic rock of the seventies and the alternative rock of the nineties, and the footage on this page is him playing them. He's a Denver musician booked through Signet Artists, solo up to a four piece."
+        },
+        {
+         "q": "Will it fill a dance floor?",
+         "a": "At trio and four piece, yes. It's voice and guitar over bass and drums, with a second guitar or keys on top at the four piece, playing blues and rock a crowd already knows."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "Solo, it sits under the conversation, so a dinner table talks across it. The four piece on a dance floor plays like a rock band at a good party, and the band moves between the two on cue. He sets the level to the space and the crowd, and if your venue has a sound limit, give us the number."
+        },
+        {
+         "q": "Does he play originals at a private event?",
+         "a": "Only if you want them. The default set for an event is covers, because guests dance to what they recognize. His own songs can sit inside the set where a night has space for them, which is worth asking about for a listening crowd."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the night, and Tony brings the size of band it needs.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close, per the conversion spine. Only the headline is\n     this page's own, and nothing follows it.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,413 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/",
+   "title": "Corporate retreat evening activities in the Colorado mountains",
+   "description": "Evening activities and entertainment for corporate retreats and company offsites in Vail, Aspen, Beaver Creek and Breckenridge, including the remote and hybrid team's once-a-year gathering. Travel and lodging itemised.",
+   "titleExact": false,
+   "nav": "corporate",
+   "breadcrumb": "Corporate retreats",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "Live music for corporate retreats and incentive events in the Colorado mountain corridor, solo through quartet, with travel and lodging itemised as their own lines.",
+     "areaServed": [
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Built 2026-08-20 with the SEO buildout (Tier 1a, corporate tree). The resort-market entry point: corporate retreats and incentive events in the mountain corridor, written for the planner or admin producing the retreat. Replaces any wedding angle in the mountains; weddings are never mentioned here.",
+    "reader": "Whoever is planning a company retreat or offsite in the Colorado mountains and wants the evenings to be what the team remembers.",
+    "_note_2026_09_14": "Remote-first section, FAQ and meta added 2026-09-14 from the corporate demand report and Daniel's call; the offsite post at /blog/company-offsite-ideas-colorado-remote-teams/ is the long form."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Corporate retreats",
+       "slab": true,
+       "title": "Corporate retreat evenings in the Colorado mountains.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The last night of the retreat: the lodge bar, snow outside the glass, a band playing, and a group of colleagues behaving like people who like each other. That’s the night a team remembers from a week in the mountains. A retreat books three evenings with different music, the welcome dinner, the program night and the last-night party, all on one contract.",
+       "headingText": [
+        {
+         "html": "It’s the mountain branch of <a href=\"/corporate/\">our corporate work</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Copy pass batch 2, 2026-09-24. THE ONE READER: whoever is planning a company retreat or offsite in the mountains and wants the evenings to be what the team remembers. The negation opener is gone; four pointer paragraphs under the nights became one; the logistics section (power, load-in, altitude) is the FAQ; venue names left the resort-town rows; the cost and lodging FAQs restated the resort-date section and are gone. The remote-team market figures stay with their sources.\n\nReopened 2026-08-20 (buyer-path audit): the offsite leads, the rate\n           mechanics follow. \"Judged by its evenings\" is the producer's actual\n           stakes, stated as the fact it is.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "The city and the mountain stage.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Denver with the Front Range behind it, and the outdoor stage a ranch or resort evening runs on: covered, level, dry, with power run to it."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-7",
+       "images": [
+        {
+         "src": "/img/range.jpg",
+         "alt": "The Denver skyline against the Front Range, from City Park.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent on grass with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-10",
+       "html": "The three nights a retreat books",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The welcome dinner",
+         "text": "The group has been traveling all day and the first night’s job is conversation. A duo plays it at a level people talk across, so colleagues who flew in from three offices can actually meet."
+        },
+        {
+         "term": "The program night",
+         "text": "The night with the awards, the remarks and the number for the year. Music runs up to the moment and stops while the speaker is still steps from the microphone."
+        },
+        {
+         "term": "The last night",
+         "text": "The loud one. A quartet fills a dance floor inside whatever limit and curfew the resort sets, and where the retreat wants a named act in front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> leads the roster."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Each night is its own line on one contract, and retreat dates get booked on shorter notice than holiday-season dates. Eight evenings, with the size each one needs, are in <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas in Vail</a>; a dinner in town has its own page as <a href=\"/corporate/client-dinners/\">client dinners</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Mornings and firesides have their own acts. <a href=\"/artists/firstwater/\">Firstwater</a> is a seventy-five-minute sound bath with the whole group lying on the floor, placed to open a morning or close an evening, and <a href=\"/artists/rene-moffatt/\">René Moffatt</a> plays his own folk and Americana songs on a deck or by a fire after dinner.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The retreat's three nights, each with its mechanism. Facts from site.json\n     plannerFaqs (dB bands, announcement mic, how a night is covered) and the\n     flagship rule: Tejas Singh leads where an act is named.\n\nFirstwater, 2026-09-19: the one booking on the roster for a retreat\n         morning, cross-linked in this page's idiom. Facts from thefirstwater.co\n         (seventy-five minutes, the floor, open a morning or close an evening).\n\nRené Moffatt, 2026-09-20: the songwriter on the roster, for the\n         evening that wants one. Facts from renemoffatt.com (his own songs,\n         folk and Americana, solo and trio).",
+    "_file": "02-nights.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-20",
+    "band": "sunk",
+    "anchor": "remote-teams",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Meeting in person",
+       "title": "Offsites for remote and hybrid companies.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The people organising company offsites now mostly work remote or hybrid themselves, 91 percent of them in the most recent industry report, and 57 percent of fully remote companies call the offsite essential to the business. Most gather once or twice a year for a few weekdays, and Colorado is where a lot of them do it, because it has a hub airport a distributed team can reach without connecting and a mountain evening within two hours of it."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "A remote team’s offsite has a different first night from any other corporate booking. People who know each other’s faces from a video grid are in one place for the first time, and a duo through the arrival dinner gives colleagues who’ve never met a reason to stand in the same corner. The last night is the one where the whole company dances.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "<a href=\"/blog/company-offsite-ideas-colorado-remote-teams/\">Company offsite ideas in Colorado for remote teams</a> has where remote teams go and seven evenings built for them. The <a href=\"/ensembles/americana-band/\">Americana band</a> is the Colorado evening for a group that flew in for it, and <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is the night a remote team quotes back to itself on video calls for the rest of the year.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Added 2026-09-14 on Daniel's call: the remote-first company that gathers\n     once or twice a year was missing from the corporate tree. Figures are\n     market-rates.json tokens (Surf Office 2026 offsites report; Gallup May\n     2026) and the Sources note prints with the FAQ block below. Routes to the\n     offsite post. No Signet number, no availability.",
+    "_file": "02b-remote.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "Resort dates",
+       "title": "What a resort date adds to a quote.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A resort date costs more than a metro one everywhere in this market, and it’s worth knowing why before you read a quote."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "The first is the drive. Vail and Beaver Creek are a mountain highway from Denver, and Aspen is most of a working day each way. Travel is its own line on the quote, so what your leadership approves looks like a Denver evening with a drive attached.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "The second is the night at the far end. A band that finishes late in Aspen stays the night, so a far-resort date carries a night’s lodging, billed at cost. The I-70 towns are close enough that most dates don’t.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "The third is the calendar. A holiday weekend is priced above a standard date across this market, and the strong resort dates are decided early. Whatever the calendar adds is on the quote before you sign.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Was the resort rate module: two Signet figures and the two travel lines,\n     typed. Since 2026-09-04 it is what a resort date adds, in words, with one\n     sourced market figure for the corridor and no Signet number anywhere.",
+    "_file": "03-rates.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-30",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "The resort towns",
+       "title": "Four resort towns, each with its own page.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Each resort town in the corridor runs on its own logistics, so each has its own page with the travel line that applies and the questions specific to the town."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-28",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/retreats/vail/\">Vail</a>",
+         "text": "The corridor’s incentive-event center, an I-70 drive from Denver with its own Eagle County setup patterns."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/aspen/\">Aspen</a>",
+         "text": "The far-resort booking, with the far travel line and a night’s lodging at cost."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/beaver-creek/\">Beaver Creek</a>",
+         "text": "Venues up the mountain above the village hotels, with setup through a gated village and access windows that shape the evening."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/breckenridge/\">Breckenridge</a>",
+         "text": "The highest of the four towns at roughly 9,600 feet, with a historic district doing the venue work that hotels do elsewhere."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Down-links to the four resort spokes, two sentences of real description\n     each. Venues named as the market's places (architecture §8 vetted lists),\n     kept sparse so the spoke pages keep their uniqueness.",
+    "_file": "05-resorts.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-36",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "Retreat questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-32",
+       "html": "The mountain towns’ sound caps and curfews, cited and dated, are on the <a href=\"/planners/mountain/\">mountain page</a>, stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, and more booking questions are on the <a href=\"/planners/faq/\">planners question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-33",
+       "items": [
+        {
+         "q": "What does the resort need to provide?",
+         "a": "One or two dedicated 20-amp circuits within reach of the performance area, not shared with catering warmers or a lighting truss, which is the most common cause of a setup problem. Setup runs 45 to 90 minutes depending on size, pack-down 30 to 60, timed to the dock and elevator windows the venue gives us."
+        },
+        {
+         "q": "How loud is it, and do you honor sound caps and curfews?",
+         "a": "The welcome dinner plays at the level of the conversation, and the last night plays like a dance band. Mountain venues run their own rules, so tell us the cap and the curfew when you book and both go into the plan, with the set built to land on the curfew."
+        },
+        {
+         "q": "Can the band play outdoors at altitude?",
+         "a": "Yes, on a covered, level and dry performance area with power run to it and a move-indoors call time written before the day, because mountain evenings drop fast. The corridor runs from about 7,900 feet in Aspen to roughly 9,600 in Breckenridge, where singers and horns pace a night differently and the temperature swing means more retuning."
+        },
+        {
+         "q": "Do you play company offsites for remote and hybrid teams?",
+         "a": "Yes, and the offsite is now the most common reason a company books a mountain evening. Tell us the dates, the venue and roughly how many are flying in, and we'll plan every evening of the stay on one contract."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-34",
+       "html": "This figure comes from published 2026 market guides, read September 2026. Signet provides prices for a specific date on request.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-39",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-37",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the retreat dates and we'll plan the evenings with you.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "root": {
+  "props": {
+   "path": "/for-artists/",
+   "title": "For Artists | Signet Artists",
+   "description": "Musicians and DJs: Signet books live music for weddings, private parties and corporate events across Denver, the Front Range and the Colorado mountain towns, and handles the client side of every booking. Send us your act.",
+   "titleExact": true,
+   "breadcrumb": "For Artists",
+   "notes": {
+    "_note": "The artist page, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day: the handoff's copy is not ratified, the page is drafted to the global copy law (the tells catalog, BASE-VOICE, the Signet rulings) and he edits it in CopyDesk after. Indexed, and he also hands the link over face to face. Not /artists/, because that directory holds the named acts' pages (Tejas, Tony Medina, Firstwater) and a client trimming one of those URLs must not land on a sign-up page. No terms on the page: commission, exclusivity and non-circumvention are one-to-one after a fit, and 'representation is non-exclusive' is the one relationship line that publishes (Daniel: correct). The genre list is wider than the roster on purpose ('include other genres that aren't currently on the roster'). The CTA is the Google Form in site.json brand.forms.artist, owned by Daniel's own account; rates are asked in the form and never publish back. No nav key: the page is for musicians, not buyers."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Musicians and DJs",
+       "slab": true,
+       "title": "For artists.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Signet books live music for weddings, private parties and corporate events in Denver, Boulder, Colorado Springs, Fort Collins, Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. We look after the client side of every booking, from the first enquiry through the quote, the contract, the deposit and the details on the day, so that you can show up and play.",
+       "headingText": [
+        {
+         "html": "We represent solo acts, duos, trios and quartets, and we put a larger band together when a client asks for one. We book jazz, flamenco and Spanish guitar, funk, soul and R&amp;B, blues, classic rock, yacht rock, Americana and bluegrass, country, Latin and mariachi, pop and rock covers, string players, pianists, singer-songwriters and DJs, and if you play something else, send it anyway."
+        },
+        {
+         "html": "Representation is non-exclusive, so you keep your own gigs and your own clients."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Send us your act",
+         "href": "https://docs.google.com/forms/d/e/1FAIpQLSfwqRn9_PH7so43wI-q2zGRAD32v2rtrYaGVMudcOIVl6jdjg/viewform",
+         "cls": "btn"
+        },
+        {
+         "label": "See the roster",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The musician's page. Who we are to an act, what we take off their\n     plate, what we book, what we look for, the one relationship line that\n     publishes. The service area renders from the roster's area list so it\n     names every town.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-7",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Before you send",
+       "title": "What we need to consider an act.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The form asks for all of it."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-5",
+       "rows": [
+        {
+         "term": "Live video",
+         "text": "A clip of you playing to a crowd. A phone recording from the back of the venue is fine, and it’s the first thing we open."
+        },
+        {
+         "term": "A song list",
+         "text": "Enough songs for a three-hour event, most of them songs the crowd already knows. Paste it in the form or link it."
+        },
+        {
+         "term": "Your own PA",
+         "text": "Sound sized for the venues you play, from a dinner party to a courtyard, and the hands to run it. Tell us in the form what you carry."
+        },
+        {
+         "term": "Liability insurance, or the will to get it",
+         "text": "Venues ask for a certificate before the date. <a href=\"https://www.insurancecanopy.com/\">Insurance Canopy</a> writes performer policies by the year, and <a href=\"https://www.musicproinsurance.com/\">MusicPro</a> covers the gear."
+        },
+        {
+         "term": "How you dress",
+         "text": "Clothes that fit a wedding or a corporate dinner. Business casual at least, and the client tells us when they want more."
+        },
+        {
+         "term": "The set format",
+         "text": "Sets of 45 to 60 minutes with 15 to 20 minutes between them, and music playing through the break."
+        },
+        {
+         "term": "A quick answer on a date",
+         "text": "When we write to ask about a date, a reply the same day keeps the booking moving."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "What we need before we can consider an act (added 2026-09-25 on\n     Daniel's call, after reading Colorado Professional Performers' artist\n     application). The reader is a musician deciding whether to send the\n     form. Each item is said once here and asked once in the form; the\n     intro no longer carries the \"what we look for\" sentence. The set\n     format is the one the FAQ already publishes. Insurer links are the\n     two CPP points artists to; they are a resource, not an endorsement.",
+    "_file": "01a-requirements.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-9",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. For a musician deciding whether to send\n     the form, the names are the whole answer to \"who books through these\n     people\".",
+    "_file": "01b-credits.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-10",
+       "buttons": [
+        {
+         "label": "Send us your act",
+         "href": "https://docs.google.com/forms/d/e/1FAIpQLSfwqRn9_PH7so43wI-q2zGRAD32v2rtrYaGVMudcOIVl6jdjg/viewform",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us your act.",
+       "lede": "Links to live video, your song list, the sizes you offer and your typical rate for a three-hour event are what we need to start. We read every submission, and when there’s a fit we’ll write back and set up a call."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "If you’d rather ask something first, email <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The page's own close. The sitewide offer close is a buyer's block\n     (\"Check a Date\"), and this page's action is the submission form.",
+    "_file": "02-close.html"
+   }
+  }
+ ]
+}

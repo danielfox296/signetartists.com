@@ -1,0 +1,370 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/retirement-party/",
+   "title": "Retirement party ideas and live music in Denver | Signet Artists",
+   "description": "Live music for a retirement party in Denver, at home, at a restaurant or at the office: a jazz duo under the dinner, a singer with a guitar, live band karaoke for the colleagues, and an announcement microphone for the speeches.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music for a retirement party",
+     "serviceType": "A jazz duo, a singer with a guitar, live band karaoke, a party band or a DJ for retirement parties thrown by a company or a family",
+     "description": "Live music for a retirement party across Denver and the Front Range: a jazz duo playing the standards at 60 to 65 dBA under the dinner and silent for the speeches, a singer with a guitar who learns the retiree's song for the night, live band karaoke for the department, and a trio or quartet for the send-off that ends on a floor, at home, at a club, in a restaurant's private dining space or at the office, with an announcement microphone for the speeches, vendor paperwork where a company needs it, and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "LvI8FAVFADA",
+      "name": "Solo jazz guitar for a retirement party: a blues after Grant Green",
+      "description": "A blues after Grant Green on one jazz guitar, the size a retirement dinner books first, at a volume the table talks across.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT33S"
+     },
+     {
+      "id": "C6M9wwR9DWk",
+      "name": "Band for a company retirement party: Tony Medina playing Drive at an office party",
+      "description": "Tony Medina playing Drive at an office party, the band a company's send-off books when the department wants a floor.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M24S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'retirement party ideas' (with 'for a man', 'for women', 'for coworker'), 'retirement party entertainment ideas' and 'retirement party entertainment'; 'retirement party band' autocompletes but is polluted by a band of that name, so the page carries it in the h1 without leaning on it. The page's argument is who throws it (the company or the family) and the speeches, with the standards as the music that reaches forty years of colleagues at once. The company version links to the corporate page for the vendor paperwork. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
+    "reader": "Whoever is throwing a retirement party, the family, the company or the department, and wants the speeches to land and the rest of the night to have something in it.",
+    "schema_note": "Authored 2026-09-20 with the retirement party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the live band karaoke page (the retiring colleague's song as a request taken the week before), the proposals page (the first learned song), the corporate holiday page (vendor setup, a PO and a certificate of insurance are available and none of it is fast) and the hub's milestone section (the announcement microphone). Questions are worded the way hosts search. No figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Retirement party",
+       "slab": true,
+       "title": "Live music for a retirement party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The third speech ends, the glasses go up, and the guitarist starts the song the retiree has asked for at every office party since the nineties. Music for a retirement party fills everything around the speeches and stops for them: a jazz duo under the dinner, a singer with a guitar for the one song, and for the department that wants to make noise, the band that hands them the microphone.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings when the family throws it and one of our <a href=\"/corporate/\">corporate bookings</a> when the company does, and the music is the same either way."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The retirement party spoke. The buyer's phrases (retirement party ideas, retirement party band) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP and the corporate page is linked ACROSS for the company version.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the send-off, the family, the company or the department. The ideas heading carried a negation ('that aren't a slideshow') and is now the search phrase; ideas rows that restated the sizes are gone; procurement and space went to the FAQ.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "One guitar under the dinner, and a band for the office.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A blues after Grant Green on one jazz guitar, the size a retirement dinner books first, and Tony Medina playing Drive at an office party, the band a company’s send-off books when the department wants a floor."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/LvI8FAVFADA?rel=0",
+         "title": "One jazz guitar playing a blues after Grant Green",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
+         "title": "Tony Medina playing Drive at an office party",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: one jazz guitar on a blues after Grant Green (no player named; the format is spec'd) and Tony Medina playing Drive at an office party (a named act).",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Sizes",
+       "title": "Music that gets out of the way of the speeches.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The speeches are the point of a retirement party, so the music is built around them: silent for the remarks, back the moment the glass goes down, and sized to the place."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The jazz duo, or one guitar",
+         "text": "Upright bass and guitar, or one jazz guitarist, playing the standards quietly under the dinner. The standards reach a table of colleagues aged twenty-five to seventy at once, and the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> stops for every speech."
+        },
+        {
+         "term": "A pianist",
+         "text": "Standards and the songs from the retiree’s own decades, played through cocktails and dinner on the venue’s piano or on a stage piano we bring. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> fits a restaurant’s private dining space as easily as a club."
+        },
+        {
+         "term": "A singer with a guitar",
+         "text": "One voice and a guitar playing the songs the office knows and the one the retiree has always asked for, learned for the night. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> plays it."
+        },
+        {
+         "term": "Live band karaoke for the department",
+         "text": "The band plays the 80s and 90s hits on its own and hands the microphone to the colleagues who’ve been threatening to sing for a decade. The retiring colleague’s one karaoke song is a request we take the week before. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> needs a big private space or a hotel event space."
+        },
+        {
+         "term": "The party band",
+         "text": "A trio or a quartet for the send-off that ends on a floor. <a href=\"/artists/tony-medina/\">Tony Medina</a> plays it up to a four piece, the same band plays the dinner first, and <a href=\"/ensembles/dj/\">the DJ</a> can take the late end through the same sound system."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out what each size costs in Colorado.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The sizes a retirement party books, with the speeches as the argument. Footprint, circuit and load-in facts from site.json; the karaoke request fact from its page; the learned-song fact from the proposals page. Tejas Singh and Tony Medina are named because they front their acts.",
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Who throws it",
+       "title": "The company, the family, or the department.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "The company",
+         "text": "A dinner in a private dining space or a hotel, booked by whoever books the holiday party and handled the way any <a href=\"/corporate/\">company event</a> is, with the speeches built into the plan."
+        },
+        {
+         "term": "The family",
+         "text": "A dinner at home or at a <a href=\"/private-parties/denver/\">Denver</a> club, with the grandchildren at one end of the table, a toast, and a set built from the years the retiree cares about."
+        },
+        {
+         "term": "The department",
+         "text": "The Friday send-off with the whole floor there, which wants something to do more than something to listen to. Live band karaoke is the answer, played as the <a href=\"/corporate/after-party/\">after-party</a> if a dinner comes first."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Who throws the party and where, each with the page that covers the venue side. The corporate facts (vendor setup, a PO, the certificate of insurance) are the holiday page's; the club dinner is the Denver page's.",
+    "_file": "03-who-throws-it.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Ideas",
+       "title": "Retirement party ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The slideshow is happening anyway. These give the rest of the night something to do."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-20",
+       "rows": [
+        {
+         "term": "Everybody singing, not just watching",
+         "text": "For a send-off where the guest of honor should be sung to, <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> is a duo that plays the Beatles and gets the colleagues, the family and the grandchildren singing together."
+        },
+        {
+         "term": "The retiree’s song, sung",
+         "text": "The one they’ve requested at every office party for thirty years, played with everyone watching, placed the way a <a href=\"/private-parties/proposals/\">surprise song</a> is."
+        },
+        {
+         "term": "A set from the year they started",
+         "text": "The standards and the songs from the decade they joined, threaded through the dinner. The <a href=\"/repertoire/\">repertoire page</a> is searchable by title."
+        },
+        {
+         "term": "A DJ built around their decade",
+         "text": "A set built from the year they started work, for the send-off that turns into a floor."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The ideas section carries the head terms hosts type ('retirement party ideas', 'retirement party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Questions",
+       "title": "Asked about retirement parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Can we hire a band for a retirement party?",
+         "a": "Yes. Most start with a jazz duo or one guitarist under the dinner, a singer with a guitar plays the retiree's song, live band karaoke gets the department singing, and a trio or a quartet plays the send-off that dances. It's one contract with one personal contact, booked through Signet Artists in Denver."
+        },
+        {
+         "q": "How does the music work around the speeches?",
+         "a": "The duo plays at the level of the conversation, stops for each speech and comes back the moment the glass goes down, and an announcement microphone is live for whoever stands up. Tell us roughly when the speeches fall and the set is built around them."
+        },
+        {
+         "q": "Can the company pay by purchase order?",
+         "a": "Yes. A company's retirement dinner is booked like any corporate event: vendor setup, a purchase order, a certificate of insurance and a W-9 are all available. Procurement is rarely fast, so start early."
+        },
+        {
+         "q": "How much space does the band need in a private dining space?",
+         "a": "One guitar takes about 6 by 4 feet on one circuit, a duo 8 by 6, a trio 12 by 8, and a quartet or live band karaoke 14 by 10 on two circuits, with karaoke's two lyric screens. Setup runs 45 minutes for a solo and an hour for a duo or a trio, and we settle setup, power and volume with the venue before the day."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the place and who's throwing it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

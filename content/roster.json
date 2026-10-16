@@ -1,0 +1,265 @@
+{
+ "order": [
+  "tejas-singh",
+  "jazz-duo",
+  "dirty-flamenco",
+  "funk-trio",
+  "dj",
+  "tony-medina",
+  "last-consulate",
+  "live-band-karaoke",
+  "yacht-rock",
+  "americana-band",
+  "soul-rnb",
+  "solo-piano",
+  "changes-jazz-trio",
+  "firstwater",
+  "rene-moffatt",
+  "your-bird-can-sing",
+  "solo-guitarist",
+  "singer-guitarist",
+  "spanish-guitarist",
+  "acoustic-duo",
+  "christmas-jazz-trio",
+  "classical-strings"
+ ],
+ "_comment": "The roster as data. Built 2026-08-15 from the restructure spec and signet-roster-system-v2.xlsx. Nothing about a booking is hardcoded in a page: act pages, roster cards, filter UI, per-act Offer schema and llms.txt all render from this file. The schema is deliberately flat and tag-based so it exports cleanly to the intranet/CRM later.",
+ "_presentation_note": "REVISED 2026-08-16 on Daniel's call, and this is the important axis. A first pass listed every act by name with a face attached, which meant inventing a flavour difference between Dan Steele and DF Funk that rested on a face chair the workbook itself marks 'assumed'. Daniel's correction: some of these are genuinely fronted and some are interchangeable, so do not name the interchangeable ones. Name them and you have promised a personality the booking cannot guarantee. Spec them and you have promised a sound, a size and a price, which is what you can actually deliver.\n\nTwo values:\n  presentation: \"face\"  the person IS the product. Publishes name and face.\n  presentation: \"spec\"  the format IS the product. Publishes instrumentation, never a name.\n\nThis is ORTHOGONAL to status (flagship/listing). Jazz Duo is a spec'd format with a full flagship page.",
+ "_img_shortage_note": "REASSIGNED 2026-08-17. There are four placeholder stills for eight image slots: seven act cards plus the home page hero, which is img/hero.jpg. Collisions are therefore unavoidable and the only question is where they fall. The 17 Aug audit caught the worst one, the same trumpet on the Dirty Flamenco and Jazz Duo cards sitting side by side in the home page flagship grid. Assignment now: the three flagship cards and the hero are four different images, so the home page repeats nothing. What is left is Dirty Flamenco and the DJ sharing dj.jpg, one row apart in column three of the roster grid, which is the least visible pair available. None of these photos depicts the act it sits on; they are duotoned stock objects and the shoot replaces all of them, alt text included. UPDATE 2026-08-28: Dirty Flamenco's card now carries its own footage (see its _video_note), so the dj.jpg collision no longer renders anywhere; the img stays as data because the card falls back to it wherever the video field is ever cleared. UPDATE 2026-09-06: the shortage is down to two slots. Tony Medina replaced Blues Rock carrying his own photograph, which releases standards.jpg back to the jazz duo alone, and the only interim stills still rendering are the jazz duo's and the DJ's.",
+ "_source_note": "The spec names signet-roster-final.xlsx as the content source. That file does not exist in the repo. The only roster workbook present is signet-roster-system-v2.xlsx, and this file is populated from its Roster and Chair Specs tabs.",
+ "_pricing_note": "REWRITTEN 2026-09-04. This file carried the published rate card: a `denver` and a `resort` range on every rateCard row, an `hourly` on the duo, and per-config Offers derived from them. The site publishes no Signet price of any kind from that date, so the price columns are gone from the data as well as the copy; the repo is the published site and a number in a shipped JSON file is a published number. What is left is structure: the configuration ids, their labels and their piece counts, which is what the ladders, the roster filter and the schema still need. The internal card is in OFFER.md. Market figures live in _src/data/market-rates.json with their provenance and are the only figures any surface may render.",
+ "_scope_note": "REFOCUSED 2026-08-17 for Q4. The 2026 product is small format: solo, duo, trio and quartet, cocktail through featured. Quartet is the published ceiling on every act and every surface. Five and six piece stays on the rate card under a by-request divider, because the published-pricing philosophy is the differentiator and hiding a number we hold would cost more than printing it; it is not merchandised as a standard product anywhere else. Seven, ten and thirteen piece are off the sold tables entirely (see site.json rates). Tejas Singh leads the roster and every featured-acts block.",
+ "_spelling_note": "Tejas Singh, with the h. The restructure spec and the roster workbook both wrote 'Tejas Sing'; Daniel confirmed 2026-08-16 that the workbook was wrong, and it has been corrected at source. Do not 'fix' this back to match an older copy of the spec.",
+ "_players_note": "No player names, no lineup, no 'collective of musicians' framing. On a face-led act the face is the one name published, because the face is what the client buys. On a spec'd format no person is named at all. Instrumentation is published everywhere, because it is part of the product; the people holding those chairs never are.",
+ "rateCard": [
+  {
+   "id": "solo",
+   "rangeLabel": "solo",
+   "label": "Solo",
+   "pieces": 1,
+   "note": "Background and cocktail. One voice, one instrument."
+  },
+  {
+   "id": "duo",
+   "rangeLabel": "duo",
+   "label": "Duo",
+   "pieces": 2,
+   "note": "The working pair. An hour on its own, or cocktails and dinner together."
+  },
+  {
+   "id": "trio",
+   "rangeLabel": "trio",
+   "label": "Trio",
+   "pieces": 3,
+   "note": "The working size for a party in a small venue."
+  },
+  {
+   "id": "quartet",
+   "rangeLabel": "quartet",
+   "label": "Quartet",
+   "pieces": 4,
+   "note": "Where a covers act becomes a dance floor act."
+  },
+  {
+   "id": "quintet",
+   "rangeLabel": "six piece",
+   "label": "Five to six piece",
+   "pieces": 5,
+   "byRequest": true,
+   "note": "Horns or a second voice. Quoted on request rather than sold as a standard size."
+  },
+  {
+   "id": "dj",
+   "rangeLabel": "DJ",
+   "label": "DJ",
+   "pieces": 1,
+   "note": "On its own, or against a live instrument as a hybrid."
+  }
+ ],
+ "buckets": [
+  {
+   "id": "party",
+   "label": "Party",
+   "blurb": "Dance floor."
+  },
+  {
+   "id": "cocktail",
+   "label": "Cocktail",
+   "blurb": "Arrival, cocktails, dinner."
+  },
+  {
+   "id": "patio",
+   "label": "Patio",
+   "blurb": "Outdoor and casual."
+  },
+  {
+   "id": "specialty",
+   "label": "Set piece",
+   "blurb": "A set piece guests watch."
+  },
+  {
+   "id": "budget",
+   "label": "Background",
+   "blurb": "Background music, the smallest live booking."
+  }
+ ],
+ "_facets_note": "ADDED 2026-09-16 with the new-act skill. Every filterable fact about an act is a tag against a vocabulary declared here, the same contract buckets[] and rateCard[] already had: bucket_tags = the kind of night, config_tags = the size, genre_tags = the genre, vocals = whether a singer fronts it, area_tags = where it plays. A select renders on the roster page only for a facet the roster actually varies on, and only with the options some act carries, so an unused tag is never a dead filter. vocals is one of: sung (a singer fronts it), instrumental (no singer), optional (a voice can be added; matches both filters). area_tags omitted means every area in areas[], which is the roster-wide default; set it only on an act that does not travel the whole list, and the Where filter appears the moment one does. The vocabularies grow with the roster; never publish a count of them either. UPDATED 2026-09-23: occasion_tags (against occasions[]) joined the facets; the Occasion select renders on the roster the same way the others do. The 'dj' bucket was retired the same day.",
+ "genres": [
+  {
+   "id": "jazz",
+   "label": "Jazz"
+  },
+  {
+   "id": "singer-songwriter",
+   "label": "Singer-songwriter"
+  },
+  {
+   "id": "pop-covers",
+   "label": "Pop and rock covers"
+  },
+  {
+   "id": "classic-rock",
+   "label": "Classic rock"
+  },
+  {
+   "id": "blues",
+   "label": "Blues"
+  },
+  {
+   "id": "soul",
+   "label": "Soul and R&B"
+  },
+  {
+   "id": "funk",
+   "label": "Funk"
+  },
+  {
+   "id": "yacht-rock",
+   "label": "Yacht rock"
+  },
+  {
+   "id": "americana",
+   "label": "Americana, folk and bluegrass",
+   "_note": "Label widened from \"Americana and bluegrass\" 2026-09-20, the day René Moffatt joined: his EPK calls the music folk, Americana and folk-rock, and the filter should say folk somewhere without minting a one-act genre."
+  },
+  {
+   "id": "flamenco",
+   "label": "Flamenco and Spanish guitar"
+  },
+  {
+   "id": "downtempo",
+   "label": "Downtempo and electronic"
+  },
+  {
+   "id": "dj",
+   "label": "DJ, open format"
+  },
+  {
+   "id": "sound-bath",
+   "label": "Sound bath and sound healing"
+  },
+  {
+   "id": "classical",
+   "label": "Classical strings",
+   "_note": "ADDED 2026-09-25 with the classical strings format. The roster carried no classical anything until then. The label is Daniel's own phrase for the offer and the one a buyer picks from a list; the head terms buyers type (string quartet, wedding violinist) are the page's title and URL, not the filter label."
+  }
+ ],
+ "areas": [
+  {
+   "id": "denver",
+   "label": "Denver"
+  },
+  {
+   "id": "boulder",
+   "label": "Boulder"
+  },
+  {
+   "id": "colorado-springs",
+   "label": "Colorado Springs"
+  },
+  {
+   "id": "fort-collins",
+   "label": "Fort Collins"
+  },
+  {
+   "id": "vail",
+   "label": "Vail"
+  },
+  {
+   "id": "beaver-creek",
+   "label": "Beaver Creek"
+  },
+  {
+   "id": "aspen",
+   "label": "Aspen"
+  },
+  {
+   "id": "breckenridge",
+   "label": "Breckenridge"
+  },
+  {
+   "id": "telluride",
+   "label": "Telluride"
+  },
+  {
+   "id": "steamboat-springs",
+   "label": "Steamboat Springs"
+  },
+  {
+   "id": "winter-park",
+   "label": "Winter Park"
+  },
+  {
+   "id": "crested-butte",
+   "label": "Crested Butte"
+  }
+ ],
+ "_holds_note": "Held out of the build. No page, no listing, no schema. Kept here so the decision is visible and reversible rather than lost. Freddy Alexander left this list on 2026-08-16: he is not a listing, he is unpublished availability depth, which is what the workbook always said he was. Since 2026-09-06 he sits behind Tony Medina rather than behind the retired Blues Rock format.",
+ "holds": [
+  {
+   "name": "Thomas Owen Band",
+   "reason": "Pulled from the site on Daniel's call, 2026-08-27. Was the one face-led listing: patio and cocktail, solo to trio, promote-on-footage. The workbook's open question about fielding a two-hour covers set was never resolved. Nothing else is tagged patio, so the patio filter left the roster page with it."
+  },
+  {
+   "name": "Tchunk",
+   "reason": "Artistic project, not an event product. Different website."
+  },
+  {
+   "name": "Vaughn Tromburg Project",
+   "reason": "Event-set question unresolved."
+  },
+  {
+   "name": "Arbor Sons",
+   "reason": "Face and covers ratio unknown."
+  },
+  {
+   "name": "DF & Kyren",
+   "reason": "Overlaps the cocktail bucket. Unfilmed."
+  }
+ ],
+ "_media_note": "Real media loaded 2026-08-27: Daniel's own Dirty Flamenco footage (media/, native player) plus artists'-channel assets (their sites and YouTube; per-asset provenance in _src/data/media-sources.json). Daniel's direction: err toward too much, he prunes. `video` http(s) = embed iframe, site-relative = native file with `video_poster`. Named faces (Tejas, Gary Meyers) may be named in alt text; spec'd acts never are. REMOVED on Daniel's call 2026-08-28: Jordan's media off the funk-trio card (stage photo) and blues-rock card (Old #7 embed); his footage stays on the jazz and solo pages. The Guaraldi solo video is embed-blocked on YouTube's side (shows 'Video unavailable' in embeds) and was replaced by the Blue Bossa solo. ADDED 2026-09-06: Tony Medina's own photographs and footage, on Daniel's permission, when he was promoted out of the Blues Rock format. Every one of his eight published videos was checked for playableInEmbed before placement. Held back deliberately, and not to be reinstated without asking him: a memorial video for a family member who died in 2026, the family-update and show-alert vlogs, a poster graphic with baked-in text, the green-venue wall-signing photographs of identifiable third parties, and a shot whose backdrop is a plasma-donation advertisement. ADDED 2026-09-20: a second clip of Daniel's own Dirty Flamenco footage (media/dirty-flamenco-2.mp4, shot 2026-09-19) replaces the August clip on the cards and in the flamenco page hero; the August clip moves into that page's footage grid. RULINGS 2026-09-20, Daniel, on the René Moffatt load: there is no memorial rule and no sponsorship or alcohol rule on this site; both were agent-made, and a cover recorded for a late parent or a stage with a sponsor's banner on it publishes like anything else. The Tony Medina hold-backs above stay as the record of that day's calls, not as rules.",
+ "_corporateRange_removed_note": "RETIRED 2026-08-17, Daniel's call. Was an aggregate corporate band range rendered as a card row and a line in llms.txt, and it anchored a corporate buyer at roughly double what the 2026 product costs. Superseded entirely 2026-09-04: no Signet range publishes anywhere now. The figure is in git history and in OFFER.md.",
+ "_buckets_note": "RELABELLED 2026-09-23 with the roster rebuild. 'Budget' read as a price claim on a site that publishes no prices, so the id stays (it is in every card's data attributes and in the skill's docs) and the label is 'Background', which is what the tag always meant: the smallest live booking, under the conversation. 'Specialty' was an internal word, so its label is 'Set piece', the phrase the site already uses for it. The 'dj' bucket is gone: a DJ was offered three times over, as a kind of night, a size and a genre, and the size and the genre are the two questions a buyer actually asks.",
+ "occasions": [
+  {
+   "id": "weddings",
+   "label": "Weddings"
+  },
+  {
+   "id": "corporate",
+   "label": "Corporate events"
+  },
+  {
+   "id": "private-parties",
+   "label": "Private parties"
+  },
+  {
+   "id": "daytime",
+   "label": "Daytime"
+  }
+ ],
+ "_occasions_note": "ADDED 2026-09-23. occasion_tags are the site's own four trees (weddings, corporate, private parties, daytime), tagged from what each act's page says it plays, so the Occasion filter on /music/ answers the question the rest of the site is organised by. An act with no page is tagged from its blurb. The occasion hubs can deep-link the roster pre-filtered with ?occasion=<id>.",
+ "_lanes_note": "ADDED 2026-09-23. The roster page shows two lanes, and `lane` is which one an act sits in: 'format' (a configuration sold on instrumentation, the spec'd acts) or 'named' (an act booked by its name). It is NOT the same axis as `presentation`: Firstwater, Last Consulate and Your Bird Can Sing are spec'd (nobody is named) and still named acts, because what you book is that act. When `lane` is omitted it follows presentation: face = named, spec = format. The filter, the contact picker, the HTML sitemap and the sibling lists all read the lane.",
+ "_entity_note": "ADDED 2026-09-23. `entity` on a named act emits a Person or MusicGroup node in the structured data, on the roster and on the act's page, with sameAs to the act's own site and channel where they are known. That is the named-act promise ('a name you can look up') stated in markup. Firstwater carries none on Daniel's ruling that nothing about the person crosses to Signet; Last Consulate and Your Bird Can Sing carry a MusicGroup node with no sameAs, since neither publishes a site.",
+ "_card_line_note": "ADDED 2026-09-23. A format-lane card on /music/ is compact (no media) and prints `card_line` when present, else the first sentence of the blurb. The full blurb still renders on the act page, in llms.txt and in the Service description; nothing is shortened at source."
+}

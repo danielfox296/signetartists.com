@@ -1,0 +1,47 @@
+{
+ "id": "firstwater",
+ "name": "Firstwater",
+ "presentation": "spec",
+ "_note": "ADDED 2026-09-19 with the signet-new-act skill, from thefirstwater.co on Daniel's direction ('here's the act. it's a little different than the others'). It is Daniel's own sound-bath practice and the first act on the roster that is not a band. Every fact on the card and the page traces to thefirstwater.co: the home page's plain description of the night, the FAQ, the About page and the corporate page. Not a band: one facilitator, seventy-five minutes, so there is one configuration and no ladder section on the page (a one-row table shows nothing; what the venue needs is in the identity paragraphs and the FAQ). The bucket is specialty, the set piece a group experiences. The act's own corporate page publishes a starting price; no figure of any kind comes across to Signet, and that page is not deep-linked for the same reason. Its reply-window line stays on its site too. No footage exists and none is likely (phones stay in bags at a session), so the hero carries a still in the act-video-photo pattern the solo guitarist page uses, with no footage-slot label; since 2026-09-19 that still is the duotoned stock sound-bath still, on Daniel's call, in place of the portrait that shipped first. Held back: every hero and session image on the act's site (duotoned Unsplash stock, listed in its img/hero/SOURCES.md, not the act), and two photographs from another of Daniel's sites (third parties in frame, and not this act). UPDATED 2026-09-19 later the same day: thefirstwater.co/weddings/ went live (Daniel: 'add wedding stuff to the firstwater site'), so the wedding booking now traces to the act's site and joins the identity copy and the occasions block.",
+ "_presentation_note": "SPEC'D ON DANIEL'S RULING 2026-09-19: 'do not cite my name. no daniel, no daniel fox. firstwater.' The first version named him the way his own site does; it was reverted the same day. Firstwater is a named project whose facilitator is not published by name, the same shape as Last Consulate: `spec` carries the build the way a spec'd format's byline does, nobody is named anywhere on the page, in alt text or in schema, and the act still sits in the roster intro's named-acts sentence because the specific sound comes with the booking. The person's own site names him by first name; that is that site's law, not this one's.",
+ "_style_note": "DANIEL 2026-09-19: 'sound sessions are meaningless... i ask you for buyer oriented intended search terms. this is seo and geo.' The first version used the act's own product term. Style, genre label, title, FAQ questions and body copy now carry the terms buyers type, checked against Google autocomplete the same day: corporate sound bath, sound bath for corporate events, corporate wellness sound bath, sound healing for corporate wellness, sound bath team building, sound bath retreat, group sound bath, private sound bath. 'Sound meditation' autocompletes back to sound bath and sound healing, so those two carry the labels.",
+ "status": "listing",
+ "page": "artists/firstwater/",
+ "style": "Sound bath and sound healing",
+ "spec": "One facilitator, live instruments and a sound system tuned to the venue",
+ "byline_inline": "one facilitator, live instruments and a sound system tuned to the venue",
+ "material": "Original music, composed and played live",
+ "bucket_tags": [
+  "specialty"
+ ],
+ "config_tags": [
+  "solo"
+ ],
+ "_config_note": "One facilitator. The rateCard's solo row is the honest size (one person, one rig); its 'Solo' label reads as a musician count, so configRangeLabel carries the plain fact instead on the card and in llms.txt.",
+ "configRangeLabel": "One facilitator, seventy-five minutes",
+ "genre_tags": [
+  "sound-bath"
+ ],
+ "_genre_note": "The genre id is sound-bath and the label carries the two head terms buyers type, 'Sound bath and sound healing', the same combined-synonyms shape as 'Flamenco and Spanish guitar'. Daniel 2026-09-19: it is not a 'new genre', it is a search category.",
+ "vocals": "instrumental",
+ "from": "solo",
+ "img": "sound-bath.jpg",
+ "_img_note": "REPLACED 2026-09-19 on Daniel's call ('remove my photo and put a stock photo of a sound bath there'). The first version carried the act's own portrait from thefirstwater.co/about/; both files are deleted and their ledger rows read REMOVED. What renders now is an interim stock still from scripts/stills.py (slug sound-bath: three singing bowls on cushions, Wikimedia Commons, CC BY-SA 4.0, duotoned to the palette like every other interim still, provenance in img/SOURCES.md). Objects only, no people, and the alt describes the frame, never the act.",
+ "alt": "Three singing bowls on cushions with a mallet beside them.",
+ "video": null,
+ "blurb": "A sound bath for your team, offsite or retreat. Your people lie down in low light for seventy-five minutes with nothing to do and nothing to say, with live instruments played over composed music and bass deep enough to feel in your chest, and Firstwater opens and closes the session with ceremony. Firstwater brings it to your venue or holds it in a partner space in Denver, and it books for wellness weeks, team building days, retreats and transition days.",
+ "_identity_note": "Written in the Signet voice from the act's own published lines and read aloud against AI-TELLS Layer 7 on 2026-09-19: no fragment closers, no trailing appositives, contractions throughout, and the trade words the act's site uses (a composed bed, sub-bass, the rig) expanded into words a planner owns (music composed for it, bass deep enough to feel in your chest, the sound system). Rewritten the same day on Daniel's rulings: no name anywhere, buyer search terms (sound bath, sound healing, corporate sound bath, team building) in place of 'sound sessions'. 'Sound healing' is a search keyword here under BASE-VOICE's term-of-art allowance, used where the page's job needs it and nowhere as a claim. The lines that are the act's own stay verbatim: 'strong enough to feel in your chest and soft enough to rest inside', 'nobody is asked to share, to speak, or to be anywhere but on the floor', 'the month a team earned something quiet', 'if you have a space, we can make it sound like a different one'.",
+ "identity": [
+  "Firstwater is a sound bath led by one facilitator, and if you've been to one you already know how to arrive: lie down, get warm, and rest. The facilitator composes the music for each session, plays live instruments over it, and mixes the whole thing from the floor, lying where your people will lie. The facilitator treats the venue like a studio and tunes the sound system to it, so if you have a space, Firstwater can make it sound like a different one.",
+  "Your people come in to low light and lie down, and the mats and blankets are already there. The session opens with ceremony, then there are seventy-five minutes of sound strong enough to feel in your chest and soft enough to rest inside, with real silence partway through, and it closes the same way. Nobody is asked to share, to speak, or to be anywhere but on the floor. Some people follow the guidance closely, some drift, and some sleep, and each of those is a fine way to spend the hour. Afterward there's tea near the door, and people stay awhile or slip out as they please.",
+  "Companies book it as a corporate sound bath three ways: a team session at your office or in a partner space in Denver, one or more sessions built into an offsite or a retreat, and a transition day, with a session for the people leaving a company and for the team that stays. As a group sound healing session it suits a wellness week or a team building day, and it's for hospitals, hospices, libraries, schools and conference organizers as much as for companies and event planners. Couples book it too, as a private sound bath for a wedding weekend or a bachelorette, at the house they rented or a partner space in Denver. Firstwater brings the sound system, the mats, the blankets and the waivers, and what it needs from you is enough floor for your people to lie down, a standard outlet, and about ninety minutes ahead of doors.",
+  "Firstwater's own site is where to read about the public sound baths it holds around Denver and the Front Range, the plain answers to what happens at one, and a journal written in the facilitator's own words.",
+  "This is a named act. What you book is Firstwater, and the one facilitator behind the name is the one who arrives with the sound system and runs the session."
+ ],
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "daytime"
+ ],
+ "lane": "named"
+}

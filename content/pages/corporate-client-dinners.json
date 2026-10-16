@@ -1,0 +1,279 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/client-dinners/",
+   "title": "Live music for client dinners and member events in Denver",
+   "description": "A jazz duo at conversation volume for client dinners and member events: 60 to 65 dBA at the nearest table, and net-30 on approval.",
+   "titleExact": false,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Client dinner and member event entertainment",
+     "serviceType": "Live music for client dinners, member events and private clubs",
+     "description": "Jazz duo and small ensembles for client dinners, member events and private clubs in Denver, played at conversation volume with sound support that's the right size for the venue.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a wedding cocktail hour: Autumn Leaves, guitar and upright bass",
+      "description": "The Signet jazz duo playing Autumn Leaves at cocktail-hour volume, with the conversation on top and the music underneath.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-08-20 with the SEO buildout (Tier 1a, corporate tree). Client dinners, member events, private clubs, firms and showrooms. The jazz duo is the lead product and dinner volume is the argument; the procurement path is the corporate-specific trust block.",
+    "reader": "Whoever is hosting a client or member dinner and wants the table to talk easily with live music under it."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Client dinners",
+       "slab": true,
+       "title": "Dinner music you can talk across.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A client dinner works when the table forgets the music is there, and then remembers it on the way out. It’s upright bass and guitar in the corner, standards played beautifully and played low, and an evening that feels considered.",
+       "headingText": [
+        {
+         "html": "Client dinners, member and association evenings, private clubs, firms and showrooms book it: the evenings where nobody dances and the evening still has to sound like somebody thought about it. Most start with the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, for an hour around a toast or a whole dinner, and it’s one branch of <a href=\"/corporate/\">our corporate work</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Copy pass batch 2, 2026-09-24. THE ONE READER: whoever is hosting a client or member dinner and wants the table to talk easily. The opener already led with the moment and stays. The self-referencing 'this is the page for' line, the volume argument ('most of what goes wrong'), the section that restated it, the procurement section and the venue list are gone; paperwork, space and set lengths are FAQ answers; British spellings fixed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "title": "Music the table talks across.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "A client dinner is a table of people who were invited to talk to each other, so the music is set to the conversation: quiet enough that nobody leans in, present enough that the evening sounds hosted.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "A duo is built for that. Upright bass and guitar playing standards leave the middle of the sound open, so the conversation sits on top of the music, and two musicians can hold a dinner for hours at the same level. The music lifts a little between courses and stops when somebody stands up to speak, planned with your run of show.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "A toast gets an announcement microphone, and the music stops while your speaker is still steps away from it. If the dinner wants a singer out front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> plays the same hours as a duo. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> plays the same dinner on the venue’s piano, or on a stage piano we bring.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The argument of the page: volume, stated as a number and a mechanism.\n     Facts from site.json plannerFaqs (dB bands, set lengths, announcement\n     mic) and acts.json jazz-duo (instrumentation, open arrangement).",
+    "_file": "02-volume.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-15",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Footage",
+       "title": "Hear the jazz duo at dinner volume.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Guitar and upright bass on a standard, at the level a client dinner runs at. Your guests hear each other first and the music second, and it’s the music they mention on the way out."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-13",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass at dinner volume",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_notes": "Client-dinner footage: the jazz duo at dinner level.\n     Existing artist footage, 2026-09-06, per Daniel: no new shoots, the artists'\n     own uploads placed under our framing. Provenance: _src/data/media-sources.json.",
+    "_file": "02a-footage.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "title": "Related evenings",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "If the dinner is a thank-you to a client list, eight ideas for it, with the notes that change for advisors, realtors and firms, are in <a href=\"/blog/client-appreciation-event-ideas-denver/\">client appreciation event ideas in Denver</a>. When the dinner is the first night of an offsite, <a href=\"/corporate/retreats/\">corporate retreats</a> covers the mountain version, and a dinner at home or a milestone at the club is on <a href=\"/private-parties/\">private parties and dinners</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Venues as the market's places (architecture §8 vetted Denver list), plus\n     the across-links to retreats and private-parties and the planners\n     technical link. Footprint figures from site.json configurations.",
+    "_file": "05-venues.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Client dinner questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to the venue as it stands, and more booking questions are on the <a href=\"/planners/faq/\">planners question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "How loud is a jazz duo during dinner?",
+         "a": "About the level of the conversation at the table, so your guests talk across it without raising their voices, and the duo holds that level all evening. If your venue or club enforces a sound cap, give us the number when we sign and the evening is built under it."
+        },
+        {
+         "q": "Can you invoice against a purchase order?",
+         "a": "Yes. We can be set up as a vendor and quote against a PO, with the purchase order number on one itemized invoice: performance, sound and any travel on separate lines. The certificate of insurance, at the limits Colorado clubs and hotels write into their vendor requirements, and the W-9 come with the contract. Vendor onboarding is usually the slowest step, so start it when you shortlist."
+        },
+        {
+         "q": "How much space does the duo need?",
+         "a": "A corner of about 8 by 6 feet, one dedicated 20-amp circuit, and an hour to set up, which can run through a service corridor. No stage and no house sound system are needed. Sets run 45 to 60 minutes with 15 to 20 minutes between them, and music continues through the breaks."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the guest count and the venue, and we'll recommend the ensemble for the dinner.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

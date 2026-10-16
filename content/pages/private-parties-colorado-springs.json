@@ -1,0 +1,403 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/colorado-springs/",
+   "title": "Live music for private parties in Colorado Springs",
+   "description": "Live music for Colorado Springs parties, wedding weekends and milestones: a duo is the size most book, solo to trio, dinner at 60 to 65 dBA, one flat Front Range travel line.",
+   "titleExact": false,
+   "nav": "private",
+   "breadcrumb": "Colorado Springs",
+   "schema": {
+    "service": {
+     "name": "Private party entertainment in Colorado Springs",
+     "serviceType": "Live music for private parties, wedding weekends and milestone celebrations",
+     "description": "An acoustic duo, solo guitarist or trio for Colorado Springs private parties, wedding weekend dinners and milestone celebrations at resorts, clubs and homes.",
+     "areaServed": [
+      "Colorado Springs"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Colorado Springs spoke of the private-parties occasion, built 2026-09-06 as Tier 2 item 9 of the content plan. Evidence: 7 Search Console impressions on 'acoustic duo colorado springs'; Colorado Springs is the only non-Denver Colorado city that autocompletes for wedding music ('wedding bands colorado springs', 'wedding dj colorado springs'); the live SERP for 'colorado springs wedding guitarist' is 100% directories and no small-ensemble vendor in the state has a Springs page. The argument is deliberately different from the Springs holiday spoke, which is paperwork-and-procurement led: this one is the social calendar, wedding weekends and milestones at resort and club venues, with the duo as the size and a Front Range drive rather than a mountain date as the logistics story.",
+    "reader": "Whoever is hosting a party in Colorado Springs, a milestone, a club celebration or the dinners around a wedding weekend.",
+    "_title_note": "RETITLED 2026-09-23. The 2026-09-06 title and h1 led with 'acoustic duo' because that phrase had earned seven Search Console impressions. 'acoustic duo colorado springs' returns nothing on suggest today; 'colorado springs bands for hire' and 'colorado springs wedding band' do. The page now leads with the city, the way the Boulder spoke does, and the duo stays as the size inside the page. Daniel's ruling 2026-09-23: framing is decided on search demand outside the site (autocomplete, suggest reads, SERP reads), never on Search Console or Bing impressions, because the site has almost no traffic and those numbers are noise.",
+    "schema_note": "Colorado Springs private-parties spoke. City-specific set: the travel line, the wedding-weekend bookings, outdoor evenings on a Springs terrace, and the sizing answer for the acoustic-duo query this page exists for. No figure appears in any answer; nothing here is a Signet price."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Colorado Springs private parties",
+       "slab": true,
+       "title": "Live music for a Colorado Springs private party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The light goes off Pikes Peak, somebody moves the party onto the terrace, and two musicians in the corner keep it there for another hour. Colorado Springs hosts beautifully outdoors and it hosts late indoors, and the size that suits both is a duo: voice and guitar, or guitar and upright bass, playing covers your guests can name at a volume they can talk across.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, for milestones, anniversaries, wedding weekends, club celebrations and evenings at home, on one contract with one flat Front Range travel line for the run down from Denver."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Springs private-parties spoke. The evening leads, the logistics sit two\n     sections down. The h1 led with \"acoustic duo\" from 2026-09-06 to\n     2026-09-23 because that phrase had earned seven Search Console\n     impressions; Daniel ruled that the site's traffic is too small to argue\n     from, so the h1 leads with the city and the duo is the size named in the\n     lede. Hub link UP in the first screen per the internal-link contract.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is hosting a party in Colorado Springs, often on a wedding weekend. The real venues, the altitude and the wind off the range stay as local fact; footprints, circuits and dBA left the sizes; travel and outdoor plans are the FAQ, with the extras list; FAQs restating the sizes, the wedding weekend and the altitude are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide since 2026-09-05. This page is a landing\n     surface for city search, so the names sit on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "A band, and a set piece.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tony Medina’s band on stage, and Dirty Flamenco live: the floor act and the centerpiece act a Colorado Springs party chooses between."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-7",
+       "images": [
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/flamenco-live.jpg",
+         "alt": "Gary Meyers playing a seated set on a venue stage.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The sizes",
+       "title": "Ensemble sizes for a Colorado Springs party.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Two musicians sound like live music from anywhere in the venue and still fit in a corner. In a city whose private events happen on terraces, in club dining spaces and in houses with a view, that combination is most of the job."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-17",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-11",
+          "html": "A solo player",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-12",
+          "html": "One voice and a guitar. It suits a dinner for twelve and an outdoor afternoon where the music is there to make the arrival feel hosted.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-13",
+          "html": "An acoustic duo",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-14",
+          "html": "The size this city books most. Voice and guitar for songs guests sing along to, or guitar and upright bass when the set should stay instrumental through dinner.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-15",
+          "html": "A trio",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-16",
+          "html": "The one that fills a dance floor without a stage, for an evening with dancing in the plan.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "What the format plays, and the difference between the acoustic set and a jazz set, is on the <a href=\"/ensembles/acoustic-duo/\">acoustic duo and trio page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The sizing argument, written to the acoustic-duo query that brings people\n     here. Footprint and dBA figures from site.json configurations and the\n     planner FAQ. Across-link to the format page.",
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "The venues",
+       "title": "Resorts, clubs and the wedding weekend around them.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "The city's private celebrations concentrate in a short list of places. Garden of the Gods Resort and Club and Cheyenne Mountain Resort hold the family gatherings and the milestone weekends, with terraces built for the hour before dinner. The Broadmoor runs its own calendar at its own scale. Downtown, The Mining Exchange and The Antlers take the celebrations that want to be walked to from a hotel lobby rather than driven to.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "More of this calendar is built around weddings here than in Denver, and most of a wedding weekend is the parties around it. The welcome party on the Friday, the rehearsal dinner, the brunch on the Sunday: those are private parties in everything but name, and a duo suits all of them. Where the wedding day itself is the one you’re planning, the <a href=\"/weddings/colorado-springs/\">Colorado Springs wedding page</a> covers the ceremony, the cocktail hour and the floor at these same venues.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "At home it's the same booking and an easier venue. A house on the west side with the front of the range in the windows takes a duo in a corner and needs nothing built. Tell us the address and which door the gear comes through, and the load-in is planned before the day.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Venues as the market's places (arch §8 vetted Colorado Springs list),\n     never as our history. The wedding-weekend angle is what makes this page\n     different from the Springs holiday spoke, which is procurement-led.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "The setting",
+       "title": "About 6,035 feet, and the wind off the range.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "The city sits at about 6,035 feet, high enough that guests from sea level feel it and low enough that it changes nothing about how musicians pace a set. What the Springs asks for is a plan for the afternoon. Wind comes off the front of the range and drops as the sun does, and an evening on a terrace can lose fifteen degrees between the first drink and the toast, so outdoor bookings here get a move-indoors call written down before the day.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "The metro versions of this page are <a href=\"/private-parties/denver/\">Denver</a> and <a href=\"/private-parties/boulder/\">Boulder</a>, and a Springs company party lives on the <a href=\"/corporate/holiday-party/colorado-springs/\">Colorado Springs holiday party page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The city-specific logistics paragraph the uniqueness gate requires: the\n     drive as one flat line, the elevation as a non-issue stated as a fact,\n     the afternoon wind and the evening cool as outdoor constraints. Links\n     ACROSS to Denver and Boulder and to the technical page.",
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-32",
+       "eyebrow": "Questions",
+       "title": "Asked about Colorado Springs dates.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-33",
+       "html": "Stage sizes, circuits and input lists for every size are on the <a href=\"/planners/technical/\">technical page</a>, in a form a resort’s events office can check line by line.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-34",
+       "items": [
+        {
+         "q": "Does travel from Denver add to a Colorado Springs quote?",
+         "a": "One flat Front Range line on the quote, covering the run down I-25 and back. There's no mileage arithmetic and no lodging line, because the band drives home the same night, and the fee for the music itself is the same one a Denver host sees. Signet Artists books private-party musicians in Colorado Springs from Denver."
+        },
+        {
+         "q": "Can music play outdoors on a Colorado Springs terrace?",
+         "a": "Yes, on a covered, level and dry spot with power run to it and a move-indoors call agreed before the day. The wind and the temperature drop fast once the sun is behind the range, so the call gets made early, and a duo is inside in a few minutes."
+        },
+        {
+         "q": "What does a Springs booking need for setup?",
+         "a": "A duo fits a corner of about 8 by 6 feet on one dedicated 20-amp circuit, a solo 6 by 4 and a trio 12 by 8. Setup runs 45 to 60 minutes, one van, through whichever door the venue prefers, and a club or resort that asks for a certificate of insurance gets one with the contract."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-35",
+       "html": "Extras that can appear on a quote.",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-36",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the Colorado Springs venue, and we'll recommend the size.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

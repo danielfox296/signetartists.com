@@ -1,0 +1,1014 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/string-quartet/",
+   "title": "String quartet and wedding violinist in Denver | Signet Artists",
+   "description": "A string quartet, trio, duo or solo violinist for wedding ceremonies, cocktail hours, galas and memorials in Denver and the mountains, Bach to Coldplay.",
+   "titleExact": true,
+   "ogImage": "img/classical-strings-card.jpg",
+   "nav": "music",
+   "breadcrumb": "String quartet",
+   "schema": {
+    "service": {
+     "name": "Classical strings",
+     "serviceType": "String quartet, trio, duo and solo violinist for weddings, galas, dinners and memorials",
+     "description": "Classical strings for private and corporate events: a solo violinist, a string duo, a string trio or a string quartet of two violins, viola and cello, playing classical processionals, hymns and popular songs arranged for strings, for wedding ceremonies, cocktail hours, galas, client dinners, anniversaries and memorial services across Denver, the Front Range and the Colorado mountain towns.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "classical-strings",
+    "video": {
+     "name": "Solo violin for a wedding ceremony: the Andante from Bach's Sonata No. 2",
+     "description": "The Andante from Bach's second solo sonata on one violin, unaccompanied, the prelude and processional sound of a strings booking.",
+     "uploadDate": "2025-11-20",
+     "duration": "PT3M55S"
+    },
+    "videos": [
+     {
+      "id": "K-ADcBUHePE",
+      "name": "String quartet for a gala or a wedding: Beethoven's Op. 18 No. 6, first two movements",
+      "description": "A string quartet of two violins, viola and cello playing the first two movements of Beethoven's Op. 18 No. 6, the four-piece sound.",
+      "uploadDate": "2025-08-04",
+      "duration": "PT14M39S"
+     },
+     {
+      "id": "Q8IErG9h694",
+      "name": "Solo violin: the Allegro from Bach's Sonata No. 2",
+      "description": "The Allegro from Bach's second solo sonata on one violin.",
+      "uploadDate": "2025-11-20",
+      "duration": "PT3M6S"
+     },
+     {
+      "id": "uDopMwnLx50",
+      "name": "Solo violin: Paganini's Caprice No. 19",
+      "description": "Paganini's Caprice No. 19 in E-flat major on one violin.",
+      "uploadDate": "2025-11-20",
+      "duration": "PT3M8S"
+     },
+     {
+      "id": "6LkA27z6c38",
+      "name": "Violin: the first movement of the Sibelius Violin Concerto",
+      "description": "The Allegro moderato of the Sibelius Violin Concerto in D minor, Op. 47.",
+      "uploadDate": "2025-11-23",
+      "duration": "PT13M28S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-25 with the signet-new-act skill, on Daniel's instruction to add classical strings as a style from solo violin to quartet, spec'd, nobody named. Evidence the same day: 'string quartet denver', 'string quartet wedding denver', 'wedding violinist denver' and 'violinist denver' autocomplete, 'string quartet colorado springs' and 'string quartet for corporate events' too, and a cost family sits behind them ('string quartet cost per hour', 'average cost string quartet wedding ceremony'), which one FAQ answers with the market's figure and the sources note. The song list is the repertoire list that arrived with the offer, published in six groups as an example of what the booking offers. No player is named on the page, in alt text or in schema; the player's own recordings are not embedded because the YouTube player prints the channel name.",
+    "reader": "Whoever wants strings at the moment everyone is watching: the walk down the aisle, the doors of a gala, a memorial, a long dinner."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Classical strings",
+       "slab": true,
+       "title": "A string quartet or a solo violinist for weddings, galas and dinners.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The first notes of Canon in D, and every guest stands up and turns around. That’s what most couples are picturing when they ask for strings, and it’s the same sound at the entrance of a gala and under a long dinner. Classical strings book as one violinist, a duo, a trio or the full string quartet of two violins, viola and cello, playing Bach for the aisle and Coldplay arranged for strings while the drinks go around.",
+       "headingText": [
+        {
+         "html": "It books for weddings, galas and dinners, for a party at home, and for a memorial service."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=classical-strings",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/NfkVbgovXQU?rel=0",
+       "title": "Solo violin playing the Andante from Bach’s Sonata No. 2 in A minor",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd: classical strings from one violinist to the string\n     quartet. Built 2026-09-25 with the signet-new-act skill on Daniel's\n     instruction. The h1 carries the head terms buyers type (string quartet,\n     violinist) and the lede opens on the moment they are paying for. No\n     player is named anywhere on this page, in alt text or in schema. The hero\n     is the violinist's own upload of the Bach Andante, embedded 2026-09-25 on\n     Daniel's yes; the iframe title names no player.\n\nTHE ONE READER: whoever wants strings at the moment everyone is watching: the walk down the aisle, the doors of a gala, a memorial, a long dinner.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The book",
+       "title": "Canon in D for the aisle, Viva La Vida for the drinks.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The book runs from the classical processionals and preludes through the hymns to the love songs, pop and film themes couples ask for. Every title here is arranged for strings, one violin to four, and a song that isn’t here can be arranged for your date."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-20",
+       "cls": "split split--three",
+       "n": 6,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-8",
+          "html": "Classical and traditional",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-9",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Air from Suite in D (Air on the G String)</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Allegro from Eine Kleine Nachtmusik</span> <span class=\"song-artist\">W.A. Mozart</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Arioso</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Arrival of the Queen of Sheba</span> <span class=\"song-artist\">G.F. Handel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Ave Maria</span> <span class=\"song-artist\">Franz Schubert</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Ave Verum Corpus</span> <span class=\"song-artist\">W.A. Mozart</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Bridal Chorus (“Here Comes the Bride”)</span> <span class=\"song-artist\">Richard Wagner</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Canon in D</span> <span class=\"song-artist\">Johann Pachelbel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Clair de Lune</span> <span class=\"song-artist\">Claude Debussy</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Jesu, Joy of Man’s Desiring</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Meditation from Thaïs</span> <span class=\"song-artist\">Jules Massenet</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Ode to Joy</span> <span class=\"song-artist\">Ludwig van Beethoven</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Pavane</span> <span class=\"song-artist\">Gabriel Fauré</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rondeau</span> <span class=\"song-artist\">Jean-Joseph Mouret</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Salut d’Amour</span> <span class=\"song-artist\">Edward Elgar</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Sheep May Safely Graze</span> <span class=\"song-artist\">J.S. Bach</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Spring</span> <span class=\"song-artist\">Antonio Vivaldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Swan</span> <span class=\"song-artist\">Camille Saint-Saëns</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Trumpet Tune</span> <span class=\"song-artist\">Jeremiah Clarke</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Trumpet Voluntary</span> <span class=\"song-artist\">Jeremiah Clarke</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Vocalise</span> <span class=\"song-artist\">Sergei Rachmaninoff</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Wedding March</span> <span class=\"song-artist\">Felix Mendelssohn</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Winter (Largo)</span> <span class=\"song-artist\">Antonio Vivaldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Come Again: Sweet Love Doth Now Invite</span> <span class=\"song-artist\">John Dowland</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Concerto in G (“Alla Rustica”)</span> <span class=\"song-artist\">Antonio Vivaldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hornpipe from Water Music</span> <span class=\"song-artist\">G.F. Handel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">La Réjouissance</span> <span class=\"song-artist\">G.F. Handel</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Prelude from Te Deum</span> <span class=\"song-artist\">Marc-Antoine Charpentier</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Por Una Cabeza</span> <span class=\"song-artist\">Carlos Gardel</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-10",
+          "html": "Hymns and worship songs",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-11",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Amazing Grace</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Be Thou My Vision</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Come Thou Fount of Every Blessing</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Great Is Thy Faithfulness</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">How Great Thou Art</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Holy, Holy, Holy</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">It Is Well with My Soul</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Jesus Paid It All</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">A Mighty Fortress Is Our God</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Praise to the Lord, the Almighty</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rock of Ages</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Old Rugged Cross</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What a Friend We Have in Jesus</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">’Tis So Sweet to Trust in Jesus</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Goodness of God</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">10,000 Reasons (Bless the Lord)</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">In Christ Alone</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Oceans (Where Feet May Fail)</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-12",
+          "html": "Love songs",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-13",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">All I Ask of You</span> <span class=\"song-artist\">Andrew Lloyd Webber</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">All of Me</span> <span class=\"song-artist\">John Legend</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">And I Love Her</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">At Last</span> <span class=\"song-artist\">Etta James</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Can’t Help Falling in Love</span> <span class=\"song-artist\">Elvis Presley</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Everything</span> <span class=\"song-artist\">Michael Bublé</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Faithfully</span> <span class=\"song-artist\">Journey</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Forever and for Always</span> <span class=\"song-artist\">Shania Twain</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">First Day of My Life</span> <span class=\"song-artist\">Bright Eyes</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Here, There, and Everywhere</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I Choose You</span> <span class=\"song-artist\">Sara Bareilles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I’m Yours</span> <span class=\"song-artist\">Jason Mraz</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">In My Life</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Just the Way You Are</span> <span class=\"song-artist\">Bruno Mars</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Lego House</span> <span class=\"song-artist\">Ed Sheeran</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Love Me Tender</span> <span class=\"song-artist\">Elvis Presley</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Love Song</span> <span class=\"song-artist\">Sara Bareilles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Love Story</span> <span class=\"song-artist\">Taylor Swift</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Lovesong</span> <span class=\"song-artist\">The Cure</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Luckiest</span> <span class=\"song-artist\">Ben Folds</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Make You Feel My Love</span> <span class=\"song-artist\">Bob Dylan</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Marry Me</span> <span class=\"song-artist\">Train</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Moon River</span> <span class=\"song-artist\">Henry Mancini</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">One Hand, One Heart</span> <span class=\"song-artist\">Leonard Bernstein</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">A Thousand Years</span> <span class=\"song-artist\">Christina Perri</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Thinking Out Loud</span> <span class=\"song-artist\">Ed Sheeran</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">’Til There Was You</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Turning Page</span> <span class=\"song-artist\">Sleeping at Last</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">We Belong Together</span> <span class=\"song-artist\">Mariah Carey</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What Makes You Beautiful</span> <span class=\"song-artist\">One Direction</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Wonderful Tonight</span> <span class=\"song-artist\">Eric Clapton</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Yellow</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Yesterday</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">You’re Beautiful</span> <span class=\"song-artist\">James Blunt</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c4": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-14",
+          "html": "Pop, rock and indie",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-15",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">All You Need Is Love</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Baba O’Riley</span> <span class=\"song-artist\">The Who</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Beautiful Day</span> <span class=\"song-artist\">U2</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Best Day of My Life</span> <span class=\"song-artist\">American Authors</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Bittersweet Symphony</span> <span class=\"song-artist\">The Verve</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Brave</span> <span class=\"song-artist\">Sara Bareilles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Brown Eyed Girl</span> <span class=\"song-artist\">Van Morrison</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Call Me Maybe</span> <span class=\"song-artist\">Carly Rae Jepsen</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Clocks</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Dancing on My Own</span> <span class=\"song-artist\">Robyn</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Digital Love</span> <span class=\"song-artist\">Daft Punk</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Don’t Stop Believin’</span> <span class=\"song-artist\">Journey</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Don’t Worry Baby</span> <span class=\"song-artist\">The Beach Boys</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Eleanor Rigby</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Falling Slowly</span> <span class=\"song-artist\">Glen Hansard and Markéta Irglová</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Firework</span> <span class=\"song-artist\">Katy Perry</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Good Vibrations</span> <span class=\"song-artist\">The Beach Boys</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Here Comes the Sun</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hey Soul Sister</span> <span class=\"song-artist\">Train</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hey There Delilah</span> <span class=\"song-artist\">Plain White T’s</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Hold On, We’re Going Home</span> <span class=\"song-artist\">Drake</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Home</span> <span class=\"song-artist\">Edward Sharpe and the Magnetic Zeros</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I Gotta Feeling</span> <span class=\"song-artist\">The Black Eyed Peas</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Mr. Brightside</span> <span class=\"song-artist\">The Killers</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Paradise</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Please, Please, Please Let Me Get What I Want</span> <span class=\"song-artist\">The Smiths</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rolling in the Deep</span> <span class=\"song-artist\">Adele</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Shake It Off</span> <span class=\"song-artist\">Taylor Swift</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Seven Nation Army</span> <span class=\"song-artist\">The White Stripes</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Smells Like Teen Spirit</span> <span class=\"song-artist\">Nirvana</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Smooth Criminal</span> <span class=\"song-artist\">Michael Jackson</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Somewhere Only We Know</span> <span class=\"song-artist\">Keane</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Starlight</span> <span class=\"song-artist\">Muse</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Such Great Heights</span> <span class=\"song-artist\">The Postal Service</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Sugar, We’re Goin’ Down</span> <span class=\"song-artist\">Fall Out Boy</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Teenage Dream</span> <span class=\"song-artist\">Katy Perry</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Today</span> <span class=\"song-artist\">The Smashing Pumpkins</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Underneath It All</span> <span class=\"song-artist\">No Doubt</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Viva La Vida</span> <span class=\"song-artist\">Coldplay</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">We Found Love</span> <span class=\"song-artist\">Calvin Harris and Rihanna</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">With a Little Help from My Friends</span> <span class=\"song-artist\">The Beatles</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">With or Without You</span> <span class=\"song-artist\">U2</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Without You</span> <span class=\"song-artist\">David Guetta and Usher</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Yeah!</span> <span class=\"song-artist\">Usher</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">You’re All I Need to Get By</span> <span class=\"song-artist\">Marvin Gaye</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c5": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-16",
+          "html": "Soul, jazz and Motown",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-17",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">For Once in My Life</span> <span class=\"song-artist\">Stevie Wonder</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">It Don’t Mean a Thing (If It Ain’t Got That Swing)</span> <span class=\"song-artist\">Duke Ellington</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">It Was a Very Good Year</span> <span class=\"song-artist\">Frank Sinatra</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Lady Is a Tramp</span> <span class=\"song-artist\">Frank Sinatra</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Like a Virgin</span> <span class=\"song-artist\">Madonna</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Moondance</span> <span class=\"song-artist\">Van Morrison</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">No One</span> <span class=\"song-artist\">Alicia Keys</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Rocket Love</span> <span class=\"song-artist\">Stevie Wonder</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Signed, Sealed, Delivered (I’m Yours)</span> <span class=\"song-artist\">Stevie Wonder</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Smash Into You</span> <span class=\"song-artist\">Beyoncé</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Stand by Me</span> <span class=\"song-artist\">Ben E. King</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Stepping Out with My Baby</span> <span class=\"song-artist\">Tony Bennett</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Strangers in the Night</span> <span class=\"song-artist\">Frank Sinatra</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c6": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-18",
+          "html": "Film themes",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-19",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Across the Stars</span> <span class=\"song-artist\">John Williams</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Concerning Hobbits</span> <span class=\"song-artist\">Howard Shore</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Linus and Lucy</span> <span class=\"song-artist\">Vince Guaraldi</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Married Life (from Up)</span> <span class=\"song-artist\">Michael Giacchino</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Storybook Love</span> <span class=\"song-artist\">Mark Knopfler</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Throne Room (Star Wars)</span> <span class=\"song-artist\">John Williams</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The book: the wedding and event repertoire list that arrived with the\n     offer on 2026-09-25, published whole as an example of what the booking\n     offers, in six groups. The list's own \"instrumental and other\" group is\n     folded into the classical group and its folk and indie group into pop,\n     and two titles the list printed twice appear once. Composers and artists\n     print as the setlist's own separator, no em dashes.",
+    "_file": "02-book.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Sizes",
+       "title": "One violin for the aisle, a quartet for the ballroom.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-24",
+       "rows": [
+        {
+         "term": "Solo violin",
+         "text": "One violinist, and the smallest strings booking. It plays a ceremony from the prelude to the recessional, an hour under a dinner for twenty, or the one song at a proposal."
+        },
+        {
+         "term": "Duo",
+         "text": "Violin and cello. The cello carries the bass line under the melody, so Canon in D sounds the way people remember it and a processional has weight in a big space. It’s the size most often booked for the ceremony and the cocktail hour together."
+        },
+        {
+         "term": "Trio",
+         "text": "Two violins and cello, or violin, viola and cello. The harmony parts arrive with the third player, so the pop songs and the film themes fill out, and it holds a cocktail hour on a terrace or a long dinner at a level the table talks across."
+        },
+        {
+         "term": "String quartet",
+         "text": "Two violins, viola and cello, the size the quartet repertoire was written for. It’s the booking for a church or a ballroom, for a gala’s first hour, and for a reception that wants the full sound under dinner."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "For a ceremony on guitar, the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays it on steel strings and the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> on nylon. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> can take the cocktail hour after a strings ceremony, and the <a href=\"/ensembles/dj/\">DJ</a> the dancing, on the same contract.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The four sizes, from one violin to the string quartet, each with the\n     instrumentation as product fact and the space it fits. Footprints, power\n     and weather are FAQ answers. Links ACROSS to the guitar ceremony bookings,\n     the jazz duo and the DJ in the note.",
+    "_file": "03-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Occasions",
+       "title": "Who books classical strings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-29",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony</a>",
+         "text": "Strings play all four parts of a ceremony, from the prelude while guests find their seats to the recessional. A violinist watches the aisle, so the processional lasts exactly as long as the walk, and in a church in Denver or Colorado Springs, or a ballroom in the mountains, the quartet carries where one instrument would be lost."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour</a>",
+         "text": "The same musicians walk from the ceremony to the terrace and play Coldplay, the Beatles and Taylor Swift arranged for strings, at a level guests talk across, on the same contract as the ceremony."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and awards nights</a>",
+         "text": "A string quartet playing as the doors open is the sound of a black-tie evening. It’s the reception act on a gala’s contract, with the dinner act and the dance floor act on the same one."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
+         "text": "A duo or a trio under a dinner for twenty to sixty, so the evening has live music in it and the conversation stays the point."
+        },
+        {
+         "term": "<a href=\"/private-parties/anniversary-party/\">Anniversaries and milestone birthdays</a>",
+         "text": "A violinist or a trio at a dinner at home, a fiftieth anniversary at a club or an eightieth birthday, with the song from their own wedding on request."
+        },
+        {
+         "term": "<a href=\"/private-parties/proposals/\">Proposals and one-song bookings</a>",
+         "text": "One violinist for one song, A Thousand Years or the film theme that’s theirs, at a restaurant table or a trailhead."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals and memorial services</a>",
+         "text": "Ave Maria, Amazing Grace and the hymns the family chooses, on one violin or violin and cello, in a chapel, at a graveside or at a celebration of life."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Who books it, one row per occasion, each linking UP to the occasion\n     page. Says who and why, never when.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-36",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-32",
+       "eyebrow": "The footage",
+       "title": "A Beethoven quartet, and one violin on its own.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Above, the Andante from Bach’s second solo sonata, which is the prelude sound. Below, the first two movements of a Beethoven string quartet, which is the four-piece sound, and three more pieces on one violin."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-33",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/K-ADcBUHePE?rel=0",
+         "title": "A string quartet playing the first two movements of Beethoven’s Op. 18 No. 6",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Q8IErG9h694?rel=0",
+         "title": "Solo violin playing the Allegro from Bach’s Sonata No. 2 in A minor",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/uDopMwnLx50?rel=0",
+         "title": "Solo violin playing Paganini’s Caprice No. 19",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/6LkA27z6c38?rel=0",
+         "title": "Violin playing the first movement of the Sibelius Violin Concerto",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-34",
+       "images": [
+        {
+         "src": "/img/acts/classical-strings-ballroom.jpg",
+         "alt": "A violinist playing on a riser at a black-tie ballroom dinner, with guests at round tables.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/classical-strings-stage.jpg",
+         "alt": "A violinist seen from behind on a concert stage under house lights.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/classical-strings-meadow.jpg",
+         "alt": "A violinist playing outdoors in a wildflower meadow.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Footage from the violinist's own channel, embedded 2026-09-25 on\n     Daniel's yes (media-sources.json video_embeds; every id passed\n     scripts/act_media.py embed the same day). The hero above is the Bach\n     Andante; these four are the rest of what she publishes, and nothing was\n     held back. No player is named here or in the iframe titles; the YouTube\n     player prints the channel on its own, which Daniel accepted.\n\n     Photographs from her site (mariroes.com), cleared by Daniel the same day:\n     the ballroom dinner, the concert stage and the meadow. The mountain\n     ceremony frame is the card and og image. Held back: the two portraits and\n     the bench shots (a portrait is not the act as booked, and this is a\n     spec'd style), the teaching photo (lessons, not this offer), and the\n     portrait crop of the ceremony frame already on the card. Alt text names\n     nobody. Reverse any of it in a word.",
+    "_file": "05-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-42",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-37",
+       "html": "String quartet questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-38",
+       "html": "The questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>. The four instruments, and how a trio or a duo compares, are in <a href=\"/blog/what-is-a-string-quartet/\">what is a string quartet</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-39",
+       "items": [
+        {
+         "q": "What does a string quartet cost for a wedding in Denver?",
+         "a": "A Denver wedding guide puts a classical string duo or trio for a ceremony or cocktail hour at $800 to $2,000, and a full quartet sits above that. That's the market's figure. Signet doesn't publish prices, so send us the date, the venue and the size you're picturing and we'll price that night."
+        },
+        {
+         "q": "How much space does a string quartet need?",
+         "a": "A level spot about ten feet across and eight deep, four seats without arms, and shade or cover outdoors. The musicians bring their own stands and music, and indoors nothing is plugged in. One violinist fits in a corner about four feet across."
+        },
+        {
+         "q": "Can a string quartet play outdoors?",
+         "a": "Yes, with shade, cover from rain and level ground, because a violin can't sit in direct sun or get wet. Cold matters too, since strings drift and fingers slow down once the temperature drops into the fifties, so for a mountain ceremony we agree a plan for moving under cover with you ahead of time."
+        },
+        {
+         "q": "How loud is a string quartet?",
+         "a": "About as loud as a conversation at the next table. Indoors it plays a prelude, a processional and a cocktail hour with nothing plugged in, and the front table keeps talking. Outdoors, or in a hall where the back has to hear the officiant, a small sound system on one standard outlet carries the strings and a microphone, and the musicians set the level to the space."
+        },
+        {
+         "q": "Can you play a song that isn't on the list?",
+         "a": "Yes. Custom arrangements are part of the booking, so a song that isn't on the list can be written out for the size you book, one violin or four. Send the title with the date, and a recording of the version you mean if there's more than one."
+        },
+        {
+         "q": "Who plays a classical strings booking?",
+         "a": "Working string players from our roster, and we name them to you when the contract is written. You book the size, one violinist to the quartet, and the same players cover the ceremony and the cocktail hour."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-40",
+       "html": "This figure comes from published 2026 market guides, read September 2026. Signet provides prices for a specific date on request.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Visible FAQ renders from this dir's schema.json. The cost answer carries\n     the market's figure, so the sources note prints under the block, as on\n     the corporate hub. Nothing follows the close token.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-45",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-43",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the venue, and we'll bring one violin or the whole quartet.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/graduation-party/",
+   "title": "Graduation party band and live music in Denver | Signet Artists",
+   "description": "A band, a singer with a guitar or a DJ for a high school or college graduation party in Denver, at home or in a backyard, with the grandparents at one table and the graduate's friends on the lawn.",
+   "titleExact": true,
+   "ogImage": "img/acts/tejas-mural.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music for a graduation party",
+     "serviceType": "A singer with a guitar, a jazz duo, a party band, live band karaoke or a DJ for high school and college graduation parties at home",
+     "description": "Live music for a graduation party across Denver and the Front Range: a singer with a guitar who plays the songs the family knows and then the graduate's requests, a jazz duo for the family lunch at 60 to 65 dBA, a DJ or a party band for the part of the afternoon that belongs to the friends, and live band karaoke for both generations, with sound support sized to the yard and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer with a guitar for a graduation party: Tejas Singh live-looping No Woman No Cry",
+      "description": "Tejas Singh building No Woman No Cry from the ground up with a looper at a private party, the size that reaches the family's table and the graduate's friends at once.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+     },
+     {
+      "id": "wt2SnYjWxKs",
+      "name": "Band for a graduation party: Tony Medina playing welcome drinks",
+      "description": "Tony Medina playing welcome drinks, the band a bigger graduation party books before the yard turns into a floor.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT5M20S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'graduation party band' and 'graduation party entertainment ideas'. The page's argument is the two crowds at one party, the family at the table and the graduate's friends on the lawn, and the size that reaches both. Seasonal: late May and June. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
+    "reader": "The parent throwing a graduation party, who wants the grandparents at the table and the graduate's friends on the lawn both enjoying it.",
+    "schema_note": "Authored 2026-09-20 with the graduation party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the live band karaoke page (the book runs from the 80s and 90s onward), the proposals page (the first learned song is included in every booking) and the backyard page's outdoor facts. Questions are worded the way hosts search. No figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Graduation party",
+       "slab": true,
+       "title": "Live music for your graduation party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The grandparents are at the table, the graduate’s friends are on the lawn, and one singer with a guitar plays Brown Eyed Girl for the first and Mr. Brightside for the second. A graduation party is two parties in one yard, and the music reaches both: a singer who plays the family’s songs and then the graduate’s, a duo for the family lunch, and a DJ or a band for the part of the afternoon that belongs to the friends.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, and it almost always happens outdoors, the way a <a href=\"/private-parties/backyard-party/\">backyard party</a> does."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The graduation party spoke. The buyer's phrases (graduation party band, graduation party entertainment ideas) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the parent throwing the party, who wants the grandparents and the graduate's friends both happy in one yard. Sizes and ideas were one list said twice; they are one list under the ideas heading. The season section keeps its calendar fact; the FAQ lost the answers that restated it.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "A singer with a guitar, and a band for drinks.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tejas Singh building No Woman No Cry from the ground up with a looper at a private party, which is the size that reaches the table and the lawn at once, and Tony Medina playing welcome drinks, the band a bigger graduation party books."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live-looping No Woman No Cry at a private party",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Tony Medina playing welcome drinks",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips, both named acts: Tejas Singh live-looping at a private party, and Tony Medina playing welcome drinks.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The season",
+       "title": "Late May and June, on everybody’s calendar at once.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Graduation parties land in a three-week window at the end of May and the start of June, on the same weekends as every other graduation in the district and the first wedding Saturdays of the summer, so the date is the thing to send early. A college graduation runs a couple of weeks ahead of the high schools, and the Sunday afternoon after a Saturday ceremony is the easier ask on both calendars.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The graduation calendar from the host's side: late May and June, the same weekends as every other graduation in the district and the June weddings, and the afternoon-into-evening shape. Calendar facts only, no clock times.",
+    "_file": "03-season.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Ideas",
+       "title": "Graduation party entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The graduate’s friends and the graduate’s grandparents want different music, and the size that suits the party is the one that can play both."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "A singer taking the graduate’s requests",
+         "text": "One voice and a guitar playing the songs the whole family knows while the food is on, then the ones the graduate asked for once the table thins out. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> builds requests live with a looper, and the same booking grows to a quartet if the lawn turns into a floor."
+        },
+        {
+         "term": "A jazz duo for the family lunch",
+         "text": "Upright bass and guitar under a long table, for the graduation that’s a lunch for the grandparents first. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> plays it."
+        },
+        {
+         "term": "A DJ set built from the graduate’s playlist",
+         "text": "Hand us the playlist and <a href=\"/ensembles/dj/\">the DJ</a> builds the afternoon around it, then carries the late end of the party indoors."
+        },
+        {
+         "term": "A party band, or live band karaoke",
+         "text": "A trio or a quartet for a party big enough to have a floor, which <a href=\"/artists/tony-medina/\">Tony Medina</a> plays up to a four piece. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> gets the friends and the parents singing in the same hour, because its book runs from the 80s onward."
+        },
+        {
+         "term": "One song for the graduate",
+         "text": "The song a parent wants played for their kid in front of everyone, learned for the day if it isn’t already in the book."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out what each size costs in Colorado, house parties included.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The ideas section carries the head term hosts type ('graduation party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Asked about graduation parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Can we hire a band for a graduation party?",
+         "a": "Yes. Most graduation parties book a singer with a guitar first, because one voice can play the family's songs through the food and the graduate's once the table thins out. A jazz duo covers a family lunch, a DJ covers the friends, and live band karaoke gets both generations singing. It's one contract with one personal contact, booked through Signet Artists in Denver."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "While the food is on, about as loud as the conversation at the table, so the grandparents hear each other. Once the friends have the yard, the DJ or the band plays like a party, and that loud part belongs early in the evening or indoors."
+        },
+        {
+         "q": "What does the yard need to provide?",
+         "a": "A wall socket through the nearest window on a dedicated circuit, cover over the musicians and the sound gear in any forecast, and a plan for the loud part to move indoors once the light goes. A singer with a guitar or a DJ takes about 6 by 4 feet, a duo 8 by 6, a trio 12 by 8 and a quartet 14 by 10. Sets run 45 to 60 minutes with music through the breaks."
+        },
+        {
+         "q": "Can the musician learn one song for the graduate?",
+         "a": "Yes. One learned song comes with every booking. Tell us the title with the date."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and a sentence about the yard.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,518 @@
+{
+ "root": {
+  "props": {
+   "path": "/repertoire/",
+   "title": "Repertoire",
+   "description": "Six sets that shape a night: arrival, dinner, the tables clearing, dancing, the finish and ceremony, plus the full song list, searchable by moment and energy.",
+   "nav": "repertoire",
+   "breadcrumb": "Songs",
+   "indexLabel": "Songs and the repertoire"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "a sample of the signet Repertoire",
+       "slab": true,
+       "title": "some real crowd pleasers",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A long song list proves range. It doesn’t tell you what we do with it. <br><br>It's a bunch of moments that make up a great night, from what plays while guests arrive to what people hear while they eat dinner to what gets people on the dance floor, we've got a small sample of songs that we pull from below. ",
+       "ledeStyle": "max-width: 24rem;",
+       "headingText": [
+        {
+         "html": "We draw from this material <strong>and</strong> read the crowd song by song like a DJ would. <br><br>If you want something that isn’t on our normal song list, let us know (we usually require a few weeks before a booking to learn any new material)"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "CoverWall",
+   "props": {
+    "id": "CoverWall-5",
+    "eyebrow": "From \"Doors open\" to the first toast",
+    "textAt": 0,
+    "title": "the vibe counts",
+    "text": "Guests are finding the bar, finding each other, feeling out what kind of night it's going to be. <br><br>The music keeps those first hours warm and open. Present enough that it isn't silent and quiet enough that nobody has to raise their voice to be heard. <br><br>We make sure our bands play this hour softer than most other groups would want to.",
+    "titleStyle": "zoom: 1.6; text-align: left;",
+    "textStyle": "max-width: 32.5rem;",
+    "tiles": [
+     {
+      "src": "/img/covers/into-the-mystic.jpg",
+      "alt": "Moondance album cover, Van Morrison",
+      "song": "Into the Mystic",
+      "credit": "Van Morrison · Moondance",
+      "style": "--c:6;--r:1;--cs:2;--rs:2;--d:0.22;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/dock-of-the-bay.jpg",
+      "alt": "The Dock of the Bay album cover, Otis Redding",
+      "song": "(Sittin' On) The Dock of the Bay",
+      "credit": "Otis Redding · The Dock of the Bay",
+      "style": "--c:9;--r:1;--cs:1;--rs:1;--d:0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/three-little-birds.jpg",
+      "alt": "Exodus album cover, Bob Marley & The Wailers",
+      "song": "Three Little Birds",
+      "credit": "Bob Marley &amp; The Wailers · Exodus",
+      "style": "--c:5;--r:2;--cs:1;--rs:1;--d:-0.7;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/peaceful-easy-feeling.jpg",
+      "alt": "Eagles album cover, Eagles",
+      "song": "Peaceful Easy Feeling",
+      "credit": "Eagles",
+      "style": "--c:10;--r:2;--cs:1;--rs:1;--d:0.5;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/inaudible-melodies.jpg",
+      "alt": "Brushfire Fairytales album cover, Jack Johnson",
+      "song": "Inaudible Melodies",
+      "credit": "Jack Johnson · Brushfire Fairytales",
+      "style": "--c:6;--r:3;--cs:1;--rs:1;--d:-0.5;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/slow-burn.jpg",
+      "alt": "Golden Hour album cover, Kacey Musgraves",
+      "song": "Slow Burn",
+      "credit": "Kacey Musgraves · Golden Hour",
+      "style": "--c:9;--r:3;--cs:1;--rs:1;--d:-0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     }
+    ],
+    "notes": "Into the Mystic, Van Morrison · (Sittin' On) The Dock of the Bay, Otis Redding · Three Little Birds, Bob Marley &amp; The Wailers · Peaceful Easy Feeling, Eagles · Inaudible Melodies, Jack Johnson · Slow Burn, Kacey Musgraves",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "CoverWall",
+   "props": {
+    "id": "CoverWall-7",
+    "flip": true,
+    "eyebrow": "what about Seated dinner service?",
+    "textAt": 0,
+    "title": "YOUR ConversationS lead. <br>OUR VOLUME followS.",
+    "text": "Dinner service is an easy set to get wrong. <br><br>Too much interest and volume and your guests are fighting the band through the entrée; not enough, and it feels like the music stopped. <br><br>We play it with enough melody to be worth hearing and enough restraint to sit under your guests' conversations.",
+    "titleStyle": "zoom: 1.6;",
+    "textStyle": "max-width: 26.5rem;",
+    "tiles": [
+     {
+      "src": "/img/covers/landslide.jpg",
+      "alt": "Fleetwood Mac album cover, Fleetwood Mac",
+      "song": "Landslide",
+      "credit": "Fleetwood Mac",
+      "style": "--c:4;--r:1;--cs:2;--rs:2;--d:0.22;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/fire-and-rain.jpg",
+      "alt": "Sweet Baby James album cover, James Taylor",
+      "song": "Fire and Rain",
+      "credit": "James Taylor · Sweet Baby James",
+      "style": "--c:2;--r:1;--cs:1;--rs:1;--d:-0.3;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/wish-you-were-here.jpg",
+      "alt": "Wish You Were Here album cover, Pink Floyd",
+      "song": "Wish You Were Here",
+      "credit": "Pink Floyd · Wish You Were Here",
+      "style": "--c:6;--r:2;--cs:1;--rs:1;--d:0.7;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/angel-from-montgomery.jpg",
+      "alt": "John Prine album cover, John Prine",
+      "song": "Angel from Montgomery",
+      "credit": "John Prine",
+      "style": "--c:1;--r:2;--cs:1;--rs:1;--d:0.3;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/the-scientist.jpg",
+      "alt": "A Rush of Blood to the Head album cover, Coldplay",
+      "song": "The Scientist",
+      "credit": "Coldplay · A Rush of Blood to the Head",
+      "style": "--c:5;--r:3;--cs:1;--rs:1;--d:-0.9;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/hey-there-delilah.jpg",
+      "alt": "All That We Needed album cover, Plain White T's",
+      "song": "Hey There Delilah",
+      "credit": "Plain White T's · All That We Needed",
+      "style": "--c:2;--r:3;--cs:1;--rs:1;--d:0.3;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     }
+    ],
+    "notes": "Landslide, Fleetwood Mac · Fire and Rain, James Taylor · Wish You Were Here, Pink Floyd · Angel from Montgomery, John Prine · The Scientist, Coldplay · Hey There Delilah, Plain White T's",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "CoverWall",
+   "props": {
+    "id": "CoverWall-9",
+    "textAt": 0,
+    "title": "Little gaps in the program?",
+    "text": "Gaps happen all the time. Nobody's dancing yet, and dinner is over. We read the room and lead the evening's energy into what the program has in store next.",
+    "titleStyle": "zoom: 1.6;",
+    "textStyle": "max-width: 43.5rem;",
+    "tiles": [
+     {
+      "src": "/img/covers/tiny-dancer.jpg",
+      "alt": "Madman Across the Water album cover, Elton John",
+      "song": "Tiny Dancer",
+      "credit": "Elton John · Madman Across the Water",
+      "style": "--c:6;--r:1;--cs:2;--rs:2;--d:0.22;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/have-you-ever-seen-the-rain.jpg",
+      "alt": "Pendulum album cover, Creedence Clearwater Revival",
+      "song": "Have You Ever Seen the Rain",
+      "credit": "Creedence Clearwater Revival · Pendulum",
+      "style": "--c:9;--r:1;--cs:1;--rs:1;--d:0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/ho-hey.jpg",
+      "alt": "The Lumineers album cover, The Lumineers",
+      "song": "Ho Hey",
+      "credit": "The Lumineers",
+      "style": "--c:5;--r:2;--cs:1;--rs:1;--d:0.5;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/ring-of-fire.jpg",
+      "alt": "Ring of Fire: The Best of Johnny Cash album cover, Johnny Cash",
+      "song": "Ring of Fire",
+      "credit": "Johnny Cash · Ring of Fire: The Best of Johnny Cash",
+      "style": "--c:10;--r:2;--cs:1;--rs:1;--d:-0.7;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/lean-on-me.jpg",
+      "alt": "Still Bill album cover, Bill Withers",
+      "song": "Lean on Me",
+      "credit": "Bill Withers · Still Bill",
+      "style": "--c:6;--r:3;--cs:1;--rs:1;--d:-0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/use-somebody.jpg",
+      "alt": "Only by the Night album cover, Kings of Leon",
+      "song": "Use Somebody",
+      "credit": "Kings of Leon · Only by the Night",
+      "style": "--c:9;--r:3;--cs:1;--rs:1;--d:-1;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     }
+    ],
+    "notes": "Tiny Dancer, Elton John · Have You Ever Seen the Rain, Creedence Clearwater Revival · Ho Hey, The Lumineers · Ring of Fire, Johnny Cash · Lean on Me, Bill Withers · Use Somebody, Kings of Leon",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "CoverWall",
+   "props": {
+    "id": "CoverWall-11",
+    "flip": true,
+    "eyebrow": "get on the dance floor",
+    "textAt": 0,
+    "title": "Songs that work on almost everyone",
+    "text": "A floor-filler is the song the most guests have in common, not the best song in the book. <br><br>Sometimes, the aim is to get all four generations out on one dance floor. Nobody wants to sit out because they didn't recognize the song. We adjust this set live. If a crowd wants more country, for instance, we can go there.",
+    "titleStyle": "zoom: 1.6;",
+    "tiles": [
+     {
+      "src": "/img/covers/brown-eyed-girl.jpg",
+      "alt": "Blowin' Your Mind! album cover, Van Morrison",
+      "song": "Brown Eyed Girl",
+      "credit": "Van Morrison · Blowin' Your Mind!",
+      "style": "--c:4;--r:1;--cs:2;--rs:2;--d:0.22;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/valerie.jpg",
+      "alt": "Version album cover, Mark Ronson",
+      "song": "Valerie",
+      "credit": "Mark Ronson · Version",
+      "style": "--c:2;--r:1;--cs:1;--rs:1;--d:-1;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/i-wanna-dance-with-somebody.jpg",
+      "alt": "Whitney album cover, Whitney Houston",
+      "song": "I Wanna Dance with Somebody",
+      "credit": "Whitney Houston · Whitney",
+      "style": "--c:6;--r:2;--cs:1;--rs:1;--d:0.3;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/riptide.jpg",
+      "alt": "Dream Your Life Away album cover, Vance Joy",
+      "song": "Riptide",
+      "credit": "Vance Joy · Dream Your Life Away",
+      "style": "--c:1;--r:2;--cs:1;--rs:1;--d:-0.9;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/dancing-in-the-moonlight.jpg",
+      "alt": "Dancing in the Moonlight album cover, King Harvest",
+      "song": "Dancing in the Moonlight",
+      "credit": "King Harvest · Dancing in the Moonlight",
+      "style": "--c:5;--r:3;--cs:1;--rs:1;--d:-0.7;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/i-will-wait.jpg",
+      "alt": "Babel album cover, Mumford & Sons",
+      "song": "I Will Wait",
+      "credit": "Mumford &amp; Sons · Babel",
+      "style": "--c:2;--r:3;--cs:1;--rs:1;--d:-0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     }
+    ],
+    "notes": "Brown Eyed Girl, Van Morrison · Valerie, Mark Ronson · I Wanna Dance with Somebody, Whitney Houston · Riptide, Vance Joy · Dancing in the Moonlight, King Harvest · I Will Wait, Mumford &amp; Sons",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "CoverWall",
+   "props": {
+    "id": "CoverWall-13",
+    "eyebrow": "the last few moments",
+    "textAt": 0,
+    "title": "Every night should go somewhere amazing.",
+    "text": "We can plan the last few songs with you rather than improvise them - let us know what you envision and we can play to creating it with you. Whether it's a blow out or a taper-off - just let us know.",
+    "titleStyle": "zoom: 1.6;",
+    "tiles": [
+     {
+      "src": "/img/covers/dont-stop-believin.jpg",
+      "alt": "Escape album cover, Journey",
+      "song": "Don't Stop Believin'",
+      "credit": "Journey · Escape",
+      "style": "--c:6;--r:1;--cs:2;--rs:2;--d:0.22;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/sweet-caroline.jpg",
+      "alt": "Brother Love's Travelling Salvation Show album cover, Neil Diamond",
+      "song": "Sweet Caroline",
+      "credit": "Neil Diamond · Brother Love's Travelling Salvation Show",
+      "style": "--c:9;--r:1;--cs:1;--rs:1;--d:0.7;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/piano-man.jpg",
+      "alt": "Piano Man album cover, Billy Joel",
+      "song": "Piano Man",
+      "credit": "Billy Joel · Piano Man",
+      "style": "--c:5;--r:2;--cs:1;--rs:1;--d:-0.5;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/wonderwall.jpg",
+      "alt": "(What's the Story) Morning Glory? album cover, Oasis",
+      "song": "Wonderwall",
+      "credit": "Oasis · (What's the Story) Morning Glory?",
+      "style": "--c:10;--r:2;--cs:1;--rs:1;--d:0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/mr-brightside.jpg",
+      "alt": "Hot Fuss album cover, The Killers",
+      "song": "Mr. Brightside",
+      "credit": "The Killers · Hot Fuss",
+      "style": "--c:6;--r:3;--cs:1;--rs:1;--d:-1;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/country-roads.jpg",
+      "alt": "Poems, Prayers & Promises album cover, John Denver",
+      "song": "Take Me Home, Country Roads",
+      "credit": "John Denver · Poems, Prayers &amp; Promises",
+      "style": "--c:9;--r:3;--cs:1;--rs:1;--d:0.3;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     }
+    ],
+    "notes": "Don't Stop Believin', Journey · Sweet Caroline, Neil Diamond · Piano Man, Billy Joel · Wonderwall, Oasis · Mr. Brightside, The Killers · Take Me Home, Country Roads, John Denver",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "CoverWall",
+   "props": {
+    "id": "CoverWall-15",
+    "flip": true,
+    "eyebrow": "Ceremony and formalities",
+    "textAt": 0,
+    "title": "critical moments in  the plan.",
+    "text": "Knowing how to adjust the volume or end a song at a mid-point to follow a cue is critical. Whether it's in a wedding processional or a walk-up to accept an award.",
+    "titleStyle": "zoom: 1.6;",
+    "textStyle": "max-width: 42rem;",
+    "tiles": [
+     {
+      "src": "/img/covers/cant-help-falling-in-love.jpg",
+      "alt": "Blue Hawaii album cover, Elvis Presley",
+      "song": "Can't Help Falling in Love",
+      "credit": "Elvis Presley · Blue Hawaii",
+      "style": "--c:4;--r:1;--cs:2;--rs:2;--d:0.22;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/thinking-out-loud.jpg",
+      "alt": "x album cover, Ed Sheeran",
+      "song": "Thinking Out Loud",
+      "credit": "Ed Sheeran · x",
+      "style": "--c:2;--r:1;--cs:1;--rs:1;--d:0.3;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/tennessee-whiskey.jpg",
+      "alt": "Traveller album cover, Chris Stapleton",
+      "song": "Tennessee Whiskey",
+      "credit": "Chris Stapleton · Traveller",
+      "style": "--c:6;--r:2;--cs:1;--rs:1;--d:0.7;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/god-only-knows.jpg",
+      "alt": "Pet Sounds album cover, The Beach Boys",
+      "song": "God Only Knows",
+      "credit": "The Beach Boys · Pet Sounds",
+      "style": "--c:1;--r:2;--cs:1;--rs:1;--d:-0.5;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/your-song.jpg",
+      "alt": "Elton John album cover, Elton John",
+      "song": "Your Song",
+      "credit": "Elton John",
+      "style": "--c:5;--r:3;--cs:1;--rs:1;--d:0.7;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/cover-me-up.jpg",
+      "alt": "Southeastern album cover, Jason Isbell",
+      "song": "Cover Me Up",
+      "credit": "Jason Isbell · Southeastern",
+      "style": "--c:2;--r:3;--cs:1;--rs:1;--d:-0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     }
+    ],
+    "notes": "Can't Help Falling in Love, Elvis Presley · Thinking Out Loud, Ed Sheeran · Tennessee Whiskey, Chris Stapleton · God Only Knows, The Beach Boys · Your Song, Elton John · Cover Me Up, Jason Isbell",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-16",
+    "html": "<script>\n  // Set-wall parallax: every sleeve drifts at its own rate (--d) against\n  // scroll. Desktop-map layouts only (>=1100px; the packed grids hold still),\n  // reduced motion wins outright, and with JS off the walls are simply\n  // static — placement never depends on this script.\n  (function () {\n    var mm = window.matchMedia;\n    if (!mm || mm('(prefers-reduced-motion: reduce)').matches) return;\n    var tiles = [];\n    document.querySelectorAll('.cover-wall .wall-tile').forEach(function (t) {\n      tiles.push({ el: t, d: parseFloat(t.style.getPropertyValue('--d')) || 0 });\n    });\n    if (!tiles.length) return;\n    var MAX = 96, wide = mm('(min-width: 1100px)').matches, ticking = false;\n    function frame() {\n      ticking = false;\n      var vh = window.innerHeight;\n      var shifts = tiles.map(function (t) {\n        var r = t.el.getBoundingClientRect();          // read phase\n        if (r.bottom < -MAX || r.top > vh + MAX) return null;\n        return ((r.top + r.height / 2 - vh / 2) / vh) * t.d * -MAX;\n      });\n      shifts.forEach(function (y, i) {                 // write phase\n        if (y !== null) tiles[i].el.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0)';\n      });\n    }\n    function onScroll() {\n      if (!wide || ticking) return;\n      ticking = true;\n      requestAnimationFrame(frame);\n    }\n    mm('(min-width: 1100px)').addEventListener('change', function (e) {\n      wide = e.matches;\n      if (!wide) tiles.forEach(function (t) { t.el.style.transform = ''; });\n      else onScroll();\n    });\n    window.addEventListener('scroll', onScroll, { passive: true });\n    window.addEventListener('resize', onScroll, { passive: true });\n    onScroll();\n  })();\n</script>",
+    "_file": "02-sets.html"
+   }
+  },
+  {
+   "type": "SongCatalog",
+   "props": {
+    "id": "SongCatalog-19",
+    "band": "sunk",
+    "anchor": "catalog",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-17",
+       "eyebrow": "the songs",
+       "title": "a great sampling of the classic song book",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "zoom: 1.6;"
+      }
+     }
+    ],
+    "empty": "Nothing here by that name, which doesn't mean we won't play it. <a href=\"/contact/\">Ask.</a>",
+    "_file": "03-catalog.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-20",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Send us the flow of the evening, and we’ll help build the music around it.",
+       "titleStyle": "max-width: 41rem; zoom: 1.05;"
+      }
+     }
+    ],
+    "_file": "04-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,284 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/last-consulate/",
+   "title": "Last Consulate: instrumental music for Denver events | Signet Artists",
+   "description": "Instrumental background music for Denver corporate events, dinner parties and cocktail hours: upright bass and guitar over downtempo electronics, one musician.",
+   "titleExact": true,
+   "ogImage": "img/last-consulate-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Last Consulate",
+   "schema": {
+    "service": {
+     "name": "Last Consulate",
+     "serviceType": "Instrumental downtempo music for cocktail hours, dinners and corporate receptions",
+     "description": "Last Consulate, one musician on upright bass and guitar over downtempo electronics, playing original instrumental music with jazz improvisation at conversation volume for arrival, cocktails and dinner at corporate events, galas and private dinners across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "last-consulate"
+   },
+   "notes": {
+    "_note": "Named-project page built 2026-09-23 on Daniel's call ('build pages for solo piano and last consulate too'), in the Firstwater shape: a named act with nobody named, spec'd in acts.json, the identity paragraphs held there since 2026-09-03 now on a page. No site, no channel and no footage exist, so the hero carries the act's own artwork (the prop passport Daniel supplied) in the footage slot. Title and meta carry the terms buyers type ('instrumental music for events', 'background music for corporate events'); the eyebrow keeps the act's own genre word. The residency product in LAST-CONSULATE-RESIDENCY.md is sold by hand and is not on this page.",
+    "reader": "Whoever wants a dinner or a cocktail hour that feels like a late jazz set in a very good hotel, with the conversation as the point."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Instrumental downtempo",
+       "slab": true,
+       "title": "Last Consulate",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Upright bass, guitar and electronics, one musician, playing original music.",
+       "lede": "One player, upright bass and guitar out front, over downtempo electronics with slow hip-hop drums, worn keys and delayed guitar. Jazz improvisation on top, at conversation volume. Arrival, cocktails and dinner, on original material that sounds closer to an early-2000s downtempo record than to a jazz set.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=last-consulate",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/last-consulate-card.jpg",
+        "alt": "A passport held open at its photo page, in black and white.",
+        "width": "960",
+        "height": "540",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name is\n     the h1, the byline is the spec line, the blurb is the lede. Nobody is named\n     on this page (acts.json _presentation_note). No site and no channel exist,\n     so there is no \"hear them first\" line; the artwork in the footage slot is\n     the act's own prop passport, supplied by Daniel (media-sources.json).",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, the same block the other act pages carry.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-12",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Last Consulate is the solo project of one multi-instrumentalist, built on upright bass, electric bass, guitar and downtempo electronics.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The improvising is jazz. The production is early-2000s downtempo electronica, the slow and hazy end of it, instrumental and warm, and mixed so that what was played and what was sampled are hard to tell apart.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "Upright bass is the lead instrument. Under it sit slow hip-hop drums, extended jazz harmony, tape-worn keys and delayed guitars, and the improvised bass line is usually the melody.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "It is built for arrival, cocktails and dinner, played at a volume guests can talk across, with the feel of a late jazz set or a hotel lobby. The loops hold the tempo in the slow band all evening, so the music never drifts up as the venue fills. It sounds like a record playing in a very good hotel, until somebody notices the bass line is being played live.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Copy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a dinner that feels like a late jazz set in a very good hotel. The hero lede is Daniel's own CopyDesk sentence (protected) and stays first. The first four paragraphs here are his supplied description and stay; the two page-written paragraphs are gone: the footprint and the no-covers negation went to the FAQ, and the named-act line narrated the site's own sourcing (Layer 8, the provenance leak).\n\nThe identity paragraphs, ratified in acts.json (Daniel's supplied\n     description, 2026-09-03) and kept close to source. The last two are the\n     page's own: the footprint, and the named-act promise in the form this act\n     can keep, since nobody is named.",
+    "_file": "02-identity.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books Last Consulate.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "Twenty at one table or eighty at ten, with the music under the conversation for the whole night."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "The doors and the dinner, before the program, and it stops on the emcee’s cue like every act on the roster."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">The welcome evening of a retreat</a>",
+         "text": "The first night, when the group has flown in and the point is to sit down and talk. One musician and one rig travel well over the passes to a resort or a ranch."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and cocktail parties at home</a>",
+         "text": "A table of twelve, or a cocktail party that’s about the conversation, with the music in a corner of the living space."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "How the music sits around remarks and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Up-links to the occasion pages this act suits, as repertoire and format\n     range only. Four, each with a page of its own.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Last Consulate questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What does Last Consulate play?",
+         "a": "Original instrumental music: upright bass and guitar out front over downtempo electronics, with jazz improvisation on top. It sounds closer to an early-2000s downtempo record than to a jazz set, and it's booked through Signet Artists in Denver."
+        },
+        {
+         "q": "Is it background music?",
+         "a": "It plays arrival, cocktails and dinner at about the level of the conversation, so your guests talk across it the whole time, and the bass lines are improvised live on the night."
+        },
+        {
+         "q": "Does it play covers or take requests?",
+         "a": "No. Everything is original and instrumental, with no singer, which is part of why a client dinner books it: there's nothing on the night for the host to manage."
+        },
+        {
+         "q": "How big is the setup?",
+         "a": "One musician and one rig. It sets up in about 6 by 4 feet on one dedicated 20-amp circuit, takes 45 minutes to set up, and plays through its own small sound system or the venue's house system, whichever the space wants."
+        },
+        {
+         "q": "Can it carry a whole evening?",
+         "a": "Arrival through dinner, yes. When the night wants a dance floor afterward, a band or the DJ takes over on the same contract and the same sound system, so Last Consulate is the first half of one booking."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block and the\n     FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book Last Consulate for arrival, cocktails and dinner.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing\n     follows it.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

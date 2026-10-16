@@ -1,0 +1,491 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/flamenco-trio/",
+   "title": "Spanish guitar for private events in Denver: Dirty Flamenco | Signet Artists",
+   "description": "Spanish guitar for dinner parties, milestone birthdays and corporate dinners in Denver and the mountains. Real flamenco played by a working trio, with a dancer option.",
+   "titleExact": true,
+   "ogImage": "img/flamenco-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Dirty Flamenco",
+   "indexLabel": "Dirty Flamenco, the trio",
+   "schema": {
+    "service": {
+     "name": "Spanish guitar and flamenco for private events",
+     "serviceType": "Spanish guitar and flamenco trio for dinner parties, milestone birthdays, corporate dinners and weddings",
+     "description": "Dirty Flamenco, fronted by Gary Meyers: Spanish guitar played as real flamenco by a working group with a standing repertoire of traditional palos, sized for private events across Denver and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "dirty-flamenco",
+    "video": {
+     "name": "Dirty Flamenco, live",
+     "description": "A minute of Dirty Flamenco playing live at a private event: flamenco guitar, bass and percussion.",
+     "uploadDate": "2026-09-20",
+     "duration": "PT1M5S"
+    },
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for a wedding ceremony: Malaguena, Dirty Flamenco",
+      "description": "Gary Meyers plays a Malaguena on solo Spanish guitar, the prelude and processional sound.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     },
+     {
+      "id": "IGww0fFkjyg",
+      "name": "Flamenco trio for a private party: rumba, Dirty Flamenco",
+      "description": "Guitar, bass and percussion on a rumba, the sound of a garden party finding its second wind.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M31S"
+     },
+     {
+      "id": "Npuomaienyo",
+      "name": "Spanish guitar for a dinner party: farruca, Dirty Flamenco",
+      "description": "A farruca at dinner volume, the slow form a table talks over and remembers.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT3M49S"
+     },
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "The song everyone knows on one Spanish guitar, at the pace of a walk down an aisle.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     },
+     {
+      "id": "4DMf0D47_N0",
+      "name": "Three Spanish guitars for a corporate event: Entre dos Aguas",
+      "description": "Three flamenco guitars trading on Entre dos Aguas, the set piece for a corporate night.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT34S"
+     },
+     {
+      "id": "wEhN63qX0RA",
+      "name": "Flamenco guitar for a cocktail hour: tangos, Dirty Flamenco",
+      "description": "Tangos under a cocktail hour: quick, bright, and low enough that nobody raises their voice.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT39S"
+     },
+     {
+      "id": "CXqYXJGUuRc",
+      "name": "Spanish guitar for a private party: the Sabicas verdiales",
+      "description": "The Sabicas verdiales, the piece a dinner party remembers without knowing its name.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT48S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "REFRAMED 2026-09-06 around Spanish guitar, which is what buyers search: \"spanish guitar wedding\" autocompletes in ten forms and \"spanish guitar denver\" returns no vendor page framed around an event, while bare \"flamenco\" autocompletes as dresses and dance. The act name and the craft are unchanged; the door is wider. Format spoke of the 2026-08-20 SEO buildout (Tier 3), face-led: Dirty Flamenco, fronted by Gary Meyers, the one name that publishes on this page. Replaces /music/dirty-flamenco/; build.py REDIRECTS carries the stub, and acts.json dirty-flamenco.page points here. Identity copy reuses the ratified acts.json paragraphs. Title reuses the ratified acts.json seo_title with the brand suffix.",
+    "reader": "Whoever wants one moment in the evening that guests watch and talk about the next day: a dinner party, a milestone birthday, a member event, a corporate dinner, a wedding.",
+    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Flamenco trio",
+       "slab": true,
+       "title": "Spanish guitar for private events, played by Dirty Flamenco.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The plates are cleared, Gary Meyers leans into a bulería, the cajón answers him, and the whole table turns to watch. Dirty Flamenco is a working flamenco trio of guitar, bass and cajón. It plays under the conversation through cocktails and dinner, then steps forward for one set piece where your evening has space for it.",
+       "headingText": [
+        {
+         "html": "It books for a dinner party for twenty, a milestone birthday, a member event and a corporate dinner. For one guitarist playing solo at a ceremony, a cocktail hour or a dinner, book the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=dirty-flamenco",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "video",
+       "src": "/media/dirty-flamenco-2.mp4",
+       "title": "Dirty Flamenco performing",
+       "poster": "/media/dirty-flamenco-2-poster.jpg"
+      }
+     }
+    ],
+    "_notes": "The face-led specialty act: Gary Meyers is the one name that publishes\n     here. Intro reuses the ratified identity paragraphs from acts.json\n     dirty-flamenco. Rate-card link in the first screen per the spine.\n     Hero footage 2026-09-20: Daniel's own clip of the trio (acts.json\n     _video_note has the provenance), the same file the roster cards play\n     and the one schema.json \"video\" describes. It replaces the Malaguena\n     embed that led here from 2026-08-28, which stays in the footage grid.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants one moment in the evening that guests watch and remember. The colon-reveal opener, 'guests describe afterwards' and the 'named act' taxonomy line are gone; the paragraph restating the hero under the set piece is gone; FAQs that restated the occasion rows are gone and volume is answered in words.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set piece",
+       "title": "One set piece, placed like a toast.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-10",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-8",
+          "html": "<strong>The set piece is planned.</strong> The trio plays the whole evening, and the set piece is its peak. We place it with your timeline the same way a toast or an award is placed, after the remarks or before the dancing, and the <a href=\"/planners/run-of-show/\">run of show page</a> shows how that works.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-9",
+          "html": "<strong>The repertoire is palos, the traditional forms.</strong> The trio plays bulerías, soleá, alegrías and tangos as the forms themselves, which is what separates a flamenco booking from a Spanish guitar booking.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The working argument: this is the watched booking, and the repertoire is\n     palos, both drawn from the ratified identity copy. The run-of-show link\n     is the planners resource this page genuinely needs.",
+    "_file": "02-setpiece.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "The footage",
+       "title": "The traditional forms, and one cover.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The trio plays live above, and once more in the first clip below. The rest is from Gary Meyers’ own channels: a Malagueña, a rumba, a farruca, tangos, the Sabicas verdiales, Can’t Help Falling in Love on flamenco guitar, and three guitars trading on Entre dos Aguas."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-14",
+       "videos": [
+        {
+         "kind": "video",
+         "src": "/media/dirty-flamenco.mp4",
+         "title": "Dirty Flamenco performing, an earlier night",
+         "poster": "/media/dirty-flamenco-poster.jpg"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+         "title": "Gary Meyers playing Malaguena live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/IGww0fFkjyg?rel=0",
+         "title": "Gary Meyers playing a rumba flamenca",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Npuomaienyo?rel=0",
+         "title": "Gary Meyers playing a farruca live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Gary Meyers playing Can't Help Falling in Love, flamenco guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/4DMf0D47_N0?rel=0",
+         "title": "Three flamenco guitars on Entre dos Aguas",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wEhN63qX0RA?rel=0",
+         "title": "Gary Meyers playing tangos, flamenco guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/CXqYXJGUuRc?rel=0",
+         "title": "Gary Meyers playing the Sabicas verdiales",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-15",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-colonnade.jpg",
+         "alt": "Gary Meyers playing flamenco guitar under a colonnade.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-live.jpg",
+         "alt": "Gary Meyers playing a seated set on a venue stage.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-stone.jpg",
+         "alt": "Gary Meyers playing against a stone wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-steps.jpg",
+         "alt": "Gary Meyers seated on brick steps with his flamenco guitar.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-suit.jpg",
+         "alt": "Gary Meyers in a suit with his guitar on a garden wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-window.jpg",
+         "alt": "Gary Meyers playing beneath a shuttered window, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Real media, loaded 2026-08-27 from Gary's own channels (dirtyflamenco.com\n     and his YouTube). Per-asset provenance: _src/data/media-sources.json.\n     Four cuts chosen for range: a rumba, a farruca, the Elvis cover for the\n     crossover moment, and three guitars on Entre dos Aguas.\n     First tile since 2026-09-20: Daniel's August clip of the trio\n     (media/dirty-flamenco.mp4, native player), which led the page and the\n     cards until his 2026-09-19 footage took over the hero.",
+    "_file": "02b-footage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "Occasions",
+       "title": "Who books flamenco.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-19",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Member and association events</a>",
+         "text": "An evening with remarks in it that wants one thing guests describe the next day, with the set piece placed where the program has space for it."
+        },
+        {
+         "term": "<a href=\"/corporate/\">The corporate dinner with one photographed moment</a>",
+         "text": "Dinner at conversation volume, and the set piece after the remarks, placed against the timeline the way a toast is."
+        },
+        {
+         "term": "The dinner party at home",
+         "text": "Twenty around a long table, a courtyard or a backyard, with flamenco under the whole meal. It’s the smallest booking the trio takes and the one it fits most naturally."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">The milestone birthday</a>",
+         "text": "A fiftieth, a sixtieth, an anniversary or a retirement, in <a href=\"/private-parties/denver/\">Denver</a> or up in the mountains, with a centerpiece the guest of honor doesn’t have to host and no program to run."
+        },
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony and cocktail hour</a>",
+         "text": "Processional, prelude and recessional on nylon strings, then an hour of palos at conversation volume through the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "What live music costs across Colorado, format by format, is set out in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>. The palos below are the trio’s own set, and the wider covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the act lands. The member-event row reuses the ratified\n     corporateShapes copy from site.json. Links UP to the occasion pages,\n     ACROSS to the Denver private parties page.",
+    "_file": "03-occasions.html"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-24",
+    "act": "dirty-flamenco",
+    "title": "Configurations",
+    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "_notes": "The published ladder (trio, and the quartet that is the trio plus a\n     dancer) and the palos set, both rendered from acts.json so neither can\n     drift from the roster.",
+    "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-26",
+    "act": "dirty-flamenco",
+    "title": "A sample of the set",
+    "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-27",
+       "html": "Flamenco booking questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-29",
+       "items": [
+        {
+         "q": "Is Dirty Flamenco traditional flamenco or Spanish guitar?",
+         "a": "Traditional flamenco. The repertoire is palos, the traditional forms: bulerias, solea, alegrias and tangos. A Spanish guitar booking plays familiar songs with a Spanish flavor; a flamenco booking plays the forms themselves. Dirty Flamenco is fronted by Gary Meyers and booked through Signet Artists in Denver."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "Under dinner it plays at the level of the conversation, so the table talks across it. The set piece is louder on purpose, because it's the part everyone stops to watch. The trio sets the level to the space and the crowd, and if your venue has a sound limit, give us the number and it plays under it."
+        },
+        {
+         "q": "Is Spanish guitar right for a wedding ceremony?",
+         "a": "Yes. Nylon strings carry a processional and a recessional without amplification in most spaces, and the repertoire moves between Spanish pieces and the songs a couple asks for."
+        },
+        {
+         "q": "Can we add a dancer?",
+         "a": "Yes. With a dancer the trio becomes a quartet, and the dancer is the set piece. Whether an evening wants one depends on whether the program has space for a set piece in it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-32",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us where the set piece goes, and we'll bring Dirty Flamenco.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

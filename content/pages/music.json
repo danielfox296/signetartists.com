@@ -1,0 +1,321 @@
+{
+ "root": {
+  "props": {
+   "path": "/music/",
+   "title": "Bands and musicians for hire in Denver",
+   "description": "Bands and musicians for hire in Denver and the mountains: guitarists, jazz duos and trios, string quartets, party bands, a DJ, and named acts you can look up.",
+   "nav": "music",
+   "breadcrumb": "Artist Roster",
+   "indexLabel": "Artist Roster",
+   "schemaKind": "roster",
+   "schema": {},
+   "notes": {
+    "reader": "Whoever is choosing an act and wants to see the whole roster, by the kind of event, the size or the sound.",
+    "_restructure_note": "Was 'The Music' and described two house bands. Now the roster page for the represented acts. Never state a count of acts here or anywhere outbound: the roster grows and a number goes stale silently (2026-09-07). URL stays /music/ deliberately: it is the indexed URL and carries the nav slot, so the model changed underneath it rather than moving. REBUILT 2026-09-23: the page carries two lanes now (the configurations, compact and smallest first, then the named acts with their footage), an answer-first block on which configuration fits which kind of event, an occasion filter, and its own FAQ in schema.json; the hand-typed configuration list is gone because the lane renders from acts.json. Title and h1 carry the head term nothing on the site owned, 'bands and musicians for hire in Denver' ('denver bands for hire' and 'denver musicians for hire' autocomplete, 2026-09-23); Search Console had the old page on no buyer query at all. index_label keeps the nav label so the sitemap and the nav agree.",
+    "schema_note": "The roster's FAQ, 2026-09-23. No service block: the page's graph (every act as a Service, the named acts as entities) comes from build.py roster_schema, and page_schema adds it when config.json says schema: roster. Answers lead with the answer; the figures on the pricing page stay there."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "signet ARTIST roster",
+       "slab": true,
+       "title": "Bands and musicians for hire in Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "headingText": [
+        {
+         "html": "<strong>Named acts.</strong> Music from artists like Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate and Firstwater, their specific sound and presence comes with the booking. "
+        },
+        {
+         "html": "<strong>Entertainment Formats.</strong> The other lane are professional players throwing down their best in a format to serve your needs. From Jazz combos, Funk, Live DJs, String Quartets or Singer-Songwriter, they're are all configurable to your needs."
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Restructure 2026-08-15, revised 2026-08-16. Permanence claims removed\n     2026-08-17: the contract sells a configuration, so the named-acts paragraph\n     now promises the published name and advance notice of any substitution,\n     never presence. Thomas Owen Band came off the roster 2026-08-27 on\n     Daniel's call (see acts.json holds). Tony Medina was promoted out of the\n     spec'd Blues Rock format and named 2026-09-06, which is why Blues and\n     Rock left the formats sentence: it is a named act now, not a lane.\n\n     The first pass claimed every booking here was \"fronted by someone with a\n     book they already play, and the name is on the page so you can look them\n     up.\" That is true of three of them. For the rest it was a promise the\n     booking could not keep, and it forced an invented flavour difference\n     between two interchangeable funk trios.\n\n     The page now states the split instead of papering over it, which is the\n     stronger position anyway: a named act is a person you can go and check,\n     and a format is a spec we guarantee. Both are checkable claims. The\n     previous version was one checkable claim and one unfalsifiable one.\n\n     NO COUNT, 2026-09-07, Daniel: the roster grows, so any number posted\n     anywhere becomes an ongoing maintenance problem and eventually a stale\n     claim. The {{act_count_word}} token that used to sit in this headline is\n     retired in build.py. \"& growing\" carries the same idea and never expires.\n\n     Changes Jazz Trio joined the named-acts list 2026-09-16, the day it was\n     published under its own name (Daniel: \"They can be a named act\"). The\n     sentence is Daniel's; only the list of names in it moved.\n\n     Firstwater joined the list 2026-09-19, the day Daniel's own sound-session\n     practice was published as a named act; again only the list moved.\n\n     René Moffatt joined the list 2026-09-20, the day Daniel added him as an\n     original singer-songwriter; only the list moved.\n\n     Your Bird Can Sing joined the list 2026-09-22. It is spec'd rather than\n     face-led, because Daniel ruled that no musician in it publishes (\"publish\n     under the act name. no additional names\"), and it belongs in this\n     sentence for the reason Firstwater does: what you book is that act, not\n     an interchangeable format. Only the list moved.\n\n     H1 2026-09-23, Daniel's call on the roster assessment (\"do all seven\"):\n     the headline carries the head term nothing on the site owned. \"denver\n     bands for hire\" and \"denver musicians for hire\" autocomplete; the old\n     headline ranked for nothing a buyer types. The two paragraphs under it\n     are his and are unchanged.\n\n     String Quartets joined the formats sentence 2026-09-25 on Daniel's \"yes\",\n     the day classical strings shipped; the word is the search head term, the\n     same call as the home lede. Only the list moved.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, 2026-09-03 (Daniel: the music page too). Same block as\n     /corporate/, logos only; the venue sentence stays on the home page.\n     Directly under the intro, ahead of the filter and the roster grid.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-10",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Where to start",
+       "title": "Which configuration fits which kind of event.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most people book by the kind of event first and the sound second, so here’s the roster sorted that way. Every act named here has a page of its own."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "A cocktail hour, a dinner, or background music",
+         "text": "A <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, a <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>, a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, an <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a>, a <a href=\"/ensembles/solo-piano/\">pianist</a> or <a href=\"/artists/last-consulate/\">Last Consulate</a>, one musician on upright bass and guitar over downtempo electronics, all quiet enough that your guests keep talking. In December the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season at the same volume."
+        },
+        {
+         "term": "A party with a dance floor",
+         "text": "A trio or a quartet. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> and <a href=\"/artists/tony-medina/\">Tony Medina</a> both grow from a small build to a four piece on one contract, and the <a href=\"/ensembles/americana-band/\">Americana band</a>, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a>, the <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> and the <a href=\"/ensembles/funk-band/\">funk band</a> are each a floor with a different sound on it. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> is the one where your people take the mic."
+        },
+        {
+         "term": "A DJ, on its own or after the band",
+         "text": "The <a href=\"/ensembles/dj/\">DJ</a> is open format, and it books alone or after any band on the roster through the same sound system, on the same contract."
+        },
+        {
+         "term": "A set piece your guests watch",
+         "text": "<a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>, <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> with a saxophone added, <a href=\"/artists/rene-moffatt/\">René Moffatt</a> playing his own songs, <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> for a crowd that sings along, and <a href=\"/artists/firstwater/\">Firstwater</a> for a sound bath at an offsite or a wellness day."
+        },
+        {
+         "term": "A wedding",
+         "text": "An acoustic or Spanish guitarist for the ceremony, a duo for the cocktail hour and the DJ for the floor, on one contract. The <a href=\"/weddings/\">weddings page</a> walks through all three, and the <a href=\"/weddings/jazz-band/\">wedding jazz band</a> covers the whole day in one style."
+        },
+        {
+         "term": "During the day",
+         "text": "A jazz duo or a guitarist for senior living, a memorial or a Sunday brunch, the Beatles sing-along for a community afternoon, and a daytime sound bath. The <a href=\"/daytime/\">daytime page</a> has each of them."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Every act plays Denver, the Front Range and the mountain towns, and travel past the metro is quoted as its own line. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The answer-first block, 2026-09-23. The roster used to open on a filter\n     and a wall of cards; the first thing a reader (or an answer engine)\n     could quote was a card blurb. This states, in definite sentences, which\n     configuration fits which kind of event, with the size and volume facts\n     the site already publishes, and links every act it names. Sizing facts\n     stay (a solo in 6 by 4, a quartet on two circuits, 60 to 65 dBA); no\n     clock times, no assigning an act to an hour of anyone's night.\n\nCopy pass batch 4, 2026-09-24. The which-configuration block: dBA and footprints left the rows (they're on the act pages' FAQs and the technical page); the lede is shorter and the pricing pointer is gone (the hero and the close carry it). Daniel's own intro paragraphs above are untouched.",
+    "_file": "01b-which.html"
+   }
+  },
+  {
+   "type": "Roster",
+   "props": {
+    "id": "Roster-12",
+    "band": "ruled",
+    "title": "Filter the roster",
+    "note": "By the occasion, the kind of night, the size of the act, the genre, or whether it’s sung.",
+    "empty": "Nothing on the roster matches that combination. Widen one of them and it will.",
+    "lanes": [
+     {
+      "lane": "format",
+      "eyebrow": "Configurations",
+      "title": "The configurations, smallest first.",
+      "lede": "Each one is a sound at a size, a jazz duo or a yacht rock band, played by working musicians matched to your date. Open any of them for what it sounds like, the sizes it books and the events it suits."
+     },
+     {
+      "lane": "named",
+      "eyebrow": "Named acts",
+      "title": "The named acts.",
+      "lede": "Booked under their own names, so their specific sound and presence comes with the booking, and every one of them is a name you can look up."
+     }
+    ],
+    "script": true,
+    "_notes": "Two lanes, 2026-09-23. The roster grid used to list every act in file\n     order, named and spec'd mixed, with the hand-typed configuration index\n     fourteen phone screens further down and five configuration pages that\n     were on no card at all. Now the configurations come first, compact and\n     smallest first, and the named acts follow with their footage. Both lanes\n     render from acts.json (`lane`, see its _lanes_note), so a new act joins\n     the right lane on the next build with nothing to type here.\n\n     Filter UI ships hidden and acts.js unhides it, so with script off every\n     act on the roster is still on the page. The filter is a class toggle\n     over data attributes rendered by build.py, never a re-render, and it\n     works across both lanes; a lane with nothing left in it hides its own\n     heading. The page opens pre-filtered from a query string\n     (?occasion=weddings, ?size=duo, ?genre=jazz, ?night=party), which is how\n     an occasion page can point at the acts that suit it.\n\nDaniel's disclaimer, 2026-09-19, on the page that lists every act and\n         size. The footer carries the same sentence sitewide.",
+    "_file": "02-roster.html"
+   }
+  },
+  {
+   "type": "Specs",
+   "props": {
+    "id": "Specs-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Included at every size",
+       "title": "every act comes with the following.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-14",
+       "source": "included",
+       "cols": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Stage lighting and a dedicated engineer are optional add-ons. Travel outside the metro, holiday weekends and New Year's Eve are also available as market priced.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-included.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Roster questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "The operational questions, from substitutions to decibel caps, are on the <a href=\"/planners/faq/\">full FAQ list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What's the difference between a \"named act\" and a configuration?",
+         "a": "A named act is booked under its name, and that specific sound and presence comes with the booking: Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate and Firstwater. A configuration is a format we spec by instrumentation, size and repertoire, like a jazz duo or a yacht rock band, and the contract names the configuration. Both kinds have a page of their own."
+        },
+        {
+         "q": "Which size do most private parties book?",
+         "a": "A duo or a trio. A duo plays arrival and dinner at a volume people talk across, and a trio of guitar, bass and drums fills a floor without a stage. For a company party in a ballroom the quartet is the dance floor size, and a duo through dinner with the DJ after it covers both halves of the night on one contract."
+        },
+        {
+         "q": "Can a booking start small and grow through the evening?",
+         "a": "Yes. Tejas Singh starts as a duo and finishes as a quartet on one contract and one load-in, the jazz duo becomes a trio with drums played with brushes, and the DJ takes over from any band through the same sound system."
+        },
+        {
+         "q": "Do you publish prices for the acts?",
+         "a": "No. What live music costs in this market, figure by figure with the source each one came from, is on the pricing page, and we price a specific night when you send the date, the venue and the guest count."
+        },
+        {
+         "q": "Where do the acts play?",
+         "a": "Denver, Boulder, Colorado Springs and Fort Collins, and the mountain towns: Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. Travel outside the metro and a night's lodging past the passes are quoted as their own lines on the contract."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The roster's own questions, 2026-09-23, authored in this dir's\n     schema.json so the visible block and the FAQPage markup cannot drift.",
+    "_file": "03b-faqs.html"
+   }
+  },
+  {
+   "type": "CoverStrip",
+   "props": {
+    "id": "CoverStrip-24",
+    "tiles": [
+     {
+      "src": "/img/covers/into-the-mystic.jpg",
+      "alt": "Moondance, Van Morrison album cover"
+     },
+     {
+      "src": "/img/covers/landslide.jpg",
+      "alt": "Fleetwood Mac album cover"
+     },
+     {
+      "src": "/img/covers/tennessee-whiskey.jpg",
+      "alt": "Chris Stapleton album cover"
+     },
+     {
+      "src": "/img/covers/dock-of-the-bay.jpg",
+      "alt": "The Dock of the Bay, Otis Redding album cover"
+     },
+     {
+      "src": "/img/covers/valerie.jpg",
+      "alt": "Version, Mark Ronson album cover"
+     },
+     {
+      "src": "/img/covers/sweet-caroline.jpg",
+      "alt": "Neil Diamond album cover"
+     },
+     {
+      "src": "/img/covers/dont-stop-believin.jpg",
+      "alt": "Escape, Journey album cover"
+     },
+     {
+      "src": "/img/covers/mr-brightside.jpg",
+      "alt": "Hot Fuss, The Killers album cover"
+     }
+    ],
+    "note": "We love music - both originals from our artists and a few hundred familiar favorites. For our singer-songwriter acts, you can check out our <a href=\"/repertoire/\">Songs page</a> for an example of the available repertoire.",
+    "_notes": "The sleeves before the close: this page is who plays, and the strip is the\n     handoff to what they play.",
+    "_file": "04-close.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-28",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Tell us your needs and we can recommend an amazing act",
+       "titleStyle": "max-width: 32rem;"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "We love to help clients find the best fit for their entertainment. Whether it's their creative vision, budgetary or logistic problem solving, we're happy to help at every stage.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "root": {
+  "props": {
+   "path": "/contact/",
+   "title": "Check a Date",
+   "description": "Tell us the date and the venue. Availability and an exact number back inside 24 to 48 hours, in business hours.",
+   "nav": "contact",
+   "breadcrumb": "Check a Date"
+  }
+ },
+ "content": [
+  {
+   "type": "ContactForm",
+   "props": {
+    "id": "ContactForm-2",
+    "eyebrow": "Enquiries",
+    "slab": true,
+    "title": "Check a date.",
+    "titleTag": "h1",
+    "titleClass": "h2 display",
+    "lede": "Tell us when and where. You'll get availability and an exact number back inside 24 to 48 hours, in business hours.",
+    "headingText": [
+     {
+      "html": "A date and a problem to solve are enough to start. You don't need a size, a set list or a budget worked out first; tell us what the night is and we'll size it from there."
+     }
+    ],
+    "band": "top",
+    "details": [
+     {
+      "term": "Email",
+      "html": "<a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>"
+     },
+     {
+      "term": "Where we play",
+      "html": "Denver, BOULDER, and the mountain corridor"
+     },
+     {
+      "term": "Prefer a call?",
+      "html": "Say so in the form and leave your number."
+     }
+    ],
+    "action": "https://formsubmit.co/6a0410c3f604efa0e95283b9d52a9eb8",
+    "hidden": [
+     {
+      "name": "_next",
+      "value": "https://signetartists.com/thanks/"
+     },
+     {
+      "name": "_subject",
+      "value": "Enquiry via signetartists.com"
+     },
+     {
+      "name": "_template",
+      "value": "table"
+     },
+     {
+      "name": "_captcha",
+      "value": "false"
+     }
+    ],
+    "fields": [
+     {
+      "kind": "input",
+      "id": "name",
+      "name": "Name",
+      "label": "Name <span class=\"req\">*</span>",
+      "autocomplete": "name",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "email",
+      "name": "email",
+      "label": "Email <span class=\"req\">*</span>",
+      "type": "email",
+      "autocomplete": "email",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "eventDate",
+      "name": "Event date",
+      "label": "Event date <span class=\"req\">*</span>",
+      "type": "date",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "venue",
+      "name": "Venue or city",
+      "label": "Venue or city"
+     },
+     {
+      "kind": "acts"
+     },
+     {
+      "kind": "textarea",
+      "id": "message",
+      "name": "What's the night",
+      "label": "What's the night",
+      "full": true,
+      "rows": "4",
+      "placeholder": "What it's for and roughly how many people. A sentence is plenty."
+     }
+    ],
+    "button": "Send",
+    "script": true,
+    "_notes": "2026-09-04, with the no-published-price decision. The site\n               publishes no price, so the one thing this page has to say is\n               that a date and a problem are enough to start with. Nothing\n               else on this page changed.\n\n2026-08-27, from the buyer-questions pass. Calls happen on\n               request (Daniel's practice) but no number publishes — his call.\n               One plain line, not a promise stack.\n\nStatic host, so this posts to formsubmit.co rather than a server\n           action. _next is the confirmation page.\n           No honeypot, on purpose: a hidden _honey field makes formsubmit\n           drop the submission silently while still redirecting to /thanks/,\n           and browser autofill fills hidden fields it can classify. That\n           combination cost us a live corporate enquiry the week of\n           2026-08-24 while blocking no observable spam — formsubmit's own\n           server-side filtering is the spam layer. If spam volume ever\n           becomes a problem, escalate to a relay that logs submissions,\n           never back to a silent trap.\n\n2026-09-23, Daniel: the form was eleven fields with four\n             required, and the required one was labelled \"Anything else\".\n             The site's own promise everywhere else is \"send us the date and\n             the venue\", so that is what the form asks now. Three required\n             fields, two optional, and the act field only appears when an\n             Inquire link has already answered it. Company, phone, event\n             type, guest count and \"what needs covering\" all go in the one\n             box if the buyer wants to say them, and we ask the rest by\n             reply.\n\nAdded with the roster restructure 2026-08-15. Every Inquire link\n               on the site carries ?act=<id> and acts.js preselects it here, so\n               an enquiry that started on an act page arrives naming the act\n               rather than making the planner say it twice. Since 2026-09-23\n               the field ships hidden and disabled, and acts.js shows it only\n               when the link named an act, so nobody else scrolls a roster.",
+    "_file": "01-form.html"
+   }
+  }
+ ]
+}

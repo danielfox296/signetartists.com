@@ -1,0 +1,311 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/yacht-rock/",
+   "title": "Yacht rock band for parties and corporate events in Denver | Signet Artists",
+   "description": "A yacht rock cover band for Denver company parties, patios, client appreciation evenings and milestone birthdays. Doobie Brothers, Steely Dan, Hall and Oates, Toto and Christopher Cross, sung in harmony with the saxophone out front.",
+   "titleExact": true,
+   "ogImage": "img/yacht-rock.jpg",
+   "nav": "music",
+   "breadcrumb": "Yacht rock band",
+   "schema": {
+    "service": {
+     "name": "Yacht rock band",
+     "serviceType": "Yacht rock cover band for company parties, patios and private events",
+     "description": "A yacht rock cover band playing Doobie Brothers, Steely Dan, Hall and Oates, Toto, Christopher Cross and Michael McDonald in three-part harmony with saxophone, for summer company parties, client appreciation evenings, after-parties and milestone birthdays across Denver and Colorado.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "yacht-rock"
+   },
+   "notes": {
+    "_note": "Format spoke built 2026-09-14 from the corporate demand report. Evidence: 'yacht rock cover band denver', 'yacht rock bands near me' and nine neighbouring phrases autocomplete; the demand is satisfied today only by a touring act's ticketed shows; no Colorado act exists and neither The Bash nor GigSalad carries the category. Corporate fit: summer parties, client appreciation on a patio, the late set at a gala or holiday party, milestone birthdays. Spec'd, no names.",
+    "reader": "Whoever wants a patio or a ballroom singing along to the late-seventies records they all know: the company summer party, the client evening, the floor after a program, the milestone birthday."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "The Doobie Brothers to Steely Dan",
+       "slab": true,
+       "title": "A yacht rock band for company parties, patios and milestone birthdays.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "What a Fool Believes starts, three voices come in on the harmony, and the whole patio sings the chorus. This band is keys, guitar, bass and drums with three of them singing, because those harmonies are what the records were built on, and a saxophone takes the solos at full size.",
+       "headingText": [
+        {
+         "html": "It books for a company summer party, a client evening on a terrace, the floor after a gala or holiday party program, and the fortieth or fiftieth of anyone who owned these records."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=yacht-rock",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/yacht-rock.jpg",
+        "alt": "Two sailboats moored on still water at sunset.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format spoke, spec'd. The h1 and lede carry the buyer's words (yacht rock\n     band, party, patio) and the band names that define the genre, because\n     \"yacht rock\" is what people search and the set list is what they mean.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a crowd singing along to the smooth end of the late seventies, mostly on a patio. Footprints, power, dBA, outdoors and added time moved to the FAQ; Booking it deleted, its pairing links moved into the sizes note; birthdays and weddings split into a row each.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide since 2026-09-05. Directly under the intro so\n     the names land on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The set",
+       "title": "What a Fool Believes, Reelin’ in the Years, Rich Girl.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The smooth end of 1976 to 1984: the Doobie Brothers, Steely Dan, Hall and Oates, Toto, Christopher Cross, Boz Scaggs, Kenny Loggins, Ambrosia, Player, Michael McDonald on his own, and the Fleetwood Mac ballads that sit beside them."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The ballads play while people eat, and the up-tempo half of the book opens the floor. The rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "The four-piece, or the full band with saxophone.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The four-piece",
+         "text": "Keys, guitar, bass and drums, three of them singing. The harmonies are what make it yacht rock, so every size carries them."
+        },
+        {
+         "term": "Five to six piece",
+         "text": "The four-piece plus saxophone, with a lead voice of its own for a ballroom or a crowd past two hundred. It’s the version that sounds most like the records."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "An <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> or <a href=\"/ensembles/solo-piano/\">a solo pianist</a> can play the drinks hour before the band on the same contract, and the <a href=\"/ensembles/dj/\">DJ</a> can take over afterward through the same sound system.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Who books a yacht rock band.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Summer company parties</a>",
+         "text": "A lawn, a patio or a rooftop in July, for a staff of every age that knows these songs. It books like the rest of a <a href=\"/corporate/\">company event</a>, on one contract with the paperwork your office needs."
+        },
+        {
+         "term": "<a href=\"/blog/client-appreciation-event-ideas-denver/\">Client appreciation evenings</a>",
+         "text": "A thank-you to a client list on a terrace, for the evening that should end on a dance floor."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties and galas</a>",
+         "text": "The floor once a program is over, as the after-party or as the second half of a <a href=\"/corporate/galas-and-awards/\">gala</a> or holiday party."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays</a>",
+         "text": "A fortieth or a fiftieth for a crowd that owned these records, at the house, a club or a rented space."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "A reception where the couple wants everyone singing on the dance floor, with the ceremony and the cocktail hour on the same contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Yacht rock band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>. What yacht rock is, and where the name came from, is in <a href=\"/blog/what-is-yacht-rock/\">what is yacht rock</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "What is a yacht rock band?",
+         "a": "A band that plays the smooth end of late-70s and early-80s pop and soft rock: the Doobie Brothers with Michael McDonald, Steely Dan, Hall and Oates, Toto, Christopher Cross, Boz Scaggs and Kenny Loggins. The songs depend on harmony vocals and saxophone, which is why this one carries three voices and a horn. It's booked through Signet Artists in Denver."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "While people eat, the ballads play at a level the tables talk across. Once the floor opens it plays like a party band, loud enough to fill a lawn or a ballroom. The band sets the level to the space and the crowd, and if your venue has a sound limit, give us the number and the set stays under it."
+        },
+        {
+         "q": "How much space and power does it need?",
+         "a": "The four-piece sets up in about 14 by 10 feet on two dedicated 20-amp circuits and needs 90 minutes to set up. The five to six piece needs a little more width. Sound support that's the right size for the venue comes with every booking, and on a patio that's what lets a band fill a lawn."
+        },
+        {
+         "q": "Can it play outdoors?",
+         "a": "Yes, and patios and lawns are its natural work. It needs a covered, level and dry spot with power run to it, and we agree a plan for moving indoors with you ahead of time, because Colorado weather turns fast in the afternoon."
+        },
+        {
+         "q": "Can we add time or ask for a song?",
+         "a": "Yes. If the night runs long, another half hour is easy to add on the night, and the band learns one song of your choosing as part of every booking."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, and we'll bring the harmonies and the saxophone.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

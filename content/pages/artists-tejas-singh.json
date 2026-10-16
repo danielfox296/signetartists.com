@@ -1,0 +1,377 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/tejas-singh/",
+   "title": "Tejas Singh: voice-fronted covers, duo to quartet, Denver | Signet Artists",
+   "description": "Voice-fronted covers for events in Denver and the Colorado mountains. Starts as a duo, finishes as a quartet, on one contract and one load-in.",
+   "titleExact": true,
+   "ogImage": "img/tejas-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Tejas Singh",
+   "schema": {
+    "service": {
+     "name": "Voice-fronted cover band",
+     "serviceType": "Voice-fronted covers for private and corporate events",
+     "description": "Covers fronted by Tejas Singh, booked as a duo, trio or quartet for private and corporate events in Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "tejas-singh",
+    "video": {
+     "name": "Tejas Singh live: acoustic singer and guitarist for private parties and weddings",
+     "description": "Tejas Singh's full live set at Sofar Sounds: voice, guitar and looping, the sound he brings to a private party or a wedding cocktail hour.",
+     "uploadDate": "2022-05-12",
+     "duration": "PT13M5S"
+    },
+    "videos": [
+     {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer and guitarist for a private party: Tejas Singh live-looping No Woman No Cry",
+      "description": "Tejas Singh builds No Woman No Cry from the ground up with live looping.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "The flagship act page, authored 2026-08-20 with the SEO buildout. Replaces the generated /music/tejas-singh/ page: acts.json carries page: 'artists/tejas-singh/', build.py skips generation for acts with a page field, and REDIRECTS stubs the old URL to this one. Identity copy is the ratified acts.json paragraphs; the ladder and the setlist resolve from tokens. No prices anywhere since 2026-09-04.",
+    "reader": "Whoever wants one act to carry the whole night, from dinner to a full dance floor: a holiday party, a milestone birthday, a wedding, a client evening.",
+    "_title_note": "57 chars before the brand suffix, inside the 60-char cap (the cap is measured pre-suffix). title_exact swaps the build's em dash suffix for the pipe suffix written here; the brand stays in the SERP line like every other page."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Singer-songwriter covers",
+       "slab": true,
+       "title": "Tejas Singh",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers, duo to quartet.",
+       "lede": "Tejas Singh builds a song you know from the ground up, one looped layer of guitar at a time, until the whole record is playing under his voice. He starts the night as a duo under dinner, the rhythm section joins, and by the end the same voice is fronting a quartet on the dance floor, all on one contract.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=tejas-singh",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ],
+       "headingNote": "Hear him first: <a href=\"https://www.tejassinghmusic.com/\">tejassinghmusic.com</a> and <a href=\"https://open.spotify.com/artist/4aCRec0OSB09DRVTLrSdTm\">Spotify</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+       "title": "Tejas Singh live for Sofar Sounds",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name\n     is the h1, the ladder promise is the lede. The from-price line came off\n     2026-09-04 with every other Signet figure. The footage slot is the\n     act_hero empty-video pattern and\n     stays honest: no footage exists yet, and the slot says so rather than\n     faking a performance still. Poster is one of the four duotone object\n     stills, not a photo of the act.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants one act to carry the whole night, dinner through the dance floor. Opener is what he does with a loop pedal (Daniel's blurb names it); 'A named act' left the act-face; the identity section lost the paragraphs arguing with a two-act night, the show-band negation (now an FAQ) and the named-act line; dBA left the holiday row.\n\nListen links added 2026-08-27. The named-acts promise on /music/ is\n           \"you can go and look them up\"; these are the look-up. Verified\n           against tejassinghmusic.com itself (based in Denver, previously\n           D.C./NYC; the Spotify URL is the one his own site links).",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "It’s the one booking on the <a href=\"/music/\">roster</a> that grows through the night: one setup, one sound check, and the same voice from the first drink to the last song.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "At quartet size it’s a dance band, the full rhythm section behind one voice, with keys or a second guitar on top, playing a covers set built for a floor.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source:\n     the ladder argument, the quartet claim, the premium-cover-band line and\n     the named-act promise. He is newly arriving, so nothing here claims a\n     local history, a client list or a scene backstory.",
+    "_file": "02-identity.html"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "tejas-singh",
+    "title": "Configurations",
+    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "_notes": "The configuration ladder, rendered from acts.json by the token. It shows\n     size, build and where each rung lands; the price columns came off\n     2026-09-04 with the published card.",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books Tejas Singh.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "The quartet is the size for a company party with a dance floor, in a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> ballroom or an office of your own."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Client evenings and corporate dinners</a>",
+         "text": "At duo size the same songs sit under the conversation, which is what a client dinner or a member evening asks for. An hour on its own is a real booking."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
+         "text": "A milestone birthday or an anniversary with a dinner to talk through and a dance floor after it, on one booking. The trio is the size for a party that wants a floor in a smaller space."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "The duo puts a voice in the hour after the ceremony, and if the reception wants a dance floor later, the same act grows into it."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the ladder lands: the up-links to the occasion pages this act\n     serves, written as repertoire and format range only. No venue history,\n     no client list; he is newly arriving and the page claims nothing it\n     cannot prove. Down-link idiom mirrors the corporate hub's def-list\n     block. The note carries the run of show and cost guide links.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-19",
+    "act": "tejas-singh",
+    "title": "A sample of the set",
+    "more": "A sample. <a href=\"/repertoire/\">The whole song list</a> is on the repertoire page.",
+    "_notes": "The sample set, rendered from the repertoire by the token: three moments,\n     six titles each, picked deterministically from the published song list.\n     The token also carries the link to the full repertoire page.",
+    "_file": "05-setlist.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "eyebrow": "The footage",
+       "title": "Two more cuts, from his own channels.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A live looping cover, and an original from a session tape, so you can hear more of him before you book."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-21",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live looping a Bob Marley cover",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/GRBAijVpRA8?rel=0",
+         "title": "Tejas Singh performing A Life of Crime",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-22",
+       "images": [
+        {
+         "src": "/img/acts/tejas-fire-escape.jpg",
+         "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/tejas-mural.jpg",
+         "alt": "Tejas Singh carrying a guitar case past a jazz mural.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/tejas-portrait.jpg",
+         "alt": "Tejas Singh in a white shirt, looking up past the camera.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/tejas-profile.jpg",
+         "alt": "Tejas Singh in profile, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Real media, loaded 2026-08-27 from the artist's own channels (his site\n     and YouTube). Per-asset provenance: _src/data/media-sources.json. The\n     roster's named-act promise is \"you can go and look them up\"; this is the\n     look, brought on-page. Daniel prunes anything he dislikes.",
+    "_file": "05b-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-29",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-25",
+       "html": "Tejas Singh questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "What does Tejas Singh play?",
+         "a": "Covers, fronted by one voice and often built live with a looper, from the Beatles and Bob Marley to the songs of the last twenty years. He also plays his own singer-songwriter material when you want it. He's a Denver musician booked through Signet Artists as a duo, a trio or a quartet."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "As a duo under dinner, it sits at the level of the conversation. At quartet size on the dance floor, it's as loud as a band at a good party. The band moves between the two on cue and sets the level to the space, and if your venue has a sound limit, give us the number."
+        },
+        {
+         "q": "Is it a show band?",
+         "a": "No. Nobody changes costume, there's no choreography and there's no host segment. The band plays, reads the floor and plays the next song."
+        },
+        {
+         "q": "Can we ask for a song?",
+         "a": "Yes. One learned song of your choosing comes with every booking, often the first dance at a wedding, and if the night runs long, another half hour is easy to add on the night."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about your event and we'll bring Tejas Singh to it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close, per the conversion spine. Only the headline is\n     this page's own, and nothing follows it.",
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

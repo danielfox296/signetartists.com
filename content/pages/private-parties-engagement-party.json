@@ -1,0 +1,323 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/engagement-party/",
+   "title": "Engagement party band and live music in Denver | Signet Artists",
+   "description": "A jazz duo, a Spanish guitarist, a singer with a guitar or a band for an engagement party in Denver, at home, on a patio or in a private dining space, with the couple's song learned for the night.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-court.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music for an engagement party",
+     "serviceType": "A jazz duo, a Spanish guitarist, a singer with a guitar or a party band for engagement parties and the party after a proposal",
+     "description": "Live music for an engagement party across Denver and the Front Range: a jazz duo playing the standards at 60 to 65 dBA under the dinner with both families, a Spanish guitarist under a long table, a singer with a guitar who learns the couple's song for the night, and a trio or quartet for the engagement party that dances, at home, on a patio or in a private dining space, with the same duo available for the wedding's cocktail hour on one contract and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for an engagement party: Dirty Flamenco playing Malagueña",
+      "description": "Dirty Flamenco playing Malagueña on Spanish guitar, the sound of an engagement dinner under a long table.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     },
+     {
+      "id": "cA2KwgmJqGc",
+      "name": "Jazz trio for an engagement party: Sunny with drums played with brushes",
+      "description": "Sunny on a jazz trio with drums played with brushes, the size for an engagement party big enough to have a floor.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M9S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'engagement party band' and 'engagement party entertainment ideas'. The page bridges the private parties tree and the weddings tree: the two families at one table, the couple's song learned for the night, the party that follows a proposal, and the same duo playing the cocktail hour on the day on one contract. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
+    "reader": "Whoever is throwing an engagement party, the parents or the friends, and wants the two families to enjoy their first evening together.",
+    "schema_note": "Authored 2026-09-20 with the engagement party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the proposals page (the musician already there, the first learned song included in every booking), the brunch page's precedent for two bookings on one contract, and the weddings tree. Questions are worded the way hosts search. No figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Engagement party",
+       "slab": true,
+       "title": "Live music for your engagement party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Two sets of parents are meeting over dinner, somebody raises a glass to the couple, and the song they’ll dance to at the wedding gets its first hearing. An engagement party is smaller and looser than the wedding will be, and the music is a jazz duo or a Spanish guitarist under the dinner, a singer who learns the couple’s song, and a trio if the party ends on a floor.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, and often the first booking of the wedding: the duo the families hear that night can play the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a> on the day, on the same contract."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The engagement party spoke. The buyer's phrases (engagement party band, live music for an engagement party) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP and the weddings tree is linked ACROSS.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the engagement party, parents or friends, and wants the two families to enjoy one evening together. The sizes list and the ideas list restated each other and are one list under the ideas heading now; ops and the cost pointer moved to the FAQ or out.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Spanish guitar for the dinner, a trio if it dances.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Dirty Flamenco playing Malagueña, the sound of an engagement dinner under a long table, and Sunny on a jazz trio with drums played with brushes, the size for an engagement party big enough to have a floor."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+         "title": "Dirty Flamenco playing Malagueña on Spanish guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny with drums played with brushes",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: Dirty Flamenco playing Malaguena (a named act) and a jazz trio on Sunny (no player named; the format is spec'd).",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The party",
+       "title": "The dinner, the patio, and the night after the question.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The dinner with the two families",
+         "text": "A long table at home, at a <a href=\"/private-parties/denver/\">Denver</a> club or in a private dining space, the parents meeting the parents, a toast from each side, and the duo playing the standards under all of it."
+        },
+        {
+         "term": "The cocktail party on a patio",
+         "text": "The summer version, with friends of both invited and the party the point more than the meal. A singer with a guitar or a duo plays it while the light lasts, the way a <a href=\"/private-parties/backyard-party/\">backyard party</a> does."
+        },
+        {
+         "term": "The party right after the proposal",
+         "text": "The friends set up the house while the question is being asked somewhere else, so the couple walks in to everyone they know and their song already playing. One booking can cover the <a href=\"/private-parties/proposals/\">proposal</a> and the party, and the wedding weekend’s own welcome party is on the <a href=\"/weddings/\">weddings page</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The three engagement parties, each with the size that fits. Links ACROSS to the proposals page (the party after the question), the weddings tree (the welcome party and the cocktail hour) and the backyard page. No clock times.",
+    "_file": "03-the-party.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Ideas",
+       "title": "Engagement party entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "An engagement party is usually a dinner or a cocktail party for forty, so most start with the duo, and the rest follows from whether the night ends on a floor."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "A jazz duo the two families can talk over",
+         "text": "Upright bass and guitar playing the standards quietly enough that parents who’ve just met can hear each other, at home, on a patio or in a private dining space. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> is the same size that plays a wedding cocktail hour."
+        },
+        {
+         "term": "The couple’s song, once",
+         "text": "The song they’ll dance to at the wedding, sung once in front of both families by <a href=\"/artists/tejas-singh/\">Tejas Singh</a>, who learns it for the night and takes requests from both sides of the table for the rest of the evening."
+        },
+        {
+         "term": "A Spanish guitarist under dinner",
+         "text": "A guitar with real technique in it under a long table, which is the first clip above, and the same sound couples book for the ceremony. <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> plays it as one guitarist or as a trio."
+        },
+        {
+         "term": "A trio for the friends’ version",
+         "text": "When the friends throw it, it’s a party with a floor. <a href=\"/artists/tony-medina/\">Tony Medina</a> plays it up to a four piece, and <a href=\"/ensembles/dj/\">the DJ</a> is there for the friends who want the night to run past the band."
+        },
+        {
+         "term": "Live band karaoke for the wedding party",
+         "text": "The band plays the hits and hands the microphone to the best man, months early, with <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out what each size costs in Colorado, wedding cocktail hours included.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The ideas section carries the head term hosts type ('engagement party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Asked about engagement parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Can we hire a band for an engagement party?",
+         "a": "Yes. Most engagement parties are a dinner or a cocktail party for forty, so a jazz duo, a Spanish guitarist or a singer with a guitar plays the evening, and a trio or a quartet plays the party the friends throw. It's one contract with one personal contact, booked through Signet Artists in Denver."
+        },
+        {
+         "q": "Can the same musicians play the engagement party and the wedding?",
+         "a": "Yes, on one contract. The duo from the engagement party can play the cocktail hour, and the singer who learned the couple's song already has it for the first dance. Tell us both dates when you write."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "Quiet enough for two families who've just met to hear each other across the table, and the musicians stop for each toast. An announcement microphone is ready for whichever parent stands up first. A trio at the friends' party plays dinner at that level and turns up once the floor opens."
+        },
+        {
+         "q": "Can the band play on a patio?",
+         "a": "Yes, under cover, with a wall socket through the nearest window. A singer with a guitar takes about 6 by 4 feet on one circuit, a duo 8 by 6 and a trio 12 by 8, and once the sun goes down the loud part of a patio party moves indoors or to the DJ. A certificate of insurance and a W-9 come with the quote if you need them."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the couple's song.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

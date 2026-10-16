@@ -1,0 +1,208 @@
+{
+ "root": {
+  "props": {
+   "path": "/planners/",
+   "title": "For Planners",
+   "description": "How we work with planners: a personal contact before the night, the certificate of insurance and W-9 with the contract, market pricing you can put in a budget, and the technical details venues ask for.",
+   "nav": "planners",
+   "breadcrumb": "For Planners",
+   "notes": {
+    "reader": "The event planner who needs the working facts before putting us in front of a client or a venue."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "headingStyle": "max-width: 61rem;",
+       "eyebrow": "For Planners",
+       "slab": true,
+       "title": "an Easy &amp; Clear plan, before you need it.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "titleStyle": "max-width: 61rem;",
+       "lede": "Every vendor you hire represents your reputation. Below are some questions and answers to the ones we've been asked so far.",
+       "ledeStyle": "max-width: 42rem;"
+      }
+     }
+    ],
+    "_notes": "Rewritten 2026-08-07, content overhaul. This page used to make four claims\n     about how we behave, each of which was already made on two or three other\n     pages. It now hands over the documents instead. Same URL, same audience,\n     opposite method: the claims are demonstrated by the resources below rather\n     than asserted a fourth time.\n\nCopy pass batch 4, 2026-09-24. Planner hub, utility genre: numbers stay, tells only. 'Three things you can rely on' restated the vendor-file section above it line for line and is gone (its links live in that section); itemised fixed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-4",
+       "items": [
+        {
+         "q": "\"What Signet needs from a planner, and when?\"",
+         "a": "We need three things from you. To start, send the date and the venue, and we'll come back with an itemized quote. A city is enough if the venue isn't chosen yet. Once the venue is chosen we need its name, because the certificate of insurance names the venue. And we'd like your run of show as soon as a draft exists. Every other step is ours.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"booking/\">How a booking works</a></span>"
+        },
+        {
+         "q": "\"What do you need from the venue?\"",
+         "a": "A solo musician needs a few feet of floor and one outlet on its own circuit. A quartet needs more floor, a second circuit and more time to load in. A stage is optional at every size. The full page covers floor space, power, soundboard channel counts, load-in times and preferred volume for each size. It's written to be forwarded to the venue, and it includes the six things worth confirming at contract.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"technical/\">What we may need from the venue (depending on booking)</a></span>"
+        },
+        {
+         "q": "\"How does the band fit into my run of show?\"",
+         "a": "Send us your draft in whatever state it's in. We'll fill in the band’s rows and send it back, whether or not you've booked us. You'll get the set times, the breaks, the points where the music stops for remarks, and who cues each one. If you're starting from a blank page, there are three templates to copy and retime: a corporate gala, a wedding and a company holiday party.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"run-of-show/\">Run of show templates</a></span>"
+        },
+        {
+         "q": "\"How loud is it, and what if my venue has a sound limit?\"",
+         "a": "During cocktails and dinner, guests can talk across the table without raising their voices (60 to 65 dBA at the nearest table). Dancing is louder (88 to 95 dBA on the floor), and the band adjusts it to the crowd and the space. If your venue or town enforces a decibel limit or a curfew, give us the number when you book and we'll plan the night inside it. Colorado sets statewide limits, and Aspen, Telluride, Breckenridge, Steamboat and Vail each enforce their own. They're all on one page, with sources and dates.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"mountain/\">Loudness Limits</a></span>"
+        },
+        {
+         "q": "\"Who chooses the songs?\"",
+         "a": "You and your client do, as much or as little as you like. You can build the list yourself, hand us a do-not-play list and leave the rest to the band, or describe the crowd and let the band read it song by song. If you want a song the band doesn't already play, send it a few weeks ahead and they'll learn it.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"/repertoire/\">A sample of the song list</a></span>"
+        },
+        {
+         "q": "\"Do you recommend other vendors?\"",
+         "a": "Yes. The <a href=\"/preferred-vendors/\">Preferred Vendor List</a> has the photographers, planners, videographers, caterers, florists and venues we’d send our own clients to, each with a link to their site. If you work in events yourself, <a href=\"/preferred-vendors/join/\">here’s how to apply</a>."
+        }
+       ],
+       "schema": false,
+       "style": "margin-top: 0;"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "More answers are in <a href=\"faq/\">the full question list</a>, including deposits and cancellation, substitutions, what the musicians wear, and microphones for speeches.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Rewritten 2026-10-01 on Daniel's word (\"a large section near the top that\n     purports to answer questions ... the whole thing is confusing. fix it\").\n     His opening line promises questions and answers, and what sat here was\n     seven cards named after our own documents, each describing its contents\n     as a list of nouns. Reader: a planner with an event on the calendar,\n     deciding whether to put us in front of a client or a venue. The rows are\n     that planner's questions in the order the job raises them (what I owe\n     you, my venue, my timeline, my sound limit, my client's songs, my other\n     vendors), each answered here in full, with the long page linked under\n     the answer for whoever needs it. Every link the cards carried is kept.\n     The second pricing pointer is gone; Daniel's own is in the vendor file\n     below. Two link labels are his and stay verbatim: 'What we may need from\n     the venue (depending on booking)' and 'Loudness Limits'.\n\nThe join link, added 2026-09-22 the day it came out of the footer.\n           It sits here rather than anywhere else on the site because planners\n           are one of the six categories on the list, so the person reading\n           this row is a plausible applicant as well as a buyer.",
+    "_file": "02-resources.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "anchor": "vendor",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Vendor file",
+       "title": "What your venue may ask for.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "All five are below, so there's no phone call to make"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "Certificate of insurance",
+         "text": "Whether you ask for it or not, a COI naming your venue as additional insured arrives in the same email as the contract, along with a W-9 and one itemized invoice. If the venue needs specific wording or a specific additional insured, send it and it comes back correct the first time."
+        },
+        {
+         "term": "<br>General liability",
+         "text": "Carried at the limits most Colorado venues write into their vendor requirements. Send us the limits yours asks for and we'll confirm them against the policy before you commit to a date; the certificate itself shows the numbers."
+        },
+        {
+         "term": "<br>A written contract",
+         "text": "Every booking gets one. It names the date, the venue, the configuration, the hours, the total and the payment schedule. A deposit holds the date, the balance falls due 14 days out, and payment is ACH, check or card through Stripe, all at no fee. <br><br>It's rare that we may choose to approve corporate accounts which run on net-30 terms instead. These will be invoiced after the event. Cancellation and refund terms are written into the contract rather than referred to, so your client isn't signing a document that points at a policy nobody has read."
+        },
+        {
+         "term": "<br>Single point of contact",
+         "text": "For each event, you'll have a single point of contact who is reachable from load-in to load-out. In many cases they'll be in the building all night, and you'll have their cell. "
+        },
+        {
+         "term": "<br>Small-to-medium sized sound included",
+         "text": "We will always size our sound system to your specs and to the venue, at every configuration. This will be itemized in the invoice. Load-in, setup, strike and load-out are enumerated. Stage lighting and a dedicated engineer are optional add-ons, quoted as their own line when you want them. "
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "If you're curious about what the wider market charges (with cited sources) you can learn more at the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Added 2026-08-15 with the roster restructure. The spec's planner trust-signal\n     list, in one block, because these are the five things a planner or a venue\n     checks before a vendor goes on a shortlist and they were scattered across\n     four pages. Insurance limits render from site.json; see the _insurance_note\n     there, they are a claim about real coverage and have to match the policy.\n\nReconciled against the contract draft 2026-08-16, card restored\n           2026-08-17 once Stripe was confirmed, card fee absorbed later the\n           same day: all methods at no fee. Vocabulary is the contract's:\n           deposit, never retainer. Note this says configuration rather than\n           act: per Daniel 2026-08-17 the contract specifies what is delivered,\n           not which act or which players deliver it.\n\nScoped to sound 2026-08-18 per Daniel: lighting and an engineer are\n           optional add-ons now, quoted as their own line, so the old \"no\n           separate production line\" claim came out with them.",
+    "_file": "02b-vendor.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-16",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Unbundling? not a problem",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "If you want your own <strong>ceremony musician</strong>, or a marquee DJ you already trust, and us only for the dance floor, that's a booking we're still happy to help with. <br><br>Assemble the night your way and bring us in for the part where we fit.   ",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The honesty section. Header and answer are Daniel-approved (WEBSITE-PLAN.md\n     §1), with the interim résumés wording until the roster accolade sweep.",
+    "_file": "04-honesty.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-17",
+       "buttons": [
+        {
+         "label": "Start a conversation",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "04-honesty.html"
+   }
+  }
+ ]
+}

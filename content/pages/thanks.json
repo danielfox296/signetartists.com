@@ -1,0 +1,62 @@
+{
+ "root": {
+  "props": {
+   "path": "/thanks/",
+   "title": "Enquiry received",
+   "description": "Your enquiry has been received. A person replies with availability and an exact number.",
+   "robots": "noindex, follow"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-6",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Panel",
+      "props": {
+       "id": "Panel-4",
+       "blocks": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-1",
+          "html": "Received. <span class=\"smile\">Consider it started.</span>",
+          "tag": "h1",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-2",
+          "html": "One of us will reply with availability and an exact number.",
+          "cls": "prose"
+         }
+        },
+        {
+         "type": "ButtonRow",
+         "props": {
+          "id": "ButtonRow-3",
+          "buttons": [
+           {
+            "label": "See Pricing",
+            "href": "/pricing/",
+            "cls": "btn btn--outline"
+           }
+          ]
+         }
+        }
+       ],
+       "style": "max-width: 34rem;"
+      }
+     }
+    ],
+    "_notes": "\"Consider it started.\" is the page's wink (§6.4). The reply window\n           came out 2026-08-18 per Daniel; it now lives on the contact page\n           and in the booking-page steps table only.",
+    "_file": "01-thanks.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/anniversary-party/",
+   "title": "Anniversary party band and live music in Denver | Signet Artists",
+   "description": "A jazz duo, a singer with a guitar or a band for a 25th, 40th or 50th anniversary party in Denver, at home, at a club or in a private dining space, with the couple's song learned for the night.",
+   "titleExact": true,
+   "ogImage": "img/acts/jazz-duo-poster.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music for an anniversary party",
+     "serviceType": "A jazz duo, a singer with a guitar, a Spanish guitarist or a party band for 25th, 40th and 50th anniversary parties, surprise anniversary dinners and vow renewals",
+     "description": "Live music for an anniversary party across Denver and the Front Range: a jazz duo playing the standards at 60 to 65 dBA under the dinner and the toasts, a singer with a guitar who learns the couple's first-dance song for the night, a Spanish guitarist for a long family dinner, and a trio or quartet for the anniversary that dances, at home, at a club or in a private dining space, with an announcement microphone for the toasts and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for an anniversary party: Autumn Leaves on upright bass and guitar",
+      "description": "Autumn Leaves on upright bass and guitar, the size an anniversary dinner books first, at a volume the table talks across.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     },
+     {
+      "id": "NI0kunpQQiA",
+      "name": "Singer with a guitar for an anniversary party: Tejas Singh at a wedding cocktail hour",
+      "description": "Tejas Singh singing at a wedding cocktail hour, the singer who learns the couple's first-dance song for an anniversary night.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M9S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'anniversary party band' and 'anniversary party entertainment ideas'. The hub's milestone section covers birthdays; this is the anniversary's own page: the couple's song learned for the night, the set built from the years they've been married, the toast, the surprise party the children throw, and the vow renewal that books ceremony music. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
+    "reader": "Whoever is throwing an anniversary party for a couple, often their children, and wants the night built around the couple's song.",
+    "schema_note": "Authored 2026-09-20 with the anniversary party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the proposals page (the cue, the first learned song included in every booking), the hub's milestone section (the announcement microphone, the set built for the person) and the ceremony page. Questions are worded the way hosts search. No figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Anniversary party",
+       "slab": true,
+       "title": "Live music for your anniversary party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The song they danced to at their wedding starts again, years later, and everyone who was there the first time is watching. An anniversary party is a dinner built around that song: a jazz duo or a singer with a guitar under the toasts, the song learned for the night, and a band on the floor afterward if the party dances.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, at home, at a club or in a restaurant’s private dining space, on one contract with one personal contact for the music."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The anniversary party spoke. The buyer's phrases (anniversary party band, live music for an anniversary) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the party for the couple, most often their children, and wants the night built around the couple's song. The ideas section restated the sizes (jazz duo, the 25th's floor, the Spanish guitarist) and those rows are gone; ops (dBA, footprints, paperwork) moved to the FAQ; the pricing pointer appears once plus the sitewide close.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "The duo, and a singer with the couple’s song.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Autumn Leaves on upright bass and guitar, which is the size an anniversary dinner books first, and Tejas Singh at a wedding cocktail hour, the singer who learns the couple’s song for the night."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo, upright bass and guitar, playing Autumn Leaves",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/NI0kunpQQiA?rel=0",
+         "title": "Tejas Singh singing at a wedding cocktail hour",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: a jazz duo on Autumn Leaves (no player named; the format is spec'd) and Tejas Singh at a wedding cocktail hour (a named act).",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Sizes",
+       "title": "A duo for the dinner, a band if it dances.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most anniversaries are a seated dinner with a toast in it, so most start with the duo, and the rest follows from whether the night ends on a floor."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The jazz duo",
+         "text": "Upright bass and guitar playing the standards at a volume the table talks across, for a dinner at home, at a club or in a private dining space. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> builds the set from the years the two of them have been married."
+        },
+        {
+         "term": "A singer with a guitar",
+         "text": "One voice and a guitar for the anniversary where the couple’s song should be sung. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> learns it for the night, and the same booking grows to a quartet if the party turns into a floor."
+        },
+        {
+         "term": "A Spanish guitarist for a long dinner",
+         "text": "A guitar with real technique in it under a long table, for the 50th that’s a dinner for the whole family. <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> plays it as one guitarist or as a trio."
+        },
+        {
+         "term": "The band, for the 25th that dances",
+         "text": "A trio or a quartet for the anniversary whose friends are still the people who danced at the wedding. <a href=\"/artists/tony-medina/\">Tony Medina</a> plays it up to a four piece, the same band plays the dinner first, and <a href=\"/ensembles/dj/\">the DJ</a> can carry the late end through the same sound system."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out what each size costs in Colorado.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The sizes an anniversary books, dinner first. Footprint, circuit and load-in facts from site.json; the learned-song fact from the proposals page. Tejas Singh, Tony Medina and Dirty Flamenco are named because they front their acts; the jazz sizes are spec'd.",
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "The party",
+       "title": "The surprise, the dinner, and the vow renewal.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "The surprise party the children throw",
+         "text": "The couple thinks it’s dinner with the kids, the private dining space is full of everyone they’ve known for forty years, and the musician is already playing, so the first thing they hear as the door opens is their song. It runs on the same cue as a <a href=\"/private-parties/proposals/\">surprise proposal song</a>."
+        },
+        {
+         "term": "The dinner at home or at the club",
+         "text": "A long table, the toasts, the slideshow somebody made, and the duo playing the standards under all of it, at home or at a <a href=\"/private-parties/denver/\">Denver</a> club."
+        },
+        {
+         "term": "The vow renewal",
+         "text": "Some 25ths and 50ths renew the vows in the garden before the dinner: a guitarist or a duo for the walk in, the song the two of them chose, and the walk out, placed the way <a href=\"/weddings/ceremony/\">wedding ceremony music</a> is, with the dinner afterward on the same contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The three anniversaries, each with the size that fits. Links ACROSS to the proposals page (the surprise mechanics), the ceremony page (a vow renewal) and the Denver page (the club dinner). No clock times.",
+    "_file": "03-the-party.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Ideas",
+       "title": "Anniversary party entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-20",
+       "rows": [
+        {
+         "term": "A sing-along the grandchildren can join",
+         "text": "A fortieth or fiftieth usually has four generations in it, and the Beatles are the one songbook all four know. <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> is a duo that plays it and gets the whole family singing."
+        },
+        {
+         "term": "Their first-dance song, played again",
+         "text": "The song from the wedding, played while the two of them dance in front of the people who watched the first time."
+        },
+        {
+         "term": "A set built from their years",
+         "text": "The standards and the songs from the decade they met, threaded through the dinner so the evening sounds like their life. The <a href=\"/repertoire/\">repertoire page</a> is searchable by title."
+        },
+        {
+         "term": "Live band karaoke for the wedding party",
+         "text": "The band plays the hits and hands the microphone to the best man, thirty years later, with <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The ideas section carries the head term hosts type ('anniversary party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Questions",
+       "title": "Asked about anniversary parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Can we hire a band for an anniversary party?",
+         "a": "Yes. Most anniversaries are a seated dinner with a toast, so a jazz duo or a singer with a guitar plays the dinner, and a trio or a quartet plays the anniversary that ends on a dance floor. It's one contract with one personal contact for the music, booked through Signet Artists in Denver."
+        },
+        {
+         "q": "Can the band play the couple's first-dance song?",
+         "a": "Yes. The song from the wedding is learned for the night if it isn't already in the book, and one learned song comes with every booking. Tell us the title with the date, and whether it should be played or sung."
+        },
+        {
+         "q": "How does a surprise anniversary party work with a musician?",
+         "a": "The musician is set up early and playing quietly, so the place looks like it simply has live music that night, and the couple's song starts on a cue you agree beforehand: a nod from the host or a text from a friend at the next table."
+        },
+        {
+         "q": "How loud is the music at dinner?",
+         "a": "About as loud as the conversation at the table, so the toasts are easy to hear and nobody leans in to talk. The duo stops for each toast, and an announcement microphone is ready for whoever stands up. The musicians set the level to the space, so a restaurant's private dining space gets less than a backyard."
+        },
+        {
+         "q": "How much space does the band need at a dinner?",
+         "a": "A guitarist or a singer with a guitar takes about 6 by 4 feet on one circuit, a duo 8 by 6 on one, a trio 12 by 8 on one and a quartet 14 by 10 on two, in the corner the table naturally faces. Setup runs 45 minutes for a solo and an hour for a duo or a trio. A certificate of insurance and a W-9 come with the quote if the venue asks."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the couple's song.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

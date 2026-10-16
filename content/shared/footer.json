@@ -1,0 +1,102 @@
+{
+ "line": "Live entertainment for private events in the Denver area, including the Front Range, and the mountain corridor.",
+ "links": [
+  {
+   "label": "Signet on LinkedIn",
+   "href": "https://www.linkedin.com/company/signetartists/",
+   "cls": "footer-social",
+   "rel": "me"
+  },
+  {
+   "label": "Check a Date",
+   "href": "/contact/",
+   "cls": "btn btn--sm footer-cta"
+  }
+ ],
+ "columns": [
+  {
+   "title": "Occasions",
+   "links": [
+    {
+     "label": "Corporate",
+     "href": "/corporate/"
+    },
+    {
+     "label": "Weddings",
+     "href": "/weddings/"
+    },
+    {
+     "label": "Private Parties",
+     "href": "/private-parties/"
+    },
+    {
+     "label": "Daytime",
+     "href": "/daytime/"
+    }
+   ]
+  },
+  {
+   "title": "The music",
+   "links": [
+    {
+     "label": "Artist Roster",
+     "href": "/music/"
+    },
+    {
+     "label": "Songs",
+     "href": "/repertoire/"
+    }
+   ]
+  },
+  {
+   "title": "Planning",
+   "links": [
+    {
+     "label": "Pricing",
+     "href": "/pricing/"
+    },
+    {
+     "label": "For Planners",
+     "href": "/planners/"
+    },
+    {
+     "label": "Preferred Vendor List",
+     "href": "/preferred-vendors/"
+    }
+   ]
+  },
+  {
+   "title": "Signet",
+   "links": [
+    {
+     "label": "About",
+     "href": "/about/"
+    },
+    {
+     "label": "Notes",
+     "href": "/blog/"
+    }
+   ]
+  }
+ ],
+ "baseLinks": [
+  {
+   "label": "All pages",
+   "href": "/sitemap/"
+  },
+  {
+   "label": "For Artists",
+   "href": "/for-artists/"
+  }
+ ],
+ "meta": [
+  {
+   "cls": "footer-meta",
+   "text": "All acts and configurations are subject to availability."
+  },
+  {
+   "cls": "footer-meta footer-meta--copyright",
+   "text": "© 2026 Signet Artists"
+  }
+ ]
+}

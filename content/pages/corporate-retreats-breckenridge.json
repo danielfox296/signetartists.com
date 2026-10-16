@@ -1,0 +1,378 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/breckenridge/",
+   "title": "Live music for Breckenridge retreat evenings | Signet Artists",
+   "description": "Evening activities for a Breckenridge corporate retreat at 9,600 feet: a longer sound check, paced sets, and venue caps honoured as written.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Breckenridge",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "Live music for corporate retreats and private celebrations at Breckenridge venues, solo through quartet, planned for 9,600 feet.",
+     "areaServed": [
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Tier 2 resort spoke, built 2026-08-20 for the SEO buildout. Corporate-retreat and private-event angle only. Argument: 9,600 feet as the highest working altitude on the travel card (breath, tuning, timelines, generous load-in windows), the venues around the historic core plus Ten Mile Station on-mountain, and town caps and curfews honoured as written. Noise figures restate planners/mountain with its own hedge; that page holds the citations.",
+    "reader": "Whoever is planning a corporate retreat in Breckenridge and needs the evenings to work at 9,600 feet."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Corporate retreats",
+       "slab": true,
+       "title": "Breckenridge corporate retreats, built for 9,600 feet.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A distillery dinner at the north end of town, a band in the corner, and a group that arrived buttoned-up on Thursday dancing by Saturday. Breckenridge is the highest venue market we travel to, at roughly 9,600 feet, and the evenings are built for it: a welcome night, dinners at conversation volume and a party, solo through quartet on one contract.",
+       "headingText": [
+        {
+         "html": "It’s a town that has been entertaining people at altitude for a hundred and fifty years, and its venues have real character. The whole resort program starts on the <a href=\"/corporate/retreats/\">corporate retreats page</a>, and eight evening ideas, with the size each one needs, are in <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Breckenridge retreat spoke. Argument: 9,600 feet is the highest working\n     altitude on the travel card, and the plan changes before the music does.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is planning a Breckenridge retreat and needs the evenings to work at 9,600 feet. The altitude facts (breath, tuning) stay as the page's subject; set lengths, setup windows and power went to the FAQ; the cited zone caps sit in the FAQ and the body says what they mean; unrecognisable/honoured fixed; FAQs restating the venues, the curfew and the calendar are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "A Breckenridge evening.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A patio set, and the stage deck a Breckenridge evening runs on when it goes outside."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent on grass with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-14",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "9,600 feet",
+       "title": "What the altitude changes.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-9",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [],
+       "c2": []
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Breath. Singers and horns tire faster in thin, dry air, so sets are paced with real breaks between them, and music keeps playing through the breaks. Pacing is the difference between a band that finishes strong and one that fades early.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Tuning. The temperature swing between sound check and the last set runs wide up here, and instruments drift with it. Retunes between sets are part of the plan, and the sound check runs longer than the same band would take in Denver.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Carrying gear is slower work at this altitude too, so setup takes the generous end of its window. The altitude of every mountain town is cited on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The altitude section, this page's core argument. Set lengths, load-in\n     windows and circuit facts are site.json data; altitude consequences\n     restate planners/mountain, which holds the citations.",
+    "_file": "02-altitude.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "The venues",
+       "title": "Breckenridge venues.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The town runs on its historic core, and the event calendar sits around that. The Breckenridge Distillery holds dinners at the north end of town, The Lodge at Breckenridge sits on the ridge above it, and Beaver Run Resort and Gravity Haus carry the conference end of the market at the base, ballroom program and all. A distillery dinner for forty and an awards night for two hundred are different bookings, and both are quoted the same way: the fee, the travel, and whatever the venue needs from the sound.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Ten Mile Station sits mid-mountain, and in winter gear reaches it over snow, on the venue's own access and schedule. That’s a question we settle with the venue in writing before the day, the same way we work the on-mountain venues at <a href=\"/corporate/retreats/beaver-creek/\">Beaver Creek</a>: what travels, when it travels, where it waits.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Where the trip wants one act through it, Tejas Singh can start as a duo at dinner and finish as a quartet on the dance floor, on one contract. Where the dinner is the event, a jazz duo of upright bass and guitar holds it at conversation volume for the whole evening.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Venues as the market's places. All five are on the vetted Breckenridge\n     list. Geographic placements kept loose and checkable: Distillery north\n     end, Lodge on the ridge above town, Beaver Run and Gravity Haus at the\n     base, Ten Mile Station mid-mountain.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-25",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-21",
+       "html": "Caps and curfews, kept as written.",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Breckenridge’s reported noise limits vary by zone, residential and commercial, with the town manager able to permit above them, and we couldn’t reach the code text directly when we checked. So the venue’s number is the one that governs, and we ask for it at contract. The figures, with sources and the date checked, are on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "A town cap is measured at a property line, so the distance between the band and that line decides how much sound the evening has to work with, which is why the venue name is the first thing we’ll ask for. Tell us the curfew when you book, and the set is built to land on it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Caps and curfews. The reported figures and the could-not-reach-the-code\n     hedge restate planners/mountain word-for-fact; that page holds sources.",
+    "_file": "04-rules.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-26",
+       "eyebrow": "The quote",
+       "title": "What a Breckenridge date adds.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "There are three: the mountain drive, the calendar, and a longer working day at 9,600 feet."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-27",
+       "html": "Travel is its own line on the quote, covering the I-70 drive from Denver over the pass. What the altitude adds is time: the generous end of the load-in window, a longer sound check, paced sets and a retune between them. That planning is part of the booking, and there’s no altitude item on a Breckenridge quote.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "The calendar is the other variable. A holiday weekend prices above a standard date across this market, and December in Breckenridge is the busiest the town gets. New Year's Eve is its own case here as it is everywhere.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Milestone birthdays, anniversaries and family gatherings book the same venues the same way, on one contract. Those occasions are on the <a href=\"/private-parties/\">private parties page</a>, and the Colorado market is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Was the resort rate module. Since 2026-09-04 it is what a Breckenridge\n     date adds, in words. The altitude is the town's own fact and it is a\n     planning cost rather than a line on a quote.",
+    "_file": "05-rates.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-36",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-32",
+       "eyebrow": "Questions",
+       "title": "Breckenridge booking questions.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-33",
+       "html": "Stage sizes and power are <a href=\"/planners/technical/\">set out by size</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-34",
+       "items": [
+        {
+         "q": "Does 9,600 feet change what the band costs?",
+         "a": "No. The travel line is the same one Vail and Beaver Creek carry, and there's no altitude line on the quote. What changes at Breckenridge is the plan: a longer setup window, a longer sound check, paced sets and retunes between them. Signet Artists books Breckenridge retreat evenings from Denver."
+        },
+        {
+         "q": "What are Breckenridge's noise limits?",
+         "a": "Reported at 55 dBA by day and 50 after hours in residential zones, 70 and 65 in commercial, with the town manager able to permit above them. We couldn't reach the code text directly, so we treat your venue's number as the one that governs and build the night under it. Dinner plays at the level of the conversation, well inside any of these at a sensible distance."
+        },
+        {
+         "q": "What does setup need at this altitude?",
+         "a": "Setup usually runs 45 to 90 minutes depending on the size of the band, and at 9,600 feet we take the generous end and fix the dock or door time with the venue in advance. Sets run 45 to 60 minutes with real breaks. The band needs one or two dedicated 20-amp circuits, not shared with catering warmers, which is the most common setup fault we plan against."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-39",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-37",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the Breckenridge dates and the venue, and we'll plan the evenings from there.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

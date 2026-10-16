@@ -1,0 +1,336 @@
+{
+ "root": {
+  "props": {
+   "path": "/",
+   "title": "Signet Artists — Live music for private events in Denver, Colorado",
+   "description": "Live music for private events across Colorado, from a solo musician to a full band, on one contract with a personal contact for the night. Send us the date.",
+   "titleExact": true,
+   "indexLabel": "Home",
+   "schemaKind": "organization",
+   "notes": {
+    "_title_note": "The em dash here is the sitewide title separator: build.py appends '— Signet Artists' to every other page title, so this is a data label like 'Duo — 4 hours', not prose. Accepted exemption to the prose em-dash ban, recorded at the 2026-08-02 audit."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "HomeHero",
+   "props": {
+    "id": "HomeHero-2",
+    "label": "Signet Artists",
+    "frames": [
+     {
+      "src": "/img/hero/gary-meyers.jpg",
+      "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
+      "width": "1600",
+      "height": "900",
+      "fetchpriority": "high",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/hero/tejas-singh.jpg",
+      "alt": "Tejas Singh in profile, looking upward, in black and white.",
+      "width": "1600",
+      "height": "900",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/hero/last-consulate.jpg",
+      "alt": "Last Consulate's artwork: a black and white prop passport held open in one hand.",
+      "width": "1600",
+      "height": "900",
+      "decoding": "async"
+     }
+    ],
+    "title": "Live music for your event.",
+    "titleStyle": "max-width: 25.5rem;",
+    "lede": "Signet Artists delivers live entertainment for private events in Denver, Colorado and surrounding areas. All provided in a variety of genres and configurations - effortlessly.",
+    "ledeStyle": "max-width: 18rem;",
+    "buttons": [
+     {
+      "label": "See Our Artists Roster",
+      "href": "/music/",
+      "cls": "btn"
+     }
+    ],
+    "_notes": "Hero, rebuilt 2026-09-10 on Daniel's call: full-width, three black and\n     white artist stills crossfading behind white type. Gary Meyers, Tejas\n     Singh, Last Consulate. The stock stage still (img/hero.jpg), the service\n     area eyebrow and the See Pricing button all left the hero that day; the\n     range strip that leaned on the eyebrow moved down above the roster.\n     Crossfade is CSS only (.hero-cine in styles.css), no controls, and\n     reduced-motion users get the first frame held. Files in img/hero/,\n     provenance in _src/data/media-sources.json.",
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-4",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": true,
+    "_notes": "The client strip, 2026-09-03, Daniel's call: the roster's artists have\n     played for these companies and the names carry trust the copy cannot.\n     Data and the choice of which ten get a logo are in site.json credits;\n     build.py inlines the marks. Sits under the locator strip and above How\n     we work, so the first scroll reads: what this is, where we play, who has\n     hired the players. The venue sentence prints here and nowhere else.",
+    "_file": "01c-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-8",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-5"
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-6",
+       "buttons": []
+      }
+     }
+    ],
+    "_notes": "Pillar 1 — the differentiator, high on the page. Still early evening in\n     the night arc, so it stays on paper; the warming starts at Range.\n\n     Trimmed 2026-08-07, content overhaul. This block used to print the whole\n     seven-item included list, which also appears in full on the pricing page\n     and in pieces on three others. It now states the pillar once and points at\n     the documents that prove it. The canonical included list lives on pricing.",
+    "_file": "02-how-we-work.html"
+   }
+  },
+  {
+   "type": "RangeStrip",
+   "props": {
+    "id": "RangeStrip-10",
+    "image": {
+     "src": "/img/range.jpg",
+     "alt": "The Denver skyline against the Front Range, from City Park.",
+     "width": "2400",
+     "height": "800",
+     "loading": "lazy",
+     "decoding": "async"
+    },
+    "label": "Where we play",
+    "_notes": "The Front Range locator, 2026-08-27, Daniel's call: the site did not read\n     as front-range centric. Moved 2026-09-10, also his call, from directly\n     under the hero to directly above the roster module, once the hero became\n     a full-width photo band of its own. One thin full-bleed band,\n     the City Park downtown-into-the-mountains shot, duotoned into the palette\n     like every interim still (provenance in img/SOURCES.md). Pairs with the\n     location line in the header; the caption is the footer's service-area\n     sentence, so the words never drift apart. Deliberately short: a locator,\n     not a hero.\n\nNo caption: the header's location line already says the words, so the\n     strip supplies only the picture. Alt text carries it for readers.",
+    "_file": "02b-range.html"
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "headingStyle": "max-width: 62.5rem;",
+       "eyebrow": "The artists roster",
+       "title": "Check out signet's growing book of Flavorful Acts",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 54rem;",
+       "lede": "From singer-songwriters, cover artists, jazz, flamenco, string quartets, funk and DJ options to sound baths, Signet Artists offers many of our acts as solo, duo, trio and more players. Some with a notable front-person and others are purpose-built for your event. We've highlighted a few below,",
+       "ledeStyle": "max-width: 62.5rem;"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-12",
+       "source": "flagships"
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-13",
+       "buttons": [
+        {
+         "label": "See The Full Roster",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Booked for",
+       "cls": "tag-label"
+      }
+     },
+     {
+      "type": "List",
+      "props": {
+       "id": "List-15",
+       "items": [
+        {
+         "html": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>"
+        },
+        {
+         "html": "<a href=\"/corporate/client-dinners/\">Client dinners</a>"
+        },
+        {
+         "html": "<a href=\"/corporate/retreats/\">Corporate retreats</a>"
+        },
+        {
+         "html": "<a href=\"/corporate/\">Galas and fundraisers</a>"
+        },
+        {
+         "html": "<a href=\"/private-parties/\">Dinner and cocktail parties</a>"
+        },
+        {
+         "html": "<a href=\"/private-parties/\">Milestones and anniversaries</a>"
+        },
+        {
+         "html": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>"
+        },
+        {
+         "html": "<a href=\"/corporate/client-dinners/\">Club and member events</a>"
+        }
+       ],
+       "cls": "tag-list"
+      }
+     }
+    ],
+    "_notes": "Pillar 2 as a picture. Rewritten 2026-08-15: this block described two house\n     bands and a DJ, which is not what the business is. It is an agency booking\n     named acts, so the home page shows the three flagship acts and sends the\n     rest to the roster. The evening still warms here, paper-sunk, before the\n     night section inverts.\n\n\"americana\" left this list 2026-08-27 with the Thomas Owen Band\n           (acts.json holds). The genre list is hand-typed: it must shrink and\n           grow with the roster. No count in the heading, 2026-09-07: a genre\n           list survives a new act, an integer does not. Sound bath and sound\n           healing joined the list 2026-09-19 on Daniel's instruction (\"it should\n           say sound bath, or sound healing, or other related search terms\");\n           the sentence is his, only the list moved. String quartets joined 2026-09-25\n           on Daniel's call (\"what is the shape of the search demand? do that\"):\n           \"string quartet denver\", \"string quartet wedding denver\", \"string quartet\n           colorado springs\" and \"string quartet for corporate events\" all\n           autocomplete, and the violinist family is smaller, so the quartet is the\n           word. Only the list moved.\n\nThe sleeves, wired in 2026-08-07. It sits directly under the roster because\n     range is a claim about what we can play and this is the only evidence for\n     it on the page. Full-bleed on the night ground, so the strip also does the\n     arc's work: the roster section warms and the sleeves drop to midnight. The\n     late-night band that used to follow was cut on 2026-08-17 with the Q4\n     refocus, so the strip is the only night ground on the page now and pricing\n     returns to paper directly after it.",
+    "_file": "03-range.html"
+   }
+  },
+  {
+   "type": "CoverStrip",
+   "props": {
+    "id": "CoverStrip-19",
+    "tiles": [
+     {
+      "src": "/img/covers/into-the-mystic.jpg",
+      "alt": "Moondance, Van Morrison album cover"
+     },
+     {
+      "src": "/img/covers/landslide.jpg",
+      "alt": "Fleetwood Mac album cover"
+     },
+     {
+      "src": "/img/covers/tennessee-whiskey.jpg",
+      "alt": "Chris Stapleton album cover"
+     },
+     {
+      "src": "/img/covers/dock-of-the-bay.jpg",
+      "alt": "The Dock of the Bay, Otis Redding album cover"
+     },
+     {
+      "src": "/img/covers/valerie.jpg",
+      "alt": "Version, Mark Ronson album cover"
+     },
+     {
+      "src": "/img/covers/sweet-caroline.jpg",
+      "alt": "Neil Diamond album cover"
+     },
+     {
+      "src": "/img/covers/dont-stop-believin.jpg",
+      "alt": "Escape, Journey album cover"
+     },
+     {
+      "src": "/img/covers/mr-brightside.jpg",
+      "alt": "Hot Fuss, The Killers album cover"
+     }
+    ],
+    "note": "We love music - both originals from our artists and a few hundred familiar favorites. For our singer-songwriter acts, you can check out our <a href=\"/repertoire/\">Songs page</a> for an example of the available repertoire.",
+    "_file": "03-range.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "headingStyle": "max-width: 53rem;",
+       "eyebrow": "When's your event?",
+       "title": "nobody wants to get the booking wrong",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 42rem; zoom: 1.25;",
+       "image": {
+        "src": "/img/unsplash/photo-1511379938547-c1f69419868d.jpg",
+        "alt": "",
+        "width": "1600",
+        "height": "1067",
+        "loading": "lazy",
+        "decoding": "async",
+        "style": "width: 22rem; height: auto;"
+       },
+       "imageFirst": true,
+       "lede": "Hiring the right entertainment can be nerve-racking. Everyone's got an opinion, and to some degree, your reputation might be on the line.",
+       "ledeStyle": "max-width: 53rem;",
+       "headingText": [
+        {
+         "html": "Signet Artists makes it hard to get wrong. You get an act that fits your vision, sound support that's the right size for the venue, and clear, professional support all along the way.",
+         "style": "max-width: 51.5rem;"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-21",
+       "buttons": []
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": " <a href=\"/pricing/\">Learn what live music costs in different markets including Colorado, the Front Range and Nationally.</a> ",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Pricing, on the home page. Rewritten 2026-09-04 with the no-published-price\n     decision. The section's job used to be \"we publish a card\". It is now that\n     the market's numbers are on the site, sourced, so a budget can be set, and\n     that Signet prices the date. One button, and a text link to the page that\n     carries the figures. The hero above is untouched.",
+    "_file": "04-pricing.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 48rem;",
+       "title": "we love helping bring magical events together",
+       "titleStyle": "max-width: 48rem;",
+       "lede": "Share the details and we can bring together the entertainment to fit your night perfectly.",
+       "ledeStyle": "max-width: 32rem;",
+       "image": {
+        "src": "/img/unsplash/photo-1653821355226-6def361cc7ab.jpg",
+        "alt": "magical event table setting",
+        "width": "1600",
+        "height": "1067",
+        "loading": "lazy",
+        "decoding": "async",
+        "style": "width: 28rem; height: auto;"
+       }
+      }
+     }
+    ],
+    "_notes": "Close.",
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

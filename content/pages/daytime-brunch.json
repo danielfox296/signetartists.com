@@ -1,0 +1,308 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/brunch/",
+   "title": "Live music for Sunday brunch in Denver: jazz duo or guitarist | Signet Artists",
+   "description": "Live music for a Sunday jazz brunch in Denver: upright bass and guitar, a solo guitarist or a pianist at 60 to 65 dBA, for a standing Sunday or a family table.",
+   "titleExact": true,
+   "ogImage": "img/acts/jazz-duo-poster.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music for Sunday brunch",
+     "serviceType": "A jazz duo, solo guitarist or pianist for brunch at restaurants, hotels and clubs, and for private brunches",
+     "description": "Upright bass and guitar, a solo guitarist, a Spanish guitarist or a pianist playing the standards under a Sunday brunch at 60 to 65 dBA, for a restaurant's, hotel's or club's standing Sunday and for private brunches, the morning after a wedding, a bridal brunch, a shower or a birthday, across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a Sunday brunch: Autumn Leaves on upright bass and guitar",
+      "description": "The duo recommended first for a dining space: upright bass and guitar playing Autumn Leaves at a level the tables talk across.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     },
+     {
+      "id": "cA2KwgmJqGc",
+      "name": "Jazz trio for a hotel brunch: Sunny",
+      "description": "The size for a hotel's Sunday with a hundred guests seated: guitar, upright bass and drums played with brushes, on Sunny.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M9S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-19 on Daniel's brief (Sunday brunch). Autocomplete evidence, Google and Bing, 2026-09-19: 'jazz brunch denver' (Google's first suggestion for 'jazz brunch'), 'brunch with live music denver', 'brunch with live music denver colorado', 'live music sunday brunch near me', 'sunday brunch with live music', 'live music for brunch near me', 'jazz brunch live music', 'wedding brunch music', 'wedding breakfast music', 'bridal brunch songs'. The hire-side phrases ('musicians for brunch', 'hire musician for brunch') return nothing, so the page carries the diner-side head terms and is written for the two people who actually book: the restaurant, hotel or club that wants a standing Sunday, and the host of a private brunch. Uniqueness gate: registered as a daytime sibling. No figure on the page.",
+    "reader": "Whoever wants a brunch to sound like a good Sunday: a restaurant, hotel or club with a standing Sunday, or a family with a morning-after or a shower.",
+    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json (60 to 65 dBA, set lengths, continuous audio through breaks, footprints, load-in), the jazz duo's setlist in acts.json, and the outdoor conditions on the private parties page. Questions are worded the way venues and hosts search. No figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Sunday brunch",
+       "slab": true,
+       "title": "Live music for a Sunday brunch.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The coffee keeps coming, a table of eight is on its second round of mimosas, and in the corner upright bass and guitar are playing The Girl from Ipanema. Restaurants, hotels and clubs book it as a standing Sunday, and families book it for the morning after a wedding, a bridal brunch, a shower or a birthday. It’s the same music either way, from a duo, a solo guitarist or a pianist.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/daytime/\">daytime bookings</a>, and a <a href=\"/ensembles/solo-piano/\">pianist</a> plays it where the dining space has a piano."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The brunch spoke. The buyer's phrases (live music for brunch, jazz\n     brunch, Sunday brunch) sit in the h1 and the first paragraph. Two buyers\n     on one page: the venue booking a standing Sunday and the host booking a\n     private brunch. Hub link UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever wants a brunch to sound like a good Sunday, a restaurant's manager or a family. The opener was the spec ('a brunch with live music is upright bass and guitar'); it's the table now. Footprint, set lengths, dBA and paperwork moved to the FAQ; FAQs restating the set and the rows are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Hyatt and Sheraton are the names a hotel\n     food and beverage manager is looking for.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "The duo, and the trio for a bigger dining space.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Autumn Leaves on upright bass and guitar, which is the duo we recommend first for a dining space, and Sunny with drums played with brushes, which is the size for a hotel’s Sunday with a hundred guests seated."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo, upright bass and guitar, playing Autumn Leaves",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny with drums played with brushes",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips: the duo, and the trio for a bigger dining\n     space. No player named; the format is spec'd.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Who books it",
+       "title": "A restaurant’s Sunday, or a family’s.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "Restaurants, hotels and clubs",
+         "text": "A standing Sunday, weekly or monthly, with the same musicians every time: upright bass and guitar, a guitarist alone, or <a href=\"/ensembles/solo-piano/\">a pianist</a> where the dining space has a piano, on one contract for the whole run."
+        },
+        {
+         "term": "The morning after a wedding",
+         "text": "A post-wedding brunch at the hotel, a rented house or a family’s home, with the same duo that played the cocktail hour the day before or a guitarist alone, playing the songs from the weekend. The <a href=\"/weddings/\">wedding</a> and the brunch go on the same contract."
+        },
+        {
+         "term": "A bridal brunch, a shower or a birthday",
+         "text": "A private dining space, a garden, a table of twenty at home. A guitarist or a Spanish guitarist plays under the meal, and a singer with a guitar plays the songs the guest of honor asked for. <a href=\"/private-parties/showers/\">Showers</a> have their own page, and the evening version is on <a href=\"/private-parties/\">private parties</a>."
+        },
+        {
+         "term": "A client or member brunch",
+         "text": "A hotel’s member event, a company’s family day, a club’s Mother’s Day seating: a pianist or a duo playing the standards while the tables turn, the daytime version of a <a href=\"/corporate/client-dinners/\">client dinner</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Who books it: the venue's standing Sunday and the three private\n     brunches. Facts: set lengths and continuous audio through breaks from\n     site.json, footprints and the 60 to 65 dBA band from the configurations.\n     Links UP to weddings, private parties and client dinners.",
+    "_file": "02-who-books.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "The set",
+       "title": "Standards, bossa nova, and the songs that suit a slow morning.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "The duo plays the standards and the bossa novas: Autumn Leaves, The Girl from Ipanema, All of Me, Blue Bossa, Someday My Prince Will Come, and the rest of a set built for a dining space where the coffee is the loudest thing in it. A guitarist alone plays the same set instrumentally, a Spanish guitarist plays it on nylon strings for a patio, and a singer with a guitar takes the folk and singer-songwriter end of the song list.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio page</a> covers the format in full, and the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> and <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> pages cover the one-musician versions.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "What plays and what the space needs. The titles are the jazz duo's\n     published setlist in acts.json; the outdoor conditions are the ratified\n     three from the private parties page; the battery line is from the\n     proposals page. Links ACROSS to the format pages.",
+    "_file": "03-the-set.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Asked about brunch music.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Can a restaurant or hotel book live music for brunch every Sunday?",
+         "a": "Yes. A standing Sunday, weekly or monthly, runs on one contract with one personal contact for the run, with the same musicians every time. Tell us the seating times and the space and we'll come back with a recommendation and a price for the run. Signet Artists books brunch musicians across Denver."
+        },
+        {
+         "q": "How loud is brunch music?",
+         "a": "About the level of the conversation at the tables, so a table of eight talks across it and the server can take an order without leaning in. Sets run 45 to 60 minutes with music through the breaks, so the dining space never goes quiet."
+        },
+        {
+         "q": "What does a dining space need?",
+         "a": "A corner of about 8 by 6 feet for a duo or 6 by 4 for a solo, and one outlet. Setup takes 45 minutes to an hour before doors, so it's finished before the first seating, and packing up takes 30 to 45 minutes after the last. On a patio, a covered, level and dry spot with power or a battery-powered system, and a call time for moving inside. A certificate of insurance and a W-9 come with the quote."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the Sunday, the space and the seating times, and we'll size the music to the tables.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

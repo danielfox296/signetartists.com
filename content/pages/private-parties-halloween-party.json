@@ -1,0 +1,321 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/halloween-party/",
+   "title": "Halloween party DJ or live band in Denver | Signet Artists",
+   "description": "A DJ, a party band or live band karaoke for an adult Halloween party in Denver, at home or at a venue. Halloween 2026 is a Saturday, so the city parties on one night.",
+   "titleExact": true,
+   "ogImage": "img/acts/medina-band.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music and a DJ for a Halloween party",
+     "serviceType": "A DJ, a party band or live band karaoke for adult Halloween parties at home and at venues",
+     "description": "A DJ, a party band or live band karaoke for an adult Halloween party across Denver and the Front Range, at home or at a venue: a DJ in 6 by 4 feet playing the songs a costume crowd wants, a trio or quartet playing the hits to a floor, or the band that plays the 80s and 90s hits and hands the microphone to anyone in costume, with sound support sized to the house and one personal contact for the night.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "dj",
+      "trio",
+      "quartet"
+     ]
+    },
+    "videos": [
+     {
+      "id": "mHtY8DbqLtA",
+      "name": "Live band for a Halloween party: Tony Medina playing Purple Rain to a full floor",
+      "description": "Tony Medina playing Purple Rain to a full floor at a milestone party, the band we recommend when a Halloween party wants live players rather than a DJ.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT7M12S"
+     },
+     {
+      "id": "C6M9wwR9DWk",
+      "name": "Party band for a Halloween party: Tony Medina playing Drive",
+      "description": "Tony Medina playing Drive as a party set, the size that plays the early part of a Halloween party at a volume people talk across before the floor turns.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M24S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-20 on Daniel's ruling ('do halloween. it up today'). Autocomplete evidence, Google and Bing, 2026-09-20: 'halloween party dj' with 'mix', 'set', 'playlist' and 'songs' behind it, 'halloween party entertainment ideas for adults', 'live music halloween party' (echoes the seed), and 'halloween party denver adults', which is event-goer intent the page can honestly carry because the party it describes is an adult party at home. The family is DJ-shaped, so the DJ leads the configurations, with the party band and live band karaoke as the other two honest answers. Halloween 2026 is a Saturday, so the calendar section is a fact rather than a sales line. Uniqueness gate: registered as a private-parties sibling. No figure on the page. Title shortened 2026-09-21 after the Bing read (was 77 characters: 'Halloween party DJ, live band or live band karaoke in Denver | Signet Artists'); the head term stays first.",
+    "reader": "Whoever is throwing an adult Halloween party, usually at home, and wants a full floor of people in costume.",
+    "schema_note": "Authored 2026-09-20 with the Halloween party spoke. Answers trace to site.json (footprints, circuits, load-in, set lengths, music through breaks), the live band karaoke page and Daniel's karaoke facts (paper sign-up list, six to ten songs an hour), the DJ line in acts.json, the Denver page's sound-after-dark planning fact (no ordinance cited) and the 2026 calendar (Halloween a Saturday, October 24 the other Saturday). The costume question is answered without a promise: the musicians decide what they wear and a themed set is a request taken with the booking. No figure; the cost answer points at the pricing page and the two posts."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Halloween party",
+       "slab": true,
+       "title": "Live music and a DJ for your Halloween party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Everyone arrives as somebody else, and behind a mask a floor fills faster than at any other party of the year. The music is a DJ playing the songs a costume crowd wants, a party band playing the hits, or live band karaoke, where the band hands the microphone to whoever came dressed as Freddie Mercury.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings. In 2026 Halloween falls on Saturday, October 31, so the whole city parties on one night, and Saturday, October 24 is the other one."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The Halloween party spoke. The buyer's phrases (Halloween party DJ,\n     live music for a Halloween party, adult Halloween party) sit in the h1\n     and the first paragraph. The night leads, the booking facts follow, the\n     hub link goes UP in the first screen and the 2026 calendar fact sits\n     where a host will read it first.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the adult Halloween party at home and wants the floor full. The ideas rows that restated the three configurations are gone; the house section (circuits, fog machine, parking, quiet hours) is the FAQ now; the cost and date FAQs that restated the page are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "A band on a floor, playing the songs everyone knows.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tony Medina playing Purple Rain to a full floor at a milestone party, and Drive as the party set. It’s the band we recommend when a Halloween party wants live players rather than a DJ."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+         "title": "Tony Medina playing Purple Rain to a full floor",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
+         "title": "Tony Medina playing Drive as a party set",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two Signet-channel clips of Tony Medina, a named, fronted act: Purple\n     Rain on a milestone floor, and Drive as the party set. The DJ and the\n     karaoke band have no footage of their own on the channel yet.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Three ways to book it",
+       "title": "A DJ, a party band, or the band that hands over the microphone.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A Halloween party is a floor first and a dinner second, if it’s a dinner at all."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The DJ",
+         "text": "The usual first question, and the easiest one for a house. <a href=\"/ensembles/dj/\">A DJ</a> plays the songs a costume crowd wants, built around the decade your guests grew up in, with the songs that have to happen placed where you want them, and it runs as late as the house allows."
+        },
+        {
+         "term": "The party band",
+         "text": "A trio or a quartet playing the hits to a floor with no stage in it. <a href=\"/artists/tony-medina/\">Tony Medina</a> plays it up to a four piece, and <a href=\"/artists/tejas-singh/\">Tejas Singh</a> plays a quartet built from the songs everyone in the house knows. Either can play the early part of the night quietly before the floor turns."
+        },
+        {
+         "term": "Live band karaoke",
+         "text": "The band plays the 80s and 90s hits on its own, sung out front, and hands the microphone to anyone in costume who wants a song. The person dressed as Prince is going to sing Prince, and the band is ready the moment they get brave. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> wants a big main floor, a finished basement or a garage with the cars out."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "<a href=\"/blog/what-a-dj-costs-denver/\">What a DJ costs in Denver</a> and <a href=\"/blog/band-or-dj-denver/\">band or DJ</a> each have a post of their own.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The three honest answers to a Halloween party, DJ first because the\n     query family is DJ-shaped. Footprint, circuit and load-in facts from\n     site.json configurations and the live band karaoke page; Tony Medina and\n     Tejas Singh are named because they front their acts, the DJ and the\n     karaoke band are spec'd.",
+    "_file": "02-configurations.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Ideas",
+       "title": "Halloween party entertainment ideas for adults.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "A costume contest run from the microphone",
+         "text": "Every booking can come with an announcement microphone, so whoever is judging runs the contest through the band’s sound system, and the band or the DJ plays the winner on."
+        },
+        {
+         "term": "A grown-up Halloween dinner before the party",
+         "text": "A seated dinner in costume first, with upright bass and guitar under it, and the doors opened to the bigger crowd after, when the same night turns into the band or the DJ. The <a href=\"/private-parties/\">private parties page</a> covers the dinner party on its own."
+        },
+        {
+         "term": "The office Halloween party",
+         "text": "The Friday-before version at work books the same three, and the <a href=\"/corporate/\">corporate page</a> covers how a band works around a program."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "The ideas section carries the head term hosts type (\"halloween party\n     entertainment ideas for adults\"). Every idea is an act on the roster or\n     a mechanic the site already describes (the announcement microphone, the\n     paper sign-up list, six to ten songs an hour are Daniel's karaoke facts).",
+    "_file": "03-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Asked about Halloween parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "What a house needs, from parking to power, is on the <a href=\"/private-parties/denver/\">Denver private parties page</a>, and stage sizes for every act are on the <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "Do you have a DJ for a Halloween party?",
+         "a": "Yes. A DJ is the usual first question for a Halloween party and the easiest one for a house, with a set built around the decade your guests grew up in. It's one contract with sound support sized to the house, booked through Signet Artists in Denver, and the same DJ can take the late end of a night after a band."
+        },
+        {
+         "q": "Will the band or the DJ play in costume?",
+         "a": "Ask us with the booking. The musicians decide what they wear, and a themed set, the songs that belong to the night, is a request we take with the date."
+        },
+        {
+         "q": "How loud is it, and how late can it run?",
+         "a": "It's a party, so once the floor fills it plays like one. The loud part of any home party belongs indoors once the neighbors have gone to bed, which is why the floor for this one is usually a finished basement, a garage with the cars out, or the main floor with the doors shut. If your street or HOA has quiet hours in writing, give them to us at contract and the night gets built under them."
+        },
+        {
+         "q": "How much space does a Halloween party band need?",
+         "a": "A DJ takes about 6 by 4 feet on one dedicated circuit and 45 minutes to set up, a trio 12 by 8 on one, and a quartet or the karaoke four-piece 14 by 10 on two, and none of them want to share a circuit with the fog machine and the string lights. On a night when every house on the block has guests, tell us about the driveway or the alley and which door is ours. Sets run 45 to 60 minutes with music through the breaks."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-24",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and a sentence about the house.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

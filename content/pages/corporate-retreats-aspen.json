@@ -1,0 +1,368 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/aspen/",
+   "title": "Live music for Aspen corporate retreat evenings | Signet Artists",
+   "description": "Evening activities for an Aspen corporate retreat. Four hours from Denver each way, fee, travel and lodging itemised, formats sized to the dinner calendar.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Aspen",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "Live music for corporate retreats and private celebrations at Aspen venues, solo through quartet, with travel and lodging.",
+     "areaServed": [
+      "Aspen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "Tier 2 resort spoke, built 2026-08-20 for the SEO buildout. Corporate-retreat and private-event angle only. Argument: the far-resort math stated plainly (about four hours from Denver, travel plus lodging at cost, and why both are itemised), the Little Nell class calendar, and small format as what these venues book at dinner. The four-hour figure is from the buildout brief; Independence Pass routing is from planners/mountain. Figures came off 2026-09-04.",
+    "reader": "Whoever is planning a corporate retreat in Aspen and has to get the evenings, and what a far resort adds, through finance."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Corporate retreats",
+       "slab": true,
+       "title": "Aspen corporate retreats, and what a far-resort date adds to a quote.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Dinner in a private space most of your guests will never get into again, and a dance floor that fills late. The Aspen evenings are the part of the trip people talk about for years afterward, and a retreat here books like any other: a welcome night, dinner at conversation volume, one evening with a dance floor.",
+       "headingText": [
+        {
+         "html": "Aspen sits about four hours from Denver when the roads cooperate, and longer in winter, when Independence Pass closes and the drive runs the long way through Glenwood Springs, which makes an Aspen date a two-day trip for a band. The quote shows what that adds, line by line. The way we work every resort town starts on the <a href=\"/corporate/retreats/\">corporate retreats page</a>, and eight evening ideas, with the size each one needs, are in <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Aspen retreat spoke. Argument: the far-resort math stated plainly, and\n     small format as what the dinner calendar books.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is planning an Aspen retreat and has to get the evenings, and their far-resort costs, through finance. The drive, the altitude, the venues and the town's outdoor cutoff stay as local fact; the cited cap figure lives in the FAQ beside the words; paperwork and footprints went to the FAQ; FAQs restating the quote lines, the drive and the dinner size are gone; afterwards/itemised/neighbours fixed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "An outdoor evening in Aspen.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "An acoustic act outdoors, and the cases that made the drive over the passes."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/loadin.jpg",
+         "alt": "Road cases stacked in a dark backstage hall.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The quote",
+       "title": "The lines on an Aspen quote.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "There are three, and the second and third are what make an Aspen date different from a Denver one."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "The fee for the music",
+         "text": "The fee covers the band, sound support that’s the right size for the venue, setup, the sound check, pack-down and a personal contact for the night. A duo through cocktails and dinner or a quartet when the dance floor is the point, whichever the evening needs."
+        },
+        {
+         "term": "Travel",
+         "text": "Travel is its own line on the quote. Aspen is roughly four hours from Denver each way in good conditions, over passes that don’t always give you good conditions, and that’s most of a working day at both ends of the evening."
+        },
+        {
+         "term": "Lodging, at cost",
+         "text": "A band that has played a late set isn’t driving four hours of mountain highway home that night. Lodging bills at cost, on its own line. That’s the difference between a far resort and the I-70 towns, which mostly don’t need it."
+        },
+        {
+         "term": "Why it’s itemized",
+         "text": "A retreat budget goes through finance, and a quote that separates fee, travel and lodging is easier to forward, question and approve."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "A holiday weekend prices above a standard date across this market, and the <a href=\"/guides/live-music-cost-colorado/\">Colorado cost guide</a> sets the mountain towns against the wider market.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The far-resort math, this page's core argument. It was three published\n     Signet lines; since 2026-09-04 it is the three lines a far-resort quote\n     is made of, described rather than priced.",
+    "_file": "02-math.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "The venues",
+       "title": "Aspen venues.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "The Little Nell at the base of Aspen Mountain and the Hotel Jerome in the town's core anchor the dinner calendar, The St. Regis Aspen carries the ballroom end of it, and Aspen Meadows is the campus a working offsite actually runs on, sessions by day and dinner on the property at night. The Limelight holds the more casual end of the market, welcome nights and closing parties.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Where the retreat wants one act across the whole evening, Tejas Singh can start as a duo and finish as a quartet on the same contract. Where it wants dinner music and no more, a jazz duo of upright bass and guitar holds the evening at a volume the table talks across.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Venues as the market's places. All five are on the vetted Aspen list.",
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-23",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Dinner at this class of venue books small.",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "The evenings here happen on dining floors and terraces built at human scale, and dinner asks for a duo or a trio at the level a table of executives talks across without effort. A quartet is the booking when a dance floor has to fill.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "The town’s rules push the same way: outdoor amplified sound at a private event stops at eight in the evening, so the loud chapter of the night moves indoors, where a small format does its best work. The figures, cited and dated, are on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "At 7,908 feet the altitude is gentler than Vail’s and well under Breckenridge’s, and we still plan a longer sound check for it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The small-format argument. The 80 dBA / 8pm / 250 ft figures restate\n     planners/mountain, which holds the citations.",
+    "_file": "04-format.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-24",
+       "html": "Private celebrations in Aspen.",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "Milestone birthdays, anniversaries and family gatherings book Aspen on the same three lines: the fee, the travel and the lodging at cost, on one contract. The occasions themselves are gathered on the <a href=\"/private-parties/\">private parties page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "If the drive is the deciding factor, the I-70 towns are a shorter day and mostly do without the lodging line, and <a href=\"/corporate/retreats/vail/\">Vail</a> has its own page.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Private-event angle, plus the sibling and hub links.",
+    "_file": "05-private.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-33",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Questions",
+       "title": "Aspen booking questions.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-30",
+       "html": "Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to the venue.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-31",
+       "items": [
+        {
+         "q": "Can the party run outdoors in Aspen?",
+         "a": "Yes, until eight in the evening. Outdoor amplified sound at a private event was capped at 80 dBA at the perimeter, between 9am and 8pm, when we checked, with neighbors within 250 feet owed seven days' notice. Evenings move indoors from there, and we confirm the current figures with your venue. Signet Artists books Aspen retreat evenings from Denver."
+        },
+        {
+         "q": "What do Aspen venues need from the band?",
+         "a": "Venues at this level hold vendors to their standards: a certificate of insurance, which comes with the contract, setup on the venue's schedule, and the sound cap and curfew kept as written."
+        },
+        {
+         "q": "How much space and power does it need?",
+         "a": "A duo takes a corner of about 8 by 6 feet and one dedicated 20-amp circuit; a quartet takes about 14 by 10 feet and two. Setup runs 45 to 90 minutes depending on size, and the drive's margin is built into the setup day."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-36",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-34",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the Aspen dates, and travel and lodging come back as their own lines on the quote.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

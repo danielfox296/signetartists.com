@@ -1,0 +1,341 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/dj/",
+   "title": "Denver wedding DJ, and the late night at corporate parties | Signet Artists",
+   "description": "Open-format DJ for Denver wedding floors and corporate late nights, alone or after the band through the same sound system. One contract, a 45-minute load-in.",
+   "titleExact": true,
+   "ogImage": "img/dj.jpg",
+   "nav": "music",
+   "breadcrumb": "DJ",
+   "schema": {
+    "service": {
+     "name": "Wedding and corporate event DJ",
+     "serviceType": "Open-format DJ for weddings, corporate events, late-night receptions and private parties",
+     "description": "Open-format DJ for wedding receptions, corporate events and private parties across Denver and the Colorado mountain corridor, on its own or carrying the late night after a band through the same sound system on one contract.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "dj"
+     ]
+    },
+    "act": "dj"
+   },
+   "notes": {
+    "_note": "Format spoke of the 2026-08-20 SEO buildout (Tier 3), positioned per the audit's DJ decision: the corporate late-night continuation, on its own or carrying the back half after a band steps off, through the same sound system on the same contract. The hybrid copy reuses acts.json dj.hybrid, ratified. Spec'd format, no names. Reframed 2026-09-13: 'denver dj wedding' is the most-autocompleted Denver music vendor query after mariachi, and the page carried only the corporate word in its title, H1 and lede; weddings now sit beside corporate in all three, the body was already half wedding. Title shortened 2026-09-21 after the Bing read (was 90 characters: 'DJ for Denver weddings and corporate events, on its own or after the band | Signet Artists'); the head term stays first.",
+    "reader": "Whoever wants the dance floor to keep going: the office holiday party, a company night that turns into a party, a milestone birthday, the wedding floor.",
+    "_title_note": "RETITLED 2026-09-23. The 2026-09-21 title led with 'Denver DJ for corporate holiday parties', the one query Bing showed at two impressions. 'denver dj wedding' autocompletes in six forms and no corporate DJ phrase for Denver completes at all, so weddings lead and the corporate late night is the second clause, which is also the order the h1 and the meta already had. Daniel's ruling 2026-09-23: framing is decided on search demand outside the site (autocomplete, suggest reads, SERP reads), never on Search Console or Bing impressions, because the site has almost no traffic and those numbers are noise."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Open format",
+       "slab": true,
+       "title": "A DJ for wedding floors and corporate late nights, on its own or after the band.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The band plays its last song, the DJ brings in the first bars of September under the applause, and the floor stays full. Book a DJ on their own, or to carry the late night after the band through the same sound system, on the same contract.",
+       "headingText": [
+        {
+         "html": "It books for an office holiday party, a company launch or a closing dinner that turns into a party, a milestone birthday, and a wedding floor from the first dance to the last song."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=dj",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/dj.jpg",
+        "alt": "Faders and knobs on a mixing console.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Positioned per the audit: the corporate late-night continuation. The\n     headline fact and the lede reuse the ratified acts.json dj blurb; the\n     pairing fact is the holiday page's. Rate-card link in the first screen.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the dance floor to keep going. Daniel's own DJ sentences live in the acts.json blurb (his CopyDesk edit of the music page card, 2026-09-05) and stay there untouched; this lede is the page's own. The market figure moved from the hero into the after-the-band section beside its source line. The footprint section became a section about the music, and its ops went to the FAQ; the FAQs that restated body sections are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "After the band",
+       "title": "Adding the DJ to a band booking.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Once we’re in the building the evening is already committed, so adding the DJ to a band booking costs far less than hiring one separately. The band’s last set ends, the DJ picks up through the same sound system, and the music carries straight on."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "A duo through cocktails and dinner with the DJ carrying the rest of the night is a common Denver <a href=\"/corporate/holiday-party/\">holiday party</a> booking, and the handoff is planned with your <a href=\"/planners/run-of-show/\">run of show</a>. Booked on their own, a Denver DJ carrying a night with production lighting runs $2,500 to $6,000 in this market.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "This figure comes from published 2026 market guides, read September 2026. Signet provides prices for a specific date on request.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The mechanics of the add. The figures came off 2026-09-04; what is left\n     is the reason the add is cheap, which was always the argument.",
+    "_file": "02-continuation.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "The live instrument option",
+       "title": "A live instrument over the set.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Bass or saxophone, played live on the floor over the DJ set, so the end of the party is something guests watch as well as dance to. It holds a dance floor late, on a company floor or a wedding floor, and it’s quoted as an option when you ask for it."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "For live musicians earlier in the night, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> starts as a duo, grows to a quartet and hands the floor to the DJ, and every act that can open for it is on the <a href=\"/music/\">roster page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The named premium option. The copy reuses acts.json dj.hybrid.\n     Tejas Singh is the one named act on the page (spine rule). The\n     one-couple-in-six adoption stat was cut 2026-08-27 on the critical pass:\n     unsourced, and wedding-framed on a corporate-first page (see the\n     _stat_note in acts.json).",
+    "_file": "03-hybrid.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Who books a DJ.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">The office holiday party</a>",
+         "text": "The most common single booking of the corporate season, from a <a href=\"/corporate/holiday-party/denver/\">downtown Denver hotel</a> ballroom to an office floor."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Company events year-round</a>",
+         "text": "Launches, closing dinners that turn into parties, and member events with a late finish, on one contract with the paperwork your office needs."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
+         "text": "A milestone birthday or an anniversary that ends with everybody dancing, and the <a href=\"/private-parties/halloween-party/\">Halloween party</a>, the one night a house books a DJ before anything else."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The wedding floor</a>",
+         "text": "A common wedding booking is live musicians for the ceremony and the cocktail hour, and the DJ from the first dance to the last song."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "What live music costs across Colorado, size by size, is in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>, and <a href=\"/blog/band-or-dj-denver/\">band or DJ for a Denver wedding or company party</a> compares the two.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Where the DJ lands, holiday-party first per the audit. Links UP to the\n     occasion pages, ACROSS to the Denver holiday page.",
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "The music",
+       "title": "As much say in the music as you want.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Build the list yourself, hand over a do-not-play list and leave the rest, or describe the crowd and let the DJ read it song by song."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Open format means the DJ plays across genres, so the set is wider than any one list. The songs the live bands play are on the <a href=\"/repertoire/\">repertoire page</a>, if you want a place to start.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Logistics from site.json configurations (DJ row) and the music-control\n     answer adapted from the ratified planner FAQ.",
+    "_file": "05-practical.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-29",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-25",
+       "html": "DJ booking questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from curfews to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "What does the DJ booking include?",
+         "a": "Decks, a booth and a PA that's the right size for the venue, an announcement microphone for toasts and announcements, setup and pack-down, and the certificate of insurance and W-9 your office needs. It's booked through Signet Artists in Denver, on its own or after a band."
+        },
+        {
+         "q": "How much space does the DJ need?",
+         "a": "A booth of about 6 by 4 feet on one dedicated 20-amp circuit, with 45 minutes to set up and 30 to pack down. After a band, the DJ plays through the sound system that's already there."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "As loud as the floor wants and the venue allows. During dinner or a toast the DJ plays at a level the tables talk across, and once people are dancing it plays like a party. If your venue has a sound limit or a curfew, give us the number and it's built into the plan."
+        },
+        {
+         "q": "How late can the DJ play?",
+         "a": "As late as the venue allows. Added time comes in half-hour blocks, and you can decide it on the night."
+        },
+        {
+         "q": "Do you take requests on the night?",
+         "a": "From you, always, and from guests where they fit. A do-not-play list is the part worth spending time on before the event, and a request that would empty the floor gets a straight answer and an alternative."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book the DJ on their own, or after the band on the same contract.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

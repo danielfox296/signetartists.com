@@ -1,0 +1,299 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/christmas-jazz-trio/",
+   "title": "Christmas jazz trio for holiday parties in Denver | Signet Artists",
+   "description": "A Christmas jazz trio for Denver holiday parties and December dinners: the Charlie Brown book and the standards on guitar, upright bass and drums, at a volume the table talks across, with sound included.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Christmas jazz trio",
+     "serviceType": "Christmas jazz trio for company holiday parties, December client dinners and private parties",
+     "description": "A jazz trio playing the Christmas book, the Vince Guaraldi record and the standards of the season, on guitar, upright bass and drums with brushes, at conversation volume for company holiday parties, December client dinners and private parties across Denver, the Front Range and the Colorado mountain towns, with sound included.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "christmas-jazz-trio",
+    "videos": [
+     {
+      "id": "Y6_evCDeUm8",
+      "name": "Solo jazz guitar for a holiday party: White Christmas",
+      "description": "White Christmas on one jazz guitar, the smallest size of the Christmas book at dinner volume.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M21S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Seasonal format page built 2026-09-16 on Daniel's call (he wanted a page, not a section on the holiday party page). Evidence from the demand harvest: the seasonal signal is 'christmas', with 'jazz trio christmas', 'jazz trio charlie brown christmas' and 'background music for events christmas party' autocompleting. The page is evergreen at a seasonal URL: the December book (the Guaraldi record, the standards that are Christmas songs, the standards that aren't) at dinner volume, for company holiday parties, December client dinners and private parties. Uniqueness gate: registered as a jazz sibling. No prices.",
+    "reader": "Whoever wants a December evening that sounds like the season under dinner: the company holiday party, the December client dinner, a club's member evening, a party at home."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "The Charlie Brown record and the standards",
+       "slab": true,
+       "title": "A Christmas jazz trio for holiday parties and December dinners.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Christmas Time Is Here on guitar, upright bass and brushed drums, while the coats come off and the first glasses of wine go around. The Christmas jazz trio plays the Charlie Brown record, the standards that are Christmas songs and the standards that aren’t, at a volume the table talks across, so a long dinner sounds like December from the first course to dessert.",
+       "headingText": [
+        {
+         "html": "It books for the dinner half of a <a href=\"/corporate/holiday-party/\">company holiday party</a>, a client dinner in the second week of December, a member evening at a club, and <a href=\"/private-parties/holiday-party/\">a party at home with a tree in the corner</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=christmas-jazz-trio",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/Y6_evCDeUm8?rel=0",
+       "title": "Solo jazz guitar playing White Christmas for a holiday party",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_notes": "Seasonal format spoke, spec'd. The h1 carries the buyer's phrase\n     (Christmas jazz trio, holiday party). The hero is the Signet copy of the\n     White Christmas solo guitar clip; the iframe title names no player.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a December evening that sounds like the season under dinner. The minted line ('twelve carols don't') is gone from the book section; footprints left the size rows for the FAQ; the FAQs that restated the book and the sizes are gone; the season-dates pointer appears once.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, sitewide.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The book",
+       "title": "Three books, and the balance is yours.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A December dinner runs for hours, longer than the carols last, so the trio draws on three books and moves between them through the evening."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "The Guaraldi record",
+         "text": "Christmas Time Is Here, Skating, Linus and Lucy, O Tannenbaum the way Guaraldi’s trio played it. It’s the one Christmas record almost everybody in a ballroom grew up on, and it was written for a piano trio at conversation volume, which is why it sits so well under dinner."
+        },
+        {
+         "term": "The standards that are Christmas songs",
+         "text": "White Christmas, The Christmas Song, Let It Snow, Have Yourself a Merry Little Christmas, Winter Wonderland, I’ll Be Home for Christmas. They were written by the same songwriters as the rest of the standards book, and the trio plays them the same way."
+        },
+        {
+         "term": "The standards that aren’t",
+         "text": "Autumn Leaves, All of Me, The Girl from Ipanema and the rest of the book the trio plays in any month, threaded through the season’s songs so the evening feels like December without being a medley of it. The whole list is on the <a href=\"/repertoire/\">repertoire page</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "Tell us how much season you want in it. Some parties want carols wall to wall, some want one Christmas set placed after dinner, and most want the balance the trio reads off the crowd.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The December book, in three parts, and how a night is balanced across\n     them. The titles named are the season's standards, not a promise of a\n     fixed set.",
+    "_file": "02-book.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-16",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Sizes",
+       "title": "One guitar at a client dinner, a quartet on the floor.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "Solo",
+         "text": "One jazz guitarist playing the Christmas book at a dinner for twenty or a party at home. It’s the smallest booking here."
+        },
+        {
+         "term": "Duo",
+         "text": "Upright bass and guitar, for a cocktail hour or a longer dinner where the conversation is the point. It fits in a corner and stays under the table talk."
+        },
+        {
+         "term": "Trio",
+         "text": "The duo plus drums played with brushes, for a company party in a ballroom. <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> plays this size under its own three names."
+        },
+        {
+         "term": "Quartet, and the floor",
+         "text": "The trio plus a singer or a horn, for a party that wants the swing side of the book on a dance floor. When the night should run past that, the <a href=\"/ensembles/dj/\">DJ</a> takes the same sound system on the same contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "The same trio in any other month is the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>, and a company evening part by part is on the <a href=\"/corporate/jazz-band/\">corporate jazz band page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "The sizes, from one guitar at a client dinner to the quartet on the\n     floor, and the handoff to the DJ. Footprint facts from the technical\n     page. Links ACROSS to the named trio and the DJ.",
+    "_file": "03-sizes.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-17",
+       "html": "Christmas jazz trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-19",
+       "items": [
+        {
+         "q": "Is a Christmas jazz trio too quiet for a holiday party?",
+         "a": "For the dinner half, quiet is the job. With the drums played with brushes, the trio sits at the level of the conversation, so people at one table hear each other and still hear Linus and Lucy. Once the floor opens, the quartet with a singer plays the swing side of the book, or the DJ carries the rest of the night through the same sound system on the same contract."
+        },
+        {
+         "q": "How much space does it need?",
+         "a": "One guitarist sets up in about 6 by 4 feet on one circuit, and the duo in a corner of about 8 by 6 feet. The trio takes about 12 by 8 feet on one dedicated circuit and needs about an hour to set up. Sound support that's the right size for the venue comes with every size."
+        },
+        {
+         "q": "How far ahead does a December date need to be booked?",
+         "a": "Corporate holiday parties tend to get decided between August and October for November and December dates, and the peak Saturdays in December go first. Tell us the date and the venue, and we'll check the booking calendar and come back with a recommendation and a price for that night."
+        },
+        {
+         "q": "Does the Christmas jazz trio play New Year's Eve?",
+         "a": "Yes. New Year's Eve gets booked earliest everywhere, and the set turns from carols to the standards and the swing book as the night goes on. Send the date early."
+        },
+        {
+         "q": "Can we ask for a particular song?",
+         "a": "Yes. One learned song of your choosing comes with every booking, and you set the balance: carols all night, one Christmas set, or the mix the trio reads off the crowd."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-22",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the December date and the venue, and we'll bring the season at the right volume.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  }
+ ]
+}

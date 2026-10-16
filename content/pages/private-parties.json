@@ -1,0 +1,679 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/",
+   "title": "Live music for private parties and dinners in Colorado | Signet Artists",
+   "description": "Live music for dinner parties, milestone birthdays and cocktail parties at homes and clubs. Solo to quartet, dinner at 60 to 65 dBA, no stage required.",
+   "titleExact": true,
+   "nav": "private",
+   "breadcrumb": "Private Parties",
+   "schema": {
+    "service": {
+     "name": "Private party and dinner party live music",
+     "serviceType": "Live music for private parties, dinner parties and milestone celebrations",
+     "description": "Live music for dinner parties, cocktail parties, milestone birthdays and anniversaries at homes and clubs in Denver, Boulder and across Colorado, solo through quartet.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Front Range",
+      "Colorado mountain corridor"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "videos": [
+     {
+      "id": "IGww0fFkjyg",
+      "name": "Flamenco trio for a private party: rumba, Dirty Flamenco",
+      "description": "Guitar, bass and percussion on a rumba, the sound of a garden party finding its second wind.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M31S"
+     },
+     {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer and guitarist for a private party: Tejas Singh live-looping No Woman No Cry",
+      "description": "Tejas Singh builds No Woman No Cry from the ground up with live looping.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+     }
+    ]
+   },
+   "notes": {
+    "reader": "Whoever is hosting a dinner party, a cocktail party or a milestone at home or at a club and wants live music in it.",
+    "schema_note": "The cost FAQ carries the market's figures as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text; the page prints the Sources note beside them. No Signet figure appears here or anywhere since 2026-09-04. Never type a figure."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "headingStyle": "max-width: 49.5rem;",
+       "eyebrow": "Private parties &amp; dinners",
+       "slab": true,
+       "title": "Live music for your private parties.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "titleStyle": "max-width: 49.5rem;",
+       "lede": " <br><br>Great live music is what makes that moment <em>likely</em> instead of <em>lucky</em>.",
+       "headingText": [
+        {
+         "html": "Signet Artists serve milestone birthdays and anniversaries, engagement dinners, holiday gatherings at home, club celebrations just to name a few.  <br><br>  "
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Browse the acts",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Tier 1b hub. The buyer is the private host booking straight from search,\n     and what the market costs is the first question, so the pricing page is linked\n     twice inside the first screen and the three working figures follow in the\n     next section. Occasion and moment lead; formats answer later.\n\nCopy pass batch 4, 2026-09-24. Agent sections only: Daniel's hero, his size paragraphs, his shapes and milestone copy and both reviews are untouched. The 'very specific vibe' paragraphs argued with other options ('gets pointed at a music school ... there's no obvious place to book one') and are rewritten plainly under his heading; the practical section is the FAQ; the occasions lede was a pointer; FAQs restating his milestone and Spanish guitar sections are gone.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "PagesAndPosts",
+   "props": {
+    "id": "PagesAndPosts-5",
+    "band": "ruled",
+    "heading": "TYPES OF private partIES WE SERVE",
+    "groups": [
+     {
+      "label": "Occasions",
+      "pages": [
+       {
+        "path": "birthday-party"
+       },
+       {
+        "path": "anniversary-party"
+       },
+       {
+        "path": "engagement-party"
+       },
+       {
+        "path": "showers"
+       },
+       {
+        "path": "graduation-party"
+       },
+       {
+        "path": "retirement-party"
+       },
+       {
+        "path": "backyard-party"
+       },
+       {
+        "path": "halloween-party"
+       },
+       {
+        "path": "holiday-party"
+       },
+       {
+        "path": "proposals"
+       }
+      ]
+     },
+     {
+      "label": "Cities",
+      "pages": [
+       {
+        "path": "denver"
+       },
+       {
+        "path": "boulder"
+       },
+       {
+        "path": "colorado-springs"
+       }
+      ]
+     }
+    ],
+    "_notes": "The list of every page under this hub, 2026-10-03. Generated by build.py\n     (HUB_INDEX): the pages grouped, then the hub's articles. It sits directly\n     under the opening because a visitor who clicks this hub in a breadcrumb\n     is looking for the other pages in it. To move it, rename this file; the\n     sections build in filename order.",
+    "_file": "01-pages.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-7",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_notes": "The client strip, 2026-09-03 (Daniel: weddings and private parties get\n     it too). Same block as /corporate/, logos only; the venue sentence stays\n     on the home page. Directly under the intro so the names sit on the first\n     screen with the rate-card button, ahead of the priced section.",
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "headingStyle": "max-width: 64rem;",
+       "eyebrow": "What YOU'RE BOOKING",
+       "title": "Ensemble sizes, and how they change the vibe.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 64rem;",
+       "lede": "In our experience, most hosts guess <em>too big</em>.",
+       "ledeStyle": "max-width: 42rem;"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-15",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-9",
+          "html": "A solo player",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-10",
+          "html": "One voice and a guitar or piano in the corner of a dinner makes the evening feel thoughtfully planned, <em>and</em> it fits well into a home without reconfiguring all the furniture.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-11",
+          "html": "A duo",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-12",
+          "html": "A duo is a great intensity for both arrival and dinner - it's a volume people easily talk across, and it has the range to lift the last hour (if that's where things are headed.)",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-13",
+          "html": "A trio",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-14",
+          "html": "This is the one that gets people dancing without needing a stage. Usually guitar (or keys), bass and drums. More danceable energy - or it can be a fuller-sounding-but-still laid-back jazz ensemble. ",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "2026-09-05: was a market-figure block with a Sources note. The money\n     question gets a line and a link; the rest of the section is about which\n     size actually turns a party.",
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "what kind of night do you want?",
+       "title": "three common entertainment choices for  private parties.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most requests we get fall into one of the following categories."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-27",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "The dinner party",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-20",
+          "html": "We bring jazz standards on upright bass and guitar, at a level you can talk across. Great as an hour on its own, or keep things going from the time your guests arrive through dessert.",
+          "cls": "prose"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-21",
+          "html": "A common format for this is our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>. Or a <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> can hold down the same block for occasions when the guest list is a bit smaller.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-22",
+          "html": "The cocktail party that ends in dancing",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-23",
+          "html": "When the furniture is going to end up against the wall, trio size is the answer: guitar, bass and drums fill a floor without a stage.   A trio through drinks that becomes the band that drive danceable energy.",
+          "cls": "prose"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-24",
+          "html": "In situations where dancing is a \"maybe\" rather than the plan, an <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> can cover the night well, too.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-25",
+          "html": "The milestone with a moment in it",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-26",
+          "html": "Things like - a 40th birthday, a notable anniversary, or an engagement dinner. There is a toast (and sometimes a surprise), and the band plays around both: a dedicated announcement microphone can be ready to go from sound check on. When the whole booking is the moment, a proposal or one surprise song at a dinner, that has <a href=\"/private-parties/proposals/\">a page of its own</a>.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-28",
+       "html": "“...We discussed what we were looking for, (funky jams) and they delivered. It was the perfect band for my husband’s 50th. They are personable, professional, and very talented musicians.”",
+       "by": "Jill B. a 50th Birthday Party, September 2025."
+      }
+     }
+    ],
+    "_notes": "The three shapes a private enquiry actually arrives as, each with the\n     size that fits it. Tejas Singh leads wherever an act is named; the\n     jazz duo and Dirty Flamenco appear as specific-flavor answers, per the\n     conversion spine. Across-links live inside the sentences.\n\nRené Moffatt, 2026-09-20, added below Daniel's two paragraphs,\n             which are his CopyDesk sentences and stay as written.\n\nAdded 2026-09-06. Provenance in _src/data/reviews.json. The brief\n         arrived in the client's own two words and the band was built to it,\n         which is what the second shape above describes. Excerpted; the\n         closing recommendation is dropped.",
+    "_file": "03-shapes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-31",
+       "headingStyle": "max-width: 64rem;",
+       "eyebrow": "Milestone birthdays",
+       "title": "a birthday big enough to deserve a band.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "For most birthdays, a restaurant with family and friends is a perfect night. But, sometimes the celebration is so important that the whole night is built to cheer on the guest of honor. If you're throwing the kind of party that's worth a band, check out some of our recommendations.",
+       "ledeStyle": "max-width: 64rem;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-32",
+       "rows": [
+        {
+         "term": "A 30th Birthday",
+         "text": "These are the ones that run latest and hit hardest. A trio fills a floor without a stage, and a <a href=\"/ensembles/dj/\">DJ</a> can get your guests dancing through the end of the night.",
+         "textStyle": "max-width: 21.5rem;"
+        },
+        {
+         "term": "A 40th Birthday",
+         "text": "These usually look more like two parties in one evening. Guests arrive and eat, then there's some letting loose. A trio or quartet can work well for these situations.  ",
+         "textStyle": "max-width: 21rem;"
+        },
+        {
+         "term": "A 50th Birthday",
+         "text": "These are more often a seated dinner with a toast. Live players hang out at a lower volume at the nearest table, and the song list is built from the years the guest of honor cares about.",
+         "textStyle": "max-width: 21rem;"
+        },
+        {
+         "term": "A 60th  Birthday and Beyond",
+         "text": "These are earlier, warmer, with more family in the space and more of it seated. A solo player or a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> holds this evening from arrival through dessert, and jazz standards are the repertoire that reaches everyone in the family at once.",
+         "textStyle": "max-width: 20.5rem;"
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-33",
+       "html": "...From beginning to end. Pulled together bandmates for my husband’s 80th outdoor birthday bash. Guests were impressed with the repertoire. More than the usual cover band – jazzy sophistication.”",
+       "by": "Noreen S., an outdoor 80th, September 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-34",
+       "html": "The intention and flow of most parties are similar. A toast, and a surprise entrance, a special video. Tell us the location, the plan and roughly who is coming, and we can build a setlist for the honoree specifically. The <a href=\"/private-parties/birthday-party/\">birthday party page</a> covers the whole night, the surprise and the ideas.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-35",
+       "html": "specific vibe? we got you",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-36",
+       "html": "We do get one request frequently for a milestone dinner at home: a table of twelve, a long dinner, and a Spanish guitarist in the corner playing something with real technique in it. <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> plays the traditional forms at solo or trio size,  covers a dinner table alone. Both play at dinner-conversation volume and neither require a stage.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Added 2026-09-06, Tier 2 item 12 of the content plan. Evidence: \"hire a\n     band for a birthday party\", \"musician for birthday party near me\" and\n     \"best music for a 30th / 40th / 50th / 60th birthday party\" all\n     autocomplete, and Bing carries \"adult birthday party ideas denver\"; the\n     milestone family had no section of its own on any page. Also the place\n     where the Spanish-guitar dinner-party brief gets named: it is asked in\n     public in Denver and answered with music schools and restaurants. It said\n     \"section, not a new URL, until Search Console shows the family\" until\n     2026-09-23, when Daniel ruled that outside demand decides, not the site's\n     own traffic; the birthday family autocompletes, so the page exists now at\n     private-parties/birthday-party/ and this section is its summary.\n\nAdded 2026-09-06. Provenance in _src/data/reviews.json. An 80th with a\n         band on it, which is the last row above, and \"more than the usual\n         cover band\" is the distinction this whole section argues for.\n         Verbatim except her closing line; her '--' renders as an en dash.",
+    "_file": "03a-milestones.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-42",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-39",
+       "eyebrow": "Hear it",
+       "title": "Two of the acts featured",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Dirty Flamenco’s rumba, the sound of a garden party finding its second wind, and Tejas Singh building No Woman No Cry from the ground up, the way he does at a milestone birthday when the crowd starts singing back."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-40",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/IGww0fFkjyg?rel=0",
+         "title": "Dirty Flamenco playing a rumba flamenca live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live-looping No Woman No Cry",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Private-party footage: two of the nights the page describes, on film.\n     Existing artist footage, 2026-09-06, per Daniel: no new shoots, the artists'\n     own uploads placed under our framing. Provenance: _src/data/media-sources.json.",
+    "_file": "03b-footage.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-47",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-43",
+       "eyebrow": "Where",
+       "title": "Denver, Boulder &amp; Colorado Springs.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-44",
+       "html": "In <a href=\"/private-parties/denver/\">Denver</a>, there's no additional cost for travel inside the metro area, and the booking calendar is the only constraint. A lot of holiday gatherings in homes compete with office parties in the city for the same dates. <a href=\"/private-parties/boulder/\">Boulder</a> parties can tend to skew smaller. Hosted in homes and clubs where the attendees sit close to the band, so solo and duo are the sizes to ask about first. <a href=\"/private-parties/colorado-springs/\">Colorado Springs</a> hosts more of its private calendar around wedding weekends and resort terraces, and the acoustic duo is the size parties in The Springs book most.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-45",
+       "html": "Castle Pines, Castle Rock and Evergreen are inside that <em>no-travel-charge</em> area too. So a party at a house in any of the three is quoted the same as Denver.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "Hub duties: body links DOWN to both children, plus the booking-window\n     brass fact and the resort column pointer. Venue names stay off the hub so\n     the city pages keep their uniqueness.\n\nAdded 2026-09-20. The no-travel-charge line is Daniel's ruling that\n         day (Castle Pines, Castle Rock and Evergreen), and the two occasion\n         spokes built the same day get their hub inlink here.",
+    "_file": "05-cities.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-51",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-48",
+       "eyebrow": "The occasions",
+       "title": "9 parties with details of their own.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-49",
+       "rows": [
+        {
+         "term": "<a href=\"/private-parties/engagement-party/\">Engagement party</a>",
+         "text": "The first night the two families are in one place, with the couple’s song learned for it and the same duo available for the wedding’s cocktail hour."
+        },
+        {
+         "term": "<a href=\"/private-parties/showers/\">Baby and bridal showers</a>",
+         "text": "An afternoon at a long table with one guitar under it, and the ideas that give the afternoon something besides the games."
+        },
+        {
+         "term": "<a href=\"/private-parties/graduation-party/\">Graduation party</a>",
+         "text": "Late May and June, two crowds in one yard, and the singer who reaches the grandparents’ table and the graduate’s friends at once."
+        },
+        {
+         "term": "<a href=\"/private-parties/backyard-party/\">Backyard party</a>",
+         "text": "The patio size and the lawn size, the power and the cover a yard has to provide, and where the loud part goes once the sun is down."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthday party</a>",
+         "text": "The 30th, 40th, 50th and 60th, with the size that suits each number, the surprise entrance planned with the music, and the toast on a microphone."
+        },
+        {
+         "term": "<a href=\"/private-parties/anniversary-party/\">Anniversary party</a>",
+         "text": "A dinner with one song in it that matters more than the rest, the surprise the children throw, and the vow renewal that books ceremony music."
+        },
+        {
+         "term": "<a href=\"/private-parties/retirement-party/\">Retirement party</a>",
+         "text": "Forty years of colleagues and three speeches, thrown by the company or the family, with the standards as the music that reaches every age at the table."
+        },
+        {
+         "term": "<a href=\"/private-parties/halloween-party/\">Halloween party</a>",
+         "text": "A DJ, a party band or live band karaoke in costume, and Halloween 2026 on a Saturday."
+        },
+        {
+         "term": "<a href=\"/private-parties/holiday-party/\">Holiday party at home</a>",
+         "text": "The Christmas jazz duo or trio, the party band and the DJ, the December Saturdays the office parties take first, and Thanksgiving week and New Year’s Eve on the same page."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_notes": "Added 2026-09-20: the occasion spokes under this hub, one line each, in\n     calendar order. Hub duty: body links DOWN to every child. The heads come\n     from the 2026-09-20 autocomplete harvest; the neighborhood ring was killed\n     the same day on the same evidence.",
+    "_file": "05b-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-56",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-52",
+       "eyebrow": "Questions",
+       "title": "What hosts often ask when they get in touch.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-53",
+       "html": "Stage sizes, electrical concerns and sound needs are on the <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-54",
+       "items": [
+        {
+         "q": "What does a band for a dinner party cost?",
+         "a": "It depends on how many musicians and how long, and for a dinner party that's usually one or two people rather than the band most hosts picture. We don't publish prices; what live music costs across this market is on our pricing page. Describe the evening and we'll tell you which size it wants and what that costs. Signet Artists books private-party musicians across Denver and Colorado."
+        },
+        {
+         "q": "How much space and power does the band need at home?",
+         "a": "A solo sets up in about 6 by 4 feet, a duo in 8 by 6 and a trio in 12 by 8, with no stage; those are working footprints, the space musicians and gear actually occupy. One dedicated 20-amp circuit covers a solo, duo or trio, and a quartet takes two. Dedicated is the word that matters: sharing a circuit with the caterer's warmers is the most common setup problem, and one question to the caterer settles it."
+        },
+        {
+         "q": "How long does setup take, and what does a club ask for?",
+         "a": "Setup takes 45 minutes for a solo and up to 90 for a quartet, before guests arrive, and pack-down 30 to 60 minutes at the end. Tell us where to park and which door to use. Clubs and managed buildings usually ask for a certificate of insurance, and one naming the venue comes with the contract, along with a W-9 and one itemized invoice."
+        },
+        {
+         "q": "How loud will it be?",
+         "a": "At dinner, a level you talk across without raising your voice, about 60 to 65 dBA at the nearest table if the club wants the number. Dancing runs around 88 to 95 on the floor. A shared wall, a close neighbor or a club sound policy goes into the plan at booking, and the night is built under it."
+        },
+        {
+         "q": "Can you play outdoors at a home?",
+         "a": "Yes, on a covered, level and dry performance area with power run to it, and with a move-indoors call time agreed before the day, because Colorado evenings drop fast and instruments and electronics stop behaving in the cold and the wet."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-59",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-57",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about the party, and we'll recommend the act for it.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

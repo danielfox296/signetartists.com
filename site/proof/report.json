@@ -1,0 +1,50 @@
+{
+ "summary": {
+  "compared": 192,
+  "html": 187,
+  "feeds": [
+   "llms.txt",
+   "rss.xml",
+   "sitemap.xml",
+   "video-sitemap.xml",
+   "robots.txt"
+  ],
+  "only_in_build_py": [],
+  "only_in_new_build": [],
+  "files_differing": 2,
+  "differing_lines": 4,
+  "accepted": [
+   "blog/company-offsite-ideas-colorado-remote-teams/index.html",
+   "blog/index.html"
+  ],
+  "unaccepted": []
+ },
+ "differences": {
+  "blog/company-offsite-ideas-colorado-remote-teams/index.html": [
+   {
+    "part": "body",
+    "lines": 2,
+    "diff": [
+     "@@ -147,3 +147,3 @@",
+     " <span >",
+     "-T 8 min read",
+     "+T 9 min read",
+     " </span>"
+    ]
+   }
+  ],
+  "blog/index.html": [
+   {
+    "part": "body",
+    "lines": 2,
+    "diff": [
+     "@@ -1012,3 +1012,3 @@",
+     " <span >",
+     "-T 8 min read",
+     "+T 9 min read",
+     " </span>"
+    ]
+   }
+  ]
+ }
+}

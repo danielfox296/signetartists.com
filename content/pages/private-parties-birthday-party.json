@@ -1,0 +1,387 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/birthday-party/",
+   "title": "Birthday party band and live music in Denver | Signet Artists",
+   "description": "A band, a jazz duo or a singer with a guitar for a 30th, 40th, 50th or 60th birthday party in Denver, at home, at a club or in a private dining space, with the toast on a microphone.",
+   "titleExact": true,
+   "ogImage": "img/acts/medina-live-poster.jpg",
+   "breadcrumb": "Birthday party",
+   "schema": {
+    "service": {
+     "name": "Live music for a birthday party",
+     "serviceType": "A band, a jazz duo, a singer with a guitar or a Spanish guitarist for 30th, 40th, 50th and 60th birthday parties and surprise parties",
+     "description": "Live music for a milestone birthday party across Denver and the Front Range: a trio or quartet for the 30th and 40th that dance, a jazz duo at 60 to 65 dBA under the 50th's dinner and toasts, a solo musician or a duo for the 60th and past it, a singer who learns the birthday song the guest of honour actually wants, at home, at a club or in a private dining space, with an announcement microphone for the toasts and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "mHtY8DbqLtA",
+      "name": "Live band for a birthday party: Tony Medina playing Purple Rain to a full floor",
+      "description": "Tony Medina playing Purple Rain to a full floor at a milestone party, the band for the 40th or 50th that ends on a dance floor.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT7M12S"
+     },
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a birthday dinner: Autumn Leaves on upright bass and guitar",
+      "description": "Autumn Leaves on upright bass and guitar, the size a 50th birthday dinner books, at a volume the table talks across.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Built 2026-09-23 on Daniel's call, after the audit found the milestone family had been held at a section 'until Search Console shows the family'. Outside evidence, the 2026-09-06 harvest: 'hire a band for a birthday party', 'musician for birthday party', 'musician for birthday party near me', 'best music for 30th / 40th / 50th / 60th birthday party', 'how much musicians charge for birthday party'; Bing carries 'adult birthday party ideas denver'. The hub's milestone section (Daniel's copy) stays as the summary; this page is the whole night: the size by the number, the surprise entrance, the toast, the set built for the person, and the ideas. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
+    "reader": "Whoever is throwing a milestone birthday, a 30th to an 80th, for a partner, a parent or a friend.",
+    "schema_note": "Authored 2026-09-23 with the birthday party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA), the proposals page (the cue, the first learned song), the hub's milestone section (the announcement microphone, the set built for the person, the size by the number) and the pricing page (no figure). Questions are worded the way hosts search."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Birthday party",
+       "slab": true,
+       "title": "Live music for a milestone birthday party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The toast ends, the glasses go down, and the band starts the song the guest of honor has loved since college, learned that week. A milestone birthday is a whole night built around one person, and the size follows the number on the cake: a trio that fills a floor at a 30th, a jazz duo under the dinner and the toasts at a 50th.",
+       "headingText": [
+        {
+         "html": "It’s one of our <a href=\"/private-parties/\">private parties</a> bookings, at home, at a club or in a private dining space, and the <a href=\"/private-parties/anniversary-party/\">anniversary party</a> is the couple’s version of the same night."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See Pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Birthday spoke, 2026-09-23. The hub's milestone section (Daniel's copy)\n     is the summary; this page is the whole night. Opening on the party, the\n     paperwork one paragraph down.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the milestone birthday, for a partner, a parent or a friend. The 'most birthdays get a restaurant' opener argued with an alternative and is gone. The ideas rows that restated the sizes are cut; the two client reviews stay exactly as they are. Ops to the FAQ; honour/favourite locale drift fixed.",
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "The band on a full floor, and the duo under a dinner.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Tony Medina playing Purple Rain to a full floor at a milestone party, which is the 40th or 50th that dances, and Autumn Leaves on upright bass and guitar, which is the 50th that sits down."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+         "title": "Tony Medina playing Purple Rain to a full floor at a milestone party",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo, upright bass and guitar, playing Autumn Leaves",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Two clips already in the ledger: Tony Medina's Purple Rain on a full\n     floor at a milestone party (the Signet channel copy, mHtY8DbqLtA) and the\n     jazz duo's Autumn Leaves (O2A0PKE7CXE). Both VideoObjects are in this\n     dir's schema.json.",
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Sizes",
+       "title": "The size follows the number on the cake.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A 30th and a 50th are different parties, and the band that suits one is the wrong size for the other."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The 30th: a trio, and the DJ after it",
+         "text": "The one that runs latest. A trio of guitar, bass and drums fills a floor without a stage, and the <a href=\"/ensembles/dj/\">DJ</a> takes the same sound system when the band is done. The <a href=\"/ensembles/funk-band/\">funk band</a> is the trio for a crowd that wants a groove."
+        },
+        {
+         "term": "The 40th: a band that plays both halves",
+         "text": "A seated dinner and then the floor once somebody moves the furniture. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> and <a href=\"/artists/tony-medina/\">Tony Medina</a> both start small and finish as a four piece on one contract, and the <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> is the quartet for a crowd that grew up on those records."
+        },
+        {
+         "term": "The 50th: a jazz duo under the dinner and the toasts",
+         "text": "More often a seated dinner with a toast in it than a floor. Upright bass and guitar, quiet under the conversation, silent for the toasts and back the moment the glass goes down. The <a href=\"/ensembles/jazz-duo-trio/\">jazz trio</a> with brushed drums is the same booking for a bigger crowd."
+        },
+        {
+         "term": "The 60th and past it: one musician, or two",
+         "text": "Earlier, warmer, more family and more of it sitting down. A <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, a <a href=\"/ensembles/solo-piano/\">pianist</a> or the duo holds the evening from arrival through dessert, and a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> under a long family dinner is the request that comes up most."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> sets out what each size costs in Colorado.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "The party",
+       "title": "The surprise, the toast, and the set built for one person.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "The surprise entrance",
+         "text": "The guest of honor thinks it’s dinner with three friends, the private dining space is full of everyone they’ve known since school, and the band is already playing, so the first thing they hear as the door opens is their song. It runs on the same cue as a <a href=\"/private-parties/proposals/\">surprise proposal song</a>."
+        },
+        {
+         "term": "The toast",
+         "text": "Somebody stands up with a glass, and the music stops before they reach the microphone. When the toasts are a program, three speakers and a slideshow, we plan them with you on the <a href=\"/planners/run-of-show/\">run of show</a>."
+        },
+        {
+         "term": "The set built for the person",
+         "text": "Tell us the name, the number and a few of the songs, and the set is built from the years the guest of honor cares about: the college years for a 40th, the wedding years for a 60th. The whole song list is on the <a href=\"/repertoire/\">repertoire page</a>."
+        },
+        {
+         "term": "The 50th that dances anyway",
+         "text": "Some 50ths sit down and some don’t, and a band that plays dinner quietly and then turns up covers both. The <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> and the soul and R&amp;B band both do that on one contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-17",
+       "html": "“...We discussed what we were looking for, (funky jams) and they delivered. It was the perfect band for my husband’s 50th. They are personable, professional, and very talented musicians.”",
+       "by": "Jill B. a 50th Birthday Party, September 2025."
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-18",
+       "html": "...From beginning to end. Pulled together bandmates for my husband’s 80th outdoor birthday bash. Guests were impressed with the repertoire. More than the usual cover band – jazzy sophistication.”",
+       "by": "Noreen S., an outdoor 80th, September 2025."
+      }
+     }
+    ],
+    "_notes": "Provenance in _src/data/reviews.json: Jill B. (a 50th, funky jams) and\n         Noreen S. (an outdoor 80th). Both already sit on the private parties\n         hub; the same pulls belong on the page that is about the birthday.",
+    "_file": "03-the-party.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "Ideas",
+       "title": "Birthday party entertainment ideas for adults.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-22",
+       "rows": [
+        {
+         "term": "Live band karaoke for the 40th",
+         "text": "The band plays the hits and hands the microphone to the friends who have been threatening to sing all night. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> fits a club or a big main floor."
+        },
+        {
+         "term": "The one song, learned for the night",
+         "text": "A <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> learns the song the guest of honor has loved for thirty years and plays it once, at the moment you choose."
+        },
+        {
+         "term": "A flamenco set piece under a long dinner",
+         "text": "A table of twelve and a guitar in the corner with real technique in it, with <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> stepping forward for one set piece."
+        },
+        {
+         "term": "A sing-along the whole family can join",
+         "text": "A 70th or an 80th usually has four generations in it, and the Beatles are the songbook all four know. <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> gets the whole family singing."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "Questions",
+       "title": "Asked about birthday parties.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-26",
+       "items": [
+        {
+         "q": "Can we hire a band for a birthday party?",
+         "a": "Yes, and the size follows the number on the cake: a trio or a quartet for a 30th or a 40th that ends on a dance floor, a jazz duo for a 50th that's a dinner with a toast in it, and one musician or a duo from arrival through dessert for a 60th and past it. It's one contract with one personal contact, booked through Signet Artists in Denver."
+        },
+        {
+         "q": "What size band for a 40th birthday party?",
+         "a": "A trio or a quartet. A trio plays the dinner quietly and fills the floor afterward without a stage, and a quartet is the size for a club or a venue past a hundred guests. The DJ can carry the late end through the same sound system."
+        },
+        {
+         "q": "How do you handle a surprise birthday party?",
+         "a": "The musicians are set up early and playing quietly, so the place looks like it simply has live music that night, and the guest of honor's song starts on a cue you and the band agree beforehand: a nod from the host or a text from the door."
+        },
+        {
+         "q": "Can the band learn the birthday person's favorite songs?",
+         "a": "Yes. One learned song comes with every booking, and each one after it is its own line on the quote."
+        },
+        {
+         "q": "Can a band play a birthday party at home?",
+         "a": "Yes. A solo musician takes about 6 by 4 feet on one dedicated circuit, a duo 8 by 6 and a trio 12 by 8, in the corner the party naturally faces, and every size plays dinner at a level the table talks across. Outdoors it plays on a covered, level and dry spot with power run to it, and whatever limit the HOA or the neighborhood puts on evening sound goes into the contract. An announcement microphone for the toasts comes with every size."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-29",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the name, the number and the date.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

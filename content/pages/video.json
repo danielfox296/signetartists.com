@@ -1,0 +1,24 @@
+{
+ "root": {
+  "props": {
+   "path": "/video/",
+   "title": "Video clips of bands and musicians for hire in Denver",
+   "description": "Video clips of the bands and musicians on the Signet Artists roster, grouped by act: jazz, Spanish guitar, singer-guitarists and classical strings in Denver.",
+   "nav": "music",
+   "breadcrumb": "Video Clips",
+   "indexLabel": "All video clips",
+   "schemaKind": "videos"
+  }
+ },
+ "content": [
+  {
+   "type": "VideoIndex",
+   "props": {
+    "id": "VideoIndex-1",
+    "eyebrow": "Video Clips",
+    "title": "Video clips of our bands and musicians.",
+    "lede": "Every clip is grouped by act. If you see something you like, check out the act's page or just <a href=\"/contact/\">reach out with your date</a>."
+   }
+  }
+ ]
+}
