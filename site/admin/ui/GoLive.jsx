@@ -49,14 +49,16 @@ const ROSTER_FIELDS = {
   occasions: choice("Occasion"),
   areas: choice("Area"),
 };
-// Tags read as the choices' names.
+// Tags read as one list of the choices' names, and ladder sizes by name.
 function named(repo, a) {
   const r = repo.json("content/roster.json");
   if (!a || !r) return a;
+  const name = (key, id) => ((r[key] || []).find((c) => c.id === id) || { label: id }).label;
   const out = { ...a };
   for (const [tag, key] of [["bucket_tags", "buckets"], ["config_tags", "rateCard"], ["genre_tags", "genres"], ["occasion_tags", "occasions"], ["area_tags", "areas"]]) {
-    if (Array.isArray(a[tag])) out[tag] = a[tag].map((id) => ((r[key] || []).find((c) => c.id === id) || { label: id }).label);
+    if (Array.isArray(a[tag])) out[tag] = a[tag].map((id) => name(key, id)).join(", ");
   }
+  if (Array.isArray(a.ladder)) out.ladder = a.ladder.map((x) => ({ ...x, config: name("rateCard", x.config) }));
   return out;
 }
 const SHARED_FIELDS = Object.fromEntries(Object.values(SHARED).map((s) => [s.file, s.fields]));
@@ -82,7 +84,10 @@ async function describe(repo, base, item) {
     return jsonDiff(pa, pb, adminPageConfig.components, pageSettingsFields);
   }
   if (path.startsWith("content/acts/")) return jsonDiff(named(repo, pa), named(repo, pb), adminPageConfig.components, ACT_FIELDS);
-  if (path === "content/roster.json") return jsonDiff(pa, pb, adminPageConfig.components, ROSTER_FIELDS);
+  if (path === "content/roster.json") {
+    const order = (x) => x && { ...x, order: (x.order || []).map((id) => (repo.json(`content/acts/${id}.json`) || { name: id }).name).join(", ") };
+    return jsonDiff(order(pa), order(pb), adminPageConfig.components, ROSTER_FIELDS);
+  }
   return jsonDiff(pa, pb, adminPageConfig.components, SHARED_FIELDS[path] || null);
 }
 

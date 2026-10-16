@@ -578,10 +578,15 @@ function Ladder({ a, edit }) {
   const rows = a.ladder || [];
   const setRows = (next) => edit((x) => put(x, "ladder", next));
   const setRow = (i, k, v) => setRows(rows.map((r, j) => (j === i ? { ...r, [k]: v } : r)));
+  // A new row is for the first size the act plays that has none, placed
+  // in size order.
   const add = () => {
     const used = new Set(rows.map((r) => r.config));
     const next = (a.config_tags || []).find((c) => !used.has(c)) || (a.config_tags || [])[0] || card[0].id;
-    setRows([...rows, { config: next, build: "", bestFor: "" }]);
+    const rank = (id) => card.findIndex((c) => c.id === id);
+    const at = rows.findIndex((r) => rank(r.config) > rank(next));
+    const row = { config: next, build: "", bestFor: "" };
+    setRows(at < 0 ? [...rows, row] : [...rows.slice(0, at), row, ...rows.slice(at)]);
   };
   return (
     <Group label="Size ladder">
