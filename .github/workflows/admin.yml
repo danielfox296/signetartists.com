@@ -1,0 +1,77 @@
+name: Deploy admin.signetartists.com
+
+# Builds the admin app (site/admin/) from the staging branch, so the admin
+# always edits with the same components staging is built with, and pushes it
+# to danielfox296/signet-admin, whose Pages site serves admin.signetartists.com.
+# Its one key (ADMIN_DEPLOY_KEY, a deploy key on signet-admin) opens nothing
+# else. The admin holds no secrets: each person signs in with their own token.
+
+on:
+  push:
+    branches: [staging]
+    paths:
+      - "site/admin/**"
+      - "site/src/**"
+      - "site/package.json"
+      - "site/package-lock.json"
+      - ".github/workflows/admin.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: admin
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install
+        run: npm ci --prefix site
+
+      - name: Build admin
+        run: npm --prefix site run build:admin
+
+      # The admin's domain, plain HTML (no Jekyll), the commit it was built
+      # from, and nothing for search engines.
+      - name: Stage
+        run: |
+          mkdir -p _admin
+          rsync -a site/admin/dist/ _admin/
+          echo "admin.signetartists.com" > _admin/CNAME
+          : > _admin/.nojekyll
+          echo "$GITHUB_SHA" > _admin/commit.txt
+          printf 'User-agent: *\nDisallow: /\n' > _admin/robots.txt
+
+      - name: Push to signet-admin
+        env:
+          DEPLOY_KEY: ${{ secrets.ADMIN_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/admin_key
+          chmod 600 ~/.ssh/admin_key
+          echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > ~/.ssh/known_hosts
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/admin_key -o IdentitiesOnly=yes"
+          git clone --depth 1 git@github.com:danielfox296/signet-admin.git ../out
+          rsync -a --delete --exclude='.git' _admin/ ../out/
+          cd ../out
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No change to the admin"
+            exit 0
+          fi
+          git commit -q -m "Admin build of signetartists.com@${GITHUB_SHA::8}"
+          git push origin HEAD:main
