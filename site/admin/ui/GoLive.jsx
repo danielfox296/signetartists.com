@@ -1,11 +1,25 @@
 /* Go live: what is on staging and not live, file by file with the copy
-   that changed; the saves since; revert for either; and the button that
-   merges staging into the live branch (off until the cutover). */
+   that changed; the saves since; the go-lives since the cutover; revert for
+   each; and the button that merges staging into the live branch. */
 import { useCallback, useEffect, useState } from "react";
-import { GO_LIVE, GO_LIVE_NEEDS_BUILD, OWNER, REPO } from "../config.js";
-import { baseline, goLive, history, liveRun, pendingFiles, revertCommit, revertFile, revertPlan, textAt } from "../lib/publish.js";
+import { GO_LIVE_NEEDS_BUILD, OWNER, REPO } from "../config.js";
+import {
+  baseline,
+  canGoLive,
+  goLive,
+  goLives,
+  history,
+  liveRevertPlan,
+  liveRun,
+  pendingFiles,
+  revertCommit,
+  revertFile,
+  revertLive,
+  revertPlan,
+  textAt,
+} from "../lib/publish.js";
 import { jsonDiff, wordDiff } from "../lib/diff.js";
-import { fileKind, fileLabel } from "../lib/labels.js";
+import { commitMessage, fileKind, fileLabel } from "../lib/labels.js";
 import { slugOf } from "../lib/site.js";
 import { ask, go, session, toast, ui, useRepo } from "../state.js";
 import { when } from "./common.jsx";
@@ -87,8 +101,8 @@ export function GoLiveDrawer({ status }) {
         })
       );
       items.sort((x, y) => (ORDER[x.kind] ?? 9) - (ORDER[y.kind] ?? 9) || x.label.localeCompare(y.label));
-      const hist = await history(api, base);
-      setData({ base, items, hist });
+      const [hist, lives] = await Promise.all([history(api, base), canGoLive(base) ? goLives(api) : null]);
+      setData({ base, items, hist, lives });
       ui.set({ pending: items.length });
       setErr(null);
     } catch (e) {
@@ -139,44 +153,72 @@ export function GoLiveDrawer({ status }) {
     }
   };
 
+  // Follow the live branch's deploy of `sha` through to live.
+  const follow = async (sha, first) => {
+    setLive({ step: 1, sha, first });
+    let seen = false;
+    for (let i = 0; sha && i < 120; i++) {
+      await new Promise((r) => setTimeout(r, 5000));
+      const run = await liveRun(api, sha);
+      if (run && run.status === "completed") {
+        setLive({ step: run.conclusion === "success" ? 3 : -1, sha, run, first, error: run.conclusion === "success" ? null : "Build failed" });
+        break;
+      }
+      if (run) {
+        seen = true;
+        setLive({ step: run.status === "in_progress" ? 2 : 1, sha, run, first });
+      } else if (!seen && i >= 24) {
+        setLive({ step: -1, sha, first, error: "No build started" });
+        break;
+      }
+    }
+    if (!sha) setLive({ step: 3, sha: null, first });
+  };
+
   const doGoLive = async () => {
-    if (!GO_LIVE) return;
+    if (!canGoLive(data && data.base)) return;
     if (!(await ask({ title: "Go live", buttons: [{ label: "Cancel", value: false }, { label: "Go live", value: true, primary: true }] }))) return;
     setBusy(true);
-    setLive({ step: 0 });
+    setLive({ step: 0, first: "Merging" });
     try {
-      const n = data.items.length;
-      const merge = await goLive(api, `Go live: ${n} ${n === 1 ? "change" : "changes"}`);
-      const sha = merge ? merge.sha : null;
-      setLive({ step: 1, sha });
-      let seen = false;
-      for (let i = 0; sha && i < 120; i++) {
-        await new Promise((r) => setTimeout(r, 5000));
-        const run = await liveRun(api, sha);
-        if (run && run.status === "completed") {
-          setLive({ step: run.conclusion === "success" ? 3 : -1, sha, run, error: run.conclusion === "success" ? null : "Build failed" });
-          break;
-        }
-        if (run) {
-          seen = true;
-          setLive({ step: run.status === "in_progress" ? 2 : 1, sha, run });
-        } else if (!seen && i >= 24) {
-          setLive({ step: -1, sha, error: "No build started" });
-          break;
-        }
-      }
-      if (!sha) setLive({ step: 3, sha: null });
+      const merge = await goLive(api, data.base, `Go live: ${commitMessage(data.items.map((it) => it.label))}`);
+      await follow(merge ? merge.sha : null, "Merging");
       await load();
     } catch (e) {
-      setLive({ step: -1, error: String(e.message || e) });
+      setLive({ step: -1, first: "Merging", error: String(e.message || e) });
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const revertGoLive = async (g) => {
+    setBusy(true);
+    try {
+      const plan = await liveRevertPlan(api, repo, g);
+      const title = `Revert ${plan.message}`;
+      let anyway = false;
+      if (plan.clash.length) {
+        anyway = await ask({
+          title,
+          body: <ul className="plain-list">{plan.clash.map((p) => <li key={p}>{fileLabel(p, repo.get(p))}</li>)}</ul>,
+          buttons: [{ label: "Cancel", value: false }, { label: "Revert anyway", value: true, danger: true }],
+        });
+        if (!anyway) return;
+      } else if (!(await confirm(title, "Revert"))) return;
+      setLive({ step: 0, first: "Reverting" });
+      const sha = await revertLive(api, repo, plan, title, { anyway });
+      await follow(sha, "Reverting");
+      await load();
+    } catch (e) {
+      setLive({ step: -1, first: "Reverting", error: String(e.message || e) });
     } finally {
       setBusy(false);
     }
   };
 
   const items = data ? data.items : [];
-  const canGo = GO_LIVE && !busy && data && items.length > 0 && (status.state === "live" || !GO_LIVE_NEEDS_BUILD);
-  const STEPS = ["Merging", "Building", "Publishing", "Live"];
+  const canGo = !busy && data && canGoLive(data.base) && items.length > 0 && (status.state === "live" || !GO_LIVE_NEEDS_BUILD);
+  const STEPS = [live && live.first ? live.first : "Merging", "Building", "Publishing", "Live"];
   return (
     <>
       <div className="scrim" onClick={close} />
@@ -196,6 +238,11 @@ export function GoLiveDrawer({ status }) {
             <button aria-selected={String(tab === "history")} onClick={() => setTab("history")}>
               Saves ({data ? data.hist.commits.length : "…"})
             </button>
+            {data && data.lives ? (
+              <button aria-selected={String(tab === "lives")} onClick={() => setTab("lives")}>
+                Go-lives ({data.lives.length})
+              </button>
+            ) : null}
           </div>
         )}
         <div className="drawer-body">
@@ -267,6 +314,25 @@ export function GoLiveDrawer({ status }) {
               </>
             ) : (
               <p className="muted">No changes</p>
+            )
+          ) : tab === "lives" && data.lives ? (
+            data.lives.length ? (
+              data.lives.map((g) => (
+                <div className="cgroup" key={g.sha}>
+                  <div className="cgroup-head">
+                    <b>{g.message}</b>
+                    <span style={{ flex: 1 }} />
+                    <button className="link" disabled={busy} onClick={() => revertGoLive(g)}>
+                      Revert
+                    </button>
+                  </div>
+                  <div className="change">
+                    <span className="diff">{when(g.date)}</span>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="muted">No go-lives</p>
             )
           ) : data.hist.commits.length ? (
             data.hist.commits.map((c) => (
