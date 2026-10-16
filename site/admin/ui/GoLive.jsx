@@ -26,7 +26,39 @@ import { when } from "./common.jsx";
 import { adminPageConfig, assetUrl, pageSettingsFields } from "./fields.jsx";
 import { SHARED } from "./Editor.jsx";
 
-const ORDER = { page: 0, shared: 1, data: 2, media: 3 };
+const ORDER = { page: 0, shared: 1, layout: 2, data: 3, media: 4 };
+
+// Act and roster files, field by field, as the act form names them.
+const t = (label) => ({ type: "text", label });
+const ACT_FIELDS = {
+  name: t("Name"), style: t("Style line"), face: t("Fronted by"), spec: t("Lineup"), byline: t("Byline"), material: t("Material"),
+  lane: t("Type"), status: t("Flagship"), hidden: t("Hidden"), presentation: t("Byline"),
+  bucket_tags: t("Kind of night"), config_tags: t("Size"), genre_tags: t("Genre"), vocals: t("Vocals"), occasion_tags: t("Occasion"), area_tags: t("Area"),
+  img: t("Photo"), alt: t("Alt text"), video: t("Video"), video_poster: t("Poster"), blurb: t("Description"), card_line: t("Short description"),
+  configRangeLabel: t("Size range"), page: t("Page"), identity: t("About"),
+  ladder: { type: "array", label: "Size ladder", arrayFields: { config: t("Size"), build: t("Lineup"), bestFor: t("Best for") } },
+  setlist: { type: "object", label: "Setlist", objectFields: { note: t("Note"), items: t("Songs"), groups: { type: "array", label: "Groups", arrayFields: { label: t("Heading"), moment: t("Moment"), count: t("Songs") } } } },
+  entity: { type: "object", label: "Search", objectFields: { type: t("Schema type"), sameAs: t("Links") } },
+};
+const choice = (label, extra) => ({ type: "array", label, arrayFields: { label: t("Name"), ...extra } });
+const ROSTER_FIELDS = {
+  order: t("Roster order"),
+  buckets: choice("Kind of night"),
+  rateCard: choice("Size", { rangeLabel: t("Range label"), pieces: t("Musicians") }),
+  genres: choice("Genre"),
+  occasions: choice("Occasion"),
+  areas: choice("Area"),
+};
+// Tags read as the choices' names.
+function named(repo, a) {
+  const r = repo.json("content/roster.json");
+  if (!a || !r) return a;
+  const out = { ...a };
+  for (const [tag, key] of [["bucket_tags", "buckets"], ["config_tags", "rateCard"], ["genre_tags", "genres"], ["occasion_tags", "occasions"], ["area_tags", "areas"]]) {
+    if (Array.isArray(a[tag])) out[tag] = a[tag].map((id) => ((r[key] || []).find((c) => c.id === id) || { label: id }).label);
+  }
+  return out;
+}
 const SHARED_FIELDS = Object.fromEntries(Object.values(SHARED).map((s) => [s.file, s.fields]));
 
 function textDiff(a, b) {
@@ -49,6 +81,8 @@ async function describe(repo, base, item) {
     if (!pa || !pb) return [];
     return jsonDiff(pa, pb, adminPageConfig.components, pageSettingsFields);
   }
+  if (path.startsWith("content/acts/")) return jsonDiff(named(repo, pa), named(repo, pb), adminPageConfig.components, ACT_FIELDS);
+  if (path === "content/roster.json") return jsonDiff(pa, pb, adminPageConfig.components, ROSTER_FIELDS);
   return jsonDiff(pa, pb, adminPageConfig.components, SHARED_FIELDS[path] || null);
 }
 
@@ -62,6 +96,9 @@ function Parts({ parts }) {
 function openFile(path) {
   ui.set({ drawer: null });
   if (path.startsWith("content/pages/")) go("page", slugOf(path));
+  else if (path.startsWith("content/acts/")) go("act", slugOf(path));
+  else if (path === "content/roster.json") go("acts");
+  else if (path.startsWith("content/layouts/")) go("layout");
   else {
     const k = Object.entries(SHARED).find(([, s]) => s.file === path);
     if (k) go(k[0]);

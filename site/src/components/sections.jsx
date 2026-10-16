@@ -5,7 +5,7 @@
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
 import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite } from "./parts.jsx";
-import { CardGrid } from "./blocks.jsx";
+import { ALLOW, CardGrid, CloseRow } from "./blocks.jsx";
 
 const { rich, text } = F;
 const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0, 48) : "");
@@ -240,6 +240,104 @@ const CoverWall = {
   },
 };
 
+// ------------------------------------------------------------ act parts
+
+// The act a part draws from: the one it names, else the page's own act.
+const actFor = (s, act) => (act ? s.model.ACT_BY_ID[act] : s.model.pageAct(s.page)) || null;
+
+// The top of an act page, from the act's file: style, name, byline,
+// description, the button to the contact form, and the footage or photo.
+const ActHeader = {
+  label: "Act header",
+  fields: { act: text("Act"), button: text("Button") },
+  render: function ActHeaderRender({ act, button }) {
+    const s = useSite();
+    const href = useHref();
+    const m = s.model;
+    const a = actFor(s, act);
+    if (!a) return null;
+    const face = [m.actByline(a), a.material].filter(Boolean).map((x) => x.replace(/[.\s]+$/, "") + ".").join(" ");
+    let media = null;
+    if (a.video && /^https?:\/\//.test(a.video)) media = <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />;
+    else if (a.video) media = <video src={href("/" + a.video)} poster={a.video_poster ? href("/" + a.video_poster) : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />;
+    else if (a.img) media = <Pic class="act-video-photo" src={href("/img/" + a.img)} alt={a.alt || ""} decoding="async" />;
+    return (
+      <section className="section section--top act-hero">
+        <div className="wrap">
+          <div className="heading">
+            {a.style ? <p className="eyebrow eyebrow--slab">{a.style}</p> : null}
+            <h1 className="h1 display">{a.name}</h1>
+            {face ? <p className="act-face">{face}</p> : null}
+            {a.blurb ? <p className="lede">{a.blurb}</p> : null}
+            <div className="btn-row">
+              <a className="btn" href={href(`/contact/?act=${a.id}`)}>{button || "Check a date"}</a>
+            </div>
+          </div>
+          {media ? <div className="act-video">{media}</div> : null}
+        </div>
+      </section>
+    );
+  },
+};
+
+// The act's About paragraphs.
+const ActAbout = {
+  label: "Act about",
+  fields: { act: text("Act"), band: shellFields.band },
+  render: function ActAboutRender({ act, band }) {
+    const s = useSite();
+    const a = actFor(s, act);
+    const paras = (a && a.identity) || [];
+    if (!paras.length) return null;
+    return (
+      <section className={bandClass(band || "ruled")}>
+        <div className="wrap wrap--narrow">
+          {paras.map((t, i) => <p key={i} className="prose">{t}</p>)}
+        </div>
+      </section>
+    );
+  },
+};
+
+// The close of an act page: {name} in the title is the act's name, and the
+// button opens the contact form with the act chosen.
+const ActClose = {
+  label: "Act close",
+  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede"), button: text("Button") },
+  render: function ActCloseRender({ act, band, title, lede, button }) {
+    const s = useSite();
+    const a = actFor(s, act);
+    if (!a) return null;
+    const R = CloseRow.render;
+    const t = typeof title === "string" ? title.replace(/\{name\}/g, esc(a.name)) : title;
+    return (
+      <section className={bandClass(band || "ruled")}>
+        <div className="wrap">
+          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a date", href: `/contact/?act=${a.id}`, cls: "btn" }]} />
+        </div>
+      </section>
+    );
+  },
+};
+
+// Where an act's own sections go in the act page layout. The build puts
+// them in its place; the layout editor shows where.
+const ActOwn = {
+  label: "Own sections",
+  fields: {},
+  render: function ActOwnRender() {
+    const s = useSite();
+    if (!s || s.raw) return null;
+    return (
+      <section className="section section--ruled act-own">
+        <div className="wrap">
+          <p className="note">Own sections</p>
+        </div>
+      </section>
+    );
+  },
+};
+
 // An act's sizes: what each one is and what it suits, from the act's file.
 const ActSizes = {
   label: "Act sizes",
@@ -247,7 +345,8 @@ const ActSizes = {
   render: function ActSizesRender({ act, title, note }) {
     const s = useSite();
     const m = s.model;
-    const a = m.ACT_BY_ID[act];
+    const a = actFor(s, act);
+    if (!a || !(a.ladder || []).length) return null;
     return (
       <section className="section section--ruled section--sunk" id="configurations">
         <div className="wrap">
@@ -260,7 +359,7 @@ const ActSizes = {
               <tbody>
                 {a.ladder.map((rung, i) => (
                   <tr key={i}>
-                    <th scope="row" className="rate-size">{m.RATE_BY_ID[rung.config].label}<span className="rate-note">{rung.build}</span></th>
+                    <th scope="row" className="rate-size">{(m.RATE_BY_ID[rung.config] || { label: rung.config }).label}<span className="rate-note">{rung.build}</span></th>
                     <td className="ladder-best">{rung.bestFor}</td>
                   </tr>
                 ))}
@@ -282,8 +381,8 @@ const Setlist = {
   render: function SetlistRender({ act, title, more }) {
     const s = useSite();
     const m = s.model;
-    const a = m.ACT_BY_ID[act];
-    const sl = a.setlist;
+    const a = actFor(s, act);
+    const sl = a && a.setlist;
     if (!sl) return null;
     let body;
     if (sl.from_repertoire) {
@@ -291,7 +390,7 @@ const Setlist = {
       body = (
         <>
           <div className="split split--three">
-            {sl.groups.map((g, i) => (
+            {(sl.groups || []).map((g, i) => (
               <div key={i}>
                 <h3 className="h5">{g.label}</h3>
                 <ul className="setlist">
@@ -308,7 +407,7 @@ const Setlist = {
     } else {
       body = (
         <ul className="setlist setlist--cols">
-          {sl.items.map((x, j) => <li key={j}><span className="song-title">{x}</span></li>)}
+          {(sl.items || []).map((x, j) => <li key={j}><span className="song-title">{x}</span></li>)}
         </ul>
       );
     }
@@ -316,7 +415,7 @@ const Setlist = {
       <section className="section section--ruled">
         <div className="wrap">
           <H as="h2" className="h3" html={title} />
-          <p className="note">{sl.note}</p>
+          {sl.note ? <p className="note">{sl.note}</p> : null}
           {body}
         </div>
       </section>
@@ -634,9 +733,9 @@ const SongCatalog = {
   },
 };
 
-export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActSizes, Setlist, VendorList, ContactForm, Roster, SongCatalog };
+export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActClose, VendorList, ContactForm, Roster, SongCatalog };
 
-export const components = { ...blockSections, ...fixedSections };
+export const components = { ...blockSections, ...fixedSections, ActOwn };
 
 export const categories = {
   sections: { title: "Sections", components: Object.keys(blockSections) },

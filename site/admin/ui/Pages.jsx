@@ -231,7 +231,7 @@ function DeletePage({ slug, close }) {
   const exists = target && target !== path && pageByPath(repo, target);
   const ok = () => {
     if (!exists) return;
-    for (const [f, v] of repoint(repo, path, target)) if (f !== pagePath(slug)) repo.set(f, serialize(v));
+    for (const [f, v] of repoint(repo, path, target, { deleted: true })) if (f !== pagePath(slug)) repo.set(f, serialize(v));
     repo.remove(pagePath(slug));
     close(null);
     toast("Deleted");
