@@ -66,8 +66,10 @@ jobs:
           git clone --depth 1 git@github.com:danielfox296/signet-admin.git ../out
           # Old builds' hashed files stay: a tab still running an earlier
           # build (index.html is cached for ten minutes) loads its chunks.
-          rsync -a --delete --exclude='.git' --exclude='/assets/' _admin/ ../out/
-          rsync -a _admin/assets/ ../out/assets/
+          # --checksum: a fresh clone and a fresh build can share a size and
+          # a second, and rsync's quick check would skip the new file.
+          rsync -a --checksum --delete --exclude='.git' --exclude='/assets/' _admin/ ../out/
+          rsync -a --checksum _admin/assets/ ../out/assets/
           cd ../out
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
