@@ -1,9 +1,11 @@
 name: Deploy staging.signetartists.com
 
-# Builds the staging branch and pushes the output to danielfox296/signet-staging,
-# whose Pages site serves staging.signetartists.com. This workflow has no Pages
-# permission in this repo, and its one key (STAGING_DEPLOY_KEY, a deploy key on
-# signet-staging) opens nothing else, so it cannot reach signetartists.com.
+# Builds the staging branch with the new build (site/, from content/) and
+# pushes the output to danielfox296/signet-staging, whose Pages site serves
+# staging.signetartists.com. This workflow has no Pages permission in this
+# repo, and its one key (STAGING_DEPLOY_KEY, a deploy key on signet-staging)
+# opens nothing else, so it cannot reach signetartists.com. main keeps
+# build.py and deploy.yml until the cutover.
 
 on:
   push:
@@ -20,23 +22,27 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # Full history, as in deploy.yml: the sitemap's <lastmod> comes from git.
+      # Full history: a page's sitemap <lastmod> is its file's last commit.
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
 
-      - name: Install Python dependencies
-        run: pip install jinja2 markdown pyyaml
+      - name: Install
+        run: npm ci --prefix site
 
       - name: Build site
-        run: python3 build.py
+        run: node site/scripts/build.mjs --out _gen
 
-      # Same staging as deploy.yml.
+      # The repo's static files (styles, scripts, images, fonts), then the
+      # build's output over them. The HTML and feeds build.py committed are
+      # left out, so a page deleted from content/ is gone from staging too.
       - name: Stage site
         run: |
           mkdir -p _site
@@ -45,17 +51,28 @@ jobs:
             --exclude='.github' \
             --exclude='_src' \
             --exclude='_site' \
+            --exclude='_gen' \
+            --exclude='/site' \
+            --exclude='/content' \
             --exclude='build.py' \
             --exclude='*.md' \
+            --exclude='*.html' \
+            --exclude='/sitemap.xml' \
+            --exclude='/video-sitemap.xml' \
+            --exclude='/rss.xml' \
+            --exclude='/llms.txt' \
             --exclude='.gitignore' \
             --exclude='__pycache__' \
+            --exclude='node_modules' \
             --exclude='scripts' \
             ./ _site/
+          rsync -a _gen/ _site/
 
       # The staging domain, plain HTML (no Jekyll), the commit it was built
       # from at /commit.txt, and nothing for search engines: robots.txt
-      # disallows everything and every page carries noindex. The run fails if
-      # any page can't take the tag.
+      # disallows everything and every page carries noindex. Forms post
+      # nowhere: a send goes to the thanks page and no email leaves. The run
+      # fails if any page can't take the tag or any form still sends.
       - name: Make it staging
         run: |
           echo "staging.signetartists.com" > _site/CNAME
@@ -67,7 +84,15 @@ jobs:
           tag = '<meta name="robots" content="noindex">'
           robots = re.compile(r'<meta\s+name=["\']robots["\'][^>]*>', re.I)
           head = re.compile(r'<head(\s[^>]*)?>', re.I)
-          pages, missing = 0, []
+          form = re.compile(r'<form\b([^>]*)>', re.I)
+          action = re.compile(r'\saction="[^"]*"', re.I)
+          turned = []
+          def off(m):
+              turned.append(1)
+              attrs = action.sub('', m.group(1))
+              return ('<form action="/thanks/"' + attrs +
+                      ' onsubmit="event.preventDefault();location.href=\'/thanks/\'">')
+          pages, missing, sending = 0, [], []
           for p in sorted(pathlib.Path('_site').rglob('*.html')):
               s = p.read_text(encoding='utf-8')
               s, n = robots.subn(tag, s)
@@ -76,11 +101,16 @@ jobs:
               if not n:
                   missing.append(str(p))
                   continue
+              s = form.sub(lambda m: off(m) if 'action=' in m.group(1) else m.group(0), s)
+              if 'formsubmit.co' in s:
+                  sending.append(str(p))
               p.write_text(s, encoding='utf-8')
               pages += 1
           if missing:
               sys.exit('No <head> to take noindex: ' + ', '.join(missing))
-          print(f'noindex on {pages} pages')
+          if sending:
+              sys.exit('A form still sends: ' + ', '.join(sending))
+          print(f'noindex on {pages} pages, {len(turned)} forms off')
           EOF
 
       - name: Push to signet-staging
