@@ -1,7 +1,7 @@
 /* Editing in Puck: a page's sections, or one shared part, on the site's own
    components and stylesheet. Sections down the left, the page in the
    middle at desktop or phone width, fields on the right. */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createUsePuck, Puck } from "@puckeditor/core";
 import "@puckeditor/core/puck.css";
 import { Site, useSite } from "../../src/components/parts.jsx";
@@ -63,6 +63,19 @@ function Canvas({ children, document: d }) {
 let currentCtx = null;
 function CanvasContext({ children }) {
   return <Site.Provider value={currentCtx}>{children}</Site.Provider>;
+}
+
+// Puck's props stay the same objects from render to render: a new
+// overrides object makes Puck rebuild the canvas, and the copy being typed
+// loses focus after one letter.
+const PUCK_IFRAME = { enabled: true, waitForStyles: false };
+let OVERRIDES = null;
+const overrides = () => (OVERRIDES ||= { iframe: Canvas, componentOverlay: Overlay });
+// An onChange whose identity never changes, calling the latest handler.
+function useStable(fn) {
+  const ref = useRef(fn);
+  ref.current = fn;
+  return useCallback((...a) => ref.current(...a), []);
 }
 
 function Overlay({ children, componentType, isSelected, hover }) {
@@ -428,19 +441,19 @@ export function PageEditor({ slug }) {
     }
   }, [rev]); // eslint-disable-line react-hooks/exhaustive-deps
   const initial = useMemo(() => (doc ? structuredClone(doc) : null), [k, slug, !!doc]); // eslint-disable-line react-hooks/exhaustive-deps
+  const onChange = useStable((data) => {
+    const cur = repo.json(path);
+    if (!cur) return;
+    const c = clean(data, adminPageConfig);
+    const next = ordered(cur, { ...cur, root: { ...cur.root, props: ordered(cur.root.props, c.root.props) }, content: conform(c.content, cur.content, adminPageConfig) });
+    if (serialize(next) !== repo.get(path)) writePage(slug, next, "editor");
+  });
   if (!doc) return <div className="screen"><p className="muted">No such page</p></div>;
   if (site.error) return <div className="screen"><p className="warn-line">{String(site.error.message)}</p></div>;
   const p = doc.root.props;
   place.slug = slug;
   place.label = fileLabel(path, repo.get(path));
   currentCtx = pageContext(site, doc, { prefix: PREFIX, assetUrl });
-  const onChange = (data) => {
-    const cur = repo.json(path);
-    if (!cur) return;
-    const c = clean(data, adminPageConfig);
-    const next = ordered(cur, { ...cur, root: { ...cur.root, props: ordered(cur.root.props, c.root.props) }, content: conform(c.content, cur.content, adminPageConfig) });
-    if (serialize(next) !== repo.get(path)) writePage(slug, next, "editor");
-  };
   return (
     <Site.Provider value={currentCtx}>
       <Puck
@@ -449,8 +462,8 @@ export function PageEditor({ slug }) {
         data={initial}
         onChange={onChange}
         viewports={VIEWPORTS}
-        iframe={{ enabled: true, waitForStyles: false }}
-        overrides={{ iframe: Canvas, componentOverlay: Overlay }}
+        iframe={PUCK_IFRAME}
+        overrides={overrides()}
       >
         <Layout config={adminPageConfig} title={place.label} kind="page" url={p.path} />
       </Puck>
@@ -583,15 +596,15 @@ export function SharedEditor({ which }) {
   currentCtx = pageContext(site, home, { prefix: PREFIX, assetUrl });
   place.slug = null;
   place.label = s.title;
-  const onChange = (data) => {
+  const onChange = useStable((data) => {
     const cur = repo.json(s.file);
     const { puck, editMode, children, ...props } = data.root.props || {}; // eslint-disable-line no-unused-vars
     const text = serialize(ordered(cur, props));
     if (text !== repo.get(s.file)) repo.set(s.file, text, "editor");
-  };
+  });
   return (
     <Site.Provider value={currentCtx}>
-      <Puck key={which + ":" + k} config={config} data={initial} onChange={onChange} viewports={VIEWPORTS} iframe={{ enabled: true, waitForStyles: false }} overrides={{ iframe: Canvas, componentOverlay: Overlay }}>
+      <Puck key={which + ":" + k} config={config} data={initial} onChange={onChange} viewports={VIEWPORTS} iframe={PUCK_IFRAME} overrides={overrides()}>
         <Layout config={config} title={s.title} kind="shared" shared={which} />
       </Puck>
     </Site.Provider>
