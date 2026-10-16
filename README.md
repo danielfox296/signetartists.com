@@ -8,14 +8,17 @@ Same idiom as daniel-fox.com, danielchristopherfox.com and foxlessons.com.
 ## Build
 
 ```bash
-python3 build.py
+npm ci --prefix site
+node site/scripts/build.mjs --out _site
 ```
 
-Pure Python stdlib for the pages. The blog kit needs `jinja2`, `markdown`
-and `pyyaml` (imported lazily — with no `blog-*` post directories the build
-runs stdlib-only; the deploy workflow pip-installs them).
+Since 2026-10-16 the site is built from `content/` by `site/` (see
+`site/README.md`). Edit it in the admin at admin.signetartists.com, or write
+`content/` on the `staging` branch; Go live merges `staging` into `main`.
 
-**Edit `_src/`. Never edit root `*.html` by hand** — the build overwrites it.
+`_src/`, `build.py` and the HTML and feeds at the root are what the site was
+built from before then. Nothing reads them now, and the sections below that
+describe them are history.
 
 ## Layout
 
@@ -135,8 +138,9 @@ silently. `build.py` also prints them at the end of every build.
 
 ## Deploy
 
-Push to `main`. GitHub Actions lints the blog, builds, publishes to GitHub
-Pages, and pings IndexNow with the URLs whose sitemap entry changed.
+`main` deploys. GitHub Actions builds `content/` with `site/`, publishes to
+GitHub Pages, and pings IndexNow with the URLs whose sitemap entry changed.
+`staging` builds the same way to staging.signetartists.com.
 
 ## No published prices (2026-09-04)
 
