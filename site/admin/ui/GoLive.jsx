@@ -2,7 +2,7 @@
    that changed; the saves since; revert for either; and the button that
    merges staging into the live branch (off until the cutover). */
 import { useCallback, useEffect, useState } from "react";
-import { GO_LIVE, GO_LIVE_NEEDS_BUILD, OWNER, REPO, STAGING_URL } from "../config.js";
+import { GO_LIVE, GO_LIVE_NEEDS_BUILD, OWNER, REPO } from "../config.js";
 import { baseline, goLive, history, liveRun, pendingFiles, revertCommit, revertFile, revertPlan, textAt } from "../lib/publish.js";
 import { jsonDiff, wordDiff } from "../lib/diff.js";
 import { fileKind, fileLabel } from "../lib/labels.js";
@@ -279,9 +279,7 @@ export function GoLiveDrawer({ status }) {
                   </button>
                 </div>
                 <div className="change">
-                  <span className="diff">
-                    {when(c.commit.committer.date)} · <a href={`${STAGING_URL}/commit.txt`} target="_blank" rel="noreferrer" className="mono">{c.sha.slice(0, 8)}</a>
-                  </span>
+                  <span className="diff">{when(c.commit.committer.date)}</span>
                 </div>
               </div>
             ))

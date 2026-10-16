@@ -89,7 +89,7 @@ export function pageByPath(repo, path) {
 
 // A path no page or redirect already uses.
 export function pathProblem(repo, path, self) {
-  if (!path || !/^\/([a-z0-9-]+\/)*$/.test(path)) return "URL";
+  if (!path || !/^\/([a-z0-9-]+\/)*$/.test(path)) return "Invalid";
   const taken = pagesList(repo).find((p) => p.path === path && p.slug !== self);
   if (taken) return "Taken";
   return null;
