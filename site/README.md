@@ -12,6 +12,8 @@ Run everything from the repo root.
 | Convert `_src/` into `content/` | `python3 site/scripts/convert.py` |
 | Whole-site proof | `python3 site/scripts/proof.py` (report in `site/proof/report.md`) |
 | Editor, development only | `npm --prefix site run dev`, then http://127.0.0.1:5793/?page=weddings |
+| Admin, development | `GH_DEV_TOKEN=$(gh auth token) VITE_API_BASE=/gh VITE_STAGING_BRANCH=<a throwaway branch> npm --prefix site run admin`, then http://127.0.0.1:5794/ and sign in with any text |
+| Admin, build | `npm --prefix site run build:admin` (into `site/admin/dist`); `.github/workflows/admin.yml` builds and deploys it from `staging` |
 
 ## Layout
 
@@ -22,6 +24,12 @@ Run everything from the repo root.
   - `config.jsx` the Puck configs, `registry.jsx` how the build renders stored items
 - `src/lib/model.js` everything derived from `content/`: act facts, trails, sibling and hub lists, posts by parent
 - `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD), `feeds.js`
+- `admin/` the admin app at admin.signetartists.com (Phase 2)
+  - `config.js` the repo, branches and the Go live switch (`GO_LIVE`, off until the cutover)
+  - `lib/github.js` the REST calls; `lib/repo.js` the working copy of `staging` (one commit per save, merge per file);
+    `lib/publish.js` Go live, the saves list and revert; `lib/diff.js` readable diffs; `lib/merge3.js` line merge for revert
+  - `ui/Editor.jsx` pages and shared parts in Puck; `ui/fields.jsx` the picture, URL and Indexed fields and the config the
+    admin edits with; `ui/Pages.jsx` the pages list; `ui/GoLive.jsx` the Go live drawer
 - `scripts/` the converter (`convert.py`, `sections.py`), the proof (`proof.py`, `domdiff.py`)
 - `proof/` the last proof report, the converter report, and `accepted.json`
 
