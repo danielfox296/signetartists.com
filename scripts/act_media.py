@@ -2,7 +2,7 @@
 """Act media helper (2026-09-16, the new-act skill).
 
 The four media jobs every new act needs, each writing its own provenance row
-into _src/data/media-sources.json as it goes, because an asset without a row
+into content/records/media-sources.json as it goes, because an asset without a row
 in that ledger does not exist on this site (the ledger is how a removal is
 done, and the repo is public).
 
@@ -41,7 +41,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LEDGER = ROOT / "_src" / "data" / "media-sources.json"
+LEDGER = ROOT / "content" / "records" / "media-sources.json"
 UA = {"User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
                      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 signetartists.com asset pull "
                      "(contact hello@signetartists.com)")}
@@ -60,7 +60,7 @@ def load_ledger() -> dict:
 
 
 def save_ledger(d: dict) -> None:
-    LEDGER.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    LEDGER.write_text(json.dumps(d, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def sha(b: bytes) -> str:
