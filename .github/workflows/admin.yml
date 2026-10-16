@@ -64,7 +64,10 @@ jobs:
           echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > ~/.ssh/known_hosts
           export GIT_SSH_COMMAND="ssh -i ~/.ssh/admin_key -o IdentitiesOnly=yes"
           git clone --depth 1 git@github.com:danielfox296/signet-admin.git ../out
-          rsync -a --delete --exclude='.git' _admin/ ../out/
+          # Old builds' hashed files stay: a tab still running an earlier
+          # build (index.html is cached for ten minutes) loads its chunks.
+          rsync -a --delete --exclude='.git' --exclude='/assets/' _admin/ ../out/
+          rsync -a _admin/assets/ ../out/assets/
           cd ../out
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
