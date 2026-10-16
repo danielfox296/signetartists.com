@@ -12,6 +12,7 @@
   "party"
  ],
  "config_tags": [
+  "solo",
   "duo",
   "trio",
   "quartet"
@@ -50,6 +51,11 @@
    "config": "quartet",
    "build": "The trio plus keys or a second guitar",
    "bestFor": "The dance floor booking. Weddings and corporate parties."
+  },
+  {
+   "config": "solo",
+   "build": "Voice, guitar and the looper",
+   "bestFor": "Welcome drinks and dinner, under the conversation."
   }
  ],
  "setlist": {
