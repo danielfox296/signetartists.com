@@ -6,6 +6,9 @@ import { contentFrom } from "../lib/site.js";
 import { ask, go, session, toast, ui, useRepo } from "../state.js";
 import { Field, Modal, Toggle } from "./common.jsx";
 
+// The home page and the 404 page keep their URLs and can't be deleted.
+export const fixedPath = (path) => path === "/" || path.endsWith(".html");
+
 const shortTitle = (t) => String(t || "").replace(/\s*\|\s*Signet Artists\s*$/, "");
 
 // Write a page's new version, and fix what points at it if its URL moved.
@@ -84,9 +87,11 @@ export function PagesScreen() {
                     <button className="btn ghost sm" onClick={() => ask({ render: (close) => <Settings slug={p.slug} close={close} /> })}>
                       Settings
                     </button>
-                    <button className="btn ghost sm danger" onClick={() => ask({ render: (close) => <DeletePage slug={p.slug} close={close} /> })}>
-                      Delete
-                    </button>
+                    {fixedPath(p.path) ? null : (
+                      <button className="btn ghost sm danger" onClick={() => ask({ render: (close) => <DeletePage slug={p.slug} close={close} /> })}>
+                        Delete
+                      </button>
+                    )}
                   </td>
                 </tr>
               )),
@@ -176,7 +181,7 @@ function Settings({ slug, close }) {
   const doc = repo.json(pagePath(slug));
   const p = doc.root.props;
   const [v, setV] = useState({ title: p.title || "", description: p.description || "", path: p.path, indexed: !(p.robots || "").startsWith("noindex") });
-  const fixed = p.path.endsWith(".html");
+  const fixed = fixedPath(p.path);
   const path = fixed ? p.path : normPath(v.path);
   const problem = path !== p.path ? pathProblem(repo, path, slug) : null;
   const ok = () => {
