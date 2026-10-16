@@ -9,9 +9,10 @@ import { css, cx, relHtml, relUrl } from "../lib/util.js";
 export const Site = createContext(null);
 export const useSite = () => useContext(Site);
 
+// In the admin, `assetUrl` shows a picture uploaded but not yet built.
 export function useHref() {
   const s = useSite();
-  return (u) => relUrl(u, s ? s.prefix : "/");
+  return (u) => (s && s.assetUrl && s.assetUrl(u)) || relUrl(u, s ? s.prefix : "/");
 }
 
 // Raw HTML with no wrapper element: a placeholder in the static build that
