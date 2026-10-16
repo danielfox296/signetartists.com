@@ -55,3 +55,8 @@ Objects, gear and empty rooms only: no people, and nothing that implies it is ou
   top hit; the top hit for every skyline query was the stadium angle, which has
   no mountains in it. Crop: 2400x800 from the 12590x1819 original, centred at
   x=0.405 to keep the skyline mid-frame, then the standard palette duotone.
+
+## admin-test-picture.jpg
+- Used on: Weddings
+- Creator: Signet admin test
+- Added: 2026-10-16 in the admin, resized to 2000x666
