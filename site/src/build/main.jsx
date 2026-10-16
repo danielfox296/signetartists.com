@@ -51,6 +51,7 @@ export function loadContent(dir = CONTENT) {
     photoFocus: j(at("photo-focus.json")),
     lastmod: fs.existsSync(at("lastmod.json")) ? j(at("lastmod.json")) : {},
     repertoire: j(at("repertoire.json")),
+    layouts: { act: fs.existsSync(at("layouts/act-page.json")) ? j(at("layouts/act-page.json")) : null },
     logoSvg: (id) => fs.readFileSync(path.join(REPO, "img", "logos", `${id}.svg`), "utf8"),
     exists: (rel) => fs.existsSync(path.join(REPO, rel)),
   };
@@ -138,14 +139,14 @@ export function buildSite(c, out) {
     if (p.schemaKind === "videos") {
       const listed = [...m.FORMAT_ACTS, ...m.NAMED_ACTS].flatMap((a) => m.FOOTAGE.filter((v) => v.act === a.id));
       schema = schemaFor(S.videoIndexSchema(doc, canonical, listed));
-    } else schema = S.pageSchema(doc, canonical);
+    } else schema = S.pageSchema({ ...doc, content: m.pageContent(doc) }, canonical);
     page({
       output,
       prefix: p.absolutePaths ? "/" : prefixFor(output),
       nav: p.nav || "",
       trail,
       indexed,
-      content: doc.content.map((x) => <Section key={x.props.id} c={x} />),
+      content: m.pageContent(doc).map((x) => <Section key={x.props.id} c={x} />),
       ctxExtra: { page: doc },
       title: brandTitle(p.title, p.titleExact),
       description: p.description || "",

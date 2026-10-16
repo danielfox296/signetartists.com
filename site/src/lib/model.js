@@ -15,20 +15,25 @@ export function createModel(c) {
   const brand = site.brand;
   const SITE_URL = brand.url.replace(/\/+$/, "");
   const roster = c.roster;
-  const ACTS = roster.order.map((id) => c.acts[id]);
+  // The roster's acts in its order, and the ones not hidden. A hidden act is
+  // on no list, card or filter, but a page that names it still renders:
+  // ACT_BY_ID holds every act file.
+  const ALL_ACTS = roster.order.map((id) => c.acts[id]).filter(Boolean);
+  const ACTS = ALL_ACTS.filter((a) => !a.hidden);
   const RATE_BY_ID = Object.fromEntries(roster.rateCard.map((r) => [r.id, r]));
   const BUCKET_LABEL = Object.fromEntries(roster.buckets.map((b) => [b.id, b.label]));
   const GENRE_LABEL = Object.fromEntries((roster.genres || []).map((g) => [g.id, g.label]));
   const AREA_LABEL = Object.fromEntries((roster.areas || []).map((a) => [a.id, a.label]));
   const SERVICE_AREAS = (roster.areas || []).map((a) => a.label);
-  const ACT_BY_ID = Object.fromEntries(ACTS.map((a) => [a.id, a]));
+  const ACT_BY_ID = Object.fromEntries(Object.values(c.acts).map((a) => [a.id, a]));
   const ACTS_BASE = "music";
   const WATCH_BASE = "video";
 
+  const actConfigs = (a) => (a.config_tags || []).map((t) => RATE_BY_ID[t]).filter(Boolean);
   const actLane = (a) => a.lane || (a.presentation === "face" ? "named" : "format");
   const sizeKey = (a) => {
-    const pieces = a.config_tags.map((t) => RATE_BY_ID[t].pieces);
-    return [Math.max(...pieces), Math.min(...pieces), a.config_tags.includes("dj") ? 1 : 0, a.name];
+    const pieces = actConfigs(a).map((r) => r.pieces);
+    return pieces.length ? [Math.max(...pieces), Math.min(...pieces), (a.config_tags || []).includes("dj") ? 1 : 0, a.name] : [0, 0, 0, a.name];
   };
   const cmp = (x, y) => {
     for (let i = 0; i < x.length; i++) {
@@ -40,25 +45,56 @@ export function createModel(c) {
   const FORMAT_ACTS = ACTS.filter((a) => actLane(a) === "format").sort((a, b) => cmp(sizeKey(a), sizeKey(b)));
   const NAMED_ACTS = ACTS.filter((a) => actLane(a) === "named");
   const FLAGSHIPS = ACTS.filter((a) => a.status === "flagship");
-  const ACT_BY_URL = Object.fromEntries(ACTS.filter((a) => a.page).map((a) => ["/" + a.page, a]));
+  const ACT_BY_URL = Object.fromEntries(ALL_ACTS.filter((a) => a.page).map((a) => ["/" + a.page, a]));
 
   const actUrl = (a, prefix = "") => (a.page ? prefix + a.page : `${prefix}${ACTS_BASE}/#act-${a.id}`);
-  const actConfigs = (a) => a.config_tags.map((t) => RATE_BY_ID[t]);
   const actAreaIds = (a) => (a.area_tags && a.area_tags.length ? a.area_tags : (roster.areas || []).map((x) => x.id));
-  const actAreas = (a) => actAreaIds(a).map((i) => AREA_LABEL[i]);
-  const actByline = (a) => a.byline || (a.presentation === "face" ? `Fronted by ${a.face}` : a.spec);
-  const actBylineInline = (a) => a.byline_inline || (a.presentation === "face" ? `fronted by ${a.face}` : a.spec);
+  const actAreas = (a) => actAreaIds(a).map((i) => AREA_LABEL[i]).filter(Boolean);
+  const actByline = (a) => a.byline || (a.presentation === "face" ? (a.face ? `Fronted by ${a.face}` : "") : a.spec || "");
+  const actBylineInline = (a) => a.byline_inline || (a.presentation === "face" ? (a.face ? `fronted by ${a.face}` : "") : a.spec || "");
   const actConfigRange = (a) => {
     if (a.configRangeLabel) return a.configRangeLabel;
     const cs = actConfigs(a);
+    if (!cs.length) return "";
     return cs.length === 1 ? cs[0].label : `${cs[0].label} to ${cs[cs.length - 1].rangeLabel}`;
   };
   const actCardLine = (a) => {
     if (a.card_line) return a.card_line;
-    const parts = a.blurb.trim().split(/(?<=[.!?])\s+/);
+    const parts = String(a.blurb || "").trim().split(/(?<=[.!?])\s+/);
     let line = parts[0];
     if (line.split(/\s+/).filter(Boolean).length < 12 && parts.length > 1) line += " " + parts[1];
     return line;
+  };
+
+  // The acts a list on a page shows: by occasion, by kind of night, or
+  // chosen by hand, in roster order unless chosen.
+  const actsWhere = ({ source, occasion, night, acts }) => {
+    if (source === "occasion") return ACTS.filter((a) => (a.occasion_tags || []).includes(occasion));
+    if (source === "night") return ACTS.filter((a) => (a.bucket_tags || []).includes(night));
+    if (source === "acts") return (acts || []).map((x) => ACT_BY_ID[x && x.act]).filter((a) => a && !a.hidden);
+    return FLAGSHIPS;
+  };
+
+  // A page built on the act page layout: the layout's sections, with the
+  // page's own sections where the layout says.
+  const pageAct = (doc) => {
+    const p = doc && doc.root && doc.root.props;
+    return p && p.schema && p.schema.act ? ACT_BY_ID[p.schema.act] || null : null;
+  };
+  const LAYOUT = (c.layouts && c.layouts.act) || null;
+  const usesLayout = (doc) => !!(LAYOUT && doc && doc.root && doc.root.props.layout === "act");
+  const pageContent = (doc) => {
+    if (!usesLayout(doc)) return doc.content;
+    const out = [];
+    let placed = false;
+    for (const s of LAYOUT.content) {
+      if (s.type === "ActOwn") {
+        out.push(...doc.content);
+        placed = true;
+      } else out.push(s);
+    }
+    if (!placed) out.push(...doc.content);
+    return out;
   };
 
   const canonicalFor = (output) => (output === "index.html" ? `${SITE_URL}/` : output.endsWith("/index.html") ? `${SITE_URL}/${output.slice(0, -"index.html".length)}` : `${SITE_URL}/${output}`);
@@ -93,12 +129,13 @@ export function createModel(c) {
   for (const d of pages) {
     const p = d.root.props;
     pageByUrl[p.path] = d;
-    LABELS[p.path] = p.breadcrumb || slugLabel(p.path);
+    const own = p.layout === "act" && p.schema && ACT_BY_ID[p.schema.act];
+    LABELS[p.path] = p.breadcrumb || (own ? own.name : "") || slugLabel(p.path);
   }
   const CRUMB_OVERRIDES = {};
   for (const v of FOOTAGE) {
     const a = ACT_BY_ID[v.act];
-    if (a.page) CRUMB_OVERRIDES[`/${WATCH_BASE}/${v.slug}/`] = "/" + a.page;
+    if (a && a.page) CRUMB_OVERRIDES[`/${WATCH_BASE}/${v.slug}/`] = "/" + a.page;
   }
   const POSTS_BY_PARENT = {};
   for (const d of indexedPosts) {
@@ -209,8 +246,9 @@ export function createModel(c) {
   const dateDisplay = (iso) => longDate(iso);
 
   return {
-    c, site, brand, SITE_URL, roster, ACTS, ACT_BY_ID, ACT_BY_URL, RATE_BY_ID, BUCKET_LABEL, GENRE_LABEL, AREA_LABEL, SERVICE_AREAS,
+    c, site, brand, SITE_URL, roster, ALL_ACTS, ACTS, ACT_BY_ID, ACT_BY_URL, RATE_BY_ID, BUCKET_LABEL, GENRE_LABEL, AREA_LABEL, SERVICE_AREAS,
     VOCALS_LABEL, VOCALS_MATCH, FORMAT_ACTS, NAMED_ACTS, FLAGSHIPS, ACTS_BASE, WATCH_BASE,
+    actsWhere, pageAct, usesLayout, pageContent, LAYOUT,
     actLane, actUrl, actConfigs, actAreaIds, actAreas, actByline, actBylineInline, actConfigRange, actCardLine,
     canonicalFor, FOOTAGE, FOOTAGE_BY_KEY, footageKey, watchOutput, watchUrl, watchThumb,
     posts, postBySlug, published, indexedPosts, pages, pageByUrl, LABELS, crumbLabel, crumbParent, crumbTrail, breadcrumbs,

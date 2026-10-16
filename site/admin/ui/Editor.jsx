@@ -9,7 +9,8 @@ import { Item } from "../../src/components/registry.jsx";
 import { Footer, Header } from "../../src/components/layout.jsx";
 import { fixedSections } from "../../src/components/sections.jsx";
 import { STAGING_URL } from "../config.js";
-import { pageContext, pagePath, serialize, siteFrom } from "../lib/site.js";
+import { ACT_LAYOUT, pageContext, pagePath, serialize, siteFrom } from "../lib/site.js";
+import { pageConfig } from "../../src/components/config.jsx";
 import { sectionName } from "../lib/diff.js";
 import { go, session, useRepo } from "../state.js";
 import { Badge, kindOf, useOutside } from "./common.jsx";
@@ -296,7 +297,7 @@ function useViewWidth() {
   return [w, (x) => ((viewStore.width = x), viewStore.subs.forEach((f) => f(x)))];
 }
 
-function ViewTools({ url }) {
+function ViewTools({ url, act }) {
   const [current, setW] = useViewWidth();
   return (
     <div className="prev-tools">
@@ -312,13 +313,18 @@ function ViewTools({ url }) {
           {url}
         </a>
       ) : null}
+      {act ? (
+        <button className="btn ghost sm" onClick={() => go("act", act)}>
+          Edit act
+        </button>
+      ) : null}
     </div>
   );
 }
 
 // The canvas is drawn at the view's real width and scaled to fit, so
 // desktop shows the desktop layout on any screen.
-function Middle({ url }) {
+function Middle({ url, act }) {
   const [width] = useViewWidth();
   const box = useRef(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -333,7 +339,7 @@ function Middle({ url }) {
   const scale = size.w && width > size.w ? size.w / width : 1;
   return (
     <div className="pe-mid">
-      <ViewTools url={url} />
+      <ViewTools url={url} act={act} />
       <div className={"pe-stage" + (phone ? " phone" : "")} ref={box}>
         <div className="pe-canvas" style={{ width, height: scale < 1 ? size.h / scale : "100%", transform: scale < 1 ? `scale(${scale})` : undefined }}>
           <Puck.Preview />
@@ -383,10 +389,11 @@ function SharedList({ which }) {
   );
 }
 
-function Layout({ config, title, kind, url, shared }) {
+function Layout({ config, title, kind, url, shared, top, act }) {
   return (
     <div className="pe">
       <aside className="pe-left">
+        {top}
         <div className="insp-label">{shared ? "Shared" : "Sections"}</div>
         {shared ? <SharedList which={shared} /> : <SectionList config={config} />}
         {shared ? null : (
@@ -396,7 +403,7 @@ function Layout({ config, title, kind, url, shared }) {
           </div>
         )}
       </aside>
-      <Middle url={url} />
+      <Middle url={url} act={act} />
       <aside className="pe-right">
         <RightHead title={title} kind={kind} config={config} />
         <Puck.Fields />
@@ -465,7 +472,77 @@ export function PageEditor({ slug }) {
         iframe={PUCK_IFRAME}
         overrides={overrides()}
       >
-        <Layout config={adminPageConfig} title={place.label} kind="page" url={p.path} />
+        <Layout config={adminPageConfig} title={place.label} kind="page" url={p.path} act={(site.m.ACT_BY_URL[p.path] || {}).id} />
+      </Puck>
+    </Site.Provider>
+  );
+}
+
+// ------------------------------------------------------------ layouts
+
+// The act page layout: the sections every page on it shows, drawn with one
+// act's details, and where each act's own sections go.
+const layoutConfig = {
+  ...adminPageConfig,
+  root: { fields: {}, render: pageConfig.root.render },
+  categories: { ...adminPageConfig.categories, other: { title: "Other", components: ["ActOwn", "CustomHtml"] } },
+};
+
+let layoutAct = null;
+export function LayoutEditor() {
+  const rev = useRepo();
+  const repo = session.repo;
+  const k = useExternal(ACT_LAYOUT);
+  const doc = repo.json(ACT_LAYOUT);
+  const site = useMemo(() => {
+    try {
+      return siteFrom(repo);
+    } catch (e) {
+      return { error: e };
+    }
+  }, [rev]); // eslint-disable-line react-hooks/exhaustive-deps
+  const acts = site.error ? [] : site.m.ALL_ACTS;
+  const usesIt = acts.find((a) => a.page && site.m.usesLayout(site.m.pageByUrl["/" + a.page]));
+  const [actId, setActId] = useState(layoutAct || (usesIt || acts[0] || {}).id);
+  const initial = useMemo(() => (doc ? structuredClone(doc) : null), [k, actId, !!doc]); // eslint-disable-line react-hooks/exhaustive-deps
+  const onChange = useStable((data) => {
+    const cur = repo.json(ACT_LAYOUT);
+    if (!cur) return;
+    const c = clean(data, layoutConfig);
+    const next = ordered(cur, { ...cur, content: conform(c.content, cur.content, layoutConfig) });
+    if (serialize(next) !== repo.get(ACT_LAYOUT)) repo.set(ACT_LAYOUT, serialize(next), "editor");
+  });
+  if (!doc) return <div className="screen"><p className="muted">No act page layout</p></div>;
+  if (site.error) return <div className="screen"><p className="warn-line">{String(site.error.message)}</p></div>;
+  const a = site.m.ACT_BY_ID[actId] || acts[0];
+  const path = a && a.page ? "/" + a.page : "/artists/act/";
+  const synth = { root: { props: { path, title: a ? a.name : "", nav: "music", layout: "act", schema: { act: a ? a.id : "" } } }, content: [] };
+  place.slug = null;
+  place.label = "Act page layout";
+  currentCtx = pageContext(site, synth, { prefix: PREFIX, assetUrl });
+  const pick = (
+    <label className="field layout-act">
+      <span className="insp-label">Act</span>
+      <select
+        className="select"
+        value={a ? a.id : ""}
+        onChange={(e) => {
+          layoutAct = e.target.value;
+          setActId(e.target.value);
+        }}
+      >
+        {acts.map((x) => (
+          <option key={x.id} value={x.id}>
+            {x.name}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+  return (
+    <Site.Provider value={currentCtx}>
+      <Puck key={"layout:" + k + ":" + (a ? a.id : "")} config={layoutConfig} data={initial} onChange={onChange} viewports={VIEWPORTS} iframe={PUCK_IFRAME} overrides={overrides()}>
+        <Layout config={layoutConfig} title="Act page" kind="layout" url={null} top={pick} />
       </Puck>
     </Site.Provider>
   );

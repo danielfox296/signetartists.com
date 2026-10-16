@@ -1,0 +1,62 @@
+{
+ "root": {
+  "props": {}
+ },
+ "content": [
+  {
+   "type": "ActHeader",
+   "props": {
+    "id": "layout-hero",
+    "button": "Check a date"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "layout-logos",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "ActAbout",
+   "props": {
+    "id": "layout-about",
+    "band": "ruled"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "layout-sizes",
+    "title": "Configurations",
+    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs."
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "layout-setlist",
+    "title": "A sample of the set",
+    "more": "A sample. <a href=\"/repertoire/\">The whole song list</a> is on the repertoire page."
+   }
+  },
+  {
+   "type": "ActOwn",
+   "props": {
+    "id": "layout-own"
+   }
+  },
+  {
+   "type": "ActClose",
+   "props": {
+    "id": "layout-close",
+    "band": "ruled",
+    "title": "Check a date for {name}.",
+    "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night.",
+    "button": "Check a Date"
+   }
+  }
+ ]
+}
