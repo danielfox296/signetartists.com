@@ -1,10 +1,10 @@
 {
  "blog/company-offsite-ideas-colorado-remote-teams/index.html": {
   "reason": "Reading time is now counted from the post's text as a reader sees it, so it follows edits. build.py counted each {{market:...}} figure and the {{market_sources}} line as one word. This post prints 11 figures as words (\"62 percent\") and the one-sentence sources note, which takes it from 1,599 to 1,631 words, past the 1,600 that reads in 8 minutes: 9 min read instead of 8.",
-  "accepted": false
+  "accepted": true
  },
  "blog/index.html": {
   "reason": "The same post's row on the blog index: 9 min read instead of 8.",
-  "accepted": false
+  "accepted": true
  }
 }
