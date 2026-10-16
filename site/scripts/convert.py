@@ -202,6 +202,28 @@ def resolve(base, rel):
     return urljoin("https://h" + base, rel)[len("https://h"):]
 
 
+def unfocus(html):
+    """Take out the crop points build.py writes into <img> styles. They belong
+    to the photo (photo-focus.json) and the new build writes them again."""
+
+    def one(m):
+        tag = m.group(0)
+        src = re.search(r'\ssrc="([^"]*)"', tag)
+        if not src:
+            return tag
+        path = re.sub(r"^(?:\.\./)+|^/", "", src.group(1).split("?")[0].split("#")[0])
+        if path not in B.PHOTO_FOCUS:
+            return tag
+        st = re.search(r'\sstyle="([^"]*)"', tag)
+        if not st:
+            return tag
+        kept = "; ".join(d.strip() for d in st.group(1).split(";") if d.strip() and not d.strip().lower().startswith("object-position"))
+        repl = f' style="{kept};"' if kept else ""
+        return tag[:st.start()] + repl + tag[st.end():]
+
+    return re.sub(r"<img\b[^>]*>", one, html, flags=re.I)
+
+
 def strip_comments_notes(text):
     notes = [c.strip() for c in re.findall(r"<!--(.*?)-->", text, re.S)]
     return "\n\n".join(n for n in notes if n)
@@ -473,7 +495,7 @@ def main():
             for i, piece in enumerate(pieces):
                 ctx = S.Ctx(B=B, page=page_dir.name, url=url, prefix=prefix, output=output, file=f.name, tokens=tokens,
                             cfg=cfg, schema=schema, raw=B.COMMENT.sub("", raw), ids=ids)
-                rooted = to_root(piece, prefix, url)
+                rooted = unfocus(to_root(piece, prefix, url))
                 typed = S.classify(rooted, ctx)
                 custom = {"type": "CustomHtml", "props": {"id": ctx.id("CustomHtml"), "html": rooted}}
                 item = typed or custom
