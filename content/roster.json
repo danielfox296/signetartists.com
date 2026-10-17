@@ -255,7 +255,7 @@
   },
   {
    "id": "daytime",
-   "label": "Daytime"
+   "label": "Daytime events"
   }
  ],
  "_occasions_note": "ADDED 2026-09-23. occasion_tags are the site's own four trees (weddings, corporate, private parties, daytime), tagged from what each act's page says it plays, so the Occasion filter on /music/ answers the question the rest of the site is organised by. An act with no page is tagged from its blurb. The occasion hubs can deep-link the roster pre-filtered with ?occasion=<id>.",
