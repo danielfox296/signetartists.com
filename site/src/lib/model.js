@@ -2,6 +2,7 @@
    content/. Lists, trails, sibling links and act facts are computed here so
    that a page, a post or an act added to content/ joins them with no edit. */
 import { decodeEntities, longDate } from "./util.js";
+import { layoutOf, LAYOUT_DEFAULTS } from "./layouts.js";
 
 export const outputFor = (path) => (path === "/" ? "index.html" : path.endsWith(".html") ? path.slice(1) : path.slice(1) + "index.html");
 export const urlFor = (output) => "/" + output.replace("index.html", "");
@@ -82,7 +83,10 @@ export function createModel(c) {
     return p && p.schema && p.schema.act ? ACT_BY_ID[p.schema.act] || null : null;
   };
   const LAYOUT = (c.layouts && c.layouts.act) || null;
+  // The act card, post, post card and video page layouts.
+  const L = Object.fromEntries(Object.keys(LAYOUT_DEFAULTS).map((k) => [k, layoutOf(c.layouts && c.layouts[k], k)]));
   const usesLayout = (doc) => !!(LAYOUT && doc && doc.root && doc.root.props.layout === "act");
+  // A layout section switched off is left out; the act's own sections still go where it says.
   const pageContent = (doc) => {
     if (!usesLayout(doc)) return doc.content;
     const out = [];
@@ -91,7 +95,7 @@ export function createModel(c) {
       if (s.type === "ActOwn") {
         out.push(...doc.content);
         placed = true;
-      } else out.push(s);
+      } else if (!s.props.hidden) out.push(s);
     }
     if (!placed) out.push(...doc.content);
     return out;
@@ -248,7 +252,7 @@ export function createModel(c) {
   return {
     c, site, brand, SITE_URL, roster, ALL_ACTS, ACTS, ACT_BY_ID, ACT_BY_URL, RATE_BY_ID, BUCKET_LABEL, GENRE_LABEL, AREA_LABEL, SERVICE_AREAS,
     VOCALS_LABEL, VOCALS_MATCH, FORMAT_ACTS, NAMED_ACTS, FLAGSHIPS, ACTS_BASE, WATCH_BASE,
-    actsWhere, pageAct, usesLayout, pageContent, LAYOUT,
+    actsWhere, pageAct, usesLayout, pageContent, LAYOUT, L,
     actLane, actUrl, actConfigs, actAreaIds, actAreas, actByline, actBylineInline, actConfigRange, actCardLine,
     canonicalFor, FOOTAGE, FOOTAGE_BY_KEY, footageKey, watchOutput, watchUrl, watchThumb,
     posts, postBySlug, published, indexedPosts, pages, pageByUrl, LABELS, crumbLabel, crumbParent, crumbTrail, breadcrumbs,

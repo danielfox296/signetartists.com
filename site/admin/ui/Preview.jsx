@@ -21,7 +21,7 @@ function applyFocus(d) {
   }
 }
 
-export function SiteFrame({ ctx, width, height = 860, crop, children, label }) {
+export function SiteFrame({ ctx, width, height = 860, crop, children, label, css }) {
   const outer = useRef(null);
   const frame = useRef(null);
   const [mount, setMount] = useState(null);
@@ -54,6 +54,23 @@ export function SiteFrame({ ctx, width, height = 860, crop, children, label }) {
   useEffect(() => {
     if (mount) applyFocus(mount.ownerDocument);
   });
+
+  // A stylesheet of its own, over staging's, while site styles are edited.
+  useEffect(() => {
+    if (!mount) return;
+    const d = mount.ownerDocument;
+    let st = d.getElementById("site-styles");
+    if (!css) {
+      if (st) st.remove();
+      return;
+    }
+    if (!st) {
+      st = d.createElement("style");
+      st.id = "site-styles";
+      d.head.appendChild(st);
+    }
+    if (st.textContent !== css) st.textContent = css;
+  }, [mount, css]);
 
   useEffect(() => {
     const el = outer.current;

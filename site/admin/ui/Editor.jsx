@@ -2,7 +2,7 @@
    components and stylesheet. Sections down the left, the page in the
    middle at desktop or phone width, fields on the right. */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { createUsePuck, Puck } from "@puckeditor/core";
+import { createUsePuck, FieldLabel, Puck } from "@puckeditor/core";
 import "@puckeditor/core/puck.css";
 import { Site, useSite } from "../../src/components/parts.jsx";
 import { Item } from "../../src/components/registry.jsx";
@@ -13,7 +13,7 @@ import { ACT_LAYOUT, pageContext, pagePath, serialize, siteFrom } from "../lib/s
 import { pageConfig } from "../../src/components/config.jsx";
 import { sectionName } from "../lib/diff.js";
 import { go, session, useRepo } from "../state.js";
-import { Badge, kindOf, useOutside } from "./common.jsx";
+import { Badge, kindOf, Toggle, useOutside } from "./common.jsx";
 import { adminPageConfig, assetUrl, clean, conform, guarded, imageField, newItem, place } from "./fields.jsx";
 import { writePage } from "./Pages.jsx";
 import { fileLabel } from "../lib/labels.js";
@@ -167,7 +167,7 @@ export function SectionList({ config, name = sectionName }) {
           <div
             key={c.props.id}
             data-row
-            className={"layer" + (top === i ? " sel" : "") + (drag && drag.from === i ? " dragging" : "") + (target ? (drag.to > drag.from ? " dropafter" : " dragover") : "")}
+            className={"layer" + (top === i ? " sel" : "") + (c.props.hidden ? " off" : "") + (drag && drag.from === i ? " dragging" : "") + (target ? (drag.to > drag.from ? " dropafter" : " dragover") : "")}
             onPointerDown={down(i)}
             role="button"
             tabIndex={0}
@@ -485,8 +485,32 @@ export function PageEditor({ slug }) {
 
 // The act page layout: the sections every page on it shows, drawn with one
 // act's details, and where each act's own sections go.
+// A layout section can be switched off: it stays in the layout, faded on
+// the canvas, and the act pages leave it out.
+function ShownInput({ value, onChange, readOnly }) {
+  return (
+    <FieldLabel label="Shown" el="div" readOnly={readOnly}>
+      <Toggle checked={!value} onChange={(on) => onChange(on ? undefined : true)} />
+    </FieldLabel>
+  );
+}
+const switchable = (c) => ({
+  ...c,
+  fields: { hidden: { type: "custom", label: "Shown", render: ShownInput }, ...c.fields },
+  render: function LayoutSection(props) {
+    const R = c.render;
+    return props.hidden ? (
+      <div style={{ opacity: 0.35 }}>
+        <R {...props} />
+      </div>
+    ) : (
+      <R {...props} />
+    );
+  },
+});
 const layoutConfig = {
   ...adminPageConfig,
+  components: Object.fromEntries(Object.entries(adminPageConfig.components).map(([name, c]) => [name, name === "ActOwn" ? c : switchable(c)])),
   root: { fields: {}, render: pageConfig.root.render },
   categories: { ...adminPageConfig.categories, other: { title: "Other", components: ["ActOwn", "CustomHtml"] } },
 };

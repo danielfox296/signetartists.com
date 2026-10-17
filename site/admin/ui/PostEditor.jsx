@@ -288,7 +288,7 @@ function PostRoot({ children, puck, editMode, id, ...p }) { // eslint-disable-li
   return (
     <Site.Provider value={ctx}>
       <Body nav="" trail={trail} output={ctx.output} hubs={s.hubs} indexed>
-        <PostFrame p={p} minutes={m.readingTime({ content })}>
+        <PostFrame p={p} minutes={m.readingTime({ content })} content={content}>
           <div className="blog-body">{children}</div>
         </PostFrame>
       </Body>

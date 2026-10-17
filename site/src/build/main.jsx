@@ -19,7 +19,9 @@ import { WatchPage, watchHeadExtra } from "../components/generated.jsx";
 import { makeSchema } from "./schema.js";
 import { document, head, redirectStub } from "./head.js";
 import { llms, rss, sitemap, videoSitemap } from "./feeds.js";
+import { fingerprint, stylesheet, stylesOf } from "./styles.js";
 import { esc, pyjson } from "../lib/util.js";
+import { LAYOUT_FILES } from "../lib/layouts.js";
 
 const REPO = process.cwd();
 const CONTENT = path.join(REPO, "content");
@@ -51,7 +53,11 @@ export function loadContent(dir = CONTENT) {
     photoFocus: j(at("photo-focus.json")),
     lastmod: fs.existsSync(at("lastmod.json")) ? j(at("lastmod.json")) : {},
     repertoire: j(at("repertoire.json")),
-    layouts: { act: fs.existsSync(at("layouts/act-page.json")) ? j(at("layouts/act-page.json")) : null },
+    layouts: {
+      act: fs.existsSync(at("layouts/act-page.json")) ? j(at("layouts/act-page.json")) : null,
+      ...Object.fromEntries(Object.entries(LAYOUT_FILES).map(([k, f]) => [k, fs.existsSync(at(`layouts/${f}`)) ? j(at(`layouts/${f}`)) : null])),
+    },
+    styles: fs.existsSync(at("styles.json")) ? j(at("styles.json")) : null,
     logoSvg: (id) => fs.readFileSync(path.join(REPO, "img", "logos", `${id}.svg`), "utf8"),
     exists: (rel) => fs.existsSync(path.join(REPO, rel)),
   };
@@ -114,6 +120,19 @@ export function buildSite(c, out) {
   const write = (rel, text) => {
     files[rel] = text;
   };
+  // The stylesheet with the site styles in it. Only when they change it is
+  // it written, with its own ?v= and the theme colour following the ground.
+  let headSite = m.site;
+  const cssPath = path.join(REPO, "styles.css");
+  if (c.styles && fs.existsSync(cssPath)) {
+    const css = fs.readFileSync(cssPath, "utf8");
+    const next = stylesheet(css, c.styles);
+    if (next !== css) {
+      write("styles.css", next);
+      const paper = stylesOf(next).colors["--paper"];
+      headSite = { ...m.site, cssVersion: `${m.site.cssVersion}-${fingerprint(next)}`, themeColor: paper !== stylesOf(css).colors["--paper"] ? paper : m.site.themeColor };
+    }
+  }
 
   const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, headExtra, schema }) => {
     const ctx = { ...base, prefix, output, url: "/" + output.replace("index.html", ""), trail, indexed, raw: [], ...ctxExtra };
@@ -124,7 +143,7 @@ export function buildSite(c, out) {
       ctx
     );
     const canonical = m.canonicalFor(output);
-    const h = head({ site: m.site, title, description, robots, canonical, prefix, ogType, ogImage, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
+    const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
     write(output, photoFocus(m, document(h, body)));
   };
 

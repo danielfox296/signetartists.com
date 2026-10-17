@@ -11,6 +11,11 @@ const DATA = {
   "content/lastmod.json": "Sitemap dates",
   "content/robots.txt": "robots.txt",
   "content/layouts/act-page.json": "Act page layout",
+  "content/layouts/act-card.json": "Act card layout",
+  "content/layouts/post.json": "Post layout",
+  "content/layouts/post-card.json": "Post card layout",
+  "content/layouts/video-page.json": "Video page layout",
+  "content/styles.json": "Site styles",
 };
 
 // Set once signed in: an act's name from its id.
@@ -19,7 +24,7 @@ export const actNames = { get: null };
 export function fileKind(path) {
   if (path.startsWith("content/pages/")) return "page";
   if (SHARED[path]) return "shared";
-  if (path.startsWith("content/layouts/")) return "layout";
+  if (path.startsWith("content/layouts/") || path === "content/styles.json") return "layout";
   if (path.startsWith("content/")) return "data";
   if (path.startsWith("img/")) return "media";
   return "code";

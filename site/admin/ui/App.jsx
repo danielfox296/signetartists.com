@@ -18,6 +18,9 @@ import { PostsScreen } from "./Posts.jsx";
 import { PostEditor } from "./PostEditor.jsx";
 import { VideosScreen } from "./Videos.jsx";
 import { postPath, postsList, videosList } from "../lib/posts.js";
+import { LayoutForm, LAYOUTS, LayoutsScreen } from "./Layouts.jsx";
+import { StylesScreen } from "./Styles.jsx";
+import { MediaScreen } from "./Media.jsx";
 import { GoLiveDrawer } from "./GoLive.jsx";
 
 // ------------------------------------------------------------ sign-in
@@ -130,7 +133,7 @@ function Rail() {
   const open = useUi((s) => s.rail);
   const n = pagesList(session.repo).length;
   const nActs = actsList(session.repo).length;
-  const cur = route[0] === "page" ? "pages" : route[0] === "act" || route[0] === "filters" ? "acts" : route[0] === "post" ? "posts" : route[0];
+  const cur = route[0] === "page" ? "pages" : route[0] === "act" || route[0] === "filters" ? "acts" : route[0] === "post" ? "posts" : route[0] === "layout" ? "layouts" : route[0];
   const item = (id, label, kind, count) => (
     <button className="rail-item" aria-current={cur === id ? "page" : undefined} onClick={() => go(id)}>
       <span className={"kdot " + kind} />
@@ -168,8 +171,13 @@ function Rail() {
           ))}
         </div>
         <div className="rail-group">
-          <div className="rail-label">Layouts</div>
-          {item("layout", "Act page", "layout")}
+          <div className="rail-label">Design</div>
+          {item("layouts", "Layouts", "layout")}
+          {item("styles", "Site styles", "layout")}
+        </div>
+        <div className="rail-group">
+          <div className="rail-label">Library</div>
+          {item("media", "Media", "")}
         </div>
       </nav>
       <div className="rail-foot">
@@ -239,13 +247,19 @@ function crumbs(route) {
       </>
     );
   }
-  if (r === "layout")
+  if (r === "layout" || (r === "layouts" && arg))
     return (
       <>
-        <span className="hide-sm">Layouts ›</span>
-        <b>Act page</b>
+        <button className="hide-sm" onClick={() => go("layouts")}>
+          Layouts
+        </button>
+        <span className="hide-sm">›</span>
+        <b>{r === "layout" ? "Act page" : (LAYOUTS[arg] || {}).name || arg}</b>
       </>
     );
+  if (r === "layouts") return <b>Layouts</b>;
+  if (r === "styles") return <b>Site styles</b>;
+  if (r === "media") return <b>Media</b>;
   if (r === "post") {
     const d = session.repo.json(postPath(arg));
     return (
@@ -336,6 +350,9 @@ function Shell() {
   else if (route[0] === "filters") screen = <FiltersScreen />;
   else if (route[0] === "act") screen = <ActEditor key={route[1]} id={route[1]} />;
   else if (route[0] === "layout") screen = <LayoutEditor />;
+  else if (route[0] === "layouts") screen = route[1] ? <LayoutForm key={route[1]} id={route[1]} /> : <LayoutsScreen />;
+  else if (route[0] === "styles") screen = <StylesScreen />;
+  else if (route[0] === "media") screen = <MediaScreen />;
   else if (route[0] === "post") screen = <PostEditor key={route[1]} slug={route[1]} />;
   else if (route[0] === "posts") screen = <PostsScreen />;
   else if (route[0] === "videos") screen = <VideosScreen slug={route[1]} />;

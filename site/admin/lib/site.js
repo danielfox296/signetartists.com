@@ -2,9 +2,11 @@
    the components read, and what each page's canvas needs to know. */
 import { createModel, outputFor, pySort } from "../../src/lib/model.js";
 import { plan } from "../../src/lib/plan.js";
+import { LAYOUT_FILES } from "../../src/lib/layouts.js";
 
 export const pagePath = (slug) => `content/pages/${slug}.json`;
 export const ACT_LAYOUT = "content/layouts/act-page.json";
+export const STYLES = "content/styles.json";
 export const slugOf = (path) => path.split("/").pop().replace(/\.json$/, "");
 export const serialize = (v) => JSON.stringify(v, null, 1) + "\n";
 
@@ -33,7 +35,8 @@ export function contentFrom(repo) {
     photoFocus: repo.json("content/photo-focus.json"),
     lastmod: {},
     repertoire: repo.json("content/repertoire.json"),
-    layouts: { act: repo.json(ACT_LAYOUT) || null },
+    layouts: { act: repo.json(ACT_LAYOUT) || null, ...Object.fromEntries(Object.entries(LAYOUT_FILES).map(([k, f]) => [k, repo.json(`content/layouts/${f}`) || null])) },
+    styles: repo.json(STYLES) || null,
     logoSvg: (id) => repo.get(`img/logos/${id}.svg`) || "<svg></svg>",
     exists: (rel) => repo.has(rel),
   };

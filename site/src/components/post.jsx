@@ -3,6 +3,7 @@
 import { Fragment } from "react";
 import { H, Pic, Raw, useHref, useSite } from "./parts.jsx";
 import { renderChart } from "./dataviz.js";
+import { ratioStyle, runs } from "../lib/layouts.js";
 
 const rich = (label) => ({ type: "richtext", label, contentEditable: true });
 const text = (label) => ({ type: "text", label });
@@ -177,6 +178,7 @@ export const blocks = {
       const s = useSite();
       const href = useHref();
       const found = posts.map((x) => s.model.postBySlug[x.slug]).filter((d) => d && !d.root.props.draft).map((d) => d.root.props);
+      const L = s.model.L.postCard;
       return (
         <section className="blog-related" aria-label="Related posts">
           <h2 className="blog-subhead blog-subhead--h2">Keep reading</h2>
@@ -184,12 +186,15 @@ export const blocks = {
             {found.map((p, k) => {
               // The card's parts sit on their own lines in the template, so
               // a space separates them inside the link.
-              const parts = [
-                p.hero && p.hero.src ? <Pic key="i" src={href(p.hero.src)} alt="" class="media" loading="lazy" width="1600" height="900" /> : null,
-                p.eyebrow ? <span key="e" className="eyebrow">{p.eyebrow}</span> : null,
-                <span key="t" className="blog-related-card-title">{p.title}</span>,
-                p.dek ? <span key="d" className="blog-related-dek">{p.dek}</span> : null,
-              ].filter(Boolean);
+              // The post card layout's parts; the date and reading time
+              // show in the blog list only.
+              const part = {
+                photo: () => (p.hero && p.hero.src ? <Pic key="i" src={href(p.hero.src)} alt="" class="media" loading="lazy" width="1600" height="900" style={ratioStyle(L.ratio)} /> : null),
+                eyebrow: () => (p.eyebrow ? <span key="e" className="eyebrow">{p.eyebrow}</span> : null),
+                title: () => <span key="t" className="blog-related-card-title">{p.title}</span>,
+                dek: () => (p.dek ? <span key="d" className="blog-related-dek">{p.dek}</span> : null),
+              };
+              const parts = L.parts.filter((x) => x.on && part[x.id]).map((x) => part[x.id]()).filter(Boolean);
               return (
                 <Fragment key={p.slug}>
                   {k ? " " : null}
@@ -315,36 +320,65 @@ function Block({ c }) {
   return <R {...c.props} puck={{ isEditing: false }} />;
 }
 
-// The article's frame: the header and hero, then what goes inside. The
-// site draws a post with it, and so does the editor.
-export function PostFrame({ p, minutes, children }) {
+// The article's frame: the header and hero, then what goes inside, in the
+// post layout's parts and order. The site draws a post with it, and so does
+// the editor.
+const HEADER = ["eyebrow", "title", "dek", "byline"];
+export function PostFrame({ p, minutes, content, children }) {
   const s = useSite();
   const href = useHref();
+  const L = s.model.L.post;
   const author = p.author || {};
   const sep = <span className="blog-byline-sep" aria-hidden="true">{"·"}</span>;
+  const subheads = (content || []).filter((c) => c.type === "Subhead" && Number(c.props.level || 2) === 2 && typeof c.props.text === "string" && c.props.text.trim());
+  const part = {
+    eyebrow: () => <p key="eyebrow" className="eyebrow">{p.eyebrow}</p>,
+    title: () => <h1 key="title" className="h1 blog-headline">{p.title}</h1>,
+    dek: () => <p key="dek" className="lede blog-dek">{p.dek}</p>,
+    byline: () => (
+      <p key="byline" className="blog-byline">
+        <span className="blog-byline-author">{author.name}</span>{" "}
+        {author.role ? <>{sep}{" "}<span>{author.role}</span>{" "}</> : null}
+        {sep}{" "}
+        <time dateTime={p.date}>{s.model.dateDisplay(p.date)}</time>{" "}
+        {sep}{" "}
+        <span>{`${minutes} min read`}</span>
+      </p>
+    ),
+    hero: (k) =>
+      p.hero && p.hero.src ? (
+        <figure key={k} className="blog-hero">
+          <Pic class="media" src={href(p.hero.src)} alt={p.hero.alt} width="1600" height="900" loading="eager" fetchpriority="high" style={ratioStyle(L.heroRatio)} />
+          {p.hero.caption ? <figcaption className="blog-hero-caption">{p.hero.caption}</figcaption> : null}
+        </figure>
+      ) : null,
+    contents: (k) =>
+      subheads.length ? (
+        <nav key={k} className="blog-takeaways blog-contents" aria-label="In this post">
+          <div className="blog-takeaways-title">In this post</div>
+          <ul>
+            {subheads.map((c) => (
+              <li key={c.props.id}>
+                <a href={`#${c.props.anchor || slugify(c.props.text)}`}>{c.props.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ) : null,
+  };
   return (
     <section className="section section--top">
       <div className="wrap">
         <article className="blog-article">
-          <header className="blog-header">
-            <p className="eyebrow">{p.eyebrow}</p>
-            <h1 className="h1 blog-headline">{p.title}</h1>
-            <p className="lede blog-dek">{p.dek}</p>
-            <p className="blog-byline">
-              <span className="blog-byline-author">{author.name}</span>{" "}
-              {author.role ? <>{sep}{" "}<span>{author.role}</span>{" "}</> : null}
-              {sep}{" "}
-              <time dateTime={p.date}>{s.model.dateDisplay(p.date)}</time>{" "}
-              {sep}{" "}
-              <span>{`${minutes} min read`}</span>
-            </p>
-          </header>
-          {p.hero && p.hero.src ? (
-            <figure className="blog-hero">
-              <Pic class="media" src={href(p.hero.src)} alt={p.hero.alt} width="1600" height="900" loading="eager" fetchpriority="high" />
-              {p.hero.caption ? <figcaption className="blog-hero-caption">{p.hero.caption}</figcaption> : null}
-            </figure>
-          ) : null}
+          {runs(L, HEADER).map((r, i) =>
+            r.group ? (
+              <header key={i} className="blog-header">
+                {r.ids.map((id) => part[id]())}
+              </header>
+            ) : (
+              part[r.id](i)
+            )
+          )}
           {children}
         </article>
       </div>
@@ -363,7 +397,7 @@ export function PostArticle({ doc }) {
   const last = (list) => (list.length ? [list[list.length - 1]] : []);
   return (
     <>
-      <PostFrame p={doc.root.props} minutes={s.model.readingTime(doc)}>
+      <PostFrame p={doc.root.props} minutes={s.model.readingTime(doc)} content={doc.content}>
         {last(kt).map((c) => <Block key={c.props.id} c={c} />)}
         <div className="blog-body">
           {body.map((c) => <Block key={c.props.id} c={c} />)}

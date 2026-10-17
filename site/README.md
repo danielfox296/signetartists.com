@@ -38,6 +38,11 @@ Run everything from the repo root.
     `ui/Videos.jsx` the videos list and form; `lib/posts.js` what a post's or video's new URL or delete also changes
     (the posts that list it, a redirect); `lib/postrich.jsx` a post's copy (paragraphs and lists), and the paragraphs
     an edit didn't touch keeping their stored text
+  - `ui/Layouts.jsx` the act card, post, post card and video page layouts (parts on or off, their order, image ratios)
+    with a preview; the act page layout stays in `Editor.jsx`, where a section can be switched off; `ui/Styles.jsx` the
+    site styles with contrast; `ui/Media.jsx` and `lib/media.js` the pictures under img/, their uses, replace everywhere
+- `src/lib/layouts.js` the layouts' parts and defaults; `src/build/styles.js` the site styles written into the stylesheet
+  (unchanged, byte for byte, while they match it)
 - `scripts/` the converter (`convert.py`, `sections.py`), the proof (`proof.py`, `domdiff.py`)
 - `proof/` the last proof report, the converter report, and `accepted.json`
 
@@ -51,6 +56,8 @@ Run everything from the repo root.
 | `roster.json` | act order and the filter vocabularies |
 | `layouts/act-page.json` | the act page layout. A page with `"layout": "act"` and `schema.act` is drawn as these sections, with its own where `ActOwn` sits |
 | `shared/` | header, footer, logo strip |
+| `layouts/` | the act page layout (Puck's format), and the act card, post, post card and video page layouts |
+| `styles.json` | the site styles: colours, type sizes, corners |
 | `site.json` | brand, business, lists shared by pages, llms.txt wording |
 | `redirects.json`, `robots.txt`, `photo-focus.json`, `repertoire.json` | as named |
 | `lastmod.json` | each URL's sitemap date when converted, and the hash of its file |

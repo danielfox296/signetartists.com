@@ -459,3 +459,34 @@ body.admin {
 }
 :root[data-theme="dark"] body.admin .gprev .t { color: #8ab4f8; }
 body.admin .size-row { flex-wrap: nowrap; gap: 8px; }
+
+/* ---------- layouts, site styles, media (phase 6) */
+body.admin {
+  .lay-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .lay-card { text-align: left; border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: 16px; cursor: pointer; display: grid; gap: 4px; justify-items: start; color: var(--ink); font: inherit; }
+  .lay-card:hover { border-color: var(--line-strong); }
+  .lay-card b { font-size: 15px; }
+  .lay-card p { margin: 0; color: var(--ink-soft); font-size: 13px; }
+  .listed .item.part { grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; }
+  .listed .item.part .lbl { font-size: 13.5px; font-weight: 600; }
+  .listed .item.part.off .lbl { color: var(--ink-faint); font-weight: 500; }
+  .layer.off .t { opacity: .5; }
+  .swatch { display: grid; grid-template-columns: 38px minmax(0, 1fr) 64px; gap: 10px; align-items: center; }
+  .swatch .badge { justify-self: end; }
+  .swatch input[type="color"] { width: 38px; height: 32px; border: 1px solid var(--line-strong); border-radius: 7px; padding: 0; background: none; cursor: pointer; }
+  .swatch-name { display: grid; grid-template-columns: minmax(0, 1fr) 96px; gap: 8px; align-items: center; }
+  .swatch-name b { font-size: 13px; }
+  .input.sm { padding: 5px 8px; font-size: 12.5px; }
+  input[type="range"] { width: 100%; accent-color: var(--brass); }
+  .media-lib { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; align-content: start; }
+  .media-lib button { position: relative; border: 2px solid transparent; border-radius: 10px; padding: 0; background: var(--card); cursor: pointer; overflow: hidden; display: grid; text-align: left; color: var(--ink-soft); font: inherit; }
+  .media-lib button[aria-pressed="true"] { border-color: var(--brass); }
+  .media-lib img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--sunk); }
+  .media-lib span { padding: 6px 8px; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .media-lib .badge { position: absolute; top: 6px; left: 6px; font-style: normal; }
+  .media-lib.pick { max-height: 56vh; overflow: auto; margin-top: 12px; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+  .media-big { width: 100%; border-radius: 8px; display: block; background: var(--sunk); }
+  .used-on { gap: 4px; justify-items: start; }
+  .ellipsis { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .small { font-size: 12px; }
+}

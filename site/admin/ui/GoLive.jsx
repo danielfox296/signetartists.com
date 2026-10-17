@@ -63,6 +63,24 @@ function named(repo, a) {
   if (Array.isArray(a.ladder)) out.ladder = a.ladder.map((x) => ({ ...x, config: name("rateCard", x.config) }));
   return out;
 }
+// Site styles and the layouts, field by field, as their screens name them.
+const STYLE_FIELDS = {
+  colors: {
+    type: "object",
+    label: "Colours",
+    objectFields: { "--paper": t("Background"), "--paper-sunk": t("Band"), "--rule": t("Rule"), "--rule-strong": t("Border"), "--ink": t("Text"), "--ink-soft": t("Text secondary"), "--ink-faint": t("Text muted"), "--brass": t("Accent"), "--brass-bright": t("Accent light") },
+  },
+  type: { type: "object", label: "Type", objectFields: { headings: t("Headings"), body: t("Body") } },
+  corners: t("Corners"),
+};
+const LAYOUT_FIELDS = {
+  parts: { type: "array", label: "Parts", arrayFields: { id: t("Part"), on: t("Shown") } },
+  ratio: t("Image ratio"),
+  heroRatio: t("Hero ratio"),
+  blurb: t("Description"),
+  tags: t("Tags"),
+  link: t("Link text"),
+};
 const SHARED_FIELDS = Object.fromEntries(Object.values(SHARED).map((s) => [s.file, s.fields]));
 
 function textDiff(a, b) {
@@ -93,6 +111,8 @@ async function describe(repo, base, item) {
     if (!pa || !pb) return [];
     return jsonDiff(pa, pb, {}, VIDEO_FIELDS);
   }
+  if (path === "content/styles.json") return jsonDiff(pa, pb, {}, STYLE_FIELDS);
+  if (path.startsWith("content/layouts/") && !path.endsWith("act-page.json")) return jsonDiff(pa, pb, {}, LAYOUT_FIELDS);
   if (path.startsWith("content/acts/")) return jsonDiff(named(repo, pa), named(repo, pb), adminPageConfig.components, ACT_FIELDS);
   if (path === "content/roster.json") {
     const order = (x) => x && { ...x, order: (x.order || []).map((id) => (repo.json(`content/acts/${id}.json`) || { name: id }).name).join(", ") };
@@ -113,7 +133,8 @@ function routeOf(path) {
   if (path.startsWith("content/pages/")) return ["page", slugOf(path)];
   if (path.startsWith("content/acts/")) return ["act", slugOf(path)];
   if (path === "content/roster.json") return ["acts"];
-  if (path.startsWith("content/layouts/")) return ["layout"];
+  if (path === "content/styles.json") return ["styles"];
+  if (path.startsWith("content/layouts/")) return path.endsWith("act-page.json") ? ["layout"] : ["layouts", { "act-card.json": "card", "post.json": "post", "post-card.json": "postCard", "video-page.json": "video" }[path.split("/").pop()]];
   if (path.startsWith("content/posts/")) return ["post", slugOf(path)];
   if (path.startsWith("content/videos/")) return ["videos", slugOf(path)];
   const k = Object.entries(SHARED).find(([, s]) => s.file === path);
