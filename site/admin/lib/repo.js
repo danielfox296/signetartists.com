@@ -120,14 +120,17 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
 
   // `source` names who made the edit, so an editor knows a change it
   // didn't make and reloads.
+  // A file in a save still running keeps its edit, even one back to how it
+  // was: the save would otherwise settle on the text it is sending.
+  const sending = (p) => !!(st.inflight && st.inflight.has(p));
   function set(p, text, source) {
-    if (st.files.has(p) && st.text.get(p) === text) st.local.delete(p);
+    if (st.files.has(p) && st.text.get(p) === text && !sending(p)) st.local.delete(p);
     else st.local.set(p, { text });
     emit({ edit: p, source });
     schedule();
   }
   function remove(p, source) {
-    if (!st.files.has(p)) st.local.delete(p);
+    if (!st.files.has(p) && !sending(p)) st.local.delete(p);
     else st.local.set(p, null);
     emit({ edit: p, source });
     schedule();
@@ -138,7 +141,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
     schedule();
   }
   function putSha(p, sha) {
-    if (st.files.get(p) === sha) st.local.delete(p);
+    if (st.files.get(p) === sha && !sending(p)) st.local.delete(p);
     else st.local.set(p, { sha });
     emit({ edit: p });
     schedule();
@@ -253,6 +256,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
         if (remote !== st.head) await sync(remote);
         if (!st.local.size) break;
         const snapshot = new Map(st.local);
+        st.inflight = snapshot;
         try {
           const sha = await commit(snapshot, msg || (message ? message([...snapshot.keys()], snapshot) : "Admin edit"));
           if (sha) await settle(snapshot, sha);
@@ -269,6 +273,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
     } catch (e) {
       st.error = e;
     } finally {
+      st.inflight = null;
       st.saving = false;
       emit({ saved: true });
       if (st.local.size) schedule();

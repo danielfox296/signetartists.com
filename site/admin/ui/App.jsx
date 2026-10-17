@@ -11,6 +11,10 @@ import { ask, go, session, storedToken, storeToken, ui, useRepo, useUi, watchRep
 import { clock, DialogHost, Toast, useNow } from "./common.jsx";
 import { PagesScreen } from "./Pages.jsx";
 import { PageEditor, SharedEditor, SHARED } from "./Editor.jsx";
+import { PostsScreen } from "./Posts.jsx";
+import { PostEditor } from "./PostEditor.jsx";
+import { VideosScreen } from "./Videos.jsx";
+import { postPath, postsList, videosList } from "../lib/posts.js";
 import { GoLiveDrawer } from "./GoLive.jsx";
 
 // ------------------------------------------------------------ sign-in
@@ -122,7 +126,7 @@ function Rail() {
   const route = useUi((s) => s.route);
   const open = useUi((s) => s.rail);
   const n = pagesList(session.repo).length;
-  const cur = route[0] === "page" ? "pages" : route[0];
+  const cur = route[0] === "page" ? "pages" : route[0] === "post" ? "posts" : route[0];
   const item = (id, label, kind, count) => (
     <button className="rail-item" aria-current={cur === id ? "page" : undefined} onClick={() => go(id)}>
       <span className={"kdot " + kind} />
@@ -149,6 +153,8 @@ function Rail() {
         <div className="rail-group">
           <div className="rail-label">Content</div>
           {item("pages", "Pages", "page", n)}
+          {item("posts", "Posts", "data", postsList(session.repo).length)}
+          {item("videos", "Videos", "data", videosList(session.repo).length)}
         </div>
         <div className="rail-group">
           <div className="rail-label">Shared</div>
@@ -211,6 +217,20 @@ function crumbs(route) {
       </>
     );
   }
+  if (r === "post") {
+    const d = session.repo.json(postPath(arg));
+    return (
+      <>
+        <button className="hide-sm" onClick={() => go("posts")}>
+          Posts
+        </button>
+        <span className="hide-sm">›</span>
+        <b>{d ? d.root.props.title || "Untitled" : arg}</b>
+      </>
+    );
+  }
+  if (r === "posts") return <b>Posts</b>;
+  if (r === "videos") return <b>Videos</b>;
   if (SHARED[r])
     return (
       <>
@@ -227,9 +247,16 @@ function Shell() {
   const drawer = useUi((s) => s.drawer);
   const pending = useUi((s) => s.pending);
   const status = useStagingStatus();
-  const full = route[0] === "page" || !!SHARED[route[0]];
+  const full = route[0] === "page" || route[0] === "post" || !!SHARED[route[0]];
   const dirty = session.repo.st.local.size;
-  const pagePathNow = route[0] === "page" ? (session.repo.json(pagePath(route[1])) || { root: { props: {} } }).root.props.path : null;
+  const pagePathNow =
+    route[0] === "page"
+      ? (session.repo.json(pagePath(route[1])) || { root: { props: {} } }).root.props.path
+      : route[0] === "post"
+        ? `/blog/${route[1]}/`
+        : route[0] === "videos" && route[1]
+          ? `/video/${route[1]}/`
+          : null;
 
   useEffect(() => {
     const k = (e) => {
@@ -258,7 +285,10 @@ function Shell() {
   useEffect(() => {
     let alive = true;
     baseline(session.api, session.repo)
-      .then((b) => alive && ui.set({ pending: pendingFiles(b, session.repo).length }))
+      .then((b) => {
+        const list = pendingFiles(b, session.repo);
+        if (alive) ui.set({ pending: list.length, pendingPaths: new Set(list.map((f) => f.path)) });
+      })
       .catch(() => {});
     return () => {
       alive = false;
@@ -268,6 +298,9 @@ function Shell() {
   let screen;
   if (route[0] === "page") screen = <PageEditor key={route[1]} slug={route[1]} />;
   else if (SHARED[route[0]]) screen = <SharedEditor key={route[0]} which={route[0]} />;
+  else if (route[0] === "post") screen = <PostEditor key={route[1]} slug={route[1]} />;
+  else if (route[0] === "posts") screen = <PostsScreen />;
+  else if (route[0] === "videos") screen = <VideosScreen slug={route[1]} />;
   else screen = <PagesScreen />;
 
   return (

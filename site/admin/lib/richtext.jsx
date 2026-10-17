@@ -29,7 +29,7 @@ const LinkIcon = () => (
 // A link is set, changed or taken off from one button. The browser's own
 // prompt asks for the address: unlike a dialog in the page it leaves the
 // editor focused, and Puck only takes edits from the focused field.
-function LinkControl({ editor, readOnly }) {
+export function LinkControl({ editor, readOnly }) {
   const active = !!editor && editor.isActive("link");
   return (
     <RichTextMenu.Control

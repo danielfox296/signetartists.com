@@ -19,9 +19,9 @@ import { fileLabel } from "../lib/labels.js";
 
 const usePuck = createUsePuck();
 const ROOT = "root:default-zone";
-const PREFIX = STAGING_URL + "/";
+export const PREFIX = STAGING_URL + "/";
 
-const VIEWPORTS = [
+export const VIEWPORTS = [
   { width: 1280, height: "auto", label: "Desktop", icon: "Monitor" },
   { width: 390, height: "auto", label: "Phone", icon: "Smartphone" },
 ];
@@ -61,6 +61,9 @@ function Canvas({ children, document: d }) {
 
 // Puck renders the canvas through a portal: the site context is passed in again.
 let currentCtx = null;
+export const setCanvasContext = (ctx) => {
+  currentCtx = ctx;
+};
 function CanvasContext({ children }) {
   return <Site.Provider value={currentCtx}>{children}</Site.Provider>;
 }
@@ -68,11 +71,11 @@ function CanvasContext({ children }) {
 // Puck's props stay the same objects from render to render: a new
 // overrides object makes Puck rebuild the canvas, and the copy being typed
 // loses focus after one letter.
-const PUCK_IFRAME = { enabled: true, waitForStyles: false };
+export const PUCK_IFRAME = { enabled: true, waitForStyles: false };
 let OVERRIDES = null;
-const overrides = () => (OVERRIDES ||= { iframe: Canvas, componentOverlay: Overlay });
+export const overrides = () => (OVERRIDES ||= { iframe: Canvas, componentOverlay: Overlay });
 // An onChange whose identity never changes, calling the latest handler.
-function useStable(fn) {
+export function useStable(fn) {
   const ref = useRef(fn);
   ref.current = fn;
   return useCallback((...a) => ref.current(...a), []);
@@ -84,7 +87,7 @@ function Overlay({ children, componentType, isSelected, hover }) {
 
 // ------------------------------------------------------------ left column
 
-function SectionList({ config }) {
+export function SectionList({ config, name = sectionName }) {
   const content = usePuck((s) => s.appState.data.content);
   const sel = usePuck((s) => s.appState.ui.itemSelector);
   const selected = usePuck((s) => s.selectedItem);
@@ -157,7 +160,7 @@ function SectionList({ config }) {
         <span className="t">Header</span>
       </button>
       {content.map((c, i) => {
-        const n = sectionName(c, config.components);
+        const n = name(c, config.components);
         const target = drag && drag.to === i && drag.from !== i;
         return (
           <div
@@ -191,7 +194,7 @@ function SectionList({ config }) {
   );
 }
 
-function AddMenu({ label, groups, onPick }) {
+export function AddMenu({ label, groups, onPick }) {
   const [at, setAt] = useState(null);
   const [q, setQ] = useState("");
   const ref = useOutside(() => setAt(null));
@@ -318,7 +321,7 @@ function ViewTools({ url }) {
 
 // The canvas is drawn at the view's real width and scaled to fit, so
 // desktop shows the desktop layout on any screen.
-function Middle({ url }) {
+export function Middle({ url }) {
   const [width] = useViewWidth();
   const box = useRef(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -406,7 +409,7 @@ function Layout({ config, title, kind, url, shared }) {
 }
 
 // Re-read the file into Puck when it changes from outside (a merge, a revert).
-function useExternal(path) {
+export function useExternal(path) {
   const [k, setK] = useState(0);
   useEffect(
     () =>
@@ -418,7 +421,7 @@ function useExternal(path) {
   return k;
 }
 
-const ordered = (orig, next) => {
+export const ordered = (orig, next) => {
   const out = {};
   for (const k of Object.keys(orig)) if (k in next) out[k] = next[k];
   for (const k of Object.keys(next)) if (!(k in out)) out[k] = next[k];

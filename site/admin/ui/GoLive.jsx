@@ -25,6 +25,8 @@ import { ask, go, session, toast, ui, useRepo } from "../state.js";
 import { when } from "./common.jsx";
 import { adminPageConfig, assetUrl, pageSettingsFields } from "./fields.jsx";
 import { SHARED } from "./Editor.jsx";
+import { adminPostConfig, postSettingsFields } from "./PostEditor.jsx";
+import { VIDEO_FIELDS } from "../lib/posts.js";
 
 const ORDER = { page: 0, shared: 1, data: 2, media: 3 };
 const SHARED_FIELDS = Object.fromEntries(Object.values(SHARED).map((s) => [s.file, s.fields]));
@@ -48,6 +50,14 @@ async function describe(repo, base, item) {
   if (path.startsWith("content/pages/")) {
     if (!pa || !pb) return [];
     return jsonDiff(pa, pb, adminPageConfig.components, pageSettingsFields);
+  }
+  if (path.startsWith("content/posts/")) {
+    if (!pa || !pb) return [];
+    return jsonDiff(pa, pb, adminPostConfig.components, postSettingsFields);
+  }
+  if (path.startsWith("content/videos/")) {
+    if (!pa || !pb) return [];
+    return jsonDiff(pa, pb, {}, VIDEO_FIELDS);
   }
   return jsonDiff(pa, pb, adminPageConfig.components, SHARED_FIELDS[path] || null);
 }

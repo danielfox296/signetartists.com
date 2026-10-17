@@ -26,7 +26,7 @@ export const blocks = {
     render: ({ html }) => <H as="div" className="blog-prose" html={html} />,
   },
   Subhead: {
-    label: "Subhead",
+    label: "Subheading",
     fields: { text: text("Text"), level: { type: "select", label: "Level", options: [{ label: "H2", value: 2 }, { label: "H3", value: 3 }] }, anchor: text("Anchor") },
     render: ({ text: t, level = 2, anchor }) => {
       const Tag = `h${level}`;
@@ -50,8 +50,8 @@ export const blocks = {
     ),
   },
   StatCallout: {
-    label: "Figure callout",
-    fields: { number: text("Figure"), label: text("Label"), source: text("Source") },
+    label: "Big number",
+    fields: { number: text("Number"), label: text("Label"), source: text("Source") },
     render: ({ number, label, source }) => (
       <div className="blog-stat">
         <div className="blog-stat-number">{String(number ?? "")}</div>
@@ -62,11 +62,11 @@ export const blocks = {
   },
   DataViz: {
     label: "Chart",
-    fields: { chart_type: text("Chart"), title: text("Title"), caption: text("Caption"), source: text("Source"), data: { type: "array", label: "Data", getItemSummary: (d) => d.label, arrayFields: { label: text("Label"), value: { type: "number", label: "Value" } } } },
+    fields: { chart_type: { type: "select", label: "Kind", options: [{ label: "Bar", value: "bar" }, { label: "Line", value: "line" }, { label: "Comparison", value: "comparison" }] }, title: text("Title"), caption: text("Caption"), source: text("Source"), data: { type: "array", label: "Data", getItemSummary: (d) => d.label, arrayFields: { label: text("Label"), value: { type: "number", label: "Value" } } } },
     render: (b) => <Raw html={renderChart(b)} />,
   },
   Figure: {
-    label: "Picture",
+    label: "Photo",
     fields: { src: text("File"), alt: text("Alt text"), caption: text("Caption"), source: text("Source") },
     render: function FigureRender({ src, alt, caption, source }) {
       const href = useHref();
@@ -95,7 +95,7 @@ export const blocks = {
     ),
   },
   ComparisonTable: {
-    label: "Table",
+    label: "Comparison table",
     fields: {
       title: text("Title"),
       columns: { type: "array", label: "Columns", getItemSummary: (c) => c.text, arrayFields: { text: text("Heading") } },
@@ -138,7 +138,7 @@ export const blocks = {
     ),
   },
   Methodology: {
-    label: "Methodology",
+    label: "How we measured",
     fields: { what_we_measured: area("What we measured"), sample: area("Sample"), date_range: text("Date range"), caveats: area("Caveats") },
     render: (b) => (
       <details className="blog-methodology">
@@ -171,7 +171,7 @@ export const blocks = {
     },
   },
   RelatedPosts: {
-    label: "Keep reading",
+    label: "Related posts",
     fields: { posts: { type: "array", label: "Posts", getItemSummary: (p) => p.slug, arrayFields: { slug: text("Post") } } },
     render: function RelatedRender({ posts = [] }) {
       const s = useSite();
@@ -274,7 +274,7 @@ export const blocks = {
     },
   },
   References: {
-    label: "References",
+    label: "Sources",
     fields: { heading: text("Heading"), items: { type: "array", label: "Sources", getItemSummary: (r) => r.text, arrayFields: { text: area("Citation"), url: text("Link"), link_text: text("Link text") } } },
     render: ({ heading, items = [] }) =>
       items.length ? (
@@ -315,52 +315,62 @@ function Block({ c }) {
   return <R {...c.props} puck={{ isEditing: false }} />;
 }
 
-// The article: header, hero, key takeaways first, the body, then the call
-// to action and the related posts wherever they sit in the list.
-export function PostArticle({ doc }) {
+// The article's frame: the header and hero, then what goes inside. The
+// site draws a post with it, and so does the editor.
+export function PostFrame({ p, minutes, children }) {
   const s = useSite();
   const href = useHref();
-  const p = doc.root.props;
   const author = p.author || {};
+  const sep = <span className="blog-byline-sep" aria-hidden="true">{"·"}</span>;
+  return (
+    <section className="section section--top">
+      <div className="wrap">
+        <article className="blog-article">
+          <header className="blog-header">
+            <p className="eyebrow">{p.eyebrow}</p>
+            <h1 className="h1 blog-headline">{p.title}</h1>
+            <p className="lede blog-dek">{p.dek}</p>
+            <p className="blog-byline">
+              <span className="blog-byline-author">{author.name}</span>{" "}
+              {author.role ? <>{sep}{" "}<span>{author.role}</span>{" "}</> : null}
+              {sep}{" "}
+              <time dateTime={p.date}>{s.model.dateDisplay(p.date)}</time>{" "}
+              {sep}{" "}
+              <span>{`${minutes} min read`}</span>
+            </p>
+          </header>
+          {p.hero && p.hero.src ? (
+            <figure className="blog-hero">
+              <Pic class="media" src={href(p.hero.src)} alt={p.hero.alt} width="1600" height="900" loading="eager" fetchpriority="high" />
+              {p.hero.caption ? <figcaption className="blog-hero-caption">{p.hero.caption}</figcaption> : null}
+            </figure>
+          ) : null}
+          {children}
+        </article>
+      </div>
+    </section>
+  );
+}
+
+// The article: key takeaways first, the body, then the call to action and
+// the related posts wherever they sit in the list.
+export function PostArticle({ doc }) {
+  const s = useSite();
   const kt = doc.content.filter((c) => c.type === "KeyTakeaways");
   const cta = doc.content.filter((c) => c.type === "PostCta");
   const rel = doc.content.filter((c) => c.type === "RelatedPosts");
   const body = doc.content.filter((c) => !["KeyTakeaways", "PostCta", "RelatedPosts"].includes(c.type));
-  const sep = <span className="blog-byline-sep" aria-hidden="true">{"·"}</span>;
   const last = (list) => (list.length ? [list[list.length - 1]] : []);
   return (
     <>
-      <section className="section section--top">
-        <div className="wrap">
-          <article className="blog-article">
-            <header className="blog-header">
-              <p className="eyebrow">{p.eyebrow}</p>
-              <h1 className="h1 blog-headline">{p.title}</h1>
-              <p className="lede blog-dek">{p.dek}</p>
-              <p className="blog-byline">
-                <span className="blog-byline-author">{author.name}</span>{" "}
-                {author.role ? <>{sep}{" "}<span>{author.role}</span>{" "}</> : null}
-                {sep}{" "}
-                <time dateTime={p.date}>{s.model.dateDisplay(p.date)}</time>{" "}
-                {sep}{" "}
-                <span>{`${s.model.readingTime(doc)} min read`}</span>
-              </p>
-            </header>
-            {p.hero && p.hero.src ? (
-              <figure className="blog-hero">
-                <Pic class="media" src={href(p.hero.src)} alt={p.hero.alt} width="1600" height="900" loading="eager" fetchpriority="high" />
-                {p.hero.caption ? <figcaption className="blog-hero-caption">{p.hero.caption}</figcaption> : null}
-              </figure>
-            ) : null}
-            {last(kt).map((c) => <Block key={c.props.id} c={c} />)}
-            <div className="blog-body">
-              {body.map((c) => <Block key={c.props.id} c={c} />)}
-            </div>
-            {last(cta).map((c) => <Block key={c.props.id} c={c} />)}
-            {last(rel).map((c) => <Block key={c.props.id} c={c} />)}
-          </article>
+      <PostFrame p={doc.root.props} minutes={s.model.readingTime(doc)}>
+        {last(kt).map((c) => <Block key={c.props.id} c={c} />)}
+        <div className="blog-body">
+          {body.map((c) => <Block key={c.props.id} c={c} />)}
         </div>
-      </section>
+        {last(cta).map((c) => <Block key={c.props.id} c={c} />)}
+        {last(rel).map((c) => <Block key={c.props.id} c={c} />)}
+      </PostFrame>
       <Raw html={ANCHOR_SCRIPT} />
     </>
   );

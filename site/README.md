@@ -31,6 +31,10 @@ Run everything from the repo root.
     `lib/publish.js` Go live, the saves and go-lives lists, and revert; `lib/diff.js` readable diffs; `lib/merge3.js` line merge for revert
   - `ui/Editor.jsx` pages and shared parts in Puck; `ui/fields.jsx` the picture, URL and Indexed fields and the config the
     admin edits with; `ui/Pages.jsx` the pages list; `ui/GoLive.jsx` the Go live drawer
+  - `ui/Posts.jsx` the posts list, new post and delete; `ui/PostEditor.jsx` a post in Puck with its settings;
+    `ui/Videos.jsx` the videos list and form; `lib/posts.js` what a post's or video's new URL or delete also changes
+    (the posts that list it, a redirect); `lib/postrich.jsx` a post's copy (paragraphs and lists), and the paragraphs
+    an edit didn't touch keeping their stored text
 - `scripts/` the converter (`convert.py`, `sections.py`), the proof (`proof.py`, `domdiff.py`)
 - `proof/` the last proof report, the converter report, and `accepted.json`
 
