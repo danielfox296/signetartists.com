@@ -59,12 +59,12 @@ const LogoStrip = {
   label: "Logo strip",
   fields: { band: shellFields.band, label: shellFields.label, showAlso: { type: "radio", label: "Line under", options: [{ label: "No", value: false }, { label: "Yes", value: true }] }, blocks: { type: "slot", label: "After" } },
   defaultProps: { band: "ruled", label: "Trusted and booked by", showAlso: false, blocks: [] },
-  render: function LogoStripRender({ band, label, showAlso, blocks: Blocks }) {
+  render: function LogoStripRender({ band, label, showAlso, wrapStyle, blocks: Blocks }) {
     const s = useSite();
     const c = s.model.c.logoStrip;
     return (
       <section className={cx(bandClass(band), "credits")} aria-label={label || undefined}>
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           <p className="eyebrow">{c.label}</p>
           <ul className="credits-list" aria-label={c.label}>
             {c.logos.map((l) => {
@@ -95,14 +95,14 @@ const PagesAndPosts = {
     },
   },
   defaultProps: { band: "ruled", heading: "All pages", groups: [] },
-  render: function PagesAndPostsRender({ band, heading, groups }) {
+  render: function PagesAndPostsRender({ band, heading, groups, wrapStyle }) {
     const s = useSite();
     const href = useHref();
     const url = s.url;
     const { rows, posts } = s.model.hubIndex(url, groups || []);
     return (
       <section className={cx(bandClass(band), "hub-index-band")}>
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           <nav className="hub-index" aria-label={heading}>
             <p className="eyebrow">{heading}</p>
             <dl className="hub-index-list">
@@ -146,7 +146,7 @@ const HomeHero = {
     frames: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: imageFields },
     framesHidden: text("Hidden"),
   },
-  render: ({ label, frames, framesHidden, title, titleStyle, lede, ledeStyle, buttons }) => (
+  render: ({ label, frames, framesHidden, title, titleStyle, lede, ledeStyle, buttons, wrapStyle }) => (
     <section className="hero-cine" aria-label={label || undefined}>
       <div className="hero-cine__frames" aria-hidden={framesHidden || "false"}>
         {(frames || []).map((im, i) => (
@@ -157,7 +157,7 @@ const HomeHero = {
         ))}
       </div>
       <div className="hero-cine__scrim" aria-hidden="true"></div>
-      <div className="wrap hero-cine__copy">
+      <div className="wrap hero-cine__copy" style={css(wrapStyle)}>
         <H as="h1" className="h1 display" style={css(titleStyle)} html={title} />
         <H as="p" className="hero-lede" style={css(ledeStyle)} html={lede} />
         <Buttons items={buttons || []} />
@@ -169,8 +169,8 @@ const HomeHero = {
 const RangeStrip = {
   label: "Range strip",
   fields: { label: shellFields.label, image: { type: "object", label: "Picture", objectFields: imageFields } },
-  render: ({ label, image }) => (
-    <section className="range-strip" aria-label={label || undefined}>
+  render: ({ label, image, wrapStyle }) => (
+    <section className="range-strip" aria-label={label || undefined} style={css(wrapStyle)}>
       <Img im={image} sizes={SIZES.screen} />
     </section>
   ),
@@ -180,10 +180,10 @@ const RangeStrip = {
 const CoverStrip = {
   label: "Cover strip",
   fields: { tiles: { type: "array", label: "Sleeves", getItemSummary: (t) => t.alt, arrayFields: { src: text("File"), alt: text("Alt text") } }, note: rich("Note") },
-  render: function CoverStripRender({ tiles, note }) {
+  render: function CoverStripRender({ tiles, note, wrapStyle }) {
     const href = useHref();
     return (
-      <section className="section--night cover-strip">
+      <section className="section--night cover-strip" style={css(wrapStyle)}>
         <div className="cover-strip-inner">
           {(tiles || []).map((t, i) => <Pic key={i} src={href(t.src)} alt={t.alt} loading="lazy" decoding="async" width="300" height="300" sizes={SIZES.strip} />)}
         </div>
@@ -209,7 +209,7 @@ const CoverWall = {
     textStyle: text("Text style"),
     flip: { type: "radio", label: "Side", options: [{ label: "Words left", value: false }, { label: "Words right", value: true }] },
   },
-  render: function CoverWallRender({ flip, eyebrow, title, titleStyle, text: body, textStyle, textAt, tiles, notes }) {
+  render: function CoverWallRender({ flip, eyebrow, title, titleStyle, text: body, textStyle, textAt, tiles, notes, wrapStyle }) {
     const href = useHref();
     const words = (
       <div className="wall-text" key="words">
@@ -229,7 +229,7 @@ const CoverWall = {
     ));
     const at = textAt || 0;
     return (
-      <section className={cx("section--night cover-wall", flip && "cover-wall--flip")}>
+      <section className={cx("section--night cover-wall", flip && "cover-wall--flip")} style={css(wrapStyle)}>
         <div className="wall-grid">
           {[...figs.slice(0, at), words, ...figs.slice(at)]}
         </div>
@@ -251,7 +251,7 @@ const actFor = (s, act) => (act ? s.model.ACT_BY_ID[act] : s.model.pageAct(s.pag
 const ActHeader = {
   label: "Act header",
   fields: { act: text("Act"), button: text("Button") },
-  render: function ActHeaderRender({ act, button }) {
+  render: function ActHeaderRender({ act, button, wrapStyle }) {
     const s = useSite();
     const href = useHref();
     const m = s.model;
@@ -265,7 +265,7 @@ const ActHeader = {
     else if (a.img) media = <Pic class="act-video-photo" src={href("/img/" + a.img)} alt={a.alt || ""} decoding="async" sizes={SIZES.wrap} />;
     return (
       <section className="section section--top act-hero">
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           <div className="heading">
             {a.style ? <p className="eyebrow eyebrow--slab">{a.style}</p> : null}
             <h1 className="h1 display">{a.name}</h1>
@@ -286,14 +286,14 @@ const ActHeader = {
 const ActAbout = {
   label: "Act about",
   fields: { act: text("Act"), band: shellFields.band },
-  render: function ActAboutRender({ act, band }) {
+  render: function ActAboutRender({ act, band, wrapStyle }) {
     const s = useSite();
     const a = actFor(s, act);
     const paras = (a && a.identity) || [];
     if (!paras.length) return null;
     return (
       <section className={bandClass(band || "ruled")}>
-        <div className="wrap wrap--narrow">
+        <div className="wrap wrap--narrow" style={css(wrapStyle)}>
           {paras.map((t, i) => <p key={i} className="prose">{t}</p>)}
         </div>
       </section>
@@ -306,7 +306,7 @@ const ActAbout = {
 const ActClose = {
   label: "Act close",
   fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede"), button: text("Button") },
-  render: function ActCloseRender({ act, band, title, lede, button }) {
+  render: function ActCloseRender({ act, band, title, lede, button, wrapStyle }) {
     const s = useSite();
     const a = actFor(s, act);
     if (!a) return null;
@@ -314,7 +314,7 @@ const ActClose = {
     const t = typeof title === "string" ? title.replace(/\{name\}/g, esc(a.name)) : title;
     return (
       <section className={bandClass(band || "ruled")}>
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a date", href: `/contact/?act=${a.id}`, cls: "btn" }]} />
         </div>
       </section>
@@ -344,14 +344,14 @@ const ActOwn = {
 const ActSizes = {
   label: "Act sizes",
   fields: { act: text("Act"), title: rich("Title"), note: rich("Note") },
-  render: function ActSizesRender({ act, title, note }) {
+  render: function ActSizesRender({ act, title, note, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const a = actFor(s, act);
     if (!a || !(a.ladder || []).length) return null;
     return (
       <section className="section section--ruled section--sunk" id="configurations">
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           <H as="h2" className="h3" html={title} />
           <div className="table-scroll">
             <table className="rate-table tnum">
@@ -380,7 +380,7 @@ const ActSizes = {
 const Setlist = {
   label: "Setlist",
   fields: { act: text("Act"), title: rich("Title"), more: rich("Note") },
-  render: function SetlistRender({ act, title, more }) {
+  render: function SetlistRender({ act, title, more, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const a = actFor(s, act);
@@ -415,7 +415,7 @@ const Setlist = {
     }
     return (
       <section className="section section--ruled">
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           <H as="h2" className="h3" html={title} />
           {sl.note ? <p className="note">{sl.note}</p> : null}
           {body}
@@ -431,9 +431,9 @@ const VendorList = {
     categories: { type: "array", label: "Categories", getItemSummary: (c) => c.label, arrayFields: { id: text("Anchor"), label: text("Name"), ask: { type: "textarea", label: "Empty line" } } },
     vendors: { type: "array", label: "Vendors", getItemSummary: (v) => v.name, arrayFields: { name: text("Name"), url: text("Website"), location: text("Where"), note: { type: "textarea", label: "Line" }, category: text("Category") } },
   },
-  render: ({ categories, vendors }) => (
+  render: ({ categories, vendors, wrapStyle }) => (
     <section className="section section--ruled">
-      <div className="wrap vendor-cats">
+      <div className="wrap vendor-cats" style={css(wrapStyle)}>
         {(categories || []).map((cat) => {
           const rows = (vendors || []).filter((v) => v.category === cat.id);
           return (
@@ -499,7 +499,7 @@ const ContactForm = {
     return (
       <>
         <section className={bandClass(p.band || "top")}>
-          <div className="wrap">
+          <div className="wrap" style={css(p.wrapStyle)}>
             <div className="split contact-grid">
               <div>
                 <div className="heading">
@@ -572,14 +572,14 @@ const Roster = {
     band: shellFields.band,
     script: { type: "radio", label: "Act script", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
   },
-  render: function RosterRender({ band, title, note, empty, lanes, script }) {
+  render: function RosterRender({ band, title, note, empty, lanes, script, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const href = useHref();
     return (
       <>
         <section className={bandClass(band)}>
-          <div className="wrap">
+          <div className="wrap" style={css(wrapStyle)}>
             <H as="h2" className="h3" html={title} />
             <H as="p" className="note" html={note} />
             <RosterFilters />
@@ -702,7 +702,7 @@ const SongCatalog = {
   label: "Song catalog",
   fields: { band: shellFields.band, anchor: shellFields.anchor, blocks: { type: "slot", label: "Heading" }, empty: rich("Nothing found") },
   defaultProps: { band: "sunk", anchor: "catalog", blocks: [], empty: "Nothing here by that name." },
-  render: function SongCatalogRender({ band, anchor, blocks: Blocks, empty }) {
+  render: function SongCatalogRender({ band, anchor, blocks: Blocks, empty, wrapStyle }) {
     const s = useSite();
     const songs = s.model.c.repertoire;
     const present = new Set(songs.flatMap((x) => [...x.moments, ...x.flags]));
@@ -724,7 +724,7 @@ const SongCatalog = {
       `<ul class="catalog-list" data-catalog-list>\n${rows}\n</ul>`;
     return (
       <section className={cx(bandClass(band), "catalog")} id={anchor || undefined}>
-        <div className="wrap">
+        <div className="wrap" style={css(wrapStyle)}>
           {Blocks ? <Blocks /> : null}
           <Raw html={controls} />
           <H as="p" className="catalog-empty note" data-catalog-empty="" hidden html={empty} />

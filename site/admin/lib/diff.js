@@ -1,6 +1,7 @@
 /* What changed in a file, as a person reads it: the words that changed in
    each piece of copy, and the sections added, removed or moved. */
 import { htmlText } from "../../src/lib/util.js";
+import { describeWidth, getDecl } from "./widths.js";
 
 const isComp = (x) => x && typeof x === "object" && typeof x.type === "string" && x.props && typeof x.props === "object";
 
@@ -8,6 +9,24 @@ const isComp = (x) => x && typeof x === "object" && typeof x.type === "string" &
 // id, so a section that moves keeps its key. `fields` names what each key
 // is called where it sits.
 function leaves(v, key, out, comps, labels, label, owner, fields) {
+  // A section's or block's width reads as its width ("Narrow, Center"), not as the style it is kept in.
+  const w = fields && fields._width && fields._width.width;
+  if (w && v && typeof v === "object" && !Array.isArray(v)) {
+    const at = w.prop.split(".");
+    if (at.length === 1 && (at[0] in v || "narrow" in v)) {
+      const { [at[0]]: style, narrow, ...rest } = v;
+      const said = describeWidth(style, w.kind) || (narrow ? "Narrow" : "");
+      if (said) out.set(`${key}/_width`, { v: said, label: [...label, "Width"], owner, whole: true });
+      const shown = getDecl(style, "max-width") != null || getDecl(style, "margin-left") != null || narrow;
+      if (style && !shown) rest[at[0]] = style;
+      v = rest;
+    } else if (at.length === 2 && v[at[0]] && typeof v[at[0]] === "object" && at[1] in v[at[0]]) {
+      const { [at[1]]: style, ...pic } = v[at[0]];
+      const said = describeWidth(style, w.kind);
+      if (said) out.set(`${key}/_width`, { v: said, label: [...label, "Width"], owner, whole: true });
+      v = { ...v, [at[0]]: said ? pic : v[at[0]] };
+    }
+  }
   if (typeof v === "string" || typeof v === "number" || typeof v === "boolean") {
     out.set(key, { v: String(v), label, owner });
     return;
@@ -25,6 +44,12 @@ function leaves(v, key, out, comps, labels, label, owner, fields) {
   if (v && typeof v === "object") {
     for (const [k, x] of Object.entries(v)) {
       if (k === "id" || k.startsWith("_") || k === "notes") continue;
+      // A title's, lede's or paragraph's own width, likewise.
+      if (typeof x === "string" && /^style$|Style$/.test(k) && (getDecl(x, "max-width") != null || getDecl(x, "margin-left") != null)) {
+        const name = k === "style" ? "Width" : labels.human(k.replace(/Style$/, "")) + " width";
+        out.set(`${key}/${k}`, { v: describeWidth(x, "box"), label: [...label, name], owner, whole: true });
+        continue;
+      }
       const f = fields && fields[k];
       const sub = f ? (f.type === "object" ? f.objectFields : f.type === "array" ? f.arrayFields : null) : null;
       const name = k === "root" || k === "props" || k === "content" || (f && f.type === "slot") ? null : (f && f.label) || labels.human(k);
@@ -141,7 +166,8 @@ export function jsonDiff(a, b, registry, rootFields) {
     }
     const pa = plain(y.v);
     const pb = plain(x.v);
-    out.push({ kind: "changed", where: tidy(x.label), parts: pa === pb ? [{ t: "same", s: "Formatting" }] : clip(wordDiff(pa, pb)) });
+    const parts = x.whole ? [{ t: "del", s: pa }, { t: "ins", s: pb }].filter((p) => p.s) : clip(wordDiff(pa, pb));
+    out.push({ kind: "changed", where: tidy(x.label), parts: pa === pb ? [{ t: "same", s: "Formatting" }] : parts });
   }
   for (const [k, y] of la) {
     if (lb.has(k) || (y.owner && !cb.has(y.owner))) continue;

@@ -71,6 +71,11 @@ export function Shell({ p, cls, wrap = true, children }) {
   );
 }
 
+// Markup written as is gets a box of its own only when it is given a width.
+export function Boxed({ style, children }) {
+  return style ? <div style={css(style)}>{children}</div> : children;
+}
+
 // An <img>. The static build writes it as plain markup: React 19 would
 // otherwise add a <link rel="preload"> for every image not marked lazy,
 // which the site has never had. Given `sizes`, a local picture gains a srcset
@@ -136,12 +141,12 @@ export function Img({ im, sizes }) {
   );
 }
 
-export function Buttons({ items, cls }) {
+export function Buttons({ items, cls, style }) {
   const href = useHref();
   if (items == null) return null;
   // Buttons sit on their own lines in the markup, so a space separates them.
   return (
-    <div className={cx("btn-row", cls)}>
+    <div className={cx("btn-row", cls)} style={css(style)}>
       {items.map((b, i) => (
         <Fragment key={i}>
           {i ? " " : null}

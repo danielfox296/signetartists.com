@@ -41,6 +41,18 @@ Run everything from the repo root.
   - `ui/Editor.jsx` pages, shared parts and the act page layout in Puck; `ui/fields.jsx` the picture, URL, Indexed, act
     and filter-choice fields and the config the admin edits with; `ui/Pages.jsx` the pages list; `ui/GoLive.jsx` the Go
     live drawer
+  - The canvas is the site: Puck's frame gets the site's `styles.css` and Puck's own styles, never the admin's
+    (`syncHostStyles: false`). The site's rules that join one element to the next (`.heading + .split`,
+    `.breadcrumb + .section--top`, `.blog-prose > :first-child`) are given `:where()` variants in the canvas's copy of
+    the stylesheet that also match across Puck's boxes, drop zones and rich text editor, keeping their order and
+    specificity (`acrossPuck` in `ui/Editor.jsx`). An empty slot takes no room unless something is dragged.
+  - Widths (`ui/Width.jsx`, `lib/widths.js`): every section and block has Width (Narrow 42rem, Wide 64rem, Full,
+    Custom in rem) and Alignment (Left, Center), and a handle on the selected one's right edge in the canvas that
+    snaps to them. It writes the style the item already keeps for its box: a section's `wrapStyle` (its `.wrap`, or
+    the section itself for the range strip, cover strip, cover wall and Custom HTML), a heading's `headingStyle`, a
+    call to action's `boxStyle`, a picture's `image.style` (`width: …; height: auto;`), else `style`, as
+    `max-width: …`. Left for a section lines it up with the page column. Typed CSS and class fields are kept and
+    drawn but no longer shown
   - `ui/Acts.jsx` the roster and the filter choices; `ui/Act.jsx` one act's form; `ui/Preview.jsx` the site drawn in a
     frame at desktop or phone width; `lib/acts.js` every change to acts, the roster, crop points and act pages
   - `ui/Posts.jsx` the posts list, new post and delete; `ui/PostEditor.jsx` a post in Puck with its settings;

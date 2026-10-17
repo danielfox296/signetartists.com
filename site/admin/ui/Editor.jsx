@@ -16,6 +16,7 @@ import { go, session, useRepo } from "../state.js";
 import { Badge, kindOf, Toggle, useOutside } from "./common.jsx";
 import { adminPageConfig, assetUrl, clean, conform, guarded, imageField, newItem, place } from "./fields.jsx";
 import { writePage } from "./Pages.jsx";
+import { HANDLE_CSS, WidthHandle } from "./Width.jsx";
 import { fileLabel } from "../lib/labels.js";
 
 const usePuck = createUsePuck();
@@ -28,18 +29,136 @@ export const VIEWPORTS = [
 ];
 
 
+// What the canvas has besides the site's stylesheet and Puck's own: the
+// outline and tint in the colour of the kind under the pointer, the faded
+// context around a header, footer or act page, and the page laid out as the
+// site lays it out around what Puck adds. Puck's root sits between <body>
+// and <main>, so it is the column <main> grows in; an empty slot takes no
+// room, as on the site, except while something is dragged; words typed on
+// the page run on inline as the site's do (Puck boxes them), and wrap as
+// the site's do (the browser breaks long words in anything editable).
+const CANVAS_CSS = `html{scroll-behavior:auto}
+#frame-root{display:flex;flex-direction:column;height:auto}
+[data-puck-entry]:not([data-puck-dragging]) [data-puck-dropzone]:empty{min-height:0!important;outline:0!important}
+[data-puck-overlay-portal][class*="_InlineTextField"]{display:inline}
+:is(span,label)>[data-puck-overlay-portal],:is(span,label)>[data-puck-overlay-portal] :is(div,p){display:inline}
+[data-puck-overlay-portal][contenteditable],[data-puck-overlay-portal] [contenteditable]{overflow-wrap:inherit;line-break:inherit}
+:root{--puck-color-selection-bg:color-mix(in srgb,#86ace6 8%,transparent);--puck-color-selection-border:#86ace6;--puck-slot-color-bg:transparent}
+.k-overlay{--zc:#86ace6;height:100%;width:100%;--puck-color-selection-border:var(--zc);--puck-color-selection-bg:color-mix(in srgb,var(--zc) 10%,transparent)}
+.k-overlay.k-shared{--zc:#b799e2}
+.k-overlay.k-data{--zc:#63c5ba}
+.k-overlay.k-layout{--zc:#e8a172}
+.k-context{opacity:.45;pointer-events:none}
+${HANDLE_CSS}`;
+
+// The site's rules that tie one element to the next (".heading + .split",
+// ".breadcrumb + .section--top") or a box to its first child
+// (".blog-prose > :first-child") are made to match across what Puck puts
+// between them on the canvas: the box around each section and block, the
+// zone that holds them, and the rich text editor around copy. Each rule
+// keeps its place and its specificity (the added parts are :where()).
+const IN = ":where([data-puck-component])";
+const ACROSS = {
+  "+": (a, b) => [`${IN}:has(> ${a}) + ${IN} > ${b}`, `${a} + :where([data-puck-dropzone]) > :where([data-puck-component]:first-child) > ${b}`],
+  ">": (a, b) => [`${a} > :where([data-puck-overlay-portal]) :where(.ProseMirror) > ${b}`],
+};
+// One selector as compounds and the combinators between them.
+function compounds(sel) {
+  const parts = [];
+  let cur = "";
+  let depth = 0;
+  let quote = null;
+  for (let i = 0; i < sel.length; i++) {
+    const ch = sel[i];
+    if (quote) {
+      cur += ch;
+      if (ch === quote && sel[i - 1] !== "\\") quote = null;
+    } else if (ch === '"' || ch === "'") (quote = ch), (cur += ch);
+    else if (ch === "(" || ch === "[") depth++, (cur += ch);
+    else if (ch === ")" || ch === "]") depth--, (cur += ch);
+    else if (!depth && /[\s>+~]/.test(ch)) {
+      let j = i;
+      let comb = " ";
+      while (j < sel.length && /[\s>+~]/.test(sel[j])) {
+        if (sel[j] !== " " && sel[j] !== "\n" && sel[j] !== "\t") comb = sel[j];
+        j++;
+      }
+      if (cur) parts.push(cur, comb);
+      cur = "";
+      i = j - 1;
+    } else cur += ch;
+  }
+  if (cur) parts.push(cur);
+  return parts;
+}
+function selectors(list) {
+  const out = [];
+  let cur = "";
+  let depth = 0;
+  for (const ch of list) {
+    if (ch === "(" || ch === "[") depth++;
+    if (ch === ")" || ch === "]") depth--;
+    if (ch === "," && !depth) out.push(cur.trim()), (cur = "");
+    else cur += ch;
+  }
+  if (cur.trim()) out.push(cur.trim());
+  return out;
+}
+const joined = (parts) => parts.map((p, i) => (i % 2 ? (p === " " ? " " : ` ${p} `) : p)).join("");
+export function acrossPuck(selectorText) {
+  const extra = [];
+  for (const sel of selectors(selectorText)) {
+    const parts = compounds(sel);
+    for (let k = 1; k < parts.length; k += 2) {
+      const f = ACROSS[parts[k]];
+      if (!f) continue;
+      for (const v of f(parts[k - 1], parts[k + 1])) extra.push(joined([...parts.slice(0, k - 1), v, ...parts.slice(k + 2)]));
+    }
+  }
+  return extra;
+}
+function throughPuck(sheet) {
+  const walk = (rules) => {
+    for (const r of rules) {
+      if (r.selectorText != null && r.style) {
+        const extra = acrossPuck(r.selectorText);
+        if (!extra.length) continue;
+        const before = r.selectorText;
+        r.selectorText = [before, ...extra].join(", ");
+        // A variant the browser can't read leaves the rule as it was; then each on its own.
+        if (r.selectorText === before) {
+          let ok = [];
+          for (const x of extra) {
+            r.selectorText = [before, ...ok, x].join(", ");
+            if (r.selectorText !== before) ok = [...ok, x];
+          }
+          r.selectorText = [before, ...ok].join(", ");
+        }
+      } else if (r.cssRules && !(r.type === 7)) walk(r.cssRules);
+    }
+  };
+  try {
+    walk(sheet.cssRules);
+  } catch {
+    /* a stylesheet the canvas can't read stays as it is */
+  }
+}
+
 // The site's stylesheet, inside the canvas only, and each photo's crop
-// point the way the build applies it.
+// point the way the build applies it. The admin's own stylesheets stay out
+// (PUCK_IFRAME): their colours and type would be drawn over the site's.
 function Canvas({ children, document: d }) {
   useEffect(() => {
     if (!d || d.getElementById("signet-css")) return;
     const l = d.createElement("link");
     l.id = "signet-css";
     l.rel = "stylesheet";
+    l.crossOrigin = "anonymous";
+    l.addEventListener("load", () => throughPuck(l.sheet));
     l.href = PREFIX + "styles.css";
     d.head.appendChild(l);
     const st = d.createElement("style");
-    st.textContent = "html{scroll-behavior:auto} body{background:#14130e}";
+    st.textContent = CANVAS_CSS;
     d.head.appendChild(st);
   }, [d]);
   useEffect(() => {
@@ -57,7 +176,12 @@ function Canvas({ children, document: d }) {
     mo.observe(d.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["src"] });
     return () => mo.disconnect();
   }, [d]);
-  return <CanvasContext>{children}</CanvasContext>;
+  return (
+    <CanvasContext>
+      {children}
+      <WidthHandle doc={d} />
+    </CanvasContext>
+  );
 }
 
 // Puck renders the canvas through a portal: the site context is passed in again.
@@ -72,7 +196,7 @@ function CanvasContext({ children }) {
 // Puck's props stay the same objects from render to render: a new
 // overrides object makes Puck rebuild the canvas, and the copy being typed
 // loses focus after one letter.
-export const PUCK_IFRAME = { enabled: true, waitForStyles: false };
+export const PUCK_IFRAME = { enabled: true, waitForStyles: false, syncHostStyles: false };
 let OVERRIDES = null;
 export const overrides = () => (OVERRIDES ||= { iframe: Canvas, componentOverlay: Overlay });
 // An onChange whose identity never changes, calling the latest handler.

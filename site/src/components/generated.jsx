@@ -1,17 +1,17 @@
 /* Pages and parts whose lists come from the act, video and post files:
    the clip index, a clip's own page, and Custom HTML for the one-offs. */
 import { Fragment } from "react";
-import { esc } from "../lib/util.js";
+import { css, esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
 import { isoSeconds } from "../build/feeds.js";
-import { H, Pic, Raw, useHref, useSite } from "./parts.jsx";
+import { Boxed, H, Pic, Raw, useHref, useSite } from "./parts.jsx";
 import { SIZES } from "../lib/pictures.js";
 
 export const CustomHtml = {
   label: "Custom HTML",
   fields: { html: { type: "textarea", label: "HTML" } },
   defaultProps: { html: "" },
-  render: ({ html }) => <Raw html={html} />,
+  render: ({ html, wrapStyle }) => <Boxed style={wrapStyle}><Raw html={html} /></Boxed>,
 };
 
 function ClipCard({ v }) {
@@ -40,14 +40,14 @@ export const VideoIndex = {
     title: { type: "richtext", label: "Title", contentEditable: true },
     lede: { type: "richtext", label: "Lede", contentEditable: true },
   },
-  render: function VideoIndexRender({ eyebrow, title, lede }) {
+  render: function VideoIndexRender({ eyebrow, title, lede, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const groups = clipGroups(m);
     return (
       <>
         <section className="section section--top">
-          <div className="wrap">
+          <div className="wrap" style={css(wrapStyle)}>
             <div className="heading">
               <H as="p" className="eyebrow eyebrow--slab" html={eyebrow} />
               <H as="h1" className="h2 display" html={title} />
@@ -63,7 +63,7 @@ export const VideoIndex = {
           </div>
         </section>
         <section className="section section--ruled clips">
-          <div className="wrap">
+          <div className="wrap" style={css(wrapStyle)}>
             {groups.map((g) => {
               const actHref = m.actUrl(g.act, s.prefix);
               return (
@@ -166,7 +166,7 @@ const ROW_TEXT = ["eyebrow", "date", "time", "title", "dek"];
 export const BlogPosts = {
   label: "Blog list",
   fields: {},
-  render: function BlogPostsRender() {
+  render: function BlogPostsRender({ style }) {
     const s = useSite();
     const m = s.model;
     const docs = m.published;
@@ -188,7 +188,7 @@ export const BlogPosts = {
       return m.c.exists(t) ? t : rel;
     };
     return (
-      <div className="blog-list">
+      <div className="blog-list" style={css(style)}>
         {posts.map((p, i) => {
           // The post card layout's parts and order; the eyebrow, date and
           // reading time next to each other share one line.
@@ -241,7 +241,7 @@ export const PageIndex = {
     top: { type: "array", label: "First", getItemSummary: (t) => t.output, arrayFields: { output: { type: "text", label: "Page" } } },
     groups: { type: "array", label: "Groups", getItemSummary: (g) => g.heading, arrayFields: { prefix: { type: "text", label: "Folder" }, heading: { type: "text", label: "Heading" }, lanes: { type: "radio", label: "Acts by lane", options: [{ label: "No", value: false }, { label: "Yes", value: true }] } } },
   },
-  render: function PageIndexRender({ top, groups }) {
+  render: function PageIndexRender({ top, groups, style }) {
     const s = useSite();
     const m = s.model;
     const live = (s.built || []).filter((b) => !(b.robots || "").startsWith("noindex") && b.output !== "404.html");
@@ -272,7 +272,7 @@ export const PageIndex = {
     if (posts.length) rows.push(["Notes", posts.map((p) => [`/blog/${p.slug}/`, p.title])]);
     const href = (u) => s.prefix + u.slice(1);
     return (
-      <dl className="def-list def-list--stack">
+      <dl className="def-list def-list--stack" style={css(style)}>
         {rows.map(([heading, links], i) => (
           <div className="def-row" key={i}>
             <dt>{heading}</dt>

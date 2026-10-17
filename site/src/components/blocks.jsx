@@ -5,7 +5,7 @@
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
-import { buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
+import { Boxed, buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
 
 const { rich, text } = F;
@@ -53,8 +53,8 @@ export const Quote = {
   label: "Quote",
   fields: { html: rich("Quote"), by: rich("By") },
   defaultProps: { html: "Quote", by: "Name" },
-  render: ({ html, by }) => (
-    <figure className="review-pull">
+  render: ({ html, by, style }) => (
+    <figure className="review-pull" style={css(style)}>
       <H as="blockquote" html={html} />
       <H as="figcaption" html={by} />
     </figure>
@@ -71,7 +71,7 @@ export const ButtonRow = {
   label: "Buttons",
   fields: { buttons: buttonFields },
   defaultProps: { buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
-  render: ({ buttons, cls }) => <Buttons items={buttons || []} cls={cls} />,
+  render: ({ buttons, cls, style }) => <Buttons items={buttons || []} cls={cls} style={style} />,
 };
 
 export const List = {
@@ -97,13 +97,14 @@ export const SpecList = {
     cols: { type: "radio", label: "Columns", options: [{ label: "One", value: false }, { label: "Two", value: true }] },
   },
   defaultProps: { source: "own", items: [{ html: "Item" }], cols: false },
-  render: function SpecListRender({ source, items, cols }) {
+  render: function SpecListRender({ source, items, cols, style }) {
     const s = useSite();
     const DASH = '<span class="dash" aria-hidden="true"></span>';
-    const list = source && source !== "own" ? s.model.site.lists[source].map((t) => DASH + esc(t)) : (items || []).map((it) => DASH + it.html);
+    const list = source && source !== "own" ? s.model.site.lists[source].map((t) => DASH + esc(t)) : (items || []).map((it) => (typeof it.html === "string" ? DASH + it.html : it.html));
+    // Copy being edited on the canvas is an editor, not a string: the dash goes before it.
     return (
-      <ul className={cx("spec-list", cols && "spec-list--cols")}>
-        {list.map((h, i) => <H key={i} as="li" html={h} />)}
+      <ul className={cx("spec-list", cols && "spec-list--cols")} style={css(style)}>
+        {list.map((h, i) => (typeof h === "string" ? <H key={i} as="li" html={h} /> : <li key={i}><span className="dash" aria-hidden="true"></span>{h}</li>))}
       </ul>
     );
   },
@@ -179,8 +180,8 @@ export const MediaGrid = {
   label: "Images",
   fields: { images: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: figureFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
   defaultProps: { images: [], single: false },
-  render: ({ images, single }) => (
-    <div className={cx("media-grid", single && "media-grid--single")}>
+  render: ({ images, single, style }) => (
+    <div className={cx("media-grid", single && "media-grid--single")} style={css(style)}>
       {(images || []).map((im, i) => (
         <figure key={i}>
           <Img im={im} sizes={single ? SIZES.single : SIZES.grid} />
@@ -220,8 +221,8 @@ export const VideoGrid = {
   label: "Videos",
   fields: { videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: videoFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
   defaultProps: { videos: [], single: false },
-  render: ({ videos, single }) => (
-    <div className={cx("video-grid", single && "video-grid--single")}>
+  render: ({ videos, single, style }) => (
+    <div className={cx("video-grid", single && "video-grid--single")} style={css(style)}>
       {(videos || []).map((v, i) => (
         <div className="act-video" key={i}>
           <Player v={v} sizes={single ? SIZES.single : SIZES.videos((videos || []).length)} />
@@ -237,7 +238,7 @@ export const ActVideo = {
   fields: videoFields,
   defaultProps: { kind: "iframe", src: "", title: "" },
   render: (v) => (
-    <div className="act-video">
+    <div className="act-video" style={css(v.style)}>
       <Player v={v} sizes={SIZES.wrap} />
     </div>
   ),
@@ -258,7 +259,7 @@ export const Columns = {
   render: (p) => {
     const count = p.n || (/three/.test(p.cls || "") ? 3 : 2);
     return (
-      <div className={p.cls || "split split--two"}>
+      <div className={p.cls || "split split--two"} style={css(p.style)}>
         {SLOTS.slice(0, count).map((k, i) => {
           const Col = p[k];
           return <div key={k} style={css(p.styles && p.styles[i])}>{Col ? <Col /> : null}</div>;
@@ -289,8 +290,8 @@ export const Table = {
     head: { type: "array", label: "Header", getItemSummary: (c) => plain(c.html), arrayFields: cellFields },
     rows: { type: "array", label: "Rows", getItemSummary: (r) => plain((r.cells || [])[0] && r.cells[0].html), arrayFields: { cells: { type: "array", label: "Cells", arrayFields: cellFields } } },
   },
-  render: ({ caption, captionCls, head, rows, provisional, tableCls }) => (
-    <div className="table-scroll" data-provisional={provisional ? "true" : undefined}>
+  render: ({ caption, captionCls, head, rows, provisional, tableCls, style }) => (
+    <div className="table-scroll" data-provisional={provisional ? "true" : undefined} style={css(style)}>
       <table className={tableCls || "rate-table tnum"}>
         {caption != null ? <H as="caption" className={captionCls || undefined} html={caption} /> : null}
         {head ? (
@@ -437,9 +438,9 @@ function CardMedia({ a, ratio }) {
   return <Pic class="act-card-img" src={href(`/img/${a.img}`)} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" style={st} sizes={SIZES.card} />;
 }
 
-export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) {
+export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3", style }) {
   return (
-    <div className={cls} id={id}>
+    <div className={cls} id={id} style={css(style)}>
       {acts.map((a) => <ActCard key={a.id} a={a} compact={compact} />)}
     </div>
   );
@@ -471,13 +472,13 @@ export const Cards = {
     },
   },
   defaultProps: { source: "flagships", picks: [] },
-  render: function CardsRender({ source, picks, occasion, night, acts, compact }) {
+  render: function CardsRender({ source, picks, occasion, night, acts, compact, style }) {
     const s = useSite();
     const m = s.model;
     const href = useHref();
-    if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} />;
+    if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} style={style} />;
     return (
-      <div className="card-grid card-grid--3">
+      <div className="card-grid card-grid--3" style={css(style)}>
         {(picks || []).map((p, i) => {
           const a = m.ACT_BY_ID[p.act];
           const r = m.RATE_BY_ID[p.config];
@@ -510,9 +511,9 @@ export const Season = {
     dates: { type: "array", label: "Dates", getItemSummary: (d) => d.date, arrayFields: { date: text("Date"), peak: { type: "radio", label: "Peak", options: [{ label: "No", value: false }, { label: "Yes", value: true }] }, note: text("Tag") } },
   },
   defaultProps: { dates: [] },
-  render: ({ dates }) => (
+  render: ({ dates, style }) => (
     <>
-      <ul className="season-board">
+      <ul className="season-board" style={css(style)}>
         {(dates || []).map((d, i) => {
           const [y, mo, da] = d.date.split("-").map(Number);
           const dt = new Date(Date.UTC(y, mo - 1, da));
@@ -539,7 +540,7 @@ export const StagePlot = {
   label: "Stage drawing",
   fields: { guide: { type: "number", label: "Guide (ft)" }, width: { type: "number", label: "Width (ft)" }, depth: { type: "number", label: "Depth (ft)" } },
   defaultProps: { guide: 24, width: 14, depth: 10 },
-  render: ({ guide, width: w, depth: d }) => {
+  render: ({ guide, width: w, depth: d, style }) => {
     const U = 20;
     const gw = guide * U;
     const aw = w * U;
@@ -573,7 +574,7 @@ export const StagePlot = {
 ${saved} square feet of floor, which is a few hundred dollars of riser and about
 ${Math.round(saved / 10)} guests standing.</figcaption>
 </figure>`;
-    return <Raw html={html} />;
+    return <Boxed style={style}><Raw html={html} /></Boxed>;
   },
 };
 
@@ -582,7 +583,7 @@ export const HtmlBlock = {
   label: "HTML",
   fields: { html: { type: "textarea", label: "HTML" } },
   defaultProps: { html: "" },
-  render: ({ html }) => <Raw html={html} />,
+  render: ({ html, style }) => <Boxed style={style}><Raw html={html} /></Boxed>,
 };
 
 export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };
