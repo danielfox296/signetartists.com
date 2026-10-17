@@ -4,6 +4,7 @@ import { createModel, outputFor, pySort } from "../../src/lib/model.js";
 import { plan } from "../../src/lib/plan.js";
 
 export const pagePath = (slug) => `content/pages/${slug}.json`;
+export const ACT_LAYOUT = "content/layouts/act-page.json";
 export const slugOf = (path) => path.split("/").pop().replace(/\.json$/, "");
 export const serialize = (v) => JSON.stringify(v, null, 1) + "\n";
 
@@ -32,6 +33,7 @@ export function contentFrom(repo) {
     photoFocus: repo.json("content/photo-focus.json"),
     lastmod: {},
     repertoire: repo.json("content/repertoire.json"),
+    layouts: { act: repo.json(ACT_LAYOUT) || null },
     logoSvg: (id) => repo.get(`img/logos/${id}.svg`) || "<svg></svg>",
     exists: (rel) => repo.has(rel),
   };
@@ -96,8 +98,9 @@ export function pathProblem(repo, path, self) {
 }
 
 // Fix what refers to a page's URL after it moves or is deleted: redirects
-// point at the new place, posts filed under it move, and hub lists drop it.
-export function repoint(repo, from, to) {
+// point at the new place, posts filed under it move, hub lists drop it, and
+// an act whose page it is follows it, or has no page once it is deleted.
+export function repoint(repo, from, to, { deleted = false } = {}) {
   const changes = new Map();
   const redirects = structuredClone(repo.json("content/redirects.json"));
   let red = redirects.filter((r) => r.from !== to).map((r) => (r.to === from ? { ...r, to } : r));
@@ -126,6 +129,14 @@ export function repoint(repo, from, to) {
       }
     }
     if (touched) changes.set(pg.file, n);
+  }
+  for (const file of repo.list("content/acts/")) {
+    const a = repo.json(file);
+    if (!a || !a.page || "/" + a.page !== from) continue;
+    const n = structuredClone(a);
+    if (deleted) delete n.page;
+    else n.page = to.replace(/^\//, "");
+    changes.set(file, n);
   }
   return changes;
 }

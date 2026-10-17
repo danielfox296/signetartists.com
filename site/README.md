@@ -29,8 +29,11 @@ Run everything from the repo root.
   - `config.js` the repo, branches and the Go live switch (`GO_LIVE`: Go live works once `main` is built from `content/`)
   - `lib/github.js` the REST calls; `lib/repo.js` the working copy of `staging` (one commit per save, merge per file);
     `lib/publish.js` Go live, the saves and go-lives lists, and revert; `lib/diff.js` readable diffs; `lib/merge3.js` line merge for revert
-  - `ui/Editor.jsx` pages and shared parts in Puck; `ui/fields.jsx` the picture, URL and Indexed fields and the config the
-    admin edits with; `ui/Pages.jsx` the pages list; `ui/GoLive.jsx` the Go live drawer
+  - `ui/Editor.jsx` pages, shared parts and the act page layout in Puck; `ui/fields.jsx` the picture, URL, Indexed, act
+    and filter-choice fields and the config the admin edits with; `ui/Pages.jsx` the pages list; `ui/GoLive.jsx` the Go
+    live drawer
+  - `ui/Acts.jsx` the roster and the filter choices; `ui/Act.jsx` one act's form; `ui/Preview.jsx` the site drawn in a
+    frame at desktop or phone width; `lib/acts.js` every change to acts, the roster, crop points and act pages
   - `ui/Posts.jsx` the posts list, new post and delete; `ui/PostEditor.jsx` a post in Puck with its settings;
     `ui/Videos.jsx` the videos list and form; `lib/posts.js` what a post's or video's new URL or delete also changes
     (the posts that list it, a redirect); `lib/postrich.jsx` a post's copy (paragraphs and lists), and the paragraphs
@@ -44,8 +47,9 @@ Run everything from the repo root.
 |---|---|
 | `pages/<name>.json` | one page in Puck's format: `{root: {props}, content: [sections]}`; a section holds `blocks` |
 | `posts/<slug>.json` | one post, Puck's format, the 15 post block types |
-| `acts/<id>.json`, `videos/<slug>.json` | one act, one clip |
+| `acts/<id>.json`, `videos/<slug>.json` | one act, one clip. `"hidden": true` takes an act off every list, card and filter |
 | `roster.json` | act order and the filter vocabularies |
+| `layouts/act-page.json` | the act page layout. A page with `"layout": "act"` and `schema.act` is drawn as these sections, with its own where `ActOwn` sits |
 | `shared/` | header, footer, logo strip |
 | `site.json` | brand, business, lists shared by pages, llms.txt wording |
 | `redirects.json`, `robots.txt`, `photo-focus.json`, `repertoire.json` | as named |

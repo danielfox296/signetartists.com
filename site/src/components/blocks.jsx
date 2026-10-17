@@ -189,7 +189,7 @@ export const MediaGrid = {
   ),
 };
 
-const ALLOW = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+export const ALLOW = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
 
 export function Player({ v }) {
   const href = useHref();
@@ -357,8 +357,8 @@ function ActCard({ a, compact }) {
       className={compact ? "card act-card act-card--compact" : "card act-card"}
       id={`act-${a.id}`}
       data-lane={m.actLane(a)}
-      data-buckets={a.bucket_tags.join(" ")}
-      data-configs={a.config_tags.join(" ")}
+      data-buckets={(a.bucket_tags || []).join(" ")}
+      data-configs={(a.config_tags || []).join(" ")}
       data-genres={(a.genre_tags || []).join(" ")}
       data-vocals={m.VOCALS_MATCH[a.vocals || "instrumental"]}
       data-areas={m.actAreaIds(a).join(" ")}
@@ -372,7 +372,7 @@ function ActCard({ a, compact }) {
         <h3 className="act-name">{a.name}</h3>
         <p className="act-face">{m.actByline(a)}</p>
         <ul className="pill-row">
-          {a.bucket_tags.map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
+          {(a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
         </ul>
         <p className="act-blurb">{compact ? m.actCardLine(a) : a.blurb}</p>
         <dl className="act-facts">
@@ -390,7 +390,7 @@ function ActCard({ a, compact }) {
 }
 
 function CardMedia({ a }) {
-  const s = useSite();
+  const href = useHref();
   if (a.video) {
     if (/^https?:\/\//.test(a.video)) {
       return (
@@ -401,11 +401,12 @@ function CardMedia({ a }) {
     }
     return (
       <div className="act-card-video">
-        <video src={s.prefix + a.video} poster={a.video_poster ? s.prefix + a.video_poster : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />
+        <video src={href("/" + a.video)} poster={a.video_poster ? href("/" + a.video_poster) : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />
       </div>
     );
   }
-  return <Pic class="act-card-img" src={`${s.prefix}img/${a.img}`} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" />;
+  if (!a.img) return null;
+  return <Pic class="act-card-img" src={href(`/img/${a.img}`)} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" />;
 }
 
 export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) {
@@ -416,12 +417,24 @@ export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) 
   );
 }
 
-// Act cards: the flagships, a lane of the roster, or a short list of picks
-// with a line on why each one suits the night.
+// Act cards: the flagships, the acts for an occasion or a kind of night,
+// acts chosen by hand, or a short list of picks with a line on why each one
+// suits the night.
+export const CARD_SOURCES = [
+  { label: "Flagships", value: "flagships" },
+  { label: "Occasion", value: "occasion" },
+  { label: "Kind of night", value: "night" },
+  { label: "Chosen acts", value: "acts" },
+  { label: "Picks", value: "picks" },
+];
 export const Cards = {
   label: "Act cards",
   fields: {
-    source: select("Acts", [{ label: "Flagships", value: "flagships" }, { label: "Picks", value: "picks" }]),
+    source: select("Acts", CARD_SOURCES),
+    occasion: text("Occasion"),
+    night: text("Kind of night"),
+    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act") } },
+    compact: { type: "radio", label: "Cards", options: [{ label: "Full", value: false }, { label: "Short", value: true }] },
     picks: {
       type: "array",
       label: "Picks",
@@ -430,11 +443,11 @@ export const Cards = {
     },
   },
   defaultProps: { source: "flagships", picks: [] },
-  render: function CardsRender({ source, picks }) {
+  render: function CardsRender({ source, picks, occasion, night, acts, compact }) {
     const s = useSite();
     const m = s.model;
     const href = useHref();
-    if (source !== "picks") return <CardGrid acts={m.FLAGSHIPS} />;
+    if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} />;
     return (
       <div className="card-grid card-grid--3">
         {(picks || []).map((p, i) => {

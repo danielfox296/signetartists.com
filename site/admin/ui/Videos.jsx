@@ -50,7 +50,7 @@ export function VideosScreen({ slug }) {
         </select>
         <span className="muted">{shown.length}</span>
       </div>
-      <div className={open ? "split" : ""}>
+      <div className={open ? "list-split" : ""}>
         <div className="table-wrap">
           <table className="list">
             <thead>
@@ -144,7 +144,7 @@ function VideoForm({ slug }) {
   };
   const thumb = thumbOf(v);
   return (
-    <aside className="panel preview-col" aria-label="Video">
+    <aside className="panel side-col" aria-label="Video">
       <div className="panel-head">
         <h2>Video</h2>
         <span className="grow" />
