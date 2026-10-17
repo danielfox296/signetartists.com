@@ -107,7 +107,7 @@ export function readWidth(item, w, measured) {
     if (rem != null) return { preset: presetOf(rem), rem, align: align || "center" };
     // The section's own column, or the narrow one it was given before widths.
     if (item.props.narrow) return { preset: "narrow", rem: NARROW, align: null };
-    return { preset: "wide", rem: WIDE, align: null };
+    return { preset: "wide", rem: WIDE, align: "center" };
   }
   if (!align && m.centred != null) align = m.centred ? "center" : "left";
   if (v === "none") return { preset: "full", rem: m.rem, align };

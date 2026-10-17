@@ -169,15 +169,17 @@ export function WidthInput({ field, readOnly }) {
         </div>
       </FieldLabel>
       {showAlign ? (
-        <FieldLabel label="Alignment" el="div" readOnly={readOnly}>
-          <div className="seg w-seg" role="group" aria-label="Alignment">
-            {ALIGN.map(([k, label]) => (
-              <button key={k} type="button" disabled={readOnly} aria-pressed={String(cur.align === k)} onClick={() => set({ align: k })}>
-                {label}
-              </button>
-            ))}
-          </div>
-        </FieldLabel>
+        <div className="w-align">
+          <FieldLabel label="Alignment" el="div" readOnly={readOnly}>
+            <div className="seg w-seg" role="group" aria-label="Alignment">
+              {ALIGN.map(([k, label]) => (
+                <button key={k} type="button" disabled={readOnly} aria-pressed={String(cur.align === k)} onClick={() => set({ align: k })}>
+                  {label}
+                </button>
+              ))}
+            </div>
+          </FieldLabel>
+        </div>
       ) : null}
     </>
   );
