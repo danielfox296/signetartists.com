@@ -1,7 +1,7 @@
 /* The pictures' copies, made when the site is deployed (build.mjs --images
    <cache>), never committed:
-   - AVIF and WebP in the widths lib/pictures.js gives each picture the
-     pages show (img/a.jpg -> img/a-800w.avif)
+   - WebP in the widths lib/pictures.js gives each picture the pages show
+     (img/a.jpg -> img/a-800w.webp)
    - every JPEG under img/ and media/ recompressed, where that saves a tenth
    - each YouTube video's own picture, the largest YouTube has, at
      img/yt/<id>.jpg and its copies
@@ -12,15 +12,13 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
-import { FORMATS, variantPath, widthsFor, YT_WIDTHS, ytPath } from "../lib/pictures.js";
+import { FORMAT, variantPath, widthsFor, YT_WIDTHS, ytPath } from "../lib/pictures.js";
 
 // Bump to make every copy again.
 const VERSION = "1";
-const AVIF = { quality: 58, effort: 4 };
 const WEBP = { quality: 80, effort: 5, smartSubsample: true };
 const JPEG = { quality: 82, mozjpeg: true };
-const encode = (img, fmt, chroma) =>
-  fmt === "avif" ? img.avif({ ...AVIF, chromaSubsampling: chroma === "4:4:4" ? "4:4:4" : "4:2:0" }) : fmt === "webp" ? img.webp(WEBP) : img.jpeg({ ...JPEG, chromaSubsampling: chroma === "4:4:4" ? "4:4:4" : "4:2:0" });
+const encode = (img, fmt, chroma) => (fmt === "webp" ? img.webp(WEBP) : img.jpeg({ ...JPEG, chromaSubsampling: chroma === "4:4:4" ? "4:4:4" : "4:2:0" }));
 
 const RASTER = /\.(jpe?g|png)$/i;
 function walk(dir, files) {
@@ -75,6 +73,7 @@ async function ytFetch(id) {
 export async function makeImages({ repo, out, cache, used, yt, dims, log = console.log }) {
   fs.mkdirSync(cache, { recursive: true });
   const kept = new Set();
+  const keptFiles = new Set();
   const jobs = [];
   const copies = [];
   let made = 0;
@@ -83,6 +82,7 @@ export async function makeImages({ repo, out, cache, used, yt, dims, log = conso
   // A copy in the cache, made once: `make` writes it.
   const cached = (key, name, make) => {
     kept.add(key);
+    keptFiles.add(path.join(key, name));
     const file = path.join(cache, key, name);
     if (!fs.existsSync(file)) {
       jobs.push(async () => {
@@ -103,9 +103,7 @@ export async function makeImages({ repo, out, cache, used, yt, dims, log = conso
     const buf = fs.readFileSync(path.join(repo, rel));
     const key = sha1(VERSION, buf);
     for (const w of widthsFor(d.w)) {
-      for (const fmt of FORMATS) {
-        place(cached(key, `${w}.${fmt}`, (to) => encode(sharp(buf).autoOrient().resize({ width: w, withoutEnlargement: true }), fmt, d.chroma).toFile(to)), variantPath(rel, w, fmt));
-      }
+      place(cached(key, `${w}.${FORMAT}`, (to) => encode(sharp(buf).autoOrient().resize({ width: w, withoutEnlargement: true }), FORMAT, d.chroma).toFile(to)), variantPath(rel, w));
     }
   }
 
@@ -148,11 +146,11 @@ export async function makeImages({ repo, out, cache, used, yt, dims, log = conso
     const rel = ytPath(id);
     place(cached(key, "yt.jpg", async (to) => encode((await frame()).resize({ width: 1280, height: 720 }), "jpeg").toFile(to)), rel);
     for (const w of YT_WIDTHS) {
-      for (const fmt of FORMATS) place(cached(key, `yt-${w}.${fmt}`, async (to) => encode((await frame()).resize({ width: w, height: Math.round((w * 9) / 16) }), fmt).toFile(to)), variantPath(rel, w, fmt));
+      place(cached(key, `yt-${w}.${FORMAT}`, async (to) => encode((await frame()).resize({ width: w, height: Math.round((w * 9) / 16) }), FORMAT).toFile(to)), variantPath(rel, w));
     }
   }
 
-  // AVIF is slow: several at once.
+  // Several at once.
   await pool(jobs, Math.max(2, Math.min(8, os.cpus().length)), (job) => job());
 
   for (const [rel, size, file] of recompressed) {
@@ -168,7 +166,9 @@ export async function makeImages({ repo, out, cache, used, yt, dims, log = conso
 
   // What nothing uses any more leaves the cache.
   for (const d of fs.readdirSync(cache)) {
-    if (d !== "yt" && !kept.has(d)) fs.rmSync(path.join(cache, d), { recursive: true, force: true });
+    if (d === "yt") continue;
+    if (!kept.has(d)) fs.rmSync(path.join(cache, d), { recursive: true, force: true });
+    else for (const f of fs.readdirSync(path.join(cache, d))) if (!keptFiles.has(path.join(d, f))) fs.rmSync(path.join(cache, d, f), { force: true });
   }
   for (const f of fs.readdirSync(ytSrc)) if (!yt.has(f.replace(/\.jpg$/, ""))) fs.rmSync(path.join(ytSrc, f), { force: true });
 

@@ -2,7 +2,7 @@
    frame, the heading block and the run of paragraphs around a section's body. */
 import { createContext, Fragment, useContext } from "react";
 import { css, cx, relHtml, relUrl } from "../lib/util.js";
-import { pictureHtml, sizesFor, ytPath } from "../lib/pictures.js";
+import { sizesFor, srcsetOf, ytPath } from "../lib/pictures.js";
 
 // What a component needs to know about the page it is on: the link prefix
 // for its depth, its URL, the site model, and (in the static build) where to
@@ -73,19 +73,22 @@ export function Shell({ p, cls, wrap = true, children }) {
 
 // An <img>. The static build writes it as plain markup: React 19 would
 // otherwise add a <link rel="preload"> for every image not marked lazy,
-// which the site has never had. Given `sizes`, a local picture goes out as a
-// <picture> with its AVIF and WebP copies, and its width and height.
+// which the site has never had. Given `sizes`, a local picture gains a srcset
+// of its WebP copies, and its width and height; it stays the same <img>.
 export function Pic({ sizes, ...attrs }) {
   const s = useSite();
   let a = Object.entries(attrs).filter(([, v]) => v !== undefined && v !== null && v !== false);
   if (s && s.raw) {
     const pic = sizes && s.pictures ? s.pictures.of(attrs.src) : null;
-    if (pic && attrs.width == null && attrs.height == null) {
-      const at = a.findIndex(([k]) => k === "alt") + 1 || a.length;
-      a = [...a.slice(0, at), ["width", pic.w], ["height", pic.h], ...a.slice(at)];
+    if (pic) {
+      const src = a.findIndex(([k]) => k === "src") + 1;
+      a = [...a.slice(0, src), ["srcset", srcsetOf(attrs.src, pic.widths)], ["sizes", sizes], ...a.slice(src)];
+      if (attrs.width == null && attrs.height == null) {
+        const at = a.findIndex(([k]) => k === "alt") + 1 || a.length;
+        a = [...a.slice(0, at), ["width", pic.w], ["height", pic.h], ...a.slice(at)];
+      }
     }
-    let html = "<img" + a.map(([k, v]) => (k === "style" && typeof v === "object" ? "" : ` ${k === "className" ? "class" : k.toLowerCase()}="${escAttr(v)}"`)).join("") + ">";
-    if (pic) html = pictureHtml(html, attrs.src, pic.widths, sizes);
+    const html = "<img" + a.map(([k, v]) => (k === "style" && typeof v === "object" ? "" : ` ${k === "className" ? "class" : k.toLowerCase()}="${escAttr(v)}"`)).join("") + ">";
     s.raw.push(html);
     return <raw-html data-k={s.raw.length - 1} />;
   }

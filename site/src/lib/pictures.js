@@ -1,15 +1,16 @@
-/* Pictures in the static build: each local JPEG or PNG a component shows goes
-   out as a <picture>, AVIF and WebP in the widths below its own, with the
-   JPEG or PNG itself as the <img>. The files are made at deploy time by
-   build/images.js, never committed: img/a.jpg -> img/a-800w.avif. The editor
-   canvas draws plain <img>s, since a new upload has no copies yet.
+/* Pictures in the static build: each local JPEG or PNG a component shows
+   keeps its <img>, in the same place, and gains a srcset of WebP copies in
+   the widths below its own, with the component's sizes. The JPEG or PNG
+   stays its src. The copies are made at deploy time by build/images.js,
+   never committed: img/a.jpg -> img/a-800w.webp. The editor canvas draws
+   the plain <img>, since a new upload has no copies yet.
 
    `sizes` is how wide the component draws the picture, measured on the
    site at phone to desktop widths. */
 
 export const WIDTHS = [480, 800, 1200, 1600];
 export const MAX_WIDTH = 2400;
-export const FORMATS = ["avif", "webp"];
+export const FORMAT = "webp";
 
 // A YouTube video's own picture, kept by the deploy at img/yt/<id>.jpg.
 export const YT_WIDTHS = [480, 800, 1280];
@@ -47,7 +48,7 @@ export function widthsFor(w) {
   return [...WIDTHS.filter((x) => x < top * 0.9), top];
 }
 
-export const variantPath = (path, w, ext) => path.replace(/\.(jpe?g|png)$/i, `-${w}w.${ext}`);
+export const variantPath = (path, w, ext = FORMAT) => path.replace(/\.(jpe?g|png)$/i, `-${w}w.${ext}`);
 
 // The repo path of a picture as a page writes it (../../img/a.jpg, /img/a.jpg),
 // when it is a local JPEG or PNG.
@@ -58,8 +59,5 @@ export function repoPath(src) {
 
 const enc = (u) => u.replace(/ /g, "%20").replace(/,/g, "%2C");
 
-// <picture> around an <img>: one <source> per format, the widths as srcset.
-export function pictureHtml(img, src, widths, sizes) {
-  const set = (ext) => widths.map((w) => `${enc(variantPath(src, w, ext))} ${w}w`).join(", ");
-  return `<picture>${FORMATS.map((f) => `<source type="image/${f}" srcset="${set(f)}" sizes="${sizes}">`).join("")}${img}</picture>`;
-}
+// The WebP copies as an <img srcset>, from the src as the page writes it.
+export const srcsetOf = (src, widths) => widths.map((w) => `${enc(variantPath(src, w))} ${w}w`).join(", ");

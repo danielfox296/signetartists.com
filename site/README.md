@@ -25,11 +25,11 @@ Run everything from the repo root.
   - `config.jsx` the Puck configs, `registry.jsx` how the build renders stored items
 - `src/lib/model.js` everything derived from `content/`: act facts, trails, sibling and hub lists, posts by parent
 - `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD), `feeds.js`
-- `src/lib/pictures.js` pictures in the built site: a local JPEG or PNG goes out as a `<picture>` with AVIF and WebP
-  copies in 480, 800, 1200 and 1600 wide (up to its own width), and each component's `sizes`. The editor draws plain
-  `<img>`s. `src/build/images.js` makes the copies at deploy time (`--images`), recompresses every JPEG under `img/`
-  and `media/`, and fetches each YouTube video's picture to `img/yt/<id>.jpg`; none of it is committed, and the
-  workflows keep it in the Actions cache
+- `src/lib/pictures.js` pictures in the built site: a local JPEG or PNG keeps its `<img>`, which gains a `srcset` of
+  WebP copies in 480, 800, 1200 and 1600 wide (up to its own width) and each component's `sizes`. No wrapper
+  element: the page's element tree is what it was. The editor draws the plain `<img>`. `src/build/images.js` makes the
+  copies at deploy time (`--images`), recompresses every JPEG under `img/` and `media/`, and fetches each YouTube
+  video's picture to `img/yt/<id>.jpg`; none of it is committed, and the workflows keep it in the Actions cache
 - YouTube videos are click-to-play (`YouTube` in `components/parts.jsx`): the video's poster or its YouTube picture
   and a play button, swapped for the player on a click or Enter. The watch pages under `/video/` keep the player.
 - The build minifies `styles.css` and gives it a `?v=` of its own; the first picture of a page's first section loads
