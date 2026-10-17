@@ -357,7 +357,7 @@ function AddBlock({ config }) {
   const content = usePuck((s) => s.appState.data.content);
   const sel = usePuck((s) => s.appState.ui.itemSelector);
   const dispatch = usePuck((s) => s.dispatch);
-  const groups = [{ title: "Blocks", items: POST_BLOCKS.map((name) => ({ name, label: config.components[name].label || name })) }];
+  const groups = [{ title: "", items: POST_BLOCKS.map((name) => ({ name, label: config.components[name].label || name })) }];
   const pick = (type) => {
     const index = sel && sel.zone === ROOT ? sel.index + 1 : content.length;
     const id = `${type}-${crypto.randomUUID().slice(0, 8)}`;

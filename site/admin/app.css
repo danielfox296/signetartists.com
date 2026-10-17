@@ -443,6 +443,7 @@ body.admin {
   /* Posts and videos: a list with one video's form beside it. */
   .list-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 430px); gap: 24px; align-items: start; }
   .list-split .side-col { position: sticky; top: 16px; }
+  .list-split table.list { min-width: 520px; }
   .side-col .panel-head .grow { flex: 1; }
   table.list tr.on td { background: var(--brass-tint); }
   .video-still { position: relative; background: #000; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; }
