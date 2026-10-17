@@ -27,6 +27,7 @@ import { adminPageConfig, assetUrl, pageSettingsFields } from "./fields.jsx";
 import { SHARED } from "./Editor.jsx";
 import { adminPostConfig, postSettingsFields } from "./PostEditor.jsx";
 import { VIDEO_FIELDS } from "../lib/posts.js";
+import { PART_LABEL } from "./Layouts.jsx";
 
 const ORDER = { page: 0, shared: 1, layout: 2, data: 3, media: 4 };
 
@@ -74,7 +75,8 @@ const STYLE_FIELDS = {
   corners: t("Corners"),
 };
 const LAYOUT_FIELDS = {
-  parts: { type: "array", label: "Parts", arrayFields: { id: t("Part"), on: t("Shown") } },
+  shown: t("Shown"),
+  hidden: t("Hidden"),
   ratio: t("Image ratio"),
   heroRatio: t("Hero ratio"),
   blurb: t("Description"),
@@ -112,7 +114,17 @@ async function describe(repo, base, item) {
     return jsonDiff(pa, pb, {}, VIDEO_FIELDS);
   }
   if (path === "content/styles.json") return jsonDiff(pa, pb, {}, STYLE_FIELDS);
-  if (path.startsWith("content/layouts/") && !path.endsWith("act-page.json")) return jsonDiff(pa, pb, {}, LAYOUT_FIELDS);
+  if (path.startsWith("content/layouts/") && !path.endsWith("act-page.json")) {
+    // The parts by name: the ones shown in their order, and the ones off.
+    const key = { "act-card.json": "card", "post.json": "post", "post-card.json": "postCard", "video-page.json": "video" }[path.split("/").pop()];
+    const named = (x) => {
+      if (!x || !Array.isArray(x.parts)) return x;
+      const label = (p) => (PART_LABEL[key] || {})[p.id] || p.id;
+      const { parts, ...rest } = x;
+      return { shown: parts.filter((p) => p.on !== false).map(label).join(", "), hidden: parts.filter((p) => p.on === false).map(label).join(", "), ...rest };
+    };
+    return jsonDiff(named(pa), named(pb), {}, LAYOUT_FIELDS);
+  }
   if (path.startsWith("content/acts/")) return jsonDiff(named(repo, pa), named(repo, pb), adminPageConfig.components, ACT_FIELDS);
   if (path === "content/roster.json") {
     const order = (x) => x && { ...x, order: (x.order || []).map((id) => (repo.json(`content/acts/${id}.json`) || { name: id }).name).join(", ") };

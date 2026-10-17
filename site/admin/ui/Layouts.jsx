@@ -26,7 +26,7 @@ export const LAYOUTS = {
   video: { name: "Video page", kind: "video" },
 };
 
-const PART_LABEL = {
+export const PART_LABEL = {
   card: { media: "Image", kind: "Style line", name: "Name", face: "Lineup", tags: "Tags", blurb: "Description", sizes: "Size range", link: "Link" },
   post: { eyebrow: "Eyebrow", title: "Title", dek: "Dek", byline: "Byline", hero: "Hero", contents: "Contents" },
   postCard: { photo: "Photo", eyebrow: "Eyebrow", date: "Date", time: "Reading time", title: "Title", dek: "Dek" },
