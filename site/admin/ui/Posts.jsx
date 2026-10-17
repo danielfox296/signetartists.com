@@ -71,7 +71,7 @@ export function PostsScreen() {
               const src = e.p.hero && e.p.hero.src;
               return (
                 <tr key={e.slug} onClick={() => go("post", e.slug)}>
-                  <td style={{ width: 76 }}>{src ? <img className="thumb" src={previewUrl(thumbFor(repo, src))} alt="" loading="lazy" /> : <div className="thumb" />}</td>
+                  <td style={{ width: 76 }}>{src ? <img className="thumb" src={previewUrl(thumbFor(repo, src))} alt="" loading="lazy" onError={(ev) => (ev.currentTarget.style.visibility = "hidden")} /> : <div className="thumb" />}</td>
                   <td className="namecell">
                     <b>{e.p.title || "Untitled"}</b>
                     <small>{e.p.eyebrow}</small>
