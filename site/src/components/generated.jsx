@@ -1,6 +1,8 @@
 /* Pages and parts whose lists come from the act, video and post files:
    the clip index, a clip's own page, and Custom HTML for the one-offs. */
+import { Fragment } from "react";
 import { esc } from "../lib/util.js";
+import { ratioStyle, runs } from "../lib/layouts.js";
 import { isoSeconds } from "../build/feeds.js";
 import { H, Pic, Raw, useHref, useSite } from "./parts.jsx";
 
@@ -100,44 +102,63 @@ export function WatchPage({ v }) {
       <video src={s.prefix + v.file} poster={v.poster ? s.prefix + v.poster : undefined} title={v.name} controls preload="metadata" playsInline />
     </div>
   );
-  return (
-    <>
-      <section className="section section--top watch">
+  // The video page layout's parts and order. The style line and the title
+  // next to each other share one heading; the other clips are a band of
+  // their own, above the clip or below it.
+  const L = m.L.video;
+  const part = {
+    style: () => <p key="style" className="eyebrow eyebrow--slab">{act.style}</p>,
+    title: () => <h1 key="title" className="h1 display">{v.name}</h1>,
+    player: (k) => <Fragment key={k}>{player}</Fragment>,
+    description: (k) => <p key={k} className="lede">{v.description}</p>,
+    buttons: (k) => (
+      <div key={k} className="btn-row">
+        <a className="btn" href={`${s.prefix}contact/?act=${act.id}`}>Check a date</a>
+        <a className="btn btn--outline" href={actHref}>{"See " + act.name}</a>
+      </div>
+    ),
+  };
+  const on = L.parts.filter((x) => x.on);
+  const main = (
+    <section key="main" className="section section--top watch">
+      <div className="wrap">
+        {runs({ parts: on.filter((x) => x.id !== "more") }, ["style", "title"]).map((r, i) =>
+          r.group ? (
+            <div key={i} className="heading">
+              {r.ids.map((id) => part[id]())}
+            </div>
+          ) : (
+            part[r.id](i)
+          )
+        )}
+      </div>
+    </section>
+  );
+  const more =
+    on.some((x) => x.id === "more") && others.length ? (
+      <section key="more" className="section section--ruled siblings">
         <div className="wrap">
-          <div className="heading">
-            <p className="eyebrow eyebrow--slab">{act.style}</p>
-            <h1 className="h1 display">{v.name}</h1>
-          </div>
-          {player}
-          <p className="lede">{v.description}</p>
-          <div className="btn-row">
-            <a className="btn" href={`${s.prefix}contact/?act=${act.id}`}>Check a date</a>
-            <a className="btn btn--outline" href={actHref}>{"See " + act.name}</a>
-          </div>
+          <p className="eyebrow">
+            {"More "}<a href={`${s.prefix}${m.WATCH_BASE}/`}>video clips</a>{" of "}<a href={actHref}>{act.name}</a>
+          </p>
+          <ul className="sibling-list">
+            {others.map((x) => (
+              <li key={x.slug}><a href={`${s.prefix}${m.WATCH_BASE}/${x.slug}/`}>{x.name}</a></li>
+            ))}
+          </ul>
         </div>
       </section>
-      {others.length ? (
-        <section className="section section--ruled siblings">
-          <div className="wrap">
-            <p className="eyebrow">
-              {"More "}<a href={`${s.prefix}${m.WATCH_BASE}/`}>video clips</a>{" of "}<a href={actHref}>{act.name}</a>
-            </p>
-            <ul className="sibling-list">
-              {others.map((x) => (
-                <li key={x.slug}><a href={`${s.prefix}${m.WATCH_BASE}/${x.slug}/`}>{x.name}</a></li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
-    </>
-  );
+    ) : null;
+  return <>{on.length && on[0].id === "more" ? [more, main] : [main, more]}</>;
 }
 
 export const watchHeadExtra = (m, v) =>
   v.id
     ? `<meta property="og:video" content="https://www.youtube.com/embed/${esc(v.id)}">`
     : `<meta property="og:video" content="${m.SITE_URL}/${esc(v.file)}"><meta property="og:video:type" content="video/mp4">`;
+
+const META = ["eyebrow", "date", "time"];
+const ROW_TEXT = ["eyebrow", "date", "time", "title", "dek"];
 
 // The blog index list: every published post, newest first, the category as
 // the eyebrow. Written for the blog index page, so links are its own.
@@ -158,6 +179,7 @@ export const BlogPosts = {
       );
     }
     const sep = <span className="blog-row-sep" aria-hidden="true">{"·"}</span>;
+    const L = m.L.postCard;
     const thumb = (src) => {
       const rel = src.replace(/^\//, "");
       if (/^(https?:)?\/\//.test(src)) return src;
@@ -166,22 +188,45 @@ export const BlogPosts = {
     };
     return (
       <div className="blog-list">
-        {posts.map((p, i) => (
-          <a className="blog-row" href={`${p.slug}/`} key={p.slug}>
-            {p.hero && p.hero.src ? <Pic class="blog-row-thumb" src={s.prefix + thumb(p.hero.src)} alt="" width="640" height="360" loading={i < 2 ? "eager" : "lazy"} decoding="async" /> : null}
-            <div className="blog-row-text">
-              <p className="blog-row-meta">
-                <span className="blog-row-eyebrow">{p.eyebrow || ""}</span>
-                {sep}
-                <time dateTime={p.date}>{m.dateDisplay(p.date)}</time>
-                {sep}
-                <span>{`${m.readingTime(docs[i])} min read`}</span>
-              </p>
-              <h2 className="blog-row-title">{p.title}</h2>
-              <p className="blog-row-dek">{p.dek || ""}</p>
-            </div>
-          </a>
-        ))}
+        {posts.map((p, i) => {
+          // The post card layout's parts and order; the eyebrow, date and
+          // reading time next to each other share one line.
+          const part = {
+            eyebrow: () => <span key="e" className="blog-row-eyebrow">{p.eyebrow || ""}</span>,
+            date: () => <time key="d" dateTime={p.date}>{m.dateDisplay(p.date)}</time>,
+            time: () => <span key="t">{`${m.readingTime(docs[i])} min read`}</span>,
+            title: () => <h2 key="title" className="blog-row-title">{p.title}</h2>,
+            dek: () => <p key="dek" className="blog-row-dek">{p.dek || ""}</p>,
+          };
+          const text = (ids) => {
+            const out = [];
+            for (const id of ids) {
+              const last = out[out.length - 1];
+              if (META.includes(id) && Array.isArray(last)) last.push(id);
+              else out.push(META.includes(id) ? [id] : id);
+            }
+            return out.map((x, k) =>
+              Array.isArray(x) ? (
+                <p key={k} className="blog-row-meta">
+                  {x.map((id, j) => (j ? [<Fragment key={"s" + j}>{sep}</Fragment>, part[id]()] : part[id]()))}
+                </p>
+              ) : (
+                part[x]()
+              )
+            );
+          };
+          return (
+            <a className="blog-row" href={`${p.slug}/`} key={p.slug}>
+              {runs(L, ROW_TEXT).map((r, k) =>
+                r.group ? (
+                  <div key={k} className="blog-row-text">{text(r.ids)}</div>
+                ) : p.hero && p.hero.src ? (
+                  <Pic key={k} class="blog-row-thumb" src={s.prefix + thumb(p.hero.src)} alt="" width="640" height="360" loading={i < 2 ? "eager" : "lazy"} decoding="async" style={ratioStyle(L.ratio)} />
+                ) : null
+              )}
+            </a>
+          );
+        })}
       </div>
     );
   },

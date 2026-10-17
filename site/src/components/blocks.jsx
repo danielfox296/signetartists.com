@@ -4,6 +4,7 @@
    the site root and written relative to the page. */
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
+import { ratioStyle, runs } from "../lib/layouts.js";
 import { buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite } from "./parts.jsx";
 
 const { rich, text } = F;
@@ -189,7 +190,7 @@ export const MediaGrid = {
   ),
 };
 
-const ALLOW = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+export const ALLOW = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
 
 export function Player({ v }) {
   const href = useHref();
@@ -347,18 +348,49 @@ export const CloseRow = {
 
 // ------------------------------------------------------- acts and dates
 
+// An act's card, in the act card layout's parts and order.
+const CARD_BODY = ["kind", "name", "face", "tags", "blurb", "sizes", "link"];
 function ActCard({ a, compact }) {
   const s = useSite();
   const m = s.model;
+  const L = m.L.card;
   const flagship = a.status === "flagship";
   const href = useHref();
+  const tagLabels = L.tags === "occasions"
+    ? (a.occasion_tags || []).map((t) => (m.roster.occasions || []).find((o) => o.id === t)).filter(Boolean).map((o) => [o.id, o.label])
+    : L.tags === "none"
+      ? []
+      : (a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => [b, m.BUCKET_LABEL[b]]);
+  const part = {
+    kind: () => <p key="kind" className="act-kind">{a.style}</p>,
+    name: () => <h3 key="name" className="act-name">{a.name}</h3>,
+    face: () => <p key="face" className="act-face">{m.actByline(a)}</p>,
+    tags: () => (
+      <ul key="tags" className="pill-row">
+        {tagLabels.map(([id, label]) => <li key={id} className="pill">{label}</li>)}
+      </ul>
+    ),
+    blurb: () => <p key="blurb" className="act-blurb">{compact || L.blurb === "short" ? m.actCardLine(a) : a.blurb}</p>,
+    sizes: () => (
+      <dl key="sizes" className="act-facts">
+        <dt>Configurations</dt>
+        <dd>{m.actConfigRange(a)}</dd>
+      </dl>
+    ),
+    link: () =>
+      flagship || a.page ? (
+        <a key="link" className="act-card-link" href={m.actUrl(a, s.prefix)}>{String(L.link || "See {name}").replace(/\{name\}/g, a.name)}</a>
+      ) : (
+        <a key="link" className="act-card-link" href={href(`/contact/?act=${a.id}`)}>Inquire</a>
+      ),
+  };
   return (
     <article
       className={compact ? "card act-card act-card--compact" : "card act-card"}
       id={`act-${a.id}`}
       data-lane={m.actLane(a)}
-      data-buckets={a.bucket_tags.join(" ")}
-      data-configs={a.config_tags.join(" ")}
+      data-buckets={(a.bucket_tags || []).join(" ")}
+      data-configs={(a.config_tags || []).join(" ")}
       data-genres={(a.genre_tags || []).join(" ")}
       data-vocals={m.VOCALS_MATCH[a.vocals || "instrumental"]}
       data-areas={m.actAreaIds(a).join(" ")}
@@ -366,46 +398,36 @@ function ActCard({ a, compact }) {
       data-status={a.status}
       data-name={a.name}
     >
-      {compact ? null : <CardMedia a={a} />}
-      <div className="act-card-body">
-        <p className="act-kind">{a.style}</p>
-        <h3 className="act-name">{a.name}</h3>
-        <p className="act-face">{m.actByline(a)}</p>
-        <ul className="pill-row">
-          {a.bucket_tags.map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
-        </ul>
-        <p className="act-blurb">{compact ? m.actCardLine(a) : a.blurb}</p>
-        <dl className="act-facts">
-          <dt>Configurations</dt>
-          <dd>{m.actConfigRange(a)}</dd>
-        </dl>
-        {flagship || a.page ? (
-          <a className="act-card-link" href={m.actUrl(a, s.prefix)}>{"See " + a.name}</a>
-        ) : (
-          <a className="act-card-link" href={href(`/contact/?act=${a.id}`)}>Inquire</a>
-        )}
-      </div>
+      {runs(L, CARD_BODY).map((r, i) =>
+        r.group ? (
+          <div key={i} className="act-card-body">{r.ids.map((id) => part[id]())}</div>
+        ) : compact ? null : (
+          <CardMedia key={i} a={a} ratio={L.ratio} />
+        )
+      )}
     </article>
   );
 }
 
-function CardMedia({ a }) {
-  const s = useSite();
+function CardMedia({ a, ratio }) {
+  const href = useHref();
+  const st = ratioStyle(ratio);
   if (a.video) {
     if (/^https?:\/\//.test(a.video)) {
       return (
-        <div className="act-card-video">
+        <div className="act-card-video" style={css(st)}>
           <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />
         </div>
       );
     }
     return (
-      <div className="act-card-video">
-        <video src={s.prefix + a.video} poster={a.video_poster ? s.prefix + a.video_poster : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />
+      <div className="act-card-video" style={css(st)}>
+        <video src={href("/" + a.video)} poster={a.video_poster ? href("/" + a.video_poster) : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />
       </div>
     );
   }
-  return <Pic class="act-card-img" src={`${s.prefix}img/${a.img}`} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" />;
+  if (!a.img) return null;
+  return <Pic class="act-card-img" src={href(`/img/${a.img}`)} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" style={st} />;
 }
 
 export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) {
@@ -416,12 +438,24 @@ export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) 
   );
 }
 
-// Act cards: the flagships, a lane of the roster, or a short list of picks
-// with a line on why each one suits the night.
+// Act cards: the flagships, the acts for an occasion or a kind of night,
+// acts chosen by hand, or a short list of picks with a line on why each one
+// suits the night.
+export const CARD_SOURCES = [
+  { label: "Flagships", value: "flagships" },
+  { label: "Occasion", value: "occasion" },
+  { label: "Kind of night", value: "night" },
+  { label: "Chosen acts", value: "acts" },
+  { label: "Picks", value: "picks" },
+];
 export const Cards = {
   label: "Act cards",
   fields: {
-    source: select("Acts", [{ label: "Flagships", value: "flagships" }, { label: "Picks", value: "picks" }]),
+    source: select("Acts", CARD_SOURCES),
+    occasion: text("Occasion"),
+    night: text("Kind of night"),
+    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act") } },
+    compact: { type: "radio", label: "Cards", options: [{ label: "Full", value: false }, { label: "Short", value: true }] },
     picks: {
       type: "array",
       label: "Picks",
@@ -430,11 +464,11 @@ export const Cards = {
     },
   },
   defaultProps: { source: "flagships", picks: [] },
-  render: function CardsRender({ source, picks }) {
+  render: function CardsRender({ source, picks, occasion, night, acts, compact }) {
     const s = useSite();
     const m = s.model;
     const href = useHref();
-    if (source !== "picks") return <CardGrid acts={m.FLAGSHIPS} />;
+    if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} />;
     return (
       <div className="card-grid card-grid--3">
         {(picks || []).map((p, i) => {

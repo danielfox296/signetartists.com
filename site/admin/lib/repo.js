@@ -21,6 +21,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
     savedAt: null,
     error: null,
     current: null,
+    flight: null, // path -> entry, while a save of them is on its way
     timer: null,
     delay: 5000,
     loading: true,
@@ -119,15 +120,18 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
   // ------------------------------------------------------------ editing
 
   // `source` names who made the edit, so an editor knows a change it
-  // didn't make and reloads.
+  // didn't make and reloads. While a save carrying the file is on its way,
+  // the edit is kept even when it matches the file as it was: the save is
+  // about to change that.
+  const flying = (p) => !!(st.flight && st.flight.has(p));
   function set(p, text, source) {
-    if (st.files.has(p) && st.text.get(p) === text) st.local.delete(p);
+    if (st.files.has(p) && st.text.get(p) === text && !flying(p)) st.local.delete(p);
     else st.local.set(p, { text });
     emit({ edit: p, source });
     schedule();
   }
   function remove(p, source) {
-    if (!st.files.has(p)) st.local.delete(p);
+    if (!st.files.has(p) && !flying(p)) st.local.delete(p);
     else st.local.set(p, null);
     emit({ edit: p, source });
     schedule();
@@ -138,7 +142,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
     schedule();
   }
   function putSha(p, sha) {
-    if (st.files.get(p) === sha) st.local.delete(p);
+    if (st.files.get(p) === sha && !flying(p)) st.local.delete(p);
     else st.local.set(p, { sha });
     emit({ edit: p });
     schedule();
@@ -253,6 +257,7 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
         if (remote !== st.head) await sync(remote);
         if (!st.local.size) break;
         const snapshot = new Map(st.local);
+        st.flight = snapshot;
         try {
           const sha = await commit(snapshot, msg || (message ? message([...snapshot.keys()], snapshot) : "Admin edit"));
           if (sha) await settle(snapshot, sha);
@@ -262,6 +267,8 @@ export function createRepo({ api, owner, repo, branch, cache, ask, message, rawB
           // The branch moved between the read and the ref update.
           if (e.status === 422 && attempt < 3) continue;
           throw e;
+        } finally {
+          st.flight = null;
         }
       }
       st.savedAt = Date.now();

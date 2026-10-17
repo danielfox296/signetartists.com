@@ -5,12 +5,22 @@ import { API_BASE, OWNER, REPO, STAGING, STAGING_URL, STAGING_WORKFLOW, SAVE_AFT
 import { baseline, pendingFiles } from "../lib/publish.js";
 import { github } from "../lib/github.js";
 import { createRepo, idbCache } from "../lib/repo.js";
-import { commitMessage, fileLabel } from "../lib/labels.js";
+import { actNames, commitMessage, fileLabel } from "../lib/labels.js";
 import { pagePath, pagesList } from "../lib/site.js";
 import { ask, go, session, storedToken, storeToken, ui, useRepo, useUi, watchRepo } from "../state.js";
 import { clock, DialogHost, Toast, useNow } from "./common.jsx";
 import { PagesScreen } from "./Pages.jsx";
-import { PageEditor, SharedEditor, SHARED } from "./Editor.jsx";
+import { LayoutEditor, PageEditor, SharedEditor, SHARED } from "./Editor.jsx";
+import { ActsScreen, FiltersScreen } from "./Acts.jsx";
+import { ActEditor } from "./Act.jsx";
+import { actOf, actsList } from "../lib/acts.js";
+import { PostsScreen } from "./Posts.jsx";
+import { PostEditor } from "./PostEditor.jsx";
+import { VideosScreen } from "./Videos.jsx";
+import { postPath, postsList, videosList } from "../lib/posts.js";
+import { LayoutForm, LAYOUTS, LayoutsScreen } from "./Layouts.jsx";
+import { StylesScreen } from "./Styles.jsx";
+import { MediaScreen } from "./Media.jsx";
 import { GoLiveDrawer } from "./GoLive.jsx";
 
 // ------------------------------------------------------------ sign-in
@@ -122,7 +132,8 @@ function Rail() {
   const route = useUi((s) => s.route);
   const open = useUi((s) => s.rail);
   const n = pagesList(session.repo).length;
-  const cur = route[0] === "page" ? "pages" : route[0];
+  const nActs = actsList(session.repo).length;
+  const cur = route[0] === "page" ? "pages" : route[0] === "act" || route[0] === "filters" ? "acts" : route[0] === "post" ? "posts" : route[0] === "layout" ? "layouts" : route[0];
   const item = (id, label, kind, count) => (
     <button className="rail-item" aria-current={cur === id ? "page" : undefined} onClick={() => go(id)}>
       <span className={"kdot " + kind} />
@@ -149,12 +160,24 @@ function Rail() {
         <div className="rail-group">
           <div className="rail-label">Content</div>
           {item("pages", "Pages", "page", n)}
+          {item("acts", "Acts", "data", nActs)}
+          {item("posts", "Posts", "data", postsList(session.repo).length)}
+          {item("videos", "Videos", "data", videosList(session.repo).length)}
         </div>
         <div className="rail-group">
           <div className="rail-label">Shared</div>
           {Object.entries(SHARED).map(([k, s]) => (
             <span key={k}>{item(k, s.title, "shared")}</span>
           ))}
+        </div>
+        <div className="rail-group">
+          <div className="rail-label">Design</div>
+          {item("layouts", "Layouts", "layout")}
+          {item("styles", "Site styles", "layout")}
+        </div>
+        <div className="rail-group">
+          <div className="rail-label">Library</div>
+          {item("media", "Media", "")}
         </div>
       </nav>
       <div className="rail-foot">
@@ -211,6 +234,46 @@ function crumbs(route) {
       </>
     );
   }
+  if (r === "acts" || r === "filters") return <b>Acts</b>;
+  if (r === "act") {
+    const a = actOf(session.repo, arg);
+    return (
+      <>
+        <button className="hide-sm" onClick={() => go("acts")}>
+          Acts
+        </button>
+        <span className="hide-sm">›</span>
+        <b>{a ? a.name : arg}</b>
+      </>
+    );
+  }
+  if (r === "layout" || (r === "layouts" && arg))
+    return (
+      <>
+        <button className="hide-sm" onClick={() => go("layouts")}>
+          Layouts
+        </button>
+        <span className="hide-sm">›</span>
+        <b>{r === "layout" ? "Act page" : (LAYOUTS[arg] || {}).name || arg}</b>
+      </>
+    );
+  if (r === "layouts") return <b>Layouts</b>;
+  if (r === "styles") return <b>Site styles</b>;
+  if (r === "media") return <b>Media</b>;
+  if (r === "post") {
+    const d = session.repo.json(postPath(arg));
+    return (
+      <>
+        <button className="hide-sm" onClick={() => go("posts")}>
+          Posts
+        </button>
+        <span className="hide-sm">›</span>
+        <b>{d ? d.root.props.title || "Untitled" : arg}</b>
+      </>
+    );
+  }
+  if (r === "posts") return <b>Posts</b>;
+  if (r === "videos") return <b>Videos</b>;
   if (SHARED[r])
     return (
       <>
@@ -227,9 +290,21 @@ function Shell() {
   const drawer = useUi((s) => s.drawer);
   const pending = useUi((s) => s.pending);
   const status = useStagingStatus();
-  const full = route[0] === "page" || !!SHARED[route[0]];
+  const full = route[0] === "page" || route[0] === "post" || route[0] === "layout" || !!SHARED[route[0]];
   const dirty = session.repo.st.local.size;
-  const pagePathNow = route[0] === "page" ? (session.repo.json(pagePath(route[1])) || { root: { props: {} } }).root.props.path : null;
+  const actNow = route[0] === "act" ? actOf(session.repo, route[1]) : null;
+  const pagePathNow =
+    route[0] === "page"
+      ? (session.repo.json(pagePath(route[1])) || { root: { props: {} } }).root.props.path
+      : actNow && actNow.page
+        ? "/" + actNow.page
+        : route[0] === "acts"
+          ? "/music/"
+          : route[0] === "post"
+            ? `/blog/${route[1]}/`
+            : route[0] === "videos" && route[1]
+              ? `/video/${route[1]}/`
+              : null;
 
   useEffect(() => {
     const k = (e) => {
@@ -258,7 +333,10 @@ function Shell() {
   useEffect(() => {
     let alive = true;
     baseline(session.api, session.repo)
-      .then((b) => alive && ui.set({ pending: pendingFiles(b, session.repo).length }))
+      .then((b) => {
+        const list = pendingFiles(b, session.repo);
+        if (alive) ui.set({ pending: list.length, pendingPaths: new Set(list.map((f) => f.path)) });
+      })
       .catch(() => {});
     return () => {
       alive = false;
@@ -268,6 +346,16 @@ function Shell() {
   let screen;
   if (route[0] === "page") screen = <PageEditor key={route[1]} slug={route[1]} />;
   else if (SHARED[route[0]]) screen = <SharedEditor key={route[0]} which={route[0]} />;
+  else if (route[0] === "acts") screen = <ActsScreen />;
+  else if (route[0] === "filters") screen = <FiltersScreen />;
+  else if (route[0] === "act") screen = <ActEditor key={route[1]} id={route[1]} />;
+  else if (route[0] === "layout") screen = <LayoutEditor />;
+  else if (route[0] === "layouts") screen = route[1] ? <LayoutForm key={route[1]} id={route[1]} /> : <LayoutsScreen />;
+  else if (route[0] === "styles") screen = <StylesScreen />;
+  else if (route[0] === "media") screen = <MediaScreen />;
+  else if (route[0] === "post") screen = <PostEditor key={route[1]} slug={route[1]} />;
+  else if (route[0] === "posts") screen = <PostsScreen />;
+  else if (route[0] === "videos") screen = <VideosScreen slug={route[1]} />;
   else screen = <PagesScreen />;
 
   return (
@@ -375,18 +463,28 @@ function Workspace({ token, onSignOut }) {
         ),
     });
     repo.st.delay = SAVE_AFTER_MS;
+    actNames.get = (id) => {
+      const a = repo.json(`content/acts/${id}.json`) || (repo.base(`content/acts/${id}.json`) && JSON.parse(repo.base(`content/acts/${id}.json`)));
+      return a ? a.name : null;
+    };
     session.api = api;
     session.repo = repo;
     session.token = token;
     const off = watchRepo(repo);
+    // Only the working copy still in use may say it has loaded.
+    let alive = true;
     repo
       .load()
-      .then(() => setState({ loading: false, error: null }))
+      .then(() => alive && setState({ loading: false, error: null }))
       .catch((e) => {
+        if (!alive) return;
         if (e.status === 401) onSignOut("Token not accepted");
         else setState({ loading: false, error: e });
       });
-    return off;
+    return () => {
+      alive = false;
+      off();
+    };
   }, [token]); // eslint-disable-line react-hooks/exhaustive-deps
   if (state.error)
     return (

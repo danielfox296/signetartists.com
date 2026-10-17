@@ -2,26 +2,27 @@
    components and stylesheet. Sections down the left, the page in the
    middle at desktop or phone width, fields on the right. */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { createUsePuck, Puck } from "@puckeditor/core";
+import { createUsePuck, FieldLabel, Puck } from "@puckeditor/core";
 import "@puckeditor/core/puck.css";
 import { Site, useSite } from "../../src/components/parts.jsx";
 import { Item } from "../../src/components/registry.jsx";
 import { Footer, Header } from "../../src/components/layout.jsx";
 import { fixedSections } from "../../src/components/sections.jsx";
 import { STAGING_URL } from "../config.js";
-import { pageContext, pagePath, serialize, siteFrom } from "../lib/site.js";
+import { ACT_LAYOUT, pageContext, pagePath, serialize, siteFrom } from "../lib/site.js";
+import { pageConfig } from "../../src/components/config.jsx";
 import { sectionName } from "../lib/diff.js";
 import { go, session, useRepo } from "../state.js";
-import { Badge, kindOf, useOutside } from "./common.jsx";
+import { Badge, kindOf, Toggle, useOutside } from "./common.jsx";
 import { adminPageConfig, assetUrl, clean, conform, guarded, imageField, newItem, place } from "./fields.jsx";
 import { writePage } from "./Pages.jsx";
 import { fileLabel } from "../lib/labels.js";
 
 const usePuck = createUsePuck();
 const ROOT = "root:default-zone";
-const PREFIX = STAGING_URL + "/";
+export const PREFIX = STAGING_URL + "/";
 
-const VIEWPORTS = [
+export const VIEWPORTS = [
   { width: 1280, height: "auto", label: "Desktop", icon: "Monitor" },
   { width: 390, height: "auto", label: "Phone", icon: "Smartphone" },
 ];
@@ -61,6 +62,9 @@ function Canvas({ children, document: d }) {
 
 // Puck renders the canvas through a portal: the site context is passed in again.
 let currentCtx = null;
+export const setCanvasContext = (ctx) => {
+  currentCtx = ctx;
+};
 function CanvasContext({ children }) {
   return <Site.Provider value={currentCtx}>{children}</Site.Provider>;
 }
@@ -68,11 +72,11 @@ function CanvasContext({ children }) {
 // Puck's props stay the same objects from render to render: a new
 // overrides object makes Puck rebuild the canvas, and the copy being typed
 // loses focus after one letter.
-const PUCK_IFRAME = { enabled: true, waitForStyles: false };
+export const PUCK_IFRAME = { enabled: true, waitForStyles: false };
 let OVERRIDES = null;
-const overrides = () => (OVERRIDES ||= { iframe: Canvas, componentOverlay: Overlay });
+export const overrides = () => (OVERRIDES ||= { iframe: Canvas, componentOverlay: Overlay });
 // An onChange whose identity never changes, calling the latest handler.
-function useStable(fn) {
+export function useStable(fn) {
   const ref = useRef(fn);
   ref.current = fn;
   return useCallback((...a) => ref.current(...a), []);
@@ -84,7 +88,7 @@ function Overlay({ children, componentType, isSelected, hover }) {
 
 // ------------------------------------------------------------ left column
 
-function SectionList({ config }) {
+export function SectionList({ config, name = sectionName }) {
   const content = usePuck((s) => s.appState.data.content);
   const sel = usePuck((s) => s.appState.ui.itemSelector);
   const selected = usePuck((s) => s.selectedItem);
@@ -157,13 +161,13 @@ function SectionList({ config }) {
         <span className="t">Header</span>
       </button>
       {content.map((c, i) => {
-        const n = sectionName(c, config.components);
+        const n = name(c, config.components);
         const target = drag && drag.to === i && drag.from !== i;
         return (
           <div
             key={c.props.id}
             data-row
-            className={"layer" + (top === i ? " sel" : "") + (drag && drag.from === i ? " dragging" : "") + (target ? (drag.to > drag.from ? " dropafter" : " dragover") : "")}
+            className={"layer" + (top === i ? " sel" : "") + (c.props.hidden ? " off" : "") + (drag && drag.from === i ? " dragging" : "") + (target ? (drag.to > drag.from ? " dropafter" : " dragover") : "")}
             onPointerDown={down(i)}
             role="button"
             tabIndex={0}
@@ -191,7 +195,7 @@ function SectionList({ config }) {
   );
 }
 
-function AddMenu({ label, groups, onPick }) {
+export function AddMenu({ label, groups, onPick }) {
   const [at, setAt] = useState(null);
   const [q, setQ] = useState("");
   const ref = useOutside(() => setAt(null));
@@ -296,7 +300,7 @@ function useViewWidth() {
   return [w, (x) => ((viewStore.width = x), viewStore.subs.forEach((f) => f(x)))];
 }
 
-function ViewTools({ url }) {
+function ViewTools({ url, act }) {
   const [current, setW] = useViewWidth();
   return (
     <div className="prev-tools">
@@ -312,13 +316,18 @@ function ViewTools({ url }) {
           {url}
         </a>
       ) : null}
+      {act ? (
+        <button className="btn ghost sm" onClick={() => go("act", act)}>
+          Edit act
+        </button>
+      ) : null}
     </div>
   );
 }
 
 // The canvas is drawn at the view's real width and scaled to fit, so
 // desktop shows the desktop layout on any screen.
-function Middle({ url }) {
+export function Middle({ url, act }) {
   const [width] = useViewWidth();
   const box = useRef(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -333,7 +342,7 @@ function Middle({ url }) {
   const scale = size.w && width > size.w ? size.w / width : 1;
   return (
     <div className="pe-mid">
-      <ViewTools url={url} />
+      <ViewTools url={url} act={act} />
       <div className={"pe-stage" + (phone ? " phone" : "")} ref={box}>
         <div className="pe-canvas" style={{ width, height: scale < 1 ? size.h / scale : "100%", transform: scale < 1 ? `scale(${scale})` : undefined }}>
           <Puck.Preview />
@@ -383,10 +392,11 @@ function SharedList({ which }) {
   );
 }
 
-function Layout({ config, title, kind, url, shared }) {
+function Layout({ config, title, kind, url, shared, top, act }) {
   return (
     <div className="pe">
       <aside className="pe-left">
+        {top}
         <div className="insp-label">{shared ? "Shared" : "Sections"}</div>
         {shared ? <SharedList which={shared} /> : <SectionList config={config} />}
         {shared ? null : (
@@ -396,7 +406,7 @@ function Layout({ config, title, kind, url, shared }) {
           </div>
         )}
       </aside>
-      <Middle url={url} />
+      <Middle url={url} act={act} />
       <aside className="pe-right">
         <RightHead title={title} kind={kind} config={config} />
         <Puck.Fields />
@@ -406,7 +416,7 @@ function Layout({ config, title, kind, url, shared }) {
 }
 
 // Re-read the file into Puck when it changes from outside (a merge, a revert).
-function useExternal(path) {
+export function useExternal(path) {
   const [k, setK] = useState(0);
   useEffect(
     () =>
@@ -418,7 +428,7 @@ function useExternal(path) {
   return k;
 }
 
-const ordered = (orig, next) => {
+export const ordered = (orig, next) => {
   const out = {};
   for (const k of Object.keys(orig)) if (k in next) out[k] = next[k];
   for (const k of Object.keys(next)) if (!(k in out)) out[k] = next[k];
@@ -465,7 +475,101 @@ export function PageEditor({ slug }) {
         iframe={PUCK_IFRAME}
         overrides={overrides()}
       >
-        <Layout config={adminPageConfig} title={place.label} kind="page" url={p.path} />
+        <Layout config={adminPageConfig} title={place.label} kind="page" url={p.path} act={(site.m.ACT_BY_URL[p.path] || {}).id} />
+      </Puck>
+    </Site.Provider>
+  );
+}
+
+// ------------------------------------------------------------ layouts
+
+// The act page layout: the sections every page on it shows, drawn with one
+// act's details, and where each act's own sections go.
+// A layout section can be switched off: it stays in the layout, faded on
+// the canvas, and the act pages leave it out.
+function ShownInput({ value, onChange, readOnly }) {
+  return (
+    <FieldLabel label="Shown" el="div" readOnly={readOnly}>
+      <Toggle checked={!value} onChange={(on) => onChange(on ? undefined : true)} />
+    </FieldLabel>
+  );
+}
+const switchable = (c) => ({
+  ...c,
+  fields: { hidden: { type: "custom", label: "Shown", render: ShownInput }, ...c.fields },
+  render: function LayoutSection(props) {
+    const R = c.render;
+    return props.hidden ? (
+      <div style={{ opacity: 0.35 }}>
+        <R {...props} />
+      </div>
+    ) : (
+      <R {...props} />
+    );
+  },
+});
+const layoutConfig = {
+  ...adminPageConfig,
+  components: Object.fromEntries(Object.entries(adminPageConfig.components).map(([name, c]) => [name, name === "ActOwn" ? c : switchable(c)])),
+  root: { fields: {}, render: pageConfig.root.render },
+  categories: { ...adminPageConfig.categories, other: { title: "Other", components: ["ActOwn", "CustomHtml"] } },
+};
+
+let layoutAct = null;
+export function LayoutEditor() {
+  const rev = useRepo();
+  const repo = session.repo;
+  const k = useExternal(ACT_LAYOUT);
+  const doc = repo.json(ACT_LAYOUT);
+  const site = useMemo(() => {
+    try {
+      return siteFrom(repo);
+    } catch (e) {
+      return { error: e };
+    }
+  }, [rev]); // eslint-disable-line react-hooks/exhaustive-deps
+  const acts = site.error ? [] : site.m.ALL_ACTS;
+  const usesIt = acts.find((a) => a.page && site.m.usesLayout(site.m.pageByUrl["/" + a.page]));
+  const [actId, setActId] = useState(layoutAct || (usesIt || acts[0] || {}).id);
+  const initial = useMemo(() => (doc ? structuredClone(doc) : null), [k, actId, !!doc]); // eslint-disable-line react-hooks/exhaustive-deps
+  const onChange = useStable((data) => {
+    const cur = repo.json(ACT_LAYOUT);
+    if (!cur) return;
+    const c = clean(data, layoutConfig);
+    const next = ordered(cur, { ...cur, content: conform(c.content, cur.content, layoutConfig) });
+    if (serialize(next) !== repo.get(ACT_LAYOUT)) repo.set(ACT_LAYOUT, serialize(next), "editor");
+  });
+  if (!doc) return <div className="screen"><p className="muted">No act page layout</p></div>;
+  if (site.error) return <div className="screen"><p className="warn-line">{String(site.error.message)}</p></div>;
+  const a = site.m.ACT_BY_ID[actId] || acts[0];
+  const path = a && a.page ? "/" + a.page : "/artists/act/";
+  const synth = { root: { props: { path, title: a ? a.name : "", nav: "music", layout: "act", schema: { act: a ? a.id : "" } } }, content: [] };
+  place.slug = null;
+  place.label = "Act page layout";
+  currentCtx = pageContext(site, synth, { prefix: PREFIX, assetUrl });
+  const pick = (
+    <label className="field layout-act">
+      <span className="insp-label">Act</span>
+      <select
+        className="select"
+        value={a ? a.id : ""}
+        onChange={(e) => {
+          layoutAct = e.target.value;
+          setActId(e.target.value);
+        }}
+      >
+        {acts.map((x) => (
+          <option key={x.id} value={x.id}>
+            {x.name}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+  return (
+    <Site.Provider value={currentCtx}>
+      <Puck key={"layout:" + k + ":" + (a ? a.id : "")} config={layoutConfig} data={initial} onChange={onChange} viewports={VIEWPORTS} iframe={PUCK_IFRAME} overrides={overrides()}>
+        <Layout config={layoutConfig} title="Act page" kind="layout" url={null} top={pick} />
       </Puck>
     </Site.Provider>
   );

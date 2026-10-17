@@ -6,7 +6,9 @@
 import { Component, useEffect, useRef, useState } from "react";
 import { createUsePuck, FieldLabel, setDeep, useGetPuck } from "@puckeditor/core";
 import { pageConfig } from "../../src/components/config.jsx";
-import { inline } from "../../src/components/parts.jsx";
+import { inline, useSite } from "../../src/components/parts.jsx";
+import { Item } from "../../src/components/registry.jsx";
+import { actsList, rosterOf } from "../lib/acts.js";
 import { normPath, pathProblem } from "../lib/site.js";
 import { fileSlug, freePath, resize, sourcesEntry } from "../lib/images.js";
 import { RICH } from "../lib/richtext.jsx";
@@ -184,21 +186,76 @@ export const pageSettingsFields = {
   robots: { type: "custom", label: "Indexed", render: IndexedInput },
 };
 
+// ------------------------------------------------------------ acts and choices
+
+// An act from the roster. A part of an act page may leave it empty, and
+// then shows the page's own act.
+function ActPick({ field, value, onChange, readOnly }) {
+  const acts = actsList(session.repo);
+  return (
+    <FieldLabel label={field.label} el="div" readOnly={readOnly}>
+      <select className="select" value={value || ""} disabled={readOnly} onChange={(e) => onChange(e.target.value || undefined)}>
+        <option value="">{field.pageAct ? "This page's act" : ""}</option>
+        {acts.map((a) => (
+          <option key={a.id} value={a.id}>
+            {a.name}
+          </option>
+        ))}
+      </select>
+    </FieldLabel>
+  );
+}
+
+// A choice from one of the roster's filter lists.
+function ChoicePick({ field, value, onChange, readOnly }) {
+  const list = rosterOf(session.repo)[field.list] || [];
+  return (
+    <FieldLabel label={field.label} el="div" readOnly={readOnly}>
+      <select className="select" value={value || ""} disabled={readOnly} onChange={(e) => onChange(e.target.value || undefined)}>
+        <option value="" />
+        {list.map((c) => (
+          <option key={c.id} value={c.id}>
+            {c.label}
+          </option>
+        ))}
+      </select>
+    </FieldLabel>
+  );
+}
+
+const CHOICE_LISTS = { occasion: "occasions", night: "buckets" };
+
+// Act cards show only the fields their source uses.
+const CARD_FIELDS = { flagships: [], occasion: ["occasion", "compact"], night: ["night", "compact"], acts: ["acts", "compact"], picks: ["picks"] };
+const RESOLVE = {
+  Cards: (data, { fields }) => {
+    const show = CARD_FIELDS[data.props.source || "flagships"] || [];
+    return Object.fromEntries(Object.entries(fields).filter(([k]) => k === "source" || show.includes(k)));
+  },
+};
+
 // ------------------------------------------------------------ configs
 
 const PICTURE_KEYS = new Set(["src", "poster"]);
 
-// Picture fields become uploads, wherever they sit.
-function mapFields(fields) {
+// Picture fields become uploads, wherever they sit; act and choice fields
+// pick from the roster.
+function mapFields(fields, nested = false) {
   const out = {};
   for (const [k, f] of Object.entries(fields || {})) {
     if (!f) continue;
-    if (PICTURE_KEYS.has(k) && f.type === "text") out[k] = imageField(f.label === "File" ? "Picture" : f.label);
+    if (k === "act" && f.type === "text") out[k] = { type: "custom", label: f.label, render: ActPick, pageAct: !nested };
+    else if (CHOICE_LISTS[k] && f.type === "text") out[k] = { type: "custom", label: f.label, render: ChoicePick, list: CHOICE_LISTS[k] };
+    else if (PICTURE_KEYS.has(k) && f.type === "text") out[k] = imageField(f.label === "File" ? "Picture" : f.label);
     else if (f.type === "richtext") out[k] = { ...f, ...RICH };
     // Inline CSS fields say so, so they don't read as a second "Style".
     else if (f.type === "text" && /style$/i.test(k) && f.label) out[k] = { ...f, label: f.label.replace(/\bStyle\b/, "CSS").replace(/\bstyle\b/, "CSS") };
-    else if (f.type === "object") out[k] = { ...f, objectFields: mapFields(f.objectFields) };
-    else if (f.type === "array") out[k] = { ...f, arrayFields: mapFields(f.arrayFields) };
+    else if (f.type === "object") out[k] = { ...f, objectFields: mapFields(f.objectFields, true) };
+    else if (f.type === "array") {
+      out[k] = { ...f, arrayFields: mapFields(f.arrayFields, true) };
+      // A list of acts reads as their names.
+      if (f.arrayFields && f.arrayFields.act) out[k].getItemSummary = (it) => (it && it.act && (session.repo.json(`content/acts/${it.act}.json`) || {}).name) || (it && it.act) || "";
+    }
     else out[k] = f;
   }
   return out;
@@ -280,6 +337,7 @@ export function guarded(components) {
     out[name] = {
       ...c,
       fields,
+      ...(RESOLVE[name] ? { resolveFields: RESOLVE[name] } : {}),
       defaultProps: undefined,
       render: function Guarded(props) {
         const getPuck = useGetPuck();
@@ -301,9 +359,30 @@ export function guarded(components) {
   return out;
 }
 
+// A page on the act page layout shows the layout's parts around its own
+// sections, as the build puts them together.
+function LayoutParts({ items }) {
+  return items.length ? <div className="k-context">{items.map((x) => <Item key={x.props.id} c={x} />)}</div> : null;
+}
+function AdminPageRoot(props) {
+  const s = useSite();
+  const R = pageConfig.root.render;
+  const doc = s && s.page;
+  if (!doc || !s.model.usesLayout(doc)) return <R {...props} />;
+  const parts = s.model.LAYOUT.content;
+  const i = parts.findIndex((x) => x.type === "ActOwn");
+  return (
+    <R {...props}>
+      <LayoutParts items={i < 0 ? parts : parts.slice(0, i)} />
+      {props.children}
+      <LayoutParts items={i < 0 ? [] : parts.slice(i + 1)} />
+    </R>
+  );
+}
+
 export const adminPageConfig = {
   ...pageConfig,
-  root: { ...pageConfig.root, fields: pageSettingsFields },
+  root: { ...pageConfig.root, fields: pageSettingsFields, render: AdminPageRoot },
   components: guarded(pageConfig.components),
 };
 
