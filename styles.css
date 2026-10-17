@@ -152,6 +152,16 @@ img {
   height: auto;
 }
 
+/* The built site wraps its pictures in <picture> for the AVIF and WebP
+   copies; the <img> inside lays out as if the wrapper weren't there. */
+picture {
+  display: contents;
+}
+
+picture source {
+  display: none;
+}
+
 ::selection {
   background: var(--ink);
   color: var(--paper);
@@ -826,9 +836,9 @@ img {
   will-change: opacity, transform;
 }
 
-.hero-cine__frame:nth-child(1) { animation-delay: 0s; }
-.hero-cine__frame:nth-child(2) { animation-delay: -12s; }
-.hero-cine__frame:nth-child(3) { animation-delay: -6s; }
+.hero-cine__frame:nth-child(1), :nth-child(1) > .hero-cine__frame { animation-delay: 0s; }
+.hero-cine__frame:nth-child(2), :nth-child(2) > .hero-cine__frame { animation-delay: -12s; }
+.hero-cine__frame:nth-child(3), :nth-child(3) > .hero-cine__frame { animation-delay: -6s; }
 
 @keyframes hero-cine-cycle {
   0%    { opacity: 1; transform: scale(1.02); }
@@ -889,7 +899,8 @@ img {
     animation: none;
     transform: none;
   }
-  .hero-cine__frame:nth-child(1) {
+  .hero-cine__frame:nth-child(1),
+  :nth-child(1) > .hero-cine__frame {
     opacity: 1;
   }
 }
@@ -1341,7 +1352,8 @@ img {
 /* Below the fold of a phone the strip would show eight 45px stamps, which reads
    as noise. Four sleeves at a legible size instead. */
 @media (max-width: 700px) {
-  .cover-strip img:nth-child(n + 5) {
+  .cover-strip img:nth-child(n + 5),
+  .cover-strip picture:nth-child(n + 5) {
     display: none;
   }
 }
@@ -3230,6 +3242,37 @@ main:focus {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Click-to-play YouTube, 2026-10-17: the video's picture and YouTube's play
+   button. A click or Enter swaps in the player, playing; until then nothing
+   loads from YouTube. The watch pages keep the player itself. */
+.yt {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #000;
+  cursor: pointer;
+}
+
+.yt img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.yt-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 48px;
+  margin: -24px 0 0 -34px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'%3E%3Cpath d='M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z' fill='%23f00'/%3E%3Cpath d='M45 24 27 14v20' fill='%23fff'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* Real-media grids, 2026-08-27. Video embeds reuse .act-video; the photo

@@ -4,7 +4,8 @@
    the hub lists, the home hero, the cover walls, the act lists. */
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
-import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite } from "./parts.jsx";
+import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
+import { SIZES, ytId } from "../lib/pictures.js";
 import { ALLOW, CardGrid, CloseRow } from "./blocks.jsx";
 
 const { rich, text } = F;
@@ -151,7 +152,7 @@ const HomeHero = {
         {(frames || []).map((im, i) => (
           <Fragment key={i}>
             {i ? " " : null}
-            <Img im={{ cls: "hero-cine__frame", ...im }} />
+            <Img im={{ cls: "hero-cine__frame", ...im }} sizes={SIZES.screen} />
           </Fragment>
         ))}
       </div>
@@ -170,7 +171,7 @@ const RangeStrip = {
   fields: { label: shellFields.label, image: { type: "object", label: "Picture", objectFields: imageFields } },
   render: ({ label, image }) => (
     <section className="range-strip" aria-label={label || undefined}>
-      <Img im={image} />
+      <Img im={image} sizes={SIZES.screen} />
     </section>
   ),
 };
@@ -184,7 +185,7 @@ const CoverStrip = {
     return (
       <section className="section--night cover-strip">
         <div className="cover-strip-inner">
-          {(tiles || []).map((t, i) => <Pic key={i} src={href(t.src)} alt={t.alt} loading="lazy" decoding="async" width="300" height="300" />)}
+          {(tiles || []).map((t, i) => <Pic key={i} src={href(t.src)} alt={t.alt} loading="lazy" decoding="async" width="300" height="300" sizes={SIZES.strip} />)}
         </div>
         <div className="wrap">
           <H as="p" className="cover-strip-note" html={note} />
@@ -219,7 +220,7 @@ const CoverWall = {
     );
     const figs = (tiles || []).map((t, i) => (
       <figure className="wall-tile" style={css(t.style)} key={i}>
-        <Pic src={href(t.src)} alt={t.alt} loading={t.loading || undefined} decoding={t.decoding || undefined} />
+        <Pic src={href(t.src)} alt={t.alt} loading={t.loading || undefined} decoding={t.decoding || undefined} sizes={SIZES.wall} />
         <figcaption>
           <H as="span" className="wall-song" html={t.song} />
           <H as="span" className="wall-credit" html={t.credit} />
@@ -258,9 +259,10 @@ const ActHeader = {
     if (!a) return null;
     const face = [m.actByline(a), a.material].filter(Boolean).map((x) => x.replace(/[.\s]+$/, "") + ".").join(" ");
     let media = null;
-    if (a.video && /^https?:\/\//.test(a.video)) media = <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />;
+    if (a.video && ytId(a.video)) media = <YouTube id={ytId(a.video)} src={a.video} title={`${a.name} performing`} allow={ALLOW} sizes={SIZES.wrap} />;
+    else if (a.video && /^https?:\/\//.test(a.video)) media = <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />;
     else if (a.video) media = <video src={href("/" + a.video)} poster={a.video_poster ? href("/" + a.video_poster) : undefined} title={`${a.name} performing`} controls preload="metadata" playsInline />;
-    else if (a.img) media = <Pic class="act-video-photo" src={href("/img/" + a.img)} alt={a.alt || ""} decoding="async" />;
+    else if (a.img) media = <Pic class="act-video-photo" src={href("/img/" + a.img)} alt={a.alt || ""} decoding="async" sizes={SIZES.wrap} />;
     return (
       <section className="section section--top act-hero">
         <div className="wrap">

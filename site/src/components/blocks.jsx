@@ -5,7 +5,8 @@
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
-import { buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite } from "./parts.jsx";
+import { buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
+import { SIZES, ytId } from "../lib/pictures.js";
 
 const { rich, text } = F;
 const select = (label, values) => ({ type: "select", label, options: values.map((v) => (typeof v === "string" ? { label: v, value: v } : v)) });
@@ -182,7 +183,7 @@ export const MediaGrid = {
     <div className={cx("media-grid", single && "media-grid--single")}>
       {(images || []).map((im, i) => (
         <figure key={i}>
-          <Img im={im} />
+          <Img im={im} sizes={single ? SIZES.single : SIZES.grid} />
           {im.caption != null ? <H as="figcaption" html={im.caption} /> : null}
         </figure>
       ))}
@@ -192,14 +193,16 @@ export const MediaGrid = {
 
 export const ALLOW = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
 
-export function Player({ v }) {
+export function Player({ v, sizes }) {
   const href = useHref();
   if (v.kind === "video") {
     return <video src={href(v.src)} poster={v.poster ? href(v.poster) : undefined} title={v.title} controls preload="metadata" playsInline />;
   }
   if (v.kind === "photo") {
-    return <Img im={{ cls: "act-video-photo", ...v.image }} />;
+    return <Img im={{ cls: "act-video-photo", ...v.image }} sizes={sizes} />;
   }
+  const id = ytId(v.src);
+  if (id) return <YouTube id={id} src={v.src} title={v.title} allow={v.allow || ALLOW} sizes={sizes} />;
   return <iframe src={v.src} title={v.title} loading={v.loading || undefined} allow={v.allow || ALLOW} allowFullScreen />;
 }
 
@@ -221,7 +224,7 @@ export const VideoGrid = {
     <div className={cx("video-grid", single && "video-grid--single")}>
       {(videos || []).map((v, i) => (
         <div className="act-video" key={i}>
-          <Player v={v} />
+          <Player v={v} sizes={single ? SIZES.single : SIZES.videos((videos || []).length)} />
         </div>
       ))}
     </div>
@@ -235,7 +238,7 @@ export const ActVideo = {
   defaultProps: { kind: "iframe", src: "", title: "" },
   render: (v) => (
     <div className="act-video">
-      <Player v={v} />
+      <Player v={v} sizes={SIZES.wrap} />
     </div>
   ),
 };
@@ -416,7 +419,11 @@ function CardMedia({ a, ratio }) {
     if (/^https?:\/\//.test(a.video)) {
       return (
         <div className="act-card-video" style={css(st)}>
-          <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />
+          {ytId(a.video) ? (
+            <YouTube id={ytId(a.video)} src={a.video} title={`${a.name} performing`} allow={ALLOW} sizes={SIZES.card} />
+          ) : (
+            <iframe src={a.video} title={`${a.name} performing`} loading="lazy" allow={ALLOW} allowFullScreen />
+          )}
         </div>
       );
     }
@@ -427,7 +434,7 @@ function CardMedia({ a, ratio }) {
     );
   }
   if (!a.img) return null;
-  return <Pic class="act-card-img" src={href(`/img/${a.img}`)} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" style={st} />;
+  return <Pic class="act-card-img" src={href(`/img/${a.img}`)} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" style={st} sizes={SIZES.card} />;
 }
 
 export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3" }) {

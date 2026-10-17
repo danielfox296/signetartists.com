@@ -5,6 +5,7 @@ import { esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
 import { isoSeconds } from "../build/feeds.js";
 import { H, Pic, Raw, useHref, useSite } from "./parts.jsx";
+import { SIZES } from "../lib/pictures.js";
 
 export const CustomHtml = {
   label: "Custom HTML",
@@ -20,7 +21,7 @@ function ClipCard({ v }) {
   const secs = isoSeconds(v.duration);
   return (
     <a className="clip-card" href={href(`/${s.model.WATCH_BASE}/${v.slug}/`)}>
-      {src ? <Pic class="clip-thumb" src={src} alt="" width="320" height="180" loading="lazy" decoding="async" /> : null}
+      {src ? <Pic class="clip-thumb" src={src} alt="" width="320" height="180" loading="lazy" decoding="async" sizes={SIZES.clip} /> : null}
       <span className="clip-title">{v.name}</span>
       <span className="clip-time">{`${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}`}</span>
     </a>
@@ -221,7 +222,7 @@ export const BlogPosts = {
                 r.group ? (
                   <div key={k} className="blog-row-text">{text(r.ids)}</div>
                 ) : p.hero && p.hero.src ? (
-                  <Pic key={k} class="blog-row-thumb" src={s.prefix + thumb(p.hero.src)} alt="" width="640" height="360" loading={i < 2 ? "eager" : "lazy"} decoding="async" style={ratioStyle(L.ratio)} />
+                  <Pic key={k} class="blog-row-thumb" src={s.prefix + thumb(p.hero.src)} alt="" width="640" height="360" loading={i < 2 ? "eager" : "lazy"} decoding="async" style={ratioStyle(L.ratio)} sizes={SIZES.row} />
                 ) : null
               )}
             </a>

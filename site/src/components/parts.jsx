@@ -2,6 +2,7 @@
    frame, the heading block and the run of paragraphs around a section's body. */
 import { createContext, Fragment, useContext } from "react";
 import { css, cx, relHtml, relUrl } from "../lib/util.js";
+import { pictureHtml, sizesFor, ytPath } from "../lib/pictures.js";
 
 // What a component needs to know about the page it is on: the link prefix
 // for its depth, its URL, the site model, and (in the static build) where to
@@ -72,25 +73,53 @@ export function Shell({ p, cls, wrap = true, children }) {
 
 // An <img>. The static build writes it as plain markup: React 19 would
 // otherwise add a <link rel="preload"> for every image not marked lazy,
-// which the site has never had.
-export function Pic(attrs) {
+// which the site has never had. Given `sizes`, a local picture goes out as a
+// <picture> with its AVIF and WebP copies, and its width and height.
+export function Pic({ sizes, ...attrs }) {
   const s = useSite();
-  const a = Object.entries(attrs).filter(([, v]) => v !== undefined && v !== null && v !== false);
+  let a = Object.entries(attrs).filter(([, v]) => v !== undefined && v !== null && v !== false);
   if (s && s.raw) {
-    const html = "<img" + a.map(([k, v]) => (k === "style" && typeof v === "object" ? "" : ` ${k === "className" ? "class" : k.toLowerCase()}="${escAttr(v)}"`)).join("") + ">";
+    const pic = sizes && s.pictures ? s.pictures.of(attrs.src) : null;
+    if (pic && attrs.width == null && attrs.height == null) {
+      const at = a.findIndex(([k]) => k === "alt") + 1 || a.length;
+      a = [...a.slice(0, at), ["width", pic.w], ["height", pic.h], ...a.slice(at)];
+    }
+    let html = "<img" + a.map(([k, v]) => (k === "style" && typeof v === "object" ? "" : ` ${k === "className" ? "class" : k.toLowerCase()}="${escAttr(v)}"`)).join("") + ">";
+    if (pic) html = pictureHtml(html, attrs.src, pic.widths, sizes);
     s.raw.push(html);
     return <raw-html data-k={s.raw.length - 1} />;
   }
   const props = Object.fromEntries(a.map(([k, v]) => [k === "fetchpriority" ? "fetchPriority" : k === "class" ? "className" : k, k === "style" && typeof v === "string" ? css(v) : v]));
   return <img {...props} />;
 }
+
+// A YouTube video as its picture and a play button: the video's poster, or
+// the picture YouTube shows for it. The page's script swaps in the player,
+// playing, on a click or Enter, so nothing loads from YouTube until then.
+export function YouTube({ id, src, title, allow, referrerPolicy, sizes }) {
+  const s = useSite();
+  const href = useHref();
+  const v = s && s.model && s.model.FOOTAGE_BY_KEY ? s.model.FOOTAGE_BY_KEY[id] : null;
+  const own = s && s.raw && s.pictures;
+  const pic = v && v.poster ? { src: href("/" + v.poster) } : own ? { src: href("/" + ytPath(id)) } : { src: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`, width: "480", height: "360" };
+  return (
+    <button type="button" className="yt" data-yt={src} data-title={title} data-allow={allow} data-referrerpolicy={referrerPolicy} aria-label={title ? `Play video: ${title}` : "Play video"}>
+      <Pic src={pic.src} alt="" width={pic.width} height={pic.height} loading="lazy" decoding="async" sizes={sizes} />
+      <span className="yt-play" aria-hidden="true"></span>
+    </button>
+  );
+}
+
 const escAttr = (v) => String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-export function Img({ im }) {
+// A stored picture. It is drawn as wide as its style says, else as wide as
+// the column, unless the block that holds it says otherwise.
+export function Img({ im, sizes }) {
   const href = useHref();
   if (!im) return null;
   return (
     <Pic
+      sizes={sizes || sizesFor(im.style)}
       class={im.cls || undefined}
       src={href(im.src)}
       alt={im.alt ?? undefined}

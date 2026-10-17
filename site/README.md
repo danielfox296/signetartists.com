@@ -8,7 +8,7 @@ Run everything from the repo root.
 | | |
 |---|---|
 | Install | `npm ci --prefix site` and `pip3 install -r site/scripts/requirements.txt` |
-| Build | `node site/scripts/build.mjs --out _site` |
+| Build | `node site/scripts/build.mjs --out _site`; with `--images <cache folder>` it also makes the pictures' copies, as the deploys do |
 | Convert `_src/` into `content/` | `python3 site/scripts/convert.py` |
 | Whole-site proof | `python3 site/scripts/proof.py` (report in `site/proof/report.md`) |
 | Editor, development only | `npm --prefix site run dev`, then http://127.0.0.1:5793/?page=weddings |
@@ -25,6 +25,15 @@ Run everything from the repo root.
   - `config.jsx` the Puck configs, `registry.jsx` how the build renders stored items
 - `src/lib/model.js` everything derived from `content/`: act facts, trails, sibling and hub lists, posts by parent
 - `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD), `feeds.js`
+- `src/lib/pictures.js` pictures in the built site: a local JPEG or PNG goes out as a `<picture>` with AVIF and WebP
+  copies in 480, 800, 1200 and 1600 wide (up to its own width), and each component's `sizes`. The editor draws plain
+  `<img>`s. `src/build/images.js` makes the copies at deploy time (`--images`), recompresses every JPEG under `img/`
+  and `media/`, and fetches each YouTube video's picture to `img/yt/<id>.jpg`; none of it is committed, and the
+  workflows keep it in the Actions cache
+- YouTube videos are click-to-play (`YouTube` in `components/parts.jsx`): the video's poster or its YouTube picture
+  and a play button, swapped for the player on a click or Enter. The watch pages under `/video/` keep the player.
+- The build minifies `styles.css` and gives it a `?v=` of its own; the first picture of a page's first section loads
+  first and never lazily
 - `admin/` the admin app at admin.signetartists.com (Phase 2)
   - `config.js` the repo, branches and the Go live switch (`GO_LIVE`: Go live works once `main` is built from `content/`)
   - `lib/github.js` the REST calls; `lib/repo.js` the working copy of `staging` (one commit per save, merge per file);

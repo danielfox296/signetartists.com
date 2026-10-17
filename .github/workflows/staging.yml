@@ -37,8 +37,27 @@ jobs:
       - name: Install
         run: npm ci --prefix site
 
+      # The pictures' AVIF and WebP copies, the recompressed JPEGs and the
+      # YouTube pictures are made here, never committed. The cache keeps them
+      # between runs, so a run makes only what is new, and is saved again
+      # only when something was made.
+      - name: Restore pictures
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.cache/signet-pictures
+          key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: pictures-v1-
+
       - name: Build site
-        run: node site/scripts/build.mjs --out _gen
+        id: build
+        run: node site/scripts/build.mjs --out _gen --images ~/.cache/signet-pictures
+
+      - name: Save pictures
+        if: steps.build.outputs.pictures_made != '0'
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/signet-pictures
+          key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       # The repo's static files (styles, scripts, images, fonts), then the
       # build's output over them. The HTML and feeds build.py committed are
