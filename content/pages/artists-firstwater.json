@@ -28,7 +28,7 @@
     "act": "firstwater"
    },
    "notes": {
-    "_note": "Authored 2026-09-19 with the signet-new-act skill (scripts/new_act_page.py --kind artists --shape artist), for Daniel's own sound-bath practice, the first non-band act on the roster. acts.json firstwater.page points here so every card and llms line follows. Ladder, book and footage sections deleted: one configuration, no titles, no footage; the hero carries the interim sound-bath still (scripts/stills.py) in the act-video-photo slot in place of a footage label, the act's portrait having been removed on Daniel's call the same day. No price of any kind: the act's own corporate page publishes a starting figure and it stays there. Rewritten the same day on Daniel's rulings: nobody named, buyer search terms throughout.",
+    "_note": "Authored 2026-09-19 with the signet-new-act skill (scripts/new_act_page.py --kind artists --shape artist), for Daniel's own sound-bath practice, the first non-band act on the roster. acts.json firstwater.page points here so every card and llms line follows. Ladder, book and footage sections deleted: one configuration, no titles, no footage; the hero carries the interim sound-bath still (scripts/stills.py) in the act-video-photo slot in place of a footage label, the act's portrait having been removed on Daniel's call the same day. No price of any kind: the act's own corporate page publishes a starting figure and it stays there. Rewritten the same day on Daniel's rulings: nobody named, buyer search terms throughout. Links to thefirstwater.co removed 2026-10-20: the Firstwater site was shut down 2026-10-19 (Daniel: \"Remove the four thefirstwater.co links from the Signet Firstwater page\"). Gone: the hero's read-about-it-first note, the FAQ pointer above the questions, and the links on the transition-day and wedding rows.",
     "reader": "Whoever wants to give a team, an offsite or a wedding party seventy-five minutes of rest together.",
     "_title_note": "58 chars before the pipe. The name leads because it is a named act; 'corporate sound bath' is the head term Google autocompletes (with 'corporate wellness sound bath' and 'sound bath corporate event' beside it), 'sound healing' is the second head term, and Denver is the market.",
     "schema_note": "Authored 2026-09-19, rewritten the same day on Daniel's rulings (nobody named; buyer search terms). Every answer traces to thefirstwater.co (the FAQ, the corporate page, the home page's plain description of the night). Questions are worded the way buyers search. No figure, no reply window, no video block: the act carries no footage."
@@ -65,8 +65,7 @@
          "href": "/pricing/",
          "cls": "btn btn--outline"
         }
-       ],
-       "headingNote": "Read about it first: <a href=\"https://thefirstwater.co/\">Firstwater’s own site</a>, and <a href=\"https://thefirstwater.co/faq/\">the plain answers to what happens at a sound bath</a>."
+       ]
       }
      },
      {
@@ -157,11 +156,11 @@
          "text": "Firstwater builds one or more sessions into the agenda with you, and uses them to close an evening or open a morning, which is where a sound bath does its best work. A team that has spent the day in meetings gets seventy-five minutes with nothing to do."
         },
         {
-         "term": "<a href=\"https://thefirstwater.co/sessions/laid-off/\">Transition days</a>",
-         "text": "When a company is doing a hard thing well, this is a session for the people leaving and for the team that stays, and it’s usually the employer who books it. The page for it on Firstwater’s own site is called Laid Off, and it’s written for the people who’ll be in it."
+         "term": "Transition days",
+         "text": "When a company is doing a hard thing well, this is a session for the people leaving and for the team that stays, and it’s usually the employer who books it."
         },
         {
-         "term": "<a href=\"https://thefirstwater.co/weddings/\">Wedding weekends and bachelorettes</a>",
+         "term": "Wedding weekends and bachelorettes",
          "text": "A private sound bath for the wedding party, the bachelorette, or the couple, at the house you rented, your venue, or a partner space in Denver. It goes into the weekend as the welcome evening, the morning of, or the day after for whoever stayed, and the <a href=\"/weddings/\">weddings page</a> covers the music for the rest of it."
         }
        ],
@@ -194,14 +193,6 @@
        "html": "Firstwater questions",
        "tag": "h2",
        "cls": "h3"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-17",
-       "html": "The longer answers, what people wear, whether anyone has to talk, what happens if someone feels a lot or nothing, are on <a href=\"https://thefirstwater.co/faq/\">Firstwater’s own FAQ</a>.",
-       "cls": "note"
       }
      },
      {
