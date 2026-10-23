@@ -160,6 +160,9 @@ function VideoForm({ slug }) {
         <Field label="Title">
           <input className="input" value={v.name || ""} onChange={(e) => set({ name: e.target.value })} />
         </Field>
+        <Field label="Search title">
+          <input className="input" value={v.seoTitle || ""} placeholder={v.name || ""} onChange={(e) => set({ seoTitle: e.target.value || undefined })} />
+        </Field>
         <Field label="Description">
           <textarea className="textarea" rows={3} value={v.description || ""} onChange={(e) => set({ description: e.target.value })} />
         </Field>

@@ -162,7 +162,14 @@ export function makeSite(c) {
   const S = makeSchema(m);
   const hubs = new Set(c.pages.filter((d) => d.content.some((x) => x.type === "PagesAndPosts")).map((d) => d.root.props.path));
   const OG_DEFAULT = `${m.SITE_URL}/img/og-default.png`;
-  const brandTitle = (t, exact) => (exact ? t : `${t} | ${m.brand.name}`);
+  // The brand follows the title while the whole thing fits a search result
+  // (60 characters); a longer title stands alone, and the site's name is
+  // in the page's schema.
+  const brandTitle = (t, exact) => {
+    if (exact) return t;
+    const full = `${t} | ${m.brand.name}`;
+    return full.length > 60 ? t : full;
+  };
   const absImg = (src) => (!src ? "" : /^https?:\/\//.test(src) ? src : `${m.SITE_URL}/${src.replace(/^\/+/, "")}`);
   const base = { model: m, hubs, built: plan(c, m) };
   return { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base };
@@ -182,6 +189,7 @@ export function buildSite(c, out) {
   const base = { ...plain, pictures };
   const files = {};
   const built = [];
+  const lastmod = lastmodFor(c);
   const write = (rel, text) => {
     files[rel] = text;
   };
@@ -224,7 +232,11 @@ export function buildSite(c, out) {
     if (p.schemaKind === "videos") {
       const listed = [...m.FORMAT_ACTS, ...m.NAMED_ACTS].flatMap((a) => m.FOOTAGE.filter((v) => v.act === a.id));
       schema = schemaFor(S.videoIndexSchema(doc, canonical, listed));
-    } else schema = S.pageSchema({ ...doc, content: m.pageContent(doc) }, canonical);
+    } else {
+      const file = `content/pages/${doc.slug}.json`;
+      const modified = lastmod({ output, file });
+      schema = S.pageSchema({ ...doc, content: m.pageContent(doc) }, canonical, { published: p.published || modified, modified });
+    }
     page({
       output,
       prefix: p.absolutePaths ? "/" : prefixFor(output),
@@ -259,7 +271,7 @@ export function buildSite(c, out) {
       trail,
       indexed: true,
       content: <WatchPage v={v} />,
-      title: brandTitle(v.name, false),
+      title: brandTitle(v.seoTitle || v.name, false),
       description: v.description,
       robots: "index, follow",
       ogType: "video.other",
@@ -307,7 +319,7 @@ export function buildSite(c, out) {
   }
 
   const blogIndex = c.pages.find((d) => d.slug === "blog-index");
-  write("sitemap.xml", sitemap(m, built, lastmodFor(c)));
+  write("sitemap.xml", sitemap(m, built, lastmod));
   write("video-sitemap.xml", videoSitemap(m));
   write("llms.txt", llms(m, built));
   write("rss.xml", rss(m, blogIndex ? blogIndex.root.props.description : ""));

@@ -11,10 +11,12 @@ export { isoSeconds };
 
 const noindex = (r) => (r || "").startsWith("noindex");
 
+// The watch pages are listed in video-sitemap.xml, with their videos, and
+// nowhere else: no URL is in two sitemaps.
 export function sitemap(m, built, lastmod) {
   const urls = [];
   for (const b of built) {
-    if (noindex(b.robots)) continue;
+    if (noindex(b.robots) || b.watch) continue;
     const loc = esc(m.canonicalFor(b.output));
     const d = lastmod(b);
     urls.push(d ? `  <url><loc>${loc}</loc><lastmod>${d}</lastmod></url>` : `  <url><loc>${loc}</loc></url>`);

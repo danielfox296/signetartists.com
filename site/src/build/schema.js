@@ -10,7 +10,7 @@ export function makeSchema(m) {
 
   const localBusinessNode = () => {
     const node = {
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "Organization"],
       "@id": `${SITE_URL}/#business`,
       name: brand.name,
       description: brand.intro,
@@ -57,6 +57,36 @@ export function makeSchema(m) {
     mainEntity: items.map((f) => ({ "@type": "Question", name: htmlText(f.q), acceptedAnswer: { "@type": "Answer", text: htmlText(f.a) } })),
   });
 
+  const websiteNode = () => ({
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: brand.name,
+    publisher: { "@id": `${SITE_URL}/#business` },
+  });
+
+  // A page that reads as an article (a guide, a worked template, a long
+  // explainer) says so: root.props.schemaArticle is "on" (the admin's
+  // Article schema switch). Its dates are the page's own, the day it was
+  // first published and the day its file last changed.
+  const articleNode = (p, canonical, dates, image) => {
+    const headline = (p.title || brand.name).replace(new RegExp(`\\s*\\|\\s*${brand.name}$`), "");
+    const entity = { "@id": `${SITE_URL}/#business` };
+    const node = {
+      "@type": "Article",
+      "@id": `${canonical}#article`,
+      headline,
+      description: p.description || "",
+      image,
+      author: entity,
+      publisher: entity,
+      mainEntityOfPage: { "@id": canonical },
+    };
+    if (dates.published) node.datePublished = dates.published;
+    if (dates.modified) node.dateModified = dates.modified;
+    return node;
+  };
+
   // The questions a page shows and offers to search: its Questions sections
   // marked for it, leaving out any answer still marked open.
   const pageFaqs = (doc) => {
@@ -77,9 +107,9 @@ export function makeSchema(m) {
   };
 
   // The page's own graph: what schema.json held under build.py.
-  const pageGraph = (doc, canonical) => {
+  const pageGraph = (doc, canonical, dates = {}) => {
     const p = doc.root.props;
-    const sc = p.schema;
+    const sc = p.schema || {};
     const graph = [localBusinessNode()];
     const svc = sc.service;
     let act = sc.act ? m.ACT_BY_ID[sc.act] : null;
@@ -163,6 +193,11 @@ export function makeSchema(m) {
       webpage.about = { "@id": pageEntity["@id"] };
       webpage.mainEntity = { "@id": pageEntity["@id"] };
     }
+    if (p.schemaArticle === "on") {
+      const article = articleNode(p, canonical, dates, ogFor(p));
+      graph.push(article);
+      if (!webpage.mainEntity) webpage.mainEntity = { "@id": article["@id"] };
+    }
     graph.push(webpage);
     const faqs = pageFaqs(doc);
     if (faqs.length) graph.push(faqPage(faqs));
@@ -173,15 +208,15 @@ export function makeSchema(m) {
   const kindSchema = (doc) => {
     const kind = doc.root.props.schemaKind;
     const faqs = pageFaqs(doc);
-    if (kind === "organization") return { "@context": "https://schema.org", ...localBusinessNode() };
+    if (kind === "organization") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), websiteNode()] };
     if (kind === "faq" || kind === "plannerfaq") return { "@context": "https://schema.org", ...faqPage(faqs) };
     if (kind === "roster") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map(actServiceNode), ...rosterEntityNodes()] };
     if (kind === "pricing") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map(actServiceNode), faqPage(faqs)] };
     return null;
   };
 
-  const pageSchema = (doc, canonical) => {
-    if (doc.root.props.schema) return schemaTag(pageGraph(doc, canonical));
+  const pageSchema = (doc, canonical, dates) => {
+    if (doc.root.props.schema || doc.root.props.schemaArticle === "on") return schemaTag(pageGraph(doc, canonical, dates));
     const k = kindSchema(doc);
     return k ? schemaTag(k) : "";
   };
