@@ -2,7 +2,7 @@
  "root": {
   "props": {
    "path": "/corporate/holiday-party/denver/",
-   "title": "Corporate holiday party entertainment in Denver | Signet Artists",
+   "title": "Corporate holiday party entertainment in Denver",
    "description": "Live music for Denver corporate holiday parties: 21 party dates across November and December, 10 of them in December, and downtown load-in solved.",
    "titleExact": true,
    "nav": "corporate",
@@ -27,7 +27,9 @@
     "reader": "Whoever books the company holiday party in Denver, usually in a downtown hotel or a club.",
     "_seasonal_note": "Same staleness clock as the hub: the 21-date count and the embedded dates describe the 2026 season. When the hub rolls to 2027 or gets its noindex, this page rolls with it.",
     "schema_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the December calendar, the booking window. Answers answer in the first sentence. Any figure is a {{market:<id>}} token off market-rates.json and the page prints its source; no Signet figure appears here or anywhere since 2026-09-04."
-   }
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-05"
   }
  },
  "content": [
