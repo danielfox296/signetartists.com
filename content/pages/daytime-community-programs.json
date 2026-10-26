@@ -3,7 +3,7 @@
   "props": {
    "path": "/daytime/community-programs/",
    "title": "Musicians for farmers markets and libraries in Denver",
-   "description": "Performers for farmers markets, library programs and rec centers in Denver: a singer on a battery-powered system, a duo at 60 to 65 dBA, a band for the park.",
+   "description": "Performers for farmers markets, library programs and rec centers in Denver: a singer on a battery-powered system, a duo at conversation volume, a band for the park.",
    "titleExact": true,
    "ogImage": "img/acts/acoustic-outdoor.jpg",
    "breadcrumb": "Farmers markets and libraries",
@@ -11,7 +11,7 @@
     "service": {
      "name": "Musicians for farmers markets, libraries and rec centers",
      "serviceType": "Performers for farmers markets, library programs and concert series, recreation center events and summer concert series",
-     "description": "A singer with a guitar, a solo guitarist, an acoustic duo, a jazz duo, an Americana band or a sound bath for farmers markets, library programs and concert series, rec center and community center events and summer concert series across Denver, the Front Range and the Colorado mountain corridor, on a battery-powered system where there's no power, with a certificate of insurance, a W-9 and an invoice that matches the purchase order.",
+     "description": "A singer with a guitar, a solo guitarist, an acoustic duo, a jazz duo, an Americana band or a sound bath for farmers markets, library programs and concert series, rec center and community center events and summer concert series across Denver, the Front Range and the Colorado mountain corridor, on a battery-powered system where there's no power, with the paperwork a city or a district needs.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -170,7 +170,7 @@
        "rows": [
         {
          "term": "Farmers markets",
-         "text": "A singer with a guitar, a solo guitarist or an acoustic duo, playing a market morning in sets, on a battery-powered system or none at all where the market has no power. The musician plays the folk, country and singer-songwriter songs people know the words to, at a volume the stall next door can still sell over, and a whole season of Saturdays can be booked with one enquiry."
+         "text": "A singer with a guitar, a solo guitarist or an acoustic duo, playing a market morning in sets, on a battery-powered system or none at all where the market has no power. The musician plays the folk, country and singer-songwriter songs people know the words to, at a volume the stall next door can still sell over, and a whole season of Saturdays can be booked with one inquiry."
         },
         {
          "term": "Libraries",
@@ -224,7 +224,7 @@
        "items": [
         {
          "q": "Do you book musicians for farmers markets?",
-         "a": "Yes, for a morning or a whole season of Saturdays in one enquiry. Tell us the market, the hours and whether there's power, and we'll come back with a recommendation and a price. Signet Artists books community performers across Denver and the Front Range."
+         "a": "Yes, for a morning or a whole season of Saturdays in one inquiry. Tell us the market, the hours and whether there's power, and we'll come back with a recommendation and a price. Signet Artists books community performers across Denver and the Front Range."
         },
         {
          "q": "How loud is it?",
@@ -240,7 +240,7 @@
         },
         {
          "q": "Do you work with purchase orders and city vendor paperwork?",
-         "a": "Yes. A W-9, a certificate of insurance naming the city, the district or the library as additional insured, and one itemized invoice that matches the purchase order come in the same email as the contract, so a business office can set up the vendor before the first date."
+         "a": "Yes, we can, and we can name the city, the district or the library as additional insured. Just let us know what the business office needs."
         }
        ],
        "schema": true
@@ -277,7 +277,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-20",
-       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in the Colorado market is on the <a href=\"/pricing/\">pricing page</a>.",
        "cls": "note"
       }
      }

@@ -115,15 +115,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "The book is the blues and most of what the blues turned into. Freddie King and B.B. King sit at one end, The Cars, Prince and the rock records of the seventies and nineties at the other, and his own songs are threaded through. Guests recognize nearly all of it.",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-8",
-       "html": "He’s a working Denver musician with his own catalog, his own site and his own channel, and he joined the <a href=\"/music/\">roster</a> under his own name in September 2026. The footage on this page is his.",
+       "html": "His song list is the blues and most of what the blues turned into, from Freddie King and B.B. King to The Cars, Prince and the rock records of the seventies and nineties, with his own songs threaded through. Guests recognize nearly all of it.",
        "cls": "prose"
       }
      }
@@ -138,7 +130,7 @@
     "id": "ActSizes-12",
     "act": "tony-medina",
     "title": "Configurations",
-    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "note": "The size and the date set the price. Send the date and we’ll come back with a recommendation and a price.",
     "_notes": "The configuration ladder, rendered from acts.json by the token: size,\n     build, and where each rung lands. Four rungs, the widest on the roster.",
     "_file": "03-ladder.html"
    }
@@ -166,11 +158,11 @@
        "rows": [
         {
          "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
-         "text": "A fiftieth or a sixtieth for a crowd that grew up on these records, with a size that lets people talk over dinner and a size that fills a floor after it."
+         "text": "A 50th or a 60th for a crowd that grew up on these records, with a size that lets people talk over dinner and a size that gets people dancing after it."
         },
         {
          "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
-         "text": "Classic rock fills a floor at a company party of every age, because the whole staff knows the songs whatever decade they grew up in. The four piece is the dance floor size, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or your own office."
+         "text": "Classic rock gets a company party of every age dancing, because the whole staff knows the songs whatever decade they grew up in. The four piece is the size to book for a dance floor, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or your own office."
         },
         {
          "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
@@ -188,7 +180,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "html": "We plan the music around speeches and a program with your <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
        "cls": "note"
       }
      }
@@ -207,11 +199,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-18",
-       "eyebrow": "The book",
-       "title": "A sample of the book.",
+       "eyebrow": "Song list",
+       "title": "A sample of his songs.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Every cover here is one you can watch him play on this page."
+       "lede": "Every cover here is one you can watch him play in the video clips on this page."
       }
      },
      {
@@ -225,7 +217,7 @@
          "type": "Title",
          "props": {
           "id": "Title-19",
-          "html": "The blues end",
+          "html": "Blues",
           "tag": "h3",
           "cls": "h5"
          }
@@ -251,7 +243,7 @@
          "type": "Title",
          "props": {
           "id": "Title-21",
-          "html": "What the crowd sings",
+          "html": "Classic rock",
           "tag": "h3",
           "cls": "h5"
          }
@@ -280,7 +272,7 @@
          "type": "Title",
          "props": {
           "id": "Title-23",
-          "html": "His own",
+          "html": "Originals",
           "tag": "h3",
           "cls": "h5"
          }
@@ -310,7 +302,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "The wider covers book runs from sixties soul and classic rock through nineties alternative, and the rest of it is on the <a href=\"/repertoire/\">repertoire page</a>. His own catalog is on his channel, and originals sit inside an event set only if you ask for them.",
+       "html": "His wider song list runs from sixties soul and classic rock through nineties alternative, and more of it is on the <a href=\"/repertoire/\">repertoire page</a>. Originals are played at an event only if you ask for them.",
        "cls": "note"
       }
      }
@@ -329,11 +321,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-29",
-       "eyebrow": "The footage",
+       "eyebrow": "Video Clips",
        "title": "The blues, the covers, and one of his own.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A Prince cover plays above. Below: B.B. King live at a blues jam, The Cars, two duo versions with a second guitarist on Freddie King and Dave Matthews, and one of his own songs so you can hear what he writes."
+       "lede": "B.B. King live at a blues jam, The Cars, two duo versions with a second guitarist on Freddie King and Dave Matthews, and one of his own songs so you can hear what he writes."
       }
      },
      {
@@ -467,19 +459,19 @@
        "items": [
         {
          "q": "What does Tony Medina play?",
-         "a": "Blues and the rock and roll that came out of it, plus his own songs. The covers run from Freddie King and B.B. King through the classic rock of the seventies and the alternative rock of the nineties, and the footage on this page is him playing them. He's a Denver musician booked through Signet Artists, solo up to a four piece."
+         "a": "Blues and the rock and roll that came out of it, plus his own songs. The covers run from Freddie King and B.B. King through the classic rock of the seventies and the alternative rock of the nineties, and the video clips on this page are him playing them. He's a Denver musician booked through Signet Artists, solo up to a four piece."
         },
         {
-         "q": "Will it fill a dance floor?",
+         "q": "Will it get people dancing?",
          "a": "At trio and four piece, yes. It's voice and guitar over bass and drums, with a second guitar or keys on top at the four piece, playing blues and rock a crowd already knows."
         },
         {
          "q": "How loud is it?",
-         "a": "Solo, it sits under the conversation, so a dinner table talks across it. The four piece on a dance floor plays like a rock band at a good party, and the band moves between the two on cue. He sets the level to the space and the crowd, and if your venue has a sound limit, give us the number."
+         "a": "Solo, it sits under the conversation, so a dinner table talks across it. The four piece on a dance floor plays like a rock band at a good party, and the band moves between the two on cue. He sets the level to the space and the crowd, and if your venue has a sound limit, just let us know."
         },
         {
          "q": "Does he play originals at a private event?",
-         "a": "Only if you want them. The default set for an event is covers, because guests dance to what they recognize. His own songs can sit inside the set where a night has space for them, which is worth asking about for a listening crowd."
+         "a": "Only if you want them. The default set for an event is covers, because guests dance to what they recognize. Originals songs can sit inside the set where a night has space for them, which is worth asking about for a listening crowd."
         }
        ],
        "schema": true

@@ -194,7 +194,7 @@
         },
         {
          "q": "Do you provide the vendor paperwork a facility or a city needs?",
-         "a": "Yes. A certificate of insurance naming your venue as additional insured, a W-9 and one itemized invoice come in the same email as the contract, which is usually what a business office needs to set up a vendor before the first date."
+         "a": "Yes, we can, and we can name your venue as additional insured. Just let us know what the business office needs."
         },
         {
          "q": "Do you play outdoors, at a market or in a park?",
@@ -202,7 +202,7 @@
         },
         {
          "q": "How much does daytime live music cost?",
-         "a": "It depends on the size, the length and the date, and we publish no prices of our own. What live music costs in this market, with the source for each figure, is on the pricing page, and each date or run of dates is priced as its own job."
+         "a": "It depends on the size, the length and the date. We quote each date one-by-one, and what's published on our pricing page is a general market-view of what live music costs in Denver, Colorado."
         }
        ],
        "schema": true
@@ -239,7 +239,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-17",
-       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in this market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in the Colorado market is on the <a href=\"/pricing/\">pricing page</a>.",
        "cls": "note"
       }
      }

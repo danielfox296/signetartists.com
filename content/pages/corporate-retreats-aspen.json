@@ -3,7 +3,7 @@
   "props": {
    "path": "/corporate/retreats/aspen/",
    "title": "Live music for Aspen corporate retreat evenings",
-   "description": "Evening activities for an Aspen corporate retreat. Four hours from Denver each way, fee, travel and lodging itemised, formats sized to the dinner calendar.",
+   "description": "Evening activities for an Aspen corporate retreat. Four hours from Denver each way, fee, travel and lodging itemized, formats sized to the dinner calendar.",
    "titleExact": true,
    "nav": "corporate",
    "schema": {
@@ -140,15 +140,15 @@
        "rows": [
         {
          "term": "The fee for the music",
-         "text": "The fee covers the band, sound support that’s the right size for the venue, setup, the sound check, pack-down and a personal contact for the night. A duo through cocktails and dinner or a quartet when the dance floor is the point, whichever the evening needs."
+         "text": "The fee covers the band, sound support that’s the right size for the venue, setup, the sound check, strike and a personal contact for the night. A duo through cocktails and dinner or a quartet when the dance floor is the point, whichever the evening needs."
         },
         {
          "term": "Travel",
-         "text": "Travel is its own line on the quote. Aspen is roughly four hours from Denver each way in good conditions, over passes that don’t always give you good conditions, and that’s most of a working day at both ends of the evening."
+         "text": "Travel is priced with the date. Aspen is roughly four hours from Denver each way in good conditions, over passes that don’t always give you good conditions, and that’s most of a working day at both ends of the evening."
         },
         {
          "term": "Lodging, at cost",
-         "text": "A band that has played a late set isn’t driving four hours of mountain highway home that night. Lodging bills at cost, on its own line. That’s the difference between a far resort and the I-70 towns, which mostly don’t need it."
+         "text": "A band that has played a late set isn’t driving four hours of mountain highway home that night. Lodging is billed at cost. That’s the difference between a far resort and the I-70 towns, which mostly don’t need it."
         },
         {
          "term": "Why it’s itemized",
@@ -162,7 +162,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-10",
-       "html": "A holiday weekend prices above a standard date across this market, and the <a href=\"/guides/live-music-cost-colorado/\">Colorado cost guide</a> sets the mountain towns against the wider market.",
+       "html": "The <a href=\"/guides/live-music-cost-colorado/\">Colorado cost guide</a> sets the mountain towns against the wider market.",
        "cls": "note"
       }
      }
@@ -227,7 +227,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "The evenings here happen on dining floors and terraces built at human scale, and dinner asks for a duo or a trio at the level a table of executives talks across without effort. A quartet is the booking when a dance floor has to fill.",
+       "html": "The evenings here happen on dining floors and terraces built at human scale, and dinner asks for a duo or a trio at the level a table of executives talks across without effort. A quartet is the booking when you want people dancing.",
        "cls": "prose"
       }
      },
@@ -235,7 +235,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-20",
-       "html": "The town’s rules push the same way: outdoor amplified sound at a private event stops at eight in the evening, so the loud chapter of the night moves indoors, where a small format does its best work. The figures, cited and dated, are on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "html": "The town’s rules push the same way: outdoor amplified sound at a private event stops at eight in the evening, so the loud chapter of the night moves indoors, where a small format does its best work. The numbers, cited and dated, are on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
        "cls": "prose"
       }
      },
@@ -319,11 +319,11 @@
        "items": [
         {
          "q": "Can the party run outdoors in Aspen?",
-         "a": "Yes, until eight in the evening. Outdoor amplified sound at a private event was capped at 80 dBA at the perimeter, between 9am and 8pm, when we checked, with neighbors within 250 feet owed seven days' notice. Evenings move indoors from there, and we confirm the current figures with your venue. Signet Artists books Aspen retreat evenings from Denver."
+         "a": "Yes, until eight in the evening. Outdoor amplified sound at a private event was capped at 80 dBA at the perimeter, between 9am and 8pm, when we checked, with neighbors within 250 feet owed seven days' notice. Evenings move indoors from there, and we confirm the current numbers with your venue. Signet Artists books Aspen retreat evenings from Denver."
         },
         {
          "q": "What do Aspen venues need from the band?",
-         "a": "Venues at this level hold vendors to their standards: a certificate of insurance, which comes with the contract, setup on the venue's schedule, and the sound cap and curfew kept as written."
+         "a": "Venues at this level hold vendors to their standards: a certificate of insurance, setup on the venue's schedule, and the sound cap and curfew kept as written."
         },
         {
          "q": "How much space and power does it need?",
@@ -356,7 +356,7 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us the Aspen dates, and travel and lodging come back as their own lines on the quote.",
+       "title": "Send us the Aspen dates, and we’ll come back with a recommendation and a price, travel and lodging included.",
        "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
       }
      }

@@ -78,7 +78,7 @@
       "type": "Table",
       "props": {
        "id": "Table-6",
-       "caption": "Published 2026 market figures for live music in Colorado and the US. These are not Signet prices.",
+       "caption": "Published 2026 market prices for live music in Colorado and the US.",
        "captionCls": "rate-caption",
        "head": [
         {
@@ -244,7 +244,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-12",
-          "html": "<strong>Prices can go up when:</strong> a wedding rather than a private party. A Saturday in June, September or October. A holiday weekend, which this market prices 20 to 30 percent above a standard date. A venue with a hard load-in, a long carry or a late curfew. A run of show with ceremony, cocktails, dinner and dancing all needing cover. A drive over the passes, and past them a night's lodging.",
+          "html": "<strong>Prices can go up when:</strong> a wedding rather than a private party. A Saturday in June, September or October. A holiday weekend, which the Colorado market prices 20 to 30 percent above a standard date. A venue with a hard load-in, a long carry or a late curfew. A run of show with ceremony, cocktails, dinner and dancing all needing cover. A drive over the passes, and past them a night's lodging.",
           "cls": "prose"
          }
         }
@@ -351,7 +351,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-26",
-          "html": "Stage lighting and a dedicated engineer are optional, and quoted as their own line when you want them.",
+          "html": "Stage lighting and a dedicated engineer are optional add-ons.",
           "cls": "note"
          }
         }
@@ -370,7 +370,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-28",
-          "html": "Each of these arrives as its own line on the quote and on the contract, never folded into a total.",
+          "html": "Each of these is quoted separately.",
           "cls": "note"
          }
         },

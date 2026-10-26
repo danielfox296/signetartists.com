@@ -3,7 +3,7 @@
   "props": {
    "path": "/corporate/holiday-party/",
    "title": "Corporate holiday party bands and DJs in Denver, 2026",
-   "description": "Live music and DJs for Denver corporate holiday parties, November and December 2026. Solo to quartet on one contract, with the pricing calendar for every date.",
+   "description": "Live music and DJs for Denver corporate holiday parties, November and December 2026. Bands, duos and a DJ, with sound support and a single point of contact for the night.",
    "titleExact": true,
    "nav": "corporate",
    "schema": {
@@ -49,10 +49,10 @@
        "title": "Denver corporate holiday parties, November and December.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "The remarks end, the bandleader counts in the first song, and the people who said they’d leave after dinner are still on the floor when the lights come up. A holiday party band plays dinner quietly, stops for the remarks, and gets loud on cue the moment the program ends, with the music and the sound on one contract.",
+       "lede": "You know the office holiday party where almost everyone ended up dancing. That’s the party we can help you book. A holiday party band plays dinner at a volume people can talk across, stops for the remarks, and gets people dancing the moment the program ends, with the sound support included.",
        "headingText": [
         {
-         "html": "The season is decided between August and October, and the December Fridays and Saturdays go first, so the date is the part worth settling early."
+         "html": "Tell us the date and the venue and we’ll check the booking calendar. If your party is coming up sooner, no worries. Just reach out and we can often make something great work."
         }
        ],
        "buttons": [
@@ -95,11 +95,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-6",
-       "eyebrow": "Footage",
+       "eyebrow": "Video Clips",
        "title": "See Tejas Singh live.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Tejas Singh building a cover live with a looper, which is the sound the duo brings to drinks and dinner before the night turns."
+       "lede": "Tejas Singh building a cover live with a looper. This is the sound his duo brings to drinks and dinner."
       }
      },
      {
@@ -137,7 +137,7 @@
        "title": "The dates of the season.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The Thursdays, Fridays and Saturdays through the season, plus New Year’s Eve, with Thanksgiving and Christmas left out. The peak dates are marked, because this market prices a December Saturday above a Thursday in November."
+       "lede": "The Thursdays, Fridays and Saturdays through the season, plus New Year’s Eve, with Thanksgiving and Christmas left out. The peak dates are marked, because a December Saturday in Denver usually prices above a Thursday in November."
       }
      },
      {
@@ -236,7 +236,7 @@
        "title": "Three common configurations of a holiday party.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Most corporate holiday parties land on one of these three. Any of them can be paired: a duo through drinks and dinner with the DJ carrying the back half is one contract for the whole night."
+       "lede": "Most corporate holiday parties book one of these three. They can also be paired, for instance a duo through drinks and dinner with the DJ taking over for the dancing."
       }
      },
      {
@@ -249,21 +249,21 @@
          "act": "tejas-singh",
          "config": "quartet",
          "kicker": "Quartet",
-         "why": "The dance floor booking. Book this when the party is the point.",
+         "why": "This is the act to book when you want the whole office out on the dance floor.",
          "face": "style"
         },
         {
          "act": "jazz-duo",
          "config": "duo",
          "kicker": "Duo",
-         "why": "Drinks and dinner covered without anybody raising their voice over it. The safest booking on the page for a night that has speeches in it.",
+         "why": "A duo covers drinks and dinner without anybody having to raise their voice, and it’s a great choice for a night with speeches in it.",
          "face": "style"
         },
         {
          "act": "dj",
          "config": "dj",
          "kicker": "DJ",
-         "why": "The whole night on one line, at the smallest number on this page. The format most corporate parties actually book.",
+         "why": "A solid DJ gets people moving, can cover the whole night, and is the most common single booking of the corporate season.",
          "face": "style"
         }
        ]
@@ -273,7 +273,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "Every act is on the <a href=\"/music/\">roster page</a>. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> is its own act this season, the band that plays the 80s and 90s hits and hands the mic to anyone who wants a song, and for the dinner half of a December party the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs. A <a href=\"/ensembles/solo-piano/\">pianist</a> plays the office party that stays a dinner all evening.",
+       "html": "<a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> is a great choice when you want the whole office singing, and the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs through dinner. A <a href=\"/ensembles/solo-piano/\">pianist</a> works well for an office party that stays a dinner all evening. Every act is on our <a href=\"/music/\">roster page</a>.",
        "cls": "note"
       }
      }
@@ -311,7 +311,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-21",
-       "html": "There are speeches, and they’re the point. Somebody thanks the team, somebody announces the number, somebody hands out an award. The speaker gets an announcement microphone at every size, and the music stops while they’re still steps from it.",
+       "html": "There are usually speeches. Somebody thanks the team, somebody hands out an award. We provide an announcement microphone at every size, and the music stops while the speaker is still steps from it.",
        "cls": "prose"
       }
      },
@@ -319,7 +319,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-22",
-       "html": "Half the crowd wants to talk and the other half is waiting to dance. That’s what the duo-plus-DJ pairing is for: standards under the conversation through dinner, then the DJ turns the same sound system to the dance floor, and both halves get their night.",
+       "html": "Half the crowd wants to talk and the other half is waiting to dance. A duo through dinner with the DJ after it gives both halves their night, through the same sound system.",
        "cls": "prose"
       }
      },
@@ -327,7 +327,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-23",
-       "html": "The venue is usually a restaurant or a hotel ballroom, built for dinners more than bands, and we settle setup, power and the volume limit with it before the day.",
+       "html": "The venue is usually a restaurant or a hotel ballroom. We settle setup, power and the volume limit with the venue before the day, so there are no surprises when the doors open.",
        "cls": "prose"
       }
      },
@@ -335,7 +335,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "Run of show and booking details are on the <a href=\"/planners/\">planners pages</a>. A holiday party at a house, on the same December calendar, is on the <a href=\"/private-parties/holiday-party/\">holiday party at home page</a>.",
+       "html": "Throwing the party at a house instead? Find out more on our <a href=\"/private-parties/holiday-party/\">holiday party at home page</a>.",
        "cls": "note"
       }
      }
@@ -357,14 +357,14 @@
        "title": "Denver’s December venues.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A Denver company party in December usually means a downtown hotel, and every company that waits until November is asking those calendars for the same two or three Saturdays, which is why the season is decided months before it starts."
+       "lede": "A Denver company party in December usually means a downtown hotel, and the hotels are built for dinners more than bands, so we settle setup, power and the volume limit with them before the day."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-28",
-       "html": "The <a href=\"/corporate/holiday-party/denver/\">Denver page</a> carries the downtown season in detail, and sixteen of the venues this market books are covered one by one in <a href=\"/blog/corporate-holiday-party-venues-denver/\">the Denver venue guide</a>. <a href=\"/corporate/holiday-party/colorado-springs/\">Colorado Springs</a>, an hour south, runs a calendar of its own, and a Springs date carries a Front Range travel line. Both sit under the <a href=\"/corporate/\">corporate page</a>, what the Colorado market charges for a December band is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>, and when December’s evening is a dinner more than a party, <a href=\"/corporate/client-dinners/\">client dinners</a> has a page of its own.",
+       "html": "Sixteen of Denver’s downtown venues are covered one by one in <a href=\"/blog/corporate-holiday-party-venues-denver/\">the Denver venue guide</a>, and the <a href=\"/corporate/holiday-party/denver/\">Denver holiday party page</a> has more on the downtown season. We play <a href=\"/corporate/holiday-party/colorado-springs/\">Colorado Springs</a> too, an hour south. What a December band costs in Colorado is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>, and when the evening is more of a dinner than a party, check out our <a href=\"/corporate/client-dinners/\">client dinners page</a>.",
        "cls": "prose"
       }
      }
@@ -403,23 +403,19 @@
        "items": [
         {
          "q": "Which dates does the Denver holiday season cover?",
-         "a": "21 party dates across November and December 2026, 10 of them in December, covering Thursdays, Fridays and Saturdays plus New Year's Eve. The peak December dates are marked, because this market prices a holiday weekend above a standard date. Tell us the date and the venue and we'll check the booking calendar."
-        },
-        {
-         "q": "When do companies book holiday party entertainment?",
-         "a": "August through October is when the season is decided for November and December dates, and New Year's Eve books first of all. Booking early is how you get the date you want; it doesn't change the price."
+         "a": "The Thursdays, Fridays and Saturdays from late November through New Year's Eve, with Thanksgiving and Christmas left out. Tell us the date and the venue and we'll check the booking calendar."
         },
         {
          "q": "How loud is it?",
-         "a": "Through dinner, quiet enough that a table of colleagues talks across it; for the remarks, silent; once the program ends, as loud as a dance floor and the venue allow. Give us the venue's sound limit when we sign and the night is built under it."
+         "a": "Through dinner, quiet enough that a table of colleagues can talk across it, silent for the remarks, and once the program ends, as loud as the dance floor and the venue allow. If the venue has a sound limit, let us know and we'll plan the night around it."
         },
         {
          "q": "What does the venue need to provide?",
-         "a": "Hotel function space comes with a dock time, an elevator window and an hour when the space becomes yours. Setup runs 45 to 90 minutes depending on the size of the act and needs one or two dedicated 20-amp circuits, and we coordinate it with the banquet staff before the day."
+         "a": "Usually a dock time, an elevator window and about an hour of setup before the space is yours. Setup can run 45 to 90 minutes depending on the size of the act and needs one or two dedicated 20-amp circuits. We coordinate all of it with the banquet staff before the day."
         },
         {
          "q": "Can our procurement process clear a booking in time?",
-         "a": "Yes, if it starts early. We can be set up as a vendor and quote against a purchase order, and the certificate of insurance, the W-9 and one itemized invoice come with the contract. Vendor onboarding is usually the slowest step of a corporate booking, so start it when you shortlist."
+         "a": "Yes. We can be set up as a vendor, quote against a purchase order and send whatever paperwork your finance team needs. Just let us know what the process looks like."
         }
        ],
        "schema": true
@@ -445,14 +441,14 @@
        "title": "The January holiday party.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A growing share of Denver companies hold the party in January, and the venues have followed: several now write their holiday packages to run into the third week of January and past it. In January, the party has the calendar to itself."
+       "lede": "Many Denver companies now hold the party in January, and the venues have followed, with holiday packages that run into the third week of January and past it."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-37",
-       "html": "Everything on this page works in January without a change of repertoire, because standards, covers and a dance set were never seasonal. A few things work even better in January, when the crowd isn’t spread across a season of invitations: the <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> night, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a>, and the set piece from <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>.",
+       "html": "Everything on this page works just as well in January. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a>, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> and <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> are all great choices for a January party, when your guests aren’t spread across a season of invitations.",
        "cls": "prose"
       }
      },
@@ -460,7 +456,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-38",
-       "html": "The mountain version is the same evening with snow outside it. A January date at a Vail or Breckenridge venue is an après-ski party by default, and the <a href=\"/corporate/retreats/\">retreats page</a> carries the travel and lodging lines that go with it.",
+       "html": "A January date at a Vail or Breckenridge venue makes a great après-ski party. Find out more on our <a href=\"/corporate/retreats/\">corporate retreats page</a>.",
        "cls": "prose"
       }
      },
@@ -468,7 +464,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-39",
-       "html": "Ideas built for that month, themes included, are in <a href=\"/blog/january-office-party-ideas/\">January office party ideas</a>.",
+       "html": "Want some more ideas? Check out our <a href=\"/blog/january-office-party-ideas/\">January office party ideas</a>.",
        "cls": "note"
       }
      }

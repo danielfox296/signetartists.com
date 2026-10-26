@@ -3,7 +3,7 @@
   "props": {
    "path": "/artists/tejas-singh/",
    "title": "Tejas Singh: voice-fronted covers, duo to quartet, Denver",
-   "description": "Voice-fronted covers for events in Denver and the Colorado mountains. Starts as a duo, finishes as a quartet, on one contract and one load-in.",
+   "description": "Voice-fronted covers for events in Denver and the Colorado mountains. Tejas Singh can start the night as a duo and finish it as a quartet on the dance floor.",
    "titleExact": true,
    "ogImage": "img/tejas-card.jpg",
    "nav": "music",
@@ -70,7 +70,7 @@
        "titleTag": "h1",
        "titleClass": "h1 display",
        "face": "Covers, duo to quartet.",
-       "lede": "Tejas Singh builds a song you know from the ground up, one looped layer of guitar at a time, until the whole record is playing under his voice. He starts the night as a duo under dinner, the rhythm section joins, and by the end the same voice is fronting a quartet on the dance floor, all on one contract.",
+       "lede": "Tejas Singh builds a song you know from the ground up, one looped layer of guitar at a time, until the whole record is playing under his voice. He can start the night as a duo under dinner and finish it as a quartet on the dance floor, all on one contract.",
        "buttons": [
         {
          "label": "Check a date",
@@ -123,7 +123,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "It’s the one booking on the <a href=\"/music/\">roster</a> that grows through the night: one setup, one sound check, and the same voice from the first drink to the last song.",
+       "html": "This is the act to book when you want one voice from the first drink to the last song. Whether Tejas is performing solo, as a duo or with the full band, you get sophisticated covers of your guests’ favorite songs, and his own singer-songwriter material when you want it.",
        "cls": "prose"
       }
      },
@@ -131,7 +131,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "At quartet size it’s a dance band, the full rhythm section behind one voice, with keys or a second guitar on top, playing a covers set built for a floor.",
+       "html": "At quartet size it’s a dance band, with a full rhythm section behind his voice and keys or a second guitar on top.",
        "cls": "prose"
       }
      }
@@ -146,7 +146,7 @@
     "id": "ActSizes-12",
     "act": "tejas-singh",
     "title": "Configurations",
-    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "note": "The size and the date set the price. Send the date and we’ll come back with a recommendation and a price.",
     "_notes": "The configuration ladder, rendered from acts.json by the token. It shows\n     size, build and where each rung lands; the price columns came off\n     2026-09-04 with the published card.",
     "_file": "03-ladder.html"
    }
@@ -178,15 +178,15 @@
         },
         {
          "term": "<a href=\"/corporate/\">Client evenings and corporate dinners</a>",
-         "text": "At duo size the same songs sit under the conversation, which is what a client dinner or a member evening asks for. An hour on its own is a real booking."
+         "text": "At duo size the same songs sit under the conversation, which is just what a client dinner or a member evening needs. An hour on its own works well too."
         },
         {
          "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
-         "text": "A milestone birthday or an anniversary with a dinner to talk through and a dance floor after it, on one booking. The trio is the size for a party that wants a floor in a smaller space."
+         "text": "A milestone birthday or an anniversary with a dinner first and dancing after it. The trio is a great size for a party that wants dancing in a smaller space."
         },
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
-         "text": "The duo puts a voice in the hour after the ceremony, and if the reception wants a dance floor later, the same act grows into it."
+         "text": "The duo puts a voice in the hour after the ceremony, and it’s a great choice when you want something more familiar than jazz standards."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -196,7 +196,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "html": "We plan the music around speeches and a program with your <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
        "cls": "note"
       }
      }
@@ -211,7 +211,7 @@
     "id": "Setlist-19",
     "act": "tejas-singh",
     "title": "A sample of the set",
-    "more": "A sample. <a href=\"/repertoire/\">The whole song list</a> is on the repertoire page.",
+    "more": "A sample of his songs. For more, check out the <a href=\"/repertoire/\">repertoire page</a>.",
     "_notes": "The sample set, rendered from the repertoire by the token: three moments,\n     six titles each, picked deterministically from the published song list.\n     The token also carries the link to the full repertoire page.",
     "_file": "05-setlist.html"
    }
@@ -226,11 +226,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-20",
-       "eyebrow": "The footage",
-       "title": "Two more cuts, from his own channels.",
+       "eyebrow": "Video Clips",
+       "title": "Two more clips.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A live looping cover, and an original from a session tape, so you can hear more of him before you book."
+       "lede": "A live looping cover and one of his originals, so you can hear more of him before you book."
       }
      },
      {
@@ -326,15 +326,11 @@
         },
         {
          "q": "How loud is it?",
-         "a": "As a duo under dinner, it sits at the level of the conversation. At quartet size on the dance floor, it's as loud as a band at a good party. The band moves between the two on cue and sets the level to the space, and if your venue has a sound limit, give us the number."
-        },
-        {
-         "q": "Is it a show band?",
-         "a": "No. Nobody changes costume, there's no choreography and there's no host segment. The band plays, reads the floor and plays the next song."
+         "a": "As a duo under dinner, it sits at the level of the conversation. At quartet size on the dance floor, it's as loud as a band at a good party. The band moves between the two on cue and sets the level to the space, and if your venue has a sound limit, just let us know."
         },
         {
          "q": "Can we ask for a song?",
-         "a": "Yes. One learned song of your choosing comes with every booking, often the first dance at a wedding, and if the night runs long, another half hour is easy to add on the night."
+         "a": "Yes. If you want a song that isn’t on his list, the first dance at a wedding for instance, let us know when you book (we usually need a few weeks before a booking to learn new material)."
         }
        ],
        "schema": true

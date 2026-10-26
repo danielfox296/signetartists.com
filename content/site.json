@@ -82,7 +82,7 @@
    "Sound sized for a small-to-medium sized event venue",
    "Load-in, setup, strike and load-out",
    "Certificate of insurance",
-   "W-9 and one itemised invoice",
+   "W-9 and one itemized invoice",
    "Timeline coordination before the event",
    "Continuous audio during set breaks"
   ],
@@ -96,12 +96,12 @@
   ]
  },
  "llms": {
-  "about": "{name} is a live music company for private events in {serviceArea}. No prices are published. What the pricing page carries is what live music costs in this market, each figure with the source it came from, and Signet prices a specific night when the date is sent.",
+  "about": "{name} is a live music company for private events in {serviceArea}. No prices are published. What the pricing page carries is what live music costs in the Colorado market, each price with the source it came from, and Signet prices a specific night when the date is sent.",
   "videos": "Each clip the roster plays has its own page. {site}/video/ lists them all by act, and so does {site}/video-sitemap.xml.",
   "actsNote": "All acts and configurations are subject to availability.",
   "pricing": [
-   "{name} publishes no price list, no starting prices and no hourly figures. Actual prices vary by date, size, hours and location. {site}/pricing/ sets out what live music costs in this market, with each figure attributed to the public source it came from, so a reader can set a budget before writing to Signet. To get the number for a specific night, send the date: {site}/contact/",
-   "Travel beyond the Denver metro, a night's lodging past the passes, holiday weekends and New Year's Eve are quoted as their own lines rather than folded into a headline figure."
+   "{name} publishes no price list, no starting prices and no hourly prices. Actual prices vary by date, size, hours and location. {site}/pricing/ sets out what live music costs in the Colorado market, with each price attributed to the public source it came from, so a reader can set a budget before writing to Signet. To get the number for a specific night, send the date: {site}/contact/",
+   "Travel beyond the Denver metro area, a night's lodging past the passes, holiday weekends and New Year's Eve are priced with the date."
   ]
  },
  "_comment": "Every brand-dependent value on the site. No template hardcodes one. Values in [square brackets] are unresolved and render with a dotted underline in the browser so open decisions stay visible while browsing.",
