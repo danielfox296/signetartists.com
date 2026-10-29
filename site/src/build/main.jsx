@@ -2,12 +2,15 @@
    build.py wrote. Every page is rendered with the editor's own components.
 
    node site/scripts/build.mjs --out <folder>          build the site
+   node site/scripts/build.mjs --out <folder> --images <cache>
+                                                       and its pictures' copies (deploys)
    node site/scripts/build.mjs --render-sections <f>   render sections (converter check)
 */
 import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { transformSync } from "esbuild";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createModel, outputFor, prefixFor, pySort } from "../lib/model.js";
 import { plan } from "../lib/plan.js";
@@ -22,6 +25,8 @@ import { llms, rss, sitemap, videoSitemap } from "./feeds.js";
 import { fingerprint, stylesheet, stylesOf } from "./styles.js";
 import { esc, pyjson } from "../lib/util.js";
 import { LAYOUT_FILES } from "../lib/layouts.js";
+import { repoPath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
+import { imageDims, makeImages } from "./images.js";
 
 const REPO = process.cwd();
 const CONTENT = path.join(REPO, "content");
@@ -87,6 +92,64 @@ export function photoFocus(m, html) {
 
 const Section = Item;
 
+// The pictures the pages show with copies (lib/pictures.js), as they are
+// drawn: from a local file whose size is known, or a YouTube video's own.
+function picturesFor(dims) {
+  const used = new Set();
+  const yt = new Set();
+  return {
+    used,
+    yt,
+    of(src) {
+      const p = repoPath(src);
+      const y = p && /^img\/yt\/([\w-]{11})\.jpg$/.exec(p);
+      if (y) {
+        yt.add(y[1]);
+        return { widths: YT_WIDTHS, w: 1280, h: 720 };
+      }
+      const d = p && dims.get(p);
+      if (!d) return null;
+      used.add(p);
+      return { widths: widthsFor(d.w), w: d.w, h: d.h };
+    },
+  };
+}
+
+// A page's first picture, when its first section has one, is the page's
+// hero: it is asked for first and never waits to be scrolled to.
+export function hero(html) {
+  const main = html.indexOf("<main");
+  const first = main < 0 ? -1 : html.indexOf("<section", main);
+  if (first < 0) return html;
+  const end = html.indexOf("</section>", first);
+  const img = /<img\b[^>]*>/g;
+  img.lastIndex = first;
+  const m = img.exec(html);
+  if (!m || (end >= 0 && m.index > end)) return html;
+  let tag = m[0].replace(/\sloading="lazy"/, "");
+  if (!/\sfetchpriority=/.test(tag)) tag = tag.replace(/^<img/, '<img fetchpriority="high"');
+  return html.slice(0, m.index) + tag + html.slice(m.index + m[0].length);
+}
+
+// Click-to-play YouTube: a video's button becomes its player, playing.
+const YT_SCRIPT = `<script>
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.yt');
+      if (!b) { return; }
+      var src = b.getAttribute('data-yt');
+      var f = document.createElement('iframe');
+      f.src = src + (src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+      f.title = b.getAttribute('data-title') || '';
+      f.setAttribute('allow', b.getAttribute('data-allow') || '');
+      if (b.hasAttribute('data-referrerpolicy')) { f.referrerPolicy = b.getAttribute('data-referrerpolicy'); }
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+      f.focus();
+    });
+  </script>`;
+
+const minifyCss = (css) => transformSync(css, { loader: "css", minify: true }).code;
+
 export { plan };
 
 function renderStatic(el, ctx) {
@@ -99,7 +162,14 @@ export function makeSite(c) {
   const S = makeSchema(m);
   const hubs = new Set(c.pages.filter((d) => d.content.some((x) => x.type === "PagesAndPosts")).map((d) => d.root.props.path));
   const OG_DEFAULT = `${m.SITE_URL}/img/og-default.png`;
-  const brandTitle = (t, exact) => (exact ? t : `${t} | ${m.brand.name}`);
+  // The brand follows the title while the whole thing fits a search result
+  // (60 characters); a longer title stands alone, and the site's name is
+  // in the page's schema.
+  const brandTitle = (t, exact) => {
+    if (exact) return t;
+    const full = `${t} | ${m.brand.name}`;
+    return full.length > 60 ? t : full;
+  };
   const absImg = (src) => (!src ? "" : /^https?:\/\//.test(src) ? src : `${m.SITE_URL}/${src.replace(/^\/+/, "")}`);
   const base = { model: m, hubs, built: plan(c, m) };
   return { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base };
@@ -114,34 +184,38 @@ export function renderSections(c, reqs) {
 }
 
 export function buildSite(c, out) {
-  const { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base } = makeSite(c);
+  const { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base: plain } = makeSite(c);
+  const pictures = c.images ? picturesFor(c.images) : null;
+  const base = { ...plain, pictures };
   const files = {};
   const built = [];
+  const lastmod = lastmodFor(c);
   const write = (rel, text) => {
     files[rel] = text;
   };
-  // The stylesheet with the site styles in it. Only when they change it is
-  // it written, with its own ?v= and the theme colour following the ground.
+  // The stylesheet with the site styles in it, minified, with a ?v= of its
+  // own and the theme colour following the ground.
   let headSite = m.site;
   const cssPath = path.join(REPO, "styles.css");
-  if (c.styles && fs.existsSync(cssPath)) {
+  if (fs.existsSync(cssPath)) {
     const css = fs.readFileSync(cssPath, "utf8");
-    const next = stylesheet(css, c.styles);
-    if (next !== css) {
-      write("styles.css", next);
-      const paper = stylesOf(next).colors["--paper"];
-      headSite = { ...m.site, cssVersion: `${m.site.cssVersion}-${fingerprint(next)}`, themeColor: paper !== stylesOf(css).colors["--paper"] ? paper : m.site.themeColor };
-    }
+    const next = c.styles ? stylesheet(css, c.styles) : css;
+    const min = minifyCss(next);
+    write("styles.css", min);
+    const paper = stylesOf(next).colors["--paper"];
+    headSite = { ...m.site, cssVersion: `${m.site.cssVersion}-${fingerprint(min)}`, themeColor: paper !== stylesOf(css).colors["--paper"] ? paper : m.site.themeColor };
   }
 
-  const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, headExtra, schema }) => {
+  const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, headExtra, schema, first }) => {
     const ctx = { ...base, prefix, output, url: "/" + output.replace("index.html", ""), trail, indexed, raw: [], ...ctxExtra };
-    const body = renderStatic(
+    let body = renderStatic(
       <Body nav={nav} trail={trail} output={output} hubs={hubs} indexed={indexed}>
         {content}
       </Body>,
       ctx
     );
+    if (first) body = hero(body);
+    if (body.includes('<button type="button" class="yt"')) body += "\n" + YT_SCRIPT;
     const canonical = m.canonicalFor(output);
     const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
     write(output, photoFocus(m, document(h, body)));
@@ -158,7 +232,11 @@ export function buildSite(c, out) {
     if (p.schemaKind === "videos") {
       const listed = [...m.FORMAT_ACTS, ...m.NAMED_ACTS].flatMap((a) => m.FOOTAGE.filter((v) => v.act === a.id));
       schema = schemaFor(S.videoIndexSchema(doc, canonical, listed));
-    } else schema = S.pageSchema({ ...doc, content: m.pageContent(doc) }, canonical);
+    } else {
+      const file = `content/pages/${doc.slug}.json`;
+      const modified = lastmod({ output, file });
+      schema = S.pageSchema({ ...doc, content: m.pageContent(doc) }, canonical, { published: p.published || modified, modified });
+    }
     page({
       output,
       prefix: p.absolutePaths ? "/" : prefixFor(output),
@@ -174,6 +252,7 @@ export function buildSite(c, out) {
       ogImage: absImg(p.ogImage) || OG_DEFAULT,
       headExtra: "",
       schema,
+      first: true,
     });
     built.push({ output, title: p.title, description: p.description || "", robots, indexLabel: p.indexLabel, watch: false, file: `content/pages/${doc.slug}.json` });
   };
@@ -192,7 +271,7 @@ export function buildSite(c, out) {
       trail,
       indexed: true,
       content: <WatchPage v={v} />,
-      title: brandTitle(v.name, false),
+      title: brandTitle(v.seoTitle || v.name, false),
       description: v.description,
       robots: "index, follow",
       ogType: "video.other",
@@ -240,7 +319,7 @@ export function buildSite(c, out) {
   }
 
   const blogIndex = c.pages.find((d) => d.slug === "blog-index");
-  write("sitemap.xml", sitemap(m, built, lastmodFor(c)));
+  write("sitemap.xml", sitemap(m, built, lastmod));
   write("video-sitemap.xml", videoSitemap(m));
   write("llms.txt", llms(m, built));
   write("rss.xml", rss(m, blogIndex ? blogIndex.root.props.description : ""));
@@ -251,7 +330,7 @@ export function buildSite(c, out) {
     fs.mkdirSync(path.dirname(target), { recursive: true });
     fs.writeFileSync(target, text);
   }
-  return { files: Object.keys(files), built };
+  return { files: Object.keys(files), built, pictures };
 }
 
 function schemaFor(payload) {
@@ -294,6 +373,12 @@ if (flag("--render-sections")) {
   process.stdout.write(JSON.stringify(renderSections(loadContent(), reqs)));
 } else if (flag("--out")) {
   const out = path.resolve(flag("--out"));
-  const r = buildSite(loadContent(), out);
+  const c = loadContent();
+  c.images = await imageDims(REPO);
+  const r = buildSite(c, out);
   console.log(`Built ${r.files.length} files into ${out}`);
+  if (flag("--images")) {
+    const { made } = await makeImages({ repo: REPO, out, cache: path.resolve(flag("--images")), used: r.pictures.used, yt: r.pictures.yt, dims: c.images });
+    if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `pictures_made=${made}\n`);
+  }
 }

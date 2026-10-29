@@ -1,0 +1,66 @@
+{
+ "id": "little-moses-jones",
+ "name": "Little Moses Jones",
+ "presentation": "face",
+ "_note": "ADDED 2026-10-29 with the signet-new-act skill, from the band's own email to hello@ (Oct 27: the pitch with the booking one-sheet, then the EPK, technical rider, stage plot, hospitality rider, press photo and logo) and from littlemosesjones.com and @LittleMosesJones. Daniel's replies in the thread are the clearance ('Absolutely impressed by the quality and fit', then 'As a non-exclusive act, assuming I have permission to add you to the roster, we should be good with what you've sent already'). Every fact here traces to their site, their EPK, their riders or their channel.",
+ "_presentation_note": "Named. The band fronts under its own name on its own site, channel and catalogue, which is the definition of fronted in roster.json _players_note, and the name is the bandleader's. The face is the bandleader alone. The band's site publishes the whole lineup by name (two lead vocalists, guitar, bass, drums, the sound engineer); none of those names are published here, per the one-name rule on a face-led act. If Daniel wants the lineup named, `byline` carries it.",
+ "status": "listing",
+ "page": "artists/little-moses-jones/",
+ "style": "90s and 2000s R&B and hip-hop",
+ "face": "Little Moses Jones",
+ "material": "Covers, with originals on request",
+ "bucket_tags": [
+  "party"
+ ],
+ "config_tags": [
+  "quintet"
+ ],
+ "_config_note": "One size. The band books as a six piece with its own sound engineer (their email, the one-sheet and the hospitality rider all say six performers plus one to three crew), so the rateCard's five-to-six row is the honest size and the page carries no ladder section, the same call Firstwater and Your Bird Can Sing record. configRangeLabel carries the plain fact on the card and in llms.txt. Their wedding page sells the ceremony and the cocktail hour with a smaller lineup as part of one day; that is said on the page as their offer and is not a Signet size. Moses, 2026-10-29, in the rate email: the band performs only as the full six piece, with no smaller lineup, which settles the one-size call.",
+ "configRangeLabel": "Six piece, with its own sound engineer",
+ "genre_tags": [
+  "hip-hop",
+  "soul"
+ ],
+ "_genre_note": "hip-hop is a new genre id, added to roster.json 2026-10-29 with this act, the first on the roster to carry it. The label is the word a buyer picks from a list. soul (Soul and R&B) is the other half of what they play.",
+ "vocals": "sung",
+ "from": "quintet",
+ "img": "little-moses-jones-card.jpg",
+ "_img_note": "Their own photograph, from the gallery on their site: the band on stage in red under purple light, keys and tuba in frame, cropped 16:9 from the centre. No duotone. Provenance in media-sources.json.",
+ "alt": "The band on stage in red under purple light, two singers out front and a tuba beside the keys.",
+ "video": "https://www.youtube-nocookie.com/embed/oIa-i9C4T7g?rel=0",
+ "_video_note": "The band's 2026 promo, clean version, on their own channel (oIa-i9C4T7g, 2m42s, published 2026-10-12): the strongest single clip and the one Moses sent first. The explicit version of the same promo (g2STWW852Ek) is the same footage with the other audio and is not placed. Every clip on the page checked playableInEmbed 2026-10-29; rows in media-sources.json.",
+ "video_poster": "img/acts/little-moses-jones-live-poster.jpg",
+ "blurb": "Usher, TLC, Outkast, Missy Elliott, Lauryn Hill and Warren G, played as one long set by a six-piece band with the verses rapped live, so a crowd that grew up on this music ends up on the floor singing every word. Little Moses Jones brings its own sound engineer, plays a clean show when the night calls for one, and books for holiday parties, galas, weddings and milestone birthdays in Denver and across Colorado.",
+ "_identity_note": "Written 2026-10-29 in the Signet voice from the facts on their site, EPK and channel, and read aloud against AI-TELLS layers 3 to 8: no epigram ender, no fragment stack, no not-X-but-Y, no colon reveal, contractions throughout, one setting per sentence. Their own trade words (nonstop medleys, concert-level production, rider-ready) are expanded into words a buyer owns. The credits named are the band's own, as the copy laws allow; nothing is claimed for Signet. The named-act promise paragraph is not on the page (the 2026-09-24 pass cut it from every act page as a provenance leak).",
+ "identity": [
+  "Two singers work the front of Little Moses Jones, and behind them the bandleader plays keys and horns over guitar, bass and drums. The set runs straight through with no gap between the songs, so nobody leaves the floor to wait for the next one.",
+  "The song list runs Usher, TLC, Destiny's Child, Mary J. Blige, Outkast, Missy Elliott, Nelly and Montell Jordan, with the soul and funk records those songs came from threaded through it, and the set on the night is built for the crowd in front of it. They play a clean version of the show for an office party or a gala and the full version for a late night, so the same band suits both.",
+  "The band has nearly two decades of live work behind it. It has played for Google, Pearson and a Denver Broncos pregame, galas for the Boys and Girls Club and the Denver Children's Foundation, festival stages at Parker Days, Burro Days and Juneteenth in Thornton, and dates in Amsterdam and Mexico. In 2022 the LUXlife awards named it Colorado's wedding band of the year.",
+  "It books as a six piece with its own sound engineer, so there's no separate audio company to hire, and it's a Denver band that plays the Front Range and the mountain towns."
+ ],
+ "setlist": {
+  "_note": "Every title here is a cover they publish footage of, on this page or on their own channel, so the sample set and the evidence are the same list. Deliberately not from_repertoire.",
+  "note": "These are the covers you can watch them play, on this page and on their own channel. The wider list runs Usher, TLC, Destiny's Child, Mary J. Blige, Nelly and Montell Jordan through the soul and funk those records came from, and the set on the night is built around your crowd.",
+  "items": [
+   "Gin and Juice",
+   "Regulate",
+   "I Got 5 On It",
+   "Forgot About Dre",
+   "So Fresh, So Clean",
+   "Get Ur Freak On",
+   "Doo Wop (That Thing)"
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "MusicGroup",
+  "sameAs": [
+   "https://littlemosesjones.com/",
+   "https://www.youtube.com/@LittleMosesJones"
+  ]
+ }
+}

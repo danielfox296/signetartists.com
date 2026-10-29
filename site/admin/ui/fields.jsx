@@ -15,6 +15,9 @@ import { RICH } from "../lib/richtext.jsx";
 import { STAGING_URL } from "../config.js";
 import { ask, session } from "../state.js";
 import { Field, Modal, Toggle } from "./common.jsx";
+import { widthField } from "./Width.jsx";
+import { widthOf } from "../lib/widths.js";
+import { sections as SECTIONS } from "../../src/components/registry.jsx";
 
 // Pictures uploaded this session: path -> {url, width, height}.
 export const uploads = new Map();
@@ -237,19 +240,22 @@ const RESOLVE = {
 // ------------------------------------------------------------ configs
 
 const PICTURE_KEYS = new Set(["src", "poster"]);
+// Inline CSS and class names typed by hand are kept in the files and drawn,
+// but not shown: widths have their own control.
+const RAW = (k, f) => f.type === "text" && (/style$/i.test(k) || /^cls$|Cls$/.test(k));
 
 // Picture fields become uploads, wherever they sit; act and choice fields
 // pick from the roster.
 function mapFields(fields, nested = false) {
   const out = {};
   for (const [k, f] of Object.entries(fields || {})) {
-    if (!f) continue;
+    if (!f || RAW(k, f)) continue;
     if (k === "act" && f.type === "text") out[k] = { type: "custom", label: f.label, render: ActPick, pageAct: !nested };
     else if (CHOICE_LISTS[k] && f.type === "text") out[k] = { type: "custom", label: f.label, render: ChoicePick, list: CHOICE_LISTS[k] };
     else if (PICTURE_KEYS.has(k) && f.type === "text") out[k] = imageField(f.label === "File" ? "Picture" : f.label);
+    // A picture's own size, in pixels, apart from the width it is drawn at.
+    else if (nested && fields.src && (k === "width" || k === "height") && f.type === "text") out[k] = { ...f, label: k === "width" ? "Width (px)" : "Height (px)" };
     else if (f.type === "richtext") out[k] = { ...f, ...RICH };
-    // Inline CSS fields say so, so they don't read as a second "Style".
-    else if (f.type === "text" && /style$/i.test(k) && f.label) out[k] = { ...f, label: f.label.replace(/\bStyle\b/, "CSS").replace(/\bstyle\b/, "CSS") };
     else if (f.type === "object") out[k] = { ...f, objectFields: mapFields(f.objectFields, true) };
     else if (f.type === "array") {
       out[k] = { ...f, arrayFields: mapFields(f.arrayFields, true) };
@@ -328,12 +334,29 @@ function present(props, raw, fields) {
   return out;
 }
 
+// Every section and block gets Width: after a section's background, at the
+// end of a block's fields. It takes the place of a section's Narrow/Full.
+const NO_WIDTH = new Set(["ActOwn"]);
+function withWidth(name, fields) {
+  if (NO_WIDTH.has(name)) return fields;
+  const isSection = name in SECTIONS;
+  const w = widthField(widthOf(name, isSection));
+  const out = {};
+  for (const [k, f] of Object.entries(fields)) {
+    if (k === "narrow") continue;
+    out[k] = f;
+    if (k === "band" && isSection) out._width = w;
+  }
+  if (!out._width) out._width = w;
+  return out;
+}
+
 export function guarded(components) {
   const out = {};
   for (const [name, c] of Object.entries(components)) {
     const R = c.render;
     if (c.defaultProps) STARTS[name] = c.defaultProps;
-    const fields = mapFields(c.fields);
+    const fields = withWidth(name, mapFields(c.fields));
     out[name] = {
       ...c,
       fields,

@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/corporate/after-party/",
-   "title": "After-party entertainment in Denver: conference, gala and holiday party after-parties | Signet Artists",
-   "description": "After-party entertainment for Denver conferences, galas and company parties: a DJ with a live musician over the set, a band that lets the crowd sing, or a soul band on the ballroom floor, on the sound system that's already up.",
+   "title": "After-party entertainment in Denver: conferences and galas",
+   "description": "After-party entertainment for Denver conferences, galas and company parties: a DJ with a live musician over the set, or a band that lets the crowd sing.",
    "titleExact": true,
    "ogImage": "img/dj.jpg",
    "nav": "corporate",
@@ -135,7 +135,7 @@
       "props": {
        "id": "Heading-10",
        "eyebrow": "Who plays it",
-       "title": "Four ways to fill the hour after the program.",
+       "title": "Five ways to fill the hour after the program.",
        "titleTag": "h2",
        "titleClass": "h2",
        "lede": "Each one runs through the same sound system as the dinner music, on the same contract, so the dance floor opens the moment the program closes."
@@ -161,6 +161,10 @@
         {
          "term": "<a href=\"/ensembles/yacht-rock/\">The yacht rock band</a>",
          "text": "The Doobie Brothers, Steely Dan, Hall and Oates and Toto in three-part harmony, for the crowd that wants to sing every chorus, and for a summer after-party on a terrace."
+        },
+        {
+         "term": "<a href=\"/artists/little-moses-jones/\">Little Moses Jones</a>",
+         "text": "A six-piece band playing the 90s and 2000s R&B and hip-hop a conference crowd grew up on, Usher and TLC through Outkast and Missy Elliott, with the verses rapped live and its own sound engineer on the crew. The clean version of the show is the one for a gala."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -175,7 +179,8 @@
       }
      }
     ],
-    "_file": "02-shapes.html"
+    "_file": "02-shapes.html",
+    "_notes": "2026-10-29: a fifth row for Little Moses Jones, the day the band joined the roster; the heading's count moved with it."
    }
   },
   {
@@ -262,7 +267,7 @@
         },
         {
          "q": "What does the hotel need to know?",
-         "a": "The dock time and the elevator window, one or two dedicated 20-amp circuits depending on the act, the sound cap and the curfew, and the run of show. Setup runs 45 to 90 minutes depending on the size of the act, and a certificate of insurance, the W-9 and one itemized invoice come with the contract. We settle all of it with the events office before the day."
+         "a": "The dock time and the elevator window, one or two dedicated 20-amp circuits depending on the act, the sound cap and the curfew, and the run of show. Setup runs 45 to 90 minutes depending on the size of the act, and we can send whatever paperwork the hotel needs. We settle all of it with the events office before the day."
         },
         {
          "q": "Can conference attendees request songs?",
@@ -270,7 +275,7 @@
         },
         {
          "q": "How loud can it be, and what about the curfew?",
-         "a": "As loud as a dance floor wants and the venue allows. Give us the hotel's sound cap and curfew when we sign, and the set is built under them from the start, so nobody has to turn it down on the night. The downtown hotels and the convention-center properties each run their own rules, and we settle them with the events office."
+         "a": "As loud as a dance floor wants and the venue allows. Let us know the hotel's sound limit and curfew when you book, and we'll plan the set around them from the start, so nobody has to turn it down on the night. The downtown hotels and the convention-center properties each run their own rules, and we settle them with the events office."
         }
        ],
        "schema": true

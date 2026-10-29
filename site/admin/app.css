@@ -1,7 +1,7 @@
 /* The admin's look, from the approved prototype (CopyDesk for Signet,
-   2026-10-16), plus what Puck's parts need. Everything but the colour
-   tokens sits under body.admin: Puck copies this sheet into the canvas,
-   where it must not touch the site's own classes. */
+   2026-10-16), plus what Puck's parts need. None of it reaches the canvas,
+   which has the site's stylesheet and Puck's own (CANVAS_CSS in Editor.jsx
+   for the rest). */
 :root {
   --paper: #f6f3ee; --card: #fffdf9; --sunk: #efeae1; --raise: #ffffff;
   --ink: #18171a; --ink-soft: #5b574f; --ink-faint: #857f74;
@@ -49,14 +49,6 @@
 html, body { height: 100%; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes pulse { 50% { opacity: .35; } }
-/* On the canvas, which is the site and always dark: Puck's outline and
-   tint take the colour of the kind under the pointer. */
-:root { --puck-color-selection-bg: color-mix(in srgb, #86ace6 8%, transparent); --puck-color-selection-border: #86ace6; --puck-slot-color-bg: transparent; }
-.k-overlay { --zc: #86ace6; height: 100%; width: 100%; --puck-color-selection-border: var(--zc); --puck-color-selection-bg: color-mix(in srgb, var(--zc) 10%, transparent); }
-.k-overlay.k-shared { --zc: #b799e2; }
-.k-overlay.k-data { --zc: #63c5ba; }
-.k-overlay.k-layout { --zc: #e8a172; }
-.k-context { opacity: .45; pointer-events: none; }
 
 body.admin {
   /* Puck's panels in the admin's colours. */
@@ -372,8 +364,6 @@ body.admin {
   .img-thumb { width: 64px; height: 48px; border-radius: 6px; object-fit: cover; background: var(--sunk); display: block; border: 1px solid var(--line); }
   .img-side { display: grid; gap: 6px; justify-items: start; }
   .img-side .input { width: 100%; font-size: 12px; padding: 6px 8px; }
-  /* The canvas outline takes the colour of the kind under the pointer. */
-  /* Puck's selection outline and tint, in the kind's colour. */
   .pe-left { overflow-x: hidden; }
   .layer { min-width: 0; }
   /* ---------- acts */
@@ -489,4 +479,14 @@ body.admin {
   .used-on { gap: 4px; justify-items: start; }
   .ellipsis { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .small { font-size: 12px; }
+}
+
+/* ---------- widths */
+body.admin {
+  .w-field { display: grid; gap: 8px; }
+  .w-seg { display: flex; flex-wrap: nowrap; }
+  .w-seg button { flex: 1; padding: 5px 6px; }
+  .w-rem { display: flex; align-items: center; gap: 8px; color: var(--ink-faint); font-size: 12.5px; }
+  .w-rem .input { width: 96px; }
+  .w-align { margin-top: 16px; }
 }

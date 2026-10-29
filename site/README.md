@@ -8,7 +8,7 @@ Run everything from the repo root.
 | | |
 |---|---|
 | Install | `npm ci --prefix site` and `pip3 install -r site/scripts/requirements.txt` |
-| Build | `node site/scripts/build.mjs --out _site` |
+| Build | `node site/scripts/build.mjs --out _site`; with `--images <cache folder>` it also makes the pictures' copies, as the deploys do |
 | Convert `_src/` into `content/` | `python3 site/scripts/convert.py` |
 | Whole-site proof | `python3 site/scripts/proof.py` (report in `site/proof/report.md`) |
 | Editor, development only | `npm --prefix site run dev`, then http://127.0.0.1:5793/?page=weddings |
@@ -25,6 +25,15 @@ Run everything from the repo root.
   - `config.jsx` the Puck configs, `registry.jsx` how the build renders stored items
 - `src/lib/model.js` everything derived from `content/`: act facts, trails, sibling and hub lists, posts by parent
 - `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD), `feeds.js`
+- `src/lib/pictures.js` pictures in the built site: a local JPEG or PNG keeps its `<img>`, which gains a `srcset` of
+  WebP copies in 480, 800, 1200 and 1600 wide (up to its own width) and each component's `sizes`. No wrapper
+  element: the page's element tree is what it was. The editor draws the plain `<img>`. `src/build/images.js` makes the
+  copies at deploy time (`--images`), recompresses every JPEG under `img/` and `media/`, and fetches each YouTube
+  video's picture to `img/yt/<id>.jpg`; none of it is committed, and the workflows keep it in the Actions cache
+- YouTube videos are click-to-play (`YouTube` in `components/parts.jsx`): the video's poster or its YouTube picture
+  and a play button, swapped for the player on a click or Enter. The watch pages under `/video/` keep the player.
+- The build minifies `styles.css` and gives it a `?v=` of its own; the first picture of a page's first section loads
+  first and never lazily
 - `admin/` the admin app at admin.signetartists.com (Phase 2)
   - `config.js` the repo, branches and the Go live switch (`GO_LIVE`: Go live works once `main` is built from `content/`)
   - `lib/github.js` the REST calls; `lib/repo.js` the working copy of `staging` (one commit per save, merge per file);
@@ -32,6 +41,18 @@ Run everything from the repo root.
   - `ui/Editor.jsx` pages, shared parts and the act page layout in Puck; `ui/fields.jsx` the picture, URL, Indexed, act
     and filter-choice fields and the config the admin edits with; `ui/Pages.jsx` the pages list; `ui/GoLive.jsx` the Go
     live drawer
+  - The canvas is the site: Puck's frame gets the site's `styles.css` and Puck's own styles, never the admin's
+    (`syncHostStyles: false`). The site's rules that join one element to the next (`.heading + .split`,
+    `.breadcrumb + .section--top`, `.blog-prose > :first-child`) are given `:where()` variants in the canvas's copy of
+    the stylesheet that also match across Puck's boxes, drop zones and rich text editor, keeping their order and
+    specificity (`acrossPuck` in `ui/Editor.jsx`). An empty slot takes no room unless something is dragged.
+  - Widths (`ui/Width.jsx`, `lib/widths.js`): every section and block has Width (Narrow 42rem, Wide 64rem, Full,
+    Custom in rem) and Alignment (Left, Center), and a handle on the selected one's right edge in the canvas that
+    snaps to them. It writes the style the item already keeps for its box: a section's `wrapStyle` (its `.wrap`, or
+    the section itself for the range strip, cover strip, cover wall and Custom HTML), a heading's `headingStyle`, a
+    call to action's `boxStyle`, a picture's `image.style` (`width: …; height: auto;`), else `style`, as
+    `max-width: …`. Left for a section lines it up with the page column. Typed CSS and class fields are kept and
+    drawn but no longer shown
   - `ui/Acts.jsx` the roster and the filter choices; `ui/Act.jsx` one act's form; `ui/Preview.jsx` the site drawn in a
     frame at desktop or phone width; `lib/acts.js` every change to acts, the roster, crop points and act pages
   - `ui/Posts.jsx` the posts list, new post and delete; `ui/PostEditor.jsx` a post in Puck with its settings;

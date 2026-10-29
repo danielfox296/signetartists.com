@@ -2,7 +2,7 @@
  "root": {
   "props": {
    "path": "/weddings/ceremony/",
-   "title": "Acoustic guitar for a wedding ceremony in Colorado | Signet Artists",
+   "title": "Acoustic guitar for a wedding ceremony in Colorado",
    "description": "An acoustic or Spanish guitarist for a wedding ceremony: how ceremony music works, how many songs each part needs, how long it runs, and who plays it.",
    "titleExact": true,
    "ogImage": "img/acts/acoustic-outdoor.jpg",
@@ -40,7 +40,9 @@
    "notes": {
     "_note": "The ceremony page, built 2026-09-06 with the weddings hub after Daniel lifted the one-wedding-surface cap. It exists because the ceremony question cluster is the biggest FAQ family in the demand harvest (how does ceremony music work, how many songs, how long, should it be instrumental, what is prelude music, who does it, do DJs do it, how much to tip) and no Colorado page answers any of it. Vendor targets are acoustic guitarist for wedding, acoustic guitar for wedding ceremony and spanish guitar wedding ceremony music. Tipping is answered with no figure of any kind, Signet's or the market's.",
     "reader": "The couple planning ceremony music for the first time, who wants the walk down the aisle to land."
-   }
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-06"
   }
  },
  "content": [
@@ -215,7 +217,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-17",
-       "html": "The whole song list is on the <a href=\"/repertoire/\">repertoire page</a>, and a song that isn't on it can be learned for the ceremony.",
+       "html": "The whole song list is on the <a href=\"/repertoire/\">repertoire page</a>, and if the song you want isn't on it, just let us know when you book and we can usually learn it.",
        "cls": "note"
       }
      }
@@ -323,7 +325,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-29",
-       "html": "The hour after the ceremony has its own questions on <a href=\"/weddings/cocktail-hour/\">the cocktail hour page</a>, how the ceremony hands off to dinner is on the <a href=\"/planners/run-of-show/\">run of show page</a>, mountain sound rules are on the <a href=\"/planners/mountain/\">mountain corridor page</a>, stage sizes are on the <a href=\"/planners/technical/\">technical page</a>, and the whole day routes from <a href=\"/weddings/\">the weddings page</a>.",
+       "html": "The hour after the ceremony has its own questions on <a href=\"/weddings/cocktail-hour/\">the cocktail hour page</a>, and the whole day is on <a href=\"/weddings/\">the weddings page</a>. Mountain sound rules are on the <a href=\"/planners/mountain/\">mountain corridor page</a>.",
        "cls": "note"
       }
      },
@@ -342,7 +344,7 @@
         },
         {
          "q": "Can you play an outdoor ceremony?",
-         "a": "Yes, and most ceremonies here are outside. It takes a covered, level and dry spot for the musician, power run to it, and a move-indoors call written before the day. Open air has no walls to send the sound back, so the small system carries the same gentle level to the back rows, and the spot is chosen with the wind in mind, because wind puts noise straight into the officiant's microphone. Colorado evenings cool fast after sunset, so a late-afternoon mountain ceremony gets the weather call written into the contract."
+         "a": "Yes, and most ceremonies here are outside. It takes a covered, level and dry spot for the musician, power run to it, and a plan for moving indoors agreed before the day. Open air has no walls to send the sound back, so the small system carries the same gentle level to the back rows, and the spot is chosen with the wind in mind, because wind puts noise straight into the officiant's microphone. Colorado evenings cool fast after sunset, so for a late-afternoon mountain ceremony we agree the weather call with you ahead of time."
         },
         {
          "q": "How much space does a guitarist need?",
@@ -350,7 +352,7 @@
         },
         {
          "q": "How much to tip ceremony musicians?",
-         "a": "Nothing is expected. The figure agreed for your date is the whole cost of the music, so a gratuity is a personal choice. If you'd like to do something, credit the musicians by name to your photographer before the gallery goes out."
+         "a": "Nothing is expected. The price agreed for your date is the whole cost of the music, so a gratuity is a personal choice. If you'd like to do something, credit the musicians by name to your photographer before the gallery goes out."
         }
        ],
        "schema": true

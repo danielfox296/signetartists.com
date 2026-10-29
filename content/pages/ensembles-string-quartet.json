@@ -2,7 +2,7 @@
  "root": {
   "props": {
    "path": "/ensembles/string-quartet/",
-   "title": "String quartet and wedding violinist in Denver | Signet Artists",
+   "title": "String quartet and wedding violinist in Denver",
    "description": "A string quartet, trio, duo or solo violinist for wedding ceremonies, cocktail hours, galas and memorials in Denver and the mountains, Bach to Coldplay.",
    "titleExact": true,
    "ogImage": "img/classical-strings-card.jpg",
@@ -70,7 +70,9 @@
    "notes": {
     "_note": "Format spoke built 2026-09-25 with the signet-new-act skill, on Daniel's instruction to add classical strings as a style from solo violin to quartet, spec'd, nobody named. Evidence the same day: 'string quartet denver', 'string quartet wedding denver', 'wedding violinist denver' and 'violinist denver' autocomplete, 'string quartet colorado springs' and 'string quartet for corporate events' too, and a cost family sits behind them ('string quartet cost per hour', 'average cost string quartet wedding ceremony'), which one FAQ answers with the market's figure and the sources note. The song list is the repertoire list that arrived with the offer, published in six groups as an example of what the booking offers. No player is named on the page, in alt text or in schema; the player's own recordings are not embedded because the YouTube player prints the channel name.",
     "reader": "Whoever wants strings at the moment everyone is watching: the walk down the aisle, the doors of a gala, a memorial, a long dinner."
-   }
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-22"
   }
  },
  "content": [
@@ -842,7 +844,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-32",
-       "eyebrow": "The footage",
+       "eyebrow": "Video Clips",
        "title": "A Beethoven quartet, and one violin on its own.",
        "titleTag": "h2",
        "titleClass": "h2",
@@ -944,7 +946,7 @@
        "items": [
         {
          "q": "What does a string quartet cost for a wedding in Denver?",
-         "a": "A Denver wedding guide puts a classical string duo or trio for a ceremony or cocktail hour at $800 to $2,000, and a full quartet sits above that. That's the market's figure. Signet doesn't publish prices, so send us the date, the venue and the size you're picturing and we'll price that night."
+         "a": "A Denver wedding guide puts a classical string duo or trio for a ceremony or cocktail hour at $800 to $2,000, and a full quartet sits above that. That's the market's price. We quote each date one-by-one, so send us the date, the venue and the size you're picturing and we'll come back with a price."
         },
         {
          "q": "How much space does a string quartet need?",
@@ -964,7 +966,7 @@
         },
         {
          "q": "Who plays a classical strings booking?",
-         "a": "Working string players from our roster, and we name them to you when the contract is written. You book the size, one violinist to the quartet, and the same players cover the ceremony and the cocktail hour."
+         "a": "Working string players from our roster, and we'll tell you who they are when you book. You book the size, one violinist to the quartet, and the same players cover the ceremony and the cocktail hour."
         }
        ],
        "schema": true
@@ -974,7 +976,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-40",
-       "html": "This figure comes from published 2026 market guides, read September 2026. Signet provides prices for a specific date on request.",
+       "html": "This price comes from published 2026 market guides, read September 2026. We quote each date one-by-one.",
        "cls": "note"
       }
      }

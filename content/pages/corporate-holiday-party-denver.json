@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/corporate/holiday-party/denver/",
-   "title": "Corporate holiday party entertainment in Denver | Signet Artists",
-   "description": "Live music for Denver corporate holiday parties: 21 party dates across November and December, 10 of them in December, and downtown load-in solved.",
+   "title": "Corporate holiday party entertainment in Denver",
+   "description": "Live music for Denver corporate holiday parties: the November and December dates, the peak weekends, and downtown load-in solved.",
    "titleExact": true,
    "nav": "corporate",
    "schema": {
@@ -27,7 +27,9 @@
     "reader": "Whoever books the company holiday party in Denver, usually in a downtown hotel or a club.",
     "_seasonal_note": "Same staleness clock as the hub: the 21-date count and the embedded dates describe the 2026 season. When the hub rolls to 2027 or gets its noindex, this page rolls with it.",
     "schema_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the December calendar, the booking window. Answers answer in the first sentence. Any figure is a {{market:<id>}} token off market-rates.json and the page prints its source; no Signet figure appears here or anywhere since 2026-09-04."
-   }
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-05"
   }
  },
  "content": [
@@ -46,10 +48,10 @@
        "title": "A Denver corporate holiday party has 21 dates to land on.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "The program ends, the duo that played dinner hands the floor to the DJ without a gap, and a ballroom off 17th Street fills up. Thursdays, Fridays and Saturdays across November and December 2026, minus Thanksgiving and Christmas, come to 21 party dates, ten of them in December, and the whole market wants the same peak weekends, marked below.",
+       "lede": "The program ends, the duo that played dinner hands over to the DJ without a gap, and a ballroom off 17th Street fills up. The party dates run Thursday through Saturday across November and December, minus Thanksgiving and Christmas, and the peak weekends are marked below.",
        "headingText": [
         {
-         "html": "The season is decided August through October, and New Year’s Eve books earliest of all. Downtown it’s tighter still: the companies filling the December calendars at the Brown Palace, the Four Seasons and the Oxford are choosing from the same short list of Saturdays."
+         "html": "Downtown Denver in December means the Brown Palace, the Four Seasons, the Oxford and the hotels around them. Tell us the date and the venue and we’ll check the booking calendar. If your party is coming up sooner, no worries. Just reach out and we can often make something great work."
         }
        ],
        "buttons": [
@@ -266,7 +268,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-17",
-       "html": "New Year's Eve books first and is marked as a peak date. Booking the party in Colorado Springs instead? That market has <a href=\"/corporate/holiday-party/colorado-springs/\">its own page</a>.",
+       "html": "New Year's Eve is marked as a peak date. Booking the party in Colorado Springs instead? Find out more on our <a href=\"/corporate/holiday-party/colorado-springs/\">Colorado Springs holiday party page</a>.",
        "cls": "note"
       }
      }
@@ -306,7 +308,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-22",
-       "html": "Footprints, power and load-in by size are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to your venue contact. If the venue itself is still open, <a href=\"/blog/corporate-holiday-party-venues-denver/\">the Denver venue guide</a> covers sixteen of this market's spaces one by one.",
+       "html": "Footprints, power and load-in by size are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to your venue contact. If the venue itself is still open, <a href=\"/blog/corporate-holiday-party-venues-denver/\">the Denver venue guide</a> covers sixteen of Denver's spaces one by one.",
        "cls": "note"
       }
      }
@@ -346,7 +348,7 @@
         },
         {
          "q": "Do December dates in Denver cost more?",
-         "a": "Yes. December weekends cost more than a standard date everywhere in this market, and New Year's Eve is a peak date of its own. What that means for your date is its own line on the quote."
+         "a": "Yes. December weekends usually cost more than a standard date across Colorado, and New Year's Eve is a peak date of its own. Send us the date and we'll come back with a price."
         }
        ],
        "schema": true

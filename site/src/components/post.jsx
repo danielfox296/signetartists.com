@@ -1,7 +1,8 @@
 /* Blog posts: the article frame and its block types. Prose is stored as the
    HTML its Markdown always produced. */
 import { Fragment } from "react";
-import { H, Pic, Raw, useHref, useSite } from "./parts.jsx";
+import { H, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
+import { SIZES } from "../lib/pictures.js";
 import { renderChart } from "./dataviz.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
 
@@ -73,7 +74,7 @@ export const blocks = {
       const href = useHref();
       return (
         <figure className="blog-figure">
-          <Pic src={href(src)} alt={alt} loading="lazy" />
+          <Pic src={href(src)} alt={alt} loading="lazy" sizes={SIZES.post} />
           {caption || source ? (
             <figcaption>
               {caption || null}
@@ -189,7 +190,7 @@ export const blocks = {
               // The post card layout's parts; the date and reading time
               // show in the blog list only.
               const part = {
-                photo: () => (p.hero && p.hero.src ? <Pic key="i" src={href(p.hero.src)} alt="" class="media" loading="lazy" width="1600" height="900" style={ratioStyle(L.ratio)} /> : null),
+                photo: () => (p.hero && p.hero.src ? <Pic key="i" src={href(p.hero.src)} alt="" class="media" loading="lazy" width="1600" height="900" style={ratioStyle(L.ratio)} sizes={SIZES.related} /> : null),
                 eyebrow: () => (p.eyebrow ? <span key="e" className="eyebrow">{p.eyebrow}</span> : null),
                 title: () => <span key="t" className="blog-related-card-title">{p.title}</span>,
                 dek: () => (p.dek ? <span key="d" className="blog-related-dek">{p.dek}</span> : null),
@@ -220,14 +221,13 @@ export const blocks = {
       return (
         <div className="blog-video">
           <div className="blog-video-frame">
-            <iframe
+            <YouTube
+              id={v.id}
               src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0`}
               title={v.title || s.post.title}
-              loading="lazy"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
+              sizes={SIZES.post}
             />
           </div>
           {caption ? <p className="blog-video-caption">{caption}</p> : null}
@@ -348,7 +348,7 @@ export function PostFrame({ p, minutes, content, children }) {
     hero: (k) =>
       p.hero && p.hero.src ? (
         <figure key={k} className="blog-hero">
-          <Pic class="media" src={href(p.hero.src)} alt={p.hero.alt} width="1600" height="900" loading="eager" fetchpriority="high" style={ratioStyle(L.heroRatio)} />
+          <Pic class="media" src={href(p.hero.src)} alt={p.hero.alt} width="1600" height="900" loading="eager" fetchpriority="high" style={ratioStyle(L.heroRatio)} sizes={SIZES.post} />
           {p.hero.caption ? <figcaption className="blog-hero-caption">{p.hero.caption}</figcaption> : null}
         </figure>
       ) : null,

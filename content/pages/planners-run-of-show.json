@@ -3,8 +3,10 @@
   "props": {
    "path": "/planners/run-of-show/",
    "title": "Run of show",
-   "description": "Three worked run-of-show templates with the band's rows filled in: a corporate gala, a wedding, and a holiday party. Set times, break placement, volume steps and who cues each moment.",
-   "nav": "planners"
+   "description": "Three worked run-of-show templates with the band's rows filled in: a corporate gala, a wedding and a holiday party. Set times, breaks and who cues each moment.",
+   "nav": "planners",
+   "schemaArticle": "on",
+   "published": "2026-08-07"
   }
  },
  "content": [
@@ -917,7 +919,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-25",
-       "html": "If the program wants a louder set, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is its own line on the quote.",
+       "html": "If the program wants a louder set, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is booked as its own act.",
        "cls": "prose"
       }
      }

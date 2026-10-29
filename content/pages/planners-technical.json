@@ -3,9 +3,11 @@
   "props": {
    "path": "/planners/technical/",
    "title": "What we need from your venue",
-   "description": "Stage footprint, power, channel counts, load-in times and volume at every size we sell, solo to quartet, plus the DJ. Published so a planner can forward them to the venue.",
+   "description": "Stage footprint, power, channel counts, load-in times and volume at every size, solo to quartet, plus the DJ, for a planner to forward to the venue.",
    "nav": "planners",
-   "breadcrumb": "Your venue"
+   "breadcrumb": "Your venue",
+   "schemaArticle": "on",
+   "published": "2026-08-18"
   }
  },
  "content": [
@@ -51,7 +53,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "Published stage-rental guidance for a seven to ten-piece band runs to <strong class=\"num-accent\">24 by 24 feet</strong>. That figure is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. Renting to it costs you a chunk of floor your guests wanted.",
+       "html": "Published stage-rental guidance for a seven to ten-piece band runs to <strong class=\"num-accent\">24 by 24 feet</strong>. That number is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. Renting to it costs you a chunk of floor your guests wanted.",
        "cls": "prose"
       }
      },
@@ -389,7 +391,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "A generator works if it's a quiet one, properly grounded, and sized with headroom above the figures above. A domestic generator at the edge of a lawn isn't that, and the noise floor it adds sits underneath every quiet moment of the evening.",
+       "html": "A generator works if it's a quiet one, properly grounded, and sized with headroom above the numbers above. A domestic generator at the edge of a lawn isn't that, and the noise floor it adds sits underneath every quiet moment of the evening.",
        "cls": "prose"
       }
      },

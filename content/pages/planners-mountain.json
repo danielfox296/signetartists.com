@@ -2,14 +2,16 @@
  "root": {
   "props": {
    "path": "/planners/mountain/",
-   "title": "Live music logistics for Vail, Aspen, Breckenridge and Telluride",
+   "title": "Live music logistics in Vail, Aspen, Breckenridge, Telluride",
    "description": "Live music at Colorado mountain venues: Vail, Beaver Creek, Aspen, Breckenridge and the Broadmoor. Noise caps, curfews and altitude, cited and dated.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "The mountain corridor",
    "notes": {
     "_seo_note": "Retitled 2026-08-15 to target '[mountain town] wedding band', then RETITLED AGAIN 2026-08-20 with the SEO buildout: the resort wedding market is won through planner shortlists and venue preferred-vendor lists, a channel Daniel works offline, so wedding-band targeting fights the channel structure (handoff §1). The mountain SEO play is now /corporate/retreats/ and its town spokes; this page is the cited logistics resource they all link to, and its title now says what the page is. Page CONTENT untouched, do-not-edit per the audit; this is metadata only. If the retitle is wrong, the 08-15 title is one line up in git."
-   }
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-05"
   }
  },
  "content": [
@@ -201,7 +203,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "A resort date costs more than a metro date everywhere in this market. The gap is travel, the extra day the calendar loses, and lodging when the night runs late enough that driving I-70 home afterward isn't sensible. All three are itemized on our quote.",
+       "html": "A resort date costs more than a Denver metro date everywhere in the Colorado market. The gap is travel, the extra day the calendar loses, and lodging when the night runs late enough that driving I-70 home afterward isn't sensible. All three are itemized on our quote.",
        "cls": "prose"
       }
      },
@@ -247,7 +249,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-20",
-       "html": "A holiday weekend prices above a standard date across this market. What live music costs in Colorado, sourced figure by figure, is on the <a href=\"/pricing/\">pricing page</a> and in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>. The town matters as much as the date up here, so send both.",
+       "html": "A holiday weekend prices above a standard date across Colorado. What live music costs in Colorado, sourced price by price, is on the <a href=\"/pricing/\">pricing page</a> and in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>. The town matters as much as the date up here, so send both.",
        "cls": "note"
       }
      }
@@ -302,7 +304,7 @@
         },
         {
          "term": "Vail",
-         "text": "Reported at <strong>65 dB(A) outdoors in the resort villages</strong>, measured ten feet from the permitted area, with the town manager able to allow amplified sound for up to four consecutive days. Vail was reviewing these rules as outdoor programming grew, so confirm the current figure with the venue."
+         "text": "Reported at <strong>65 dB(A) outdoors in the resort villages</strong>, measured ten feet from the permitted area, with the town manager able to allow amplified sound for up to four consecutive days. Vail was reviewing these rules as outdoor programming grew, so confirm the current number with the venue."
         },
         {
          "term": "Beaver Creek, Winter Park, Snowmass Village, Crested Butte, Mountain Village",
@@ -316,7 +318,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "One pattern holds across all of them. The published cap is a property-line or perimeter figure, and a dance floor runs 88 to 95 dBA <em>on the floor</em>. Those two numbers aren't comparable, and the distance between the band and the property line is what reconciles them. That distance is a site question, which is why we want the venue name early.",
+       "html": "One pattern holds across all of them. The published cap is a property-line or perimeter number, and a dance floor runs 88 to 95 dBA <em>on the floor</em>. Those two numbers aren't comparable, and the distance between the band and the property line is what reconciles them. That distance is a site question, which is why we want the venue name early.",
        "cls": "prose"
       }
      }
@@ -510,13 +512,13 @@
          "html": "Telluride amplified-sound hours: <a href=\"https://telluride.municipal.codes/TMC/7-2-20\" rel=\"nofollow\">Telluride Municipal Code 7-2-20</a>, with the 2022 revision reported in the Telluride Daily Planet"
         },
         {
-         "html": "Breckenridge levels: <a href=\"https://breckenridge.town.codes/Code/5-8-5\" rel=\"nofollow\">Breckenridge Town Code 5-8-5</a>, figures as reported by the Summit Daily"
+         "html": "Breckenridge levels: <a href=\"https://breckenridge.town.codes/Code/5-8-5\" rel=\"nofollow\">Breckenridge Town Code 5-8-5</a>, levels as reported by the Summit Daily"
         },
         {
          "html": "Steamboat levels: Steamboat Springs revised noise ordinance, as reported by the Steamboat Pilot"
         },
         {
-         "html": "Vail levels: Vail Municipal Code 5-1-7, figures as reported by the Vail Daily"
+         "html": "Vail levels: Vail Municipal Code 5-1-7, levels as reported by the Vail Daily"
         }
        ]
       }

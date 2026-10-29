@@ -2,15 +2,15 @@
  "root": {
   "props": {
    "path": "/private-parties/graduation-party/",
-   "title": "Graduation party band and live music in Denver | Signet Artists",
-   "description": "A band, a singer with a guitar or a DJ for a high school or college graduation party in Denver, at home or in a backyard, with the grandparents at one table and the graduate's friends on the lawn.",
+   "title": "Graduation party band and live music in Denver",
+   "description": "A band, a singer with a guitar or a DJ for a high school or college graduation party in Denver, with the graduate's friends on the lawn.",
    "titleExact": true,
    "ogImage": "img/acts/tejas-mural.jpg",
    "schema": {
     "service": {
      "name": "Live music for a graduation party",
      "serviceType": "A singer with a guitar, a jazz duo, a party band, live band karaoke or a DJ for high school and college graduation parties at home",
-     "description": "Live music for a graduation party across Denver and the Front Range: a singer with a guitar who plays the songs the family knows and then the graduate's requests, a jazz duo for the family lunch at 60 to 65 dBA, a DJ or a party band for the part of the afternoon that belongs to the friends, and live band karaoke for both generations, with sound support sized to the yard and one personal contact.",
+     "description": "Live music for a graduation party across Denver and the Front Range: a singer with a guitar who plays the songs the family knows and then the graduate's requests, a jazz duo for the family lunch at conversation volume, a DJ or a party band for the part of the afternoon that belongs to the friends, and live band karaoke for both generations, with sound support sized to the yard and one personal contact.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -215,7 +215,7 @@
         },
         {
          "term": "One song for the graduate",
-         "text": "The song a parent wants played for their kid in front of everyone, learned for the day if it isn’t already in the book."
+         "text": "The song a parent wants played for their kid in front of everyone, learned for the day if it isn’t already on the song list."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -269,7 +269,7 @@
         },
         {
          "q": "Can the musician learn one song for the graduate?",
-         "a": "Yes. One learned song comes with every booking. Tell us the title with the date."
+         "a": "Yes. Tell us the title with the date and we can usually learn it."
         }
        ],
        "schema": true
