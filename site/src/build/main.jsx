@@ -320,7 +320,7 @@ export function buildSite(c, out) {
 
   const blogIndex = c.pages.find((d) => d.slug === "blog-index");
   write("sitemap.xml", sitemap(m, built, lastmod));
-  write("video-sitemap.xml", videoSitemap(m));
+  write("video-sitemap.xml", videoSitemap(m, built, lastmod));
   write("llms.txt", llms(m, built));
   write("rss.xml", rss(m, blogIndex ? blogIndex.root.props.description : ""));
   write("robots.txt", fs.readFileSync(path.join(c.dir, "robots.txt"), "utf8"));

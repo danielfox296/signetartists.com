@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""IndexNow ping — submits sitemap URLs after a deploy; changed-only when a
-pre-deploy baseline is supplied. Ported from the thefirstwater.co kit.
+"""IndexNow ping — submits the URLs of both sitemaps (sitemap.xml and
+video-sitemap.xml) after a deploy; changed-only when a pre-deploy baseline
+is supplied. Ported from the thefirstwater.co kit.
 
 Runs in CI after the Pages deploy step (see .github/workflows/deploy.yml).
-ORDERING MATTERS: the workflow snapshots the LIVE sitemap to a file BEFORE
-the build/deploy steps — by the time this script runs, live already equals
-the new sitemap, so a post-deploy fetch would always diff empty. Against
+ORDERING MATTERS: the workflow snapshots BOTH live sitemaps into one file
+BEFORE the build/deploy steps — by the time this script runs, live already
+equals the new sitemaps, so a post-deploy fetch would always diff empty. Against
 that pre-deploy baseline, only URLs that are new or whose <lastmod> changed
 are submitted; when nothing changed the ping is skipped entirely. Without a
 readable baseline (first deploy, snapshot failed) every URL is submitted.
@@ -25,10 +26,12 @@ import urllib.request
 SITE = "signetartists.com"
 KEY = "54d6215e56b1e0da9b42f82791b125b0"
 ENDPOINT = "https://api.indexnow.org/indexnow"
-SITEMAP = "sitemap.xml"
+SITEMAPS = ("sitemap.xml", "video-sitemap.xml")
 
-# One <url> block: loc plus its optional lastmod. Both sitemaps this ever
-# parses are emitted by build.py's generator, so the shape is stable.
+# One <url> block: loc plus its optional lastmod. The sitemaps this parses are
+# written by site/src/build/feeds.js, which puts lastmod right after loc in
+# both (the video one carries its <video:video> block after that), so the
+# shape is stable. The baseline file may be the two live sitemaps concatenated.
 _URL_RE = re.compile(r"<url>\s*<loc>(.*?)</loc>(?:\s*<lastmod>(.*?)</lastmod>)?", re.S)
 
 
@@ -51,7 +54,7 @@ def changed_urls(new, baseline_path):
         return sorted(new), "baseline empty — submitting all"
     urls = sorted(loc for loc, lm in new.items() if loc not in old or old[loc] != lm)
     return urls, (f"{len(urls)} of {len(new)} URLs new or lastmod-changed "
-                  f"vs pre-deploy live sitemap")
+                  f"vs the pre-deploy live sitemaps")
 
 
 def main(argv):
@@ -66,10 +69,15 @@ def main(argv):
         else:
             print(f"indexnow: unknown argument {arg!r} ignored", file=sys.stderr)
 
-    with open(SITEMAP, encoding="utf-8") as f:
-        new = parse_sitemap(f.read())
+    new = {}
+    for name in SITEMAPS:
+        try:
+            with open(name, encoding="utf-8") as f:
+                new.update(parse_sitemap(f.read()))
+        except OSError:
+            print(f"indexnow: {name} not in the build, skipping it")
     if not new:
-        print("indexnow: no URLs found in sitemap, skipping")
+        print("indexnow: no URLs found in the sitemaps, skipping")
         return
 
     urls, reason = changed_urls(new, baseline_path)
