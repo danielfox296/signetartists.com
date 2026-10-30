@@ -11,8 +11,10 @@ export { isoSeconds };
 
 const noindex = (r) => (r || "").startsWith("noindex");
 
-// The watch pages are listed in video-sitemap.xml, with their videos, and
-// nowhere else: no URL is in two sitemaps.
+// The watch pages are listed in video-sitemap.xml, with their videos and
+// their lastmod, and nowhere else: no URL is in two sitemaps. Both sitemaps
+// carry lastmod because scripts/indexnow.py reads both after a deploy and
+// pings only the URLs whose date moved.
 export function sitemap(m, built, lastmod) {
   const urls = [];
   for (const b of built) {
@@ -29,14 +31,17 @@ export function sitemap(m, built, lastmod) {
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.join("\n") + "\n</urlset>\n";
 }
 
-export function videoSitemap(m) {
+export function videoSitemap(m, built, lastmod) {
+  const dates = new Map(built.filter((b) => b.watch).map((b) => [b.output, lastmod(b)]));
   const urls = m.FOOTAGE.map((v) => {
+    const d = dates.get(m.watchOutput(v));
     const src = v.id
       ? `      <video:player_loc>https://www.youtube-nocookie.com/embed/${v.id}</video:player_loc>`
       : `      <video:content_loc>${esc(m.SITE_URL + "/" + v.file)}</video:content_loc>`;
     return [
       "  <url>",
       `    <loc>${esc(m.watchUrl(v))}</loc>`,
+      ...(d ? [`    <lastmod>${d}</lastmod>`] : []),
       "    <video:video>",
       `      <video:thumbnail_loc>${esc(m.watchThumb(v))}</video:thumbnail_loc>`,
       `      <video:title>${esc(v.name)}</video:title>`,
