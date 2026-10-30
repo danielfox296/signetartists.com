@@ -338,7 +338,8 @@ function schemaFor(payload) {
 }
 
 // A page's sitemap date: the date it had when it was converted while its
-// file is unchanged, then the file's own last commit.
+// file is unchanged, then the file's own last commit. A page added since the
+// conversion has no seed and takes its file's last commit from the start.
 function lastmodFor(c) {
   const cache = {};
   const gitDate = (file) => {
@@ -353,7 +354,7 @@ function lastmodFor(c) {
   };
   return (b) => {
     const seed = c.lastmod[b.output];
-    if (!seed) return null;
+    if (!seed) return gitDate(b.file);
     const p = path.join(REPO, seed.file);
     if (!fs.existsSync(p)) return seed.date;
     const sha = crypto.createHash("sha1").update(fs.readFileSync(p)).digest("hex");
