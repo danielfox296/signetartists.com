@@ -155,7 +155,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-11",
-       "html": "Overtime is the next thing to look for on a quote. The Colorado market charges $200 to $400 for time beyond the contracted set, which is worth knowing before the night.",
+       "html": "Overtime is the next thing to look for on a quote. The Denver market charges $200 to $400 for each hour beyond the contracted set, which is worth knowing before the night.",
        "cls": "prose"
       }
      },
@@ -198,7 +198,7 @@
        "captionCls": "rate-caption",
        "head": [
         {
-         "html": "2 hours of live music performance"
+         "html": "What you're booking"
         },
         {
          "html": "Market rate"
@@ -366,7 +366,7 @@
         },
         {
          "term": "The production tier",
-         "text": "A 7-9 piece show band runs $7,500 to $17,000, and full production adds costs like show direction, lighting, staffing and a program designed around the act. For a gala carrying a production budget, it's the right purchase."
+         "text": "Nationally, a 7-9 piece show band runs $7,500 to $17,000, and full production adds costs like show direction, lighting, staffing and a program designed around the act. For a gala carrying a production budget, it's the right purchase."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -409,11 +409,11 @@
        "rows": [
         {
          "term": "The jazz trio",
-         "text": "A trio across a 4-hour evening can run $2,000 to $3,500 in the Colorado market. For a dinner set rather than a full evening, a jazz trio or acoustic duo runs $500 to $3,000. The pricing difference relates to how long the sets are and how much production is required. Denver has no trio figure of its own in print: the Denver band range of $2,500 to $8,000 begins at the trio and ends at a full band with horns, so the trio sits at the bottom of that range rather than in the middle of it."
+         "text": "Nationally, a trio across a 4-hour evening can run $2,000 to $3,500. For a dinner set rather than a full evening, a jazz trio or acoustic duo runs $500 to $3,000 nationally. The pricing difference relates to how long the sets are and how much production is required. Denver has no trio figure of its own in print: the Denver band range of $2,500 to $8,000 begins at the trio and ends at a full band with horns, so the trio sits at the bottom of that range rather than in the middle of it."
         },
         {
          "term": "The acoustic duo",
-         "text": "An acoustic duo across a 4-hour evening can run $1,500 to $2,500. It's the smallest full-evening price published anywhere in the Colorado market. <br><br>Two musicians cover a dinner or a cocktail hour without a stage, and for a short booking the Denver market puts a duo or trio at a ceremony or cocktail hour at $800 to $2,000. A duo evening and a trio evening are one musician apart, and the market prices that one musician as the difference between $1,500 to $2,500 and $2,000 to $3,500."
+         "text": "Nationally, an acoustic duo across a 4-hour evening can run $1,500 to $2,500. It's the smallest full-evening price for live musicians on this page. <br><br>Two musicians cover a dinner or a cocktail hour without a stage, and for a short booking the Denver market puts a classical string duo or trio at a ceremony or cocktail hour at $800 to $2,000. A duo evening and a trio evening are one musician apart, and the national market prices that one musician as the difference between $1,500 to $2,500 and $2,000 to $3,500."
         },
         {
          "term": "What changes the prices?",
@@ -457,7 +457,7 @@
       }
      }
     ],
-    "_notes": "Added 2026-09-06 from the demand harvest. \"how much does a jazz trio\n     cost\" has no Colorado page answering it (a marketplace pricing page is\n     first, a UK agency third), and \"what is a jazz trio\" surfaced from 13\n     seeds with its own instrument tails. Both are answered here, the figures\n     market tokens only, and the explainer hands off to the ensemble page.\n     Section alternation: this lands sunk, so 05, 06 and 07 flipped with it.",
+    "_notes": "Added 2026-09-06 from the demand harvest. \"how much does a jazz trio\n     cost\" has no Colorado page answering it (a marketplace pricing page is\n     first, a UK agency third), and \"what is a jazz trio\" surfaced from 13\n     seeds with its own instrument tails. Both are answered here, the figures\n     market tokens only, and the explainer hands off to the ensemble page.\n     Section alternation: this lands sunk, so 05, 06 and 07 flipped with it.\n     2026-11-01, Daniel: every figure on this page names its real market.\n     us_trio, us_duo and us_dinner_band are United States figures and had been\n     labelled Colorado; denver_overtime is Denver; denver_strings is a classical\n     string duo or trio, not any duo or trio; the table head said 2 hours though\n     every figure is per event. AI engines quote this page (CITATION-LOG.md).",
     "_file": "04b-trio-duo.html"
    }
   },
@@ -489,15 +489,15 @@
         },
         {
          "term": "The client dinner",
-         "text": "The conversation is the event, so the music sits under it at a level guests can talk across. A jazz trio or acoustic duo for a dinner runs $500 to $3,000 in the Colorado market, depending on how long the music plays and how much production comes with it. Find out more on our <a href=\"/corporate/client-dinners/\">client dinners page</a>."
+         "text": "The conversation is the event, so the music sits under it at a level guests can talk across. A jazz trio or acoustic duo for a dinner runs $500 to $3,000 nationally, depending on how long the music plays and how much production comes with it. Find out more on our <a href=\"/corporate/client-dinners/\">client dinners page</a>."
         },
         {
          "term": "The private party",
-         "text": "A cover or acoustic band for a private party runs $3,000 to $8,000, and a smaller act playing the same music costs well under that: an acoustic duo over a 4-hour reception runs $1,500 to $2,500 and a trio $2,000 to $3,500. Find out more on our <a href=\"/private-parties/\">private parties page</a>."
+         "text": "Nationally, a cover or acoustic band for a private party runs $3,000 to $8,000, and a smaller act playing the same music costs well under that: an acoustic duo over a 4-hour reception runs $1,500 to $2,500 and a trio $2,000 to $3,500. Find out more on our <a href=\"/private-parties/\">private parties page</a>."
         },
         {
          "term": "The wedding cocktail hour",
-         "text": "One hour between the ceremony and the reception, and the smallest booking on this list. A duo or trio for a ceremony or cocktail hour runs $800 to $2,000 in Denver. Find out more on our <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>."
+         "text": "One hour between the ceremony and the reception, and the smallest booking on this list. A classical string duo or trio for a ceremony or cocktail hour runs $800 to $2,000 in Denver. Find out more on our <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -623,7 +623,7 @@
         },
         {
          "q": "Why do live music prices vary so much in Colorado?",
-         "a": "Because the market runs in tiers and quotes cover different scopes. One booking marketplace averages $1,150 for a Denver party band, the Denver market treats the four to six piece as its middle at $4,000 to $6,000, and a seven to nine piece show band runs $7,500 to $17,000. What's included in a price, sound above all, varies as much as the price itself."
+         "a": "Because the market runs in tiers and quotes cover different scopes. One booking marketplace averages $1,150 for a Denver party band, the Denver market treats the four to six piece as its middle at $4,000 to $6,000, and nationally a seven to nine piece show band runs $7,500 to $17,000. What's included in a price, sound above all, varies as much as the price itself."
         },
         {
          "q": "What does the mountain premium cover?",
@@ -639,7 +639,7 @@
         },
         {
          "q": "How much does a jazz trio cost?",
-         "a": "A trio across a 4-hour evening can run $2,000 to $3,500 in the Colorado market, and a jazz trio or acoustic duo for a dinner set runs $500 to $3,000. Send us the date and the length of the evening and we'll come back with a price."
+         "a": "Nationally, a trio across a 4-hour evening can run $2,000 to $3,500, and a jazz trio or acoustic duo for a dinner set runs $500 to $3,000. Send us the date and the length of the evening and we'll come back with a price."
         },
         {
          "q": "How much does it cost to hire a band for two hours, or for four?",
