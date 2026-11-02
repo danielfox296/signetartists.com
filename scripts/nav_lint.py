@@ -40,7 +40,9 @@ import re
 import sys
 import pathlib
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+# The built site to read: the folder given (the deploys pass _site), else the
+# repo root, where build.py used to write it.
+ROOT = pathlib.Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else pathlib.Path(__file__).resolve().parent.parent
 
 TOPICS = {
     "cost": ["pricing", "price", "prices", "cost", "costs", "rate", "rates",

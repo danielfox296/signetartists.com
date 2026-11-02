@@ -87,6 +87,15 @@ jobs:
             ./ _site/
           rsync -a _gen/ _site/
 
+      # The checks, on what is about to be served (2026-11-02). nav_lint: the
+      # header, menu, footer, crumbs, /sitemap/ and placeholders. site_check:
+      # titles, descriptions, share images, picture descriptions and the
+      # structured data. Either one failing stops the deploy.
+      - name: Check site
+        run: |
+          python3 scripts/nav_lint.py _site
+          python3 site/scripts/site_check.py _site
+
       # The staging domain, plain HTML (no Jekyll), the commit it was built
       # from at /commit.txt, and nothing for search engines: robots.txt
       # disallows everything and every page carries noindex. Forms post
