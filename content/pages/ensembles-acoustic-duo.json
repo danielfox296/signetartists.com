@@ -2,16 +2,16 @@
  "root": {
   "props": {
    "path": "/ensembles/acoustic-duo/",
-   "title": "Acoustic duo and trio for cocktail hours in Denver",
-   "description": "Acoustic covers at conversation volume: voice and guitar, guitar and upright bass, or the trio joining both, one hour or all night.",
+   "title": "Acoustic duo and trio for hire, Denver weddings and events",
+   "description": "An acoustic duo or trio for hire in Denver: voice and guitar, guitar and upright bass, or all three, playing covers at conversation volume.",
    "titleExact": true,
    "ogImage": "img/hero.jpg",
    "nav": "music",
    "breadcrumb": "Acoustic duo and trio",
    "schema": {
     "service": {
-     "name": "Acoustic duo and trio",
-     "serviceType": "Acoustic duo and trio for cocktail hours, dinner parties, patios and welcome drinks",
+     "name": "Acoustic duo and trio for hire",
+     "serviceType": "Acoustic duo and trio for hire for wedding cocktail hours, dinner parties, patios and welcome drinks",
      "description": "Voice and guitar, guitar and upright bass, or the trio joining all three musicians, playing singer-songwriter and folk-rock covers at conversation volume for cocktail hours, dinner parties and receptions across Denver and the Colorado mountain corridor.",
      "areaServed": [
       "Denver",
@@ -30,7 +30,7 @@
     "act": "acoustic-duo"
    },
    "notes": {
-    "_note": "Format spoke of the 2026-08-20 SEO buildout (Tier 3). Differentiated from ensembles/jazz-duo-trio/ by repertoire: singer-songwriter and folk-rock covers against the jazz page's standards, with both pages linking each other. Spec'd format, no player names. Trio added 2026-08-27 on Daniel's confirmation, after 'acoustic trio denver' surfaced in week-one GSC with no page answering it: voice, guitar and upright bass, priced off the card's trio line.",
+    "_note": "Format spoke of the 2026-08-20 SEO buildout (Tier 3). Differentiated from ensembles/jazz-duo-trio/ by repertoire: singer-songwriter and folk-rock covers against the jazz page's standards, with both pages linking each other. Spec'd format, no player names. Trio added 2026-08-27 on Daniel's confirmation, after 'acoustic trio denver' surfaced in week-one GSC with no page answering it: voice, guitar and upright bass, priced off the card's trio line. 2026-11-01: title, H1, description and Service name carry 'for hire', the pattern that moved /ensembles/jazz-duo-trio/ from off page 1 to #3 for 'jazz trio for hire denver' and into Google's AI Overview (research/CITATION-LOG.md, run 2).",
     "reader": "Whoever wants familiar songs played live under a cocktail hour or a dinner where people talk: a wedding, a dinner party, a company reception, a client dinner."
    }
   }
@@ -48,7 +48,7 @@
        "id": "Heading-1",
        "eyebrow": "Covers people know, played acoustic",
        "slab": true,
-       "title": "An acoustic duo or trio for cocktail hours and dinner parties.",
+       "title": "An acoustic duo or trio for hire, for cocktail hours and dinner parties.",
        "titleTag": "h1",
        "titleClass": "h2 display",
        "lede": "Wild World on an acoustic guitar, sung just loud enough to hear from the bar, while your guests catch up over the first drink. The acoustic duo is voice and guitar, or guitar and upright bass, playing covers people know at a volume they talk across, and the trio puts all three musicians on one night for a bigger crowd.",

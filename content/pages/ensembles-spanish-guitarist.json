@@ -2,15 +2,15 @@
  "root": {
   "props": {
    "path": "/ensembles/spanish-guitarist/",
-   "title": "Spanish guitarist for weddings, dinners and events in Denver",
-   "description": "A solo Spanish guitarist for wedding ceremonies, cocktail hours, dinner parties and milestone birthdays in Denver. Nylon strings at conversation volume.",
+   "title": "Spanish guitarist for hire in Denver, weddings and events",
+   "description": "A Spanish guitarist for hire in Denver, for wedding ceremonies, cocktail hours, dinner parties and milestone birthdays. Nylon strings at conversation volume.",
    "titleExact": true,
    "ogImage": "img/acts/flamenco-colonnade.jpg",
    "nav": "music",
    "schema": {
     "service": {
-     "name": "Spanish guitarist",
-     "serviceType": "Solo Spanish guitarist for wedding ceremonies, cocktail hours, dinner parties and corporate dinners",
+     "name": "Spanish guitarist for hire",
+     "serviceType": "Solo Spanish guitarist for hire for wedding ceremonies, cocktail hours, dinner parties and corporate dinners",
      "description": "One Spanish guitarist on nylon strings: Malaguena, rumbas, farrucas and familiar songs played flamenco-style, for wedding ceremonies, cocktail hours, dinner parties, milestone birthdays and corporate dinners across Denver, the Front Range and the Colorado mountain corridor.",
      "areaServed": [
       "Denver",
@@ -58,7 +58,7 @@
     ]
    },
    "notes": {
-    "_note": "Format spoke built 2026-09-13. Evidence: 'spanish guitar' autocompletes in ten wedding and event forms and 'spanish guitar denver' / 'spanish guitarist near me' echo their own words back, while 'flamenco' autocompletes as dresses and dance; the 2026-09-12 enquiry to hello@ asked for 'a Spanish guitarist', singular, and Daniel's reply named more than one Spanish guitar player on the roster. Until today the only Spanish guitar surface was the Dirty Flamenco trio page. Spec'd format, no player names on the page: it is the solo booking, and whichever working Spanish guitarist plays it is named at contract. Footage is the Signet channel's own copies of Gary Meyers' clips, embedded with permission (media-sources.json); the VideoObject nodes carry the artist, the page copy does not.",
+    "_note": "Format spoke built 2026-09-13. Evidence: 'spanish guitar' autocompletes in ten wedding and event forms and 'spanish guitar denver' / 'spanish guitarist near me' echo their own words back, while 'flamenco' autocompletes as dresses and dance; the 2026-09-12 enquiry to hello@ asked for 'a Spanish guitarist', singular, and Daniel's reply named more than one Spanish guitar player on the roster. Until today the only Spanish guitar surface was the Dirty Flamenco trio page. Spec'd format, no player names on the page: it is the solo booking, and whichever working Spanish guitarist plays it is named at contract. Footage is the Signet channel's own copies of Gary Meyers' clips, embedded with permission (media-sources.json); the VideoObject nodes carry the artist, the page copy does not. 2026-11-01: title, H1, description and Service name carry 'for hire', the pattern that moved /ensembles/jazz-duo-trio/ from off page 1 to #3 for 'jazz trio for hire denver' and into Google's AI Overview (research/CITATION-LOG.md, run 2).",
     "reader": "Whoever wants the sound of Spain under a wedding ceremony, a cocktail hour or a long dinner, from one musician who fits anywhere."
    }
   }
@@ -76,7 +76,7 @@
        "id": "Heading-1",
        "eyebrow": "Nylon strings, solo",
        "slab": true,
-       "title": "A Spanish guitarist for weddings, dinners and events.",
+       "title": "A Spanish guitarist for hire, for weddings, dinners and events.",
        "titleTag": "h1",
        "titleClass": "h2 display",
        "lede": "A rumba under the first drink, a Malagueña as your guests sit down, and one hand keeping time on the body of the guitar. A Spanish guitarist is one musician on nylon strings, playing from a corner of a courtyard, the end of a long table or the landing of a staircase.",

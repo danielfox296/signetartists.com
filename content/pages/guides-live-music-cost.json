@@ -640,13 +640,17 @@
         {
          "q": "How much does a jazz trio cost?",
          "a": "A trio across a 4-hour evening can run $2,000 to $3,500 in the Colorado market, and a jazz trio or acoustic duo for a dinner set runs $500 to $3,000. Send us the date and the length of the evening and we'll come back with a price."
+        },
+        {
+         "q": "How much does it cost to hire a band for two hours, or for four?",
+         "a": "Two hours costs more than half of four, because the drive, the load-in and the sound check are the same for a short night. In Denver a classical string duo or trio for a ceremony or cocktail hour runs $800 to $2,000. Nationally, a four-hour evening runs $1,500 to $2,500 for an acoustic duo and $2,000 to $3,500 for a trio, and the Denver market charges $200 to $400 for each hour past the contracted set."
         }
        ],
        "schema": true
       }
      }
     ],
-    "_notes": "The page FAQ renders from schema.json, one source for the visible list\n     and the FAQPage markup. The offer close ends the page; nothing after it.",
+    "_notes": "The page FAQ renders from schema.json, one source for the visible list\n     and the FAQPage markup. The offer close ends the page; nothing after it.\n     2026-11-01: the two-hours-or-four question added in the buyer's own form\n     (\"how much to hire a band for 2 hours / 4 hours\" autocompletes, PLAN.md\n     section 1). This page is the one AI engines cite for cost (CITATION-LOG.md\n     run 2), and until now the hours answer lived only in the corporate cost\n     post. Figures are existing market-rates.json entries, each labelled with\n     its own market: denver_strings, us_duo, us_trio, denver_overtime.",
     "_file": "07-faqs.html"
    }
   },
