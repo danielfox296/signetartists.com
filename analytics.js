@@ -1,6 +1,7 @@
 /* Signet Artists — GA4 event instrumentation (WEBSITE-PLAN.md §7).
-   Five events, nothing more: lead_submit, cta_click, email_click,
-   pricing_engaged, roster_filter. No-ops cleanly if gtag is absent or blocked. */
+   Six events, nothing more: lead_submit, cta_click, email_click,
+   pricing_engaged, roster_filter, nav_click. No-ops cleanly if gtag is
+   absent or blocked. */
 (function () {
   "use strict";
 
@@ -27,6 +28,27 @@
     if (el.tagName === "A" && !/contact\/(\?[^#]*)?$/.test(href)) return;
     var label = (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
     send("cta_click", { label: label });
+  }, true);
+
+  // nav_click: a link in the desktop row, the mobile menu or the footer
+  // (2026-11-02). Until this a header click and a body link were the same
+  // page view, so nothing said which nav items people use. The params are
+  // GA's predefined Link text / Link URL / Link classes dimensions, readable
+  // in reports with no custom definition: link_classes carries WHERE the link
+  // sat (nav-desktop, nav-mobile, site-footer), not the link's own classes.
+  // Mailto links stay email_click only.
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest && e.target.closest("a");
+    if (!el) return;
+    var where = el.closest(".nav-desktop, .nav-mobile, .site-footer");
+    if (!where) return;
+    var href = el.getAttribute("href") || "";
+    if (href.slice(0, 7) === "mailto:") return;
+    send("nav_click", {
+      link_text: (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100),
+      link_url: href,
+      link_classes: where.className.split(" ")[0]
+    });
   }, true);
 
   // lead_submit: observe the formsubmit.co POST without touching it —
