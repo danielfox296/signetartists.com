@@ -150,7 +150,7 @@ export function blankPage(path, title) {
 
 export function copyPage(doc, path, title) {
   const d = structuredClone(doc);
-  const keep = ["description", "titleExact", "ogImage", "nav", "schema", "robots"];
+  const keep = ["description", "titleExact", "ogImage", "ogImageAlt", "nav", "schema", "robots"];
   const props = { path, title };
   for (const k of keep) if (k in d.root.props) props[k] = d.root.props[k];
   if (props.titleExact) props.titleExact = false;
