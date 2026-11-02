@@ -25,6 +25,14 @@ export function gaTag(gid) {
   );
 }
 
+// The share image's size and description, each only when it is known.
+function ogImageMeta(o = {}) {
+  let s = "";
+  if (o.w && o.h) s += `\n  <meta property="og:image:width" content="${o.w}">\n  <meta property="og:image:height" content="${o.h}">`;
+  if (o.alt) s += `\n  <meta property="og:image:alt" content="${esc(o.alt)}">`;
+  return s;
+}
+
 export function head(h) {
   const { site } = h;
   const brand = site.brand;
@@ -43,7 +51,8 @@ export function head(h) {
   <meta property="og:title" content="${esc(h.title)}">
   <meta property="og:description" content="${esc(h.description)}">
   <meta property="og:url" content="${h.canonical}">
-  <meta property="og:image" content="${h.ogImage}">
+  <meta property="og:image" content="${h.ogImage}">${ogImageMeta(h.ogMeta)}
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   ${h.headExtra || ""}
 
