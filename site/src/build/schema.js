@@ -19,7 +19,7 @@ export function makeSchema(m) {
       address: { "@type": "PostalAddress", addressLocality: brand.city, addressRegion: brand.region, addressCountry: "US" },
       areaServed: m.SERVICE_AREAS.map((n) => ({ "@type": "Place", name: n })),
       priceRange: biz.priceRange,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/img/icon-512.png`, width: 512, height: 512 },
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo-512.png`, width: 512, height: 512 },
       image: biz.images.map((i) => `${SITE_URL}/${i}`),
       slogan: brand.tagline || "",
       founder: biz.founder,
@@ -230,7 +230,7 @@ export function makeSchema(m) {
 
   const articleSchema = (post, canonical, ogImage) => {
     const authorName = (post.author || {}).name ?? brand.name;
-    const entity = { "@type": "LocalBusiness", "@id": `${SITE_URL}/#business`, name: brand.name, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/img/icon-512.png` } };
+    const entity = { "@type": "LocalBusiness", "@id": `${SITE_URL}/#business`, name: brand.name, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo-512.png` } };
     return {
       "@context": "https://schema.org",
       "@type": "Article",

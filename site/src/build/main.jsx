@@ -162,6 +162,7 @@ export function makeSite(c) {
   const S = makeSchema(m);
   const hubs = new Set(c.pages.filter((d) => d.content.some((x) => x.type === "PagesAndPosts")).map((d) => d.root.props.path));
   const OG_DEFAULT = `${m.SITE_URL}/img/og-signet-v2.jpg`;
+  const OG_DEFAULT_ALT = "The Signet Artists logo, a laurelled head above the word Signet, with Book live music in Colorado under it.";
   // The brand follows the title while the whole thing fits a search result
   // (60 characters); a longer title stands alone, and the site's name is
   // in the page's schema.
@@ -172,7 +173,7 @@ export function makeSite(c) {
   };
   const absImg = (src) => (!src ? "" : /^https?:\/\//.test(src) ? src : `${m.SITE_URL}/${src.replace(/^\/+/, "")}`);
   const base = { model: m, hubs, built: plan(c, m) };
-  return { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base };
+  return { m, S, hubs, OG_DEFAULT, OG_DEFAULT_ALT, brandTitle, absImg, base };
 }
 
 export function renderSections(c, reqs) {
@@ -184,7 +185,7 @@ export function renderSections(c, reqs) {
 }
 
 export function buildSite(c, out) {
-  const { m, S, hubs, OG_DEFAULT, brandTitle, absImg, base: plain } = makeSite(c);
+  const { m, S, hubs, OG_DEFAULT, OG_DEFAULT_ALT, brandTitle, absImg, base: plain } = makeSite(c);
   const pictures = c.images ? picturesFor(c.images) : null;
   const base = { ...plain, pictures };
   const files = {};
@@ -206,7 +207,34 @@ export function buildSite(c, out) {
     headSite = { ...m.site, cssVersion: `${m.site.cssVersion}-${fingerprint(min)}`, themeColor: paper !== stylesOf(css).colors["--paper"] ? paper : m.site.themeColor };
   }
 
-  const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, headExtra, schema, first }) => {
+  // The share image's size and description (2026-11-02). Facebook and
+  // LinkedIn can draw a link's first share with no picture until they know
+  // its size; the description is the one the page itself gives that picture.
+  // A local file's size comes from the picture sizes the build already reads;
+  // YouTube's hqdefault is always 480x360.
+  const shareImageMeta = (url, body, given = "") => {
+    if (!url) return {};
+    const local = url.startsWith(m.SITE_URL + "/") ? url.slice(m.SITE_URL.length + 1) : null;
+    let w, h;
+    const d = local && c.images && c.images.get(local);
+    if (d) ({ w, h } = d);
+    else if (/^https:\/\/i\.ytimg\.com\/vi\/[\w-]{11}\/hqdefault\.jpg$/.test(url)) [w, h] = [480, 360];
+    let alt = given || (url === OG_DEFAULT ? OG_DEFAULT_ALT : "");
+    if (!alt && local) {
+      for (const tag of body.match(/<img\b[^>]*>/g) || []) {
+        const src = /\ssrc="([^"]*)"/.exec(tag);
+        const a = /\salt="([^"]+)"/.exec(tag);
+        if (src && a && repoPath(src[1]) === local) {
+          // Undo the page's escaping; head() escapes it again.
+          alt = a[1].replace(/&(amp|quot|lt|gt|#x27|#39);/g, (_, e) => ({ amp: "&", quot: '"', lt: "<", gt: ">", "#x27": "'", "#39": "'" })[e]);
+          break;
+        }
+      }
+    }
+    return { w, h, alt };
+  };
+
+  const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, ogAlt, headExtra, schema, first }) => {
     const ctx = { ...base, prefix, output, url: "/" + output.replace("index.html", ""), trail, indexed, raw: [], ...ctxExtra };
     let body = renderStatic(
       <Body nav={nav} trail={trail} output={output} hubs={hubs} indexed={indexed}>
@@ -217,7 +245,8 @@ export function buildSite(c, out) {
     if (first) body = hero(body);
     if (body.includes('<button type="button" class="yt"')) body += "\n" + YT_SCRIPT;
     const canonical = m.canonicalFor(output);
-    const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
+    const ogMeta = shareImageMeta(ogImage, body, ogAlt);
+    const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage, ogMeta, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
     write(output, photoFocus(m, document(h, body)));
   };
 
@@ -276,6 +305,7 @@ export function buildSite(c, out) {
       robots: "index, follow",
       ogType: "video.other",
       ogImage: thumb,
+      ogAlt: `A still from the video ${v.name}.`,
       headExtra: watchHeadExtra(m, v),
       schema: schemaFor(S.watchSchema(v, m.canonicalFor(output))),
     });
