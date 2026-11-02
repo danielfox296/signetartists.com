@@ -161,7 +161,7 @@ export function makeSite(c) {
   const m = createModel(c);
   const S = makeSchema(m);
   const hubs = new Set(c.pages.filter((d) => d.content.some((x) => x.type === "PagesAndPosts")).map((d) => d.root.props.path));
-  const OG_DEFAULT = `${m.SITE_URL}/img/og-signet.jpg`;
+  const OG_DEFAULT = `${m.SITE_URL}/img/og-signet-v2.jpg`;
   // The brand follows the title while the whole thing fits a search result
   // (60 characters); a longer title stands alone, and the site's name is
   // in the page's schema.
