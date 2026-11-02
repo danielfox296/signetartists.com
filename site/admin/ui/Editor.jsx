@@ -14,7 +14,7 @@ import { pageConfig } from "../../src/components/config.jsx";
 import { sectionName } from "../lib/diff.js";
 import { go, session, useRepo } from "../state.js";
 import { Badge, kindOf, Toggle, useOutside } from "./common.jsx";
-import { adminPageConfig, assetUrl, clean, conform, guarded, imageField, newItem, place } from "./fields.jsx";
+import { adminPageConfig, assetUrl, clean, conform, freshAlts, guarded, imageField, newItem, place } from "./fields.jsx";
 import { writePage } from "./Pages.jsx";
 import { HANDLE_CSS, WidthHandle } from "./Width.jsx";
 import { fileLabel } from "../lib/labels.js";
@@ -579,8 +579,10 @@ export function PageEditor({ slug }) {
     const cur = repo.json(path);
     if (!cur) return;
     const c = clean(data, adminPageConfig);
-    const next = ordered(cur, { ...cur, root: { ...cur.root, props: ordered(cur.root.props, c.root.props) }, content: conform(c.content, cur.content, adminPageConfig) });
-    if (serialize(next) !== repo.get(path)) writePage(slug, next, "editor");
+    const [next, emptied] = freshAlts(ordered(cur, { ...cur, root: { ...cur.root, props: ordered(cur.root.props, c.root.props) }, content: conform(c.content, cur.content, adminPageConfig) }), cur);
+    // An emptied description is written as an outside edit, so the canvas
+    // re-reads the file and shows the field empty.
+    if (serialize(next) !== repo.get(path)) writePage(slug, next, emptied ? "picture" : "editor");
   });
   if (!doc) return <div className="screen"><p className="muted">No such page</p></div>;
   if (site.error) return <div className="screen"><p className="warn-line">{String(site.error.message)}</p></div>;
@@ -660,8 +662,8 @@ export function LayoutEditor() {
     const cur = repo.json(ACT_LAYOUT);
     if (!cur) return;
     const c = clean(data, layoutConfig);
-    const next = ordered(cur, { ...cur, content: conform(c.content, cur.content, layoutConfig) });
-    if (serialize(next) !== repo.get(ACT_LAYOUT)) repo.set(ACT_LAYOUT, serialize(next), "editor");
+    const [next, emptied] = freshAlts(ordered(cur, { ...cur, content: conform(c.content, cur.content, layoutConfig) }), cur);
+    if (serialize(next) !== repo.get(ACT_LAYOUT)) repo.set(ACT_LAYOUT, serialize(next), emptied ? "picture" : "editor");
   });
   if (!doc) return <div className="screen"><p className="muted">No act page layout</p></div>;
   if (site.error) return <div className="screen"><p className="warn-line">{String(site.error.message)}</p></div>;

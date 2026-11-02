@@ -445,6 +445,41 @@ export function clean(data, config) {
 // Keep each item's props in the order its file had them, and leave out the
 // empty slot Puck adds to an item that had none, so a save changes only
 // what was edited.
+// A picture swapped keeps nothing of the old one's description (2026-11-02).
+// Copied posts once kept "A trumpet resting on a table." under nine pictures
+// that were not trumpets: the file changed, the description stayed. Where a
+// picture's src (or a page's share image) changes and its description does
+// not, the description is emptied, and the site check stops the deploy until
+// one is written. Returns the doc and whether anything was emptied.
+export function freshAlts(next, prev) {
+  const before = new Map();
+  const index = (v) => {
+    if (Array.isArray(v)) v.forEach(index);
+    else if (v && typeof v === "object") {
+      if (typeof v.type === "string" && v.props && v.props.id) before.set(v.props.id, v.props);
+      Object.values(v).forEach(index);
+    }
+  };
+  index(prev);
+  let emptied = false;
+  const swapped = (v, old, src, alt) =>
+    old && typeof v[src] === "string" && typeof v[alt] === "string" && v[alt] && old[src] !== v[src] && old[alt] === v[alt];
+  const fix = (v, old) => {
+    if (Array.isArray(v)) return v.map((x, i) => fix(x, Array.isArray(old) ? old[i] : undefined));
+    if (!v || typeof v !== "object") return v;
+    if (typeof v.type === "string" && v.props && v.props.id) return { ...v, props: fix(v.props, before.get(v.props.id)) };
+    const out = Object.fromEntries(Object.entries(v).map(([k, x]) => [k, fix(x, old && typeof old === "object" ? old[k] : undefined)]));
+    for (const [src, alt] of [["src", "alt"], ["ogImage", "ogImageAlt"]]) {
+      if (swapped(v, old, src, alt)) {
+        out[alt] = "";
+        emptied = true;
+      }
+    }
+    return out;
+  };
+  return [fix(next, prev), emptied];
+}
+
 export function conform(next, prev, config) {
   const before = new Map();
   const index = (v) => {

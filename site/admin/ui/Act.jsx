@@ -108,6 +108,12 @@ export function ActEditor({ id }) {
   const off = a.hidden || !a.onRoster;
   const edit = (fn) => editAct(repo, id, fn);
   const set = (k) => (v) => edit((x) => put(x, k, v));
+  // A new photo empties the old photo's description (see freshAlts).
+  const setImg = (v) =>
+    edit((x) => {
+      if (v !== x.img) put(x, "alt", "");
+      put(x, "img", v);
+    });
   const page = actPage(repo, a);
   const layoutPage = !!(page && page.doc.root.props.layout === "act");
   place.label = a.name;
@@ -217,7 +223,7 @@ export function ActEditor({ id }) {
                 <div className="stack" style={{ gap: 8 }}>
                   <FocusPick a={a} />
                   <div className="row">
-                    <Upload label={a.img ? "Replace" : "Add photo"} onDone={(p) => set("img")(p.replace(/^\/?img\//, ""))} />
+                    <Upload label={a.img ? "Replace" : "Add photo"} onDone={(p) => setImg(p.replace(/^\/?img\//, ""))} />
                   </div>
                 </div>
                 <div className="stack">
@@ -225,7 +231,7 @@ export function ActEditor({ id }) {
                     <TextIn area rows={3} value={a.alt} onChange={set("alt")} />
                   </F>
                   <F label="File">
-                    <TextIn className="input mono" value={a.img} onChange={set("img")} />
+                    <TextIn className="input mono" value={a.img} onChange={setImg} />
                   </F>
                 </div>
               </div>
