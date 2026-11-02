@@ -18,7 +18,9 @@ export function Header({ nav }) {
       <header className="site-header">
         <div className="wrap header-inner">
           <div className="brand-lockup">
-            <a className="wordmark" href={s.prefix || "./"}>{s.model.brand.name}</a>
+            <a className="logo" href={s.prefix || "./"}>
+              <img src={href("/img/signet-logo.png")} alt={s.model.brand.name} width="372" height="144" />
+            </a>
             <p className="header-loc">{h.tagline}</p>
           </div>
           <nav className="nav-desktop">

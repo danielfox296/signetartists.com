@@ -596,6 +596,27 @@ img {
 }
 
 
+/* The header logo (2026-11-01): Daniel's drawn mark, the laurelled head and
+   the brushed "Signet", in place of the set wordmark. The file's background
+   is cut to transparency against the paper, so it belongs on the dark header
+   only. */
+.logo {
+  display: block;
+  line-height: 0;
+}
+
+.logo img {
+  display: block;
+  width: auto;
+  height: 2.75rem;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    height: 3.25rem;
+  }
+}
+
 /* The wordmark is set, not drawn — WEBSITE-PLAN §6.7 keeps a drawn signet mark
    as a Phase-3 nice-to-have. Uppercase and heavy 2026-08-07: at sentence case
    and 400 it read as a page title rather than as a mark, which is the one
