@@ -306,6 +306,7 @@ export function pageOn(repo, id, url) {
   for (let i = 2; repo.has(pagePath(slug)); i++) slug = `${slugForPath(path)}-${i}`;
   const props = { path, title: a.seo_title || a.name, description: a.meta_description || firstSentences(a.blurb), nav: "music" };
   if (a.img) props.ogImage = `img/${a.img}`;
+  if (a.img && a.alt) props.ogImageAlt = a.alt;
   props.layout = "act";
   props.schema = { act: id };
   const red = repo.json("content/redirects.json");

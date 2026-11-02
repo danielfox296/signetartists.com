@@ -220,16 +220,21 @@ export function buildSite(c, out) {
     if (d) ({ w, h } = d);
     else if (/^https:\/\/i\.ytimg\.com\/vi\/[\w-]{11}\/hqdefault\.jpg$/.test(url)) [w, h] = [480, 360];
     let alt = given || (url === OG_DEFAULT ? OG_DEFAULT_ALT : "");
+    // A video's poster has alt="" inside its play button, whose label names
+    // the video; that label describes the picture.
     if (!alt && local) {
-      for (const tag of body.match(/<img\b[^>]*>/g) || []) {
-        const src = /\ssrc="([^"]*)"/.exec(tag);
-        const a = /\salt="([^"]+)"/.exec(tag);
-        if (src && a && repoPath(src[1]) === local) {
-          // Undo the page's escaping; head() escapes it again.
-          alt = a[1].replace(/&(amp|quot|lt|gt|#x27|#39);/g, (_, e) => ({ amp: "&", quot: '"', lt: "<", gt: ">", "#x27": "'", "#39": "'" })[e]);
-          break;
-        }
+      for (const im of body.matchAll(/<img\b[^>]*>/g)) {
+        const src = /\ssrc="([^"]*)"/.exec(im[0]);
+        if (!src || repoPath(src[1]) !== local) continue;
+        const a = /\salt="([^"]+)"/.exec(im[0]);
+        const btn = body.lastIndexOf("<button", im.index);
+        const play = btn > body.lastIndexOf("</button>", im.index) && /aria-label="Play video: ([^"]+)"/.exec(body.slice(btn, im.index));
+        if (a) alt = a[1];
+        else if (play) alt = `A still from the video ${play[1]}.`;
+        if (alt) break;
       }
+      // Undo the page's escaping; head() escapes it again.
+      alt = alt.replace(/&(amp|quot|lt|gt|#x27|#39);/g, (_, e) => ({ amp: "&", quot: '"', lt: "<", gt: ">", "#x27": "'", "#39": "'" })[e]);
     }
     return { w, h, alt };
   };
@@ -279,6 +284,7 @@ export function buildSite(c, out) {
       robots,
       ogType: p.ogType || "website",
       ogImage: absImg(p.ogImage) || OG_DEFAULT,
+      ogAlt: p.ogImage ? p.ogImageAlt || "" : "",
       headExtra: "",
       schema,
       first: true,

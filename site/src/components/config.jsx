@@ -15,6 +15,7 @@ export const pageRootFields = {
   breadcrumb: text("Breadcrumb"),
   robots: { type: "select", label: "Indexed", options: [{ label: "Yes", value: "index, follow" }, { label: "No", value: "noindex, follow" }] },
   ogImage: text("Share image"),
+  ogImageAlt: text("Share image description"),
   schemaArticle: { type: "select", label: "Article schema", options: [{ label: "Off", value: "off" }, { label: "On", value: "on" }] },
 };
 
