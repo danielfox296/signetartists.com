@@ -103,7 +103,7 @@ export function makeSchema(m) {
 
   const ogFor = (p) => {
     const og = p.ogImage || "";
-    return og.startsWith("http://") || og.startsWith("https://") ? og : og ? `${SITE_URL}/${og.replace(/^\/+/, "")}` : `${SITE_URL}/img/og-signet.jpg`;
+    return og.startsWith("http://") || og.startsWith("https://") ? og : og ? `${SITE_URL}/${og.replace(/^\/+/, "")}` : `${SITE_URL}/img/og-signet-v2.jpg`;
   };
 
   // The page's own graph: what schema.json held under build.py.
