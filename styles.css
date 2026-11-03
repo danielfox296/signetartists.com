@@ -3768,9 +3768,7 @@ main:focus {
 }
 .def-list--stack .def-row {
   display: grid;
-  grid-template-columns: 2.75rem minmax(0, 1fr);
-  grid-template-rows: auto 1fr;
-  column-gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr);
   row-gap: 0.35rem;
   align-items: start;
   padding: 1.5rem 0;
@@ -3789,8 +3787,9 @@ main:focus {
   mask-repeat: no-repeat;
 }
 .def-list--stack .def-row::before {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.5rem;
 }
 .def-list--stack .def-row[data-num]::before,
 .def-list--cards .def-row[data-num]::before {
@@ -3804,10 +3803,6 @@ main:focus {
   font-size: 2rem;
   line-height: 1;
   letter-spacing: -0.02em;
-}
-.def-list--stack dt,
-.def-list--stack dd {
-  grid-column: 2;
 }
 .def-list--stack dt,
 .def-list--cards dt {
@@ -3829,11 +3824,19 @@ main:focus {
 @media (min-width: 768px) {
   .def-list--stack .def-row {
     grid-template-columns: 3.25rem minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
     column-gap: 1.75rem;
   }
   .def-list--stack .def-row::before {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     width: 3.25rem;
     height: 3.25rem;
+    margin-bottom: 0;
+  }
+  .def-list--stack dt,
+  .def-list--stack dd {
+    grid-column: 2;
   }
 }
 
