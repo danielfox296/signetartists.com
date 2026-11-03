@@ -1802,8 +1802,11 @@ main:focus {
   max-width: 24rem;
 }
 
+/* The line sits in the contact column above the address since 2026-11-02
+   (Daniel), so it takes the column's alignment: left on a phone, right from
+   768px. */
 .footer-line {
-  margin-top: 0.55rem;
+  max-width: 24rem;
   font-size: 0.9625rem;
   line-height: 1.5;
   color: var(--ink-faint);
@@ -1816,10 +1819,11 @@ main:focus {
   gap: 0.625rem;
 }
 
-/* The address is the one thing in the footer a buyer might act on, so it is
-   the one thing set above body size. */
+/* The address is the one thing in the footer a buyer might act on. It was set
+   above body size until 2026-11-02, when Daniel asked for it smaller; it now
+   matches the line above it and keeps its full ink and underline. */
 .footer-email {
-  font-size: 1.2375rem;
+  font-size: 0.9625rem;
   color: var(--ink);
   border-bottom: 1px solid var(--rule-strong);
   padding-bottom: 2px;
@@ -3420,10 +3424,10 @@ main:focus {
 }
 
 /* Prose measure, independent of --wrap. Identity copy and the close are read
-   rather than scanned, and 64rem is too wide to read at. */
+   rather than scanned, and 64rem is too wide to read at. It sat against the
+   right edge until 2026-11-02, when Daniel had every module centred. */
 .wrap--narrow {
   max-width: 42rem;
-  margin-right: 0;
 }
 
 .wrap--narrow .prose + .prose {
@@ -3957,6 +3961,30 @@ main:focus {
    is a list with a play mark on each line, in body size, well spaced. */
 .section:has(.faq-list) > .wrap {
   max-width: 46rem;
+}
+/* A section that holds only measure-width blocks (headings, prose, notes,
+   stacked lists, questions, one video, a row of links or buttons) narrows to
+   the same 46rem column and sits centred on the page, its type still set left,
+   so it no longer leaves the right third of the screen empty (2026-11-02,
+   Daniel, sitewide). Any section with a grid, a table, cards or a hero photo
+   keeps the full width. */
+.section > .wrap:not(:has(> :not(
+  .heading, .prose, .eyebrow, .note, .lede, .h3, .h5,
+  .def-list:not(.def-list--cards), .spec-list:not(.spec-list--cols),
+  .faq-list, .btn-row, .blog-article, .review-pull, .stage-plot, .panel,
+  .sibling-list, .video-grid--single, .media-grid,
+  img, script, template, style
+))) {
+  max-width: 46rem;
+}
+/* A photo grid of three or more keeps the full width (same specificity as the
+   rule above, so this one must stay after it). One or two photos share the
+   column between them instead of filling two tracks of three. */
+.section > .wrap:has(> .media-grid > :nth-child(3)) {
+  max-width: var(--wrap);
+}
+.media-grid:not(.media-grid--single):not(:has(> :nth-child(3))) {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
 .footer-logo {
   width: 13.5rem;

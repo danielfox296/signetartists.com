@@ -52,10 +52,10 @@ export function Footer() {
           <a className="logo footer-logo" href={s.prefix || "./"}>
             <img src={href("/img/signet-logo.png")} alt={b.name} width="372" height="144" loading="lazy" decoding="async" />
           </a>
-          <p className="footer-line">{f.line}</p>
         </div>
         <div className="footer-contact">
           {spaced([
+            <p key="l" className="footer-line">{f.line}</p>,
             <a key="e" className="footer-email" href={"mailto:" + b.email}>{b.email}</a>,
             ...f.links.map((l, i) => (
               <a key={i} className={l.cls || undefined} href={href(l.href)} rel={l.rel || undefined}>{l.label}</a>
