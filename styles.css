@@ -584,11 +584,12 @@ img {
 }
 
 /* The Front Range locator strip (2026-08-27): the downtown-into-the-mountains
-   shot as a thin full-bleed band under the home hero. Height-capped so it
-   reads as a locator, not a hero; the duotone keeps it in the paper. */
+   shot as a full-bleed band under the home hero. Three times its first height
+   since 2026-11-03 (Daniel), when the empty section above it went; the photo
+   is 3:1, so at full height it is close to uncropped. */
 .range-strip {
   position: relative;
-  height: clamp(110px, 15vw, 180px);
+  height: clamp(330px, 45vw, 540px);
   overflow: hidden;
 }
 
@@ -1377,10 +1378,15 @@ img {
   display: block;
 }
 
-/* Below the fold of a phone the strip would show eight 45px stamps, which reads
-   as noise. Four sleeves at a legible size instead. */
+/* Twice the height since 2026-11-03 (Daniel): the sleeves stay square and the
+   strip stays one full-bleed row, so it shows half as many sleeves, each twice
+   the size. Four across a wide screen, two on a phone (it was eight and four). */
+.cover-strip img:nth-child(n + 5) {
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .cover-strip img:nth-child(n + 5) {
+  .cover-strip img:nth-child(n + 3) {
     display: none;
   }
 }
