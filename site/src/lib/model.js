@@ -208,7 +208,7 @@ export function createModel(c) {
     }
     if (peers.length < 2) return null;
     const parent = crumbParent(url) || "/";
-    return { lead: laneWord ? `More ${laneWord} in` : "More in", parent, parentLabel: parent === "/" ? "Home" : crumbLabel(parent), peers: peers.map((u) => [u, crumbLabel(u)]) };
+    return { lead: laneWord ? `More ${laneWord} on our` : "More in", parent, parentLabel: parent === "/" ? "Home" : crumbLabel(parent), peers: peers.map((u) => [u, crumbLabel(u)]) };
   };
   const postRows = (list) => [...list].sort((a, b) => -cmp([a.date || "", a.slug], [b.date || "", b.slug]));
   const relatedArticles = (url, hubUrls) => {
