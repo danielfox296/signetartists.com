@@ -109,7 +109,20 @@
        "html": "Firstwater is a sound bath led by one facilitator, and if you’ve been to one you already know how to arrive: lie down, get warm, and rest. The facilitator composes the music for each session, plays live instruments over it, and mixes the whole thing from the floor, lying where your people will lie. The facilitator treats the venue like a studio and tunes the sound system to it, so if you have a space, Firstwater can make it sound like a different one.",
        "cls": "prose"
       }
-     },
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Nobody is named: Daniel 2026-09-19, \"do not cite my name. no daniel, no\n     daniel fox. firstwater.\"",
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
      {
       "type": "Paragraph",
       "props": {
@@ -119,9 +132,7 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Nobody is named: Daniel 2026-09-19, \"do not cite my name. no daniel, no\n     daniel fox. firstwater.\"",
-    "_file": "02-identity.html",
-    "cls": "statement"
+    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
    }
   },
   {

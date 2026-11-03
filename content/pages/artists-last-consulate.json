@@ -108,7 +108,20 @@
        "html": "Last Consulate is the solo project of one multi-instrumentalist, built on upright bass, electric bass, guitar and downtempo electronics.",
        "cls": "prose"
       }
-     },
+     }
+    ],
+    "_notes": "Copy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a dinner that feels like a late jazz set in a very good hotel. The hero lede is Daniel's own CopyDesk sentence (protected) and stays first. The first four paragraphs here are his supplied description and stay; the two page-written paragraphs are gone: the footprint and the no-covers negation went to the FAQ, and the named-act line narrated the site's own sourcing (Layer 8, the provenance leak).\n\nThe identity paragraphs, ratified in acts.json (Daniel's supplied\n     description, 2026-09-03) and kept close to source. The last two are the\n     page's own: the footprint, and the named-act promise in the form this act\n     can keep, since nobody is named.",
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
      {
       "type": "Paragraph",
       "props": {
@@ -134,9 +147,7 @@
       }
      }
     ],
-    "_notes": "Copy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a dinner that feels like a late jazz set in a very good hotel. The hero lede is Daniel's own CopyDesk sentence (protected) and stays first. The first four paragraphs here are his supplied description and stay; the two page-written paragraphs are gone: the footprint and the no-covers negation went to the FAQ, and the named-act line narrated the site's own sourcing (Layer 8, the provenance leak).\n\nThe identity paragraphs, ratified in acts.json (Daniel's supplied\n     description, 2026-09-03) and kept close to source. The last two are the\n     page's own: the footprint, and the named-act promise in the form this act\n     can keep, since nobody is named.",
-    "_file": "02-identity.html",
-    "cls": "statement"
+    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
    }
   },
   {
