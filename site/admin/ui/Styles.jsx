@@ -26,6 +26,7 @@ const NAMES = {
   "--ink-faint": "Text muted",
   "--brass": "Accent",
   "--brass-bright": "Accent light",
+  "--second": "Secondary",
 };
 // What each colour is checked for, against both grounds.
 const TEXT = ["--ink", "--ink-soft", "--ink-faint", "--brass", "--brass-bright"];
