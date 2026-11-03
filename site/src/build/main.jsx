@@ -25,7 +25,7 @@ import { llms, rss, sitemap, videoSitemap } from "./feeds.js";
 import { fingerprint, stylesheet, stylesOf } from "./styles.js";
 import { esc, pyjson } from "../lib/util.js";
 import { LAYOUT_FILES } from "../lib/layouts.js";
-import { repoPath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
+import { repoPath, SHARE, sharePath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
 import { imageDims, makeImages } from "./images.js";
 
 const REPO = process.cwd();
@@ -97,9 +97,11 @@ const Section = Item;
 function picturesFor(dims) {
   const used = new Set();
   const yt = new Set();
+  const share = new Map();
   return {
     used,
     yt,
+    share,
     of(src) {
       const p = repoPath(src);
       const y = p && /^img\/yt\/([\w-]{11})\.jpg$/.exec(p);
@@ -212,13 +214,22 @@ export function buildSite(c, out) {
   // its size; the description is the one the page itself gives that picture.
   // A local file's size comes from the picture sizes the build already reads;
   // YouTube's hqdefault is always 480x360.
+  // A photo taller than wide is shared as a wide cut of itself (2026-11-02),
+  // made by the deploy around the photo's focus point (content/photo-focus.json)
+  // or, with none, around what draws the eye. It keeps the photo's description.
+  const focus = c.photoFocus || {};
   const shareImageMeta = (url, body, given = "") => {
     if (!url) return {};
     const local = url.startsWith(m.SITE_URL + "/") ? url.slice(m.SITE_URL.length + 1) : null;
-    let w, h;
+    let w, h, shared;
     const d = local && c.images && c.images.get(local);
     if (d) ({ w, h } = d);
     else if (/^https:\/\/i\.ytimg\.com\/vi\/[\w-]{11}\/hqdefault\.jpg$/.test(url)) [w, h] = [480, 360];
+    if (d && pictures && h > w) {
+      pictures.share.set(local, focus[local] || null);
+      shared = `${m.SITE_URL}/${sharePath(local)}`;
+      ({ w, h } = SHARE);
+    }
     let alt = given || (url === OG_DEFAULT ? OG_DEFAULT_ALT : "");
     // A video's poster has alt="" inside its play button, whose label names
     // the video; that label describes the picture.
@@ -236,7 +247,7 @@ export function buildSite(c, out) {
       // Undo the page's escaping; head() escapes it again.
       alt = alt.replace(/&(amp|quot|lt|gt|#x27|#39);/g, (_, e) => ({ amp: "&", quot: '"', lt: "<", gt: ">", "#x27": "'", "#39": "'" })[e]);
     }
-    return { w, h, alt };
+    return { url: shared || url, w, h, alt };
   };
 
   const page = ({ output, prefix, nav, trail, indexed, content, ctxExtra, title, description, robots, ogType, ogImage, ogAlt, headExtra, schema, first }) => {
@@ -251,7 +262,7 @@ export function buildSite(c, out) {
     if (body.includes('<button type="button" class="yt"')) body += "\n" + YT_SCRIPT;
     const canonical = m.canonicalFor(output);
     const ogMeta = shareImageMeta(ogImage, body, ogAlt);
-    const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage, ogMeta, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
+    const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage: ogMeta.url || ogImage, ogMeta, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
     write(output, photoFocus(m, document(h, body)));
   };
 
@@ -415,7 +426,7 @@ if (flag("--render-sections")) {
   const r = buildSite(c, out);
   console.log(`Built ${r.files.length} files into ${out}`);
   if (flag("--images")) {
-    const { made } = await makeImages({ repo: REPO, out, cache: path.resolve(flag("--images")), used: r.pictures.used, yt: r.pictures.yt, dims: c.images });
+    const { made } = await makeImages({ repo: REPO, out, cache: path.resolve(flag("--images")), used: r.pictures.used, yt: r.pictures.yt, share: r.pictures.share, dims: c.images });
     if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `pictures_made=${made}\n`);
   }
 }
