@@ -3570,19 +3570,16 @@ main:focus {
   max-width: 50rem;
 }
 .why-signet .def-list--stack .def-row {
-  grid-template-columns: 4rem 1fr;
-  grid-template-rows: auto 1fr;
-  column-gap: 1.5rem;
+  grid-template-columns: 1fr;
   row-gap: 0.4rem;
   align-items: start;
   padding: 1.75rem 0;
 }
 .why-signet .def-row::before {
   content: "";
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  width: 4rem;
-  height: 4rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 0.5rem;
   background-color: var(--brass);
   -webkit-mask-position: center;
   mask-position: center;
@@ -3590,10 +3587,6 @@ main:focus {
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-}
-.why-signet .def-list--stack dt,
-.why-signet .def-list--stack dd {
-  grid-column: 2;
 }
 .why-signet .def-list--stack dt {
   font-size: 1.2375rem;
@@ -3605,11 +3598,19 @@ main:focus {
 @media (min-width: 768px) {
   .why-signet .def-list--stack .def-row {
     grid-template-columns: 5.5rem 1fr;
+    grid-template-rows: auto 1fr;
     column-gap: 2.25rem;
   }
   .why-signet .def-row::before {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     width: 5.5rem;
     height: 5.5rem;
+    margin-bottom: 0;
+  }
+  .why-signet .def-list--stack dt,
+  .why-signet .def-list--stack dd {
+    grid-column: 2;
   }
 }
 .why-signet .def-row:nth-child(1)::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='14' cy='25' r='5'/%3E%3Cpath d='M5 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Ccircle cx='32' cy='19' r='6'/%3E%3Cpath d='M21 47c0-9 5-14.5 11-14.5S43 38 43 47'/%3E%3Ccircle cx='50' cy='25' r='5'/%3E%3Cpath d='M41 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Cpath d='M4 53h56'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='14' cy='25' r='5'/%3E%3Cpath d='M5 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Ccircle cx='32' cy='19' r='6'/%3E%3Cpath d='M21 47c0-9 5-14.5 11-14.5S43 38 43 47'/%3E%3Ccircle cx='50' cy='25' r='5'/%3E%3Cpath d='M41 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Cpath d='M4 53h56'/%3E%3C/svg%3E"); }
