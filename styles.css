@@ -4014,7 +4014,7 @@ main:focus {
   color: var(--ink);
 }
 .playlist-item[aria-pressed="true"] {
-  background-color: rgba(201, 164, 90, 0.1);
+  background-color: rgba(255, 255, 255, 0.09);
   color: var(--ink);
 }
 .playlist-item .clip-name {
