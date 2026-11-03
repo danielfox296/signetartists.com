@@ -39,14 +39,7 @@
         {
          "type": "ButtonRow",
          "props": {
-          "id": "ButtonRow-3",
-          "buttons": [
-           {
-            "label": "See Pricing",
-            "href": "/pricing/",
-            "cls": "btn btn--outline"
-           }
-          ]
+          "id": "ButtonRow-3"
          }
         }
        ],
