@@ -3965,10 +3965,8 @@ main:focus {
   border-top: 1px solid var(--rule);
 }
 .clip-list li {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.95rem 0;
+  position: relative;
+  padding: 0.95rem 0 0.95rem 2.85rem;
   border-bottom: 1px solid var(--rule);
   font-size: 1.1rem;
   line-height: 1.45;
@@ -3976,7 +3974,10 @@ main:focus {
 }
 .clip-list li::before {
   content: "";
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 1.75rem;
   height: 1.75rem;
   background-color: var(--brass);
