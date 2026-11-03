@@ -34,22 +34,33 @@
      border is its only visual indicator. This cut clears it on the base
      (3.86:1) and on the band (3.54:1), staying in the same warm-grey family. */
   --rule-strong: #767676;
-  --ink: #fafafa;
+  --ink: #f5f5f2;
   --ink-soft: #e2e2e2;
   /* All three checked against BOTH grounds, not just the base — eyebrows and
      table headers sit on the lifted band. Worst case is --ink-faint on the
      band at 5.99:1, comfortably past AA at the 11px it gets used at. */
   --ink-faint: #b5b5b5;
-  /* Brass was two cuts, one per ground. On a dark site the lifted cut is the
-     only one that works, so it is promoted to the default: 7.92:1 on the base
-     and 7.26:1 on the band. The old light-ground brass (#84682d) reads 2.4:1
-     here and is gone. */
-  --brass: #c9a45a;
-  /* Kept for the rare second level of emphasis. 10.12:1 on the base. */
-  --brass-bright: #dcbb7a;
+  /* 2026-11-03, Daniel: the palette is four colours. Near-black (--paper),
+     near-white (--ink), the primary, Cameo Red, and the secondary, a powder
+     aqua. The primary keeps the old token name, --brass; it is 6.3:1 on the
+     base and is what you read or click first. */
+  --brass: #e0776b;
+  /* Kept for the rare second level of emphasis. 8.6:1 on the base. */
+  --brass-bright: #ee9a8f;
+  /* The secondary, for surfaces only: the bands, with near-black type on them
+     (11:1). Red does not read on it (2.1:1), so a band has no red type. */
+  --second: #abccd6;
   /* Alias, retained so the cover-wall and night rules that predate the
      inversion keep resolving. Same value as --ink-soft by design. */
   --paper-dim: #e2e2e2;
+  /* The four colours under names a band can't change: a custom property set
+     here resolves here, so these stay put when .section--sunk turns --ink and
+     --paper over. */
+  --near-black: var(--paper);
+  --near-white: var(--ink);
+  --dark-soft: var(--ink-soft);
+  --dark-faint: var(--ink-faint);
+  --red: var(--brass);
 
   /* Archivo, ported from soundbathcalendar 2026-08-07 on Daniel's call: "i
      want the type choices from the sound bath site ported over." That replaces
@@ -211,6 +222,25 @@ img {
 .section--sunk {
   background-color: var(--paper-sunk);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* 2026-11-03, Daniel: the band is the secondary, a light field that breaks up
+   the dark site. Everything on it turns over: near-black type, rules and
+   marks, and a dark button. Two bands stay dark: a closing call has a photo
+   behind its type, and the client logos are white. */
+.section--sunk:not(.credits, :has(.close-row--photo)) {
+  --ink: var(--near-black);
+  --ink-soft: #1f2b30;
+  --ink-faint: #33424a;
+  --paper: var(--near-white);
+  --paper-dim: #1f2b30;
+  --paper-sunk: rgba(255, 255, 255, 0.3);
+  --rule: rgba(18, 18, 18, 0.22);
+  --rule-strong: rgba(18, 18, 18, 0.55);
+  --brass: var(--near-black);
+  --brass-bright: var(--near-black);
+  color: var(--ink);
+  background-color: var(--second);
 }
 
 /* The night arc, rebuilt for the dark base (WEBSITE-PLAN §6.2, amended
@@ -478,7 +508,12 @@ img {
   background: var(--paper-sunk);
 }
 .section--sunk .review-pull {
-  background: var(--paper);
+  --ink: var(--near-white);
+  --ink-soft: var(--dark-soft);
+  --ink-faint: var(--dark-faint);
+  --brass: var(--red);
+  color: var(--ink);
+  background: var(--near-black);
 }
 .review-pull + .review-pull {
   margin-top: 1rem;
@@ -556,6 +591,13 @@ img {
   border-color: var(--brass);
 }
 
+.section--sunk .btn:not(.btn--outline):hover,
+.section--sunk .btn:not(.btn--outline):focus-visible {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--near-black);
+}
+
 .btn--outline {
   background: rgba(0, 0, 0, 0.25);
   color: var(--ink);
@@ -565,6 +607,11 @@ img {
 .btn--outline:hover {
   background: transparent;
   color: var(--ink);
+  border-color: var(--ink);
+}
+
+.section--sunk .btn--outline {
+  background: transparent;
   border-color: var(--ink);
 }
 
@@ -1201,10 +1248,10 @@ img {
    never fully clears at the ends of the travel. */
 .section--sunk .table-scroll {
   background-image:
-    linear-gradient(to right, var(--paper-sunk) 30%, rgba(28, 28, 28, 0)),
-    linear-gradient(to left, var(--paper-sunk) 30%, rgba(28, 28, 28, 0)),
-    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+    linear-gradient(to right, var(--second) 30%, rgba(171, 204, 214, 0)),
+    linear-gradient(to left, var(--second) 30%, rgba(171, 204, 214, 0)),
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
 /* A whole table of working figures, as distinct from one open value inline.
@@ -3294,6 +3341,7 @@ main:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
   transition: transform 0.5s ease;
 }
 

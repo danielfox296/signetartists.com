@@ -3,7 +3,7 @@
    it as it is, byte for byte. */
 
 // The colours the admin edits, as the stylesheet's :root names them.
-export const COLORS = ["--paper", "--paper-sunk", "--rule", "--rule-strong", "--ink", "--ink-soft", "--ink-faint", "--brass", "--brass-bright"];
+export const COLORS = ["--paper", "--paper-sunk", "--rule", "--rule-strong", "--ink", "--ink-soft", "--ink-faint", "--brass", "--brass-bright", "--second"];
 // Kept the same as --ink-soft, as the stylesheet says it is by design.
 const ALIASES = { "--paper-dim": "--ink-soft" };
 
