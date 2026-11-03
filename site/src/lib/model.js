@@ -199,7 +199,7 @@ export function createModel(c) {
     if (act) {
       const laneActs = actLane(act) === "format" ? FORMAT_ACTS : NAMED_ACTS;
       peers = laneActs.filter((a) => a.page && "/" + a.page !== url).map((a) => "/" + a.page);
-      laneWord = actLane(act) === "format" ? "configurations" : "named acts";
+      laneWord = actLane(act) === "format" ? "configurations" : "Featured Artists";
     } else {
       const depth = (u) => (u.replace(/^\/+|\/+$/g, "").match(/\//g) || []).length;
       peers = Object.keys(LABELS)

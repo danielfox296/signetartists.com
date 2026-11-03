@@ -40,7 +40,7 @@
  ],
  "setlist": {
   "_note": "Every title here is a cover they publish footage of, on this page or on their own channel, so the sample set and the evidence are the same list. Deliberately not from_repertoire.",
-  "note": "These are the covers you can watch them play, on this page and on their own channel. The wider list runs Usher, TLC, Destiny's Child, Mary J. Blige, Nelly and Montell Jordan through the soul and funk those records came from, and the set on the night is built around your crowd.",
+  "note": "These are the covers you can watch them play on this page. The wider list runs Usher, TLC, Destiny's Child, Mary J. Blige, Nelly and Montell Jordan through the soul and funk those records came from, and the set on the night is built around your crowd.",
   "items": [
    "Gin and Juice",
    "Regulate",
@@ -58,9 +58,6 @@
  ],
  "entity": {
   "type": "MusicGroup",
-  "sameAs": [
-   "https://littlemosesjones.com/",
-   "https://www.youtube.com/@LittleMosesJones"
-  ]
+  "_sameAs_note": "Removed 2026-11-02 on Daniel's word: no link to an artist's own site or channel anywhere, the search-engine data included, so a client can't book around Signet."
  }
 }

@@ -34,7 +34,7 @@
   "Flamenco is the booking on this roster that almost nobody else in Colorado sells as a private event product. It exists here as a concert act, or as a guitarist playing Spanish-flavored background. Dirty Flamenco is neither. It is a working group with a standing repertoire, sold at private event scale.",
   "Most live music at a private event is designed to be felt and not watched. This is the opposite booking, and its work is the set moment: a cultural centerpiece, a corporate dinner that has to be memorable, a reception that wants something guests will describe to people who were not there.",
   "The repertoire is palos, the traditional forms, not a set of pop songs with nylon strings on them. That is the difference between a flamenco booking and a Spanish guitar booking, and it is audible inside eight bars.",
-  "This is a named act rather than a format, an existing group booked under its own name. Any change to the lineup is named to you in advance."
+  "This is a Featured Artist rather than a format, an existing group booked under its own name. Any change to the lineup is named to you in advance."
  ],
  "ladder": [
   {
@@ -68,8 +68,6 @@
  ],
  "entity": {
   "type": "MusicGroup",
-  "sameAs": [
-   "https://dirtyflamenco.com/"
-  ]
+  "_sameAs_note": "Removed 2026-11-02 on Daniel's word: no link to an artist's own site or channel anywhere, the search-engine data included, so a client can't book around Signet."
  }
 }

@@ -162,7 +162,9 @@
    "notes": {
     "_note": "Authored 2026-09-20, the day René Moffatt joined the roster under his own name (Daniel: 'we've added a new artist, an original singer songwriter'). Mirrors the artists-tony-medina dir: acts.json carries page: 'artists/rene-moffatt/', so build.py links every card and every llms.txt line here and generates nothing at /music/rene-moffatt/. Identity copy is the ratified acts.json paragraphs; the ladder resolves from the token. The title targets the buyer's phrase (singer-songwriter for events) with his name in front, since 'singer-songwriter denver' on its own returns artists and clubs rather than bookings. No prices anywhere.",
     "reader": "Whoever wants songs worth listening to, from a songwriter: a ceremony and cocktail hour, a dinner or house concert, a retreat evening, a library or summer stage.",
-    "_title_note": "57 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here."
+    "_title_note": "57 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here.",
+    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
+    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -197,7 +199,7 @@
          "cls": "btn btn--outline"
         }
        ],
-       "headingNote": "Hear him first: <a href=\"https://renemoffatt.com/\">renemoffatt.com</a> and <a href=\"https://www.youtube.com/@renemoffatt\">his channel</a>."
+       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -471,7 +473,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "The records are on Spotify, Apple Music and Bandcamp, and his site links all three. If you want a covers set with a few of his own songs inside it, just let us know when you book and he builds the set that way. The wider covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "html": "If you want a covers set with a few of his own songs inside it, just let us know when you book and he builds the set that way. The wider covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
        "cls": "note"
       }
      }
@@ -708,7 +710,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-39",
-       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },
@@ -731,7 +733,7 @@
         },
         {
          "q": "Can he play outdoors?",
-         "a": "Yes. Solo plays a patio, a garden or a farmers market on one circuit of power with the sound support included, and the band plays a park stage or a lawn with a sound system behind it. Tell us the venue and we'll bring the size that suits it."
+         "a": "Yes. Solo suits a patio, a garden or a farmers market, and the band plays a park stage or a lawn. Tell us the venue and we'll bring the size that suits it."
         }
        ],
        "schema": true

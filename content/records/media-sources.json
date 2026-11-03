@@ -401,6 +401,32 @@
    "retrieved": "2026-10-29",
    "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl.",
    "verified": "sha256 184cee215dbc24be, 2026-10-29"
+  },
+  "img/afro-house-dj-card.jpg": {
+   "source": "crop of img/acts/afro-house-dj-headphones.jpg, 16:9 at 1600x900, focus 0.50,0.28",
+   "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
+   "retrieved": "2026-11-02",
+   "_note": "The roster card and the page og_image."
+  },
+  "img/acts/afro-house-dj-decks.jpg": {
+   "source": "EPK photo zip, 1 Photos/hero-black-and-white.jpg",
+   "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
+   "retrieved": "2026-11-02",
+   "verified": "sha256 83120be85e71e89f of the source bytes, 2026-11-02"
+  },
+  "img/acts/afro-house-dj-portrait.jpg": {
+   "source": "EPK photo zip, 1 Photos/press-photo-rhythm-culture-connection.jpg",
+   "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
+   "retrieved": "2026-11-02",
+   "verified": "sha256 1bda9509614e7d09 of the source bytes, 2026-11-02",
+   "_note": "Downsized to 1800 pixels on the long side for the page, 2026-11-02; the full-size original is in the zip."
+  },
+  "img/acts/afro-house-dj-headphones.jpg": {
+   "source": "EPK photo zip, 1 Photos/live-behind-the-decks.jpg",
+   "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
+   "retrieved": "2026-11-02",
+   "verified": "sha256 2c56a71441b9edc8 of the source bytes, 2026-11-02",
+   "_note": "Downsized to 1800 pixels on the long side for the page, 2026-11-02; the full-size original is in the zip. Also the source of the roster card."
   }
  },
  "video_embeds": {
@@ -754,7 +780,11 @@
    "rené moffatt EPK photographs not placed: the vintage-radio portrait (rene-moffatt-cameronwhitman-credit, an earlier era), the DC9 black and white (an old DC-era stage), the coffee-and-notebook portrait (not the act as booked), the two headshots, the second Molecule Effect frame (a near-duplicate of the placed one), and the logos. The older DC-era gallery on his videos page was left alone for the same reason.",
    "rené moffatt Instagram: not scraped, per the standing rule."
   ],
-  "_rulings_2026_09_20": "Daniel, on the René Moffatt load: there is no memorial rule and no sponsorship or alcohol rule on this site. The first pass held back his Willie Nelson cover (its description remembers his late father) and the nine Underground Music Showcase 2026 clips (sponsor banners on the stage) under rules that were agent-made; both publish as of 2026-09-20. Rows in this list are records of one day's call on one asset, never standing rules; the Tony Medina rows above are his to reverse the same way."
+  "_rulings_2026_09_20": "Daniel, on the René Moffatt load: there is no memorial rule and no sponsorship or alcohol rule on this site. The first pass held back his Willie Nelson cover (its description remembers his late father) and the nine Underground Music Showcase 2026 clips (sponsor banners on the stage) under rules that were agent-made; both publish as of 2026-09-20. Rows in this list are records of one day's call on one asset, never standing rules; the Tony Medina rows above are his to reverse the same way.",
+  "afro-house-dj-sets": {
+   "what": "Two full DJ sets (YouTube eajUzmLn5KU and SMxLWXMY7VQ) on a Hong Kong promoter's channel",
+   "why": "2026-11-02: the titles and thumbnails carry the DJ's name and the act is unnamed, so they were taken off ensembles/afro-house-dj/ before it went live; the DJ is sending the files for a Signet reupload"
+  }
  },
  "first_party": {
   "media/dirty-flamenco.mp4": "Daniel's own phone footage ('monarch 1'), landed by a parallel session 2026-08-28; led the flamenco page and both roster cards as a native player until 2026-09-20, when it moved to the first tile of the flamenco page's footage grid. Poster media/dirty-flamenco-poster.jpg is a frame of it.",

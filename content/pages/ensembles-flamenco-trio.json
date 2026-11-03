@@ -91,7 +91,8 @@
    "notes": {
     "_note": "REFRAMED 2026-09-06 around Spanish guitar, which is what buyers search: \"spanish guitar wedding\" autocompletes in ten forms and \"spanish guitar denver\" returns no vendor page framed around an event, while bare \"flamenco\" autocompletes as dresses and dance. The act name and the craft are unchanged; the door is wider. Format spoke of the 2026-08-20 SEO buildout (Tier 3), face-led: Dirty Flamenco, fronted by Gary Meyers, the one name that publishes on this page. Replaces /music/dirty-flamenco/; build.py REDIRECTS carries the stub, and acts.json dirty-flamenco.page points here. Identity copy reuses the ratified acts.json paragraphs. Title reuses the ratified acts.json seo_title with the brand suffix.",
     "reader": "Whoever wants one moment in the evening that guests watch and talk about the next day: a dinner party, a milestone birthday, a member event, a corporate dinner, a wedding.",
-    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions."
+    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions.",
+    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -128,7 +129,8 @@
          "href": "/pricing/",
          "cls": "btn btn--outline"
         }
-       ]
+       ],
+       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -427,7 +429,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-28",
-       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },

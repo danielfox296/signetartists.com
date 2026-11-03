@@ -33,7 +33,7 @@
   "The reason to care is the contract. Most events buy the front of the night and the back of the night from two different acts, which means two load-ins, two sound checks, two sets of names to keep straight and a seam in the middle that guests can hear. This ladders instead: a duo through arrival and dinner, then the rhythm section arrives and the same voice fronts the dance floor. The party sees one band getting bigger.",
   "At quartet it stops being a cocktail act. The full rhythm section behind one voice, keys or a second guitar on top, playing a covers set built for a floor.",
   "It is a premium cover band. It is not a show band. Nobody changes costume, there is no choreography and there is no host segment. The band plays, reads the floor, and plays the next thing.",
-  "This is a named act, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
+  "This is a Featured Artist, published under the name of the person who fronts it, and any substitution in the lineup is named to you in advance."
  ],
  "ladder": [
   {
@@ -81,8 +81,6 @@
  ],
  "entity": {
   "type": "Person",
-  "sameAs": [
-   "https://www.tejassinghmusic.com/"
-  ]
+  "_sameAs_note": "Removed 2026-11-02 on Daniel's word: no link to an artist's own site or channel anywhere, the search-engine data included, so a client can't book around Signet."
  }
 }

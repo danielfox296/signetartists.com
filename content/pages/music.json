@@ -3,7 +3,7 @@
   "props": {
    "path": "/music/",
    "title": "Bands and musicians for hire in Denver",
-   "description": "Bands and musicians for hire in Denver and the mountains: guitarists, jazz duos and trios, string quartets, party bands, a DJ, and named acts you can look up.",
+   "description": "Bands and musicians for hire in Denver and the mountains: guitarists, jazz duos and trios, string quartets, party bands, a DJ, and Featured Artists.",
    "nav": "music",
    "breadcrumb": "Artist Roster",
    "indexLabel": "Artist Roster",
@@ -34,7 +34,7 @@
        "titleClass": "h2 display",
        "headingText": [
         {
-         "html": "<strong>Named acts.</strong> Music from artists like Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate, Firstwater and Little Moses Jones, their specific sound and presence comes with the booking. "
+         "html": "<strong>Featured Artists.</strong> Music from artists like Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate, Firstwater and Little Moses Jones, their specific sound and presence comes with the booking. "
         },
         {
          "html": "<strong>Entertainment Formats.</strong> The other lane are professional players throwing down their best in a format to serve your needs. From Jazz combos, Funk, Live DJs, String Quartets or Singer-Songwriter, they're are all configurable to your needs."
@@ -138,8 +138,8 @@
      },
      {
       "lane": "named",
-      "eyebrow": "Named acts",
-      "title": "The named acts.",
+      "eyebrow": "Featured Artists",
+      "title": "The Featured Artists.",
       "lede": "Booked under their own names, and every one of them is a name you can look up."
      }
     ],
@@ -213,8 +213,8 @@
        "id": "Faq-20",
        "items": [
         {
-         "q": "What's the difference between a \"named act\" and a configuration?",
-         "a": "A named act, like Tejas Singh or Dirty Flamenco, is booked under its own name, so you know exactly who is playing. A format, like a jazz duo or a yacht rock band, is played by professional musicians we match to your date and your venue. Either one can be booked by sending us the date."
+         "q": "What's the difference between a Featured Artist and a configuration?",
+         "a": "A Featured Artist, like Tejas Singh or Dirty Flamenco, is booked under its own name, so you know exactly who is playing. A format, like a jazz duo or a yacht rock band, is played by professional musicians we match to your date and your venue. Either one can be booked by sending us the date."
         },
         {
          "q": "Where do the acts play?",
@@ -289,8 +289,7 @@
          "cls": "btn"
         }
        ],
-       "title": "Tell us your needs and we can recommend an amazing act",
-       "titleStyle": "max-width: 32rem;"
+       "title": "Tell us your needs and we can recommend an amazing act"
       }
      },
      {
