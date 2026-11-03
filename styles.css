@@ -184,8 +184,8 @@ img {
   box-sizing: content-box;
   max-width: var(--wrap);
   margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .section {
@@ -636,7 +636,9 @@ img {
    hub. The header wrap caps at 1024px with 32px of padding, so the row has
    960px to live in whatever the screen is: seven links plus the button
    measure about 908 at this gap, and measured about 964 at the old one,
-   which is why labels had started breaking across two lines. */
+   which is why labels had started breaking across two lines. The padding
+   doubled to 64px on 2026-11-02, leaving 896px; the logo and the row (For
+   Planners gone from it) measured 808 at a 1024 screen. */
 .nav-desktop {
   display: none;
   align-items: center;
@@ -681,7 +683,7 @@ img {
 .nav-mobile {
   display: none;
   border-top: 1px solid var(--rule);
-  padding: 0 1.5rem 1.25rem;
+  padding: 0 3rem 1.25rem;
 }
 
 .nav-mobile.open {
@@ -1893,13 +1895,13 @@ main:focus {
 
 @media (min-width: 640px) {
   .wrap {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .nav-mobile {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .form-grid {
@@ -2762,13 +2764,13 @@ main:focus {
   align-self: center;
   position: relative;
   z-index: 5;
-  padding-left: max(1.5rem, calc((100vw - var(--wrap)) / 2));
+  padding-left: max(3rem, calc((100vw - var(--wrap)) / 2));
   padding-right: var(--space-4);
 }
 
 .cover-wall--flip .wall-text {
   grid-column: 7 / 11;
-  padding-right: max(1.5rem, calc((100vw - var(--wrap)) / 2));
+  padding-right: max(3rem, calc((100vw - var(--wrap)) / 2));
   padding-left: var(--space-4);
 }
 
@@ -2861,7 +2863,7 @@ main:focus {
   .cover-wall--flip .wall-text {
     grid-column: 1 / -1;
     grid-row: 1;
-    padding: 0 1.5rem var(--space-3);
+    padding: 0 3rem var(--space-3);
   }
 
   .wall-tile {
