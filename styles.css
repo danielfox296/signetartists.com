@@ -3695,14 +3695,19 @@ main:focus {
   inset: 0;
   z-index: 0;
   background-size: cover;
-  background-position: 50% 35%;
+  background-position: 50% 28%;
   background-repeat: no-repeat;
   filter: grayscale(1) contrast(1.05);
 }
+/* The block's own width box (32rem, set per page) is for the plain close;
+   over a photo the headline needs the room to stay at three lines or fewer. */
+.close-row--photo > div[style] {
+  max-width: 54rem !important;
+}
 .close-row--photo .h2 {
-  font-size: clamp(2.25rem, 1.2rem + 4vw, 4.75rem);
+  font-size: clamp(2.1rem, 1.1rem + 3.4vw, 4.25rem);
   line-height: 0.95;
-  max-width: 14ch;
+  max-width: 20ch;
 }
 .close-row--photo .lede {
   color: var(--ink);
