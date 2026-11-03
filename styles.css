@@ -26,20 +26,20 @@
   /* Grounds. The band is now LIFTED off the base rather than sunk into it,
      which is the way depth reads on a dark ground. 1.09:1 apart — a hair more
      separation than the light build's paper/sunk pair had at 1.06:1. */
-  --paper: #14130e;
-  --paper-sunk: #1e1c15;
-  --rule: #332f26;
+  --paper: #121212;
+  --paper-sunk: #1c1c1c;
+  --rule: #303030;
   /* Form-control boundaries. --rule reads 1.40:1 on the base — fine for
      hairline dividers, short of WCAG 1.4.11's 3:1 for a component whose
      border is its only visual indicator. This cut clears it on the base
      (3.86:1) and on the band (3.54:1), staying in the same warm-grey family. */
-  --rule-strong: #77725f;
-  --ink: #fbfaf7;
-  --ink-soft: #e4e1d8;
+  --rule-strong: #767676;
+  --ink: #fafafa;
+  --ink-soft: #e2e2e2;
   /* All three checked against BOTH grounds, not just the base — eyebrows and
      table headers sit on the lifted band. Worst case is --ink-faint on the
      band at 5.99:1, comfortably past AA at the 11px it gets used at. */
-  --ink-faint: #b9b5a8;
+  --ink-faint: #b5b5b5;
   /* Brass was two cuts, one per ground. On a dark site the lifted cut is the
      only one that works, so it is promoted to the default: 7.92:1 on the base
      and 7.26:1 on the band. The old light-ground brass (#84682d) reads 2.4:1
@@ -49,7 +49,7 @@
   --brass-bright: #dcbb7a;
   /* Alias, retained so the cover-wall and night rules that predate the
      inversion keep resolving. Same value as --ink-soft by design. */
-  --paper-dim: #e4e1d8;
+  --paper-dim: #e2e2e2;
 
   /* Archivo, ported from soundbathcalendar 2026-08-07 on Daniel's call: "i
      want the type choices from the sound bath site ported over." That replaces
@@ -228,14 +228,14 @@ img {
    .btn is unaffected here now — it is a light fill with dark type across the
    whole site since the inversion, so it reads on all three grounds. */
 .section--night {
-  background-color: #0a0906;
+  background-color: #090909;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
   color: var(--ink);
 }
 
 /* The cut into midnight is its own rule; a hairline there is noise. */
 .section--night.section--ruled {
-  border-top-color: #0a0906;
+  border-top-color: #090909;
 }
 
 .section--night .h1,
@@ -304,7 +304,7 @@ img {
 
 .section--night .eyebrow--slab {
   background: var(--brass-bright);
-  color: #0a0906;
+  color: #090909;
 }
 
 /* Every heading is condensed and heavy — soundbathcalendar's h1/h2/h3 rule,
@@ -561,7 +561,7 @@ img {
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--rule);
-  background: rgba(20, 19, 14, 0.95);
+  background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(8px);
 }
 
@@ -906,7 +906,7 @@ img {
    everywhere else. */
 .hero-cine__copy .btn {
   background: #fff;
-  color: #0a0906;
+  color: #090909;
   border-color: #fff;
 }
 
@@ -914,7 +914,7 @@ img {
 .hero-cine__copy .btn:focus-visible {
   background: var(--brass-bright);
   border-color: var(--brass-bright);
-  color: #0a0906;
+  color: #090909;
 }
 
 @media (min-width: 1024px) {
@@ -1156,8 +1156,8 @@ img {
   margin-top: 2.2rem;
   overflow-x: auto;
   background:
-    linear-gradient(to right, var(--paper) 30%, rgba(20, 19, 14, 0)) left center,
-    linear-gradient(to left, var(--paper) 30%, rgba(20, 19, 14, 0)) right center,
+    linear-gradient(to right, var(--paper) 30%, rgba(18, 18, 18, 0)) left center,
+    linear-gradient(to left, var(--paper) 30%, rgba(18, 18, 18, 0)) right center,
     radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) left center,
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) right center;
   background-size: 3rem 100%, 3rem 100%, 1.25rem 100%, 1.25rem 100%;
@@ -1169,8 +1169,8 @@ img {
    never fully clears at the ends of the travel. */
 .section--sunk .table-scroll {
   background-image:
-    linear-gradient(to right, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
-    linear-gradient(to left, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
+    linear-gradient(to right, var(--paper-sunk) 30%, rgba(28, 28, 28, 0)),
+    linear-gradient(to left, var(--paper-sunk) 30%, rgba(28, 28, 28, 0)),
     radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)),
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
 }
@@ -2810,7 +2810,7 @@ main:focus {
   position: absolute;
   inset: auto 0 0 0;
   padding: 2.2rem 0.8rem 0.7rem;
-  background: linear-gradient(0deg, rgba(22, 21, 15, 0.94) 40%, rgba(22, 21, 15, 0));
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.94) 40%, rgba(20, 20, 20, 0));
   opacity: 0;
   transition: opacity 0.25s;
   line-height: 1.4;
@@ -3681,7 +3681,7 @@ main:focus {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(20, 19, 14, 0.64);
+  background: rgba(18, 18, 18, 0.64);
 }
 .close-row--photo > :not(.close-photo) {
   position: relative;
@@ -3747,7 +3747,7 @@ main:focus {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(20, 19, 14, 0.72);
+  background: rgba(18, 18, 18, 0.72);
 }
 .hero-photo .lede,
 .hero-photo .prose,
@@ -4034,7 +4034,7 @@ main:focus {
    the bottom edge like a mixing desk. The copy is untouched; this is layout
    only. */
 .section.statement {
-  background-color: #101010;
+  background-color: #0c0c0c;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='576' height='120' viewBox='0 0 576 120'%3E%3Cg fill='%23fff' fill-opacity='0.07'%3E%3Crect x='6' y='51' width='6' height='69'/%3E%3Crect x='22' y='73' width='6' height='47'/%3E%3Crect x='38' y='42' width='6' height='78'/%3E%3Crect x='54' y='86' width='6' height='34'/%3E%3Crect x='70' y='83' width='6' height='37'/%3E%3Crect x='86' y='24' width='6' height='96'/%3E%3Crect x='102' y='80' width='6' height='40'/%3E%3Crect x='118' y='46' width='6' height='74'/%3E%3Crect x='134' y='85' width='6' height='35'/%3E%3Crect x='150' y='28' width='6' height='92'/%3E%3Crect x='166' y='65' width='6' height='55'/%3E%3Crect x='182' y='88' width='6' height='32'/%3E%3Crect x='198' y='81' width='6' height='39'/%3E%3Crect x='214' y='37' width='6' height='83'/%3E%3Crect x='230' y='39' width='6' height='81'/%3E%3Crect x='246' y='84' width='6' height='36'/%3E%3Crect x='262' y='62' width='6' height='58'/%3E%3Crect x='278' y='81' width='6' height='39'/%3E%3Crect x='294' y='22' width='6' height='98'/%3E%3Crect x='310' y='38' width='6' height='82'/%3E%3Crect x='326' y='85' width='6' height='35'/%3E%3Crect x='342' y='20' width='6' height='100'/%3E%3Crect x='358' y='77' width='6' height='43'/%3E%3Crect x='374' y='64' width='6' height='56'/%3E%3Crect x='390' y='85' width='6' height='35'/%3E%3Crect x='406' y='42' width='6' height='78'/%3E%3Crect x='422' y='86' width='6' height='34'/%3E%3Crect x='438' y='64' width='6' height='56'/%3E%3Crect x='454' y='87' width='6' height='33'/%3E%3Crect x='470' y='21' width='6' height='99'/%3E%3Crect x='486' y='75' width='6' height='45'/%3E%3Crect x='502' y='55' width='6' height='65'/%3E%3Crect x='518' y='39' width='6' height='81'/%3E%3Crect x='534' y='74' width='6' height='46'/%3E%3Crect x='550' y='23' width='6' height='97'/%3E%3Crect x='566' y='77' width='6' height='43'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-position: center bottom;
