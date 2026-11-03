@@ -125,20 +125,105 @@
  "_faqs_note": "REWRITTEN 2026-09-04 with the no-published-price decision. These are the pricing page's questions and they still answer the money question, with the market's figures instead of Signet's. Figures only ever arrive here as {{market:<id>}} tokens off market-rates.json; a page that resolves one has to carry {{market_sources}} or the build fails. Never type a figure into an answer.",
  "closePhotos": [
   {
-   "src": "img/hero/gary-meyers.jpg"
+   "src": "img/acts/flamenco-court.jpg",
+   "act": "dirty-flamenco"
   },
   {
-   "src": "img/tejas-card.jpg"
+   "src": "img/acts/little-moses-jones-stage.jpg",
+   "act": "little-moses-jones"
   },
   {
-   "src": "img/tony-medina-card.jpg"
+   "src": "img/acts/rene-moffatt-festival.jpg",
+   "act": "rene-moffatt"
   },
   {
-   "src": "img/little-moses-jones-card.jpg"
+   "src": "img/acts/tejas-mural.jpg",
+   "act": "tejas-singh"
   },
   {
-   "src": "img/rene-moffatt-card.jpg"
+   "src": "img/acts/medina-patio.jpg",
+   "act": "tony-medina"
+  },
+  {
+   "src": "img/acts/classical-strings-stage.jpg",
+   "act": "classical-strings"
+  },
+  {
+   "src": "img/acts/afro-house-dj-headphones.jpg",
+   "act": "afro-house-dj",
+   "pos": "50% 20%"
+  },
+  {
+   "src": "img/acts/acoustic-outdoor.jpg",
+   "act": "acoustic-duo",
+   "pos": "50% 25%"
+  },
+  {
+   "src": "img/acts/flamenco-stone.jpg",
+   "act": "dirty-flamenco"
+  },
+  {
+   "src": "img/acts/little-moses-jones-frontline.jpg",
+   "act": "little-moses-jones"
+  },
+  {
+   "src": "img/acts/rene-moffatt-cafe.jpg",
+   "act": "rene-moffatt"
+  },
+  {
+   "src": "img/acts/tejas-profile.jpg",
+   "act": "tejas-singh"
+  },
+  {
+   "src": "img/acts/medina-band.jpg",
+   "act": "tony-medina"
+  },
+  {
+   "src": "img/acts/classical-strings-meadow.jpg",
+   "act": "classical-strings"
+  },
+  {
+   "src": "img/acts/afro-house-dj-portrait.jpg",
+   "act": "afro-house-dj",
+   "pos": "50% 20%"
+  },
+  {
+   "src": "img/acts/flamenco-window.jpg",
+   "act": "dirty-flamenco",
+   "pos": "50% 40%"
+  },
+  {
+   "src": "img/acts/little-moses-jones-session.jpg",
+   "act": "little-moses-jones"
+  },
+  {
+   "src": "img/acts/rene-moffatt-seated.jpg",
+   "act": "rene-moffatt"
+  },
+  {
+   "src": "img/acts/tejas-portrait.jpg",
+   "act": "tejas-singh",
+   "pos": "50% 30%"
+  },
+  {
+   "src": "img/acts/medina-portrait.jpg",
+   "act": "tony-medina",
+   "pos": "50% 30%"
+  },
+  {
+   "src": "img/acts/classical-strings-ceremony.jpg",
+   "act": "classical-strings"
+  },
+  {
+   "src": "img/acts/little-moses-jones-jerseys.jpg",
+   "act": "little-moses-jones"
   }
  ],
- "_closePhotos_note": "2026-11-02, Daniel chose the full-bleed photo for the closing call to action on every page. An act page's close uses that act's own card photo; every other page takes one of these, picked by its URL so a page keeps the same one. All are Signet artists on stage or with their instruments, shown in black and white behind a dark wash. The photo is a CSS background with aria-hidden, a backdrop rather than content, so it carries no description (site_check rule N forbids reusing an act card's description on a second picture). A CloseRow with its own picture set in the admin uses that instead."
+ "_closePhotos_note": "2026-11-02, Daniel chose the full-bleed photo for the closing call to action on every page, and the same for the photo behind each page's h1. 2026-11-03, Daniel: the same photo of Gary was on three page heroes; show the variety of acts, no act repeated. The pool is now the professional photographs, less any act page's own top photo, from Signet/Media on Drive (copies in img/acts/), dealt one act at a time: each act's first photo, then each act's second, and so on, at most four per act, so no two neighbours in the list are the same act. Every page that is not an act page takes its place among those pages sorted by URL, and its hero is the photo at that place in the pool, so sibling pages in a tree each open on a different act; its close is half the pool along, moved on until it is a different act from the hero. Neither may be an act whose photo the page already shows (act cards, photoActs, then pool photos say which act a picture is; act here means the people in it, so Jordan's photos are one act). Act pages are counted in the order too; an act page whose top photo is its card is dealt its close the same way, as long as it is not that act. pos is the CSS background-position for a photo whose subject is off the default 50% 28%. An act page's hero is its own gallery's first photo and its close is its own card. The photo is a CSS background with aria-hidden, a backdrop rather than content, so it carries no description (site_check rule N forbids reusing an act card's description on a second picture). A CloseRow with its own picture set in the admin uses that instead.",
+ "photoActs": {
+  "img/hero/gary-meyers.jpg": "dirty-flamenco",
+  "img/acts/flamenco-colonnade.jpg": "dirty-flamenco",
+  "img/acts/flamenco-steps.jpg": "dirty-flamenco",
+  "img/acts/solo-bridge.jpg": "acoustic-duo"
+ }
 }

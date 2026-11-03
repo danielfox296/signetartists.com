@@ -468,6 +468,31 @@ img {
   color: var(--ink-soft);
 }
 
+/* 2026-11-03, Daniel: the review ran into the list above it and read as one
+   more row. It now sits in its own panel, on the ground the section is not
+   (darker in a sunk band, lifted on the base), with more room above it. */
+.review-pull {
+  margin-top: 3.5rem;
+  padding: 1.75rem 2rem;
+  border-left-width: 3px;
+  background: var(--paper-sunk);
+}
+.section--sunk .review-pull {
+  background: var(--paper);
+}
+.review-pull + .review-pull {
+  margin-top: 1rem;
+}
+.review-pull blockquote {
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+@media (max-width: 599px) {
+  .review-pull {
+    padding: 1.35rem 1.25rem;
+  }
+}
+
 .review-pull figcaption {
   margin-top: 0.55rem;
   font-size: 0.9625rem;
@@ -1522,7 +1547,7 @@ img {
    so no page grew taller. The separator is a pseudo-element so it is never
    read aloud or copied with the text. */
 .breadcrumb {
-  padding-top: var(--space-4);
+  padding: 1.2rem 0;
 }
 
 .breadcrumb ol {
@@ -1552,9 +1577,17 @@ img {
 }
 
 /* The page's own first section stops adding its top padding when a trail is
-   above it, so the trail replaces that space instead of stacking with it. */
+   above it, so the trail replaces that space instead of stacking with it.
+   2026-11-03, Daniel: the trail sits centred top to bottom in its band, and
+   the band is about 30% shorter. Over a page hero the band ends where the
+   photo starts, so it carries equal padding above and below the line (64px
+   tall before, 45px now); without a hero the trail sits midway between the
+   header and the first section's words (88px before, 62px now). */
+.breadcrumb:has(+ .section--top .hero-photo) {
+  padding: 0.65rem 0;
+}
 .breadcrumb + .section--top {
-  padding-top: var(--space-3);
+  padding-top: 0;
 }
 
 /* ------------------------------------------------------------- siblings */
@@ -3833,6 +3866,13 @@ main:focus {
 .def-list dd .lead {
   color: var(--ink);
   font-weight: 500;
+}
+/* The row's headline beside its drawing is set in capitals (2026-11-03,
+   Daniel, sitewide), with the one caps tracking the site allows. */
+.def-list--stack dt,
+.def-list--cards dt {
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
 }
 @media (min-width: 768px) {
   .def-list--stack .def-row {
