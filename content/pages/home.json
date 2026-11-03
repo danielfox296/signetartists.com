@@ -294,6 +294,65 @@
    }
   },
   {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-40",
+    "band": "sunk",
+    "anchor": "why-signet",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-41",
+       "eyebrow": "Why book through Signet",
+       "title": "We put the act together around your night.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Booking a band yourself means settling five things, then getting every one of them into a contract you can hold the band to. We work them out with you, and one person answers you from the first email to the last song."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-42",
+       "cls": "def-list def-list--stack",
+       "rows": [
+        {
+         "term": "How many musicians",
+         "text": "A duo suits a dinner, a trio suits a crowd that wants to dance, and a full band fills a ballroom floor. We match the size to your headcount, your budget and the part of the night it plays."
+        },
+        {
+         "term": "Sound for the space",
+         "text": "It should reach the back of a ballroom, stay low enough for a dinner table to talk over, and sit inside the noise limit a mountain venue sets. The sound support comes with the act, sized to where it plays."
+        },
+        {
+         "term": "The kind of music",
+         "text": "It might be jazz under a dinner, a soul band for the dance floor, a string quartet for a ceremony or a DJ for the late night. Tell us about the crowd and we’ll recommend the act that suits it."
+        },
+        {
+         "term": "The songs",
+         "text": "You give us the must-plays, the songs to skip, the first dance, and whether it’s a work crowd that wants a clean set. It’s agreed before the night and written into the booking."
+        },
+        {
+         "term": "What they wear",
+         "text": "Black tie, business formal or all black. Tell us the dress code you’ve set for your guests and the musicians dress one notch inside it."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-43",
+       "html": "All of it goes into one contract, the insurance certificate and the W-9 come in the same email, and your contact on the night is the person you’ve been talking to all along. Every step is on <a href=\"/planners/booking/\">how a booking works</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "DRAFT 2026-11-02 for Daniel's read on staging. The case for booking through Signet rather than direct, built on his point the same day: 'the value of being able to put together a group that is the right size (number of musicians), sound support for the right room, genre, song list, and attire. the reality of trying to navigate all of that at a level of functional and contractual detail with a band who have notoriously poor communication is next to impossible for most people.' Placed after his 'nobody wants to get the booking wrong' section, which is untouched. Anchor #why-signet is the target of the one-line note on every act page. No replacement promise until he rules on it."
+   }
+  },
+  {
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-27",
