@@ -651,11 +651,15 @@ img {
   gap: 1rem;
 }
 
+/* Links rest at --ink-faint and go to --ink on hover and on the current page
+   (2026-11-02, Daniel: the rollover was too slight to read). From --ink-soft
+   the step was 1.5:1 and read as nothing; from --ink-faint it is 2.7:1, and
+   the resting links still read 6.5:1 on the header. */
 .nav-desktop a {
   font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: var(--track-caps);
-  color: var(--ink-soft);
+  color: var(--ink-faint);
   white-space: nowrap;
 }
 
