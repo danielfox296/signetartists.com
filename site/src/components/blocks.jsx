@@ -126,6 +126,75 @@ export const SpecList = {
 
 // ------------------------------------------------------------------ rows
 
+// The marker beside a list row (2026-11-02, Daniel: the lists read as a wall
+// of text; the line drawings on the home page helped). A label with an
+// ordinal ("The 40th") gets the number in brass; any other label gets the line
+// drawing its words point to, first match wins, music notes when nothing does.
+// The drawings themselves are in styles.css, keyed by data-art.
+const ROW_ART = [
+  [/wedding|reception|ceremony|couple|bride|engagement|propos/, "rings"],
+  [/anniversar/, "heart"],
+  [/birthday/, "cake"],
+  [/graduat/, "cap"],
+  [/retire/, "clock"],
+  [/shower/, "gift"],
+  [/halloween/, "moon"],
+  [/memorial|funeral|celebration of life/, "candle"],
+  [/holiday|cocktail|drinks|toast|happy hour|welcome/, "glass"],
+  [/dinner|brunch|lunch|meal|banquet/, "plate"],
+  [/after-party|after party|conference|gala|award|fundrais|launch|keynote|program/, "microphone"],
+  [/retreat|mountain|vail|aspen|breckenridge|beaver creek|telluride|steamboat|crested butte|winter park|resort/, "mountain"],
+  [/backyard|garden|patio|outdoor|lawn|park|courtyard|terrace|rooftop/, "tree"],
+  [/daytime|morning|afternoon|market|festival|summer/, "sun"],
+  [/senior|community|library|neighbo|house party|at home/, "house"],
+  [/\bdj\b|late night|dance floor|dancing/, "headphones"],
+  [/sound|volume|speaker|\bpa\b|loud|quiet|noise/, "speaker"],
+  [/song|setlist|set list|first dance|repertoire|request/, "list"],
+  [/dress|attire|wear|black tie/, "bowtie"],
+  [/office|company|corporate|client|team|member|club|staff/, "building"],
+  [/guitar|flamenco|spanish/, "guitar"],
+  [/duo|trio|quartet|quintet|band|piece|musician|solo|size|singer|ensemble/, "musicians"],
+  [/cost|price|budget|quote|fee|deposit|pay|rate/, "tag"],
+  [/travel|drive|mile|distance/, "car"],
+  [/venue|where|denver|boulder|colorado springs|fort collins|city|town|space|stage|floor/, "pin"],
+  [/when|date|book|ahead|month|week|calendar|season/, "calendar"],
+  [/time|hour|minute|length|long|curfew|late/, "clock"],
+];
+function rowMark(term) {
+  const t = String(term || "").replace(/<[^>]+>/g, "").toLowerCase();
+  const n = t.match(/\b(\d{1,3})(?:st|nd|rd|th)\b/);
+  if (n) return { num: n[1] };
+  for (const [re, art] of ROW_ART) if (re.test(t)) return { art };
+  return { art: "notes" };
+}
+
+// The first sentence of a row in the brighter ink, so a skimmer gets the point
+// (2026-11-02). Splits at the first full stop, question or exclamation mark
+// that is outside a tag and not inside an open link, and leaves the row alone
+// when there is no second sentence.
+function leadSentence(html) {
+  if (typeof html !== "string") return html;
+  let depth = 0;
+  let inTag = false;
+  for (let i = 0; i < html.length; i++) {
+    const ch = html[i];
+    if (ch === "<") {
+      inTag = true;
+      if (html.startsWith("<a", i) && /\s|>/.test(html[i + 2] || "")) depth++;
+      else if (html.startsWith("</a", i)) depth--;
+      continue;
+    }
+    if (ch === ">") { inTag = false; continue; }
+    if (inTag || depth > 0) continue;
+    if ((ch === "." || ch === "?" || ch === "!") && html[i + 1] === " ") {
+      const rest = html.slice(i + 2);
+      if (!rest.trim()) return html;
+      return `<span class="lead">${html.slice(0, i + 1)}</span> ${rest}`;
+    }
+  }
+  return html;
+}
+
 export const DefRows = {
   label: "Rows",
   fields: {
@@ -135,24 +204,29 @@ export const DefRows = {
       getItemSummary: (r) => plain(r.term),
       arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
     },
-    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Side by side", value: "def-list" }]),
+    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Cards", value: "def-list def-list--cards" }, { label: "Side by side", value: "def-list" }]),
     bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
     style: text("Style"),
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
-  render: ({ cls, style, bare, rows }) => (
-    <dl className={cls || "def-list def-list--stack"} style={css(style)}>
+  render: ({ cls, style, bare, rows }) => {
+    const layout = cls || "def-list def-list--stack";
+    const marked = /def-list--(stack|cards)/.test(layout);
+    return (
+    <dl className={layout} style={css(style)}>
       {(rows || []).map((r, i) => {
         const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
-        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={r.text} />;
+        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={marked ? leadSentence(r.text) : r.text} />;
+        const mark = marked ? rowMark(r.term) : {};
         return bare ? (
           <Fragment key={i}>{dt}{dd}</Fragment>
         ) : (
-          <div className="def-row" key={i}>{dt}{dd}</div>
+          <div className="def-row" key={i} data-art={mark.art} data-num={mark.num}>{dt}{dd}</div>
         );
       })}
     </dl>
-  ),
+    );
+  },
 };
 
 // The questions a page shows. With "schema" on, they are also the page's
@@ -170,19 +244,25 @@ export const Faq = {
     style: text("Style"),
   },
   defaultProps: { items: [{ q: "Question", a: "Answer" }], schema: true },
+  // Each question opens on a click, the first one open (2026-11-02): a page
+  // shows its questions, not a column of answers. The answers stay in the
+  // page for search, and the FAQPage markup still renders from the items.
   render: ({ items, style }) => (
-    <dl className="faq-list" style={css(style)}>
+    <div className="faq-list" style={css(style)}>
       {(items || []).map((f, i) => (
-        <div className="faq-row" key={i}>
-          <H as="dt" html={f.q} />
+        <details className="faq-row" key={i} open={i === 0 || undefined}>
+          <summary>
+            <H as="span" className="faq-q" html={f.q} />
+            <span className="faq-toggle" aria-hidden="true" />
+          </summary>
           {f.open ? (
-            <dd><H as="span" data-tbd="true" html={f.a} /></dd>
+            <div className="faq-a"><H as="span" data-tbd="true" html={f.a} /></div>
           ) : (
-            <H as="dd" html={f.a} />
+            <H as="div" className="faq-a" html={f.a} />
           )}
-        </div>
+        </details>
       ))}
-    </dl>
+    </div>
   ),
 };
 
