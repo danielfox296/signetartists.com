@@ -5,6 +5,7 @@
    - every JPEG under img/ and media/ recompressed, where that saves a tenth
    - each YouTube video's own picture, the largest YouTube has, at
      img/yt/<id>.jpg and its copies
+   - a wide share picture for each tall photo a page shares (img/share/)
    The cache folder keeps what was made, by the source file's hash, so a
    deploy only makes what is new, and loses what nothing uses any more. */
 import crypto from "node:crypto";
@@ -12,7 +13,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
-import { FORMAT, variantPath, widthsFor, YT_WIDTHS, ytPath } from "../lib/pictures.js";
+import { FORMAT, SHARE, sharePath, variantPath, widthsFor, YT_WIDTHS, ytPath } from "../lib/pictures.js";
 
 // Bump to make every copy again.
 const VERSION = "1";
@@ -70,7 +71,7 @@ async function ytFetch(id) {
   return null;
 }
 
-export async function makeImages({ repo, out, cache, used, yt, dims, log = console.log }) {
+export async function makeImages({ repo, out, cache, used, yt, share = new Map(), dims, log = console.log }) {
   fs.mkdirSync(cache, { recursive: true });
   const kept = new Set();
   const keptFiles = new Set();
@@ -105,6 +106,25 @@ export async function makeImages({ repo, out, cache, used, yt, dims, log = conso
     for (const w of widthsFor(d.w)) {
       place(cached(key, `${w}.${FORMAT}`, (to) => encode(sharp(buf).autoOrient().resize({ width: w, withoutEnlargement: true }), FORMAT, d.chroma).toFile(to)), variantPath(rel, w));
     }
+  }
+
+  // Tall photos a page shares, cut wide: across the whole width, at the
+  // photo's focus point's height ("x% y%", as CSS object-position places it),
+  // else around what sharp's attention finds.
+  for (const [rel, focus] of [...share].sort()) {
+    const buf = fs.readFileSync(path.join(repo, rel));
+    const key = sha1(VERSION, buf);
+    const y = focus && /^\s*[\d.]+%\s+([\d.]+)%\s*$/.exec(focus);
+    place(
+      cached(key, `share-${y ? y[1] : "auto"}.jpg`, async (to) => {
+        if (!y) return encode(sharp(buf).autoOrient().resize({ width: SHARE.w, height: SHARE.h, fit: "cover", position: sharp.strategy.attention }), "jpeg").toFile(to);
+        const wide = sharp(buf).autoOrient().resize({ width: SHARE.w });
+        const tall = (await wide.clone().toBuffer({ resolveWithObject: true })).info.height;
+        const top = Math.round(((tall - SHARE.h) * Number(y[1])) / 100);
+        return encode(wide.extract({ left: 0, top, width: SHARE.w, height: SHARE.h }), "jpeg").toFile(to);
+      }),
+      sharePath(rel),
+    );
   }
 
   // Every JPEG, recompressed. A copy that doesn't save a tenth isn't used.
@@ -172,6 +192,6 @@ export async function makeImages({ repo, out, cache, used, yt, dims, log = conso
   }
   for (const f of fs.readdirSync(ytSrc)) if (!yt.has(f.replace(/\.jpg$/, ""))) fs.rmSync(path.join(ytSrc, f), { force: true });
 
-  log(`Pictures: ${used.size} shown in ${copies.length} files, ${made} made, ${Math.round(saved / 1024)} KB off ${jpegs.length} JPEGs, ${ids.length} YouTube pictures`);
+  log(`Pictures: ${used.size} shown in ${copies.length} files, ${made} made, ${Math.round(saved / 1024)} KB off ${jpegs.length} JPEGs, ${ids.length} YouTube pictures, ${share.size} share pictures`);
   return { made, files: copies.length };
 }

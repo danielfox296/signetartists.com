@@ -12,6 +12,12 @@ export const WIDTHS = [480, 800, 1200, 1600];
 export const MAX_WIDTH = 2400;
 export const FORMAT = "webp";
 
+// A share picture cut wide from a tall photo, made by the deploy:
+// img/acts/a.jpg -> img/share/acts/a.jpg. Feeds draw a link's picture as a
+// wide strip around its middle, which takes the head off a portrait.
+export const SHARE = { w: 1200, h: 630 };
+export const sharePath = (p) => p.replace(/^(?:img|media)\//, "img/share/").replace(/\.(?:jpe?g|png)$/i, ".jpg");
+
 // A YouTube video's own picture, kept by the deploy at img/yt/<id>.jpg.
 export const YT_WIDTHS = [480, 800, 1280];
 export const ytPath = (id) => `img/yt/${id}.jpg`;
