@@ -509,6 +509,7 @@ img {
   background: var(--ink);
   color: var(--paper);
   border: 1px solid var(--ink);
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -1996,9 +1997,6 @@ main:focus {
     text-align: right;
   }
 
-  .close-row {
-    padding: 3rem 0;
-  }
 }
 
 /* The desktop nav row: seven links plus the Check a Date button. It used to
@@ -3638,7 +3636,12 @@ main:focus {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 0;
+}
+/* The section around the closing call takes the smaller of the two section
+   paddings at every width (Daniel, 2026-11-02: too much room above the picture
+   and below the button). */
+.section:has(> .wrap > .close-row) {
+  padding: var(--space-4) 0;
 }
 .close-row > div {
   width: 100%;
