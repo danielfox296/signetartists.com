@@ -140,5 +140,5 @@
    "src": "img/rene-moffatt-card.jpg"
   }
  ],
- "_closePhotos_note": "2026-11-02, Daniel chose the full-bleed photo for the closing call to action on every page. An act page's close uses that act's own card photo; every other page takes one of these, picked by its URL so a page keeps the same one. All are Signet artists on stage or with their instruments, shown in black and white behind a dark wash. A CloseRow with its own picture set in the admin uses that instead."
+ "_closePhotos_note": "2026-11-02, Daniel chose the full-bleed photo for the closing call to action on every page. An act page's close uses that act's own card photo; every other page takes one of these, picked by its URL so a page keeps the same one. All are Signet artists on stage or with their instruments, shown in black and white behind a dark wash. The photo is a CSS background with aria-hidden, a backdrop rather than content, so it carries no description (site_check rule N forbids reusing an act card's description on a second picture). A CloseRow with its own picture set in the admin uses that instead."
 }

@@ -3690,16 +3690,13 @@ main:focus {
   position: relative;
   z-index: 2;
 }
-.close-row--photo img.close-photo {
+.close-row--photo .close-photo {
   position: absolute;
   inset: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  margin: 0;
-  object-fit: cover;
-  object-position: 50% 35%;
+  background-size: cover;
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
   filter: grayscale(1) contrast(1.05);
 }
 .close-row--photo .h2 {

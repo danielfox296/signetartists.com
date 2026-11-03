@@ -354,6 +354,7 @@ export const CloseRow = {
   defaultProps: { boxed: true, boxStyle: "max-width: 32rem;", title: "Title", lede: "Text", buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
   render: function CloseRowRender(p) {
     const s = useSite();
+    const href = useHref();
     const photo = closePhoto(s, p.image);
     const words = (
       <>
@@ -363,7 +364,7 @@ export const CloseRow = {
     );
     return (
       <div className={photo ? "close-row close-row--photo" : "close-row"}>
-        {photo ? <Img im={{ src: photo, alt: "", loading: "lazy", decoding: "async", cls: "close-photo" }} sizes="100vw" /> : null}
+        {photo ? <div className="close-photo" aria-hidden="true" style={{ backgroundImage: `url("${href(photo)}")` }} /> : null}
         {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
         <Buttons items={p.buttons || []} />
       </div>
