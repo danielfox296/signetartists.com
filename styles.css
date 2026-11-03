@@ -3686,7 +3686,7 @@ main:focus {
   z-index: 1;
   background: rgba(20, 19, 14, 0.64);
 }
-.section:has(.close-row--photo) > .wrap {
+.close-row--photo > :not(.close-photo) {
   position: relative;
   z-index: 2;
 }
