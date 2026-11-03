@@ -42,7 +42,7 @@ export const Heading = {
     if (!photo) return heading;
     return (
       <div className="hero-photo">
-        <div className="hero-photo__bg" aria-hidden="true" style={{ backgroundImage: `url("${href(photo)}")` }} />
+        <div className="hero-photo__bg" aria-hidden="true" style={photoStyle(href, photo)} />
         {heading}
       </div>
     );
@@ -445,38 +445,77 @@ function Cell({ c, tag }) {
 // -------------------------------------------------------- call to action
 
 // The photo behind the closing call to action (2026-11-02): the picture set
-// on the block, else the page's own act's card, else one of site.closePhotos
-// picked by the page's URL so a page always shows the same one.
+// on the block, else the page's own act's card, else one from site.closePhotos
+// (dealt below). Each returns { src, pos } or null.
 function closePhoto(s, image) {
-  if (image && image.src) return image.src;
-  const m = s && s.model;
-  if (!m) return null;
-  const actId = s.page && s.page.root && s.page.root.props && s.page.root.props.schema && s.page.root.props.schema.act;
-  const act = actId && m.ACT_BY_ID[actId];
-  if (act && act.img) return "/img/" + act.img;
-  return rotation(s, 0);
+  if (image && image.src) return { src: image.src };
+  const act = pageActOf(s);
+  const card = act && act.img ? { src: "/img/" + act.img } : null;
+  if (card && (heroPhoto(s) || {}).src !== card.src) return card;
+  return dealt(s, true);
 }
 
 // The photo behind a page's h1 heading (2026-11-02, Daniel: "there should be
 // a hero section that's treated like this"). An act page takes the first
-// photograph in its own gallery, else its card; any other page takes one of
-// site.closePhotos, two along from the one its closing call shows, so the top
-// and the foot of a page never repeat.
+// photograph in its own gallery, else its card; any other page is dealt one
+// from site.closePhotos.
 function pageActOf(s) {
   const m = s && s.model;
   const props = s && s.page && s.page.root && s.page.root.props;
   const id = props && props.schema && props.schema.act;
   return m && id ? m.ACT_BY_ID[id] : null;
 }
-function rotation(s, offset) {
+const slash = (src) => (src.startsWith("/") ? src : "/" + src);
+// 2026-11-03, Daniel: "no act should be repeated". site.closePhotos is the pool
+// of professional photos, listed one act at a time. The pages are dealt from
+// it in URL order, so a tree's pages sit together: each page's hero is the
+// next photo in the pool whose act is not on the page already and not among
+// the last five pages' heroes; its close is dealt the same way from half the
+// pool along, never its hero's act. An act page uses a dealt close only when
+// its card is already its hero. One deal per build, kept on the model.
+const deals = new WeakMap();
+function dealt(s, close) {
   const m = s && s.model;
-  const list = (m && m.site && m.site.closePhotos) || [];
-  if (!list.length) return null;
-  const key = (s && s.url) || "/";
-  let h = 0;
-  for (const ch of key) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-  const src = list[(h + offset) % list.length].src;
-  return src.startsWith("/") ? src : "/" + src;
+  const pool = (m && m.site && m.site.closePhotos) || [];
+  if (!pool.length || !s.page) return null;
+  if (!deals.has(m)) deals.set(m, deal(m, pool));
+  const d = deals.get(m)[s.page.root.props.path];
+  const e = d && (close ? d.close : d.hero);
+  return e ? { src: slash(e.src), pos: e.pos } : null;
+}
+function deal(m, pool) {
+  const actOf = {};
+  for (const a of Object.values(m.ACT_BY_ID)) if (a.img) actOf["img/" + a.img] = a.id;
+  Object.assign(actOf, (m.site && m.site.photoActs) || {});
+  for (const e of pool) actOf[e.src] = e.act;
+  const n = pool.length;
+  const at = [0, Math.floor(n / 2)];
+  const recent = [[], []];
+  const out = {};
+  const pick = (k, avoid) => {
+    // Relax the neighbours rule, then the page's own acts, before repeating.
+    for (const strict of [2, 1, 0]) {
+      for (let i = 0; i < n; i++) {
+        const e = pool[(at[k] + i) % n];
+        if (strict > 0 && avoid.has(e.act)) continue;
+        if (strict > 1 && recent[k].includes(e.act)) continue;
+        at[k] = (at[k] + i + 1) % n;
+        recent[k] = [...recent[k], e.act].slice(-5);
+        return e;
+      }
+    }
+    return pool[0];
+  };
+  for (const d of [...(m.pages || [])].sort((x, y) => (x.root.props.path < y.root.props.path ? -1 : 1))) {
+    const body = JSON.stringify(d.content || []);
+    const shown = new Set(Object.keys(actOf).filter((src) => body.includes(src)).map((src) => actOf[src]));
+    const id = d.root.props.schema && d.root.props.schema.act;
+    if (id) shown.add(id);
+    const hero = pick(0, shown);
+    const close = pick(1, new Set([...shown, hero.act]));
+    out[d.root.props.path] = { hero, close };
+  }
+  return out;
 }
 function heroPhoto(s) {
   if (!s || !s.model || !s.page) return null;
@@ -492,11 +531,12 @@ function heroPhoto(s) {
       }
     };
     walk(s.page.content);
-    if (first) return first.startsWith("/") ? first : "/" + first;
-    return act.img ? "/img/" + act.img : null;
+    if (first) return { src: slash(first) };
+    return act.img ? { src: "/img/" + act.img } : null;
   }
-  return rotation(s, 2);
+  return dealt(s, false);
 }
+const photoStyle = (href, photo) => ({ backgroundImage: `url("${href(photo.src)}")`, ...(photo.pos ? { backgroundPosition: photo.pos } : {}) });
 
 
 export const CloseRow = {
@@ -525,7 +565,7 @@ export const CloseRow = {
     );
     return (
       <div className={photo ? "close-row close-row--photo" : "close-row"}>
-        {photo ? <div className="close-photo" aria-hidden="true" style={{ backgroundImage: `url("${href(photo)}")` }} /> : null}
+        {photo ? <div className="close-photo" aria-hidden="true" style={photoStyle(href, photo)} /> : null}
         {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
         <Buttons items={p.buttons || []} />
       </div>
