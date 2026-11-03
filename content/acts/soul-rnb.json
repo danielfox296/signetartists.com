@@ -19,8 +19,8 @@
  ],
  "vocals": "sung",
  "from": "quartet",
- "img": "soul-band-card.jpg",
- "alt": "A black 45 with a rose label on a cream field, drawn flat, with the words soul and R&B band beside it.",
+ "img": "unsplash/photo-1786540601357-aba5b71f3da8.jpg",
+ "alt": "Close on a gold saxophone, the player's hands on its keys.",
  "video": null,
  "_note": "ADDED 2026-09-14 on Daniel's call: a sung soul and R&B listing beside the instrumental Funk Trio. Every Colorado variety band carries Motown and soul as a layer of its set; this is that layer sold as its own act. Spec'd, no names. Listing only: 'soul band for hire denver' returns no autocomplete, so no page.",
  "blurb": "Stevie Wonder, Aretha Franklin, Al Green, Bill Withers and the Motown songbook, sung out front with a horn on the big choruses. Book it as the dance floor act for a holiday party, or for the second half of a gala.",
@@ -30,5 +30,5 @@
   "private-parties"
  ],
  "_page_note": "PAGE 2026-09-23: 'soul band denver' and 'r&b bands denver' autocomplete now (they did not on 2026-09-14, which is why this stayed a card). Scaffolded with scripts/new_act_page.py --slug soul-band.",
- "_img_note": "2026-09-23: its own drawn tile from scripts/format_art.py, replacing the shared headliners.jpg."
+ "_img_note": "2026-11-03, Daniel: a close stock photo of a horn, replacing the drawn record tile."
 }
