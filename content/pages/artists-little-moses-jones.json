@@ -141,11 +141,6 @@
          "label": "Check a date",
          "href": "/contact/?act=little-moses-jones",
          "cls": "btn"
-        },
-        {
-         "label": "See pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -189,7 +184,19 @@
        "html": "Two singers work the front of Little Moses Jones, and behind them the bandleader plays keys and horns over guitar, bass and drums. The set runs straight through with no gap between the songs, so nobody leaves the floor to wait for the next one.",
        "cls": "prose"
       }
-     },
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in the act's file and mirrored here: the lineup and how the set runs, the song list and the clean show, the band's own credits, the size. Nothing restates the hero; no named-act promise paragraph (cut from every act page 2026-09-24 as a provenance leak); no ladder section follows because the band is one size.",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
      {
       "type": "Paragraph",
       "props": {
@@ -215,7 +222,7 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in the act's file and mirrored here: the lineup and how the set runs, the song list and the clean show, the band's own credits, the size. Nothing restates the hero; no named-act promise paragraph (cut from every act page 2026-09-24 as a provenance leak); no ladder section follows because the band is one size."
+    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
    }
   },
   {
@@ -229,7 +236,7 @@
       "props": {
        "id": "Heading-13",
        "eyebrow": "Occasions",
-       "title": "Who books Little Moses Jones.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -253,10 +260,10 @@
         },
         {
          "term": "<a href=\"/weddings/\">Wedding receptions</a>",
-         "text": "A reception where the couple wants the floor full from the first song, with the first dance learned on request. The band also plays the ceremony and the cocktail hour with a smaller lineup, so one band can take the whole day. Send us the date and we’ll price it."
+         "text": "A reception where the couple wants the dance floor full from the first song. The band can learn your first dance, and it also plays the ceremony and the cocktail hour with a smaller lineup, so one band can cover the whole day."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

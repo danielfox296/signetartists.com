@@ -60,11 +60,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=solo-guitarist",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -141,7 +136,7 @@
       "props": {
        "id": "Heading-11",
        "eyebrow": "Occasions",
-       "title": "Who books a solo guitarist.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -176,7 +171,7 @@
          "text": "An afternoon in a memory care neighborhood, played with no amplification at all."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

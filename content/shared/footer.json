@@ -1,18 +1,6 @@
 {
  "line": "Live entertainment for private events in the Denver area, including the Front Range, and the mountain corridor.",
- "links": [
-  {
-   "label": "Signet on LinkedIn",
-   "href": "https://www.linkedin.com/company/signetartists/",
-   "cls": "footer-social",
-   "rel": "me"
-  },
-  {
-   "label": "Check a Date",
-   "href": "/contact/",
-   "cls": "btn btn--sm footer-cta"
-  }
- ],
+ "links": [],
  "columns": [
   {
    "title": "Occasions",
@@ -91,12 +79,9 @@
  ],
  "meta": [
   {
-   "cls": "footer-meta",
-   "text": "All acts and configurations are subject to availability."
-  },
-  {
    "cls": "footer-meta footer-meta--copyright",
    "text": "© 2026 Signet Artists"
   }
- ]
+ ],
+ "_note": "2026-11-02, Daniel: one unified footer. The availability line, the LinkedIn link, the Check a Date button and the two inner rules are gone, and the header logo replaces the set company name."
 }

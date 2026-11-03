@@ -60,11 +60,6 @@
          "label": "Check a date",
          "href": "/contact/?act=firstwater",
          "cls": "btn"
-        },
-        {
-         "label": "See pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -114,7 +109,20 @@
        "html": "Firstwater is a sound bath led by one facilitator, and if you’ve been to one you already know how to arrive: lie down, get warm, and rest. The facilitator composes the music for each session, plays live instruments over it, and mixes the whole thing from the floor, lying where your people will lie. The facilitator treats the venue like a studio and tunes the sound system to it, so if you have a space, Firstwater can make it sound like a different one.",
        "cls": "prose"
       }
-     },
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Nobody is named: Daniel 2026-09-19, \"do not cite my name. no daniel, no\n     daniel fox. firstwater.\"",
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
      {
       "type": "Paragraph",
       "props": {
@@ -124,8 +132,7 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Nobody is named: Daniel 2026-09-19, \"do not cite my name. no daniel, no\n     daniel fox. firstwater.\"",
-    "_file": "02-identity.html"
+    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
    }
   },
   {
@@ -155,7 +162,7 @@
         },
         {
          "term": "<a href=\"/corporate/retreats/\">Offsites and retreats</a>",
-         "text": "Firstwater builds one or more sessions into the agenda with you, and uses them to close an evening or open a morning, which is where a sound bath does its best work. A team that has spent the day in meetings gets seventy-five minutes with nothing to do."
+         "text": "A sound bath is a great way to close an evening or open a morning. Firstwater builds one or more sessions into your agenda with you, so a team that has spent the day in meetings gets seventy-five minutes with nothing to do."
         },
         {
          "term": "Transition days",
@@ -163,10 +170,10 @@
         },
         {
          "term": "Wedding weekends and bachelorettes",
-         "text": "A private sound bath for the wedding party, the bachelorette, or the couple, at the house you rented, your venue, or a partner space in Denver. It goes into the weekend as the welcome evening, the morning of, or the day after for whoever stayed, and the <a href=\"/weddings/\">weddings page</a> covers the music for the rest of it."
+         "text": "A private sound bath for the wedding party, the bachelorette or the couple. It can be the welcome evening, the morning of, or the day after for whoever stayed, at the house you rented, your venue or a partner space in Denver. For the music through the rest of the weekend, take a look at our <a href=\"/weddings/\">weddings page</a>."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

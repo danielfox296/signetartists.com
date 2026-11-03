@@ -62,11 +62,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=acoustic-duo",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -193,7 +188,7 @@
       "props": {
        "id": "Heading-16",
        "eyebrow": "Occasions",
-       "title": "Who books an acoustic duo or trio.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -220,7 +215,7 @@
          "text": "A dinner where the conversation is the event, with the instrumental duo under it all night."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

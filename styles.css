@@ -26,20 +26,20 @@
   /* Grounds. The band is now LIFTED off the base rather than sunk into it,
      which is the way depth reads on a dark ground. 1.09:1 apart — a hair more
      separation than the light build's paper/sunk pair had at 1.06:1. */
-  --paper: #14130e;
-  --paper-sunk: #1e1c15;
-  --rule: #332f26;
+  --paper: #121212;
+  --paper-sunk: #1c1c1c;
+  --rule: #303030;
   /* Form-control boundaries. --rule reads 1.40:1 on the base — fine for
      hairline dividers, short of WCAG 1.4.11's 3:1 for a component whose
      border is its only visual indicator. This cut clears it on the base
      (3.86:1) and on the band (3.54:1), staying in the same warm-grey family. */
-  --rule-strong: #77725f;
-  --ink: #fbfaf7;
-  --ink-soft: #e4e1d8;
+  --rule-strong: #767676;
+  --ink: #fafafa;
+  --ink-soft: #e2e2e2;
   /* All three checked against BOTH grounds, not just the base — eyebrows and
      table headers sit on the lifted band. Worst case is --ink-faint on the
      band at 5.99:1, comfortably past AA at the 11px it gets used at. */
-  --ink-faint: #b9b5a8;
+  --ink-faint: #b5b5b5;
   /* Brass was two cuts, one per ground. On a dark site the lifted cut is the
      only one that works, so it is promoted to the default: 7.92:1 on the base
      and 7.26:1 on the band. The old light-ground brass (#84682d) reads 2.4:1
@@ -49,7 +49,7 @@
   --brass-bright: #dcbb7a;
   /* Alias, retained so the cover-wall and night rules that predate the
      inversion keep resolving. Same value as --ink-soft by design. */
-  --paper-dim: #e4e1d8;
+  --paper-dim: #e2e2e2;
 
   /* Archivo, ported from soundbathcalendar 2026-08-07 on Daniel's call: "i
      want the type choices from the sound bath site ported over." That replaces
@@ -228,14 +228,14 @@ img {
    .btn is unaffected here now — it is a light fill with dark type across the
    whole site since the inversion, so it reads on all three grounds. */
 .section--night {
-  background-color: #0a0906;
+  background-color: #090909;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
   color: var(--ink);
 }
 
 /* The cut into midnight is its own rule; a hairline there is noise. */
 .section--night.section--ruled {
-  border-top-color: #0a0906;
+  border-top-color: #090909;
 }
 
 .section--night .h1,
@@ -304,7 +304,7 @@ img {
 
 .section--night .eyebrow--slab {
   background: var(--brass-bright);
-  color: #0a0906;
+  color: #090909;
 }
 
 /* Every heading is condensed and heavy — soundbathcalendar's h1/h2/h3 rule,
@@ -312,7 +312,7 @@ img {
    tracking -0.005em. The variable font's two axes are what carry the voice
    here now, where the old build used two families. */
 .h1 {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-family: var(--display);
   font-weight: 800;
   font-stretch: 72%;
@@ -390,18 +390,18 @@ img {
 }
 
 .heading .h2 {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
 }
 
 .lede {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: 1.1rem;
   line-height: 1.65;
   color: var(--ink-soft);
 }
 
 .prose {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   max-width: 42rem;
   font-size: 1.1rem;
   line-height: 1.65;
@@ -419,7 +419,9 @@ img {
 .note a,
 .lede a,
 .spec-list a,
-.faq-row dd a {
+.faq-row dd a,
+.faq-a a,
+.def-list dd a {
   color: var(--ink);
   border-bottom: 1px solid var(--brass);
   padding-bottom: 1px;
@@ -429,7 +431,9 @@ img {
 .note a:hover,
 .lede a:hover,
 .spec-list a:hover,
-.faq-row dd a:hover {
+.faq-row dd a:hover,
+.faq-a a:hover,
+.def-list dd a:hover {
   color: var(--brass);
 }
 
@@ -441,7 +445,7 @@ img {
 }
 
 .note {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: 0.9625rem;
   color: var(--ink-faint);
 }
@@ -465,7 +469,7 @@ img {
 }
 
 .review-pull figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-size: 0.9625rem;
   color: var(--ink-faint);
 }
@@ -489,7 +493,7 @@ img {
 }
 
 .hero-lede {
-  margin-top: 1.25rem;
+  margin-top: 1.375rem;
   max-width: 36rem;
   font-size: 1.2375rem;
   line-height: 1.65;
@@ -502,13 +506,14 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   font-size: 0.9625rem;
   font-weight: 500;
   font-family: inherit;
   background: var(--ink);
   color: var(--paper);
   border: 1px solid var(--ink);
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -527,7 +532,7 @@ img {
 }
 
 .btn--outline {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.25);
   color: var(--ink);
   border-color: var(--rule);
 }
@@ -539,11 +544,11 @@ img {
 }
 
 .btn--sm {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .btn-row {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -556,7 +561,7 @@ img {
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--rule);
-  background: rgba(20, 19, 14, 0.95);
+  background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(8px);
 }
 
@@ -646,11 +651,15 @@ img {
   gap: 1rem;
 }
 
+/* Links rest at --ink-faint and go to --ink on hover and on the current page
+   (2026-11-02, Daniel: the rollover was too slight to read). From --ink-soft
+   the step was 1.5:1 and read as nothing; from --ink-faint it is 2.7:1, and
+   the resting links still read 6.5:1 on the header. */
 .nav-desktop a {
   font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: var(--track-caps);
-  color: var(--ink-soft);
+  color: var(--ink-faint);
   white-space: nowrap;
 }
 
@@ -739,13 +748,13 @@ img {
 /* A two-column split that follows a heading block needs the gap the
    def-list carries on its own (live band karaoke booking section, 2026-09-14). */
 .heading + .split {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
 }
 
 .card-grid {
   display: grid;
   gap: 1px;
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   border: 1px solid var(--rule);
   background: var(--rule);
 }
@@ -777,7 +786,7 @@ img {
 }
 
 .card-grid--2 .card p {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -798,21 +807,21 @@ img {
 }
 
 .card-grid--2 .card .vendor-where {
-  margin-top: 0.25rem;
-  font-size: 0.8938rem;
+  margin-top: 0.275rem;
+  font-size: 0.9625rem;
   color: var(--ink-faint);
 }
 
 .note--small {
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
 }
 
 .vendor-cat + .vendor-cat {
-  margin-top: 2.75rem;
+  margin-top: 3.025rem;
 }
 
 .vendor-cat .card-grid {
-  margin-top: 1.25rem;
+  margin-top: 1.375rem;
 }
 
 /* ------------------------------------------------------------- hero-cine */
@@ -897,7 +906,7 @@ img {
    everywhere else. */
 .hero-cine__copy .btn {
   background: #fff;
-  color: #0a0906;
+  color: #090909;
   border-color: #fff;
 }
 
@@ -905,7 +914,7 @@ img {
 .hero-cine__copy .btn:focus-visible {
   background: var(--brass-bright);
   border-color: var(--brass-bright);
-  color: #0a0906;
+  color: #090909;
 }
 
 @media (min-width: 1024px) {
@@ -942,7 +951,7 @@ img {
 /* ------------------------------------------------------------------ acts */
 
 .act-kind {
-  margin-top: 0.25rem;
+  margin-top: 0.275rem;
   font-size: 0.825rem;
   text-transform: uppercase;
   letter-spacing: var(--track-caps);
@@ -957,28 +966,28 @@ img {
 }
 
 .act-heading {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
 }
 
 .act-sizes {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 0.9625rem;
   color: var(--ink-faint);
 }
 
 .act-blurb {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
 }
 
 .tag-list {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   display: flex;
   flex-wrap: wrap;
   column-gap: 1.5rem;
-  row-gap: 0.5rem;
+  row-gap: 0.55rem;
   font-size: 0.9625rem;
   color: var(--ink-soft);
 }
@@ -998,7 +1007,7 @@ img {
 }
 
 .tag-label {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   font-size: 0.825rem;
   text-transform: uppercase;
   letter-spacing: var(--track-caps);
@@ -1011,7 +1020,7 @@ img {
    is capped independently of the wrap: a bio is read, not scanned. */
 
 .player-list {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   display: grid;
 }
 
@@ -1034,9 +1043,9 @@ img {
 /* ------------------------------------------------------------ spec lists */
 
 .spec-list {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   display: grid;
-  row-gap: 1rem;
+  row-gap: 1.1rem;
 }
 
 .spec-list li {
@@ -1048,7 +1057,7 @@ img {
 }
 
 .spec-list .dash {
-  margin-top: 0.7rem;
+  margin-top: 0.77rem;
   height: 1px;
   width: 1rem;
   flex-shrink: 0;
@@ -1058,7 +1067,7 @@ img {
 /* ------------------------------------------------------------- data lists */
 
 .def-list {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
@@ -1106,7 +1115,7 @@ img {
 }
 
 .faq-list {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
@@ -1144,11 +1153,11 @@ img {
    gradients that cover them at the ends of the travel. No JS, no listener:
    background-attachment does the work. */
 .table-scroll {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   overflow-x: auto;
   background:
-    linear-gradient(to right, var(--paper) 30%, rgba(20, 19, 14, 0)) left center,
-    linear-gradient(to left, var(--paper) 30%, rgba(20, 19, 14, 0)) right center,
+    linear-gradient(to right, var(--paper) 30%, rgba(18, 18, 18, 0)) left center,
+    linear-gradient(to left, var(--paper) 30%, rgba(18, 18, 18, 0)) right center,
     radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) left center,
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)) right center;
   background-size: 3rem 100%, 3rem 100%, 1.25rem 100%, 1.25rem 100%;
@@ -1160,8 +1169,8 @@ img {
    never fully clears at the ends of the travel. */
 .section--sunk .table-scroll {
   background-image:
-    linear-gradient(to right, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
-    linear-gradient(to left, var(--paper-sunk) 30%, rgba(30, 28, 21, 0)),
+    linear-gradient(to right, var(--paper-sunk) 30%, rgba(28, 28, 28, 0)),
+    linear-gradient(to left, var(--paper-sunk) 30%, rgba(28, 28, 28, 0)),
     radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)),
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
 }
@@ -1274,7 +1283,7 @@ img {
 }
 
 .figure-pair dd {
-  margin-top: 0.4rem;
+  margin-top: 0.44rem;
   font-family: var(--display);
   font-weight: 800;
   font-stretch: 72%;
@@ -1405,7 +1414,7 @@ img {
 .field input,
 .field select,
 .field textarea {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   width: 100%;
   padding: 0.625rem 0.75rem;
   border: 1px solid var(--rule-strong);
@@ -1437,11 +1446,11 @@ img {
 }
 
 .contact-details {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   border-top: 1px solid var(--rule);
   padding-top: 2rem;
   display: grid;
-  row-gap: 1.5rem;
+  row-gap: 1.65rem;
 }
 
 .contact-details dt {
@@ -1453,7 +1462,7 @@ img {
 }
 
 .contact-details dd {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -1474,7 +1483,7 @@ img {
    stacked list on the site uses. */
 .index-list {
   display: grid;
-  row-gap: 0.5rem;
+  row-gap: 0.55rem;
 }
 
 /* Multi-column rather than a two-track grid: a grid flows row-wise, so the
@@ -1489,7 +1498,7 @@ img {
 
   .index-list li {
     break-inside: avoid;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.55rem;
   }
 }
 
@@ -1515,7 +1524,7 @@ img {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.25rem 0.5rem;
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
   color: var(--ink-faint);
 }
 
@@ -1554,7 +1563,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem 1.25rem;
-  margin-top: 0.875rem;
+  margin-top: 0.9625rem;
   font-size: 0.9625rem;
   color: var(--ink-soft);
 }
@@ -1584,7 +1593,7 @@ img {
 }
 
 .hub-index-list {
-  margin-top: 0.875rem;
+  margin-top: 0.9625rem;
 }
 
 .hub-index-row {
@@ -1595,7 +1604,7 @@ img {
 }
 
 .hub-index-row dt {
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-faint);
 }
@@ -1652,7 +1661,7 @@ img {
 /* /video/, every clip by act (2026-10-03). Cards link to the watch pages and
    play nothing here: the frame, the clip's name, its length. */
 .clip-group {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 6.6rem;
 }
 
 .clip-group + .clip-group {
@@ -1669,7 +1678,7 @@ img {
   display: grid;
   gap: 1.75rem 1.25rem;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
 }
 
 .clip-card {
@@ -1718,11 +1727,11 @@ img {
 }
 
 .watch .watch-video {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
 }
 
 .watch .lede {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   max-width: 44rem;
 }
 
@@ -1778,8 +1787,7 @@ main:focus {
 
 .footer-band,
 .footer-base {
-  margin-top: 2.5rem;
-  border-top: 1px solid var(--rule);
+  margin-top: 2.75rem;
 }
 
 /* ---- band: brand and the way in */
@@ -1794,8 +1802,11 @@ main:focus {
   max-width: 24rem;
 }
 
+/* The line sits in the contact column above the address since 2026-11-02
+   (Daniel), so it takes the column's alignment: left on a phone, right from
+   768px. */
 .footer-line {
-  margin-top: 0.5rem;
+  max-width: 24rem;
   font-size: 0.9625rem;
   line-height: 1.5;
   color: var(--ink-faint);
@@ -1808,10 +1819,11 @@ main:focus {
   gap: 0.625rem;
 }
 
-/* The address is the one thing in the footer a buyer might act on, so it is
-   the one thing set above body size. */
+/* The address is the one thing in the footer a buyer might act on. It was set
+   above body size until 2026-11-02, when Daniel asked for it smaller; it now
+   matches the line above it and keeps its full ink and underline. */
 .footer-email {
-  font-size: 1.2375rem;
+  font-size: 0.9625rem;
   color: var(--ink);
   border-bottom: 1px solid var(--rule-strong);
   padding-bottom: 2px;
@@ -1831,7 +1843,7 @@ main:focus {
 }
 
 .footer-cta {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
 }
 
 /* ---- band: the link columns */
@@ -1844,12 +1856,12 @@ main:focus {
 }
 
 .footer-band .eyebrow {
-  margin-bottom: 0.875rem;
+  margin-bottom: 0.9625rem;
 }
 
 .footer-list {
   display: grid;
-  row-gap: 0.5rem;
+  row-gap: 0.55rem;
   font-size: 0.9625rem;
   line-height: 1.45;
   color: var(--ink-soft);
@@ -1876,7 +1888,7 @@ main:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
   color: var(--ink-soft);
 }
 
@@ -1895,7 +1907,7 @@ main:focus {
 /* The availability disclaimer sits first; the copyright follows it without a
    rule between them (2026-09-19). */
 .footer-meta--copyright {
-  margin-top: 0.375rem;
+  margin-top: 0.4125rem;
 }
 
 /* ----------------------------------------------------------- breakpoints */
@@ -1969,16 +1981,6 @@ main:focus {
     gap: 3rem;
   }
 
-  .faq-row {
-    grid-template-columns: 1fr 1.5fr;
-    gap: 2.5rem;
-  }
-
-  .def-list--stack .def-row {
-    grid-template-columns: 1fr 1.6fr;
-    gap: 2.5rem;
-  }
-
   .footer-head,
   .footer-base {
     flex-direction: row;
@@ -1996,9 +1998,6 @@ main:focus {
     text-align: right;
   }
 
-  .close-row {
-    padding: 3rem 0;
-  }
 }
 
 /* The desktop nav row: seven links plus the Check a Date button. It used to
@@ -2071,7 +2070,7 @@ main:focus {
 }
 
 .blog-byline {
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -2093,7 +2092,7 @@ main:focus {
 .blog-figure figcaption,
 .blog-data-viz figcaption,
 .blog-video-caption {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-size: 0.825rem;
   line-height: 1.6;
   color: var(--ink-faint);
@@ -2108,7 +2107,7 @@ main:focus {
 /* ----- body flow */
 
 .blog-prose {
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
   font-size: 1.1rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -2119,7 +2118,7 @@ main:focus {
 }
 
 .blog-prose p {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 
 .blog-prose strong {
@@ -2147,7 +2146,7 @@ main:focus {
 
 .blog-prose ul,
 .blog-prose ol {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   padding-left: 1.25rem;
 }
 
@@ -2160,7 +2159,7 @@ main:focus {
 }
 
 .blog-prose li {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
 }
 
 .blog-prose li::marker {
@@ -2186,7 +2185,7 @@ main:focus {
   background: var(--paper-sunk);
   border: 1px solid var(--rule);
   overflow-x: auto;
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
   line-height: 1.6;
 }
 
@@ -2250,7 +2249,7 @@ main:focus {
 }
 
 .blog-pullquote figcaption {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 0.825rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -2275,14 +2274,14 @@ main:focus {
 }
 
 .blog-stat-label {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink);
 }
 
 .blog-stat-source {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 0.825rem;
   color: var(--ink-faint);
 }
@@ -2307,14 +2306,14 @@ main:focus {
 }
 
 .blog-aside-body {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
 }
 
 .blog-aside-body p {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
 }
 
 .blog-aside-body > :first-child {
@@ -2322,9 +2321,9 @@ main:focus {
 }
 
 .blog-takeaways ul {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   display: grid;
-  row-gap: 0.75rem;
+  row-gap: 0.825rem;
 }
 
 .blog-takeaways li {
@@ -2337,7 +2336,7 @@ main:focus {
 
 .blog-takeaways li::before {
   content: "";
-  margin-top: 0.7rem;
+  margin-top: 0.77rem;
   height: 1px;
   width: 1rem;
   flex-shrink: 0;
@@ -2382,7 +2381,7 @@ main:focus {
 }
 
 .blog-comparison-table .table-scroll {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
 }
 
 .blog-comparison-table table {
@@ -2436,18 +2435,18 @@ main:focus {
 }
 
 .blog-methodology dl {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
 }
 
 .blog-methodology dt {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: 0.9625rem;
   font-weight: 500;
   color: var(--ink);
 }
 
 .blog-methodology dd {
-  margin-top: 0.25rem;
+  margin-top: 0.275rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -2456,13 +2455,13 @@ main:focus {
 /* ----- references, transcript, video */
 
 .blog-references-list {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   padding-left: 1.25rem;
   list-style: decimal;
 }
 
 .blog-references-list li {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -2474,9 +2473,9 @@ main:focus {
 }
 
 .blog-transcript-toc {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   display: grid;
-  row-gap: 0.5rem;
+  row-gap: 0.55rem;
   font-size: 0.9625rem;
   color: var(--ink-soft);
 }
@@ -2497,7 +2496,7 @@ main:focus {
 }
 
 .blog-transcript p {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 1.0312rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -2544,14 +2543,14 @@ main:focus {
 }
 
 .blog-cta-body {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
 }
 
 .blog-cta-body p {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
 }
 
 .blog-cta-body > :first-child {
@@ -2559,7 +2558,7 @@ main:focus {
 }
 
 .blog-cta-btn {
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
 }
 
 /* ----- related posts */
@@ -2571,7 +2570,7 @@ main:focus {
 .blog-related-grid {
   display: grid;
   gap: 1px;
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
   border: 1px solid var(--rule);
   background: var(--rule);
 }
@@ -2582,7 +2581,7 @@ main:focus {
 }
 
 .blog-related-card .media {
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 
 .blog-related-card .eyebrow {
@@ -2591,7 +2590,7 @@ main:focus {
 
 .blog-related-card-title {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-family: var(--display);
   font-size: 1.25rem;
   line-height: 1.3;
@@ -2604,7 +2603,7 @@ main:focus {
 
 .blog-related-dek {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-size: 0.9625rem;
   line-height: 1.65;
   color: var(--ink-soft);
@@ -2613,7 +2612,7 @@ main:focus {
 /* ----- blog index rows */
 
 .blog-list {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   border-top: 1px solid var(--rule);
 }
 
@@ -2684,7 +2683,7 @@ main:focus {
 }
 
 .blog-row-title {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   font-family: var(--display);
   font-weight: 400;
   font-size: 1.5rem;
@@ -2697,7 +2696,7 @@ main:focus {
 }
 
 .blog-row-dek {
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   max-width: 42rem;
   font-size: 0.9625rem;
   line-height: 1.65;
@@ -2791,7 +2790,7 @@ main:focus {
 
 .wall-text .prose {
   max-width: 26rem;
-  font-size: 0.99rem;
+  font-size: 0.9625rem;
   line-height: 1.6;
 }
 
@@ -2815,7 +2814,7 @@ main:focus {
   position: absolute;
   inset: auto 0 0 0;
   padding: 2.2rem 0.8rem 0.7rem;
-  background: linear-gradient(0deg, rgba(22, 21, 15, 0.94) 40%, rgba(22, 21, 15, 0));
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.94) 40%, rgba(20, 20, 20, 0));
   opacity: 0;
   transition: opacity 0.25s;
   line-height: 1.4;
@@ -2832,7 +2831,7 @@ main:focus {
 .wall-song {
   display: block;
   font-family: var(--sans);
-  font-size: 0.902rem;
+  font-size: 0.9625rem;
   font-weight: 600;
   color: var(--ink);
 }
@@ -2845,7 +2844,7 @@ main:focus {
 
 .wall-notes {
   color: var(--paper-dim);
-  font-size: 0.902rem;
+  font-size: 0.9625rem;
   margin-top: var(--space-4);
 }
 
@@ -2900,7 +2899,7 @@ main:focus {
   max-width: 26rem;
   padding: 0.6rem 0.8rem;
   font: inherit;
-  font-size: 0.99rem;
+  font-size: 0.9625rem;
   color: var(--ink);
   background: var(--paper);
   border: 1px solid var(--rule-strong);
@@ -2916,7 +2915,7 @@ main:focus {
 .chip {
   padding: 0.35rem 0.75rem;
   font: inherit;
-  font-size: 0.858rem;
+  font-size: 0.9625rem;
   color: var(--ink-soft);
   background: transparent;
   border: 1px solid var(--rule-strong);
@@ -2964,12 +2963,12 @@ main:focus {
 }
 
 .catalog-song {
-  font-size: 0.99rem;
+  font-size: 0.9625rem;
   color: var(--ink);
 }
 
 .catalog-artist {
-  font-size: 0.88rem;
+  font-size: 0.9625rem;
   color: var(--ink-faint);
   text-align: right;
   flex-shrink: 0;
@@ -2995,8 +2994,8 @@ main:focus {
    the name rather than in the blurb. Faint, because it is attribution and
    not a headline. */
 .act-face {
-  margin-top: 0.5rem;
-  font-size: 0.8938rem;
+  margin-top: 0.55rem;
+  font-size: 0.9625rem;
   color: var(--ink-faint);
 }
 
@@ -3004,7 +3003,7 @@ main:focus {
    a photograph and a price in brass, and a third filled element would fight
    both. Doubles as the visible legend for the filter above. */
 .pill-row {
-  margin-top: 0.75rem;
+  margin-top: 0.825rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
@@ -3082,10 +3081,10 @@ main:focus {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 1rem;
-  row-gap: 0.25rem;
+  row-gap: 0.275rem;
   align-items: baseline;
   border-top: 1px solid var(--rule);
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
 }
 
 .act-facts dt {
@@ -3105,9 +3104,9 @@ main:focus {
 }
 
 .act-card-link {
-  margin-top: 1.25rem;
+  margin-top: 1.375rem;
   align-self: flex-start;
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
   font-weight: 500;
   color: var(--ink);
   border-bottom: 1px solid var(--brass);
@@ -3124,7 +3123,7 @@ main:focus {
    appear and every act is on the page, which is the only honest default:
    a filter that cannot filter must not be offered. */
 .roster-filters {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -3161,13 +3160,13 @@ main:focus {
    so it has to reach a screen reader as well as the eye. */
 .filter-count {
   flex: 0 0 auto;
-  font-size: 0.8938rem;
+  font-size: 0.9625rem;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
 }
 
 .filter-empty {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   font-size: 0.9625rem;
   color: var(--ink-soft);
 }
@@ -3182,7 +3181,7 @@ main:focus {
    named acts keep the full card underneath. A lane with nothing visible in
    it after a filter hides, heading and all. */
 .roster-lane {
-  margin-top: 3rem;
+  margin-top: 3.3rem;
 }
 
 .roster-lane .heading {
@@ -3190,7 +3189,7 @@ main:focus {
 }
 
 .roster-lane .card-grid {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
 }
 
 .roster-lane[hidden] {
@@ -3211,7 +3210,7 @@ main:focus {
 }
 
 .act-card--compact .act-card-link {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 
 /* --------------------------------------------------------- the act pages */
@@ -3221,20 +3220,20 @@ main:focus {
 }
 
 .act-from {
-  margin-top: 1.25rem;
+  margin-top: 1.375rem;
   font-size: 1.1rem;
   color: var(--ink-soft);
 }
 
 .act-hero .btn {
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
 }
 
 /* The media slot. It carries the act's footage, or the act's still until
    footage exists. It never renders as a labelled placeholder: nothing on a
    published page says that something is missing (2026-09-29). */
 .act-video {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   position: relative;
   aspect-ratio: 16 / 9;
   border: 1px solid var(--rule);
@@ -3301,7 +3300,7 @@ main:focus {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  margin-top: 2rem;
+  margin-top: 2.2rem;
 }
 
 .video-grid .act-video {
@@ -3316,7 +3315,7 @@ main:focus {
   display: grid;
   gap: 2px;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   border: 1px solid var(--rule);
   background: var(--rule);
 }
@@ -3356,7 +3355,7 @@ main:focus {
    fifth column would push the two price columns off a phone. */
 .rate-note {
   display: block;
-  margin-top: 0.25rem;
+  margin-top: 0.275rem;
   font-size: 0.825rem;
   font-weight: 400;
   text-transform: none;
@@ -3391,7 +3390,7 @@ main:focus {
 /* ---------------------------------------------------------- the set list */
 
 .setlist {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   list-style: none;
   display: grid;
   gap: 0.5rem;
@@ -3425,10 +3424,10 @@ main:focus {
 }
 
 /* Prose measure, independent of --wrap. Identity copy and the close are read
-   rather than scanned, and 64rem is too wide to read at. */
+   rather than scanned, and 64rem is too wide to read at. It sat against the
+   right edge until 2026-11-02, when Daniel had every module centred. */
 .wrap--narrow {
   max-width: 42rem;
-  margin-right: 0;
 }
 
 .wrap--narrow .prose + .prose {
@@ -3436,7 +3435,7 @@ main:focus {
 }
 
 .act-cta .btn {
-  margin-top: 1.75rem;
+  margin-top: 1.925rem;
 }
 
 @media (min-width: 640px) {
@@ -3462,7 +3461,7 @@ main:focus {
    spends most of its area on Mondays nobody is asking about. */
 
 .season-board {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
@@ -3579,15 +3578,15 @@ main:focus {
 }
 .why-signet .def-list--stack .def-row {
   grid-template-columns: 1fr;
-  row-gap: 0.4rem;
+  row-gap: 0.44rem;
   align-items: start;
   padding: 1.75rem 0;
 }
-.why-signet .def-row::before {
+.why-signet .def-list--stack .def-row::before {
   content: "";
   width: 3.25rem;
   height: 3.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
   background-color: var(--brass);
   -webkit-mask-position: center;
   mask-position: center;
@@ -3609,7 +3608,7 @@ main:focus {
     grid-template-rows: auto 1fr;
     column-gap: 2.25rem;
   }
-  .why-signet .def-row::before {
+  .why-signet .def-list--stack .def-row::before {
     grid-column: 1;
     grid-row: 1 / span 2;
     width: 5.5rem;
@@ -3638,9 +3637,14 @@ main:focus {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 0;
 }
-.close-row > div {
+/* The section around the closing call takes the smaller of the two section
+   paddings at every width (Daniel, 2026-11-02: too much room above the picture
+   and below the button). */
+.section:has(> .wrap > .close-row) {
+  padding: var(--space-4) 0;
+}
+.close-row > div:not(.close-photo) {
   width: 100%;
   margin-inline: auto;
   display: flex;
@@ -3663,5 +3667,439 @@ main:focus {
 }
 .close-row .btn-row {
   justify-content: center;
-  margin-top: 2.25rem;
+  margin-top: 2.475rem;
+}
+
+/* The full-bleed photo behind the closing call (Daniel picked it 2026-11-02
+   from three mockups). The photo covers the whole section edge to edge, in
+   black and white like the home hero, under a flat dark wash; the words and
+   button sit over it at display size. The photo is absolutely placed against
+   the section, so nothing between them may be positioned. */
+.section:has(.close-row--photo) {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 2.5rem + 6vw, 7.5rem) 0;
+}
+.section:has(.close-row--photo)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(18, 18, 18, 0.64);
+}
+.close-row--photo > :not(.close-photo) {
+  position: relative;
+  z-index: 2;
+}
+.close-row--photo .close-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: 50% 28%;
+  background-repeat: no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+/* The block's own width box (32rem, set per page) is for the plain close;
+   over a photo the headline needs the room to stay at three lines or fewer. */
+.close-row--photo > div[style]:not(.close-photo) {
+  max-width: 54rem !important;
+}
+.close-row--photo .h2 {
+  font-size: clamp(1.75rem, 1rem + 3.4vw, 4.25rem);
+  line-height: 0.95;
+  max-width: 20ch;
+}
+.close-row--photo .lede {
+  color: var(--ink);
+}
+
+/* The page hero (2026-11-02): a page's h1 heading over a full-bleed photo,
+   matching the closing call so the top of a page carries as much as its foot.
+   The photo layer spans the viewport from inside the column (the section
+   clips the overhang), in black and white under the same wash. The section's
+   own top padding moves inside the hero. */
+.section--top:has(.hero-photo) {
+  padding-top: 0;
+  overflow-x: clip;
+}
+.section--top:has(> .wrap > .hero-photo:last-child) {
+  padding-bottom: 0;
+}
+.hero-photo {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(3.5rem, 1.5rem + 7vw, 8rem) 0 clamp(3rem, 1.5rem + 5vw, 6.5rem);
+}
+.hero-photo + * {
+  margin-top: var(--space-4);
+}
+.hero-photo__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-size: cover;
+  background-position: 50% 28%;
+  background-repeat: no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+.hero-photo__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.72);
+}
+.hero-photo .lede,
+.hero-photo .prose,
+.hero-photo .act-face,
+.hero-photo .note {
+  color: var(--ink);
+}
+
+/* ------------------------------------------------------------ the lists
+   One system for every list on the site (2026-11-02, Daniel: "the spacing is
+   inconsistent. the justification is inconsistent and it reads as a wall of
+   text"). Rows are one column at a reading width, each with a brass marker in
+   a fixed left column: the row's number when its label has an ordinal, else a
+   line drawing picked from the label's words (blocks.jsx rowMark). The label
+   is the row's heading, and the first sentence of the text is in the brighter
+   ink. Cards are the same parts in a two-up grid, for short lists of choices.
+   Questions open on a click. */
+.def-list--stack,
+.faq-list {
+  max-width: 46rem;
+}
+.def-list--stack .def-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0.385rem;
+  align-items: start;
+  padding: 1.65rem 0;
+}
+.def-list--stack .def-row::before,
+.def-list--cards .def-row::before {
+  content: "";
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--brass);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.def-list--stack .def-row::before {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.55rem;
+}
+.def-list--stack .def-row[data-num]::before,
+.def-list--cards .def-row[data-num]::before {
+  content: attr(data-num);
+  background: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  color: var(--brass);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.def-list--stack dt,
+.def-list--cards dt {
+  font-size: 1.2375rem;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink);
+}
+.def-list--stack dd,
+.def-list--cards dd {
+  font-size: 1.0588rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.def-list dd .lead {
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .def-list--stack .def-row {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 1.75rem;
+  }
+  .def-list--stack .def-row::before {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin-bottom: 0;
+  }
+  .def-list--stack dt,
+  .def-list--stack dd {
+    grid-column: 2;
+  }
+}
+
+.def-list--cards {
+  display: grid;
+  gap: 1rem;
+  border: 0;
+}
+.def-list--cards .def-row {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+.def-list--cards .def-row:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.def-list--cards .def-row::before {
+  margin-bottom: 0.55rem;
+}
+@media (min-width: 768px) {
+  .def-list--cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq-row {
+  display: block;
+  padding: 0;
+}
+.faq-row summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.485rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-row summary::-webkit-details-marker {
+  display: none;
+}
+.faq-q {
+  font-family: var(--display);
+  font-size: 1.2375rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.faq-row summary:hover .faq-q {
+  color: var(--brass-bright);
+}
+.faq-toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.385rem;
+}
+.faq-toggle::before,
+.faq-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1.5px;
+  background: var(--brass);
+  transition: transform 0.2s ease;
+}
+.faq-toggle::after {
+  transform: rotate(90deg);
+}
+.faq-row[open] .faq-toggle::after {
+  transform: rotate(0deg);
+}
+.faq-a {
+  padding: 0 2.6rem 1.5rem 0;
+  font-size: 1.0588rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.def-row[data-art="musicians"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='14' cy='25' r='5'/%3E%3Cpath d='M5 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Ccircle cx='32' cy='19' r='6'/%3E%3Cpath d='M21 47c0-9 5-14.5 11-14.5S43 38 43 47'/%3E%3Ccircle cx='50' cy='25' r='5'/%3E%3Cpath d='M41 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Cpath d='M4 53h56'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='14' cy='25' r='5'/%3E%3Cpath d='M5 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Ccircle cx='32' cy='19' r='6'/%3E%3Cpath d='M21 47c0-9 5-14.5 11-14.5S43 38 43 47'/%3E%3Ccircle cx='50' cy='25' r='5'/%3E%3Cpath d='M41 47c0-7 4-11.5 9-11.5s9 4.5 9 11.5'/%3E%3Cpath d='M4 53h56'/%3E%3C/svg%3E"); }
+.def-row[data-art="speaker"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='10' width='24' height='44' rx='3'/%3E%3Ccircle cx='22' cy='21' r='4'/%3E%3Ccircle cx='22' cy='40' r='8.5'/%3E%3Ccircle cx='22' cy='40' r='3'/%3E%3Cpath d='M40 34a6 6 0 0 1 0 12'/%3E%3Cpath d='M44.5 28a14 14 0 0 1 0 24'/%3E%3Cpath d='M49 22a22 22 0 0 1 0 36'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='10' width='24' height='44' rx='3'/%3E%3Ccircle cx='22' cy='21' r='4'/%3E%3Ccircle cx='22' cy='40' r='8.5'/%3E%3Ccircle cx='22' cy='40' r='3'/%3E%3Cpath d='M40 34a6 6 0 0 1 0 12'/%3E%3Cpath d='M44.5 28a14 14 0 0 1 0 24'/%3E%3Cpath d='M49 22a22 22 0 0 1 0 36'/%3E%3C/svg%3E"); }
+.def-row[data-art="notes"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='20' cy='47' rx='6.5' ry='4.5' transform='rotate(-20 20 47)'/%3E%3Cellipse cx='44' cy='42' rx='6.5' ry='4.5' transform='rotate(-20 44 42)'/%3E%3Cpath d='M26 45V15l24-5v30'/%3E%3Cpath d='M26 22l24-5'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='20' cy='47' rx='6.5' ry='4.5' transform='rotate(-20 20 47)'/%3E%3Cellipse cx='44' cy='42' rx='6.5' ry='4.5' transform='rotate(-20 44 42)'/%3E%3Cpath d='M26 45V15l24-5v30'/%3E%3Cpath d='M26 22l24-5'/%3E%3C/svg%3E"); }
+.def-row[data-art="list"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='13' y='7' width='38' height='50' rx='3'/%3E%3Cpath d='M20 19l2.5 2.5L27 17'/%3E%3Cpath d='M31 19h13'/%3E%3Cpath d='M20 30l2.5 2.5L27 28'/%3E%3Cpath d='M31 30h13'/%3E%3Cpath d='M20 41l2.5 2.5L27 39'/%3E%3Cpath d='M31 41h9'/%3E%3Cpath d='M31 50h11'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='13' y='7' width='38' height='50' rx='3'/%3E%3Cpath d='M20 19l2.5 2.5L27 17'/%3E%3Cpath d='M31 19h13'/%3E%3Cpath d='M20 30l2.5 2.5L27 28'/%3E%3Cpath d='M31 30h13'/%3E%3Cpath d='M20 41l2.5 2.5L27 39'/%3E%3Cpath d='M31 41h9'/%3E%3Cpath d='M31 50h11'/%3E%3C/svg%3E"); }
+.def-row[data-art="bowtie"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 8l10 9 10-9'/%3E%3Cpath d='M22 8l-9 10v38h38V18L42 8'/%3E%3Cpath d='M32 17v39'/%3E%3Cpath d='M29 24l-10-5v12z'/%3E%3Cpath d='M35 24l10-5v12z'/%3E%3Crect x='29' y='21.5' width='6' height='6' rx='1'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 8l10 9 10-9'/%3E%3Cpath d='M22 8l-9 10v38h38V18L42 8'/%3E%3Cpath d='M32 17v39'/%3E%3Cpath d='M29 24l-10-5v12z'/%3E%3Cpath d='M35 24l10-5v12z'/%3E%3Crect x='29' y='21.5' width='6' height='6' rx='1'/%3E%3C/svg%3E"); }
+.def-row[data-art="cake"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 54h40'/%3E%3Crect x='15' y='38' width='34' height='16' rx='2'/%3E%3Crect x='20' y='27' width='24' height='11' rx='2'/%3E%3Cpath d='M15 45c4 3 8 3 12 0s8-3 12 0 7 3 10 0'/%3E%3Cpath d='M26 27v-6M32 27v-8M38 27v-6'/%3E%3Cpath d='M26 16c-1.5 1.5-1.5 3 0 4M32 13c-1.5 1.5-1.5 3 0 4M38 16c-1.5 1.5-1.5 3 0 4'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 54h40'/%3E%3Crect x='15' y='38' width='34' height='16' rx='2'/%3E%3Crect x='20' y='27' width='24' height='11' rx='2'/%3E%3Cpath d='M15 45c4 3 8 3 12 0s8-3 12 0 7 3 10 0'/%3E%3Cpath d='M26 27v-6M32 27v-8M38 27v-6'/%3E%3Cpath d='M26 16c-1.5 1.5-1.5 3 0 4M32 13c-1.5 1.5-1.5 3 0 4M38 16c-1.5 1.5-1.5 3 0 4'/%3E%3C/svg%3E"); }
+.def-row[data-art="glass"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 9h24l-2 15a10 10 0 0 1-20 0z'/%3E%3Cpath d='M21 17h22'/%3E%3Cpath d='M32 34v18'/%3E%3Cpath d='M22 54h20'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 9h24l-2 15a10 10 0 0 1-20 0z'/%3E%3Cpath d='M21 17h22'/%3E%3Cpath d='M32 34v18'/%3E%3Cpath d='M22 54h20'/%3E%3C/svg%3E"); }
+.def-row[data-art="rings"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='25' cy='38' r='13'/%3E%3Ccircle cx='39' cy='38' r='13'/%3E%3Cpath d='M36 18l3-6 3 6-3 4z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='25' cy='38' r='13'/%3E%3Ccircle cx='39' cy='38' r='13'/%3E%3Cpath d='M36 18l3-6 3 6-3 4z'/%3E%3C/svg%3E"); }
+.def-row[data-art="microphone"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='24' y='8' width='16' height='26' rx='8'/%3E%3Cpath d='M18 28a14 14 0 0 0 28 0'/%3E%3Cpath d='M32 42v12'/%3E%3Cpath d='M24 54h16'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='24' y='8' width='16' height='26' rx='8'/%3E%3Cpath d='M18 28a14 14 0 0 0 28 0'/%3E%3Cpath d='M32 42v12'/%3E%3Cpath d='M24 54h16'/%3E%3C/svg%3E"); }
+.def-row[data-art="mountain"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 52l19-27 10 13 8-10 17 24z'/%3E%3Cpath d='M19 32l5 3 4-3'/%3E%3Ccircle cx='47' cy='14' r='4'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 52l19-27 10 13 8-10 17 24z'/%3E%3Cpath d='M19 32l5 3 4-3'/%3E%3Ccircle cx='47' cy='14' r='4'/%3E%3C/svg%3E"); }
+.def-row[data-art="building"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='14' y='10' width='24' height='44'/%3E%3Cpath d='M38 24h12v30H38'/%3E%3Cpath d='M20 18h4M28 18h4M20 26h4M28 26h4M20 34h4M28 34h4M20 42h4M28 42h4M43 32h3M43 40h3'/%3E%3Cpath d='M8 54h48'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='14' y='10' width='24' height='44'/%3E%3Cpath d='M38 24h12v30H38'/%3E%3Cpath d='M20 18h4M28 18h4M20 26h4M28 26h4M20 34h4M28 34h4M20 42h4M28 42h4M43 32h3M43 40h3'/%3E%3Cpath d='M8 54h48'/%3E%3C/svg%3E"); }
+.def-row[data-art="plate"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='34' r='14'/%3E%3Ccircle cx='32' cy='34' r='8'/%3E%3Cpath d='M10 14v12a3 3 0 0 0 6 0V14M13 26v28'/%3E%3Cpath d='M52 14c-4 2-5 8-5 14h5v26'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='34' r='14'/%3E%3Ccircle cx='32' cy='34' r='8'/%3E%3Cpath d='M10 14v12a3 3 0 0 0 6 0V14M13 26v28'/%3E%3Cpath d='M52 14c-4 2-5 8-5 14h5v26'/%3E%3C/svg%3E"); }
+.def-row[data-art="sun"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='10'/%3E%3Cpath d='M32 8v6M32 50v6M8 32h6M50 32h6M15 15l4 4M45 45l4 4M15 49l4-4M45 19l4-4'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='10'/%3E%3Cpath d='M32 8v6M32 50v6M8 32h6M50 32h6M15 15l4 4M45 45l4 4M15 49l4-4M45 19l4-4'/%3E%3C/svg%3E"); }
+.def-row[data-art="tree"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 56V30'/%3E%3Cpath d='M32 42l-8-6M32 36l7-6'/%3E%3Ccircle cx='32' cy='22' r='14'/%3E%3Cpath d='M18 56h28'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 56V30'/%3E%3Cpath d='M32 42l-8-6M32 36l7-6'/%3E%3Ccircle cx='32' cy='22' r='14'/%3E%3Cpath d='M18 56h28'/%3E%3C/svg%3E"); }
+.def-row[data-art="candle"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='26' y='26' width='12' height='28' rx='1'/%3E%3Cpath d='M32 26v-5'/%3E%3Cpath d='M32 8c-4 5-4 9 0 12 4-3 4-7 0-12z'/%3E%3Cpath d='M20 54h24'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='26' y='26' width='12' height='28' rx='1'/%3E%3Cpath d='M32 26v-5'/%3E%3Cpath d='M32 8c-4 5-4 9 0 12 4-3 4-7 0-12z'/%3E%3Cpath d='M20 54h24'/%3E%3C/svg%3E"); }
+.def-row[data-art="cap"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 26l26-12 26 12-26 12z'/%3E%3Cpath d='M18 32v10c0 4 6 8 14 8s14-4 14-8V32'/%3E%3Cpath d='M52 28v14'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 26l26-12 26 12-26 12z'/%3E%3Cpath d='M18 32v10c0 4 6 8 14 8s14-4 14-8V32'/%3E%3Cpath d='M52 28v14'/%3E%3C/svg%3E"); }
+.def-row[data-art="heart"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 52S12 40 12 25a10 10 0 0 1 20-3 10 10 0 0 1 20 3c0 15-20 27-20 27z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 52S12 40 12 25a10 10 0 0 1 20-3 10 10 0 0 1 20 3c0 15-20 27-20 27z'/%3E%3C/svg%3E"); }
+.def-row[data-art="gift"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='12' y='26' width='40' height='28' rx='2'/%3E%3Cpath d='M8 18h48v8H8z'/%3E%3Cpath d='M32 18v36'/%3E%3Cpath d='M32 18c-4-8-14-8-12-2 1 3 7 2 12 2zM32 18c4-8 14-8 12-2-1 3-7 2-12 2z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='12' y='26' width='40' height='28' rx='2'/%3E%3Cpath d='M8 18h48v8H8z'/%3E%3Cpath d='M32 18v36'/%3E%3Cpath d='M32 18c-4-8-14-8-12-2 1 3 7 2 12 2zM32 18c4-8 14-8 12-2-1 3-7 2-12 2z'/%3E%3C/svg%3E"); }
+.def-row[data-art="clock"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='22'/%3E%3Cpath d='M32 18v14l9 6'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='22'/%3E%3Cpath d='M32 18v14l9 6'/%3E%3C/svg%3E"); }
+.def-row[data-art="moon"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z'/%3E%3C/svg%3E"); }
+.def-row[data-art="headphones"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 40v-6a20 20 0 0 1 40 0v6'/%3E%3Crect x='10' y='38' width='10' height='16' rx='3'/%3E%3Crect x='44' y='38' width='10' height='16' rx='3'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 40v-6a20 20 0 0 1 40 0v6'/%3E%3Crect x='10' y='38' width='10' height='16' rx='3'/%3E%3Crect x='44' y='38' width='10' height='16' rx='3'/%3E%3C/svg%3E"); }
+.def-row[data-art="guitar"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='22' cy='44' r='11'/%3E%3Ccircle cx='31' cy='35' r='7'/%3E%3Ccircle cx='24' cy='42' r='3'/%3E%3Cpath d='M35 31l15-15'/%3E%3Cpath d='M47 11l6 6-4 4-6-6z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='22' cy='44' r='11'/%3E%3Ccircle cx='31' cy='35' r='7'/%3E%3Ccircle cx='24' cy='42' r='3'/%3E%3Cpath d='M35 31l15-15'/%3E%3Cpath d='M47 11l6 6-4 4-6-6z'/%3E%3C/svg%3E"); }
+.def-row[data-art="pin"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 56s-16-16-16-28a16 16 0 0 1 32 0c0 12-16 28-16 28z'/%3E%3Ccircle cx='32' cy='28' r='6'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 56s-16-16-16-28a16 16 0 0 1 32 0c0 12-16 28-16 28z'/%3E%3Ccircle cx='32' cy='28' r='6'/%3E%3C/svg%3E"); }
+.def-row[data-art="tag"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 32V12h20l24 24-20 20z'/%3E%3Ccircle cx='20' cy='22' r='3'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 32V12h20l24 24-20 20z'/%3E%3Ccircle cx='20' cy='22' r='3'/%3E%3C/svg%3E"); }
+.def-row[data-art="car"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 42v-8l6-12h32l6 12v8z'/%3E%3Ccircle cx='20' cy='44' r='5'/%3E%3Ccircle cx='44' cy='44' r='5'/%3E%3Cpath d='M16 32h32'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 42v-8l6-12h32l6 12v8z'/%3E%3Ccircle cx='20' cy='44' r='5'/%3E%3Ccircle cx='44' cy='44' r='5'/%3E%3Cpath d='M16 32h32'/%3E%3C/svg%3E"); }
+.def-row[data-art="house"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 30L32 12l22 18'/%3E%3Cpath d='M16 26v28h32V26'/%3E%3Cpath d='M27 54V40h10v14'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 30L32 12l22 18'/%3E%3Cpath d='M16 26v28h32V26'/%3E%3Cpath d='M27 54V40h10v14'/%3E%3C/svg%3E"); }
+.def-row[data-art="calendar"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='14' width='44' height='40' rx='3'/%3E%3Cpath d='M10 24h44M22 8v10M42 8v10'/%3E%3Cpath d='M20 34h6M30 34h6M40 34h4M20 44h6M30 44h6'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='14' width='44' height='40' rx='3'/%3E%3Cpath d='M10 24h44M22 8v10M42 8v10'/%3E%3Cpath d='M20 34h6M30 34h6M40 34h4M20 44h6M30 44h6'/%3E%3C/svg%3E"); }
+
+/* ---------------------------------------------- 2026-11-02 refinements
+   The question list sits centred in its section, its type still set left.
+   The footer carries the header's logo. A video list (Tony Medina's clips)
+   is a list with a play mark on each line, in body size, well spaced. */
+.section:has(.faq-list) > .wrap {
+  max-width: 46rem;
+}
+/* A section that holds only measure-width blocks (headings, prose, notes,
+   stacked lists, questions, one video, a row of links or buttons) narrows to
+   the same 46rem column and sits centred on the page, its type still set left,
+   so it no longer leaves the right third of the screen empty (2026-11-02,
+   Daniel, sitewide). Any section with a grid, a table, cards or a hero photo
+   keeps the full width. */
+.section > .wrap:not(:has(> :not(
+  .heading, .prose, .eyebrow, .note, .lede, .h3, .h5,
+  .def-list:not(.def-list--cards), .spec-list:not(.spec-list--cols),
+  .faq-list, .btn-row, .blog-article, .review-pull, .stage-plot, .panel,
+  .sibling-list, .video-grid--single, .media-grid,
+  img, script, template, style
+))) {
+  max-width: 46rem;
+}
+/* A photo grid of three or more keeps the full width (same specificity as the
+   rule above, so this one must stay after it). One or two photos share the
+   column between them instead of filling two tracks of three. */
+.section > .wrap:has(> .media-grid > :nth-child(3)) {
+  max-width: var(--wrap);
+}
+.media-grid:not(.media-grid--single):not(:has(> :nth-child(3))) {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+.footer-logo {
+  width: 13.5rem;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.playlist {
+  display: grid;
+  gap: 1.65rem;
+  margin-top: 2.2rem;
+}
+.playlist-stage iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+.playlist-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.playlist-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1rem 0.75rem 1rem 3.1rem;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.playlist-item::before {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: var(--brass);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='6' y='14' width='52' height='36' rx='6'/%3E%3Cpath d='M27 24l12 8-12 8z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='6' y='14' width='52' height='36' rx='6'/%3E%3Cpath d='M27 24l12 8-12 8z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.playlist-item:hover,
+.playlist-item:focus-visible {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--ink);
+}
+.playlist-item[aria-pressed="true"] {
+  background-color: rgba(255, 255, 255, 0.09);
+  color: var(--ink);
+}
+.playlist-item .clip-name {
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (min-width: 960px) {
+  .playlist {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+/* The statement under the logo wall on a Featured Artist page (2026-11-02,
+   Daniel picked the meters from four mockups): a neutral black band, the
+   paragraphs centred and set large, and a row of thin level bars rising from
+   the bottom edge like a mixing desk. The copy is untouched; this is layout
+   only. */
+.section.statement {
+  background-color: #0c0c0c;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='576' height='120' viewBox='0 0 576 120'%3E%3Cg fill='%23fff' fill-opacity='0.07'%3E%3Crect x='6' y='51' width='6' height='69'/%3E%3Crect x='22' y='73' width='6' height='47'/%3E%3Crect x='38' y='42' width='6' height='78'/%3E%3Crect x='54' y='86' width='6' height='34'/%3E%3Crect x='70' y='83' width='6' height='37'/%3E%3Crect x='86' y='24' width='6' height='96'/%3E%3Crect x='102' y='80' width='6' height='40'/%3E%3Crect x='118' y='46' width='6' height='74'/%3E%3Crect x='134' y='85' width='6' height='35'/%3E%3Crect x='150' y='28' width='6' height='92'/%3E%3Crect x='166' y='65' width='6' height='55'/%3E%3Crect x='182' y='88' width='6' height='32'/%3E%3Crect x='198' y='81' width='6' height='39'/%3E%3Crect x='214' y='37' width='6' height='83'/%3E%3Crect x='230' y='39' width='6' height='81'/%3E%3Crect x='246' y='84' width='6' height='36'/%3E%3Crect x='262' y='62' width='6' height='58'/%3E%3Crect x='278' y='81' width='6' height='39'/%3E%3Crect x='294' y='22' width='6' height='98'/%3E%3Crect x='310' y='38' width='6' height='82'/%3E%3Crect x='326' y='85' width='6' height='35'/%3E%3Crect x='342' y='20' width='6' height='100'/%3E%3Crect x='358' y='77' width='6' height='43'/%3E%3Crect x='374' y='64' width='6' height='56'/%3E%3Crect x='390' y='85' width='6' height='35'/%3E%3Crect x='406' y='42' width='6' height='78'/%3E%3Crect x='422' y='86' width='6' height='34'/%3E%3Crect x='438' y='64' width='6' height='56'/%3E%3Crect x='454' y='87' width='6' height='33'/%3E%3Crect x='470' y='21' width='6' height='99'/%3E%3Crect x='486' y='75' width='6' height='45'/%3E%3Crect x='502' y='55' width='6' height='65'/%3E%3Crect x='518' y='39' width='6' height='81'/%3E%3Crect x='534' y='74' width='6' height='46'/%3E%3Crect x='550' y='23' width='6' height='97'/%3E%3Crect x='566' y='77' width='6' height='43'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  padding-bottom: clamp(6.5rem, 4rem + 6vw, 9rem);
+}
+.statement .wrap,
+.statement .wrap--narrow {
+  max-width: 50rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.statement .prose {
+  font-size: clamp(1.25rem, 1rem + 0.9vw, 1.6rem);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 44ch;
+  margin-inline: auto;
+}
+.statement .prose + .prose {
+  margin-top: 1.1em;
+}
+
+/* Stock photographs are black and white, sitewide (2026-11-02, Daniel): the
+   Unsplash photos added through CopyDesk and the interim stills listed in
+   img/SOURCES.md, which were a warm duotone. The same filter the page and
+   closing backdrops use. Artists' own photographs and the drawn format cards
+   keep their colour. */
+img[src*="img/unsplash/"],
+img[src$="img/hero.jpg"],
+img[src$="img/outdoor.jpg"],
+img[src$="img/sound-bath.jpg"],
+img[src$="img/range.jpg"],
+img[src$="img/loadin.jpg"],
+img[src$="img/ballroom.jpg"],
+img[src$="img/yacht-rock.jpg"],
+img[src$="img/standards.jpg"],
+img[src$="img/dj.jpg"],
+img[src$="img/headliners.jpg"] {
+  filter: grayscale(1) contrast(1.05);
 }

@@ -18,7 +18,10 @@ export const Heading = {
   label: "Heading",
   fields: { ...headingFields, slab: headingFields.slab },
   defaultProps: { eyebrow: "Eyebrow", title: "Title", titleTag: "h2", titleClass: "h2", lede: "Lede" },
-  render: (p) => (
+  render: function HeadingRender(p) {
+    const s = useSite();
+    const href = useHref();
+    const heading = (
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
       {p.title != null ? <H as={p.titleTag || "h2"} className={p.titleClass || "h2"} style={css(p.titleStyle)} html={p.title} /> : null}
@@ -32,7 +35,18 @@ export const Heading = {
       <Buttons items={p.buttons} />
       {p.headingNote != null ? <H as="p" className="note" html={p.headingNote} /> : null}
     </div>
-  ),
+    );
+    // The page's own h1 heading sits over a full-bleed photo, the same
+    // treatment as the closing call to action (2026-11-02).
+    const photo = p.titleTag === "h1" ? heroPhoto(s) : null;
+    if (!photo) return heading;
+    return (
+      <div className="hero-photo">
+        <div className="hero-photo__bg" aria-hidden="true" style={{ backgroundImage: `url("${href(photo)}")` }} />
+        {heading}
+      </div>
+    );
+  },
 };
 
 export const Paragraph = {
@@ -112,6 +126,78 @@ export const SpecList = {
 
 // ------------------------------------------------------------------ rows
 
+// The marker beside a list row (2026-11-02, Daniel: the lists read as a wall
+// of text; the line drawings on the home page helped). A label with an
+// ordinal ("The 40th") gets the number in brass; any other label gets the line
+// drawing its words point to, first match wins, music notes when nothing does.
+// The drawings themselves are in styles.css, keyed by data-art.
+const ROW_ART = [
+  [/\b(?:wedding|reception|ceremony|couple|bride|engagement|propos)/, "rings"],
+  [/\b(?:anniversar)/, "heart"],
+  [/\b(?:birthday)/, "cake"],
+  [/\b(?:graduat)/, "cap"],
+  [/\b(?:retire)/, "clock"],
+  [/\b(?:shower)/, "gift"],
+  [/\b(?:halloween)/, "moon"],
+  [/\b(?:memorial|funeral|celebration of life)/, "candle"],
+  [/\b(?:holiday|cocktail|drinks|toast|happy hour|welcome)/, "glass"],
+  [/\b(?:dinner|brunch|lunch|meal|banquet)/, "plate"],
+  [/\b(?:after-party|after party|conference|gala|award|fundrais|launch|keynote|program)/, "microphone"],
+  [/\b(?:retreat|mountain|vail|aspen|breckenridge|beaver creek|telluride|steamboat|crested butte|winter park|resort)/, "mountain"],
+  [/\b(?:backyard|garden|patio|outdoor|lawn|park|courtyard|terrace|rooftop)/, "tree"],
+  [/\b(?:daytime|morning|afternoon|markets?\b|farmers|festival|summer)/, "sun"],
+  [/\b(?:senior|community|library|neighbo|house party|at home)/, "house"],
+  [/\b(?:\bdj\b|late night|dance floor|dancing)/, "headphones"],
+  [/\b(?:sound|volume|speaker|\bpa\b|loud|quiet|noise)/, "speaker"],
+  [/\b(?:song|setlist|set list|first dance|repertoire|request)/, "list"],
+  [/\b(?:dress|attire|wear|black tie)/, "bowtie"],
+  [/\b(?:office|company|corporate|client|team|member|club|staff)/, "building"],
+  [/\b(?:guitar|flamenco|spanish)/, "guitar"],
+  [/\b(?:duo|trio|quartet|quintet|band|piece|musician|solo|size|singer|voice|ensemble)/, "musicians"],
+  [/\b(?:costs?\b|price|budget|quote|fees?\b|deposit|pay\b|payment|rates?\b|marketplace|tier\b)/, "tag"],
+  [/\b(?:travel|drive|miles?\b|distance)/, "car"],
+  [/\b(?:venue|denver|boulder|colorado springs|fort collins|city|town|space|stage|floor)/, "pin"],
+  [/\b(?:when|date|book|ahead|month|week|calendar|season)/, "calendar"],
+  [/\b(?:time|hour|minute|length|long|curfew|late)/, "clock"],
+];
+function rowMark(term) {
+  const t = String(term || "").replace(/<[^>]+>/g, "").toLowerCase();
+  const n = t.match(/\b(\d{1,3})(?:st|nd|rd|th)\b/);
+  if (n) return { num: n[1] };
+  for (const [re, art] of ROW_ART) if (re.test(t)) return { art };
+  return { art: "notes" };
+}
+
+// The first sentence of a row in the brighter ink, so a skimmer gets the point
+// (2026-11-02). Splits at the first full stop, question or exclamation mark
+// that is outside a tag and not inside an open link, and leaves the row alone
+// when there is no second sentence or the first runs past 90 characters.
+// Cards skip it: the card's own title is the cue there.
+function leadSentence(html) {
+  if (typeof html !== "string") return html;
+  let depth = 0;
+  let inTag = false;
+  for (let i = 0; i < html.length; i++) {
+    const ch = html[i];
+    if (ch === "<") {
+      inTag = true;
+      if (html.startsWith("<a", i) && /\s|>/.test(html[i + 2] || "")) depth++;
+      else if (html.startsWith("</a", i)) depth--;
+      continue;
+    }
+    if (ch === ">") { inTag = false; continue; }
+    if (inTag || depth > 0) continue;
+    if ((ch === "." || ch === "?" || ch === "!") && html[i + 1] === " ") {
+      const rest = html.slice(i + 2);
+      if (!rest.trim()) return html;
+      // A long first sentence in bold is a block, not a cue: leave it plain.
+      if (html.slice(0, i + 1).replace(/<[^>]+>/g, "").length > 90) return html;
+      return `<span class="lead">${html.slice(0, i + 1)}</span> ${rest}`;
+    }
+  }
+  return html;
+}
+
 export const DefRows = {
   label: "Rows",
   fields: {
@@ -121,24 +207,30 @@ export const DefRows = {
       getItemSummary: (r) => plain(r.term),
       arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
     },
-    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Side by side", value: "def-list" }]),
+    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Cards", value: "def-list def-list--cards" }, { label: "Side by side", value: "def-list" }]),
     bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
     style: text("Style"),
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
-  render: ({ cls, style, bare, rows }) => (
-    <dl className={cls || "def-list def-list--stack"} style={css(style)}>
+  render: ({ cls, style, bare, rows }) => {
+    const layout = cls || "def-list def-list--stack";
+    const marked = /def-list--(stack|cards)/.test(layout);
+    const leads = /def-list--stack/.test(layout);
+    return (
+    <dl className={layout} style={css(style)}>
       {(rows || []).map((r, i) => {
         const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
-        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={r.text} />;
+        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={leads ? leadSentence(r.text) : r.text} />;
+        const mark = marked ? rowMark(r.term) : {};
         return bare ? (
           <Fragment key={i}>{dt}{dd}</Fragment>
         ) : (
-          <div className="def-row" key={i}>{dt}{dd}</div>
+          <div className="def-row" key={i} data-art={mark.art} data-num={mark.num}>{dt}{dd}</div>
         );
       })}
     </dl>
-  ),
+    );
+  },
 };
 
 // The questions a page shows. With "schema" on, they are also the page's
@@ -156,19 +248,25 @@ export const Faq = {
     style: text("Style"),
   },
   defaultProps: { items: [{ q: "Question", a: "Answer" }], schema: true },
+  // Each question opens on a click, the first one open (2026-11-02): a page
+  // shows its questions, not a column of answers. The answers stay in the
+  // page for search, and the FAQPage markup still renders from the items.
   render: ({ items, style }) => (
-    <dl className="faq-list" style={css(style)}>
+    <div className="faq-list" style={css(style)}>
       {(items || []).map((f, i) => (
-        <div className="faq-row" key={i}>
-          <H as="dt" html={f.q} />
+        <details className="faq-row" key={i} open={i === 0 || undefined}>
+          <summary>
+            <H as="span" className="faq-q" html={f.q} />
+            <span className="faq-toggle" aria-hidden="true" />
+          </summary>
           {f.open ? (
-            <dd><H as="span" data-tbd="true" html={f.a} /></dd>
+            <div className="faq-a"><H as="span" data-tbd="true" html={f.a} /></div>
           ) : (
-            <H as="dd" html={f.a} />
+            <H as="div" className="faq-a" html={f.a} />
           )}
-        </div>
+        </details>
       ))}
-    </dl>
+    </div>
   ),
 };
 
@@ -219,17 +317,44 @@ const videoFields = {
 
 export const VideoGrid = {
   label: "Videos",
-  fields: { videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: videoFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
-  defaultProps: { videos: [], single: false },
-  render: ({ videos, single, style }) => (
+  fields: {
+    videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: { ...videoFields, caption: rich("Caption (playlist)") } },
+    single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] },
+    playlist: { type: "radio", label: "Playlist", options: [{ label: "No", value: false }, { label: "Yes", value: true }] },
+  },
+  defaultProps: { videos: [], single: false, playlist: false },
+  render: ({ videos, single, playlist, style }) => {
+    const list = videos || [];
+    // A playlist (2026-11-02): one player and the clips listed beside it; a
+    // click on a line plays that clip in the player (YT_SCRIPT in main.jsx).
+    if (playlist && list.length) {
+      return (
+        <div className="playlist" style={css(style)}>
+          <div className="playlist-stage act-video">
+            <Player v={list[0]} sizes={SIZES.wrap} />
+          </div>
+          <ol className="playlist-list">
+            {list.map((v, i) => (
+              <li key={i}>
+                <button type="button" className="playlist-item" data-play={v.src} data-title={v.title} aria-pressed={i === 0 ? "true" : "false"}>
+                  <H as="span" className="playlist-caption" html={v.caption || v.title} />
+                </button>
+              </li>
+            ))}
+          </ol>
+        </div>
+      );
+    }
+    return (
     <div className={cx("video-grid", single && "video-grid--single")} style={css(style)}>
-      {(videos || []).map((v, i) => (
+      {list.map((v, i) => (
         <div className="act-video" key={i}>
-          <Player v={v} sizes={single ? SIZES.single : SIZES.videos((videos || []).length)} />
+          <Player v={v} sizes={single ? SIZES.single : SIZES.videos(list.length)} />
         </div>
       ))}
     </div>
-  ),
+    );
+  },
 };
 
 // The picture or the clip beside an act's heading.
@@ -319,6 +444,61 @@ function Cell({ c, tag }) {
 
 // -------------------------------------------------------- call to action
 
+// The photo behind the closing call to action (2026-11-02): the picture set
+// on the block, else the page's own act's card, else one of site.closePhotos
+// picked by the page's URL so a page always shows the same one.
+function closePhoto(s, image) {
+  if (image && image.src) return image.src;
+  const m = s && s.model;
+  if (!m) return null;
+  const actId = s.page && s.page.root && s.page.root.props && s.page.root.props.schema && s.page.root.props.schema.act;
+  const act = actId && m.ACT_BY_ID[actId];
+  if (act && act.img) return "/img/" + act.img;
+  return rotation(s, 0);
+}
+
+// The photo behind a page's h1 heading (2026-11-02, Daniel: "there should be
+// a hero section that's treated like this"). An act page takes the first
+// photograph in its own gallery, else its card; any other page takes one of
+// site.closePhotos, two along from the one its closing call shows, so the top
+// and the foot of a page never repeat.
+function pageActOf(s) {
+  const m = s && s.model;
+  const props = s && s.page && s.page.root && s.page.root.props;
+  const id = props && props.schema && props.schema.act;
+  return m && id ? m.ACT_BY_ID[id] : null;
+}
+function rotation(s, offset) {
+  const m = s && s.model;
+  const list = (m && m.site && m.site.closePhotos) || [];
+  if (!list.length) return null;
+  const key = (s && s.url) || "/";
+  let h = 0;
+  for (const ch of key) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  const src = list[(h + offset) % list.length].src;
+  return src.startsWith("/") ? src : "/" + src;
+}
+function heroPhoto(s) {
+  if (!s || !s.model || !s.page) return null;
+  const act = pageActOf(s);
+  if (act) {
+    let first = null;
+    const walk = (o) => {
+      if (first || !o) return;
+      if (Array.isArray(o)) return o.forEach(walk);
+      if (typeof o === "object") {
+        if (o.type === "MediaGrid" && o.props && o.props.images && o.props.images[0]) first = o.props.images[0].src;
+        else Object.values(o).forEach(walk);
+      }
+    };
+    walk(s.page.content);
+    if (first) return first.startsWith("/") ? first : "/" + first;
+    return act.img ? "/img/" + act.img : null;
+  }
+  return rotation(s, 2);
+}
+
+
 export const CloseRow = {
   label: "Call to action",
   fields: {
@@ -333,16 +513,19 @@ export const CloseRow = {
     image: { type: "object", label: "Picture", objectFields: imageFields },
   },
   defaultProps: { boxed: true, boxStyle: "max-width: 32rem;", title: "Title", lede: "Text", buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
-  render: (p) => {
+  render: function CloseRowRender(p) {
+    const s = useSite();
+    const href = useHref();
+    const photo = closePhoto(s, p.image);
     const words = (
       <>
-        <Img im={p.image} />
         <H as="h2" className={p.titleCls || "h2"} style={css(p.titleStyle)} html={p.title} />
         {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
       </>
     );
     return (
-      <div className="close-row">
+      <div className={photo ? "close-row close-row--photo" : "close-row"}>
+        {photo ? <div className="close-photo" aria-hidden="true" style={{ backgroundImage: `url("${href(photo)}")` }} /> : null}
         {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
         <Buttons items={p.buttons || []} />
       </div>

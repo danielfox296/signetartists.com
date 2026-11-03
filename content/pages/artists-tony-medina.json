@@ -71,11 +71,6 @@
          "label": "Check a date",
          "href": "/contact/?act=tony-medina",
          "cls": "btn"
-        },
-        {
-         "label": "See pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -124,7 +119,8 @@
      }
     ],
     "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Every claim here traces to something published: the covers to the footage\n     below, the sizes to the ladder, the catalogue to his own channel. He is a\n     working Denver player, so unlike the Tejas page this one is allowed to say\n     so. It still claims no client list and no venue history of its own.",
-    "_file": "02-identity.html"
+    "_file": "02-identity.html",
+    "cls": "statement"
    }
   },
   {
@@ -149,7 +145,7 @@
       "props": {
        "id": "Heading-13",
        "eyebrow": "Occasions",
-       "title": "Who books Tony Medina.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -176,7 +172,7 @@
          "text": "The night before, and the hour after the ceremony, with solo voice and guitar under the conversation, for a couple who wants more grit in the music than a jazz set."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {
@@ -327,8 +323,7 @@
        "eyebrow": "Video Clips",
        "title": "The blues, the covers, and one of his own.",
        "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "B.B. King live at a blues jam, The Cars, two duo versions with a second guitarist on Freddie King and Dave Matthews, and one of his own songs so you can hear what he writes."
+       "titleClass": "h2"
       }
      },
      {
@@ -340,34 +335,40 @@
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/B7ZnhTflOfs?rel=0",
          "title": "Tony Medina playing The Thrill Is Gone live at a blues jam",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">The Thrill Is Gone</span> by B.B. King, live at a blues jam"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
          "title": "Tony Medina playing a cover of Drive by The Cars",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Drive</span> by The Cars"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/t_s2FavrDew?rel=0",
          "title": "Tony Medina playing the Freddie King standard Going Down as a duo",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Going Down</span> by Freddie King, as a duo with a second guitarist"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/qf4_7lKu3iE?rel=0",
          "title": "Tony Medina playing a Dave Matthews cover as a duo",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Don’t Drink the Water</span> by Dave Matthews Band, as a duo"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
          "title": "Tony Medina playing his original song Headline",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Headline</span>, one of his own songs"
         }
        ],
-       "single": false
+       "single": false,
+       "playlist": true
       }
      },
      {
@@ -428,7 +429,7 @@
       }
      }
     ],
-    "_notes": "Real media, loaded 2026-09-06 from his own site and channel with his\n     permission. Per-asset provenance: _src/data/media-sources.json. Between\n     this grid and the hero, every title named in \"The book\" above is playable\n     on this page. Purple Rain moved up to the hero 2026-09-06 and Going Down\n     came down here in its place: the hero now sits on a video Signet hosts\n     rather than on the SIDEHATCH ARTS channel, so nothing at the top of the\n     page depends on a channel we do not control. Held back deliberately, and not to be\n     reinstated without asking him: a memorial video for a family member, the\n     family-update and show-alert vlogs, a poster graphic with baked-in text,\n     the wall-signing photographs of identifiable third parties, and a shot\n     whose backdrop is a plasma-donation advertisement.",
+    "_notes": "Real media, loaded 2026-09-06 from his own site and channel with his\n     permission. Per-asset provenance: _src/data/media-sources.json. Between\n     this grid and the hero, every title named in \"The book\" above is playable\n     on this page. Purple Rain moved up to the hero 2026-09-06 and Going Down\n     came down here in its place: the hero now sits on a video Signet hosts\n     rather than on the SIDEHATCH ARTS channel, so nothing at the top of the\n     page depends on a channel we do not control. Held back deliberately, and not to be\n     reinstated without asking him: a memorial video for a family member, the\n     family-update and show-alert vlogs, a poster graphic with baked-in text,\n     the wall-signing photographs of identifiable third parties, and a shot\n     whose backdrop is a plasma-donation advertisement. 2026-11-02, Daniel: the clip lede read like a wall of text; it is now a list with a video mark on each line (List cls clip-list).",
     "_file": "05b-footage.html"
    }
   },

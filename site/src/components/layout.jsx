@@ -49,11 +49,13 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-head">
         <div className="footer-brand">
-          <p className="wordmark">{b.name}</p>
-          <p className="footer-line">{f.line}</p>
+          <a className="logo footer-logo" href={s.prefix || "./"}>
+            <img src={href("/img/signet-logo.png")} alt={b.name} width="372" height="144" loading="lazy" decoding="async" />
+          </a>
         </div>
         <div className="footer-contact">
           {spaced([
+            <p key="l" className="footer-line">{f.line}</p>,
             <a key="e" className="footer-email" href={"mailto:" + b.email}>{b.email}</a>,
             ...f.links.map((l, i) => (
               <a key={i} className={l.cls || undefined} href={href(l.href)} rel={l.rel || undefined}>{l.label}</a>

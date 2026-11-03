@@ -123,11 +123,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=dirty-flamenco",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -343,7 +338,7 @@
       "props": {
        "id": "Heading-18",
        "eyebrow": "Occasions",
-       "title": "Who books flamenco.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -374,7 +369,7 @@
          "text": "Processional, prelude and recessional on nylon strings, then an hour of palos at conversation volume through the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

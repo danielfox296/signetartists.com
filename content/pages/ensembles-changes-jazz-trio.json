@@ -63,11 +63,6 @@
          "label": "Check a date",
          "href": "/contact/?act=changes-jazz-trio",
          "cls": "btn"
-        },
-        {
-         "label": "See pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -117,7 +112,20 @@
        "html": "They play the standards the way a working trio plays them, with the arrangements left open and a little risk in the solos. Under a dinner they sit at the level of the conversation, and when the crowd turns to listen, they give it something to listen to.",
        "cls": "prose"
       }
-     },
+     }
+    ],
+    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.",
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
      {
       "type": "Paragraph",
       "props": {
@@ -127,8 +135,7 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.",
-    "_file": "02-identity.html"
+    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
    }
   },
   {
@@ -153,7 +160,7 @@
       "props": {
        "id": "Heading-13",
        "eyebrow": "Occasions",
-       "title": "Who books Changes.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -165,7 +172,7 @@
        "rows": [
         {
          "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
-         "text": "The trio sits under the conversation with the drums played soft, and the quartet with saxophone turns the same booking into a featured set when the dinner has a program in it. It books like the rest of a <a href=\"/corporate/\">company event</a>, on one contract with the paperwork your office needs."
+         "text": "The trio plays under the conversation, with the drums kept soft. When the dinner has a program in it, add a saxophone and the quartet can play a featured set, booked like the rest of your <a href=\"/corporate/\">company event</a> on one contract."
         },
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
@@ -180,7 +187,7 @@
          "text": "A dinner party for thirty, or a sixtieth birthday that wants real jazz in the house. The trio fits a home or a patio."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

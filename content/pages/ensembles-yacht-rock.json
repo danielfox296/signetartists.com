@@ -62,11 +62,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=yacht-rock",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -187,7 +182,7 @@
       "props": {
        "id": "Heading-16",
        "eyebrow": "Occasions",
-       "title": "Who books a yacht rock band.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -218,7 +213,7 @@
          "text": "A reception where the couple wants everyone singing on the dance floor, with the ceremony and the cocktail hour on the same contract."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      }
     ],

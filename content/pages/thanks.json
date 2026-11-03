@@ -35,19 +35,6 @@
           "html": "One of us will reply with availability and an exact number.",
           "cls": "prose"
          }
-        },
-        {
-         "type": "ButtonRow",
-         "props": {
-          "id": "ButtonRow-3",
-          "buttons": [
-           {
-            "label": "See Pricing",
-            "href": "/pricing/",
-            "cls": "btn btn--outline"
-           }
-          ]
-         }
         }
        ],
        "style": "max-width: 34rem;"

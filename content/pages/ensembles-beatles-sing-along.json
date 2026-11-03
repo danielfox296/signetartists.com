@@ -64,11 +64,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=your-bird-can-sing",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -125,7 +120,7 @@
       "props": {
        "id": "Heading-9",
        "eyebrow": "Occasions",
-       "title": "Who books a Beatles sing-along.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -149,14 +144,14 @@
         },
         {
          "term": "<a href=\"/daytime/community-programs/\">Community events</a>",
-         "text": "A library’s summer program, a school’s family night, a church picnic, a block party or a farmers market. It’s open to whoever walks up, so the audience is every age at once, and this is one of the few programs that works for the toddlers and the retirees in the same hour."
+         "text": "A library’s summer program, a school’s family night, a church picnic or a block party. It’s open to whoever walks up, so the crowd is every age at once, and it’s one of the few programs that works for toddlers and retirees in the same hour."
         },
         {
          "term": "<a href=\"/daytime/senior-living/\">Senior living and memory care</a>",
          "text": "The residents know every one of these songs from the first time around. In memory care the same duo plays a shorter, quieter set to a smaller group."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      }
     ],

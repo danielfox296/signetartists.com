@@ -62,11 +62,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=live-band-karaoke",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -159,7 +154,7 @@
         },
         {
          "term": "Five to six piece",
-         "text": "The four-piece plus a host of its own on the floor and a horn or a second voice. It’s the size for a ballroom, a conference after-party or a crowd past two hundred, where getting the first singers up is a full-time job and the choruses want the extra weight."
+         "text": "The four piece plus a horn or a second voice, with a host of its own on the floor. It’s the size for a ballroom, a conference after-party or a crowd of more than two hundred, where the extra voice helps get the first singers up and gives the choruses more weight."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -189,7 +184,7 @@
       "props": {
        "id": "Heading-16",
        "eyebrow": "Occasions",
-       "title": "Who books live band karaoke.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -220,7 +215,7 @@
          "text": "A fortieth or a fiftieth with a crowd that grew up on this songbook, a <a href=\"/private-parties/halloween-party/\">Halloween party</a> in costume, or a <a href=\"/private-parties/holiday-party/\">holiday party at home</a> with a big main floor."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      }
     ],

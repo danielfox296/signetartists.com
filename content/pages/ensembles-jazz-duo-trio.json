@@ -69,11 +69,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=jazz-duo",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -170,7 +165,7 @@
       "props": {
        "id": "Heading-13",
        "eyebrow": "Occasions",
-       "title": "Who books a jazz duo or trio.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -209,7 +204,7 @@
          "text": "The reception or the celebration of life after a service, with the songs the family chooses."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      },
      {

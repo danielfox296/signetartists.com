@@ -61,11 +61,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=solo-piano",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -167,7 +162,7 @@
       "props": {
        "id": "Heading-14",
        "eyebrow": "Occasions",
-       "title": "Who books a pianist.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -206,7 +201,7 @@
          "text": "A house with a piano in it, and a table of twelve."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      }
     ],

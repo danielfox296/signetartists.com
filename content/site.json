@@ -36,7 +36,7 @@
  },
  "gaId": "G-LL5DKVEX29",
  "cssVersion": "20260923a",
- "themeColor": "#14130e",
+ "themeColor": "#121212",
  "business": {
   "priceRange": "$$$",
   "images": [
@@ -122,5 +122,23 @@
  "_rates_removed_note": "REMOVED 2026-09-04. `rates` held the call-out plus hourly table and `_rates_byRequest_note` explained the by-request rows. The site publishes no Signet price of any kind from that date, and the repo is the published site, so the numbers left the data file with the copy. They live in OFFER.md, which is the internal model and always was. Do not restore them here: market figures go in market-rates.json with their provenance, and Signet's own numbers go in a quote.",
  "_extras_note": "REWRITTEN 2026-09-04 with the no-published-price decision. This was an item plus a `rate` column and rendered as a priced table. It is now the list of what is itemised separately on a quote, which is a real and useful thing to publish, with no figure attached to any line. The figures are in OFFER.md.",
  "_insurance_removed_note": "REMOVED 2026-09-04. Held the general-liability limits and rendered them through {{gl_per_occurrence}} / {{gl_aggregate}} on /planners/ and /corporate/client-dinners/. The coverage is real and unchanged; the figures came off because the no-published-figure rule of 2026-09-04 is written as an absolute and the repo is the published site. The copy now says the certificate names the venue as additional insured and meets what Colorado venues write into their vendor requirements. The limits are in OFFER.md and on the certificate itself.",
- "_faqs_note": "REWRITTEN 2026-09-04 with the no-published-price decision. These are the pricing page's questions and they still answer the money question, with the market's figures instead of Signet's. Figures only ever arrive here as {{market:<id>}} tokens off market-rates.json; a page that resolves one has to carry {{market_sources}} or the build fails. Never type a figure into an answer."
+ "_faqs_note": "REWRITTEN 2026-09-04 with the no-published-price decision. These are the pricing page's questions and they still answer the money question, with the market's figures instead of Signet's. Figures only ever arrive here as {{market:<id>}} tokens off market-rates.json; a page that resolves one has to carry {{market_sources}} or the build fails. Never type a figure into an answer.",
+ "closePhotos": [
+  {
+   "src": "img/hero/gary-meyers.jpg"
+  },
+  {
+   "src": "img/tejas-card.jpg"
+  },
+  {
+   "src": "img/tony-medina-card.jpg"
+  },
+  {
+   "src": "img/little-moses-jones-card.jpg"
+  },
+  {
+   "src": "img/rene-moffatt-card.jpg"
+  }
+ ],
+ "_closePhotos_note": "2026-11-02, Daniel chose the full-bleed photo for the closing call to action on every page. An act page's close uses that act's own card photo; every other page takes one of these, picked by its URL so a page keeps the same one. All are Signet artists on stage or with their instruments, shown in black and white behind a dark wash. The photo is a CSS background with aria-hidden, a backdrop rather than content, so it carries no description (site_check rule N forbids reusing an act card's description on a second picture). A CloseRow with its own picture set in the admin uses that instead."
 }

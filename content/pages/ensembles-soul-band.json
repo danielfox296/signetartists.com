@@ -62,11 +62,6 @@
          "label": "Check a Date",
          "href": "/contact/?act=soul-rnb",
          "cls": "btn"
-        },
-        {
-         "label": "See Pricing",
-         "href": "/pricing/",
-         "cls": "btn btn--outline"
         }
        ],
        "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
@@ -187,7 +182,7 @@
       "props": {
        "id": "Heading-16",
        "eyebrow": "Occasions",
-       "title": "Who books a soul and R&amp;B band.",
+       "title": "Perfect booking for",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -214,7 +209,7 @@
          "text": "A fiftieth or a sixtieth for a crowd that grew up on these records, at a club or a restaurant buyout, or an <a href=\"/private-parties/anniversary-party/\">anniversary</a> with the couple’s song in the set."
         }
        ],
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--cards"
       }
      }
     ],
