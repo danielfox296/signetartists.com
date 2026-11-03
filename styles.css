@@ -3668,3 +3668,45 @@ main:focus {
   justify-content: center;
   margin-top: 2.25rem;
 }
+
+/* The full-bleed photo behind the closing call (Daniel picked it 2026-11-02
+   from three mockups). The photo covers the whole section edge to edge, in
+   black and white like the home hero, under a flat dark wash; the words and
+   button sit over it at display size. The photo is absolutely placed against
+   the section, so nothing between them may be positioned. */
+.section:has(.close-row--photo) {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 2.5rem + 6vw, 7.5rem) 0;
+}
+.section:has(.close-row--photo)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(20, 19, 14, 0.64);
+}
+.section:has(.close-row--photo) > .wrap {
+  position: relative;
+  z-index: 2;
+}
+.close-row--photo img.close-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+  object-position: 50% 35%;
+  filter: grayscale(1) contrast(1.05);
+}
+.close-row--photo .h2 {
+  font-size: clamp(2.25rem, 1.2rem + 4vw, 4.75rem);
+  line-height: 0.95;
+  max-width: 14ch;
+}
+.close-row--photo .lede {
+  color: var(--ink);
+}

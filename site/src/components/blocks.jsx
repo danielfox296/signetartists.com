@@ -319,6 +319,25 @@ function Cell({ c, tag }) {
 
 // -------------------------------------------------------- call to action
 
+// The photo behind the closing call to action (2026-11-02): the picture set
+// on the block, else the page's own act's card, else one of site.closePhotos
+// picked by the page's URL so a page always shows the same one.
+function closePhoto(s, image) {
+  if (image && image.src) return image.src;
+  const m = s && s.model;
+  if (!m) return null;
+  const actId = s.page && s.page.root && s.page.root.props && s.page.root.props.schema && s.page.root.props.schema.act;
+  const act = actId && m.ACT_BY_ID[actId];
+  if (act && act.img) return "/img/" + act.img;
+  const list = (m.site && m.site.closePhotos) || [];
+  if (!list.length) return null;
+  const key = s.url || "/";
+  let h = 0;
+  for (const ch of key) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  const src = list[h % list.length].src;
+  return src.startsWith("/") ? src : "/" + src;
+}
+
 export const CloseRow = {
   label: "Call to action",
   fields: {
@@ -333,16 +352,18 @@ export const CloseRow = {
     image: { type: "object", label: "Picture", objectFields: imageFields },
   },
   defaultProps: { boxed: true, boxStyle: "max-width: 32rem;", title: "Title", lede: "Text", buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
-  render: (p) => {
+  render: function CloseRowRender(p) {
+    const s = useSite();
+    const photo = closePhoto(s, p.image);
     const words = (
       <>
-        <Img im={p.image} />
         <H as="h2" className={p.titleCls || "h2"} style={css(p.titleStyle)} html={p.title} />
         {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
       </>
     );
     return (
-      <div className="close-row">
+      <div className={photo ? "close-row close-row--photo" : "close-row"}>
+        {photo ? <Img im={{ src: photo, alt: "", loading: "lazy", decoding: "async", cls: "close-photo" }} sizes="100vw" /> : null}
         {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
         <Buttons items={p.buttons || []} />
       </div>
