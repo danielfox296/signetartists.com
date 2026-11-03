@@ -3750,7 +3750,7 @@ main:focus {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(20, 19, 14, 0.64);
+  background: rgba(20, 19, 14, 0.72);
 }
 .hero-photo .lede,
 .hero-photo .prose,
