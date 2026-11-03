@@ -4084,3 +4084,22 @@ main:focus {
 .statement .prose + .prose {
   margin-top: 1.1em;
 }
+
+/* Stock photographs are black and white, sitewide (2026-11-02, Daniel): the
+   Unsplash photos added through CopyDesk and the interim stills listed in
+   img/SOURCES.md, which were a warm duotone. The same filter the page and
+   closing backdrops use. Artists' own photographs and the drawn format cards
+   keep their colour. */
+img[src*="img/unsplash/"],
+img[src$="img/hero.jpg"],
+img[src$="img/outdoor.jpg"],
+img[src$="img/sound-bath.jpg"],
+img[src$="img/range.jpg"],
+img[src$="img/loadin.jpg"],
+img[src$="img/ballroom.jpg"],
+img[src$="img/yacht-rock.jpg"],
+img[src$="img/standards.jpg"],
+img[src$="img/dj.jpg"],
+img[src$="img/headliners.jpg"] {
+  filter: grayscale(1) contrast(1.05);
+}
