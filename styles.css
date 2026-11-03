@@ -637,9 +637,9 @@ img {
    960px to live in whatever the screen is: seven links plus the button
    measure about 908 at this gap, and measured about 964 at the old one,
    which is why labels had started breaking across two lines. On 2026-11-02
-   the labels went to caps at 13px with a 1rem gap (the row measures 748),
-   the logo grew to the tagline's 215px and desktop padding went to 80px, so
-   the row now swaps in at 1180 (see the breakpoint below). */
+   the labels went to caps at 13px with a 1rem gap, the logo grew to the
+   tagline's 215px, desktop padding went to 80px and the Check a Date button
+   left the header: six links measure 595. */
 .nav-desktop {
   display: none;
   align-items: center;
@@ -2011,10 +2011,10 @@ main:focus {
 /* The desktop nav row: seven links plus the Check a Date button. It used to
    swap in at 768px, which stopped fitting once the row grew to eight items on
    2026-09-06: the page scrolled sideways at 800px and the labels wrapped.
-   Since 2026-11-02 the logo and the caps row need about 963px of content
-   width with 80px of padding each side, so the row swaps in at 1180 (a 42px
-   gap between them there) and the Menu button covers every width under that. */
-@media (min-width: 1180px) {
+   Since 2026-11-02 the logo and the six caps links need 810px of content
+   width; at 1024, with 80px of padding each side, there is 849, so the row
+   still swaps in there and the Menu button covers every width under that. */
+@media (min-width: 1024px) {
   .nav-desktop {
     display: flex;
   }

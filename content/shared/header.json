@@ -30,12 +30,6 @@
    "label": "Private Parties",
    "href": "/private-parties/",
    "key": "private"
-  },
-  {
-   "label": "Check a Date",
-   "href": "/contact/",
-   "cls": "btn btn--sm",
-   "key": "contact"
   }
  ],
  "navMobile": [
@@ -72,12 +66,6 @@
   {
    "label": "Daytime",
    "href": "/daytime/"
-  },
-  {
-   "label": "Check a Date",
-   "href": "/contact/",
-   "cls": "btn nav-mobile-cta",
-   "key": "contact"
   }
  ]
 }
