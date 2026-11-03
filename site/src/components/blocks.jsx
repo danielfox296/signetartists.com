@@ -661,6 +661,60 @@ function CardMedia({ a, ratio }) {
   return <Pic class="act-card-img" src={href(`/img/${a.img}`)} alt={a.alt} width="1600" height="900" loading="lazy" decoding="async" style={st} sizes={SIZES.card} />;
 }
 
+// The roster page's card (2026-11-03, Daniel): the act's photograph carries
+// it, with the kind and the name over the foot of the photo; under it the
+// size, the tags and one line. The whole card is the link. It keeps the act
+// card's class and data so acts.js filters it as before. The photo carries no
+// description: the act's name is over it inside the same link, and the card
+// photo is often a crop of a photo the act's page describes in the same words.
+function RosterCard({ a }) {
+  const s = useSite();
+  const m = s.model;
+  const href = useHref();
+  const named = m.actLane(a) === "named";
+  const url = a.status === "flagship" || a.page ? m.actUrl(a, s.prefix) : href(`/contact/?act=${a.id}`);
+  return (
+    <article
+      className="act-card act-card--roster"
+      id={`act-${a.id}`}
+      data-lane={m.actLane(a)}
+      data-buckets={(a.bucket_tags || []).join(" ")}
+      data-configs={(a.config_tags || []).join(" ")}
+      data-genres={(a.genre_tags || []).join(" ")}
+      data-vocals={m.VOCALS_MATCH[a.vocals || "instrumental"]}
+      data-areas={m.actAreaIds(a).join(" ")}
+      data-occasions={(a.occasion_tags || []).join(" ")}
+      data-status={a.status}
+      data-name={a.name}
+    >
+      <a className="roster-card-link" href={url}>
+        <div className="roster-card-photo">
+          {a.img ? <Pic src={href(`/img/${a.img}`)} alt="" width="1600" height="1200" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}
+          <div className="roster-card-over">
+            <p className="act-kind">{a.style}</p>
+            <h3 className="roster-card-name">{a.name}</h3>
+          </div>
+        </div>
+        <div className="roster-card-meta">
+          <span className="roster-card-size">{m.actConfigRange(a)}</span>
+          <ul className="pill-row">
+            {(a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
+          </ul>
+        </div>
+        <p className="roster-card-line">{named ? m.actCardLine(a) : m.actByline(a) || m.actCardLine(a)}</p>
+      </a>
+    </article>
+  );
+}
+
+export function RosterGrid({ acts, id }) {
+  return (
+    <div className="roster-grid roster-grid--photo" id={id}>
+      {acts.map((a) => <RosterCard key={a.id} a={a} />)}
+    </div>
+  );
+}
+
 export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3", style }) {
   return (
     <div className={cls} id={id} style={css(style)}>

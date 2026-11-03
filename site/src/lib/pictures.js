@@ -32,6 +32,7 @@ export const SIZES = {
   single: `(min-width: 704px) 640px, ${PAD}`,
   videos: (n) => (n < 2 ? SIZES.wrap : n === 2 ? `(min-width: 1072px) 504px, (min-width: 658px) 50vw, ${PAD}` : `(min-width: 1072px) 336px, (min-width: 962px) 34vw, (min-width: 658px) 50vw, ${PAD}`),
   card: `(min-width: 1072px) 340px, (min-width: 768px) 32vw, ${PAD}`,
+  roster: `(min-width: 1072px) 496px, (min-width: 640px) 46vw, ${PAD}`,
   post: `(min-width: 768px) 672px, ${PAD}`,
   related: `(min-width: 640px) 304px, calc(100vw - 96px)`,
   row: `(min-width: 640px) 208px, ${PAD}`,
