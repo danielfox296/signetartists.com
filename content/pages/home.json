@@ -371,11 +371,9 @@
         }
        ],
        "boxed": true,
-       "boxStyle": "max-width: 48rem;",
+       "boxStyle": "max-width: 32rem;",
        "title": "we love helping bring magical events together",
-       "titleStyle": "max-width: 48rem;",
        "lede": "Share the details and we can bring together the entertainment to fit your night perfectly.",
-       "ledeStyle": "max-width: 32rem;",
        "image": {
         "src": "/img/unsplash/photo-1653821355226-6def361cc7ab.jpg",
         "alt": "magical event table setting",
@@ -383,7 +381,7 @@
         "height": "1067",
         "loading": "lazy",
         "decoding": "async",
-        "style": "width: 28rem; height: auto;"
+        "style": "width: 32rem; height: auto;"
        }
       }
      }

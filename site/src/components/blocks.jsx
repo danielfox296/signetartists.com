@@ -336,9 +336,9 @@ export const CloseRow = {
   render: (p) => {
     const words = (
       <>
+        <Img im={p.image} />
         <H as="h2" className={p.titleCls || "h2"} style={css(p.titleStyle)} html={p.title} />
         {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
-        <Img im={p.image} />
       </>
     );
     return (
