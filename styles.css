@@ -632,7 +632,9 @@ img {
    is cut to transparency against the paper, so it belongs on the dark header
    only. Since 2026-11-02 it is as wide as the tagline under it, at every
    width: the lockup shrinks to the tagline (the one line that cannot wrap)
-   and the picture fills it, so the logo follows the tagline's size. */
+   and the picture fills it, so the logo follows the tagline's size. Since
+   2026-11-03 (Daniel) the header logo is half that width, the tagline as it
+   was, and the footer logo is half its old 13.5rem. */
 .brand-lockup {
   width: min-content;
 }
@@ -646,6 +648,10 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.site-header .logo img {
+  width: 50%;
 }
 
 /* The wordmark is set, not drawn — WEBSITE-PLAN §6.7 keeps a drawn signet mark
@@ -4033,7 +4039,7 @@ main:focus {
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
 .footer-logo {
-  width: 13.5rem;
+  width: 6.75rem;
   max-width: 100%;
   margin-bottom: 1rem;
 }
