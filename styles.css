@@ -599,7 +599,13 @@ img {
 /* The header logo (2026-11-01): Daniel's drawn mark, the laurelled head and
    the brushed "Signet", in place of the set wordmark. The file's background
    is cut to transparency against the paper, so it belongs on the dark header
-   only. */
+   only. Since 2026-11-02 it is as wide as the tagline under it, at every
+   width: the lockup shrinks to the tagline (the one line that cannot wrap)
+   and the picture fills it, so the logo follows the tagline's size. */
+.brand-lockup {
+  width: min-content;
+}
+
 .logo {
   display: block;
   line-height: 0;
@@ -607,14 +613,8 @@ img {
 
 .logo img {
   display: block;
-  width: auto;
-  height: 2.75rem;
-}
-
-@media (min-width: 768px) {
-  .logo img {
-    height: 3.25rem;
-  }
+  width: 100%;
+  height: auto;
 }
 
 /* The wordmark is set, not drawn — WEBSITE-PLAN §6.7 keeps a drawn signet mark
@@ -636,17 +636,20 @@ img {
    hub. The header wrap caps at 1024px with 32px of padding, so the row has
    960px to live in whatever the screen is: seven links plus the button
    measure about 908 at this gap, and measured about 964 at the old one,
-   which is why labels had started breaking across two lines. The padding
-   doubled to 64px on 2026-11-02, leaving 896px; the logo and the row (For
-   Planners gone from it) measured 808 at a 1024 screen. */
+   which is why labels had started breaking across two lines. On 2026-11-02
+   the labels went to caps at 13px with a 1rem gap (the row measures 748),
+   the logo grew to the tagline's 215px and desktop padding went to 80px, so
+   the row now swaps in at 1180 (see the breakpoint below). */
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .nav-desktop a {
-  font-size: 0.9625rem;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
   color: var(--ink-soft);
   white-space: nowrap;
 }
@@ -676,6 +679,8 @@ img {
   background: none;
   font-family: inherit;
   font-size: 0.9625rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
   color: var(--ink-soft);
   cursor: pointer;
 }
@@ -695,6 +700,8 @@ img {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--rule);
   font-size: 0.9625rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
   color: var(--ink-soft);
 }
 
@@ -1921,6 +1928,13 @@ main:focus {
   }
 }
 
+@media (min-width: 1024px) {
+  .wrap {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .section {
     padding: var(--space-6) 0;
@@ -1996,10 +2010,11 @@ main:focus {
 
 /* The desktop nav row: seven links plus the Check a Date button. It used to
    swap in at 768px, which stopped fitting once the row grew to eight items on
-   2026-09-06: the page scrolled sideways at 800px and the labels wrapped. The
-   row needs about 908px of content width, so it swaps in at 1024 and the Menu
-   button covers every width under that. */
-@media (min-width: 1024px) {
+   2026-09-06: the page scrolled sideways at 800px and the labels wrapped.
+   Since 2026-11-02 the logo and the caps row need about 963px of content
+   width with 80px of padding each side, so the row swaps in at 1180 (a 42px
+   gap between them there) and the Menu button covers every width under that. */
+@media (min-width: 1180px) {
   .nav-desktop {
     display: flex;
   }
@@ -2764,13 +2779,13 @@ main:focus {
   align-self: center;
   position: relative;
   z-index: 5;
-  padding-left: max(3rem, calc((100vw - var(--wrap)) / 2));
+  padding-left: max(5rem, calc((100vw - var(--wrap)) / 2));
   padding-right: var(--space-4);
 }
 
 .cover-wall--flip .wall-text {
   grid-column: 7 / 11;
-  padding-right: max(3rem, calc((100vw - var(--wrap)) / 2));
+  padding-right: max(5rem, calc((100vw - var(--wrap)) / 2));
   padding-left: var(--space-4);
 }
 
