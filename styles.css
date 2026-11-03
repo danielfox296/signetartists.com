@@ -3575,7 +3575,7 @@ main:focus {
   align-items: start;
   padding: 1.75rem 0;
 }
-.why-signet .def-row::before {
+.why-signet .def-list--stack .def-row::before {
   content: "";
   width: 3.25rem;
   height: 3.25rem;
@@ -3601,7 +3601,7 @@ main:focus {
     grid-template-rows: auto 1fr;
     column-gap: 2.25rem;
   }
-  .why-signet .def-row::before {
+  .why-signet .def-list--stack .def-row::before {
     grid-column: 1;
     grid-row: 1 / span 2;
     width: 5.5rem;
