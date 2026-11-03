@@ -213,7 +213,10 @@ export function buildSite(c, out) {
   // LinkedIn can draw a link's first share with no picture until they know
   // its size; the description is the one the page itself gives that picture.
   // A local file's size comes from the picture sizes the build already reads;
-  // YouTube's hqdefault is always 480x360.
+  // YouTube's hqdefault is always 480x360. A video's own picture at
+  // img/yt/<id>.jpg is made by the deploy at 1280x720 (2026-11-02); sharing it
+  // asks the deploy to make it, as showing it on a page does, since a watch
+  // page draws YouTube's player and not the picture.
   // A photo taller than wide is shared as a wide cut of itself (2026-11-02),
   // made by the deploy around the photo's focus point (content/photo-focus.json)
   // or, with none, around what draws the eye. It keeps the photo's description.
@@ -223,7 +226,9 @@ export function buildSite(c, out) {
     const local = url.startsWith(m.SITE_URL + "/") ? url.slice(m.SITE_URL.length + 1) : null;
     let w, h, shared;
     const d = local && c.images && c.images.get(local);
+    const yt = local && pictures && /^img\/yt\/[\w-]{11}\.jpg$/.test(local) && pictures.of(local);
     if (d) ({ w, h } = d);
+    else if (yt) ({ w, h } = yt);
     else if (/^https:\/\/i\.ytimg\.com\/vi\/[\w-]{11}\/hqdefault\.jpg$/.test(url)) [w, h] = [480, 360];
     if (d && pictures && h > w) {
       pictures.share.set(local, focus[local] || null);

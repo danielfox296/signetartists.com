@@ -3,6 +3,7 @@
    that a page, a post or an act added to content/ joins them with no edit. */
 import { decodeEntities, longDate } from "./util.js";
 import { layoutOf, LAYOUT_DEFAULTS } from "./layouts.js";
+import { ytPath } from "./pictures.js";
 
 export const outputFor = (path) => (path === "/" ? "index.html" : path.endsWith(".html") ? path.slice(1) : path.slice(1) + "index.html");
 export const urlFor = (output) => "/" + output.replace("index.html", "");
@@ -112,7 +113,12 @@ export function createModel(c) {
   const FOOTAGE_BY_KEY = Object.fromEntries(FOOTAGE.map((v) => [v.id || v.file, v]));
   const watchOutput = (v) => `${WATCH_BASE}/${v.slug}/index.html`;
   const watchUrl = (v) => canonicalFor(watchOutput(v));
-  const watchThumb = (v) => (v.poster ? `${SITE_URL}/${v.poster}` : `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`);
+  // A video's picture: its own poster, else the copy of its largest YouTube
+  // picture the deploy keeps at 1280x720 (2026-11-02), not YouTube's 480x360
+  // hqdefault with black bars. The share image, the schema and the video
+  // sitemap all name this one file; the deploy makes it for every video,
+  // falling back to the last one fetched, then a dark frame.
+  const watchThumb = (v) => `${SITE_URL}/${v.poster || ytPath(v.id)}`;
 
   // Posts: published, newest first.
   const posts = c.posts.map((d) => d.root.props);
