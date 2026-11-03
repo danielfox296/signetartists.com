@@ -171,7 +171,8 @@ function rowMark(term) {
 // The first sentence of a row in the brighter ink, so a skimmer gets the point
 // (2026-11-02). Splits at the first full stop, question or exclamation mark
 // that is outside a tag and not inside an open link, and leaves the row alone
-// when there is no second sentence.
+// when there is no second sentence or the first runs past 90 characters.
+// Cards skip it: the card's own title is the cue there.
 function leadSentence(html) {
   if (typeof html !== "string") return html;
   let depth = 0;
@@ -189,6 +190,8 @@ function leadSentence(html) {
     if ((ch === "." || ch === "?" || ch === "!") && html[i + 1] === " ") {
       const rest = html.slice(i + 2);
       if (!rest.trim()) return html;
+      // A long first sentence in bold is a block, not a cue: leave it plain.
+      if (html.slice(0, i + 1).replace(/<[^>]+>/g, "").length > 90) return html;
       return `<span class="lead">${html.slice(0, i + 1)}</span> ${rest}`;
     }
   }
@@ -212,11 +215,12 @@ export const DefRows = {
   render: ({ cls, style, bare, rows }) => {
     const layout = cls || "def-list def-list--stack";
     const marked = /def-list--(stack|cards)/.test(layout);
+    const leads = /def-list--stack/.test(layout);
     return (
     <dl className={layout} style={css(style)}>
       {(rows || []).map((r, i) => {
         const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
-        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={marked ? leadSentence(r.text) : r.text} />;
+        const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={leads ? leadSentence(r.text) : r.text} />;
         const mark = marked ? rowMark(r.term) : {};
         return bare ? (
           <Fragment key={i}>{dt}{dd}</Fragment>
