@@ -317,17 +317,44 @@ const videoFields = {
 
 export const VideoGrid = {
   label: "Videos",
-  fields: { videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: videoFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
-  defaultProps: { videos: [], single: false },
-  render: ({ videos, single, style }) => (
+  fields: {
+    videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: { ...videoFields, caption: rich("Caption (playlist)") } },
+    single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] },
+    playlist: { type: "radio", label: "Playlist", options: [{ label: "No", value: false }, { label: "Yes", value: true }] },
+  },
+  defaultProps: { videos: [], single: false, playlist: false },
+  render: ({ videos, single, playlist, style }) => {
+    const list = videos || [];
+    // A playlist (2026-11-02): one player and the clips listed beside it; a
+    // click on a line plays that clip in the player (YT_SCRIPT in main.jsx).
+    if (playlist && list.length) {
+      return (
+        <div className="playlist" style={css(style)}>
+          <div className="playlist-stage act-video">
+            <Player v={list[0]} sizes={SIZES.wrap} />
+          </div>
+          <ol className="playlist-list">
+            {list.map((v, i) => (
+              <li key={i}>
+                <button type="button" className="playlist-item" data-play={v.src} data-title={v.title} aria-pressed={i === 0 ? "true" : "false"}>
+                  <H as="span" className="playlist-caption" html={v.caption || v.title} />
+                </button>
+              </li>
+            ))}
+          </ol>
+        </div>
+      );
+    }
+    return (
     <div className={cx("video-grid", single && "video-grid--single")} style={css(style)}>
-      {(videos || []).map((v, i) => (
+      {list.map((v, i) => (
         <div className="act-video" key={i}>
-          <Player v={v} sizes={single ? SIZES.single : SIZES.videos((videos || []).length)} />
+          <Player v={v} sizes={single ? SIZES.single : SIZES.videos(list.length)} />
         </div>
       ))}
     </div>
-  ),
+    );
+  },
 };
 
 // The picture or the clip beside an act's heading.

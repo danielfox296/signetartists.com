@@ -326,30 +326,6 @@
       }
      },
      {
-      "type": "List",
-      "props": {
-       "id": "List-60",
-       "cls": "clip-list",
-       "items": [
-        {
-         "html": "<span class=\"clip-name\">The Thrill Is Gone</span> by B.B. King, live at a blues jam"
-        },
-        {
-         "html": "<span class=\"clip-name\">Drive</span> by The Cars"
-        },
-        {
-         "html": "<span class=\"clip-name\">Going Down</span> by Freddie King, as a duo with a second guitarist"
-        },
-        {
-         "html": "<span class=\"clip-name\">Don’t Drink the Water</span> by Dave Matthews Band, as a duo"
-        },
-        {
-         "html": "<span class=\"clip-name\">Headline</span>, one of his own songs"
-        }
-       ]
-      }
-     },
-     {
       "type": "VideoGrid",
       "props": {
        "id": "VideoGrid-30",
@@ -358,34 +334,40 @@
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/B7ZnhTflOfs?rel=0",
          "title": "Tony Medina playing The Thrill Is Gone live at a blues jam",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">The Thrill Is Gone</span> by B.B. King, live at a blues jam"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
          "title": "Tony Medina playing a cover of Drive by The Cars",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Drive</span> by The Cars"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/t_s2FavrDew?rel=0",
          "title": "Tony Medina playing the Freddie King standard Going Down as a duo",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Going Down</span> by Freddie King, as a duo with a second guitarist"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/qf4_7lKu3iE?rel=0",
          "title": "Tony Medina playing a Dave Matthews cover as a duo",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Don’t Drink the Water</span> by Dave Matthews Band, as a duo"
         },
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
          "title": "Tony Medina playing his original song Headline",
-         "loading": "lazy"
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Headline</span>, one of his own songs"
         }
        ],
-       "single": false
+       "single": false,
+       "playlist": true
       }
      },
      {

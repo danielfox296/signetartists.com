@@ -136,6 +136,21 @@ export function hero(html) {
 // Click-to-play YouTube: a video's button becomes its player, playing.
 const YT_SCRIPT = `<script>
     document.addEventListener('click', function (e) {
+      var item = e.target.closest && e.target.closest('.playlist-item');
+      if (item) {
+        var pl = item.closest('.playlist');
+        var stage = pl.querySelector('.playlist-stage');
+        var p = document.createElement('iframe');
+        var u = item.getAttribute('data-play');
+        p.src = u + (u.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+        p.title = item.getAttribute('data-title') || '';
+        p.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture');
+        p.allowFullscreen = true;
+        stage.replaceChildren(p);
+        pl.querySelectorAll('.playlist-item').forEach(function (x) { x.setAttribute('aria-pressed', x === item ? 'true' : 'false'); });
+        if (stage.getBoundingClientRect().top < 0) { stage.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        return;
+      }
       var b = e.target.closest && e.target.closest('.yt');
       if (!b) { return; }
       var src = b.getAttribute('data-yt');
