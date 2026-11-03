@@ -49,7 +49,9 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-head">
         <div className="footer-brand">
-          <p className="wordmark">{b.name}</p>
+          <a className="logo footer-logo" href={s.prefix || "./"}>
+            <img src={href("/img/signet-logo.png")} alt={b.name} width="372" height="144" loading="lazy" decoding="async" />
+          </a>
           <p className="footer-line">{f.line}</p>
         </div>
         <div className="footer-contact">
