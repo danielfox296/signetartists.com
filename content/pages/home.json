@@ -69,30 +69,6 @@
    }
   },
   {
-   "type": "Text",
-   "props": {
-    "id": "Text-8",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-5"
-      }
-     },
-     {
-      "type": "ButtonRow",
-      "props": {
-       "id": "ButtonRow-6",
-       "buttons": []
-      }
-     }
-    ],
-    "_notes": "Pillar 1 — the differentiator, high on the page. Still early evening in\n     the night arc, so it stays on paper; the warming starts at Range.\n\n     Trimmed 2026-08-07, content overhaul. This block used to print the whole\n     seven-item included list, which also appears in full on the pricing page\n     and in pieces on three others. It now states the pillar once and points at\n     the documents that prove it. The canonical included list lives on pricing.",
-    "_file": "02-how-we-work.html"
-   }
-  },
-  {
    "type": "RangeStrip",
    "props": {
     "id": "RangeStrip-10",
