@@ -18,7 +18,10 @@ export const Heading = {
   label: "Heading",
   fields: { ...headingFields, slab: headingFields.slab },
   defaultProps: { eyebrow: "Eyebrow", title: "Title", titleTag: "h2", titleClass: "h2", lede: "Lede" },
-  render: (p) => (
+  render: function HeadingRender(p) {
+    const s = useSite();
+    const href = useHref();
+    const heading = (
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
       {p.title != null ? <H as={p.titleTag || "h2"} className={p.titleClass || "h2"} style={css(p.titleStyle)} html={p.title} /> : null}
@@ -32,7 +35,18 @@ export const Heading = {
       <Buttons items={p.buttons} />
       {p.headingNote != null ? <H as="p" className="note" html={p.headingNote} /> : null}
     </div>
-  ),
+    );
+    // The page's own h1 heading sits over a full-bleed photo, the same
+    // treatment as the closing call to action (2026-11-02).
+    const photo = p.titleTag === "h1" ? heroPhoto(s) : null;
+    if (!photo) return heading;
+    return (
+      <div className="hero-photo">
+        <div className="hero-photo__bg" aria-hidden="true" style={{ backgroundImage: `url("${href(photo)}")` }} />
+        {heading}
+      </div>
+    );
+  },
 };
 
 export const Paragraph = {
@@ -329,14 +343,50 @@ function closePhoto(s, image) {
   const actId = s.page && s.page.root && s.page.root.props && s.page.root.props.schema && s.page.root.props.schema.act;
   const act = actId && m.ACT_BY_ID[actId];
   if (act && act.img) return "/img/" + act.img;
-  const list = (m.site && m.site.closePhotos) || [];
+  return rotation(s, 0);
+}
+
+// The photo behind a page's h1 heading (2026-11-02, Daniel: "there should be
+// a hero section that's treated like this"). An act page takes the first
+// photograph in its own gallery, else its card; any other page takes one of
+// site.closePhotos, two along from the one its closing call shows, so the top
+// and the foot of a page never repeat.
+function pageActOf(s) {
+  const m = s && s.model;
+  const props = s && s.page && s.page.root && s.page.root.props;
+  const id = props && props.schema && props.schema.act;
+  return m && id ? m.ACT_BY_ID[id] : null;
+}
+function rotation(s, offset) {
+  const m = s && s.model;
+  const list = (m && m.site && m.site.closePhotos) || [];
   if (!list.length) return null;
-  const key = s.url || "/";
+  const key = (s && s.url) || "/";
   let h = 0;
   for (const ch of key) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-  const src = list[h % list.length].src;
+  const src = list[(h + offset) % list.length].src;
   return src.startsWith("/") ? src : "/" + src;
 }
+function heroPhoto(s) {
+  if (!s || !s.model || !s.page) return null;
+  const act = pageActOf(s);
+  if (act) {
+    let first = null;
+    const walk = (o) => {
+      if (first || !o) return;
+      if (Array.isArray(o)) return o.forEach(walk);
+      if (typeof o === "object") {
+        if (o.type === "MediaGrid" && o.props && o.props.images && o.props.images[0]) first = o.props.images[0].src;
+        else Object.values(o).forEach(walk);
+      }
+    };
+    walk(s.page.content);
+    if (first) return first.startsWith("/") ? first : "/" + first;
+    return act.img ? "/img/" + act.img : null;
+  }
+  return rotation(s, 2);
+}
+
 
 export const CloseRow = {
   label: "Call to action",

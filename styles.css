@@ -3712,3 +3712,49 @@ main:focus {
 .close-row--photo .lede {
   color: var(--ink);
 }
+
+/* The page hero (2026-11-02): a page's h1 heading over a full-bleed photo,
+   matching the closing call so the top of a page carries as much as its foot.
+   The photo layer spans the viewport from inside the column (the section
+   clips the overhang), in black and white under the same wash. The section's
+   own top padding moves inside the hero. */
+.section--top:has(.hero-photo) {
+  padding-top: 0;
+  overflow-x: clip;
+}
+.section--top:has(> .wrap > .hero-photo:last-child) {
+  padding-bottom: 0;
+}
+.hero-photo {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(3.5rem, 1.5rem + 7vw, 8rem) 0 clamp(3rem, 1.5rem + 5vw, 6.5rem);
+}
+.hero-photo + * {
+  margin-top: var(--space-4);
+}
+.hero-photo__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-size: cover;
+  background-position: 50% 28%;
+  background-repeat: no-repeat;
+  filter: grayscale(1) contrast(1.05);
+}
+.hero-photo__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 19, 14, 0.64);
+}
+.hero-photo .lede,
+.hero-photo .prose,
+.hero-photo .act-face,
+.hero-photo .note {
+  color: var(--ink);
+}
