@@ -33,7 +33,9 @@
     "_note": "Authored 2026-09-16, the first page published with the signet-new-act skill (scripts/new_act_page.py --kind ensembles --shape artist). A named group of three equals at an ensembles URL, the same placement as Dirty Flamenco; acts.json changes-jazz-trio.page points here so every card and llms line follows. The hero is the empty footage slot over the interim still: their site has no photograph and no footage, only two studio recordings, which the hero note links. No prices anywhere.",
     "reader": "Whoever wants real jazz under a dinner, a cocktail hour or a gala, played by musicians they can look up first.",
     "_title_note": "54 chars before the pipe. 'for hire' because the bare Denver jazz SERP is clubs (the jazz-duo-trio page's lesson); the name leads because the name is the product.",
-    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions."
+    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions.",
+    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
+    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -67,8 +69,7 @@
          "href": "/pricing/",
          "cls": "btn btn--outline"
         }
-       ],
-       "headingNote": "Hear them first: <a href=\"https://changesjazz.base44.app/music\">two studio recordings on their site</a>, with the three bios beside them."
+       ]
       }
      },
      {
@@ -213,7 +214,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>. The classic trio lineups are in <a href=\"/blog/what-is-a-jazz-trio/\">what is a jazz trio</a>.",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>. The classic trio lineups are in <a href=\"/blog/what-is-a-jazz-trio/\">what is a jazz trio</a>.",
        "cls": "note"
       }
      },
@@ -224,7 +225,7 @@
        "items": [
         {
          "q": "What does Changes Jazz Trio play?",
-         "a": "Jazz standards, played by a Denver guitar trio with a modern edge: guitar, fretless bass and drums, with the arrangements left open. It's instrumental, so it sits under a dinner, and it holds a listening crowd when the evening gives it one. Their site carries two studio recordings."
+         "a": "Jazz standards, played by a Denver guitar trio with a modern edge: guitar, fretless bass and drums, with the arrangements left open. It's instrumental, so it sits under a dinner, and it holds a listening crowd when the evening gives it one."
         },
         {
          "q": "How is this different from the jazz duo?",
@@ -240,7 +241,7 @@
         },
         {
          "q": "Can Changes play outdoors?",
-         "a": "Yes, with a covered, level and dry spot and power run to it. We agree a plan for moving indoors with you ahead of time, because Colorado evenings turn fast."
+         "a": "Yes, with a covered spot out of the weather. We agree a plan for moving indoors with you ahead of time, because Colorado evenings turn fast."
         }
        ],
        "schema": true

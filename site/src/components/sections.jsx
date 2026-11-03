@@ -532,7 +532,7 @@ const ContactForm = {
                         <select id="act" name="Act" disabled>
                           <option value="">Not sure yet, recommend one</option>
                           <optgroup label="Configurations">{opts(m.FORMAT_ACTS)}</optgroup>
-                          <optgroup label="Named acts">{opts(m.NAMED_ACTS)}</optgroup>
+                          <optgroup label="Featured Artists">{opts(m.NAMED_ACTS)}</optgroup>
                         </select>
                       </div>
                     ) : (
@@ -568,7 +568,7 @@ const Roster = {
     title: rich("Title"),
     note: rich("Note"),
     empty: rich("Nothing matches"),
-    lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { lane: { type: "select", label: "Acts", options: [{ label: "Configurations", value: "format" }, { label: "Named acts", value: "named" }] }, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
+    lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { lane: { type: "select", label: "Acts", options: [{ label: "Configurations", value: "format" }, { label: "Featured Artists", value: "named" }] }, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
     band: shellFields.band,
     script: { type: "radio", label: "Act script", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
   },

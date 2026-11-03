@@ -49,7 +49,9 @@
    "notes": {
     "_note": "The flagship act page, authored 2026-08-20 with the SEO buildout. Replaces the generated /music/tejas-singh/ page: acts.json carries page: 'artists/tejas-singh/', build.py skips generation for acts with a page field, and REDIRECTS stubs the old URL to this one. Identity copy is the ratified acts.json paragraphs; the ladder and the setlist resolve from tokens. No prices anywhere since 2026-09-04.",
     "reader": "Whoever wants one act to carry the whole night, from dinner to a full dance floor: a holiday party, a milestone birthday, a wedding, a client evening.",
-    "_title_note": "57 chars before the brand suffix, inside the 60-char cap (the cap is measured pre-suffix). title_exact swaps the build's em dash suffix for the pipe suffix written here; the brand stays in the SERP line like every other page."
+    "_title_note": "57 chars before the brand suffix, inside the 60-char cap (the cap is measured pre-suffix). title_exact swaps the build's em dash suffix for the pipe suffix written here; the brand stays in the SERP line like every other page.",
+    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
+    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -83,8 +85,7 @@
          "href": "/pricing/",
          "cls": "btn btn--outline"
         }
-       ],
-       "headingNote": "Hear him first: <a href=\"https://www.tejassinghmusic.com/\">tejassinghmusic.com</a> and <a href=\"https://open.spotify.com/artist/4aCRec0OSB09DRVTLrSdTm\">Spotify</a>."
+       ]
       }
      },
      {
@@ -312,7 +313,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },

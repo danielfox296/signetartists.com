@@ -1,0 +1,307 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/afro-house-dj/",
+   "title": "Afro house DJ in Denver, with live tabla | Signet Artists",
+   "titleExact": true,
+   "description": "A Denver DJ playing Afro house, deep house and amapiano, with live tabla on request, for after-parties, holiday parties, weddings and birthdays in Colorado.",
+   "nav": "music",
+   "ogImage": "img/afro-house-dj-card.jpg",
+   "ogImageAlt": "A DJ holding headphones to one ear under purple and pink stage light.",
+   "breadcrumb": "Afro House DJ",
+   "schema": {
+    "service": {
+     "name": "Afro house DJ with live tabla",
+     "serviceType": "Afro house, deep house and amapiano DJ sets, with live tabla on request, for corporate events, weddings and private parties",
+     "description": "A Denver DJ playing Afro house, deep house and amapiano, with live Indian classical tabla over the set on request, for conference after-parties, holiday parties, wedding receptions and birthdays across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "dj"
+     ]
+    },
+    "act": "afro-house-dj"
+   },
+   "notes": {
+    "_note": "Authored 2026-11-02, first as a named artist page and recast the same evening as a spec'd format on Daniel's ruling (no artist names, no Instagram or other link out: 'we book people, we don't promote them and give a client an option to go around us'). Format shape after ensembles-dj: Intro, the credits strip, the tabla, occasions, photographs, questions, the close. No equipment, setup or stage detail anywhere on the page (Daniel, 2026-11-02: 'this page is to inspire an evocative feel to inspire a booking not be a fucking tech rider'). No prices.",
+    "reader": "Whoever wants a dance floor on house music, Afro house and amapiano, with something live on it as well as a DJ: a conference after-party, an office holiday party, a wedding reception, a milestone birthday.",
+    "_title_note": "57 characters with the brand suffix. The term buyers type is 'afro house dj', with the city and the tabla as the difference.",
+    "_hero_note": "The hero is the DJ's photograph until a clip is on @SignetArtists under a title with no name; see the act's _video_note."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Afro house and amapiano",
+       "slab": true,
+       "title": "An Afro house DJ in Denver, with live tabla over the set.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the point in a house set when the drums lock in and the people standing at the edge of the floor start to move. This DJ plays Afro house, deep house and amapiano, and can sit down at a pair of tabla drums and play them live over the records.",
+       "headingText": [
+        {
+         "html": "It books for a conference after-party, an office holiday party, a wedding reception or a birthday, anywhere the night wants a dance floor on house music."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=afro-house-dj",
+         "cls": "btn"
+        },
+        {
+         "label": "See pricing",
+         "href": "/pricing/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/afro-house-dj-card.jpg",
+        "alt": "A DJ holding headphones to one ear under purple and pink stage light.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_notes": "Format intro in the ensembles-dj shape: eyebrow the sound, the h1 a sentence in the buyer's words, the lede opening on the moment the buyer pays for. No name and no look-up link."
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_notes": "The client strip, the same block the other act pages carry."
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The tabla",
+       "title": "Live drums over the records.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The DJ trained in Indian classical music on the tabla, a pair of hand drums. Played live, they give the crowd a musician to watch as well as music to dance to, and the same set works without them when you book the DJ on their own."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The DJ has played Denver's house clubs and club nights in Chicago, San Francisco, San Diego and Hong Kong, and can play the warm-up while a crowd is still arriving and talking, the peak of the night once the floor is full, or one long set that covers both.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_notes": "The identity paragraphs from the act's file. No club names or bill-mates, which would identify the person behind an unnamed format."
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Who books an Afro house DJ.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "cls": "def-list def-list--stack",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/after-party/\">Conference after-parties</a>",
+         "text": "The night after the program, for a crowd that flew in from everywhere and wants a dance floor on house music."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "For a company that wants its dance floor on house music, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue, booked as the DJ alone or with the tabla."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthdays</a>",
+         "text": "A birthday for people who go out to hear Afro house and amapiano, at a venue or a house with a floor for dancing."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Wedding receptions</a>",
+         "text": "For a couple whose friends go out dancing to house music and want the reception to sound like the clubs they go to. Send us the date and we’ll price it."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "We plan the set around speeches and a program with your <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_notes": "Who books it and why, never when."
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Photos",
+       "title": "On the decks.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/acts/afro-house-dj-decks.jpg",
+         "alt": "A DJ at a pair of Pioneer decks on a club stage, a big monstera plant in the foreground, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/afro-house-dj-portrait.jpg",
+         "alt": "The DJ in sunglasses, a backwards cap and a white T-shirt under a steel canopy.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "The DJ's own photographs from the EPK zip, provenance in media-sources.json. The headphones photograph is the hero, so it is not repeated here. Not placed: the two full sets on the promoter's channel (the DJ's name is in their titles and thumbnails), six portraits that came only as narrow EPK strips, low-resolution video stills, flyers, logos and cover art."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Afro house DJ questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "schema": true,
+       "items": [
+        {
+         "q": "What does the Afro house DJ play?",
+         "a": "Afro house, deep house and amapiano, with global electronic records worked into the set. It's a Denver DJ booked through Signet Artists, with live tabla over the set when you want it."
+        },
+        {
+         "q": "Can the tabla be added to any booking?",
+         "a": "Yes. Ask for it when you send the date and it's priced with the rest of the booking."
+        },
+        {
+         "q": "How long does the DJ play?",
+         "a": "Anywhere from one hour to four, with the breaks planned around your program."
+        },
+        {
+         "q": "Does the DJ play outside Denver?",
+         "a": "Yes, across Colorado, and travel outside the Denver metro is priced with the date."
+        }
+       ]
+      }
+     }
+    ],
+    "_notes": "Buyer questions only; no equipment or setup."
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book an Afro house DJ for the night, with live tabla over the set.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing follows it."
+   }
+  }
+ ]
+}

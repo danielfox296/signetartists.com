@@ -111,7 +111,9 @@
     "_note": "Authored 2026-10-29 with the signet-new-act skill, the day the band joined the roster from its own email to hello@ (the pitch and one-sheet on Oct 27, then the EPK, riders, stage plot, press photo and logo; Daniel's replies in the thread are the clearance). Mirrors artists-tony-medina: the act's file carries page 'artists/little-moses-jones/', the identity paragraphs are the ratified ones in that file, and there is no ladder section because the band books as one size (six piece with its own sound engineer). Every claim traces to littlemosesjones.com, the EPK PDF, the riders or @LittleMosesJones; the credits named are the band's own. No prices anywhere. The one-name rule on a face-led act keeps the lineup unnamed on this page, in alt text and in the video titles, although the band's own site names everyone.",
     "reader": "Whoever wants the floor full of people singing every word to the records they grew up on, from an office holiday party to a 40th to a wedding reception.",
     "_title_note": "54 characters before the brand suffix. The terms buyers type are the era and the genre (90s hip hop band, r&b band denver), with the act's name first.",
-    "_read_note": "Read aloud 2026-10-29 against AI-TELLS layers 7 and 8 on the built page: the verses-rapped-live fact, the clean show and the sound engineer each said once where they do the most work, the FAQ answering in the buyer's words without repeating the body, the credits sentence split in two."
+    "_read_note": "Read aloud 2026-10-29 against AI-TELLS layers 7 and 8 on the built page: the verses-rapped-live fact, the clean show and the sound engineer each said once where they do the most work, the FAQ answering in the buyer's words without repeating the body, the credits sentence split in two.",
+    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
+    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -145,8 +147,7 @@
          "href": "/pricing/",
          "cls": "btn btn--outline"
         }
-       ],
-       "headingNote": "Hear them first: <a href=\"https://littlemosesjones.com/\">littlemosesjones.com</a> and <a href=\"https://www.youtube.com/@LittleMosesJones\">their channel</a>."
+       ]
       }
      },
      {
@@ -243,7 +244,7 @@
         },
         {
          "term": "<a href=\"/corporate/after-party/\">Conference after-parties and galas</a>",
-         "text": "The hour after the program, for a ballroom crowd that flew in from everywhere and came up on the same songs. The band’s own engineer runs the sound, so the move from the speeches to the dance floor is one crew’s job."
+         "text": "The hour after the program, for a ballroom crowd that flew in from everywhere and came up on the same songs."
         },
         {
          "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthdays</a>",
@@ -251,7 +252,7 @@
         },
         {
          "term": "<a href=\"/weddings/\">Wedding receptions</a>",
-         "text": "A reception where the couple wants the floor full from the first song, with the first dance learned on request. On their own site the band also plays the ceremony and the cocktail hour with a smaller lineup, so one band can take the whole day. Send us the date and we’ll price it."
+         "text": "A reception where the couple wants the floor full from the first song, with the first dance learned on request. The band also plays the ceremony and the cocktail hour with a smaller lineup, so one band can take the whole day. Send us the date and we’ll price it."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -556,7 +557,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-35",
-       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },
@@ -572,10 +573,6 @@
         {
          "q": "Can the show be kept clean for an office party?",
          "a": "Yes. Tell us whether it's a work crowd or a family crowd when you send the date, and the set is built to it."
-        },
-        {
-         "q": "How big is the band, and what does it need from the venue?",
-         "a": "Six musicians and a sound engineer who travels with them. The band plays through its own sound system or the venue's, needs three dedicated 20-amp circuits for its instruments, or six when it brings the full sound and lights, and the stage plot and input list come with the booking."
         },
         {
          "q": "How long does the band play?",

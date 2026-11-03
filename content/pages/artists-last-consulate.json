@@ -30,7 +30,8 @@
    },
    "notes": {
     "_note": "Named-project page built 2026-09-23 on Daniel's call ('build pages for solo piano and last consulate too'), in the Firstwater shape: a named act with nobody named, spec'd in acts.json, the identity paragraphs held there since 2026-09-03 now on a page. No site, no channel and no footage exist, so the hero carries the act's own artwork (the prop passport Daniel supplied) in the footage slot. Title and meta carry the terms buyers type ('instrumental music for events', 'background music for corporate events'); the eyebrow keeps the act's own genre word. The residency product in LAST-CONSULATE-RESIDENCY.md is sold by hand and is not on this page.",
-    "reader": "Whoever wants a dinner or a cocktail hour that feels like a late jazz set in a very good hotel, with the conversation as the point."
+    "reader": "Whoever wants a dinner or a cocktail hour that feels like a late jazz set in a very good hotel, with the conversation as the point.",
+    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -214,7 +215,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },
@@ -236,12 +237,8 @@
          "a": "No. Everything is original and instrumental, with no singer, which is part of why a client dinner books it: there's nothing on the night for the host to manage."
         },
         {
-         "q": "How big is the setup?",
-         "a": "One musician and one rig. It sets up in about 6 by 4 feet on one dedicated 20-amp circuit, takes 45 minutes to set up, and plays through its own small sound system or the venue's house system, whichever the space wants."
-        },
-        {
          "q": "Can it carry a whole evening?",
-         "a": "Arrival through dinner, yes. When the night wants a dance floor afterward, a band or the DJ takes over on the same contract and the same sound system, so Last Consulate is the first half of one booking."
+         "a": "Arrival through dinner, yes. When the night wants a dance floor afterward, a band or the DJ takes over on the same contract, so Last Consulate is the first half of one booking."
         }
        ],
        "schema": true
