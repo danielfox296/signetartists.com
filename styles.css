@@ -219,10 +219,16 @@ img {
 /* The rect is filled white since the inversion. Unfilled it defaults to black,
    which was correct speckle on cream and invisible on a dark ground — the
    grain had to flip with the palette or it stopped existing. */
+.section--sunk {
+  background-color: var(--paper-sunk);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
 /* 2026-11-03, Daniel: the band is the secondary, a light field that breaks up
    the dark site. Everything on it turns over: near-black type, rules and
-   marks, and a dark button. */
-.section--sunk {
+   marks, and a dark button. Two bands stay dark: a closing call has a photo
+   behind its type, and the client logos are white. */
+.section--sunk:not(.credits, :has(.close-row--photo)) {
   --ink: var(--near-black);
   --ink-soft: #1f2b30;
   --ink-faint: #33424a;
@@ -235,7 +241,6 @@ img {
   --brass-bright: var(--near-black);
   color: var(--ink);
   background-color: var(--second);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23ffffff' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
 /* The night arc, rebuilt for the dark base (WEBSITE-PLAN §6.2, amended
