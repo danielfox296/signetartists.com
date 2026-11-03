@@ -258,7 +258,7 @@ export const PageIndex = {
     const depth = (o) => (o.match(/\//g) || []).length;
     for (const g of groups || []) {
       if (g.lanes) {
-        for (const [heading, acts] of [["Configurations", m.FORMAT_ACTS], ["Featured Artists", m.NAMED_ACTS]]) {
+        for (const [heading, acts] of [["Featured Artists", m.NAMED_ACTS], ["House Ensembles", m.FORMAT_ACTS]]) {
           const group = acts.filter((a) => a.page && byOutput[a.page + "index.html"] && !used.has(a.page + "index.html")).map((a) => byOutput[a.page + "index.html"]);
           if (group.length) emit(heading, group);
         }

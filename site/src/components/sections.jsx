@@ -6,7 +6,7 @@ import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
 import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
-import { ALLOW, CardGrid, CloseRow } from "./blocks.jsx";
+import { ALLOW, CloseRow, RosterGrid } from "./blocks.jsx";
 
 const { rich, text } = F;
 const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0, 48) : "");
@@ -531,8 +531,8 @@ const ContactForm = {
                         <label htmlFor="act">Act</label>
                         <select id="act" name="Act" disabled>
                           <option value="">Not sure yet, recommend one</option>
-                          <optgroup label="Configurations">{opts(m.FORMAT_ACTS)}</optgroup>
                           <optgroup label="Featured Artists">{opts(m.NAMED_ACTS)}</optgroup>
+                          <optgroup label="House Ensembles">{opts(m.FORMAT_ACTS)}</optgroup>
                         </select>
                       </div>
                     ) : (
@@ -561,14 +561,15 @@ const ContactForm = {
   },
 };
 
-// The roster page: the filters, then the two lanes of act cards.
+// The roster page: the filters, then the two lanes of act cards, two across
+// with the photograph first.
 const Roster = {
   label: "Roster",
   fields: {
     title: rich("Title"),
     note: rich("Note"),
     empty: rich("Nothing matches"),
-    lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { lane: { type: "select", label: "Acts", options: [{ label: "Configurations", value: "format" }, { label: "Featured Artists", value: "named" }] }, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
+    lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { lane: { type: "select", label: "Acts", options: [{ label: "House Ensembles", value: "format" }, { label: "Featured Artists", value: "named" }] }, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
     band: shellFields.band,
     script: { type: "radio", label: "Act script", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
   },
@@ -592,10 +593,10 @@ const Roster = {
                   <H as="p" className="lede" html={l.lede} />
                 </div>
                 {l.lane === "format" ? (
-                  <CardGrid acts={m.FORMAT_ACTS} compact id="roster-formats" cls="card-grid card-grid--3 roster-grid" />
+                  <RosterGrid acts={m.FORMAT_ACTS} id="roster-formats" />
                 ) : (
                   <>
-                    <CardGrid acts={m.NAMED_ACTS} id="roster-named" cls="card-grid card-grid--3 roster-grid" />
+                    <RosterGrid acts={m.NAMED_ACTS} id="roster-named" />
                     <p className="note">{"Want to see them play? "}<a href={href(`/${m.WATCH_BASE}/`)}>Check out our video clips</a>.</p>
                   </>
                 )}

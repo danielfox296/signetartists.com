@@ -289,3 +289,39 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1578451779798-c250e75fd0e1
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-09 with CopyDesk
+
+## photo-1560788762-d78911d73c4e.jpg
+- Used on: the Solo Guitarist roster card
+- Source: https://images.unsplash.com/photo-1560788762-d78911d73c4e
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-03
+
+## photo-1684784176798-aae206e325e7.jpg
+- Used on: the Solo Piano roster card
+- Source: https://images.unsplash.com/photo-1684784176798-aae206e325e7
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-03
+
+## photo-1526979118433-63c7344f06f1.jpg
+- Used on: the DJ roster card
+- Source: https://images.unsplash.com/photo-1526979118433-63c7344f06f1
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-03
+
+## photo-1619558041249-0523903712e1.jpg
+- Used on: the Funk Band roster card
+- Source: https://images.unsplash.com/photo-1619558041249-0523903712e1
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-03
+
+## photo-1649640198446-bc8fa0388e40.jpg
+- Used on: the Americana Band roster card
+- Source: https://images.unsplash.com/photo-1649640198446-bc8fa0388e40
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-03
+
+## photo-1786540601357-aba5b71f3da8.jpg
+- Used on: the Soul and R&B Band roster card
+- Source: https://images.unsplash.com/photo-1786540601357-aba5b71f3da8
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-03

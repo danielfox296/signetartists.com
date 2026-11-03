@@ -131,16 +131,16 @@
     "empty": "Nothing on the roster matches that combination. Widen one of them and it will.",
     "lanes": [
      {
-      "lane": "format",
-      "eyebrow": "Configurations",
-      "title": "The configurations, smallest first.",
-      "lede": "A jazz duo, a yacht rock band and every format in between, played by working Denver musicians matched to your date. Open any of them to hear what it sounds like and see which events it suits."
-     },
-     {
       "lane": "named",
       "eyebrow": "Featured Artists",
       "title": "The Featured Artists.",
       "lede": "Booked under their own names, and every one of them is a name you can look up."
+     },
+     {
+      "lane": "format",
+      "eyebrow": "House Ensembles",
+      "title": "The House Ensembles, smallest first.",
+      "lede": "A jazz duo, a yacht rock band and every format in between, played by working Denver musicians matched to your date. Open any of them to hear what it sounds like and see which events it suits."
      }
     ],
     "script": true,
@@ -213,7 +213,7 @@
        "id": "Faq-20",
        "items": [
         {
-         "q": "What's the difference between a Featured Artist and a configuration?",
+         "q": "What's the difference between a Featured Artist and a House Ensemble?",
          "a": "A Featured Artist, like Tejas Singh or Dirty Flamenco, is booked under its own name, so you know exactly who is playing. A format, like a jazz duo or a yacht rock band, is played by professional musicians we match to your date and your venue. Either one can be booked by sending us the date."
         },
         {

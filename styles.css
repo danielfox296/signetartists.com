@@ -3220,11 +3220,10 @@ main:focus {
   display: none;
 }
 
-/* The two lanes of the roster, 2026-09-23. The configurations come first,
-   compact: no photograph, one line, the size and the link, because a format
-   sells a spec and the photograph it used to carry was never of the act. The
-   named acts keep the full card underneath. A lane with nothing visible in
-   it after a filter hides, heading and all. */
+/* The two lanes of the roster, 2026-09-23: the Featured Artists and the
+   House Ensembles (named the configurations until 2026-11-03, when the
+   Featured Artists moved first). A lane with nothing visible in it after a
+   filter hides, heading and all. */
 .roster-lane {
   margin-top: 3.3rem;
 }
@@ -3256,6 +3255,114 @@ main:focus {
 
 .act-card--compact .act-card-link {
   margin-top: 1.1rem;
+}
+
+/* The roster page's cards since 2026-11-03 (Daniel): two across, the photo
+   first with the kind and the name over its foot, then the size, the tags and
+   one line, and room between the cards rather than a shared hairline. Featured
+   Artists come first, the House Ensembles under them. */
+.roster-grid--photo {
+  display: grid;
+  gap: 3.3rem 2rem;
+  margin-top: 2.2rem;
+}
+
+@media (min-width: 640px) {
+  .roster-grid--photo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.act-card--roster {
+  background: none;
+}
+
+.roster-card-link {
+  display: block;
+  color: inherit;
+}
+
+.roster-card-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--paper-sunk);
+}
+
+.roster-card-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.roster-card-link:hover .roster-card-photo img {
+  transform: scale(1.03);
+}
+
+.roster-card-over {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 6rem 1.5rem 1.25rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0) 100%);
+}
+
+.roster-card-over .act-kind {
+  margin: 0 0 0.4rem;
+}
+
+.roster-card-name {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.roster-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1.1rem;
+}
+
+.roster-card-meta .pill-row {
+  margin-top: 0;
+}
+
+.roster-card-size {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+
+.roster-card-line {
+  margin-top: 0.6rem;
+  font-size: 0.9625rem;
+  color: var(--ink-soft);
+}
+
+.roster-card-link:hover .roster-card-name {
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roster-card-photo img {
+    transition: none;
+  }
+
+  .roster-card-link:hover .roster-card-photo img {
+    transform: none;
+  }
 }
 
 /* --------------------------------------------------------- the act pages */
