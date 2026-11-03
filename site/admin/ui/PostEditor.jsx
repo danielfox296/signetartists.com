@@ -13,7 +13,7 @@ import { fileLabel } from "../lib/labels.js";
 import { keepUnedited, postHtml, POST_RICH } from "../lib/postrich.jsx";
 import { apply, hubOptions, hubUrl, hubValue, postPath, postsList, postUrl, renamePost, slugFromUrl, slugProblem, tidyPostProps, videosList } from "../lib/posts.js";
 import { go, session, useRepo } from "../state.js";
-import { assetUrl, conform, guarded, imageField, place } from "./fields.jsx";
+import { assetUrl, conform, freshAlts, guarded, imageField, place } from "./fields.jsx";
 import { AddMenu, Middle, ordered, overrides, PREFIX, PUCK_IFRAME, SectionList, setCanvasContext, useExternal, useStable, VIEWPORTS } from "./Editor.jsx";
 
 const usePuck = createUsePuck();
@@ -429,13 +429,15 @@ export function PostEditor({ slug }) {
     const { puck, editMode, children, id, ...rp } = c.root.props || {}; // eslint-disable-line no-unused-vars
     const base = repo.base(path);
     const props = tidyPostProps(cur.root.props, ordered(cur.root.props, rp), base ? JSON.parse(base).root.props : null);
-    const next = ordered(cur, { ...cur, root: { ...cur.root, props }, content: unedited(conform(c.content, settled(cur.content), adminPostConfig), cur.content) });
+    const [next, emptied] = freshAlts(ordered(cur, { ...cur, root: { ...cur.root, props }, content: unedited(conform(c.content, settled(cur.content), adminPostConfig), cur.content) }), cur);
     if (props.slug && props.slug !== cur.root.props.slug && !slugProblem(repo, props.slug, cur.root.props.slug, "post")) {
       apply(repo, renamePost(repo, slug, next));
       go("post", props.slug);
       return;
     }
-    if (serialize(next) !== repo.get(path)) repo.set(path, serialize(next), "editor");
+    // An emptied description is written as an outside edit, so the canvas
+    // re-reads the file and shows the field empty.
+    if (serialize(next) !== repo.get(path)) repo.set(path, serialize(next), emptied ? "picture" : "editor");
   });
   if (!doc)
     return (
