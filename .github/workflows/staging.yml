@@ -96,6 +96,12 @@ jobs:
           python3 scripts/nav_lint.py _site
           python3 site/scripts/site_check.py _site
 
+      # The copy check reads the built pages for the words the voice standard
+      # bans (2026-11-04). It warns and never stops a deploy, so nothing he
+      # types in the admin can hold up Go live.
+      - name: Check copy
+        run: python3 scripts/copy_check.py _site
+
       # The staging domain, plain HTML (no Jekyll), the commit it was built
       # from at /commit.txt, and nothing for search engines: robots.txt
       # disallows everything and every page carries noindex. Forms post
