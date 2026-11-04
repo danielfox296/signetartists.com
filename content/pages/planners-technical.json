@@ -3,7 +3,7 @@
   "props": {
    "path": "/planners/technical/",
    "title": "What we need from your venue",
-   "description": "Stage footprint, power, channel counts, load-in times and volume at every size, solo to quartet, plus the DJ, for a planner to forward to the venue.",
+   "description": "Here's the stage footprint, power, channel counts, load-in times and volume for every ensemble size from solo to quartet, plus the DJ, for planners to forward to the venue.",
    "nav": "planners",
    "breadcrumb": "Your venue",
    "schemaArticle": "on",
@@ -26,7 +26,7 @@
        "title": "What we need from your venue.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Every question a venue asks before it will confirm a band, answered on one page. It covers stage, power, channels, load-in and volume, from solo to quartet, plus the DJ. Send the link to the venue and to your AV lead; the six things worth confirming at contract are at the bottom."
+       "lede": "Your venue will probably want to know what the band needs before they confirm anything, so we've tried to answer all of their questions here. You'll find stage sizes, power, sound channels, load-in and volume for each size of band, from solo up to quartet, plus our DJ. Feel free to send this page to your venue and your AV lead."
       }
      }
     ],
@@ -44,7 +44,7 @@
       "type": "Title",
       "props": {
        "id": "Title-4",
-       "html": "The stage",
+       "html": "Stage size for a live band",
        "tag": "h2",
        "cls": "h3"
       }
@@ -53,7 +53,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "Published stage-rental guidance for a seven to ten-piece band runs to <strong class=\"num-accent\">24 by 24 feet</strong>. That number is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. Renting to it costs you a chunk of floor your guests wanted.",
+       "html": "If you look up stage rental guidance for a band of 7 to 10 musicians, it can run up to <strong class=\"num-accent\">24 by 24 feet</strong>. That number is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. If you rent a stage that size, you'll lose a lot of floor space your guests could be using.",
        "cls": "prose"
       }
      },
@@ -70,7 +70,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "So there are two numbers below. The first is what we ask for, where the band is comfortable and the sightlines work. The second is the smallest we'll play on. Between them nothing breaks; the band just gets tighter.",
+       "html": "We've given you two numbers for each size. The first is what we ask for, where the band is comfortable and the sightlines work. The second is the smallest we'll play on. Anywhere between those two numbers will work, and the band will just have a little less space.",
        "cls": "prose"
       }
      },
@@ -175,7 +175,7 @@
            "html": "6 by 3 ft"
           },
           {
-           "html": "Booth, controller and the house of our own PA"
+           "html": "Booth, controller and our own sound system"
           }
          ]
         }
@@ -186,7 +186,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-9",
-       "html": "Depth before width if you have to choose. A band squeezed narrow still works; a band with no depth puts the drums in the singer’s back.",
+       "html": "If you have to choose, give us depth before width. A band can still work in a narrow space, but with no depth the drums end up right behind the singer.",
        "cls": "note"
       }
      }
@@ -216,20 +216,20 @@
        "id": "DefRows-13",
        "rows": [
         {
-         "term": "We don't require a stage",
-         "text": "A band plays fine on a floor, and most of our Denver bookings are on one. A riser is a sightline decision for events over about 150 guests."
+         "term": "Do you need a stage?",
+         "text": "No. A band can play just fine on the floor, and most of our Denver bookings are set up that way. For events over about 150 guests, you may want a riser (a low platform) so people can see the band."
         },
         {
-         "term": "We don't supply one either",
-         "text": "If you want a riser, it comes from the venue or your production company. Tell us the height and we'll plan the load-in around it; 12 to 24 inches is normal and anything over 24 needs a rail behind the drums."
+         "term": "Who supplies a riser?",
+         "text": "We don't supply risers, so if you want one, it'll need to come from the venue or your production company. Just tell us the height and we'll plan the load-in around it. A riser of 12 to 24 inches is normal, and anything over 24 inches needs a rail behind the drums."
         },
         {
          "term": "Ceiling height",
-         "text": "Ten feet clear above the stage surface. Lighting stands go to nine, and a low ceiling over a riser is the one constraint that can't be solved on the day."
+         "text": "We need 10 feet of clear height above the stage surface. Lighting stands go up to 9 feet, and a low ceiling over a riser can't be fixed on the day of the event."
         },
         {
          "term": "Surface",
-         "text": "Level and solid. Deck that flexes under a drummer will be heard through every microphone on the stage. Carpet is fine; grass and gravel need a deck under the band."
+         "text": "The surface needs to be level and solid. If a stage deck flexes under a drummer, you may hear it through every microphone on stage. Carpet is fine, but grass and gravel will need a deck under the band."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -258,7 +258,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-17",
-       "html": "This is the requirement venues get wrong most often. <strong>Dedicated</strong> is the operative word. A 20-amp circuit shared with catering warmers, a coffee urn or a lighting truss will trip, and it will trip at the moment everything is switched on at once, which is the moment the venue is full.",
+       "html": "In our experience, this is the requirement that gets missed most often. We need <strong>dedicated</strong> circuits, which means nothing else is plugged into them. A 20-amp circuit shared with catering warmers, a coffee urn or a lighting truss can trip, and that's most likely to happen when everything is switched on at once and the venue is full.",
        "cls": "prose"
       }
      },
@@ -266,7 +266,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-18",
-       "html": "Circuits need to be within about 50 feet of the stage. We bring our own distribution and cable and don't need the venue to supply either. What we need from the venue is the circuits, confirmed in writing, before the day.",
+       "html": "Circuits need to be within about 50 feet of the stage. We bring our own power distribution and cable, so the venue doesn't need to supply either. We just need the venue to confirm those circuits in writing before your event.",
        "cls": "prose"
       }
      },
@@ -364,7 +364,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-20",
-       "html": "Channel counts are what arrives at the desk, including one announcement microphone on its own channel. Your AV lead will ask for this number.",
+       "html": "A channel count is the number of lines that reach the sound desk (the mixing board), including one announcement microphone on its own channel. Your AV lead will ask for this number.",
        "cls": "note"
       }
      }
@@ -382,7 +382,7 @@
       "type": "Title",
       "props": {
        "id": "Title-23",
-       "html": "Outdoors, and other places without a wall socket",
+       "html": "Outdoor events and other places without a wall outlet",
        "tag": "h2",
        "cls": "h3"
       }
@@ -391,7 +391,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "A generator works if it's a quiet one, properly grounded, and sized with headroom above the numbers above. A domestic generator at the edge of a lawn isn't that, and the noise floor it adds sits underneath every quiet moment of the evening.",
+       "html": "A generator can work if it's quiet, properly grounded and sized comfortably above the power numbers on this page. A small home generator usually won't do the job, and you may hear its noise under every quiet moment of your event.",
        "cls": "prose"
       }
      },
@@ -399,7 +399,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-25",
-       "html": "Cover over the band and over the desk isn't optional outdoors, in any forecast. Colorado evenings cool fast enough that by the end of a damp night the musicians are retuning between songs. If there's a move-indoors plan, it needs a decision time written into the run of show and a person named to make the call.",
+       "html": "For any outdoor event, we'll need cover over the band and the sound desk, whatever the forecast says. Colorado evenings can cool down fast, and by the end of a damp night the musicians may be retuning between songs. If you have a plan to move indoors, please write a decision time into the run of show and name the person who'll make the call.",
        "cls": "prose"
       }
      }
@@ -426,7 +426,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-29",
-       "html": "Times below are from the vehicle arriving to the band being ready for sound check, assuming a ground-floor space with parking within a reasonable push. Add 30 minutes for an elevator, and add 30 more if the elevator is shared with catering during their load-in.",
+       "html": "These times run from when the vehicle arrives to when the band is ready for sound check, and they assume a ground-floor space with parking close enough to roll the gear in. Add 30 minutes for an elevator, and add 30 more if the elevator is shared with catering during their load-in.",
        "cls": "prose"
       }
      },
@@ -545,23 +545,23 @@
        "rows": [
         {
          "term": "Doors and corridors",
-         "text": "36 inches clear. The widest single item is the bass amp or a keyboard case; nothing needs a double door, but a 30-inch doorway with a turn in it will cost you 20 minutes."
+         "text": "We need 36 inches of clearance. The widest item is the bass amp or a keyboard case, so nothing needs a double door, but a 30-inch doorway with a turn in it can add 20 minutes to load-in."
         },
         {
          "term": "Elevator",
-         "text": "A car of about 4 by 6 feet takes everything in several trips. Tell us the window we have it in and we'll plan inside it."
+         "text": "An elevator car of about 4 by 6 feet can take everything in several trips. Just tell us when we can use it and we'll plan around that."
         },
         {
          "term": "Sound check",
-         "text": "30 minutes once the band is set, and it finishes 60 minutes before the first guest arrives. That gap is where the problems found at sound check get fixed."
+         "text": "Sound check takes 30 minutes once the band is set, and we like to finish 60 minutes before the first guest arrives. That gap gives us time to fix anything we find at sound check."
         },
         {
-         "term": "Where the cases live",
-         "text": "Out of sight of guests, and not in the kitchen path. Any back-of-house corner works. If there's nowhere, tell us at contract and the cases go back to the vehicles, which adds 20 minutes to the strike."
+         "term": "Where we store our cases",
+         "text": "We'll need a spot for them that's out of sight of guests and clear of the kitchen path. Any back-of-house corner works. If there's nowhere to put them, just tell us when you book and the cases can go back to the vehicles, which adds 20 minutes to the strike."
         },
         {
          "term": "Strike",
-         "text": "Begins after the last note. We don't break down during the final set, and nothing gets carried through a space with guests still in it unless the venue requires it."
+         "text": "We start the strike (packing up) after the last note. We don't break down during the final set, and nothing gets carried through a space with guests still in it unless the venue requires it."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -590,7 +590,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-35",
-       "html": "Volume is a decision somebody makes in advance and writes into the run of show. Left undecided, it gets made on the night by whoever is standing nearest the desk.",
+       "html": "Someone should decide the volume in advance and write it into the run of show. Otherwise, that decision tends to fall to whoever is standing nearest the sound desk.",
        "cls": "prose"
       }
      },
@@ -605,7 +605,7 @@
          "textCls": "tnum"
         },
         {
-         "term": "Remarks, awards and anything on a microphone that is not us",
+         "term": "Remarks, awards and anything on a microphone that isn't us",
          "text": "Silent",
          "textCls": "tnum"
         },
@@ -627,7 +627,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-37",
-       "html": "If the venue enforces a cap, give us the number when you book. A band that knows at contract the ceiling is 95 dBA chooses arrangements and instrumentation that land inside it. A band told on the night just gets quieter.",
+       "html": "If the venue has a volume cap, just give us the number when you book. If the band knows ahead of time that the limit is 95 dBA, we can choose arrangements and instruments that stay under it. If the band only hears about it that night, all they can do is play quieter.",
        "cls": "prose"
       }
      },
@@ -635,7 +635,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-38",
-       "html": "Curfews are honored as written. Where there's one, the last twenty minutes are planned so the night ends on the right song.",
+       "html": "If your venue has a curfew, just let us know and we can plan the last 20 minutes with you so your event ends on the right song.",
        "cls": "prose"
       }
      }
@@ -653,7 +653,7 @@
       "type": "Title",
       "props": {
        "id": "Title-41",
-       "html": "What we need confirmed, and when",
+       "html": "What we need your venue to confirm when you book",
        "tag": "h2",
        "cls": "h3 h3--lead"
       }
@@ -662,7 +662,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-42",
-       "html": "There are six, and all of them are answers the venue already has. None of them takes longer than one email to get.",
+       "html": "There are six things on our list, and your venue should already have the answers. One email to your venue should take care of all of them.",
        "cls": "prose"
       }
      },
@@ -674,13 +674,13 @@
        "cols": false,
        "items": [
         {
-         "html": "The circuits, by count, and that they are dedicated"
+         "html": "How many circuits there are, and that they're dedicated"
         },
         {
          "html": "The stage or the floor area, in feet, and the riser height if there is one"
         },
         {
-         "html": "The load-in door, the route, and the elevator window if there is an elevator"
+         "html": "The load-in door, the route and when we can use the elevator, if the venue has one"
         },
         {
          "html": "Where the vehicles park and for how long"
@@ -727,14 +727,14 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Anything here that your venue disagrees with?",
-       "lede": "Send us the venue and we'll work it out with them directly."
+       "lede": "Just let us know and we'll talk to them directly."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-48",
-       "html": "More for planners: the <a href=\"../run-of-show/\">run of show templates</a> and the <a href=\"../faq/\">full question list</a>.",
+       "html": "Building your timeline next? Check out our <a href=\"../run-of-show/\">run of show templates</a>, along with our <a href=\"../faq/\">full question list</a>.",
        "cls": "note"
       }
      }

@@ -3,7 +3,7 @@
   "props": {
    "path": "/planners/run-of-show/",
    "title": "Run of show",
-   "description": "Three worked run-of-show templates with the band's rows filled in: a corporate gala, a wedding and a holiday party. Set times, breaks and who cues each moment.",
+   "description": "Here are three run-of-show templates with the band's rows filled in, for a corporate gala, a wedding and a holiday party. Each one shows the set times, the breaks and who cues each moment.",
    "nav": "planners",
    "schemaArticle": "on",
    "published": "2026-08-07"
@@ -20,12 +20,12 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "Run of show",
+       "eyebrow": "For Planners",
        "slab": true,
-       "title": "Three run of show templates, already timed.",
+       "title": "Run of show templates for a gala, a wedding and a holiday party.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Most run-of-show documents carry the band as one row that says <em>band plays</em>, and the detail gets filled in during the week of the event, by email, at speed. Here's that detail already worked out for the three kinds of night we see most. Take them, change the times, delete what doesn't apply."
+       "lede": "If you've ever put together a run of show, you know the band usually gets one row that says <em>band plays</em>, and the details get filled in by email the week of the event. We've worked those details out here for the three kinds of events we see most. You're welcome to use them, change the times and delete whatever doesn't apply."
       }
      }
     ],
@@ -43,7 +43,7 @@
       "type": "Title",
       "props": {
        "id": "Title-4",
-       "html": "How to read these",
+       "html": "How to read these templates",
        "tag": "h2",
        "cls": "h3"
       }
@@ -52,7 +52,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "The <strong>cue</strong> column is the one worth settling before the day. Every moment in an evening belongs to somebody, and what usually goes wrong is two people each assuming the other was going to nod at the band, or nobody knowing who decides the speeches are running long.",
+       "html": "The <strong>cue</strong> column is the most important one to get right. Someone needs to give the band the go-ahead for each moment of your event. What usually goes wrong is that two people each assume the other one will signal the band, or nobody knows who decides when the speeches are running long.",
        "cls": "prose"
       }
      },
@@ -60,7 +60,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-6",
-       "html": "Agree the cue column at sound check with the person holding the master document. Our bandleader takes their cues from that one person.",
+       "html": "We'll go over that column at sound check with whoever is holding the master document. Our bandleader takes their cues from that one person.",
        "cls": "prose"
       }
      }
@@ -87,7 +87,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-10",
-       "html": "Four hundred guests, a quartet with a DJ, an 11:30pm curfew. This is the way most awards dinners and fundraisers run.",
+       "html": "This example has 400 guests, a quartet with a DJ and an 11:30pm curfew. Many awards dinners and fundraisers run this way.",
        "cls": "note"
       }
      },
@@ -137,7 +137,7 @@
            "html": "Sound check complete"
           },
           {
-           "html": "Cue column agreed with you"
+           "html": "Cue column settled with you"
           },
           {
            "html": "Bandleader"
@@ -171,7 +171,7 @@
            "html": "Call to dinner"
           },
           {
-           "html": "Plays guests in, then down"
+           "html": "Plays guests in, then turns down"
           },
           {
            "html": "You"
@@ -191,7 +191,7 @@
            "html": "Trio, 63 dBA"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -222,7 +222,7 @@
            "html": "Awards"
           },
           {
-           "html": "Silent. Walk-on stings if wanted"
+           "html": "Silent. Short walk-on music if you'd like"
           },
           {
            "html": "You"
@@ -239,7 +239,7 @@
            "html": "Video package"
           },
           {
-           "html": "PA handed to AV"
+           "html": "Sound system handed to the AV team"
           },
           {
            "html": "AV lead"
@@ -310,7 +310,7 @@
            "html": "DJ, continuous"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -324,7 +324,7 @@
            "html": "Dancing, second set"
           },
           {
-           "html": "Quartet, peak"
+           "html": "Quartet, at full energy"
           },
           {
            "html": "Bandleader"
@@ -341,7 +341,7 @@
            "html": "Last song, curfew"
           },
           {
-           "html": "Shaped to finish, not cut"
+           "html": "Times the last song to end at curfew"
           },
           {
            "html": "Bandleader"
@@ -355,7 +355,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-12",
-       "html": "Two of those rows are worth a second look. The <strong>7:00pm</strong> call to dinner is the surest way to move four hundred people from a bar into a seated dinner, and the band plays them in. The <strong>9:15pm</strong> changeover matters because a quartet can't get from a dinner setup to a dance setup silently, so the DJ covers that gap.",
+       "html": "Two of those rows are worth a second look. A clear <strong>7:00pm</strong> call to dinner is a great way to get 400 people from the bar to their seats, and the band can play them in. At the <strong>9:15pm</strong> changeover, the quartet can't move from its dinner setup to its dance setup silently, so the DJ plays through that gap.",
        "cls": "prose"
       }
      }
@@ -373,7 +373,7 @@
       "type": "Title",
       "props": {
        "id": "Title-15",
-       "html": "A wedding, ceremony through late night",
+       "html": "A wedding, from ceremony to late night",
        "tag": "h2",
        "cls": "h3"
       }
@@ -382,7 +382,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "A hundred and eighty guests, one venue, a duo for the ceremony and a quartet for the floor. The whole night is booked as one contract.",
+       "html": "Here we have 180 guests in one venue, with a duo for the ceremony and a quartet for the dance floor. We can put the whole event on one contract.",
        "cls": "note"
       }
      },
@@ -452,7 +452,7 @@
            "html": "Duo, prelude, 60 dBA"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -466,7 +466,7 @@
            "html": "Processional"
           },
           {
-           "html": "Duo. Your song, learned"
+           "html": "Duo. Plays your chosen song"
           },
           {
            "html": "Planner or officiant"
@@ -503,7 +503,7 @@
            "html": "Trio, 63 dBA"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -534,7 +534,7 @@
            "html": "First dance"
           },
           {
-           "html": "Quartet. Learned, arranged to length"
+           "html": "Quartet. Your song, arranged to the right length"
           },
           {
            "html": "Planner"
@@ -554,7 +554,7 @@
            "html": "Trio, 63 dBA"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -622,7 +622,7 @@
            "html": "DJ, continuous"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -636,7 +636,7 @@
            "html": "Dancing, second set"
           },
           {
-           "html": "Quartet, peak"
+           "html": "Quartet, at full energy"
           },
           {
            "html": "Bandleader"
@@ -673,7 +673,7 @@
            "html": "DJ alone"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         }
@@ -684,7 +684,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-18",
-       "html": "The row people move most often is <strong>6:45pm</strong>. A first dance immediately after the entrances, before anyone has picked up a fork, keeps the whole crowd watching. Held back until after dinner it competes with coffee, and half the guests are outside.",
+       "html": "The row people move most often is <strong>6:45pm</strong>. We like to put the first dance right after the entrances, while everyone is already in their seats. If you hold it until after dinner, some guests may have stepped outside or be busy with coffee.",
        "cls": "prose"
       }
      }
@@ -711,7 +711,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-22",
-       "html": "Two hundred staff, a quartet, a hotel ballroom, an early hard stop. It's shorter and looser, and it's the one where the program is smallest and the dance floor matters most.",
+       "html": "This one is for 200 staff in a hotel ballroom, with a quartet and an 11:00pm finish. It's shorter and looser, and it's the one where the program is smallest and the dance floor matters most.",
        "cls": "note"
       }
      },
@@ -744,7 +744,7 @@
            "html": "Load-in and setup"
           },
           {
-           "html": "Before the space is dressed if possible"
+           "html": "Before the space is decorated, if possible"
           },
           {
            "html": "Venue"
@@ -798,7 +798,7 @@
            "html": "Duo, 63 dBA"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -849,7 +849,7 @@
            "html": "DJ, continuous"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         },
@@ -863,7 +863,7 @@
            "html": "Second set"
           },
           {
-           "html": "Quartet, peak"
+           "html": "Quartet, at full energy"
           },
           {
            "html": "Bandleader"
@@ -897,10 +897,10 @@
            "html": "Guests out, strike"
           },
           {
-           "html": "Nothing moves before this"
+           "html": "No gear moves until guests are out"
           },
           {
-           "html": "Standing"
+           "html": "No cue needed"
           }
          ]
         }
@@ -911,7 +911,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "The row to watch on this night is <strong>8:00pm</strong>. Remarks at a holiday party start late, run long, and land on a crowd that has been drinking since doors opened. Put a hard finish on them in the document, give it to whoever is speaking in advance, and put the band back up on time regardless.",
+       "html": "The row to watch at this party is <strong>8:00pm</strong>. In our experience, remarks at a holiday party can start late and run long, and by then your guests have usually been at the bar for a while. We'd suggest putting a hard end time in the document and giving it to your speakers ahead of time. We can bring the band back up on time either way.",
        "cls": "prose"
       }
      },
@@ -919,7 +919,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-25",
-       "html": "If the program wants a louder set, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is booked as its own act.",
+       "html": "Want your staff up singing with the band? Check out our <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a>.",
        "cls": "prose"
       }
      }
@@ -946,15 +946,15 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us your version.",
-       "lede": "Whatever state it's in. We'll fill in the band’s rows and send it back, whether or not you've booked us."
+       "title": "Send us your run of show.",
+       "lede": "Don't worry if it's still a rough draft. We'll fill in the band’s rows and send it back, whether or not you've booked us."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-29",
-       "html": "Also for planners: <a href=\"../technical/\">what we need from your venue</a> and the <a href=\"../faq/\">full question list</a>.",
+       "html": "Still working out the venue side? Take a look at <a href=\"../technical/\">what we need from your venue</a> and our <a href=\"../faq/\">full question list</a>.",
        "cls": "note"
       }
      }

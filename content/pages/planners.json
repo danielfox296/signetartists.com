@@ -3,7 +3,7 @@
   "props": {
    "path": "/planners/",
    "title": "For Planners",
-   "description": "How we work with planners: a personal contact before the night, the certificate of insurance and W-9 with the contract, and technical details venues ask for.",
+   "description": "Here's how we work with planners, including your personal point of contact, the certificate of insurance and W-9 that come with the contract, and the technical details venues ask for.",
    "nav": "planners",
    "breadcrumb": "For Planners",
    "notes": {
@@ -29,7 +29,7 @@
        "titleTag": "h1",
        "titleClass": "h2 display",
        "titleStyle": "max-width: 61rem;",
-       "lede": "Every vendor you hire represents your reputation. Below are some questions and answers to the ones we've been asked so far.",
+       "lede": "Every vendor you hire represents your reputation. Here are some of the questions planners ask us, along with our answers.",
        "ledeStyle": "max-width: 42rem;"
       }
      }
@@ -51,23 +51,23 @@
        "items": [
         {
          "q": "\"What Signet needs from a planner, and when?\"",
-         "a": "We need three things from you. To start, send the date and the venue, and we'll come back with an itemized quote. A city is enough if the venue isn't chosen yet. Once the venue is chosen we need its name, because the certificate of insurance names the venue. And we'd like your run of show as soon as a draft exists. We take care of everything else.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"booking/\">How a booking works</a></span>"
+         "a": "We need three things from you. To start, send the date and the venue, and we'll come back with an itemized quote. A city is enough if the venue isn't chosen yet. Once the venue is chosen we need its name, because the certificate of insurance names the venue. And we'd like your run of show as soon as you have a draft. We can take care of the rest.\n <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"booking/\">How a booking works</a></span>"
         },
         {
          "q": "\"What do you need from the venue?\"",
-         "a": "A solo musician needs a few feet of floor and one outlet on its own circuit. A quartet needs more floor, a second circuit and more time to load in. A stage is optional at every size. The full page covers floor space, power, soundboard channel counts, load-in times and preferred volume for each size. It's written to be forwarded to the venue, and it includes the six things worth confirming at contract.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"technical/\">What we may need from the venue (depending on booking)</a></span>"
+         "a": "A solo musician needs a few feet of floor and one outlet on its own circuit. A quartet needs more floor, a second circuit and more time to load in. A stage is optional at every size. Want the floor space, power, soundboard channel counts, load-in times and preferred volume for each size? Check out our technical page. It's written to be forwarded to the venue, and it includes the six things worth confirming at contract.\n <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"technical/\">What we may need from the venue (depending on booking)</a></span>"
         },
         {
          "q": "\"How does the band fit into my run of show?\"",
-         "a": "Send us your draft in whatever state it's in. We'll fill in the band’s rows and send it back, whether or not you've booked us. You'll get the set times, the breaks, the points where the music stops for remarks, and who cues each one. If you're starting from a blank page, there are three templates to copy and retime: a corporate gala, a wedding and a company holiday party.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"run-of-show/\">Run of show templates</a></span>"
+         "a": "Send us your draft in whatever state it's in. We'll add the band's part and send it back to you, even if you haven't booked us yet. You'll get the set times, the breaks, the points where the music stops for remarks, and who cues each one. If you're starting from a blank page, we have three templates you can copy and adjust, for a corporate gala, a wedding and a company holiday party.\n <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"run-of-show/\">Run of show templates</a></span>"
         },
         {
          "q": "\"How loud is it, and what if my venue has a sound limit?\"",
-         "a": "During cocktails and dinner, guests can talk across the table without raising their voices (60 to 65 dBA at the nearest table). Dancing is louder (88 to 95 dBA on the floor), and the band adjusts it to the crowd and the space. If your venue or town enforces a decibel limit or a curfew, give us the number when you book and we'll plan the night inside it. Colorado sets statewide limits, and Aspen, Telluride, Breckenridge, Steamboat and Vail each enforce their own. They're all on one page, with sources and dates.\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"mountain/\">Loudness Limits</a></span>"
+         "a": "During cocktails and dinner, guests can talk across the table without raising their voices (60 to 65 dBA at the nearest table). Dancing is louder (88 to 95 dBA on the floor), and the band adjusts it to the crowd and the space. If your venue or town enforces a decibel limit or a curfew, just let us know when you book and we'll plan your event around it. Colorado sets statewide limits, and Aspen, Telluride, Breckenridge, Steamboat and Vail each enforce their own. We've collected them all, with sources and dates, if you'd like to take a look.\n <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"mountain/\">Loudness Limits</a></span>"
         },
         {
          "q": "\"Who chooses the songs?\"",
-         "a": "You and your client do, as much or as little as you like. You can build the list yourself, hand us a do-not-play list and leave the rest to the band, or describe the crowd and let the band read it song by song. If you want a song the band doesn't already play, just let us know when you book and we can usually learn it (we usually need a few weeks before a booking to learn new material).\n          <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"/repertoire/\">A sample of the song list</a></span>"
+         "a": "You and your client do, as much or as little as you like. You can build the list yourself, hand us a do-not-play list and leave the rest to the band, or tell us about the crowd and let the band choose as they go. If you want a song the band doesn't already play, just let us know when you book and we can usually learn it (we usually need a few weeks before a booking to learn new material).\n <span style=\"display: block; margin-top: 0.75rem;\"><a href=\"/repertoire/\">A sample of the song list</a></span>"
         },
         {
          "q": "\"Do you recommend other vendors?\"",
@@ -82,7 +82,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "More answers are in <a href=\"faq/\">the full question list</a>, including deposits and cancellation, substitutions, what the musicians wear, and microphones for speeches.",
+       "html": "Have another question? <a href=\"faq/\">Our full question list</a> covers deposits and cancellation, substitutions, what the musicians wear and microphones for speeches.",
        "cls": "note"
       }
      }
@@ -120,7 +120,7 @@
         },
         {
          "term": "<br>General liability",
-         "text": "Carried at the limits most Colorado venues write into their vendor requirements. Send us the limits yours asks for and we'll confirm them against the policy before you commit to a date. The certificate itself shows the numbers."
+         "text": "We carry general liability at the limits most Colorado venues write into their vendor requirements. Send us the limits yours asks for and we'll confirm them against the policy before you commit to a date. The certificate itself shows the numbers."
         },
         {
          "term": "<br>A written contract",
@@ -128,11 +128,11 @@
         },
         {
          "term": "<br>Single point of contact",
-         "text": "For each event, you'll have a single point of contact who is reachable from load-in to load-out. In many cases they'll be in the building all night, and you'll have their cell. "
+         "text": "For each event, you'll have a single point of contact who is reachable from load-in to load-out. In many cases they'll be in the building all night, and you'll have their cell."
         },
         {
          "term": "<br>Small-to-medium sized sound included",
-         "text": "We will always size our sound system to your specs and to the venue, at every configuration. This will be itemized in the invoice. Load-in, setup, strike and load-out are enumerated. Stage lighting and a dedicated engineer are optional add-ons, quoted as their own line when you want them. "
+         "text": "We will always size our sound system to your specs and to the venue, at every configuration. This will be itemized in the invoice. Load-in, setup, strike and load-out are enumerated. Stage lighting and a dedicated engineer are optional add-ons, quoted as their own line when you want them."
         }
        ],
        "bare": true,
@@ -172,7 +172,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-14",
-       "html": "If you want your own <strong>ceremony musician</strong>, or a marquee DJ you already trust, and us only for the dance floor, that's a booking we're still happy to help with. <br><br>Assemble the night your way and bring us in for the part where we fit.   ",
+       "html": "If you want your own <strong>ceremony musician</strong>, or a marquee DJ you already trust, and us only for the dance floor, that's a booking we're still happy to help with. <br><br>Assemble the night your way and bring us in for the part where we fit.",
        "cls": "prose"
       }
      }

@@ -3,7 +3,7 @@
   "props": {
    "path": "/thanks/",
    "title": "Inquiry received",
-   "description": "Your inquiry has been received. A person replies with availability and a price.",
+   "description": "We've received your inquiry. Someone from our team will get back to you with availability and a price.",
    "robots": "noindex, follow"
   }
  },
@@ -23,7 +23,7 @@
          "type": "Title",
          "props": {
           "id": "Title-1",
-          "html": "Received. <span class=\"smile\">Consider it started.</span>",
+          "html": "Thanks for reaching out! <span class=\"smile\">We've got it from here.</span>",
           "tag": "h1",
           "cls": "h3"
          }
@@ -32,7 +32,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-2",
-          "html": "One of us will reply with availability and an exact number.",
+          "html": "One of us will reply with availability and costs, and we may have a question or two for you.",
           "cls": "prose"
          }
         }

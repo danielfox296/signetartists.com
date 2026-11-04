@@ -3,7 +3,7 @@
   "props": {
    "path": "/preferred-vendors/",
    "title": "Preferred Vendor List | Signet Artists",
-   "description": "The photographers, planners, videographers, caterers, florists and venues we'd hand to our own clients in Denver. The list is short on purpose.",
+   "description": "These are the photographers, planners, videographers, caterers, florists and venues we'd recommend to our own clients in Denver. The list is short on purpose.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
@@ -28,10 +28,10 @@
        "title": "Preferred Vendor List.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Putting on an event means hiring six or seven people who have to work well together on the day. These are the ones we’d hand to our own clients, and the list stays short on purpose. If someone here isn’t right for your event, we’ll tell you.",
+       "lede": "Putting on an event means hiring six or seven people who have to work well together when the day comes. We’d love to connect you with the people we recommend to our own clients, and we keep that list short on purpose. If someone on it isn’t right for your event, we’ll tell you.",
        "headingText": [
         {
-         "html": "Every name links to the vendor’s own site, and each one is here because we’ve seen their work up close and would book them again."
+         "html": "We’ve seen the work of everyone on it up close, and we’d happily book them again."
         }
        ]
       }
@@ -49,32 +49,32 @@
      {
       "id": "venues",
       "label": "Venues",
-      "ask": "Ask us where we’d hold it, and we’ll name a venue we’ve played and tell you what it’s like to work in."
+      "ask": "Need a venue? Ask us where we’ve played, and we’ll tell you what each place is like to work with."
      },
      {
       "id": "planning",
       "label": "Planning and coordination",
-      "ask": "Ask us which planner we’d want running the day, and we’ll give you a name we’ve worked beside."
+      "ask": "Need someone to run the day? We’ll give you the name of a planner we’ve worked with."
      },
      {
       "id": "photography",
       "label": "Photography",
-      "ask": "Ask us who should shoot it, and we’ll give you the name of a photographer we’ve worked with."
+      "ask": "Looking for a photographer? We’re happy to recommend one."
      },
      {
       "id": "videography",
       "label": "Videography",
-      "ask": "Ask us who should film it, and we’ll give you the name of a videographer we’ve worked with."
+      "ask": "Want it all on video? Just ask, and we’ll send you the name of a videographer we know."
      },
      {
       "id": "catering",
       "label": "Catering",
-      "ask": "Ask us who should feed the crowd, and we’ll give you the name of a caterer we’ve worked with."
+      "ask": "Need someone to feed your guests? Let us know, and we’ll suggest a caterer."
      },
      {
       "id": "design-florals",
       "label": "Design and florals",
-      "ask": "Ask us who should dress the venue, and we’ll give you the name of a designer we’ve worked with."
+      "ask": "For flowers and decor, just reach out and we’ll point you to a designer."
      }
     ],
     "vendors": [],
@@ -132,7 +132,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Book the music with us.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "lede": "We book live music for events of every size, from a solo musician to a full band. We’ll make sure the sound system suits the venue, and you’ll have one person to call with any questions."
       }
      }
     ],

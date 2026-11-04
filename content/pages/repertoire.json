@@ -3,10 +3,10 @@
   "props": {
    "path": "/repertoire/",
    "title": "Repertoire",
-   "description": "Six sets that shape a night: arrival, dinner, the tables clearing, dancing, the finish and ceremony, plus the full song list, searchable by moment and energy.",
+   "description": "Browse the songs our musicians play at each part of an event, from guests arriving through dinner, dancing, the last few songs and the ceremony. You can also search our song list by moment and energy.",
    "nav": "repertoire",
    "breadcrumb": "Songs",
-   "indexLabel": "Songs and the repertoire",
+   "indexLabel": "Songs",
    "schemaArticle": "on",
    "published": "2026-09-05"
   }
@@ -27,7 +27,7 @@
        "title": "some real crowd pleasers",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "A long song list proves range. It doesn’t tell you what we do with it. <br><br>It's a bunch of moments that make up a great night, from what plays while guests arrive to what people hear while they eat dinner to what gets people on the dance floor, we've got a small sample of songs that we pull from below. ",
+       "lede": "A long song list proves range. It doesn’t tell you what we do with it. <br><br>It's a bunch of moments that make up a great night, from what plays while guests arrive to what people hear while they eat dinner to what gets people on the dance floor, we've got a small sample of songs that we pull from below.",
        "ledeStyle": "max-width: 24rem;",
        "headingText": [
         {
@@ -396,7 +396,7 @@
     "flip": true,
     "eyebrow": "Ceremony and formalities",
     "textAt": 0,
-    "title": "critical moments in  the plan.",
+    "title": "critical moments in the plan.",
     "text": "Knowing how to adjust the volume or end a song at a mid-point to follow a cue is critical. Whether it's in a wedding processional or a walk-up to accept an award.",
     "titleStyle": "zoom: 1.6;",
     "textStyle": "max-width: 42rem;",
@@ -487,7 +487,7 @@
       }
      }
     ],
-    "empty": "Nothing here by that name, which doesn't mean we won't play it. <a href=\"/contact/\">Ask.</a>",
+    "empty": "We don't have that one listed here, but we may still be able to play it. Just <a href=\"/contact/\">let us know</a>.",
     "_file": "03-catalog.html"
    }
   },
