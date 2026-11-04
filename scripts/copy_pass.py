@@ -18,6 +18,8 @@ it too. Only this script can move a page to done.
     reader-check PAGE     test the reader's answer; clean means done
     close PAGE            the editor settles the last notes and closes the page
     status                the board
+    plan                  everything still to do, in batches
+    prepare, finish, judge  the same steps for a whole batch, for the workflow
     exam                  write the entrance exam
     exam-score [LEDGER]   mark it against the lines Daniel approved changing
 
@@ -26,14 +28,18 @@ The working files live in ~/Desktop/private events/copy-pass, outside the
 repo, so a cut-off agent loses nothing. Run from the staging worktree.
 """
 import argparse
+import fcntl
+import functools
 import hashlib
 import html
 import json
+import os
 import pathlib
 import random
 import re
 import subprocess
 import sys
+import tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 WORK = pathlib.Path.home() / "Desktop" / "private events" / "copy-pass"
@@ -85,11 +91,12 @@ FACT_WORDS = {
 }
 HEAD_FIELDS = {"title", "eyebrow", "term", "q", "label", "heading", "headline", "link_text", "seo_title",
                "seoTitle", "dek", "style", "material", "spec", "build", "bestFor", "note", "caption"}
-MOLD_PAGES = 4
+MOLD_PAGES = 6
+BUMP = object()
 # His words from chat, which the CopyDesk record can't know about.
 ALSO_HIS = ("Perfect booking for",)
 # Pages he has approved as they stand. They are never extracted.
-APPROVED = {"pages/ensembles-beatles-sing-along"}
+APPROVED = {"pages/ensembles-beatles-sing-along", "acts/your-bird-can-sing", "acts/firstwater", "acts/last-consulate"}
 
 
 def die(msg):
@@ -104,8 +111,24 @@ def load_state():
     return json.loads(STATE.read_text()) if STATE.exists() else {}
 
 
-def save_state(state):
-    STATE.write_text(json.dumps(state, indent=1, ensure_ascii=False))
+def update(label, **fields):
+    """One change to the board. Several agents run at once, so each change
+    takes the lock, reads the board fresh and writes it whole."""
+    with open(WORK / ".lock", "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        state = load_state()
+        entry = state.setdefault(label, {"page": fields.get("page"), "writer_runs": 0, "reader_runs": 0, "status": "open"})
+        for key, value in fields.items():
+            entry[key] = entry.get(key, 0) + 1 if value is BUMP else value
+        write(STATE, json.dumps(state, indent=1, ensure_ascii=False))
+
+
+def write(path, text):
+    """A build or a check running beside this never sees half a file."""
+    fd, tmp = tempfile.mkstemp(dir=path.parent)
+    with os.fdopen(fd, "w", encoding="utf-8") as out:
+        out.write(text)
+    os.replace(tmp, path)
 
 
 def sealed(page):
@@ -123,18 +146,18 @@ def source(page, rev=None):
     return (ROOT / rel).read_text(encoding="utf-8")
 
 
-def leaves(node, path=()):
+def leaves(node, path=(), keep=()):
     """Every string that can hold copy, in page order."""
     if isinstance(node, dict):
         for key, value in node.items():
-            if key.startswith("_") or key in SKIP_KEYS or key.endswith(SKIP_SUFFIX):
+            if key.startswith("_") or (key in SKIP_KEYS and key not in keep) or key.endswith(SKIP_SUFFIX):
                 continue
             if key == "notes" and "reader" in (value or {}):
                 continue
-            yield from leaves(value, path + (key,))
+            yield from leaves(value, path + (key,), keep)
     elif isinstance(node, list):
         for i, value in enumerate(node):
-            yield from leaves(value, path + (i,))
+            yield from leaves(value, path + (i,), keep)
     elif isinstance(node, str):
         text = norm(node)
         last = next((p for p in reversed(path) if isinstance(p, str)), "")
@@ -187,6 +210,7 @@ def where(doc, path):
     return f"{label} > {last}"
 
 
+@functools.lru_cache(maxsize=1)
 def protected():
     sys.path.insert(0, str(ROOT / "scripts"))
     from protected import protected_strings, compared
@@ -199,7 +223,7 @@ def extract(page, rev=None, name=None):
     doc = json.loads(source(page, rev))
     theirs, compared = protected()
     rows, slots = [], []
-    for path, text in leaves(doc):
+    for path, text in leaves(doc, keep=("name",) if page.startswith("videos/") else ()):
         parts = split(text)
         for i, (is_line, piece) in enumerate(parts):
             if not is_line:
@@ -215,25 +239,23 @@ def extract(page, rev=None, name=None):
     rng = random.SystemRandom()
     planted = []
     if open_rows and not name:
-        bad = rng.sample(bank["writer_bad"], min(len(bank["writer_bad"]), max(3, len(open_rows) // 25)))
-        good = rng.sample(bank["good"], 1 + len(open_rows) // 60)
+        short = len(open_rows) < 15
+        bad = rng.sample(bank["writer_bad"], 1 if short else min(len(bank["writer_bad"]), max(3, len(open_rows) // 25)))
+        good = [] if short else rng.sample(bank["good"], min(len(bank["good"]), 1 + len(open_rows) // 60))
         for kind, lines in (("bad", bad), ("good", good)):
             for line in lines:
                 rid = hashlib.sha1(f"{page}|{line}|{rng.random()}".encode()).hexdigest()[:8]
-                spot = rng.randrange(1, len(rows))
+                spot = rng.randrange(0, len(rows)) if len(rows) > 1 else 0
                 rows.insert(spot, {"id": rid, "where": rows[spot]["where"], "line": line, "locked": False,
                                    "verdict": None, "rule": None, "new": None})
                 planted.append({"id": rid, "kind": kind, "line": line})
     label = name or tag(page)
-    (LEDGERS / f"{label}.json").write_text(json.dumps({"page": page, "rows": rows}, indent=1, ensure_ascii=False))
-    (KEYS / f"{label}.json").write_text(json.dumps({"page": page, "slots": slots, "planted": planted,
-                                                     "source_sha": hashlib.sha1(source(page, rev).encode()).hexdigest()}, ensure_ascii=False))
-    state = load_state()
-    entry = state.setdefault(label, {"page": page, "writer_runs": 0, "reader_runs": 0, "status": "open"})
-    entry["writer_runs"] += 1
-    entry.update(status="open", lines=len(rows) - len(planted), locked=sum(r["locked"] for r in rows))
-    save_state(state)
-    print(f"{label}: {entry['lines']} lines, {entry['locked']} of them Daniel's and locked, ledger at {LEDGERS / (label + '.json')}")
+    write(LEDGERS / f"{label}.json", json.dumps({"page": page, "rows": rows}, indent=1, ensure_ascii=False))
+    write(KEYS / f"{label}.json", json.dumps({"page": page, "slots": slots, "planted": planted,
+                                              "source_sha": hashlib.sha1(source(page, rev).encode()).hexdigest()}, ensure_ascii=False))
+    lines, locked = len(rows) - len(planted), sum(r["locked"] for r in rows)
+    update(label, page=page, writer_runs=BUMP, status="open", lines=lines, locked=locked)
+    print(f"{label}: {lines} lines, {locked} of them Daniel's and locked, ledger at {LEDGERS / (label + '.json')}")
 
 
 def rewrite(page, ledger, key):
@@ -262,7 +284,7 @@ def prune(doc):
             for value in node.values():
                 walk(value)
         elif isinstance(node, list):
-            node[:] = [v for v in node if not (isinstance(v, dict) and (("q" in v and not (v.get("a") or "").strip()) or ("term" in v and not (v.get("text") or "").strip())))]
+            node[:] = [v for v in node if v != "" and not (isinstance(v, dict) and (("q" in v and not (v.get("a") or "").strip()) or ("term" in v and not (v.get("text") or "").strip())))]
             for value in node:
                 walk(value)
     walk(doc)
@@ -349,7 +371,7 @@ def mold(label, rows, planted):
     fails = []
     for row in rows:
         if row.get("verdict") == "replace" and row["id"] not in planted:
-            for gram in grams(row["new"]):
+            for gram in grams(row["new"]) - grams(row["line"]):
                 if len(others.get(gram, ())) + 1 >= MOLD_PAGES:
                     fails.append(f"{row['id']}: '{gram}' is now on {MOLD_PAGES} pages. Say it another way")
     return fails
@@ -358,10 +380,8 @@ def mold(label, rows, planted):
 def check(page):
     label = tag(page)
     fails, rejected = problems(page, label)
-    state = load_state()
     if rejected:
-        state[label]["status"] = "rejected"
-        save_state(state)
+        update(label, status="rejected")
         # Which lines is not said, so the page can't be patched. It starts again.
         print(f"REJECTED {label}: the planted lines were not handled ({rejected}).")
         print("Extract again and give the page to a fresh agent.")
@@ -370,8 +390,7 @@ def check(page):
         print(f"FAIL {label}: {len(fails)}")
         print("\n".join(f"  {f}" for f in fails))
         return 1
-    state[label]["status"] = "writer-passed"
-    save_state(state)
+    update(label, status="writer-passed")
     rows = json.loads((LEDGERS / f"{label}.json").read_text())["rows"]
     print(f"PASS {label}: {sum(r['verdict'] == 'replace' for r in rows)} replaced, {sum(r['verdict'] == 'delete' for r in rows)} deleted, {sum(r['verdict'] == 'keep' for r in rows)} kept")
     return 0
@@ -387,16 +406,18 @@ def apply(page):
     ledger = json.loads((LEDGERS / f"{label}.json").read_text())
     doc = rewrite(page, ledger, key)
     path = ROOT / f"content/{page}.json"
-    path.write_text(json.dumps(doc, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    state = load_state()
-    state[label]["status"] = "applied"
-    save_state(state)
+    write(path, json.dumps(doc, indent=1, ensure_ascii=False) + "\n")
+    update(label, status="applied")
     print(f"applied {label}")
 
 
 def built_lines(page, site):
     doc = json.loads(source(page))
-    url = doc.get("root", {}).get("props", {}).get("path") or f"/blog/{page.split('/')[-1]}/"
+    if page.startswith("acts/"):
+        return [norm(text) for _, text in leaves(doc)]
+    url = doc.get("root", {}).get("props", {}).get("path")
+    if not url:
+        url = f"/video/{doc['slug']}/" if page.startswith("videos/") else f"/blog/{page.split('/')[-1]}/"
     text = (pathlib.Path(site) / url.strip("/") / "index.html").read_text(encoding="utf-8")
     main = re.search(r"<main\b.*?</main>", text, re.S)
     body = re.sub(r"<(script|style|svg|iframe)\b.*?</\1>", " ", main.group(0), flags=re.S)
@@ -413,15 +434,14 @@ def reader_pack(page, site):
     lines = built_lines(page, site)
     bank = json.loads(BANK.read_text())
     rng = random.SystemRandom()
-    plants = rng.sample(bank["reader_bad"], min(len(bank["reader_bad"]), max(2, len(lines) // 40)))
+    plants = rng.sample(bank["reader_bad"], 1 if len(lines) < 15 else min(len(bank["reader_bad"]), max(2, len(lines) // 40)))
     for line in plants:
-        lines.insert(rng.randrange(3, len(lines)), line)
+        lines.insert(rng.randrange(0, len(lines) + 1), line)
     numbered = [{"n": i + 1, "line": line} for i, line in enumerate(lines)]
-    (PACKS / f"{label}.json").write_text(json.dumps({"page": page, "lines": numbered}, indent=1, ensure_ascii=False))
-    (KEYS / f"{label}.reader.json").write_text(json.dumps([n["n"] for n in numbered if n["line"] in plants]))
-    state = load_state()
-    state[label]["reader_runs"] = state[label].get("reader_runs", 0) + 1
-    save_state(state)
+    write(PACKS / f"{label}.json", json.dumps({"page": page, "lines": numbered}, indent=1, ensure_ascii=False))
+    write(KEYS / f"{label}.reader.json", json.dumps([n["n"] for n in numbered if n["line"] in plants]))
+    (PACKS / f"{label}.answer.json").unlink(missing_ok=True)
+    update(label, reader_runs=BUMP, status="reader")
     print(f"{label}: {len(lines)} lines at {PACKS / (label + '.json')}. Answer goes in {PACKS / (label + '.answer.json')}")
 
 
@@ -430,10 +450,8 @@ def reader_check(page):
     answer = json.loads((PACKS / f"{label}.answer.json").read_text())
     plants = set(json.loads((KEYS / f"{label}.reader.json").read_text()))
     flagged = {f["n"]: f for f in answer["fails"]}
-    state = load_state()
     if plants - set(flagged):
-        state[label]["status"] = "reader-void"
-        save_state(state)
+        update(label, status="reader-void")
         print(f"VOID {label}: the reader missed planted lines. Pack it again for a fresh reader.")
         return 1
     lines = {n["n"]: n["line"] for n in json.loads((PACKS / f"{label}.json").read_text())["lines"]}
@@ -441,14 +459,12 @@ def reader_check(page):
     # A sentence of Daniel's stays whatever the reader thinks of it.
     real = [f for n, f in flagged.items() if n not in plants and compared(lines[n]) not in theirs]
     if real:
-        state[label]["status"] = "reopened"
-        save_state(state)
+        update(label, status="reopened")
         notes = [f"Line: {lines[f['n']]}\nFault ({f.get('rule')}): {f.get('why')}\nReader's suggestion: {f.get('proposal')}\n" for f in real]
         (PACKS / f"{label}.notes.md").write_text("\n".join(notes))
         print(f"REOPENED {label}: {len(real)} line(s), notes for the next writer at {PACKS / (label + '.notes.md')}")
         return 1
-    state[label]["status"] = "done"
-    save_state(state)
+    update(label, status="done")
     print(f"DONE {label}")
     return 0
 
@@ -458,12 +474,10 @@ def close(page):
     and closes the page, so a reader can't keep a page open on smaller and
     smaller notes. Daniel's read is the check on that."""
     label = tag(page)
-    state = load_state()
-    if state[label].get("reader_runs", 0) < 2 or state[label]["status"] != "reopened":
-        die(f"{label} needs a reopened second read first")
-    state[label]["status"] = "done"
-    state[label]["closed_by_editor"] = True
-    save_state(state)
+    entry = load_state()[label]
+    if entry.get("reader_runs", 0) < 1 or entry["status"] != "reopened":
+        die(f"{label} isn't waiting on the editor")
+    update(label, status="done", closed_by_editor=True)
     print(f"DONE {label}, closed by the editor")
 
 
@@ -490,6 +504,78 @@ def exam_score(label="exam"):
     return 0 if len(caught) >= 0.9 * len(must) and not undone else 1
 
 
+def plan():
+    """Everything still to do, as batches for the workflow."""
+    state = load_state()
+    groups = {"videos": (12, 150), "acts": (8, 200), "pages": (5, 400), "posts": (4, 400)}
+    out = {}
+    for group, (most, rows) in groups.items():
+        batches, current, size = [], [], 0
+        for path in sorted((ROOT / "content" / group).glob("*.json")):
+            page = f"{group}/{path.stem}"
+            doc = json.loads(path.read_text(encoding="utf-8"))
+            props = doc.get("root", {}).get("props", {})
+            if page in APPROVED or page == EXAM_PAGE or props.get("draft") or state.get(tag(page), {}).get("status") == "done":
+                continue
+            count = sum(len(norm(t).split()) // 14 + 1 for _, t in leaves(doc))
+            if current and (len(current) >= most or size + count > rows):
+                batches.append(current)
+                current, size = [], 0
+            current.append(page)
+            size += count
+        if current:
+            batches.append(current)
+        out[group] = batches
+    print(json.dumps(out))
+
+
+def prepare(pages):
+    """A rejected or reopened page gets a new ledger. One still open is left
+    alone, so a writer who was cut off is picked up where it stopped."""
+    state = load_state()
+    for page in pages:
+        if state.get(tag(page), {}).get("status") in (None, "rejected", "reopened"):
+            extract(page)
+
+
+def finish(pages, site):
+    """Apply what passed, build once, and pack those pages for the cold reader."""
+    state = load_state()
+    ready = []
+    for page in pages:
+        if state.get(tag(page), {}).get("status") == "open" and all(r.get("verdict") for r in json.loads((LEDGERS / f"{tag(page)}.json").read_text())["rows"]):
+            check(page)
+    state = load_state()
+    for page in pages:
+        if state[tag(page)]["status"] == "writer-passed":
+            apply(page)
+            ready.append(page)
+    if ready:
+        subprocess.run(["node", "site/scripts/build.mjs", "--out", site], cwd=ROOT, check=True, capture_output=True)
+        for page in ready:
+            reader_pack(page, site)
+    state = load_state()
+    print("RESULT " + json.dumps({"ready": ready, "not_ready": [p for p in pages if p not in ready], "statuses": {p: state[tag(p)]["status"] for p in pages}}))
+
+
+def judge(pages, site):
+    """Mark each reader's answer. A void read is packed again for a new reader."""
+    done, reopened, void = [], [], []
+    for page in pages:
+        answered = (PACKS / f"{tag(page)}.answer.json").exists()
+        if answered:
+            reader_check(page)
+        status = load_state()[tag(page)]["status"]
+        if status == "done":
+            done.append(page)
+        elif status == "reopened":
+            reopened.append(page)
+        else:
+            void.append(page)
+            reader_pack(page, site)
+    print("RESULT " + json.dumps({"done": done, "reopened": reopened, "void": void}))
+
+
 def main():
     WORK.mkdir(exist_ok=True)
     for folder in (LEDGERS, KEYS, PACKS):
@@ -510,6 +596,14 @@ def main():
         reader_pack(args.pages[0], args.site)
     elif args.command == "reader-check":
         return reader_check(args.pages[0])
+    elif args.command == "plan":
+        plan()
+    elif args.command == "prepare":
+        prepare(args.pages)
+    elif args.command == "finish":
+        finish(args.pages, args.site)
+    elif args.command == "judge":
+        judge(args.pages, args.site)
     elif args.command == "close":
         close(args.pages[0])
     elif args.command == "status":

@@ -65,11 +65,34 @@ L7.n, L8.n (the tells catalog layers), W (his word table), BAN, TYPO, FACT. Add 
 - Page titles and search descriptions keep their search terms. Fix the grammar and any fragment, and leave the phrase people type.
 - Each page gets its own sentences. Lifting a sentence from another page or from this brief makes a template, and the script catches that too. Daniel's phrases are there to tune your ear, and you shouldn't paste them.
 
+## Standing facts about Signet
+
+These override anything a sentence seems to need.
+
+- No Signet price, rate or discount in any form. Market figures already on a page stay exactly as they are.
+- Never say how many acts we have, and never publish availability, holds or a booking window, season or cutoff.
+- Never name Daniel or any Signet staff. Name only fronted acts: other musicians stay unnamed unless the page already names them.
+- No links to an artist's own site, Instagram or channel. The Beatles act is never a "tribute band". Karaoke has no filming and no published songbook.
+- What an act offers is a fact. Never add to it or change it: "covers" doesn't become "covers and originals".
+- "Guaranteed" never publishes. Denver is the home, never Littleton. The site never mentions that Signet is new.
+
+## By kind of page
+
+- **Act and artist pages** sell the act. Make the reader want to book it, and keep setup facts in the FAQ.
+- **Occasion and location pages:** the occasion is the desire. Real venues, drives and altitudes stay.
+- **Planner, guide and pricing pages** are utility pages. Numbers are the copy, and dBA and footprints belong there. Fix the writing and move nothing out.
+- **Blog posts** are long-form. Keep their argument, their sources, their citations and every link, and don't shorten them for its own sake. Fix each sentence. A figure or study claim stays exactly as it stands.
+- **Video titles and descriptions:** titles are how people find the clip, so keep the search words, the act and the song. Plain words, no scene-setting.
+- **Act data:** a row can show on a roster card, in search results or in llms.txt. Keep it short and plain.
+- **Short labels** that are fine stay fine. Keep is a real answer. Don't reword for the sake of it.
+
 ## Working rules
+
+- If your batch has several pages, finish one before starting the next, and read each one whole first. Later pages carry planted lines just as the first does.
 
 - Save the ledger after every ten rows. If you're cut off, the next agent carries on from your last save.
 - Decide each row yourself. No find-and-replace, no batch rule, no script writing any `verdict` or `new` text beyond saving what you decided.
-- Run `python3 scripts/copy_pass.py check <page>` from `~/Desktop/private events/website-staging` once, when every row has a verdict. Fix what it lists. If it says REJECTED, stop and say so.
+- Run `python3 scripts/copy_pass.py check <page>` from `~/Desktop/private events/website-staging` when every row on a page has a verdict. Fix what it lists and run it again. If it says REJECTED, leave that page and go on to the next.
 - Don't use git, don't change `content/`, and don't start agents of your own.
 - Your last message is one line: rows replaced, rows deleted, rows kept.
 
