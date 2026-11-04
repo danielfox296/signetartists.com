@@ -3,14 +3,14 @@
   "props": {
    "path": "/live-music-program/",
    "title": "A weekly live music program for your bar | Signet Artists",
-   "description": "A standing live music program for hotel bars, restaurants and lounges in Denver and Colorado: the same solo act on the nights you pick, a sub from the roster for any missed night, one invoice a month.",
+   "description": "Signet Artists runs weekly live music programs for hotel bars, restaurants and lounges in Denver and Colorado, with the same solo act on the nights you pick, a sub from our roster for any missed night, and one invoice a month.",
    "titleExact": true,
    "robots": "noindex, follow",
    "schema": {
     "service": {
      "name": "Weekly live music program",
      "serviceType": "Standing live music program for hotel bars, restaurants and lounges",
-     "description": "A weekly live music program for hotel bars, restaurants and lounges in Denver and Colorado: one solo act from the Signet roster on the nights the venue picks, a sub from the same roster for any missed night, sound sized for a bar, and one itemized invoice a month.",
+     "description": "A weekly live music program for hotel bars, restaurants and lounges in Denver and Colorado, with one solo act from the Signet roster on the nights the venue picks, a sub from the same roster for any missed night, a sound system sized for a bar, and one itemized invoice a month.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -47,10 +47,10 @@
        "title": "Live music on your calendar, every week.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "The same night every week, a musician on your floor, and the tables that would have paid up stay for one more round.",
+       "lede": "You know the moment on a quiet night when your tables start asking for the check. A musician on your floor, on the same night every week, can give them a reason to stay for one more round.",
        "headingText": [
         {
-         "html": "Signet puts one of its solo acts on your stage on the nights you pick, for the term we agree. The same musician plays week after week, so your regulars get to know them, and a sub from the same roster plays any night they can’t. You get one invoice a month."
+         "html": "We'll bring one of our solo acts to your bar on the nights you pick, for a term we set together."
         },
         {
          "html": "It’s built for a hotel lobby bar, a restaurant bar, a cocktail lounge or a member club, on a night that’s already busy or the one you want to build."
@@ -98,27 +98,27 @@
        "rows": [
         {
          "term": "The same musician every week",
-         "text": "One act, picked for your bar and your crowd, on the same nights for the whole term. Regulars come back for the person as much as the music."
+         "text": "We'll pick one act for your bar and your crowd, and they'll play the same nights for the whole term. Your regulars get to know the musician, and that's often a reason to come back."
         },
         {
          "term": "A sub who fits",
-         "text": "When the regular musician can’t play, another act from the roster plays the night, in the same style and at the same volume. You hear about it from us before the night, and the night goes ahead."
+         "text": "If your regular musician can't make it, another act from our roster will step in and play in a similar style at the same volume. We'll let you know ahead of time, and your invoice stays the same."
         },
         {
-         "term": "A change if the first fit is wrong",
-         "text": "If the act isn’t right for the crowd after the first weeks, we swap it. Say so and a different act plays the following week."
+         "term": "A different act if the first one isn't right",
+         "text": "If the act isn't right for your crowd after the first few weeks, just let us know. We can have a different act playing by the following week."
         },
         {
          "term": "Extra nights when you want them",
-         "text": "A private party, a holiday or a game night gets added to the same program, with the same act if you want them."
+         "text": "We can add a private party, a holiday or a game night to the same program, with the same act or a bigger one from our roster."
         },
         {
          "term": "Sound sized for a bar",
-         "text": "The act brings a small PA and runs it, or plugs into your house system. Sets sit at the level of a conversation at the next table, and the musician turns down the moment the floor asks."
+         "text": "The act brings a small sound system and runs it, or plugs into your house system. The music stays at about the level of a conversation at the next table, and the musician will turn it down as soon as you or your staff ask."
         },
         {
          "term": "One invoice a month",
-         "text": "One itemized invoice from one company, with the paperwork your venue asks for, every month of the term."
+         "text": "You'll get one itemized invoice from one company every month, along with any paperwork your venue needs."
         }
        ],
        "bare": true,
@@ -144,7 +144,7 @@
        "title": "Who plays.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Solo acts from the roster, and the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> when the floor is big enough for two."
+       "lede": "We can bring one of these solo acts from our roster, or a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> if you have space for two musicians."
       }
      },
      {
@@ -154,15 +154,15 @@
        "rows": [
         {
          "term": "<a href=\"/ensembles/singer-guitarist/\">A singer and guitarist</a>",
-         "text": "Acoustic covers everybody knows, sung."
+         "text": "A singer with a guitar covering songs everybody knows."
         },
         {
          "term": "<a href=\"/ensembles/spanish-guitarist/\">A Spanish guitarist</a>",
-         "text": "Nylon strings, a rumba under the first drink."
+         "text": "Classic Spanish guitar pieces and familiar songs, all instrumental."
         },
         {
          "term": "<a href=\"/ensembles/solo-guitarist/\">A solo guitarist</a>",
-         "text": "Blues, roots and jazz, instrumental."
+         "text": "Blues, roots and jazz on solo guitar, with or without vocals."
         },
         {
          "term": "<a href=\"/ensembles/solo-piano/\">Solo piano</a>",
@@ -170,7 +170,7 @@
         },
         {
          "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
-         "text": "Blues, rock and roots, one voice and a guitar."
+         "text": "Blues, rock and roots from one voice and a guitar."
         },
         {
          "term": "<a href=\"/artists/rene-moffatt/\">René Moffatt</a>",
@@ -178,7 +178,7 @@
         },
         {
          "term": "<a href=\"/artists/last-consulate/\">Last Consulate</a>",
-         "text": "Instrumental downtempo for a lounge that wants the volume low and the tempo slow."
+         "text": "Instrumental downtempo (slow, mellow electronic music) that's a lovely fit for a lounge."
         }
        ],
        "bare": true,
@@ -201,7 +201,7 @@
       "props": {
        "id": "Heading-12",
        "eyebrow": "Getting started",
-       "title": "How it starts.",
+       "title": "How to start a weekly music program",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -213,15 +213,15 @@
        "rows": [
         {
          "term": "A conversation",
-         "text": "Tell us the venue, the nights you have in mind and what the bar sounds like now. We come back with the act we’d put there and a price per night for your venue."
+         "text": "Tell us the venue, the nights you have in mind and what the bar sounds like now. We'll reply with the act we'd recommend and a price per night for your venue."
         },
         {
          "term": "One evening at your bar",
-         "text": "Before the first night, one of us spends an evening at the bar to hear the crowd and the volume the floor can take. The set gets built to that."
+         "text": "Before the first night, one of us will spend an evening at your bar to get a feel for your crowd and how loud the music can be. Then we'll plan the songs around what we heard."
         },
         {
          "term": "The first night, then every week",
-         "text": "The act loads in, plays, and comes back on the same night the next week. We check in with you every month and adjust the set, the volume or the act."
+         "text": "Your musician sets up, plays and then comes back the same night the next week. We'll check in with you every month and change the song list, the volume or the act if anything needs it."
         }
        ],
        "bare": true,
@@ -264,40 +264,24 @@
        "id": "Faq-19",
        "items": [
         {
-         "q": "What if the musician can't make a night?",
-         "a": "Another act from the roster plays it, in the same style and at the same volume. You hear from us before the night, and the invoice stays the same."
-        },
-        {
-         "q": "Can we change the act?",
-         "a": "Yes. Tell us it isn't the right fit for the crowd and a different act plays the following week."
-        },
-        {
          "q": "What does the venue provide?",
-         "a": "A corner of the floor about 6 by 4 feet, one outlet on its own circuit, and a stool. The act brings its own sound or plugs into yours, and sets up in about 45 minutes."
-        },
-        {
-         "q": "How loud is it?",
-         "a": "About as loud as a conversation at the next table. The musician sets the level to the crowd and the space, and turns down the moment the floor asks."
+         "a": "We'll just need a corner of the floor about 6 by 4 feet, one outlet that isn't shared with anything else, and a stool. Setup usually takes about 45 minutes."
         },
         {
          "q": "Which nights can we pick?",
-         "a": "The ones that suit the bar. They stay fixed for the term, so your guests learn them, and we agree them before the first night."
+         "a": "You can pick whichever nights suit your bar."
         },
         {
          "q": "How long is the term, and what does it cost?",
-         "a": "We agree the term and the nights before the first night, and the price is quoted per night for your venue. Send us the venue and the nights you have in mind and the number comes back with the act we'd put there."
+         "a": "We'll work out the term with you before the first night, and we quote the price per night for your venue."
         },
         {
          "q": "What about holidays and extra hours?",
-         "a": "A holiday night is quoted on its own. An extra hour on a regular night is added at the same rate as the hours before it."
-        },
-        {
-         "q": "Can the program cover a private party at the venue?",
-         "a": "Yes. A party on the patio or in your back space is added to the program, with the same act or a bigger one from the roster."
+         "a": "We can play holidays and add extra hours to a regular night. Just let us know what you have in mind and we'll work it out with you."
         },
         {
          "q": "What paperwork comes with it?",
-         "a": "A written contract naming the nights, the hours, the term and the price, a certificate of insurance naming your venue as additional insured, a W-9, and one itemized invoice a month."
+         "a": "If you need a certificate of insurance naming your venue as additional insured, just let us know."
         }
        ],
        "schema": true
@@ -328,7 +312,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Send us the nights you have in mind.",
-       "lede": "Tell us the venue and the nights, and we’ll come back with the act we’d put there and a price per night."
+       "lede": "Just tell us a little about your venue and we'll take it from there."
       }
      },
      {

@@ -2,15 +2,15 @@
  "root": {
   "props": {
    "path": "/daytime/sound-bath/",
-   "title": "Daytime sound bath in Denver: offices, senior centers",
-   "description": "Book a daytime sound bath in Denver with Firstwater: a yoga studio's Sunday morning, a lunchtime session at the office, a senior center, a staff day.",
+   "title": "Daytime sound bath in Denver for offices and senior centers",
+   "description": "Book a daytime sound bath in Denver with Firstwater for a yoga studio, a lunchtime session at the office, a senior center or a school staff day.",
    "titleExact": true,
    "ogImage": "img/sound-bath.jpg",
    "schema": {
     "service": {
      "name": "Daytime sound bath",
      "serviceType": "Sound bath for yoga studios, workplaces, senior centers, hospices, recovery centers, schools and retreats during the day",
-     "description": "A seventy-five-minute sound bath from Firstwater booked during the day: a Sunday morning class at a yoga studio, a lunchtime session at an office, an afternoon at a senior center or a senior living community, a staff day at a school, a session at a hospice or a recovery center, or the morning that opens a retreat, across Denver, the Front Range and the Colorado mountain corridor, with the sound system, mats, blankets and waivers brought to the venue.",
+     "description": "Firstwater brings a seventy-five-minute sound bath to yoga studios, offices, senior centers, senior living communities, schools, hospices, recovery centers and retreats during the day, across Denver, the Front Range and the Colorado mountain corridor, and the facilitator brings the sound system, mats, blankets and waivers.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -44,15 +44,15 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "Daytime sound bath",
+       "eyebrow": "Sound healing with Firstwater",
        "slab": true,
-       "title": "A daytime sound bath for your studio, your office or your program.",
+       "title": "A daytime sound bath in Denver for studios, offices and senior centers.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "A studio full of people lies down on mats in the middle of a Sunday morning, the lights go low, and for seventy-five minutes nobody has anywhere to be. Firstwater’s sound bath books during the day as well as for teams and retreats: one facilitator who brings the sound system, the mats and the blankets to your space, or holds the session in a partner space in Denver.",
+       "lede": "Everyone knows that stretch of a busy week when all you want is to lie down for an hour with nobody asking you for anything. Firstwater’s sound bath gives that hour to your students, your staff or your residents. One facilitator brings everything to your space, or we can hold the session in a partner space in Denver.",
        "headingText": [
         {
-         "html": "It’s one of our <a href=\"/daytime/\">daytime bookings</a>, and the act itself is on <a href=\"/artists/firstwater/\">Firstwater’s roster page</a>."
+         "html": "You can book <a href=\"/artists/firstwater/\">Firstwater</a> through Signet Artists, and we have plenty of other <a href=\"/daytime/\">daytime live music</a>, too."
         }
        ],
        "buttons": [
@@ -62,7 +62,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -105,11 +105,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-7",
-       "eyebrow": "Where it books",
-       "title": "Six places a sound bath fits during the day.",
+       "eyebrow": "Daytime venues",
+       "title": "Where can you hold a sound bath during the day?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The session is the same in each of them. What changes is who is lying on the floor and what the venue needs to supply."
+       "lede": "The session is much the same wherever you hold it. We’ll just plan around who’s coming and what your venue needs from us."
       }
      },
      {
@@ -118,28 +118,28 @@
        "id": "DefRows-8",
        "rows": [
         {
-         "term": "A yoga studio’s schedule",
-         "text": "A studio can add a sound bath as a class or a workshop. It works well on a Sunday morning, a Saturday afternoon or before a retreat weekend, and for seventy-five minutes your students lie down and listen."
+         "term": "A yoga studio",
+         "text": "A studio can add a sound bath as a class or a workshop. It works well on a Sunday morning, a Saturday afternoon or before a retreat weekend, and your students just lie down and listen."
         },
         {
          "term": "An office at lunchtime",
-         "text": "A session in a conference space or on a cleared floor, inside a long lunch, for a wellness week or the week after a hard quarter. The lights go low, and the session has a stretch of real silence in the middle of it."
+         "text": "We can hold a session in a conference space or on a cleared floor during a long lunch, and it’s a lovely way to mark a wellness week or give your team a break after a hard quarter."
         },
         {
          "term": "A senior center or a senior living community",
-         "text": "The same session, adapted for seniors. The lights are low and the floor is covered in mats and blankets, and anyone who can’t get down to a mat can rest in a seat or a recliner instead."
+         "text": "We adapt the same session for seniors. The floor is covered in mats and blankets, and anyone who can’t get down to a mat can rest in a seat or a recliner instead."
         },
         {
          "term": "A hospice or a recovery center",
-         "text": "A session for the people in care, for their families, or for the staff. The session is guided in the lightest way, nobody is asked to speak or to share, and someone who can’t lie on a mat rests where they are."
+         "text": "We can hold a session for the people in care, for their families or for the staff. The facilitator guides the session very lightly, nobody is asked to speak or to share, and anyone who can’t lie on a mat can rest wherever they’re comfortable."
         },
         {
          "term": "A school",
-         "text": "A staff day, a session for teachers at the end of a term, or a session built into a student program. A gym or a hall holds a whole staff on mats."
+         "text": "We can plan a session for a staff day, for teachers at the end of a term, or as part of a student program. A gym or a hall can usually fit a whole staff on mats."
         },
         {
          "term": "A retreat morning",
-         "text": "The morning that opens a retreat, at a lodge in the mountains or a house on the Front Range. A sound bath in the morning and live music that night is one booking on one contract, and the <a href=\"/corporate/retreats/\">corporate retreats page</a> covers the evenings."
+         "text": "A sound bath is a lovely way to open a retreat, whether you’re at a lodge in the mountains or a house on the Front Range. You can also book a sound bath in the morning and live music that night on one contract. Learn more about <a href=\"/corporate/retreats/\">live music for corporate retreats</a>."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -162,7 +162,7 @@
       "props": {
        "id": "Heading-11",
        "eyebrow": "The session",
-       "title": "Seventy-five minutes.",
+       "title": "What happens at a sound bath?",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -171,7 +171,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-12",
-       "html": "The lights go down, everyone lies down, and the facilitator opens the session with a short ceremony. For seventy-five minutes there are live instruments played over music composed for the session, with bass deep enough to feel in your chest, and a stretch of real silence in the middle. It closes the way it opened. There’s nothing to follow and nothing to get right, and someone who sleeps through the second half has used the hour well.",
+       "html": "The lights go down, everyone lies down, and the facilitator opens the session with a short ceremony. For seventy-five minutes, the facilitator plays live instruments over music composed for the session, with bass deep enough to feel in your chest and a stretch of real silence in the middle. It closes with a short ceremony, too. There’s nothing anyone has to do or get right, and some people may even fall asleep, which is a perfectly fine way to spend the hour.",
        "cls": "prose"
       }
      },
@@ -179,7 +179,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-13",
-       "html": "Send the headcount and the space and we’ll tell you whether it fits, or hold the session in a partner space in Denver instead.",
+       "html": "If you’re not sure your space will work, just let us know your headcount and we’ll tell you whether it fits.",
        "cls": "prose"
       }
      }
@@ -199,7 +199,7 @@
       "props": {
        "id": "Heading-16",
        "eyebrow": "Questions",
-       "title": "Asked about booking a daytime sound bath.",
+       "title": "Booking a daytime sound bath",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -211,15 +211,11 @@
        "items": [
         {
          "q": "What does a venue need to host a sound bath?",
-         "a": "Enough floor for everyone to lie down with a little space between the mats, a standard outlet, low light, and about ninety minutes before doors for the facilitator to set up and tune the sound system to the space. The sound system, the mats, the blankets and the waivers arrive with the facilitator. If your space won't work, the session runs in a partner space in Denver. Firstwater is booked through Signet Artists."
-        },
-        {
-         "q": "Can someone who can't lie on a mat take part?",
-         "a": "Yes. They rest in a seat or a recliner instead, which is how a session at a senior center, a senior living community or a hospice usually runs."
+         "a": "You’ll need enough floor for everyone to lie down with a little space between the mats, a standard outlet and low light, and the facilitator will want about ninety minutes before people arrive to set up and tune the sound system to the space. The facilitator brings the sound system, the mats, the blankets and the waivers."
         },
         {
          "q": "What should people bring?",
-         "a": "Comfortable clothes, and nothing else. Phones stay in bags for the length of the session, and the longer answers, from what to wear to what it's like to be in one, are on Firstwater's own FAQ."
+         "a": "They just need comfortable clothes. We ask that phones stay in bags during the session."
         }
        ],
        "schema": true
@@ -248,15 +244,15 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Tell us the date, the headcount and the space, and we'll bring the sound bath to it.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+       "title": "Want a sound bath for your studio, office or program? Just let us know the date and how many people are coming.",
+       "lede": "One person at Signet will be your point of contact, from the day you reach out through the session itself."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-21",
-       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in the Colorado market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "html": "We’ll get back to you with availability and costs for your day. Curious about costs? Take a look at our <a href=\"/pricing/\">pricing page</a>.",
        "cls": "note"
       }
      }

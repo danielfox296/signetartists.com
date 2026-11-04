@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/ensembles/acoustic-duo/",
-   "title": "Acoustic duo and trio for hire, Denver weddings and events",
-   "description": "An acoustic duo or trio for hire in Denver: voice and guitar, guitar and upright bass, or all three, playing covers at conversation volume.",
+   "title": "Acoustic duo and trio for hire in Denver for weddings and events",
+   "description": "An acoustic duo or trio for hire in Denver, with voice and guitar, guitar and upright bass, or all three, playing covers soft enough for everyone to keep talking.",
    "titleExact": true,
    "ogImage": "img/hero.jpg",
    "nav": "music",
@@ -12,7 +12,7 @@
     "service": {
      "name": "Acoustic duo and trio for hire",
      "serviceType": "Acoustic duo and trio for hire for wedding cocktail hours, dinner parties, patios and welcome drinks",
-     "description": "Voice and guitar, guitar and upright bass, or the trio joining all three musicians, playing singer-songwriter and folk-rock covers at conversation volume for cocktail hours, dinner parties and receptions across Denver and the Colorado mountain corridor.",
+     "description": "An acoustic duo can be voice and guitar or guitar and upright bass, and the trio brings all three musicians together, playing singer-songwriter and folk-rock covers at a comfortable volume for cocktail hours, dinner parties and receptions across Denver and the Colorado mountain corridor.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -48,13 +48,13 @@
        "id": "Heading-1",
        "eyebrow": "Covers people know, played acoustic",
        "slab": true,
-       "title": "An acoustic duo or trio for hire, for cocktail hours and dinner parties.",
+       "title": "An acoustic duo or trio for hire in Denver for cocktail hours and dinner parties.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Wild World on an acoustic guitar, sung just loud enough to hear from the bar, while your guests catch up over the first drink. The acoustic duo is voice and guitar, or guitar and upright bass, playing covers people know at a volume they talk across, and the trio puts all three musicians on one night for a bigger crowd.",
+       "lede": "Everyone has a song like Wild World, the one you catch yourself humming along to with a drink in your hand. Our acoustic duo is either voice and guitar or guitar and upright bass. For a bigger crowd, a third musician makes it a trio.",
        "headingText": [
         {
-         "html": "It books for a wedding cocktail hour, a dinner party at home or at a club, welcome drinks before a company dinner, and a client dinner, for a single hour or from arrival through dinner."
+         "html": "It’s a great choice when you want live music that feels relaxed and personal."
         }
        ],
        "buttons": [
@@ -64,7 +64,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We’ll plan it all around your event, from how many musicians you want to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -107,18 +107,18 @@
       "type": "Heading",
       "props": {
        "id": "Heading-7",
-       "eyebrow": "The set",
-       "title": "Singer-songwriter and folk-rock covers people know.",
+       "eyebrow": "Song list",
+       "title": "What does an acoustic duo play?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Wild World, Peaceful Easy Feeling, Three Little Birds, Carolina in My Mind: the songs guests know the words to, played on acoustic instruments. For the same size playing standards, book the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+       "lede": "We mostly play singer-songwriter and folk-rock covers people know the words to, like Peaceful Easy Feeling, Three Little Birds and Carolina in My Mind. Prefer jazz standards? Check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "The rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>, and if there's a song you want that isn't on it, just let us know when you book and the duo can usually learn it.",
+       "html": "Want some more ideas? Take a look at our full <a href=\"/repertoire/\">song list</a>. If there’s a song you want that isn’t on it, just let us know when you book and the duo can usually learn it.",
        "cls": "prose"
       }
      }
@@ -138,7 +138,7 @@
       "props": {
        "id": "Heading-11",
        "eyebrow": "Sizes",
-       "title": "Two duos, or the trio that joins them.",
+       "title": "Which acoustic duo or trio is right for you?",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -150,15 +150,15 @@
        "rows": [
         {
          "term": "Voice and guitar",
-         "text": "The sung version, for cocktail hours, welcome drinks and patios: familiar songs sung at a talking level, enough to feel like live music without taking over the conversation."
+         "text": "A singer and a guitarist are a great fit for cocktail hours, welcome drinks and patios, and they can keep familiar songs just loud enough to feel like live music without taking over the conversation."
         },
         {
          "term": "Guitar and upright bass",
-         "text": "The instrumental version, for dinner. The melodies stay familiar, and without lyrics the music sits under the table talk."
+         "text": "This is our instrumental duo, and it’s a lovely choice for dinner. The melodies are still familiar, and without lyrics the music can sit under the conversation at the table."
         },
         {
          "term": "The trio: voice, guitar and upright bass",
-         "text": "Both duos on one night, with a sung set and an instrumental set, and a fuller sound for a bigger crowd."
+         "text": "With a trio, you get a fuller sound for a bigger crowd, and the musicians can play one set with vocals and one without."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -168,7 +168,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-13",
-       "html": "One voice and a guitar on its own is the <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>. When the same night should end on a dance floor, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> starts as a duo and grows to a quartet on one contract.",
+       "html": "Need just one musician? Our <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is one person who sings and plays guitar. Want your event to end on the dance floor? <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can start as a duo and grow to a quartet.",
        "cls": "note"
       }
      }
@@ -200,19 +200,19 @@
        "rows": [
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
-         "text": "The hour between the ceremony and dinner, sung or instrumental, at a <a href=\"/weddings/cocktail-hour/denver/\">Denver venue</a> or up in the mountains."
+         "text": "We can play the hour between the ceremony and dinner, with or without vocals, at a <a href=\"/weddings/cocktail-hour/denver/\">Denver venue</a> or up in the mountains."
         },
         {
          "term": "<a href=\"/private-parties/\">Dinner and cocktail parties</a>",
-         "text": "At home, at a club or in a private dining space, in Denver or <a href=\"/private-parties/colorado-springs/\">Colorado Springs</a>."
+         "text": "The duo can play at your home, at a club or in a private dining space, in Denver or <a href=\"/private-parties/colorado-springs/\">Colorado Springs</a>."
         },
         {
          "term": "<a href=\"/corporate/\">Welcome drinks and receptions</a>",
-         "text": "The arrival hour of a company evening, before the program starts."
+         "text": "An acoustic duo is a nice way to welcome guests to a company event before the program starts."
         },
         {
          "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
-         "text": "A dinner where the conversation is the event, with the instrumental duo under it all night."
+         "text": "When the conversation is what matters most, the instrumental duo can play quietly through the whole dinner."
         }
        ],
        "cls": "def-list def-list--cards"
@@ -222,7 +222,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-18",
-       "html": "What live music costs across Colorado, size by size, is set out in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>.",
+       "html": "Wondering what this may cost? See our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
        "cls": "note"
       }
      }
@@ -250,7 +250,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-22",
-       "html": "Stage sizes and power for each size are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "Have another question? Take a look at our <a href=\"/planners/faq/\">full list of questions</a>.",
        "cls": "note"
       }
      },
@@ -261,19 +261,15 @@
        "items": [
         {
          "q": "How loud is it?",
-         "a": "About as loud as the conversation around it. Guests can tell it's live music from across the venue, and the people at the nearest table still talk without leaning in. Two or three acoustic musicians set the level to the space, and they stay at that level all night."
+         "a": "It’s about as loud as the conversation around it. You’ll hear that it’s live music from across the venue, and the people at the nearest table can still talk easily. The musicians set their volume to fit your space, and they’re happy to adjust it."
         },
         {
          "q": "How long can the duo play?",
-         "a": "Sets run 45 to 60 minutes with 15 to 20 minutes between them, and music keeps playing through the breaks. A single hour works well, and so does arrival through dessert. If you think the night might run long, let us know when you book."
-        },
-        {
-         "q": "How much space and power does it need?",
-         "a": "A duo sets up in a corner of about 8 by 6 feet on one circuit, and the trio needs a little more. Sound support that's the right size for the venue comes with the booking."
+         "a": "The duo usually plays 45 to 60 minutes at a time with 15 to 20 minutes between sets, and we can keep music playing through the breaks. A single hour works well, and so does playing from the time guests arrive through dessert. If you think the night might run long, let us know when you book."
         },
         {
          "q": "Can the acoustic duo play outside?",
-         "a": "Yes, and patios are its regular work. The sound support is what lets two musicians fill a garden, and the duo needs a covered, level and dry spot with power run to it. Colorado evenings cool fast, so we agree a plan for moving indoors with you ahead of time."
+         "a": "Yes, and it’s a great fit for a patio. We’ll just need a dry, level spot under cover with power nearby, and we’ll size the sound system to your space. Colorado evenings cool down fast, so we’ll work out a plan with you for moving indoors."
         }
        ],
        "schema": true
@@ -303,8 +299,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us the date, and we'll bring the acoustic duo for your dinner or cocktail hour.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Looking for an acoustic duo or trio in Denver? Just tell us your date and we’ll check availability and costs.",
+       "lede": "We’d love to help with your event, and one person will look after you from the first email through the last song."
       }
      }
     ],

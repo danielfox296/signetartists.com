@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/artists/tejas-singh/",
-   "title": "Tejas Singh: voice-fronted covers, duo to quartet, Denver",
-   "description": "Voice-fronted covers for events in Denver and the Colorado mountains. Tejas Singh can start the night as a duo and finish it as a quartet on the dance floor.",
+   "title": "Tejas Singh: cover band for weddings and private events in Denver",
+   "description": "Tejas Singh sings covers for events in Denver and the Colorado mountains. He can start out as a duo and finish as a quartet on the dance floor.",
    "titleExact": true,
    "ogImage": "img/tejas-card.jpg",
    "ogImageAlt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
@@ -12,8 +12,8 @@
    "schema": {
     "service": {
      "name": "Voice-fronted cover band",
-     "serviceType": "Voice-fronted covers for private and corporate events",
-     "description": "Covers fronted by Tejas Singh, booked as a duo, trio or quartet for private and corporate events in Denver, the Front Range and the Colorado mountain corridor.",
+     "serviceType": "Cover band for private and corporate events",
+     "description": "Tejas Singh sings covers at private and corporate events anywhere from Denver and the Front Range to the Colorado mountains, and you can book him as a duo, a trio or a quartet.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -32,7 +32,7 @@
     "act": "tejas-singh",
     "video": {
      "name": "Tejas Singh live: acoustic singer and guitarist for private parties and weddings",
-     "description": "Tejas Singh's full live set at Sofar Sounds: voice, guitar and looping, the sound he brings to a private party or a wedding cocktail hour.",
+     "description": "Tejas Singh's full live set at Sofar Sounds, with his voice, his guitar and live looping.",
      "uploadDate": "2022-05-12",
      "duration": "PT13M5S"
     },
@@ -72,8 +72,8 @@
        "title": "Tejas Singh",
        "titleTag": "h1",
        "titleClass": "h1 display",
-       "face": "Covers, duo to quartet.",
-       "lede": "Tejas Singh builds a song you know from the ground up, one looped layer of guitar at a time, until the whole record is playing under his voice. He can start the night as a duo under dinner and finish it as a quartet on the dance floor, all on one contract.",
+       "face": "Covers as a duo, a trio or a full band.",
+       "lede": "It’s a lot of fun to watch a song you love come together one guitar part at a time. Tejas Singh builds it live with a looper, a device that repeats what he’s just played, until it sounds like the whole record is playing behind his voice. You can start with a duo for dinner and have the full band join him for the dance floor.",
        "buttons": [
         {
          "label": "Check a date",
@@ -81,7 +81,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We can fit the music to your event, including how many musicians play, which songs they choose and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -121,7 +121,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "This is the act to book when you want one voice from the first drink to the last song. Whether Tejas is performing solo, as a duo or with the full band, you get sophisticated covers of your guests’ favorite songs, and his own singer-songwriter material when you want it.",
+       "html": "This is the act to book when you want one singer for your whole event. Whether Tejas is performing as a duo, as a trio or with the full band, you get sophisticated covers of your guests’ favorite songs, and his own singer-songwriter material when you want it.",
        "cls": "prose"
       }
      }
@@ -142,7 +142,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "At quartet size it’s a dance band, with a full rhythm section behind his voice and keys or a second guitar on top.",
+       "html": "As a quartet, he’s got a real dance band, with bass and drums behind him, plus keys or a second guitar.",
        "cls": "prose"
       }
      }
@@ -156,7 +156,7 @@
     "id": "ActSizes-12",
     "act": "tejas-singh",
     "title": "Configurations",
-    "note": "The size and the date set the price. Send the date and we’ll come back with a recommendation and a price.",
+    "note": "Not sure which size you need? Send us the date and we’ll help you choose.",
     "_notes": "The configuration ladder, rendered from acts.json by the token. It shows\n     size, build and where each rung lands; the price columns came off\n     2026-09-04 with the published card.",
     "_file": "03-ladder.html"
    }
@@ -184,19 +184,19 @@
        "rows": [
         {
          "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
-         "text": "The quartet is the size for a company party with a dance floor, in a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> ballroom or an office of your own."
+         "text": "The quartet is perfect for a company party with a dance floor, and it can play a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> ballroom or your own office."
         },
         {
          "term": "<a href=\"/corporate/\">Client evenings and corporate dinners</a>",
-         "text": "At duo size the same songs sit under the conversation, which is just what a client dinner or a member evening needs. An hour on its own works well too."
+         "text": "As a duo, Tejas can keep the same songs quiet enough for easy conversation, and that’s just right for a client dinner or a member event. If you only need an hour, we can do that, too."
         },
         {
          "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
-         "text": "A milestone birthday or an anniversary with a dinner first and dancing after it. The trio is a great size for a party that wants dancing in a smaller space."
+         "text": "He’s a great pick for a milestone birthday or an anniversary, especially if you’re planning dinner and then dancing."
         },
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
-         "text": "The duo puts a voice in the hour after the ceremony, and it’s a great choice when you want something more familiar than jazz standards."
+         "text": "The duo gives you a singer for the hour after the ceremony, and it’s a great choice when you want songs everyone knows."
         }
        ],
        "cls": "def-list def-list--cards"
@@ -206,7 +206,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "We plan the music around speeches and a program with your <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "html": "Got speeches or a program? We can plan the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. Curious about prices? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> lays out what live music costs across Colorado.",
        "cls": "note"
       }
      }
@@ -220,8 +220,8 @@
    "props": {
     "id": "Setlist-19",
     "act": "tejas-singh",
-    "title": "A sample of the set",
-    "more": "A sample of his songs. For more, check out the <a href=\"/repertoire/\">repertoire page</a>.",
+    "title": "A sample of his song list",
+    "more": "For more, check out our <a href=\"/repertoire/\">full song list</a>.",
     "_notes": "The sample set, rendered from the repertoire by the token: three moments,\n     six titles each, picked deterministically from the published song list.\n     The token also carries the link to the full repertoire page.",
     "_file": "05-setlist.html"
    }
@@ -237,10 +237,10 @@
       "props": {
        "id": "Heading-20",
        "eyebrow": "Video Clips",
-       "title": "Two more clips.",
+       "title": "Watch Tejas Singh play",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A live looping cover and one of his originals, so you can hear more of him before you book."
+       "lede": "Here’s a Bob Marley cover he builds live, plus one of his own songs, so you can hear more of him before you book."
       }
      },
      {
@@ -321,7 +321,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "Don’t see your question? Check out our <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },
@@ -332,15 +332,15 @@
        "items": [
         {
          "q": "What does Tejas Singh play?",
-         "a": "Covers, fronted by one voice and often built live with a looper, from the Beatles and Bob Marley to the songs of the last twenty years. He also plays his own singer-songwriter material when you want it. He's a Denver musician booked through Signet Artists as a duo, a trio or a quartet."
+         "a": "He mostly plays covers, and they reach right up to the songs of the last twenty years."
         },
         {
          "q": "How loud is it?",
-         "a": "As a duo under dinner, it sits at the level of the conversation. At quartet size on the dance floor, it's as loud as a band at a good party. The band moves between the two on cue and sets the level to the space, and if your venue has a sound limit, just let us know."
+         "a": "As a duo, it's pretty soft. The quartet plays about as loud as a band at a good party. The band can turn up or down to suit your venue, so if there's a sound limit, just let us know."
         },
         {
          "q": "Can we ask for a song?",
-         "a": "Yes. If you want a song that isn’t on his list, the first dance at a wedding for instance, let us know when you book (we usually need a few weeks before a booking to learn new material)."
+         "a": "Yes. If there’s a song that isn’t on his list, such as your first dance, just tell us when you book and he can usually learn it."
         }
        ],
        "schema": true
@@ -370,8 +370,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Tell us about your event and we'll bring Tejas Singh to it.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Tell us about your event and when you'd like Tejas Singh to play.",
+       "lede": "We’ll reply with availability and costs, and we may have a question or two about your plans."
       }
      }
     ],

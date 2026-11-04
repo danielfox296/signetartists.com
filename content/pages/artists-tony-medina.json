@@ -3,7 +3,7 @@
   "props": {
    "path": "/artists/tony-medina/",
    "title": "Tony Medina: blues and rock band in Denver | Signet Artists",
-   "description": "Blues, classic rock and originals for private events in Denver and the Colorado mountains. Solo voice and guitar through a four piece with a dance floor.",
+   "description": "Tony Medina plays blues, classic rock and originals for private events in Denver and the Colorado mountains. He can play solo with his guitar or bring a four-piece band to get people dancing.",
    "titleExact": true,
    "ogImage": "img/tony-medina-card.jpg",
    "ogImageAlt": "Tony Medina playing an acoustic guitar under string lights, in black and white.",
@@ -13,7 +13,7 @@
     "service": {
      "name": "Blues and rock band",
      "serviceType": "Blues and rock covers for private and corporate events",
-     "description": "Blues, classic rock and original material fronted by Tony Medina, booked from solo voice and guitar up to a four piece, for private and corporate events in Denver, the Front Range and the Colorado mountain corridor.",
+     "description": "Tony Medina plays blues, classic rock and his own songs at private and corporate events in Denver, across the Front Range and in the mountains of Colorado, from solo voice and guitar up to a four-piece band.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -33,7 +33,7 @@
     "act": "tony-medina",
     "video": {
      "name": "Tony Medina live: blues and rock voice and guitar for private events in Denver",
-     "description": "Tony Medina playing the Prince song Purple Rain on voice and acoustic guitar: the sound he brings to a milestone birthday, an office party or a rehearsal dinner.",
+     "description": "Tony Medina playing the Prince song Purple Rain on voice and acoustic guitar.",
      "uploadDate": "2026-09-06",
      "duration": "PT7M13S"
     }
@@ -64,8 +64,8 @@
        "title": "Tony Medina",
        "titleTag": "h1",
        "titleClass": "h1 display",
-       "face": "Covers and originals, solo to four piece.",
-       "lede": "Tony Medina sings The Thrill Is Gone with gravel in his voice and plays guitar with a funk guitarist’s right hand, and the crowd that came for background music turns around to watch. He plays the blues and the rock and roll that came out of it, from one musician under the conversation to a four piece with a dance floor in front of it.",
+       "face": "Covers and originals, from one guitar up to a four-piece band.",
+       "lede": "Have you ever stopped mid-conversation because the singer in the corner turned out to be amazing? That’s Tony Medina, who sings The Thrill Is Gone with gravel in his voice and plays guitar with the rhythm of a funk player. He plays the blues and the rock and roll that came out of it, and he can play solo while people talk or bring a four-piece band to get people dancing.",
        "buttons": [
         {
          "label": "Check a date",
@@ -73,7 +73,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We’re happy to tailor the music to your event, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -113,7 +113,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "His song list is the blues and most of what the blues turned into, from Freddie King and B.B. King to The Cars, Prince and the rock records of the seventies and nineties, with his own songs threaded through. Guests recognize nearly all of it.",
+       "html": "His song list goes from Freddie King and B.B. King to The Cars, Prince and the rock records of the seventies and nineties. Your guests will probably recognize nearly all of it.",
        "cls": "prose"
       }
      }
@@ -129,7 +129,7 @@
     "id": "ActSizes-12",
     "act": "tony-medina",
     "title": "Configurations",
-    "note": "The size and the date set the price. Send the date and we’ll come back with a recommendation and a price.",
+    "note": "Send us your date and we’ll help you choose the size that works best.",
     "_notes": "The configuration ladder, rendered from acts.json by the token: size,\n     build, and where each rung lands. Four rungs, the widest on the roster.",
     "_file": "03-ladder.html"
    }
@@ -157,19 +157,19 @@
        "rows": [
         {
          "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
-         "text": "A 50th or a 60th for a crowd that grew up on these records, with a size that lets people talk over dinner and a size that gets people dancing after it."
+         "text": "He’s a great choice for a 50th or a 60th when your guests grew up on these songs. He can keep things quiet over dinner, and the full band can take over when you're ready to dance."
         },
         {
          "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
-         "text": "Classic rock gets a company party of every age dancing, because the whole staff knows the songs whatever decade they grew up in. The four piece is the size to book for a dance floor, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or your own office."
+         "text": "Classic rock goes over well at a company party, since most of your team will know these songs no matter when they grew up. Book the four-piece band if you want a dance floor, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or in your own office."
         },
         {
          "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
-         "text": "The evening after a day of sessions, on a deck or by a fire, with the acoustic end of his songbook played solo or as a duo."
+         "text": "When the meetings are done, Tony can play the acoustic side of his song list solo or as a duo."
         },
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">Welcome drinks and rehearsal dinners</a>",
-         "text": "The night before, and the hour after the ceremony, with solo voice and guitar under the conversation, for a couple who wants more grit in the music than a jazz set."
+         "text": "On his own, Tony can play the night before the wedding or the hour after the ceremony, and he’s a great fit if you’d like a little grit in the music."
         }
        ],
        "cls": "def-list def-list--cards"
@@ -179,7 +179,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "We plan the music around speeches and a program with your <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "html": "If you’re planning speeches or a program, we can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. Want a general idea of what live music costs across Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
        "cls": "note"
       }
      }
@@ -202,7 +202,7 @@
        "title": "A sample of his songs.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Every cover here is one you can watch him play in the video clips on this page."
+       "lede": "You can watch him play most of these covers in the video clips below."
       }
      },
      {
@@ -301,7 +301,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "His wider song list runs from sixties soul and classic rock through nineties alternative, and more of it is on the <a href=\"/repertoire/\">repertoire page</a>. Originals are played at an event only if you ask for them.",
+       "html": "He also plays sixties soul and nineties alternative, and you can find more on our <a href=\"/repertoire/\">full song list</a>.",
        "cls": "note"
       }
      }
@@ -321,7 +321,7 @@
       "props": {
        "id": "Heading-29",
        "eyebrow": "Video Clips",
-       "title": "The blues, the covers, and one of his own.",
+       "title": "Watch Tony Medina play blues and rock",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -350,7 +350,7 @@
          "src": "https://www.youtube-nocookie.com/embed/t_s2FavrDew?rel=0",
          "title": "Tony Medina playing the Freddie King standard Going Down as a duo",
          "loading": "lazy",
-         "caption": "<span class=\"clip-name\">Going Down</span> by Freddie King, as a duo with a second guitarist"
+         "caption": "<span class=\"clip-name\">Going Down</span> by Freddie King, as a duo"
         },
         {
          "kind": "iframe",
@@ -452,7 +452,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-35",
-       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
        "cls": "note"
       }
      },
@@ -462,20 +462,16 @@
        "id": "Faq-36",
        "items": [
         {
-         "q": "What does Tony Medina play?",
-         "a": "Blues and the rock and roll that came out of it, plus his own songs. The covers run from Freddie King and B.B. King through the classic rock of the seventies and the alternative rock of the nineties, and the video clips on this page are him playing them. He's a Denver musician booked through Signet Artists, solo up to a four piece."
-        },
-        {
          "q": "Will it get people dancing?",
-         "a": "At trio and four piece, yes. It's voice and guitar over bass and drums, with a second guitar or keys on top at the four piece, playing blues and rock a crowd already knows."
+         "a": "Yes, the trio and the four-piece band can both get people dancing."
         },
         {
          "q": "How loud is it?",
-         "a": "Solo, it sits under the conversation, so a dinner table talks across it. The four piece on a dance floor plays like a rock band at a good party, and the band moves between the two on cue. He sets the level to the space and the crowd, and if your venue has a sound limit, just let us know."
+         "a": "When he plays solo, he's on the quiet side. The four-piece band is as loud as you'd expect from a rock band at a good party. He can bring the volume up or down to suit your venue, and if there's a sound limit, just let us know."
         },
         {
          "q": "Does he play originals at a private event?",
-         "a": "Only if you want them. The default set for an event is covers, because guests dance to what they recognize. Originals songs can sit inside the set where a night has space for them, which is worth asking about for a listening crowd."
+         "a": "Only if you want them. He usually sticks to covers at an event, since people tend to dance to songs they recognize. We can work a few of his own songs in if there's time, and it's worth asking about if your guests are there to listen."
         }
        ],
        "schema": true
@@ -505,8 +501,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Tell us the night, and Tony brings the size of band it needs.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Want Tony Medina at your event? Send us the date.",
+       "lede": "We’ll let you know if he’s available and what it would cost."
       }
      }
     ],

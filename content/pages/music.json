@@ -3,7 +3,7 @@
   "props": {
    "path": "/music/",
    "title": "Bands and musicians for hire in Denver",
-   "description": "Bands and musicians for hire in Denver and the mountains: guitarists, jazz duos and trios, string quartets, party bands, a DJ, and Featured Artists.",
+   "description": "Looking for bands and musicians for hire in Denver and the mountains? We have guitarists, jazz duos and trios, string quartets, party bands, a DJ and Featured Artists.",
    "nav": "music",
    "breadcrumb": "Artist Roster",
    "indexLabel": "Artist Roster",
@@ -34,10 +34,10 @@
        "titleClass": "h2 display",
        "headingText": [
         {
-         "html": "<strong>Featured Artists.</strong> Music from artists like Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate, Firstwater and Little Moses Jones, their specific sound and presence comes with the booking. "
+         "html": "<strong>Featured Artists.</strong> When you book artists like Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate, Firstwater and Little Moses Jones, you get their specific sound and presence."
         },
         {
-         "html": "<strong>Entertainment Formats.</strong> The other lane are professional players throwing down their best in a format to serve your needs. From Jazz combos, Funk, Live DJs, String Quartets or Singer-Songwriter, they're are all configurable to your needs."
+         "html": "<strong>House Ensembles.</strong> These are professional players throwing down their best in a format to serve your needs. From Jazz combos, Funk, Live DJs, String Quartets or Singer-Songwriter, they're all configurable to your needs."
         }
        ]
       }
@@ -90,10 +90,10 @@
         },
         {
          "term": "A DJ, on its own or after the band",
-         "text": "The <a href=\"/ensembles/dj/\">DJ</a> is open format, and can play the whole night or take over after any band on the roster through the same sound system."
+         "text": "The <a href=\"/ensembles/dj/\">DJ</a> is open format (a mix of genres rather than one style), and can play the whole night or take over after any band on the roster through the same sound system."
         },
         {
-         "term": "A set piece your guests watch",
+         "term": "A show rather than background music",
          "text": "Some acts are made for your guests to stop and watch. Book <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>, <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> with a saxophone added, or <a href=\"/artists/rene-moffatt/\">René Moffatt</a> playing his own songs. <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> gets a whole crowd singing along, and <a href=\"/artists/firstwater/\">Firstwater</a> brings a sound bath to an offsite or a wellness day."
         },
         {
@@ -112,7 +112,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "Every act plays Denver, the Front Range and the mountain towns. Our <a href=\"/pricing/\">pricing page</a> has a general view of what live music costs in Denver and Colorado.",
+       "html": "Our <a href=\"/pricing/\">pricing page</a> has a general view of what live music costs in Denver and Colorado.",
        "cls": "note"
       }
      }
@@ -127,20 +127,20 @@
     "id": "Roster-12",
     "band": "ruled",
     "title": "Filter the roster",
-    "note": "By the occasion, the kind of night, the size of the act, the genre, or whether it’s sung.",
-    "empty": "Nothing on the roster matches that combination. Widen one of them and it will.",
+    "note": "You can narrow it down by the occasion, the kind of event, the size of the act, the genre or whether it has vocals.",
+    "empty": "Nothing on the roster matches that combination. Try removing one of your filters.",
     "lanes": [
      {
       "lane": "named",
       "eyebrow": "Featured Artists",
-      "title": "The Featured Artists.",
-      "lede": "Booked under their own names, and every one of them is a name you can look up."
+      "title": "Artists you can book by name",
+      "lede": "These acts each have their own sound, and you can look up every one of them."
      },
      {
       "lane": "format",
       "eyebrow": "House Ensembles",
-      "title": "The House Ensembles, smallest first.",
-      "lede": "A jazz duo, a yacht rock band and every format in between, played by working Denver musicians matched to your date. Open any of them to hear what it sounds like and see which events it suits."
+      "title": "Ensembles of every size for your event",
+      "lede": "We have everything from a jazz duo to a yacht rock band, played by professional Denver musicians. Open any of them to hear what it sounds like and see which events it suits."
      }
     ],
     "script": true,
@@ -158,7 +158,6 @@
       "type": "Heading",
       "props": {
        "id": "Heading-13",
-       "eyebrow": "Included at every size",
        "title": "every act comes with the following.",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -203,7 +202,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "Want to know more? The <a href=\"/planners/faq/\">full FAQ list</a> covers everything from substitutions to volume limits.",
+       "html": "Want to know more? Check out our <a href=\"/planners/faq/\">full FAQ</a>, which covers everything from substitutions to volume limits.",
        "cls": "note"
       }
      },
@@ -214,11 +213,11 @@
        "items": [
         {
          "q": "What's the difference between a Featured Artist and a House Ensemble?",
-         "a": "A Featured Artist, like Tejas Singh or Dirty Flamenco, is booked under its own name, so you know exactly who is playing. A format, like a jazz duo or a yacht rock band, is played by professional musicians we match to your date and your venue. Either one can be booked by sending us the date."
+         "a": "A Featured Artist, like Tejas Singh or Dirty Flamenco, is booked by name, so you know exactly who will be playing. A House Ensemble, like a jazz duo or a yacht rock band, is played by professional musicians we match to your date and your venue. To book either one, just send us the date."
         },
         {
          "q": "Where do the acts play?",
-         "a": "Denver, Boulder, Colorado Springs and Fort Collins, and the mountain towns: Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. For a venue outside the Denver metro area, just let us know where it is and we can price the travel with the date."
+         "a": "Our acts play in Denver, Boulder, Colorado Springs and Fort Collins, plus mountain towns like Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. If your venue is outside the Denver area, just let us know where it is and we'll work out the travel with you."
         }
        ],
        "schema": true

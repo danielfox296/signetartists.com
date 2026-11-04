@@ -15,11 +15,9 @@ second agent who never sees your reasons.
 
 ## Read before the first row, in full
 
-1. `~/Desktop/private events/WEBSITE-PLAN.md`, section 1, lines 22 to 176. His sentences are the standard.
-2. `~/Desktop/site-ops/AI-TELLS-2026.md`, Layers 2, 3, 4, 7 and 8.
-3. `~/Desktop/site-ops/BASE-VOICE.md`, the marketing genre and the litmus.
-4. `~/Desktop/private events/copy-pass/calibration.md`, if your brief says to. Every change he approved on one page.
-5. `~/Desktop/private events/copy-pass/corrections.md`, if it exists. Every later correction of his.
+1. `~/Desktop/private events/SIGNET-VOICE.md`. All of it. It is the whole standard.
+2. `~/Desktop/private events/copy-pass/calibration.md`, if your brief says to. Changes he approved on one page.
+3. `~/Desktop/private events/copy-pass/corrections.md`, if it exists. Every later correction of his.
 
 ## How to read a page
 
@@ -42,7 +40,7 @@ talking to someone planning an event. For each row, ask:
 13. Does it contradict anything else on the page, or anything true of this act? Take every question literally: a person is not the same as a genre.
 14. Is the new sentence as good as what Daniel would type, or is it only the old sentence with its faults filed off?
 
-A clean rule pass is the floor. Would a copywriter sign this sentence? Keep means yes.
+A clean rule pass is the floor. Would a copywriter sign this sentence? Keep means yes. A sentence that's fine stays, and the standard lists what earlier passes wrongly treated as faults.
 
 Page-level faults are yours too: an opener that isn't a moment the buyer knows, three
 sections saying one thing, a phrase repeated down the page, a heading that carries no
@@ -56,29 +54,17 @@ Each row needs `verdict`:
 - `replace`: needs `new`, the sentence to publish, and `rule`, the one rule it breaks most.
 - `delete`: needs `rule`. Deleting a sentence has to lose no fact, or the fact has to appear on another row.
 
-`rule` is one of: P1 to P8 (What his edits do), R1 to R15 (the fifteen rules), L2, L3.n, L4,
-L7.n, L8.n (the tells catalog layers), W (his word table), BAN, TYPO, FACT. Add `why`, a few words.
+`rule` is one of V1 to V22 from the standard, W (his word table), NEVER (the never list) or TYPO. Add `why`, a few words.
 
 - Keep `<a href>` links and other tags inside the sentence. Drop a link only with its address in `drop_links` and the reason in `why`.
 - `locked` rows are Daniel's. Leave them exactly as they are.
 - Use a new proper name or number only if it's in the act's data under `content/acts/`, and name the file in `fact_source`. Otherwise it stays out.
 - Page titles and search descriptions keep their search terms. Fix the grammar and any fragment, and leave the phrase people type.
-- Each page gets its own sentences. Lifting a sentence from another page or from this brief makes a template, and the script catches that too. Daniel's phrases are there to tune your ear, and you shouldn't paste them.
-
-## Standing facts about Signet
-
-These override anything a sentence seems to need.
-
-- No Signet price, rate or discount in any form. Market figures already on a page stay exactly as they are.
-- Never say how many acts we have, and never publish availability, holds or a booking window, season or cutoff.
-- Never name Daniel or any Signet staff. Name only fronted acts: other musicians stay unnamed unless the page already names them.
-- No links to an artist's own site, Instagram or channel. The Beatles act is never a "tribute band". Karaoke has no filming and no published songbook.
-- What an act offers is a fact. Never add to it or change it: "covers" doesn't become "covers and originals".
-- "Guaranteed" never publishes. Denver is the home, never Littleton. The site never mentions that Signet is new.
+- Each page gets its own sentences. Lifting a sentence from another page or from this brief makes a template, and the script catches that too. Daniel's phrases are there to tune your ear, not to paste.
 
 ## By kind of page
 
-- **Act and artist pages** sell the act. Make the reader want to book it, and keep setup facts in the FAQ.
+- **Act and artist pages** sell the act. Make the reader want to book it. Setup detail comes off the page altogether (V12).
 - **Occasion and location pages:** the occasion is the desire. Real venues, drives and altitudes stay.
 - **Planner, guide and pricing pages** are utility pages. Numbers are the copy, and dBA and footprints belong there. Fix the writing and move nothing out.
 - **Blog posts** are long-form. Keep their argument, their sources, their citations and every link, and don't shorten them for its own sake. Fix each sentence. A figure or study claim stays exactly as it stands.
@@ -99,8 +85,8 @@ These override anything a sentence seems to need.
 ## The cold reader
 
 You get one numbered file of what a page says and nothing about how it got there. Read the
-same documents, then read the page once through as its buyer and once as a stranger,
-asking the fourteen questions. Write `{"fails": [{"n": 12, "rule": "L7.3", "why": "...", "proposal": "..."}]}`
+same standard, then read the page once through as its buyer and once as a stranger,
+asking the fourteen questions. Write `{"fails": [{"n": 12, "rule": "V18", "why": "...", "proposal": "..."}]}`
 to the answer path you were given, listing every line that fails. Lines were planted
 to test you, and missing one voids your read. Flag a fault against a rule, and leave out
 matters of taste. An empty list is a real answer if the page earns it.

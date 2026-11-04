@@ -3,14 +3,14 @@
   "props": {
    "path": "/corporate/client-dinners/",
    "title": "Live music for client dinners and member events in Denver",
-   "description": "A jazz duo at conversation volume for client dinners and member events in Denver, playing under the conversation all evening.",
+   "description": "A jazz duo for client dinners and member events in Denver, at a volume that lets your guests talk all evening.",
    "titleExact": false,
    "nav": "corporate",
    "schema": {
     "service": {
      "name": "Client dinner and member event entertainment",
      "serviceType": "Live music for client dinners, member events and private clubs",
-     "description": "Jazz duo and small ensembles for client dinners, member events and private clubs in Denver, played at conversation volume with sound support that's the right size for the venue.",
+     "description": "We offer a jazz duo and small ensembles for client dinners, member events and private clubs in Denver, at a level where nobody has to raise their voice.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -26,7 +26,7 @@
      {
       "id": "O2A0PKE7CXE",
       "name": "Jazz duo for a wedding cocktail hour: Autumn Leaves, guitar and upright bass",
-      "description": "The Signet jazz duo playing Autumn Leaves at cocktail-hour volume, with the conversation on top and the music underneath.",
+      "description": "The Signet jazz duo playing Autumn Leaves live on guitar and upright bass.",
       "uploadDate": "2026-09-06",
       "duration": "PT59S"
      }
@@ -49,15 +49,15 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "Client dinners",
+       "eyebrow": "Client dinners & member events",
        "slab": true,
-       "title": "Dinner music you can talk across.",
+       "title": "Live dinner music in Denver",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "A client dinner works when the table forgets the music is there, and then remembers it on the way out. It’s upright bass and guitar in the corner, standards played beautifully and played low, and an evening that feels considered.",
+       "lede": "You've invited your best clients to dinner, and the conversation is what you're really there for. A jazz duo is a lovely fit for that. It’s upright bass and guitar in the corner, playing jazz standards quietly, and it’s an easy way to make a dinner feel polished.",
        "headingText": [
         {
-         "html": "Client dinners, member and association evenings, private clubs, firms and showrooms book it: the evenings where nobody dances and the evening still has to sound like somebody thought about it. Most start with the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, for an hour around a toast or a whole dinner, and it’s one branch of <a href=\"/corporate/\">our corporate work</a>."
+         "html": "It’s a great choice for client dinners, member and association events, private clubs, firms and showrooms, or for any event where you want lovely music but nobody's planning to dance. Many hosts start with the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, for an hour around a toast or for a whole dinner. Want to see what else we do? Take a look at <a href=\"/corporate/\">our corporate entertainment</a>."
         }
        ],
        "buttons": [
@@ -95,7 +95,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-6",
-       "title": "Music the table talks across.",
+       "title": "Why a jazz duo works for a client dinner",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -104,7 +104,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "A client dinner is a table of people who were invited to talk to each other, so the music is set to the conversation: quiet enough that nobody leans in, present enough that the evening sounds hosted.",
+       "html": "Your guests came to talk to each other, so we'll keep the music quiet enough that nobody has to lean in.",
        "cls": "prose"
       }
      },
@@ -112,7 +112,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "A duo is built for that. Upright bass and guitar playing standards leave the middle of the sound open, so the conversation sits on top of the music, and two musicians can hold a dinner for hours at the same level. The music lifts a little between courses and stops when somebody stands up to speak, planned with your run of show.",
+       "html": "A duo is built for that. With just two instruments, it's easy to keep the music low and still sound great. We'll plan the music with you around the flow of the evening, so the duo can stop whenever someone stands up to speak.",
        "cls": "prose"
       }
      },
@@ -120,7 +120,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-9",
-       "html": "A toast gets an announcement microphone, and the music stops while your speaker is still steps away from it. If the dinner wants a singer out front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> plays the same hours as a duo. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> plays the same dinner on the venue’s piano, or on a stage piano we bring.",
+       "html": "If you're planning a toast, we can bring a microphone for your speaker. If you'd like a singer out front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can play your dinner as a duo. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> can also play your dinner, either on the venue’s piano or on a stage piano we bring.",
        "cls": "prose"
       }
      }
@@ -140,10 +140,10 @@
       "props": {
        "id": "Heading-12",
        "eyebrow": "Video Clips",
-       "title": "Hear the jazz duo at dinner volume.",
+       "title": "Hear the jazz duo play live.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Guitar and upright bass on a standard, at the level a client dinner runs at. Your guests hear each other first and the music second, and it’s the music they mention on the way out."
+       "lede": "Here's a clip of the duo playing a jazz standard."
       }
      },
      {
@@ -154,7 +154,7 @@
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
-         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass at dinner volume",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
          "loading": "lazy"
         }
        ],
@@ -176,7 +176,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-16",
-       "title": "Related evenings",
+       "title": "Related events",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -185,7 +185,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-17",
-       "html": "If the dinner is a thank-you to a client list, eight ideas for it, with the notes that change for advisors, realtors and firms, are in <a href=\"/blog/client-appreciation-event-ideas-denver/\">client appreciation event ideas in Denver</a>. When the dinner is the first night of an offsite, <a href=\"/corporate/retreats/\">corporate retreats</a> covers the mountain version, and a dinner at home or a milestone at the club is on <a href=\"/private-parties/\">private parties and dinners</a>.",
+       "html": "Planning a thank-you for your clients? Check out our <a href=\"/blog/client-appreciation-event-ideas-denver/\">client appreciation event ideas in Denver</a>. If the dinner is the first night of an offsite in the mountains, take a look at <a href=\"/corporate/retreats/\">corporate retreats</a>. For a dinner at home or a milestone at the club, check out <a href=\"/private-parties/\">private parties and dinners</a>.",
        "cls": "prose"
       }
      }
@@ -213,7 +213,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-21",
-       "html": "Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to the venue as it stands, and more booking questions are on the <a href=\"/planners/faq/\">planners question list</a>.",
+       "html": "Need stage sizes and power details? Learn more on our <a href=\"/planners/technical/\">technical page</a>. Have another booking question? You'll find plenty of answers in our <a href=\"/planners/faq/\">list of planner questions</a>.",
        "cls": "note"
       }
      },
@@ -224,7 +224,7 @@
        "items": [
         {
          "q": "How loud is a jazz duo during dinner?",
-         "a": "About the level of the conversation at the table, so your guests talk across it without raising their voices, and the duo holds that level all evening. If your venue or club has a sound limit, let us know when you book and we'll plan the evening around it."
+         "a": "The duo plays at about the level of the conversation at the table, and they can bring it up or down to suit your guests. If your venue or club has a sound limit, let us know when you book and we'll plan the evening around it."
         },
         {
          "q": "Can you invoice against a purchase order?",
@@ -232,7 +232,7 @@
         },
         {
          "q": "How much space does the duo need?",
-         "a": "A corner of about 8 by 6 feet, one dedicated 20-amp circuit, and an hour to set up, which can run through a service corridor. No stage and no house sound system are needed. Sets run 45 to 60 minutes with 15 to 20 minutes between them, and music continues through the breaks."
+         "a": "The duo needs a corner of about 8 by 6 feet, one dedicated 20-amp circuit and about an hour to set up, and we can load in through a service corridor. You won't need a stage or a house sound system. Sets can run 45 to 60 minutes with 15 to 20 minutes between them, and we can keep music playing through the breaks."
         }
        ],
        "schema": true
@@ -262,8 +262,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Tell us the guest count and the venue, and we'll recommend the ensemble for the dinner.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Tell us the guest count and the venue, and we'll recommend the right ensemble for your dinner.",
+       "lede": "Whether you need a solo musician or a full band, we'll size the sound to your venue, and you'll have a personal point of contact all the way through."
       }
      }
     ],

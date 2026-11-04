@@ -3,7 +3,7 @@
   "props": {
    "path": "/planners/booking/",
    "title": "How a booking works",
-   "description": "Every step from the first email to the last invoice for a live band booking: reply times, what arrives with the contract, and when the run of show gets locked.",
+   "description": "Here's every step of booking a live band, from the first email to the final invoice, including reply times, what comes with the contract and when we finalize the run of show.",
    "nav": "planners",
    "schemaArticle": "on",
    "published": "2026-08-07"
@@ -22,10 +22,10 @@
        "id": "Heading-1",
        "eyebrow": "Booking",
        "slab": true,
-       "title": "From the first email to the last invoice.",
+       "title": "How to hire a live band for your event.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Here's what happens at each step, who does it, and how long it takes. The contract, the certificate of insurance and the W-9 arrive in one email."
+       "lede": "You've got a date on the calendar, and now you're wondering what happens after you reach out. Here's each step, who does it and how long it usually takes."
       }
      }
     ],
@@ -43,7 +43,7 @@
       "type": "Title",
       "props": {
        "id": "Title-4",
-       "html": "The steps",
+       "html": "Booking a band, step by step",
        "tag": "h2",
        "cls": "h3 h3--lead"
       }
@@ -52,7 +52,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "Timings assume a date six months out. A booking made three weeks before the event goes through the same steps in the same order, only faster. For a wedding, see <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>.",
+       "html": "These timings assume your event is about six months away. If your event is only three weeks away, we'll go through the same steps in the same order, just faster. Planning a wedding? Here's our take on <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>.",
        "cls": "note"
       }
      },
@@ -75,14 +75,14 @@
         {
          "cells": [
           {
-           "html": "1. You write",
+           "html": "1. You get in touch",
            "cls": "rate-size"
           },
           {
            "html": "24 to 48 hrs"
           },
           {
-           "html": "Availability and an exact number, itemized"
+           "html": "We reply with availability and an itemized quote"
           }
          ]
         },
@@ -93,24 +93,24 @@
            "cls": "rate-size"
           },
           {
-           "html": "The day we agree"
+           "html": "The day you say yes"
           },
           {
-           "html": "Contract, insurance certificate, W-9 and invoice, one email"
+           "html": "We send the contract, the certificate of insurance, the W-9 and the invoice in one email"
           }
          ]
         },
         {
          "cells": [
           {
-           "html": "3. Your contact reaches you",
+           "html": "3. We introduce your point of contact",
            "cls": "rate-size"
           },
           {
            "html": "Before the event"
           },
           {
-           "html": "Your personal contact for the night, with a name and cell number"
+           "html": "You'll get the name and cell number of your personal point of contact for the event"
           }
          ]
         },
@@ -124,21 +124,21 @@
            "html": "Any time"
           },
           {
-           "html": "We fill in the band’s rows and send it back"
+           "html": "We add the band's part and send it back"
           }
          ]
         },
         {
          "cells": [
           {
-           "html": "5. We agree the cues",
+           "html": "5. We go over the cues",
            "cls": "rate-size"
           },
           {
            "html": "The week before"
           },
           {
-           "html": "One person owns each program moment"
+           "html": "We make sure one person is in charge of each moment in the program"
           }
          ]
         },
@@ -152,7 +152,7 @@
            "html": "The week before"
           },
           {
-           "html": "Power, stage, load-in route, decibel cap"
+           "html": "They confirm the power, the stage, the load-in route and any decibel cap"
           }
          ]
         },
@@ -163,24 +163,24 @@
            "cls": "rate-size"
           },
           {
-           "html": "The day"
+           "html": "The day of the event"
           },
           {
-           "html": "The space handed back to you, ready"
+           "html": "We set up, check the sound and hand the space back to you, ready to go"
           }
          ]
         },
         {
          "cells": [
           {
-           "html": "8. The night",
+           "html": "8. We play your event",
            "cls": "rate-size"
           },
           {
-           "html": "The night"
+           "html": "The day of the event"
           },
           {
-           "html": "Your contact is reachable, load-in to load-out"
+           "html": "You can reach your contact from load-in to load-out"
           }
          ]
         },
@@ -194,7 +194,7 @@
            "html": "After the event"
           },
           {
-           "html": "One page, everything on its own line"
+           "html": "We send one page, with every charge on its own line"
           }
          ]
         }
@@ -205,7 +205,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "Deposit, balance timing and payment methods are on the <a href=\"../faq/\">question list</a>. Load-in and sound-check times by band size, and the six venue answers in step 6, are on <a href=\"../technical/\">what we need from your venue</a>.",
+       "html": "Wondering about the deposit, when the balance is due or how to pay? Take a look at our <a href=\"../faq/\">FAQ</a>. Want load-in and sound check times by band size, along with the six things to confirm with your venue? Check out our guide to <a href=\"../technical/\">what we need from your venue</a>.",
        "cls": "note"
       }
      }
@@ -233,7 +233,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-11",
-       "html": "Six of those nine steps need nothing from you at all. Three do, and they're the three that stall a booking when they arrive late.",
+       "html": "Six of those nine steps need nothing from you at all. The other three do, and if those run late, they can hold up your booking.",
        "cls": "prose"
       }
      },
@@ -244,15 +244,15 @@
        "rows": [
         {
          "term": "The date and the venue, to get a number",
-         "text": "A city works if the venue isn't chosen yet. We can price a night without a signed venue and re-price it when you have one, because travel is its own line on the quote."
+         "text": "If you haven't chosen a venue yet, just give us the city. We can price your event now and update it once you've signed with a venue."
         },
         {
-         "term": "The venue name, to raise the certificate of insurance",
-         "text": "The certificate names your venue as additional insured, so it can't be issued before the venue is chosen."
+         "term": "The venue name, for the certificate of insurance",
+         "text": "The certificate names your venue as additional insured, so we can't issue it until you've chosen one."
         },
         {
-         "term": "The run of show, whenever it exists",
-         "text": "Send us the draft, even if it's nowhere near final. We'll fill in the band's rows against whatever you have and send it back, whether or not you've booked us."
+         "term": "The run of show, whenever you have one",
+         "text": "Send us the draft, even if it's nowhere near final. We're happy to add the band's part to whatever you have, even if you haven't booked us yet."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -281,7 +281,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "Guest counts move, programs get rewritten, a venue falls through. Tell us and we'll re-quote. Added performance time costs what the earlier hours did, a smaller build re-prices down, and a changed date is something we'll talk through with you.",
+       "html": "Plans change all the time, whether it's the guest count, the program or even the venue. Just let us know and we'll update your quote. Need more time, a smaller band or a different date? We'll work it out with you.",
        "cls": "prose"
       }
      },
@@ -289,7 +289,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-17",
-       "html": "If a musician can't make the date, you get the substitute's name and the reason as soon as we have them.",
+       "html": "If a musician can't make your date, we'll tell you who's stepping in and why as soon as we know.",
        "cls": "prose"
       }
      }
@@ -317,14 +317,14 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Send us the date and the venue.",
-       "lede": "That's enough for us to come back with an exact number."
+       "lede": "That's enough for us to come back with a number."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-21",
-       "html": "Also for planners: <a href=\"../technical/\">what we need from your venue</a>, the <a href=\"../run-of-show/\">run of show templates</a> and the <a href=\"../faq/\">full question list</a>.",
+       "html": "Drafting your run of show? Start with one of our <a href=\"../run-of-show/\">run of show templates</a>.",
        "cls": "note"
       }
      }

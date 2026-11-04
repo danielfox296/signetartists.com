@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/daytime/",
-   "title": "Daytime live music in Denver: seniors, memorials, brunch",
-   "description": "Live music during the day in Denver: a jazz duo for senior living, a guitarist for a memorial, brunch music, a lunchtime sound bath, a singer at a market.",
+   "title": "Daytime live music in Denver for senior living, memorials and brunch",
+   "description": "Book live music during the day in Denver, from a jazz duo for senior living or a guitarist for a memorial to brunch music, a lunchtime sound bath or a singer at a market.",
    "titleExact": true,
    "ogImage": "img/standards.jpg",
    "ogImageAlt": "A trumpet resting on a table.",
@@ -11,7 +11,7 @@
     "service": {
      "name": "Daytime live music and sound baths",
      "serviceType": "Live music and sound baths during the day for senior living communities, memorial services, brunches, workplaces, yoga studios, farmers markets, libraries and rec centers",
-     "description": "Solo musicians, duos and a sound bath for daytime bookings across Denver, the Front Range and the Colorado mountain corridor: a jazz duo for senior living and memory care, a guitarist or pianist for a funeral or memorial service, live music for Sunday brunch, a daytime sound bath for studios, offices, senior centers and schools, and musicians for farmers markets, libraries and rec center programs, on one contract with sound included.",
+     "description": "We book solo musicians, duos and a sound bath for daytime events across Denver, the Front Range and the Colorado mountain corridor, including a jazz duo for senior living and memory care, a guitarist or pianist for a funeral or memorial service, live music for Sunday brunch, a daytime sound bath for studios, offices, senior centers and schools, and musicians for farmers markets, libraries and rec center programs.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -50,13 +50,13 @@
        "id": "Heading-1",
        "eyebrow": "Daytime bookings",
        "slab": true,
-       "title": "Live music and sound baths during the day.",
+       "title": "Live music and sound baths in Denver during the day.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "While the sun is up, the music is smaller and the reasons are different: the standards in a senior living common area on a weekday afternoon, the prelude at a memorial service, a jazz duo under a Sunday brunch, a sound bath in an office at lunchtime, a singer at a Saturday farmers market. If you're the one booking it, you usually have a program to fill and a budget line to fill it from, and the booking often repeats.",
+       "lede": "You know how a quiet weekday afternoon feels different as soon as someone sits down and plays the old standards live. We book a lot of live music during the day, from senior living communities to Sunday brunches, and it tends to be smaller than what you’d hire for an evening. If you’re the one planning it, you probably have a program to fill and a budget to work with, and you may want to book the music more than once.",
        "headingText": [
         {
-         "html": "Each one has its own page: <a href=\"/daytime/senior-living/\">senior living and memory care</a>, <a href=\"/daytime/funerals-and-memorials/\">funerals, memorial services and celebrations of life</a>, the <a href=\"/daytime/sound-bath/\">daytime sound bath</a> with Firstwater, <a href=\"/daytime/brunch/\">Sunday brunch</a>, and <a href=\"/daytime/community-programs/\">farmers markets, libraries and rec centers</a>."
+         "html": ""
         }
        ],
        "buttons": [
@@ -94,11 +94,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-6",
-       "eyebrow": "The bookings",
-       "title": "Five kinds of daytime booking, and what each one wants.",
+       "eyebrow": "Occasions",
+       "title": "What kind of daytime event are you planning?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The evening rules mostly still hold: the music sits at a level people talk across, the footprint is a corner, and one contract covers the date. What changes during the day is who is listening and why."
+       "lede": "We like to start with who’s listening and why."
       }
      },
      {
@@ -108,11 +108,11 @@
        "rows": [
         {
          "term": "<a href=\"/daytime/senior-living/\">Senior living and memory care</a>",
-         "text": "Activity directors book us for assisted living, memory care and independent living. It’s usually a weekday afternoon and often a standing date, with the standards on upright bass and guitar or a singer with a guitar playing the decades the residents grew up with, at about the volume of a conversation."
+         "text": "Activity directors book us for assisted living, memory care and independent living. It’s usually a weekday afternoon and often a standing date. A jazz duo on upright bass and guitar can play the standards, or a singer with a guitar can play songs from the decades your residents grew up with."
         },
         {
          "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals, memorial services and celebrations of life</a>",
-         "text": "A guitarist for the prelude and one song at the service. Where the chapel has a piano, <a href=\"/ensembles/solo-piano/\">a pianist</a> can play instead, and a jazz duo can play through the reception or the celebration of life afterward. The family chooses the songs, and we plan the music with the officiant or the funeral director."
+         "text": "A guitarist can play as people arrive and for one song during the service. Where the chapel has a piano, <a href=\"/ensembles/solo-piano/\">a pianist</a> can play instead, and a jazz duo can play through the reception or the celebration of life afterward. The family chooses the songs, and we plan the music with the officiant or the funeral director."
         },
         {
          "term": "<a href=\"/daytime/sound-bath/\">The daytime sound bath</a>",
@@ -120,11 +120,11 @@
         },
         {
          "term": "<a href=\"/daytime/brunch/\">Sunday brunch</a>",
-         "text": "Upright bass and guitar, a solo guitarist or a pianist under a Sunday brunch. We can book a standing Sunday at a restaurant, a hotel or a club, or a single date, and the same music suits a private brunch like the morning after a wedding, a bridal brunch or a birthday."
+         "text": "We can bring upright bass and guitar, a solo guitarist or a pianist to your Sunday brunch. We can book a standing Sunday at a restaurant, a hotel or a club, or a single date, and the same music suits a private brunch like the morning after a wedding, a bridal brunch or a birthday."
         },
         {
          "term": "<a href=\"/daytime/community-programs/\">Farmers markets, libraries and rec centers</a>",
-         "text": "Public programs, from a Saturday market to a library lawn concert. A singer with a guitar suits a market, a duo suits a library program and the Americana band suits a rec center’s community evening, and we’re used to working with a coordinator, a season and a purchase order."
+         "text": "We play public programs, from a Saturday market to a library lawn concert. A singer with a guitar is a great fit for a market, a duo for a library program and the Americana band for a rec center’s community evening, and we’re used to working with coordinators and purchase orders."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -134,7 +134,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "The acts are the ones on the rest of the roster. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, the <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> and the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> play most of these; <a href=\"/artists/firstwater/\">Firstwater</a> is the sound bath.",
+       "html": "Our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> and <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> play most of these events, and <a href=\"/artists/firstwater/\">Firstwater</a> leads the sound bath.",
        "cls": "note"
       }
      }
@@ -154,7 +154,7 @@
       "props": {
        "id": "Heading-11",
        "eyebrow": "Questions",
-       "title": "Asked about daytime bookings.",
+       "title": "Booking daytime live music",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -163,7 +163,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-12",
-       "html": "Stage sizes and circuits for every size are on the <a href=\"/planners/technical/\">technical page</a>.",
+       "html": "Planning the setup? Learn more on our <a href=\"/planners/technical/\">technical page</a>.",
        "cls": "note"
       }
      },
@@ -174,19 +174,19 @@
        "items": [
         {
          "q": "Do you book live music during the day, on weekdays?",
-         "a": "Yes. A weekday afternoon at a senior living community, a lunchtime sound bath at an office, a weekday morning memorial service and a Saturday farmers market are all bookings we take, usually a solo or a duo. Send the date and the venue and we'll come back with a recommendation and a price. Signet Artists books daytime music across Denver and the Front Range."
+         "a": "Yes. We often play weekday mornings and afternoons, from memorial services to visits at senior living communities. Send the date and the venue and we'll come back with a recommendation and a price. Signet Artists books daytime music across Denver and the Front Range."
         },
         {
-         "q": "Which sizes play daytime events?",
-         "a": "Solo and duo, almost always: one musician with a guitar or a piano, or upright bass and guitar, at the level of a conversation and in a corner with no stage. In a small space the guitar plays without amplification at all. A trio plays a brunch or a community evening where the space is bigger, and the sound bath is one facilitator."
+         "q": "What size of act works for a daytime event?",
+         "a": "Usually a solo musician or a duo, so that’s one musician with a guitar or a piano, or upright bass and guitar. They can play from a corner with no stage, at a volume where people can talk easily. In a small space, a guitarist can play with no sound system at all. A trio can work well for a brunch or a community evening in a bigger space, and a sound bath is led by one facilitator."
         },
         {
          "q": "What does a daytime venue need?",
-         "a": "A solo sets up in about 6 by 4 feet and a duo in 8 by 6, on the floor, with one dedicated 20-amp circuit. Outdoors with no power, a guitarist plays on a battery-powered system. Setup is 45 minutes for a solo and an hour for a duo, before the program starts, and packing up takes 30 to 45 minutes. A sound bath needs enough floor for everyone to lie down and sets up about ninety minutes ahead of doors. Sets run 45 to 60 minutes with music through the breaks."
+         "a": "In many cases, a solo musician can set up in about 6 by 4 feet and a duo in 8 by 6, on the floor, and we’ll go over any electrical concerns with you. If there’s no power outdoors, a guitarist can play on a battery-powered sound system. Setup may take about 45 minutes for a solo musician and an hour for a duo before the program starts, and packing up takes 30 to 45 minutes. A sound bath needs enough floor for everyone to lie down, and the facilitator sets up about ninety minutes before people arrive. The musicians usually play 45 to 60 minutes at a time, with music through the breaks."
         },
         {
          "q": "Can we book the same act every month?",
-         "a": "Yes. A standing date, monthly or every other week, runs on one contract with one personal contact for the whole run. A community that books the jazz duo gets upright bass and guitar playing the standards on every visit, and a Featured Artist, Tejas Singh or Firstwater, is the same act on every date."
+         "a": "Yes. We can set up a standing date, monthly or every other week, on one contract, with a single point of contact for the whole run. If you book the jazz duo, you’ll have upright bass and guitar playing the standards on every visit, and a Featured Artist like Tejas Singh or Firstwater is the same act every time."
         },
         {
          "q": "Do you provide the vendor paperwork a facility or a city needs?",
@@ -194,7 +194,7 @@
         },
         {
          "q": "Do you play outdoors, at a market or in a park?",
-         "a": "Yes. We'll want a covered, level and dry performance area, power run to it or a battery-powered system agreed ahead, and a rain call agreed with the coordinator, because Colorado weather changes fast."
+         "a": "Yes. We’ll want a covered, level and dry place to play, with power or a battery-powered sound system, and we’ll work out a rain plan with your coordinator ahead of time, because Colorado weather changes fast."
         },
         {
          "q": "How much does daytime live music cost?",
@@ -228,7 +228,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Tell us the date, the space and who will be listening, and we'll recommend the act for it.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+       "lede": "We book everything from a solo musician to a full band, so just let us know what you have in mind."
       }
      }
     ],

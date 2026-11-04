@@ -3,7 +3,7 @@
   "props": {
    "path": "/ensembles/changes-jazz-trio/",
    "title": "Changes Jazz Trio: modern jazz trio for hire in Denver",
-   "description": "A Denver guitar trio playing the standards with a modern edge: guitar, fretless bass and drums for cocktails, dinners and galas, or a quartet with saxophone.",
+   "description": "A Denver jazz trio playing the standards with a modern edge on guitar, fretless bass and drums. Book the trio for cocktails, dinners and galas, or add a saxophone for a quartet.",
    "titleExact": true,
    "ogImage": "img/hero.jpg",
    "nav": "music",
@@ -56,16 +56,16 @@
        "title": "Changes Jazz Trio",
        "titleTag": "h1",
        "titleClass": "h1 display",
-       "face": "Doug Emery, guitar. Sri Viswanath, fretless bass. Brian Jaffe, drums. Standards, trio to quartet.",
-       "lede": "A standard you know, taken somewhere new: the guitar stretches the melody, the fretless bass slides under it, and the drums stay quiet enough to talk across. Changes is a Denver guitar trio playing the standards with a modern edge, and a saxophone joins when the evening wants a featured set.",
+       "face": "Doug Emery, guitar. Sri Viswanath, fretless bass. Brian Jaffe, drums.",
+       "lede": "You know that moment in a great little jazz club when a song you love goes somewhere you didn’t expect? Changes brings that to your event. They’re a Denver trio on guitar, bass and drums, playing jazz standards with a modern edge, and a saxophone can join them when you want the music front and center for a while.",
        "buttons": [
         {
-         "label": "Check a date",
+         "label": "Check a Date",
          "href": "/contact/?act=changes-jazz-trio",
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We can work with you on the songs, whether to add the saxophone and what the trio wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -109,7 +109,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "They play the standards the way a working trio plays them, with the arrangements left open and a little risk in the solos. Under a dinner they sit at the level of the conversation, and when the crowd turns to listen, they give it something to listen to.",
+       "html": "The trio keeps its arrangements relaxed and easy to listen to, and the solos can get a little adventurous. They can stay in the background through a dinner, and they’re just as happy to play for a crowd that’s there to listen.",
        "cls": "prose"
       }
      }
@@ -130,7 +130,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "Doug Emery studied guitar performance at Berklee, played more than three thousand dates across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri Viswanath spent decades as a working bassist in New York, on stages from Smalls to the Plaza Hotel, and played on Radha Thomas’s 2019 tribute to Chet Baker. Brian Jaffe came through the Lamont School of Music at the University of Denver and has played more than a hundred theater productions in the Denver pit orchestras since 2011.",
+       "html": "Doug Emery studied guitar performance at Berklee, played more than three thousand shows across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri Viswanath spent decades playing bass in New York, on stages from the jazz club Smalls to the Plaza Hotel, and performed on Radha Thomas’s 2019 tribute to Chet Baker. Brian Jaffe studied at the Lamont School of Music at the University of Denver, and he’s played more than a hundred theater productions in Denver pit orchestras since 2011.",
        "cls": "prose"
       }
      }
@@ -144,7 +144,7 @@
     "id": "ActSizes-12",
     "act": "changes-jazz-trio",
     "title": "Configurations",
-    "note": "The size and the date set the price, since an hour of cocktails in Denver and a full evening in the mountains are different jobs.",
+    "note": "",
     "_notes": "The configuration ladder, rendered from acts.json by the token.",
     "_file": "03-ladder.html"
    }
@@ -172,19 +172,19 @@
        "rows": [
         {
          "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
-         "text": "The trio plays under the conversation, with the drums kept soft. When the dinner has a program in it, add a saxophone and the quartet can play a featured set, booked like the rest of your <a href=\"/corporate/\">company event</a> on one contract."
+         "text": "The trio can play through a client dinner with the drums kept soft, so you can still talk business. If there’s a program, add a saxophone and the quartet can play a featured set. Need music for the rest of your <a href=\"/corporate/\">company event</a>? We can help with that, too."
         },
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
-         "text": "The trio plays the hour after the ceremony at a volume guests can talk across, and a modern take on the standards suits a couple who want jazz in the hour without the lounge feel."
+         "text": "If you love jazz and want your cocktail hour to feel a little more modern, this trio is an excellent choice."
         },
         {
          "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
-         "text": "A listening act for the stretch between the seating and the program. The quartet with saxophone is the size for a gala that wants the music to be one of the things guests remember, and it stops on the emcee’s cue like every act on the roster."
+         "text": "The trio is a great choice for the time before your program starts. Book the quartet with saxophone when you want the music to be a real part of your gala, and it can stop on your emcee’s cue."
         },
         {
          "term": "<a href=\"/private-parties/\">Dinner parties and milestone birthdays</a>",
-         "text": "A dinner party for thirty, or a sixtieth birthday that wants real jazz in the house. The trio fits a home or a patio."
+         "text": "If you’re hosting a dinner party or a milestone birthday and you love jazz, this is the trio to call. The trio fits a home or a patio."
         }
        ],
        "cls": "def-list def-list--cards"
@@ -194,7 +194,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "How the music sits around speeches and a program is planned with the <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is set out in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "html": "Have speeches or a program? Take a look at our <a href=\"/planners/run-of-show/\">run of show</a> guide to see how we plan the music around them. Curious what live music costs in Colorado? Check out our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
        "cls": "note"
       }
      }
@@ -222,7 +222,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>. The classic trio lineups are in <a href=\"/blog/what-is-a-jazz-trio/\">what is a jazz trio</a>.",
+       "html": "Got a question that isn’t here? You may find the answer on our <a href=\"/planners/faq/\">full question list</a>. Wondering what makes a jazz trio? <a href=\"/blog/what-is-a-jazz-trio/\">Learn more about the classic lineups</a>.",
        "cls": "note"
       }
      },
@@ -233,23 +233,23 @@
        "items": [
         {
          "q": "What does Changes Jazz Trio play?",
-         "a": "Jazz standards, played by a Denver guitar trio with a modern edge: guitar, fretless bass and drums, with the arrangements left open. It's instrumental, so it sits under a dinner, and it holds a listening crowd when the evening gives it one."
+         "a": "They play instrumental jazz standards, so there’s no singer."
         },
         {
          "q": "How is this different from the jazz duo?",
-         "a": "The jazz duo is upright bass and guitar playing standards for cocktails and dinner, with the musicians matched to your date. Changes is a working trio with drums and a fretless bass, a more modern sound, and three musicians you can look up before you book."
+         "a": "Our jazz duo is guitar and upright bass playing standards for cocktails and dinner, and we pick the musicians to suit your date. Changes is a trio with drums and a fretless bass, so it has a more modern sound, and you’ll know who the three musicians are before you book."
         },
         {
          "q": "How loud is it?",
-         "a": "Under cocktails and dinner the trio plays at the level of the table's conversation, with the drums kept soft. A featured set with the saxophone is louder on purpose, because that's the part people stop to hear. If your venue has a sound limit, give us the number and the set is built under it."
+         "a": "The trio can play cocktails and dinner at a volume where everyone can talk easily. The quartet gets louder for a featured set with the saxophone, since that’s the music you want people to stop and hear. If your venue has a sound limit, let us know the number and we’ll stay under it."
         },
         {
          "q": "Where is the trio based?",
-         "a": "Denver. All three musicians live and work in the Denver metro, and the trio plays the Front Range and the mountain towns."
+         "a": "Denver. All three musicians live and work in the Denver area, and the trio plays all over the Front Range and in the mountain towns."
         },
         {
          "q": "Can Changes play outdoors?",
-         "a": "Yes, with a covered spot out of the weather. We agree a plan for moving indoors with you ahead of time, because Colorado evenings turn fast."
+         "a": "Yes, as long as there’s a covered spot out of the weather. We’ll work out a backup plan with you ahead of time, since Colorado weather can turn fast."
         }
        ],
        "schema": true
@@ -279,8 +279,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Tell us the night, and Changes brings the trio or the quartet.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Looking for a jazz trio in Denver? Send us your date and we’ll check with Changes.",
+       "lede": "Let us know whether you’d like the trio or the quartet, and we’ll reply with availability and costs."
       }
      }
     ],

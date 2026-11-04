@@ -60,12 +60,12 @@ SKIP_KEYS = {
 SKIP_SUFFIX = ("Style", "_tags", "Class", "Url", "Id")
 BLOCK = re.compile(r"(</?(?:p|ul|ol|li|h[1-6]|blockquote|table|tr|td|th|div|figure|figcaption|section|br)\b[^>]*>)")
 BREAK = re.compile(r"(?<=[.?!])(?<!\bSt\.)(?<!\bMt\.)(?<!\bDr\.)(?<!\bvs\.)(?<!\bMr\.)(?<!\bMs\.)(\s+)(?=[A-Z“\"‘'(<0-9])")
-RULE = re.compile(r"^(P[1-8]|R(1[0-5]|[1-9])|L[1-8](\.\d{1,2})?|W|BAN|TYPO|FACT)$")
+RULE = re.compile(r"^(V([1-9]|1\d|2[0-2])|W|NEVER|TYPO)$")
 
 # Hard fails in anything a writer proposes. His own sentences are locked, so
 # none of this ever reaches them.
 BANS = [
-    ("em dash", r"—"), ("quietly", r"\bquietly\b"), ("guaranteed", r"\bguarantee[ds]?\b"),
+    ("em dash", r"—"), ("guaranteed", r"\bguarantee[ds]?\b"),
     ("room", r"(?<![a-z-])rooms?\b(?!\s+(?:block|rate))"), ("chair", r"\bchairs?\b"),
     ("the night wants", r"\b(?:night|evening|event|party|dinner|crowd|floor|booking)s? (?:that )?wants?\b"),
     ("books for", r"\bbooks? (?:for|as)\b"), ("a booking", r"\bplays? (?:a|the) booking\b"),
@@ -76,7 +76,7 @@ BANS = [
     ("the set", r"\bthe set is built\b"), ("conversation volume", r"\bconversation volume\b"),
     ("agree a", r"\bagree (?:a|the) (?:plan|date|time|price)\b"),
     ("British", r"\b(?:afterwards|catalogue|honour|colour|favourite|enquir|organis|programme)\w*"),
-    ("Layer 1 and 2 words", r"\b(?:delve|tapestry|testament|seamless(?:ly)?|elevates?|bespoke|curated|unforgettable|world-class|premier|genuinely|honestly|truly|candidly)\b"),
+    ("Layer 1 and 2 words", r"\b(?:delve|tapestry|testament|seamless(?:ly)?|bespoke|genuinely|honestly|truly|candidly)\b"),
     ("the version of", r"\bthe version (?:of|where)\b"), ("the shape of", r"\bthe shape of\b"),
     ("the move", r"\bthe move\b"), ("load-bearing", r"\bload-bearing\b"), ("full stop", r"\bfull stop\b"),
     ("not X but Y", r"\bnot (?:just |only |merely )?[a-z]+(?: [a-z]+){0,3},? but\b"),
@@ -284,7 +284,7 @@ def prune(doc):
             for value in node.values():
                 walk(value)
         elif isinstance(node, list):
-            node[:] = [v for v in node if v != "" and not (isinstance(v, dict) and (("q" in v and not (v.get("a") or "").strip()) or ("term" in v and not (v.get("text") or "").strip())))]
+            node[:] = [v for v in node if v != "" and not (isinstance(v, dict) and (("q" in v and not (v.get("a") or v.get("html") or "").strip()) or ("term" in v and not (v.get("text") or v.get("html") or "").strip())))]
             for value in node:
                 walk(value)
     walk(doc)
@@ -418,7 +418,8 @@ def built_lines(page, site):
     url = doc.get("root", {}).get("props", {}).get("path")
     if not url:
         url = f"/video/{doc['slug']}/" if page.startswith("videos/") else f"/blog/{page.split('/')[-1]}/"
-    text = (pathlib.Path(site) / url.strip("/") / "index.html").read_text(encoding="utf-8")
+    built = pathlib.Path(site) / url.strip("/")
+    text = (built if url.endswith(".html") else built / "index.html").read_text(encoding="utf-8")
     main = re.search(r"<main\b.*?</main>", text, re.S)
     body = re.sub(r"<(script|style|svg|iframe)\b.*?</\1>", " ", main.group(0), flags=re.S)
     body = re.sub(r"</?(?:a|strong|em|b|i|span)\b[^>]*>", "", body)
@@ -549,6 +550,7 @@ def finish(pages, site):
     for page in pages:
         if state[tag(page)]["status"] == "writer-passed":
             apply(page)
+        if load_state()[tag(page)]["status"] == "applied":
             ready.append(page)
     if ready:
         subprocess.run(["node", "site/scripts/build.mjs", "--out", site], cwd=ROOT, check=True, capture_output=True)
