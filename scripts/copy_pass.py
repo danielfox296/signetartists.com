@@ -77,6 +77,8 @@ BANS = [
     ("agree a", r"\bagree (?:a|the) (?:plan|date|time|price)\b"),
     ("British", r"\b(?:afterwards|catalogue|honour|colour|favourite|enquir|organis|programme)\w*"),
     ("Layer 1 and 2 words", r"\b(?:delve|tapestry|testament|seamless(?:ly)?|bespoke|genuinely|honestly|truly|candidly)\b"),
+    ("machine words", r"\b(?:pivotal|crucial|meticulous(?:ly)?|nuanced|intricate|boasts?|quietly (?:confident|powerful|radical|elegant))\b"),
+    ("filler", r"\b(?:leverag(?:e|es|ing)|solutions|robust|holistic|synergy|turnkey|best-in-class|elevat(?:e|es|ing)|vibrant|game-changing|transformative)\b"),
     ("the version of", r"\bthe version (?:of|where)\b"), ("the shape of", r"\bthe shape of\b"),
     ("the move", r"\bthe move\b"), ("load-bearing", r"\bload-bearing\b"), ("full stop", r"\bfull stop\b"),
     ("not X but Y", r"\bnot (?:just |only |merely )?[a-z]+(?: [a-z]+){0,3},? but\b"),
