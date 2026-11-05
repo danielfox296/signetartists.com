@@ -7,7 +7,7 @@
  "page": "ensembles/changes-jazz-trio/",
  "style": "Modern jazz",
  "face": "Doug Emery, Sri Viswanath and Brian Jaffe",
- "byline": "Doug Emery, guitar. Sri Viswanath, bass. Brian Jaffe, drums.",
+ "byline": "Doug Emery on guitar, Sri Viswanath on bass and Brian Jaffe on drums.",
  "byline_inline": "Doug Emery on guitar, Sri Viswanath on bass and Brian Jaffe on drums",
  "material": "Standards",
  "bucket_tags": [
@@ -27,24 +27,22 @@
  "_img_note": "Interim still (scripts/stills.py, an empty stage with a drum kit), not a photograph of the act. Their site publishes no photograph. Replace with the trio's own picture through scripts/act_media.py photo --card the day Sri's photographs arrive (Daniel asked 2026-09-16), and update the page hero poster and og_image with it.",
  "alt": "An empty stage set with drums, keys and microphones.",
  "video": null,
- "blurb": "Guitar, fretless bass and drums, playing the standards with a modern edge at a volume guests can talk across. They're three working Denver musicians booked under their own names, with a saxophone added when the evening wants a featured set.",
+ "blurb": "With the right jazz trio, your cocktail hour can feel like a night out at a great little club. Changes plays jazz standards with a modern edge on guitar, bass and drums, and the trio can keep the volume low enough for your guests to talk. They're all Denver musicians, and we can add a saxophone if you'd like the music to take center stage for a while.",
  "identity": [
-  "Changes is a guitar trio with a modern edge. Doug Emery on guitar, Sri Viswanath on fretless bass and Brian Jaffe on drums, playing the standards the way a working trio plays them, with the arrangements left open and a little risk in the solos. It holds a dinner at conversation volume, and it holds a listening crowd when the night wants that instead.",
-  "The three musicians are the reason it books under a name. Doug studied guitar performance at Berklee, played more than three thousand dates across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri spent decades as a working bassist in New York, on stages from Smalls to the Plaza Hotel, and played on Radha Thomas's 2019 tribute to Chet Baker. Brian came through the Lamont School of Music at the University of Denver and has played more than a hundred theater productions in the Denver pit orchestras since 2011.",
-  "It books as a trio, or as a quartet with a saxophone out front when the night wants a horn on the melody. The trio is the cocktail hour and dinner size. The quartet is the one for a featured set at a gala, or a client dinner where the music is part of the program.",
-  "Send us the date and we'll send the trio's studio recordings with the quote.",
-  "This is a Featured Artist, booked under the names of the three musicians in it, and if anyone in the lineup changes, we tell you in advance."
+  "The arrangements stay relaxed and easy to listen to, and the solos can get a little adventurous.",
+  "Doug studied guitar performance at Berklee and played more than three thousand shows across New England, from jazz duos to wedding bands. He now teaches music full time in Denver. Sri spent decades as a working bassist in New York, on stages from the jazz club Smalls to the Plaza Hotel, and played on Radha Thomas's 2019 tribute to Chet Baker. Brian studied at the Lamont School of Music at the University of Denver, and since 2011 he's played more than a hundred theater productions in Denver pit orchestras.",
+  "Want to hear them first? Send us your date and we'd be happy to share the trio's studio recordings."
  ],
  "ladder": [
   {
    "config": "trio",
-   "build": "Guitar, fretless bass and drums",
-   "bestFor": "Cocktails and dinner at conversation volume, and a listening crowd."
+   "build": "Guitar, fretless bass (a bass with a smooth, singing tone) and drums",
+   "bestFor": "The trio is at its best at cocktail hours and dinners."
   },
   {
    "config": "quartet",
-   "build": "The trio plus saxophone",
-   "bestFor": "A featured set at a gala, or a client dinner where the music is part of the program."
+   "build": "The trio plus a saxophone on the melody",
+   "bestFor": "The quartet is a great choice when you want a featured set."
   }
  ],
  "occasion_tags": [

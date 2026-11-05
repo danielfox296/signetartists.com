@@ -3,7 +3,7 @@
   "props": {
    "path": "/ensembles/string-quartet/",
    "title": "String quartet and wedding violinist in Denver",
-   "description": "A string quartet, trio, duo or solo violinist for wedding ceremonies, cocktail hours, galas and memorials in Denver and the mountains, Bach to Coldplay.",
+   "description": "A string quartet, trio, duo or solo violinist for wedding ceremonies, cocktail hours, galas and memorials in Denver and the mountains, playing everything from Bach to Coldplay.",
    "titleExact": true,
    "ogImage": "img/classical-strings-card.jpg",
    "ogImageAlt": "A violinist playing at an outdoor wedding ceremony, the couple at the arch behind her.",
@@ -13,7 +13,7 @@
     "service": {
      "name": "Classical strings",
      "serviceType": "String quartet, trio, duo and solo violinist for weddings, galas, dinners and memorials",
-     "description": "Classical strings for private and corporate events: a solo violinist, a string duo, a string trio or a string quartet of two violins, viola and cello, playing classical processionals, hymns and popular songs arranged for strings, for wedding ceremonies, cocktail hours, galas, client dinners, anniversaries and memorial services across Denver, the Front Range and the Colorado mountain towns.",
+     "description": "Classical strings for private and corporate events, from a solo violinist, string duo or string trio to a string quartet of two violins, viola and cello. They play classical processionals, hymns and popular songs arranged for strings at wedding ceremonies, cocktail hours, galas, client dinners, anniversaries and memorial services across Denver, the Front Range and the Colorado mountain towns.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -33,7 +33,7 @@
     "act": "classical-strings",
     "video": {
      "name": "Solo violin for a wedding ceremony: the Andante from Bach's Sonata No. 2",
-     "description": "The Andante from Bach's second solo sonata on one violin, unaccompanied, the prelude and processional sound of a strings booking.",
+     "description": "The Andante from Bach's second solo sonata on solo violin, played live.",
      "uploadDate": "2025-11-20",
      "duration": "PT3M55S"
     },
@@ -41,7 +41,7 @@
      {
       "id": "K-ADcBUHePE",
       "name": "String quartet for a gala or a wedding: Beethoven's Op. 18 No. 6, first two movements",
-      "description": "A string quartet of two violins, viola and cello playing the first two movements of Beethoven's Op. 18 No. 6, the four-piece sound.",
+      "description": "A string quartet of two violins, viola and cello playing the first two movements of Beethoven's Op. 18 No. 6.",
       "uploadDate": "2025-08-04",
       "duration": "PT14M39S"
      },
@@ -92,10 +92,10 @@
        "title": "A string quartet or a solo violinist for weddings, galas and dinners.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "The first notes of Canon in D, and every guest stands up and turns around. That’s what most couples are picturing when they ask for strings, and it’s the same sound at the entrance of a gala and under a long dinner. Classical strings book as one violinist, a duo, a trio or the full string quartet of two violins, viola and cello, playing Bach for the aisle and Coldplay arranged for strings while the drinks go around.",
+       "lede": "The first notes of Canon in D begin, and everyone at the wedding stands up and turns toward the aisle. That’s what a lot of couples are picturing when they ask for strings. You can book a solo violinist, a duo, a trio or a full string quartet, and they can play anything from Bach to Coldplay arranged for strings.",
        "headingText": [
         {
-         "html": "It books for weddings, galas and dinners, for a party at home, and for a memorial service."
+         "html": "Strings are just as lovely at a gala, a dinner, a party at home or a memorial service."
         }
        ],
        "buttons": [
@@ -105,7 +105,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We can build the music around your event, from how many players you’d like to the pieces they play and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -144,11 +144,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-7",
-       "eyebrow": "The book",
-       "title": "Canon in D for the aisle, Viva La Vida for the drinks.",
+       "eyebrow": "Song list",
+       "title": "What does a string quartet play?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The book runs from the classical processionals and preludes through the hymns to the love songs, pop and film themes couples ask for. Every title here is arranged for strings, one violin to four, and a song that isn’t here can be arranged for your date."
+       "lede": "Our song list runs from classical processionals and preludes to hymns, love songs, pop and the film themes couples often ask for. Everything on this list is arranged for strings, from one violin up to a full quartet."
       }
      },
      {
@@ -730,7 +730,7 @@
       "props": {
        "id": "Heading-23",
        "eyebrow": "Sizes",
-       "title": "One violin for the aisle, a quartet for the ballroom.",
+       "title": "From a solo violinist to a full string quartet",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -742,19 +742,19 @@
        "rows": [
         {
          "term": "Solo violin",
-         "text": "One violinist, and the smallest strings booking. It plays a ceremony from the prelude to the recessional, an hour under a dinner for twenty, or the one song at a proposal."
+         "text": "A solo violinist can play a whole ceremony, an hour of music at a dinner, or a single song at a proposal."
         },
         {
          "term": "Duo",
-         "text": "Violin and cello. The cello carries the bass line under the melody, so Canon in D sounds the way people remember it and a processional has weight in a big space. It’s the size most often booked for the ceremony and the cocktail hour together."
+         "text": "A duo is a violin and a cello. The cello plays the low notes under the melody, so Canon in D sounds the way people remember it, and a processional feels fuller in a big space. It’s the size most often booked for the ceremony and the cocktail hour together."
         },
         {
          "term": "Trio",
-         "text": "Two violins and cello, or violin, viola and cello. The harmony parts arrive with the third player, so the pop songs and the film themes fill out, and it holds a cocktail hour on a terrace or a long dinner at a level the table talks across."
+         "text": "A trio is two violins and cello, or violin, viola and cello. A third player adds harmony, so pop songs and film themes sound fuller, and it’s an excellent choice for a cocktail hour or a long dinner where your guests want to talk."
         },
         {
          "term": "String quartet",
-         "text": "Two violins, viola and cello, the size the quartet repertoire was written for. It’s the booking for a church or a ballroom, for a gala’s first hour, and for a reception that wants the full sound under dinner."
+         "text": "A string quartet is two violins, viola and cello, the group that so much classical music was written for. This is the size to choose for a church or a ballroom, the first hour of a gala, or a reception where you’d like the full sound during dinner."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -764,7 +764,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-25",
-       "html": "For a ceremony on guitar, the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays it on steel strings and the <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> on nylon. The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> can take the cocktail hour after a strings ceremony, and the <a href=\"/ensembles/dj/\">DJ</a> the dancing, on the same contract.",
+       "html": "Prefer a guitar at your ceremony? Take a look at our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> or our <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>. Want a change of pace after the ceremony? A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> can play the cocktail hour and a <a href=\"/ensembles/dj/\">DJ</a> can get people dancing, all on the same contract.",
        "cls": "note"
       }
      }
@@ -796,31 +796,31 @@
        "rows": [
         {
          "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony</a>",
-         "text": "Strings can play every part of a ceremony, from the prelude to the recessional. A violinist watches the aisle so the processional lasts exactly as long as the walk, and in a big church or a mountain ballroom, a quartet carries where a single instrument can get lost."
+         "text": "Strings can play every part of a ceremony, from the prelude to the recessional. The musicians watch the aisle, so the processional can last as long as the walk does, and in a big church or a mountain ballroom, a quartet will carry better than a single violin."
         },
         {
          "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour</a>",
-         "text": "The same musicians walk from the ceremony to the terrace and play Coldplay, the Beatles and Taylor Swift arranged for strings, at a level guests talk across, on the same contract as the ceremony."
+         "text": "The same musicians can stay on for the cocktail hour and play songs by Coldplay, the Beatles and Taylor Swift, at a volume your guests can easily talk over."
         },
         {
          "term": "<a href=\"/corporate/galas-and-awards/\">Galas and awards nights</a>",
-         "text": "A string quartet playing as the doors open is the sound of a black-tie evening. It’s the reception act on a gala’s contract, with the dinner act and the dance floor act on the same one."
+         "text": "A string quartet is a great way to welcome guests to a black-tie gala. We can also book the rest of your gala’s music, from dinner through the dancing."
         },
         {
          "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
-         "text": "A duo or a trio under a dinner for twenty to sixty, so the evening has live music in it and the conversation stays the point."
+         "text": "A duo or a trio works well at a client dinner, since you get live music and your conversations stay front and center."
         },
         {
          "term": "<a href=\"/private-parties/anniversary-party/\">Anniversaries and milestone birthdays</a>",
-         "text": "A violinist or a trio at a dinner at home, a fiftieth anniversary at a club or an eightieth birthday, with the song from their own wedding on request."
+         "text": "A violinist or a trio is a lovely touch for a dinner at home, a fiftieth anniversary at a club or an eightieth birthday, and we can play the song from your own wedding if you’d like."
         },
         {
-         "term": "<a href=\"/private-parties/proposals/\">Proposals and one-song bookings</a>",
-         "text": "One violinist for one song, A Thousand Years or the film theme that’s theirs, at a restaurant table or a trailhead."
+         "term": "<a href=\"/private-parties/proposals/\">Proposals and surprises</a>",
+         "text": "Looking for just one song? We can send a violinist to play A Thousand Years or a film theme that means something to you."
         },
         {
          "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals and memorial services</a>",
-         "text": "Ave Maria, Amazing Grace and the hymns the family chooses, on one violin or violin and cello, in a chapel, at a graveside or at a celebration of life."
+         "text": "We can play Ave Maria, Amazing Grace and the hymns your family chooses on one violin or on violin and cello, in a chapel, at a graveside or at a celebration of life."
         }
        ],
        "cls": "def-list def-list--cards"
@@ -842,10 +842,10 @@
       "props": {
        "id": "Heading-32",
        "eyebrow": "Video Clips",
-       "title": "A Beethoven quartet, and one violin on its own.",
+       "title": "Watch a string quartet and a solo violinist play",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Above, the Andante from Bach’s second solo sonata, which is the prelude sound. Below, the first two movements of a Beethoven string quartet, which is the four-piece sound, and three more pieces on one violin."
+       "lede": "Here’s a string quartet playing the first two movements of a Beethoven quartet, along with a violinist playing Bach, Paganini and Sibelius."
       }
      },
      {
@@ -932,7 +932,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-38",
-       "html": "The questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>. The four instruments, and how a trio or a duo compares, are in <a href=\"/blog/what-is-a-string-quartet/\">what is a string quartet</a>.",
+       "html": "Have a question about substitutions or other booking details? You’ll find the answers on our <a href=\"/planners/faq/\">full list of questions</a>. Want to know more about the four instruments, or how a trio or duo compares? Check out our <a href=\"/blog/what-is-a-string-quartet/\">guide to the string quartet</a>.",
        "cls": "note"
       }
      },
@@ -943,27 +943,23 @@
        "items": [
         {
          "q": "What does a string quartet cost for a wedding in Denver?",
-         "a": "A Denver wedding guide puts a classical string duo or trio for a ceremony or cocktail hour at $800 to $2,000, and a full quartet sits above that. That's the market's price. We quote each date one-by-one, so send us the date, the venue and the size you're picturing and we'll come back with a price."
-        },
-        {
-         "q": "How much space does a string quartet need?",
-         "a": "A level spot about ten feet across and eight deep, four seats without arms, and shade or cover outdoors. The musicians bring their own stands and music, and indoors nothing is plugged in. One violinist fits in a corner about four feet across."
+         "a": "A Denver wedding guide puts a classical string duo or trio for a ceremony or cocktail hour at $800 to $2,000, and a full quartet costs more. That’s a general view of what strings cost in the Denver, Colorado market. Just send us the date, the venue and the size you’re picturing, and we’ll come back with a price."
         },
         {
          "q": "Can a string quartet play outdoors?",
-         "a": "Yes, with shade, cover from rain and level ground, because a violin can't sit in direct sun or get wet. Cold matters too, since strings drift and fingers slow down once the temperature drops into the fifties, so for a mountain ceremony we agree a plan for moving under cover with you ahead of time."
+         "a": "Yes. We’ll just need shade, cover from rain and level ground, since violins can’t sit in direct sun or get wet. Cold weather matters, too, since strings go out of tune and fingers slow down once it drops into the fifties, so for a mountain ceremony we’ll work out a backup plan with you in case it gets cold."
         },
         {
          "q": "How loud is a string quartet?",
-         "a": "About as loud as a conversation at the next table. Indoors it plays a prelude, a processional and a cocktail hour with nothing plugged in, and the front table keeps talking. Outdoors, or in a hall where the back has to hear the officiant, a small sound system on one standard outlet carries the strings and a microphone, and the musicians set the level to the space."
+         "a": "It’s about as loud as a conversation at the next table. Indoors, a quartet can play a ceremony or a cocktail hour with nothing plugged in. Outdoors, or in a large hall where everyone needs to hear the officiant, we can bring a small sound system, and the musicians will adjust the volume to fit the space."
         },
         {
          "q": "Can you play a song that isn't on the list?",
-         "a": "Yes. Custom arrangements are part of the booking, so a song that isn't on the list can be written out for the size you book, one violin or four. Send the title with the date, and a recording of the version you mean if there's more than one."
+         "a": "Yes. We can usually have a new song written out for your group, whether that’s one violin or a full quartet. Send the title with the date, and a recording of the version you mean if there's more than one."
         },
         {
-         "q": "Who plays a classical strings booking?",
-         "a": "Working string players from our roster, and we'll tell you who they are when you book. You book the size, one violinist to the quartet, and the same players cover the ceremony and the cocktail hour."
+         "q": "Who will the musicians be?",
+         "a": "They’ll be string players from our roster, and we’ll let you know their names when you book."
         }
        ],
        "schema": true
@@ -973,7 +969,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-40",
-       "html": "This price comes from published 2026 market guides, read September 2026. We quote each date one-by-one.",
+       "html": "We quote each date one-by-one.",
        "cls": "note"
       }
      }
@@ -1001,8 +997,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us the date and the venue, and we'll bring one violin or the whole quartet.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Looking for a string quartet or a violinist?",
+       "lede": "Send us your date and venue, and we’ll get back to you about availability and costs."
       }
      }
     ],

@@ -4,7 +4,7 @@
    "path": "/ensembles/afro-house-dj/",
    "title": "Afro house DJ in Denver, with live tabla | Signet Artists",
    "titleExact": true,
-   "description": "A Denver DJ playing Afro house, deep house and amapiano, with live tabla on request, for after-parties, holiday parties, weddings and birthdays in Colorado.",
+   "description": "A Denver DJ playing Afro house, deep house, amapiano, techno and electronic music, with live tabla on request, for after-parties, holiday parties, weddings and birthdays in Colorado.",
    "nav": "music",
    "ogImage": "img/afro-house-dj-card.jpg",
    "ogImageAlt": "A DJ holding headphones to one ear under purple and pink stage light.",
@@ -12,8 +12,8 @@
    "schema": {
     "service": {
      "name": "Afro house DJ with live tabla",
-     "serviceType": "Afro house, deep house and amapiano DJ sets, with live tabla on request, for corporate events, weddings and private parties",
-     "description": "A Denver DJ playing Afro house, deep house and amapiano, with live Indian classical tabla over the set on request, for conference after-parties, holiday parties, wedding receptions and birthdays across Denver, the Front Range and the Colorado mountain corridor.",
+     "serviceType": "Afro house, deep house, amapiano, techno and electronic DJ sets, with live tabla on request, for corporate events, weddings and private parties",
+     "description": "A Denver DJ playing Afro house, deep house, amapiano, techno and electronic music, with live Indian classical tabla over the set on request, for conference after-parties, holiday parties, wedding receptions and birthdays across Denver, the Front Range and the Colorado mountain corridor.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -27,13 +27,19 @@
       "dj"
      ]
     },
-    "act": "afro-house-dj"
+    "act": "afro-house-dj",
+    "video": {
+     "name": "Afro house DJ for an after-party: live DJ set",
+     "description": "Here’s the DJ playing a live outdoor set. The DJ plays Afro house, deep house, amapiano, techno and electronic music, and can play live tabla on request.",
+     "uploadDate": "2026-11-04",
+     "duration": "PT2M31S"
+    }
    },
    "notes": {
     "_note": "Authored 2026-11-02, first as a named artist page and recast the same evening as a spec'd format on Daniel's ruling (no artist names, no Instagram or other link out: 'we book people, we don't promote them and give a client an option to go around us'). Format shape after ensembles-dj: Intro, the credits strip, the tabla, occasions, photographs, questions, the close. No equipment, setup or stage detail anywhere on the page (Daniel, 2026-11-02: 'this page is to inspire an evocative feel to inspire a booking not be a fucking tech rider'). No prices.",
     "reader": "Whoever wants a dance floor on house music, Afro house and amapiano, with something live on it as well as a DJ: a conference after-party, an office holiday party, a wedding reception, a milestone birthday.",
     "_title_note": "57 characters with the brand suffix. The term buyers type is 'afro house dj', with the city and the tabla as the difference.",
-    "_hero_note": "The hero is the DJ's photograph until a clip is on @SignetArtists under a title with no name; see the act's _video_note."
+    "_hero_note": "The hero is the Signet reupload v0nKiT2_7RE since 2026-11-04; see the act's _video_note."
    }
   }
  },
@@ -53,34 +59,30 @@
        "title": "An Afro house DJ in Denver, with live tabla over the set.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "You know the point in a house set when the drums lock in and the people standing at the edge of the floor start to move. This DJ plays Afro house, deep house and amapiano, and can sit down at a pair of tabla drums and play them live over the records.",
+       "lede": "You know the point in a house set when the drums lock in and the people standing at the edge of the floor start to move. This DJ plays Afro house, deep house, amapiano (a style of house music built around piano), techno and electronic music, and can sit down at a pair of tabla drums and play them live over the records.",
        "headingText": [
         {
-         "html": "It books for a conference after-party, an office holiday party, a wedding reception or a birthday, anywhere the night wants a dance floor on house music."
+         "html": "This is the act to book when you want people dancing to house music."
         }
        ],
        "buttons": [
         {
-         "label": "Check a date",
+         "label": "Check a Date",
          "href": "/contact/?act=afro-house-dj",
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We’ll shape the set around your event, from the styles the DJ plays to whether you want the tabla. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
       "type": "ActVideo",
       "props": {
        "id": "ActVideo-2",
-       "kind": "photo",
-       "image": {
-        "src": "/img/afro-house-dj-card.jpg",
-        "alt": "A DJ holding headphones to one ear under purple and pink stage light.",
-        "width": "1600",
-        "height": "900",
-        "decoding": "async"
-       }
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/v0nKiT2_7RE?rel=0",
+       "title": "The Afro house DJ playing a live outdoor set",
+       "loading": "lazy"
       }
      }
     ],
@@ -108,17 +110,17 @@
       "props": {
        "id": "Heading-7",
        "eyebrow": "The tabla",
-       "title": "Live drums over the records.",
+       "title": "What does live tabla add to a DJ set?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The DJ trained in Indian classical music on the tabla, a pair of hand drums. Played live, they give the crowd a musician to watch as well as music to dance to, and the same set works without them when you book the DJ on their own."
+       "lede": "The DJ trained in Indian classical music on the tabla, a pair of hand drums. The drums give your guests a live musician to watch as well as music to dance to, and the set works just as well without them, so just let us know what you’d like."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "The DJ has played Denver's house clubs and club nights in Chicago, San Francisco, San Diego and Hong Kong, and can play the warm-up while a crowd is still arriving and talking, the peak of the night once the floor is full, or one long set that covers both.",
+       "html": "The DJ has played Denver’s house clubs and club nights in Chicago, San Francisco, San Diego and Hong Kong, and can play a relaxed warm-up set, a high-energy set, or one long set that builds from one to the other.",
        "cls": "prose"
       }
      }
@@ -150,19 +152,19 @@
        "rows": [
         {
          "term": "<a href=\"/corporate/after-party/\">Conference after-parties</a>",
-         "text": "The night after the program, for a crowd that flew in from everywhere and wants a dance floor on house music."
+         "text": "House music is a great way to get your conference guests dancing once the program is over, especially if they’ve flown in from all over."
         },
         {
          "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
-         "text": "For a company that wants its dance floor on house music, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue, booked as the DJ alone or with the tabla."
+         "text": "If your team loves house music, we can book the DJ alone or with the tabla at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue."
         },
         {
          "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthdays</a>",
-         "text": "A birthday for people who go out to hear Afro house and amapiano, at a venue or a house with a floor for dancing."
+         "text": "This is a great way to celebrate a birthday if you and your friends love going out to hear Afro house and amapiano, whether you’re at a venue or at a house with space to dance."
         },
         {
          "term": "<a href=\"/weddings/\">Wedding receptions</a>",
-         "text": "For a couple whose friends go out dancing to house music and want the reception to sound like the clubs they go to. Send us the date and we’ll price it."
+         "text": "If you and your friends love dancing to house music, the DJ can make your reception sound like the clubs you go to."
         }
        ]
       }
@@ -171,7 +173,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "We plan the set around speeches and a program with your <a href=\"/planners/run-of-show/\">run of show</a>. What live music costs across Colorado, size by size, is in the <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "html": "We can plan the music around speeches and a program - just share your <a href=\"/planners/run-of-show/\">flow of the evening</a> with us. Need a sense of prices? Check out our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
        "cls": "note"
       }
      }
@@ -190,7 +192,7 @@
       "props": {
        "id": "Heading-29",
        "eyebrow": "Photos",
-       "title": "On the decks.",
+       "title": "The Afro house DJ at work",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -239,7 +241,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-35",
-       "html": "The questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "Still curious? We cover a lot more on our <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },
@@ -251,19 +253,15 @@
        "items": [
         {
          "q": "What does the Afro house DJ play?",
-         "a": "Afro house, deep house and amapiano, with global electronic records worked into the set. It's a Denver DJ booked through Signet Artists, with live tabla over the set when you want it."
-        },
-        {
-         "q": "Can the tabla be added to any booking?",
-         "a": "Yes. Ask for it when you send the date and it's priced with the rest of the booking."
+         "a": "It’s mostly house music, and the DJ also plays techno and mixes in electronic music from around the world."
         },
         {
          "q": "How long does the DJ play?",
-         "a": "Anywhere from one hour to four, with the breaks planned around your program."
+         "a": "The DJ can play anywhere from one hour to four, and we’ll plan any breaks around your program."
         },
         {
          "q": "Does the DJ play outside Denver?",
-         "a": "Yes, across Colorado, and travel outside the Denver metro is priced with the date."
+         "a": "Yes, the DJ plays all across Colorado, so just let us know where your event is."
         }
        ]
       }
@@ -291,8 +289,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Book an Afro house DJ for the night, with live tabla over the set.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Want an Afro house DJ and a live drummer in one person? Tell us your date and we’ll check availability.",
+       "lede": "We’ll match the sound system to your venue, and you’ll have one person to call from start to finish."
       }
      }
     ],

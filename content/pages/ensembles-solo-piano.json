@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/ensembles/solo-piano/",
-   "title": "Pianist for hire in Denver, for cocktails, dinners and galas",
-   "description": "A solo pianist for Denver client dinners, galas, hotel ballrooms and dinner parties: standards and covers at a level the table talks across.",
+   "title": "Pianist for hire in Denver for cocktails, dinners and galas",
+   "description": "Hire a solo pianist in Denver for client dinners, galas, hotel ballrooms and dinner parties, playing standards and covers at a level your guests can easily talk over.",
    "titleExact": true,
    "ogImage": "img/ballroom.jpg",
    "nav": "music",
@@ -12,7 +12,7 @@
     "service": {
      "name": "Solo piano",
      "serviceType": "Solo pianist for cocktail hours, client dinners, galas and dinner parties",
-     "description": "A solo pianist playing standards and covers at conversation volume for client dinners, galas, hotel ballroom dinners, dinner parties, Sunday brunches and memorial services across Denver, the Front Range and the Colorado mountain corridor, with a voice added when the evening wants singing.",
+     "description": "A solo pianist plays standards and covers at a level your guests can talk over, for client dinners, galas, hotel ballroom dinners, dinner parties, Sunday brunches and memorial services across Denver, the Front Range and the Colorado mountain corridor, and we can add a singer if you’d like one.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -50,10 +50,10 @@
        "title": "A pianist for cocktails, dinners and galas.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Someone at the piano is playing All of Me while your guests find their tables, and the conversation carries on over it all night. A solo pianist plays standards and covers through arrival, cocktails and dinner, on the venue’s piano or on a stage piano we bring, and a singer joins when the evening wants one.",
+       "lede": "When you walk into an event and someone at the piano is playing All of Me, you can tell that somebody put real thought into it. A solo pianist can play from the time your guests arrive through cocktails and dinner.",
        "headingText": [
         {
-         "html": "It books for a client dinner in a private dining space, the doors and dinner of a gala, a holiday party that’s a dinner rather than a dance, and a Sunday brunch."
+         "html": "It’s a lovely choice when you want something polished that still leaves your guests free to talk."
         }
        ],
        "buttons": [
@@ -63,7 +63,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "We build the act around your night, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "We’ll work with you on the music, from the song list to what the pianist wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -101,7 +101,7 @@
    "props": {
     "id": "Setlist-8",
     "act": "solo-piano",
-    "title": "A sample of the set",
+    "title": "Solo piano song list",
     "_notes": "The set, pulled from the repertoire data by the token (acts.json\n     solo-piano.setlist, from_repertoire: the arrival and dinner moments), so\n     every title here is one the site already publishes on the song list.",
     "_file": "02-set.html"
    }
@@ -116,8 +116,8 @@
       "type": "Heading",
       "props": {
        "id": "Heading-9",
-       "eyebrow": "The booking",
-       "title": "One musician, the piano, and a voice when you want one.",
+       "eyebrow": "Your options",
+       "title": "A solo pianist, with a singer if you’d like one.",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -129,11 +129,11 @@
        "rows": [
         {
          "term": "The piano",
-         "text": "When the venue has a piano, the pianist plays it, and a hotel lobby or a club dining space usually has one. When it doesn’t, a stage piano comes with the booking, and from the tables it sounds like a piano in the corner."
+         "text": "When the venue has a piano, the pianist plays it, and a hotel lobby or a club dining space usually has one. If it doesn’t, we’ll bring a stage piano (a portable electric piano), and from the tables it sounds a lot like an acoustic piano."
         },
         {
-         "term": "With a voice",
-         "text": "On its own the piano is instrumental, which is the version most client dinners and galas book. When the evening wants singing, a voice joins for a set or for the night, on the same line of the contract."
+         "term": "With a singer",
+         "text": "On its own, the piano is instrumental, and that’s what most people choose for a client dinner or a gala. If you’d like some singing, we can add a singer for a set or for the whole event."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -143,7 +143,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-11",
-       "html": "For a bigger crowd, a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> plays the same hours. When the night wants a dance floor after dinner, a <a href=\"/ensembles/soul-band/\">band</a> or the <a href=\"/ensembles/dj/\">DJ</a> takes over through the same sound system on the same contract. The rest of the covers list is on the <a href=\"/repertoire/\">repertoire page</a>.",
+       "html": "For a bigger crowd, we can bring a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> for the same hours. Want people dancing after dinner? We can have a <a href=\"/ensembles/soul-band/\">band</a> or our <a href=\"/ensembles/dj/\">DJ</a> take over, and it can all stay on the same contract.",
        "cls": "note"
       }
      }
@@ -174,31 +174,31 @@
        "rows": [
         {
          "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
-         "text": "Twenty at one table or eighty at ten, in a private dining space or a club, where the conversation is the event."
+         "text": "A pianist is a lovely fit for a client dinner in a private dining space or a club, where the conversation is what matters most."
         },
         {
          "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
-         "text": "The doors and the dinner, before the program. <a href=\"/blog/gala-entertainment-ideas/\">Gala entertainment ideas</a> has the smaller gala where the piano is the whole evening."
+         "text": "A pianist can play as guests arrive and through dinner, right up until the program starts. Planning a smaller gala? A pianist can be the entertainment for the whole event, and you can find more <a href=\"/blog/gala-entertainment-ideas/\">gala entertainment ideas</a> on our blog."
         },
         {
          "term": "<a href=\"/corporate/holiday-party/\">The low-key company dinner</a>",
-         "text": "A holiday party that’s a dinner rather than a dance floor, or the <a href=\"/blog/january-office-party-ideas/\">January office party</a> after the December rush."
+         "text": "A pianist is a great pick for a holiday party that’s more of a dinner than a dance, or a <a href=\"/blog/january-office-party-ideas/\">January office party</a> after the December rush."
         },
         {
          "term": "<a href=\"/daytime/brunch/\">Sunday brunch</a>",
-         "text": "A jazz brunch at a club, a hotel or a restaurant, with standards under the whole service."
+         "text": "We can bring a pianist to a jazz brunch at your club, hotel or restaurant, playing standards from start to finish."
         },
         {
          "term": "<a href=\"/daytime/funerals-and-memorials/\">Memorial services</a>",
-         "text": "The prelude as people arrive, and the songs the family chooses, when the chapel or the reception has a piano."
+         "text": "A pianist can play a prelude as people arrive, along with the songs your family chooses."
         },
         {
          "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
-         "text": "A standing afternoon at a community, with the residents’ own songs from the Great American Songbook."
+         "text": "We can set up a regular afternoon at your community, with songs from the Great American Songbook that your residents know and love."
         },
         {
          "term": "<a href=\"/private-parties/\">Dinner parties at home</a>",
-         "text": "A house with a piano in it, and a table of twelve."
+         "text": "If you have a piano at home, a pianist is a lovely way to make a dinner party feel special."
         }
        ],
        "cls": "def-list def-list--cards"
@@ -227,7 +227,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, and the questions every booking shares, from substitutions to volume limits, are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "Wondering about something else? Our <a href=\"/planners/faq/\">full question list</a> has answers on everything from substitutions to volume limits.",
        "cls": "note"
       }
      },
@@ -238,19 +238,15 @@
        "items": [
         {
          "q": "What does the pianist play?",
-         "a": "Standards and covers, from the Great American Songbook to Elton John and Billy Joel, played through arrival, cocktails and dinner. The set can lean jazz, lean pop or move between the two as the evening goes on. It's booked through Signet Artists in Denver."
-        },
-        {
-         "q": "Does the venue need a piano?",
-         "a": "No. When the venue has one, the pianist plays it, and it only needs the tuning the venue already keeps up. When it doesn't, a stage piano and a small sound system come with the booking, set up in a corner of about 6 by 4 feet with one dedicated 20-amp circuit and 45 minutes to set up."
+         "a": "Our pianists play standards and covers, from the Great American Songbook to Elton John and Billy Joel. We can lean toward jazz or pop, or move between the two as your event goes on. Want some more ideas? Check out our <a href=\"/repertoire/\">full song list</a>."
         },
         {
          "q": "How loud is it?",
-         "a": "About as loud as the conversation at the table, so two people across from each other hear each other and the piano both. A pianist sets the level to the space: in a small dining space the stage piano plays barely amplified, and in a ballroom the sound support carries it to the back tables without getting loud at the front ones."
+         "a": "It’s about as loud as the conversation at the table, so nobody has to raise their voice and everyone can still hear the piano. Your pianist can adjust to the space, too, playing very softly in a small dining area and using a little more sound in a ballroom so the back tables can hear without it getting loud up front."
         },
         {
          "q": "Can we ask for a song, or add time?",
-         "a": "Yes. If you want a song that isn't on the list, let us know when you book and we can usually learn it, and if you think the dinner might run long, let us know that too. An announcement microphone is ready for the toast or the remarks."
+         "a": "Yes. If you want a song that isn't on the list, let us know when you book and we can usually learn it, and if you think the dinner might run long, let us know that too. We can also bring a microphone for any toasts or remarks."
         }
        ],
        "schema": true
@@ -279,8 +275,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us the date, and we'll bring a pianist for cocktails and dinner.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Looking for a pianist in Denver? Let us know the date and we’ll see what we can do.",
+       "lede": "Book through Signet Artists in Denver, and we’ll size the sound to your venue and give you a personal contact from start to finish."
       }
      }
     ],

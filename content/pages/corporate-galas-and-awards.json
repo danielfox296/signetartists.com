@@ -3,7 +3,7 @@
   "props": {
    "path": "/corporate/galas-and-awards/",
    "title": "Live music for galas and award nights in Denver",
-   "description": "Live music for Denver galas, fundraisers and award nights: a reception act, dinner music the tables talk across, and a floor after the last award.",
+   "description": "Live music for Denver galas, fundraisers and award nights, from a reception act and dinner music to a dance floor after the last award.",
    "titleExact": true,
    "ogImage": "img/ballroom.jpg",
    "ogImageAlt": "An empty banquet hall set for dinner.",
@@ -13,7 +13,7 @@
     "service": {
      "name": "Gala and award night entertainment",
      "serviceType": "Live music for galas, fundraisers, award dinners and annual meetings",
-     "description": "Live music for nonprofit galas, association award nights, chamber annual dinners and company award ceremonies in Denver and across Colorado: reception acts, dinner ensembles and dance bands that work around remarks, auctions, videos and walk-ups, on one contract.",
+     "description": "We offer live music for nonprofit galas, association award nights, chamber annual dinners and company award ceremonies in Denver and across Colorado, with reception acts, dinner ensembles and dance bands that work around remarks, auctions, videos and walk-ups.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -50,13 +50,13 @@
        "id": "Heading-1",
        "eyebrow": "Galas and award nights",
        "slab": true,
-       "title": "Music that works around your program.",
+       "title": "Gala entertainment in Denver",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "The emcee steps toward the podium and the music has already stopped, and the last honoree reaches the stage on the final bar of their walk-up. A gala runs on a program, and the music’s job is to know where every cue is: a reception act as the doors open, dinner music the tables talk across, silence for the emcee, and a dance floor after the last award.",
+       "lede": "You've planned every part of the program, and the last thing you want is music playing over your emcee. We'll plan the music around your program with you. That can mean a reception act as the doors open, dinner music your guests can easily talk over, quiet for the emcee, and a dance floor after the last award.",
        "headingText": [
         {
-         "html": "Nonprofit galas and fundraisers, association award nights, chamber annual dinners and company award ceremonies book it, and the cues below are written so you can forward them to whoever signs."
+         "html": "We work with nonprofit galas and fundraisers, association award nights, chamber annual dinners and company award ceremonies."
         }
        ],
        "buttons": [
@@ -95,10 +95,10 @@
       "props": {
        "id": "Heading-6",
        "eyebrow": "Video Clips",
-       "title": "Hear the jazz duo at reception volume.",
+       "title": "Watch our jazz duo play.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Guitar and upright bass on a standard, at the level a gala’s doors and dinner run at. The dance floor after the last award is a different act on the same contract."
+       "lede": "Our jazz duo plays guitar and upright bass, and it’s a lovely choice for a gala reception or dinner. Once the awards are done, we can bring in a different act for the dancing."
       }
      },
      {
@@ -109,7 +109,7 @@
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
-         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass at dinner volume",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
          "loading": "lazy"
         }
        ],
@@ -131,11 +131,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-10",
-       "eyebrow": "Doors to dance floor",
-       "title": "What the band does at every cue in the program.",
+       "eyebrow": "From reception to dance floor",
+       "title": "Live music for every part of your gala program",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The run of show is planned with whoever is running the program, and on the night the bandleader watches the emcee."
+       "lede": "We'll go over the flow of the evening with whoever is running your program, and the bandleader will follow your emcee throughout the event."
       }
      },
      {
@@ -144,32 +144,32 @@
        "id": "DefRows-11",
        "rows": [
         {
-         "term": "The doors",
-         "text": "A reception act is already playing when the first guest walks in, at a level the check-in table can hear itself over: a duo, <a href=\"/ensembles/solo-piano/\">a solo pianist</a> or a Spanish guitarist, depending on what the evening should feel like in its first ten minutes."
+         "term": "Reception music",
+         "text": "We can have a reception act playing when your first guests walk in, at a volume the check-in table can easily talk over."
         },
         {
          "term": "Remarks and the welcome",
-         "text": "The music stops while the speaker is still steps from the podium, and the speaker gets an announcement microphone of their own."
+         "text": "The band can stop before your speaker reaches the podium, and we'll have a microphone ready for them."
         },
         {
          "term": "Dinner",
-         "text": "The band plays at the level of the conversation from the first course to the coffee. A trio usually does this better than a full band turned down."
+         "text": "The band can play at the level of the conversation for the whole meal. A trio usually does this better than a full band turned down."
         },
         {
          "term": "The video",
-         "text": "The band goes silent, with the handoff to the house audio planned in advance, and comes back in on the applause."
+         "text": "If you're showing a video, the band will stop, we'll plan the switch to the house audio ahead of time, and the band can come back in after the applause."
         },
         {
          "term": "The auction and the paddle raise",
-         "text": "Silence through the bidding unless the auctioneer wants music low under it, and a short piece as each lot closes if the program calls for it."
+         "text": "The band will stay quiet during the bidding unless your auctioneer would like some music, and we can play a short piece as each lot closes."
         },
         {
          "term": "The walk-ups",
-         "text": "Each honoree gets music from the moment the name is read to the moment they reach the podium, cut on arrival, never faded over their first sentence. We take the names and the order ahead of the night."
+         "text": "We can play music for each honoree from the moment their name is read until they reach the podium, then stop as soon as they get there. We'll just need the names and the order ahead of time."
         },
         {
-         "term": "The turn",
-         "text": "When the last award is given, the night gets loud on cue: a dance band or the DJ through the same system, with no changeover the guests can see."
+         "term": "The dance floor",
+         "text": "A dance band or DJ can take over without a long break to change things over."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -191,10 +191,10 @@
       "props": {
        "id": "Heading-14",
        "eyebrow": "Who plays each part",
-       "title": "A reception act, a dinner act and a dance floor act, on one contract.",
+       "title": "Gala bands, DJs & musicians",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "They can be the same musicians all night or three different sounds. The contract and the sound system stay the same."
+       "lede": "You can have the same musicians all night or three different acts. Either way, it can all go on one contract with one sound system."
       }
      },
      {
@@ -204,15 +204,15 @@
        "rows": [
         {
          "term": "As the doors open",
-         "text": "The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> on upright bass and guitar, <a href=\"/ensembles/solo-piano/\">a solo pianist</a>, a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, a <a href=\"/ensembles/string-quartet/\">string quartet</a> for a black-tie evening, or <a href=\"/artists/last-consulate/\">Last Consulate</a> for an evening that wants to sound like this decade."
+         "text": "Great choices include the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, <a href=\"/ensembles/solo-piano/\">a solo pianist</a>, a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, or a <a href=\"/ensembles/string-quartet/\">string quartet</a> for a black-tie event. If you'd like something more modern, check out <a href=\"/artists/last-consulate/\">Last Consulate</a>, with upright bass over slow, laid-back electronic music."
         },
         {
          "term": "Through dinner",
-         "text": "The <a href=\"/ensembles/jazz-duo-trio/\">jazz trio</a> with drums played with brushes, or the <a href=\"/ensembles/americana-band/\">Americana trio</a> when the gala is a ranch, a barn or a mountain evening."
+         "text": "We'd suggest the <a href=\"/ensembles/jazz-duo-trio/\">jazz trio</a>, with the drummer playing brushes to keep it soft, or the <a href=\"/ensembles/americana-band/\">Americana trio</a> for a gala at a ranch, a barn or up in the mountains."
         },
         {
          "term": "After the last award",
-         "text": "The <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> on a ballroom floor, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> for a crowd that wants to sing, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> when the committee wants the after-party to be the thing people describe, or the <a href=\"/ensembles/dj/\">DJ</a> on its own or with a live musician over the set."
+         "text": "The <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> is great on a ballroom floor, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> is perfect for a crowd that loves to sing, and <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> lets your guests take the mic. You could also book the <a href=\"/ensembles/dj/\">DJ</a> on their own or with a live musician playing along."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -222,7 +222,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "Ideas for the whole evening, music and otherwise, are in <a href=\"/blog/gala-entertainment-ideas/\">gala entertainment ideas</a>. The hour after the program has <a href=\"/corporate/after-party/\">its own page</a>.",
+       "html": "Looking for more ideas, music and otherwise? Check out our <a href=\"/blog/gala-entertainment-ideas/\">gala entertainment ideas</a>. Planning a party after the program? Learn more about <a href=\"/corporate/after-party/\">after-party entertainment</a>.",
        "cls": "note"
       }
      }
@@ -241,7 +241,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-19",
-       "title": "Related evenings",
+       "title": "Related events",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -250,7 +250,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-20",
-       "html": "When the award night belongs to a company rather than a cause, the <a href=\"/corporate/\">corporate page</a> covers vendor setup and purchase orders, and <a href=\"/corporate/client-dinners/\">client dinners</a> have their own page. When it’s the last night of a retreat, the <a href=\"/corporate/retreats/\">retreats page</a> covers the mountain evening.",
+       "html": "Planning a company award night? Take a look at our <a href=\"/corporate/\">corporate entertainment</a> to learn more about vendor setup and purchase orders. We also play <a href=\"/corporate/client-dinners/\">client dinners</a>. If it’s the last night of a mountain retreat, learn more about our <a href=\"/corporate/retreats/\">corporate retreats</a>.",
        "cls": "prose"
       }
      }
@@ -269,7 +269,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-23",
-       "eyebrow": "Questions",
+       "eyebrow": "Good to know",
        "title": "Gala and award night questions",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -279,7 +279,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "Stage sizes and power for every act are on the <a href=\"/planners/technical/\">technical page</a>, written so you can forward it to the venue as it stands, and more booking questions are on the <a href=\"/planners/faq/\">planners question list</a>.",
+       "html": "Looking for stage sizes and power details? Check out our <a href=\"/planners/technical/\">technical page</a>. You can read more booking answers in our <a href=\"/planners/faq/\">planner questions</a>.",
        "cls": "note"
       }
      },
@@ -290,23 +290,23 @@
        "items": [
         {
          "q": "Do you play during the live auction and the paddle raise?",
-         "a": "Only if the auctioneer wants music low under the bidding, and most don't. The usual plan is silence through the auction, a short piece as each lot closes if the program calls for it, and the band back in when the auctioneer hands the microphone back. The auctioneer gets a microphone of their own."
+         "a": "In our experience, most auctioneers prefer quiet during the bidding. The band will usually start again when the auctioneer hands the microphone back."
         },
         {
-         "q": "How loud is the music at dinner?",
-         "a": "Quiet enough that a table of ten talks across it, and the band stops for every speaker. After the last award it plays like a dance band, up to whatever the venue allows. Let us know the venue's sound limit and curfew when you book and we'll plan the night around them."
+         "q": "How loud can the band get?",
+         "a": "Once the dancing starts, the band can turn it up as far as the venue allows. Let us know the venue's sound limit and curfew when you book and we'll plan the night around them."
         },
         {
          "q": "What do you need from the venue?",
-         "a": "A dock time and an elevator window if it's a hotel, one or two dedicated 20-amp circuits depending on the size of the act, the sound cap and curfew if there are any, and the run of show with the program's cues on it. We can send whatever paperwork your venue or your finance team needs."
+         "a": "If it’s a hotel, we'll need to know when we can use the loading dock and the elevators. We'll also need one or two dedicated 20-amp circuits, depending on the size of the act. We'd love to see the flow of the evening, too, including when your program needs the music to stop. We can send whatever paperwork your venue or your finance team needs."
         },
         {
          "q": "Do you work with our emcee and auctioneer?",
-         "a": "Yes. The run of show is planned with whoever is running the program, the emcee gets an announcement microphone of their own, and the bandleader takes cues from the emcee on the night. If your emcee is a board member doing it for the first time, we're glad to walk through it with them before the doors open."
+         "a": "Yes. We'll have a microphone for your emcee and one for your auctioneer, and we'll go over the plan with both of them ahead of time. If your emcee is a board member doing it for the first time, we're glad to walk through it with them before the doors open."
         },
         {
-         "q": "How far ahead do galas book entertainment?",
-         "a": "Whenever you're ready. Committees usually settle the venue and the honorees first and come to the entertainment after, and we're glad to hear from you at any point in that. Tell us the date and the venue, and we'll come back with a recommendation and a price."
+         "q": "How far ahead should we book entertainment for a gala?",
+         "a": "Whenever you're ready. Many committees pick the venue and the honorees first and come to the entertainment later, and we're happy to hear from you at any point. Tell us the date and the venue, and we'll come back with a recommendation and a price."
         }
        ],
        "schema": true
@@ -335,8 +335,8 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us the run of show and we'll plan the music around every cue.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "title": "Send us the flow of the evening and we'll plan the music with you.",
+       "lede": "From a solo musician to a full band, we'd love to help with your gala. We'll size the sound to the venue, and you'll have a personal point of contact for the event."
       }
      }
     ],

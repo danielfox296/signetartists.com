@@ -3,7 +3,7 @@
   "props": {
    "path": "/blog/",
    "title": "Blog",
-   "description": "Occasional writing on live music for private events: planning it, pricing it, and the music itself. From Signet Artists in Denver.",
+   "description": "We’re Signet Artists in Denver, and we write now and then about live music for private events, including how to plan it, what it costs and the music itself.",
    "breadcrumb": "Notes",
    "notes": {
     "_note": "The blog index is auto-built: {{blog_cards}} in the section fills with one row per published post, newest first, or the empty state until the first post ships. The RSS channel description reuses meta_description verbatim, so editing it here updates both."

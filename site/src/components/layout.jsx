@@ -135,7 +135,7 @@ export function Below({ output, hubs }) {
       {clips ? (
         <section className="section section--ruled related">
           <div className="wrap">
-            <p className="eyebrow"><a href={href(`/${m.WATCH_BASE}/`)}>Video clips</a>{" of " + clips.act.name}</p>
+            <p className="eyebrow"><a href={href(`/${m.WATCH_BASE}/`)}>Video clips</a>{clips.act.presentation === "spec" ? "" : " of " + clips.act.name}</p>
             <LinkList rows={clips.clips.map((v) => [`/${m.WATCH_BASE}/${v.slug}/`, v.name])} />
           </div>
         </section>

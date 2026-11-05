@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/planners/mountain/",
-   "title": "Live music logistics in Vail, Aspen, Breckenridge, Telluride",
-   "description": "Live music at Colorado mountain venues: Vail, Beaver Creek, Aspen, Breckenridge and the Broadmoor. Noise caps, curfews and altitude, cited and dated.",
+   "title": "Live music logistics in Vail, Aspen, Breckenridge and Telluride",
+   "description": "Planning live music at a Colorado mountain venue in Vail, Beaver Creek, Aspen or Breckenridge, or at the Broadmoor? Here's what to know. We cover noise caps, curfews and altitude, with sources and dates.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "The mountain corridor",
@@ -25,12 +25,12 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "Mountain venues",
+       "eyebrow": "For planners",
        "slab": true,
        "title": "Live music at Colorado's mountain venues.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Noise caps, curfews, altitude and travel for a band playing Vail, Beaver Creek, Breckenridge, Aspen, Telluride or Steamboat. Every number below is cited and dated at the foot of the page, and the towns we couldn't confirm are named as unconfirmed."
+       "lede": "You've found a beautiful venue in the mountains, and then someone mentions the noise cap. Here's what to know about noise caps, curfews, altitude and travel for a band playing Vail, Beaver Creek, Breckenridge, Aspen, Telluride or Steamboat. We've listed our sources for every number below, and we'll tell you where we couldn't confirm a town's rules."
       }
      }
     ],
@@ -57,7 +57,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "Most planning conversations about volume happen at the town level. Colorado also caps noise statewide, and where the state number is the lower of the two, that's the number you have to meet. The Noise Abatement Act sets maximum levels measured <strong>25 feet or more from the property line</strong>, and exceeding them is prima facie evidence of a public nuisance.",
+       "html": "When people plan for volume, they usually look at the town's rules first. Colorado also caps noise statewide, and where the state number is the lower of the two, that's the number you have to meet. The Noise Abatement Act sets maximum levels measured <strong>25 feet or more from the property line</strong>, and exceeding them is prima facie evidence (evidence that stands unless it's disproved) of a public nuisance.",
        "cls": "prose"
       }
      },
@@ -140,7 +140,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "Two details in the Act matter for an evening event. Between 7am and 7pm the limit rises by 10 dB(A) for up to fifteen minutes in any one hour, which is enough for a ceremony but not for dancing. And after 7pm, a residential zone sits at <strong class=\"num-accent\">50 dB(A)</strong> at 25 feet, which is below conversation. A private estate or ranch reception in a residential zone is constrained by that number whatever the band does.",
+       "html": "Two details in the Act matter for an evening event. Between 7am and 7pm the limit rises by 10 dB(A) for up to fifteen minutes in any one hour, which is enough for a ceremony but not for dancing. And after 7pm, the limit in a residential zone is <strong class=\"num-accent\">50 dB(A)</strong> at 25 feet, which is quieter than a normal conversation. If your reception is at a private estate or ranch in a residential zone, that limit applies no matter how the band plays.",
        "cls": "prose"
       }
      }
@@ -167,7 +167,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-11",
-       "html": "On 8 September 2025 the Colorado Supreme Court held that a municipality cannot authorize a private for-profit venue to exceed the state caps. The 1987 amendment that exempts cultural and entertainment events applies to property used by a government body or a nonprofit, and the court read that narrowly: Salida could not issue amplified-sound permits for concerts at a commercial bar.",
+       "html": "On September 8, 2025, the Colorado Supreme Court held that a municipality can't authorize a private for-profit venue to exceed the state caps. The 1987 amendment that exempts cultural and entertainment events applies to property used by a government body or a nonprofit, and the court read that narrowly. Salida could not issue amplified-sound permits for concerts at a commercial bar.",
        "cls": "prose"
       }
      },
@@ -175,7 +175,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-12",
-       "html": "For a planner this changes one habit. A sound permit from the town, held by a commercial venue, is no longer the end of the question. Ask the venue who holds the property and under what exemption, and get the answer before the contract.",
+       "html": "If your venue is a commercial property, a sound permit from the town may no longer settle the question. Ask the venue who owns the property and what exemption it falls under, and try to get the answer before you sign the contract.",
        "cls": "prose"
       }
      }
@@ -194,7 +194,7 @@
       "type": "Title",
       "props": {
        "id": "Title-15",
-       "html": "What a mountain date costs",
+       "html": "What live music costs at a mountain venue",
        "tag": "h2",
        "cls": "h3 h3--lead"
       }
@@ -203,7 +203,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "A resort date costs more than a Denver metro date everywhere in the Colorado market. The gap is travel, the extra day the calendar loses, and lodging when the night runs late enough that driving I-70 home afterward isn't sensible. All three are itemized on our quote.",
+       "html": "A resort event in Colorado usually costs more than a Denver event. The difference comes from travel, the extra day on the musicians' calendars, and lodging when the event runs too late for a sensible drive home on I-70.",
        "cls": "prose"
       }
      },
@@ -223,15 +223,15 @@
        "rows": [
         {
          "term": "Front Range",
-         "text": "Boulder, Fort Collins and Colorado Springs, including the Broadmoor. These are day trips, so they carry a short travel line and no lodging, which makes the Broadmoor one of the better-value resort venues in the state for live music."
+         "text": "This tier covers Boulder, Fort Collins and Colorado Springs, including the Broadmoor. These are day trips, so there's a small travel charge and no lodging, which makes the Broadmoor one of the better-value resort venues in Colorado for live music."
         },
         {
          "term": "I-70 corridor",
-         "text": "Vail, Beaver Creek, Breckenridge and Winter Park. The corridor adds travel. Same-day return works for an early finish, and a late curfew usually brings a night's lodging with it."
+         "text": "This tier covers Vail, Beaver Creek, Breckenridge and Winter Park. These events add a travel charge. The band can often drive back the same day if you finish early, but a late curfew usually means a night's lodging."
         },
         {
          "term": "Far resorts",
-         "text": "Aspen, Telluride, Steamboat Springs and Crested Butte. These add travel, plus a night's lodging billed at what it cost. These are two-day commitments for the band whatever the run of show says."
+         "text": "This tier covers Aspen, Telluride, Steamboat Springs and Crested Butte. These add a travel charge, plus a night's lodging, which we bill at cost. The band will need two days for these, whatever your run of show looks like."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -241,7 +241,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-19",
-       "html": "Lodging is billed at cost, on the quote as its own line.",
+       "html": "",
        "cls": "prose"
       }
      },
@@ -249,7 +249,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-20",
-       "html": "A holiday weekend prices above a standard date across Colorado. What live music costs in Colorado, sourced price by price, is on the <a href=\"/pricing/\">pricing page</a> and in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>. The town matters as much as the date up here, so send both.",
+       "html": "A holiday weekend usually costs more than a standard date anywhere in Colorado. Curious what live music costs in Colorado more broadly? Our <a href=\"/pricing/\">pricing page</a> and <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a> can help. The town matters as much as the date in the mountains, so please send us both.",
        "cls": "note"
       }
      }
@@ -268,7 +268,7 @@
       "type": "Title",
       "props": {
        "id": "Title-23",
-       "html": "Town by town",
+       "html": "Noise limits by mountain town",
        "tag": "h2",
        "cls": "h3 h3--lead"
       }
@@ -277,7 +277,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "Checked 7 August 2026. Municipal codes change, and several of these towns were actively revising their noise rules when we looked. Treat this as the starting question to put to your venue.",
+       "html": "We checked these rules on August 7, 2026. Municipal codes change, and several of these towns were actively revising their noise rules when we looked. Treat this as a starting point for your conversation with your venue.",
        "cls": "note"
       }
      },
@@ -288,7 +288,7 @@
        "rows": [
         {
          "term": "Aspen",
-         "text": "Aspen has the strictest rules, and the clearest. Outdoor amplified sound at a <strong>private</strong> event is capped at <strong>80 dBA at the perimeter, between 9am and 8pm</strong>, and a public event with a Special Event Permit gets 100 dBA until 9pm. Neighbors within 250 feet get seven days’ notice, and a property with a noise variance can hold two events a week. With an 8pm outdoor cutoff, plan the loudest part of the night indoors or earlier in the day."
+         "text": "Of all these towns, Aspen has some of the strictest rules and some of the clearest. Outdoor amplified sound at a <strong>private</strong> event is capped at <strong>80 dBA at the perimeter, between 9am and 8pm</strong>, and a public event with a Special Event Permit gets 100 dBA until 9pm. Neighbors within 250 feet get seven days’ notice, and a property with a noise variance can hold two events a week. With an 8pm outdoor cutoff, plan the loudest part of the night indoors or earlier in the day."
         },
         {
          "term": "Telluride",
@@ -300,7 +300,7 @@
         },
         {
          "term": "Steamboat Springs",
-         "text": "Reported at <strong>60 dB(A) from 7am to 7pm and 55 dB(A) from 7pm to 7am</strong>. Amplified sound in a public place needs permission from the city manager."
+         "text": "Steamboat's reported limit is <strong>60 dB(A) from 7am to 7pm and 55 dB(A) from 7pm to 7am</strong>. Amplified sound in a public place needs permission from the city manager."
         },
         {
          "term": "Vail",
@@ -308,7 +308,7 @@
         },
         {
          "term": "Beaver Creek, Winter Park, Snowmass Village, Crested Butte, Mountain Village",
-         "text": "Not confirmed. Send us the venue and we'll get the answer from the town."
+         "text": "We couldn't confirm the rules for these towns. Send us the venue and we'll get the answer from the town."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -318,7 +318,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-26",
-       "html": "One pattern holds across all of them. The published cap is a property-line or perimeter number, and a dance floor runs 88 to 95 dBA <em>on the floor</em>. Those two numbers aren't comparable, and the distance between the band and the property line is what reconciles them. That distance is a site question, which is why we want the venue name early.",
+       "html": "A town's published limit is measured at the property line or the perimeter, while a band can run 88 to 95 dBA <em>on the dance floor</em>. You can't compare those two numbers directly, because sound drops as it travels from the band to the property line. That distance depends on your site, which is why we'd like the venue name early.",
        "cls": "prose"
       }
      }
@@ -353,7 +353,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-31",
-       "html": "Two consequences reach the run of show. Singers and horns tire faster in thin dry air, so a band that plays four hours at 9,600 feet paces the night differently from the same band in Denver. And the temperature swing between sound check and the last set is wider up there than it is on the Front Range, which means more retuning across the evening.",
+       "html": "That affects your run of show in two ways. Singers and horn players tire faster in thin, dry air, so a band playing four hours at 9,600 feet will pace itself differently than it would in Denver. And the temperature swing between sound check and the last set is wider up there than it is on the Front Range, which means more retuning across the evening.",
        "cls": "prose"
       }
      },
@@ -361,7 +361,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-32",
-       "html": "Both are reasons to build a longer sound check into the document and to put water on the stage.",
+       "html": "That's why we'd build a longer sound check into your run of show and ask for water on the stage.",
        "cls": "prose"
       }
      }
@@ -388,7 +388,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-36",
-       "html": "The I-70 corridor adds travel. The far resorts add travel and, past the passes, a night’s lodging billed at what it cost. Both sit on the quote and on the contract as their own lines.",
+       "html": "",
        "cls": "prose"
       }
      },
@@ -396,7 +396,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-37",
-       "html": "Lodging bills at what the receipt says, and it appears on the far-resort tier because of I-70 and the passes. A drive that takes two hours in September takes considerably longer on a February Sunday, and a band that has driven six hours to Telluride isn't driving home the same night. If you'd rather we price the night without lodging and drive it, tell us and we'll look at it with you.",
+       "html": "We charge lodging for the far resorts because of I-70 and the mountain passes. A drive that takes two hours in September takes considerably longer on a February Sunday, and a band that has driven six hours to Telluride isn't driving home the same night. If your event is in a town like Vail or Breckenridge and you'd rather we price it without lodging and make the drive, just tell us and we'll look at it with you.",
        "cls": "prose"
       }
      },
@@ -404,7 +404,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-38",
-       "html": "One more winter fact worth knowing early. Independence Pass closes, so Aspen from Denver runs the long way round through Glenwood Springs.",
+       "html": "Independence Pass closes in winter, so the drive from Denver to Aspen goes the long way around through Glenwood Springs.",
        "cls": "prose"
       }
      }
@@ -431,7 +431,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-42",
-       "html": "Everything above comes down to these four. Ask them at contract; in the week of the event, two of them can move the loud hour or end it early.",
+       "html": "Try to ask them before you sign the contract. If the noise cap or the curfew only comes up the week of the event, it could move the loudest part of your event or end it early.",
        "cls": "prose"
       }
      },
@@ -485,14 +485,6 @@
       }
      },
      {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-48",
-       "html": "Checked 7 August 2026.",
-       "cls": "note"
-      }
-     },
-     {
       "type": "SpecList",
       "props": {
        "id": "SpecList-49",
@@ -503,7 +495,7 @@
          "html": "State decibel table and the fifteen-minute allowance: <a href=\"https://law.justia.com/codes/colorado/title-25/environmental-control/article-12/section-25-12-103/\" rel=\"nofollow\">C.R.S. 25-12-103, Maximum permissible noise levels</a>"
         },
         {
-         "html": "Local permits against state caps: <a href=\"https://www.coloradopolitics.com/2025/09/08/colorado-supreme-court-walks-back-decision-allowing-localities-to-broadly-permit-violations-of-noise-limits/\" rel=\"nofollow\">Colorado Supreme Court, 8 September 2025, reported in Colorado Politics</a>"
+         "html": "Local permits against state caps: <a href=\"https://www.coloradopolitics.com/2025/09/08/colorado-supreme-court-walks-back-decision-allowing-localities-to-broadly-permit-violations-of-noise-limits/\" rel=\"nofollow\">Colorado Supreme Court, September 8, 2025, reported in Colorado Politics</a>"
         },
         {
          "html": "Aspen limits, hours and notification: <a href=\"https://www.aspen.gov/329/Noise\" rel=\"nofollow\">City of Aspen, Noise</a>"
@@ -547,14 +539,14 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Tell us the venue and the date.",
-       "lede": "We'll check the cap, the curfew and the load-in with the venue."
+       "lede": "We'll take it from there and work out the load-in with the venue, too."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-53",
-       "html": "Also for planners: <a href=\"../technical/\">what we need from your venue</a>, the <a href=\"../run-of-show/\">run of show templates</a>, <a href=\"../booking/\">how a booking works</a> and the <a href=\"../faq/\">full question list</a>.",
+       "html": "Need more help with your planning? Take a look at <a href=\"../technical/\">what we need from your venue</a>, our <a href=\"../run-of-show/\">run of show templates</a>, <a href=\"../booking/\">how a booking works</a> and the <a href=\"../faq/\">full question list</a>.",
        "cls": "note"
       }
      }

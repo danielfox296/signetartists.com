@@ -3,7 +3,7 @@
   "props": {
    "path": "/404.html",
    "title": "Page not found",
-   "description": "A moved page or a mistyped address. Every page on the site is one click away.",
+   "description": "That page may have moved, or the address may be mistyped. Just let us know what you’re looking for, and we’ll help you find it.",
    "robots": "noindex, follow",
    "absolutePaths": true
   }
@@ -21,10 +21,10 @@
        "id": "Heading-1",
        "eyebrow": "404",
        "slab": true,
-       "title": "This page ends earlier than our sets do.",
+       "title": "Sorry, we can’t find that page.",
        "titleTag": "h1",
        "titleClass": "h2 smile",
-       "lede": "The link may be old, or the address mistyped. Everything on the site is one click away below."
+       "lede": "The link may be old, or there might be a typo in the address. Try one of these links, and if you can’t find what you’re looking for, just reach out."
       }
      },
      {
@@ -38,7 +38,7 @@
          "html": "<a href=\"/corporate/\">Corporate</a>: company parties, galas, client dinners and retreats"
         },
         {
-         "html": "<a href=\"/weddings/\">Weddings</a>: the ceremony, the cocktail hour and the floor"
+         "html": "<a href=\"/weddings/\">Weddings</a>: the ceremony, the cocktail hour and the dance floor"
         },
         {
          "html": "<a href=\"/private-parties/\">Private Parties</a>: at home, in a yard, or in a space you booked"
@@ -47,10 +47,10 @@
          "html": "<a href=\"/daytime/\">Daytime</a>: senior living, memorials, brunch and community programs"
         },
         {
-         "html": "<a href=\"/music/\">Artist Roster</a>: the acts and every configuration"
+         "html": "<a href=\"/music/\">Artist Roster</a>: Featured Artists and House Ensembles"
         },
         {
-         "html": "<a href=\"/repertoire/\">Songs</a>: the whole song book"
+         "html": "<a href=\"/repertoire/\">Songs</a>: our full song list"
         },
         {
          "html": "<a href=\"/pricing/\">Pricing</a>: what live music costs in the Colorado market"

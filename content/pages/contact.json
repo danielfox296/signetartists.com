@@ -3,7 +3,7 @@
   "props": {
    "path": "/contact/",
    "title": "Check a Date",
-   "description": "Tell us the date and the venue. Availability and an exact number back inside 24 to 48 hours, in business hours.",
+   "description": "Tell us the date and the venue. We'll reply with availability and an exact price within 24 to 48 hours, during business hours.",
    "nav": "contact",
    "breadcrumb": "Check a Date"
   }
@@ -18,10 +18,10 @@
     "title": "Check a date.",
     "titleTag": "h1",
     "titleClass": "h2 display",
-    "lede": "Tell us when and where. You'll get availability and an exact number back inside 24 to 48 hours, in business hours.",
+    "lede": "Tell us when and where. You'll hear back from us with availability and an exact price within 24 to 48 hours, during business hours.",
     "headingText": [
      {
-      "html": "A date and a problem to solve are enough to start. You don't need a size, a set list or a budget worked out first; tell us what the night is and we'll size it from there."
+      "html": "All we need to get started is a date and a rough idea of what you're planning. You don't need to have the size of the band, the song list or a budget worked out first. Just tell us about the event and we'll help you figure out the rest."
      }
     ],
     "band": "top",
@@ -97,10 +97,10 @@
       "kind": "textarea",
       "id": "message",
       "name": "What's the night",
-      "label": "What's the night",
+      "label": "What's the occasion?",
       "full": true,
       "rows": "4",
-      "placeholder": "What it's for and roughly how many people. A sentence is plenty."
+      "placeholder": "Tell us a little about it and roughly how many people you're expecting. A sentence is plenty."
      }
     ],
     "button": "Send",

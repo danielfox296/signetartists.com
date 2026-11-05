@@ -3,14 +3,14 @@
   "props": {
    "path": "/weddings/cocktail-hour/",
    "title": "Wedding cocktail hour music in Colorado | Signet Artists",
-   "description": "Live music for cocktail hour: what plays, how many songs, whether anyone notices, whether people can talk over it, and whether a duo is enough for 70 guests.",
+   "description": "Planning live music for your cocktail hour? Find out what should play, how many songs you’ll need, whether people can talk over it and whether a duo is enough for 70 guests.",
    "titleExact": true,
    "nav": "weddings",
    "schema": {
     "service": {
      "name": "Wedding cocktail hour music",
      "serviceType": "Live music for wedding cocktail hours",
-     "description": "Jazz duo, acoustic duo and solo guitarist bookings for wedding cocktail hours across Denver, the Front Range and the Colorado mountain corridor.",
+     "description": "We book jazz duos, acoustic duos and solo guitarists for wedding cocktail hours across Denver, the Front Range and up into the Colorado mountains.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -29,7 +29,7 @@
      {
       "id": "O2A0PKE7CXE",
       "name": "Jazz duo for a wedding cocktail hour: Autumn Leaves, guitar and upright bass",
-      "description": "The Signet jazz duo playing Autumn Leaves at cocktail-hour volume: conversation on top, music underneath.",
+      "description": "The Signet jazz duo plays Autumn Leaves at a cocktail hour volume, soft enough for your guests to keep talking.",
       "uploadDate": "2026-09-06",
       "duration": "PT59S"
      }
@@ -54,15 +54,15 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "Wedding cocktail hour",
+       "eyebrow": "After the ceremony, before dinner",
        "slab": true,
        "title": "Live music for cocktail hour at a Colorado wedding.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Cocktail hour is the turn of the wedding. The ceremony ends, the couple leaves for photographs, and the guests stand with a first drink deciding what kind of night this is going to be. A jazz duo holds that hour at conversation volume, close enough that guests can hear the bass, and the hour feels like the start of the party.",
+       "lede": "Right after the ceremony, the two of you head off for photos and your guests have about an hour to fill on their own. Live music can turn that hour into the start of the party. We often recommend a jazz duo, because your guests can easily talk over it and still enjoy the sound of an upright bass up close.",
        "headingText": [
         {
-         "html": "The duo is upright bass and guitar playing standards, and the same two musicians can carry cocktails through dinner. An acoustic duo or a solo guitarist covers the hour in a different flavor. The hour before this one is the <a href=\"/weddings/ceremony/\">ceremony</a>, <a href=\"/weddings/cocktail-hour/denver/\">Denver weddings</a> have a page of their own, and the whole day is on <a href=\"/weddings/\">the weddings page</a>."
+         "html": "Our duo plays jazz standards (classic songs like Autumn Leaves) on upright bass and guitar. An acoustic duo or a solo guitarist can be a great choice, too, if you’d like a different flavor. Planning the rest of the day, too? Learn more about <a href=\"/weddings/ceremony/\">ceremony music</a> and <a href=\"/weddings/\">wedding music in Colorado</a>, or check out <a href=\"/weddings/cocktail-hour/denver/\">cocktail hour at Denver weddings</a>."
         }
        ],
        "buttons": [
@@ -95,7 +95,7 @@
    "props": {
     "id": "Setlist-7",
     "act": "jazz-duo",
-    "title": "A sample of the set",
+    "title": "A sample of songs",
     "_notes": "Moved out of 01-intro.html 2026-09-03 so the client strip (01a) sits\n     between the intro and the setlist. Renders its own ruled section, so the\n     alternation downpage still starts sunk at 02.",
     "_file": "01b-setlist.html"
    }
@@ -110,11 +110,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-8",
-       "eyebrow": "The set",
-       "title": "Standards at conversation volume.",
+       "eyebrow": "Song list",
+       "title": "What music should play during cocktail hour?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "What should play is the easier half of the question: jazz standards and singer-songwriter covers, songs guests recognize without having to name. The harder half is volume."
+       "lede": "We’d suggest jazz standards or singer-songwriter covers, the kind of songs your guests will recognize even if they can’t name them."
       }
      },
      {
@@ -128,7 +128,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-9",
-          "html": "<strong>The volume.</strong> The duo plays at about the level of the conversation around it, so two people who have just met talk across it without leaning in. That’s the real work of the hour, because half the guest list is meeting the other half.",
+          "html": "<strong>The volume.</strong> The duo plays at about the level of the conversation around it, so nobody has to lean in to be heard. That makes it easier for people to get to know each other, since many of your guests may be meeting for the first time.",
           "cls": "prose"
          }
         }
@@ -138,7 +138,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-10",
-          "html": "<strong>The songs.</strong> Standards feel like a careful choice and don't ask for anyone's attention. A duo of upright bass and guitar leaves space in the middle of the sound where conversation sits. The instrumentation, the trio option and the longer sample set are on the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio page</a>.",
+          "html": "<strong>The songs.</strong> Jazz standards sound sophisticated, and your guests can enjoy them without having to stop and listen. Thinking about a trio, or want to see more of the song list? Learn more about our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>.",
           "cls": "prose"
          }
         }
@@ -161,10 +161,10 @@
       "props": {
        "id": "Heading-14",
        "eyebrow": "Hear it",
-       "title": "What a jazz duo sounds like under a cocktail hour.",
+       "title": "What does a jazz duo sound like at a cocktail hour?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Guitar and upright bass on Autumn Leaves, at the volume a terrace actually wants. The conversation stays on top, the music stays underneath, and nobody has to lean in to be heard."
+       "lede": "Here’s our duo on Autumn Leaves, with guitar and upright bass, at the kind of volume we’d use for a cocktail hour."
       }
      },
      {
@@ -175,7 +175,7 @@
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
-         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass, cocktail-hour volume",
+         "title": "Jazz duo for a cocktail hour: Autumn Leaves on guitar and upright bass",
          "loading": "lazy"
         }
        ],
@@ -201,7 +201,7 @@
        "title": "What an outdoor cocktail hour sounds like.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A Colorado cocktail hour is outdoors more often than not, and open air behaves nothing like a ballroom. There are no walls to hand the sound back, so guests hear what the musicians actually put out and nothing else. That changes what each format does with the hour."
+       "lede": "Many Colorado cocktail hours happen outdoors, and music sounds different in the open air than it does in a ballroom. There are no walls for the sound to bounce off, so your guests only hear what’s coming straight from the musicians. That’s why the number of musicians you book makes a bigger difference outside."
       }
      },
      {
@@ -215,7 +215,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-19",
-          "html": "<strong>From a guitar.</strong> The sound is close, detailed and warm within about thirty feet, and it thins fast beyond that. A guitar has no low end to carry it across a lawn, so an outdoor hour is amplified where the same booking indoors might not be, and the amplification is there to hold the same conversation level across a wider spread. Guests near the terrace rail hear the strings, and guests at the far end hear an evening with music in it.",
+          "html": "<strong>From a guitar.</strong> A guitar sounds warm and clear within about thirty feet, and beyond that it fades quickly. A guitar doesn’t have the low notes to carry very far outdoors, so we’ll usually add a small sound system to keep the music at the same easy level across a wider area, even where we wouldn’t need one indoors.",
           "cls": "prose"
          }
         }
@@ -225,7 +225,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-20",
-          "html": "<strong>From a jazz trio.</strong> The sound is fuller and steadier across distance, because the upright bass gives it a low end and low frequencies travel further outdoors than anything else does. Drums played with brushes keep the pulse without a single hard hit in the set, which is what stops an outdoor trio from sounding like a concert. On a big terrace or a lawn spread wide, the trio is the size that reaches the far edge of the crowd at the same level the near edge is hearing.",
+          "html": "<strong>From a jazz trio.</strong> A trio sounds fuller and carries further, because the low notes of an upright bass travel well outdoors. Our drummer plays with brushes for a soft, steady beat, so the trio stays relaxed and easy to talk over.",
           "cls": "prose"
          }
         }
@@ -248,10 +248,10 @@
       "props": {
        "id": "Heading-24",
        "eyebrow": "Timing",
-       "title": "Sixty minutes, sometimes ninety.",
+       "title": "How long is a wedding cocktail hour?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A standard cocktail hour runs 60 minutes. Plan 90 when ceremony and reception share one space, because the guests wait out the venue flip with a drink in hand, and the duo covers the wait."
+       "lede": "A cocktail hour usually runs about 60 minutes. If your ceremony and reception are in the same space, plan on 90 minutes, and the duo can keep playing while your guests wait."
       }
      },
      {
@@ -265,7 +265,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-25",
-          "html": "<strong>Where the time goes.</strong> The couple is away for photographs, the venue is turning ceremony rows into dinner tables, and the guests are sorting themselves into the evening's conversations. Sixty minutes covers all of that when the reception has its own space. When one space does both jobs, the flip sets the length, and 90 is the booking that fits.",
+          "html": "<strong>Where the time goes.</strong> In a shared space, the venue may need to turn your ceremony rows into dinner tables, and that takes time.",
           "cls": "prose"
          }
         }
@@ -275,7 +275,7 @@
          "type": "Paragraph",
          "props": {
           "id": "Paragraph-26",
-          "html": "<strong>One booking through dinner.</strong> The duo that plays the hour can keep playing through dinner on the same contract, and if you think the hour might stretch, just let us know when you book.",
+          "html": "<strong>Music through dinner.</strong> The duo can keep playing through dinner on the same contract, and if you think cocktail hour might run long, just let us know when you book.",
           "cls": "prose"
          }
         }
@@ -286,7 +286,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-28",
-       "html": "The same duo plays <a href=\"/private-parties/\">dinner and cocktail parties</a> year-round and <a href=\"/corporate/client-dinners/\">client dinners</a> on the corporate side.",
+       "html": "Our duo plays <a href=\"/private-parties/\">dinner and cocktail parties</a> and <a href=\"/corporate/client-dinners/\">client dinners</a>, too.",
        "cls": "note"
       }
      }
@@ -305,11 +305,11 @@
       "type": "Heading",
       "props": {
        "id": "Heading-31",
-       "eyebrow": "Duo or DJ",
-       "title": "Two musicians for the hour, a DJ for the late night.",
+       "eyebrow": "Live music options",
+       "title": "Should you book live musicians or a DJ for cocktail hour?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "A duo reads the crowd while the crowd is still forming, adjusts its volume on the spot and takes a request. A DJ is the better booking after dinner, keeping people dancing for hours at a stretch."
+       "lede": "A duo can keep an eye on your guests as they arrive and take a request. A DJ is usually a better fit after dinner, and can keep people dancing for hours."
       }
      },
      {
@@ -319,31 +319,31 @@
        "rows": [
         {
          "term": "The jazz duo",
-         "text": "Upright bass and guitar playing standards, with the set sampled at the top of this page. You can book it for the hour on its own, or the same two musicians can carry cocktails through dinner. This is the lead booking for the hour."
+         "text": "Our jazz duo is a great fit if you want cocktail hour to feel polished and relaxed."
         },
         {
          "term": "The acoustic duo",
-         "text": "The same footprint with the set turned toward singer-songwriter covers, for a wedding that wants the songs one notch more familiar than standards. Details on the <a href=\"/ensembles/acoustic-duo/\">acoustic duo page</a>."
+         "text": "The same footprint with the set turned toward singer-songwriter covers, for a wedding that wants the songs one notch more familiar than standards. Learn more about our <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a>."
         },
         {
          "term": "The string trio or quartet",
-         "text": "The same string players who played the ceremony, on the terrace for the hour after it, with Coldplay and the Beatles arranged for strings at a level guests talk across. Sizes and the song list are on the <a href=\"/ensembles/string-quartet/\">string quartet page</a>."
+         "text": "If you have strings at your ceremony, the same players can stay for cocktail hour, with songs by Coldplay and the Beatles arranged for strings. Curious about sizes and songs? Check out our <a href=\"/ensembles/string-quartet/\">string quartet</a>."
         },
         {
          "term": "The pianist",
-         "text": "Standards and love songs on the venue’s piano, or on a stage piano we bring to the terrace or the rooftop. The songs are on the <a href=\"/ensembles/solo-piano/\">solo pianist page</a>."
+         "text": "A pianist can play standards and love songs on your venue’s piano, or we can bring a stage piano if there isn’t one. Here’s a look at what our <a href=\"/ensembles/solo-piano/\">solo pianist</a> plays."
         },
         {
          "term": "The solo guitarist",
-         "text": "One instrument, the smallest booking on the roster, sized for a short guest list or a second space the crowd passes through. Details on the <a href=\"/ensembles/solo-guitarist/\">solo guitarist page</a>."
+         "text": "One guitarist can be a lovely fit for a smaller guest list, or for a second space your guests will pass through. Find out more about our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>."
         },
         {
-         "term": "Tejas Singh, where the hour wants a voice",
-         "text": "Voice and guitar with bass behind it, singer-songwriter covers with Tejas out front. Configurations and the set are on the <a href=\"/artists/tejas-singh/\">Tejas Singh page</a>."
+         "term": "Tejas Singh, if you’d like a singer",
+         "text": "Tejas sings and plays guitar with a bass player alongside him, and his song list is mostly singer-songwriter covers. Want to see his song list and the sizes you can book? Learn more about <a href=\"/artists/tejas-singh/\">Tejas Singh</a>."
         },
         {
          "term": "The DJ, after dinner",
-         "text": "For the hour itself, a duo is the better fit. The <a href=\"/ensembles/dj/\">DJ</a> is the late-night answer, on the same contract and through the same sound system when the night runs past the last set."
+         "text": "Want to keep the party going after the band’s last song? Our <a href=\"/ensembles/dj/\">DJ</a> can take over and play through the same sound system."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -353,7 +353,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-33",
-       "html": "What live music costs across Colorado, format by format, is set out in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>.",
+       "html": "Wondering what each of these might cost? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
        "cls": "note"
       }
      }
@@ -381,7 +381,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-37",
-       "html": "Stage sizes and power are on the <a href=\"/planners/technical/\">technical page</a>, how the hour hands off to dinner is on the <a href=\"/planners/run-of-show/\">run of show page</a>, and the questions every booking shares are on the <a href=\"/planners/faq/\">full question list</a>.",
+       "html": "Looking for the finer details? Take a look at <a href=\"/planners/technical/\">stage sizes and power</a>, <a href=\"/planners/run-of-show/\">how cocktail hour leads into dinner</a> and <a href=\"/planners/faq/\">other common questions</a>.",
        "cls": "note"
       }
      },
@@ -392,35 +392,35 @@
        "items": [
         {
          "q": "Do you need music during cocktail hour?",
-         "a": "You need something, and live musicians are the option guests notice. Silence in that hour feels like a gap in the day, because the couple is away for photographs and nothing else is happening yet. A duo covers the hour without asking anyone for their attention. Signet Artists books cocktail hour musicians across Denver and the Colorado mountains."
+         "a": "We think so, because a quiet cocktail hour can feel like a gap in the day. We book cocktail hour musicians across Denver and the Colorado mountains."
         },
         {
          "q": "How many songs for cocktail hour?",
-         "a": "Roughly fifteen to twenty for a 60-minute hour and closer to thirty for 90 minutes, because a standard runs three to four minutes. Live musicians don't work to a count: the set runs continuously and tunes stretch or shorten to the crowd."
+         "a": "You’d need roughly 15 to 20 songs for a 60-minute cocktail hour and closer to 30 for 90 minutes, since a jazz standard usually runs 3 to 4 minutes. In practice, live musicians don’t count songs. They’ll play straight through and make each song longer or shorter to suit your guests."
         },
         {
          "q": "Will anyone actually notice the music?",
-         "a": "Not in the moment, usually. Guests remember that the evening felt hosted more than they remember which songs played, and that's what the hour is for."
+         "a": "Not in the moment, usually. That’s okay, because live music can make your wedding feel thoughtfully planned even when nobody’s listening closely."
         },
         {
          "q": "Can people talk over it?",
-         "a": "Yes, that's what the level is set for. Two guests who have just met can talk across it without raising their voices, and the duo adjusts on the spot if a terrace fills up or empties out."
+         "a": "Yes, and the duo can bring the volume up or down on the spot as your crowd grows or thins out."
         },
         {
          "q": "Instrumental or vocals for cocktail hour?",
-         "a": "Instrumental, for most of the hour. A voice pulls attention to the words, and guests who are mid-introduction feel that as competition. Where a wedding wants a voice anyway, a singer can lead the hour and the level comes down to match."
+         "a": "We usually suggest instrumental music for most of the hour. A singer can draw people’s attention to the words, which can make it harder to talk. If you’d like a singer anyway, no worries. We’ll just keep the volume down to match."
         },
         {
          "q": "Is a duo enough for 60 to 70 guests?",
-         "a": "Yes. Two musicians are the right size for a crowd that size. On a big terrace or a lawn spread wide, the trio carries further, so the far edge hears the same thing the near edge does."
+         "a": "Yes. Two musicians are usually plenty for a crowd of 60 to 70. If your guests will be spread out across a big outdoor space, we’d suggest the trio, so people at the far end can hear the music just as well."
         },
         {
          "q": "What does an outdoor cocktail hour need?",
-         "a": "A covered, level and dry spot for the musicians, power run to it, and a plan for moving indoors agreed before the day. Colorado evenings get cold fast after sunset, and instruments and electronics both stop behaving in the cold."
+         "a": "The musicians will need a level, dry spot with some cover and power nearby, and we’ll plan ahead with you for moving indoors if the weather turns. Colorado evenings can get cold fast after sunset, and that’s hard on both instruments and electronics."
         },
         {
-         "q": "How far ahead should we book, and what paperwork comes with it?",
-         "a": "Whenever you're ready. If the date is coming up sooner than you'd like, no worries, just reach out and we can often make something great work. You'll have a single point of contact for the day, and we can send whatever paperwork the venue needs. Just let us know."
+         "q": "How far ahead should we book?",
+         "a": "Whenever you're ready. If the date is coming up sooner than you'd like, no worries, just reach out and we can often make something great work. You'll have a single point of contact for the day, so if your venue needs anything from us, just let us know."
         }
        ],
        "schema": true
@@ -451,7 +451,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Book the cocktail hour on its own, or with the ceremony and the reception.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+       "lede": "Whether you’d like a solo guitarist or a jazz trio, we can help you work out what’s right for your cocktail hour."
       }
      }
     ],

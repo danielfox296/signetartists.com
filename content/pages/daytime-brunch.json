@@ -2,15 +2,15 @@
  "root": {
   "props": {
    "path": "/daytime/brunch/",
-   "title": "Live music for Sunday brunch in Denver: jazz duo, guitarist",
-   "description": "Live music for a Sunday jazz brunch in Denver: upright bass and guitar, a solo guitarist or a pianist at conversation volume, weekly or for a family table.",
+   "title": "Live music for Sunday brunch in Denver: jazz duo or guitarist",
+   "description": "Live music for a Sunday jazz brunch in Denver. We can bring upright bass and guitar, a solo guitarist or a pianist, soft enough for easy conversation, every week or for one family brunch.",
    "titleExact": true,
    "ogImage": "img/acts/jazz-duo-poster.jpg",
    "schema": {
     "service": {
      "name": "Live music for Sunday brunch",
      "serviceType": "A jazz duo, solo guitarist or pianist for brunch at restaurants, hotels and clubs, and for private brunches",
-     "description": "Upright bass and guitar, a solo guitarist, a Spanish guitarist or a pianist playing the standards under a Sunday brunch at conversation volume, for a restaurant's, hotel's or club's standing Sunday and for private brunches, the morning after a wedding, a bridal brunch, a shower or a birthday, across Denver, the Front Range and the Colorado mountain corridor.",
+     "description": "Upright bass and guitar, a solo guitarist, a Spanish guitarist or a pianist for Sunday brunch at restaurants, hotels and clubs, every week or once a month, and for private brunches such as the morning after a wedding, a bridal brunch, a shower or a birthday, across Denver, the Front Range and the Colorado mountain corridor.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -30,14 +30,14 @@
      {
       "id": "O2A0PKE7CXE",
       "name": "Jazz duo for a Sunday brunch: Autumn Leaves on upright bass and guitar",
-      "description": "The duo recommended first for a dining space: upright bass and guitar playing Autumn Leaves at a level the tables talk across.",
+      "description": "Autumn Leaves on upright bass and guitar, played live.",
       "uploadDate": "2026-09-06",
       "duration": "PT59S"
      },
      {
       "id": "cA2KwgmJqGc",
       "name": "Jazz trio for a hotel brunch: Sunny",
-      "description": "The size for a hotel's Sunday with a hundred guests seated: guitar, upright bass and drums played with brushes, on Sunny.",
+      "description": "Sunny played live on guitar, upright bass and drums with brushes.",
       "uploadDate": "2026-09-06",
       "duration": "PT1M9S"
      }
@@ -61,15 +61,15 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "Sunday brunch",
+       "eyebrow": "Jazz brunch in Denver",
        "slab": true,
        "title": "Live music for a Sunday brunch.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "The coffee keeps coming, a table of eight is on its second round of mimosas, and in the corner upright bass and guitar are playing The Girl from Ipanema. Restaurants, hotels and clubs book it as a standing Sunday, and families book it for the morning after a wedding, a bridal brunch, a shower or a birthday. It’s the same music either way, from a duo, a solo guitarist or a pianist.",
+       "lede": "There’s nothing quite like a slow Sunday brunch with a little live jazz in the corner. We can bring that sound to your restaurant, hotel or club every week, or to a single family brunch. Either way, you can choose a duo, a solo guitarist or a pianist.",
        "headingText": [
         {
-         "html": "It’s one of our <a href=\"/daytime/\">daytime bookings</a>, and a <a href=\"/ensembles/solo-piano/\">pianist</a> plays it where the dining space has a piano."
+         "html": "Looking for something else during the day? Check out our other <a href=\"/daytime/\">daytime music</a>."
         }
        ],
        "buttons": [
@@ -108,10 +108,10 @@
       "props": {
        "id": "Heading-6",
        "eyebrow": "Hear it",
-       "title": "The duo, and the trio for a bigger dining space.",
+       "title": "A jazz duo for brunch, and a trio for a bigger dining space.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Autumn Leaves on upright bass and guitar, which is the duo we recommend first for a dining space, and Sunny with drums played with brushes, which is the size for a hotel’s Sunday with a hundred guests seated."
+       "lede": "Here’s Autumn Leaves on upright bass and guitar, the duo we usually recommend first for brunch, and Sunny with drums played softly with brushes, which suits a bigger hotel brunch."
       }
      },
      {
@@ -128,7 +128,7 @@
         {
          "kind": "iframe",
          "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
-         "title": "A jazz trio playing Sunny with drums played with brushes",
+         "title": "A jazz trio playing Sunny, with brushes on the drums",
          "loading": "lazy"
         }
        ],
@@ -151,7 +151,7 @@
       "props": {
        "id": "Heading-10",
        "eyebrow": "Who books it",
-       "title": "A restaurant’s Sunday, or a family’s.",
+       "title": "Brunch music for restaurants, hotels and families.",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -163,19 +163,19 @@
        "rows": [
         {
          "term": "Restaurants, hotels and clubs",
-         "text": "A standing Sunday, weekly or monthly, with the same musicians every time: upright bass and guitar, a guitarist alone, or <a href=\"/ensembles/solo-piano/\">a pianist</a> where the dining space has a piano, on one contract for the whole run."
+         "text": "We can play every week or once a month, and if you have a piano, we can bring <a href=\"/ensembles/solo-piano/\">a pianist</a>, too. We’ll put the whole run on one contract."
         },
         {
          "term": "The morning after a wedding",
-         "text": "A post-wedding brunch at the hotel, a rented house or a family’s home, with the same duo that played the cocktail hour the day before or a guitarist alone, playing the songs from the weekend. The <a href=\"/weddings/\">wedding</a> and the brunch go on the same contract."
+         "text": "A duo or a solo guitarist can play your post-wedding brunch, whether it’s at the hotel or at home. If we played your cocktail hour, we can often send the same duo back for some of the weekend’s favorite songs. You can book the <a href=\"/weddings/\">wedding</a> and the brunch together, too."
         },
         {
          "term": "A bridal brunch, a shower or a birthday",
-         "text": "A guitarist or a Spanish guitarist can play under the meal. A singer with a guitar can add the songs the guest of honor asks for, in a private dining space, a garden or at home. Find more ideas for <a href=\"/private-parties/showers/\">showers</a> and <a href=\"/private-parties/\">private parties</a>."
+         "text": "A guitarist or a Spanish guitarist is a lovely way to make a brunch feel special. A singer with a guitar can add the songs the guest of honor asks for, in a private dining space, a garden or at home. Find more ideas for <a href=\"/private-parties/showers/\">showers</a> and <a href=\"/private-parties/\">private parties</a>."
         },
         {
          "term": "A client or member brunch",
-         "text": "A hotel’s member event, a company’s family day, a club’s Mother’s Day seating: a pianist or a duo playing the standards while the tables turn, the daytime version of a <a href=\"/corporate/client-dinners/\">client dinner</a>."
+         "text": "A pianist or a duo playing jazz standards is a great fit for a hotel member event, a company family day or a club’s Mother’s Day brunch. Think of it as a daytime <a href=\"/corporate/client-dinners/\">client dinner</a>."
         }
        ],
        "cls": "def-list def-list--stack"
@@ -196,8 +196,8 @@
       "type": "Heading",
       "props": {
        "id": "Heading-14",
-       "eyebrow": "The set",
-       "title": "Standards, bossa nova, and the songs that suit a slow morning.",
+       "eyebrow": "The song list",
+       "title": "What do musicians play at a jazz brunch?",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -206,7 +206,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-15",
-       "html": "The duo plays the standards and the bossa novas: Autumn Leaves, The Girl from Ipanema, All of Me, Blue Bossa, Someday My Prince Will Come, and the rest of a set built for a dining space where the coffee is the loudest thing in it. A guitarist alone plays the same set instrumentally, a Spanish guitarist plays it on nylon strings for a patio, and a singer with a guitar takes the folk and singer-songwriter end of the song list.",
+       "html": "Our duo plays jazz standards and bossa novas, including Autumn Leaves, The Girl from Ipanema, All of Me, Blue Bossa and Someday My Prince Will Come, and we’ll keep the song list relaxed enough for a Sunday morning. A solo guitarist can play the same songs, a Spanish guitarist is a lovely choice for a patio, and a singer with a guitar leans more toward folk and singer-songwriter songs.",
        "cls": "prose"
       }
      },
@@ -214,7 +214,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-16",
-       "html": "The <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio page</a> covers the format in full, and the <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> and <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> pages cover the one-musician versions.",
+       "html": "Want to hear more? Check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>, <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> and <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>.",
        "cls": "note"
       }
      }
@@ -234,7 +234,7 @@
       "props": {
        "id": "Heading-19",
        "eyebrow": "Questions",
-       "title": "Asked about brunch music.",
+       "title": "What people ask about live brunch music.",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -246,15 +246,15 @@
        "items": [
         {
          "q": "Can a restaurant or hotel book live music for brunch every Sunday?",
-         "a": "Yes. A standing Sunday, weekly or monthly, runs on one contract with one personal contact for the run, with the same musicians every time. Tell us the seating times and the space and we'll come back with a recommendation and a price for the run. Signet Artists books brunch musicians across Denver."
+         "a": "Yes. You’ll have one personal contact for the whole run, and we’ll do our best to send the same musicians each time. Just tell us your seating times and a little about the space, and we’ll get back to you with a recommendation and a price. We can bring brunch musicians to restaurants and hotels all over Denver."
         },
         {
          "q": "How loud is brunch music?",
-         "a": "About the level of the conversation at the tables, so a table of eight talks across it and the server can take an order without leaning in. Sets run 45 to 60 minutes with music through the breaks, so the dining space never goes quiet."
+         "a": "We’ll keep it around the level of conversation at the tables, so nobody has to lean in to order. Sets usually run 45 to 60 minutes, and we can keep music playing through the breaks so the dining space doesn’t go quiet."
         },
         {
          "q": "What does a dining space need?",
-         "a": "A corner of about 8 by 6 feet for a duo or 6 by 4 for a solo, and one outlet. Setup takes 45 minutes to an hour before doors, so it's finished before the first seating, and packing up takes 30 to 45 minutes after the last. On a patio, a covered, level and dry spot with power or a battery-powered system, and a call time for moving inside. We can send a certificate of insurance and whatever else the venue asks for."
+         "a": "We’ll need a corner of about 8 by 6 feet for a duo or 6 by 4 for a solo musician, plus one outlet. Setup can take 45 minutes to an hour, so we’ll be ready before your first seating, and packing up can take 30 to 45 minutes after the last one. On a patio, we’ll need a covered, level and dry spot with power, or we can use a battery-powered system, and we’ll set a time to make the call on moving inside. We can send a certificate of insurance and whatever else the venue asks for."
         }
        ],
        "schema": true
@@ -283,15 +283,15 @@
        ],
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Send us the Sunday, the space and the seating times, and we'll size the music to the tables.",
-       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the day."
+       "title": "Send us your date and seating times, and we’ll help you find the right music for your brunch.",
+       "lede": "We’ll match the sound to your dining space."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-24",
-       "html": "Send us the date and the venue, and we’ll come back with a recommendation and a price for your day. What live music costs in the Colorado market is on the <a href=\"/pricing/\">pricing page</a>.",
+       "html": "Wondering what live music costs in Colorado? Our <a href=\"/pricing/\">pricing page</a> gives a good general idea.",
        "cls": "note"
       }
      }
