@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Hold the palette to WCAG AA, in the repo, on every build.
 
-Ported from soundbathcalendar's contrast_check.py 2026-08-07. That site keeps
+Ported from a retired sister site's contrast_check.py 2026-08-07. That site keeps
 its token pairs in a script rather than in a comment, which is why its indigo
 swap got caught when a border quietly fell to 2.51:1. Signet went dark on the
 same day and the audit that proved it was a throwaway in a scratchpad, so it

@@ -138,7 +138,7 @@ GROUPS = {
         "daytime/community-programs/index.html",
     ],
     # The daytime sound bath page and the act's own page draw on the same
-    # source (thefirstwater.co) and must read as two pages.
+    # source (the act's old site) and must read as two pages.
     "firstwater": [
         "artists/firstwater/index.html",
         "daytime/sound-bath/index.html",
