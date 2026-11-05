@@ -27,13 +27,19 @@
       "dj"
      ]
     },
-    "act": "afro-house-dj"
+    "act": "afro-house-dj",
+    "video": {
+     "name": "Afro house DJ for an after-party: live DJ set",
+     "description": "Here’s the DJ playing a live outdoor set. The DJ plays Afro house, deep house, amapiano, techno and electronic music, and can play live tabla on request.",
+     "uploadDate": "2026-11-04",
+     "duration": "PT2M31S"
+    }
    },
    "notes": {
     "_note": "Authored 2026-11-02, first as a named artist page and recast the same evening as a spec'd format on Daniel's ruling (no artist names, no Instagram or other link out: 'we book people, we don't promote them and give a client an option to go around us'). Format shape after ensembles-dj: Intro, the credits strip, the tabla, occasions, photographs, questions, the close. No equipment, setup or stage detail anywhere on the page (Daniel, 2026-11-02: 'this page is to inspire an evocative feel to inspire a booking not be a fucking tech rider'). No prices.",
     "reader": "Whoever wants a dance floor on house music, Afro house and amapiano, with something live on it as well as a DJ: a conference after-party, an office holiday party, a wedding reception, a milestone birthday.",
     "_title_note": "57 characters with the brand suffix. The term buyers type is 'afro house dj', with the city and the tabla as the difference.",
-    "_hero_note": "The hero is the DJ's photograph until a clip is on @SignetArtists under a title with no name; see the act's _video_note."
+    "_hero_note": "The hero is the Signet reupload v0nKiT2_7RE since 2026-11-04; see the act's _video_note."
    }
   }
  },
@@ -73,14 +79,10 @@
       "type": "ActVideo",
       "props": {
        "id": "ActVideo-2",
-       "kind": "photo",
-       "image": {
-        "src": "/img/afro-house-dj-card.jpg",
-        "alt": "A DJ holding headphones to one ear under purple and pink stage light.",
-        "width": "1600",
-        "height": "900",
-        "decoding": "async"
-       }
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/v0nKiT2_7RE?rel=0",
+       "title": "The Afro house DJ playing a live outdoor set",
+       "loading": "lazy"
       }
      }
     ],

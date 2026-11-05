@@ -433,6 +433,13 @@
    "retrieved": "2026-11-02",
    "verified": "sha256 2c56a71441b9edc8 of the source bytes, 2026-11-02",
    "_note": "Downsized to 1800 pixels on the long side for the page, 2026-11-02; the full-size original is in the zip. Also the source of the roster card."
+  },
+  "img/acts/afro-house-dj-live-poster.jpg": {
+   "source": "Frame at 0:40 of the Signet reupload v0nKiT2_7RE",
+   "from": "https://www.youtube.com/@SignetArtists",
+   "retrieved": "2026-11-04",
+   "_note": "Saved for the VideoObject thumbnailUrl.",
+   "verified": "sha256 b7687a42ce114678, 2026-11-04"
   }
  },
  "video_embeds": {
@@ -788,8 +795,8 @@
   ],
   "_rulings_2026_09_20": "Daniel, on the René Moffatt load: there is no memorial rule and no sponsorship or alcohol rule on this site. The first pass held back his Willie Nelson cover (its description remembers his late father) and the nine Underground Music Showcase 2026 clips (sponsor banners on the stage) under rules that were agent-made; both publish as of 2026-09-20. Rows in this list are records of one day's call on one asset, never standing rules; the Tony Medina rows above are his to reverse the same way.",
   "afro-house-dj-sets": {
-   "what": "Two full DJ sets (YouTube eajUzmLn5KU and SMxLWXMY7VQ) on a Hong Kong promoter's channel; aO8MWD3R6BI is the same night set as eajUzmLn5KU on the DJ's own channel",
-   "why": "2026-11-02: the titles and thumbnails carry the DJ's name and the act is unnamed, so they were taken off ensembles/afro-house-dj/ before it went live; the DJ is sending the files for a Signet reupload"
+   "what": "Two full DJ sets: the daylight set (eajUzmLn5KU on a Hong Kong promoter's channel, aO8MWD3R6BI on the DJ's own) and the night set (SMxLWXMY7VQ, promoter's channel)",
+   "why": "2026-11-02: the titles and thumbnails carry the DJ's name and the act is unnamed, so they were taken off ensembles/afro-house-dj/ before it went live. The night set also has the name burned into the picture. 2026-11-04: a 2:30 clip of the daylight set went on the Signet channel in their place."
   }
  },
  "first_party": {
@@ -951,6 +958,14 @@
     "title": "Singer and guitarist for welcome drinks: Tony Medina, Headline | Signet Artists",
     "published": "2026-09-06",
     "placed": "artists/tony-medina/ footage grid"
+   },
+   "v0nKiT2_7RE": {
+    "original": "aO8MWD3R6BI",
+    "artist": "The Afro house DJ (roster sheet A-030)",
+    "title": "Afro house DJ for an after-party: live DJ set, Denver | Signet Artists",
+    "published": "2026-11-04",
+    "placed": "ensembles/afro-house-dj/ hero and VideoObject; /video/afro-house-dj-after-party-live-set/",
+    "_note": "2:30 from the daylight set, 19:30 to 22:00, with short fades. Carries the promoter's small corner logo. YouTube blocked it in Russia on processing."
    }
   }
  },
