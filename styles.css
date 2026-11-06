@@ -903,6 +903,18 @@ img {
   margin-top: 1.375rem;
 }
 
+/* One vendor in a category: the card keeps its width and leaves no empty
+   grid cell beside it. */
+.vendor-cat .card-grid:has(> .card:only-child) {
+  grid-template-columns: 1fr;
+  max-width: 34rem;
+}
+
+.vendor-cat .card p a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* ------------------------------------------------------------- hero-cine */
 
 /* The home hero, 2026-09-10. Full-width band, three black and white artist
