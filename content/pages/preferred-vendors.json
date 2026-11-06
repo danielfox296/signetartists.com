@@ -3,12 +3,12 @@
   "props": {
    "path": "/preferred-vendors/",
    "title": "Denver Wedding Vendors We Recommend | Signet Artists",
-   "description": "These are the photographers, planners, videographers, caterers, florists and venues we'd recommend to our own clients in Denver. The list is short on purpose.",
+   "description": "These are the photographers, planners, videographers, makeup artists, caterers, florists and venues we'd recommend to our own clients in Denver. The list is short on purpose.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
    "notes": {
-    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count. 2026-11-06: MXBloom Films is the first listing, one card under Photography and one under Videography, each linking to the matching page of their site; a vendor's own page on our site goes in `page`. The search title carries 'Denver wedding vendors', a phrase Google suggests; the page's name stays Preferred Vendor List."
+    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count. 2026-11-06: MXBloom Films is the first listing, one card under Photography and one under Videography, each linking to the matching page of their site; a vendor's own page on our site goes in `page`. The search title carries 'Denver wedding vendors', a phrase Google suggests; the page's name stays Preferred Vendor List. Makeup by Sameera, the same day, opened a seventh category, Hair and makeup."
    },
    "schemaKind": "vendorlist"
   }
@@ -63,6 +63,11 @@
       "ask": "Want it all on video? Just ask, and we’ll send you the name of a videographer we know."
      },
      {
+      "id": "hair-makeup",
+      "label": "Hair and makeup",
+      "ask": "Need hair and makeup for the day? Let us know, and we’ll recommend someone."
+     },
+     {
       "id": "catering",
       "label": "Catering",
       "ask": "Need someone to feed your guests? Let us know, and we’ll suggest a caterer."
@@ -88,6 +93,14 @@
       "location": "Denver and Seattle",
       "category": "videography",
       "note": "The same team makes emotional, cinematic wedding films, so you can have your photographs and your film from the same two people."
+     },
+     {
+      "name": "Makeup by Sameera",
+      "url": "https://www.makeupbysameera.com/bridal",
+      "location": "Denver",
+      "category": "hair-makeup",
+      "page": "/preferred-vendors/makeup-by-sameera/",
+      "note": "Sameera Ahmed is a Denver makeup and hair artist whose bridal looks range from soft and natural to bold. She’s a great choice if you’d like a look that represents your own style."
      }
     ],
     "_notes": "Six categories from vendors.json, in order, each with its cards or the\n     ask-us line. Rendered by build.py vendor_list().",
