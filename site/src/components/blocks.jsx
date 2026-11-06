@@ -519,6 +519,10 @@ function deal(m, pool) {
 }
 function heroPhoto(s) {
   if (!s || !s.model || !s.page) return null;
+  // A page about someone else's business (a preferred vendor) sits on their
+  // photo: one of our musicians behind their name would read as their work.
+  const own = s.page.root && s.page.root.props && s.page.root.props.heroImage;
+  if (own) return { src: slash(own) };
   const act = pageActOf(s);
   if (act) {
     let first = null;

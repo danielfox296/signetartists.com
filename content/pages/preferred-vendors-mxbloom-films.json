@@ -1,0 +1,313 @@
+{
+  "root": {
+    "props": {
+      "path": "/preferred-vendors/mxbloom-films/",
+      "title": "MXBloom Films: Denver Wedding Photographer & Videographer",
+      "description": "MXBloom Films is a husband-and-wife wedding photography and film team based in Denver and Seattle, working throughout Colorado, Washington and beyond.",
+      "titleExact": true,
+      "nav": "planners",
+      "breadcrumb": "MXBloom Films",
+      "schema": {
+        "vendor": {
+          "@id": "https://mxbloom.com/#organization",
+          "name": "MXBloom Films",
+          "url": "https://mxbloom.com/",
+          "description": "MXBloom Films is a husband-and-wife wedding photography and cinematography team based in Denver and Seattle, working throughout Colorado and Washington and at destination weddings.",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Colorado"
+            },
+            {
+              "@type": "Place",
+              "name": "Washington"
+            }
+          ],
+          "knowsAbout": [
+            "Wedding photography",
+            "Wedding cinematography"
+          ],
+          "sameAs": [
+            "https://www.instagram.com/mxbloomfilms/",
+            "https://www.facebook.com/mxbloomfilms/",
+            "https://www.youtube.com/@mxbloomfilms"
+          ]
+        }
+      },
+      "notes": {
+        "_note": "The first preferred vendor's page, 2026-11-06, and the pattern for the next ones. Facts come only from the vendor's own email and website. Daniel, 2026-11-06: nothing here says what he has or hasn't seen of their work, and no link goes to WeddingWire, The Knot or any platform like them, in the copy or the schema, because Signet competes with them for music. Photographs copied from the vendor's site on his word, in img/vendors/. Their site's picture descriptions don't always match the pictures, so ours say only what's in the frame and name no place. The vendor's node keeps the @id their own site uses, and carries no rating."
+      },
+      "heroImage": "img/vendors/mxbloom-films/confetti-exit.jpg",
+      "ogImage": "img/vendors/mxbloom-films/forest-bouquet.jpg",
+      "ogImageAlt": "A bride and groom smiling at each other among tall trees, with her bouquet between them."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "id": "Intro-1",
+        "band": "top",
+        "blocks": [
+          {
+            "type": "Heading",
+            "props": {
+              "id": "Heading-1",
+              "eyebrow": "On our Preferred Vendor List",
+              "slab": true,
+              "title": "MXBloom Films: Denver wedding photography and video.",
+              "titleTag": "h1",
+              "titleClass": "h2 display",
+              "lede": "A lot of couples hire a photographer and a videographer separately, and then hope the two of them work well together on the day. With <a href=\"https://mxbloom.com/\" target=\"_blank\" rel=\"noopener\">MXBloom Films</a>, it’s one team.",
+              "headingText": [
+                {
+                  "html": "Neil and Fiona are a husband-and-wife team based in Denver and Seattle, and they personally handle both the photography and the filmmaking. Their photographs are bright and lovely, and their wedding films are emotional and cinematic."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Rows",
+      "props": {
+        "id": "Rows-2",
+        "band": "sunk",
+        "blocks": [
+          {
+            "type": "Heading",
+            "props": {
+              "id": "Heading-2",
+              "title": "MXBloom Films at a glance",
+              "titleTag": "h2",
+              "titleClass": "h2"
+            }
+          },
+          {
+            "type": "DefRows",
+            "props": {
+              "id": "DefRows-2",
+              "cls": "def-list def-list--cards",
+              "rows": [
+                {
+                  "term": "What they offer",
+                  "text": "They offer wedding photography and cinematography, and they have combination packages if you want both."
+                },
+                {
+                  "term": "Where they work",
+                  "text": "They work throughout Colorado and Washington, and at destination weddings too."
+                },
+                {
+                  "term": "Experience",
+                  "text": "They have nearly 10 years of experience and have captured close to 300 weddings."
+                },
+                {
+                  "term": "Awards",
+                  "text": "They’ve received WeddingWire Couples’ Choice and The Knot Best of Weddings awards from 2020 to 2025."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "Text-3",
+        "band": "ruled",
+        "blocks": [
+          {
+            "type": "Title",
+            "props": {
+              "id": "Title-3",
+              "html": "One team for your photographs and your film",
+              "tag": "h2",
+              "cls": "h3"
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-3a",
+              "cls": "prose",
+              "html": "When one team takes care of the photographs and the film, you have fewer people to coordinate, and they’re already working from the same plan."
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-3b",
+              "cls": "prose",
+              "html": "Neil and Fiona describe their style as a mix of documentary and editorial. They work in the background for most of the day and step in with some gentle direction when it’s needed, which is a relief if you feel awkward in front of a camera. They also take just one event per day, so your wedding has their full attention."
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-3c",
+              "cls": "prose",
+              "html": "A wedding film carries your vows and your first dance, so the sound matters as much as the picture. Neil and Fiona bring professional audio recording along with their cameras."
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-3d",
+              "cls": "prose",
+              "html": "This is the team to book when you want your photographs and your film from the same two people, with a natural, story-driven look."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Images",
+      "props": {
+        "id": "Images-6",
+        "band": "ruled",
+        "blocks": [
+          {
+            "type": "Heading",
+            "props": {
+              "id": "Heading-6",
+              "title": "Wedding photographs by MXBloom Films",
+              "titleTag": "h2",
+              "titleClass": "h2"
+            }
+          },
+          {
+            "type": "MediaGrid",
+            "props": {
+              "id": "MediaGrid-6",
+              "single": false,
+              "images": [
+                {
+                  "src": "/img/vendors/mxbloom-films/desert-gown.jpg",
+                  "alt": "A bride in a flowing gown walking through desert scrub, seen from behind.",
+                  "loading": "lazy",
+                  "decoding": "async"
+                },
+                {
+                  "src": "/img/vendors/mxbloom-films/forest-bouquet.jpg",
+                  "alt": "A bride and groom smiling at each other among tall trees, with her bouquet between them.",
+                  "loading": "lazy",
+                  "decoding": "async"
+                },
+                {
+                  "src": "/img/vendors/mxbloom-films/wedding-party.jpg",
+                  "alt": "A laughing wedding party crowded around the bride and groom on a lawn in front of a brick building.",
+                  "loading": "lazy",
+                  "decoding": "async"
+                },
+                {
+                  "src": "/img/vendors/mxbloom-films/fountain-ceremony.jpg",
+                  "alt": "A bride and groom touching each other’s faces in front of a stone fountain hung with white drapes.",
+                  "loading": "lazy",
+                  "decoding": "async"
+                },
+                {
+                  "src": "/img/vendors/mxbloom-films/meadow-couple.jpg",
+                  "alt": "A couple playing in a field of tall grass with evergreens behind them.",
+                  "loading": "lazy",
+                  "decoding": "async"
+                },
+                {
+                  "src": "/img/vendors/mxbloom-films/black-and-white-kiss.jpg",
+                  "alt": "A black and white close-up of a bride and groom about to kiss.",
+                  "loading": "lazy",
+                  "decoding": "async"
+                }
+              ]
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-6",
+              "cls": "note note--small",
+              "html": "All photographs on this page are by MXBloom Films."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Videos",
+      "props": {
+        "id": "Videos-4",
+        "band": "sunk",
+        "blocks": [
+          {
+            "type": "Heading",
+            "props": {
+              "id": "Heading-4",
+              "title": "A wedding film by MXBloom Films",
+              "titleTag": "h2",
+              "titleClass": "h2",
+              "lede": "Here’s one of their highlight films, from KC & Jeremy’s wedding at Semiahmoo Resort in Washington."
+            }
+          },
+          {
+            "type": "VideoGrid",
+            "props": {
+              "id": "VideoGrid-4",
+              "single": true,
+              "videos": [
+                {
+                  "kind": "iframe",
+                  "src": "https://www.youtube-nocookie.com/embed/MOp3yuK_6Tw?rel=0",
+                  "title": "KC & Jeremy’s wedding highlight film at Semiahmoo Resort, by MXBloom Films",
+                  "loading": "lazy"
+                }
+              ]
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-4a",
+              "cls": "prose",
+              "html": "There’s plenty more on their site, including their <a href=\"https://mxbloom.com/photography/\" target=\"_blank\" rel=\"noopener\">wedding photo galleries</a>, their <a href=\"https://mxbloom.com/cinematography/\" target=\"_blank\" rel=\"noopener\">wedding films</a> and an <a href=\"https://mxbloom.com/kc-jeremy-lost-gulch-overlook-boulder-engagement-gallery/\" target=\"_blank\" rel=\"noopener\">engagement session at Lost Gulch Overlook in Boulder</a>. They’ve also written some helpful <a href=\"https://mxbloom.com/wedding-planning-guides-for-couples/\" target=\"_blank\" rel=\"noopener\">wedding planning guides for couples</a>."
+            }
+          },
+          {
+            "type": "Paragraph",
+            "props": {
+              "id": "Paragraph-4b",
+              "cls": "prose",
+              "html": "There’s plenty more on their site, including their <a href=\"https://mxbloom.com/photography/\" target=\"_blank\" rel=\"noopener\">wedding photo galleries</a>, their <a href=\"https://mxbloom.com/cinematography/\" target=\"_blank\" rel=\"noopener\">wedding films</a> and some helpful <a href=\"https://mxbloom.com/wedding-planning-guides-for-couples/\" target=\"_blank\" rel=\"noopener\">wedding planning guides for couples</a>."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "CallToAction",
+      "props": {
+        "id": "CallToAction-5",
+        "band": "ruled",
+        "blocks": [
+          {
+            "type": "CloseRow",
+            "props": {
+              "id": "CloseRow-5",
+              "boxed": true,
+              "boxStyle": "max-width: 32rem;",
+              "buttons": [
+                {
+                  "label": "Check a Date",
+                  "href": "/contact/",
+                  "cls": "btn"
+                }
+              ],
+              "title": "Need live music for your wedding, too?",
+              "lede": "We book ceremony musicians, cocktail hour acts and bands that get people dancing, all over Colorado. Learn more about <a href=\"/weddings/\">live music for your wedding</a>, or just send us your date."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

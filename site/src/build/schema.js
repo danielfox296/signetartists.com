@@ -188,6 +188,9 @@ export function makeSchema(m) {
       about: { "@id": `${SITE_URL}/#business` },
       primaryImageOfPage: { "@type": "ImageObject", url: ogFor(p) },
     };
+    // A preferred vendor's page is about them, not us. Their node keeps the
+    // @id their own site gives the business, so the two read as one entity.
+    if (sc.vendor) pageEntity = { "@type": ["ProfessionalService", "Organization"], ...sc.vendor };
     if (pageEntity) {
       graph.push(pageEntity);
       webpage.about = { "@id": pageEntity["@id"] };
@@ -210,6 +213,35 @@ export function makeSchema(m) {
     const faqs = pageFaqs(doc);
     if (kind === "organization") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), websiteNode()] };
     if (kind === "faq" || kind === "plannerfaq") return { "@context": "https://schema.org", ...faqPage(faqs) };
+    if (kind === "vendorlist") {
+      const canonical = `${SITE_URL}${doc.root.props.path}`;
+      const seen = new Set();
+      const vendors = [];
+      for (const c of doc.content) {
+        if (c.type !== "VendorList") continue;
+        for (const v of c.props.vendors || []) {
+          if (seen.has(v.name)) continue;
+          seen.add(v.name);
+          vendors.push(v);
+        }
+      }
+      return {
+        "@context": "https://schema.org",
+        "@graph": [
+          localBusinessNode(),
+          {
+            "@type": "CollectionPage",
+            "@id": canonical,
+            url: canonical,
+            name: doc.root.props.title,
+            description: doc.root.props.description,
+            isPartOf: { "@type": "WebSite", url: SITE_URL, name: brand.name },
+            about: { "@id": `${SITE_URL}/#business` },
+            mainEntity: { "@type": "ItemList", itemListElement: vendors.map((v, i) => ({ "@type": "ListItem", position: i + 1, name: v.name, url: v.page ? `${SITE_URL}${v.page}` : v.url })) },
+          },
+        ],
+      };
+    }
     if (kind === "roster") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map(actServiceNode), ...rosterEntityNodes()] };
     if (kind === "pricing") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map(actServiceNode), faqPage(faqs)] };
     return null;
