@@ -2,14 +2,15 @@
  "root": {
   "props": {
    "path": "/preferred-vendors/",
-   "title": "Preferred Vendor List | Signet Artists",
+   "title": "Denver Wedding Vendors We Recommend | Signet Artists",
    "description": "These are the photographers, planners, videographers, caterers, florists and venues we'd recommend to our own clients in Denver. The list is short on purpose.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
    "notes": {
-    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count."
-   }
+    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count. 2026-11-06: MXBloom Films is the first listing, one card under Photography and one under Videography, each linking to the matching page of their site; a vendor's own page on our site goes in `page`. The search title carries 'Denver wedding vendors', a phrase Google suggests; the page's name stays Preferred Vendor List."
+   },
+   "schemaKind": "vendorlist"
   }
  },
  "content": [
@@ -77,7 +78,23 @@
       "ask": "For flowers and decor, just reach out and we’ll point you to a designer."
      }
     ],
-    "vendors": [],
+    "vendors": [
+     {
+      "name": "MXBloom Films",
+      "url": "https://mxbloom.com/photography/",
+      "location": "Denver and Seattle",
+      "category": "photography",
+      "page": "/preferred-vendors/mxbloom-films/",
+      "note": "Neil and Fiona are a husband-and-wife team who take bright, lovely wedding photographs across Colorado and Washington. They’re a great choice if you’d like a natural, story-driven look."
+     },
+     {
+      "name": "MXBloom Films",
+      "url": "https://mxbloom.com/cinematography/",
+      "location": "Denver and Seattle",
+      "category": "videography",
+      "note": "The same team makes emotional, cinematic wedding films, so you can have your photographs and your film from the same two people."
+     }
+    ],
     "_notes": "Six categories from vendors.json, in order, each with its cards or the\n     ask-us line. Rendered by build.py vendor_list().",
     "_file": "02-list.html"
    }

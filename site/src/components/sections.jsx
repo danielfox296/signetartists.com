@@ -429,9 +429,11 @@ const VendorList = {
   label: "Vendor list",
   fields: {
     categories: { type: "array", label: "Categories", getItemSummary: (c) => c.label, arrayFields: { id: text("Anchor"), label: text("Name"), ask: { type: "textarea", label: "Empty line" } } },
-    vendors: { type: "array", label: "Vendors", getItemSummary: (v) => v.name, arrayFields: { name: text("Name"), url: text("Website"), location: text("Where"), note: { type: "textarea", label: "Line" }, category: text("Category") } },
+    vendors: { type: "array", label: "Vendors", getItemSummary: (v) => v.name, arrayFields: { name: text("Name"), url: text("Website"), location: text("Where"), note: { type: "textarea", label: "Line" }, category: text("Category"), page: text("Our page about them") } },
   },
-  render: ({ categories, vendors, wrapStyle }) => (
+  render: function VendorListRender({ categories, vendors, wrapStyle }) {
+    const href = useHref();
+    return (
     <section className="section section--ruled">
       <div className="wrap vendor-cats" style={css(wrapStyle)}>
         {(categories || []).map((cat) => {
@@ -446,6 +448,7 @@ const VendorList = {
                       <h3><a href={v.url} target="_blank" rel="noopener">{v.name}</a></h3>
                       <p className="vendor-where">{v.location}</p>
                       <p>{v.note}</p>
+                      {v.page ? <p><a href={href(v.page)}>Read more about {v.name}</a></p> : null}
                     </article>
                   ))}
                 </div>
@@ -457,7 +460,8 @@ const VendorList = {
         })}
       </div>
     </section>
-  ),
+    );
+  },
 };
 
 const actsScript = (s) => `<script defer src="${s.prefix}acts.js"></script>`;
