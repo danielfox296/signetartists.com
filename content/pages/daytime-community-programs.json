@@ -3,7 +3,7 @@
   "props": {
    "path": "/daytime/community-programs/",
    "title": "Musicians for farmers markets and libraries in Denver",
-   "description": "We book performers for Denver farmers markets, library programs and rec centers, from a singer on a battery-powered sound system to a quiet duo or a band for the park.",
+   "description": "We book performers for Denver farmers markets, library programs and rec centers, from a singer with a battery-powered sound system to a band for the park.",
    "titleExact": true,
    "ogImage": "img/acts/acoustic-outdoor.jpg",
    "ogImageAlt": "A guitarist playing outdoors under pine trees.",
@@ -49,7 +49,7 @@
    "notes": {
     "_note": "Built 2026-09-19 on Daniel's brief (farmers-market and library/rec-center programs). Autocomplete evidence, Google and Bing, 2026-09-19: 'farmers market musicians', 'farmers market band', 'farmers market performers', 'farmers market live music near me', 'sunday farmers market near me with live music', 'performers for libraries' (Google), 'library concert series', 'library concert series near me', 'library music series', 'library programs for adults', 'library programs for older adults', 'live music at the library', 'recreation center events', 'adult recreation center events', 'community concert series', 'summer concert series colorado' and 'summer concert series denver'. The hire-side phrases are thin, so the page carries the program words the coordinators use (programs, series, performers) and the head terms in the title. Uniqueness gate: registered as a daytime sibling. No figure on the page.",
     "reader": "The program coordinator at a market, library, rec center or summer series with a season of dates to fill.",
-    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json configurations and the included list, the proposals page (battery-powered system), the private parties page (the three outdoor conditions), the ceremony page (unamplified in a small space), acts.json (the Americana band's build) and thefirstwater.co (libraries). Questions are worded the way coordinators search. No figure."
+    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json configurations and the included list, the proposals page (battery-powered system), the private parties page (the three outdoor conditions), the ceremony page (unamplified in a small space), acts.json (the Americana band's build) and the act's old site (libraries). Questions are worded the way coordinators search. No figure."
    }
   }
  },
@@ -185,7 +185,7 @@
       }
      }
     ],
-    "_notes": "The programs, one row each: markets, libraries, rec centers, summer\n     series. Facts: the battery line from the proposals page, the 60 to 65\n     dBA band and set lengths from site.json, the unamplified line from the\n     ceremony page, the Americana band's build and buckets from acts.json,\n     Firstwater's libraries line from thefirstwater.co. Named acts are named;\n     spec'd formats are not.",
+    "_notes": "The programs, one row each: markets, libraries, rec centers, summer\n     series. Facts: the battery line from the proposals page, the 60 to 65\n     dBA band and set lengths from site.json, the unamplified line from the\n     ceremony page, the Americana band's build and buckets from acts.json,\n     Firstwater's libraries line from the act's old site. Named acts are named;\n     spec'd formats are not.",
     "_file": "02-programs.html"
    }
   },

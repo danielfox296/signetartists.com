@@ -2,7 +2,7 @@
    Ported from the Tailwind build 2026-08-01. Design-system pass 2026-08-02
    (WEBSITE-PLAN §6): display type step, brass as a functional accent, the
    wink, and the stated base-8 spacing scale. Type became Archivo 2026-08-07,
-   ported from soundbathcalendar; Fraunces and Inter are gone.
+   ported from a retired sister site; Fraunces and Inter are gone.
 
    Inverted to a dark base 2026-08-07, on Daniel's call. The repertoire page's
    cover walls were the reference: the whole site now sits on the ground that
@@ -62,7 +62,7 @@
   --dark-faint: var(--ink-faint);
   --red: var(--brass);
 
-  /* Archivo, ported from soundbathcalendar 2026-08-07 on Daniel's call: "i
+  /* Archivo, ported from a retired sister site 2026-08-07 on Daniel's call: "i
      want the type choices from the sound bath site ported over." That replaces
      Fraunces + Inter, which WEBSITE-PLAN §6 had called settled. One variable
      family, two voices, selected per surface with font-stretch and weight
@@ -74,7 +74,7 @@
   --display: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
   --sans: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
 
-  /* TRACKING LAW (2026-08-07, from soundbathcalendar's "zero positive
+  /* TRACKING LAW (2026-08-07, from a retired sister site's "zero positive
      letter-spacing anywhere"). One value, one token, every uppercase label on
      the site. Nothing else on this site carries positive tracking; display and
      heading steps run negative, and body runs normal.
@@ -310,7 +310,7 @@ img {
   color: var(--brass);
 }
 
-/* The brass slab (borrowed from soundbathcalendar's coral "TODAY" marker,
+/* The brass slab (borrowed from a retired sister site's coral "TODAY" marker,
    2026-08-07). That site spends its one signal hue as a FILLED slab behind
    reversed type rather than as coloured text, and holds it to a written
    budget: "≤2 coral slabs per screen. Nothing else." Signet's brass had the
@@ -337,7 +337,7 @@ img {
   color: #090909;
 }
 
-/* Every heading is condensed and heavy — soundbathcalendar's h1/h2/h3 rule,
+/* Every heading is condensed and heavy — a retired sister site's h1/h2/h3 rule,
    ported verbatim as the setting: weight 800, stretch 72%, leading 1.02,
    tracking -0.005em. The variable font's two axes are what carry the voice
    here now, where the old build used two families. */
@@ -847,7 +847,7 @@ img {
   padding: 1.75rem;
 }
 
-/* Type tiles (soundbathcalendar CAL-28, borrowed 2026-08-07). That site has no
+/* Type tiles (a retired sister site CAL-28, borrowed 2026-08-07). That site has no
    photography for most of its listings and answered it by making the tile a
    typographic object rather than a caption under a missing image. Signet has
    the same problem for the opposite reason — the shoot has not happened — and
@@ -1328,7 +1328,7 @@ img {
    emphasised fact per page. AA on paper (5.0:1) and paper-sunk (4.6:1);
    never used on .section--night. The extra selectors outgun
    ".prose strong" and ".rate-table td". */
-/* tabular-nums added 2026-08-07: soundbathcalendar sets its counts and prices
+/* tabular-nums added 2026-08-07: a retired sister site sets its counts and prices
    to tabular figures in PROSE, not only in table columns, and it is right —
    .tnum was only ever applied to tables here, so "$6,000 and $12,500" mid
    sentence and "24 to 48 hours" were rendering proportional while the same

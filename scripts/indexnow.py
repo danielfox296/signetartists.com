@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """IndexNow ping — submits the URLs of both sitemaps (sitemap.xml and
 video-sitemap.xml) after a deploy; changed-only when a pre-deploy baseline
-is supplied. Ported from the thefirstwater.co kit.
+is supplied.
 
 Runs in CI after the Pages deploy step (see .github/workflows/deploy.yml).
 ORDERING MATTERS: the workflow snapshots BOTH live sitemaps into one file
