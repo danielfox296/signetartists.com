@@ -1,0 +1,601 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/meghan-clarisse/",
+   "title": "Meghan Clarisse: country singer and band for hire in Denver",
+   "description": "Meghan Clarisse is an award-winning Denver country and Americana singer-songwriter. You can book her solo, as a duo or with her five-piece band.",
+   "titleExact": true,
+   "ogImage": "img/meghan-clarisse-card.jpg",
+   "ogImageAlt": "Meghan Clarisse in a cream cowboy hat and a lace top, looking back over her shoulder under a blossoming tree.",
+   "nav": "music",
+   "breadcrumb": "Meghan Clarisse",
+   "schema": {
+    "service": {
+     "name": "Country and Americana singer and band",
+     "serviceType": "Country and Americana covers and originals for weddings, private events and corporate events",
+     "description": "Meghan Clarisse plays country and Americana covers and her own songs at weddings, private events and corporate events in Denver and across Colorado, solo, as a duo or with a five-piece band.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "quintet"
+     ]
+    },
+    "act": "meghan-clarisse",
+    "video": {
+     "name": "Meghan Clarisse live: Copper & Quartz",
+     "description": "Meghan Clarisse singing her song Copper & Quartz live on stage with an acoustic guitar.",
+     "uploadDate": "2026-03-13",
+     "duration": "PT2M37S"
+    },
+    "videos": [
+     {
+      "id": "AnSq5PmNqd0",
+      "name": "Meghan Clarisse playing Go Back To Your Mama live",
+      "description": "Meghan Clarisse playing her song Go Back To Your Mama live.",
+      "uploadDate": "2026-08-29",
+      "duration": "PT4M7S"
+     },
+     {
+      "id": "U2rgdUjobD0",
+      "name": "Meghan Clarisse playing Monster live",
+      "description": "Meghan Clarisse playing her song Monster live.",
+      "uploadDate": "2024-11-05",
+      "duration": "PT3M40S"
+     },
+     {
+      "id": "8p7WhjqUzxI",
+      "name": "Meghan Clarisse playing Hold My Hand by Brandy Clark",
+      "description": "Meghan Clarisse's solo acoustic cover of Hold My Hand by Brandy Clark.",
+      "uploadDate": "2019-04-19",
+      "duration": "PT4M3S"
+     },
+     {
+      "id": "axhRUPOx8hY",
+      "name": "Meghan Clarisse playing She Ain't Going Nowhere by Guy Clark",
+      "description": "Meghan Clarisse's solo acoustic cover of She Ain't Going Nowhere by Guy Clark.",
+      "uploadDate": "2019-04-19",
+      "duration": "PT2M51S"
+     },
+     {
+      "id": "oIrtaOZ2Yb8",
+      "name": "Meghan Clarisse playing Life of the Party",
+      "description": "Meghan Clarisse playing her song Life of the Party solo.",
+      "uploadDate": "2026-05-17",
+      "duration": "PT3M43S"
+     },
+     {
+      "id": "GBTHE_ilib4",
+      "name": "Meghan Clarisse playing The Catch That Got Away",
+      "description": "Meghan Clarisse playing her song The Catch That Got Away.",
+      "uploadDate": "2026-08-29",
+      "duration": "PT3M3S"
+     }
+    ]
+   },
+   "notes": {
+    "_note": "Authored 2026-11-06 from her emails to hello@ (Sep 29 to Nov 5), her EPK and her own site. Daniel made her a Featured Artist the same day. No prices, no availability, no gear: her rates are on the cost sheet, and her PA and set-break answers live on the roster sheet.",
+    "reader": "Whoever wants a country or Americana feel at a wedding, a party or a company event in Colorado.",
+    "_title_note": "59 characters, no brand suffix (titleExact), because the suffix would take it over 60. Buyer phrases checked on Google autocomplete 2026-11-06: country singer for hire, country band for hire, country band for wedding."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Country and Americana",
+       "slab": true,
+       "title": "Meghan Clarisse",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers and originals, solo, as a duo or with a full band.",
+       "lede": "You know what it’s like when Jolene comes on and the whole table starts singing along? Meghan Clarisse is a Denver singer-songwriter who calls what she does “music with country roots and cowgirl boots,” and she plays the country songs your guests love alongside her own. She can play on her own at a dinner, bring pedal steel or electric guitar as a duo, or bring a five-piece band to get people dancing.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=meghan-clarisse",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/A8E_XRwkhTk?rel=0",
+       "title": "Meghan Clarisse playing her song Copper & Quartz live",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Meghan’s album <em>Shadows of a Ghost Town</em> won the 2026 Josie Music Award for Folk/Americana Album of the Year. The Colorado Country Music Hall of Fame gave her its Golden Star Award in 2026, and her duo won its Duo of the Year award in 2025. You may have seen her on Great Day Colorado or Colorado & Company, too.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-107",
+       "html": "Her usual style is a little vintage cowgirl, and that’s a lot of fun if you want a country feel. If your event is more formal, she can dress up or wear all black, too.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-207",
+       "html": "When she’s not performing, Meghan volunteers with Musicians On Call, playing live music for patients at Children’s Hospital and the VA in Denver.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "meghan-clarisse",
+    "title": "Configurations",
+    "note": "Send us your date and we’ll help you choose the size that works best. She can put a trio together, too, if that’s a better fit."
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/\">Country and ranch weddings</a>",
+         "text": "Book her solo or as a duo for your <a href=\"/weddings/ceremony/\">ceremony</a> or <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>, and bring in the five-piece band for the reception."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Birthdays and private parties</a>",
+         "text": "She’s a lot of fun at a birthday or an anniversary when your guests love country music, and a solo or a duo is an easy fit at home."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "Dolly Parton and Fleetwood Mac both go over well with a mixed crowd. Book the five-piece band if you want a dance floor, or the duo if your party is more of a dinner."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreats and welcome receptions</a>",
+         "text": "If your team is flying in from out of state, a Colorado songwriter with a pedal steel player beside her is a fun way to welcome them to the West."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Planning toasts or a program? We can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. You can also get a general idea of what live music costs in Colorado from our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "Song list",
+       "title": "A sample of her songs.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "This is a sample of the covers on her song list, and we’ll put the setlist together with you."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-25",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "Country classics",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-20",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Jolene</span> <span class=\"song-artist\">Dolly Parton</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Folsom Prison Blues</span> <span class=\"song-artist\">Johnny Cash</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Mama Tried</span> <span class=\"song-artist\">Merle Haggard</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Jambalaya</span> <span class=\"song-artist\">Hank Williams</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Neon Moon</span> <span class=\"song-artist\">Brooks & Dunn</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Strawberry Wine</span> <span class=\"song-artist\">Deana Carter</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-21",
+          "html": "Newer country and Americana",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-22",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Wagon Wheel</span> <span class=\"song-artist\">Old Crow Medicine Show</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Cover Me Up</span> <span class=\"song-artist\">Jason Isbell</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Kerosene</span> <span class=\"song-artist\">Miranda Lambert</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Before He Cheats</span> <span class=\"song-artist\">Carrie Underwood</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">My Church</span> <span class=\"song-artist\">Maren Morris</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Angel From Montgomery</span> <span class=\"song-artist\">John Prine</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-23",
+          "html": "Rock and pop",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-24",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Dreams</span> <span class=\"song-artist\">Fleetwood Mac</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Landslide</span> <span class=\"song-artist\">Fleetwood Mac</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">All I Wanna Do</span> <span class=\"song-artist\">Sheryl Crow</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Summer of ’69</span> <span class=\"song-artist\">Bryan Adams</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">What’s Up</span> <span class=\"song-artist\">4 Non Blondes</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Pink Pony Club</span> <span class=\"song-artist\">Chappell Roan</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Looking for more ideas? Take a look at our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Meghan Clarisse play country and Americana",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/AnSq5PmNqd0?rel=0",
+         "title": "Meghan Clarisse playing Go Back To Your Mama live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Go Back To Your Mama</span>, one of her own songs"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/U2rgdUjobD0?rel=0",
+         "title": "Meghan Clarisse playing Monster live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Monster</span>, one of her own songs"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/8p7WhjqUzxI?rel=0",
+         "title": "Meghan Clarisse playing a solo cover of Hold My Hand by Brandy Clark",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Hold My Hand</span> by Brandy Clark, solo"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/axhRUPOx8hY?rel=0",
+         "title": "Meghan Clarisse playing a solo cover of She Ain't Going Nowhere by Guy Clark",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">She Ain’t Going Nowhere</span> by Guy Clark, solo"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/oIrtaOZ2Yb8?rel=0",
+         "title": "Meghan Clarisse playing Life of the Party solo",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Life of the Party</span>, solo"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/GBTHE_ilib4?rel=0",
+         "title": "Meghan Clarisse playing The Catch That Got Away",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">The Catch That Got Away</span>, one of her own songs"
+        }
+       ],
+       "single": false,
+       "playlist": true
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/meghan-clarisse-stage.jpg",
+         "alt": "Meghan Clarisse singing at the mic and playing acoustic guitar on a dark stage, in a red sequined top.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-band.jpg",
+         "alt": "Meghan Clarisse and her band on a stage, with a pedal steel player beside her.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-duo.jpg",
+         "alt": "Meghan Clarisse playing guitar beside a pedal steel player on a TV studio set.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-keys.jpg",
+         "alt": "Meghan Clarisse in a teal hat and a white lace dress, singing at a keyboard.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-outdoor.jpg",
+         "alt": "Meghan Clarisse singing with a guitar at an outdoor stage, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-green-stage.jpg",
+         "alt": "Meghan Clarisse in a dark hat playing an orange acoustic guitar under green and purple stage light.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-blue-stage.jpg",
+         "alt": "Meghan Clarisse in a white cowboy hat and a red dress, playing guitar on a blue-lit stage.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-portrait.jpg",
+         "alt": "Portrait of Meghan Clarisse smiling in a cream hat and purple ruffles.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/meghan-clarisse-hat.jpg",
+         "alt": "Meghan Clarisse in a cream cowboy hat, looking back over her shoulder under a blossoming tree.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_notes": "Clips from her own channel, photographs from her own site, all in the ledger (2026-11-06). Left off, with reasons: clips and thumbnails that name another player (Fire and Fly, Strong with Todd Clayton, The End of an Error, Here I Am Again, Elastic Love); the TV interviews, which are talk and not performance; the EP-release and birthday clips; album-art audio uploads such as Lovesick Blues; the second Monster, since one is on the page. Her site's selfies, a dog photo, flyers and press graphics stay off. The blue stage photo is her red holiday dress, kept because it suits a holiday booking. Nine photographs, so the three-across grid ends on a full row."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Meghan Clarisse questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "items": [
+        {
+         "q": "Does she play covers or her own songs?",
+         "a": "She plays both. Her song list mixes crowd-pleasing covers with her own songs, and we’ll work out the balance with you."
+        },
+        {
+         "q": "Can she keep the volume down during dinner?",
+         "a": "Yes. On her own or as a duo, she can play at a level where nobody has to raise their voice. The five-piece band is louder, and if your venue has a sound limit, just let us know."
+        },
+        {
+         "q": "Does she play outdoor events?",
+         "a": "Yes. She plays festivals and farmers markets along the Front Range, so an outdoor wedding or a company picnic is a comfortable fit."
+        },
+        {
+         "q": "Does she play outside Denver?",
+         "a": "Yes, she plays up and down the Front Range. Tell us where your event is and we’ll let you know what’s possible."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=meghan-clarisse",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a country singer or band in Denver?",
+       "lede": "Send us your date and we’ll let you know if Meghan is available and what it would cost."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

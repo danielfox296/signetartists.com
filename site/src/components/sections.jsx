@@ -361,7 +361,7 @@ const ActSizes = {
               <tbody>
                 {a.ladder.map((rung, i) => (
                   <tr key={i}>
-                    <th scope="row" className="rate-size">{(m.RATE_BY_ID[rung.config] || { label: rung.config }).label}<span className="rate-note">{rung.build}</span></th>
+                    <th scope="row" className="rate-size">{rung.label || (m.RATE_BY_ID[rung.config] || { label: rung.config }).label}<span className="rate-note">{rung.build}</span></th>
                     <td className="ladder-best">{rung.bestFor}</td>
                   </tr>
                 ))}

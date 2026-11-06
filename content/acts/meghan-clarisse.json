@@ -1,0 +1,83 @@
+{
+ "id": "meghan-clarisse",
+ "name": "Meghan Clarisse",
+ "presentation": "face",
+ "_presentation_note": "2026-11-06, Daniel: Featured Artist, named at artists/meghan-clarisse/. She wrote hello@ on 2026-09-29. Only her name publishes: none of her players, and her duo partner on the Hall of Fame award stays unnamed.",
+ "status": "listing",
+ "page": "artists/meghan-clarisse/",
+ "style": "Country and Americana",
+ "face": "Meghan Clarisse",
+ "material": "Covers and originals",
+ "bucket_tags": [
+  "cocktail",
+  "patio",
+  "party",
+  "budget"
+ ],
+ "config_tags": [
+  "solo",
+  "duo",
+  "quintet"
+ ],
+ "_config_note": "From her 2026-11-05 email: solo, duo, and a five-piece full band. She can put a trio together on request; it has no rate yet, so it isn't a size on the card, and the page says so in the ActSizes note. Add 'trio' here when she quotes it.",
+ "configRangeLabel": "Solo, duo or five-piece band",
+ "genre_tags": [
+  "country",
+  "americana"
+ ],
+ "_genre_note": "2026-11-06: 'country' is new in roster.json, because 'country band for hire', 'country singer for hire' and 'country band for wedding' all autocomplete and the filter had no way to say it.",
+ "vocals": "sung",
+ "from": "solo",
+ "img": "meghan-clarisse-card.jpg",
+ "_img_note": "The hero photograph from her own site, cropped 16:9. Her Drive folder was locked when this was built (access requested 2026-11-06), so everything here comes from her public site; swap in better originals if the folder has them.",
+ "alt": "Meghan Clarisse in a cream cowboy hat and a lace top, looking back over her shoulder under a blossoming tree.",
+ "video": "https://www.youtube-nocookie.com/embed/A8E_XRwkhTk?rel=0",
+ "_video_note": "Copper & Quartz at Society Hall, her own channel, uploaded 2026-03-13 in 4K: the sharpest live clip she has, and she's alone in frame. Go Back To Your Mama is more of a good time but is 480p, so it leads the grid instead.",
+ "video_poster": "img/acts/meghan-clarisse-live-poster.jpg",
+ "blurb": "Meghan Clarisse is a Denver singer-songwriter who calls what she does \"music with country roots and cowgirl boots.\" Her latest album won the 2026 Josie Music Award for Folk/Americana Album of the Year, and she plays Dolly Parton, Fleetwood Mac and Johnny Cash alongside her own songs. You can book her solo, as a duo or with her five-piece band.",
+ "identity": [
+  "Meghan’s album <em>Shadows of a Ghost Town</em> won the 2026 Josie Music Award for Folk/Americana Album of the Year. The Colorado Country Music Hall of Fame gave her its Golden Star Award in 2026, and her duo won its Duo of the Year award in 2025. You may have seen her on Great Day Colorado or Colorado & Company, too.",
+  "Her usual style is a little vintage cowgirl, and that’s a lot of fun if you want a country feel. If your event is more formal, she can dress up or wear all black, too.",
+  "When she’s not performing, Meghan volunteers with Musicians On Call, playing live music for patients at Children’s Hospital and the VA in Denver."
+ ],
+ "ladder": [
+  {
+   "config": "solo",
+   "build": "Voice and acoustic guitar, sometimes keys",
+   "bestFor": "On her own, she’s a lovely choice for welcome drinks, patios and dinners, and she fits easily into a home."
+  },
+  {
+   "config": "duo",
+   "build": "Voice and rhythm guitar, plus pedal steel or electric lead guitar",
+   "bestFor": "Pedal steel is the sliding, singing guitar you hear on classic country records, and it gives a duo a much bigger country sound."
+  },
+  {
+   "config": "quintet",
+   "label": "Five-piece band",
+   "build": "Lead and harmony vocals, rhythm guitar, lead guitar, pedal steel, bass and drums",
+   "bestFor": "This is her full band, and it’s the size to book when you want people dancing at a wedding reception or a big party."
+  }
+ ],
+ "setlist": {
+  "_note": "Every title is from the sample set list on her own EPK page, spellings corrected. Her originals aren't in this list; the clips cover those.",
+  "note": "This is a sample of the covers on her song list, and we’ll put the setlist together with you.",
+  "items": [
+   "Jolene",
+   "Wagon Wheel",
+   "Dreams",
+   "Cover Me Up",
+   "Mama Tried",
+   "Landslide"
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person",
+  "_sameAs_note": "No sameAs: no link to an artist's own site or channel anywhere, search-engine data included (Daniel, 2026-11-02)."
+ },
+ "_ladder_note": "2026-11-06: 'label' on a rung overrides the rate card's name, because the rate card's 'Five to six piece' overstates a band that is exactly five."
+}
