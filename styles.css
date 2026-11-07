@@ -4984,3 +4984,22 @@ img[src$="img/headliners.jpg"] {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
+
+/* A tile whose label is a link: the label is underlined in the accent, and
+   the whole tile is the link's target. */
+.def-list--tiles dt a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+.def-list--tiles dt a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.def-list--tiles .def-row:has(dt a):hover dt a {
+  text-decoration-color: currentColor;
+}

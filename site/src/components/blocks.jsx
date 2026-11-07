@@ -818,7 +818,7 @@ export function RosterGrid({ acts, id }) {
 // (a short silent clip under media/loops/) plays it over the photo while the
 // card is on screen. The video is written as raw HTML because React's server
 // render drops the muted attribute, and a browser only autoplays a muted video.
-function PhotoCard({ a }) {
+function PhotoCard({ a, kicker }) {
   const s = useSite();
   const m = s.model;
   const href = useHref();
@@ -835,7 +835,7 @@ function PhotoCard({ a }) {
             />
           ) : null}
           <div className="roster-card-over">
-            <p className="act-kind">{a.style}</p>
+            <p className="act-kind">{kicker || a.style}</p>
             <h3 className="roster-card-name">{a.name}</h3>
           </div>
         </div>
@@ -854,12 +854,12 @@ const LOOP_SCRIPT =
   `var p=v.play();p&&p.catch&&p.catch(function(){});}else if(v.src){v.pause();}});},{rootMargin:"150px 0px"});` +
   `g.querySelectorAll(".photo-card-loop video").forEach(function(v){o.observe(v);});})();`;
 
-export function PhotoGrid({ acts, id, style }) {
+export function PhotoGrid({ acts, id, style, kickers }) {
   const looping = acts.some((a) => a.loop);
   return (
     <>
       <div className="roster-grid roster-grid--photo" id={id} style={css(style)}>
-        {acts.map((a) => <PhotoCard key={a.id} a={a} />)}
+        {acts.map((a) => <PhotoCard key={a.id} a={a} kicker={kickers && kickers[a.id]} />)}
       </div>
       {looping ? <script dangerouslySetInnerHTML={{ __html: LOOP_SCRIPT }} /> : null}
     </>
@@ -890,7 +890,7 @@ export const Cards = {
     source: select("Acts", CARD_SOURCES),
     occasion: text("Occasion"),
     night: text("Kind of night"),
-    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act") } },
+    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act"), kicker: text("Line over the name (Photos only; blank: the act's style)") } },
     compact: { type: "radio", label: "Cards", options: [{ label: "Full", value: false }, { label: "Short", value: true }] },
     look: { type: "radio", label: "Look", options: [{ label: "Cards", value: "cards" }, { label: "Photos", value: "photos" }] },
     picks: {
@@ -905,7 +905,10 @@ export const Cards = {
     const s = useSite();
     const m = s.model;
     const href = useHref();
-    if (source !== "picks" && look === "photos") return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} />;
+    if (source !== "picks" && look === "photos") {
+      const kickers = Object.fromEntries((acts || []).filter((x) => x && x.act && x.kicker).map((x) => [x.act, x.kicker]));
+      return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} kickers={kickers} />;
+    }
     if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} style={style} />;
     return (
       <div className="card-grid card-grid--3" style={css(style)}>

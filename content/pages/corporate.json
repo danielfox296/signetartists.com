@@ -57,15 +57,6 @@
          "style": "max-width: 51rem;"
         }
        ],
-       "image": {
-        "src": "/img/unsplash/photo-1515169067868-5387ec356754.jpg",
-        "alt": "Colleagues talking over drinks around a candlelit table at an evening work party.",
-        "width": "1600",
-        "height": "1067",
-        "loading": "lazy",
-        "decoding": "async",
-        "style": "margin-top: 2rem; width: 43.5rem; height: auto;"
-       },
        "buttons": [
         {
          "label": "Check a Date",
@@ -80,10 +71,395 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-8",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "blocks": [
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-6",
+       "html": "“[our act] naturally read the vibe and flow of the crowd, adjusting intensity and volume of the performance accordingly. He checked in during the event to ensure he was delivering what was asked for, but there was no direction needed.”",
+       "by": "Lindy R., a four-hour outdoor company picnic for 101 to 150, October 2025."
+      }
+     }
+    ],
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-9",
+       "headingStyle": "max-width: 49.5rem;",
+       "title": "A Few Examples of who's to book",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 49.5rem;",
+       "lede": "You also get sound support and a personal point of contact for the night - spec'd in every booking."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-10",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones",
+         "kicker": "The holiday party"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "The client dinner"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "The gala"
+        },
+        {
+         "act": "tony-medina",
+         "kicker": "Welcome drinks"
+        },
+        {
+         "act": "afro-house-dj",
+         "kicker": "The after-party"
+        },
+        {
+         "act": "dirty-flamenco",
+         "kicker": "A themed association event"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-70",
+       "buttons": [
+        {
+         "label": "See The Full Roster",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-11",
+       "html": "“Their music created the perfect atmosphere, elegant, sophisticated and beautifully understated, while still adding something truly special to the evening. They were professional, polished and elevated the entire event.”",
+       "by": "Annette M., August 2026"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Common types of corporate occasions",
+       "title": "Five formats for your corporate event",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "cls": "def-list def-list--tiles",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "From late November into January, the holiday party is something special for your employees and associates."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "An evening built around your program: remarks, an auction, videos and walks to the stage. We work out the cues together so the music flows with the night."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "Dinners where the conversation is the event. We often recommend a jazz duo, low enough to add some class without pulling attention away from the table."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Corporate retreats</a>",
+         "text": "Retreats and incentive trips in the mountain corridor, Vail through Aspen, and the Colorado foothills."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties</a>",
+         "text": "You know your people <em>better than we do</em> - and some people like to <strong>keep going</strong>. A DJ, a DJ with a live musician over top, a band that lets the crowd sing, or live band karaoke.",
+         "art": "headphones"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Video Clips",
+       "title": "Get the vibe",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A few of our acts, live.",
+       "ledeStyle": "max-width: 47.5rem;"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-20",
+       "single": false,
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/oIa-i9C4T7g?rel=0",
+         "title": "Little Moses Jones performing live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo for a cocktail hour: Autumn Leaves on guitar and upright bass",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/K-ADcBUHePE?rel=0",
+         "title": "String quartet for a gala or a wedding: Beethoven's Op. 18 No. 6",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Singer and guitarist for welcome drinks: Tony Medina's song Headline",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/v0nKiT2_7RE?rel=0",
+         "title": "Afro house DJ for an after-party: live DJ set",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/4DMf0D47_N0?rel=0",
+         "title": "Three Spanish guitars for a corporate event: Entre dos Aguas",
+         "loading": "lazy"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-71",
+       "title": "We Work around your event's program",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "image": {
+        "src": "/img/unsplash/photo-1700514077430-3659e38eb5e7.jpg",
+        "alt": "Banquet tables set for a gala under purple stage lights and screens.",
+        "width": "1600",
+        "height": "1067",
+        "loading": "lazy",
+        "decoding": "async"
+       },
+       "imageFirst": "left",
+       "lede": "Every great corporate evening runs on great programming.",
+       "headingText": [
+        {
+         "html": "Dinner and networking get live music low enough for everyone to talk, and the night can get loud later, when loud is exactly the point."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "The music stops while your CEO is still three steps from the microphone.",
+       "cls": "callout"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-72",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Remarks and keynotes",
+         "text": "Transitions are planned with the run of show."
+        },
+        {
+         "term": "Awards, auctions and videos",
+         "text": "The music stops when it needs to and comes back in right after.",
+         "art": "list"
+        },
+        {
+         "term": "The paddle raise",
+         "text": "At a gala or fundraiser, we'll plan around the paddle raise and the thank-yous, too.",
+         "art": "heart"
+        },
+        {
+         "term": "A louder set later",
+         "text": "<a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> plays the hits and hands the mic to whoever wants a song.",
+         "art": "musicians"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-37",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-73",
+       "title": "Corporate retreats in the mountains",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "image": {
+        "src": "/img/unsplash/photo-1578451779798-c250e75fd0e1.jpg",
+        "alt": "Fireworks over a ski mountain at night, a lit town below.",
+        "width": "1600",
+        "height": "2400",
+        "loading": "lazy",
+        "decoding": "async",
+        "style": "aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%;"
+       },
+       "imageFirst": "right",
+       "lede": "We create the evening to meet the expectations of a group that flew in for it."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-74",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound limits",
+         "text": "Many mountain venues have one. Let us know early and we can plan the arrangements and the instruments around it, which sounds much better than asking a band to turn down at the last minute. You can look up your town's limit on our <a href=\"/planners/mountain/\">mountain page</a>."
+        },
+        {
+         "term": "Setup with the venue",
+         "text": "We'll work it out ahead of time, from dock times to where the cases go during dinner. Want the details for each band size? Check out our <a href=\"/planners/technical/\">technical page</a>.",
+         "art": "box"
+        },
+        {
+         "term": "Travel and lodging",
+         "text": "If your retreat is far from Denver, we'll work out the band's travel and lodging with you."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-75",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-76",
+       "html": "More ideas for your corporate event",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-77",
+       "cls": "def-list def-list--tiles",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/jazz-band/\">A corporate jazz band</a>",
+         "text": "Jazz across the whole evening, from the moment the doors open to the after-party.",
+         "art": "musicians"
+        },
+        {
+         "term": "<a href=\"/guides/live-music-cost-colorado/\">What live music costs</a>",
+         "text": "Prices in the Denver, Colorado market, in our cost guide."
+        },
+        {
+         "term": "<a href=\"/blog/corporate-event-entertainment-ideas-denver/\">Corporate entertainment ideas</a>",
+         "text": "Our thoughts on the whole evening, in Denver."
+        },
+        {
+         "term": "<a href=\"/blog/gala-entertainment-ideas/\">Gala entertainment ideas</a>",
+         "text": "For a fundraiser or an award night."
+        },
+        {
+         "term": "<a href=\"/daytime/sound-bath/\">A corporate sound bath</a>",
+         "text": "Seventy-five minutes of deep, meditative rest for a wellness week, an offsite or a transition day.",
+         "art": "sun"
+        },
+        {
+         "term": "<a href=\"/private-parties/retirement-party/\">A retirement party</a>",
+         "text": "A party the company throws to spoil a VIP."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "PagesAndPosts",
    "props": {
     "id": "PagesAndPosts-5",
-    "band": "ruled",
+    "band": "sunk",
     "heading": "more details about our corporate events",
     "groups": [
      {
@@ -144,315 +520,6 @@
      }
     ],
     "_file": "01-pages.html"
-   }
-  },
-  {
-   "type": "LogoStrip",
-   "props": {
-    "id": "LogoStrip-8",
-    "band": "ruled",
-    "label": "Where our artists have played",
-    "showAlso": false,
-    "blocks": [
-     {
-      "type": "Quote",
-      "props": {
-       "id": "Quote-6",
-       "html": "“[our act] naturally read the vibe and flow of the crowd, adjusting intensity and volume of the performance accordingly. He checked in during the event to ensure he was delivering what was asked for, but there was no direction needed.”",
-       "by": "Lindy R., a four-hour outdoor company picnic for 101 to 150, October 2025."
-      }
-     }
-    ],
-    "_file": "01a-credits.html"
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-13",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-9",
-       "headingStyle": "max-width: 49.5rem;",
-       "title": "A Few Examples of who's to book",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "titleStyle": "max-width: 49.5rem;",
-       "lede": "You also get sound support and a personal point of contact for the night - spec'd in every booking."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-10",
-       "source": "picks",
-       "picks": [
-        {
-         "act": "tejas-singh",
-         "config": "quartet",
-         "kicker": "The office holiday party",
-         "why": "Whether Tejas is performing solo, duo or has a full band for a bigger occasion, you're going to get sophisticated covers of some of your guests' favorite tunes. . . and more than one aside in the conversation saying \"These guys are really good\"",
-         "face": "config"
-        },
-        {
-         "act": "jazz-duo",
-         "config": "duo",
-         "kicker": "The client dinner",
-         "why": "This is the act to book when you want sophistication without drawing an insane amount of attention. We know your conversations are the main event, so the music sits under it for the whole night and nobody has to raise their voice to be heard across the table.",
-         "face": "config"
-        },
-        {
-         "act": "dirty-flamenco",
-         "config": "trio",
-         "kicker": "themed association event",
-         "why": "Bring a little Latin flavor to an evening. Flamenco / Spanish guitar with a soulful, danceable vibe in the trio configuration, or a mysterious European guitar tradition punctuating the evening as a soloist.",
-         "face": "config"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Quote",
-      "props": {
-       "id": "Quote-11",
-       "html": "“Their music created the perfect atmosphere, elegant, sophisticated and beautifully understated, while still adding something truly special to the evening. They were professional, polished and elevated the entire event.”",
-       "by": "Annette M., August 2026"
-      }
-     }
-    ],
-    "_file": "01b-shapes.html"
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-18",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-14",
-       "eyebrow": "Common types of corporate occasions",
-       "title": "Five formats for your corporate event",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-15",
-       "rows": [
-        {
-         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
-         "text": "Booking from late November into January, the holiday party is something special for your employees and associates.",
-         "termStyle": "zoom: 1.3;"
-        },
-        {
-         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
-         "text": "An evening built around your programming (likely including remarks, an auction, videos and walks to the stage). We work together on cues so the music flows seamlessly with the night.",
-         "termStyle": "zoom: 1.3;"
-        },
-        {
-         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
-         "text": "Dinners where the conversation is the event. Many times we recommend a jazz duo playing low enough to add a sense of class to the ambience without demanding attention away from developing relationships.",
-         "termStyle": "zoom: 1.3;"
-        },
-        {
-         "term": "<a href=\"/corporate/retreats/\">Corporate retreats</a>",
-         "text": "Retreats and incentive trips in the mountain corridor, Vail through Aspen, and the Colorado foothills. We create the evening to meet the expectations of a group that flew in for it.",
-         "termStyle": "zoom: 1.3;"
-        },
-        {
-         "term": "<a href=\"/corporate/after-party/\">After-parties</a>",
-         "text": "You know your people <em>better than we do</em> - and some people like to <strong>keep going</strong> after the first party ends. The hour after a conference dinner, a gala program or the holiday party’s speeches, with a DJ alone (or a DJ plus a live musician over top), a band that lets the crowd sing, or live band karaoke.",
-         "termStyle": "zoom: 1.3;"
-        }
-       ],
-       "cls": "def-list def-list--stack"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-16",
-       "html": "A jazz band across the whole evening, from the moment the doors open to the after-party, is on the <a href=\"/corporate/jazz-band/\">corporate jazz band page</a>. Curious what live music costs in Denver? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>. Want some more ideas? Check out our thoughts on the whole evening in <a href=\"/blog/corporate-event-entertainment-ideas-denver/\">corporate event entertainment ideas in Denver</a>. Planning a fundraiser or an award night? We’ve also written up some <a href=\"/blog/gala-entertainment-ideas/\">gala dinner entertainment ideas</a>. Even more out of the box: you can book a seventy-five-minute corporate sound bath for a wellness week, an offsite or a transition day, with the whole team enjoying some deep, meditative rest. Find out more on the <a href=\"/daytime/sound-bath/\">daytime sound bath page</a>. A <a href=\"/private-parties/retirement-party/\">retirement party</a> the company throws is one of the things we would love to help you spoil a VIP with.",
-       "cls": "note"
-      }
-     }
-    ],
-    "_file": "01c-occasions.html"
-   }
-  },
-  {
-   "type": "Videos",
-   "props": {
-    "id": "Videos-22",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-19",
-       "headingStyle": "max-width: 47.5rem;",
-       "eyebrow": "Video Clips",
-       "title": "Get the vibe: Tejas Singh original",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "Solo to quartet version of Tejas can be available for your office holiday party.",
-       "ledeStyle": "max-width: 47.5rem;"
-      }
-     },
-     {
-      "type": "VideoGrid",
-      "props": {
-       "id": "VideoGrid-20",
-       "videos": [
-        {
-         "kind": "iframe",
-         "src": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
-         "title": "Tejas Singh performing live at a Sofar Sounds session",
-         "loading": "lazy"
-        }
-       ],
-       "single": true
-      }
-     }
-    ],
-    "_file": "01d-footage.html"
-   }
-  },
-  {
-   "type": "Text",
-   "props": {
-    "id": "Text-30",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Title",
-      "props": {
-       "id": "Title-23",
-       "html": "We Work around your event's program",
-       "tag": "h2",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-24",
-       "html": "Every great corporate evening runs on great programming. You've got remarks from leadership, maybe an an award or auction, a window of time where people need to hear each other talk. Dinner and networking are served with live music at conversation volume, and the night can get loud later, when loud is exactly the point.",
-       "cls": "prose",
-       "style": "max-width: 63rem;"
-      }
-     },
-     {
-      "type": "Picture",
-      "props": {
-       "id": "Picture-25",
-       "image": {
-        "src": "/img/unsplash/photo-1700514077430-3659e38eb5e7.jpg",
-        "alt": "Banquet tables set for a gala under purple stage lights and screens.",
-        "width": "1600",
-        "height": "1067",
-        "loading": "lazy",
-        "decoding": "async",
-        "style": "width: 41.5rem; height: auto; margin-top: 2rem;"
-       }
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-26",
-       "html": "The music stops while your CEO is still three steps from the microphone. Transitions are planned with the run of show.",
-       "cls": "prose",
-       "style": "max-width: 62.5rem;"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-27",
-       "html": "We treat awards, auctions and videos the same way, so the music stops when it needs to and comes back in right after. If you want a louder set later in the night, <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> plays the hits and hands the mic to whoever wants a song.",
-       "cls": "prose",
-       "style": "max-width: 63rem;"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-28",
-       "html": "At a gala or fundraiser, we’ll also plan around the paddle raise and the thank-yous.",
-       "cls": "prose",
-       "style": "max-width: 60.5rem;"
-      }
-     }
-    ],
-    "_file": "02-program.html"
-   }
-  },
-  {
-   "type": "Text",
-   "props": {
-    "id": "Text-37",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Title",
-      "props": {
-       "id": "Title-31",
-       "html": "Corporate retreats in the mountains",
-       "tag": "h2",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-32",
-       "html": "Many mountain venues have a sound limit. If yours does, let us know early and we can plan the arrangements and the instruments around it, which sounds much better than asking a band to turn down at the last minute. You can look up your town’s limit on our <a href=\"/planners/mountain/\">mountain page</a>.",
-       "cls": "prose",
-       "style": "max-width: 64rem;"
-      }
-     },
-     {
-      "type": "Picture",
-      "props": {
-       "id": "Picture-33",
-       "image": {
-        "src": "/img/unsplash/photo-1578451779798-c250e75fd0e1.jpg",
-        "alt": "Fireworks over a ski mountain at night, a lit town below.",
-        "width": "1600",
-        "height": "2400",
-        "loading": "lazy",
-        "decoding": "async",
-        "style": "width: 29.5rem; height: auto; margin-top: 2rem;"
-       }
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-34",
-       "html": "We’ll work out setup with the venue ahead of time, from dock times to where the cases go during dinner. Want the details for each band size? Check out our <a href=\"/planners/technical/\">technical page</a>.",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-35",
-       "html": "If your retreat is far from Denver, we’ll work out the band’s travel and lodging with you.",
-       "cls": "prose"
-      }
-     }
-    ],
-    "_file": "03-mountain.html"
    }
   },
   {
