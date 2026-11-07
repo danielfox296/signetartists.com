@@ -1,0 +1,297 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/yacht-rock/",
+   "title": "Yacht rock band for parties and corporate events in Denver",
+   "description": "A yacht rock cover band for Denver company parties, patios and birthdays, playing the Doobie Brothers, Steely Dan, Hall and Oates and Toto in harmony.",
+   "titleExact": true,
+   "ogImage": "img/yacht-rock.jpg",
+   "nav": "music",
+   "breadcrumb": "Yacht rock band",
+   "schema": {
+    "service": {
+     "name": "Yacht rock band",
+     "serviceType": "Yacht rock cover band for company parties, patios and private events",
+     "description": "A yacht rock cover band playing Doobie Brothers, Steely Dan, Hall and Oates, Toto, Christopher Cross and Michael McDonald in three-part harmony with saxophone, for summer company parties, client appreciation evenings, after-parties and milestone birthdays across Denver and Colorado.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "yacht-rock"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "The Doobie Brothers to Steely Dan",
+       "slab": true,
+       "title": "A yacht rock band for company parties, patios and milestone birthdays.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Everybody knows someone who can’t hear What a Fool Believes without trying to sing the high part. This is the band to book when you want those smooth soft rock hits played live, with all the harmonies and the saxophone solos.",
+       "headingText": [
+        {
+         "html": ""
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=yacht-rock",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can build the band around your event, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/yacht-rock.jpg",
+        "alt": "Two sailboats moored on still water at sunset.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a yacht rock band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "This band plays songs like What a Fool Believes, Reelin’ in the Years and Rich Girl. That covers the Doobie Brothers, Steely Dan, Hall and Oates, Toto, Christopher Cross, Boz Scaggs, Kenny Loggins, Ambrosia, Player and Michael McDonald on his own, plus some of the Fleetwood Mac ballads."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The band can play ballads through dinner, and the up-tempo songs are great for getting people dancing. Looking for more songs? Check out our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "How many musicians do you need for a yacht rock band?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The four-piece",
+         "text": "This band has keys, guitar, bass and drums, with three of the musicians singing. The harmonies are what make it yacht rock, so we keep all three voices at every size."
+        },
+        {
+         "term": "Five to six piece",
+         "text": "This is the four-piece plus saxophone, with a lead singer of its own, and it’s a great fit for a ballroom or a crowd past two hundred. This is the size that sounds most like the records."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Want music before the band starts? An <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> or <a href=\"/ensembles/solo-piano/\">solo pianist</a> can play the cocktail hour on the same contract, and our <a href=\"/ensembles/dj/\">DJ</a> can keep things going once the band finishes.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Summer company parties</a>",
+         "text": "People of every age at your company will likely know these songs, and the band can play on a lawn, a patio or a rooftop. We can also help with the rest of the music for your <a href=\"/corporate/\">company event</a>."
+        },
+        {
+         "term": "<a href=\"/blog/client-appreciation-event-ideas-denver/\">Client appreciation evenings</a>",
+         "text": "This band is a fun way to thank your clients, especially if you’d like the event to end with dancing."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties and galas</a>",
+         "text": "Once the program is over, this band can get people dancing, either at the after-party or in the second half of a <a href=\"/corporate/galas-and-awards/\">gala</a> or holiday party."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays</a>",
+         "text": "Yacht rock makes for a great 40th or 50th birthday, whether it’s at your house, a club or a rented space."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "This is a fun pick for a wedding reception where you want everyone singing on the dance floor, and we can help with music for the ceremony and the cocktail hour, too."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Yacht rock band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Have another question? Take a look at our <a href=\"/planners/faq/\">full list of questions</a> for things like substitutions and volume limits. Curious where the name came from? Learn more about <a href=\"/blog/what-is-yacht-rock/\">what yacht rock is</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "What is a yacht rock band?",
+         "a": "It’s a band that plays the smooth pop and soft rock of the late-70s and early-80s, with lots of harmony vocals and saxophone. If you’re looking for one in Denver, just reach out to us at Signet Artists."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "During dinner, the band can play softly enough that your guests can still talk. Once the dancing starts, it can sound like a full party band, whether you’re on a lawn or in a ballroom. The band will adjust the volume to suit the space and your crowd, and if your venue has a sound limit, tell us the number and we’ll work with you to stay under it."
+        },
+        {
+         "q": "Can it play outdoors?",
+         "a": "Yes, and this band sounds great outdoors. The band will just need a covered, level, dry spot with power, and we’ll plan ahead with you for moving indoors, since Colorado weather can turn fast in the afternoon."
+        },
+        {
+         "q": "Can we add time or ask for a song?",
+         "a": "Yes. Let us know the song when you book and the band can usually learn it (a few weeks' notice helps). If your event might go long, let us know that, too."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want a yacht rock band at your party? Send us your date, and we’ll let you know about availability and costs.",
+       "lede": "We can bring a solo musician or a full band to your event, with the right sound system for your venue and a personal point of contact."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

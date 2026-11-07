@@ -1,0 +1,334 @@
+{
+ "root": {
+  "props": {
+   "path": "/planners/booking/",
+   "title": "How a booking works",
+   "description": "Here's every step of booking a live band, from the first email to the final invoice, including what comes with the contract and the run of show.",
+   "nav": "planners",
+   "schemaArticle": "on",
+   "published": "2026-08-07"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Booking",
+       "slab": true,
+       "title": "How to hire a live band for your event.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You've got a date on the calendar, and now you're wondering what happens after you reach out. Here's each step, who does it and how long it usually takes."
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "RateTable",
+   "props": {
+    "id": "RateTable-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "Booking a band, step by step",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "These timings assume your event is about six months away. If your event is only three weeks away, we'll go through the same steps in the same order, just faster. Planning a wedding? Here's our take on <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-6",
+       "head": [
+        {
+         "html": "Step"
+        },
+        {
+         "html": "When"
+        },
+        {
+         "html": "What happens"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "1. You get in touch",
+           "cls": "rate-size"
+          },
+          {
+           "html": "24 to 48 hrs"
+          },
+          {
+           "html": "We reply with availability and an itemized quote"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "2. You hold the date",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The day you say yes"
+          },
+          {
+           "html": "We send the contract, the certificate of insurance, the W-9 and the invoice in one email"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "3. We introduce your point of contact",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Before the event"
+          },
+          {
+           "html": "You'll get the name and cell number of your personal point of contact for the event"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "4. You send the run of show",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Any time"
+          },
+          {
+           "html": "We add the band's part and send it back"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "5. We go over the cues",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The week before"
+          },
+          {
+           "html": "We make sure one person is in charge of each moment in the program"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "6. The venue confirms",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The week before"
+          },
+          {
+           "html": "They confirm the power, the stage, the load-in route and any decibel cap"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "7. Load-in and sound check",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The day of the event"
+          },
+          {
+           "html": "We set up, check the sound and hand the space back to you, ready to go"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "8. We play your event",
+           "cls": "rate-size"
+          },
+          {
+           "html": "The day of the event"
+          },
+          {
+           "html": "You can reach your contact from load-in to load-out"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "9. The invoice",
+           "cls": "rate-size"
+          },
+          {
+           "html": "After the event"
+          },
+          {
+           "html": "We send one page, with every charge on its own line"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Wondering about the deposit, when the balance is due or how to pay? Take a look at our <a href=\"../faq/\">FAQ</a>. Want load-in and sound check times by band size, along with the six things to confirm with your venue? Check out our guide to <a href=\"../technical/\">what we need from your venue</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-steps.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-10",
+       "html": "Three things we need from you",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Six of those nine steps need nothing from you at all. The other three do, and if those run late, they can hold up your booking.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The date and the venue, to get a number",
+         "text": "If you haven't chosen a venue yet, just give us the city. We can price your event now and update it once you've signed with a venue."
+        },
+        {
+         "term": "The venue name, for the certificate of insurance",
+         "text": "The certificate names your venue as additional insured, so we can't issue it until you've chosen one."
+        },
+        {
+         "term": "The run of show, whenever you have one",
+         "text": "Send us the draft, even if it's nowhere near final. We're happy to add the band's part to whatever you have, even if you haven't booked us yet."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-from-you.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-15",
+       "html": "If something changes",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Plans change all the time, whether it's the guest count, the program or even the venue. Just let us know and we'll update your quote. Need more time, a smaller band or a different date? We'll work it out with you.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "If a musician can't make your date, we'll tell you who's stepping in and why as soon as we know.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-from-you.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-20",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the venue.",
+       "lede": "That's enough for us to come back with a number."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Drafting your run of show? Start with one of our <a href=\"../run-of-show/\">run of show templates</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-from-you.html"
+   }
+  }
+ ]
+}

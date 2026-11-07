@@ -1,0 +1,353 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/aspen/",
+   "title": "Live music for Aspen corporate retreat evenings",
+   "description": "Looking for evening activities for an Aspen corporate retreat? We can plan the travel and lodging for a solo musician, a quartet or anything in between.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Aspen",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "We book solo musicians, duos, trios and quartets for corporate retreats and private celebrations at Aspen venues, with travel and lodging.",
+     "areaServed": [
+      "Aspen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "In the Colorado mountains",
+       "slab": true,
+       "title": "Live music for your Aspen corporate retreat",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The meetings are on the calendar and the hotel is booked, and now someone has to figure out what everyone’s doing in the evenings. In Aspen, that can mean a welcome night, a dinner where everyone can talk, and one evening with dancing, and we’d love to help you find the right live entertainment for each of them.",
+       "headingText": [
+        {
+         "html": "Aspen is about four hours from Denver when the roads cooperate. It can take longer in winter, when Independence Pass closes and the drive goes the long way through Glenwood Springs, so an Aspen event is usually a two-day trip for a band. Still deciding what to plan? Take a look at these eight <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>, or learn more about how we work on our <a href=\"/corporate/retreats/\">corporate retreats page</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "Live music outdoors in Aspen",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s an acoustic act playing outdoors, and a look at the gear that comes along for the drive."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/loadin.jpg",
+         "alt": "Road cases stacked in a dark backstage hall.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Budget",
+       "title": "What to budget for live music in Aspen",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Compared with an event in Denver, an Aspen event adds travel and lodging for the band."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "The music",
+         "text": "We’ll usually recommend a duo for cocktails and dinner, or a quartet if you want people dancing."
+        },
+        {
+         "term": "Travel",
+         "text": "The drive can take up most of a working day for the band on each side of your event, so travel will be a bigger part of your budget than it would be in Denver."
+        },
+        {
+         "term": "Lodging",
+         "text": "After a late set, we can’t ask a band to drive four hours of mountain highway home, so they’ll need somewhere to stay that night."
+        },
+        {
+         "term": "For your finance team",
+         "text": "Retreat budgets often go through finance, so just let us know what they need from us."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Curious how the mountain towns compare with the rest of Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">Colorado cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-math.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Hotels & event spaces",
+       "title": "Aspen venues.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "The Little Nell at the base of Aspen Mountain and the Hotel Jerome in the center of town are both lovely choices for a corporate dinner. The St. Regis Aspen is a great fit if you need a ballroom, and Aspen Meadows is a campus where you can hold sessions during the day and have dinner on the property at night. The Limelight is a more casual option for welcome nights and closing parties.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "If you’d like one act for the whole evening, Tejas Singh can start as a duo and finish as a quartet. If all you need is dinner music, a jazz duo of upright bass and guitar is a lovely choice, and everyone at the table can still hear each other.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-23",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Live music for an Aspen corporate dinner",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Many Aspen dining spaces are on the small side, so you may not need more than a trio.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Learn more about <a href=\"/planners/mountain/\">planning live music in the Colorado mountains</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "At 7,908 feet the altitude is gentler than Vail’s and well under Breckenridge’s, and we still plan a longer sound check for it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-format.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-24",
+       "html": "Private celebrations in Aspen.",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "We also play milestone birthdays, anniversaries and family gatherings in Aspen, and the travel and lodging work the same way. Learn more about live music for <a href=\"/private-parties/\">private parties</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "If the drive is a concern, the towns along I-70 are a shorter trip and often don’t need lodging for the band, so take a look at <a href=\"/corporate/retreats/vail/\">Vail</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-private.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-33",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Questions",
+       "title": "Booking live music in Aspen",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-30",
+       "html": "Need stage sizes and power for your venue? Take a look at our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-31",
+       "items": [
+        {
+         "q": "Can a band play outdoors in Aspen?",
+         "a": "Yes, though amplified music may need to stop by eight in the evening. When we last checked, the town allowed outdoor amplified sound at a private event between 9am and 8pm, at a limited volume. Neighbors within 250 feet also had to get seven days’ notice. After that, the music will need to move indoors, and we’ll check the current rules with your venue."
+        },
+        {
+         "q": "What do Aspen venues need from the band?",
+         "a": "Most will ask for a certificate of insurance, and they’ll expect the band to set up on the venue’s schedule and stick to any sound limits and curfew. We’ll work all of that out with your venue."
+        },
+        {
+         "q": "How much space and power does the band need?",
+         "a": "A duo can usually fit in a corner of about 8 by 6 feet, and a quartet may need about 14 by 10 feet. We’ll sort out the electrical concerns with your venue. Setup can take 45 to 90 minutes, with bigger bands taking longer, and we’ll plan the drive so there’s plenty of time for it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-36",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-34",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning a retreat in Aspen? Send us your dates and we’ll come back with a recommendation and a price.",
+       "lede": "We’re based in Denver, and we can bring anything from a solo musician to a full band to your Aspen retreat, with a sound system sized to the venue and a single point of contact."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

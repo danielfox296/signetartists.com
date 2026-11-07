@@ -1,0 +1,273 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/boulder/",
+   "title": "Live music for private parties in Boulder | Signet Artists",
+   "description": "Book live music for a Boulder dinner party or milestone celebration, with one musician, a duo or a trio, and we'll keep to your venue's sound limits and curfew.",
+   "titleExact": true,
+   "nav": "private",
+   "schema": {
+    "service": {
+     "name": "Private party entertainment in Boulder",
+     "serviceType": "Live music for dinner parties and private celebrations",
+     "description": "We book live music for private parties in Boulder, from one musician to a trio, and we'll stay within your venue's sound limits and curfew.",
+     "areaServed": [
+      "Boulder"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Boulder, Colorado",
+       "slab": true,
+       "title": "Live music for private parties in Boulder.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "There’s nothing quite like a Boulder dinner when the Flatirons start turning pink. A little live music makes it even better, and one musician, a duo or a trio is usually all you need.",
+       "headingText": [
+        {
+         "html": "We can bring live music to all kinds of <a href=\"/private-parties/\">private parties</a> in Boulder, from dinner parties and anniversaries to milestone celebrations, whether you’re at home, at a downtown hotel or up at Chautauqua."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "Outdoor live music with one or two musicians",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s an acoustic guitarist playing outdoors and a solo musician on a bridge, and either one would be a great fit for a patio party in Boulder."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/solo-bridge.jpg",
+         "alt": "A guitarist playing an acoustic set on a Denver bridge.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-12",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Solo, duo or trio",
+       "title": "What size band for a private party in Boulder?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most private parties in Boulder are about good conversation, and a smaller group can easily stay within the local sound limits. A quartet is great for a big dance floor, and we’ll let you know if your party could use one."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "One musician playing through a patio dinner is the simplest way to go, and it’s a popular choice in Boulder. A trio is the biggest size most Boulder venues allow, and it gets people dancing without needing a stage.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Wondering what a band costs in Colorado? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> lays it out size by size.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "The venues",
+       "title": "Live music at Chautauqua, the St Julien and Boulder homes",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Most private events in Boulder happen at a handful of venues. Chautauqua’s Community House and Dining Hall are popular for milestone dinners and anniversaries. The Hotel Boulderado and the St Julien host a lot of the downtown celebrations. Flagstaff House is a great pick for a dinner with a view.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Each has its own reasons to watch the volume. Chautauqua sits inside a residential historic district. At the Boulderado and the St Julien, the event spaces are just down the hall from sleeping hotel guests. Flagstaff House sits up a mountain road with the city below it, so sound can carry. Whichever one you choose, we’ll find out its sound policy and help you pick a size that fits comfortably within it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "The same applies at home. Boulder neighborhoods sit close together, and for a good part of the year, you’ll probably want to be outside. One musician or a duo on the patio can play quietly enough for everyone at the table to talk, and that’ll keep things friendly with the neighbors. A trio is usually a better fit indoors.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "What to know before booking live music in Boulder",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Need stage sizes and power details? Take a look at our <a href=\"/planners/technical/\">technical page</a>. Planning a party at home? Our <a href=\"/private-parties/denver/\">Denver private parties page</a> has more on what a house needs.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "How late can a band play in Boulder?",
+         "a": "As late as your venue's rules allow, and Boulder venues and neighborhoods often set earlier limits than Denver's do. Let us know the sound limit and the end time when you book, and we'll plan around them."
+        },
+        {
+         "q": "Is there a travel charge from Denver to Boulder?",
+         "a": "Yes, there's a small one. We're a Denver company, and Boulder is just a short drive up the Front Range for us. The band can drive home afterward, so you won't need to plan for lodging."
+        },
+        {
+         "q": "Can music play outside at a Boulder home?",
+         "a": "Yes. The musicians will need a spot that's covered, level and dry, with power nearby, and they can keep it soft enough for dinner. Colorado evenings can get chilly quickly, so it's smart to have an indoor spot ready for the music."
+        },
+        {
+         "q": "What do the musicians need for setup and parking in Boulder?",
+         "a": "We'll usually bring one van and need 45 to 60 minutes to set up, through whichever door your venue prefers. One musician takes about 6 by 4 feet and one dedicated electrical circuit. Parking can be the tricky part in Boulder. Downtown is metered, Chautauqua shares its lot with a trailhead that can fill up on summer evenings, and a house on the Hill shares its curb with students during the school year. Just send us the address and we'll work out how to get the gear inside."
+        },
+        {
+         "q": "When should we book music for a Boulder party?",
+         "a": "Whenever you're ready. Send the date and we'll check the booking calendar. If the party is coming up sooner, no worries. We can often make something great work."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-26",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the Boulder venue, and we'll check the sound rules for you.",
+       "lede": "Whether you want a solo guitarist or a full band, we’ll choose a sound system that suits your venue, and you’ll have a personal contact all night."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

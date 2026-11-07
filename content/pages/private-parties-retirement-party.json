@@ -1,0 +1,355 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/retirement-party/",
+   "title": "Retirement party ideas and live music in Denver",
+   "description": "Looking for live music for a retirement party in Denver? We can bring a jazz duo, a singer with a guitar or live band karaoke to your home or the office.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "ogImageAlt": "A trumpet resting on a table.",
+   "schema": {
+    "service": {
+     "name": "Live music for a retirement party",
+     "serviceType": "A jazz duo, a singer with a guitar, live band karaoke, a party band or a DJ for retirement parties thrown by a company or a family",
+     "description": "Signet Artists brings live music to retirement parties across Denver and the Front Range. A jazz duo can play standards through dinner at a level your guests can talk over, then stop for the speeches, and a singer with a guitar can learn the retiree's favorite song. Live band karaoke is great for the department, and a trio or quartet can get people dancing at the send-off. We play at homes, clubs, restaurants' private dining spaces and offices, and we can provide a microphone for the speeches, vendor paperwork if your company needs it, and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "LvI8FAVFADA",
+      "name": "Solo jazz guitar for a retirement party: a blues after Grant Green",
+      "description": "A solo jazz guitarist plays a blues in the style of Grant Green, and one guitar is a lovely sound for a retirement dinner.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT33S"
+     },
+     {
+      "id": "C6M9wwR9DWk",
+      "name": "Band for a company retirement party: Tony Medina playing Drive at an office party",
+      "description": "Tony Medina plays Drive at an office party, and his band is a great choice when your department wants to dance at a send-off.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M24S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Company & family send-offs",
+       "slab": true,
+       "title": "Live music for a retirement party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the moment at a retirement party when the last speech wraps up and all the glasses go up. Live music can fill all the time around those speeches. A jazz duo is lovely for dinner, a singer with a guitar can play the retiree's favorite song, and live band karaoke is a lot of fun if the department wants to make some noise.",
+       "headingText": [
+        {
+         "html": "Whether your family is throwing the party or your company is, we can help you find the right music for it. Learn more about our <a href=\"/private-parties/\">private parties</a> and <a href=\"/corporate/\">corporate events</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Video clips of retirement party music.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Take a listen to one jazz guitarist playing a blues in the style of Grant Green, or to Tony Medina playing Drive at an office party. One guitar is a popular choice for a retirement dinner, and a band is great when the department wants to dance."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/LvI8FAVFADA?rel=0",
+         "title": "One jazz guitarist playing a blues in the style of Grant Green",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
+         "title": "Tony Medina playing Drive at an office party",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Sizes",
+       "title": "Choosing the right size band for a retirement party.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The speeches are the heart of a retirement party, so you’ll want music that leaves space for them. We can help you pick the right size for your venue."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The jazz duo, or one guitar",
+         "text": "Upright bass and guitar together, or one jazz guitarist on their own, can play jazz standards quietly through dinner. Jazz standards work well for guests of all ages, which makes this an excellent choice for a table of colleagues. Learn more about our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+        },
+        {
+         "term": "A pianist",
+         "text": "A pianist can play jazz standards and songs from the retiree’s favorite decades through cocktails and dinner, on the venue’s piano or on one we bring. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> fits a restaurant’s private dining space as easily as a club."
+        },
+        {
+         "term": "A singer with a guitar",
+         "text": "One voice and a guitar can play the songs everyone at the office knows, and it's a warm, personal choice for a smaller party. If you’d like a fuller sound, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> is a singer and guitarist who plays as a duo with a bass player."
+        },
+        {
+         "term": "Live band karaoke for the department",
+         "text": "The band plays the 80s and 90s hits and hands the mic to anyone in the department who wants a song. Let us know the retiring colleague’s karaoke song, and the band can have it ready. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> works best in a large private space or a hotel event space."
+        },
+        {
+         "term": "The party band",
+         "text": "A trio or a quartet is the way to go when you want the send-off to end on the dance floor. <a href=\"/artists/tony-medina/\">Tony Medina</a> can bring a band of up to four players and play through dinner first, and <a href=\"/ensembles/dj/\">a DJ</a> can keep the music going late through the same sound system."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Wondering what each of these costs in Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Who throws it",
+       "title": "Retirement parties for a company, a family or a department.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "The company",
+         "text": "A company retirement dinner, in a private dining space or a hotel, often falls to whoever plans the holiday party. We’re happy to help with it."
+        },
+        {
+         "term": "The family",
+         "text": "A family retirement party might be a dinner at home or at a <a href=\"/private-parties/denver/\">Denver</a> club, with a toast or two, and we can build the song list with you around the music the retiree loves."
+        },
+        {
+         "term": "The department",
+         "text": "If the whole office is coming to the send-off, you may want something everyone can join in on. Live band karaoke is perfect for that, and it can also be the <a href=\"/corporate/after-party/\">after-party</a> if you’re having a dinner first."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-who-throws-it.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Personal touches",
+       "title": "Retirement party ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Beyond the slideshow and the speeches, here are a few ways live music can make the party feel personal."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-20",
+       "rows": [
+        {
+         "term": "A Beatles sing-along",
+         "text": "If you’d love to have everyone sing to the guest of honor, <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> is a duo that plays the Beatles and gets colleagues, family and grandchildren singing together."
+        },
+        {
+         "term": "The retiree’s favorite song",
+         "text": "If the retiree has a song they’ve always asked for, let us know. We can usually learn it, and it makes a great <a href=\"/private-parties/proposals/\">surprise song</a>."
+        },
+        {
+         "term": "A song list from the year they started",
+         "text": "We can mix jazz standards with songs from the decade they joined the company and play them through dinner. Looking for a specific song? You can search for it by title in our <a href=\"/repertoire/\">song list</a>."
+        },
+        {
+         "term": "A DJ playing the hits of their decade",
+         "text": "A DJ can build a set from the year they started work, and it’s a great way to get people dancing at the send-off."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Questions",
+       "title": "What people ask about retirement party music.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Can we hire a band for a retirement party?",
+         "a": "Yes. You'd book the whole thing with us at Signet Artists in Denver, on one contract and with one personal contact."
+        },
+        {
+         "q": "How does the music work around the speeches?",
+         "a": "The duo can play at a level your guests can talk over, stop for each speech and start up again once the glasses come down. We can also set up a microphone for whoever's speaking. Just tell us roughly when the speeches will happen, and we'll plan the music around them."
+        },
+        {
+         "q": "Can the company pay by purchase order?",
+         "a": "Yes. A company's retirement dinner can be booked like any corporate event, with vendor setup, a purchase order and whatever paperwork your finance team needs. Just let us know."
+        },
+        {
+         "q": "How much space does a band need at a retirement party?",
+         "a": "One guitarist needs about 6 by 4 feet, a duo about 8 by 6 and a trio about 12 by 8, and they can all run on one electrical circuit. A quartet or live band karaoke needs about 14 by 10 and two circuits, and karaoke also has two lyric screens. Setup can take about 45 minutes for one musician and an hour for a duo or a trio, and we'll work out the setup, power and volume with your venue ahead of time."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the place and who's throwing it.",
+       "lede": "We’d love to help you send them off in style, whether that’s one musician or a full band, with a sound system that suits your venue."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

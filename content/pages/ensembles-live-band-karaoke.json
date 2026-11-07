@@ -1,0 +1,309 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/live-band-karaoke/",
+   "title": "Live band karaoke in Denver for company parties and events",
+   "description": "We bring live band karaoke to company parties and after-parties in Denver. A real band plays the 80s and 90s hits and hands the mic to anyone who wants a song.",
+   "titleExact": true,
+   "ogImage": "img/live-band-karaoke-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Live Band Karaoke",
+   "schema": {
+    "service": {
+     "name": "Live band karaoke",
+     "serviceType": "Live band karaoke for company parties, after-parties and private events",
+     "description": "This live band plays 80s and 90s hits as a party band and hands the mic to any guest who wants to sing, with the lyrics on a screen and a host keeping things moving. It’s a great fit for company holiday parties, sales kickoffs, after-parties and private events across Denver and Colorado.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "live-band-karaoke"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Live band karaoke",
+       "slab": true,
+       "title": "The band plays the hits. Your people take the mic when they’re ready.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "There’s always someone at the office who has secretly been waiting their whole life to sing Livin’ on a Prayer with a real band behind them. Live band karaoke gives them that chance. Our band plays 80s and 90s hits as a party band, then hands the mic to anyone who wants a turn. The words are up on screens for both the singer and the crowd, a host keeps things moving, and the band follows whoever is singing.",
+       "headingText": [
+        {
+         "html": "If you want your team letting loose together at the company party, this is the one to book."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=live-band-karaoke",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can build the band around your event, from the number of musicians to the song list and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/live-band-karaoke-card.jpg",
+        "alt": "A microphone on a stand beside a lyric screen with one line lit in brass, drawn flat on a dark field.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What songs does a live karaoke band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The song list starts in the 80s and 90s and comes forward from there, because those are the songs almost everyone at the party can sing without looking at the screen. We’re talking Journey, Bon Jovi, Whitney Houston, Prince, Madonna, Queen, Oasis, No Doubt, Alanis Morissette, TLC, the Backstreet Boys, Outkast and the Killers, just to name a few."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Between singers, the band keeps playing the same hits as a party band, so the dance floor stays active. Have a song in mind for someone special, like your CEO’s karaoke song or a retiring colleague’s favorite? Just let us know ahead of time, and if it isn’t on the song list, we can usually learn it. Curious what else the band plays? <a href=\"/repertoire/\">Check out our full song list</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "How big is a live karaoke band?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The four-piece",
+         "text": "You get a singer on guitar, plus keys, bass and drums, and one of the musicians hosts from the stage. It’s the usual size for a company party of eighty to two hundred."
+        },
+        {
+         "term": "Five to six piece",
+         "text": "This is the four-piece plus a horn or a second singer, along with a dedicated host out on the floor. It’s a great size for a ballroom, a conference after-party or a crowd of more than two hundred. A second singer can help get the first guests up there, and the choruses sound bigger."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Want to keep the party going after the band wraps up? Our <a href=\"/ensembles/dj/\">DJ</a> can take over on the same sound system, on the same contract.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "Live band karaoke is a fun way to shake up the office holiday party, because you get a great party band and anyone who wants a turn in the spotlight can have one. Still weighing your options? Check out our <a href=\"/blog/office-holiday-party-ideas-denver/\">office holiday party ideas in Denver</a>."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Sales kickoffs and team offsites</a>",
+         "text": "After a long day of sessions, live band karaoke gives your team a chance to loosen up and make some noise together, in Denver or on a <a href=\"/corporate/retreats/\">mountain retreat</a>."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties</a>",
+         "text": "We can pick up right after a conference dinner or a gala program, and the band can use the sound system that’s already set up in the ballroom."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "Live band karaoke is a great way to spend the last hour of a reception or the welcome party the night before, especially if your friends love to sing."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays and parties at home</a>",
+         "text": "We love a fortieth or fiftieth birthday with a crowd that grew up on these songs, and it’s a blast at a <a href=\"/private-parties/halloween-party/\">Halloween party</a> in costume or a <a href=\"/private-parties/holiday-party/\">holiday party at home</a>, as long as you have a big main floor."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Live band karaoke questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Have another question? Our <a href=\"/planners/faq/\">full question list</a> covers everything from substitutions to volume limits.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "Does anyone have to sing?",
+         "a": "No. The band can play a full set of 80s and 90s hits on its own, so it’s still a great party even if the mic never leaves the stage, and our host won’t put anyone on the spot. In our experience, the first people up are usually a pair or a small group, and once they’ve gone, others tend to join in."
+        },
+        {
+         "q": "How does a guest get on the list?",
+         "a": "We’ll put a printed song list on the tables and show it on the screen. A guest picks a song and gives the host their name, and the host keeps a paper sign-up list and calls each singer up. There's no app and nothing to download, and two or three colleagues can go up together on one song."
+        },
+        {
+         "q": "How is this different from a karaoke DJ?",
+         "a": "With a backing track the singer is on their own. With a band, the musicians follow the singer’s tempo and keep the song going if somebody loses their place. Someone in the band can jump in with a second voice on the chorus, and they’ll end the song at the right moment."
+        },
+        {
+         "q": "How many people get a turn?",
+         "a": "About six to ten guest songs fit in an hour, so at a party of two hundred most people sing along from the floor. If the list is still long near the end, just let us know and we can often keep going a little longer."
+        },
+        {
+         "q": "Who decides what's appropriate?",
+         "a": "That’s up to you, as the person booking. Just tell us when you book whether you’d like the songs clean or as recorded, and the host will stick to that."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "The same band can play quietly through dinner so nobody has to raise their voice, then turn it up when the karaoke starts. From there, it’s about as loud as a party band, and the singer will still be able to hear themselves. If your venue has a sound limit, just let us know and we’ll keep the band under it."
+        },
+        {
+         "q": "Can we use the microphone for remarks or a raffle?",
+         "a": "Yes. Just let us know what you have planned and we’ll have a microphone ready for you."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ready to hand your team the mic? Send us the date and the headcount.",
+       "lede": "We’ll reply with availability and costs, and one person on our team will stay in touch with you all the way through."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

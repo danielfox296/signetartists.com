@@ -1,0 +1,743 @@
+{
+ "root": {
+  "props": {
+   "path": "/planners/technical/",
+   "title": "What we need from your venue",
+   "description": "Here's the stage footprint, power, channel counts, load-in times and volume for every size from solo to quartet, plus the DJ, for you to forward to the venue.",
+   "nav": "planners",
+   "breadcrumb": "Your venue",
+   "schemaArticle": "on",
+   "published": "2026-08-18"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Technical",
+       "slab": true,
+       "title": "What we need from your venue.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Your venue will probably want to know what the band needs before they confirm anything, so we've tried to answer all of their questions here. You'll find stage sizes, power, sound channels, load-in and volume for each size of band, from solo up to quartet, plus our DJ. Feel free to send this page to your venue and your AV lead."
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "RateTable",
+   "props": {
+    "id": "RateTable-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "Stage size for a live band",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "If you look up stage rental guidance for a band of 7 to 10 musicians, it can run up to <strong class=\"num-accent\">24 by 24 feet</strong>. That number is written to be safe for any band anyone might book, and it's more than four times what a quartet asks for. If you rent a stage that size, you'll lose a lot of floor space your guests could be using.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "StagePlot",
+      "props": {
+       "id": "StagePlot-6",
+       "guide": 24,
+       "width": 14,
+       "depth": 10
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "We've given you two numbers for each size. The first is what we ask for, where the band is comfortable and the sightlines work. The second is the smallest we'll play on. Anywhere between those two numbers will work, and the band will just have a little less space.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-8",
+       "provisional": true,
+       "head": [
+        {
+         "html": "Size"
+        },
+        {
+         "html": "Footprint we ask for"
+        },
+        {
+         "html": "Smallest we will take"
+        },
+        {
+         "html": "Who is on it"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "Solo",
+           "cls": "rate-size"
+          },
+          {
+           "html": "6 by 4 ft"
+          },
+          {
+           "html": "5 by 4 ft"
+          },
+          {
+           "html": "One voice, one instrument"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Duo",
+           "cls": "rate-size"
+          },
+          {
+           "html": "8 by 6 ft"
+          },
+          {
+           "html": "6 by 5 ft"
+          },
+          {
+           "html": "Guitar and upright bass"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Trio",
+           "cls": "rate-size"
+          },
+          {
+           "html": "12 by 8 ft"
+          },
+          {
+           "html": "10 by 6 ft"
+          },
+          {
+           "html": "Guitar, bass and drums"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Quartet",
+           "cls": "rate-size"
+          },
+          {
+           "html": "14 by 10 ft"
+          },
+          {
+           "html": "12 by 8 ft"
+          },
+          {
+           "html": "Trio plus a horn or a voice"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "DJ",
+           "cls": "rate-size"
+          },
+          {
+           "html": "6 by 4 ft"
+          },
+          {
+           "html": "6 by 3 ft"
+          },
+          {
+           "html": "Booth, controller and our own sound system"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "If you have to choose, give us depth before width. A band can still work in a narrow space, but with no depth the drums end up right behind the singer.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-stage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-12",
+       "html": "Risers, floors and ceilings",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "Do you need a stage?",
+         "text": "No. A band can play just fine on the floor, and most of our Denver bookings are set up that way. For events over about 150 guests, you may want a riser (a low platform) so people can see the band."
+        },
+        {
+         "term": "Who supplies a riser?",
+         "text": "We don't supply risers, so if you want one, it'll need to come from the venue or your production company. Just tell us the height and we'll plan the load-in around it. A riser of 12 to 24 inches is normal, and anything over 24 inches needs a rail behind the drums."
+        },
+        {
+         "term": "Ceiling height",
+         "text": "We need 10 feet of clear height above the stage surface. Lighting stands go up to 9 feet, and a low ceiling over a riser can't be fixed on the day of the event."
+        },
+        {
+         "term": "Surface",
+         "text": "The surface needs to be level and solid. If a stage deck flexes under a drummer, you may hear it through every microphone on stage. Carpet is fine, but grass and gravel will need a deck under the band."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "02-stage.html"
+   }
+  },
+  {
+   "type": "RateTable",
+   "props": {
+    "id": "RateTable-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-16",
+       "html": "Power",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "In our experience, this is the requirement that gets missed most often. We need <strong>dedicated</strong> circuits, which means nothing else is plugged into them. A 20-amp circuit shared with catering warmers, a coffee urn or a lighting truss can trip, and that's most likely to happen when everything is switched on at once and the venue is full.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Circuits need to be within about 50 feet of the stage. We bring our own power distribution and cable, so the venue doesn't need to supply either. We just need the venue to confirm those circuits in writing before your event.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-19",
+       "provisional": true,
+       "head": [
+        {
+         "html": "Size"
+        },
+        {
+         "html": "Channels at the desk"
+        },
+        {
+         "html": "Dedicated 20A circuits"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "Solo",
+           "cls": "rate-size"
+          },
+          {
+           "html": "3"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Duo",
+           "cls": "rate-size"
+          },
+          {
+           "html": "3"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Trio",
+           "cls": "rate-size"
+          },
+          {
+           "html": "8"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Quartet",
+           "cls": "rate-size"
+          },
+          {
+           "html": "10"
+          },
+          {
+           "html": "2"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "DJ",
+           "cls": "rate-size"
+          },
+          {
+           "html": "3"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "A channel count is the number of lines that reach the sound desk (the mixing board), including one announcement microphone on its own channel. Your AV lead will ask for this number.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-power.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-23",
+       "html": "Outdoor events and other places without a wall outlet",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "A generator can work if it's quiet, properly grounded and sized comfortably above the power numbers on this page. A small home generator usually won't do the job, and you may hear its noise under every quiet moment of your event.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "For any outdoor event, we'll need cover over the band and the sound desk, whatever the forecast says. Colorado evenings can cool down fast, and by the end of a damp night the musicians may be retuning between songs. If you have a plan to move indoors, please write a decision time into the run of show and name the person who'll make the call.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-power.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-28",
+       "html": "Load-in and strike",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "These times run from when the vehicle arrives to when the band is ready for sound check, and they assume a ground-floor space with parking close enough to roll the gear in. Add 30 minutes for an elevator, and add 30 more if the elevator is shared with catering during their load-in.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-30",
+       "provisional": true,
+       "head": [
+        {
+         "html": "Size"
+        },
+        {
+         "html": "Load-in and setup"
+        },
+        {
+         "html": "Strike"
+        },
+        {
+         "html": "Vehicles"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "Solo",
+           "cls": "rate-size"
+          },
+          {
+           "html": "45 min"
+          },
+          {
+           "html": "30 min"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Duo",
+           "cls": "rate-size"
+          },
+          {
+           "html": "60 min"
+          },
+          {
+           "html": "45 min"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Trio",
+           "cls": "rate-size"
+          },
+          {
+           "html": "60 min"
+          },
+          {
+           "html": "45 min"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Quartet",
+           "cls": "rate-size"
+          },
+          {
+           "html": "90 min"
+          },
+          {
+           "html": "60 min"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "DJ",
+           "cls": "rate-size"
+          },
+          {
+           "html": "45 min"
+          },
+          {
+           "html": "30 min"
+          },
+          {
+           "html": "1"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-31",
+       "rows": [
+        {
+         "term": "Doors and corridors",
+         "text": "We need 36 inches of clearance. The widest item is the bass amp or a keyboard case, so nothing needs a double door, but a 30-inch doorway with a turn in it can add 20 minutes to load-in."
+        },
+        {
+         "term": "Elevator",
+         "text": "An elevator car of about 4 by 6 feet can take everything in several trips. Just tell us when we can use it and we'll plan around that."
+        },
+        {
+         "term": "Sound check",
+         "text": "Sound check takes 30 minutes once the band is set, and we like to finish 60 minutes before the first guest arrives. That gap gives us time to fix anything we find at sound check."
+        },
+        {
+         "term": "Where we store our cases",
+         "text": "We'll need a spot for them that's out of sight of guests and clear of the kitchen path. Any back-of-house corner works. If there's nowhere to put them, just tell us when you book and the cases can go back to the vehicles, which adds 20 minutes to the strike."
+        },
+        {
+         "term": "Strike",
+         "text": "We start the strike (packing up) after the last note. We don't break down during the final set, and nothing gets carried through a space with guests still in it unless the venue requires it."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-loadin.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-40",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Volume",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Someone should decide the volume in advance and write it into the run of show. Otherwise, that decision tends to fall to whoever is standing nearest the sound desk.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-36",
+       "rows": [
+        {
+         "term": "Ceremony, cocktails and dinner, measured at the nearest table",
+         "text": "60 to 65 dBA",
+         "textCls": "tnum"
+        },
+        {
+         "term": "Remarks, awards and anything on a microphone that isn't us",
+         "text": "Silent",
+         "textCls": "tnum"
+        },
+        {
+         "term": "Dancing, measured on the floor",
+         "text": "88 to 95 dBA",
+         "textCls": "tnum"
+        },
+        {
+         "term": "Peaks during the last hour",
+         "text": "100 dBA",
+         "textCls": "tnum"
+        }
+       ],
+       "cls": "def-list"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-37",
+       "html": "If the venue has a volume cap, just give us the number when you book. If the band knows ahead of time that the limit is 95 dBA, we can choose arrangements and instruments that stay under it. If the band only hears about it that night, all they can do is play quieter.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-38",
+       "html": "If your venue has a curfew, just let us know and we can plan the last 20 minutes with you so your event ends on the right song.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-volume.html"
+   }
+  },
+  {
+   "type": "Specs",
+   "props": {
+    "id": "Specs-46",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-41",
+       "html": "What we need your venue to confirm when you book",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-42",
+       "html": "There are six things on our list, and your venue should already have the answers. One email to your venue should take care of all of them.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-43",
+       "source": "own",
+       "cols": false,
+       "items": [
+        {
+         "html": "How many circuits there are, and that they're dedicated"
+        },
+        {
+         "html": "The stage or the floor area, in feet, and the riser height if there is one"
+        },
+        {
+         "html": "The load-in door, the route and when we can use the elevator, if the venue has one"
+        },
+        {
+         "html": "Where the vehicles park and for how long"
+        },
+        {
+         "html": "Any decibel cap, as a number, and any curfew, as a time"
+        },
+        {
+         "html": "Somewhere out of sight for cases and for the musicians to change"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-44",
+       "html": "Not sure of an answer? Send us the venue name and we'll call them ourselves.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "06-checklist.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-50",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-47",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Anything here that your venue disagrees with?",
+       "lede": "Just let us know and we'll talk to them directly."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-48",
+       "html": "Building your timeline next? Check out our <a href=\"../run-of-show/\">run of show templates</a>, along with our <a href=\"../faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "06-checklist.html"
+   }
+  }
+ ]
+}

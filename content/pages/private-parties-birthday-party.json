@@ -1,0 +1,370 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/birthday-party/",
+   "title": "Birthday party band and live music in Denver",
+   "description": "Hire a band, a jazz duo or a singer with a guitar for a 30th, 40th, 50th or 60th birthday party in Denver, at home or at a venue.",
+   "titleExact": true,
+   "ogImage": "img/acts/medina-live-poster.jpg",
+   "breadcrumb": "Birthday party",
+   "schema": {
+    "service": {
+     "name": "Live music for a birthday party",
+     "serviceType": "A band, a jazz duo, a singer with a guitar or a Spanish guitarist for 30th, 40th, 50th and 60th birthday parties and surprise parties",
+     "description": "We bring live music to milestone birthday parties across Denver and the Front Range. A trio or quartet is great for a 30th or 40th with dancing, a jazz duo suits a 50th with dinner and toasts, and a solo musician or a duo is lovely for a 60th and beyond. We play at home, at clubs and in private dining spaces, a singer can learn the birthday song the guest of honor loves, and you’ll have a microphone for the toasts and a personal point of contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "mHtY8DbqLtA",
+      "name": "Live band for a birthday party: Tony Medina playing Purple Rain to a packed dance floor",
+      "description": "Tony Medina plays Purple Rain to a packed dance floor at a milestone party, and his band is a great choice for a 40th or 50th birthday with dancing.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT7M12S"
+     },
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a birthday dinner: Autumn Leaves on upright bass and guitar",
+      "description": "A jazz duo plays Autumn Leaves on upright bass and guitar, a great size for a 50th birthday dinner.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Private parties in Denver",
+       "slab": true,
+       "title": "Live music for a milestone birthday party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Everyone has a song they’ve loved since college, and it’s hard to beat hearing that song played live at your own birthday party. A milestone birthday is all about one person, so we’ll help you choose live music that suits them, from a trio that gets people dancing at a 30th to a jazz duo that plays through dinner at a 50th.",
+       "headingText": [
+        {
+         "html": "We can play your party at home, at a club or in a private dining space. Celebrating a couple instead? Take a look at <a href=\"/private-parties/anniversary-party/\">anniversary party</a> music, or see all of our <a href=\"/private-parties/\">private parties</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Video clips of a birthday party band and a jazz duo",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Tony Medina playing Purple Rain to a packed dance floor at a milestone party, and a jazz duo playing Autumn Leaves on upright bass and guitar, which is a lovely fit for a birthday dinner."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+         "title": "Tony Medina playing Purple Rain to a packed dance floor at a milestone party",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo, upright bass and guitar, playing Autumn Leaves",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Sizes",
+       "title": "How to choose a band for a birthday party",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A 30th and a 50th can be very different parties, so here’s where we’d usually start for each one."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The 30th: a trio, and the DJ after it",
+         "text": "This is usually the one that runs latest. A trio of guitar, bass and drums gets people dancing without a stage, and the <a href=\"/ensembles/dj/\">DJ</a> can take over when the band is done. If your friends love funk and soul, try our <a href=\"/ensembles/funk-band/\">funk band</a>. If they go out to hear house music, our <a href=\"/ensembles/afro-house-dj/\">Afro house DJ</a> plays deep house and amapiano (house music built around piano) and can add live tabla drums."
+        },
+        {
+         "term": "The 40th: a band for dinner and dancing",
+         "text": "A 40th is often a seated dinner first and a dance party after. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> and <a href=\"/artists/tony-medina/\">Tony Medina</a> can both start small for dinner and grow into a four-piece band for dancing, and our <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> is a great pick if your crowd grew up on Stevie Wonder and Aretha Franklin. Did your friends grow up on 90s hip-hop? <a href=\"/artists/little-moses-jones/\">Little Moses Jones</a> is a six-piece band that can play your whole party, and they rap the verses live."
+        },
+        {
+         "term": "The 50th: a jazz duo for dinner and toasts",
+         "text": "More often a seated dinner with a toast in it than a floor. An upright bass and guitar can play all through dinner, quiet enough that nobody has to raise their voice. For a bigger crowd, our <a href=\"/ensembles/jazz-duo-trio/\">jazz trio</a> adds drums, played softly with brushes."
+        },
+        {
+         "term": "The 60th and beyond: one or two musicians",
+         "text": "A 60th often starts earlier, with more family and more people sitting down. A <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, a <a href=\"/ensembles/solo-piano/\">pianist</a> or a duo can play from the time guests arrive through dessert, and we often get asked for a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> for a long family dinner."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Curious what each size costs? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "The party",
+       "title": "Birthday surprises, toasts & song lists",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "The surprise entrance",
+         "text": "We can have the band start the guest of honor’s favorite song the moment they walk in. We plan it a lot like a <a href=\"/private-parties/proposals/\">surprise proposal song</a>, so the musicians know exactly when to start."
+        },
+        {
+         "term": "The toast",
+         "text": "When it’s time for toasts, the musicians will stop playing, and we can bring a microphone so everyone can hear. If you have several speakers or a slideshow planned, we’ll help you map out the <a href=\"/planners/run-of-show/\">flow of the evening</a>."
+        },
+        {
+         "term": "A song list for the guest of honor",
+         "text": "Tell us who we’re celebrating, the age they’re turning and a few of their favorite songs, and we’ll put the song list together from the years they care about most, like the college years for a 40th or the wedding years for a 60th. Looking for ideas? Browse our <a href=\"/repertoire/\">full song list</a>."
+        },
+        {
+         "term": "A 50th with dancing",
+         "text": "Some 50ths are all about the dance floor, so you may want a band that can play quietly through dinner and then turn it up. Our <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> and our soul and R&amp;B band are both great at that."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-17",
+       "html": "“...We discussed what we were looking for, (funky jams) and they delivered. It was the perfect band for my husband’s 50th. They are personable, professional, and very talented musicians.”",
+       "by": "Jill B. a 50th Birthday Party, September 2025."
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-18",
+       "html": "...From beginning to end. Pulled together bandmates for my husband’s 80th outdoor birthday bash. Guests were impressed with the repertoire. More than the usual cover band – jazzy sophistication.”",
+       "by": "Noreen S., an outdoor 80th, September 2025."
+      }
+     }
+    ],
+    "_file": "03-the-party.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "Something different",
+       "title": "Birthday party entertainment ideas for adults.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-22",
+       "rows": [
+        {
+         "term": "Live band karaoke for the 40th",
+         "text": "The band plays the hits and hands the microphone to any friend who wants a turn (and you probably know who that’ll be). <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> works best at a club or a house with a big main floor."
+        },
+        {
+         "term": "A flamenco performance at a birthday dinner",
+         "text": "<a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> is our flamenco trio, and they can play through a birthday dinner and then step out for one showstopping piece."
+        },
+        {
+         "term": "A sing-along the whole family can join",
+         "text": "A 70th or 80th birthday can bring a few generations together, and just about everyone knows the Beatles. <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> gets the whole family singing."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "Questions",
+       "title": "What hosts want to know about birthday party music",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-26",
+       "items": [
+        {
+         "q": "Can we hire a band for a birthday party?",
+         "a": "Yes, and we can help you choose the right size. Just tell us which milestone you’re celebrating and the kind of party you have in mind. You’ll book through Signet Artists in Denver on one contract, and you’ll have one personal contact."
+        },
+        {
+         "q": "What size band for a 40th birthday party?",
+         "a": "A trio or a quartet. A trio can play quietly through dinner and get people dancing after, and a quartet is a better fit for a club or a venue with more than a hundred guests. If you want to keep going late, a DJ can take over on the same sound system."
+        },
+        {
+         "q": "How do you handle a surprise birthday party?",
+         "a": "We’ll have the musicians set up early and playing quietly, so it just looks like there’s live music that night. Then the guest of honor’s song can start on a cue you choose with the band, like a nod from the host or a text from the door."
+        },
+        {
+         "q": "Can the band learn the birthday person's favorite songs?",
+         "a": "Yes. Let us know the song when you book and we can usually learn it (we usually need a few weeks before a booking to learn new material). A <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> can learn one for you, too."
+        },
+        {
+         "q": "Can a band play a birthday party at home?",
+         "a": "Yes. A solo musician needs about 6 by 4 feet, a duo about 8 by 6 and a trio about 12 by 8, plus an outlet on its own circuit, and any of them can play dinner quietly enough for your guests to talk. Outdoors, we’ll just need a covered, level, dry spot with power, and if your HOA or neighborhood limits evening sound, we’ll plan around it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-29",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning a big birthday? Send us the date and we’ll help you find the right music.",
+       "lede": "We can bring anything from one musician to a full band, with a sound system that suits your party."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

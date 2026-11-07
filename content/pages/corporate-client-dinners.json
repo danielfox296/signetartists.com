@@ -1,0 +1,264 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/client-dinners/",
+   "title": "Live music for client dinners and member events in Denver",
+   "description": "A jazz duo for client dinners and member events in Denver, at a volume that lets your guests talk all evening.",
+   "titleExact": false,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Client dinner and member event entertainment",
+     "serviceType": "Live music for client dinners, member events and private clubs",
+     "description": "We offer a jazz duo and small ensembles for client dinners, member events and private clubs in Denver, at a level where nobody has to raise their voice.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a wedding cocktail hour: Autumn Leaves, guitar and upright bass",
+      "description": "The Signet jazz duo playing Autumn Leaves live on guitar and upright bass.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Client dinners & member events",
+       "slab": true,
+       "title": "Live dinner music in Denver",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You've invited your best clients to dinner, and the conversation is what you're really there for. A jazz duo is a lovely fit for that. It’s upright bass and guitar in the corner, playing jazz standards quietly, and it’s an easy way to make a dinner feel polished.",
+       "headingText": [
+        {
+         "html": "It’s a great choice for client dinners, member and association events, private clubs, firms and showrooms, or for any event where you want lovely music but nobody's planning to dance. Many hosts start with the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, for an hour around a toast or for a whole dinner. Want to see what else we do? Take a look at <a href=\"/corporate/\">our corporate entertainment</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "title": "Why a jazz duo works for a client dinner",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Your guests came to talk to each other, so we'll keep the music quiet enough that nobody has to lean in.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "A duo is built for that. With just two instruments, it's easy to keep the music low and still sound great. We'll plan the music with you around the flow of the evening, so the duo can stop whenever someone stands up to speak.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "If you're planning a toast, we can bring a microphone for your speaker. If you'd like a singer out front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can play your dinner as a duo. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> can also play your dinner, either on the venue’s piano or on a stage piano we bring.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-volume.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-15",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Video Clips",
+       "title": "Hear the jazz duo play live.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here's a clip of the duo playing a jazz standard."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-13",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "02a-footage.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "title": "Related events",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Planning a thank-you for your clients? Check out our <a href=\"/blog/client-appreciation-event-ideas-denver/\">client appreciation event ideas in Denver</a>. If the dinner is the first night of an offsite in the mountains, take a look at <a href=\"/corporate/retreats/\">corporate retreats</a>. For a dinner at home or a milestone at the club, check out <a href=\"/private-parties/\">private parties and dinners</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-venues.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Client dinner questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Need stage sizes and power details? Learn more on our <a href=\"/planners/technical/\">technical page</a>. Have another booking question? You'll find plenty of answers in our <a href=\"/planners/faq/\">list of planner questions</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "How loud is a jazz duo during dinner?",
+         "a": "The duo plays at about the level of the conversation at the table, and they can bring it up or down to suit your guests. If your venue or club has a sound limit, let us know when you book and we'll plan the evening around it."
+        },
+        {
+         "q": "Can you invoice against a purchase order?",
+         "a": "Yes. We can be set up as a vendor and quote against a PO, and we can send whatever paperwork your finance team or the club needs. Just let us know what the process looks like."
+        },
+        {
+         "q": "How much space does the duo need?",
+         "a": "The duo needs a corner of about 8 by 6 feet, one dedicated 20-amp circuit and about an hour to set up, and we can load in through a service corridor. You won't need a stage or a house sound system. Sets can run 45 to 60 minutes with 15 to 20 minutes between them, and we can keep music playing through the breaks."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the guest count and the venue, and we'll recommend the right ensemble for your dinner.",
+       "lede": "Whether you need a solo musician or a full band, we'll size the sound to your venue, and you'll have a personal point of contact all the way through."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

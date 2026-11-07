@@ -1,0 +1,80 @@
+{
+ "id": "tony-medina",
+ "name": "Tony Medina",
+ "presentation": "face",
+ "status": "listing",
+ "page": "artists/tony-medina/",
+ "style": "Blues, rock and roots",
+ "face": "Tony Medina",
+ "material": "Covers and originals",
+ "bucket_tags": [
+  "cocktail",
+  "party",
+  "budget"
+ ],
+ "config_tags": [
+  "solo",
+  "duo",
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "blues",
+  "classic-rock"
+ ],
+ "vocals": "sung",
+ "from": "solo",
+ "img": "tony-medina-card.jpg",
+ "alt": "Tony Medina playing an acoustic guitar under string lights, in black and white.",
+ "video": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+ "video_poster": "img/acts/medina-live-poster.jpg",
+ "blurb": "Tony Medina has a smoky voice, and he plays guitar with all the rhythm of a funk player. He plays the blues and the rock and roll that came out of it, from Freddie King and B.B. King to The Cars and Prince, along with his own songs. He can play solo for welcome drinks and dinner, or bring a four piece when you want people dancing.",
+ "seo_title": "Tony Medina: blues and rock for Denver private events",
+ "meta_description": "Tony Medina plays blues and rock for private events in Denver and the Colorado mountains. You can book him solo or as a four piece. Just send us your date.",
+ "identity": [
+  "Book Tony Medina when you want a singer who sounds like he's lived a little. He's a lot of fun to watch, too.",
+  "Your guests will likely know most of the covers.",
+  "We're happy to help you pick the right size for your event."
+ ],
+ "ladder": [
+  {
+   "config": "solo",
+   "build": "Voice and acoustic guitar",
+   "bestFor": "On his own, he's an easy pick for welcome drinks, patios and dinner, and your guests shouldn't have to raise their voices."
+  },
+  {
+   "config": "duo",
+   "build": "Voice and guitar, plus percussion",
+   "bestFor": "A percussionist gives him a little more rhythm, and that's a nice touch at a patio event or a reception."
+  },
+  {
+   "config": "trio",
+   "build": "Voice and guitar, bass, drums",
+   "bestFor": "If your venue is on the small side, the trio can still get people dancing."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus a second guitar or keys",
+   "bestFor": "This is his full dance band. We'd suggest it for office parties and milestone birthdays."
+  }
+ ],
+ "setlist": {
+  "note": "Watch the video clips to see him play these covers. His full song list runs from sixties soul and classic rock through nineties alternative, and we'll put the setlist together around the flow of your event. This is just a sample, so the songs he plays at your event will be a little different.",
+  "items": [
+   "Going Down",
+   "The Thrill Is Gone",
+   "Purple Rain",
+   "Drive",
+   "Don't Drink the Water"
+  ]
+ },
+ "depth": null,
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person"
+ }
+}

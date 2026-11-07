@@ -1,0 +1,289 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/funk-band/",
+   "title": "Funk band for hire in Denver for parties and after-parties",
+   "description": "This instrumental funk and soul band plays Denver parties and company after-parties as a trio of guitar, bass and drums, or as a quartet with a horn or keys.",
+   "titleExact": true,
+   "ogImage": "img/funk-band-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Funk band",
+   "schema": {
+    "service": {
+     "name": "Funk band",
+     "serviceType": "Instrumental funk and soul band for parties, after-parties and corporate events",
+     "description": "An instrumental funk and soul band, booked through Signet Artists in Denver, for private parties, company after-parties, summer picnics and retreats across Denver, the Front Range and the Colorado mountains. It plays as a trio of guitar, bass and drums, or as a quartet with a horn or keys.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "funk-trio"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Instrumental funk and soul",
+       "slab": true,
+       "title": "A funk band for parties, after-parties and patios.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "It's hard to sit still when a great funk bass line kicks in. This is an instrumental funk band, so the songs can run straight into each other and keep people dancing for as long as you'd like.",
+       "headingText": [
+        {
+         "html": "It's a great fit for milestone birthdays, company after-parties, summer picnics and the last night of a retreat."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=funk-trio",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can put the band together around your event, from the size of the group to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/funk-band-card.jpg",
+        "alt": "A row of level meters lit up in mustard and cream on a teal field, drawn flat, with the words funk band above them.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a funk band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The band plays James Brown, the Meters, Stevie Wonder, Herbie Hancock, Sly and the Family Stone, Prince, Earth, Wind &amp; Fire and the funk side of Motown, just to name a few. Your guests will likely recognize a lot of these songs from the bass line alone, and that's what the band leans into."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The band can play slower, warmer songs during dinner and pick up the pace when it's time to dance. Want a singer? Our <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> plays the same songwriters with a singer out front and a horn on the choruses. Want some more song ideas? Our full <a href=\"/repertoire/\">song list</a> has plenty.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "Do you need a funk trio or a quartet?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The trio",
+         "text": "The trio is guitar, bass and drums. It's a great size when the dance floor is close to the tables, like in a club, a restaurant or a backyard."
+        },
+        {
+         "term": "The quartet",
+         "text": "The quartet adds a horn or keys for a bigger sound, which is great in a ballroom or with a crowd of more than two hundred. A horn can play the horn parts from the original songs, and keys can fill out the sound under the guitar solos."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Want something mellower for cocktails? A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> or a <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> can play before the band, and a <a href=\"/ensembles/dj/\">DJ</a> can keep the party going afterward.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays and private parties</a>",
+         "text": "The band is a great way to celebrate a fortieth or a fiftieth, and most hosts go with the trio for these parties."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">Company after-parties</a>",
+         "text": "After a company dinner or a conference program, the band gives everyone a chance to let loose. Planning the rest of your <a href=\"/corporate/\">company event</a>? We can help with that too."
+        },
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Summer picnics and patios</a>",
+         "text": "Instrumental funk sounds great on a lawn or a rooftop, whether your guests want to dance near the band or keep eating at the far tables."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">The last night of a retreat</a>",
+         "text": "It's often the one night the whole company is together with the agenda finished, so it's a great time for a band, whether you're at a mountain venue or back in Denver."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Funk band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Have a question we haven't covered? Our <a href=\"/planners/faq/\">full FAQ</a> goes into more, or you can just ask us.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "How loud is a funk band?",
+         "a": "While people are eating, the band can keep the drums light and the volume down, so conversation is easy. Once the dancing starts, the band can turn it up, and they'll keep the volume comfortable for the guests sitting closest. The band will adjust to the venue and the crowd, and if there's a sound limit, just tell us the number so they can stay under it."
+        },
+        {
+         "q": "Can a funk band play outdoors?",
+         "a": "Yes, the band plays a lot of patios and lawns. The band just needs a covered, level, dry spot with power, and we'll work out a backup plan with you, since Colorado weather can turn fast."
+        },
+        {
+         "q": "Can we add time or ask for a song?",
+         "a": "Yes. Just tell us the song when you book, and the band can usually learn it. If you think your event might run long, let us know that too."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning a party and looking for a funk band? Send us the date and we'll see what we can do.",
+       "lede": "We'll match the sound system to your venue, and you'll have one person to call from load-in to load-out."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

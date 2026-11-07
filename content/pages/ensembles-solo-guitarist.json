@@ -1,0 +1,262 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/solo-guitarist/",
+   "title": "Solo guitarist for cocktail hours and dinners in Denver",
+   "description": "Hire a solo guitarist for cocktail hours, client dinners and private dinners in Denver. One musician can play blues, roots, jazz and Spanish guitar.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Solo guitarist",
+     "serviceType": "Solo guitarist for cocktail hours, client dinners and private dinners",
+     "description": "One guitarist, with or without vocals, plays blues, roots, jazz and Spanish guitar for cocktail hours, client dinners and private dinners across Denver and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "solo-guitarist"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Blues, roots, jazz and Spanish flavors",
+       "slab": true,
+       "title": "A solo guitarist for hire in Denver for cocktail hours and dinners.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Sometimes all you need to make a dinner feel special is one good guitarist in the corner. Your guitarist can play with or without singing, and either way we’ll keep the volume low enough that your guests can talk.",
+       "headingText": [
+        {
+         "html": "We can bring a solo guitarist to your event in Denver, Boulder, Colorado Springs or the mountain towns."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=solo-guitarist",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "Tell us what you have in mind and we’ll work out the songs with you, and even what the guitarist wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/acts/solo-bridge.jpg",
+        "alt": "A guitarist playing an acoustic set on a Denver bridge.",
+        "width": "1600",
+        "height": "1066",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Songs & styles",
+       "title": "Should your solo guitarist sing or just play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "If you’d like vocals, the guitarist can sing blues, roots and singer-songwriter favorites, which usually works well for a cocktail hour or a patio. For guitar alone, we’d suggest jazz standards like Blue Bossa or some Spanish guitar pieces, and those are great during dinner. If you know you want that Spanish sound, take a look at our <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, and if singing is the main thing, check out our <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "One musician with a small sound system can fit into a lot of places, like a private dining space at a restaurant, an art gallery or a home where you’d like the furniture to stay put. For a bigger guest list, you may want two musicians, and our <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> and <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> are both great options.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Cocktail hours</a>",
+         "text": "A solo guitarist is a lovely way to fill the time between a wedding ceremony and dinner, especially if you have a smaller guest list."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
+         "text": "When you’re hosting clients, the conversation comes first, and a guitarist can play softly through the whole dinner."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Private dinners at home</a>",
+         "text": "If you’re hosting at home in <a href=\"/private-parties/denver/\">Denver</a> or anywhere on the Front Range, a guitarist is a nice way to treat your guests."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Company receptions</a>",
+         "text": "We can have a guitarist play as guests arrive before your program, or as background music through the reception."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals and memorials</a>",
+         "text": "We can bring a guitarist to a funeral, a memorial or a graveside service, and your family can choose the songs."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "We can play an afternoon program in a memory care neighborhood with no sound system at all."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Wondering what live music costs in Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-16",
+       "html": "Solo guitarist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "We’ve also put together a <a href=\"/planners/faq/\">longer list of questions</a> that come up a lot.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-18",
+       "items": [
+        {
+         "q": "Is one guitarist enough for a cocktail hour?",
+         "a": "Yes, for a shorter guest list, one guitarist is usually plenty. You'll usually be able to hear the guitar from anywhere in the space, even with everyone talking."
+        },
+        {
+         "q": "Who will be playing at our event?",
+         "a": "We'll match you with a guitarist from our roster who suits the music you want, and we'll tell you who's playing when you book."
+        },
+        {
+         "q": "Can we ask for a song?",
+         "a": "Yes. You can pick your favorites from our <a href=\"/repertoire/\">song list</a> (and give us a do-not-play list, too). If you'd like a song that isn't on it, let us know when you book and we can usually learn it. If you think your event might run long, tell us that too, and we can plan a few more songs."
+        },
+        {
+         "q": "Can the solo guitarist play outdoors?",
+         "a": "Yes, our guitarists often play on patios and in courtyards. You'll want a spot that's covered, level and dry, and if there's no power nearby, we can bring a battery-powered sound system. We'll also plan with you ahead of time for moving indoors, since Colorado evenings can turn cold fast."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-21",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Need a guitarist for your dinner or cocktail hour? Just send us the date and we'll get back to you with availability and a price.",
+       "lede": "Whatever you book, from a solo musician to a full band, you’ll have a personal point of contact for your event, and if we bring a sound system, we’ll size it to your venue."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

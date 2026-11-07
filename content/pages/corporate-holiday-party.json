@@ -1,0 +1,481 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/holiday-party/",
+   "title": "Corporate holiday party bands and DJs in Denver, 2026",
+   "description": "Book live music for Denver corporate holiday parties in 2026. We can bring a band or a DJ, and you'll have a single point of contact from start to finish.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate holiday party entertainment",
+     "serviceType": "Live bands and DJs for corporate holiday parties",
+     "description": "We book live music and DJs for corporate holiday parties in Denver and along the Front Range in November and December 2026, and we’ll size the music to your venue and your program.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Holiday season 2026",
+       "slab": true,
+       "title": "Denver corporate holiday parties, November and December.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the office holiday party where almost everyone ended up dancing. That’s the party we can help you book. A holiday party band can play through dinner at a volume where people can still talk, stop for the remarks, and then get everyone dancing when the program ends.",
+       "headingText": [
+        {
+         "html": "Tell us the date and the venue and we’ll check the booking calendar. If your party is coming up sooner, no worries. Just reach out and we can often make something great work."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video Clips",
+       "title": "See Tejas Singh live.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Watch Tejas Singh build a cover song live, looping one part on top of the next. This is the sound his duo brings to drinks and dinner."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live looping a Bob Marley cover",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-footage.html"
+   }
+  },
+  {
+   "type": "SeasonBoard",
+   "props": {
+    "id": "SeasonBoard-13",
+    "band": "sunk",
+    "anchor": "dates",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "November through New Year's Eve",
+       "title": "Holiday party dates for 2026.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here are the Thursdays, Fridays and Saturdays through the holidays, plus New Year's Eve, with Thanksgiving and Christmas left out. We’ve marked the peak dates, since a December Saturday in Denver can cost more than a Thursday in November."
+      }
+     },
+     {
+      "type": "Season",
+      "props": {
+       "id": "Season-11",
+       "dates": [
+        {
+         "date": "2026-11-05"
+        },
+        {
+         "date": "2026-11-06"
+        },
+        {
+         "date": "2026-11-07"
+        },
+        {
+         "date": "2026-11-12"
+        },
+        {
+         "date": "2026-11-13"
+        },
+        {
+         "date": "2026-11-14"
+        },
+        {
+         "date": "2026-11-19"
+        },
+        {
+         "date": "2026-11-20"
+        },
+        {
+         "date": "2026-11-21"
+        },
+        {
+         "date": "2026-11-27"
+        },
+        {
+         "date": "2026-11-28"
+        },
+        {
+         "date": "2026-12-03"
+        },
+        {
+         "date": "2026-12-04"
+        },
+        {
+         "date": "2026-12-05",
+         "peak": true
+        },
+        {
+         "date": "2026-12-10"
+        },
+        {
+         "date": "2026-12-11",
+         "peak": true
+        },
+        {
+         "date": "2026-12-12",
+         "peak": true
+        },
+        {
+         "date": "2026-12-17"
+        },
+        {
+         "date": "2026-12-18",
+         "peak": true
+        },
+        {
+         "date": "2026-12-19",
+         "peak": true
+        },
+        {
+         "date": "2026-12-31",
+         "note": "New Year's Eve"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "02-board.html"
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "The entertainment",
+       "title": "Holiday party bands, duos and DJs.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most companies go with one of these three. You can also pair them up, and we’ll run them through one sound system."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-15",
+       "source": "picks",
+       "picks": [
+        {
+         "act": "tejas-singh",
+         "config": "quartet",
+         "kicker": "Quartet",
+         "why": "This is the act to book when you want the whole office out on the dance floor.",
+         "face": "style"
+        },
+        {
+         "act": "jazz-duo",
+         "config": "duo",
+         "kicker": "Duo",
+         "why": "A duo covers drinks and dinner without anybody having to raise their voice, and it’s a great choice for a night with speeches in it.",
+         "face": "style"
+        },
+        {
+         "act": "dj",
+         "config": "dj",
+         "kicker": "DJ",
+         "why": "A solid DJ gets people moving, can cover the whole party, and is one of the most popular choices for a company event.",
+         "face": "style"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "<a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> is a great choice when you want the whole office singing, and the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs through dinner. A <a href=\"/ensembles/solo-piano/\">pianist</a> works well for an office party that stays a dinner all evening. <a href=\"/artists/little-moses-jones/\">Little Moses Jones</a> is a six-piece band that plays 90s and 2000s R&B and hip-hop, and they bring their own sound engineer. They’re perfect if your team grew up on those songs. Looking for house music? Our <a href=\"/ensembles/afro-house-dj/\">Afro house DJ</a> is a great way to get people dancing, and can add live tabla (hand drums) if you’d like. Want a country feel? <a href=\"/artists/meghan-clarisse/\">Meghan Clarisse</a> can play solo, as a duo or with a five-piece band. Looking for something else? Check out our full <a href=\"/music/\">Artist Roster</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-leads.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Planning your party",
+       "title": "Three things to know about a December party.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-20",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [],
+       "c2": []
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "There are usually speeches. Somebody thanks the team, somebody hands out an award. We’ll have a microphone ready for your speakers, and the music will stop before they reach it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Half the crowd wants to talk and the other half is waiting to dance. A duo through dinner and a DJ for the dancing can keep both groups happy.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "The venue is usually a restaurant or a hotel ballroom. We’ll work out setup, power and any volume limit with the venue ahead of time, so you don’t have to.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Throwing the party at a house instead? Find out more on our <a href=\"/private-parties/holiday-party/\">holiday party at home page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-december.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "Downtown hotels",
+       "title": "Denver holiday party venues.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A Denver company party in December often means a downtown hotel, and our musicians are used to working with the banquet teams there."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Want some help choosing? <a href=\"/blog/corporate-holiday-party-venues-denver/\">Our Denver venue guide</a> walks through sixteen downtown spaces, and you can learn more about downtown parties on our <a href=\"/corporate/holiday-party/denver/\">Denver holiday party page</a>. We play <a href=\"/corporate/holiday-party/colorado-springs/\">Colorado Springs</a> too, an hour south. Curious what a December band costs in Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>. If your event is more of a dinner than a party, check out our <a href=\"/corporate/client-dinners/\">client dinners page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04b-venues.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-35",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "Holiday party questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-32",
+       "html": "Need stage sizes and power details for your venue? Check out our <a href=\"/planners/technical/\">technical page</a>. You’ll find more answers on our <a href=\"/planners/faq/\">planner FAQ</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-33",
+       "items": [
+        {
+         "q": "How loud is it?",
+         "a": "We’ll keep the music at whatever level suits your party, up to what the venue allows, and we can bring it up or down as the party goes on."
+        },
+        {
+         "q": "What does the venue need to provide?",
+         "a": "We’ll usually need a time at the loading dock and access to an elevator. Setup can take 45 to 90 minutes depending on the size of the act, and we may need dedicated power, too."
+        },
+        {
+         "q": "Can you go through our procurement process?",
+         "a": "Yes. We can be set up as a vendor, quote against a purchase order and send whatever paperwork your finance team needs. Just let us know what the process looks like."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04c-faqs.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-41",
+    "band": "ruled",
+    "anchor": "january",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-36",
+       "eyebrow": "Holding it in January",
+       "title": "The January holiday party.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Many Denver companies now hold the party in January, and the venues have followed, with holiday packages that run into the third week of January and past it."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-37",
+       "html": "All of this works just as well in January. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a>, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a> and <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> are all great choices for a January party, when your guests aren’t juggling as many invitations.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-38",
+       "html": "A January date at a Vail or Breckenridge venue makes a great après-ski party. Find out more on our <a href=\"/corporate/retreats/\">corporate retreats page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-39",
+       "html": "Want some more ideas? Check out our <a href=\"/blog/january-office-party-ideas/\">January office party ideas</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04d-january.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-44",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-42",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and we'll help put the holiday party together.",
+       "lede": "From a solo musician to a full band, we’ll match the live music and the sound system to your venue and stay with you the whole way."
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

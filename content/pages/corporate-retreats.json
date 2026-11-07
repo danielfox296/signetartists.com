@@ -1,0 +1,387 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/",
+   "title": "Corporate retreat evening activities in the Colorado mountains",
+   "description": "Evening activities and entertainment for corporate retreats and company offsites in Vail, Aspen, Beaver Creek and Breckenridge.",
+   "titleExact": true,
+   "nav": "corporate",
+   "breadcrumb": "Corporate retreats",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "Live music for corporate retreats and incentive events in the Colorado mountain corridor, with anything from one musician to a quartet.",
+     "areaServed": [
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Live music for company offsites",
+       "slab": true,
+       "title": "Corporate retreat evenings in the Colorado mountains.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "By the last night of a retreat, the meetings are over and everyone’s ready to let loose a little. We can bring the right band for that party, plus different music for the welcome dinner and the program night earlier in the stay, all on one contract.",
+       "headingText": [
+        {
+         "html": "Planning something closer to Denver? Take a look at our <a href=\"/corporate/\">corporate events</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "Live music in Denver and the Colorado mountains.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Our musicians play all over Colorado, from Denver venues to outdoor stages at ranches and resorts."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-7",
+       "images": [
+        {
+         "src": "/img/range.jpg",
+         "alt": "The Denver skyline against the Front Range, from City Park.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent on grass with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-10",
+       "html": "Live music for each night of your retreat",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The welcome dinner",
+         "text": "Everyone’s been traveling all day, and this is the night for conversation. A duo is a great choice here, because colleagues who’ve just flown in can hear each other and actually get acquainted."
+        },
+        {
+         "term": "The program night",
+         "text": "This is the night for awards, remarks and maybe a look back at the year. We’ll plan the music around your program, so nobody has to speak over the band."
+        },
+        {
+         "term": "The last night",
+         "text": "This is the night to turn the music up. A quartet can get people dancing and still stay inside the resort’s sound limit and curfew. If you’d like a Featured Artist out front, consider <a href=\"/artists/tejas-singh/\">Tejas Singh</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Want some ideas? We’ve written up some <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas in Vail</a>, and if you’re planning a dinner in town, take a look at our <a href=\"/corporate/client-dinners/\">client dinners page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "We can also help with the quieter parts of a retreat. <a href=\"/artists/firstwater/\">Firstwater</a> is a seventy-five-minute sound bath with your whole group resting on the floor, and it’s a lovely way to open a morning or close an evening. <a href=\"/artists/rene-moffatt/\">René Moffatt</a> plays his own folk and Americana songs, and he’s a perfect fit after dinner.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-nights.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-20",
+    "band": "sunk",
+    "anchor": "remote-teams",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Meeting in person",
+       "title": "Offsites for remote and hybrid companies.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most of the people organizing company offsites now work remote or hybrid themselves (91 percent, in a 2026 industry report), and 57 percent of fully remote companies call the offsite essential to the business. Most of these companies get together once or twice a year for a few weekdays, and a lot of them choose Colorado, because a remote team can fly straight into Denver and be in the mountains in about two hours."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "The first night of a remote team’s offsite can feel a little different from other corporate events. Many of your colleagues may only know each other from video calls, so a relaxed dinner with live music is an easy way to break the ice.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "We’ve also put together a list of <a href=\"/blog/company-offsite-ideas-colorado-remote-teams/\">company offsite ideas in Colorado for remote teams</a>. Our <a href=\"/ensembles/americana-band/\">Americana band</a> gives a group from out of state a real taste of Colorado, and <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a> is a fun choice if your team likes to sing.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02b-remote.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "Resort dates",
+       "title": "Bringing live music to a mountain resort.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A date at a resort can take a little more planning than one in Denver, and it mostly comes down to travel."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Vail and Beaver Creek are a straight drive up I-70 from Denver, while Aspen can take most of a working day each way. Just let us know where the retreat is and we’ll work out the travel with you.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "A band that finishes late in Aspen may need to stay the night, so we’ll plan for lodging there. The towns along I-70 are close enough that lodging usually isn’t needed.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-rates.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-30",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "The resort towns",
+       "title": "Corporate retreats in Vail, Aspen, Beaver Creek and Breckenridge.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Every mountain town works a little differently, so take a look at the one you’re considering."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-28",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/retreats/vail/\">Vail</a>",
+         "text": "Vail is a popular place for incentive events, and venues there have their own way of handling setup."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/aspen/\">Aspen</a>",
+         "text": "Many corporate dinners in Aspen happen in smaller, more intimate spaces, so a duo or a trio is often plenty."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/beaver-creek/\">Beaver Creek</a>",
+         "text": "Many of the venues here are up the mountain above the village hotels, and the village is gated, so we’ll plan load-in around its access times."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/breckenridge/\">Breckenridge</a>",
+         "text": "Breckenridge is the highest of the four towns, and many events here happen in the historic district rather than in hotels."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "05-resorts.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-36",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "Retreat questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-32",
+       "html": "Want more detail? Check out our <a href=\"/planners/mountain/\">mountain page</a> for sound limits and curfews in each town, our <a href=\"/planners/technical/\">technical page</a> for stage sizes and power, and our <a href=\"/planners/faq/\">planners question list</a> for more booking questions.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-33",
+       "items": [
+        {
+         "q": "What does the resort need to provide?",
+         "a": "We’ll usually need one or two dedicated 20-amp outlets near the performance area, and they shouldn’t share power with catering warmers or lighting, since that’s the most common cause of a setup problem. Setup can take 45 to 90 minutes and packing up can take 30 to 60, depending on how big the band is, and we’ll time both around the venue’s dock and elevator schedule."
+        },
+        {
+         "q": "How loud is it, and do you honor sound caps and curfews?",
+         "a": "We can adjust the volume to suit each night of your retreat. And yes, we’ll honor both. Each mountain venue has its own rules, so just let us know the sound limit and the curfew when you book, and we’ll plan the setlist around them."
+        },
+        {
+         "q": "Can the band play outdoors at altitude?",
+         "a": "Yes, as long as the band is on a covered, level and dry stage with power. Mountain temperatures can drop fast in the evening, so we’ll also decide with you ahead of time when to move indoors. These towns sit from about 7,900 feet in Aspen to roughly 9,600 in Breckenridge. At that altitude, singers and horn players may need to pace themselves, and the temperature swing means a bit more retuning."
+        },
+        {
+         "q": "Do you play company offsites for remote and hybrid teams?",
+         "a": "Yes, and in our experience, offsites are one of the most common reasons companies book live music in the mountains. Just tell us the dates, the venue and roughly how many people are flying in, and we’ll help you plan every evening of the stay."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-34",
+       "html": "We quote each date one-by-one.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-39",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-37",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the retreat dates and we'll plan the evenings with you.",
+       "lede": "Whether you want one musician or a full band, we’ll size the sound to your venue, and you’ll have a personal contact for the whole stay."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

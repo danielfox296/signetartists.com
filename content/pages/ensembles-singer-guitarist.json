@@ -1,0 +1,344 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/singer-guitarist/",
+   "title": "Singer and guitarist for hire in Denver for weddings and parties",
+   "description": "Hire an acoustic singer and guitarist in Denver for cocktail hours, welcome drinks, dinner parties and small weddings.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "ogImageAlt": "A singer and guitarist playing on a bridge over a river.",
+   "nav": "music",
+   "breadcrumb": "Singer and guitarist",
+   "schema": {
+    "service": {
+     "name": "Singer and guitarist",
+     "serviceType": "Acoustic singer and guitarist for cocktail hours, welcome drinks, patios, dinner parties and small weddings",
+     "description": "A singer and guitarist plays singer-songwriter, pop, soul and classic rock covers at a volume your guests can talk over, for cocktail hours, welcome drinks, patios, dinner parties, rehearsal dinners and small weddings across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "singer-guitarist",
+    "videos": [
+     {
+      "id": "nzVtbiEF5ak",
+      "name": "Acoustic singer and guitarist for a private party: Last Dance With Mary Jane",
+      "description": "An acoustic singer and guitarist playing a Tom Petty song live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M"
+     },
+     {
+      "id": "wt2SnYjWxKs",
+      "name": "Singer and guitarist for welcome drinks: Tony Medina, Headline",
+      "description": "Tony Medina plays one of his own songs on voice and acoustic guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT5M20S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "One voice and a guitar",
+       "slab": true,
+       "title": "A singer and guitarist for hire in Denver for cocktail hours, patios and small weddings.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Few things loosen up a cocktail hour like someone with a guitar singing Brown Eyed Girl. It’s one of the most popular choices we book in Denver, because one musician can sing the songs your guests know by heart and fit in just about any corner.",
+       "headingText": [
+        {
+         "html": ""
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=singer-guitarist",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can plan the music around your event, from the songs to what your singer wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/nzVtbiEF5ak?rel=0",
+       "title": "An acoustic singer and guitarist playing Last Dance With Mary Jane at a private party",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What songs does a singer and guitarist play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "You’ll hear singer-songwriter favorites, pop and soul from the last sixty years, and the acoustic side of classic rock, like Tom Petty, Bill Withers and Beatles ballads. These songs sound great with just one voice and one guitar, since the guitar can cover the rest of the record."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "We can keep things mellow or pick up the pace, so just tell us how you’d like your event to feel. Want to see more? Browse our <a href=\"/repertoire/\">full song list</a>. If you want something that isn’t on it, like a first dance or a processional song, let us know when you book and we can usually learn it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Who plays it",
+       "title": "Choose any of our singers, or ask for one by name.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The singer and guitarist",
+         "text": "We’ll match you with one of our singers based on your date and your guests. This is a great way to go if the sound and the date matter more to you than the name."
+        },
+        {
+         "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
+         "text": "Tony has a smoky voice and plays guitar with the rhythm of a funk player. He plays blues and classic rock, either solo for welcome drinks and dinner or as a band of up to four if you want people dancing. Want to see him play? Check out his video clips."
+        },
+        {
+         "term": "<a href=\"/artists/rene-moffatt/\">René Moffatt</a>",
+         "text": "René is a songwriter with his own folk and Americana songs, and he sings and plays acoustic guitar. He can mix in covers if you’d like, and he plays solo for a ceremony, a cocktail hour or a dinner, or with his band of up to four. You can watch video clips on his page."
+        },
+        {
+         "term": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a>",
+         "text": "Tejas is a singer-songwriter who builds familiar songs from the ground up with live looping (recording and layering parts on the spot). He fronts a duo that can grow into a quartet. He’s an excellent choice if you want to start small and finish on a dance floor."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Looking for instrumental guitar instead? Our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays jazz standards and Spanish-tinged pieces.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-who.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-21",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours and welcome drinks</a>",
+         "text": "A singer and guitarist is a lovely way to fill the hour after the ceremony or the welcome drinks the night before, with songs both families know. The same musician can play the <a href=\"/weddings/ceremony/\">ceremony</a> first, with an instrumental prelude and processional, and we can run the officiant’s microphone, too."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties, patios and milestone birthdays</a>",
+         "text": "A singer and guitarist fits easily into a dinner party at home or a backyard party, and for a milestone birthday we can lean into the songs of one particular decade."
+        },
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Company picnics and client appreciation evenings</a>",
+         "text": "We love bringing a singer and guitarist to a <a href=\"/corporate/\">company</a> picnic, and it’s just as nice at a client appreciation event where you want a warm, personal touch."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "After a day of sessions, an acoustic set is a great way for your team to wind down."
+        },
+        {
+         "term": "<a href=\"/daytime/community-programs/\">Farmers markets and daytime programs</a>",
+         "text": "A singer and guitarist is a great fit for a Saturday market or a library’s summer series."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "We can sing the songs of the sixties and seventies in your community’s common area on a weekday afternoon."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-18",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Tony Medina singing his own song Headline with an acoustic guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Curious what one musician costs for a cocktail hour? Check out our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-22",
+       "html": "Singer and guitarist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Still have a question? You’ll find more in our <a href=\"/planners/faq/\">full question list</a>, from substitutions to volume limits.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Is one singer with a guitar enough for a cocktail hour?",
+         "a": "For most cocktail hours and patios, yes. One voice and a guitar can carry across a patio and still sound like real live music. Above about a hundred guests spread across a ballroom, our <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> adds a second musician to fill the space."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "It’s soft enough that your guests can keep talking, and your singer can always adjust to the space."
+        },
+        {
+         "q": "How long are the sets?",
+         "a": "Sets usually run 45 to 60 minutes, and we can keep music going through the breaks. You can book a single hour, or have music from arrival through dinner. If you think your event might run long, let us know when you book."
+        },
+        {
+         "q": "Can a singer and guitarist play outdoors?",
+         "a": "Yes, we play patios and lawns all the time. We’ll need a covered, level, dry spot with power nearby, and we’ll work out a plan with you for moving indoors, since Colorado evenings cool off fast and it’s hard to sing and play in the cold."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want a singer and guitarist at your event? Send us the date and we’ll check our booking calendar.",
+       "lede": "We bring live music to events of every size, from a solo musician to a full band, and we’ll match the sound system to your venue. You’ll have one person to call from start to finish, too."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

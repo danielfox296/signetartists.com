@@ -1,0 +1,379 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/ceremony/",
+   "title": "Acoustic guitar for a wedding ceremony in Colorado",
+   "description": "Book an acoustic or Spanish guitarist for your wedding ceremony in Colorado, and learn how ceremony music works and how many songs you'll need.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "ogImageAlt": "A guitarist playing outdoors under pine trees.",
+   "nav": "weddings",
+   "schema": {
+    "service": {
+     "name": "Wedding ceremony music",
+     "serviceType": "Acoustic and Spanish guitar for wedding ceremonies",
+     "description": "We book acoustic and Spanish guitarists for wedding ceremonies across Denver, the Front Range and up into the Colorado mountains, from the prelude and processional to the recessional.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for a wedding ceremony: Malaguena, Dirty Flamenco",
+      "description": "Gary Meyers plays a Malagueña on solo Spanish guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     }
+    ]
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-06"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "The ceremony",
+       "slab": true,
+       "title": "Acoustic guitar for a wedding ceremony.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the moment at a wedding when the talking stops and every head turns toward the aisle. A guitarist can watch the aisle rather than a clock, so the music keeps going as long as the walk takes and ends right when you reach the front.",
+       "headingText": [
+        {
+         "html": "You can book an acoustic guitarist or a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, and either one is a lovely choice if you’d like something warm and romantic."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "How it works",
+       "title": "The four parts of ceremony music, in order.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Ceremony music is the part of a wedding most couples have never planned before, and it's simpler than it looks. There are four parts, and you get to choose the music for each one."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "The prelude",
+         "text": "This is the music that plays while guests arrive and take their seats. It usually starts twenty to thirty minutes before the ceremony and plays at a volume people can greet each other over, until the officiant is in place. In our experience, it’s the part couples most often leave out, and it can keep the wait from feeling like a delay."
+        },
+        {
+         "term": "The processional",
+         "text": "You’ll usually want one or two pieces here, often one for the wedding party and a second for the entrance everyone stands for."
+        },
+        {
+         "term": "The interlude",
+         "text": "This is an optional piece for a quiet moment in the ceremony. That might be a reading, a unity candle, a signing or communion."
+        },
+        {
+         "term": "The recessional",
+         "text": "It’s one piece, faster than everything before it, and it starts the moment the couple turns around. The guitarist keeps playing while your guests file out, which usually means going a few minutes longer than the song itself."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "<strong>How many songs, and how long?</strong> You’ll usually need three songs plus the prelude. Total playing time usually comes to about 45 to 60 minutes, counting the prelude and the ceremony itself. A civil or non-denominational service can take 20 to 30 minutes, and a religious one may take longer. One hour of music usually covers all of it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-how-it-works.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "The instrument",
+       "title": "Acoustic guitar or Spanish guitar?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Both are one musician and one instrument, and they sound less alike than couples expect. Which one suits a ceremony has more to do with the setting than with the songs."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-14",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-12",
+          "html": "<strong>Acoustic guitar.</strong> This is the bright, clear sound of steel strings, and it’s what most people mean when they say guitar. It works well for almost anything couples ask for, whether that’s a hymn, a film theme, a pop song or the song that was playing when they met. A small indoor ceremony may not need a sound system at all. Learn more about our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-13",
+          "html": "<strong>Spanish guitar.</strong> Nylon strings give it a warmer, rounder sound, and each note starts a little softer. It’s a lovely choice for a garden or a courtyard, and for any ceremony where you’d like a little Spanish flavor. The song list can mix Spanish pieces with the songs you ask for. If you’d love flamenco, <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> can bring the quieter side of it to your ceremony.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "You can also have more than one musician at your ceremony. A duo adds upright bass to the guitar, which gives a processional a fuller sound in a large space, and a trio adds drums played softly with brushes for a ceremony in a hall rather than a garden. Learn more about our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-16",
+       "html": "“[He] recently played for my wedding ceremony, and I couldn’t be happier or more grateful. He is extremely talented and so sweet, my guests and I loved him!! He played ‘Bless the Telephone’ by Labi Siffre while I walked down the aisle and it was a dream. I would hire him 1000 times over.”",
+       "by": "Jailynn G., an outdoor ceremony, November 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "See what’s on our <a href=\"/repertoire/\">full song list</a>, and if the song you want isn't on it, just let us know when you book and we can usually learn it.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-guitar.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-23",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "eyebrow": "Hear it",
+       "title": "Spanish guitar for a wedding ceremony.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A Malagueña on solo Spanish guitar."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-21",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+         "title": "Gary Meyers playing a Malagueña on solo Spanish guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "03a-footage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-27",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-24",
+       "eyebrow": "Who plays it",
+       "title": "Should you book a solo musician, a small ensemble or a DJ?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "All three are popular choices for a Colorado wedding ceremony. The main difference is how easily each one can adjust if your day doesn’t run exactly on time."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-25",
+       "rows": [
+        {
+         "term": "A solo musician",
+         "text": "That could be a guitarist or a violinist. A guitarist is usually the easiest choice for an outdoor ceremony, since one musician doesn’t need a stage. If you’d like a voice at the ceremony, <a href=\"/artists/rene-moffatt/\">René Moffatt</a> sings his own songs and covers on acoustic guitar and can stay for the cocktail hour."
+        },
+        {
+         "term": "A small ensemble",
+         "text": "You could go with a <a href=\"/ensembles/string-quartet/\">string duo, trio or quartet</a>, or a guitar and bass duo. Two to four musicians can be a great choice in a large space, and many Colorado couples keep the same ensemble for <a href=\"/weddings/cocktail-hour/\">the cocktail hour</a>."
+        },
+        {
+         "term": "The DJ",
+         "text": "Most DJs can cover a ceremony too. That can make sense when the ceremony and the reception are in the same building. If you’d like both, our <a href=\"/ensembles/dj/\">DJ</a> can take the reception while live musicians play the ceremony."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-who-plays.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-32",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-28",
+       "html": "Ceremony music questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Planning the rest of the day? Check out our <a href=\"/weddings/\">wedding music page</a>. Getting married in the mountains? We play ceremonies across Denver and the Colorado mountains, and you can learn more about the local sound rules on our <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-30",
+       "items": [
+        {
+         "q": "Should ceremony music be instrumental?",
+         "a": "For the prelude and the processional, we'd usually say yes. A lyric can pull attention to the words at the moment everyone is watching the aisle. An interlude is a great spot for a sung song, because your guests are seated and settled."
+        },
+        {
+         "q": "Can the officiant be heard?",
+         "a": "Yes. Outdoors, it can be hard to hear an officiant past about the fourth row without a microphone, so we can bring one, and the readings and vows can run through the same small sound system as the guitar."
+        },
+        {
+         "q": "Can you play an outdoor ceremony?",
+         "a": "Yes, and many Colorado ceremonies are outside. The musician will need a spot that's covered, level and dry, with power nearby, and we'll work out an indoor backup with you ahead of time. There aren't any walls outdoors to send the sound back, so a small sound system helps the music reach the back rows at the same gentle volume. We'll also pick the spot with the wind in mind, because wind can make a lot of noise on the officiant's microphone. Colorado evenings can cool off fast after sunset, so for a late-afternoon ceremony in the mountains, we'll talk through the weather plan together before the day."
+        },
+        {
+         "q": "How much space does a guitarist need?",
+         "a": "A guitarist usually needs a spot of about 6 by 4 feet beside the aisle, level and out of the sun, with power if you're using the sound system."
+        },
+        {
+         "q": "How much to tip ceremony musicians?",
+         "a": "Nothing is expected. A tip is completely up to you. If you'd like to do something extra, you can ask your photographer to credit the musicians by name when the gallery goes out."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-33",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the ceremony site and the guest count, and we'll recommend the musician.",
+       "lede": "From one guitarist to a full band, we’ll bring a sound system that suits your venue, and you’ll have a personal contact for the whole day."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

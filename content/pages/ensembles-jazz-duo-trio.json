@@ -1,0 +1,304 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/jazz-duo-trio/",
+   "title": "Jazz duo and trio for hire in Denver for weddings and events",
+   "description": "A Denver jazz duo or trio for hire for weddings, cocktail hours, corporate events and dinners, playing jazz standards quiet enough for easy conversation.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "ogImageAlt": "A trumpet resting on a table.",
+   "nav": "music",
+   "breadcrumb": "Jazz duo and trio",
+   "schema": {
+    "service": {
+     "name": "Jazz duo and trio for hire",
+     "serviceType": "Jazz duo and trio for hire for weddings, corporate events, cocktail hours and dinners",
+     "description": "A jazz duo plays standards on upright bass and guitar, and a trio adds drums played with brushes for larger venues. Both are available for cocktail hours, client dinners and private events across Denver and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio"
+     ]
+    },
+    "act": "jazz-duo",
+    "video": {
+     "name": "Jazz duo for a cocktail hour: Autumn Leaves on guitar and upright bass",
+     "description": "A short clip of the jazz duo playing Autumn Leaves on guitar and upright bass.",
+     "uploadDate": "2026-09-06",
+     "duration": "PT59S"
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Jazz standards for cocktails and dinner",
+       "slab": true,
+       "title": "Jazz duo and trio for hire for weddings and events.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know how a little live jazz can make a cocktail hour feel like the nicest bar in town? Our jazz duo plays standards on upright bass and guitar at a volume that's easy to talk over, and for a bigger crowd, the trio adds drums played with soft brushes.",
+       "headingText": [
+        {
+         "html": "Couples book it for the ceremony and the cocktail hour, and companies book it for client dinners and receptions. We love jazz standards for this, since most guests will recognize them even if they can't name them."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=jazz-duo",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We'll shape the music around your event, including how many musicians you need, the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+       "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Sizes",
+       "title": "Should you book a jazz duo or a jazz trio?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "The duo",
+         "text": "Upright bass and guitar can cover cocktails and dinner together, or just a single hour on its own. It fits in a corner, so it can play venues that don't have space for a full band."
+        },
+        {
+         "term": "The trio",
+         "text": "The drums add a steady beat that helps the music reach a bigger crowd, and the brushes keep them soft enough for dinner."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-9",
+       "html": "“[He] was fantastic, he struck the right note (pardon the pun) with our guests by not only playing beautifully, but also by playing quietly in the background so as not to disturb the conversation of our guests. Everyone loved him and would 100% hire him again. He is a tru pro!”",
+       "by": "Mara S., cocktail hour, February 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Hoping to end on the dance floor? <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can start as a duo and grow to a quartet. <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> plays the standards with a modern edge.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "At a client dinner the conversation comes first, so the duo can keep the music low all the way through."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Corporate events with a program</a>",
+         "text": "The duo can stop for remarks and awards and pick back up when they're finished. Learn more about our <a href=\"/corporate/jazz-band/\">corporate jazz bands</a>."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "The duo can play the hour between the ceremony and dinner, and the ceremony itself if you'd like. Looking for jazz from the processional to the last dance? Check out our <a href=\"/weddings/jazz-band/\">wedding jazz band</a>."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties at home or at a club</a>",
+         "text": "A duo fits a house or a club without moving the furniture, in <a href=\"/private-parties/denver/\">Denver</a> or anywhere on the Front Range."
+        },
+        {
+         "term": "<a href=\"/daytime/senior-living/\">Senior living</a>",
+         "text": "The duo can play the standards your residents grew up with, and we can set up a regular weekday afternoon in your common area."
+        },
+        {
+         "term": "<a href=\"/daytime/brunch/\">Sunday brunch</a>",
+         "text": "The duo can play through a restaurant’s or a hotel’s Sunday brunch from start to finish."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Memorial receptions</a>",
+         "text": "The duo can play the reception or celebration of life after a service, with the songs your family chooses."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Prefer singer-songwriter and folk-rock covers? Check out our <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a>. Planning something for the holidays? Our <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs. For prices, check out <a href=\"/blog/what-a-jazz-band-costs-denver/\">what a jazz band costs in Denver</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-occasions.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-19",
+    "act": "jazz-duo",
+    "title": "A sample of songs",
+    "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Jazz duo and trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Looking for a particular song? Browse our full <a href=\"/repertoire/\">song list</a>, and if it isn't there, let us know when you book (we usually need a few weeks to learn new material).",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "What is a jazz trio?",
+         "a": "A jazz trio is three musicians. The traditional combos are piano, bass and drums, or organ, guitar and drums. For private events, ours is usually guitar, upright bass and drums played with brushes. A quartet is the same three with a horn or a voice added. Signet Artists books jazz duos and trios across Denver and the Colorado mountains."
+        },
+        {
+         "q": "Can we hire a jazz trio for a wedding?",
+         "a": "Yes. The trio can play a processional and a recessional as easily as standards, and they can keep going through dinner."
+        },
+        {
+         "q": "Is a jazz duo enough for a big dinner?",
+         "a": "Yes, in many cases. The music only has to sit behind the conversation at dinner, so two musicians can go a long way. If your guest list is much bigger, or your guests are spread across a large space, we'd suggest the trio."
+        },
+        {
+         "q": "Can the same musicians play cocktails and dinner?",
+         "a": "Yes, and that's what most people book."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Thinking about a jazz duo or trio for your event? Send us the date and we'll take it from there.",
+       "lede": "We'll bring the right sound system for your venue, and a single person on our team will look after you throughout."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

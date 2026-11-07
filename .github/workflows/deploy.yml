@@ -1,0 +1,138 @@
+name: Deploy signetartists.com
+
+# Builds main with the new build (site/, from content/) and deploys it to
+# GitHub Pages. build.py and the HTML it committed are no longer read: the
+# stage leaves them out and puts the new build's output over the repo's
+# static files, so a page deleted from content/ is gone from the site too.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Full history: a page's sitemap <lastmod> is its file's last commit.
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # BEFORE build/deploy — after the deploy the live sitemaps already equal
+      # the new ones, so a post-deploy fetch would always diff empty. This
+      # snapshot (both sitemaps, one file) is what makes the changed-only
+      # IndexNow ping meaningful; the watch pages live in video-sitemap.xml.
+      - name: Snapshot live sitemaps (IndexNow baseline)
+        run: |
+          : > /tmp/live-sitemap.xml
+          for f in sitemap.xml video-sitemap.xml; do
+            curl -fsS --max-time 30 "https://signetartists.com/$f" >> /tmp/live-sitemap.xml \
+              || echo "live $f unavailable — IndexNow will submit its URLs"
+          done
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install
+        run: npm ci --prefix site
+
+      # The pictures' AVIF and WebP copies, the recompressed JPEGs and the
+      # YouTube pictures are made here, never committed. The cache keeps them
+      # between runs, so a run makes only what is new, and is saved again
+      # only when something was made.
+      - name: Restore pictures
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.cache/signet-pictures
+          key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: pictures-v1-
+
+      - name: No internal notes in content
+        run: python3 scripts/no_notes.py
+
+      - name: Build site
+        id: build
+        run: node site/scripts/build.mjs --out _gen --images ~/.cache/signet-pictures
+
+      - name: Save pictures
+        if: steps.build.outputs.pictures_made != '0'
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/signet-pictures
+          key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
+
+      # The repo's static files (styles, scripts, images, fonts), then the
+      # build's output over them. rsync rather than a hand-picked cp list, so
+      # a new output directory is never silently left out of a deploy.
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_src' \
+            --exclude='_site' \
+            --exclude='_gen' \
+            --exclude='/site' \
+            --exclude='/content' \
+            --exclude='build.py' \
+            --exclude='*.md' \
+            --exclude='*.html' \
+            --exclude='/sitemap.xml' \
+            --exclude='/video-sitemap.xml' \
+            --exclude='/rss.xml' \
+            --exclude='/llms.txt' \
+            --exclude='.gitignore' \
+            --exclude='__pycache__' \
+            --exclude='node_modules' \
+            --exclude='scripts' \
+            ./ _site/
+          rsync -a _gen/ _site/
+
+      # The checks, on what is about to be served. nav_lint: the
+      # header, menu, footer, crumbs, /sitemap/ and placeholders. site_check:
+      # titles, descriptions, share images, picture descriptions and the
+      # structured data. Either one failing stops the deploy.
+      - name: Check site
+        run: |
+          python3 scripts/nav_lint.py _site
+          python3 site/scripts/site_check.py _site
+
+      # The copy check reads the built pages against the word list. It warns and
+      # never stops a deploy.
+      - name: Check copy
+        run: python3 scripts/copy_check.py _site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Tell IndexNow-participating engines (Bing, etc.) what changed — only
+      # URLs new or lastmod-moved vs the pre-deploy snapshot; skips the ping
+      # when nothing did. The script swallows its own errors, so a dead
+      # endpoint never fails a deploy. It reads both built sitemaps.
+      - name: Ping IndexNow (changed URLs only)
+        working-directory: _site
+        run: python3 ../scripts/indexnow.py --baseline /tmp/live-sitemap.xml

@@ -1,0 +1,280 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/proposals/",
+   "title": "Musician for a proposal or a surprise song in Denver",
+   "description": "Hire a musician for a proposal or a surprise song in Denver. A guitarist, a singer or a duo can play your song, and we'll plan it all with you.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-window.jpg",
+   "ogImageAlt": "A Spanish guitarist playing beneath a shuttered window, in black and white.",
+   "nav": "private",
+   "schema": {
+    "service": {
+     "name": "Musician for a proposal or a surprise song",
+     "serviceType": "A musician or duo for a marriage proposal, a surprise song at a birthday or anniversary dinner, or a short set at a small private moment",
+     "description": "We can bring a guitarist, a singer or a duo to play one song or a short set at a marriage proposal, a surprise at a birthday or anniversary dinner, or another small private moment. We play in Denver, along the Front Range and in the Colorado mountain towns, and we’ll plan everything with the person arranging it.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "A Spanish guitarist plays Can't Help Falling in Love, a lovely song for a proposal.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Proposals and surprise songs",
+       "slab": true,
+       "title": "A musician for your proposal, or for one very special song.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Imagine a guitarist playing quietly in the corner of the restaurant, and nobody at your table gives it a second thought. Then you give the nod, and your song starts. We love helping with moments like that, whether it’s a proposal or a surprise at a birthday or anniversary dinner, and we’ll plan it all with you, so nobody else has to know it’s coming.",
+       "headingText": [
+        {
+         "html": "Planning a bigger party, too? Take a look at our <a href=\"/private-parties/\">private parties</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+       "title": "Spanish guitar playing Can't Help Falling in Love",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "How it works",
+       "title": "Planning a proposal with live music",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A proposal with a musician usually works best when the musician is already there before you arrive."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "Before",
+         "text": "You tell us the place, the time, the song and who’s in on it. We let the restaurant or the venue know a musician is coming, and the musician sets up early and plays a few songs quietly, so it looks like the place just has live music that night."
+        },
+        {
+         "term": "The cue",
+         "text": "The cue is whatever you and the musician agree on. It can be a hand signal, a text from a friend at the next table or a nod from the server, and then the musician plays the song you chose."
+        },
+        {
+         "term": "After",
+         "text": "The musician can keep playing while the two of you catch your breath, or stop so you can have the moment to yourselves. Some people like a second song for the walk out, and others would rather have the musician slip away. Tell us which one you want."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "We can plan a surprise at a birthday or anniversary dinner the same way. The musician can be in the restaurant before the guest of honor arrives and play a short set during the meal, then play the one song that means the most, like a wedding song or something from the year they met.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "We’ll help you choose the right musician for your song and your venue. A <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> is great when you’d like people to recognize the song without a voice, and a <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is the one to book when the words matter most. A <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> sounds beautiful on Can't Help Falling in Love, a <a href=\"/ensembles/string-quartet/\">violinist</a> is a lovely choice for A Thousand Years or a film theme, and a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> gives you a little more sound.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-how.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Where",
+       "title": "Proposal ideas, from a restaurant to a trailhead",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "A restaurant is the easiest place to do this. The musician only needs a corner to play from. A private dining space works beautifully, too, because you can close the door.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "A rooftop, a park or a trailhead takes a little more planning. You may need a permit, there’s often no power, and wind can make the music harder to hear. A guitarist can play with a battery-powered sound system or none at all, and we’ll walk through the spot with you beforehand, on a map or in person, so the musician ends up near the view and away from the traffic.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "You can do this at home, too. A guitarist in the corner at dinner is a lovely fit for an <a href=\"/private-parties/anniversary-party/\">anniversary</a>, an <a href=\"/private-parties/engagement-party/\">engagement party</a> or a milestone birthday. Planning your proposal in the mountains? Learn more about what changes at altitude and what resort towns allow outdoors on our <a href=\"/planners/mountain/\">mountain planning page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Wondering what a short booking costs in Colorado? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> can help with that. Looking for a song at a graveside or a memorial service? We can help with <a href=\"/daytime/funerals-and-memorials/\">funerals and memorials</a>, too.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-places.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-23",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "eyebrow": "Questions",
+       "title": "Hiring a musician for a proposal or one song",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "Can I hire a musician for just one song?",
+         "a": "Yes. We’re happy to play just one song, and we’ll plan it as carefully as a four-hour event. We do have a booking minimum, and we’ll give you the number when you send us the date. Signet Artists can set this up across Denver and the Colorado mountains."
+        },
+        {
+         "q": "Do restaurants and public places allow it?",
+         "a": "In our experience, most restaurants say yes when we ask in advance. Public places can be different, and we’ll help you find out what’s allowed."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "The musician plays quietly, at about the level of a restaurant’s usual background music, until your song starts."
+        },
+        {
+         "q": "Can the musician learn our song?",
+         "a": "Yes. Tell us the song and whether it should be played on the guitar or sung, and we can usually learn it for the day if it isn't already on the song list."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-24",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the place, the time and the song, and we’ll help you plan it.",
+       "lede": "We can bring one guitarist for one song or a duo for a short set, with just enough sound for the place, and one person on our team will plan it with you."
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

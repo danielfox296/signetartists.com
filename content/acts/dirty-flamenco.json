@@ -1,0 +1,68 @@
+{
+ "id": "dirty-flamenco",
+ "name": "Dirty Flamenco",
+ "presentation": "face",
+ "status": "flagship",
+ "page": "ensembles/flamenco-trio/",
+ "style": "Flamenco",
+ "face": "Gary Meyers",
+ "material": "Traditional and covers",
+ "bucket_tags": [
+  "specialty",
+  "cocktail"
+ ],
+ "config_tags": [
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "flamenco"
+ ],
+ "vocals": "instrumental",
+ "from": "trio",
+ "configRangeLabel": "Trio, larger by request",
+ "img": "flamenco-card.jpg",
+ "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
+ "video": "media/dirty-flamenco-2.mp4",
+ "video_poster": "media/dirty-flamenco-2-poster.jpg",
+ "blurb": "Brilliant, guitar-based flamenco musical act and one of the only in Colorado available for private events. Dirty flamenco plays real palos, and rhumba both authentically and with a soulful twist. Their polish as a working group is matched by their extensive standing repertoire.",
+ "seo_title": "Dirty Flamenco: flamenco trio for private events in Denver",
+ "meta_description": "Dirty Flamenco plays flamenco for weddings, corporate dinners and private events in Denver and the Colorado mountains. Book the trio on its own, or add a dancer for a featured performance during your event.",
+ "identity": [
+  "Flamenco is just as much fun to watch as to hear, so this is a great act for a cultural event or a reception.",
+  "The trio's song list is built on the traditional forms of flamenco, and they play covers too."
+ ],
+ "ladder": [
+  {
+   "config": "trio",
+   "build": "Flamenco guitar, bass and cajón (a box drum)",
+   "bestFor": "The trio is a great choice for cocktails and dinner. They can play anywhere from background to full volume, and they don't need a dance floor."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus a dancer",
+   "bestFor": "Bring in the dancer when you want a featured performance in your program."
+  }
+ ],
+ "setlist": {
+  "note": "Flamenco is organized by palo, the traditional form, rather than by song title. This is just a sample, and the trio picks from these forms to suit your guests.",
+  "items": [
+   "Bulerias",
+   "Solea",
+   "Alegrias",
+   "Tangos",
+   "Rumba",
+   "Fandangos",
+   "Sevillanas",
+   "Guajiras"
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "MusicGroup"
+ }
+}

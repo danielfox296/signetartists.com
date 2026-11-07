@@ -1,0 +1,39 @@
+{
+ "id": "dj",
+ "name": "DJ",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/dj/",
+ "style": "All kinds of music (open format)",
+ "spec": "A DJ and a sound system sized to your venue",
+ "material": "Whatever mix of music you'd like",
+ "bucket_tags": [
+  "party"
+ ],
+ "config_tags": [
+  "dj"
+ ],
+ "genre_tags": [
+  "dj"
+ ],
+ "vocals": "instrumental",
+ "configRangeLabel": "solo to duo",
+ "from": "dj",
+ "img": "unsplash/photo-1526979118433-63c7344f06f1.jpg",
+ "alt": "A hand on a jog wheel of a pair of DJ decks.",
+ "video": null,
+ "blurb": "Book a DJ on their own or to carry a late night set after the band wraps their set. All run by the same team, with the same contract. A solid DJ gets people moving and is the most common single booking of the corporate season.",
+ "hybrid": {
+  "label": "DJ plus live instrument",
+  "instruments": [
+   "Bass",
+   "Saxophone"
+  ],
+  "copy": "We can add a live musician on bass or saxophone to play along with the DJ. It gives your guests a live performance to watch, and it can keep people dancing late into the night. Just let us know if that sounds like a good fit for your event."
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ]
+}

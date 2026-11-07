@@ -1,0 +1,69 @@
+{
+ "id": "jazz-duo",
+ "name": "Jazz Duo",
+ "presentation": "spec",
+ "status": "flagship",
+ "page": "ensembles/jazz-duo-trio/",
+ "style": "Jazz standards",
+ "spec": "Upright bass and guitar",
+ "material": "Standards and covers",
+ "bucket_tags": [
+  "cocktail"
+ ],
+ "config_tags": [
+  "duo",
+  "trio"
+ ],
+ "genre_tags": [
+  "jazz"
+ ],
+ "vocals": "instrumental",
+ "from": "duo",
+ "img": "acts/jazz-duo-card.jpg",
+ "alt": "A guitarist in a flat cap and an upright bass player performing under an open-air pavilion.",
+ "video": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+ "blurb": "Class it up with jazz standards on upright bass and guitar, bring immediate sophistication to any cocktail hour or special event. The Signet Jazz duo specializes in music for when guests arrive, sip cocktails or enjoy dinner. This act is the perfect musical glue that holds the night together effortlessly. The volume and genre sit perfectly under riveting conversations.",
+ "seo_title": "Jazz duo for cocktails and dinner at Denver private events",
+ "meta_description": "Book a jazz standards duo for private events in Denver and the Colorado mountains. You get upright bass and guitar for cocktails and dinner, at a level that lets your guests keep talking.",
+ "identity": [
+  "A jazz duo is a perfect fit for a cocktail hour.",
+  "We'll let you know which two musicians are playing when you book.",
+  "In our experience, when the start of an event feels off, it's usually because the music is too loud. With just two musicians, it's easy to keep the volume down, so your guests shouldn't have to raise their voices.",
+  "We play jazz standards because they're songs that feel familiar even when your guests can't name them. They give an event a relaxed, elegant feel.",
+  "Want dancing later on? Just let us know and we can add a band for that part of the event."
+ ],
+ "ladder": [
+  {
+   "config": "duo",
+   "build": "Upright bass and guitar",
+   "bestFor": "You can book the duo for one hour or for the first few hours of your event."
+  },
+  {
+   "config": "trio",
+   "build": "The duo plus drums, played with brushes",
+   "bestFor": "We'd suggest the trio for a larger venue or a longer event."
+  }
+ ],
+ "setlist": {
+  "note": "Here's a sample of the jazz standards on our song list. If there's a song you'd love to hear, just let us know.",
+  "items": [
+   "Autumn Leaves",
+   "All the Things You Are",
+   "There Will Never Be Another You",
+   "Take the A Train",
+   "Blue Bossa",
+   "Beautiful Love",
+   "Someday My Prince Will Come",
+   "The Girl from Ipanema",
+   "All of Me",
+   "Green Dolphin Street"
+  ]
+ },
+ "video_poster": "img/acts/jazz-duo-poster.jpg",
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties",
+  "daytime"
+ ]
+}

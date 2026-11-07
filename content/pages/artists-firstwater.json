@@ -1,0 +1,248 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/firstwater/",
+   "title": "Firstwater: corporate sound bath and sound healing in Denver",
+   "description": "Firstwater is a corporate sound bath in Denver for wellness weeks and retreats, with seventy-five minutes of live sound healing while your people rest.",
+   "titleExact": true,
+   "ogImage": "img/sound-bath.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Corporate sound bath",
+     "serviceType": "Sound bath and sound healing for corporate wellness weeks, team building days, offsites, retreats, transition days, wedding weekends and bachelorettes",
+     "description": "Firstwater is a seventy-five-minute group sound bath and sound healing session. It comes to offices, offsites and retreats or runs in a partner space in Denver, for companies, event planners, hospitals, hospices, libraries, schools and conference organizers across Denver, the Front Range and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "firstwater"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Sound bath and sound healing",
+       "slab": true,
+       "title": "Firstwater",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "A live sound bath for your team in Denver.",
+       "lede": "Your people lie down in low light, under blankets, with nothing to do and nothing to say for seventy-five minutes, while live instruments play over composed music. Firstwater brings the session to your venue or holds it in a partner space in Denver, and companies book it for wellness weeks, team building days, offsites and retreats.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=firstwater",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/sound-bath.jpg",
+        "alt": "Three singing bowls on cushions with a mallet beside them.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Firstwater is a sound bath led by one facilitator, and if you’ve been to one you already know how to arrive: lie down, get warm, and rest. The facilitator composes the music for each session, plays live instruments over it, and mixes the whole thing from the floor, lying where your people will lie. The facilitator treats the venue like a studio and tunes the sound system to it, so if you have a space, Firstwater can make it sound like a different one.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Your people come in to low light and lie down, and the mats and blankets are already there. The session opens with ceremony, then there are seventy-five minutes of sound strong enough to feel in your chest and soft enough to rest inside, with real silence partway through, and it closes the same way. Nobody is asked to share, to speak, or to be anywhere but on the floor. Some people follow the guidance closely, some drift, and some sleep, and each of those is a fine way to spend the hour. Afterward there’s tea near the door, and people stay awhile or slip out as they please.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/\">Corporate wellness and team building</a>",
+         "text": "Firstwater can run one session at your office for a wellness week, a quarter close, or the month a team earned something quiet."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Offsites and retreats</a>",
+         "text": "A sound bath is a great way to close an evening or open a morning. Firstwater can work one or more sessions into your agenda with you, which gives your team a real break from all those meetings."
+        },
+        {
+         "term": "Transition days",
+         "text": "When people are leaving a company, this is a session for them and for the team that stays, and it’s usually the employer who books it."
+        },
+        {
+         "term": "Wedding weekends and bachelorettes",
+         "text": "We can hold a private sound bath for the wedding party, the bachelorette party or just the couple. It can be the welcome evening, the morning of, or the day after for whoever stayed, and Firstwater can come to the house you rented or to your venue. For the music through the rest of the weekend, take a look at our <a href=\"/weddings/\">weddings page</a>."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Planning a full offsite? Check out our <a href=\"/blog/company-offsite-ideas-colorado-remote-teams/\">company offsite ideas in Colorado for remote teams</a>. Firstwater also holds sound baths during the day for yoga studios, senior centers, hospices, schools and offices at lunchtime. Learn more about our <a href=\"/daytime/sound-bath/\">daytime sound bath</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-16",
+       "html": "Firstwater questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-18",
+       "items": [
+        {
+         "q": "What is a corporate sound bath?",
+         "a": "It’s a group sound bath that comes to your company. Some people call it sound healing or sound meditation, and it's the same session. Firstwater is booked through Signet Artists in Denver."
+        },
+        {
+         "q": "How much space does a sound bath need?",
+         "a": "You just need enough floor for your people to lie down."
+        },
+        {
+         "q": "Who books it besides companies?",
+         "a": "Hospitals, libraries and conference organizers book Firstwater, too."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-21",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book a Firstwater sound bath for your team, your offsite or your retreat.",
+       "lede": "Tell us your date and a little about your group, and we’ll let you know what we can do."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,317 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/dj/",
+   "title": "Denver wedding DJ and late-night DJ for corporate parties",
+   "description": "An open-format DJ for Denver wedding receptions and corporate parties, on their own or after the band, playing through the same sound system.",
+   "titleExact": true,
+   "ogImage": "img/dj.jpg",
+   "nav": "music",
+   "breadcrumb": "DJ",
+   "schema": {
+    "service": {
+     "name": "Wedding and corporate event DJ",
+     "serviceType": "Open-format DJ for weddings, corporate events, late-night receptions and private parties",
+     "description": "Open-format DJ for wedding receptions, corporate events and private parties across Denver and the Colorado mountain corridor, on their own or after a band through the same sound system.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "dj"
+     ]
+    },
+    "act": "dj"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Open format",
+       "slab": true,
+       "title": "A DJ for hire in Denver for weddings and corporate parties.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The band has played its last song, and nobody’s ready to go home. That’s when you want a great DJ. You can book one on their own, or have one take over after the band.",
+       "headingText": [
+        {
+         "html": "A DJ is an excellent choice for an office holiday party, a company launch, a milestone birthday or a wedding reception."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=dj",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "Tell us what you have in mind, from the music to what the DJ wears, and we’ll plan it with you. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/dj.jpg",
+        "alt": "Faders and knobs on a mixing console.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Band & DJ",
+       "title": "Adding a DJ after the live band",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Already booking a band? It’s easy to add a DJ to keep the dancing going after the band finishes. When the band’s last set ends, the DJ can pick up through the same sound system, so the music doesn’t stop."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "For a Denver <a href=\"/corporate/holiday-party/\">holiday party</a>, many hosts book a duo for cocktails and dinner and a DJ for the rest of the event, and we’ll plan the handoff with you when we go over the <a href=\"/planners/run-of-show/\">flow of the evening</a>. Hiring a DJ on their own, with production lighting, can run $2,500 to $6,000 in the Denver, Colorado market.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "That range comes from published 2026 market guides. We quote each date one-by-one.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-continuation.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "DJ plus live instrument",
+       "title": "Add a live bass or saxophone player",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A musician on bass or saxophone can play along with the DJ, so your guests get a live performance to watch, too. It’s a great way to keep people dancing late at a wedding or a company party, so just let us know if you’d like it."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Want live music earlier on? <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can start as a duo, grow to a quartet and hand off to the DJ, and you’ll find more great acts on our <a href=\"/music/\">roster</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-hybrid.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">The office holiday party</a>",
+         "text": "A DJ is one of the most popular choices for an office holiday party, from a <a href=\"/corporate/holiday-party/denver/\">downtown Denver hotel</a> ballroom to your own office."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Company events year-round</a>",
+         "text": "Book a DJ for a launch, a closing dinner that turns into a party or a member event that runs late."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
+         "text": "A DJ is a great way to get everybody dancing at a milestone birthday, an anniversary or a <a href=\"/private-parties/halloween-party/\">Halloween party</a>."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding receptions</a>",
+         "text": "Many couples book live musicians for the ceremony and the cocktail hour, then a DJ from the first dance to the last song."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Wondering what it all costs? Take a look at <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>. Still deciding? Here’s our take on <a href=\"/blog/band-or-dj-denver/\">band or DJ for a Denver wedding or company party</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "The music",
+       "title": "Can I choose what the DJ plays?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Yes, as much as you’d like. You can build the list yourself, give us a do-not-play list and leave the rest to the DJ, or just tell us about your crowd and let the DJ take it from there."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Open format means the DJ plays all kinds of music, so you can mix as many styles as you’d like. Looking for a place to start? Take a look at the <a href=\"/repertoire/\">songs our live bands play</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-practical.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-29",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-25",
+       "html": "DJ booking questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Have a question about curfews or volume limits? You can find more answers on our <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "How loud is it?",
+         "a": "It can be as loud as you want, up to what your venue allows. During dinner or a toast, the DJ can keep it low enough for easy talking, and then turn it up once people are dancing. If your venue has a sound limit, let us know and the DJ will work within it."
+        },
+        {
+         "q": "How late can the DJ play?",
+         "a": "As late as the venue allows. If you think your party might run long, just let us know when you book."
+        },
+        {
+         "q": "Does the DJ take requests?",
+         "a": "Yes. The DJ will play your requests, and guests’ requests when they fit. We’d suggest spending a little time on your do-not-play list, and if a guest asks for something that might clear the dance floor, the DJ can suggest something else."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a DJ in Denver? Send us the date and the venue, and tell us if you’ve got a band, too.",
+       "lede": "We can bring a DJ on their own or plan live music around them, and we’ll reply with availability and costs."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

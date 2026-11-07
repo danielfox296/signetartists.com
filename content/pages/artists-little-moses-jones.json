@@ -1,0 +1,607 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/little-moses-jones/",
+   "title": "Little Moses Jones: 90s hip-hop and R&B band in Denver",
+   "description": "Little Moses Jones is a six-piece 90s and 2000s R&B and hip-hop band, perfect for holiday parties, galas, weddings and birthdays in Denver and across Colorado.",
+   "titleExact": true,
+   "ogImage": "img/little-moses-jones-card.jpg",
+   "ogImageAlt": "The band on stage in red under purple light, two singers out front and a tuba beside the keys.",
+   "nav": "music",
+   "breadcrumb": "Little Moses Jones",
+   "schema": {
+    "service": {
+     "name": "90s and 2000s R&B and hip-hop band",
+     "serviceType": "90s and 2000s R&B and hip-hop covers for corporate events, weddings and private parties",
+     "description": "Little Moses Jones is a six-piece 90s and 2000s R&B and hip-hop band with its own sound engineer. The band plays covers for holiday parties, galas, conference after-parties, wedding receptions and milestone birthdays across Denver, the Front Range and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quintet"
+     ]
+    },
+    "act": "little-moses-jones",
+    "video": {
+     "name": "Little Moses Jones live: 90s and 2000s R&B and hip-hop band for parties in Denver",
+     "description": "Here’s the band’s 2026 promo, clean version, with two singers out front and the verses rapped live.",
+     "uploadDate": "2026-10-12",
+     "duration": "PT2M42S"
+    },
+    "videos": [
+     {
+      "id": "K-Zyy6yiBvY",
+      "name": "Little Moses Jones playing a corporate event",
+      "description": "Little Moses Jones at a corporate event: 90s and 2000s R&B and hip-hop for a company crowd.",
+      "uploadDate": "2026-09-28",
+      "duration": "PT53S"
+     },
+     {
+      "id": "c73iSssYWpA",
+      "name": "Little Moses Jones playing So Fresh, So Clean by Outkast",
+      "description": "The band's live cover of So Fresh, So Clean by Outkast.",
+      "uploadDate": "2026-04-06",
+      "duration": "PT1M6S"
+     },
+     {
+      "id": "9IBKBX6mjp4",
+      "name": "Little Moses Jones playing Gin and Juice by Snoop Dogg",
+      "description": "The band's live cover of Gin and Juice by Snoop Dogg.",
+      "uploadDate": "2026-09-27",
+      "duration": "PT3M16S"
+     },
+     {
+      "id": "zj6IJS_Xa3g",
+      "name": "Little Moses Jones playing Regulate by Warren G",
+      "description": "The band's live cover of Regulate by Warren G and Nate Dogg.",
+      "uploadDate": "2026-06-27",
+      "duration": "PT1M47S"
+     },
+     {
+      "id": "ZSXyf-_SPZY",
+      "name": "Little Moses Jones playing I Got 5 On It by Luniz",
+      "description": "The band's live cover of I Got 5 On It by Luniz.",
+      "uploadDate": "2026-06-27",
+      "duration": "PT4M12S"
+     },
+     {
+      "id": "hNQaVNOTuAw",
+      "name": "Little Moses Jones playing Doo Wop (That Thing) by Lauryn Hill",
+      "description": "The band's live cover of Doo Wop (That Thing) by Lauryn Hill.",
+      "uploadDate": "2026-06-27",
+      "duration": "PT1M8S"
+     },
+     {
+      "id": "OBZEzg-I2tI",
+      "name": "Little Moses Jones playing Get Ur Freak On by Missy Elliott",
+      "description": "The band's live cover of Get Ur Freak On by Missy Elliott.",
+      "uploadDate": "2026-03-31",
+      "duration": "PT1M51S"
+     },
+     {
+      "id": "0uEQy4ACDO8",
+      "name": "Little Moses Jones playing Forgot About Dre",
+      "description": "The band's live cover of Forgot About Dre by Dr. Dre and Eminem.",
+      "uploadDate": "2026-06-27",
+      "duration": "PT3M43S"
+     },
+     {
+      "id": "HdfyA7BUios",
+      "name": "Little Moses Jones playing their original song The Rain Came Falling Down on 9NEWS Colorado and Company",
+      "description": "The band playing their original song The Rain Came Falling Down live on 9NEWS Colorado and Company.",
+      "uploadDate": "2026-07-14",
+      "duration": "PT4M13S"
+     },
+     {
+      "id": "bVBbGw6yKU4",
+      "name": "Little Moses Jones on the main stage at Parker Days",
+      "description": "The band on the main stage at the Parker Days festival in Parker, Colorado.",
+      "uploadDate": "2026-06-10",
+      "duration": "PT34S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "90s and 2000s R&B and hip-hop",
+       "slab": true,
+       "title": "Little Moses Jones",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "lede": "You know what happens at a party when the first bars of Regulate come on and everyone starts singing along. Little Moses Jones is a six-piece band that keeps that feeling going all night, with the 90s and 2000s R&B and hip-hop your guests grew up on and the verses rapped live.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=little-moses-jones",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We’ll work with you on the songs, and even on what the band wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/oIa-i9C4T7g?rel=0",
+       "title": "Little Moses Jones, the 2026 promo, clean version",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Little Moses Jones has two singers up front, and behind them the bandleader plays keys and horns alongside guitar, bass and drums. They play straight through with no gaps between the songs, which helps keep your guests dancing.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The band can play a clean show for an office party or a gala and the full lyrics for a late-night party - just let us know which you’d like when you send the date.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "The band has been playing live for nearly two decades. It has played for Google, Pearson and a Denver Broncos pregame, galas for the Boys and Girls Club and the Denver Children's Foundation, festival stages at Parker Days, Burro Days and Juneteenth in Thornton, and dates in Amsterdam and Mexico. In 2022 the LUXlife awards named it Colorado's wedding band of the year.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "The band brings its own sound engineer, so you usually won’t need a separate audio company.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "People from every department tend to know these songs, so you won’t have to talk anyone into dancing, whether you’re at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or your own office."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">Conference after-parties and galas</a>",
+         "text": "Once the program is over, this is the band to book when you want everyone letting loose."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthdays</a>",
+         "text": "If your friends were in high school when these songs were on the radio, this is the band you want for a big birthday at a venue with space to dance."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Wedding receptions</a>",
+         "text": "This is a great choice if you want people dancing from the first song."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "We’ll plan the music around your speeches and program, so let us know the <a href=\"/planners/run-of-show/\">flow of the evening</a>. Wondering about prices? Our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a> covers what live music costs across Colorado.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "Song list",
+       "title": "A sample of their songs.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Want to hear them live? You can watch the band play every one of these songs in our video clips."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-25",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "West Coast hip-hop",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-20",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Gin and Juice</span> <span class=\"song-artist\">Snoop Dogg</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Regulate</span> <span class=\"song-artist\">Warren G and Nate Dogg</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">I Got 5 On It</span> <span class=\"song-artist\">Luniz</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Forgot About Dre</span> <span class=\"song-artist\">Dr. Dre and Eminem</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-21",
+          "html": "Outkast, Missy Elliott and Lauryn Hill",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-22",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">So Fresh, So Clean</span> <span class=\"song-artist\">Outkast</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Get Ur Freak On</span> <span class=\"song-artist\">Missy Elliott</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Doo Wop (That Thing)</span> <span class=\"song-artist\">Lauryn Hill</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-23",
+          "html": "Originals",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-24",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">The Rain Came Falling Down</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Beyond these, they play songs by Usher, TLC, Destiny’s Child, Mary J. Blige, Nelly and Montell Jordan, along with the soul and funk songs that inspired them. They can also play their original songs at your event if you ask.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Little Moses Jones live",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "These clips include a corporate event, seven covers from Snoop Dogg to Lauryn Hill, an original song played live on 9NEWS and the main stage at Parker Days."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/K-Zyy6yiBvY?rel=0",
+         "title": "Little Moses Jones playing a corporate event",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/c73iSssYWpA?rel=0",
+         "title": "Little Moses Jones playing So Fresh, So Clean by Outkast",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/9IBKBX6mjp4?rel=0",
+         "title": "Little Moses Jones playing Gin and Juice by Snoop Dogg",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/zj6IJS_Xa3g?rel=0",
+         "title": "Little Moses Jones playing Regulate by Warren G",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/ZSXyf-_SPZY?rel=0",
+         "title": "Little Moses Jones playing I Got 5 On It by Luniz",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hNQaVNOTuAw?rel=0",
+         "title": "Little Moses Jones playing Doo Wop (That Thing) by Lauryn Hill",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/OBZEzg-I2tI?rel=0",
+         "title": "Little Moses Jones playing Get Ur Freak On by Missy Elliott",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/0uEQy4ACDO8?rel=0",
+         "title": "Little Moses Jones playing Forgot About Dre",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/HdfyA7BUios?rel=0",
+         "title": "Little Moses Jones playing their original song The Rain Came Falling Down on 9NEWS Colorado and Company",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/bVBbGw6yKU4?rel=0",
+         "title": "Little Moses Jones on the main stage at Parker Days",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/little-moses-jones-lineup.jpg",
+         "alt": "The band lined up in purple against a white studio wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-jerseys.jpg",
+         "alt": "The band in black Denver baseball jerseys in a studio, arms out.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-festival.jpg",
+         "alt": "The band on the festival stage at Juneteenth in Thornton, seen from behind the drums with the crowd beyond, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-session.jpg",
+         "alt": "Two singers out front with guitar and keys behind them, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-frontline.jpg",
+         "alt": "A guitarist and two singers out front under pink light.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-hoodie.jpg",
+         "alt": "A singer in a red hoodie on the microphone with the band behind.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-wedding.jpg",
+         "alt": "A saxophonist playing on a wedding dance floor with the guests dancing around the horn.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/little-moses-jones-portrait.jpg",
+         "alt": "Little Moses Jones in sunglasses and a black T-shirt.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Little Moses Jones questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have questions? Take a look at our <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "items": [
+        {
+         "q": "How long does the band play?",
+         "a": "Their sets can run from 60 to 90 minutes, with up to 3 hours of music across your event, and we’ll plan the breaks around your program."
+        },
+        {
+         "q": "Will they learn our first dance?",
+         "a": "Yes. The band can learn a first dance or one special song if you ask, and we’ll take your must-plays and must-avoids ahead of time."
+        },
+        {
+         "q": "Do they play outside Denver?",
+         "a": "Yes. They can play the Front Range and the mountain towns, too."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a 90s hip-hop and R&B band in Denver?",
+       "lede": "Send us your date and we’ll check with the band."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

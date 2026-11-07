@@ -1,0 +1,284 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/christmas-jazz-trio/",
+   "title": "Christmas jazz trio for holiday parties in Denver",
+   "description": "A Christmas jazz trio for Denver holiday parties and December dinners, playing the Charlie Brown songs and jazz standards on guitar, upright bass and drums.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "ogImageAlt": "A trumpet resting on a table.",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Christmas jazz trio",
+     "serviceType": "Christmas jazz trio for company holiday parties, December client dinners and private parties",
+     "description": "A jazz trio playing Christmas songs, the Vince Guaraldi music from A Charlie Brown Christmas and jazz standards on guitar, upright bass and drums with brushes, at a volume guests can talk over, for company holiday parties, December client dinners and private parties across Denver, the Front Range and the Colorado mountain towns.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "christmas-jazz-trio",
+    "videos": [
+     {
+      "id": "Y6_evCDeUm8",
+      "name": "Solo jazz guitar for a holiday party: White Christmas",
+      "description": "White Christmas on solo jazz guitar for a holiday party, played live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M21S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Charlie Brown Christmas songs & jazz standards",
+       "slab": true,
+       "title": "A Christmas jazz trio for holiday parties and December dinners.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the music from A Charlie Brown Christmas the second it starts. This is the act to book when you want that sound at your holiday party. The trio plays those songs on guitar, upright bass and drums, along with Christmas favorites and a few jazz standards that have nothing to do with Christmas.",
+       "headingText": [
+        {
+         "html": "It’s a lovely choice for a <a href=\"/corporate/holiday-party/\">company holiday party</a>, a client dinner, a member event at a club or <a href=\"/private-parties/holiday-party/\">a Christmas party at home</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=christmas-jazz-trio",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "You can choose how many musicians you’d like, and we can help you pick the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/Y6_evCDeUm8?rel=0",
+       "title": "Solo jazz guitar playing White Christmas for a holiday party",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a Christmas jazz trio play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A holiday party can run a few hours, so the song list mixes three kinds of music."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "A Charlie Brown Christmas",
+         "text": "These are the songs from A Charlie Brown Christmas, in the style of Vince Guaraldi’s trio. Christmas Time Is Here, Skating, Linus and Lucy and O Tannenbaum were recorded by a piano trio, so they’re a great fit for a small jazz group at a holiday dinner."
+        },
+        {
+         "term": "Christmas standards",
+         "text": "These are the holiday songs everyone knows, like White Christmas, The Christmas Song, Let It Snow, Have Yourself a Merry Little Christmas and Winter Wonderland, played in a jazz style."
+        },
+        {
+         "term": "Jazz standards",
+         "text": "The trio also mixes in jazz standards like Autumn Leaves, All of Me and The Girl from Ipanema, which keeps the music from feeling like one long medley. Want to see more? Take a look at our <a href=\"/repertoire/\">full song list</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "Let us know how much Christmas you want in the music. Some hosts love carols from start to finish, some like a single Christmas set, and many leave it to the trio to find the right mix.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-book.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-16",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Sizes",
+       "title": "Solo guitarist, duo, trio or quartet for your holiday party",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "Solo",
+         "text": "A solo jazz guitarist is a lovely fit for a client dinner or a party at home."
+        },
+        {
+         "term": "Duo",
+         "text": "Upright bass and guitar are a great pair for a cocktail hour or a longer dinner when you want people talking. The duo can fit in a corner."
+        },
+        {
+         "term": "Trio",
+         "text": "The trio adds drums played softly with brushes, so it’s a great size for a company party in a ballroom. Looking for a trio you can get to know by name? Check out <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a>."
+        },
+        {
+         "term": "Quartet",
+         "text": "Add a singer or a horn to the trio, and you’ve got a quartet that can get people dancing to swing. Want to keep the party going after that? Check out our <a href=\"/ensembles/dj/\">DJ</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Need a jazz group at another time of year? Check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>. Planning a company event? Learn more about our <a href=\"/corporate/jazz-band/\">corporate jazz band</a> options.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-sizes.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-17",
+       "html": "Christmas jazz trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Have another question? Take a look at our <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-19",
+       "items": [
+        {
+         "q": "Is a Christmas jazz trio too quiet for a holiday party?",
+         "a": "Not for dinner, when quiet is usually what you want. With brushes on the drums, your guests can talk easily and still hear Linus and Lucy. If you’d like dancing, too, just let us know and we can plan for that."
+        },
+        {
+         "q": "How far ahead should we book a Christmas jazz trio?",
+         "a": "Whenever you're ready. Just tell us the date and the venue, and we’ll check the booking calendar and reply with a recommendation and costs. If your party is coming up sooner, no worries. We can often make something great work."
+        },
+        {
+         "q": "Does the Christmas jazz trio play New Year's Eve?",
+         "a": "Yes. The trio can leave the carols behind and play jazz standards and swing, so just let us know what you have in mind."
+        },
+        {
+         "q": "Can we ask for a particular song?",
+         "a": "Yes. Let us know the song when you book and we can usually learn it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-22",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a Christmas jazz trio? Send us the date and the venue, and we’ll see what we can do.",
+       "lede": "Let us know how big your party is, and we’ll help you pick the right size, from a solo guitarist to a quartet."
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  }
+ ]
+}

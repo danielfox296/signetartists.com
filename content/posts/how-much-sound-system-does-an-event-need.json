@@ -1,0 +1,166 @@
+{
+ "root": {
+  "props": {
+   "title": "How much sound system does an event need?",
+   "seo_title": "How much sound system does an event need? Watts, speakers and the power outlet",
+   "slug": "how-much-sound-system-does-an-event-need",
+   "eyebrow": "PLANNING",
+   "parent": "planners/technical/",
+   "dek": "The venue form asks how many watts. A vendor quotes a 2,000-watt system. Neither number tells you whether 150 guests will hear the band. Here's what the numbers mean, in plain words, and the one question to ask the venue about outlets.",
+   "date": "2026-11-07",
+   "author": {
+    "name": "Signet Artists"
+   },
+   "meta_description": "What wattage actually buys (doubling it adds three decibels), why headroom and speaker placement matter more, and why the outlet behind the band must be on its own circuit, away from the coffee urn.",
+   "llms_description": "A plain-language guide for event planners on sizing a band's sound system: doubling amplifier power adds only about 3 decibels and sounding twice as loud takes roughly ten times the power, so wattage is a weak guide; headroom (spare capacity) is what keeps sound clean, because a speaker near its limit distorts and distortion is what people hear as loud; speaker count and placement cover a hall more evenly than size. It also explains event power: a standard 15-amp circuit gives about 1,800 watts and a 20-amp circuit about 2,400, a coffee urn alone draws 1,000 to 1,500 watts, outlets along a wall often share a circuit with catering, and powered speakers on a shared circuit trip the breaker. Ask the venue for a dedicated 20-amp circuit near the band, ideally two.",
+   "hero": {
+    "src": "/img/unsplash/photo-1724858103797-6d388eb1006a.jpg",
+    "alt": "A stack of old PA speakers and cabinets of different sizes against a white wall."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "KeyTakeaways",
+   "props": {
+    "id": "KeyTakeaways-1",
+    "items": [
+     {
+      "text": "Doubling the watts adds three decibels, which most people barely notice. Twice as loud takes ten times the power. Watts are a weak way to size a sound system."
+     },
+     {
+      "text": "What matters is spare capacity, called headroom, and how many speakers there are and where they point. Two moderate pairs cover a hall better than one huge pair."
+     },
+     {
+      "text": "Ask the venue for an outlet on its own circuit near the band. Powered speakers sharing a circuit with the coffee urn trip the breaker during the first dance."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-2",
+    "text": "The number on the form",
+    "level": 2
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-3",
+    "html": "<p>The venue's event form has a box for wattage. A vendor's quote says 2,000-watt system. A friend who does weddings says you need at least 1,000 watts for 150 people. None of those numbers answer the question you actually have, which is whether the table at the back will hear the band and whether the table at the front will be able to talk.</p>\n<p>Here is what the numbers mean and which ones to ask about instead.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-4",
+    "text": "What a watt buys",
+    "level": 2
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-5",
+    "html": "<p>Loudness is measured in decibels, and a ten-decibel jump sounds about twice as loud to a person in the seat. Doubling the power of a sound system adds three decibels. Most listeners can barely tell. Making something sound twice as loud takes about ten times the power. So a 1,000-watt system and a 2,000-watt system in the same spot are much closer than the price tags suggest, and a 2,000-watt system is nowhere near twice as loud as a 1,000-watt one.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-6",
+    "text": "Headroom, the number that matters",
+    "level": 2
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-7",
+    "html": "<p>What you get for the extra power is spare capacity. Sound people call it headroom: the gap between how hard the speakers are working and their limit. A speaker running near its limit distorts, and distortion is what people mean when they say something sounds loud, even at a moderate level. Think of a small car doing 70 on the highway with the engine screaming, next to a bigger car doing the same 70 with the engine barely awake. Same speed, very different ride.</p>\n<p>A speaker with headroom at a dinner level sounds clean, and clean sound carries further at a lower volume. That is the whole reason to bring more power than the band will use: so none of it is ever used at the limit.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-8",
+    "text": "Count and placement beat size",
+    "level": 2
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-9",
+    "html": "<p>Sound gets quieter fast as it travels. Stand ten feet from a speaker, then twenty, and the drop is obvious; at forty it has dropped by the same amount again. Halve the distance between a speaker and a listener and that listener hears it noticeably louder, without anyone touching the volume. So one enormous pair of speakers at the front of a long hall has to be turned up until the first table is uncomfortable before the last table hears anything. Two moderate speakers set well, plus a small second pair halfway down the hall, cover 200 guests far more evenly, and the guests up front stop paying for the back to hear. <a href=\"/blog/what-your-venue-does-to-the-sound/\">The venue post has a diagram of the two layouts</a>, along with what glass and carpet do to the sound.</p>\n<p>The right question for a band is how many speakers they bring for your headcount and your hall, and where they'll put them. The wattage can stay on the box.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-10",
+    "text": "The outlet behind the band",
+    "level": 2
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-11",
+    "html": "<p>Every outlet in a building belongs to a circuit, a group of outlets that share one breaker, the switch in the panel that flips off when too much is plugged in at once. A standard circuit gives about 1,800 watts before the breaker trips; a heavier 20-amp circuit gives about 2,400. A single coffee urn draws somewhere around 1,000 to 1,500 watts on its own. Electric chafing warmers, a photo booth printer and a wall of string lights all pull from somewhere, and in many ballrooms the outlets along one wall share a circuit with the outlets along the next, or with the catering line behind the partition.</p>\n<p>Put the band's powered speakers, mixer and keyboard amplifier on the same circuit as the coffee service and the breaker trips in the middle of the first dance: a coffee urn, two chafing warmers and a pair of powered speakers add up past 1,800 watts on their own. Put them on a circuit shared with the lighting dimmers and there is a hum under everything all night.</p>\n<p>So ask the venue about power in the first conversation, before the deposit. The ask is simple: one outlet near where the band will stand, on its own circuit, and ideally two. The venue's form will also ask about stage size, load-in and insurance; <a href=\"/blog/what-a-band-needs-from-the-room/\">that's covered here</a>.</p>"
+   }
+  },
+  {
+   "type": "Aside",
+   "props": {
+    "id": "Aside-12",
+    "title": "Three questions for the venue",
+    "html": "<p>Which outlets near the band are on their own circuit, and what else is on it? Is the catering line on a separate circuit from the band's? Where is the breaker panel, and who has the key on the night?</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-13",
+    "text": "How we handle it",
+    "level": 2
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-14",
+    "html": "<p>We size the speakers to the headcount and the dimensions of the space, and we would rather bring a fourth speaker than turn up a second one. We ask the venue for a dedicated 20-amp circuit where the band will stand, two if the space allows, and we bring cable heavy enough that a long run to the far outlet still delivers full power. Where the outlets are is the first thing we look for on a walkthrough, before the view.</p>"
+   }
+  },
+  {
+   "type": "PostCta",
+   "props": {
+    "id": "PostCta-15",
+    "headline": "Send us the venue and the headcount.",
+    "html": "<p>We'll tell you how many speakers the hall needs and what to ask the venue about power.</p>",
+    "link": "/contact/",
+    "link_text": "Check a Date"
+   }
+  },
+  {
+   "type": "RelatedPosts",
+   "props": {
+    "id": "RelatedPosts-16",
+    "posts": [
+     {
+      "slug": "what-your-venue-does-to-the-sound"
+     },
+     {
+      "slug": "why-dinner-gets-louder"
+     },
+     {
+      "slug": "why-guests-cant-hear-the-toast"
+     }
+    ]
+   }
+  }
+ ]
+}

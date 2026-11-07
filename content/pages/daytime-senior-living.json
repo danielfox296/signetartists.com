@@ -1,0 +1,387 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/senior-living/",
+   "title": "Senior living and memory care entertainment in Denver",
+   "description": "Book a jazz duo or solo musician for assisted living, memory care and senior centers in Denver. We play the standards at a comfortable volume.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "ogImageAlt": "A trumpet resting on a table.",
+   "schema": {
+    "service": {
+     "name": "Live music for senior living and memory care",
+     "serviceType": "Live music entertainment for assisted living, memory care and independent living communities and senior centers",
+     "description": "We book a jazz duo of upright bass and guitar or a solo musician for afternoon programs at assisted living, memory care and independent living communities and senior centers across Denver, the Front Range and the Colorado mountain corridor. We play the standards and the Great American Songbook at a volume residents can talk over, with no stage needed, for one date or a standing weekday afternoon.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a senior living community: Autumn Leaves on upright bass and guitar",
+      "description": "Autumn Leaves played live on upright bass and guitar, a duo we often recommend for a common area.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     },
+     {
+      "id": "hIPHFuxl9YI",
+      "name": "Solo guitarist for a memory care neighborhood: Autumn Leaves",
+      "description": "Autumn Leaves played live on one guitar, a good fit for a smaller group.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M14S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Senior living and memory care",
+       "slab": true,
+       "title": "Live music for senior living communities, on a weekday afternoon.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Any activity director can tell you how much a song like Autumn Leaves can brighten an afternoon in the common area. We can bring a solo musician or a duo to your assisted living community, memory care neighborhood or senior center to play the standards and songs from the sixties and seventies. They’ll take requests, too, and you can book one date or a standing weekday afternoon.",
+       "headingText": [
+        {
+         "html": "We play all kinds of <a href=\"/daytime/\">daytime events</a>, and we’d love to help with yours."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video Clips",
+       "title": "Watch a jazz duo and a solo guitarist play",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Autumn Leaves two ways. The first clip is upright bass and guitar, and the second is one guitar."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo, upright bass and guitar, playing Autumn Leaves",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+         "title": "A solo jazz guitarist playing Autumn Leaves",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Senior living entertainment",
+       "title": "What does a live music visit look like?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "We’ll play in your common area, with songs from the decades your residents know."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "Song list",
+         "text": "We’ll play the standards and the Great American Songbook, including Autumn Leaves, All of Me and The Girl from Ipanema. The duo plays them without a singer so anyone can sing along, and a singer with a guitar can bring the words to the Beatles, Motown, folk and country songs the residents grew up with. In December, ask about the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a>."
+        },
+        {
+         "term": "A sing-along",
+         "text": "If you’d like your residents singing, book <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a>, two musicians who play the Beatles and invite everyone to join in on the choruses."
+        },
+        {
+         "term": "The volume",
+         "text": "We’ll keep the music about as loud as a conversation. Residents at the back can hear the melody while those at the front can still talk, and the musicians adjust to the space, so in a small lounge the guitar can play with no amplification at all."
+        },
+        {
+         "term": "Memory care",
+         "text": "For memory care, we’d suggest a shorter, quieter set for a smaller group. The musicians sit closer to the residents and lean on the songs they’re most likely to know, like the standards, a hymn or two and songs from the fifties and sixties, and they follow the residents’ lead on requests and on when to wrap up."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "02-the-visit.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Who plays it",
+       "title": "Choosing live entertainment for your residents",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-21",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-15",
+          "html": "Upright bass and guitar",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-16",
+          "html": "We usually recommend the <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> first for a common area. Upright bass and guitar have a warm sound that suits the standards, and two musicians are easy to hear from across the space. It’s a good size for a dining hall or a small lounge.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-17",
+          "html": "One singer, one guitar",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-18",
+          "html": "Our <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is a great choice when your residents want to hear the words, and can mix in the standards, too.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "Solo guitar, or <a href=\"/ensembles/solo-piano/\">solo piano</a>",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-20",
+          "html": "A <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> can play instrumental standards and Spanish-tinged pieces for a smaller group or a memory care neighborhood. If you have a piano in the common area, a <a href=\"/ensembles/solo-piano/\">pianist</a> can play standards and familiar songs on it, and can sing, too, if you’d like.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "You can search our <a href=\"/repertoire/\">song list</a>, and if your residents ask for a song that isn’t on it, let us know and we can usually learn it.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-who-plays.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "Booking it",
+       "title": "Book one visit or a regular weekday afternoon",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Tell us what afternoon you have in mind, how often you’d like a visit and what you have in your budget for live music, and we’ll suggest an act and send you the costs. You can also book a single visit for a resident’s milestone birthday, a Mother’s Day tea, a summer barbecue or a holiday open house for families. If a family event grows into a party, learn more about our <a href=\"/private-parties/\">private parties</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-27",
+       "html": "Your facilities manager can find space and power details on our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-booking.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-30",
+       "eyebrow": "Questions",
+       "title": "Live music FAQs for activity directors",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-31",
+       "items": [
+        {
+         "q": "Do you play at assisted living and memory care communities?",
+         "a": "Yes, all across Denver and the Front Range, and we play independent living communities, too."
+        },
+        {
+         "q": "Is this music therapy?",
+         "a": "No. It’s a live performance for your residents. A board-certified music therapist has a clinical purpose, and that’s a different service."
+        },
+        {
+         "q": "Can we book a standing monthly date?",
+         "a": "Yes. We can play the same weekday afternoon every month or every other week, with a single point of contact for the whole run. We’ll change up the song list from visit to visit, so your residents hear new songs along with the ones they keep asking for."
+        },
+        {
+         "q": "How long is a visit, and what does the space need?",
+         "a": "A visit is usually one set of 45 to 60 minutes, or two shorter sets with a break. A duo needs about 8 by 6 feet of floor space and a solo musician needs about 6 by 4, with one outlet. Setup usually takes 45 minutes to an hour before the program, and packing up takes about half an hour. The musicians will use whichever door you prefer."
+        },
+        {
+         "q": "Can you provide a certificate of insurance?",
+         "a": "Yes, and we can name the community as additional insured. Just tell us which forms your business office needs."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-37",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-34",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Let’s find the right music for your residents.",
+       "lede": "We’d love to play for your community, so just send us a date."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

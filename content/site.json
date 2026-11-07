@@ -1,0 +1,205 @@
+{
+ "brand": {
+  "name": "Signet Artists",
+  "legalName": "Entuned, LLC",
+  "tagline": "Live music for your event.",
+  "intro": "Signet Artists delivers live entertainment for private events in Denver, Colorado and surrounding areas. All provided in a variety of genres and configurations - effortlessly.",
+  "email": "hello@signetartists.com",
+  "city": "Denver",
+  "region": "CO",
+  "serviceArea": "Denver, Boulder, and the mountain corridor",
+  "url": "https://signetartists.com",
+  "sameAs": [
+   "https://maps.google.com/?cid=6360132596165295264",
+   "https://www.gigsalad.com/signet_artists_littleton",
+   "https://www.linkedin.com/company/signetartists/",
+   "https://instagram.com/signetartists",
+   "https://www.youtube.com/@SignetArtists",
+   "https://www.partyslate.com/vendors/signet-artists",
+   "https://www.facebook.com/profile.php?id=61595609691586",
+   "https://www.threads.com/@signetartists",
+   "https://www.pinterest.com/signetartists/"
+  ],
+  "formsubmit": "6a0410c3f604efa0e95283b9d52a9eb8",
+  "forms": {
+   "artist": "https://docs.google.com/forms/d/e/1FAIpQLSfwqRn9_PH7so43wI-q2zGRAD32v2rtrYaGVMudcOIVl6jdjg/viewform",
+   "vendor": "https://docs.google.com/forms/d/e/1FAIpQLSceJeX15gxvOkWoahNqD9jw4C3dv8P7_3C3nKu6IYfibteUGw/viewform"
+  }
+ },
+ "gaId": "G-LL5DKVEX29",
+ "cssVersion": "20260923a",
+ "themeColor": "#121212",
+ "business": {
+  "priceRange": "$$$",
+  "images": [
+   "img/hero.jpg",
+   "img/acts/flamenco-live.jpg",
+   "img/acts/tejas-mural.jpg"
+  ],
+  "founder": {
+   "@type": "Person",
+   "@id": "https://danielchristopherfox.com/#person",
+   "name": "Daniel Christopher Fox",
+   "alternateName": "Daniel Fox",
+   "url": "https://danielchristopherfox.com/"
+  },
+  "knowsAbout": [
+   "live music for private events",
+   "wedding cocktail hour music",
+   "wedding ceremony guitarist",
+   "jazz duo and trio",
+   "acoustic duo",
+   "Spanish guitar and flamenco trio",
+   "DJ",
+   "corporate holiday party entertainment",
+   "client dinner music",
+   "corporate retreat evenings",
+   "private party and milestone birthday music",
+   "jazz band for weddings and corporate events",
+   "singer and guitarist for hire",
+   "musician for a proposal or a surprise song",
+   "Christmas jazz trio",
+   "folk and Americana singer-songwriter",
+   "Beatles sing-along",
+   "live music for senior living and memory care",
+   "string quartet and wedding violinist"
+  ]
+ },
+ "breadcrumbParents": {
+  "ensembles/": "music/",
+  "artists/": "music/",
+  "guides/": "pricing/",
+  "video/": "music/"
+ },
+ "lists": {
+  "included": [
+   "A personal point of contact for the night.",
+   "Sound sized for a small-to-medium sized event venue",
+   "Load-in, setup, strike and load-out",
+   "Certificate of insurance",
+   "W-9 and one itemized invoice",
+   "Timeline coordination before the event",
+   "Continuous audio during set breaks"
+  ],
+  "extras": [
+   "Front Range travel: Boulder, Colorado Springs, Fort Collins",
+   "I-70 corridor travel: Vail, Beaver Creek, Breckenridge, Winter Park",
+   "Far resort travel and a night's lodging: Aspen, Telluride, Steamboat, Crested Butte",
+   "Holiday and peak weekends, and New Year's Eve",
+   "Live-band karaoke",
+   "Learned songs, with four weeks' notice"
+  ]
+ },
+ "llms": {
+  "about": "{name} is a live music company for private events in {serviceArea}. No prices are published. What the pricing page carries is what live music costs in the Colorado market, each price with the source it came from, and Signet prices a specific night when the date is sent.",
+  "videos": "Each clip the roster plays has its own page. {site}/video/ lists them all by act, and so does {site}/video-sitemap.xml.",
+  "actsNote": "All acts and configurations are subject to availability.",
+  "pricing": [
+   "{name} publishes no price list, no starting prices and no hourly prices. Actual prices vary by date, size, hours and location. {site}/pricing/ sets out what live music costs in the Colorado market, with each price attributed to the public source it came from, so a reader can set a budget before writing to Signet. To get the number for a specific night, send the date: {site}/contact/",
+   "Travel beyond the Denver metro area, a night's lodging past the passes, holiday weekends and New Year's Eve are priced with the date."
+  ]
+ },
+ "_configurations_provisional": true,
+ "closePhotos": [
+  {
+   "src": "img/acts/flamenco-court.jpg",
+   "act": "dirty-flamenco"
+  },
+  {
+   "src": "img/acts/little-moses-jones-stage.jpg",
+   "act": "little-moses-jones"
+  },
+  {
+   "src": "img/acts/rene-moffatt-festival.jpg",
+   "act": "rene-moffatt"
+  },
+  {
+   "src": "img/acts/tejas-mural.jpg",
+   "act": "tejas-singh"
+  },
+  {
+   "src": "img/acts/medina-patio.jpg",
+   "act": "tony-medina"
+  },
+  {
+   "src": "img/acts/classical-strings-stage.jpg",
+   "act": "classical-strings"
+  },
+  {
+   "src": "img/acts/afro-house-dj-headphones.jpg",
+   "act": "afro-house-dj",
+   "pos": "50% 20%"
+  },
+  {
+   "src": "img/acts/acoustic-outdoor.jpg",
+   "act": "acoustic-duo",
+   "pos": "50% 25%"
+  },
+  {
+   "src": "img/acts/flamenco-stone.jpg",
+   "act": "dirty-flamenco"
+  },
+  {
+   "src": "img/acts/little-moses-jones-frontline.jpg",
+   "act": "little-moses-jones"
+  },
+  {
+   "src": "img/acts/rene-moffatt-cafe.jpg",
+   "act": "rene-moffatt"
+  },
+  {
+   "src": "img/acts/tejas-profile.jpg",
+   "act": "tejas-singh"
+  },
+  {
+   "src": "img/acts/medina-band.jpg",
+   "act": "tony-medina"
+  },
+  {
+   "src": "img/acts/classical-strings-meadow.jpg",
+   "act": "classical-strings"
+  },
+  {
+   "src": "img/acts/afro-house-dj-portrait.jpg",
+   "act": "afro-house-dj",
+   "pos": "50% 20%"
+  },
+  {
+   "src": "img/acts/flamenco-window.jpg",
+   "act": "dirty-flamenco",
+   "pos": "50% 40%"
+  },
+  {
+   "src": "img/acts/little-moses-jones-session.jpg",
+   "act": "little-moses-jones"
+  },
+  {
+   "src": "img/acts/rene-moffatt-seated.jpg",
+   "act": "rene-moffatt"
+  },
+  {
+   "src": "img/acts/tejas-portrait.jpg",
+   "act": "tejas-singh",
+   "pos": "50% 30%"
+  },
+  {
+   "src": "img/acts/medina-portrait.jpg",
+   "act": "tony-medina",
+   "pos": "50% 30%"
+  },
+  {
+   "src": "img/acts/classical-strings-ceremony.jpg",
+   "act": "classical-strings"
+  },
+  {
+   "src": "img/acts/little-moses-jones-jerseys.jpg",
+   "act": "little-moses-jones"
+  }
+ ],
+ "photoActs": {
+  "img/hero/gary-meyers.jpg": "dirty-flamenco",
+  "img/acts/flamenco-colonnade.jpg": "dirty-flamenco",
+  "img/acts/flamenco-steps.jpg": "dirty-flamenco",
+  "img/acts/solo-bridge.jpg": "acoustic-duo"
+ }
+}

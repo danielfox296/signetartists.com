@@ -1,0 +1,277 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/last-consulate/",
+   "title": "Last Consulate: instrumental music for Denver events",
+   "description": "Last Consulate is one musician playing upright bass and guitar over downtempo electronics, for Denver corporate events, dinner parties and cocktail hours.",
+   "titleExact": true,
+   "ogImage": "img/last-consulate-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Last Consulate",
+   "schema": {
+    "service": {
+     "name": "Last Consulate",
+     "serviceType": "Instrumental downtempo music for cocktail hours, dinners and corporate receptions",
+     "description": "Last Consulate is one musician on upright bass and guitar over downtempo electronics. It’s original instrumental music with jazz improvisation, quiet enough to talk over, for corporate events, galas and private dinners across Denver, the Front Range and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "last-consulate"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Instrumental downtempo",
+       "slab": true,
+       "title": "Last Consulate",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "One musician plays original music on upright bass, guitar and electronics.",
+       "lede": "One player, upright bass and guitar out front, over downtempo electronics with slow hip-hop drums, worn keys and delayed guitar. Jazz improvisation on top, at conversation volume. Arrival, cocktails and dinner, on original material that sounds closer to an early-2000s downtempo record than to a jazz set.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=last-consulate",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/last-consulate-card.jpg",
+        "alt": "A passport held open at its photo page, in black and white.",
+        "width": "960",
+        "height": "540",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-12",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Last Consulate is the solo project of one multi-instrumentalist, built on upright bass, electric bass, guitar and downtempo electronics.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The improvising is jazz. The production is early-2000s downtempo electronica, the slow and hazy end of it, instrumental and warm, and mixed so that what was played and what was sampled are hard to tell apart.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "Upright bass is the lead instrument. Under it sit slow hip-hop drums, extended jazz harmony, tape-worn keys and delayed guitars, and the improvised bass line is usually the melody.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "It is built for arrival, cocktails and dinner, played at a volume guests can talk across, with the feel of a late jazz set or a hotel lobby. The electronics keep the tempo slow all evening, so the music stays relaxed even as your venue fills up. It sounds like a record playing in a very good hotel, except that the bass line is being played live.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "This is the act to book when the conversation is the reason everyone came, and Last Consulate can play through the whole dinner."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "Last Consulate can play as guests arrive and through dinner, and the music will stop on the emcee’s cue when the program starts."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">The welcome evening of a retreat</a>",
+         "text": "It’s a great fit for the first night of a retreat, when your group has just arrived and people want to sit down and talk. One musician is easy to bring up to a resort or a ranch in the mountains, too."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and cocktail parties at home</a>",
+         "text": "Last Consulate fits easily in a corner of your living space, and it’s a sophisticated sound for a dinner or cocktail party."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Have remarks or a program to plan around? Learn more about how we <a href=\"/planners/run-of-show/\">plan the flow of the evening</a>. Curious what live music costs across Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Last Consulate questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Have another question? Check out our <a href=\"/planners/faq/\">full list of questions</a>, or just ask us.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What does Last Consulate play?",
+         "a": "Last Consulate plays original instrumental music that mixes jazz with downtempo, a slow and relaxed style of electronic music. You can book Last Consulate through Signet Artists in Denver."
+        },
+        {
+         "q": "Is it background music?",
+         "a": "Yes, and it’s a lovely kind of background music, because your guests can talk easily while one musician improvises the bass lines live."
+        },
+        {
+         "q": "Does it play covers or take requests?",
+         "a": "No. Everything is original and instrumental, with no singer, so hosts of client dinners have one less thing to manage."
+        },
+        {
+         "q": "Can Last Consulate play a whole event?",
+         "a": "Yes, from the moment your guests arrive through dinner. If you’d like a dance floor afterward, we can bring in a band or a DJ to take over on the same contract."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book Last Consulate for your next client dinner or cocktail party.",
+       "lede": "Just send us your date and a few details about your event, and we’ll take it from there."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

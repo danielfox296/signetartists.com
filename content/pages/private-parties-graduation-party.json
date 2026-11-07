@@ -1,0 +1,292 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/graduation-party/",
+   "title": "Graduation party band and live music in Denver",
+   "description": "Book a band, a singer with a guitar or a DJ for a high school or college graduation party in Denver.",
+   "titleExact": true,
+   "ogImage": "img/acts/tejas-mural.jpg",
+   "ogImageAlt": "A musician carrying a guitar case past a jazz mural.",
+   "schema": {
+    "service": {
+     "name": "Live music for a graduation party",
+     "serviceType": "A singer with a guitar, a jazz duo, a party band, live band karaoke or a DJ for high school and college graduation parties at home",
+     "description": "We book live music for graduation parties in Denver and along the Front Range. One singer with a guitar might play songs the family knows and then take the graduate’s requests, and a jazz duo is a lovely choice for a family lunch. A DJ or a party band can play for the graduate’s friends, and live band karaoke works for both generations. The sound system will suit the yard, and you’ll have one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer with a guitar for a graduation party: Tejas Singh live-looping No Woman No Cry",
+      "description": "Tejas Singh builds No Woman No Cry from the ground up with a looper at a private party.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+     },
+     {
+      "id": "wt2SnYjWxKs",
+      "name": "Band for a graduation party: Tony Medina playing welcome drinks",
+      "description": "Tony Medina plays during welcome drinks.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT5M20S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "High school & college graduations",
+       "slab": true,
+       "title": "Live music for your graduation party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The grandparents want Brown Eyed Girl, and your graduate’s friends want Mr. Brightside. One singer with a guitar can play both, which is why that’s where we’d usually start. If you’d like more, a duo is lovely for a family lunch, and a DJ or a band can play for the friends.",
+       "headingText": [
+        {
+         "html": "Like a lot of our <a href=\"/private-parties/\">private parties</a>, a graduation party is usually outdoors, so take a look at our <a href=\"/private-parties/backyard-party/\">backyard party</a> ideas, too."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "A singer with a guitar and a band for your graduation party",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Tejas Singh at a private party, building No Woman No Cry from the ground up with a looper, a pedal that repeats what he plays. Tony Medina works well for a bigger graduation party, and you can hear him here playing welcome drinks."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live-looping No Woman No Cry at a private party",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Tony Medina playing welcome drinks",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The date",
+       "title": "When to have your graduation party",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Graduation parties often fall on the same weekend as every other graduation in your district, so it helps to think about your guests’ calendars when you choose a date. A Sunday afternoon after a Saturday ceremony can be an easier time for everyone.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-season.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Our suggestions",
+       "title": "Graduation party entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "In our experience, the best choice for a graduation party is an act that can play for every generation in the yard."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "A singer taking the graduate’s requests",
+         "text": "One voice and a guitar can play the songs the whole family knows. <a href=\"/artists/tejas-singh/\">Tejas Singh</a>, one of our singers, can take the graduate’s requests and play them live with his looper. If you’d like dancing, his band can grow to a quartet."
+        },
+        {
+         "term": "A jazz duo for the family lunch",
+         "text": "Upright bass and guitar are a lovely fit if your graduation party starts with lunch for the grandparents. Learn more about our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+        },
+        {
+         "term": "A DJ set built from the graduate’s playlist",
+         "text": "Send us the graduate’s playlist and <a href=\"/ensembles/dj/\">the DJ</a> can plan the party around it, then take the music indoors later on."
+        },
+        {
+         "term": "A party band, or live band karaoke",
+         "text": "A trio or a quartet works well for a bigger party with dancing, and <a href=\"/artists/tony-medina/\">Tony Medina</a> can bring a four-piece band. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> can get the friends and the parents singing together, since the song list goes from the 80s on up."
+        },
+        {
+         "term": "One song for the graduate",
+         "text": "Is there a song you’d love to have played for your kid in front of everyone? Just let us know and we can usually learn it."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Want to see what it costs to hire musicians in Colorado? Look up the size you have in mind in our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Planning graduation party music",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Can we hire a band for a graduation party?",
+         "a": "Yes. We can bring a party band, and we’re happy to help you choose the size. You’ll book everything through us at Signet Artists in Denver."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "While everyone’s eating, it’s about as loud as the conversation at the table, so the grandparents can hear each other. A DJ or a band will play louder when it’s time for the party, and that louder music is best kept early in the evening or indoors."
+        },
+        {
+         "q": "What do we need to set up in the yard?",
+         "a": "We’ll need an outlet that isn’t shared with anything else, and cover over the musicians and the sound system whatever the forecast says. A singer with a guitar or a DJ can fit in about 6 by 4 feet, a duo in about 8 by 6, a trio in about 12 by 8 and a quartet in about 14 by 10. Each set can run 45 to 60 minutes, and we can keep music playing during the breaks."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and a sentence about the yard.",
+       "lede": "We can bring one musician or a whole band, along with a sound system that’s right for your yard."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

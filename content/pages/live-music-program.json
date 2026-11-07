@@ -1,0 +1,322 @@
+{
+ "root": {
+  "props": {
+   "path": "/live-music-program/",
+   "title": "A weekly live music program for your bar | Signet Artists",
+   "description": "Signet Artists runs weekly live music programs for hotel bars, restaurants and lounges in Denver and Colorado, with the same solo act on the nights you pick, a sub from our roster for any missed night, and one invoice a month.",
+   "titleExact": true,
+   "robots": "noindex, follow",
+   "schema": {
+    "service": {
+     "name": "Weekly live music program",
+     "serviceType": "Standing live music program for hotel bars, restaurants and lounges",
+     "description": "A weekly live music program for hotel bars, restaurants and lounges in Denver and Colorado, with one solo act from the Signet roster on the nights the venue picks, a sub from the same roster for any missed night, a sound system sized for a bar, and one itemized invoice a month.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Hotels, restaurants and lounges",
+       "slab": true,
+       "title": "Live music on your calendar, every week.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the moment on a quiet night when your tables start asking for the check. A musician on your floor, on the same night every week, can give them a reason to stay for one more round.",
+       "headingText": [
+        {
+         "html": "We'll bring one of our solo acts to your bar on the nights you pick, for a term we set together."
+        },
+        {
+         "html": "It’s built for a hotel lobby bar, a restaurant bar, a cocktail lounge or a member club, on a night that’s already busy or the one you want to build."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "See the roster",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-7",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The program",
+       "title": "What you get.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-5",
+       "rows": [
+        {
+         "term": "The same musician every week",
+         "text": "We'll pick one act for your bar and your crowd, and they'll play the same nights for the whole term. Your regulars get to know the musician, and that's often a reason to come back."
+        },
+        {
+         "term": "A sub who fits",
+         "text": "If your regular musician can't make it, another act from our roster will step in and play in a similar style at the same volume. We'll let you know ahead of time, and your invoice stays the same."
+        },
+        {
+         "term": "A different act if the first one isn't right",
+         "text": "If the act isn't right for your crowd after the first few weeks, just let us know. We can have a different act playing by the following week."
+        },
+        {
+         "term": "Extra nights when you want them",
+         "text": "We can add a private party, a holiday or a game night to the same program, with the same act or a bigger one from our roster."
+        },
+        {
+         "term": "Sound sized for a bar",
+         "text": "The act brings a small sound system and runs it, or plugs into your house system. The music stays at about the level of a conversation at the next table, and the musician will turn it down as soon as you or your staff ask."
+        },
+        {
+         "term": "One invoice a month",
+         "text": "You'll get one itemized invoice from one company every month, along with any paperwork your venue needs."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "02-what.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The acts",
+       "title": "Who plays.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "We can bring one of these solo acts from our roster, or a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> if you have space for two musicians."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "<a href=\"/ensembles/singer-guitarist/\">A singer and guitarist</a>",
+         "text": "A singer with a guitar covering songs everybody knows."
+        },
+        {
+         "term": "<a href=\"/ensembles/spanish-guitarist/\">A Spanish guitarist</a>",
+         "text": "Classic Spanish guitar pieces and familiar songs, all instrumental."
+        },
+        {
+         "term": "<a href=\"/ensembles/solo-guitarist/\">A solo guitarist</a>",
+         "text": "Blues, roots and jazz on solo guitar, with or without vocals."
+        },
+        {
+         "term": "<a href=\"/ensembles/solo-piano/\">Solo piano</a>",
+         "text": "Cocktail piano for a lobby bar."
+        },
+        {
+         "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
+         "text": "Blues, rock and roots from one voice and a guitar."
+        },
+        {
+         "term": "<a href=\"/artists/rene-moffatt/\">René Moffatt</a>",
+         "text": "Original songs from a Denver singer-songwriter."
+        },
+        {
+         "term": "<a href=\"/artists/last-consulate/\">Last Consulate</a>",
+         "text": "Instrumental downtempo (slow, mellow electronic music) that's a lovely fit for a lounge."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-who.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Getting started",
+       "title": "How to start a weekly music program",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "A conversation",
+         "text": "Tell us the venue, the nights you have in mind and what the bar sounds like now. We'll reply with the act we'd recommend and a price per night for your venue."
+        },
+        {
+         "term": "One evening at your bar",
+         "text": "Before the first night, one of us will spend an evening at your bar to get a feel for your crowd and how loud the music can be. Then we'll plan the songs around what we heard."
+        },
+        {
+         "term": "The first night, then every week",
+         "text": "Your musician sets up, plays and then comes back the same night the next week. We'll check in with you every month and change the song list, the volume or the act if anything needs it."
+        }
+       ],
+       "bare": true,
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-how.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-17",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "05-credits.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Questions a venue asks",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-19",
+       "items": [
+        {
+         "q": "What does the venue provide?",
+         "a": "We'll just need a corner of the floor about 6 by 4 feet, one outlet that isn't shared with anything else, and a stool. Setup usually takes about 45 minutes."
+        },
+        {
+         "q": "Which nights can we pick?",
+         "a": "You can pick whichever nights suit your bar."
+        },
+        {
+         "q": "How long is the term, and what does it cost?",
+         "a": "We'll work out the term with you before the first night, and we quote the price per night for your venue."
+        },
+        {
+         "q": "What about holidays and extra hours?",
+         "a": "We can play holidays and add extra hours to a regular night. Just let us know what you have in mind and we'll work it out with you."
+        },
+        {
+         "q": "What paperwork comes with it?",
+         "a": "If you need a certificate of insurance naming your venue as additional insured, just let us know."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-22",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the nights you have in mind.",
+       "lede": "Just tell us a little about your venue and we'll take it from there."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "If you’d rather ask something first, email <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

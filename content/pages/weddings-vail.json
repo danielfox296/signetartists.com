@@ -1,0 +1,365 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/vail/",
+   "title": "Wedding music in Vail: ceremony guitarist, duo, band and DJ",
+   "description": "Planning live music for a Vail wedding? We can bring a guitarist for a ceremony at altitude, a duo for the terrace, and a band or DJ for the ballroom.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "nav": "weddings",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Vail",
+     "serviceType": "Live music for weddings in Vail: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "Getting married in Vail or the Vail Valley? We can bring an acoustic, jazz or Spanish guitarist for an outdoor ceremony, a jazz or acoustic duo for the cocktail hour, and a band or DJ for the reception, all on one contract.",
+     "areaServed": [
+      "Vail",
+      "Beaver Creek",
+      "Avon",
+      "Edwards",
+      "Minturn"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "Can't Help Falling in Love as a wedding processional on Spanish guitar, a lovely fit for an outdoor ceremony in Vail.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Mountain weddings",
+       "slab": true,
+       "title": "Live music for a Vail wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "If you're getting married in Vail, you've probably noticed how fast it cools off at 8,150 feet once the sun goes behind the ridge. It's a beautiful place to get married, and we're happy to help you plan the music around the light, the cold and the village noise limit. We can bring a guitarist for your ceremony, a duo for cocktails, and a band or a DJ to get people dancing.",
+       "headingText": [
+        {
+         "html": "Book us for the ceremony alone or for your whole <a href=\"/weddings/\">wedding</a> day, and the same person at Signet will look after you through all of it."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video clips",
+       "title": "Watch a Spanish guitarist play a wedding processional",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here's Can't Help Falling in Love on Spanish guitar, the kind of sound that suits a ceremony in the mountains."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Spanish guitar playing Can't Help Falling in Love for a wedding ceremony",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing an acoustic set outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Wedding day music",
+       "title": "The three parts of a Vail wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Couples usually want something different for each part of the day, so here's what we'd suggest."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony, on a deck or a lawn</a>",
+         "text": "One guitarist can play your ceremony on acoustic, jazz or Spanish guitar. We can also bring a small sound system for your officiant's microphone, and it should stay well within the village's noise limit. The guitarist will watch the walk down the aisle, so the processional can last as long as it needs to."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour, on the terrace</a>",
+         "text": "A jazz duo or an acoustic duo is a lovely choice for cocktails, since they can play softly enough for everyone to keep chatting. We'll work out the timing with you, and we'll have a plan for moving indoors if you need one."
+        },
+        {
+         "term": "The reception, in the ballroom",
+         "text": "You could book a <a href=\"/weddings/jazz-band/\">jazz band</a> that starts small and adds players as the day goes on, or a covers band like <a href=\"/artists/tejas-singh/\">Tejas Singh</a>, who can start as a duo and finish as a quartet. We can also bring a <a href=\"/ensembles/dj/\">DJ</a> to keep people dancing from the end of dinner to the last song."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Curious what our musicians play? Check out our <a href=\"/repertoire/\">song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Around Vail",
+       "title": "Wedding music at Vail's hotels and venues",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "The village hotels are a classic choice for a Vail wedding, since you can get married with the mountain behind you and head inside to the ballroom once it gets cold. You might look at the Sonnenalp or the Four Seasons Resort Vail in Vail Village, The Arrabelle at Vail Square or The Hythe in Lionshead, or the Grand Hyatt Vail along the creek at the west end of town. Their ballrooms have plenty of space for a quartet or a full band, their terraces work well for a duo, and a ceremony guitarist travels light enough to reach their outdoor spots easily.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Donovan Pavilion is the town's own venue on Gore Creek, and it's a great choice if you'd like to bring your own vendors and set your own timeline. Your ceremony and reception can both happen on one floor, so it's easy to have a duo for cocktails and a band for dancing. The creek outside makes a lovely backdrop for the ceremony, too.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "If your ceremony is up the mountain, the guitarist and a small sound system can ride the gondola with your guests. We'll run the music on batteries or the venue's power, and you can head back to the village for the reception. Just let us know where the ceremony is, and we'll plan the trip up.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "The mountain",
+       "title": "What to know about an outdoor wedding in Vail",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Many couples plan an outdoor ceremony in Vail around the light. The color on the mountain fades with the sun, so once you've picked a start time, we'll plan the music around it. The guitarist will set up and check the sound well ahead of time, and they'll need a dry, level spot under cover with power nearby, since a summer afternoon can turn to rain and a fall afternoon can turn to snow pretty quickly.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Noise rules can vary from one mountain town to the next. Want to learn more? Check out our <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "The altitude affects the musicians, too. Strings drift out of tune between an afternoon ceremony and the reception, so they'll retune, and singers and horn players pace themselves differently in the thin air. That's why we allow a longer sound check here than in Denver.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Not sure when to book the music? Learn more in our post on <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. Bringing a company group to the same hotels? Check out our <a href=\"/corporate/retreats/vail/\">Vail retreats page</a>. Getting married on the Front Range instead? Take a look at our <a href=\"/weddings/colorado-springs/\">Colorado Springs wedding page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Questions",
+       "title": "What couples ask about wedding music in Vail",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-30",
+       "html": "Does your venue need stage sizes or power details? You can find them on our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-31",
+       "items": [
+        {
+         "q": "Do you play weddings in Vail?",
+         "a": "Yes, we play weddings all over Vail and the Vail Valley. We're based in Denver, and we're happy to bring musicians up to Vail."
+        },
+        {
+         "q": "Do you charge for travel to Vail?",
+         "a": "Yes, there's a charge for the drive up I-70 and back over Vail Pass for the musicians and their gear, and we'll include it in your total when we reply with costs. In most cases, Vail is close enough that we won't need lodging for the musicians, unlike farther resorts such as Aspen and Telluride. For a winter wedding, the musicians will head up early, and we'll let your venue know."
+        },
+        {
+         "q": "Can a band play an outdoor wedding in Vail?",
+         "a": "Yes, though the village limits how loud outdoor music can be, so we'll plan around that from the start. As we understand it, the villages measure the sound ten feet from the permitted area, and a ceremony guitarist or a cocktail hour duo should have no trouble with that. A dance band usually plays louder than that, so it'll need a terrace your venue has a permit for, or we'll move it indoors. We'll confirm the current limit with your venue before your wedding."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Vail?",
+         "a": "Whenever you're ready. Couples usually book the music soon after they've settled on the venue, which tends to be the first decision for a mountain wedding. Just send us your date and we'll let you know what we can do."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-36",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us your date and your venue, and we'll help you plan the music for your Vail wedding.",
+       "lede": "We can bring anything up the mountain, from one guitarist to a full band, along with a sound system that's right for your venue."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

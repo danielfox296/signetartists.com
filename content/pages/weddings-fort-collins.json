@@ -1,0 +1,379 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/fort-collins/",
+   "title": "Wedding music in Fort Collins: guitarist, duo, band and DJ",
+   "description": "We book live music for Fort Collins weddings, from a guitarist for a foothills ceremony and a duo for cocktail hour to a band or DJ for the dancing.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "nav": "weddings",
+   "breadcrumb": "Fort Collins",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Fort Collins",
+     "serviceType": "Live music for weddings in Fort Collins: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "Signet Artists books live wedding music in Fort Collins and northern Colorado, including an acoustic, jazz or Spanish guitarist for a ceremony in the foothills, on a ranch or in the Poudre canyon, a jazz or acoustic duo for a cocktail hour in Old Town, and a band or DJ for a reception in a ballroom or a barn.",
+     "areaServed": [
+      "Fort Collins",
+      "Loveland",
+      "Windsor",
+      "Wellington",
+      "LaPorte"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "NI0kunpQQiA",
+      "name": "Singer with a guitar for a Fort Collins wedding cocktail hour: Tejas Singh",
+      "description": "Tejas Singh singing at a wedding cocktail hour, which would be a great fit for an Old Town courtyard or a ranch patio.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M9S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Northern Colorado weddings",
+       "slab": true,
+       "title": "Live music for a Fort Collins wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "If you’ve ever stood outside in Fort Collins on a beautiful afternoon, you know how quickly the wind can pick up. We’ll plan for that with you, whether your ceremony is on a ranch with the foothills behind you, beside the Poudre or in a courtyard in Old Town. We can bring a guitarist with a small sound system for your ceremony, a duo for cocktail hour, and a band or DJ to get people dancing.",
+       "headingText": [
+        {
+         "html": "Book us for all of your <a href=\"/weddings/\">wedding</a> or just one part of it, and you’ll have one person to call for the whole day."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video clips",
+       "title": "What does live wedding music look like?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Tejas Singh at a wedding cocktail hour, and one musician with a guitar on a bridge over the water."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/NI0kunpQQiA?rel=0",
+         "title": "Tejas Singh singing at a wedding cocktail hour",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/solo-bridge.jpg",
+         "alt": "A singer and guitarist playing on a bridge over a river, with autumn trees behind him.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Wedding day music",
+       "title": "The three parts of a Fort Collins wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "We can fit the music to each part of your day, and the musicians can move with your guests from one spot to the next."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">Ceremony music on a ranch, by the river or in a courtyard</a>",
+         "text": "One guitarist is a lovely choice for your ceremony, on acoustic, jazz or Spanish guitar. Outdoors here, a breeze off the plains can carry the sound of a guitar away, so we can bring a small sound system that reaches your last row of guests. It can handle your officiant’s microphone, too, even over the sound of the Poudre."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Cocktail hour music in Old Town or on a patio</a>",
+         "text": "A jazz duo or an acoustic duo is a great choice for this part of the day, and they can keep the volume low enough for easy conversation. A duo works well in a hotel courtyard, in a taproom’s event space or on a ranch patio while you’re off with the photographer. If you’d prefer one musician, a <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is a lovely choice, too."
+        },
+        {
+         "term": "Reception music in a ballroom or a barn",
+         "text": "A trio gets people dancing in a barn without a stage, and a quartet suits a bigger ballroom crowd. You can start with <a href=\"/artists/tejas-singh/\">Tejas Singh</a> as a duo and have the rest of his band join him when it’s time to dance. For a ranch wedding, our <a href=\"/ensembles/americana-band/\">Americana band</a> is a great choice, with plenty of Colorado favorites on the song list. The <a href=\"/ensembles/dj/\">DJ</a> can take the dance floor from the end of dinner to the last song. Or you can book our <a href=\"/weddings/jazz-band/\">wedding jazz band</a>, which can start small and add musicians as your day goes on."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Curious what we play? Here’s our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "The venues",
+       "title": "Music for weddings in Old Town, the foothills and the plains.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Old Town is a great spot for a downtown wedding. At The Elizabeth Hotel or the Armstrong Hotel, your ceremony, cocktail hour and reception can all be within a block of each other. Block One on Linden Street is a contemporary hall for couples who want everything on one floor and want to bring in their own vendors, and the Lincoln Center is the city’s own hall for a bigger guest list. Old Town’s halls have space for a trio or a quartet. It’s also a good idea to ask your venue about parking downtown early on.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "West of town, the foothills are a lovely setting for an estate wedding, whether that’s an 1890 manor with lawns or one of the ranches along the Poudre. The Mishawaka, up the canyon on the river, is a great pick if you want the water in every photo.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "East and north of town, on the plains, Windsong Estate sits on a hill with the whole Front Range in view.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "Outdoor weddings",
+       "title": "Planning for wind, weather and sound limits in Fort Collins.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "The plains east of town and the foothills west of it can both get a strong afternoon wind and a fast-moving storm. For an outdoor ceremony, the musicians will need a covered spot that’s level and dry, with power nearby. We’ll also make a plan with you for moving inside if a storm rolls in. If your ranch doesn’t have power near the site, you’ll need a generator. Learn more in our post on <a href=\"/blog/outdoor-reception/\">what changes when the reception is outdoors</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Each venue sets its own sound rules. A ballroom or a barn may have a volume limit, a ranch near houses has neighbors to think about, and Old Town has a city ordinance on evening sound. Just let us know your venue’s limit and end time when you book, and we’ll plan around them. A ceremony guitarist or a cocktail hour duo can usually stay within any of those limits on their own, and we’d suggest keeping the dance floor indoors or in a barn with the doors shut.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "Wondering which wedding decisions come first? Take a look at <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. Getting married closer to Denver or up in the mountains? Learn more about music for <a href=\"/weddings/boulder/\">Boulder weddings</a> and <a href=\"/weddings/vail/\">Vail weddings</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Questions",
+       "title": "What couples ask about Fort Collins weddings.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "If your venue’s events office wants to see stage sizes and power needs, just send them our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-30",
+       "items": [
+        {
+         "q": "Do you play weddings in Fort Collins?",
+         "a": "Yes, we’d love to play your Fort Collins wedding. Fort Collins is about an hour up I-25 from Denver, so you won’t need to plan for lodging for the musicians. Signet Artists books Fort Collins weddings from Denver."
+        },
+        {
+         "q": "Is there a travel charge for a Fort Collins wedding?",
+         "a": "Yes, there’s a travel charge, the same as for Colorado Springs or Boulder, and we’ll let you know what it is when you send your date. A ceremony up the Poudre canyon does take some extra planning, because of the canyon road and spotty cell coverage. We’ll time setup with your venue, and the musicians will head up early."
+        },
+        {
+         "q": "Is a duo enough for a taproom or courtyard reception in Old Town?",
+         "a": "For the cocktail hour and dinner, yes. A duo will just need a corner of about 8 by 6 feet and one outlet. If you’d like to dance, too, a trio can play without a stage, and the DJ can use the same sound system once the band finishes."
+        },
+        {
+         "q": "How much setup time do the musicians need?",
+         "a": "Setup can take 45 to 60 minutes for a solo musician, a duo or a trio, and about 90 minutes for a quartet. We’ll come in through whichever door your venue prefers."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Fort Collins?",
+         "a": "Whenever you're ready. In Fort Collins the venue and the date usually come first, since the university's calendar fills the hotels on some weekends, and the music comes right after. Just send us your date whenever it’s set, and we’ll let you know what we can do."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "What else can add to the cost?",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-32",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-37",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-35",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Getting married in Fort Collins? Tell us your date and venue, and we’ll help you plan the music.",
+       "lede": "We can bring one guitarist, a full band or anything in between, and we’ll make sure the sound system is right for the venue, indoors or out."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}
