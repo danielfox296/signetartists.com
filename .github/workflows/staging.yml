@@ -48,6 +48,9 @@ jobs:
           key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: pictures-v1-
 
+      - name: No internal notes in content
+        run: python3 scripts/no_notes.py
+
       - name: Build site
         id: build
         run: node site/scripts/build.mjs --out _gen --images ~/.cache/signet-pictures
