@@ -158,11 +158,20 @@ const HomeHero = {
         ))}
         {video ? (
           // Written as raw HTML: React's server render drops the muted attribute, and a
-          // browser only autoplays a video it can see is muted.
+          // browser only autoplays a video it can see is muted. The video has no src in the
+          // HTML: the script beside it picks the 540p copy (the same path with -540 before
+          // .mp4) for narrow screens and the full copy otherwise, and loads nothing at all
+          // for data saver or reduced motion, which keep the poster still.
           <div
             className="hero-cine__video-wrap"
             dangerouslySetInnerHTML={{
-              __html: `<video class="hero-cine__video" src="${video}"${frames && frames[0] ? ` poster="${frames[0].src}"` : ""} autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>`,
+              __html:
+                `<video class="hero-cine__video" data-src="${video}" data-src-small="${video.replace(/\.mp4$/, "-540.mp4")}"${frames && frames[0] ? ` poster="${frames[0].src}"` : ""} autoplay muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>` +
+                `<script>(function(){var v=document.currentScript.previousElementSibling,c=navigator.connection;` +
+                `if((c&&c.saveData)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;` +
+                `v.src=matchMedia("(max-width: 767px)").matches?v.dataset.srcSmall:v.dataset.src;` +
+                `var p=v.play();p&&p.catch&&p.catch(function(){});})();</script>` +
+                `<div class="hero-cine__grain"></div>`,
             }}
           />
         ) : null}
