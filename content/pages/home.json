@@ -51,22 +51,6 @@
    }
   },
   {
-   "type": "RangeStrip",
-   "props": {
-    "id": "RangeStrip-10",
-    "image": {
-     "src": "/img/range.jpg",
-     "alt": "The Denver skyline against the Front Range, from City Park.",
-     "width": "2400",
-     "height": "800",
-     "loading": "lazy",
-     "decoding": "async"
-    },
-    "label": "Where we play",
-    "_file": "02b-range.html"
-   }
-  },
-  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-17",
@@ -82,7 +66,7 @@
        "titleTag": "h2",
        "titleClass": "h2",
        "titleStyle": "max-width: 54rem;",
-       "lede": "From singer-songwriters, cover artists, jazz, flamenco, string quartets, funk and DJ options to sound baths, Signet Artists offers many of our acts as solo, duo, trio and more players. Some with a notable front-person and others are purpose-built for your event. We've highlighted a few below,",
+       "lede": "From singer-songwriters, cover artists, jazz, flamenco, string quartets, funk and DJ options to sound baths, Signet Artists offers many of our acts as solo, duo, trio and more players. Some with a notable front-person and others are purpose-built for your event. We've highlighted a few below.",
        "ledeStyle": "max-width: 62.5rem;"
       }
      },
@@ -90,7 +74,34 @@
       "type": "Cards",
       "props": {
        "id": "Cards-12",
-       "source": "flagships"
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "meghan-clarisse"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "tejas-singh"
+        },
+        {
+         "act": "jazz-duo"
+        },
+        {
+         "act": "rene-moffatt"
+        },
+        {
+         "act": "tony-medina"
+        },
+        {
+         "act": "classical-strings"
+        }
+       ]
       }
      },
      {
@@ -210,13 +221,13 @@
        "titleClass": "h2",
        "titleStyle": "max-width: 42rem; zoom: 1.25;",
        "image": {
-        "src": "/img/unsplash/photo-1511379938547-c1f69419868d.jpg",
-        "alt": "Acoustic and electric guitars, a keyboard and a microphone stand by tall windows.",
-        "width": "1600",
-        "height": "1067",
+        "src": "/img/acts/acoustic-outdoor.jpg",
+        "alt": "A guitarist in a flat cap playing an acoustic guitar among pine trees and rocks.",
+        "width": "1024",
+        "height": "1536",
         "loading": "lazy",
         "decoding": "async",
-        "style": "width: 22rem; height: auto;"
+        "style": "width: 22rem; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: 50% 25%;"
        },
        "imageFirst": true,
        "lede": "Hiring the right entertainment can be nerve-racking. Everyone's got an opinion, and to some degree, your reputation might be on the line.",
@@ -305,6 +316,22 @@
      }
     ],
     "cls": "why-signet"
+   }
+  },
+  {
+   "type": "RangeStrip",
+   "props": {
+    "id": "RangeStrip-10",
+    "image": {
+     "src": "/img/range.jpg",
+     "alt": "The Denver skyline against the Front Range, from City Park.",
+     "width": "2400",
+     "height": "800",
+     "loading": "lazy",
+     "decoding": "async"
+    },
+    "label": "Where we play",
+    "_file": "02b-range.html"
    }
   },
   {

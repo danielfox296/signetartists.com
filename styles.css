@@ -3447,6 +3447,32 @@ main:focus {
   transform: scale(1.03);
 }
 
+/* A photo card's silent loop: over the photo, unseen until it is playing, so
+   the photo shows while it loads and stays for data saver and reduced motion. */
+.photo-card-loop {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.photo-card-loop.is-playing {
+  opacity: 1;
+}
+
+.photo-card-loop video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: transform 0.5s ease;
+}
+
+.roster-card-link:hover .photo-card-loop video {
+  transform: scale(1.03);
+}
+
 .roster-card-over {
   position: absolute;
   inset: auto 0 0 0;
@@ -3456,6 +3482,8 @@ main:focus {
 
 .roster-card-over .act-kind {
   margin: 0 0 0.4rem;
+  /* Over the photo's dark foot on any band: a sunk band turns --brass to near-black. */
+  color: var(--red);
 }
 
 .roster-card-name {
