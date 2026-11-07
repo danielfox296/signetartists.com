@@ -159,7 +159,7 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Added: 2026-10-08 with CopyDesk
 
 ## photo-1527529482837-4698179dc6ce.jpg
-- Used on: the blog › party music for all ages page
+- Used on: the blog › party music for all ages page; the home page
 - Source: https://images.unsplash.com/photo-1527529482837-4698179dc6ce
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk

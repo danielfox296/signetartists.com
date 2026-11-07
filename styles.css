@@ -3473,6 +3473,30 @@ main:focus {
   transform: scale(1.03);
 }
 
+/* Photo cards sit a little off the band on a soft shadow, and rise further
+   while the pointer or keyboard focus is on them; they settle back after. */
+.act-card--photo .roster-card-photo {
+  box-shadow: 0 1px 2px rgba(18, 18, 18, 0.12), 0 10px 24px -10px rgba(18, 18, 18, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.act-card--photo .roster-card-link:hover .roster-card-photo,
+.act-card--photo .roster-card-link:focus-visible .roster-card-photo {
+  transform: translateY(-6px);
+  box-shadow: 0 2px 4px rgba(18, 18, 18, 0.14), 0 24px 44px -14px rgba(18, 18, 18, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .act-card--photo .roster-card-photo {
+    transition: box-shadow 0.35s ease;
+  }
+
+  .act-card--photo .roster-card-link:hover .roster-card-photo,
+  .act-card--photo .roster-card-link:focus-visible .roster-card-photo {
+    transform: none;
+  }
+}
+
 .roster-card-over {
   position: absolute;
   inset: auto 0 0 0;
