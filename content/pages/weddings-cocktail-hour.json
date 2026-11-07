@@ -35,10 +35,6 @@
      }
     ]
    },
-   "notes": {
-    "_note": "The single wedding surface (handoff v3, Tier 1b), built 2026-08-20. Hard cap: this page and its Denver variant are the whole wedding tree. No ceremony, no reception, no larger-band promises. The parent targets the question set plus Colorado breadth; the Denver child owns the Denver query, which is why this title says Colorado.",
-    "reader": "The couple deciding what fills the hour between the ceremony and dinner."
-   },
    "schemaArticle": "on",
    "published": "2026-09-03"
   }
@@ -75,7 +71,6 @@
       }
      }
     ],
-    "_notes": "The single wedding surface (handoff v3, Tier 1b). Cocktail hour only:\n     no ceremony content, no reception content, no larger-band promises.\n     The jazz duo leads as a format; Tejas Singh is the one named act on the\n     page, where a voice is wanted. The setlist token (01b) renders its own\n     ruled section, so the alternation downpage starts sunk.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the couple deciding what fills the hour after the ceremony. Daniel's CopyDesk sentence on the acoustic duo row ('The same footprint with the set turned toward singer-songwriter covers...') is untouched. dBA left the body for words; the planners section and the outdoor requirements are FAQ answers; FAQs went from eleven to eight by cutting the ones the body already answers.",
     "_file": "01-intro.html"
    }
   },
@@ -86,7 +81,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, 2026-09-03 (Daniel: weddings and private parties get\n     it too). Same block as /corporate/, logos only; the venue sentence stays\n     on the home page. Directly under the intro so the names sit on the first\n     screen with the rate-card button, ahead of the priced section.",
     "_file": "01a-credits.html"
    }
   },
@@ -96,7 +90,6 @@
     "id": "Setlist-7",
     "act": "jazz-duo",
     "title": "A sample of songs",
-    "_notes": "Moved out of 01-intro.html 2026-09-03 so the client strip (01a) sits\n     between the intro and the setlist. Renders its own ruled section, so the\n     alternation downpage still starts sunk at 02.",
     "_file": "01b-setlist.html"
    }
   },
@@ -146,7 +139,6 @@
       }
      }
     ],
-    "_notes": "Answer-first: what should play. The working argument is that volume,\n     not repertoire, is where the hour goes right or wrong, which is the\n     duo's case made without naming an opponent.",
     "_file": "02-what-plays.html"
    }
   },
@@ -183,7 +175,6 @@
       }
      }
     ],
-    "_notes": "Cocktail-hour footage: the jazz duo clip, the sound the page sells.\n     Existing artist footage, 2026-09-06, per Daniel: no new shoots, the artists'\n     own uploads placed under our framing. Provenance: _src/data/media-sources.json.",
     "_file": "02a-footage.html"
    }
   },
@@ -233,7 +224,6 @@
       }
      }
     ],
-    "_notes": "Added 2026-09-06. The demand harvest's cocktail-hour question set is\n     answered in the FAQ; this is the sensory paragraph the plan asks for,\n     what an outdoor hour actually sounds like from each of the two formats\n     buyers are choosing between. Colorado cocktail hours are outdoors more\n     often than they are anywhere else in the tree, so it earns its place on\n     the parent rather than on the Denver child.",
     "_file": "02b-outdoors.html"
    }
   },
@@ -291,7 +281,6 @@
       }
      }
     ],
-    "_notes": "Answer-first: how long the hour is, and the venue-flip case for 90.\n     The 60/90 framing is the handoff's; the overtime and break facts are\n     site.json's.",
     "_file": "03-the-hour.html"
    }
   },
@@ -358,7 +347,6 @@
       }
      }
     ],
-    "_notes": "Band or DJ, answered by format. The alternates link across to the\n     ensemble pages; Tejas Singh is the one named act (spine rule). The\n     act_from token is the section's single brass figure.",
     "_file": "04-duo-or-dj.html"
    }
   },
@@ -427,7 +415,6 @@
       }
      }
     ],
-    "_notes": "The visible FAQ renders from this dir's schema.json, so the answers\n     and the FAQPage markup cannot drift. Nothing follows the close token.",
     "_file": "06-faqs.html"
    }
   },

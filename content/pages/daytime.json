@@ -28,11 +28,6 @@
      ]
     }
    },
-   "notes": {
-    "_note": "The daytime hub, built 2026-09-19 on Daniel's brief: a hub-and-spoke set for the bookings that happen while the sun is up and are bought by a program person with a budget line rather than a party host. Five spokes: senior living and memory care, funerals and memorials, the daytime sound bath, Sunday brunch, and farmers markets, libraries and rec centers. Each spoke's config carries its own autocomplete evidence; the hub's phrases ('daytime live music', 'live music during the day denver', 'daytime entertainment') autocomplete on Google, checked 2026-09-19. The hub routes; the spokes carry the venue detail. No header slot: the nav row has been full at eight since the weddings hub (2026-09-06), so the hub is reached from the footer's Daytime column and from the bodies of the three occasion hubs. The close on every page in this tree is {{offer_close_day:...}}, the sitewide close with 'the night' read as 'the day'.",
-    "reader": "Whoever books music during the day, usually with a program to fill and a budget line to fill it from: an activity director, a family, a restaurant, a coordinator.",
-    "schema_note": "Authored 2026-09-19 with the daytime tree. Every answer traces to site.json configurations, the included list, and the facts already published on the solo guitarist, proposals, private parties and Firstwater pages. Questions are worded the way coordinators search. No figure, no reply window."
-   },
    "schemaArticle": "on",
    "published": "2026-09-19"
   }
@@ -69,7 +64,6 @@
       }
      }
     ],
-    "_notes": "Hub intro. The day leads, the formats answer. Links DOWN to all five\n     spokes inside the first screen, which is what a hub is for. The buyer's\n     phrases (daytime live music, live music during the day) sit in the h1\n     and the first paragraph.\n\nCopy pass batch 4, 2026-09-24. THE ONE READER: whoever books music during the day, often with a program and a budget line. The self-referencing opener ('The rest of this site is built around evenings') is gone; the rows lost their 'the X page covers' tails and dBA; the practical section is the FAQ; the standing-date answer no longer explains the contract's taxonomy.",
     "_file": "01-intro.html"
    }
   },
@@ -80,7 +74,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide.",
     "_file": "01a-credits.html"
    }
   },
@@ -139,7 +132,6 @@
       }
      }
     ],
-    "_notes": "The routing section: five bookings, five pages. Each row is a full\n     argument rather than a label with a link hanging off it, because this is\n     the hub's real work. No o'clocks anywhere in the tree: \"a weekday\n     afternoon\", \"lunchtime\" and \"a Sunday morning\" are calendar facts, not a\n     script for anyone's day.",
     "_file": "02-the-bookings.html"
    }
   },

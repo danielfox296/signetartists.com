@@ -27,11 +27,6 @@
      ]
     },
     "act": "last-consulate"
-   },
-   "notes": {
-    "_note": "Named-project page built 2026-09-23 on Daniel's call ('build pages for solo piano and last consulate too'), in the Firstwater shape: a named act with nobody named, spec'd in acts.json, the identity paragraphs held there since 2026-09-03 now on a page. No site, no channel and no footage exist, so the hero carries the act's own artwork (the prop passport Daniel supplied) in the footage slot. Title and meta carry the terms buyers type ('instrumental music for events', 'background music for corporate events'); the eyebrow keeps the act's own genre word. The residency product in LAST-CONSULATE-RESIDENCY.md is sold by hand and is not on this page.",
-    "reader": "Whoever wants a dinner or a cocktail hour that feels like a late jazz set in a very good hotel, with the conversation as the point.",
-    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -79,7 +74,6 @@
       }
      }
     ],
-    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name is\n     the h1, the byline is the spec line, the blurb is the lede. Nobody is named\n     on this page (acts.json _presentation_note). No site and no channel exist,\n     so there is no \"hear them first\" line; the artwork in the footage slot is\n     the act's own prop passport, supplied by Daniel (media-sources.json).",
     "_file": "01-hero.html"
    }
   },
@@ -90,7 +84,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, the same block the other act pages carry.",
     "_file": "01a-credits.html"
    }
   },
@@ -110,7 +103,6 @@
       }
      }
     ],
-    "_notes": "Copy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a dinner that feels like a late jazz set in a very good hotel. The hero lede is Daniel's own CopyDesk sentence (protected) and stays first. The first four paragraphs here are his supplied description and stay; the two page-written paragraphs are gone: the footprint and the no-covers negation went to the FAQ, and the named-act line narrated the site's own sourcing (Layer 8, the provenance leak).\n\nThe identity paragraphs, ratified in acts.json (Daniel's supplied\n     description, 2026-09-03) and kept close to source. The last two are the\n     page's own: the footprint, and the named-act promise in the form this act\n     can keep, since nobody is named.",
     "_file": "02-identity.html",
     "cls": "statement"
    }
@@ -146,8 +138,7 @@
        "cls": "prose"
       }
      }
-    ],
-    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
+    ]
    }
   },
   {
@@ -200,7 +191,6 @@
       }
      }
     ],
-    "_notes": "Up-links to the occasion pages this act suits, as repertoire and format\n     range only. Four, each with a page of its own.",
     "_file": "04-occasions.html"
    }
   },
@@ -253,7 +243,6 @@
       }
      }
     ],
-    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block and the\n     FAQPage markup can never drift apart.",
     "_file": "06-faqs.html"
    }
   },
@@ -281,7 +270,6 @@
       }
      }
     ],
-    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing\n     follows it.",
     "_file": "07-close.html"
    }
   }

@@ -42,11 +42,6 @@
       "duration": "PT1M9S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-19 on Daniel's brief (Sunday brunch). Autocomplete evidence, Google and Bing, 2026-09-19: 'jazz brunch denver' (Google's first suggestion for 'jazz brunch'), 'brunch with live music denver', 'brunch with live music denver colorado', 'live music sunday brunch near me', 'sunday brunch with live music', 'live music for brunch near me', 'jazz brunch live music', 'wedding brunch music', 'wedding breakfast music', 'bridal brunch songs'. The hire-side phrases ('musicians for brunch', 'hire musician for brunch') return nothing, so the page carries the diner-side head terms and is written for the two people who actually book: the restaurant, hotel or club that wants a standing Sunday, and the host of a private brunch. Uniqueness gate: registered as a daytime sibling. No figure on the page.",
-    "reader": "Whoever wants a brunch to sound like a good Sunday: a restaurant, hotel or club with a standing Sunday, or a family with a morning-after or a shower.",
-    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json (60 to 65 dBA, set lengths, continuous audio through breaks, footprints, load-in), the jazz duo's setlist in acts.json, and the outdoor conditions on the private parties page. Questions are worded the way venues and hosts search. No figure."
    }
   }
  },
@@ -82,7 +77,6 @@
       }
      }
     ],
-    "_notes": "The brunch spoke. The buyer's phrases (live music for brunch, jazz\n     brunch, Sunday brunch) sit in the h1 and the first paragraph. Two buyers\n     on one page: the venue booking a standing Sunday and the host booking a\n     private brunch. Hub link UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever wants a brunch to sound like a good Sunday, a restaurant's manager or a family. The opener was the spec ('a brunch with live music is upright bass and guitar'); it's the table now. Footprint, set lengths, dBA and paperwork moved to the FAQ; FAQs restating the set and the rows are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +87,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Hyatt and Sheraton are the names a hotel\n     food and beverage manager is looking for.",
     "_file": "01a-credits.html"
    }
   },
@@ -136,7 +129,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: the duo, and the trio for a bigger dining\n     space. No player named; the format is spec'd.",
     "_file": "01b-hear.html"
    }
   },
@@ -182,7 +174,6 @@
       }
      }
     ],
-    "_notes": "Who books it: the venue's standing Sunday and the three private\n     brunches. Facts: set lengths and continuous audio through breaks from\n     site.json, footprints and the 60 to 65 dBA band from the configurations.\n     Links UP to weddings, private parties and client dinners.",
     "_file": "02-who-books.html"
    }
   },
@@ -219,7 +210,6 @@
       }
      }
     ],
-    "_notes": "What plays and what the space needs. The titles are the jazz duo's\n     published setlist in acts.json; the outdoor conditions are the ratified\n     three from the private parties page; the battery line is from the\n     proposals page. Links ACROSS to the format pages.",
     "_file": "03-the-set.html"
    }
   },

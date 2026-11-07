@@ -44,11 +44,6 @@
       "duration": "PT1M"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 in the same day's second tranche (Daniel: 'next tranch. all year actually'). Autocomplete evidence, Google, 2026-09-20: 'backyard party band', 'band for backyard party', 'backyard party ideas for adults', 'summer party band'. The page is the outdoor version of the house party: the patio and the lawn as the two sizes, the outdoor facts from the technical page (a quiet grounded generator or a wall socket, cover over the band and the desk in any forecast, Colorado evenings cooling fast, a move-indoors plan), the after-dark planning rule from the Denver page (no ordinance cited), and the summer calendar. Uniqueness gate: registered as a private-parties sibling. No figure on the page. Title shortened 2026-09-21 after the Bing read (was 78 characters: 'Backyard party band and live music for a summer party at home | Signet Artists'); the head term stays first.",
-    "reader": "Whoever is hosting a summer party at home and wants the afternoon to turn into a night on the lawn.",
-    "schema_note": "Authored 2026-09-20 with the backyard party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the technical page's outdoor paragraph (generator, cover, evenings cooling fast, move-indoors plan), the proposals page (a guitarist on a battery-powered system) and the Denver page's after-dark planning fact. Questions are worded the way hosts search. No figure."
    }
   }
  },
@@ -84,7 +79,6 @@
       }
      }
     ],
-    "_notes": "The backyard party spoke. The buyer's phrases (backyard party band, summer party band, band for a backyard party) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is hosting a summer party at home and wants it to turn into a night. The sizes list and the ideas list said the same six things; they are one list now, under the ideas heading buyers search. The outdoors section (power, cover, neighbors) was all ops and is the FAQ now; the season section keeps its calendar fact only.",
     "_file": "01-intro.html"
    }
   },
@@ -95,7 +89,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -138,7 +131,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: Dirty Flamenco at a garden party (a named act) and a singer with a guitar at a private party (no player named; the format is spec'd).",
     "_file": "01b-hear.html"
    }
   },
@@ -167,7 +159,6 @@
       }
      }
     ],
-    "_notes": "The summer calendar from the host's side: May to September, the Saturdays the weddings take, and the shape of an afternoon that turns into an evening. Calendar facts only.",
     "_file": "04-season.html"
    }
   },
@@ -230,7 +221,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head term hosts type ('backyard party ideas for adults'). Every idea is an act on the roster or a booking the site already describes.",
     "_file": "05-ideas.html"
    }
   },

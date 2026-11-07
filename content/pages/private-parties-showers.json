@@ -42,11 +42,6 @@
       "duration": "PT2M40S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'baby shower entertainment ideas' and 'baby shower entertainment ideas no games', 'live music for baby shower', 'baby shower live music', 'bridal shower entertainment' and 'bridal shower entertainment ideas'. One page for both showers because the booking is the same (daytime, small, a guitarist or a duo at conversation volume) and the two head terms split a thin family. It is a daytime booking, so the close is the day variant and the brunch page is the sibling. Uniqueness gate: registered as a private-parties sibling. No figure on the page. Title shortened 2026-09-21 after the Bing read (was 72 characters: 'Live music for a baby shower or bridal shower in Denver | Signet Artists'); the head term stays first.",
-    "reader": "Whoever is hosting a baby, bridal or couples shower and wants the afternoon to have live music in it.",
-    "schema_note": "Authored 2026-09-20 with the showers spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the proposals page (the first learned song is included in every booking), the brunch page (the same duo the day after a wedding on the same contract) and the flamenco page (Dirty Flamenco as one guitarist). Questions are worded the way hosts search. No figure."
    }
   }
  },
@@ -82,7 +77,6 @@
       }
      }
     ],
-    "_notes": "The showers spoke. The buyer's phrases (live music for a baby shower, bridal shower entertainment) sit in the h1 and the first paragraph. Two showers on one page because the booking is the same; the hub link goes UP in the first screen and the brunch page is linked ACROSS.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is hosting a baby, bridal or couples shower and wants the afternoon to have music in it. Sizes and ideas were the same list twice; one list now, under the ideas heading. The ideas headline lost its negation. Ops (footprint, dBA, paperwork) to the FAQ; FAQs that restated rows are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +87,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -136,7 +129,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: one jazz guitar on Autumn Leaves (no player named; the format is spec'd) and Dirty Flamenco playing Can't Help Falling in Love on Spanish guitar (a named act).",
     "_file": "01b-hear.html"
    }
   },
@@ -178,7 +170,6 @@
       }
      }
     ],
-    "_notes": "The three showers, each with the size that fits. Links ACROSS to the brunch page, the weddings tree and the backyard page. No clock times.",
     "_file": "03-who-books.html"
    }
   },
@@ -233,7 +224,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head terms hosts type ('baby shower entertainment ideas no games', 'bridal shower entertainment ideas'). Every idea is an act on the roster.",
     "_file": "04-ideas.html"
    }
   },

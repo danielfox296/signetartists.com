@@ -36,10 +36,6 @@
       "duration": "PT2M40S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-16 on Daniel's call: 'if there's demand for that we offer it for a priced minimum. i don't care if it's one song, they'll pay a minimum.' Evidence from the demand harvest's surprises: 'hire a band for a proposal', 'hire musician for proposal', 'hire a band to sing happy birthday' and 'hire a mariachi band for one song' all autocomplete as micro-bookings. The page sells the one-song and short-set booking (a proposal, a surprise at a birthday or anniversary dinner) at a booking minimum, and the minimum is never a figure on the site: no Signet price publishes anywhere, so the page says a minimum exists and the date sets it. Mariachi is out (2026-09-14); the guitarist, the singer and the duo answer the same request. Uniqueness gate: registered as a private-parties sibling.",
-    "reader": "The person planning a proposal or a surprise song, who wants one song to start at the exact minute, with nobody else in on it."
    }
   }
  },
@@ -85,7 +81,6 @@
       }
      }
     ],
-    "_notes": "The one-song page. The moment leads. The buyer's phrases (hire a\n     musician for a proposal, a surprise song) sit in the h1 and the first\n     paragraph. The booking minimum is named as a fact and never as a figure.\n     Hub link UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the person planning a proposal or a surprise song, who wants it to land at the exact minute. The staccato opener ('Some bookings are four hours long. Some are one song.') was a fragment stack and is gone. The FAQs that restated the how-it-works rows are gone; honour/recognised locale drift fixed.",
     "_file": "01-intro.html"
    }
   },
@@ -96,7 +91,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide.",
     "_file": "01a-credits.html"
    }
   },
@@ -155,7 +149,6 @@
       }
      }
     ],
-    "_notes": "How a one-song booking runs: the setup, the cue, the after. Written\n     as the moment, not as ops. Links ACROSS to the guitarist, the singer,\n     the Spanish guitarist and the duo.",
     "_file": "02-how.html"
    }
   },
@@ -208,7 +201,6 @@
       }
      }
     ],
-    "_notes": "Where these happen and what each place asks: the practical paragraph\n     that keeps the page from being a card. Battery power and permits are\n     facts, not choreography: no o'clocks, no scripting.",
     "_file": "03-places.html"
    }
   },

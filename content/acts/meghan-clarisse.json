@@ -2,7 +2,6 @@
  "id": "meghan-clarisse",
  "name": "Meghan Clarisse",
  "presentation": "face",
- "_presentation_note": "2026-11-06, Daniel: Featured Artist, named at artists/meghan-clarisse/. She wrote hello@ on 2026-09-29. Only her name publishes: none of her players, and her duo partner on the Hall of Fame award stays unnamed.",
  "status": "listing",
  "page": "artists/meghan-clarisse/",
  "style": "Country and Americana",
@@ -19,20 +18,16 @@
   "duo",
   "quintet"
  ],
- "_config_note": "From her 2026-11-05 email: solo, duo, and a five-piece full band. She can put a trio together on request; it has no rate yet, so it isn't a size on the card, and the page says so in the ActSizes note. Add 'trio' here when she quotes it.",
  "configRangeLabel": "Solo, duo or five-piece band",
  "genre_tags": [
   "country",
   "americana"
  ],
- "_genre_note": "2026-11-06: 'country' is new in roster.json, because 'country band for hire', 'country singer for hire' and 'country band for wedding' all autocomplete and the filter had no way to say it.",
  "vocals": "sung",
  "from": "solo",
  "img": "meghan-clarisse-card.jpg",
- "_img_note": "The hero photograph from her own site, cropped 16:9. Her Drive folder opened 2026-11-06 after the page went live; four of its photographs are in the page's gallery, and the rest were smaller copies of what the site already had.",
  "alt": "Meghan Clarisse in a cream cowboy hat and a lace top, looking back over her shoulder under a blossoming tree.",
  "video": "https://www.youtube-nocookie.com/embed/HGsbmeBlcb0?rel=0",
- "_video_note": "2026-11-06, Daniel: Fire and Fly on the Signet channel leads the page, uploaded from the 4K file in her Drive folder. It's the only clip showing the full band, and it sits on a channel we control. Copper & Quartz, the first hero, moved into the clips.",
  "video_poster": "img/acts/meghan-clarisse-live-poster.jpg",
  "blurb": "Meghan Clarisse is a Denver singer-songwriter who calls what she does \"music with country roots and cowgirl boots.\" Her latest album won the 2026 Josie Music Award for Folk/Americana Album of the Year, and she plays Dolly Parton, Fleetwood Mac and Johnny Cash alongside her own songs. You can book her solo, as a duo or with her five-piece band.",
  "identity": [
@@ -59,7 +54,6 @@
   }
  ],
  "setlist": {
-  "_note": "Every title is from the sample set list on her own EPK page, spellings corrected. Her originals aren't in this list; the clips cover those.",
   "note": "This is a sample of the covers on her song list, and we’ll put the setlist together with you.",
   "items": [
    "Jolene",
@@ -76,8 +70,6 @@
   "private-parties"
  ],
  "entity": {
-  "type": "Person",
-  "_sameAs_note": "No sameAs: no link to an artist's own site or channel anywhere, search-engine data included (Daniel, 2026-11-02)."
- },
- "_ladder_note": "2026-11-06: 'label' on a rung overrides the rate card's name, because the rate card's 'Five to six piece' overstates a band that is exactly five."
+  "type": "Person"
+ }
 }

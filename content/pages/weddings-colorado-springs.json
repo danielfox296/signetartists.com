@@ -28,10 +28,6 @@
       "dj"
      ]
     }
-   },
-   "notes": {
-    "_note": "Colorado Springs spoke of the weddings hub, built 2026-09-13. Evidence: the Springs acoustic family (acoustic duo / bands / guitarists / trio / musicians / jazz duo colorado springs) is the fastest-growing query family in Search Console, 76 impressions in the month to Sep 11 with the private-parties spoke a week old; Colorado Springs is the only non-Denver Colorado city that autocompletes for wedding music ('wedding bands colorado springs', 'wedding dj colorado springs'); the live SERP for 'colorado springs wedding guitarist' is all directories. The argument here is the wedding day itself at the Springs venues, ceremony to last song, which is what makes it distinct from the Springs private-parties spoke (the weekend around the wedding) and the Springs holiday spoke (procurement). Uniqueness gate: registered as a weddings sibling.",
-    "reader": "The couple getting married in Colorado Springs, outdoors until the light goes and indoors after it."
    }
   }
  },
@@ -67,7 +63,6 @@
       }
      }
     ],
-    "_notes": "Springs wedding spoke. The day leads: ceremony site, terrace, floor. The\n     vendor queries the page targets sit in the h1 line and the first\n     paragraph (wedding guitarist, duo, band, DJ, Colorado Springs). Hub link\n     UP in the first screen per the internal-link contract.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: the couple marrying in Colorado Springs, usually outdoors until the light goes. The resorts, downtown hotels and the light-and-wind facts stay; travel, setup and the officiant microphone went to the FAQ with the extras list; the band-or-DJ FAQ restated the floor row and is gone; colour fixed.",
     "_file": "01-intro.html"
    }
   },
@@ -78,7 +73,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide since 2026-09-05. A landing surface for city\n     search, so the names sit on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -125,7 +119,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
     "_file": "01b-media.html"
    }
   },
@@ -176,7 +169,6 @@
       }
      }
     ],
-    "_notes": "The three bookings of the day, written to the Springs venues rather than\n     restating the hub's route-the-day argument. Links ACROSS to the ceremony,\n     cocktail hour, Tejas and DJ pages.",
     "_file": "02-the-day.html"
    }
   },
@@ -221,7 +213,6 @@
       }
      }
     ],
-    "_notes": "Venues as the market's places (arch section 8 vetted Colorado Springs\n     list), never as our history. Written to the ceremony site and the floor,\n     which is what separates this page from the Springs private-parties\n     spoke's terrace-and-weekend read of the same list.",
     "_file": "03-venues.html"
    }
   },
@@ -258,7 +249,6 @@
       }
      }
     ],
-    "_notes": "The city-specific logistics the uniqueness gate requires, written to the\n     ceremony hour rather than the party: light, wind, the officiant's\n     microphone, the drive as one line. Links to the technical page and the\n     lead-time post.",
     "_file": "04-logistics.html"
    }
   },

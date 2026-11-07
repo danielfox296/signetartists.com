@@ -44,11 +44,6 @@
       "duration": "PT1M9S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'engagement party band' and 'engagement party entertainment ideas'. The page bridges the private parties tree and the weddings tree: the two families at one table, the couple's song learned for the night, the party that follows a proposal, and the same duo playing the cocktail hour on the day on one contract. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
-    "reader": "Whoever is throwing an engagement party, the parents or the friends, and wants the two families to enjoy their first evening together.",
-    "schema_note": "Authored 2026-09-20 with the engagement party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the proposals page (the musician already there, the first learned song included in every booking), the brunch page's precedent for two bookings on one contract, and the weddings tree. Questions are worded the way hosts search. No figure."
    }
   }
  },
@@ -84,7 +79,6 @@
       }
      }
     ],
-    "_notes": "The engagement party spoke. The buyer's phrases (engagement party band, live music for an engagement party) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP and the weddings tree is linked ACROSS.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the engagement party, parents or friends, and wants the two families to enjoy one evening together. The sizes list and the ideas list restated each other and are one list under the ideas heading now; ops and the cost pointer moved to the FAQ or out.",
     "_file": "01-intro.html"
    }
   },
@@ -95,7 +89,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -138,7 +131,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: Dirty Flamenco playing Malaguena (a named act) and a jazz trio on Sunny (no player named; the format is spec'd).",
     "_file": "01b-hear.html"
    }
   },
@@ -180,7 +172,6 @@
       }
      }
     ],
-    "_notes": "The three engagement parties, each with the size that fits. Links ACROSS to the proposals page (the party after the question), the weddings tree (the welcome party and the cocktail hour) and the backyard page. No clock times.",
     "_file": "03-the-party.html"
    }
   },
@@ -239,7 +230,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head term hosts type ('engagement party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
     "_file": "04-ideas.html"
    }
   },

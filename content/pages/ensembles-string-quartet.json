@@ -68,10 +68,6 @@
      }
     ]
    },
-   "notes": {
-    "_note": "Format spoke built 2026-09-25 with the signet-new-act skill, on Daniel's instruction to add classical strings as a style from solo violin to quartet, spec'd, nobody named. Evidence the same day: 'string quartet denver', 'string quartet wedding denver', 'wedding violinist denver' and 'violinist denver' autocomplete, 'string quartet colorado springs' and 'string quartet for corporate events' too, and a cost family sits behind them ('string quartet cost per hour', 'average cost string quartet wedding ceremony'), which one FAQ answers with the market's figure and the sources note. The song list is the repertoire list that arrived with the offer, published in six groups as an example of what the booking offers. No player is named on the page, in alt text or in schema; the player's own recordings are not embedded because the YouTube player prints the channel name.",
-    "reader": "Whoever wants strings at the moment everyone is watching: the walk down the aisle, the doors of a gala, a memorial, a long dinner."
-   },
    "schemaArticle": "on",
    "published": "2026-09-22"
   }
@@ -119,7 +115,6 @@
       }
      }
     ],
-    "_notes": "Format spoke, spec'd: classical strings from one violinist to the string\n     quartet. Built 2026-09-25 with the signet-new-act skill on Daniel's\n     instruction. The h1 carries the head terms buyers type (string quartet,\n     violinist) and the lede opens on the moment they are paying for. No\n     player is named anywhere on this page, in alt text or in schema. The hero\n     is the violinist's own upload of the Bach Andante, embedded 2026-09-25 on\n     Daniel's yes; the iframe title names no player.\n\nTHE ONE READER: whoever wants strings at the moment everyone is watching: the walk down the aisle, the doors of a gala, a memorial, a long dinner.",
     "_file": "01-intro.html"
    }
   },
@@ -130,7 +125,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -715,7 +709,6 @@
       }
      }
     ],
-    "_notes": "The book: the wedding and event repertoire list that arrived with the\n     offer on 2026-09-25, published whole as an example of what the booking\n     offers, in six groups. The list's own \"instrumental and other\" group is\n     folded into the classical group and its folk and indie group into pop,\n     and two titles the list printed twice appear once. Composers and artists\n     print as the setlist's own separator, no em dashes.",
     "_file": "02-book.html"
    }
   },
@@ -769,7 +762,6 @@
       }
      }
     ],
-    "_notes": "The four sizes, from one violin to the string quartet, each with the\n     instrumentation as product fact and the space it fits. Footprints, power\n     and weather are FAQ answers. Links ACROSS to the guitar ceremony bookings,\n     the jazz duo and the DJ in the note.",
     "_file": "03-sizes.html"
    }
   },
@@ -827,7 +819,6 @@
       }
      }
     ],
-    "_notes": "Who books it, one row per occasion, each linking UP to the occasion\n     page. Says who and why, never when.",
     "_file": "04-occasions.html"
    }
   },
@@ -909,7 +900,6 @@
       }
      }
     ],
-    "_notes": "Footage from the violinist's own channel, embedded 2026-09-25 on\n     Daniel's yes (media-sources.json video_embeds; every id passed\n     scripts/act_media.py embed the same day). The hero above is the Bach\n     Andante; these four are the rest of what she publishes, and nothing was\n     held back. No player is named here or in the iframe titles; the YouTube\n     player prints the channel on its own, which Daniel accepted.\n\n     Photographs from her site (mariroes.com), cleared by Daniel the same day:\n     the ballroom dinner, the concert stage and the meadow. The mountain\n     ceremony frame is the card and og image. Held back: the two portraits and\n     the bench shots (a portrait is not the act as booked, and this is a\n     spec'd style), the teaching photo (lessons, not this offer), and the\n     portrait crop of the ceremony frame already on the card. Alt text names\n     nobody. Reverse any of it in a word.",
     "_file": "05-footage.html"
    }
   },
@@ -974,7 +964,6 @@
       }
      }
     ],
-    "_notes": "Visible FAQ renders from this dir's schema.json. The cost answer carries\n     the market's figure, so the sources note prints under the block, as on\n     the corporate hub. Nothing follows the close token.",
     "_file": "06-faqs.html"
    }
   },

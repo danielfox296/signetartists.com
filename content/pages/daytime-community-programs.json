@@ -45,11 +45,6 @@
       "duration": "PT1M31S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-19 on Daniel's brief (farmers-market and library/rec-center programs). Autocomplete evidence, Google and Bing, 2026-09-19: 'farmers market musicians', 'farmers market band', 'farmers market performers', 'farmers market live music near me', 'sunday farmers market near me with live music', 'performers for libraries' (Google), 'library concert series', 'library concert series near me', 'library music series', 'library programs for adults', 'library programs for older adults', 'live music at the library', 'recreation center events', 'adult recreation center events', 'community concert series', 'summer concert series colorado' and 'summer concert series denver'. The hire-side phrases are thin, so the page carries the program words the coordinators use (programs, series, performers) and the head terms in the title. Uniqueness gate: registered as a daytime sibling. No figure on the page.",
-    "reader": "The program coordinator at a market, library, rec center or summer series with a season of dates to fill.",
-    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json configurations and the included list, the proposals page (battery-powered system), the private parties page (the three outdoor conditions), the ceremony page (unamplified in a small space), acts.json (the Americana band's build) and the act's old site (libraries). Questions are worded the way coordinators search. No figure."
    }
   }
  },
@@ -85,7 +80,6 @@
       }
      }
     ],
-    "_notes": "The community programs spoke. The buyer's phrases (farmers market\n     musicians, library programs, concert series, rec center) sit in the h1\n     and the first paragraph. Written for the coordinator with a season to\n     fill. Hub link UP and act links ACROSS in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the program coordinator with a season to fill. The opener was a list of three institutions; it's one market morning now, and the institutions are the rows. The practical section (power, weather, permits, paperwork, footprint) is the FAQ; dBA and the sing-along booklets left the rows.",
     "_file": "01-intro.html"
    }
   },
@@ -96,7 +90,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide.",
     "_file": "01a-credits.html"
    }
   },
@@ -139,7 +132,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: one musician building a song alone, which is\n     the market booking, and a trio outdoors. Tejas Singh is a named act and\n     may be named; the flamenco trio is Dirty Flamenco, also named.",
     "_file": "01b-hear.html"
    }
   },
@@ -185,7 +177,6 @@
       }
      }
     ],
-    "_notes": "The programs, one row each: markets, libraries, rec centers, summer\n     series. Facts: the battery line from the proposals page, the 60 to 65\n     dBA band and set lengths from site.json, the unamplified line from the\n     ceremony page, the Americana band's build and buckets from acts.json,\n     Firstwater's libraries line from the act's old site. Named acts are named;\n     spec'd formats are not.",
     "_file": "02-programs.html"
    }
   },

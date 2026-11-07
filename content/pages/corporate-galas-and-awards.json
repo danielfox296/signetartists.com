@@ -30,10 +30,6 @@
       "dj"
      ]
     }
-   },
-   "notes": {
-    "_note": "Corporate spoke built 2026-09-14 from the corporate demand report. Evidence: galas and award nights are the second most-named corporate occasion on Colorado vendors' pages (7 of 35), the program-cue competence is undemonstrated by every Colorado band since the July audit, the Denver Health Foundation gala layered four acts through one night while the Colorado Technology Association's Apex Awards seated 573 people with no music at all, and 'gala dinner entertainment ideas' autocompletes. Not a search-acquisition page: 'gala band' is polluted. It is the page a committee is sent, and the forwarded proposal. Small-format scale throughout.",
-    "reader": "The gala committee or event lead who needs the music to work around every cue in the program."
    }
   }
  },
@@ -69,7 +65,6 @@
       }
      }
     ],
-    "_notes": "Corporate spoke, the program-driven evening. Written for the development\n     director, the gala committee and the association's event manager, and for\n     the board member the proposal gets forwarded to. The claim is competence\n     against a program, which the July audit found undemonstrated by every\n     Colorado band. No gala-scale production is implied.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the gala committee or event lead who needs the music to work around the program. The cue list is the product for this buyer and stays; the venue list is gone (occasion spokes carry no venue lists); ops and paperwork to the FAQ; FAQs restating cue rows are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -80,7 +75,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide since 2026-09-05. Directly under the intro so\n     the names land on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -117,7 +111,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
     "_file": "01b-footage.html"
    }
   },
@@ -176,7 +169,6 @@
       }
      }
     ],
-    "_notes": "The cues. Facts from site.json plannerFaqs: the announcement mic on its\n     own channel from the end of sound check, the dinner dBA band.",
     "_file": "02-cues.html"
    }
   },
@@ -227,7 +219,6 @@
       }
      }
     ],
-    "_notes": "The acts, by slot. Links ACROSS to the ensemble pages.",
     "_file": "03-shapes.html"
    }
   },
@@ -255,7 +246,6 @@
       }
      }
     ],
-    "_notes": "Venues as the market's places, never as our history.",
     "_file": "04-where.html"
    }
   },

@@ -23,7 +23,6 @@
  "img": "unsplash/photo-1619558041249-0523903712e1.jpg",
  "alt": "A hand plucking the strings of a wooden electric bass.",
  "video": null,
- "_merged_note": "MERGED 2026-08-16 from two listings, 'Dan Steele (funk trio)' and 'DF Funk'. The workbook flagged the direct overlap and said pick one or merge; Daniel's ruling is that they are interchangeable, so this is one format with both behind it as availability depth. The first pass differentiated them on voice-fronted versus guitar-fronted, which rested on a face chair the workbook marks 'assumed'. That copy is gone and is not to be reinstated without confirming the chair.",
  "depth": [
   "Dan Steele trio",
   "DF Funk"
@@ -32,8 +31,5 @@
  "occasion_tags": [
   "corporate",
   "private-parties"
- ],
- "_name_note": "RENAMED 2026-09-23 from 'Funk Trio to quartet', which was a size range wearing a name. config_tags now carry both sizes the old name promised. The id stays funk-trio: it is in every ?act= link and the roster's data attributes.",
- "_page_note": "PAGE 2026-09-23: 'funk band denver' and 'funk band for hire' autocomplete, which is the demand evidence the skill asks for before a spec'd listing earns a page. Scaffolded with scripts/new_act_page.py --slug funk-band.",
- "_img_note": "2026-11-03, Daniel: a stock photo of a bass guitar, replacing the drawn funk band tile, which read as a flier."
+ ]
 }

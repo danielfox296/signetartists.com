@@ -106,14 +106,6 @@
       "duration": "PT34S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Authored 2026-10-29 with the signet-new-act skill, the day the band joined the roster from its own email to hello@ (the pitch and one-sheet on Oct 27, then the EPK, riders, stage plot, press photo and logo; Daniel's replies in the thread are the clearance). Mirrors artists-tony-medina: the act's file carries page 'artists/little-moses-jones/', the identity paragraphs are the ratified ones in that file, and there is no ladder section because the band books as one size (six piece with its own sound engineer). Every claim traces to littlemosesjones.com, the EPK PDF, the riders or @LittleMosesJones; the credits named are the band's own. No prices anywhere. The one-name rule on a face-led act keeps the lineup unnamed on this page, in alt text and in the video titles, although the band's own site names everyone.",
-    "reader": "Whoever wants the floor full of people singing every word to the records they grew up on, from an office holiday party to a 40th to a wedding reception.",
-    "_title_note": "54 characters before the brand suffix. The terms buyers type are the era and the genre (90s hip hop band, r&b band denver), with the act's name first.",
-    "_read_note": "Read aloud 2026-10-29 against AI-TELLS layers 7 and 8 on the built page: the verses-rapped-live fact, the clean show and the sound engineer each said once where they do the most work, the FAQ answering in the buyer's words without repeating the body, the credits sentence split in two.",
-    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
-    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -155,8 +147,7 @@
        "loading": "lazy"
       }
      }
-    ],
-    "_notes": "The act hero in the artists-tony-medina shape: eyebrow is the style, the name is the h1, the byline is the face line, the lede opens on the moment the buyer is paying for (AI-TELLS Layer 8, pattern 10) and the mechanism follows. The footage slot is the band's own 2026 promo, clean version, on their own channel; the look-up links are their site and channel, both verified 2026-10-29."
+    ]
    }
   },
   {
@@ -165,8 +156,7 @@
     "id": "LogoStrip-6",
     "band": "ruled",
     "label": "Where our artists have played",
-    "showAlso": false,
-    "_notes": "The client strip, the same block the other act pages carry."
+    "showAlso": false
    }
   },
   {
@@ -185,7 +175,6 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in the act's file and mirrored here: the lineup and how the set runs, the song list and the clean show, the band's own credits, the size. Nothing restates the hero; no named-act promise paragraph (cut from every act page 2026-09-24 as a provenance leak); no ladder section follows because the band is one size.",
     "cls": "statement"
    }
   },
@@ -220,8 +209,7 @@
        "cls": "prose"
       }
      }
-    ],
-    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
+    ]
    }
   },
   {
@@ -273,8 +261,7 @@
        "cls": "note"
       }
      }
-    ],
-    "_notes": "Up-links to the occasion pages this band suits, written as repertoire and format only: who books it and why, never when. The wedding row says what their own site sells (ceremony and cocktail hour with a smaller lineup) as their offer, since the Signet size is the six piece."
+    ]
    }
   },
   {
@@ -394,8 +381,7 @@
        "cls": "note"
       }
      }
-    ],
-    "_notes": "The book, authored rather than pulled from the repertoire data: every cover named here is one you can watch them play on this page, and the titles match the act file's setlist.items."
+    ]
    }
   },
   {
@@ -541,8 +527,7 @@
        "single": false
       }
      }
-    ],
-    "_notes": "Real media, loaded 2026-10-29 from the band's own site and channel; per-asset provenance in content/records/media-sources.json, every embed checked playableInEmbed the same day. Between this grid and the hero, every title named in the song list above is playable on this page. Found on their channel and not placed, each a curation call Daniel can reverse in a word: the explicit version of the promo (g2STWW852Ek, the same footage with the other audio); two stand-up comedy segments by one of the singers (not the band as booked); two official-audio uploads (a still, not a performance); the behind-the-scenes vlog; the Speakeasy Blues Jam event promo; the Rihanna cover rJSsYAaGaMM (its title, on a page written for office-party buyers); two more originals on TV and at a bar (HSkNCDG5I40, 2fbBKcIxPGo), since one original is enough on a covers page; and nine more festival and bar sets (Juneteenth Thornton, Burro Days, Clement Park, Aurora Movies in the Park and 4th of July, Hoffbrau, MoJa Blu, the Frontier Club, Mile High Harley bike night, Xxplosive at Greenfields, Woo Hah at ViewHouse), all checked OK and left off only to keep the grid readable. 'The One and Only' sits on a YouTube Topic channel the band does not control and is never placed. Photographs not placed: the individual portraits of the two singers and the full-length bandleader shots (the gallery already shows the band), and the night shot outside the transit station (the band is too small in the frame)."
+    ]
    }
   },
   {
@@ -589,8 +574,7 @@
        "schema": true
       }
      }
-    ],
-    "_notes": "The page FAQ: the visible block and the FAQPage markup render from the same items. Ops (circuits, set lengths, the first dance) lives here and not in the body. The sources are the band's own FAQ, technical rider and hospitality rider."
+    ]
    }
   },
   {
@@ -616,8 +600,7 @@
        "lede": "Send us your date and we’ll check with the band."
       }
      }
-    ],
-    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing follows it."
+    ]
    }
   }
  ]

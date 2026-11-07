@@ -8,12 +8,7 @@
    "breadcrumb": "Artist Roster",
    "indexLabel": "Artist Roster",
    "schemaKind": "roster",
-   "schema": {},
-   "notes": {
-    "reader": "Whoever is choosing an act and wants to see the whole roster, by the kind of event, the size or the sound.",
-    "_restructure_note": "Was 'The Music' and described two house bands. Now the roster page for the represented acts. Never state a count of acts here or anywhere outbound: the roster grows and a number goes stale silently (2026-09-07). URL stays /music/ deliberately: it is the indexed URL and carries the nav slot, so the model changed underneath it rather than moving. REBUILT 2026-09-23: the page carries two lanes now (the configurations, compact and smallest first, then the named acts with their footage), an answer-first block on which configuration fits which kind of event, an occasion filter, and its own FAQ in schema.json; the hand-typed configuration list is gone because the lane renders from acts.json. Title and h1 carry the head term nothing on the site owned, 'bands and musicians for hire in Denver' ('denver bands for hire' and 'denver musicians for hire' autocomplete, 2026-09-23); Search Console had the old page on no buyer query at all. index_label keeps the nav label so the sitemap and the nav agree.",
-    "schema_note": "The roster's FAQ, 2026-09-23. No service block: the page's graph (every act as a Service, the named acts as entities) comes from build.py roster_schema, and page_schema adds it when config.json says schema: roster. Answers lead with the answer; the figures on the pricing page stay there."
-   }
+   "schema": {}
   }
  },
  "content": [
@@ -43,7 +38,6 @@
       }
      }
     ],
-    "_notes": "Restructure 2026-08-15, revised 2026-08-16. Permanence claims removed\n     2026-08-17: the contract sells a configuration, so the named-acts paragraph\n     now promises the published name and advance notice of any substitution,\n     never presence. Thomas Owen Band came off the roster 2026-08-27 on\n     Daniel's call (see acts.json holds). Tony Medina was promoted out of the\n     spec'd Blues Rock format and named 2026-09-06, which is why Blues and\n     Rock left the formats sentence: it is a named act now, not a lane.\n\n     The first pass claimed every booking here was \"fronted by someone with a\n     book they already play, and the name is on the page so you can look them\n     up.\" That is true of three of them. For the rest it was a promise the\n     booking could not keep, and it forced an invented flavour difference\n     between two interchangeable funk trios.\n\n     The page now states the split instead of papering over it, which is the\n     stronger position anyway: a named act is a person you can go and check,\n     and a format is a spec we guarantee. Both are checkable claims. The\n     previous version was one checkable claim and one unfalsifiable one.\n\n     NO COUNT, 2026-09-07, Daniel: the roster grows, so any number posted\n     anywhere becomes an ongoing maintenance problem and eventually a stale\n     claim. The {{act_count_word}} token that used to sit in this headline is\n     retired in build.py. \"& growing\" carries the same idea and never expires.\n\n     Changes Jazz Trio joined the named-acts list 2026-09-16, the day it was\n     published under its own name (Daniel: \"They can be a named act\"). The\n     sentence is Daniel's; only the list of names in it moved.\n\n     Firstwater joined the list 2026-09-19, the day Daniel's own sound-session\n     practice was published as a named act; again only the list moved.\n\n     René Moffatt joined the list 2026-09-20, the day Daniel added him as an\n     original singer-songwriter; only the list moved.\n\n     Your Bird Can Sing joined the list 2026-09-22. It is spec'd rather than\n     face-led, because Daniel ruled that no musician in it publishes (\"publish\n     under the act name. no additional names\"), and it belongs in this\n     sentence for the reason Firstwater does: what you book is that act, not\n     an interchangeable format. Only the list moved.\n\n     H1 2026-09-23, Daniel's call on the roster assessment (\"do all seven\"):\n     the headline carries the head term nothing on the site owned. \"denver\n     bands for hire\" and \"denver musicians for hire\" autocomplete; the old\n     headline ranked for nothing a buyer types. The two paragraphs under it\n     are his and are unchanged.\n\n     String Quartets joined the formats sentence 2026-09-25 on Daniel's \"yes\",\n     the day classical strings shipped; the word is the search head term, the\n     same call as the home lede. Only the list moved.",
     "_file": "01-intro.html"
    }
   },
@@ -54,7 +48,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, 2026-09-03 (Daniel: the music page too). Same block as\n     /corporate/, logos only; the venue sentence stays on the home page.\n     Directly under the intro, ahead of the filter and the roster grid.",
     "_file": "01a-credits.html"
    }
   },
@@ -117,7 +110,6 @@
       }
      }
     ],
-    "_notes": "The answer-first block, 2026-09-23. The roster used to open on a filter\n     and a wall of cards; the first thing a reader (or an answer engine)\n     could quote was a card blurb. This states, in definite sentences, which\n     configuration fits which kind of event, with the size and volume facts\n     the site already publishes, and links every act it names. Sizing facts\n     stay (a solo in 6 by 4, a quartet on two circuits, 60 to 65 dBA); no\n     clock times, no assigning an act to an hour of anyone's night.\n\nCopy pass batch 4, 2026-09-24. The which-configuration block: dBA and footprints left the rows (they're on the act pages' FAQs and the technical page); the lede is shorter and the pricing pointer is gone (the hero and the close carry it). Daniel's own intro paragraphs above are untouched.",
     "_file": "01b-which.html"
    }
   },
@@ -144,7 +136,6 @@
      }
     ],
     "script": true,
-    "_notes": "Two lanes, 2026-09-23. The roster grid used to list every act in file\n     order, named and spec'd mixed, with the hand-typed configuration index\n     fourteen phone screens further down and five configuration pages that\n     were on no card at all. Now the configurations come first, compact and\n     smallest first, and the named acts follow with their footage. Both lanes\n     render from acts.json (`lane`, see its _lanes_note), so a new act joins\n     the right lane on the next build with nothing to type here.\n\n     Filter UI ships hidden and acts.js unhides it, so with script off every\n     act on the roster is still on the page. The filter is a class toggle\n     over data attributes rendered by build.py, never a re-render, and it\n     works across both lanes; a lane with nothing left in it hides its own\n     heading. The page opens pre-filtered from a query string\n     (?occasion=weddings, ?size=duo, ?genre=jazz, ?night=party), which is how\n     an occasion page can point at the acts that suit it.\n\nDaniel's disclaimer, 2026-09-19, on the page that lists every act and\n         size. The footer carries the same sentence sitewide.",
     "_file": "02-roster.html"
    }
   },
@@ -224,7 +215,6 @@
       }
      }
     ],
-    "_notes": "The roster's own questions, 2026-09-23, authored in this dir's\n     schema.json so the visible block and the FAQPage markup cannot drift.",
     "_file": "03b-faqs.html"
    }
   },
@@ -267,7 +257,6 @@
      }
     ],
     "note": "We love music - both originals from our artists and a few hundred familiar favorites. For our singer-songwriter acts, you can check out our <a href=\"/repertoire/\">Songs page</a> for an example of the available repertoire.",
-    "_notes": "The sleeves before the close: this page is who plays, and the strip is the\n     handoff to what they play.",
     "_file": "04-close.html"
    }
   },

@@ -42,11 +42,6 @@
       "duration": "PT1M14S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-19 on Daniel's brief: activity directors book weekday-afternoon solo and duo acts on a recurring budget, standards and the Great American Songbook, and the upright bass and guitar duo is the ideal. Autocomplete evidence, Google and Bing, 2026-09-19: 'entertainment for assisted living facilities' (both engines, the head term), 'entertainment for senior living', 'entertainers for senior living near me', 'live entertainment for seniors near me', 'musicians for nursing homes', 'singers for nursing homes', 'live entertainment for nursing homes near me', 'music for memory care residents', 'entertainment for senior centers', 'entertainment for retirement homes', 'musical entertainers for seniors', 'senior living activities director', 'songs for seniors sing along'. 'Music therapy' is a neighbouring family and is answered once as a plain no. The buyer's word is 'entertainment', so the title carries it. Uniqueness gate: registered as a daytime sibling. No figure on the page.",
-    "reader": "The activity director or life enrichment coordinator filling a monthly calendar with programs the residents enjoy.",
-    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to site.json configurations and the included list, the jazz duo's setlist and repertoire.json's decades, the unamplified line on the ceremony page, and the first-learned-song line on the solo guitarist page. The music therapy answer is a plain no: a board-certified music therapist is a different, clinical booking, and nothing clinical is claimed for a performance. Questions are worded the way activity directors search."
    }
   }
  },
@@ -82,7 +77,6 @@
       }
      }
     ],
-    "_notes": "The senior living spoke. The afternoon leads; the sizes answer. The\n     buyer's phrases (entertainment for assisted living, live music for\n     senior living, memory care) sit in the h1 and the first paragraph. Hub\n     link UP in the first screen. Written for the activity director, who is\n     the person searching, not the resident.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the activity director or life enrichment coordinator filling a monthly calendar. The third-person 'written for the activity director' line is gone. The sing-along row no longer sells the lyric booklets (Daniel's 2026-09-24 ruling: the prop is ops); the space and standing-date rows and the paperwork paragraph are FAQ answers; volume is in words; 'the low end of that volume' is 'quieter'.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +87,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide.",
     "_file": "01a-credits.html"
    }
   },
@@ -136,7 +129,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: the duo this page recommends first, and the\n     solo for a smaller group. No player named; the format is spec'd.",
     "_file": "01b-hear.html"
    }
   },
@@ -183,7 +175,6 @@
       }
      }
     ],
-    "_notes": "What a visit looks like, row by row. Facts: set lengths and the 60 to 65\n     dBA band from site.json, footprints and load-in from the configurations,\n     the unamplified line from the ceremony page, the decades from\n     repertoire.json's sections (1960s-1970s, Motown, country and folk), the\n     standards from the jazz duo's setlist. Memory care is described as a\n     smaller, closer, shorter version of the same booking and nothing\n     clinical is claimed for it.",
     "_file": "02-the-visit.html"
    }
   },
@@ -277,7 +268,6 @@
       }
      }
     ],
-    "_notes": "Which musician: the duo first, then the singer, then the solo guitar and\n     the piano. Links ACROSS to the format pages; the pianist links to the\n     roster, where solo piano is a listing without a page of its own.",
     "_file": "03-who-plays.html"
    }
   },
@@ -314,7 +304,6 @@
       }
      }
     ],
-    "_notes": "The vendor side, written for the business office as much as the\n     activity director: paperwork, the budget line, the run of dates, and\n     the family events the same booking covers. No figure; the money question\n     gets a line and the pricing link.",
     "_file": "04-booking.html"
    }
   },

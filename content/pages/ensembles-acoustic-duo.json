@@ -28,10 +28,6 @@
      ]
     },
     "act": "acoustic-duo"
-   },
-   "notes": {
-    "_note": "Format spoke of the 2026-08-20 SEO buildout (Tier 3). Differentiated from ensembles/jazz-duo-trio/ by repertoire: singer-songwriter and folk-rock covers against the jazz page's standards, with both pages linking each other. Spec'd format, no player names. Trio added 2026-08-27 on Daniel's confirmation, after 'acoustic trio denver' surfaced in week-one GSC with no page answering it: voice, guitar and upright bass, priced off the card's trio line. 2026-11-01: title, H1, description and Service name carry 'for hire', the pattern that moved /ensembles/jazz-duo-trio/ from off page 1 to #3 for 'jazz trio for hire denver' and into Google's AI Overview (research/CITATION-LOG.md, run 2).",
-    "reader": "Whoever wants familiar songs played live under a cocktail hour or a dinner where people talk: a wedding, a dinner party, a company reception, a client dinner."
    }
   }
  },
@@ -82,7 +78,6 @@
       }
      }
     ],
-    "_notes": "Format spoke (Tier 3). The duo footprint facts come from site.json\n     configurations. Rate-card link in the first screen per the spine.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants familiar songs, live, under a cocktail hour or a dinner where people talk. The 'this page' self-reference and the footprint left the body; Booking it deleted; the FAQs that restated the rows are gone and the ops (set lengths, space, outdoors, volume) are the FAQ now.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +88,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -123,7 +117,6 @@
       }
      }
     ],
-    "_notes": "The differentiation from the jazz page lives here: covers guests can\n     name against standards guests recognize. The two pages link each other\n     by design.",
     "_file": "02-repertoire.html"
    }
   },
@@ -173,7 +166,6 @@
       }
      }
     ],
-    "_notes": "The two instrumentations, and the outdoor facts from site.json (covered,\n     level, dry; the move-indoors call). Tejas Singh is the one named act on\n     the page, pointed at for the night that grows.",
     "_file": "03-builds.html"
    }
   },
@@ -227,7 +219,6 @@
       }
      }
     ],
-    "_notes": "Where the format lands. Links UP to the occasion pages, ACROSS to the\n     Denver cocktail hour page.",
     "_file": "04-occasions.html"
    }
   },
@@ -276,7 +267,6 @@
       }
      }
     ],
-    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
     "_file": "06-faqs.html"
    }
   },

@@ -42,11 +42,6 @@
       "duration": "PT4M24S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 on Daniel's ruling ('do halloween. it up today'). Autocomplete evidence, Google and Bing, 2026-09-20: 'halloween party dj' with 'mix', 'set', 'playlist' and 'songs' behind it, 'halloween party entertainment ideas for adults', 'live music halloween party' (echoes the seed), and 'halloween party denver adults', which is event-goer intent the page can honestly carry because the party it describes is an adult party at home. The family is DJ-shaped, so the DJ leads the configurations, with the party band and live band karaoke as the other two honest answers. Halloween 2026 is a Saturday, so the calendar section is a fact rather than a sales line. Uniqueness gate: registered as a private-parties sibling. No figure on the page. Title shortened 2026-09-21 after the Bing read (was 77 characters: 'Halloween party DJ, live band or live band karaoke in Denver | Signet Artists'); the head term stays first.",
-    "reader": "Whoever is throwing an adult Halloween party, usually at home, and wants a full floor of people in costume.",
-    "schema_note": "Authored 2026-09-20 with the Halloween party spoke. Answers trace to site.json (footprints, circuits, load-in, set lengths, music through breaks), the live band karaoke page and Daniel's karaoke facts (paper sign-up list, six to ten songs an hour), the DJ line in acts.json, the Denver page's sound-after-dark planning fact (no ordinance cited) and the 2026 calendar (Halloween a Saturday, October 24 the other Saturday). The costume question is answered without a promise: the musicians decide what they wear and a themed set is a request taken with the booking. No figure; the cost answer points at the pricing page and the two posts."
    }
   }
  },
@@ -82,7 +77,6 @@
       }
      }
     ],
-    "_notes": "The Halloween party spoke. The buyer's phrases (Halloween party DJ,\n     live music for a Halloween party, adult Halloween party) sit in the h1\n     and the first paragraph. The night leads, the booking facts follow, the\n     hub link goes UP in the first screen and the 2026 calendar fact sits\n     where a host will read it first.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the adult Halloween party at home and wants the floor full. The ideas rows that restated the three configurations are gone; the house section (circuits, fog machine, parking, quiet hours) is the FAQ now; the cost and date FAQs that restated the page are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +87,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -136,7 +129,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips of Tony Medina, a named, fronted act: Purple\n     Rain on a milestone floor, and Drive as the party set. The DJ and the\n     karaoke band have no footage of their own on the channel yet.",
     "_file": "01b-hear.html"
    }
   },
@@ -187,7 +179,6 @@
       }
      }
     ],
-    "_notes": "The three honest answers to a Halloween party, DJ first because the\n     query family is DJ-shaped. Footprint, circuit and load-in facts from\n     site.json configurations and the live band karaoke page; Tony Medina and\n     Tejas Singh are named because they front their acts, the DJ and the\n     karaoke band are spec'd.",
     "_file": "02-configurations.html"
    }
   },
@@ -229,7 +220,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head term hosts type (\"halloween party\n     entertainment ideas for adults\"). Every idea is an act on the roster or\n     a mechanic the site already describes (the announcement microphone, the\n     paper sign-up list, six to ten songs an hour are Daniel's karaoke facts).",
     "_file": "03-ideas.html"
    }
   },

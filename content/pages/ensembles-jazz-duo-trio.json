@@ -35,10 +35,6 @@
      "uploadDate": "2026-09-06",
      "duration": "PT59S"
     }
-   },
-   "notes": {
-    "_note": "Title and H1 line reframed 2026-09-06: the bare Denver jazz SERP is clubs (Nocturne, Dazzle, KUVO) and hire intent lives under \"jazz trio for hire\", \"jazz band for wedding\", \"jazz trio for cocktail hour\", so the page now says for hire, for weddings and for events. Format spoke of the 2026-08-20 SEO buildout (Tier 3). One page for the duo and the trio: the duo is the standard cocktail-and-dinner booking, the trio adds drums played with brushes for larger floors. Replaces /music/jazz-duo/; build.py REDIRECTS carries the stub, and acts.json jazz-duo.page points here so every roster card follows. Identity copy draws on the ratified acts.json jazz-duo paragraphs.",
-    "reader": "Whoever wants cocktails and dinner where the conversation is the point and the music sounds polished: a wedding's ceremony and cocktail hour, a client dinner, a reception, a dinner party, a brunch."
    }
   }
  },
@@ -85,7 +81,6 @@
       }
      }
     ],
-    "_notes": "Format spoke (Tier 3). The jazz duo is spec'd on purpose: instrumentation,\n     repertoire and volume publish, players never do. The intro reuses the\n     ratified identity copy from acts.json jazz-duo. Rate-card link in the\n     first screen per the conversion spine.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants cocktails and dinner where the conversation is the point and the music sounds polished. The sizes were stated twice (the hand-written rows and the ladder token); the ladder token is gone from this page and the rows carry the sizes. dBA, footprints and the 'booked as a format' taxonomy line are gone from the body; the brunch and memorial row split in two.",
     "_file": "01-intro.html"
    }
   },
@@ -96,7 +91,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -150,7 +144,6 @@
       }
      }
     ],
-    "_notes": "The two sizes, the page's one statement of them (the ladder token was\n     removed in copy pass batch 1, 2026-09-24). Tejas Singh and Changes are\n     the named acts pointed at, for the dance floor and the named trio.\n\nAdded 2026-09-06. Provenance in _src/data/reviews.json. She states the\n         volume argument in a buyer's words, which is why this quote is on this\n         page and not another one. Verbatim, including her typo. Attribution\n         names the profile it came from; no link, the paid channel stays\n         unrouted.",
     "_file": "02-sizes.html"
    }
   },
@@ -216,7 +209,6 @@
       }
      }
     ],
-    "_notes": "Where the format lands (handoff §3: format pages answer occasions, never\n     organize by size for its own sake). Links UP to the occasion pages and\n     ACROSS to the Denver private parties page.",
     "_file": "03-occasions.html"
    }
   },
@@ -226,7 +218,6 @@
     "id": "Setlist-19",
     "act": "jazz-duo",
     "title": "A sample of songs",
-    "_notes": "The sample set, rendered from acts.json. The ladder token left this page in\n     copy pass batch 1 (2026-09-24): the sizes section above already states\n     both sizes, and saying them twice was Layer 8 restatement.",
     "_file": "04-configurations.html"
    }
   },
@@ -279,7 +270,6 @@
       }
      }
     ],
-    "_notes": "Visible FAQ renders from this dir's schema.json, so answers and FAQPage\n     markup cannot drift. The offer_close token is the last thing on the page.",
     "_file": "05-faqs.html"
    }
   },

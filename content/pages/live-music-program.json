@@ -24,10 +24,6 @@
       "solo"
      ]
     }
-   },
-   "notes": {
-    "_note": "The venue programming offer, 2026-09-25, on Daniel's call ('yes. i do want #2') after reading Colorado Professional Performers: a standing weekly live-music slot at a hotel bar, restaurant or lounge, covered by the roster's solo acts, with a sub for any missed night, one invoice a month, and the act swapped on request. It is the roster version of the Last Consulate residency (LAST-CONSULATE-RESIDENCY.md, which is one musician, two weeknights, original material). A PRIVATE SHARE like /jam/: linked from no nav and no footer, noindex keeps it out of the sitemap, llms.txt and search; Daniel hands the link to a venue after a first conversation (Gaylord Rockies' Grand Lodge, which runs local musicians nightly, is the first). No figure anywhere on the page: the per-night price is quoted per venue by Daniel. No availability, no night named as open. Nobody named except the fronted acts. Ops live in the questions.",
-    "reader": "The person who runs a hotel bar, a restaurant or a lounge and wants live music on the calendar every week without running it themselves."
    }
   }
  },
@@ -71,7 +67,6 @@
       }
      }
     ],
-    "_notes": "The venue's page. Reader: the F&B director, GM or owner of a bar\n     that wants live music every week and none of the running of it.\n     Moment first, then the mechanism, then breadth once.",
     "_file": "01-hero.html"
    }
   },
@@ -126,7 +121,6 @@
       }
      }
     ],
-    "_notes": "What the venue gets. Paperwork specifics live in the questions.",
     "_file": "02-what.html"
    }
   },
@@ -186,7 +180,6 @@
       }
      }
     ],
-    "_notes": "The acts that play it: the roster's solo acts, named only where the\n     act is fronted. No count.",
     "_file": "03-who.html"
    }
   },
@@ -229,7 +222,6 @@
       }
      }
     ],
-    "_notes": "How it starts. The observed evening is the onboarding step from the\n     Last Consulate residency, kept because it is what makes the set fit.",
     "_file": "04-how.html"
    }
   },
@@ -288,7 +280,6 @@
       }
      }
     ],
-    "_notes": "Visible questions render from this dir's schema.json.",
     "_file": "06-faqs.html"
    }
   },
@@ -324,7 +315,6 @@
       }
      }
     ],
-    "_notes": "The page's own close: the venue's action is the same form, in the\n     venue's words.",
     "_file": "07-close.html"
    }
   }

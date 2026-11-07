@@ -43,11 +43,6 @@
       "duration": "PT4M9S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'anniversary party band' and 'anniversary party entertainment ideas'. The hub's milestone section covers birthdays; this is the anniversary's own page: the couple's song learned for the night, the set built from the years they've been married, the toast, the surprise party the children throw, and the vow renewal that books ceremony music. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
-    "reader": "Whoever is throwing an anniversary party for a couple, often their children, and wants the night built around the couple's song.",
-    "schema_note": "Authored 2026-09-20 with the anniversary party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the proposals page (the cue, the first learned song included in every booking), the hub's milestone section (the announcement microphone, the set built for the person) and the ceremony page. Questions are worded the way hosts search. No figure."
    }
   }
  },
@@ -83,7 +78,6 @@
       }
      }
     ],
-    "_notes": "The anniversary party spoke. The buyer's phrases (anniversary party band, live music for an anniversary) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the party for the couple, most often their children, and wants the night built around the couple's song. The ideas section restated the sizes (jazz duo, the 25th's floor, the Spanish guitarist) and those rows are gone; ops (dBA, footprints, paperwork) moved to the FAQ; the pricing pointer appears once plus the sitewide close.",
     "_file": "01-intro.html"
    }
   },
@@ -94,7 +88,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -137,7 +130,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: a jazz duo on Autumn Leaves (no player named; the format is spec'd) and Tejas Singh at a wedding cocktail hour (a named act).",
     "_file": "01b-hear.html"
    }
   },
@@ -192,7 +184,6 @@
       }
      }
     ],
-    "_notes": "The sizes an anniversary books, dinner first. Footprint, circuit and load-in facts from site.json; the learned-song fact from the proposals page. Tejas Singh, Tony Medina and Dirty Flamenco are named because they front their acts; the jazz sizes are spec'd.",
     "_file": "02-sizes.html"
    }
   },
@@ -234,7 +225,6 @@
       }
      }
     ],
-    "_notes": "The three anniversaries, each with the size that fits. Links ACROSS to the proposals page (the surprise mechanics), the ceremony page (a vow renewal) and the Denver page (the club dinner). No clock times.",
     "_file": "03-the-party.html"
    }
   },
@@ -280,7 +270,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head term hosts type ('anniversary party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
     "_file": "04-ideas.html"
    }
   },

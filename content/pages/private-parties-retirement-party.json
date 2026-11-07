@@ -44,11 +44,6 @@
       "duration": "PT4M24S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 in the second tranche. Autocomplete evidence, Google, 2026-09-20: 'retirement party ideas' (with 'for a man', 'for women', 'for coworker'), 'retirement party entertainment ideas' and 'retirement party entertainment'; 'retirement party band' autocompletes but is polluted by a band of that name, so the page carries it in the h1 without leaning on it. The page's argument is who throws it (the company or the family) and the speeches, with the standards as the music that reaches forty years of colleagues at once. The company version links to the corporate page for the vendor paperwork. Uniqueness gate: registered as a private-parties sibling. No figure on the page.",
-    "reader": "Whoever is throwing a retirement party, the family, the company or the department, and wants the speeches to land and the rest of the night to have something in it.",
-    "schema_note": "Authored 2026-09-20 with the retirement party spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the live band karaoke page (the retiring colleague's song as a request taken the week before), the proposals page (the first learned song), the corporate holiday page (vendor setup, a PO and a certificate of insurance are available and none of it is fast) and the hub's milestone section (the announcement microphone). Questions are worded the way hosts search. No figure."
    }
   }
  },
@@ -84,7 +79,6 @@
       }
      }
     ],
-    "_notes": "The retirement party spoke. The buyer's phrases (retirement party ideas, retirement party band) sit in the h1 and the first paragraph. The night leads, the booking facts follow, the hub link goes UP and the corporate page is linked ACROSS for the company version.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is throwing the send-off, the family, the company or the department. The ideas heading carried a negation ('that aren't a slideshow') and is now the search phrase; ideas rows that restated the sizes are gone; procurement and space went to the FAQ.",
     "_file": "01-intro.html"
    }
   },
@@ -95,7 +89,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -138,7 +131,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: one jazz guitar on a blues after Grant Green (no player named; the format is spec'd) and Tony Medina playing Drive at an office party (a named act).",
     "_file": "01b-hear.html"
    }
   },
@@ -197,7 +189,6 @@
       }
      }
     ],
-    "_notes": "The sizes a retirement party books, with the speeches as the argument. Footprint, circuit and load-in facts from site.json; the karaoke request fact from its page; the learned-song fact from the proposals page. Tejas Singh and Tony Medina are named because they front their acts.",
     "_file": "02-sizes.html"
    }
   },
@@ -239,7 +230,6 @@
       }
      }
     ],
-    "_notes": "Who throws the party and where, each with the page that covers the venue side. The corporate facts (vendor setup, a PO, the certificate of insurance) are the holiday page's; the club dinner is the Denver page's.",
     "_file": "03-who-throws-it.html"
    }
   },
@@ -286,7 +276,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head terms hosts type ('retirement party ideas', 'retirement party entertainment ideas'). Every idea is an act on the roster or a booking the site already describes.",
     "_file": "04-ideas.html"
    }
   },

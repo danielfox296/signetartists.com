@@ -20,11 +20,9 @@
  ],
  "vocals": "instrumental",
  "from": "trio",
- "_configRangeLabel_note": "Overrides the derived range, which would read 'Trio to quartet'. The quartet here is the trio plus a dancer, which is an addition you ask for rather than a size off the ladder, so the card sells the trio and says the rest out loud.",
  "configRangeLabel": "Trio, larger by request",
  "img": "flamenco-card.jpg",
  "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
- "_video_note": "LANDED 2026-08-28, the first real footage on the roster. Daniel's phone video from a live date ('monarch 1' in his archive): 53 seconds of the trio playing, guitar, bass and percussion, under the venue's uplights. Shot vertical with the 16:9 image letterboxed inside, so the black bars are cropped at the source and the published file is native 16:9; 99MB re-encoded to 14.5MB, H.264, faststart. A site-relative path here renders as a native player (an http URL still renders as an embed). The poster is a frame from the footage itself, which also serves as the page's og_image, and the venue is deliberately not named anywhere it publishes. REPLACED 2026-09-20 by a second clip from the same room: Daniel's iPhone footage of 2026-09-19, trimmed to 65 seconds in QuickTime (his export, 'Untitled.mov'), better lit and framed than the August clip, all three players in frame. Re-encoded from the 720p export to 15.0MB H.264, faststart, native 16:9, 24fps. It carries both roster cards and leads the flamenco page again as a native player, with the schema VideoObject describing it; the August clip stays in the page's footage grid. The venue is still not named.",
  "video": "media/dirty-flamenco-2.mp4",
  "video_poster": "media/dirty-flamenco-2-poster.jpg",
  "blurb": "Brilliant, guitar-based flamenco musical act and one of the only in Colorado available for private events. Dirty flamenco plays real palos, and rhumba both authentically and with a soulful twist. Their polish as a working group is matched by their extensive standing repertoire.",
@@ -65,7 +63,6 @@
   "private-parties"
  ],
  "entity": {
-  "type": "MusicGroup",
-  "_sameAs_note": "Removed 2026-11-02 on Daniel's word: no link to an artist's own site or channel anywhere, the search-engine data included, so a client can't book around Signet."
+  "type": "MusicGroup"
  }
 }

@@ -4,10 +4,7 @@
    "path": "/blog/",
    "title": "Blog",
    "description": "We’re Signet Artists in Denver, and we write now and then about live music for private events, including how to plan it, what it costs and the music itself.",
-   "breadcrumb": "Notes",
-   "notes": {
-    "_note": "The blog index is auto-built: {{blog_cards}} in the section fills with one row per published post, newest first, or the empty state until the first post ships. The RSS channel description reuses meta_description verbatim, so editing it here updates both."
-   }
+   "breadcrumb": "Notes"
   }
  },
  "content": [
@@ -30,7 +27,6 @@
       }
      }
     ],
-    "_notes": "Placeholder copy pending the voice/ICP content pass. The listing itself\n     is generated: {{blog_cards}} renders published posts newest first, or a\n     quiet empty state while there are none.",
     "_file": "01-blog.html"
    }
   },

@@ -2,8 +2,6 @@
  "id": "little-moses-jones",
  "name": "Little Moses Jones",
  "presentation": "face",
- "_note": "ADDED 2026-10-29 with the signet-new-act skill, from the band's own email to hello@ (Oct 27: the pitch with the booking one-sheet, then the EPK, technical rider, stage plot, hospitality rider, press photo and logo) and from littlemosesjones.com and @LittleMosesJones. Daniel's replies in the thread are the clearance ('Absolutely impressed by the quality and fit', then 'As a non-exclusive act, assuming I have permission to add you to the roster, we should be good with what you've sent already'). Every fact here traces to their site, their EPK, their riders or their channel.",
- "_presentation_note": "Named. The band fronts under its own name on its own site, channel and catalogue, which is the definition of fronted in roster.json _players_note, and the name is the bandleader's. The face is the bandleader alone. The band's site publishes the whole lineup by name (two lead vocalists, guitar, bass, drums, the sound engineer); none of those names are published here, per the one-name rule on a face-led act. If Daniel wants the lineup named, `byline` carries it.",
  "status": "listing",
  "page": "artists/little-moses-jones/",
  "style": "90s and 2000s R&B and hip-hop",
@@ -15,23 +13,18 @@
  "config_tags": [
   "quintet"
  ],
- "_config_note": "One size. The band books as a six piece with its own sound engineer (their email, the one-sheet and the hospitality rider all say six performers plus one to three crew), so the rateCard's five-to-six row is the honest size and the page carries no ladder section, the same call Firstwater and Your Bird Can Sing record. configRangeLabel carries the plain fact on the card and in llms.txt. Their wedding page sells the ceremony and the cocktail hour with a smaller lineup as part of one day; that is said on the page as their offer and is not a Signet size. Moses, 2026-10-29, in the rate email: the band performs only as the full six piece, with no smaller lineup, which settles the one-size call.",
  "configRangeLabel": "Six piece, with its own sound engineer",
  "genre_tags": [
   "hip-hop",
   "soul"
  ],
- "_genre_note": "hip-hop is a new genre id, added to roster.json 2026-10-29 with this act, the first on the roster to carry it. The label is the word a buyer picks from a list. soul (Soul and R&B) is the other half of what they play.",
  "vocals": "sung",
  "from": "quintet",
  "img": "little-moses-jones-card.jpg",
- "_img_note": "Their own photograph, from the gallery on their site: the band on stage in red under purple light, keys and tuba in frame, cropped 16:9 from the centre. No duotone. Provenance in media-sources.json.",
  "alt": "The band on stage in red under purple light, two singers out front and a tuba beside the keys.",
  "video": "https://www.youtube-nocookie.com/embed/oIa-i9C4T7g?rel=0",
- "_video_note": "The band's 2026 promo, clean version, on their own channel (oIa-i9C4T7g, 2m42s, published 2026-10-12): the strongest single clip and the one Moses sent first. The explicit version of the same promo (g2STWW852Ek) is the same footage with the other audio and is not placed. Every clip on the page checked playableInEmbed 2026-10-29; rows in media-sources.json.",
  "video_poster": "img/acts/little-moses-jones-live-poster.jpg",
  "blurb": "If your crowd grew up on Usher, TLC, Outkast, Missy Elliott, Lauryn Hill and Warren G, Little Moses Jones is the band to book. It's a six-piece band, and they rap the verses live. The band brings its own sound engineer, so you usually won't need a separate audio company, and they can keep the lyrics clean when you need that. It's a great choice for holiday parties, galas, weddings and milestone birthdays.",
- "_identity_note": "Written 2026-10-29 in the Signet voice from the facts on their site, EPK and channel, and read aloud against AI-TELLS layers 3 to 8: no epigram ender, no fragment stack, no not-X-but-Y, no colon reveal, contractions throughout, one setting per sentence. Their own trade words (nonstop medleys, concert-level production, rider-ready) are expanded into words a buyer owns. The credits named are the band's own, as the copy laws allow; nothing is claimed for Signet. The named-act promise paragraph is not on the page (the 2026-09-24 pass cut it from every act page as a provenance leak).",
  "identity": [
   "Little Moses Jones has two lead singers out front, and behind them the bandleader plays keys and horns with guitar, bass and drums. They play straight through with no gaps between songs, which helps keep people out on the dance floor.",
   "The song list also includes Destiny's Child, Mary J. Blige, Nelly and Montell Jordan, along with the soul and funk songs that inspired them, and we can put the setlist together around your crowd. For a late-night party, they can play the uncensored versions, too.",
@@ -39,7 +32,6 @@
   "Little Moses Jones is a Denver band that can play the Front Range and the mountain towns, too."
  ],
  "setlist": {
-  "_note": "Every title here is a cover they publish footage of, on this page or on their own channel, so the sample set and the evidence are the same list. Deliberately not from_repertoire.",
   "note": "Here are a few of the songs they play live.",
   "items": [
    "Gin and Juice",
@@ -57,7 +49,6 @@
   "private-parties"
  ],
  "entity": {
-  "type": "MusicGroup",
-  "_sameAs_note": "Removed 2026-11-02 on Daniel's word: no link to an artist's own site or channel anywhere, the search-engine data included, so a client can't book around Signet."
+  "type": "MusicGroup"
  }
 }

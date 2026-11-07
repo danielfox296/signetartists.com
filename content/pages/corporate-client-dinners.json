@@ -31,10 +31,6 @@
       "duration": "PT59S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-08-20 with the SEO buildout (Tier 1a, corporate tree). Client dinners, member events, private clubs, firms and showrooms. The jazz duo is the lead product and dinner volume is the argument; the procurement path is the corporate-specific trust block.",
-    "reader": "Whoever is hosting a client or member dinner and wants the table to talk easily with live music under it."
    }
   }
  },
@@ -70,7 +66,6 @@
       }
      }
     ],
-    "_notes": "Copy pass batch 2, 2026-09-24. THE ONE READER: whoever is hosting a client or member dinner and wants the table to talk easily. The opener already led with the moment and stays. The self-referencing 'this is the page for' line, the volume argument ('most of what goes wrong'), the section that restated it, the procurement section and the venue list are gone; paperwork, space and set lengths are FAQ answers; British spellings fixed.",
     "_file": "01-intro.html"
    }
   },
@@ -81,7 +76,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -125,7 +119,6 @@
       }
      }
     ],
-    "_notes": "The argument of the page: volume, stated as a number and a mechanism.\n     Facts from site.json plannerFaqs (dB bands, set lengths, announcement\n     mic) and acts.json jazz-duo (instrumentation, open arrangement).",
     "_file": "02-volume.html"
    }
   },
@@ -162,7 +155,6 @@
       }
      }
     ],
-    "_notes": "Client-dinner footage: the jazz duo at dinner level.\n     Existing artist footage, 2026-09-06, per Daniel: no new shoots, the artists'\n     own uploads placed under our framing. Provenance: _src/data/media-sources.json.",
     "_file": "02a-footage.html"
    }
   },
@@ -190,7 +182,6 @@
       }
      }
     ],
-    "_notes": "Venues as the market's places (architecture §8 vetted Denver list), plus\n     the across-links to retreats and private-parties and the planners\n     technical link. Footprint figures from site.json configurations.",
     "_file": "05-venues.html"
    }
   },
@@ -239,7 +230,6 @@
       }
      }
     ],
-    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
     "_file": "06-faqs.html"
    }
   },

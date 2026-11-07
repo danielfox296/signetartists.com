@@ -26,10 +26,6 @@
      ]
     },
     "act": "solo-guitarist"
-   },
-   "notes": {
-    "_note": "Format spoke of the 2026-08-20 SEO buildout (Tier 3). The budget end done honestly: one guitarist, sung or instrumental, at the smallest figure on the card. Spec'd format, no player names. Space and power facts come from site.json configurations (solo row).",
-    "reader": "Whoever wants one musician under a dinner or a cocktail hour, often in a space too small for a band: a client dinner, a dinner at home, a wedding cocktail hour, a reception, a memorial."
    }
   }
  },
@@ -80,7 +76,6 @@
       }
      }
     ],
-    "_notes": "Format spoke (Tier 3): the smallest booking on the card, sold honestly.\n     \"Real playing rather than a playlist\" reuses the ratified blues-rock\n     blurb from acts.json. Rate-card link in the first screen per the spine.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants one musician under a dinner or a cocktail hour, often in a space too small for a band. The footprint section and Booking it are gone (ops to the FAQ, the fit-anywhere benefit kept as one sentence in the set section, the next-size links moved there too); 'booked as a format' taxonomy cut; memorials and senior living split into a row each.\n\nReal photo, the artist's own (provenance: _src/data/media-sources.json).\n         A photo rather than an embed: this player's YouTube uploads are\n         Shorts, and his Shorts return \"Video unavailable\" inside iframes,\n         verified live 2026-08-28. The one regular upload embeds fine and\n         leads the jazz page.",
     "_file": "01-intro.html"
    }
   },
@@ -91,7 +86,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -121,7 +115,6 @@
       }
      }
     ],
-    "_notes": "What it plays: the two ways to run one guitarist. The 60 to 65 dBA band\n     is the sitewide dinner discipline from site.json.",
     "_file": "02-set.html"
    }
   },
@@ -183,7 +176,6 @@
       }
      }
     ],
-    "_notes": "Where the format lands. Links UP to the occasion pages, ACROSS to the\n     Denver private parties page.",
     "_file": "04-occasions.html"
    }
   },
@@ -236,7 +228,6 @@
       }
      }
     ],
-    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
     "_file": "06-faqs.html"
    }
   },

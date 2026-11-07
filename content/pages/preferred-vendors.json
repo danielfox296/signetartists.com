@@ -7,9 +7,6 @@
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
-   "notes": {
-    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count. 2026-11-06: MXBloom Films is the first listing, one card under Photography and one under Videography, each linking to the matching page of their site; a vendor's own page on our site goes in `page`. The search title carries 'Denver wedding vendors', a phrase Google suggests; the page's name stays Preferred Vendor List. Makeup by Sameera, the same day, opened a seventh category, Hair and makeup. Grace Martin, the same day, is the second listing in that category."
-   },
    "schemaKind": "vendorlist"
   }
  },
@@ -33,7 +30,6 @@
       }
      }
     ],
-    "_notes": "The buyer's page: why the list exists, what short means, what a name\n     on it means. The categories and cards follow from vendors.json.",
     "_file": "01-intro.html"
    }
   },
@@ -111,7 +107,6 @@
       "note": "Grace Martin is a Denver hair and makeup artist who also works in film, television and national campaigns. Her bridal work has appeared in Rocky Mountain Bride, and she works with all hair textures and skin tones."
      }
     ],
-    "_notes": "Six categories from vendors.json, in order, each with its cards or the\n     ask-us line. Rendered by build.py vendor_list().",
     "_file": "02-list.html"
    }
   },
@@ -122,7 +117,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide.",
     "_file": "03-credits.html"
    }
   },
@@ -141,7 +135,6 @@
       }
      }
     ],
-    "_notes": "The way onto the list, for a vendor who lands here. Small and faint by\n     design: it must never read as a second call to action beside the\n     listings.",
     "_file": "04-join.html"
    }
   },

@@ -34,12 +34,6 @@
      "uploadDate": "2026-11-04",
      "duration": "PT2M31S"
     }
-   },
-   "notes": {
-    "_note": "Authored 2026-11-02, first as a named artist page and recast the same evening as a spec'd format on Daniel's ruling (no artist names, no Instagram or other link out: 'we book people, we don't promote them and give a client an option to go around us'). Format shape after ensembles-dj: Intro, the credits strip, the tabla, occasions, photographs, questions, the close. No equipment, setup or stage detail anywhere on the page (Daniel, 2026-11-02: 'this page is to inspire an evocative feel to inspire a booking not be a fucking tech rider'). No prices.",
-    "reader": "Whoever wants a dance floor on house music, Afro house and amapiano, with something live on it as well as a DJ: a conference after-party, an office holiday party, a wedding reception, a milestone birthday.",
-    "_title_note": "57 characters with the brand suffix. The term buyers type is 'afro house dj', with the city and the tabla as the difference.",
-    "_hero_note": "The hero is the Signet reupload v0nKiT2_7RE since 2026-11-04; see the act's _video_note."
    }
   }
  },
@@ -85,8 +79,7 @@
        "loading": "lazy"
       }
      }
-    ],
-    "_notes": "Format intro in the ensembles-dj shape: eyebrow the sound, the h1 a sentence in the buyer's words, the lede opening on the moment the buyer pays for. No name and no look-up link."
+    ]
    }
   },
   {
@@ -95,8 +88,7 @@
     "id": "LogoStrip-6",
     "band": "ruled",
     "label": "Where our artists have played",
-    "showAlso": false,
-    "_notes": "The client strip, the same block the other act pages carry."
+    "showAlso": false
    }
   },
   {
@@ -124,8 +116,7 @@
        "cls": "prose"
       }
      }
-    ],
-    "_notes": "The identity paragraphs from the act's file. No club names or bill-mates, which would identify the person behind an unnamed format."
+    ]
    }
   },
   {
@@ -177,8 +168,7 @@
        "cls": "note"
       }
      }
-    ],
-    "_notes": "Who books it and why, never when."
+    ]
    }
   },
   {
@@ -218,8 +208,7 @@
        ]
       }
      }
-    ],
-    "_notes": "The DJ's own photographs from the EPK zip, provenance in media-sources.json. The headphones photograph is the hero, so it is not repeated here. Not placed: the two full sets on the promoter's channel (the DJ's name is in their titles and thumbnails), six portraits that came only as narrow EPK strips, low-resolution video stills, flyers, logos and cover art."
+    ]
    }
   },
   {
@@ -266,8 +255,7 @@
        ]
       }
      }
-    ],
-    "_notes": "Buyer questions only; no equipment or setup."
+    ]
    }
   },
   {
@@ -293,8 +281,7 @@
        "lede": "We’ll match the sound system to your venue, and you’ll have one person to call from start to finish."
       }
      }
-    ],
-    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing follows it."
+    ]
    }
   }
  ]

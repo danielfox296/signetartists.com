@@ -45,10 +45,6 @@
       "duration": "PT1M9S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-16 from the demand read: 'jazz band for wedding' is its own autocomplete family (ceremony, cocktail hour, reception, cost, near me) and no page carried it; the jazz duo and trio page is the format, the cocktail hour page is the hour, and the weddings hub routes the whole day across every format. This page is jazz across the wedding day, moment by moment, with the sizes as the answer. Uniqueness gate: registered as a weddings sibling and a jazz sibling. No figures on the page; the cost question links the calibration post.",
-    "reader": "The couple who wants jazz at their wedding, for the ceremony, the cocktail hour, dinner or the whole day."
    }
   }
  },
@@ -84,7 +80,6 @@
       }
      }
     ],
-    "_notes": "The wedding jazz page. The day leads, the sizes answer. The family this\n     page targets (jazz band for wedding, ceremony, reception, cost) sits in\n     the h1 and the first two paragraphs. Hub link UP in the first screen.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the couple who wants jazz at their wedding, some of the day or all of it. The 'booked as a format' taxonomy row is rewritten; pointer sentences in the day rows are inline links now; FAQs that restated the day rows are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -95,7 +90,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro.",
     "_file": "01a-credits.html"
    }
   },
@@ -138,7 +132,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: the duo at cocktail-hour volume and the trio\n     with brushes. Neither iframe title names a player: the format is\n     spec'd. Provenance in _src/data/media-sources.json signet_channel.",
     "_file": "01b-hear.html"
    }
   },
@@ -193,7 +186,6 @@
       }
      }
     ],
-    "_notes": "The four moments of the day, each with the jazz size that suits it.\n     Links across to the ceremony page, the cocktail hour page, the named\n     trio and the DJ. Written to the moments, not the venues, which is what\n     keeps it apart from the city pages.",
     "_file": "02-the-day.html"
    }
   },
@@ -243,7 +235,6 @@
       }
      }
     ],
-    "_notes": "Which jazz band: the two ways to book it (the spec'd format, the named\n     trio) and the one pairing that covers a wedding that wants pop on the\n     floor. Cost is a link to the calibration post, never a figure here.",
     "_file": "03-which-band.html"
    }
   },

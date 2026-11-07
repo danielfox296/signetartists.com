@@ -22,12 +22,6 @@
      ]
     }
    },
-   "notes": {
-    "_note": "Denver spoke of the holiday occasion, built 2026-08-20 with the SEO buildout. The argument is date inventory plus downtown hotel logistics: 21 published party dates, 10 in December, and the dock-and-elevator reality of a 17th Street load-in. The hub at corporate/holiday-party/ carries the leads and the season narrative; this page embeds the season's dates once, premiums tagged. No availability is published (2026-08-27): the booking calendar is private.",
-    "reader": "Whoever books the company holiday party in Denver, usually in a downtown hotel or a club.",
-    "_seasonal_note": "Same staleness clock as the hub: the 21-date count and the embedded dates describe the 2026 season. When the hub rolls to 2027 or gets its noindex, this page rolls with it.",
-    "schema_note": "Denver holiday spoke. FAQs are the city-specific set: the date count, the downtown load-in reality, the December calendar, the booking window. Answers answer in the first sentence. Any figure is a {{market:<id>}} token off market-rates.json and the page prints its source; no Signet figure appears here or anywhere since 2026-09-04."
-   },
    "schemaArticle": "on",
    "published": "2026-09-05"
   }
@@ -64,7 +58,6 @@
       }
      }
     ],
-    "_notes": "The Denver argument is scarcity you can count: 21 published dates, 10 in\n     December, and a market that all wants the same Saturdays. Rate-card link\n     in the first screen per the conversion spine.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever books the company holiday party in downtown Denver. The dock and power paragraphs are the FAQ now; the downtown venues stay as local fact; the reassurance negations in the pairing section are gone; FAQs restating the date count and the booking window are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -75,7 +68,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -122,7 +114,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
     "_file": "01b-media.html"
    }
   },
@@ -160,7 +151,6 @@
       }
      }
     ],
-    "_notes": "Was the rate module, three figures and the premiums. Since 2026-09-04 it\n     is the pairing argument, which was always the point of the section, plus\n     the Denver holiday-weekend figure the market publishes. Tejas Singh is\n     the one act named, leading per the one-headline-act rule.",
     "_file": "02-pairing.html"
    }
   },
@@ -268,7 +258,6 @@
       }
      }
     ],
-    "_notes": "The one embed of the season dates outside the hub. No availability:\n     Daniel killed the published \"board\" 2026-08-27; the booking calendar is\n     private. Links UP to the hub and ACROSS to the Colorado Springs sibling.",
     "_file": "03-board.html"
    }
   },
@@ -308,7 +297,6 @@
       }
      }
     ],
-    "_notes": "The Denver-specific logistics section: docks, service elevators, dedicated\n     circuits. Venues named as the market's places, never as our history.",
     "_file": "04-downtown.html"
    }
   },

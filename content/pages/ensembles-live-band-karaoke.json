@@ -28,10 +28,6 @@
      ]
     },
     "act": "live-band-karaoke"
-   },
-   "notes": {
-    "_note": "Format spoke built 2026-09-14 from the corporate demand report. Evidence: zero Colorado corporate vendors sell live band karaoke, no Denver-metro act exists on The Bash or GigSalad, 'live karaoke denver' and 'live band karaoke near me' autocomplete, GigSalad's own corporate blog features the format, and planners say participatory formats are winning while 'casino night and photo booth' are the things to escape. Daniel's product decision the same day: the act plays the 80s and 90s hits as a party band on its own and hands the mic over, so the 80s and 90s cover-band ideas fold in here. Spec'd, no names.",
-    "reader": "Whoever wants the party where colleagues end up singing, most often a company holiday party or after-party, and a milestone birthday or a wedding's last hour."
    }
   }
  },
@@ -82,7 +78,6 @@
       }
      }
     ],
-    "_notes": "Format spoke, spec'd. The h1 carries Daniel's selling point verbatim in\n     spirit: colleagues who do not want to sing do not have to, the band fills\n     the songs on its own and hands the mic over when people get brave. The\n     buyer's words (company party, after-party, songs everyone knows) sit in the\n     first screen.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the party where colleagues end up singing. Daniel's selling point (nobody has to sing) now lives positively in the h1 and as the first FAQ, since negation cannot carry a line (rule 11). The casino-night comparison is gone. The mic section (printed songbook, sign-up list) and the booking checklists are props and ops (rule 13) and moved to the FAQ; the three-step mechanism's benefit (the band follows the singer) is in the lede.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +88,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide since 2026-09-05. Directly under the intro so\n     the names land on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -123,7 +117,6 @@
       }
      }
     ],
-    "_notes": "The songbook. The 80s and 90s cover-band ideas fold into this act\n     (Daniel, 2026-09-14), so the decades are named here rather than sold as\n     separate bands. No count of songs: the book grows.",
     "_file": "02-set.html"
    }
   },
@@ -169,7 +162,6 @@
       }
      }
     ],
-    "_notes": "Two builds, off the rate card's quartet and five-to-six rows. Footprint\n     and power facts from site.json configurations.",
     "_file": "03-builds.html"
    }
   },
@@ -219,7 +211,6 @@
       }
      }
     ],
-    "_notes": "Where the format lands. Links UP to the occasion pages.",
     "_file": "04-occasions.html"
    }
   },

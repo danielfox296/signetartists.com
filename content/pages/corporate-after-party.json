@@ -29,10 +29,6 @@
       "quintet"
      ]
     }
-   },
-   "notes": {
-    "_note": "Corporate spoke built 2026-09-14 on Daniel's call, from the corporate demand report. Evidence: two 6,000-person corporate conferences sat in the convention center in one September week, three of the largest Denver galas found all book the Hyatt Regency beside it, two of them used silent disco for the after-party instead of a band, and the DJ is the most common single corporate booking. The buyer is a DMC, a conference hospitality team or a gala committee, so this page is the forwarded proposal more than a search page.",
-    "reader": "Whoever owns the hour after the program, a DMC, a conference hospitality lead or a gala committee, and wants that hour to be the one people remember."
    }
   }
  },
@@ -68,7 +64,6 @@
       }
      }
     ],
-    "_notes": "Corporate spoke, the after-party. Written for the DMC, the conference\n     hospitality lead and the gala committee. No time of day anywhere on the\n     page: the buyer's evening is theirs to script.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever owns the hour after the program, a DMC, a conference hospitality lead or a gala committee, and wants that hour to be the one people remember. The third-person 'this page is written for' paragraph is gone; the hotel section (dock, circuits, caps) is the FAQ; the karaoke negation and the playlist contrast are gone. Daniel's DJ sentence ('A solid DJ gets people moving...') stays as written.",
     "_file": "01-intro.html"
    }
   },
@@ -79,7 +74,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide since 2026-09-05. Directly under the intro so\n     the names land on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -116,7 +110,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
     "_file": "01b-footage.html"
    }
   },
@@ -179,8 +172,7 @@
       }
      }
     ],
-    "_file": "02-shapes.html",
-    "_notes": "2026-10-29: a fifth row for Little Moses Jones, the day the band joined the roster; the heading's count moved with it."
+    "_file": "02-shapes.html"
    }
   },
   {

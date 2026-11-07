@@ -43,11 +43,6 @@
       "duration": "PT1M14S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-19 on Daniel's brief (funerals and memorials as a daytime booking). Autocomplete evidence, Google and Bing, 2026-09-19: 'hire musician for funeral', 'hire singer for funeral', 'funeral singers near me', 'funeral musicians near me', 'live music for funerals', 'live band for funeral', 'music for memorial service', 'instrumental music for memorial service', 'prelude music for memorial service', 'celebration of life music', 'celebration of life music ideas', 'songs for celebration of life service', 'jazz band for funeral', 'jazz standards for funerals', 'guitarist for funeral', 'pianist for funeral', 'singer for funeral service', 'background music for a wake'. The calibration family ('how much do you pay a singer at a funeral', 'funeral singer cost', 'pianist fee for funeral') is answered in the FAQ with the pricing link and no figure. The 2026-09-16 demand build ruled funerals out only because they had not been raised with him; he raised them. The client strip is deliberately absent on this page: the logos are a corporate buyer's proof and read wrong beside a service. Uniqueness gate: registered as a daytime sibling.",
-    "reader": "Whoever is arranging a funeral, memorial or celebration of life, often the family in a hard week, who wants the music handled without having to think about it.",
-    "schema_note": "Authored 2026-09-19 with the daytime tree. Answers trace to the ceremony page (prelude length), the solo guitarist page (first learned song), the proposals page (battery-powered system, a song at a graveside), site.json (60 to 65 dBA, footprints) and repertoire.json. Questions are worded the way families and funeral directors search. No reply window, no figure."
    }
   }
  },
@@ -83,7 +78,6 @@
       }
      }
     ],
-    "_notes": "The funerals spoke. The service leads; the instruments answer. The\n     buyer's phrases (musician for a funeral, memorial service, celebration\n     of life) sit in the h1 and the first paragraph. Plain register: no\n     sentence manages the reader's feelings, no sentence names their grief.\n     Hub link UP in the first screen. No client strip on this page.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is arranging the service, often the family in a hard week. Written plainly and without persuasion. The self-referencing 'this page is written for' line is gone; dBA and footprints left the rows; venue rules, paperwork and pricing moved to the FAQ; FAQs that restated the rows are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -126,7 +120,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: the kind of song a family asks for during the\n     service, on nylon-string guitar, and what the reception sounds like.\n     No player named; both formats are spec'd.",
     "_file": "01b-hear.html"
    }
   },
@@ -173,7 +166,6 @@
       }
      }
     ],
-    "_notes": "Where the music goes, in the order a service runs. Facts: the prelude\n     length from the ceremony page (twenty to thirty minutes), the\n     first-learned-song line from the solo guitarist page, the battery-powered\n     line from the proposals page, the 60 to 65 dBA band from site.json. The\n     order of service is the officiant's; the musician takes the cue.",
     "_file": "02-the-service.html"
    }
   },
@@ -267,7 +259,6 @@
       }
      }
     ],
-    "_notes": "Which instrument, and which page covers it. Links ACROSS to the solo\n     guitarist, the Spanish guitarist, the singer and guitarist, the jazz duo\n     and the roster (solo piano is a listing without a page).",
     "_file": "03-who-plays.html"
    }
   },
@@ -304,7 +295,6 @@
       }
      }
     ],
-    "_notes": "Booking it: the short notice, the songs, the venues' rules, the\n     paperwork. No reply-window promise (that lives on the contact and\n     booking pages only). \"Booking calendar\" is the real object's name.",
     "_file": "04-booking.html"
    }
   },

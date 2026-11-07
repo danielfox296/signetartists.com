@@ -28,10 +28,6 @@
      ]
     },
     "act": "funk-trio"
-   },
-   "notes": {
-    "_note": "Format spoke built 2026-09-23 with the roster rebuild, from the funk-trio entry in acts.json (id unchanged, name now Funk Band). Evidence: 'funk band denver', 'funk music denver' and 'funk band for hire' autocomplete on 2026-09-23, which is the demand the skill asks for before a spec'd listing earns a page. The instrumental partner of the soul and R&B band: same songwriters, no singer. Spec'd, no names; the two acts behind it are availability depth in acts.json.",
-    "reader": "Whoever wants the floor full after dinner without waiting for a singer: a milestone party, a company after-party, a summer picnic, the last night of a retreat."
    }
   }
  },
@@ -82,7 +78,6 @@
       }
      }
     ],
-    "_notes": "Format spoke, spec'd. The h1 and lede carry the buyer's words. No player is\n     named anywhere on this page. The tile in the hero is the act's own drawn\n     artwork (scripts/format_art.py), not a placeholder: a spec'd format has no\n     face to photograph, so the picture is the thing it sells.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the floor full after dinner. Opener is the groove that empties the tables; the mechanism (instrumental, three or four musicians) follows. Footprints, power, dBA, outdoors and added time moved to the FAQ; the Booking it section is gone (the sitewide close already asks for the date), and its pairing links moved into the sizes note.",
     "_file": "01-intro.html"
    }
   },
@@ -93,7 +88,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },

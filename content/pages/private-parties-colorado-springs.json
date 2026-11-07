@@ -21,12 +21,6 @@
       "trio"
      ]
     }
-   },
-   "notes": {
-    "_note": "Colorado Springs spoke of the private-parties occasion, built 2026-09-06 as Tier 2 item 9 of the content plan. Evidence: 7 Search Console impressions on 'acoustic duo colorado springs'; Colorado Springs is the only non-Denver Colorado city that autocompletes for wedding music ('wedding bands colorado springs', 'wedding dj colorado springs'); the live SERP for 'colorado springs wedding guitarist' is 100% directories and no small-ensemble vendor in the state has a Springs page. The argument is deliberately different from the Springs holiday spoke, which is paperwork-and-procurement led: this one is the social calendar, wedding weekends and milestones at resort and club venues, with the duo as the size and a Front Range drive rather than a mountain date as the logistics story.",
-    "reader": "Whoever is hosting a party in Colorado Springs, a milestone, a club celebration or the dinners around a wedding weekend.",
-    "_title_note": "RETITLED 2026-09-23. The 2026-09-06 title and h1 led with 'acoustic duo' because that phrase had earned seven Search Console impressions. 'acoustic duo colorado springs' returns nothing on suggest today; 'colorado springs bands for hire' and 'colorado springs wedding band' do. The page now leads with the city, the way the Boulder spoke does, and the duo stays as the size inside the page. Daniel's ruling 2026-09-23: framing is decided on search demand outside the site (autocomplete, suggest reads, SERP reads), never on Search Console or Bing impressions, because the site has almost no traffic and those numbers are noise.",
-    "schema_note": "Colorado Springs private-parties spoke. City-specific set: the travel line, the wedding-weekend bookings, outdoor evenings on a Springs terrace, and the sizing answer for the acoustic-duo query this page exists for. No figure appears in any answer; nothing here is a Signet price."
    }
   }
  },
@@ -62,7 +56,6 @@
       }
      }
     ],
-    "_notes": "Springs private-parties spoke. The evening leads, the logistics sit two\n     sections down. The h1 led with \"acoustic duo\" from 2026-09-06 to\n     2026-09-23 because that phrase had earned seven Search Console\n     impressions; Daniel ruled that the site's traffic is too small to argue\n     from, so the h1 leads with the city and the duo is the size named in the\n     lede. Hub link UP in the first screen per the internal-link contract.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: whoever is hosting a party in Colorado Springs, often on a wedding weekend. The real venues, the altitude and the wind off the range stay as local fact; footprints, circuits and dBA left the sizes; travel and outdoor plans are the FAQ, with the extras list; FAQs restating the sizes, the wedding weekend and the altitude are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -73,7 +66,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide since 2026-09-05. This page is a landing\n     surface for city search, so the names sit on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -120,7 +112,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders and the artists' own\n     photos; provenance in img/SOURCES.md and _src/data/media-sources.json.",
     "_file": "01b-media.html"
    }
   },
@@ -215,7 +206,6 @@
       }
      }
     ],
-    "_notes": "The sizing argument, written to the acoustic-duo query that brings people\n     here. Footprint and dBA figures from site.json configurations and the\n     planner FAQ. Across-link to the format page.",
     "_file": "02-sizes.html"
    }
   },
@@ -260,7 +250,6 @@
       }
      }
     ],
-    "_notes": "Venues as the market's places (arch §8 vetted Colorado Springs list),\n     never as our history. The wedding-weekend angle is what makes this page\n     different from the Springs holiday spoke, which is procurement-led.",
     "_file": "03-venues.html"
    }
   },
@@ -297,7 +286,6 @@
       }
      }
     ],
-    "_notes": "The city-specific logistics paragraph the uniqueness gate requires: the\n     drive as one flat line, the elevation as a non-issue stated as a fact,\n     the afternoon wind and the evening cool as outdoor constraints. Links\n     ACROSS to Denver and Boulder and to the technical page.",
     "_file": "04-logistics.html"
    }
   },

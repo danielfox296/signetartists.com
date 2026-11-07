@@ -23,13 +23,6 @@
       "dj"
      ]
     }
-   },
-   "notes": {
-    "_note": "Time-critical landing page for the Nov/Dec 2026 corporate holiday season, built 2026-08-15. The season decides August through October, so this page is live before the enquiries start rather than after. The season's dates and premium tags come from _src/data/season.json. AVAILABILITY IS NEVER PUBLISHED: Daniel killed the 'season board' 2026-08-27 as fiction; the booking calendar is private and no page claims to mirror it.",
-    "reader": "Whoever books the company holiday party and wants the night the staff are still talking about in January.",
-    "_seasonal_note": "At the end of the 2026 season this page either rolls to 2027 (update season.json, retitle) or gets a noindex. Do not leave a page publishing last year's season.",
-    "_url_note": "MOVED 2026-08-20 with the SEO buildout: /corporate/holiday/ became /corporate/holiday-party/ (the occasion x location pattern needs the occasion named in the path, and 'holiday party' is the query). build.py REDIRECTS carries the stub at the old path.",
-    "_schema_note": "The 'schema: roster' key was removed 2026-08-20 with the SEO buildout: this dir now carries its own schema.json (Service with priced Offers plus the page FAQ), which supersedes the config-level schema in build.py."
    }
   }
  },
@@ -65,7 +58,6 @@
       }
      }
     ],
-    "_notes": "Copy pass batch 2, 2026-09-24. THE ONE READER: whoever books the company holiday party and wants the night people talk about in January. The 'get it wrong and everybody is in a coat early' line argued with a failure and is gone; the hotel names came out of the venue section (no venue lists on spokes); load-in, power and procurement are FAQ answers; the FAQs that restated the January section and the pairing are gone.\n\nRebalanced 2026-08-20 (buyer-path audit): the party leads, the\n           scarcity follows, and the paperwork enumeration moved down the page.\n           The intro's first image is now the night the buyer gets credit for,\n           per the desire-before-credibility order the plan itself sets.",
     "_file": "01-intro.html"
    }
   },
@@ -76,7 +68,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -113,7 +104,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
     "_file": "01b-footage.html"
    }
   },
@@ -213,7 +203,6 @@
       }
      }
     ],
-    "_notes": "The season's dates with their published pricing tags. This section was\n     \"The season board\" with per-date open/held/booked statuses until\n     2026-08-27, when Daniel killed the published availability claim as\n     fiction: the booking calendar is private. Dates and premiums are facts;\n     whether a date is free is answered by enquiry, never by a webpage.",
     "_file": "02-board.html"
    }
   },
@@ -364,7 +353,6 @@
       }
      }
     ],
-    "_notes": "Added 2026-08-20 with the SEO buildout: the named-venues section, the\n     December calendar as downtown Denver's hotels run it, plus the down-links\n     to the two city pages and the up-link to the corporate hub. Venues are\n     named as the market's places, never as our history.",
     "_file": "04b-venues.html"
    }
   },
@@ -413,7 +401,6 @@
       }
      }
     ],
-    "_notes": "Added 2026-08-20 with the SEO buildout: the page FAQ, rendered from this\n     dir's schema.json so the visible block and the FAQPage markup can never\n     drift apart.",
     "_file": "04c-faqs.html"
    }
   },
@@ -460,7 +447,6 @@
       }
      }
     ],
-    "_notes": "Added 2026-09-14 from the corporate demand report. The January party is\n     real on both sides of the market: planners on the corporate boards say\n     \"every company does them in January now\", and Denver-area venues now\n     write their holiday offers to run past the middle of January. Calendar\n     facts only. No availability, no \"book by\".",
     "_file": "04d-january.html"
    }
   },
@@ -488,7 +474,6 @@
       }
      }
     ],
-    "_notes": "Replaced 2026-08-20 with the sitewide offer close, per the conversion\n     spine. The headline is the one this page always closed on.",
     "_file": "05-close.html"
    }
   }

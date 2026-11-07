@@ -38,10 +38,6 @@
      }
     ]
    },
-   "notes": {
-    "_note": "The ceremony page, built 2026-09-06 with the weddings hub after Daniel lifted the one-wedding-surface cap. It exists because the ceremony question cluster is the biggest FAQ family in the demand harvest (how does ceremony music work, how many songs, how long, should it be instrumental, what is prelude music, who does it, do DJs do it, how much to tip) and no Colorado page answers any of it. Vendor targets are acoustic guitarist for wedding, acoustic guitar for wedding ceremony and spanish guitar wedding ceremony music. Tipping is answered with no figure of any kind, Signet's or the market's.",
-    "reader": "The couple planning ceremony music for the first time, who wants the walk down the aisle to land."
-   },
    "schemaArticle": "on",
    "published": "2026-09-06"
   }
@@ -78,7 +74,6 @@
       }
      }
     ],
-    "_notes": "Vendor targets in the first screen: acoustic guitarist for wedding,\n     acoustic guitar for wedding ceremony, spanish guitar wedding ceremony\n     music. The night leads, the mechanics start at 02.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: the couple planning ceremony music for the first time. The four-part explainer is the product for this reader and stays; the FAQs that restated it (how many songs, how long, prelude, who does it, DJs) are gone, since the body answers them. The DJ row no longer argues with the DJ; the outdoors section and the officiant microphone are FAQ answers.",
     "_file": "01-intro.html"
    }
   },
@@ -89,7 +84,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip. Every page a buyer can land on carries it.",
     "_file": "01a-credits.html"
    }
   },
@@ -144,7 +138,6 @@
       }
      }
     ],
-    "_notes": "The cluster's biggest question, answered first and in full: how ceremony\n     music works, what the prelude is, how many songs, how long.",
     "_file": "02-how-it-works.html"
    }
   },
@@ -218,7 +211,6 @@
       }
      }
     ],
-    "_notes": "The two versions of the booking, and why guitar specifically. Nylon\n     against steel is craft detail, which is what this register is for.\n\nAdded 2026-09-06. Provenance in _src/data/reviews.json. She names the\n         song she asked for, which is what the repertoire note below describes,\n         so the quote sits directly above it. The player's name is bracketed\n         out and the closing thank-you dropped (voice pass 2026-09-14).",
     "_file": "03-guitar.html"
    }
   },
@@ -255,7 +247,6 @@
       }
      }
     ],
-    "_notes": "Ceremony footage: solo Spanish guitar from Gary Meyers' own channel.\n     Existing artist footage, 2026-09-06, per Daniel: no new shoots, the artists'\n     own uploads placed under our framing. Provenance: _src/data/media-sources.json.",
     "_file": "03a-footage.html"
    }
   },
@@ -298,7 +289,6 @@
       }
      }
     ],
-    "_notes": "\"Who does ceremony music\" and \"do djs do ceremony music\", answered\n     without an opponent: the DJ is on this roster, so the comparison is\n     honest rather than competitive.",
     "_file": "04-who-plays.html"
    }
   },
@@ -355,7 +345,6 @@
       }
      }
     ],
-    "_notes": "Renders from this dir's schema.json, so the visible answers and the\n     FAQPage markup cannot drift. Nothing follows the close token.",
     "_file": "06-faqs.html"
    }
   },

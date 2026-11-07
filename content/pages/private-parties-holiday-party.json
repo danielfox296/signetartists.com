@@ -47,11 +47,6 @@
       "duration": "PT1M21S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Built 2026-09-20 on Daniel's brief for occasion spokes under private parties (the neighborhood ring was killed the same day: 'a waste of time'). Autocomplete evidence, Google and Bing, 2026-09-20: 'christmas party band' and 'christmas party band hire', 'christmas party live music', 'holiday party at home ideas', 'christmas party entertainment ideas for adults', 'holiday party entertainment ideas' with 'for adults', 'for large groups' and 'near me'. 'thanksgiving live music' only echoes the seed and 'friendsgiving party ideas' is food and games, so Thanksgiving is a section here rather than a URL (Daniel: 'your call'), the same rule the milestone-birthday section was built under. New Year's Eve autocompletes nothing and is a section for the same reason. The page is the home version of the corporate holiday party page: the house, the December Saturdays the office calendar takes, and the sizes a house books. Uniqueness gate: registered as a private-parties sibling. No figure on the page; the cost question points at the pricing page and the cost guide. Title shortened 2026-09-21 after the Bing read (was 75 characters: 'Holiday party at home: Christmas party band and live music | Signet Artists'); the head term stays first.",
-    "reader": "Whoever is hosting a holiday party at home in December, from an open house to a dinner to a party that ends in dancing.",
-    "schema_note": "Authored 2026-09-20 with the holiday-party-at-home spoke. Answers trace to site.json (footprints, circuits, load-in, 60 to 65 dBA, set lengths, music through breaks), the Christmas jazz trio page (the three books), the live band karaoke page (its footprint and the sign-up list), the hub's booking-window fact (August through October) and the 2026 calendar (December Saturdays 5, 12, 19; Thanksgiving Thursday November 26; New Year's Eve a Thursday). Questions are worded the way hosts search. No figure; the cost answer points at the pricing page and the cost guide. Castle Pines, Castle Rock and Evergreen are in areaServed on Daniel's ruling of 2026-09-20 that they carry no travel charge."
    }
   }
  },
@@ -87,7 +82,6 @@
       }
      }
     ],
-    "_notes": "The holiday-party-at-home spoke. The buyer's phrases (holiday party at\n     home, Christmas party band, live music for a Christmas party) sit in the\n     h1 and the first paragraph. The night leads, the booking facts follow a\n     paragraph down, the hub link goes UP in the first screen and the office\n     version is linked ACROSS so the two pages never compete.\n\nCopy pass batch 2, 2026-09-24. THE ONE READER: whoever is hosting a December party at home. Page was the longest spoke (1,900 words + 9 FAQs): the house section is the FAQ now, the ideas rows that restated the sizes are gone, and the FAQs that restated the calendar section are gone. Calendar facts (2026 Saturdays, Thanksgiving, New Year's Eve) stay once, in the calendar section.",
     "_file": "01-intro.html"
    }
   },
@@ -98,7 +92,6 @@
     "band": "ruled",
     "label": "Trusted and booked by",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land\n     on the first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -141,7 +134,6 @@
       }
      }
     ],
-    "_notes": "Two Signet-channel clips: Tejas Singh's quartet at a holiday party (a\n     named, fronted act) and White Christmas on one jazz guitar, the size for\n     a dinner at home. The solo clip names no player; the format is spec'd.",
     "_file": "01b-hear.html"
    }
   },
@@ -196,7 +188,6 @@
       }
      }
     ],
-    "_notes": "The sizes a house books for a holiday party, from one guitar to the DJ.\n     Footprint, circuit and load-in facts from site.json configurations; the\n     Christmas book from the Christmas jazz trio page; the karaoke band's\n     footprint from its own page. Tejas Singh and Tony Medina are named\n     because they front their acts; the jazz sizes and the DJ are spec'd.",
     "_file": "02-sizes.html"
    }
   },
@@ -238,7 +229,6 @@
       }
      }
     ],
-    "_notes": "The three holiday parties a house throws, each with the size that fits\n     it. No clock times and no act assigned to an hour, per the standing rule:\n     the shapes are described, the evening is the host's to run.",
     "_file": "03-the-party.html"
    }
   },
@@ -281,7 +271,6 @@
       }
      }
     ],
-    "_notes": "The season's calendar from the host's side: the 2026 Saturdays, the\n     office calendar that takes them, Thanksgiving week and New Year's Eve as\n     sections rather than URLs (autocomplete has no music demand for either;\n     Daniel left the treatment to me, 2026-09-20). Calendar and pricing facts\n     only, no availability and no hold language.",
     "_file": "04-calendar.html"
    }
   },
@@ -331,7 +320,6 @@
       }
      }
     ],
-    "_notes": "The ideas section carries the head term hosts actually type (\"holiday\n     party entertainment ideas for adults\", \"holiday party at home ideas\").\n     Every idea is an act on the roster or a booking the site already\n     describes; nothing is invented for the list.",
     "_file": "05b-ideas.html"
    }
   },

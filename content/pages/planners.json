@@ -5,10 +5,7 @@
    "title": "For Planners",
    "description": "Here's how we work with planners, including your personal point of contact, the certificate of insurance, the W-9 and the technical details venues ask for.",
    "nav": "planners",
-   "breadcrumb": "For Planners",
-   "notes": {
-    "reader": "The event planner who needs the working facts before putting us in front of a client or a venue."
-   }
+   "breadcrumb": "For Planners"
   }
  },
  "content": [
@@ -34,7 +31,6 @@
       }
      }
     ],
-    "_notes": "Rewritten 2026-08-07, content overhaul. This page used to make four claims\n     about how we behave, each of which was already made on two or three other\n     pages. It now hands over the documents instead. Same URL, same audience,\n     opposite method: the claims are demonstrated by the resources below rather\n     than asserted a fourth time.\n\nCopy pass batch 4, 2026-09-24. Planner hub, utility genre: numbers stay, tells only. 'Three things you can rely on' restated the vendor-file section above it line for line and is gone (its links live in that section); itemised fixed.",
     "_file": "01-intro.html"
    }
   },
@@ -87,7 +83,6 @@
       }
      }
     ],
-    "_notes": "Rewritten 2026-10-01 on Daniel's word (\"a large section near the top that\n     purports to answer questions ... the whole thing is confusing. fix it\").\n     His opening line promises questions and answers, and what sat here was\n     seven cards named after our own documents, each describing its contents\n     as a list of nouns. Reader: a planner with an event on the calendar,\n     deciding whether to put us in front of a client or a venue. The rows are\n     that planner's questions in the order the job raises them (what I owe\n     you, my venue, my timeline, my sound limit, my client's songs, my other\n     vendors), each answered here in full, with the long page linked under\n     the answer for whoever needs it. Every link the cards carried is kept.\n     The second pricing pointer is gone; Daniel's own is in the vendor file\n     below. Two link labels are his and stay verbatim: 'What we may need from\n     the venue (depending on booking)' and 'Loudness Limits'.\n\nThe join link, added 2026-09-22 the day it came out of the footer.\n           It sits here rather than anywhere else on the site because planners\n           are one of the six categories on the list, so the person reading\n           this row is a plausible applicant as well as a buyer.",
     "_file": "02-resources.html"
    }
   },
@@ -148,7 +143,6 @@
       }
      }
     ],
-    "_notes": "Added 2026-08-15 with the roster restructure. The spec's planner trust-signal\n     list, in one block, because these are the five things a planner or a venue\n     checks before a vendor goes on a shortlist and they were scattered across\n     four pages. Insurance limits render from site.json; see the _insurance_note\n     there, they are a claim about real coverage and have to match the policy.\n\nReconciled against the contract draft 2026-08-16, card restored\n           2026-08-17 once Stripe was confirmed, card fee absorbed later the\n           same day: all methods at no fee. Vocabulary is the contract's:\n           deposit, never retainer. Note this says configuration rather than\n           act: per Daniel 2026-08-17 the contract specifies what is delivered,\n           not which act or which players deliver it.\n\nScoped to sound 2026-08-18 per Daniel: lighting and an engineer are\n           optional add-ons now, quoted as their own line, so the old \"no\n           separate production line\" claim came out with them.",
     "_file": "02b-vendor.html"
    }
   },
@@ -177,7 +171,6 @@
       }
      }
     ],
-    "_notes": "The honesty section. Header and answer are Daniel-approved (WEBSITE-PLAN.md\n     §1), with the interim résumés wording until the roster accolade sweep.",
     "_file": "04-honesty.html"
    }
   },

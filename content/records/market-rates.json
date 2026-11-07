@@ -1,8 +1,4 @@
 {
- "_comment": "Sourced market figures, 2026-09-04. THE ONLY DOLLAR FIGURES OR PERCENTAGES THAT MAY APPEAR ANYWHERE ON THIS SITE. Signet publishes no price of its own: no card, floor, range, hourly, call-out, uplift, travel figure or discount rule. Every figure below belongs to the market, is attributable to a named public source, and renders through {{market:<id>}} so it can never be retyped and never drift. A page that prints one must also print {{market_sources}}; the build fails otherwise.",
- "_provenance_note": "Same contract as media-sources.json: one entry per figure, with the URL it came from and the date it was read. Before reusing any figure, open its url and check it still says what `figure` says. Marketplace pages in particular recompute their averages as listings change. If a source has moved on, correct the entry or delete it and rewrite the sentence that used it. Never edit a figure without moving `retrieved`.",
- "_attribution_rule": "Every figure is attributed in the sentence or the table caption as the market's: 'Colorado couples budget about...', 'a Denver marketplace averages...'. Nothing may be worded so a reader could take it as Signet's number.",
- "_2026_09_04_verification": "All six sources opened and read on 2026-09-04. Two of the figures carried in the spec had drifted and were corrected here: the US wedding-band range and average now cite Paperlust, which still carries them, rather than SpeechLess, whose 2026 guide has moved to $6,000 to $15,000 and up; and the GigHeaven Denver party-band average now reads $1,150 against the $1,750 the spec recorded. Uptown Drive's page moved to /post/. The spec's suggestion of a travel figure was dropped on purpose: travel is words on this site, never a number, market or otherwise.",
  "rates": [
   {
    "id": "co_band_budget",
@@ -550,8 +546,5 @@
    "url": "https://sunnyjazz.band/how-to-hire-a-jazz-band-for-events-price-cost-band-sizes-booking-guide-2026/",
    "retrieved": "2026-09-16"
   }
- ],
- "_venue_note": "Venue rental figures were added here on 2026-09-04 and REMOVED on 2026-09-05. They were verified and correctly attributed, and they were still the wrong thing to publish: a venue's rental rate is not Signet's story, it dates faster than anything else on the site, and a stale third party price on a vendor page is a small liability for no marketing gain. The venues post names the venues, links their own event pages and says which of them publish flat rates, which is the useful part. Do not re-add third-party venue pricing.",
- "_2026_09_14_offsites_note": "Eleven figures added 2026-09-14 for /blog/company-offsite-ideas-colorado-remote-teams/: Surf Office's 2026 offsites report (90 survey responses plus 200 events), Gallup's May 2026 hybrid indicator, Emburse via Custom Ink, and Amex GBT via a trade relay. Percentages, not prices; they say how remote companies gather, never what Signet charges.",
- "_2026_09_16_dj_and_jazz_note": "Thirteen figures added 2026-09-16 for the two calibration posts (what a jazz band costs, what a DJ costs), each read from its url that day. The spread between a Denver DJ's four-hour block and a Denver DJ with production lighting (denver_dj) is the point of the DJ post: the word covers two different purchases. The California jazz figures are the top of the market and are labelled as California wherever they print."
+ ]
 }

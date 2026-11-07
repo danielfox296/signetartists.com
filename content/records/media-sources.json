@@ -1,5 +1,4 @@
 {
- "_comment": "Per-asset provenance for the 2026-08-27 real-media load. Every asset came from the artist's own channel, on Daniel's direction (2026-08-27: 'they're all out there... err on the side of too much media and i'll ask to remove anything i don't like'). Videos are EMBEDS of the artists' own YouTube uploads, never re-hosted. Instagram was deliberately not scraped; artists can supply IG assets directly if wanted.",
  "photos": {
   "img/acts/tejas-fire-escape.jpg": {
    "source": "https://images.squarespace-cdn.com/content/v1/55b6f625e4b03ad201a9bcb5/1658352564052-ZFQMORDLHWBE3R4FWML9/00CCDF95-4F9E-4EA6-9E3B-B42FCA390C5D.jpeg",
@@ -69,8 +68,7 @@
   "img/acts/solo-bridge.jpg": {
    "source": "https://jordanlovinger.com/images/weddings/wedding-coohills-02.jpg",
    "from": "jordanlovinger.com",
-   "retrieved": "2026-08-27",
-   "_note": "Leads the solo page as its hero image."
+   "retrieved": "2026-08-27"
   },
   "img/acts/funk-stage.jpg": {
    "REMOVED": "2026-08-28 on Daniel's call: Jordan off the funk trio",
@@ -83,8 +81,7 @@
   "img/acts/acoustic-outdoor.jpg": {
    "source": "https://jordanlovinger.com/images/weddings/wedding-02.jpg",
    "from": "jordanlovinger.com",
-   "retrieved": "2026-08-27",
-   "_note": "PLACED 2026-09-06 as the hero of the blog post how-far-ahead-to-book-wedding-musicians-colorado."
+   "retrieved": "2026-08-27"
   },
   "img/last-consulate-card.jpg": {
    "source": "Daniel's own act artwork for Last Consulate: ~/Desktop/last-consulate/passport.jpg, 960x1095, black and white prop passport",
@@ -96,21 +93,18 @@
    "source": "crop of img/acts/medina-marquee.jpg (73726b_c199c91a), centred 16:9 at 1600x900",
    "from": "medinablues.com",
    "retrieved": "2026-09-06",
-   "_note": "The roster card and the page og_image. Already black and white at source, so no palette duotone: this is his own photograph, not an interim still.",
    "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
   },
   "img/acts/medina-marquee.jpg": {
    "source": "https://static.wixstatic.com/media/73726b_c199c91af94745509716fad6125a6980~mv2.jpg",
    "from": "medinablues.com",
    "retrieved": "2026-09-06",
-   "_note": "Black and white, playing an acoustic guitar under string lights. The card crop comes from this frame.",
    "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
   },
   "img/acts/medina-patio.jpg": {
    "source": "https://static.wixstatic.com/media/73726b_dd9796fe8f674d95a7b25f5f03783c86~mv2.jpg",
    "from": "medinablues.com",
    "retrieved": "2026-09-06",
-   "_note": "Also the profile image on his about page.",
    "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
   },
   "img/acts/medina-portrait.jpg": {
@@ -123,7 +117,6 @@
    "source": "https://static.wixstatic.com/media/73726b_bcb1efaa1b594acc843e6367fdee4a46~mv2.png",
    "from": "medinablues.com",
    "retrieved": "2026-09-06",
-   "_note": "The four piece on a stage. Converted to jpg. The other players are not named anywhere the photo publishes, per the no-lineup rule.",
    "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
   },
   "img/acts/medina-street.jpg": {
@@ -142,7 +135,6 @@
    "source": "https://static.wixstatic.com/media/73726b_cfd7bc0cec244842889917e7747f6954~mv2.jpg",
    "from": "medinablues.com",
    "retrieved": "2026-09-06",
-   "_note": "His surname inlaid in abalone along a fretboard. The one place his name publishes as an image rather than as type.",
    "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
   },
   "img/acts/medina-soundhole.jpg": {
@@ -155,7 +147,6 @@
    "source": "https://i.ytimg.com/vi/t_s2FavrDew/hqdefault.jpg",
    "from": "medinablues.com",
    "retrieved": "2026-09-06",
-   "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl. Same 480x360 treatment as the Tejas and jazz posters.",
    "verified": "sha256 of the installed file matched a re-fetch of the source URL, 2026-09-06"
   },
   "img/hero/gary-meyers.jpg": {
@@ -178,20 +169,17 @@
   "img/acts/tejas-live-poster.jpg": {
    "source": "https://i.ytimg.com/vi/8sVxHJ9ql2g/hqdefault.jpg",
    "from": "Sofar Sounds channel (Tejas Singh live)",
-   "retrieved": "2026-09-06",
-   "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl. Row written retroactively 2026-09-16 when scripts/act_lint.py started requiring one."
+   "retrieved": "2026-09-06"
   },
   "img/acts/jazz-duo-card.jpg": {
    "source": "https://www.youtube.com/watch?v=O2A0PKE7CXE",
    "from": "@SignetArtists reupload of Jordan Lovinger's Autumn Leaves",
-   "retrieved": "2026-11-03",
-   "_note": "Daniel 2026-11-03: the jazz duo card is the guitarist and upright bass player outdoors. Frame at 6s of the 608x1080 stream (yt-dlp), cut 608x456 from y=115, enlarged to 1200x900."
+   "retrieved": "2026-11-03"
   },
   "img/acts/jazz-duo-poster.jpg": {
    "source": "https://i.ytimg.com/vi/O2A0PKE7CXE/hqdefault.jpg",
    "from": "@SignetArtists reupload of Jordan Lovinger's Autumn Leaves",
-   "retrieved": "2026-09-06",
-   "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl. Row written retroactively 2026-09-16 when scripts/act_lint.py started requiring one."
+   "retrieved": "2026-09-06"
   },
   "img/acts/firstwater-portrait.jpg": {
    "REMOVED": "2026-09-19, Daniel: 'remove my photo and put a stock photo of a sound bath there'. Files deleted; the roster card and hero now use the interim still img/sound-bath.jpg (scripts/stills.py, provenance in img/SOURCES.md).",
@@ -205,152 +193,129 @@
    "source": "https://images.zoogletools.com/s:bzglfiles/u/1013759/c5e8ab82ac2cfc89502b5f3c117565eb7996da69/original/renemoffatt-kenzieveritt-credit.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "verified": "sha256 ef6558676032ad30 of the source bytes, 2026-09-20",
-   "_note": "Press image from the EPK gallery on his site (photographer credited in the filename, Kenzie Veritt): on a stage at the microphone with an acoustic guitar, warm light. The card crop comes from this frame. Installed at 1600x1236 (the source is 2441x1886; resized to 1600 on the long side like the rest of the galleries)."
+   "verified": "sha256 ef6558676032ad30 of the source bytes, 2026-09-20"
   },
   "img/rene-moffatt-card.jpg": {
    "source": "crop of img/acts/rene-moffatt-stage.jpg, 16:9 at 1600x900, focus 0.50,0.25",
    "from": "renemoffatt.com",
-   "retrieved": "2026-09-20",
-   "_note": "The roster card and the page og_image."
+   "retrieved": "2026-09-20"
   },
   "img/acts/rene-moffatt-festival.jpg": {
    "source": "https://images.zoogletools.com/s:bzglfiles/u/1013759/2e4141dc7f7191e936d1613ca6c83c37334159f1/original/wildflower-renemoffatt-bennoeycredit.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "verified": "sha256 874236bfe2b25c18 of the source bytes, 2026-09-20",
-   "_note": "Press image from the EPK gallery (credited Ben Noey in the filename): singing at the microphone on a festival stage in a hat, guitar in frame. Installed at 1600x1068 (the source is 2048x1367; resized to 1600 on the long side like the rest of the galleries)."
+   "verified": "sha256 874236bfe2b25c18 of the source bytes, 2026-09-20"
   },
   "img/acts/rene-moffatt-seated.jpg": {
    "source": "https://images.zoogletools.com/s:bzglfiles/u/1013759/17cdc78a8ab2c720f7a0820594c9dc24ba4811bc/original/renemoffatt-jimdarlingphoto.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "verified": "sha256 8a9ebdb343ee34cf of the source bytes, 2026-09-20",
-   "_note": "Press image from the EPK gallery (credited Jim Darling in the filename): seated in an orange armchair with an acoustic guitar against a plain studio backdrop. Installed at 1600x1067 (the source is 3600x2400; resized to 1600 on the long side like the rest of the galleries)."
+   "verified": "sha256 8a9ebdb343ee34cf of the source bytes, 2026-09-20"
   },
   "img/acts/rene-moffatt-stool.jpg": {
    "source": "https://images.zoogletools.com/s:bzglfiles/u/1013759/417c59a627d514f33d550745a59b0d38ef8007d0/original/renemoffatt-stool-jimdarling-credit.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "verified": "sha256 5e662ee6feab0cdf of the source bytes, 2026-09-20",
-   "_note": "Press image from the EPK gallery (credited Jim Darling in the filename): on a stool with an acoustic guitar, studio backdrop, portrait orientation. Installed at 1067x1600 (the source is 2400x3600; resized to 1600 on the long side like the rest of the galleries)."
+   "verified": "sha256 5e662ee6feab0cdf of the source bytes, 2026-09-20"
   },
   "img/acts/rene-moffatt-cafe.jpg": {
    "source": "https://images.zoogletools.com/s:bzglfiles/u/1013759/d1911a29b8f4729a69e3163c0e18d46787de817e/original/renemoffatt-moleculeeffect1.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "verified": "sha256 1d9d7fa350934ff0 of the source bytes, 2026-09-20",
-   "_note": "Press image from the EPK gallery: black and white, singing at a microphone with an acoustic guitar in front of a large abstract painting at a cafe show. Installed at 1600x1068 (the source is 2048x1367; resized to 1600 on the long side like the rest of the galleries)."
+   "verified": "sha256 1d9d7fa350934ff0 of the source bytes, 2026-09-20"
   },
   "img/acts/rene-moffatt-portrait.jpg": {
    "source": "https://images.zoogletools.com/s:bzglfiles/u/1013759/8d3271ec33e2f53651c751ef8a5dfe0b536b30ce/original/renemoffatt-mightyfine-sethbeamer-credit.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "verified": "sha256 7d837fb0492ee1c1 of the source bytes, 2026-09-20",
-   "_note": "Press image from the EPK gallery (credited Seth Beamer in the filename): seated with an acoustic guitar beside a studio microphone, portrait orientation. Installed at 1063x1600 (the source is 2848x4288; resized to 1600 on the long side like the rest of the galleries)."
+   "verified": "sha256 7d837fb0492ee1c1 of the source bytes, 2026-09-20"
   },
   "img/acts/rene-moffatt-live-poster.jpg": {
    "source": "https://i.ytimg.com/vi/DEvhVzOZeQg/hqdefault.jpg",
    "from": "renemoffatt.com",
    "retrieved": "2026-09-20",
-   "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl.",
    "verified": "sha256 7d7227c792778666, 2026-09-20"
   },
   "img/your-bird-can-sing-card.jpg": {
    "source": "Original artwork, drawn in scripts/bird_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-22",
-   "_note": "Not a photograph and not stock. The act arrived with no media and Daniel asked for record-sleeve artwork on the page, so the sleeve was drawn from scratch: a sunburst, flat sixties colour and a flock in silhouette, every shape a path in the script. It reproduces no album cover, no photograph and no likeness. Rebuild with `python3 scripts/bird_art.py`. This is the act's artwork, not an interim still, and it stays if photography arrives."
+   "retrieved": "2026-09-22"
   },
   "img/acts/your-bird-can-sing-sleeve.jpg": {
    "source": "Original artwork, drawn in scripts/bird_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-22",
-   "_note": "The square sleeve, with the act's name set in Archivo, the site's own face, decompressed out of vendor/fonts at run time."
+   "retrieved": "2026-09-22"
   },
   "img/acts/your-bird-can-sing-songbook.jpg": {
    "source": "Original artwork, drawn in scripts/bird_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-22",
-   "_note": "The sing booklets: an open booklet with the songs leaving the page. Daniel's brief 2026-09-22 named the booklets as what the duo hands out."
+   "retrieved": "2026-09-22"
   },
   "img/live-band-karaoke-card.jpg": {
    "source": "Original artwork, drawn in scripts/format_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-23",
-   "_note": "Not a photograph and not stock: a lyric screen with one line lit and a microphone on its stand, drawn flat in the palette of scripts/bird_art.py. Until 2026-09-23 this format shared the interim snare-drum still (headliners.jpg) with two other party formats, three times on one roster page. Rebuild with `python3 scripts/format_art.py`. It reproduces no label, no logo and no photograph."
+   "retrieved": "2026-09-23"
   },
   "img/soul-band-card.jpg": {
    "source": "Original artwork, drawn in scripts/format_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-23",
-   "_note": "Not a photograph and not stock: a 45 on the turntable with a rose label, drawn flat in the palette of scripts/bird_art.py. Until 2026-09-23 this format shared the interim snare-drum still (headliners.jpg) with two other party formats, three times on one roster page. Rebuild with `python3 scripts/format_art.py`. It reproduces no label, no logo and no photograph."
+   "retrieved": "2026-09-23"
   },
   "img/funk-band-card.jpg": {
    "source": "Original artwork, drawn in scripts/format_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-23",
-   "_note": "Not a photograph and not stock: a row of level meters lit up on a teal field, drawn flat in the palette of scripts/bird_art.py. Until 2026-09-23 this format shared the interim snare-drum still (headliners.jpg) with two other party formats, three times on one roster page. Rebuild with `python3 scripts/format_art.py`. It reproduces no label, no logo and no photograph."
+   "retrieved": "2026-09-23"
   },
   "img/string-quartet-card.jpg": {
    "source": "Original artwork, drawn in scripts/format_art.py",
    "from": "Signet Artists",
-   "retrieved": "2026-09-25",
-   "_note": "Not a photograph and not stock: a violin drawn flat in ink on a mustard field, with the offer set in Archivo, in the palette of scripts/bird_art.py like the other drawn format tiles. The classical strings format is spec'd and nobody in it is named, so the honest picture is the instrument. Rebuild with `python3 scripts/format_art.py`. It reproduces no photograph and no likeness. CAME OFF THE CARD 2026-09-25, a few hours after it shipped: Daniel cleared the violinist's own photographs from her site, and her ceremony photo (img/classical-strings-card.jpg) is the card and og image now. The file stays, rebuildable, in case the page ever wants the drawn piece back."
+   "retrieved": "2026-09-25"
   },
   "img/acts/classical-strings-live-poster.jpg": {
    "source": "https://i.ytimg.com/vi/NfkVbgovXQU/hqdefault.jpg",
    "from": "https://www.youtube.com/@maristanton9146",
    "retrieved": "2026-09-25",
-   "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl.",
    "verified": "sha256 03e8ddebcf885538, 2026-09-25"
   },
   "img/acts/classical-strings-ceremony.jpg": {
    "source": "https://mariroes.com/assets/images/hero-wedding-ceremony.jpg",
    "from": "mariroes.com",
    "retrieved": "2026-09-25",
-   "verified": "sha256 b77fdc887f211a2f of the source bytes, 2026-09-25",
-   "_note": "Her site's wedding hero: playing at an outdoor mountain ceremony with the couple at a flowered arch behind her, soft focus. The card and og image from 2026-09-25 on Daniel's word that her site's photographs are cleared; it replaced the drawn violin tile the same day."
+   "verified": "sha256 b77fdc887f211a2f of the source bytes, 2026-09-25"
   },
   "img/classical-strings-card.jpg": {
    "source": "crop of img/acts/classical-strings-ceremony.jpg, 16:9 at 1600x900, focus 0.42,0.50",
    "from": "mariroes.com",
-   "retrieved": "2026-09-25",
-   "_note": "The roster card and the page og_image."
+   "retrieved": "2026-09-25"
   },
   "img/acts/classical-strings-ballroom.jpg": {
    "source": "https://mariroes.com/assets/images/corporate-events.jpg",
    "from": "mariroes.com",
    "retrieved": "2026-09-25",
-   "verified": "sha256 9bf1b631065aee2a of the source bytes, 2026-09-25",
-   "_note": "Her site's events page: solo violin on a riser at a black-tie ballroom dinner, guests at round tables. The gala and client-dinner picture."
+   "verified": "sha256 9bf1b631065aee2a of the source bytes, 2026-09-25"
   },
   "img/acts/classical-strings-stage.jpg": {
    "source": "https://mariroes.com/assets/images/hero-stage.jpg",
    "from": "mariroes.com",
    "retrieved": "2026-09-25",
-   "verified": "sha256 f34fe37a418c48d7 of the source bytes, 2026-09-25",
-   "_note": "Her site's home hero: from behind, on a concert stage under house lights, no face in frame."
+   "verified": "sha256 f34fe37a418c48d7 of the source bytes, 2026-09-25"
   },
   "img/acts/classical-strings-meadow.jpg": {
    "source": "https://mariroes.com/assets/images/card-weddings-events-raised.jpg",
    "from": "mariroes.com",
    "retrieved": "2026-09-25",
-   "verified": "sha256 af75fd8aaba90634 of the source bytes, 2026-09-25",
-   "_note": "Her site's weddings card: playing outdoors in a wildflower meadow, landscape crop."
+   "verified": "sha256 af75fd8aaba90634 of the source bytes, 2026-09-25"
   },
   "img/acts/little-moses-jones-stage.jpg": {
    "source": "https://littlemosesjones.com/images/gallery/Little-Moses-Jones-Live-Band-Stage-Show.jpg",
    "from": "https://littlemosesjones.com/gallery",
    "retrieved": "2026-10-29",
-   "verified": "sha256 7de6783e061a6ee4 of the source bytes, 2026-10-29",
-   "_note": "The band on stage in red under purple light, keys and tuba in frame; the card crop is the centre of this frame"
+   "verified": "sha256 7de6783e061a6ee4 of the source bytes, 2026-10-29"
   },
   "img/little-moses-jones-card.jpg": {
    "source": "crop of img/acts/little-moses-jones-stage.jpg, 16:9 at 1600x900, focus 0.50,0.50",
    "from": "https://littlemosesjones.com/gallery",
-   "retrieved": "2026-10-29",
-   "_note": "The roster card and the page og_image."
+   "retrieved": "2026-10-29"
   },
   "img/acts/little-moses-jones-lineup.jpg": {
    "source": "https://littlemosesjones.com/images/gallery/Little_Moses_Jones_International_Wedding_Performance_10.jpg",
@@ -374,8 +339,7 @@
    "source": "https://littlemosesjones.com/images/gallery/Little-Moses-Jones-High-Energy-Festival-Concert.jpg",
    "from": "https://littlemosesjones.com/gallery",
    "retrieved": "2026-10-29",
-   "verified": "sha256 cfd76063027bed05 of the source bytes, 2026-10-29",
-   "_note": "Black and white at source, stays black and white"
+   "verified": "sha256 cfd76063027bed05 of the source bytes, 2026-10-29"
   },
   "img/acts/little-moses-jones-frontline.jpg": {
    "source": "https://littlemosesjones.com/images/gallery/Little_Moses_Jones_Live_Music_for_Special_Events_1.jpg",
@@ -405,14 +369,12 @@
    "source": "https://i.ytimg.com/vi/oIa-i9C4T7g/hqdefault.jpg",
    "from": "https://www.youtube.com/@LittleMosesJones",
    "retrieved": "2026-10-29",
-   "_note": "YouTube thumbnail of the hero embed, saved for the VideoObject thumbnailUrl.",
    "verified": "sha256 184cee215dbc24be, 2026-10-29"
   },
   "img/afro-house-dj-card.jpg": {
    "source": "crop of img/acts/afro-house-dj-headphones.jpg, 16:9 at 1600x900, focus 0.50,0.28",
    "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
-   "retrieved": "2026-11-02",
-   "_note": "The roster card and the page og_image."
+   "retrieved": "2026-11-02"
   },
   "img/acts/afro-house-dj-decks.jpg": {
    "source": "EPK photo zip, 1 Photos/hero-black-and-white.jpg",
@@ -424,21 +386,18 @@
    "source": "EPK photo zip, 1 Photos/press-photo-rhythm-culture-connection.jpg",
    "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
    "retrieved": "2026-11-02",
-   "verified": "sha256 1bda9509614e7d09 of the source bytes, 2026-11-02",
-   "_note": "Downsized to 1800 pixels on the long side for the page, 2026-11-02; the full-size original is in the zip."
+   "verified": "sha256 1bda9509614e7d09 of the source bytes, 2026-11-02"
   },
   "img/acts/afro-house-dj-headphones.jpg": {
    "source": "EPK photo zip, 1 Photos/live-behind-the-decks.jpg",
    "from": "The DJ's EPK photo zip, emailed to daniel@signetartists.com 2026-11-02 (roster sheet A-030)",
    "retrieved": "2026-11-02",
-   "verified": "sha256 2c56a71441b9edc8 of the source bytes, 2026-11-02",
-   "_note": "Downsized to 1800 pixels on the long side for the page, 2026-11-02; the full-size original is in the zip. Also the source of the roster card."
+   "verified": "sha256 2c56a71441b9edc8 of the source bytes, 2026-11-02"
   },
   "img/acts/afro-house-dj-live-poster.jpg": {
    "source": "Frame at 0:40 of the Signet reupload v0nKiT2_7RE",
    "from": "https://www.youtube.com/@SignetArtists",
    "retrieved": "2026-11-04",
-   "_note": "Saved for the VideoObject thumbnailUrl.",
    "verified": "sha256 b7687a42ce114678, 2026-11-04"
   },
   "img/acts/meghan-clarisse-hat.jpg": {
@@ -450,8 +409,7 @@
   "img/meghan-clarisse-card.jpg": {
    "source": "crop of img/acts/meghan-clarisse-hat.jpg, 16:9 at 1600x900, focus 0.50,0.50",
    "from": "megcmusic.com",
-   "retrieved": "2026-11-06",
-   "_note": "The roster card and the page og_image."
+   "retrieved": "2026-11-06"
   },
   "img/acts/meghan-clarisse-stage.jpg": {
    "source": "https://admin.megcmusic.com/wp-content/uploads/2022/04/DSC03504small.jpg",
@@ -615,8 +573,7 @@
    "channel": "SIDEHATCH ARTS",
    "uploaded": "2020-11-22",
    "placed": "artists/tony-medina/ footage grid. WAS the page hero until 2026-09-06, when it was demoted: it sits on the SIDEHATCH ARTS channel, which meant the most-watched slot on the page ran on a channel we do not control, and the frames did not support the claim that it was his best-shot cut (720p, plain office setting, a second player as prominent as Tony). Still the one duo performance on the page, so it keeps a tile. Needs SIDEHATCH's word before a Signet copy goes up.",
-   "embed_checked": "playableInEmbed true, 2026-09-06",
-   "_note": "A Freddie King blues standard, played as a duo. Third-party channel: see the reupload note below before copying this one to the Signet channel."
+   "embed_checked": "playableInEmbed true, 2026-09-06"
   },
   "5CX5YLI_5Rk": {
    "title": "Thrill Is Gone cover at The Alley Blues Jam",
@@ -644,16 +601,14 @@
    "channel": "SIDEHATCH ARTS",
    "uploaded": "2020-11-29",
    "placed": "artists/tony-medina/ footage",
-   "embed_checked": "playableInEmbed true, 2026-09-06",
-   "_note": "Third-party channel, same caveat as the hero."
+   "embed_checked": "playableInEmbed true, 2026-09-06"
   },
   "cdiTSJd7Qpo": {
    "title": "HEADLINE- original song By Tony Medina (c)2020",
    "channel": "Tony Medina Music",
    "uploaded": "2020-05-08",
    "placed": "SUPERSEDED 2026-09-06 by the Signet copy wt2SnYjWxKs, which is what artists/tony-medina/ now embeds. Kept here as provenance.",
-   "embed_checked": "playableInEmbed true, 2026-09-06",
-   "_note": "The one original placed on the page, so the catalogue claim has something behind it."
+   "embed_checked": "playableInEmbed true, 2026-09-06"
   },
   "DEvhVzOZeQg": {
    "title": "Hope For Better Things (Alternate Video Version)",
@@ -930,7 +885,6 @@
    "rené moffatt EPK photographs not placed: the vintage-radio portrait (rene-moffatt-cameronwhitman-credit, an earlier era), the DC9 black and white (an old DC-era stage), the coffee-and-notebook portrait (not the act as booked), the two headshots, the second Molecule Effect frame (a near-duplicate of the placed one), and the logos. The older DC-era gallery on his videos page was left alone for the same reason.",
    "rené moffatt Instagram: not scraped, per the standing rule."
   ],
-  "_rulings_2026_09_20": "Daniel, on the René Moffatt load: there is no memorial rule and no sponsorship or alcohol rule on this site. The first pass held back his Willie Nelson cover (its description remembers his late father) and the nine Underground Music Showcase 2026 clips (sponsor banners on the stage) under rules that were agent-made; both publish as of 2026-09-20. Rows in this list are records of one day's call on one asset, never standing rules; the Tony Medina rows above are his to reverse the same way.",
   "afro-house-dj-sets": {
    "what": "Two full DJ sets: the daylight set (eajUzmLn5KU on a Hong Kong promoter's channel, aO8MWD3R6BI on the DJ's own) and the night set (SMxLWXMY7VQ, promoter's channel)",
    "why": "2026-11-02: the titles and thumbnails carry the DJ's name and the act is unnamed, so they were taken off ensembles/afro-house-dj/ before it went live. The night set also has the name burned into the picture. 2026-11-04: a 2:30 clip of the daylight set went on the Signet channel in their place."
@@ -940,7 +894,6 @@
   "media/dirty-flamenco.mp4": "Daniel's own phone footage ('monarch 1'), landed by a parallel session 2026-08-28; led the flamenco page and both roster cards as a native player until 2026-09-20, when it moved to the first tile of the flamenco page's footage grid. Poster media/dirty-flamenco-poster.jpg is a frame of it.",
   "media/dirty-flamenco-2.mp4": "Daniel's own iPhone footage of the trio, shot 2026-09-19 at the same venue as the August clip, trimmed by him to 65 seconds in QuickTime (Untitled.mov in his Downloads, 1280x720 export) and handed over 2026-09-20; re-encoded to 15.0MB H.264 faststart, 24fps, audio untouched. Leads the flamenco page and both roster cards as a native player; schema.json video describes it. Poster media/dirty-flamenco-2-poster.jpg is the frame at eight seconds. The venue is not named anywhere it publishes."
  },
- "_existing_footage_note_2026_09_06": "Daniel 2026-09-06: no new shoots; use the artists' existing uploads. Placements above, VideoObject names authored in each page's schema.json, asks to the artists in outreach/link-asks-2026-09.md. Poster frames for embeds are YouTube thumbnails saved to img/acts/.",
  "signet_channel": {
   "channel": "https://www.youtube.com/@SignetArtists",
   "id": "UCdIteX74DYel7z7zurPUDmQ",
@@ -1101,25 +1054,17 @@
     "artist": "The Afro house DJ (roster sheet A-030)",
     "title": "Afro house DJ for an after-party: live DJ set, Denver | Signet Artists",
     "published": "2026-11-04",
-    "placed": "ensembles/afro-house-dj/ hero and VideoObject; /video/afro-house-dj-after-party-live-set/",
-    "_note": "2:30 from the daylight set, 19:30 to 22:00, with short fades. Carries the promoter's small corner logo. YouTube blocked it in Russia on processing."
+    "placed": "ensembles/afro-house-dj/ hero and VideoObject; /video/afro-house-dj-after-party-live-set/"
    },
    "HGsbmeBlcb0": {
     "original": "hwLbMyR4SLw",
     "artist": "Meghan Clarisse",
     "title": "Country band for a wedding: Fire and Fly, Meghan Clarisse, Denver | Signet Artists",
     "published": "2026-11-06",
-    "placed": "artists/meghan-clarisse/ hero + VideoObject; /video/ watch page",
-    "_note": "Uploaded from her 4K raw file. Her YouTube copy names another player in its title, so it was never placed."
+    "placed": "artists/meghan-clarisse/ hero + VideoObject; /video/ watch page"
    }
   }
  },
- "_tony_medina_note_2026_09_06": "Daniel 2026-09-06: 'we have permission to add him with all the media from his site, to youtube too.' BOTH HALVES ARE DONE, except for two videos that are not his to give. Site: nine photographs and six embeds, live. YouTube: the four cuts on his own channel were reuploaded to @SignetArtists the same evening with the footage/reuploads pipeline (Entuned OAuth client, yt_upload.py), keys 21 to 24, and the page embeds the Signet copies. The Thrill Is Gone published as a Short: vertical and under three minutes. All four verified public and embeddable before the embeds were swapped, and added to the channel playlists including a new 'Tony Medina, blues and rock'. HERO SWAPPED the same evening to mHtY8DbqLtA (the Signet copy of his Prince cover), so nothing at the top of the page depends on a third-party channel. STILL OPEN: t_s2FavrDew ('Going Down', now a footage tile) and qf4_7lKu3iE ('Don't Drink The Water') sit on the SIDEHATCH ARTS channel, not on Tony's. His permission covers his material, not another channel's upload, so those two still embed the original and need SIDEHATCH's word before a Signet copy goes up. Tracked in Asana.",
- "_placements_2026_09_14": "Every buyer page that carried no visual got one (Daniel: blogs and pages should have images). Embeds reused: 8sVxHJ9ql2g (Tejas, Sofar) on /corporate/; Cp4cfviYj3M (Tejas looping) on /corporate/holiday-party/; U2G_lp4nXv0 (jazz duo) on /corporate/galas-and-awards/ and /weddings/cocktail-hour/denver/; mHtY8DbqLtA (Tony Medina, Signet copy) on /corporate/after-party/. Stills reused from img/ and img/acts/ on the holiday city spokes, the retreats hub and spokes, weddings hub and Colorado Springs, the private-parties city spokes and the cost guide. No new assets; nothing new to attribute.",
- "_placements_2026_09_16": "Six demand pages and three posts built 2026-09-16. Signet-channel copies placed: O2A0PKE7CXE and cA2KwgmJqGc on /weddings/jazz-band/; hIPHFuxl9YI and cA2KwgmJqGc on /corporate/jazz-band/; nzVtbiEF5ak (hero) and wt2SnYjWxKs on /ensembles/singer-guitarist/; Y6_evCDeUm8 (hero) on /ensembles/christmas-jazz-trio/; Ck7tQx7YIik on /weddings/vail/ and as the /private-parties/proposals/ hero; cA2KwgmJqGc in the what-is-a-jazz-trio post. Stills reused: img/acts/acoustic-outdoor.jpg (Vail), standards.jpg and dj.jpg (post heroes and og images), solo-bridge.jpg and flamenco-window.jpg as og images. Every embed passed scripts/act_media.py embed the same day. No new assets; nothing new to attribute.",
- "_placements_2026_09_19_daytime": "The daytime tree (hub + five spokes). Signet-channel clips re-embedded with new page-specific VideoObject text: O2A0PKE7CXE and hIPHFuxl9YI on daytime/senior-living/; Ck7tQx7YIik and hIPHFuxl9YI on daytime/funerals-and-memorials/; O2A0PKE7CXE and cA2KwgmJqGc on daytime/brunch/; Cp4cfviYj3M and IGww0fFkjyg on daytime/community-programs/. daytime/sound-bath/ carries img/sound-bath.jpg in the act-video-photo pattern (no footage exists) and as og_image. og_images: img/standards.jpg (hub, senior living), img/acts/flamenco-window.jpg (funerals), img/acts/jazz-duo-poster.jpg (brunch), img/acts/acoustic-outdoor.jpg (community programs). No player named on any spec'd page; Tejas Singh and Dirty Flamenco are named acts.",
- "_placements_2026_09_20_occasions": "The two occasion spokes under private parties (holiday party at home, Halloween party). Signet-channel clips re-embedded with page-specific VideoObject text: isKpOj8rPos (Tejas Singh quartet at a holiday party) and Y6_evCDeUm8 (White Christmas, one guitar, no player named) on private-parties/holiday-party/; mHtY8DbqLtA (Purple Rain) and C6M9wwR9DWk (Drive), both Tony Medina, on private-parties/halloween-party/. og_images: img/acts/tejas-live-poster.jpg (holiday), img/acts/medina-band.jpg (Halloween). Tejas Singh and Tony Medina are named acts; the DJ, the karaoke band and the jazz sizes are spec'd. Same day, second tranche, six more spokes: FJiO_bIIA8c (Dirty Flamenco, garden party) and nzVtbiEF5ak (singer with a guitar, no player named) on private-parties/backyard-party/; hIPHFuxl9YI (one jazz guitar, no player named) and Ck7tQx7YIik (Dirty Flamenco) on private-parties/showers/; Cp4cfviYj3M (Tejas Singh) and wt2SnYjWxKs (Tony Medina) on private-parties/graduation-party/; O2A0PKE7CXE (jazz duo, no player named) and NI0kunpQQiA (Tejas Singh) on private-parties/anniversary-party/; LvI8FAVFADA (one jazz guitar, no player named) and C6M9wwR9DWk (Tony Medina) on private-parties/retirement-party/; klpdQ4wtXkc (Dirty Flamenco) and cA2KwgmJqGc (jazz trio, no player named) on private-parties/engagement-party/. og_images: img/acts/acoustic-outdoor.jpg (backyard), img/acts/solo-bridge.jpg (showers), img/acts/tejas-mural.jpg (graduation), img/acts/jazz-duo-poster.jpg (anniversary), img/standards.jpg (retirement), img/acts/flamenco-court.jpg (engagement).",
- "_your_bird_can_sing_note_2026_09_22": "Your Bird Can Sing joined the roster 2026-09-22 with no photography and no footage. Daniel's brief asked for Beatles cover art on the page. Published album covers were not used: the artwork on the page is original, drawn in scripts/bird_art.py, and reproduces nothing. The three files are listed in photos above with the script as their source. Media gaps still open: a photograph of the duo playing, and one clip of a crowd singing. The day either lands it goes through scripts/act_media.py and the artwork moves down the page.",
  "vendor_photos": {
   "mxbloom-films": {
    "folder": "img/vendors/mxbloom-films/",

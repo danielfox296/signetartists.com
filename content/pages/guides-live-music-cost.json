@@ -30,11 +30,6 @@
      ]
     }
    },
-   "notes": {
-    "_note": "The cost guide, Tier 1c of the 2026-08-20 SEO buildout. Built to be the quoted source for cost queries, which are budget calibration. REWRITTEN 2026-09-04: the page now answers with the market's figures, every one a {{market:<id>}} token off market-rates.json with its source printed under the table, and no Signet figure anywhere. Title, H1, URL and the five FAQ questions are unchanged; this page ranks on them.",
-    "_title_note": "Trimmed 2026-08-20 from the 84-character colon form; the occasion list lives in the lede and the occasion sections rather than the title. The build appends the brand.",
-    "schema_note": "REWRITTEN 2026-09-04 with the no-published-price decision. The five questions are unchanged: this page ranks on them. The answers carry the market's figures instead of ours, as {{market:<id>}} tokens off market-rates.json, which build.py resolves here to plain text and registers against the page, so the Sources note under the market table names every source a crawler can quote from this file. Never type a figure into an answer, and never put any other token here."
-   },
    "schemaArticle": "on",
    "published": "2026-09-05"
   }
@@ -77,7 +72,6 @@
       }
      }
     ],
-    "_notes": "Answer-first intro. Title, H1 and URL are unchanged: this page ranks and\n     the 2026-09-04 rewrite is a body rewrite. Every figure is a\n     {{market:<id>}} token off market-rates.json and belongs to the market;\n     the Sources note under the table names where each one was read.",
     "_file": "01-intro.html"
    }
   },
@@ -119,7 +113,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Stills are the site's existing placeholders; provenance in\n     img/SOURCES.md.",
     "_file": "01b-media.html"
    }
   },
@@ -163,7 +156,6 @@
       }
      }
     ],
-    "_notes": "How the market builds a figure. This was our own arithmetic; it is now\n     the mechanism a buyer meets from any act here, written so two quotes can\n     be held against each other. No Signet figure.",
     "_file": "02-mechanism.html"
    }
   },
@@ -325,7 +317,6 @@
       }
      }
     ],
-    "_notes": "Was the full published card. Since 2026-09-04 it is the market table:\n     {{market_table}} from market-rates.json with {{market_sources}} under it.\n     The section id stays #rate-card so inbound anchors and the internal links\n     that point at it do not break.",
     "_file": "03-rate-card.html"
    }
   },
@@ -377,7 +368,6 @@
       }
      }
     ],
-    "_notes": "Market tiers. The old version carried two anchors with no source on file,\n     a commodity average and a boutique floor. Both are sourced figures now,\n     off market-rates.json, and the section says which market each belongs to.\n     Never name a competitor or a directory in the copy.",
     "_file": "04-market.html"
    }
   },
@@ -452,7 +442,6 @@
       }
      }
     ],
-    "_notes": "Added 2026-09-06 from the demand harvest. \"how much does a jazz trio\n     cost\" has no Colorado page answering it (a marketplace pricing page is\n     first, a UK agency third), and \"what is a jazz trio\" surfaced from 13\n     seeds with its own instrument tails. Both are answered here, the figures\n     market tokens only, and the explainer hands off to the ensemble page.\n     Section alternation: this lands sunk, so 05, 06 and 07 flipped with it.\n     2026-11-01, Daniel: every figure on this page names its real market.\n     us_trio, us_duo and us_dinner_band are United States figures and had been\n     labelled Colorado; denver_overtime is Denver; denver_strings is a classical\n     string duo or trio, not any duo or trio; the table head said 2 hours though\n     every figure is per event. AI engines quote this page (CITATION-LOG.md).",
     "_file": "04b-trio-duo.html"
    }
   },
@@ -507,7 +496,6 @@
       }
      }
     ],
-    "_notes": "Cost by occasion. Each row now gives the market's figure for that shape\n     and hands off to the occasion's own page. The dB band and the booking\n     window are site.json facts.",
     "_file": "05-occasions.html"
    }
   },
@@ -572,7 +560,6 @@
       }
      }
     ],
-    "_notes": "What sits inside a figure, and what arrives as its own line. Both lists\n     render from site.json, same as the pricing page, so the surfaces cannot\n     disagree; the copy around them is this page's own.",
     "_file": "06-included.html"
    }
   },
@@ -625,7 +612,6 @@
       }
      }
     ],
-    "_notes": "The page FAQ renders from schema.json, one source for the visible list\n     and the FAQPage markup. The offer close ends the page; nothing after it.\n     2026-11-01: the two-hours-or-four question added in the buyer's own form\n     (\"how much to hire a band for 2 hours / 4 hours\" autocompletes, PLAN.md\n     section 1). This page is the one AI engines cite for cost (CITATION-LOG.md\n     run 2), and until now the hours answer lived only in the corporate cost\n     post. Figures are existing market-rates.json entries, each labelled with\n     its own market: denver_strings, us_duo, us_trio, denver_overtime.",
     "_file": "07-faqs.html"
    }
   },

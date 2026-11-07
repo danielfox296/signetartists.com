@@ -28,14 +28,6 @@
      ]
     },
     "act": "changes-jazz-trio"
-   },
-   "notes": {
-    "_note": "Authored 2026-09-16, the first page published with the signet-new-act skill (scripts/new_act_page.py --kind ensembles --shape artist). A named group of three equals at an ensembles URL, the same placement as Dirty Flamenco; acts.json changes-jazz-trio.page points here so every card and llms line follows. The hero is the empty footage slot over the interim still: their site has no photograph and no footage, only two studio recordings, which the hero note links. No prices anywhere.",
-    "reader": "Whoever wants real jazz under a dinner, a cocktail hour or a gala, played by musicians they can look up first.",
-    "_title_note": "54 chars before the pipe. 'for hire' because the bare Denver jazz SERP is clubs (the jazz-duo-trio page's lesson); the name leads because the name is the product.",
-    "_restored_note": "RESTORED 2026-09-23, later the same day. The roster rebuild retitled this page so that two pages would not lead with the same head phrase, and it argued from Search Console positions. Daniel's ruling: 'we are looking at search demand outside of the site, not search traffic that has landed. the site has almost no traffic and basing changes on the minimal traffic is an error.' The outside evidence (the 2026-09-06 autocomplete harvest, the same-day suggest reads) is what set this title in the first place, and it still holds, so the title, h1, eyebrow and meta are back exactly as ratified. Two pages may carry one demand term when they are two products; what they may not do is be decided by a dozen impressions.",
-    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
-    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -83,7 +75,6 @@
       }
      }
     ],
-    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name is\n     the h1, the byline names the three players (a group of equals, so acts.json\n     carries a `byline` instead of a front person), the blurb is the lede. The\n     footage slot is the act_hero empty-video pattern over the interim still,\n     because the trio has published no photograph and no footage: their site's\n     images are generated illustrations and were not taken. The note links the\n     two studio recordings on their site, which is the look-up for this act.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants real jazz under a dinner or a gala, from musicians they can look up. 'A named act' left the act-face (taxonomy); the identity section kept the playing and the bios and lost the paragraphs restating the hero, the ladder and the hear-them-first link; pointer sentences left the occasion rows.\n\nThe named-acts promise on /music/ is \"you can go and look them up\";\n           this is the look-up. Verified against their site 2026-09-16.",
     "_file": "01-hero.html"
    }
   },
@@ -94,7 +85,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, the same block the other act pages carry.",
     "_file": "01a-credits.html"
    }
   },
@@ -114,7 +104,6 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.",
     "_file": "02-identity.html",
     "cls": "statement"
    }
@@ -134,8 +123,7 @@
        "cls": "prose"
       }
      }
-    ],
-    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
+    ]
    }
   },
   {
@@ -145,7 +133,6 @@
     "act": "changes-jazz-trio",
     "title": "Configurations",
     "note": "",
-    "_notes": "The configuration ladder, rendered from acts.json by the token.",
     "_file": "03-ladder.html"
    }
   },
@@ -199,7 +186,6 @@
       }
      }
     ],
-    "_notes": "Where the ladder lands: up-links to the occasion pages this trio suits,\n     written as repertoire and format range only. Four nights a modern jazz\n     trio actually plays, which is a different four from the blues and rock\n     pages. Down-link idiom mirrors the corporate hub's def-list block.",
     "_file": "04-occasions.html"
    }
   },
@@ -256,7 +242,6 @@
       }
      }
     ],
-    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block and the\n     FAQPage markup can never drift apart.",
     "_file": "06-faqs.html"
    }
   },
@@ -284,7 +269,6 @@
       }
      }
     ],
-    "_notes": "The sitewide offer close. Only the headline is this page's own, and nothing\n     follows it.",
     "_file": "07-close.html"
    }
   }

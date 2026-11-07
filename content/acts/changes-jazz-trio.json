@@ -2,7 +2,6 @@
  "id": "changes-jazz-trio",
  "name": "Changes Jazz Trio",
  "presentation": "face",
- "_note": "ADDED 2026-09-16, the first act published with the signet-new-act skill, ported from changesjazz.base44.app on Daniel's direction ('They can be a named act'). Named as a group of three equals rather than one front person, so `byline` and `byline_inline` override the 'Fronted by' line. Every image on their site is a generated illustration (base44 'generated_image' files: instruments on an empty stage, a Strat against brick, a saxophone mark), none a photograph of the trio, so nothing was taken and the card carries the interim hero still until a real photograph arrives. Daniel had already asked Sri Viswanath for media before the page went up (2026-09-16); it is forthcoming, and the day it lands it goes through scripts/act_media.py photo --card, the hero poster and og_image switch to it, and any clip takes the footage slot. No footage exists anywhere; their site has two studio audio recordings, which the page links rather than embeds. Their Spotify link returns 400 and is not published; the Instagram exists and is not scraped; the 646 phone on their site is not published.",
  "status": "listing",
  "page": "ensembles/changes-jazz-trio/",
  "style": "Modern jazz",
@@ -24,7 +23,6 @@
  "vocals": "instrumental",
  "from": "trio",
  "img": "hero.jpg",
- "_img_note": "Interim still (scripts/stills.py, an empty stage with a drum kit), not a photograph of the act. Their site publishes no photograph. Replace with the trio's own picture through scripts/act_media.py photo --card the day Sri's photographs arrive (Daniel asked 2026-09-16), and update the page hero poster and og_image with it.",
  "alt": "An empty stage set with drums, keys and microphones.",
  "video": null,
  "blurb": "With the right jazz trio, your cocktail hour can feel like a night out at a great little club. Changes plays jazz standards with a modern edge on guitar, bass and drums, and the trio can keep the volume low enough for your guests to talk. They're all Denver musicians, and we can add a saxophone if you'd like the music to take center stage for a while.",
@@ -51,7 +49,6 @@
   "private-parties"
  ],
  "entity": {
-  "type": "MusicGroup",
-  "_sameAs_note": "Removed 2026-11-02 on Daniel's word: no link to an artist's own site or channel anywhere, the search-engine data included, so a client can't book around Signet."
+  "type": "MusicGroup"
  }
 }

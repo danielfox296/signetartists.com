@@ -19,10 +19,6 @@
       "duo"
      ]
     }
-   },
-   "notes": {
-    "_note": "Denver variant of the cocktail hour page, built 2026-08-20. Location page under the uniqueness gate (arch doc, section 8): the venues and the downtown logistics are the content here; the question set lives on the parent. Owns the Denver-intent query the handoff identified as the unclaimed gap.",
-    "reader": "The couple with a Denver venue deciding what the hour after the ceremony sounds like."
    }
   }
  },
@@ -58,7 +54,6 @@
       }
      }
     ],
-    "_notes": "Denver variant. The parent answers the question set; this page is the\n     city: where the hour happens and what downtown does to load-in, parking\n     and power. The figure-pair is the conversion-spine rate module.\n\nCopy pass batch 3, 2026-09-24. THE ONE READER: the couple with a Denver venue deciding what the hour after the ceremony sounds like. The venue types and named venues stay as local fact; the 'this page is the Denver part' self-reference and the setup section are gone (setup, parking and power are the FAQ); dBA left the body; FAQs restating the venue rows are gone.",
     "_file": "01-intro.html"
    }
   },
@@ -95,7 +90,6 @@
       }
      }
     ],
-    "_notes": "Visual added 2026-09-14 on Daniel's call that every page should carry\n     one. Existing artist footage under our framing, no new shoot; provenance\n     in _src/data/media-sources.json (_placements_2026_09_14).",
     "_file": "01b-footage.html"
    }
   },
@@ -154,7 +148,6 @@
       }
      }
     ],
-    "_notes": "The uniqueness-gate core: the market's venues, named as the market's\n     places and never as our history, each read through what the cocktail\n     hour does there. All eight names are on the arch doc's vetted list.",
     "_file": "02-venues.html"
    }
   },
@@ -211,7 +204,6 @@
       }
      }
     ],
-    "_notes": "City-specific FAQ from this dir's schema.json (the gate asks for at\n     least two; there are four, three of them Denver-specific). Nothing\n     follows the close token.",
     "_file": "04-faqs.html"
    }
   },

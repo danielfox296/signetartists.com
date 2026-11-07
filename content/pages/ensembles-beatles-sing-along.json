@@ -27,11 +27,6 @@
      ]
     },
     "act": "your-bird-can-sing"
-   },
-   "notes": {
-    "_note": "Built 2026-09-22 from Daniel's brief for Your Bird Can Sing. The URL is his ruling: 'beatles-sing-along, it's not a cover band or impersonation or tribute.' Autocomplete the same day put 'beatles tribute band denver' and 'beatles cover band denver' at the top of their stems, and both describe an act this is not, so the page reaches buyers on the sing-along family instead: 'sing along music for seniors', 'sing along songs for seniors', 'beatles sing along songs' all complete, and the senior living spoke was already naming the Beatles twice in its own copy. The title carries the act name because he ruled the act publishes under its name. One FAQ answers the tribute question outright, since that is the query most likely to land here. REWRITTEN 2026-09-24 in the copy critique Daniel asked for: the page had restated its five facts in every section, listed venues four times, and carried the site's own taxonomy and the artwork's provenance on the buyer's page. Two sections deleted (identity, artwork), FAQs replaced, meta rewritten. The critique and the mechanisms are Layer 8 of the site-ops tells catalog.",
-    "reader": "Whoever wants the whole crowd singing, from five to ninety: a family party, a company event, a wedding weekend, a community program, senior living.",
-    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -84,7 +79,6 @@
       }
      }
     ],
-    "_notes": "THE ONE READER: whoever wants the whole crowd singing. Daniel's\n     correction, 2026-09-24, after a pass that wrote the page to the senior\n     living activity director: \"this is WAY too focused on senior living.\n     that is ONE potential client ... it excludes so many other booking\n     possibilities.\" His brief: kids through seniors, marketed into senior\n     living among other places but not only there. So the reader is defined\n     by the desire, not the institution; the hero speaks to that desire, the\n     second paragraph names the breadth once, and the occasions section\n     gives each buyer a row of their own: family parties, company events,\n     weddings, community events, senior living.\n\n     Fourth pass, 2026-09-24, against the fifteen copywriting rules drafted\n     in this session (in chat, pending Daniel's ratification, not yet global).\n\n     Fifth pass, 2026-09-24, on Daniel's ruling: \"the focus on booklets is\n     an ops detail that needs mentioned only in faq. it's not a feature of\n     the act. similarly decibel levels in numbers is a misread of the\n     audience.\" The feature is two musicians getting a whole crowd singing;\n     the booklets are how, and how lives in the FAQ with the footprint, the\n     outlet, the arrival time, the paperwork and the standing date. The\n     \"How it runs\" and \"Booking it\" sections are gone (the sitewide close\n     already asks for the date and the venue). \"Multi-instrumental\" left\n     the caption because with no instrument named it tells a buyer nothing;\n     it stays in the repo note as his fact.\n\n     Named act, spec'd presentation: the name publishes and no musician does\n     (Daniel, 2026-09-22: \"publish under the act name. no additional names\").\n     Act-hero shape, the same one Firstwater uses, with the style as the\n     eyebrow and the name as the h1.\n\n     Rewritten 2026-09-24 in the copy critique Daniel asked for. The first\n     version said the same five facts in every section (booklets fourteen\n     times, the duo twenty-three times), listed venues in four paragraphs,\n     and put the site's own taxonomy on the page (\"a named act\", \"books as\n     one duo\"). The identity section that restated it is gone.\n\n     The lede was rewritten a second time the same day, after Daniel read the\n     first rewrite's opener (\"Two musicians play the Beatles and hand out\n     lyric booklets, and everyone sings, from the grandchildren to the\n     great-grandparents\") and asked whether a copywriter would stand behind\n     it. It was a spec sentence: the apparatus first, the range hung off the\n     end, and the eyebrow and act-face above it already said \"everybody\n     sings\" and \"lyric booklets\". The opener now is the moment the buyer is\n     paying for, in her own memory of it, and the mechanism comes second as\n     what makes it happen. AI-TELLS Layer 8, pattern 10.\n\n     The media slot carries the act's own artwork (scripts/bird_art.py, with\n     a provenance row) in the act-video-photo pattern. Footage and\n     photography are both still open asks: the day either arrives, the clip\n     takes this slot.",
     "_file": "01-intro.html"
    }
   },
@@ -95,7 +89,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -105,7 +98,6 @@
     "id": "Setlist-8",
     "act": "your-bird-can-sing",
     "title": "A sample of the set",
-    "_notes": "The book. The token renders acts.json setlist.items, which are the eleven\n     Beatles titles already published on /repertoire/ (Hey Jude and Let It Be\n     carry the singalong flag there). Nothing is named here that the site does\n     not already list, because the act has no channel to check it against.",
     "_file": "03-set.html"
    }
   },
@@ -155,7 +147,6 @@
       }
      }
     ],
-    "_notes": "Who books it, one row per buyer, each linking the hub or spoke that\n     ranks for it. Five rows on Daniel's ruling of 2026-09-24 (\"that is ONE\n     potential client ... it excludes so many other booking possibilities\"):\n     family parties, company events, weddings, community events, senior\n     living. Each row carries the one fact that buyer needs and none assigns\n     the act to an hour of anybody's day. Senior living is last, not first,\n     because it is one of five. Fifth pass: no booklet and no volume figure\n     in any row; the prop and the ops live in the FAQ.",
     "_file": "05-occasions.html"
    }
   },
@@ -220,7 +211,6 @@
       }
      }
     ],
-    "_notes": "The FAQ is where the ops live, on Daniel's ruling of 2026-09-24: the\n     booklets, the set length, the floor space and the outlet, the sound,\n     the volume in words rather than decibels, the standing date, outdoors,\n     and the paperwork. None of it is on the page above, because none of it\n     is a feature of the act. The definition is first for the entity, and\n     the tribute question is second on purpose: \"beatles tribute band\n     denver\" is the strongest local query in this family and the answer is\n     no, so the page says no where a reader will find it.",
     "_file": "08-faqs.html"
    }
   },

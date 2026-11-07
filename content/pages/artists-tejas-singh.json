@@ -45,13 +45,6 @@
       "duration": "PT2M12S"
      }
     ]
-   },
-   "notes": {
-    "_note": "The flagship act page, authored 2026-08-20 with the SEO buildout. Replaces the generated /music/tejas-singh/ page: acts.json carries page: 'artists/tejas-singh/', build.py skips generation for acts with a page field, and REDIRECTS stubs the old URL to this one. Identity copy is the ratified acts.json paragraphs; the ladder and the setlist resolve from tokens. No prices anywhere since 2026-09-04.",
-    "reader": "Whoever wants one act to carry the whole night, from dinner to a full dance floor: a holiday party, a milestone birthday, a wedding, a client evening.",
-    "_title_note": "57 chars before the brand suffix, inside the 60-char cap (the cap is measured pre-suffix). title_exact swaps the build's em dash suffix for the pipe suffix written here; the brand stays in the SERP line like every other page.",
-    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
-    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -95,7 +88,6 @@
       }
      }
     ],
-    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name\n     is the h1, the ladder promise is the lede. The from-price line came off\n     2026-09-04 with every other Signet figure. The footage slot is the\n     act_hero empty-video pattern and\n     stays honest: no footage exists yet, and the slot says so rather than\n     faking a performance still. Poster is one of the four duotone object\n     stills, not a photo of the act.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants one act to carry the whole night, dinner through the dance floor. Opener is what he does with a loop pedal (Daniel's blurb names it); 'A named act' left the act-face; the identity section lost the paragraphs arguing with a two-act night, the show-band negation (now an FAQ) and the named-act line; dBA left the holiday row.\n\nListen links added 2026-08-27. The named-acts promise on /music/ is\n           \"you can go and look them up\"; these are the look-up. Verified\n           against tejassinghmusic.com itself (based in Denver, previously\n           D.C./NYC; the Spotify URL is the one his own site links).",
     "_file": "01-hero.html"
    }
   },
@@ -106,7 +98,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, extended sitewide 2026-09-05. For a corporate buyer\n     spending someone else's budget, \"these players have worked for Amazon and\n     Charles Schwab\" answers the only question that actually matters to them,\n     which is whether booking this makes them look good. It was on five pages\n     out of forty-six. Directly under the intro, so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -126,7 +117,6 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source:\n     the ladder argument, the quartet claim, the premium-cover-band line and\n     the named-act promise. He is newly arriving, so nothing here claims a\n     local history, a client list or a scene backstory.",
     "_file": "02-identity.html",
     "cls": "statement"
    }
@@ -146,8 +136,7 @@
        "cls": "prose"
       }
      }
-    ],
-    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
+    ]
    }
   },
   {
@@ -157,7 +146,6 @@
     "act": "tejas-singh",
     "title": "Configurations",
     "note": "Not sure which size you need? Send us the date and we’ll help you choose.",
-    "_notes": "The configuration ladder, rendered from acts.json by the token. It shows\n     size, build and where each rung lands; the price columns came off\n     2026-09-04 with the published card.",
     "_file": "03-ladder.html"
    }
   },
@@ -211,7 +199,6 @@
       }
      }
     ],
-    "_notes": "Where the ladder lands: the up-links to the occasion pages this act\n     serves, written as repertoire and format range only. No venue history,\n     no client list; he is newly arriving and the page claims nothing it\n     cannot prove. Down-link idiom mirrors the corporate hub's def-list\n     block. The note carries the run of show and cost guide links.",
     "_file": "04-occasions.html"
    }
   },
@@ -222,7 +209,6 @@
     "act": "tejas-singh",
     "title": "A sample of his song list",
     "more": "For more, check out our <a href=\"/repertoire/\">full song list</a>.",
-    "_notes": "The sample set, rendered from the repertoire by the token: three moments,\n     six titles each, picked deterministically from the published song list.\n     The token also carries the link to the full repertoire page.",
     "_file": "05-setlist.html"
    }
   },
@@ -298,7 +284,6 @@
       }
      }
     ],
-    "_notes": "Real media, loaded 2026-08-27 from the artist's own channels (his site\n     and YouTube). Per-asset provenance: _src/data/media-sources.json. The\n     roster's named-act promise is \"you can go and look them up\"; this is the\n     look, brought on-page. Daniel prunes anything he dislikes.",
     "_file": "05b-footage.html"
    }
   },
@@ -347,7 +332,6 @@
       }
      }
     ],
-    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
     "_file": "06-faqs.html"
    }
   },
@@ -375,7 +359,6 @@
       }
      }
     ],
-    "_notes": "The sitewide offer close, per the conversion spine. Only the headline is\n     this page's own, and nothing follows it.",
     "_file": "07-close.html"
    }
   }

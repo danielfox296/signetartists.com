@@ -27,10 +27,6 @@
      ]
     },
     "act": "solo-piano"
-   },
-   "notes": {
-    "_note": "Format spoke built 2026-09-23 on Daniel's call ('build pages for solo piano and last consulate too'), from the solo-piano entry in acts.json (a card since 2026-09-14). No Denver phrase for a pianist autocompletes; 'pianist for hire', 'pianist for events' and 'piano player denver' do, so the title carries those and the occasions come from the pages that already send a pianist somewhere (client dinners, galas, brunch, memorials, senior living). Spec'd, no names.",
-    "reader": "Whoever wants a dinner where the conversation is the point and a piano under it: client dinners, galas, the dinner-shaped holiday party, brunch, a memorial, a dinner party at home."
    }
   }
  },
@@ -81,7 +77,6 @@
       }
      }
     ],
-    "_notes": "Format spoke, spec'd. The h1 and lede carry the buyer's words. No player is\n     named anywhere on this page. The still is the interim ballroom photograph\n     the card has carried since 2026-09-14; a photograph of a pianist at work\n     replaces it through scripts/act_media.py when one exists.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants a dinner where the talking is the point and the music sounds like a good hotel. Footprint, power, dBA and added time moved to the FAQ; Booking it deleted, its pairing links moved into the note under the piano section; the brunch/memorial/senior living row split into a row per buyer; the set list is now explicit (see acts.json).",
     "_file": "01-intro.html"
    }
   },
@@ -92,7 +87,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide. Directly under the intro so the names land on the\n     first screen.",
     "_file": "01a-credits.html"
    }
   },
@@ -102,7 +96,6 @@
     "id": "Setlist-8",
     "act": "solo-piano",
     "title": "Solo piano song list",
-    "_notes": "The set, pulled from the repertoire data by the token (acts.json\n     solo-piano.setlist, from_repertoire: the arrival and dinner moments), so\n     every title here is one the site already publishes on the song list.",
     "_file": "02-set.html"
    }
   },

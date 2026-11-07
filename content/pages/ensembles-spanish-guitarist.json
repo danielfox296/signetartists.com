@@ -56,10 +56,6 @@
       "duration": "PT48S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Format spoke built 2026-09-13. Evidence: 'spanish guitar' autocompletes in ten wedding and event forms and 'spanish guitar denver' / 'spanish guitarist near me' echo their own words back, while 'flamenco' autocompletes as dresses and dance; the 2026-09-12 enquiry to hello@ asked for 'a Spanish guitarist', singular, and Daniel's reply named more than one Spanish guitar player on the roster. Until today the only Spanish guitar surface was the Dirty Flamenco trio page. Spec'd format, no player names on the page: it is the solo booking, and whichever working Spanish guitarist plays it is named at contract. Footage is the Signet channel's own copies of Gary Meyers' clips, embedded with permission (media-sources.json); the VideoObject nodes carry the artist, the page copy does not. 2026-11-01: title, H1, description and Service name carry 'for hire', the pattern that moved /ensembles/jazz-duo-trio/ from off page 1 to #3 for 'jazz trio for hire denver' and into Google's AI Overview (research/CITATION-LOG.md, run 2).",
-    "reader": "Whoever wants the sound of Spain under a wedding ceremony, a cocktail hour or a long dinner, from one musician who fits anywhere."
    }
   }
  },
@@ -106,7 +102,6 @@
       }
      }
     ],
-    "_notes": "Format spoke, the solo Spanish guitar booking, spec'd. The h1 line and\n     the lede carry the words the buyer uses (Spanish guitarist, wedding,\n     dinner) and the first paragraph says what the instrument is, because\n     \"Spanish guitar\" is what people ask for and flamenco is what they are\n     picturing. Trio link ACROSS in the first screen.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants the sound of Spain under a ceremony, a cocktail hour or a long dinner. dBA and the footprint section left the body (the fit-anywhere benefit is in the lede); 'afterwards' and 'back garden' were locale drift; the pricing pointer in the occasions note was the third and is gone.",
     "_file": "01-intro.html"
    }
   },
@@ -117,7 +112,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, sitewide since 2026-09-05.",
     "_file": "01a-credits.html"
    }
   },
@@ -155,7 +149,6 @@
       }
      }
     ],
-    "_notes": "What it plays, and the line between this booking and its two\n     neighbours: the trio (the form, with a set piece) and the solo guitarist\n     page (blues, roots, jazz, sung). Links ACROSS to both.",
     "_file": "02-set.html"
    }
   },
@@ -217,7 +210,6 @@
       }
      }
     ],
-    "_notes": "Where the booking lands, the hour-long booking included: proposals,\n     toasts and birthday surprises autocomplete as \"hire a musician for a\n     proposal\" and \"hire a band to sing happy birthday\", and nobody in\n     Colorado answers them. Links UP to the occasion pages.",
     "_file": "04-occasions.html"
    }
   },
@@ -293,7 +285,6 @@
       }
      }
     ],
-    "_notes": "Footage from the Signet channel's own copies (media-sources.json,\n     reuploaded 2026-09-06 with the artist's permission). Three cuts chosen\n     for the three jobs on this page: dinner, the aisle, the party. No player\n     name on the page; the VideoObject nodes carry it.",
     "_file": "05-footage.html"
    }
   },
@@ -346,7 +337,6 @@
       }
      }
     ],
-    "_notes": "Visible FAQ renders from this dir's schema.json. Nothing follows the\n     close token.",
     "_file": "06-faqs.html"
    }
   },

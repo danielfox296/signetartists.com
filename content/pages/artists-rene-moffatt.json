@@ -158,13 +158,6 @@
       "duration": "PT5M3S"
      }
     ]
-   },
-   "notes": {
-    "_note": "Authored 2026-09-20, the day René Moffatt joined the roster under his own name (Daniel: 'we've added a new artist, an original singer songwriter'). Mirrors the artists-tony-medina dir: acts.json carries page: 'artists/rene-moffatt/', so build.py links every card and every llms.txt line here and generates nothing at /music/rene-moffatt/. Identity copy is the ratified acts.json paragraphs; the ladder resolves from the token. The title targets the buyer's phrase (singer-songwriter for events) with his name in front, since 'singer-songwriter denver' on its own returns artists and clubs rather than bookings. No prices anywhere.",
-    "reader": "Whoever wants songs worth listening to, from a songwriter: a ceremony and cocktail hour, a dinner or house concert, a retreat evening, a library or summer stage.",
-    "_title_note": "57 chars before the brand suffix, inside the 60-char cap. title_exact swaps the build's suffix for the pipe suffix written here.",
-    "_links_note": "2026-11-02, Daniel: no link out to an artist's own site, channel, Spotify or Instagram on their page ('we book people, we don't promote them and give a client an option to go around us'). The hero's 'Hear them first' look-up line was removed for that reason.",
-    "_evocative_note": "2026-11-02, Daniel: an act page is there to make someone want to book the night, not to be a tech rider ('if this page goes into stageplot and equipment details it has gone wrong'). Circuits, stage plots, input lists, outlets, setup sizes and the technical-page pointer were taken off this page; that detail lives on /planners/technical/ and in the booking."
    }
   }
  },
@@ -208,7 +201,6 @@
       }
      }
     ],
-    "_notes": "The act hero, mirroring build.py act_hero: eyebrow is the style, the name\n     is the h1, the byline is the face line, the blurb is the lede. Written\n     2026-09-20, the day he joined. He arrived with his own site, his own\n     channel, six records and a band under his name, so the footage slot is\n     real from the first build: his own solo take of Hope For Better Things,\n     the version he published without title cards.\n\nCopy pass batch 1, 2026-09-24. THE ONE READER: whoever wants songs worth listening to, from a songwriter, at a dinner, a ceremony, a retreat evening or a summer stage. 'A named act' left the act-face; the identity paragraphs that restated the ladder and the covers balance, and the named-act line, are gone; the third-person couples sentence in the wedding row is rewritten; FAQs that restated the ladder are gone and volume is answered in words.\n\nThe named-acts promise on /music/ is \"you can go and look them up\";\n           these are the look-up. Both verified against his own site 2026-09-20.",
     "_file": "01-hero.html"
    }
   },
@@ -219,7 +211,6 @@
     "band": "ruled",
     "label": "Where our artists have played",
     "showAlso": false,
-    "_notes": "The client strip, the same block the other act pages carry.",
     "_file": "01a-credits.html"
    }
   },
@@ -239,7 +230,6 @@
       }
      }
     ],
-    "_notes": "The identity paragraphs, ratified in acts.json and kept close to source.\n     Every claim traces to something he publishes: the records and the Tiny\n     Desk entries to his music and tiny desk pages, the venues and festivals\n     to his EPK, the playlist company and his own line for the music to his\n     about page, the band's build to the footage below (the trio clip names\n     lead guitar and bass, the club clips add drums). The venues named are\n     his, from his EPK, never Signet's credits strip.",
     "_file": "02-identity.html",
     "cls": "statement"
    }
@@ -259,8 +249,7 @@
        "cls": "prose"
       }
      }
-    ],
-    "_notes": "2026-11-02: the identity paragraphs after the first, moved out of the statement band above so the band carries one paragraph at display size. Same words, same order."
+    ]
    }
   },
   {
@@ -270,7 +259,6 @@
     "act": "rene-moffatt",
     "title": "Configurations",
     "note": "",
-    "_notes": "The configuration ladder, rendered from acts.json by the token: size,\n     build, and where each rung lands. Four rungs, solo to the band; the duo\n     was added on Daniel's word 2026-09-20.",
     "_file": "03-ladder.html"
    }
   },
@@ -324,7 +312,6 @@
       }
      }
     ],
-    "_notes": "Where the ladder lands: up-links to the occasion pages this act serves,\n     written as repertoire and format range only. The four picked are the\n     ones a songwriter with his own catalogue actually suits, which is a\n     different four from the covers acts: the ceremony and the hour after it,\n     the retreat evening, the dinner party or house concert, and the daytime\n     programs (he is a Denver Public Library Volume Denver featured artist,\n     per his channel). No o'clocks, no assigning him to hours. Down-link\n     idiom mirrors the corporate hub's def-list block.",
     "_file": "04-occasions.html"
    }
   },
@@ -485,7 +472,6 @@
       }
      }
     ],
-    "_notes": "The book. Authored rather than {{act_setlist:rene-moffatt}} on purpose:\n     his set is his own catalogue, which the repertoire page does not carry,\n     and the token's flat branch prints one column with no link out. Every\n     title here is one you can watch him play on this page. The record titles\n     are the six releases on his music page. The titles match acts.json\n     setlist.items.",
     "_file": "05-book.html"
    }
   },
@@ -597,7 +583,6 @@
       }
      }
     ],
-    "_notes": "Real media, loaded 2026-09-20 from his own site and channel. Per-asset\n     provenance: _src/data/media-sources.json. Every embed on this page passed\n     scripts/act_media.py embed (playableInEmbed) the day it was placed, and\n     every one sits on his own channel, so nothing here depends on a channel\n     we do not control. This section is the solo, duo and trio footage plus\n     the photographs; the band has the section after it. Between the two\n     grids and the hero, every title in the book above plays on this page.\n     Daniel's rulings 2026-09-20: the Willie Nelson cover and the whole\n     Underground Music Showcase set publish, and there is no memorial rule\n     and no sponsorship or alcohol rule on this site. Left off as curation\n     only: the other Tiny Desk entries (older home recordings of songs the\n     page already plays; the 2026 one is the hero, published without\n     titles), the 90-second why-I-write-songs story (not a performance), the\n     2024 clip under an earlier band name, and the older DC-era gallery, the\n     headshots and the logos among the photographs.",
     "_file": "05b-footage.html"
    }
   },
@@ -694,7 +679,6 @@
       }
      }
     ],
-    "_notes": "The band's footage, its own section because there is a lot of it and\n     because a buyer choosing the four piece wants to see the four piece. Two\n     Roxy On Broadway clips and the whole Underground Music Showcase 2026 set,\n     nine songs, published on Daniel's word 2026-09-20 ('publish all ums').\n     All on his own channel, all checked playableInEmbed the day they were\n     placed. VideoObjects for each are authored in schema.json videos[].",
     "_file": "05c-band.html"
    }
   },
@@ -743,7 +727,6 @@
       }
      }
     ],
-    "_notes": "The page FAQ, rendered from this dir's schema.json so the visible block\n     and the FAQPage markup can never drift apart.",
     "_file": "06-faqs.html"
    }
   },
@@ -771,7 +754,6 @@
       }
      }
     ],
-    "_notes": "The sitewide offer close, per the conversion spine. Only the headline is\n     this page's own, and nothing follows it.",
     "_file": "07-close.html"
    }
   }
