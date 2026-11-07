@@ -604,24 +604,19 @@ img {
   border-color: var(--rule);
 }
 
-.btn--outline:hover {
-  background: transparent;
-  color: var(--ink);
+/* An outline button fills with the band's ink under the pointer or keyboard
+   focus, so it answers like a button on any band (an aqua band turns --ink
+   near-black and --paper near-white, so there it fills near-black). */
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
   border-color: var(--ink);
 }
 
 .section--sunk .btn--outline {
   background: transparent;
   border-color: var(--ink);
-}
-
-/* On the aqua band the outline button fills near-black under the pointer or
-   keyboard focus, so it answers like a button. */
-.section--sunk .btn--outline:hover,
-.section--sunk .btn--outline:focus-visible {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
 }
 
 .btn--sm {
@@ -3493,6 +3488,17 @@ main:focus {
 .act-card--photo .roster-card-link:focus-visible .roster-card-photo {
   transform: translateY(-6px);
   box-shadow: 0 2px 4px rgba(18, 18, 18, 0.14), 0 24px 44px -14px rgba(18, 18, 18, 0.5);
+}
+
+/* On a dark band a dark shadow disappears, so the card gets a faint light
+   edge and a deeper shadow instead. */
+.section:not(.section--sunk) .act-card--photo .roster-card-photo {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 14px 30px -12px rgba(0, 0, 0, 0.85);
+}
+
+.section:not(.section--sunk) .act-card--photo .roster-card-link:hover .roster-card-photo,
+.section:not(.section--sunk) .act-card--photo .roster-card-link:focus-visible .roster-card-photo {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16), 0 28px 50px -14px rgba(0, 0, 0, 0.95);
 }
 
 @media (prefers-reduced-motion: reduce) {

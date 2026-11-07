@@ -61,7 +61,7 @@
       "props": {
        "id": "Heading-11",
        "headingStyle": "max-width: 62.5rem;",
-       "eyebrow": "The artists roster",
+       "eyebrow": "Featured Artists",
        "title": "Check out signet's growing book of Flavorful Acts",
        "titleTag": "h2",
        "titleClass": "h2",
@@ -84,22 +84,74 @@
          "act": "meghan-clarisse"
         },
         {
+         "act": "rene-moffatt"
+        },
+        {
          "act": "dirty-flamenco"
         },
         {
          "act": "tejas-singh"
         },
         {
+         "act": "tony-medina"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "03-range.html"
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-48",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-44",
+       "headingStyle": "max-width: 62.5rem;",
+       "eyebrow": "House Ensembles",
+       "title": "live bands and musicians by genre",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 54rem;",
+       "lede": "We put these groups together from seasoned players, in the genre you want. Pick a sound, from jazz and strings to funk, soul and DJs, and we'll make it the right size for your event.",
+       "ledeStyle": "max-width: 62.5rem;"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-45",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
          "act": "jazz-duo"
         },
         {
-         "act": "rene-moffatt"
+         "act": "funk-trio"
         },
         {
-         "act": "tony-medina"
+         "act": "afro-house-dj"
+        },
+        {
+         "act": "soul-rnb"
         },
         {
          "act": "classical-strings"
+        },
+        {
+         "act": "americana-band"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "solo-piano"
         }
        ]
       }
@@ -158,8 +210,7 @@
        "cls": "tag-list"
       }
      }
-    ],
-    "_file": "03-range.html"
+    ]
    }
   },
   {
