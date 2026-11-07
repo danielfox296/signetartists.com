@@ -314,63 +314,123 @@
    }
   },
   {
-   "type": "TwoColumns",
+   "type": "Rows",
    "props": {
-    "id": "TwoColumns-32",
+    "id": "Rows-60",
     "band": "sunk",
     "blocks": [
      {
-      "type": "Columns",
+      "type": "Title",
       "props": {
-       "id": "Columns-30",
-       "cls": "split split--two",
-       "n": 2,
-       "c1": [
+       "id": "Title-24",
+       "html": "Included for every act",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-61",
+       "cls": "def-list def-list--tiles",
+       "rows": [
         {
-         "type": "Title",
-         "props": {
-          "id": "Title-24",
-          "html": "Included for every act",
-          "tag": "h2",
-          "cls": "h3"
-         }
+         "term": "Your point of contact",
+         "text": "One person who's reachable from your first email to load-out."
         },
         {
-         "type": "SpecList",
-         "props": {
-          "id": "SpecList-25",
-          "source": "included",
-          "cols": false,
-          "mark": "check"
-         }
+         "term": "Sound for the venue",
+         "text": "Sound sized for a small-to-medium event venue."
         },
         {
-         "type": "Paragraph",
-         "props": {
-          "id": "Paragraph-26",
-          "html": "Stage lighting and a dedicated engineer are optional add-ons.",
-          "cls": "note"
-         }
+         "term": "Load-in to load-out",
+         "text": "Setup, sound check, strike and load-out."
+        },
+        {
+         "term": "Timeline coordination",
+         "text": "We'll go over the flow of the event with you beforehand."
+        },
+        {
+         "term": "Music between sets",
+         "text": "Continuous audio during set breaks."
+        },
+        {
+         "term": "Paperwork",
+         "text": "A certificate of insurance, a W-9 and one itemized invoice."
         }
-       ],
-       "c2": [
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-62",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-27",
+       "html": "Quoted separately",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-63",
+       "cls": "def-list def-list--route",
+       "image": "/img/range.jpg",
+       "rows": [
         {
-         "type": "Title",
-         "props": {
-          "id": "Title-27",
-          "html": "Quoted separately",
-          "tag": "h2",
-          "cls": "h3"
-         }
+         "term": "Front Range travel",
+         "text": "Boulder, Colorado Springs and Fort Collins.",
+         "art": "car"
         },
         {
-         "type": "SpecList",
-         "props": {
-          "id": "SpecList-29",
-          "source": "extras",
-          "cols": false,
-          "mark": "plus"
-         }
+         "term": "I-70 corridor travel",
+         "text": "Vail, Beaver Creek, Breckenridge and Winter Park.",
+         "art": "mountain"
+        },
+        {
+         "term": "Far resort travel",
+         "text": "Aspen, Telluride, Steamboat and Crested Butte, plus a night's lodging.",
+         "art": "moon"
+        }
+       ]
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-64",
+       "cls": "def-list def-list--tiles def-list--addons",
+       "rows": [
+        {
+         "term": "Holiday and peak weekends",
+         "text": "New Year's Eve, too."
+        },
+        {
+         "term": "Live-band karaoke",
+         "text": "Your guests sing with a live band."
+        },
+        {
+         "term": "Learned songs",
+         "text": "A song the band doesn't already play, with four weeks' notice."
+        },
+        {
+         "term": "Stage lighting",
+         "text": "Lights for the stage."
+        },
+        {
+         "term": "A dedicated sound engineer",
+         "text": "Someone running sound for your whole event."
         }
        ]
       }
@@ -382,7 +442,7 @@
    "type": "Text",
    "props": {
     "id": "Text-38",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -418,7 +478,7 @@
    "type": "Questions",
    "props": {
     "id": "Questions-44",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

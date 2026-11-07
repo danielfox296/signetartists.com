@@ -144,6 +144,8 @@ export const SpecList = {
 // drawing its words point to, first match wins, music notes when nothing does.
 // The drawings themselves are in styles.css, keyed by data-art.
 const ROW_ART = [
+  [/\b(?:stage lighting|lighting\b|spotlight)/, "spotlight"],
+  [/\bkaraoke/, "microphone"],
   [/\b(?:wedding|reception|ceremony|couple|bride|engagement|propos)/, "rings"],
   [/\b(?:anniversar)/, "heart"],
   [/\b(?:birthday)/, "cake"],
@@ -171,6 +173,10 @@ const ROW_ART = [
   [/\b(?:venue|denver|boulder|colorado springs|fort collins|city|town|space|stage|floor)/, "pin"],
   [/\b(?:when|date|book|ahead|month|week|calendar|season)/, "calendar"],
   [/\b(?:time|hour|minute|length|long|curfew|late)/, "clock"],
+  [/\b(?:point of contact|contact|phone)/, "phone"],
+  [/\b(?:insurance|insured|certificate)/, "shield"],
+  [/\b(?:paperwork|invoice|w-9|contract)/, "document"],
+  [/\b(?:load-in|load in|load-out|setup|strike)/, "box"],
 ];
 function rowMark(term) {
   const t = String(term || "").replace(/<[^>]+>/g, "").toLowerCase();
@@ -217,31 +223,48 @@ export const DefRows = {
       type: "array",
       label: "Rows",
       getItemSummary: (r) => plain(r.term),
-      arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
+      arrayFields: { term: rich("Label"), text: rich("Text"), art: text("Drawing (blank: picked from the label)"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
     },
-    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Cards", value: "def-list def-list--cards" }, { label: "Icon list", value: "def-list def-list--icons" }, { label: "Side by side", value: "def-list" }]),
+    cls: select("Layout", [
+      { label: "Stacked", value: "def-list def-list--stack" },
+      { label: "Cards", value: "def-list def-list--cards" },
+      { label: "Icon list", value: "def-list def-list--icons" },
+      { label: "Tiles", value: "def-list def-list--tiles" },
+      { label: "Add-on tiles", value: "def-list def-list--tiles def-list--addons" },
+      { label: "Route", value: "def-list def-list--route" },
+      { label: "Side by side", value: "def-list" },
+    ]),
+    image: text("Photo behind (Route only)"),
     bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
     style: text("Style"),
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
-  render: ({ cls, style, bare, rows }) => {
+  render: function DefRowsRender({ cls, style, bare, rows, image }) {
+    const href = useHref();
     const layout = cls || "def-list def-list--stack";
-    const marked = /def-list--(stack|cards|icons)/.test(layout);
+    const marked = /def-list--(stack|cards|icons|tiles|route)/.test(layout);
     const leads = /def-list--stack/.test(layout);
-    return (
+    const staggered = /def-list--(tiles|route)/.test(layout);
+    const list = (
     <dl className={layout} style={css(style)}>
       {(rows || []).map((r, i) => {
         const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
         const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={leads ? leadSentence(r.text) : r.text} />;
-        const mark = marked ? rowMark(r.term) : {};
+        const mark = marked ? (r.art ? { art: r.art } : rowMark(r.term)) : {};
         return bare ? (
           <Fragment key={i}>{dt}{dd}</Fragment>
         ) : (
-          <div className="def-row" key={i} data-art={mark.art} data-num={mark.num}>{dt}{dd}</div>
+          <div className="def-row" key={i} data-art={mark.art} data-num={mark.num} style={staggered ? { "--i": i } : undefined}>{dt}{dd}</div>
         );
       })}
     </dl>
     );
+    // A route can sit on a photo, drawn in black and white under a dark wash
+    // like the closing call; the photo is a background, so it needs no description.
+    if (/def-list--route/.test(layout) && image) {
+      return <div className="route-panel" style={{ backgroundImage: `url("${href(image)}")` }}>{list}</div>;
+    }
+    return list;
   },
 };
 

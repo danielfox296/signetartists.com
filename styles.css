@@ -4335,14 +4335,15 @@ main:focus {
   max-width: 46rem;
 }
 /* A section that holds only measure-width blocks (headings, prose, notes,
-   stacked lists, questions, one video, a row of links or buttons) narrows to
+   stacked lists, questions, one video, a row of links or buttons; tiles and
+   routes are grids, so they keep the full width) narrows to
    the same 46rem column and sits centred on the page, its type still set left,
    so it no longer leaves the right third of the screen empty (2026-11-02,
    Daniel, sitewide). Any section with a grid, a table, cards or a hero photo
    keeps the full width. */
 .section > .wrap:not(:has(> :not(
   .heading, .prose, .eyebrow, .note, .lede, .h3, .h5,
-  .def-list:not(.def-list--cards), .spec-list:not(.spec-list--cols),
+  .def-list:not(.def-list--cards):not(.def-list--tiles):not(.def-list--route), .spec-list:not(.spec-list--cols),
   .faq-list, .btn-row, .blog-article, .review-pull, .stage-plot, .panel,
   .sibling-list, .video-grid--single, .media-grid,
   img, script, template, style
@@ -4770,4 +4771,216 @@ img[src$="img/headliners.jpg"] {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Drawings added 2026-11-07 for the pricing page: point of contact, insurance,
+   paperwork, load-in and stage lighting. */
+.def-row[data-art="phone"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='20' y='8' width='24' height='48' rx='4'/%3E%3Cpath d='M28 49h8M28 14h8'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='20' y='8' width='24' height='48' rx='4'/%3E%3Cpath d='M28 49h8M28 14h8'/%3E%3C/svg%3E"); }
+.def-row[data-art="shield"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 8l20 8v14c0 13-9 22-20 26C21 52 12 43 12 30V16z'/%3E%3Cpath d='M24 32l6 6 11-12'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 8l20 8v14c0 13-9 22-20 26C21 52 12 43 12 30V16z'/%3E%3Cpath d='M24 32l6 6 11-12'/%3E%3C/svg%3E"); }
+.def-row[data-art="document"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h20l10 10v38H18z'/%3E%3Cpath d='M38 8v10h10M24 30h18M24 38h18M24 46h12'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h20l10 10v38H18z'/%3E%3Cpath d='M38 8v10h10M24 30h18M24 38h18M24 46h12'/%3E%3C/svg%3E"); }
+.def-row[data-art="box"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22l20-10 20 10v22L32 54 12 44z'/%3E%3Cpath d='M12 22l20 10 20-10M32 32v22'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22l20-10 20 10v22L32 54 12 44z'/%3E%3Cpath d='M12 22l20 10 20-10M32 32v22'/%3E%3C/svg%3E"); }
+.def-row[data-art="spotlight"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 8h16l-3 12H27z'/%3E%3Cpath d='M27 20L14 54M37 20l13 34M10 56h44'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 8h16l-3 12H27z'/%3E%3Cpath d='M27 20L14 54M37 20l13 34M10 56h44'/%3E%3C/svg%3E"); }
+
+/* Tiles (Rows, Layout: Tiles): short items as a grid of small panels, each
+   with its drawing, a label and one line. Add-on tiles have a dashed edge and
+   a plus, for what is added to a quote. */
+.def-list--tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+  margin-top: var(--space-3);
+  border: 0;
+}
+.def-list--tiles .def-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  padding: 1.5rem 1.4rem 1.6rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--paper-sunk);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.def-list--tiles .def-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -16px rgba(0, 0, 0, 0.45);
+}
+.def-list--tiles .def-row::before,
+.def-list--route .def-row::before {
+  content: "";
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 0.6rem;
+  background-color: var(--brass);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.def-list--tiles dt,
+.def-list--route dt {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+.def-list--tiles dd,
+.def-list--route dd {
+  margin: 0;
+  font-size: 0.9625rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.def-list--addons {
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+.def-list--addons .def-row {
+  background: transparent;
+  border: 1px dashed var(--rule-strong);
+}
+.def-list--addons .def-row::after {
+  content: "+";
+  position: absolute;
+  top: 0.85rem;
+  right: 1.1rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--red);
+}
+
+/* Route (Rows, Layout: Route): stops in order of distance, joined by a line
+   with a dot at each stop, across on a wide screen and down on a phone. On a
+   photo (route-panel) the photo is black and white under a dark wash. */
+.route-panel {
+  position: relative;
+  isolation: isolate;
+  margin-top: var(--space-3);
+  padding: clamp(1.75rem, 1rem + 3vw, 3.5rem);
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 40%;
+}
+.route-panel::before,
+.route-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.route-panel::before {
+  z-index: -2;
+  background-image: inherit;
+  background-size: cover;
+  background-position: inherit;
+  filter: grayscale(1) contrast(1.05);
+}
+.route-panel::after {
+  z-index: -1;
+  background: rgba(18, 18, 18, 0.7);
+}
+.route-panel .def-list--route {
+  --ink: var(--near-white);
+  --ink-soft: rgba(245, 245, 242, 0.82);
+  --brass: var(--red);
+  margin-top: 0;
+}
+.def-list--route {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  margin-top: var(--space-3);
+  border: 0;
+}
+.def-list--route .def-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  padding: 0 0 0 2.25rem;
+  border: 0;
+}
+.def-list--route .def-row::after {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(18, 18, 18, 0.7);
+}
+.def-list--route::before {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  bottom: 1.5rem;
+  left: calc(0.45rem - 1px);
+  width: 2px;
+  background: var(--red);
+  opacity: 0.6;
+  transform-origin: top center;
+}
+@media (min-width: 800px) {
+  .def-list--route {
+    grid-template-columns: repeat(var(--stops, 3), minmax(0, 1fr));
+  }
+  .def-list--route .def-row {
+    padding: 2.25rem 0 0;
+  }
+  .def-list--route .def-row::after {
+    top: 0;
+  }
+  .def-list--route::before {
+    top: calc(0.45rem - 1px);
+    bottom: auto;
+    left: 0.45rem;
+    right: calc((100% - 4rem) / 3 - 0.45rem);
+    width: auto;
+    height: 2px;
+    transform-origin: left center;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .def-list--tiles .def-row {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry calc(mod(var(--i, 0), 3) * 8%) entry calc(60% + mod(var(--i, 0), 3) * 8%);
+    }
+    .def-list--route::before {
+      animation: draw-line linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 50%;
+    }
+    @media (min-width: 800px) {
+      .def-list--route::before {
+        animation-name: draw-line-across;
+      }
+    }
+    .def-list--route .def-row {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry calc(20% + var(--i, 0) * 10%) cover calc(35% + var(--i, 0) * 8%);
+    }
+  }
+}
+@keyframes draw-line {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes draw-line-across {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
