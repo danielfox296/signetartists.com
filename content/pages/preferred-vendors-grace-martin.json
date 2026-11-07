@@ -1,0 +1,316 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/grace-martin/",
+   "title": "Grace Martin: Denver Wedding Hair & Makeup Artist",
+   "description": "Grace Martin is a Denver hair and makeup artist for weddings, film and television, working with all hair textures and skin tones.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Grace Martin",
+   "schema": {
+    "vendor": {
+     "@id": "https://stylistgracemartin.com/#organization",
+     "name": "Grace Martin",
+     "url": "https://stylistgracemartin.com/",
+     "description": "Grace Martin is a Denver-based hair and makeup artist working on weddings, film and television, commercial and editorial productions, and live events.",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+     },
+     "areaServed": [
+      {
+       "@type": "City",
+       "name": "Denver"
+      },
+      {
+       "@type": "Place",
+       "name": "Colorado"
+      }
+     ],
+     "knowsAbout": [
+      "Bridal hair",
+      "Bridal makeup",
+      "On-camera makeup",
+      "Men's grooming"
+     ],
+     "sameAs": [
+      "https://www.instagram.com/stylistgracemartin",
+      "https://www.facebook.com/stylist.grace.martin"
+     ]
+    }
+   },
+   "notes": {
+    "_note": "The third preferred vendor's page, 2026-11-06, on the pattern of /preferred-vendors/mxbloom-films/. Facts come only from her email and website, and she said to use the site for the write-up. Nothing here says what Daniel has or hasn't seen of her work. The photographers named in the credit are the ones her bridal gallery names; three of the pictures carry no name there. Her site spells Hannah Quintana 'Qunitana', and the page uses the spelling Hannah's own business uses. Alts say only what's in the frame. Her site's street address and phone stay off the page."
+   },
+   "heroImage": "img/vendors/grace-martin/first-look-letter.jpg",
+   "ogImage": "img/vendors/grace-martin/white-studio-bouquet.jpg",
+   "ogImageAlt": "A bride with long, dark waves holding a large bouquet against a white wall."
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "On our Preferred Vendor List",
+       "slab": true,
+       "title": "Grace Martin: wedding hair and makeup in Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You’ll probably be photographed more on your wedding day than on any other day of your life. <a href=\"https://stylistgracemartin.com/\" target=\"_blank\" rel=\"noopener\">Grace Martin</a> has spent her career getting people ready for the camera, so she’s a great person to have with you.",
+       "headingText": [
+        {
+         "html": "Grace is a Denver hair and makeup artist who works on weddings, magazine covers, national commercials, television and film. She works with all hair textures and skin tones."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "title": "Grace Martin at a glance",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "What she offers",
+         "text": "She offers hair and makeup for weddings, film and television, commercials, fashion shoots and live events, and she does men’s grooming, too."
+        },
+        {
+         "term": "Where she works",
+         "text": "She’s based in Denver, and she travels for work, with jobs from Los Angeles to New York."
+        },
+        {
+         "term": "Film and television",
+         "text": "She was Key Hairstylist for the full first season of Deion Sanders’ show We Got Time Today, and her film credits include Last Looks, Needle Road and The Let Go."
+        },
+        {
+         "term": "Magazines and brands",
+         "text": "Her work has appeared in Vogue Italia, Denver Life Magazine and Cherry Creek Lifestyle, and she’s worked with brands including Nike, Clairol, The North Face and Crocs."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-3",
+       "html": "Wedding hair and makeup in Denver",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3a",
+       "cls": "prose",
+       "html": "Grace’s bridal portfolio includes soft waves, loose braids, sleek pulled-back styles and updos, so there’s a good chance you’ll see something you love."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3b",
+       "cls": "prose",
+       "html": "It also includes work at Brush Creek Ranch, Cherry Hills Country Club and Devils Thumb Ranch. Her work from Cherry Hills and Devils Thumb has been published in Rocky Mountain Bride, too."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3c",
+       "cls": "prose",
+       "html": "Producers, photographers and creative directors rely on Grace for polished work in fast-paced settings. That’s a great thing to have on a wedding day, when the photographer is waiting and the timing can get tight."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-4",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "title": "Wedding hair by Grace Martin",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-4",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/vendors/grace-martin/soft-blonde-waves.jpg",
+         "alt": "A bride with long, soft blonde waves, sitting in a vintage convertible with one gloved hand near her cheek.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/long-braid.jpg",
+         "alt": "A woman seen from behind, with her long brown hair in a loose, textured braid.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/dark-waves-sheer-sleeves.jpg",
+         "alt": "A bride with long, dark waves and sheer puffed sleeves, lifting her hands to her hair beside a white door.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/blonde-updo-kiss.jpg",
+         "alt": "A bride with her blonde hair pinned back, kissing the groom as she holds a white bouquet.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/updo-cathedral-veil.jpg",
+         "alt": "A bride seen from behind with a twisted updo and a long veil, facing the groom and the officiant.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/low-ponytail-bouquet.jpg",
+         "alt": "A bride with her dark hair pulled back, looking to the side and holding a white bouquet.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/half-up-waves.jpg",
+         "alt": "A black and white picture of a bride walking away with her long waves pulled half up, her wedding party around her.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/grace-martin/long-waves-lace-gown.jpg",
+         "alt": "A bride with long, dark curls and a long-sleeved lace gown, on a city sidewalk.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-4",
+       "cls": "note note--small",
+       "html": "All of the hair on this page is by Grace Martin. The photographs come from her portfolio, with work by Jess Leigh, Hannah Quintana, Sarah Porter, Alicia Rinka and Shelly Anderson."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-5",
+       "html": "Hair and makeup for film, TV and commercial shoots",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5a",
+       "cls": "prose",
+       "html": "If your company is planning a commercial, a press junket or a celebrity event, Grace can help with that, too. She’s known for camera-ready hair and makeup for executives, professional athletes, musicians and television personalities, and for her discretion on set."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5b",
+       "cls": "prose",
+       "html": "Her celebrity work includes William H. Macy, Troy Aikman, Christian McCaffrey, Pam Grier and Kirk Franklin, just to name a few."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5c",
+       "cls": "prose",
+       "html": "You can see more of her work in her <a href=\"https://stylistgracemartin.com/work/wedding-78w6l\" target=\"_blank\" rel=\"noopener\">bridal portfolio</a> and her <a href=\"https://stylistgracemartin.com/\" target=\"_blank\" rel=\"noopener\">selected work</a>. To check your date or ask about a shoot, <a href=\"https://stylistgracemartin.com/contact\" target=\"_blank\" rel=\"noopener\">reach out to Grace</a> through her website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Need live music for your wedding, too?",
+       "lede": "From the ceremony to the dance floor, we book live music all over Colorado. Take a look at <a href=\"/weddings/\">live music for your wedding</a>, or just send us your date."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

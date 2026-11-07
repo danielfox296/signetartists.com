@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
    "notes": {
-    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count. 2026-11-06: MXBloom Films is the first listing, one card under Photography and one under Videography, each linking to the matching page of their site; a vendor's own page on our site goes in `page`. The search title carries 'Denver wedding vendors', a phrase Google suggests; the page's name stays Preferred Vendor List. Makeup by Sameera, the same day, opened a seventh category, Hair and makeup."
+    "_note": "The Preferred Vendor List, 2026-09-20, from the vendor-network handoff as Daniel ruled on it the same day. The name is his ('Preferred Vendor List'). The list renders from _src/data/vendors.json through {{vendor_list}}: six categories in order, every one shown even when nobody is listed in it yet (Daniel: 'show a category with no act'), with the ask-us line under an empty heading. Each vendor's note is Daniel's own two sentences, never drafted here; seeding the first four to six is his research task on Signet Relaunch. Links out are dofollow and open in a new tab, which is the thing a listing gives the vendor. The join line at the foot is small and faint on purpose. Indexed; linked from the planners hub, the footer's Planning column and the weddings hub. Nothing on the page is a price, a status or a count. 2026-11-06: MXBloom Films is the first listing, one card under Photography and one under Videography, each linking to the matching page of their site; a vendor's own page on our site goes in `page`. The search title carries 'Denver wedding vendors', a phrase Google suggests; the page's name stays Preferred Vendor List. Makeup by Sameera, the same day, opened a seventh category, Hair and makeup. Grace Martin, the same day, is the second listing in that category."
    },
    "schemaKind": "vendorlist"
   }
@@ -101,6 +101,14 @@
       "category": "hair-makeup",
       "page": "/preferred-vendors/makeup-by-sameera/",
       "note": "Sameera Ahmed is a Denver makeup and hair artist whose bridal looks range from soft and natural to bold. She’s a great choice if you’d like a look that represents your own style."
+     },
+     {
+      "name": "Grace Martin",
+      "url": "https://stylistgracemartin.com/work/wedding-78w6l",
+      "location": "Denver",
+      "category": "hair-makeup",
+      "page": "/preferred-vendors/grace-martin/",
+      "note": "Grace Martin is a Denver hair and makeup artist who also works in film, television and national campaigns. Her bridal work has appeared in Rocky Mountain Bride, and she works with all hair textures and skin tones."
      }
     ],
     "_notes": "Six categories from vendors.json, in order, each with its cards or the\n     ask-us line. Rendered by build.py vendor_list().",
