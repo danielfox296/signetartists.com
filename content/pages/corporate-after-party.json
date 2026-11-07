@@ -1,0 +1,308 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/after-party/",
+   "title": "After-party entertainment in Denver for conferences and galas",
+   "description": "After-party entertainment for Denver conferences, galas and company parties, from a DJ with a live musician playing along to a band that lets your guests sing.",
+   "titleExact": true,
+   "ogImage": "img/dj.jpg",
+   "ogImageAlt": "Faders and knobs on a mixing console.",
+   "nav": "corporate",
+   "breadcrumb": "After-parties",
+   "schema": {
+    "service": {
+     "name": "After-party entertainment",
+     "serviceType": "Live music and DJs for conference after-parties, gala after-parties and corporate late nights",
+     "description": "We offer after-party entertainment for conferences, galas and company parties in Denver and across Colorado, including a DJ with a live musician, live band karaoke, a soul and R&B band and a yacht rock band.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "dj",
+      "quartet",
+      "quintet"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Conferences, galas & company parties",
+       "slab": true,
+       "title": "After-party entertainment in Denver",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know that moment when the last speech ends and nobody's ready to head back to their hotel yet. That's when a great after-party can start, at a conference, a gala or a holiday party. It can be a DJ with a live musician, a band that lets your guests sing or a soul band in the ballroom, and we'd love to help you pick.",
+       "headingText": [
+        {
+         "html": "Denver hosts conferences of several thousand people at a time, and the hotels next to the convention center put on many of their after-parties, along with the city’s largest galas. If we're also playing your reception or dinner, the after-party can go on the same contract."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "See Tony Medina live.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here's Tony Medina playing Purple Rain, which is just the kind of song that gets an after-party going."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+         "title": "Tony Medina covering Purple Rain live",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-footage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Live entertainment",
+       "title": "After-party bands & DJs",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here are some great choices for getting people dancing once the program wraps up."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "<a href=\"/ensembles/dj/\">A DJ with a live musician</a>",
+         "text": "A solid DJ gets people moving and is the most common single booking of the corporate season. You can add a saxophonist or a bass player to play along, which gives your guests a live musician to watch, too."
+        },
+        {
+         "term": "<a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a>",
+         "text": "A real band plays the 80s and 90s hits and hands the mic to anyone who wants a song. The words are up on a screen and a host keeps things moving, so it’s an easy way to get a conference crowd on its feet after a long day."
+        },
+        {
+         "term": "<a href=\"/ensembles/soul-band/\">The soul and R&amp;B band</a>",
+         "text": "This band plays Stevie Wonder, Aretha Franklin, Al Green and plenty of Motown, with a singer out front, and we can add a horn on the big choruses if you'd like. It’s a great fit for a holiday party or a gala in a ballroom."
+        },
+        {
+         "term": "<a href=\"/ensembles/yacht-rock/\">The yacht rock band</a>",
+         "text": "This band plays The Doobie Brothers, Steely Dan, Hall and Oates and Toto in three-part harmony. It’s perfect for a crowd that loves to sing along, and for a summer after-party, too."
+        },
+        {
+         "term": "<a href=\"/artists/little-moses-jones/\">Little Moses Jones</a>",
+         "text": "This six-piece band plays the 90s and 2000s R&B and hip-hop that a lot of conference guests grew up on. That’s Usher and TLC through Outkast and Missy Elliott, with the verses rapped live, and the band brings its own sound engineer. For a gala, ask for the clean version of the show."
+        },
+        {
+         "term": "<a href=\"/ensembles/afro-house-dj/\">An Afro house DJ, with live tabla</a>",
+         "text": "This DJ plays Afro house, deep house, amapiano (a style of house music built around piano), techno and electronic music, and that's a great choice if you want your guests dancing. On request, the DJ can also play live tabla, a pair of hand drums, along with the music."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "A DJ can also take over after the band wraps up.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-shapes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Occasions",
+       "title": "Events that end with an after-party",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "Conferences and incentive programs",
+         "text": "We can play the closing night of a customer conference, a sponsor’s hospitality event or the last night of an incentive trip. It works just like booking the rest of your <a href=\"/corporate/\">company event</a>, whether you’re in Denver or on a <a href=\"/corporate/retreats/\">mountain retreat</a>."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "After the last award, we can get the dance floor going."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Holiday parties</a>",
+         "text": "It’s a great way to keep the office party going once the speeches are done."
+        },
+        {
+         "term": "Weddings and private parties",
+         "text": "We also play the late part of a <a href=\"/weddings/\">wedding</a>, after the first dance and the toasts, and we love a birthday that keeps going at a <a href=\"/private-parties/\">private party</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Good to know",
+       "title": "After-party questions",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Need stage sizes and power details for your venue? Check out our <a href=\"/planners/technical/\">technical guide</a>. Got more booking questions? Take a look at our <a href=\"/planners/faq/\">planner questions</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "Can the after-party start the moment the program ends?",
+         "a": "Yes. We'll set up the sound system before your doors open, so the band or DJ is ready to go during the reception. They can play quietly through dinner if you'd like, then get the dance floor going as soon as the emcee wraps up, and your guests won't see a changeover."
+        },
+        {
+         "q": "Do we need a second sound system for the after-party?",
+         "a": "No. We'll size our sound system to your venue, and the band, the DJ and any live musician playing along can all run through it. A hotel’s house sound system is usually built for speeches, and it may not be enough for a dance floor in a ballroom."
+        },
+        {
+         "q": "What does the hotel need to know?",
+         "a": "The hotel will want to know how much power we'll need (one or two dedicated 20-amp circuits, depending on the act) and the flow of the evening, and we'll need a time from them for the loading dock and the elevators. Setup can run 45 to 90 minutes depending on the size of the act, and we can send whatever paperwork the hotel needs. We'll work all of that out with the events office ahead of time."
+        },
+        {
+         "q": "Can conference attendees request songs?",
+         "a": "Yes. Our DJs play all kinds of music and can work requests in, and with live band karaoke, your guests pick the songs."
+        },
+        {
+         "q": "How loud can it be, and what about the curfew?",
+         "a": "It can be as loud as your venue allows, and we can always adjust the volume to suit your crowd. Let us know the hotel’s sound limit and curfew when you book, and we’ll plan the music around them from the start, so nobody has to turn it down partway through. Downtown hotels and the convention-center properties each have their own rules, so we'll always check them first."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-24",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning an after-party in Denver?",
+       "lede": "Just send us the date and a little about your event. We'll reply with availability and costs, and you'll have a personal point of contact from there on."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

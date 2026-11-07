@@ -1,0 +1,54 @@
+{
+ "id": "changes-jazz-trio",
+ "name": "Changes Jazz Trio",
+ "presentation": "face",
+ "status": "listing",
+ "page": "ensembles/changes-jazz-trio/",
+ "style": "Modern jazz",
+ "face": "Doug Emery, Sri Viswanath and Brian Jaffe",
+ "byline": "Doug Emery on guitar, Sri Viswanath on bass and Brian Jaffe on drums.",
+ "byline_inline": "Doug Emery on guitar, Sri Viswanath on bass and Brian Jaffe on drums",
+ "material": "Standards",
+ "bucket_tags": [
+  "cocktail",
+  "specialty"
+ ],
+ "config_tags": [
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "jazz"
+ ],
+ "vocals": "instrumental",
+ "from": "trio",
+ "img": "hero.jpg",
+ "alt": "An empty stage set with drums, keys and microphones.",
+ "video": null,
+ "blurb": "With the right jazz trio, your cocktail hour can feel like a night out at a great little club. Changes plays jazz standards with a modern edge on guitar, bass and drums, and the trio can keep the volume low enough for your guests to talk. They're all Denver musicians, and we can add a saxophone if you'd like the music to take center stage for a while.",
+ "identity": [
+  "The arrangements stay relaxed and easy to listen to, and the solos can get a little adventurous.",
+  "Doug studied guitar performance at Berklee and played more than three thousand shows across New England, from jazz duos to wedding bands. He now teaches music full time in Denver. Sri spent decades as a working bassist in New York, on stages from the jazz club Smalls to the Plaza Hotel, and played on Radha Thomas's 2019 tribute to Chet Baker. Brian studied at the Lamont School of Music at the University of Denver, and since 2011 he's played more than a hundred theater productions in Denver pit orchestras.",
+  "Want to hear them first? Send us your date and we'd be happy to share the trio's studio recordings."
+ ],
+ "ladder": [
+  {
+   "config": "trio",
+   "build": "Guitar, fretless bass (a bass with a smooth, singing tone) and drums",
+   "bestFor": "The trio is at its best at cocktail hours and dinners."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus a saxophone on the melody",
+   "bestFor": "The quartet is a great choice when you want a featured set."
+  }
+ ],
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "MusicGroup"
+ }
+}

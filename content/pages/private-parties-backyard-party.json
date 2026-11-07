@@ -1,0 +1,316 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/backyard-party/",
+   "title": "Backyard party band and live music in Denver",
+   "description": "Book a band, a singer with a guitar or a DJ for a backyard party in Denver. We can help you plan music for the patio and work around any noise limits.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "ogImageAlt": "A guitarist playing outdoors under pine trees.",
+   "schema": {
+    "service": {
+     "name": "Live music for a backyard party",
+     "serviceType": "A singer with a guitar, a jazz duo, a flamenco trio, a party band or a DJ for backyard and summer parties at home",
+     "description": "We book live music for backyard parties across Denver and the Front Range. A singer with a guitar or a jazz duo can play on the patio, soft enough that people can chat, a flamenco trio sounds lovely on a summer evening, and a trio or quartet on the lawn can get people dancing. A DJ can take over once the loud part of the party moves indoors. We'll size the sound to your yard, work out cover and power with you ahead of time, and you'll have one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "FJiO_bIIA8c",
+      "name": "Flamenco trio for a backyard party: Dirty Flamenco at a garden party",
+      "description": "Dirty Flamenco plays a rumba at a garden party.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M33S"
+     },
+     {
+      "id": "nzVtbiEF5ak",
+      "name": "Singer with a guitar for a backyard party: Last Dance With Mary Jane",
+      "description": "A singer with a guitar plays Last Dance With Mary Jane at a private party.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Private parties at home",
+       "slab": true,
+       "title": "Live music for your backyard party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know that moment at a backyard party when the sun starts to go down and nobody wants to head home? Live music is a great way to keep that going. A singer with a guitar or a duo is perfect for the patio, and a band on the lawn or a DJ inside can get people dancing. You can book it all on one contract.",
+       "headingText": [
+        {
+         "html": "We love playing <a href=\"/private-parties/\">private parties</a>, and we’ll size the sound system to your yard."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Video clips from private parties",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Dirty Flamenco playing a rumba outdoors at a garden party, and a singer with a guitar covering Last Dance With Mary Jane."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/FJiO_bIIA8c?rel=0",
+         "title": "Dirty Flamenco playing a rumba at a garden party",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/nzVtbiEF5ak?rel=0",
+         "title": "A singer with a guitar playing Last Dance With Mary Jane at a private party",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Picking a date",
+       "title": "When to have a backyard party in Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "In our experience, Denver hosts throw their backyard parties from the first warm weekend in May to the last one in September. Saturdays are a popular choice, but a Sunday afternoon, a Friday evening or a weeknight in July can make a great party, too.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-season.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Where the music goes",
+       "title": "Backyard party ideas for adults.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The music can go on the patio or out on the lawn, and the size of the group can depend on which one you choose."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "A singer with a guitar on the patio",
+         "text": "A singer with a guitar can play the songs people ask for, and it’s an easy way to bring live music to a patio. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> builds his songs live with a looper (a pedal that layers parts as he plays). You can book him as a duo, and his band can come in if the lawn turns into a dance floor. We’ve got other <a href=\"/ensembles/singer-guitarist/\">singers and guitarists</a> on our roster, too."
+        },
+        {
+         "term": "A flamenco trio for a summer evening",
+         "text": "A trio of guitar, bass and cajón (a box drum) plays traditional flamenco outdoors, and you can add a dancer if you’d like a showpiece. <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> is the trio to book when you want that sound."
+        },
+        {
+         "term": "A jazz duo for a dinner on the deck",
+         "text": "A duo on upright bass and guitar plays jazz standards, which makes for a lovely dinner outside. Take a look at our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> if that sounds right for your party."
+        },
+        {
+         "term": "A party band on the lawn",
+         "text": "A trio or a quartet can play dinner quietly first and then get people dancing to the hits. <a href=\"/artists/tony-medina/\">Tony Medina</a> is a great choice here, with a band of up to four musicians."
+        },
+        {
+         "term": "Live band karaoke in the garage",
+         "text": "The band plays the 80s and 90s hits and hands the microphone to whoever wants a song. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> can fit in a two-car garage, so just move the cars out and open the door."
+        },
+        {
+         "term": "<a href=\"/ensembles/dj/\">A DJ once it moves inside</a>",
+         "text": "A DJ takes up very little space and can keep the party going once everyone moves indoors. Still deciding? Read our post on <a href=\"/blog/band-or-dj-denver/\">choosing a band or a DJ</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Want to know what each size costs in Colorado, house parties included? Check out our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "Planning live music for a backyard party",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Learn more about what a house needs, from parking to power, on our <a href=\"/private-parties/denver/\">Denver private parties page</a>. Want stage sizes for every act? Check out our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "Can we hire a band for a backyard party?",
+         "a": "Yes. We're Signet Artists in Denver, and you'll have one personal contact for the music."
+        },
+        {
+         "q": "How loud is it, and how late can it go?",
+         "a": "On the patio it's about as loud as the conversation around the grill. On the lawn, the band can play louder, because a lawn can handle a lot more sound than a living space can. Noise limits can cut an outdoor party short anywhere in the city, so we like to play outside while the sun is up and then move indoors or switch to a DJ when it goes down. If your street or HOA has a noise limit, let us know when you book and we'll plan the night around it."
+        },
+        {
+         "q": "Does the band need power in the backyard?",
+         "a": "Yes. A solo musician, a duo, a trio or a DJ needs one dedicated electrical circuit, a quartet needs two, and a wall socket through the nearest window is usually better than a generator. A generator can work if it's quiet, properly grounded and big enough for the sound system. A household generator usually won't be, and you may hear its hum during the quiet songs. If there's no socket at all, a guitarist can play with a battery-powered sound system."
+        },
+        {
+         "q": "What if it rains, or gets cold?",
+         "a": "The band and the sound gear will need cover whatever the forecast says, like a patio roof, a covered pergola or a tent. Direct sun can be hard on a guitar, and a Colorado evening can cool off fast. If you'd like a backup plan for moving indoors, we'll just need to know when you'll decide and who'll make the call. You'll also want the main floor or the garage ready for a smaller setup."
+        },
+        {
+         "q": "How much space does the band need on a patio or a lawn?",
+         "a": "A singer with a guitar or a DJ takes about 6 by 4 feet, a duo 8 by 6, a trio 12 by 8 and a quartet 14 by 10. Setup can take about 45 minutes for a solo musician or a DJ, an hour for a duo or a trio and 90 minutes for a quartet, so just let us know which gate or side path to use. If you need a certificate of insurance, just let us know."
+        },
+        {
+         "q": "Can the same band play the afternoon and the evening?",
+         "a": "Yes. The same band can play both, or we can start with a singer or a duo and bring in the band or the DJ later on. Sets can run 45 to 60 minutes, and we can keep music going through the breaks so the yard doesn't go quiet."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-24",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and a sentence about the yard.",
+       "lede": "Whether you want one musician on the patio or a full band on the lawn, we’d love to help."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

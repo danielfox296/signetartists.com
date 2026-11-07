@@ -1,0 +1,309 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/jazz-band/",
+   "title": "Jazz band for a corporate event in Denver | Signet Artists",
+   "description": "Looking for a jazz band for a corporate event in Denver? Our duos, trios and quartets can play your reception, your dinner and the dancing after the program.",
+   "titleExact": true,
+   "ogImage": "img/standards.jpg",
+   "ogImageAlt": "A trumpet resting on a table.",
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Jazz band for a corporate event",
+     "serviceType": "Jazz band for corporate events, receptions, dinners, awards nights and holiday parties in Denver",
+     "description": "We book jazz bands for corporate events in Denver and across Colorado, from a duo for a reception to a trio for dinner or a quartet with a horn or a singer for the dancing.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "videos": [
+     {
+      "id": "hIPHFuxl9YI",
+      "name": "Solo jazz guitarist for a client dinner: Autumn Leaves",
+      "description": "A solo jazz guitarist playing Autumn Leaves live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M14S"
+     },
+     {
+      "id": "cA2KwgmJqGc",
+      "name": "Jazz trio for a cocktail hour: Sunny",
+      "description": "A jazz trio of guitar, upright bass and drums playing Sunny live, with the drums played quietly with brushes.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M9S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver, Colorado",
+       "slab": true,
+       "title": "A jazz band for your corporate event, in whatever size you need.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Walk into a company event, hear an upright bass and a guitar, and you can tell somebody really thought about this one. That’s what a jazz band does for a corporate event, and it can stay with you from the reception through dinner to the dancing. We can start with a duo and add musicians as the event goes on, playing from the same song list.",
+       "headingText": [
+        {
+         "html": "You’ll have one contract and a single point of contact for the whole event, and you can learn more about <a href=\"/corporate/\">our corporate work</a>, too."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video Clips",
+       "title": "Hear our corporate jazz bands live.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Autumn Leaves on solo guitar, a lovely size for a small client dinner, and Sunny played by a trio, with enough sound for a big ballroom dinner."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+         "title": "A solo jazz guitarist playing Autumn Leaves",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny, with brushes on the drums",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Your event",
+       "title": "Jazz for each part of your corporate event.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "You may want a different amount of music for each part of your event, and none at all during the program."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "As the doors open",
+         "text": "A duo of upright bass and guitar plays jazz standards as your guests arrive. You can tell it’s live from across the venue, and everyone can still talk easily."
+        },
+        {
+         "term": "Through dinner",
+         "text": "A trio adds quiet drums, played with brushes, and it stays soft enough for everyone at the table to talk. Our <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> is a great choice here if you’d like standards with a more modern edge."
+        },
+        {
+         "term": "The remarks and the awards",
+         "text": "The band plays right up to the moment and then stops before your speaker reaches the microphone. We can also play each winner up to the stage. Check out our <a href=\"/planners/run-of-show/\">run of show planner</a> for more."
+        },
+        {
+         "term": "After the program",
+         "text": "When the program ends, the quartet gets people dancing. That’s the trio plus a horn or a singer, playing swing and soul favorites. If your event runs later, a <a href=\"/ensembles/dj/\">DJ</a> or a covers band can take over for the <a href=\"/corporate/after-party/\">after-party</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "02-the-evening.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Occasions",
+       "title": "Corporate events that are a great fit for a jazz band.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member evenings</a>",
+         "text": "A duo can play the whole event, and it’s perfect when the conversation is what matters most."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "A gala is a great place for a horn, so we often suggest the trio through dinner and the full quartet after the program."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Holiday parties</a>",
+         "text": "The trio can play drinks and dinner, and then the quartet with a singer or the DJ can get people dancing. In December the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "A duo is a lovely choice for a dinner at a mountain lodge."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Curious about prices? Take a look at <a href=\"/blog/what-a-jazz-band-costs-denver/\">what a jazz band costs in Denver</a>. Want something more contemporary than jazz standards? Check out <a href=\"/artists/last-consulate/\">Last Consulate</a>, one musician on upright bass, guitar and electronics playing laid-back instrumental originals.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "What planners ask about corporate jazz bands.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Which size of jazz band does a corporate event need?",
+         "a": "For a reception or a dinner for up to eighty guests, we’d suggest the duo or the trio. For a ballroom of two hundred, the trio through dinner and the quartet after the program make a great combination, with a horn or a singer out front. Tell us the headcount, the venue and whether the evening has a dance floor, and we'll recommend the size. Signet Artists books jazz bands across Denver and the Colorado mountains."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "We can play as softly as you’d like through the reception and dinner. Once the program ends, the quartet can play like a dance band, up to what the venue allows."
+        },
+        {
+         "q": "How long are the sets?",
+         "a": "Sets can run 45 to 60 minutes, and we can keep music going through the breaks."
+        },
+        {
+         "q": "What do you need from us to quote it?",
+         "a": "We just need the date, the venue and a rough idea of the flow of the evening. From there, we’ll recommend a size and send you a price, and we can share the space and power details with your venue."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and we’ll help you find the right size of jazz band for your event.",
+       "lede": "From a solo guitarist to a quartet with a horn, we can put together the jazz band that suits your event, with a sound system sized to your venue."
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

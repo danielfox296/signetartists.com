@@ -1,0 +1,90 @@
+{
+ "root": {
+  "props": {
+   "path": "/404.html",
+   "title": "Page not found",
+   "description": "That page may have moved, or the address may be mistyped. Just let us know what you’re looking for, and we’ll help you find it.",
+   "robots": "noindex, follow",
+   "absolutePaths": true
+  }
+ },
+ "content": [
+  {
+   "type": "Specs",
+   "props": {
+    "id": "Specs-5",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "404",
+       "slab": true,
+       "title": "Sorry, we can’t find that page.",
+       "titleTag": "h1",
+       "titleClass": "h2 smile",
+       "lede": "The link may be old, or there might be a typo in the address. Try one of these links, and if you can’t find what you’re looking for, just reach out."
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-2",
+       "source": "own",
+       "cols": false,
+       "items": [
+        {
+         "html": "<a href=\"/corporate/\">Corporate</a>: company parties, galas, client dinners and retreats"
+        },
+        {
+         "html": "<a href=\"/weddings/\">Weddings</a>: the ceremony, the cocktail hour and the dance floor"
+        },
+        {
+         "html": "<a href=\"/private-parties/\">Private Parties</a>: at home, in a yard, or in a space you booked"
+        },
+        {
+         "html": "<a href=\"/daytime/\">Daytime</a>: senior living, memorials, brunch and community programs"
+        },
+        {
+         "html": "<a href=\"/music/\">Artist Roster</a>: Featured Artists and House Ensembles"
+        },
+        {
+         "html": "<a href=\"/repertoire/\">Songs</a>: our full song list"
+        },
+        {
+         "html": "<a href=\"/pricing/\">Pricing</a>: what live music costs in the Colorado market"
+        },
+        {
+         "html": "<a href=\"/planners/\">For Planners</a>: how we work with professionals"
+        },
+        {
+         "html": "<a href=\"/sitemap/\">All pages</a>: every page on the site, in one list"
+        }
+       ]
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-3",
+       "buttons": [
+        {
+         "label": "Back to the start",
+         "href": "/",
+         "cls": "btn"
+        },
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-404.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,362 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/boulder/",
+   "title": "Wedding music in Boulder: guitarist, duo, band and DJ",
+   "description": "Book live music for your Boulder wedding, with a guitarist for the ceremony, a duo for the cocktail hour, and a trio or DJ for the dancing.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "nav": "weddings",
+   "breadcrumb": "Boulder",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Boulder",
+     "serviceType": "Live music for weddings in Boulder: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "Live wedding music in Boulder and Boulder County, with an acoustic, jazz or Spanish guitarist for the ceremony, a jazz or acoustic duo for the cocktail hour, and a trio or DJ for the reception, all sized to fit your venue's sound policy.",
+     "areaServed": [
+      "Boulder",
+      "Louisville",
+      "Lafayette",
+      "Longmont",
+      "Niwot"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a Boulder wedding cocktail hour: Autumn Leaves on upright bass and guitar",
+      "description": "Autumn Leaves on upright bass and guitar, played live by a jazz duo that's an easy fit for a Boulder cocktail hour.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Boulder, Colorado",
+       "slab": true,
+       "title": "Live music for a Boulder wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "It’s hard to beat saying your vows with the Flatirons behind you. We’d love to bring the music, too, with a guitarist for the ceremony, a duo for the cocktail hour, and a trio or a DJ to get people dancing later on.",
+       "headingText": [
+        {
+         "html": "We can play one part of your <a href=\"/weddings/\">wedding</a> or all of it, and you’ll have one person to call the whole way through."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video clips",
+       "title": "What does a wedding jazz duo sound like?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Autumn Leaves on upright bass and guitar from one of our jazz duos, which is a lovely fit for a Boulder cocktail hour, along with an acoustic guitarist playing outdoors at a wedding."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Autumn Leaves played live by a jazz duo on upright bass and guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing an acoustic set outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Wedding day music",
+       "title": "The three parts of a Boulder wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Many Boulder venues sit close to their neighbors, so they may limit how loud the music gets and how many musicians can play. A guitarist or a duo can fit in just about anywhere, so the dancing is the main thing we’ll plan around with you."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony, on a lawn or a porch</a>",
+         "text": "One guitarist can play the whole ceremony on acoustic, jazz or Spanish guitar. With a live guitarist, the processional can last exactly as long as the walk down the aisle takes."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour</a>",
+         "text": "A jazz duo or an acoustic duo can play soft enough for everyone to keep talking. The duo can play the whole hour outside, on the Chautauqua porch for instance, and we’ll help you plan for moving inside if it gets chilly."
+        },
+        {
+         "term": "The reception, indoors",
+         "text": "A trio of guitar, bass and drums gets people dancing without a stage. That’s often as big as a Boulder venue will let you go. Where there’s space for four musicians, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can play as a quartet, and so can our <a href=\"/weddings/jazz-band/\">wedding jazz band</a>. The <a href=\"/ensembles/dj/\">DJ</a> can take the dance floor from the end of dinner to the last song."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Looking for a particular song? Browse our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "The venues",
+       "title": "Live wedding music from Chautauqua to your backyard",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Chautauqua is the Boulder wedding a lot of people picture, with the ceremony on the lawn, the cocktail hour on the porch, and dinner in the Dining Hall or dancing in the Community House. It also sits inside a residential historic district, so its sound policy is the first thing we’ll ask for.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "The Hotel Boulderado and the St Julien are two of the best-known spots for a downtown wedding. The ceremony and the reception are often just down the hall from each other, with hotel guests sleeping on the floors above, so both hotels limit evening sound. Both ballrooms have space for a quartet or a DJ. People book Flagstaff House for the view, up a mountain road with the city below it, and a duo is a great fit on its terrace. Rembrandt Yard is a downtown gallery a block off the pedestrian mall, and you can have your ceremony, your dinner and a trio for the dancing, all on its one floor.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "You can also get married in a backyard on Mapleton Hill or in a neighborhood off Broadway. One musician or a duo works well on the patio, a trio is a better fit indoors, and we’ll plan around the sound limits your neighbors and the city expect. Getting married at home? Learn more about what a house needs for live music on our <a href=\"/private-parties/boulder/\">Boulder private parties page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "Sound & weather",
+       "title": "How loud can a band play at a Boulder wedding?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Boulder has its own rules on evening sound, and most venues have a policy on top of that, so we’ll start by asking about your venue’s sound limit. Just let us know what your venue, HOA or rental agreement says about evening sound and end times, and we’ll plan around it. Dancing usually moves indoors, which makes it much easier to stay within those limits.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "It can cool off fast once the sun drops behind the Flatirons, so we’ll keep that in mind when we plan an outdoor cocktail hour. For an outdoor ceremony, we’ll want the guitarist in a covered, level, dry spot with power nearby, since a summer afternoon can turn quickly.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "Not sure which wedding decisions come first? Check out <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. Getting married somewhere else in Colorado? Check out our <a href=\"/weddings/vail/\">Vail wedding page</a> for a wedding at altitude, or our <a href=\"/weddings/fort-collins/\">Fort Collins wedding page</a> for a wedding an hour north.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Questions",
+       "title": "Planning live music for a Boulder wedding",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "Does your venue’s events office need the technical details? Just send them to our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-30",
+       "items": [
+        {
+         "q": "Do you play weddings in Boulder?",
+         "a": "Yes, we'd love to. Boulder's a short drive up from Denver, so you won't have to think about lodging for the band."
+        },
+        {
+         "q": "Can we have a band at Chautauqua?",
+         "a": "Yes, as long as it's a size Chautauqua allows. Many couples there go with a duo through dinner or a trio indoors in the Community House."
+        },
+        {
+         "q": "Is a trio enough for a Boulder wedding reception?",
+         "a": "For most Boulder venues, yes. If you'd like to keep dancing after the band wraps up, a DJ can take over on the same sound system. If your venue has space for a bigger band, we'll let you know."
+        },
+        {
+         "q": "What about parking and setup?",
+         "a": "It's worth sorting out parking early in Boulder. Downtown is metered, Chautauqua shares its lot with a trailhead that can fill up on summer evenings, and a house on the Hill shares its curb with students during the school year. Send us the address and we'll figure out where to park and how to get everything inside. In many cases, one musician needs about 6 by 4 feet, a duo needs 8 by 6, and a trio needs 12 by 8. We'll talk through any electrical concerns with you, too. Setup usually takes one van and 45 to 60 minutes."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Boulder?",
+         "a": "Whenever you're ready. Many couples settle on a venue first, then book the music before most of their other vendors."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-37",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-35",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us your date and your Boulder venue, and we'll take it from there.",
+       "lede": "We can bring one musician, a full band or anything in between, with a sound system that’s the right size for your venue."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/acoustic-duo/",
+   "title": "Acoustic duo and trio for hire in Denver for weddings and events",
+   "description": "An acoustic duo or trio for hire in Denver, with voice, guitar and upright bass, playing covers soft enough for everyone to keep talking.",
+   "titleExact": true,
+   "ogImage": "img/hero.jpg",
+   "nav": "music",
+   "breadcrumb": "Acoustic duo and trio",
+   "schema": {
+    "service": {
+     "name": "Acoustic duo and trio for hire",
+     "serviceType": "Acoustic duo and trio for hire for wedding cocktail hours, dinner parties, patios and welcome drinks",
+     "description": "An acoustic duo can be voice and guitar or guitar and upright bass, and the trio brings all three musicians together, playing singer-songwriter and folk-rock covers at a comfortable volume for cocktail hours, dinner parties and receptions across Denver and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio"
+     ]
+    },
+    "act": "acoustic-duo"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Covers people know, played acoustic",
+       "slab": true,
+       "title": "An acoustic duo or trio for hire in Denver for cocktail hours and dinner parties.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Everyone has a song like Wild World, the one you catch yourself humming along to with a drink in your hand. Our acoustic duo is either voice and guitar or guitar and upright bass. For a bigger crowd, a third musician makes it a trio.",
+       "headingText": [
+        {
+         "html": "It’s a great choice when you want live music that feels relaxed and personal."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=acoustic-duo",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We’ll plan it all around your event, from how many musicians you want to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/hero.jpg",
+        "alt": "An empty stage with a drum kit under low light.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does an acoustic duo play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "We mostly play singer-songwriter and folk-rock covers people know the words to, like Peaceful Easy Feeling, Three Little Birds and Carolina in My Mind. Prefer jazz standards? Check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Want some more ideas? Take a look at our full <a href=\"/repertoire/\">song list</a>. If there’s a song you want that isn’t on it, just let us know when you book and the duo can usually learn it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-repertoire.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "Which acoustic duo or trio is right for you?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "Voice and guitar",
+         "text": "A singer and a guitarist are a great fit for cocktail hours, welcome drinks and patios, and they can keep familiar songs just loud enough to feel like live music without taking over the conversation."
+        },
+        {
+         "term": "Guitar and upright bass",
+         "text": "This is our instrumental duo, and it’s a lovely choice for dinner. The melodies are still familiar, and without lyrics the music can sit under the conversation at the table."
+        },
+        {
+         "term": "The trio: voice, guitar and upright bass",
+         "text": "With a trio, you get a fuller sound for a bigger crowd, and the musicians can play one set with vocals and one without."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Need just one musician? Our <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is one person who sings and plays guitar. Want your event to end on the dance floor? <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can start as a duo and grow to a quartet.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "We can play the hour between the ceremony and dinner, with or without vocals, at a <a href=\"/weddings/cocktail-hour/denver/\">Denver venue</a> or up in the mountains."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner and cocktail parties</a>",
+         "text": "The duo can play at your home, at a club or in a private dining space, in Denver or <a href=\"/private-parties/colorado-springs/\">Colorado Springs</a>."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Welcome drinks and receptions</a>",
+         "text": "An acoustic duo is a nice way to welcome guests to a company event before the program starts."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
+         "text": "When the conversation is what matters most, the instrumental duo can play quietly through the whole dinner."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Wondering what this may cost? See our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-25",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-21",
+       "html": "Acoustic duo and trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Have another question? Take a look at our <a href=\"/planners/faq/\">full list of questions</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-23",
+       "items": [
+        {
+         "q": "How loud is it?",
+         "a": "It’s about as loud as the conversation around it. You’ll hear that it’s live music from across the venue, and the people at the nearest table can still talk easily. The musicians set their volume to fit your space, and they’re happy to adjust it."
+        },
+        {
+         "q": "How long can the duo play?",
+         "a": "The duo usually plays 45 to 60 minutes at a time with 15 to 20 minutes between sets, and we can keep music playing through the breaks. A single hour works well, and so does playing from the time guests arrive through dessert. If you think the night might run long, let us know when you book."
+        },
+        {
+         "q": "Can the acoustic duo play outside?",
+         "a": "Yes, and it’s a great fit for a patio. We’ll just need a dry, level spot under cover with power nearby, and we’ll size the sound system to your space. Colorado evenings cool down fast, so we’ll work out a plan with you for moving indoors."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-26",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for an acoustic duo or trio in Denver? Just tell us your date and we’ll check availability and costs.",
+       "lede": "We’d love to help with your event, and one person will look after you from the first email through the last song."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

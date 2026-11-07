@@ -1,0 +1,296 @@
+{
+ "root": {
+  "props": {
+   "path": "/music/",
+   "title": "Bands and musicians for hire in Denver",
+   "description": "Looking for bands and musicians for hire in Denver? We have guitarists, jazz duos and trios, string quartets, party bands, a DJ and Featured Artists.",
+   "nav": "music",
+   "breadcrumb": "Artist Roster",
+   "indexLabel": "Artist Roster",
+   "schemaKind": "roster",
+   "schema": {}
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "signet ARTIST roster",
+       "slab": true,
+       "title": "Bands and musicians for hire in Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "headingText": [
+        {
+         "html": "<strong>Featured Artists.</strong> When you book artists like Tejas Singh, Tony Medina, René Moffatt, Dirty Flamenco, Changes Jazz Trio, Your Bird Can Sing, Last Consulate, Firstwater, Little Moses Jones and Meghan Clarisse, you get their specific sound and presence."
+        },
+        {
+         "html": "<strong>House Ensembles.</strong> These are professional players throwing down their best in a format to serve your needs. From Jazz combos, Funk, Live DJs, String Quartets or Singer-Songwriter, they're all configurable to your needs."
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-10",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Where to start",
+       "title": "Which act fits which kind of event?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most people book by the kind of event first and the sound second, so here’s the roster sorted that way."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "A cocktail hour, a dinner, or background music",
+         "text": "For a cocktail hour or a dinner, book a <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>, a <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a>, a <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>, an <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> or a <a href=\"/ensembles/solo-piano/\">pianist</a>. They all play at a volume your guests can talk over, and <a href=\"/artists/last-consulate/\">Last Consulate</a> (one musician on upright bass and guitar over downtempo electronics) is a great choice when you want something a little more modern. In December, the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> plays the season’s songs."
+        },
+        {
+         "term": "A party with a dance floor",
+         "text": "A trio or a quartet is the size to book when you want people dancing. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> and <a href=\"/artists/tony-medina/\">Tony Medina</a> can both start small and grow to a four piece over the evening. The <a href=\"/ensembles/americana-band/\">Americana band</a>, the <a href=\"/ensembles/yacht-rock/\">yacht rock band</a>, the <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> and the <a href=\"/ensembles/funk-band/\">funk band</a> each get people dancing to a different sound, and with <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a>, your guests take the mic."
+        },
+        {
+         "term": "A DJ, on its own or after the band",
+         "text": "The <a href=\"/ensembles/dj/\">DJ</a> is open format (a mix of genres rather than one style), and can play the whole night or take over after any band on the roster through the same sound system."
+        },
+        {
+         "term": "A show rather than background music",
+         "text": "Some acts are made for your guests to stop and watch. Book <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>, <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> with a saxophone added, or <a href=\"/artists/rene-moffatt/\">René Moffatt</a> playing his own songs. <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> gets a whole crowd singing along, and <a href=\"/artists/firstwater/\">Firstwater</a> brings a sound bath to an offsite or a wellness day."
+        },
+        {
+         "term": "A wedding",
+         "text": "Many couples book an acoustic or Spanish guitarist for the ceremony, a duo for the cocktail hour and the DJ for the dance floor. A <a href=\"/weddings/jazz-band/\">wedding jazz band</a> can cover the whole day in one style. Find out more on our <a href=\"/weddings/\">weddings page</a>."
+        },
+        {
+         "term": "During the day",
+         "text": "A jazz duo or a guitarist works well for senior living, a memorial or a Sunday brunch, the Beatles sing-along is a great choice for a community afternoon, and a sound bath can be booked during the day too. Find out more on our <a href=\"/daytime/\">daytime page</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Our <a href=\"/pricing/\">pricing page</a> has a general view of what live music costs in Denver and Colorado.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "01b-which.html"
+   }
+  },
+  {
+   "type": "Roster",
+   "props": {
+    "id": "Roster-12",
+    "band": "ruled",
+    "title": "Filter the roster",
+    "note": "You can narrow it down by the occasion, the kind of event, the size of the act, the genre or whether it has vocals.",
+    "empty": "Nothing on the roster matches that combination. Try removing one of your filters.",
+    "lanes": [
+     {
+      "lane": "named",
+      "eyebrow": "Featured Artists",
+      "title": "Artists you can book by name",
+      "lede": "These acts each have their own sound, and you can look up every one of them."
+     },
+     {
+      "lane": "format",
+      "eyebrow": "House Ensembles",
+      "title": "Ensembles of every size for your event",
+      "lede": "We have everything from a jazz duo to a yacht rock band, played by professional Denver musicians. Open any of them to hear what it sounds like and see which events it suits."
+     }
+    ],
+    "script": true,
+    "_file": "02-roster.html"
+   }
+  },
+  {
+   "type": "Specs",
+   "props": {
+    "id": "Specs-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "title": "every act comes with the following.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-14",
+       "source": "included",
+       "cols": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Stage lighting and a dedicated engineer are optional add-ons. Travel outside the metro, holiday weekends and New Year's Eve are also available as market priced.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-included.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Roster questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Want to know more? Check out our <a href=\"/planners/faq/\">full FAQ</a>, which covers everything from substitutions to volume limits.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What's the difference between a Featured Artist and a House Ensemble?",
+         "a": "A Featured Artist, like Tejas Singh or Dirty Flamenco, is booked by name, so you know exactly who will be playing. A House Ensemble, like a jazz duo or a yacht rock band, is played by professional musicians we match to your date and your venue. To book either one, just send us the date."
+        },
+        {
+         "q": "Where do the acts play?",
+         "a": "Our acts play in Denver, Boulder, Colorado Springs and Fort Collins, plus mountain towns like Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. If your venue is outside the Denver area, just let us know where it is and we'll work out the travel with you."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "03b-faqs.html"
+   }
+  },
+  {
+   "type": "CoverStrip",
+   "props": {
+    "id": "CoverStrip-24",
+    "tiles": [
+     {
+      "src": "/img/covers/into-the-mystic.jpg",
+      "alt": "Moondance, Van Morrison album cover"
+     },
+     {
+      "src": "/img/covers/landslide.jpg",
+      "alt": "Fleetwood Mac album cover"
+     },
+     {
+      "src": "/img/covers/tennessee-whiskey.jpg",
+      "alt": "Chris Stapleton album cover"
+     },
+     {
+      "src": "/img/covers/dock-of-the-bay.jpg",
+      "alt": "The Dock of the Bay, Otis Redding album cover"
+     },
+     {
+      "src": "/img/covers/valerie.jpg",
+      "alt": "Version, Mark Ronson album cover"
+     },
+     {
+      "src": "/img/covers/sweet-caroline.jpg",
+      "alt": "Neil Diamond album cover"
+     },
+     {
+      "src": "/img/covers/dont-stop-believin.jpg",
+      "alt": "Escape, Journey album cover"
+     },
+     {
+      "src": "/img/covers/mr-brightside.jpg",
+      "alt": "Hot Fuss, The Killers album cover"
+     }
+    ],
+    "note": "We love music - both originals from our artists and a few hundred familiar favorites. For our singer-songwriter acts, you can check out our <a href=\"/repertoire/\">Songs page</a> for an example of the available repertoire.",
+    "_file": "04-close.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-28",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Tell us your needs and we can recommend an amazing act"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "We love to help clients find the best fit for their entertainment. Whether it's their creative vision, budgetary or logistic problem solving, we're happy to help at every stage.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-close.html"
+   }
+  }
+ ]
+}

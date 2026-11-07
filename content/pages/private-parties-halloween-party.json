@@ -1,0 +1,307 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/halloween-party/",
+   "title": "Halloween party DJ or live band in Denver | Signet Artists",
+   "description": "Hire a DJ, a party band or live band karaoke for an adult Halloween party in Denver, at home or at a venue.",
+   "titleExact": true,
+   "ogImage": "img/acts/medina-band.jpg",
+   "ogImageAlt": "A four-piece band on a stage lit with teal neon.",
+   "schema": {
+    "service": {
+     "name": "Live music and a DJ for a Halloween party",
+     "serviceType": "A DJ, a party band or live band karaoke for adult Halloween parties at home and at venues",
+     "description": "We bring live music and DJs to adult Halloween parties across Denver and the Front Range, at home or at a venue. You can book a DJ, a trio or quartet that plays the hits and gets people dancing, or a band that plays the 80s and 90s hits and hands the mic to anyone in costume who wants a turn. We’ll size the sound system to your house, and you’ll have one personal contact for your event.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "dj",
+      "trio",
+      "quartet"
+     ]
+    },
+    "videos": [
+     {
+      "id": "mHtY8DbqLtA",
+      "name": "Live band for a Halloween party: Tony Medina playing Purple Rain to a packed dance floor",
+      "description": "Tony Medina plays Purple Rain to a packed dance floor at a milestone party. If you’d like live musicians at your Halloween party rather than a DJ, his is the band we’d recommend.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT7M12S"
+     },
+     {
+      "id": "C6M9wwR9DWk",
+      "name": "Party band for a Halloween party: Tony Medina playing Drive",
+      "description": "Tony Medina plays Drive at a party, and he can keep a Halloween party at a volume your guests can talk over until you’re ready to dance.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M24S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Adult Halloween parties in Denver",
+       "slab": true,
+       "title": "Live music and a DJ for your Halloween party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Put people in costume and they’ll do things they’d never do in their regular clothes, and that usually includes dancing. We can bring a DJ, a party band that plays the hits, or live band karaoke, so whoever came dressed as Freddie Mercury can finally sing with a real band.",
+       "headingText": [
+        {
+         "html": "Planning a different kind of party? Check out all of our <a href=\"/private-parties/\">private parties</a>, too."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Watch a party band play live",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here are two clips of Tony Medina. In the first he’s playing Purple Rain to a packed dance floor at a milestone party, and in the second he’s playing Drive. If you’d rather have live musicians than a DJ, his is the band we’d recommend for a Halloween party."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+         "title": "Tony Medina playing Purple Rain to a packed dance floor",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
+         "title": "Tony Medina playing Drive as a party set",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Your options",
+       "title": "Should you book a DJ, a party band or live band karaoke?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Most Halloween parties are more about dancing than dinner, so we’d usually start with one of these three."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The DJ",
+         "text": "A DJ is usually the first thing people ask us about, and it’s the easiest choice for a house party. <a href=\"/ensembles/dj/\">Our DJs</a> can build a mix around the decade your guests grew up in and play your must-have songs whenever you’d like to hear them."
+        },
+        {
+         "term": "The party band",
+         "text": "A trio or a quartet can play the hits and get people dancing, and you won’t have to find space for a stage. <a href=\"/artists/tony-medina/\">Tony Medina</a> can bring a four-piece band, and <a href=\"/artists/tejas-singh/\">Tejas Singh</a> leads a quartet that plays the songs everyone knows. Either band can play quietly at first if you’d like your guests to be able to talk, then turn it up when you’re ready to dance."
+        },
+        {
+         "term": "Live band karaoke",
+         "text": "The band plays the 80s and 90s hits and hands the mic to anyone in costume who wants a song. <a href=\"/ensembles/live-band-karaoke/\">Live band karaoke</a> works best on a big main floor, in a finished basement or in a garage with the cars out."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Still deciding? Check out our posts on <a href=\"/blog/what-a-dj-costs-denver/\">what a DJ costs in Denver</a> and <a href=\"/blog/band-or-dj-denver/\">whether to book a band or a DJ</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-configurations.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Extras",
+       "title": "Halloween party entertainment ideas for adults.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "A costume contest",
+         "text": "We can have a microphone ready so whoever’s judging can run the contest over the sound system, and the band or the DJ can play a song for the winner."
+        },
+        {
+         "term": "A grown-up Halloween dinner before the party",
+         "text": "If you’d like a seated dinner in costume first, an upright bass and a guitar can play during the meal, and the band or the DJ can take over when the bigger crowd arrives."
+        },
+        {
+         "term": "The office Halloween party",
+         "text": "A DJ, a party band or live band karaoke can all work for a Halloween party at the office. Want to know how a band fits around a company program? Learn more about our <a href=\"/corporate/\">corporate events</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "What hosts ask us about Halloween parties",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Planning a party at your house? Learn more about parking and power on our <a href=\"/private-parties/denver/\">Denver private parties</a> page, and check out our <a href=\"/planners/technical/\">technical page</a> for stage sizes.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "Do you have a DJ for a Halloween party?",
+         "a": "Yes. You can book a DJ through Signet Artists in Denver, either on their own or to take over after a band, all on one contract."
+        },
+        {
+         "q": "Will the band or the DJ play in costume?",
+         "a": "Just ask when you book. It’s up to the musicians what they wear, and if you’d like a song list full of Halloween songs, we’re happy to put one together with you."
+        },
+        {
+         "q": "How loud is it, and how late can it run?",
+         "a": "It’s a party, so the band or the DJ will turn it up once people are dancing. Sets usually run 45 to 60 minutes with music through the breaks, and it can all keep going as late as you and your neighbors are happy with. At a house, it helps to keep the loudest part indoors with the doors shut. If your street or HOA has quiet hours, let us know when you book and we'll plan the night around them."
+        },
+        {
+         "q": "How much space does a Halloween party band need?",
+         "a": "A DJ may need about 6 by 4 feet, one dedicated electrical circuit and 45 minutes to set up. A trio may need about 12 by 8 feet and one circuit, and a quartet or the four-piece karaoke band about 14 by 10 feet and two circuits. It’s best to keep the fog machine and the string lights on a different circuit from the music. Parking can get tight when everyone on the block has guests, so let us know about the driveway or the alley and which door we should use."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-24",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning a Halloween party? Send us the date and tell us a little about your house.",
+       "lede": "We can bring anything from a solo musician or a DJ to a full band, we’ll size the sound system to your house or venue, and you’ll only need to call one person."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

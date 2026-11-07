@@ -1,0 +1,371 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/spanish-guitarist/",
+   "title": "Spanish guitarist for hire in Denver for weddings and events",
+   "description": "A Spanish guitarist for hire in Denver, for wedding ceremonies, cocktail hours, dinner parties and birthdays, at a volume your guests can easily talk over.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-steps.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Spanish guitarist for hire",
+     "serviceType": "Solo Spanish guitarist for hire for wedding ceremonies, cocktail hours, dinner parties and corporate dinners",
+     "description": "One Spanish guitarist on nylon strings: Malagueña, rumbas, farrucas and familiar songs played flamenco-style, for wedding ceremonies, cocktail hours, dinner parties, milestone birthdays and corporate dinners across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "spanish-guitarist",
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for a wedding ceremony: Malagueña",
+      "description": "A Malagueña on solo Spanish guitar, played live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     },
+     {
+      "id": "Npuomaienyo",
+      "name": "Spanish guitar for a dinner party: farruca",
+      "description": "A farruca on solo Spanish guitar, played live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT3M49S"
+     },
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "Can't Help Falling in Love on solo Spanish guitar, played live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     },
+     {
+      "id": "CXqYXJGUuRc",
+      "name": "Spanish guitar for a private party: the Sabicas verdiales",
+      "description": "A short piece by Sabicas on solo Spanish guitar, played live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT48S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Solo acoustic guitar",
+       "slab": true,
+       "title": "A Spanish guitarist for hire in Denver for weddings, dinners and events.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "There’s something about a Spanish guitar that makes an ordinary dinner feel like a vacation. This is the act to book when you want that sound from one musician who can set up in almost any corner of your venue.",
+       "headingText": [
+        {
+         "html": "It’s an excellent choice for wedding ceremonies, cocktail hours, dinner parties and milestone birthdays. Want something bigger? Check out <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>, our flamenco trio with guitar, bass and cajón."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=spanish-guitarist",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can build the music around your event, from the songs to what the guitarist wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+       "title": "A Malagueña on solo Spanish guitar, played live",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a Spanish guitarist play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The song list usually includes classic Spanish guitar pieces like Malagueña and Entre dos Aguas, along with rumbas and tangos. Many guests won’t know the names, but almost everyone recognizes the sound. We can also play familiar songs in the same style. Can’t Help Falling in Love is a popular choice for a processional, for instance, and the Beatles sound great on Spanish guitar."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "It’s all instrumental. At a wedding, the guitarist will follow what’s happening, so the music can keep going while guests find their seats and wrap up when the wedding party reaches the front. We’ll put the song list together with you, and if you want a song that isn’t on it, let us know when you book and we can usually learn it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "Prefer blues, roots or jazz? Check out our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>. Want some more ideas? Take a look at our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-16",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony</a>",
+         "text": "A Spanish guitarist can play the whole ceremony, from the prelude and processional to the recessional, and any quiet moment in between. It’s an excellent choice if you want something warm and romantic."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour</a>",
+         "text": "Rumbas and familiar songs make a great cocktail hour, at a volume where your guests can talk easily."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">The dinner party, and the milestone birthday</a>",
+         "text": "A Spanish guitarist can play through the whole meal, and it’s an easy way to make a dinner or birthday feel like a special occasion, whether you’re in <a href=\"/private-parties/denver/\">Denver</a> or up in the mountains."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">The corporate dinner</a>",
+         "text": "A solo guitarist is a nice touch for a client dinner or member event, and it makes the evening feel thoughtfully planned."
+        },
+        {
+         "term": "Proposals & surprises",
+         "text": "Looking for just an hour of music? We can do that for a proposal, a toast at a 60th Birthday or an anniversary surprise."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Memorial services</a>",
+         "text": "We can play a memorial or graveside service, with the music your family chooses."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Want to know more about prices? Check out our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-21",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-17",
+       "eyebrow": "Video Clips",
+       "title": "Watch a Spanish guitarist play",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here are a few live clips, including a farruca, Can’t Help Falling in Love and a short piece by the flamenco guitarist Sabicas."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-18",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Npuomaienyo?rel=0",
+         "title": "A farruca on solo Spanish guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Can't Help Falling in Love on solo Spanish guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/CXqYXJGUuRc?rel=0",
+         "title": "The Sabicas verdiales on solo Spanish guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-19",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-steps.jpg",
+         "alt": "A Spanish guitarist seated on the brick steps of an old doorway, guitar across his knee.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-stone.jpg",
+         "alt": "A Spanish guitarist playing against a stone wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-window.jpg",
+         "alt": "A Spanish guitarist playing beneath a shuttered window, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "05-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-22",
+       "html": "Spanish guitarist questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Want to know more? We’ve answered <a href=\"/planners/faq/\">more common questions here</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Is Spanish guitar the same as flamenco?",
+         "a": "Not exactly. Flamenco is one style of Spanish guitar music, and our guitarists mix it with other Spanish pieces and familiar songs."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "About as loud as a conversation at the next table. Indoors, the guitar usually doesn't need a sound system at all. Outdoors, or if your officiant needs a microphone, we can bring a small sound system and set it to the right level for your venue."
+        },
+        {
+         "q": "Who will the guitarist be?",
+         "a": "One of the Spanish guitarists on our roster, and we'll let you know who it is when you book."
+        },
+        {
+         "q": "Can a Spanish guitarist play a wedding ceremony outdoors?",
+         "a": "Yes. We'll just need a covered, level, dry spot, plus power if you're using a sound system, and we'll work out a backup plan with you in case of weather."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a Spanish guitarist? Send us the date and we'll reply with availability and costs.",
+       "lede": "Live music for your event, from a solo musician to a full band, with sound support that’s the right size for the venue and a personal contact for the night."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

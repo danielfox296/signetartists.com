@@ -1,0 +1,261 @@
+{
+ "order": [
+  "tejas-singh",
+  "jazz-duo",
+  "dirty-flamenco",
+  "funk-trio",
+  "dj",
+  "tony-medina",
+  "little-moses-jones",
+  "meghan-clarisse",
+  "afro-house-dj",
+  "last-consulate",
+  "live-band-karaoke",
+  "yacht-rock",
+  "americana-band",
+  "soul-rnb",
+  "solo-piano",
+  "changes-jazz-trio",
+  "firstwater",
+  "rene-moffatt",
+  "your-bird-can-sing",
+  "solo-guitarist",
+  "singer-guitarist",
+  "spanish-guitarist",
+  "acoustic-duo",
+  "christmas-jazz-trio",
+  "classical-strings"
+ ],
+ "rateCard": [
+  {
+   "id": "solo",
+   "rangeLabel": "solo",
+   "label": "Solo",
+   "pieces": 1,
+   "note": "Background and cocktail. One voice, one instrument."
+  },
+  {
+   "id": "duo",
+   "rangeLabel": "duo",
+   "label": "Duo",
+   "pieces": 2,
+   "note": "The working pair. An hour on its own, or cocktails and dinner together."
+  },
+  {
+   "id": "trio",
+   "rangeLabel": "trio",
+   "label": "Trio",
+   "pieces": 3,
+   "note": "The working size for a party in a small venue."
+  },
+  {
+   "id": "quartet",
+   "rangeLabel": "quartet",
+   "label": "Quartet",
+   "pieces": 4,
+   "note": "Where a covers act becomes a dance floor act."
+  },
+  {
+   "id": "quintet",
+   "rangeLabel": "six piece",
+   "label": "Five to six piece",
+   "pieces": 5,
+   "byRequest": true,
+   "note": "Horns or a second voice. Quoted on request rather than sold as a standard size."
+  },
+  {
+   "id": "dj",
+   "rangeLabel": "DJ",
+   "label": "DJ",
+   "pieces": 1,
+   "note": "On its own, or against a live instrument as a hybrid."
+  }
+ ],
+ "buckets": [
+  {
+   "id": "party",
+   "label": "Party",
+   "blurb": "Dance floor."
+  },
+  {
+   "id": "cocktail",
+   "label": "Cocktail",
+   "blurb": "Arrival, cocktails, dinner."
+  },
+  {
+   "id": "patio",
+   "label": "Patio",
+   "blurb": "Outdoor and casual."
+  },
+  {
+   "id": "specialty",
+   "label": "Show",
+   "blurb": "A show for your guests to watch."
+  },
+  {
+   "id": "budget",
+   "label": "Background",
+   "blurb": "Background music, the smallest live booking."
+  }
+ ],
+ "genres": [
+  {
+   "id": "jazz",
+   "label": "Jazz"
+  },
+  {
+   "id": "singer-songwriter",
+   "label": "Singer-songwriter"
+  },
+  {
+   "id": "pop-covers",
+   "label": "Pop and rock covers"
+  },
+  {
+   "id": "classic-rock",
+   "label": "Classic rock"
+  },
+  {
+   "id": "blues",
+   "label": "Blues"
+  },
+  {
+   "id": "soul",
+   "label": "Soul and R&B"
+  },
+  {
+   "id": "funk",
+   "label": "Funk"
+  },
+  {
+   "id": "yacht-rock",
+   "label": "Yacht rock"
+  },
+  {
+   "id": "americana",
+   "label": "Americana, folk and bluegrass"
+  },
+  {
+   "id": "country",
+   "label": "Country"
+  },
+  {
+   "id": "flamenco",
+   "label": "Flamenco and Spanish guitar"
+  },
+  {
+   "id": "downtempo",
+   "label": "Downtempo and electronic"
+  },
+  {
+   "id": "dj",
+   "label": "DJ, open format"
+  },
+  {
+   "id": "sound-bath",
+   "label": "Sound bath and sound healing"
+  },
+  {
+   "id": "classical",
+   "label": "Classical strings"
+  },
+  {
+   "id": "hip-hop",
+   "label": "Hip-hop"
+  },
+  {
+   "id": "house",
+   "label": "House, techno and electronic"
+  }
+ ],
+ "areas": [
+  {
+   "id": "denver",
+   "label": "Denver"
+  },
+  {
+   "id": "boulder",
+   "label": "Boulder"
+  },
+  {
+   "id": "colorado-springs",
+   "label": "Colorado Springs"
+  },
+  {
+   "id": "fort-collins",
+   "label": "Fort Collins"
+  },
+  {
+   "id": "vail",
+   "label": "Vail"
+  },
+  {
+   "id": "beaver-creek",
+   "label": "Beaver Creek"
+  },
+  {
+   "id": "aspen",
+   "label": "Aspen"
+  },
+  {
+   "id": "breckenridge",
+   "label": "Breckenridge"
+  },
+  {
+   "id": "telluride",
+   "label": "Telluride"
+  },
+  {
+   "id": "steamboat-springs",
+   "label": "Steamboat Springs"
+  },
+  {
+   "id": "winter-park",
+   "label": "Winter Park"
+  },
+  {
+   "id": "crested-butte",
+   "label": "Crested Butte"
+  }
+ ],
+ "holds": [
+  {
+   "name": "Thomas Owen Band",
+   "reason": "Pulled from the site on Daniel's call, 2026-08-27. Was the one face-led listing: patio and cocktail, solo to trio, promote-on-footage. The workbook's open question about fielding a two-hour covers set was never resolved. Nothing else is tagged patio, so the patio filter left the roster page with it."
+  },
+  {
+   "name": "Tchunk",
+   "reason": "Artistic project, not an event product. Different website."
+  },
+  {
+   "name": "Vaughn Tromburg Project",
+   "reason": "Event-set question unresolved."
+  },
+  {
+   "name": "Arbor Sons",
+   "reason": "Face and covers ratio unknown."
+  },
+  {
+   "name": "DF & Kyren",
+   "reason": "Overlaps the cocktail bucket. Unfilmed."
+  }
+ ],
+ "occasions": [
+  {
+   "id": "weddings",
+   "label": "Weddings"
+  },
+  {
+   "id": "corporate",
+   "label": "Corporate events"
+  },
+  {
+   "id": "private-parties",
+   "label": "Private parties"
+  },
+  {
+   "id": "daytime",
+   "label": "Daytime"
+  }
+ ]
+}

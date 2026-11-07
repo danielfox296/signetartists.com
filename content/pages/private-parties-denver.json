@@ -1,0 +1,329 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/denver/",
+   "title": "Live music and party bands for private parties in Denver",
+   "description": "Book Denver party bands and musicians for dinner parties, cocktail parties and milestones, at home or at a venue.",
+   "titleExact": true,
+   "nav": "private",
+   "schema": {
+    "service": {
+     "name": "Private party entertainment in Denver",
+     "serviceType": "Live music for dinner parties, cocktail parties and milestone celebrations",
+     "description": "We book live music for Denver private parties, at home and at venues around the city. We can bring anything from one musician to a quartet, with a sound system that’s the right size for the space.",
+     "areaServed": [
+      "Denver"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Dinner parties, cocktail parties & milestones",
+       "slab": true,
+       "title": "Live music for your Denver private party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know how a party at home feels different the minute someone picks up a guitar? In our experience, most Denver private parties only need a <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> or an <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> who can play right where your guests already are.",
+       "headingText": [
+        {
+         "html": "Birthdays and anniversaries are <a href=\"/private-parties/\">private parties</a> we love to play, too, at home or at a venue."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Photos",
+       "title": "Live music for a patio or a dance floor",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Tony Medina on a patio, playing quietly enough for everyone to keep talking, and here he is with his band when it’s time to get people dancing."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Solo & duo",
+       "title": "How big a band do you need for a house party?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "A solo musician is a great choice for cocktails and dinner if your guests will be staying at the table. A duo can play the whole evening, and they can bring the energy up later on if you’d like. You can also book either one for just an hour.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Wondering what each size costs for a house party in Colorado? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> can help.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Where they happen",
+       "title": "Denver homes, clubs & landmark venues",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Most of the private parties we see in Denver happen at home, often in historic neighborhoods like Country Club, Hilltop and Park Hill and around Washington Park. A duo fits easily on most main floors, and we’ll find a corner where your guests can see them and there’s power nearby.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Club dinners are popular in Denver, too. Private dining at the University Club of Denver or the Denver Athletic Club takes care of the venue, so the music may be the last thing left to decide. A jazz duo is perfect for a club dinner, with upright bass and guitar playing the standards.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "For a milestone, you may want a bigger band and a bigger venue. Mile High Station has plenty of space for a quartet and a real dance floor. Grant-Humphreys Mansion is a lovely, century-old house for an anniversary, and Denver Botanic Gardens is a beautiful spot for a summer event outdoors that wraps up early. If you’d like dancing at your milestone party, we’d suggest Tejas Singh. He can play as a duo through dinner and bring a quartet for the dancing, all on one contract.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-17",
+       "html": "“[He] came to play in our home for a party and did an amazing job! He is a talented musician and was extremely easy and responsive to work with. He was able to play exactly the type of music we were looking for. Thanks for taking our party up a notch!”",
+       "by": "Conner S., a party at home, November 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Want some more ideas? We can help with anything from an <a href=\"/private-parties/engagement-party/\">engagement party</a> to a <a href=\"/private-parties/holiday-party/\">holiday party at home</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-where.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "After dark",
+       "title": "Noise limits for a Denver house party",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "If you’re planning a party at home, amplified music outdoors may not be able to go very late anywhere in Denver. The noise rules in Denver vary by zone, and they change. What we can tell you is that it’s best to plan the louder music early in the evening or indoors.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "If your street, venue or HOA has a noise limit, let us know when you book and we’ll plan the event around it, the same way we do with the <a href=\"/planners/mountain/\">published sound limits at the mountain venues</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Planning a party in <a href=\"/private-parties/boulder/\">Boulder</a>? The limits there tend to be earlier and stricter.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-evenings.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "Questions",
+       "title": "Hiring live music for a Denver house party",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Need stage sizes, power and setup times for a bigger band? Check out our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-29",
+       "items": [
+        {
+         "q": "Can a band fit in a Denver house?",
+         "a": "Yes, at the right size. A solo musician may need about 6 by 4 feet and one outlet that isn’t shared with the kitchen, and setup can take about 45 minutes, plus 30 to pack up at the end. A duo may need about 8 by 6 feet, the same kind of outlet and about an hour."
+        },
+        {
+         "q": "How loud is it at dinner?",
+         "a": "It’s about the level of the conversation at the table, so nobody has to raise their voice. Our musicians usually play 45 to 60 minutes at a time, and we can keep music going through the breaks, so the party doesn’t go quiet."
+        },
+        {
+         "q": "What about parking and unloading?",
+         "a": "At a Denver house, setup mostly comes down to parking. Just tell us the block and which door we should use, whether that’s the alley, the driveway or the front walk, and we’ll bring the smallest setup that works for your event."
+        },
+        {
+         "q": "Do you play private parties all over Denver?",
+         "a": "Yes. Signet Artists books party musicians across Denver, along the Front Range and up in the mountains."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-32",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about the party, at home or at the club, and we'll recommend the act.",
+       "lede": "We’d love to help with your party, whether you need one musician or a full band."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "id": "your-bird-can-sing",
+ "name": "Your Bird Can Sing",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "ensembles/beatles-sing-along/",
+ "style": "Beatles songs, and everybody sings",
+ "spec": "A Beatles sing-along led by two musicians, for everyone from five to ninety",
+ "byline_inline": "a Beatles sing-along led by two musicians, for everyone from five to ninety",
+ "material": "Covers",
+ "bucket_tags": [
+  "specialty"
+ ],
+ "config_tags": [
+  "duo"
+ ],
+ "genre_tags": [
+  "classic-rock",
+  "pop-covers"
+ ],
+ "vocals": "sung",
+ "from": "duo",
+ "img": "your-bird-can-sing-card.jpg",
+ "alt": "A flock of birds in silhouette flying into a sunburst, drawn in the flat color of a sixties record sleeve.",
+ "video": null,
+ "blurb": "You know the part of Hey Jude where everyone starts singing. A Beatles sing-along is a playful hour of that. Two musicians play and lead the singing, and by the second song that's your whole crowd. It books for family parties, company events, weddings, community programs and senior living, indoors or out.",
+ "identity": [
+  "You know the part of Hey Jude where everyone starts singing. A Beatles sing-along is a playful hour of that. Two musicians play and lead the singing, and by the second song that's your whole crowd.",
+  "It books for a fiftieth anniversary or an eightieth birthday, a company picnic or holiday party, a wedding welcome party, a school or library program, and an afternoon at a senior living community. Every crowd in that list already knows these songs."
+ ],
+ "setlist": {
+  "note": "Requests are welcome.",
+  "items": [
+   "Hey Jude",
+   "Let It Be",
+   "Yesterday",
+   "Blackbird",
+   "Come Together",
+   "Eleanor Rigby",
+   "A Hard Day's Night",
+   "Something",
+   "While My Guitar Gently Weeps",
+   "Rocky Raccoon",
+   "Mother Nature's Son"
+  ]
+ },
+ "occasion_tags": [
+  "private-parties",
+  "corporate",
+  "weddings",
+  "daytime"
+ ],
+ "lane": "named",
+ "entity": {
+  "type": "MusicGroup"
+ }
+}

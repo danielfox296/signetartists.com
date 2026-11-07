@@ -1,0 +1,40 @@
+{
+ "parts": [
+  {
+   "id": "media",
+   "on": true
+  },
+  {
+   "id": "kind",
+   "on": true
+  },
+  {
+   "id": "name",
+   "on": true
+  },
+  {
+   "id": "face",
+   "on": true
+  },
+  {
+   "id": "tags",
+   "on": true
+  },
+  {
+   "id": "blurb",
+   "on": true
+  },
+  {
+   "id": "sizes",
+   "on": true
+  },
+  {
+   "id": "link",
+   "on": true
+  }
+ ],
+ "ratio": "16 / 9",
+ "blurb": "full",
+ "tags": "buckets",
+ "link": "See {name}"
+}

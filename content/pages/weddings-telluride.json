@@ -1,0 +1,381 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/telluride/",
+   "title": "Wedding music in Telluride: guitarist, duo, band and DJ",
+   "description": "We can bring live music to your Telluride wedding, from a ceremony guitarist up the gondola to a band or DJ who'll plan around the town's amplified-sound hours.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-colonnade.jpg",
+   "nav": "weddings",
+   "breadcrumb": "Telluride",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Telluride",
+     "serviceType": "Live music for weddings in Telluride and Mountain Village: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "We play weddings in Telluride and Mountain Village, with an acoustic, jazz or Spanish guitarist for a ceremony reached by gondola, a jazz or acoustic duo for a terrace cocktail hour at altitude, and a band or DJ for a reception within the town’s amplified-sound hours. We’ll plan the travel and a night’s lodging with you.",
+     "areaServed": [
+      "Telluride",
+      "Mountain Village",
+      "Ridgway"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for a Telluride wedding ceremony: Malaguena",
+      "description": "A Malagueña played live on solo Spanish guitar, a lovely choice for a ceremony above town.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Telluride and Mountain Village",
+       "slab": true,
+       "title": "Live music for a Telluride wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You’ve told everyone it’s Telluride, and now your guests are booking their flights. You might say your vows up the gondola with the whole box canyon below you, have cocktails on a Mountain Village terrace, and then dance in a lodge, an opera house or a tent in Town Park. We can send a guitarist up the gondola with your guests, a duo for the terrace, and a band or DJ for the dancing, and we’ll plan the last song around the town’s rules on amplified sound.",
+       "headingText": [
+        {
+         "html": "You can book us for just part of your <a href=\"/weddings/\">wedding</a> or the whole day, and one person on our team will stay in touch with you from start to finish."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Video clips",
+       "title": "What does Spanish guitar sound like at a wedding ceremony?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s a Malagueña on solo Spanish guitar, a lovely sound for a prelude or a processional."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+         "title": "A Malagueña on solo Spanish guitar, played live",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-8",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-colonnade.jpg",
+         "alt": "A guitarist in a white shirt seated on a stool under a pergola, playing a nylon-string guitar between white columns.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Wedding day music",
+       "title": "The three parts of a Telluride wedding day, and what suits each one.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": ""
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony, up the gondola</a>",
+         "text": "One guitarist can ride up the gondola with your guests and play acoustic, jazz or Spanish guitar for your ceremony. At an overlook or a ranch on the mountain, a small battery-powered sound system can handle your officiant’s microphone, too."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour, on a Mountain Village terrace</a>",
+         "text": "A jazz duo or an acoustic duo is a lovely choice while the light is still on the peaks, and your guests can talk right over the music. The terrace can get cold as soon as the sun leaves the canyon, so we’ll plan the hour around the light and work out a way to move indoors ahead of time."
+        },
+        {
+         "term": "The reception, within the town’s sound hours",
+         "text": "A trio or a quartet can get people dancing in a lodge, on the Opera House stage or in a tent in Town Park. The <a href=\"/ensembles/dj/\">DJ</a> can also play from the end of dinner right up to the last song. Want one act for the whole day? <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can start out as a duo and finish as a quartet, and our <a href=\"/weddings/jazz-band/\">wedding jazz band</a> can grow through your day the same way."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Looking for song ideas? Browse our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "The venues",
+       "title": "Getting married on the mountain, in Mountain Village or in town.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "You can reach San Sophia Overlook by gondola, and it looks straight down the canyon at the town. Gorrono Ranch lets you have your ceremony and reception in one place on the mountain, and Allred’s sits at the top of the gondola with the peaks on one side and the town’s lights on the other once it’s dark. A band can play any of these spots that have the power and space to dance.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Mountain Village is a great spot for a terrace cocktail hour and a lodge reception. The Madeline’s terraces are lovely for a duo, and Mountain Lodge Telluride has space for a duo through dinner and a trio for the dancing. Both are a gondola ride from a ceremony above them and from the town below, so your guests may not need a car all day.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "In town, your wedding has all of Telluride around it. The Sheridan Opera House has a stage, a dance floor and a hundred years of shows behind it, and it’s an amazing place to put a band. Town Park, at the box canyon end of Colorado Avenue, has space for a tent and a band under the town’s amplified-sound permit.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "Getting to Telluride",
+       "title": "Travel, sound rules and altitude at a Telluride wedding.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Telluride is about six hours from Denver each way over the mountain passes, so the musicians will stay the night in town. We’ll talk through the drive and the lodging with you when you send your date. If your wedding is in winter, we’ll plan around the passes, and the musicians can travel a day early if the forecast calls for it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "The town has rules on amplified sound, so we’ll plan the dancing around them. With a ceremony guitarist or a cocktail hour duo, those rules usually aren’t an issue. Learn more about the rule on our <a href=\"/planners/mountain/\">mountain corridor page</a>, and we’ll check the latest version with your venue ahead of time.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "Telluride sits at 8,750 feet and Mountain Village at about 9,545. The air is thin and dry up there, so strings can go out of tune between an afternoon ceremony and the evening, and singers and horn players need to pace themselves. That’s why we plan a longer sound check here.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "If you’re not sure what to decide first, our post on <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a> can help. Planning something closer to Denver, along I-70? Check out our <a href=\"/weddings/vail/\">Vail wedding page</a>. If you’re bringing a company group to the mountains, learn more about our <a href=\"/corporate/retreats/\">corporate retreats</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Questions",
+       "title": "Planning a Telluride wedding?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-30",
+       "html": "We keep stage sizes, power needs and equipment lists on our <a href=\"/planners/technical/\">technical page</a>, if your venue would like to look them over.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-31",
+       "items": [
+        {
+         "q": "Do you play weddings in Telluride?",
+         "a": "Yes, we play weddings in both Telluride and Mountain Village. Signet Artists books Telluride weddings from Denver."
+        },
+        {
+         "q": "What are Telluride's rules on amplified music at a wedding?",
+         "a": "The town's code allows amplified sound, indoors and out, from 7am to 11pm on Fridays, Saturdays and defined holidays under a permit, as long as it isn't plainly audible beyond what the permit sets. So on a Saturday, we'll plan the last song for before eleven."
+        },
+        {
+         "q": "Can the ceremony be at San Sophia Overlook?",
+         "a": "Yes. The guitarist and a small battery-powered sound system can ride the gondola up with your guests, and you can hold the reception back in Mountain Village or in town. We'll plan around the light and the cold at that height. If your ceremony site has power, we can use that instead."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Telluride?",
+         "a": "Whenever you're ready. In Telluride, we'll need to book the musicians' night in town along with everything else, so your date is the first thing we'll ask for. Just reach out whenever you have a date, and we'll take it from there."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-32",
+       "html": "What can add to the price of wedding music?",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-33",
+       "source": "extras",
+       "cols": false
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-36",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us your date and ceremony site, and we’ll start planning the music, the drive and the night in town.",
+       "lede": "Whether it’s one guitarist on the mountain or a full band at the Opera House, we’ll bring a sound system that suits the venue."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

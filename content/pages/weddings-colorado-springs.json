@@ -1,0 +1,340 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/colorado-springs/",
+   "title": "Wedding music in Colorado Springs: guitarist, duo, band, DJ",
+   "description": "Book live music for your Colorado Springs wedding, with a guitarist for the ceremony, a duo for cocktail hour and a band or DJ for the dancing.",
+   "titleExact": true,
+   "ogImage": "img/acts/acoustic-outdoor.jpg",
+   "ogImageAlt": "A guitarist playing outdoors under pine trees.",
+   "nav": "weddings",
+   "breadcrumb": "Colorado Springs",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Colorado Springs",
+     "serviceType": "Live music for weddings in Colorado Springs: ceremony guitarist, cocktail hour duo, band and DJ",
+     "description": "We play live wedding music in Colorado Springs and the Pikes Peak region, with an acoustic or Spanish guitarist for the ceremony, an acoustic or jazz duo for cocktail hour, and a band or DJ for the reception.",
+     "areaServed": [
+      "Colorado Springs",
+      "Manitou Springs",
+      "Monument",
+      "Larkspur"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Getting married in The Springs",
+       "slab": true,
+       "title": "Live music for a Colorado Springs wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You’ve found your venue in The Springs, the view is everything you hoped for, and now it’s time to think about the music. Many couples want music for three parts of the day, and we’d suggest a guitarist for the ceremony, a duo for cocktail hour and a band or DJ for the dancing.",
+       "headingText": [
+        {
+         "html": "We can play one part of your <a href=\"/weddings/\">wedding</a> or all of it, and one person on our team will be your point of contact through the whole day."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The look",
+       "title": "Spanish guitar and jazz standards at a Colorado Springs wedding.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": ""
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-7",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-window.jpg",
+         "alt": "A Spanish guitarist playing beneath a shuttered window, black and white.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/standards.jpg",
+         "alt": "A trumpet resting on a table.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Wedding day music",
+       "title": "What music works best for each part of the day?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Many Colorado Springs weddings start outdoors and move inside after dark, so we’ll plan the music to move with your guests."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The ceremony</a>",
+         "text": "We’d suggest one guitarist near the aisle, on acoustic or Spanish guitar. Both sound lovely outdoors, the guitarist can keep playing for as long as the walk down the aisle takes, and a small sound system can help everyone hear your officiant. Learn more about our <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">The cocktail hour</a>",
+         "text": "An acoustic duo or a jazz duo is a great fit, with voice and guitar or guitar and upright bass, and it’s soft enough for everyone to keep chatting. The Springs has plenty of lovely terraces, so cocktail hour is a great time to stay outside."
+        },
+        {
+         "term": "The dancing",
+         "text": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a> and his band can play through dinner and then get people dancing. A <a href=\"/ensembles/dj/\">DJ</a> can also play from the end of dinner to the last song, and you can book a band first and a DJ after it to keep the party going."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Curious what they might play? Take a look at our <a href=\"/repertoire/\">song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Resorts, hotels & ranches",
+       "title": "Live music at Colorado Springs wedding venues",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "At Garden of the Gods Resort and Club and Cheyenne Mountain Resort, the ceremony is usually outdoors with the view behind you and the reception is indoors, which is an easy setup for live music. The Broadmoor is in a class of its own, and we’ll work out the details of your wedding with their events office.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Downtown, The Mining Exchange and The Antlers are great choices for a hotel wedding. Your ceremony and reception can be under one roof, your guests can walk instead of drive, and the dancing can go as late as the downtown noise curfew allows. A duo fits nicely in a hotel’s smaller event spaces, and a band or DJ may need the ballroom.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "We can also come to Manitou Springs, Monument and the ranches out toward Larkspur. At a barn or garden site, we’ll want to find a covered spot for the musicians ahead of time.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "The light and the wind",
+       "title": "Planning an outdoor ceremony in Colorado Springs",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "The sun drops behind the Front Range early and the color on the rocks goes with it, so if you’re timing your ceremony to that light, we’ll plan the music around your start time. The wind can come off the range in the afternoon and settle down around sunset. That’s why we keep a guitarist’s sound system small and low to the ground, and we’ll pick the ceremony spot with your venue for shelter as well as the view.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "Not sure what to plan first? Here’s <a href=\"/blog/how-far-ahead-to-book-wedding-musicians-colorado/\">how far ahead to book wedding musicians in Colorado</a>. Planning a welcome party or Sunday brunch around your wedding? Check out our live music for <a href=\"/private-parties/colorado-springs/\">private parties in Colorado Springs</a>. Getting married in Denver instead? Learn more about <a href=\"/weddings/cocktail-hour/denver/\">cocktail hour music in Denver</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-26",
+       "eyebrow": "Questions",
+       "title": "Colorado Springs wedding music questions",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-27",
+       "html": "Your venue’s events office can find stage sizes and power needs in our <a href=\"/planners/technical/\">technical guide</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-28",
+       "items": [
+        {
+         "q": "Do you play weddings in Colorado Springs?",
+         "a": "Yes, we do! It’s a straight shot down I-25 from Denver."
+        },
+        {
+         "q": "Can a guitarist play an outdoor ceremony in Colorado Springs?",
+         "a": "Yes, and we’d love to. A guitarist needs a covered, level, dry spot of about 6 by 4 feet with power nearby, and can play everything from the prelude to the recessional. We’ll also work out a plan with you for moving indoors ahead of time."
+        },
+        {
+         "q": "Is a duo enough for a Colorado Springs cocktail hour?",
+         "a": "Yes, a duo is usually plenty for most cocktail hours, including on a resort terrace. Two musicians can fit in a corner of about 8 by 6 feet. We’d suggest a trio if your crowd will be spread across a full ballroom, or if you’d like some dancing during cocktail hour."
+        },
+        {
+         "q": "What does setup look like, and does the altitude matter?",
+         "a": "Setup can take 45 to 60 minutes for these sizes, and if your ceremony and reception are in different buildings, the second group can set up while the first is playing. The altitude won’t affect our musicians, though your guests from sea level may notice being at about 6,035 feet."
+        },
+        {
+         "q": "How far ahead should we book wedding musicians in Colorado Springs?",
+         "a": "Whenever you're ready. Just tell us your date and we’ll let you know what’s available and what it would cost."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-33",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the ceremony site and the guest count, and we'll take it from there.",
+       "lede": "We’d love to be part of your wedding in The Springs."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

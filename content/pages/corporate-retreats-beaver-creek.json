@@ -1,0 +1,311 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/beaver-creek/",
+   "title": "Live music for Beaver Creek retreat evenings",
+   "description": "We book live music for Beaver Creek corporate retreat evenings, from one musician to a full quartet, and we'll work out the load-in with your venue.",
+   "titleExact": true,
+   "nav": "corporate",
+   "breadcrumb": "Beaver Creek",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Beaver Creek",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "We can bring a solo musician, a duo, a trio or a quartet to corporate retreats and private celebrations at Beaver Creek’s village and on-mountain venues.",
+     "areaServed": [
+      "Beaver Creek",
+      "Bachelor Gulch"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "In the Colorado mountains",
+       "slab": true,
+       "title": "Live music for Beaver Creek corporate retreats",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You’ve picked Beaver Creek for the retreat, and now you’re trying to decide whether the big dinner should be in the village or up on the mountain. Either way, we can bring the live entertainment, from a solo musician at a welcome night to a quartet for dancing on your closing night.",
+       "headingText": [
+        {
+         "html": "Beaver Creek has two kinds of venues. The hotels are in a terraced, pedestrian village with escalators between the levels, and in winter the band’s gear has to reach the venues up the mountain over snow. Love the idea of a dinner up the mountain? It’s one of our <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas</a>, and you can learn more about how we work in resort towns on our <a href=\"/corporate/retreats/\">corporate retreats page</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "Outdoor live music in Beaver Creek",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s what a covered outdoor stage can look like, along with one of our artists on a patio."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent on grass with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Where to hold your retreat",
+       "title": "Beaver Creek village and mountain venues",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "The Park Hyatt Beaver Creek sits on the plaza at the center of the village, and The Pines Lodge is a smaller hotel a short climb above it. The Ritz-Carlton Bachelor Gulch sits on its own, with a separate road in and its own loading dock. These hotels can host anything from a ballroom awards night to a small private dinner.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "The venues up the mountain are a big part of what makes Beaver Creek special. Beano's Cabin is on the mountain itself, and Saddle Ridge is at the upper edge of the village. Either one is an amazing choice for the big night of your trip, with dinner and live music at a venue your guests have to ride to.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Want to keep one act for your whole event? Tejas Singh can play dinner as a duo and grow into a quartet for the dance floor. If dinner is the main event, a jazz duo is an excellent choice, and your guests can talk comfortably the whole time.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Travel & setup",
+       "title": "What to plan for in Beaver Creek",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The drive from Denver and the venue you choose are the two things most likely to change the plan."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "The band will drive up I-70 from Denver, so we’ll need to plan for travel whether you’re booking a welcome night or a closing party.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Your venue can change how early the band needs to get there, too, and we’ll plan that with you.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Want a sense of live music costs across Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>. Tell us your date and venue, and we’ll come back with a recommendation and a price.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Private celebrations in Beaver Creek",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "These venues are just as lovely for milestone birthdays, anniversaries and family gatherings. You’ll find more ideas for your celebration on our <a href=\"/private-parties/\">private parties page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "If your group is splitting the trip between resorts, we can plan both at once. Learn more about <a href=\"/corporate/retreats/vail/\">Vail</a>, the next resort along I-70, where the gear goes by dock and freight elevator instead of over snow.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-private.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "Questions",
+       "title": "Live music in Beaver Creek",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Your venue may want to see our <a href=\"/planners/technical/\">stage sizes and power needs</a>, and you can check the sound limits in each mountain town on our <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "How does gear reach Beano's Cabin or another on-mountain venue?",
+         "a": "It depends on the venue, but in winter that can mean a sleigh, a snowcat or a gondola, and in summer it’s usually a vehicle. We’ll work out the route, the schedule and where the cases stay during dinner with your venue ahead of time, since that tells us what gear to bring and when it needs to travel."
+        },
+        {
+         "q": "How does setup work in the village core?",
+         "a": "The band comes in through the dock and service routes at a time the hotel schedules, since the escalators are for guests. We measure the distance from the dock to the floor and plan for it. Setup can take 45 to 90 minutes depending on the size of the band. The band may need anywhere from about 6 by 4 feet for a solo musician to 14 by 10 feet for a quartet, and we’ll work out any electrical concerns with the hotel. The village sits near 8,100 feet, so we plan a longer sound check, with a retune between sets."
+        },
+        {
+         "q": "Is there a published noise cap in Beaver Creek?",
+         "a": "We haven’t been able to confirm one. Each venue sets its own event rules, so send us the venue name and we’ll confirm the number with them ahead of time. Either way, we’ll keep the music at dinner low enough for people to talk."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us your Beaver Creek dates, and we’ll work out the load-in with your venue.",
+       "lede": "We can come up from Denver with anything from a solo musician to a full band, along with a sound system sized to your venue and a single point of contact."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

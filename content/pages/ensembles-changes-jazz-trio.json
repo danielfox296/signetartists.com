@@ -1,0 +1,276 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/changes-jazz-trio/",
+   "title": "Changes Jazz Trio: modern jazz trio for hire in Denver",
+   "description": "A Denver jazz trio playing the standards with a modern edge on guitar, fretless bass and drums, for cocktails, dinners and galas. You can add a saxophone, too.",
+   "titleExact": true,
+   "ogImage": "img/hero.jpg",
+   "nav": "music",
+   "breadcrumb": "Changes Jazz Trio",
+   "schema": {
+    "service": {
+     "name": "Modern jazz trio",
+     "serviceType": "Modern jazz guitar trio for cocktail hours, dinners, galas and private events",
+     "description": "A Denver jazz guitar trio, Doug Emery, Sri Viswanath and Brian Jaffe, playing the standards with a modern edge as a trio or as a quartet with saxophone, for cocktail hours, dinners, galas, weddings and private events across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "changes-jazz-trio"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Modern jazz",
+       "slab": true,
+       "title": "Changes Jazz Trio",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Doug Emery, guitar. Sri Viswanath, fretless bass. Brian Jaffe, drums.",
+       "lede": "You know that moment in a great little jazz club when a song you love goes somewhere you didn’t expect? Changes brings that to your event. They’re a Denver trio on guitar, bass and drums, playing jazz standards with a modern edge, and a saxophone can join them when you want the music front and center for a while.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=changes-jazz-trio",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can work with you on the songs, whether to add the saxophone and what the trio wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/hero.jpg",
+        "alt": "An empty stage set with drums, keys and microphones.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "The trio keeps its arrangements relaxed and easy to listen to, and the solos can get a little adventurous. They can stay in the background through a dinner, and they’re just as happy to play for a crowd that’s there to listen.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Doug Emery studied guitar performance at Berklee, played more than three thousand shows across New England, from jazz duos to wedding bands, and now teaches music full time in Denver. Sri Viswanath spent decades playing bass in New York, on stages from the jazz club Smalls to the Plaza Hotel, and performed on Radha Thomas’s 2019 tribute to Chet Baker. Brian Jaffe studied at the Lamont School of Music at the University of Denver, and he’s played more than a hundred theater productions in Denver pit orchestras since 2011.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "changes-jazz-trio",
+    "title": "Configurations",
+    "note": "",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners</a>",
+         "text": "The trio can play through a client dinner with the drums kept soft, so you can still talk business. If there’s a program, add a saxophone and the quartet can play a featured set. Need music for the rest of your <a href=\"/corporate/\">company event</a>? We can help with that, too."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "If you love jazz and want your cocktail hour to feel a little more modern, this trio is an excellent choice."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "The trio is a great choice for the time before your program starts. Book the quartet with saxophone when you want the music to be a real part of your gala, and it can stop on your emcee’s cue."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and milestone birthdays</a>",
+         "text": "If you’re hosting a dinner party or a milestone birthday and you love jazz, this is the trio to call. The trio fits a home or a patio."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Have speeches or a program? Take a look at our <a href=\"/planners/run-of-show/\">run of show</a> guide to see how we plan the music around them. Curious what live music costs in Colorado? Check out our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-18",
+       "html": "Changes Jazz Trio questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "Got a question that isn’t here? You may find the answer on our <a href=\"/planners/faq/\">full question list</a>. Wondering what makes a jazz trio? <a href=\"/blog/what-is-a-jazz-trio/\">Learn more about the classic lineups</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "What does Changes Jazz Trio play?",
+         "a": "They play instrumental jazz standards, so there’s no singer."
+        },
+        {
+         "q": "How is this different from the jazz duo?",
+         "a": "Our jazz duo is guitar and upright bass playing standards for cocktails and dinner, and we pick the musicians to suit your date. Changes is a trio with drums and a fretless bass, so it has a more modern sound, and you’ll know who the three musicians are before you book."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "The trio can play cocktails and dinner at a volume where everyone can talk easily. The quartet gets louder for a featured set with the saxophone, since that’s the music you want people to stop and hear. If your venue has a sound limit, let us know the number and we’ll stay under it."
+        },
+        {
+         "q": "Where is the trio based?",
+         "a": "Denver. All three musicians live and work in the Denver area, and the trio plays all over the Front Range and in the mountain towns."
+        },
+        {
+         "q": "Can Changes play outdoors?",
+         "a": "Yes, as long as there’s a covered spot out of the weather. We’ll work out a backup plan with you ahead of time, since Colorado weather can turn fast."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a jazz trio in Denver? Send us your date and we’ll check with Changes.",
+       "lede": "Let us know whether you’d like the trio or the quartet, and we’ll reply with availability and costs."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

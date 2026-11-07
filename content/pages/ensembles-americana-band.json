@@ -1,0 +1,288 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/americana-band/",
+   "title": "Americana band for Colorado corporate events and parties",
+   "description": "An Americana band for Colorado receptions, retreats and patio weddings, playing the Grateful Dead, Tom Petty, Nathaniel Rateliff and Gregory Alan Isakov.",
+   "titleExact": true,
+   "ogImage": "img/range.jpg",
+   "nav": "music",
+   "schema": {
+    "service": {
+     "name": "Americana band",
+     "serviceType": "Americana and bluegrass band for corporate welcome receptions, retreats, picnics and weddings",
+     "description": "An Americana band with voice, acoustic guitar, fiddle or mandolin, upright bass and drums, playing Colorado favorites for conference welcome receptions, mountain retreats, incentive groups, summer company picnics and patio weddings across Denver and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "americana-band"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Colorado favorites",
+       "slab": true,
+       "title": "An Americana band for hire in Denver for welcome receptions, retreats and weddings.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You’ve got people flying in for your event, and you want it to sound like Colorado from the first song. This is the band to book when you want that sound. It’s a fiddle or mandolin and an upright bass behind a singer on acoustic guitar, playing the songs people expect to hear in the mountains alongside songs that were written right here.",
+       "headingText": [
+        {
+         "html": "It’s a great fit for a conference welcome reception downtown, a ranch or resort dinner in the mountains, a company picnic or a patio wedding."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=americana-band",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We’re flexible on the number of musicians, the songs and what the band wears, so just tell us what you have in mind. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/range.jpg",
+        "alt": "The Denver skyline with the Front Range behind it, seen from City Park.",
+        "width": "2400",
+        "height": "800",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does an Americana band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The band plays the songs people love in the mountains, like Friend of the Devil by the Grateful Dead and Wildflowers by Tom Petty, along with Neil Young, Bob Dylan, The Band, the Allman Brothers, John Prine and the Avett Brothers. It also plays music from right here in Colorado, including S.O.B. by Nathaniel Rateliff and the Night Sweats from Denver, Big Black Car by Gregory Alan Isakov from Boulder, and songs by the Lumineers."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Have a song in mind that isn’t here? It may be on our <a href=\"/repertoire/\">full song list</a>. If you’d rather book a Colorado singer-songwriter by name, take a look at <a href=\"/artists/meghan-clarisse/\">Meghan Clarisse</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "A trio, or a quartet with drums.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The trio",
+         "text": "The trio is a lovely size for a welcome reception, or for a dinner where people want to talk."
+        },
+        {
+         "term": "The quartet",
+         "text": "Add drums to the trio and you’ve got a dance band. It’s a great way to get people moving to Tom Petty and the Grateful Dead at a ranch dinner, a company picnic or the last night of a retreat."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/\">Conference welcome receptions</a>",
+         "text": "Kick off a conference or an incentive trip, downtown or at a convention-center hotel, with music that lets your group know they’re in Colorado."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Mountain retreats and incentive groups</a>",
+         "text": "Book the band for a ranch dinner, a resort deck or the last night of your retreat in Vail, Beaver Creek, Aspen or Breckenridge. Planning an event up there? Check out our <a href=\"/planners/mountain/\">mountain planning page</a> for more on altitude and local sound rules."
+        },
+        {
+         "term": "<a href=\"/blog/company-picnic-entertainment-ideas-denver/\">Summer company picnics</a>",
+         "text": "The trio sounds great on a lawn, at a park pavilion or on a brewery patio, and if your picnic goes into the evening, the quartet can keep it going."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Patio and ranch weddings</a>",
+         "text": "It’s a lovely choice for a mountain cocktail hour or a ranch reception when you want the music to sound like the place you got married."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Birthdays and parties outdoors</a>",
+         "text": "Planning a milestone birthday in a backyard or at a rented ranch? This is a great band if your friends know every word of Wildflowers."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-23",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-19",
+       "html": "Americana band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Have a question we haven’t covered here? Take a look at our <a href=\"/planners/faq/\">full FAQ</a>, or just reach out. Wondering what Americana is, or how it differs from country and bluegrass? <a href=\"/blog/what-is-americana-music/\">Learn more about Americana music</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-21",
+       "items": [
+        {
+         "q": "Is it a bluegrass band?",
+         "a": "It can be when you want it to be. The fiddle or mandolin can take the lead on bluegrass standards, and the song list goes well beyond that, with classic rock and Colorado favorites, too. If you’d like more bluegrass or less of it, we can choose the songs with you."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "The trio can keep it low enough for easy conversation at a reception or a dinner, and outdoors, we can set up the sound so the back of the lawn can still hear the fiddle. The quartet has drums, so it’s louder. Mountain venues often have a sound limit or a curfew, so if yours does, just let us know and we’ll plan around it."
+        },
+        {
+         "q": "Can it play outdoors and at altitude?",
+         "a": "Yes, and lawns, ranches and resort decks are some of the best places to hear this band. The band will need a dry, level spot under cover with power nearby, and we’ll work out a weather plan with you ahead of time."
+        },
+        {
+         "q": "Can we add time or ask for a song?",
+         "a": "Yes. Let us know the song when you book and the band can usually learn it. If you think your event might run long, let us know that, too."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-24",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for an Americana band in Colorado? Send us the date and the venue, and we’ll reply with availability and costs.",
+       "lede": "We can bring the trio or the quartet with a sound system sized to your venue, and you’ll work with the same person from the first email to the last song."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

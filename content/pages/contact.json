@@ -1,0 +1,112 @@
+{
+ "root": {
+  "props": {
+   "path": "/contact/",
+   "title": "Check a Date",
+   "description": "Tell us the date and the venue. We'll reply with availability and an exact price within 24 to 48 hours, during business hours.",
+   "nav": "contact",
+   "breadcrumb": "Check a Date"
+  }
+ },
+ "content": [
+  {
+   "type": "ContactForm",
+   "props": {
+    "id": "ContactForm-2",
+    "eyebrow": "Inquiries",
+    "slab": true,
+    "title": "Check a date.",
+    "titleTag": "h1",
+    "titleClass": "h2 display",
+    "lede": "Tell us when and where. You'll hear back from us with availability and an exact price within 24 to 48 hours, during business hours.",
+    "headingText": [
+     {
+      "html": "All we need to get started is a date and a rough idea of what you're planning. You don't need to have the size of the band, the song list or a budget worked out first. Just tell us about the event and we'll help you figure out the rest."
+     }
+    ],
+    "band": "top",
+    "details": [
+     {
+      "term": "Email",
+      "html": "<a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>"
+     },
+     {
+      "term": "Where we play",
+      "html": "Denver, Boulder, and the mountain corridor"
+     },
+     {
+      "term": "Prefer a call?",
+      "html": "Say so in the form and leave your number."
+     }
+    ],
+    "action": "https://formsubmit.co/6a0410c3f604efa0e95283b9d52a9eb8",
+    "hidden": [
+     {
+      "name": "_next",
+      "value": "https://signetartists.com/thanks/"
+     },
+     {
+      "name": "_subject",
+      "value": "Inquiry via signetartists.com"
+     },
+     {
+      "name": "_template",
+      "value": "table"
+     },
+     {
+      "name": "_captcha",
+      "value": "false"
+     }
+    ],
+    "fields": [
+     {
+      "kind": "input",
+      "id": "name",
+      "name": "Name",
+      "label": "Name <span class=\"req\">*</span>",
+      "autocomplete": "name",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "email",
+      "name": "email",
+      "label": "Email <span class=\"req\">*</span>",
+      "type": "email",
+      "autocomplete": "email",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "eventDate",
+      "name": "Event date",
+      "label": "Event date <span class=\"req\">*</span>",
+      "type": "date",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "venue",
+      "name": "Venue or city",
+      "label": "Venue or city"
+     },
+     {
+      "kind": "acts"
+     },
+     {
+      "kind": "textarea",
+      "id": "message",
+      "name": "What's the night",
+      "label": "What's the occasion?",
+      "full": true,
+      "rows": "4",
+      "placeholder": "Tell us a little about it and roughly how many people you're expecting. A sentence is plenty."
+     }
+    ],
+    "button": "Send",
+    "script": true,
+    "_file": "01-form.html"
+   }
+  }
+ ]
+}

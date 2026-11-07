@@ -1,0 +1,75 @@
+{
+ "id": "meghan-clarisse",
+ "name": "Meghan Clarisse",
+ "presentation": "face",
+ "status": "listing",
+ "page": "artists/meghan-clarisse/",
+ "style": "Country and Americana",
+ "face": "Meghan Clarisse",
+ "material": "Covers and originals",
+ "bucket_tags": [
+  "cocktail",
+  "patio",
+  "party",
+  "budget"
+ ],
+ "config_tags": [
+  "solo",
+  "duo",
+  "quintet"
+ ],
+ "configRangeLabel": "Solo, duo or five-piece band",
+ "genre_tags": [
+  "country",
+  "americana"
+ ],
+ "vocals": "sung",
+ "from": "solo",
+ "img": "meghan-clarisse-card.jpg",
+ "alt": "Meghan Clarisse in a cream cowboy hat and a lace top, looking back over her shoulder under a blossoming tree.",
+ "video": "https://www.youtube-nocookie.com/embed/HGsbmeBlcb0?rel=0",
+ "video_poster": "img/acts/meghan-clarisse-live-poster.jpg",
+ "blurb": "Meghan Clarisse is a Denver singer-songwriter who calls what she does \"music with country roots and cowgirl boots.\" Her latest album won the 2026 Josie Music Award for Folk/Americana Album of the Year, and she plays Dolly Parton, Fleetwood Mac and Johnny Cash alongside her own songs. You can book her solo, as a duo or with her five-piece band.",
+ "identity": [
+  "Meghan’s album <em>Shadows of a Ghost Town</em> won the 2026 Josie Music Award for Folk/Americana Album of the Year. The Colorado Country Music Hall of Fame gave her its Golden Star Award in 2026, and her duo won its Duo of the Year award in 2025. You may have seen her on Great Day Colorado or Colorado & Company, too.",
+  "Her usual style is a little vintage cowgirl, and that’s a lot of fun if you want a country feel. If your event is more formal, she can dress up or wear all black, too.",
+  "When she’s not performing, Meghan volunteers with Musicians On Call, playing live music for patients at Children’s Hospital and the VA in Denver."
+ ],
+ "ladder": [
+  {
+   "config": "solo",
+   "build": "Voice and acoustic guitar, sometimes keys",
+   "bestFor": "On her own, she’s a lovely choice for welcome drinks, patios and dinners, and she fits easily into a home."
+  },
+  {
+   "config": "duo",
+   "build": "Voice and rhythm guitar, plus pedal steel or electric lead guitar",
+   "bestFor": "Pedal steel is the sliding, singing guitar you hear on classic country records, and it gives a duo a much bigger country sound."
+  },
+  {
+   "config": "quintet",
+   "label": "Five-piece band",
+   "build": "Lead and harmony vocals, rhythm guitar, lead guitar, pedal steel, bass and drums",
+   "bestFor": "This is her full band, and it’s the size to book when you want people dancing at a wedding reception or a big party."
+  }
+ ],
+ "setlist": {
+  "note": "This is a sample of the covers on her song list, and we’ll put the setlist together with you.",
+  "items": [
+   "Jolene",
+   "Wagon Wheel",
+   "Dreams",
+   "Cover Me Up",
+   "Mama Tried",
+   "Landslide"
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person"
+ }
+}

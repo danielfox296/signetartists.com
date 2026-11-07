@@ -1,0 +1,255 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/sound-bath/",
+   "title": "Daytime sound bath in Denver for offices and senior centers",
+   "description": "Book a daytime sound bath in Denver with Firstwater for a yoga studio, a lunchtime session at the office, a senior center or a school staff day.",
+   "titleExact": true,
+   "ogImage": "img/sound-bath.jpg",
+   "schema": {
+    "service": {
+     "name": "Daytime sound bath",
+     "serviceType": "Sound bath for yoga studios, workplaces, senior centers, hospices, recovery centers, schools and retreats during the day",
+     "description": "Firstwater brings a seventy-five-minute sound bath to yoga studios, offices, senior centers, senior living communities, schools, hospices, recovery centers and retreats during the day, across Denver, the Front Range and the Colorado mountain corridor, and the facilitator brings the sound system, mats, blankets and waivers.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo"
+     ]
+    },
+    "act": "firstwater"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Sound healing with Firstwater",
+       "slab": true,
+       "title": "A daytime sound bath in Denver for studios, offices and senior centers.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Everyone knows that stretch of a busy week when all you want is to lie down for an hour with nobody asking you for anything. Firstwater’s sound bath gives that hour to your students, your staff or your residents. One facilitator brings everything to your space, or we can hold the session in a partner space in Denver.",
+       "headingText": [
+        {
+         "html": "You can book <a href=\"/artists/firstwater/\">Firstwater</a> through Signet Artists, and we have plenty of other <a href=\"/daytime/\">daytime live music</a>, too."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=firstwater",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/sound-bath.jpg",
+        "alt": "Three singing bowls on cushions with a mallet beside them.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Daytime venues",
+       "title": "Where can you hold a sound bath during the day?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The session is much the same wherever you hold it. We’ll just plan around who’s coming and what your venue needs from us."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-8",
+       "rows": [
+        {
+         "term": "A yoga studio",
+         "text": "A studio can add a sound bath as a class or a workshop. It works well on a Sunday morning, a Saturday afternoon or before a retreat weekend, and your students just lie down and listen."
+        },
+        {
+         "term": "An office at lunchtime",
+         "text": "We can hold a session in a conference space or on a cleared floor during a long lunch, and it’s a lovely way to mark a wellness week or give your team a break after a hard quarter."
+        },
+        {
+         "term": "A senior center or a senior living community",
+         "text": "We adapt the same session for seniors. The floor is covered in mats and blankets, and anyone who can’t get down to a mat can rest in a seat or a recliner instead."
+        },
+        {
+         "term": "A hospice or a recovery center",
+         "text": "We can hold a session for the people in care, for their families or for the staff. The facilitator guides the session very lightly, nobody is asked to speak or to share, and anyone who can’t lie on a mat can rest wherever they’re comfortable."
+        },
+        {
+         "term": "A school",
+         "text": "We can plan a session for a staff day, for teachers at the end of a term, or as part of a student program. A gym or a hall can usually fit a whole staff on mats."
+        },
+        {
+         "term": "A retreat morning",
+         "text": "A sound bath is a lovely way to open a retreat, whether you’re at a lodge in the mountains or a house on the Front Range. You can also book a sound bath in the morning and live music that night on one contract. Learn more about <a href=\"/corporate/retreats/\">live music for corporate retreats</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "02-where.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-15",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "The session",
+       "title": "What happens at a sound bath?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "The lights go down, everyone lies down, and the facilitator opens the session with a short ceremony. For seventy-five minutes, the facilitator plays live instruments over music composed for the session, with bass deep enough to feel in your chest and a stretch of real silence in the middle. It closes with a short ceremony, too. There’s nothing anyone has to do or get right, and some people may even fall asleep, which is a perfectly fine way to spend the hour.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "If you’re not sure your space will work, just let us know your headcount and we’ll tell you whether it fits.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-the-session.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Questions",
+       "title": "Booking a daytime sound bath",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-17",
+       "items": [
+        {
+         "q": "What does a venue need to host a sound bath?",
+         "a": "You’ll need enough floor for everyone to lie down with a little space between the mats, a standard outlet and low light, and the facilitator will want about ninety minutes before people arrive to set up and tune the sound system to the space. The facilitator brings the sound system, the mats, the blankets and the waivers."
+        },
+        {
+         "q": "What should people bring?",
+         "a": "They just need comfortable clothes. We ask that phones stay in bags during the session."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-20",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want a sound bath for your studio, office or program? Just let us know the date and how many people are coming.",
+       "lede": "One person at Signet will be your point of contact, from the day you reach out through the session itself."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "We’ll get back to you with availability and costs for your day. Curious about costs? Take a look at our <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

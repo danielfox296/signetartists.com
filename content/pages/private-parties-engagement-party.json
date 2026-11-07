@@ -1,0 +1,309 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/engagement-party/",
+   "title": "Engagement party band and live music in Denver",
+   "description": "Book a jazz duo, a Spanish guitarist, a singer or a band for your engagement party in Denver. Tell us the couple's song and we can usually learn it.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-court.jpg",
+   "ogImageAlt": "A Spanish guitarist playing in a stone courtyard, in black and white.",
+   "schema": {
+    "service": {
+     "name": "Live music for an engagement party",
+     "serviceType": "A jazz duo, a Spanish guitarist, a singer with a guitar or a party band for engagement parties and the party after a proposal",
+     "description": "We book live music for engagement parties all over Denver and the Front Range. A jazz duo can play standards through dinner with both families, and a Spanish guitarist is a romantic choice for the meal. A singer and guitarist can usually learn the couple’s song, and a trio or quartet can get people dancing. We play at home, on patios and in private dining spaces, and the same duo can come back for the wedding’s cocktail hour on one contract with one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for an engagement party: Dirty Flamenco playing Malagueña",
+      "description": "Dirty Flamenco plays Malagueña on Spanish guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     },
+     {
+      "id": "cA2KwgmJqGc",
+      "name": "Jazz trio for an engagement party: Sunny with drums played with brushes",
+      "description": "A jazz trio plays Sunny, with the drummer using brushes.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M9S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver & the Front Range",
+       "slab": true,
+       "title": "Live music for your engagement party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You said yes, and now everybody wants to raise a glass to the two of you. An engagement party is usually smaller and more relaxed than the wedding. A jazz duo or a Spanish guitarist is a lovely choice for dinner, a singer can play the couple’s song, and a trio can get people dancing.",
+       "headingText": [
+        {
+         "html": "An engagement party is one of our favorite <a href=\"/private-parties/\">private parties</a> to play, and it’s a nice way to hear musicians you may want for the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a> at your wedding."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Spanish guitar and a jazz trio for your engagement party",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Dirty Flamenco playing Malagueña, which would be lovely at an engagement dinner, and a jazz trio playing Sunny. A trio is a great size for a bigger party with dancing."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+         "title": "Dirty Flamenco playing Malagueña on Spanish guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny with brushes on the drums",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "The party",
+       "title": "Engagement dinners, cocktail parties & surprise parties",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The dinner with the two families",
+         "text": "If you’re bringing both families together for dinner at home, at a <a href=\"/private-parties/denver/\">Denver</a> club or in a private dining space, one or two musicians are usually all you’ll need."
+        },
+        {
+         "term": "The cocktail party on a patio",
+         "text": "In the summer, you might invite friends from both sides and make it more about the party than the meal. A singer with a guitar or a duo works well here, just as they do at a <a href=\"/private-parties/backyard-party/\">backyard party</a>."
+        },
+        {
+         "term": "The party right after the proposal",
+         "text": "Surprise the couple with everyone they love and their song already playing. Just tell us what you have in mind, and we can play the <a href=\"/private-parties/proposals/\">proposal</a>, the party or both. For the wedding weekend’s welcome party, take a look at our <a href=\"/weddings/\">weddings page</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-the-party.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Our favorites",
+       "title": "Engagement party entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Since most engagement parties are a dinner or a cocktail party, we’d usually suggest a duo first. From there, it depends on how much dancing you have in mind."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "A jazz duo the two families can talk over",
+         "text": "Upright bass and guitar playing jazz standards will bring some sophistication to the dinner and leave plenty of space for conversation. Want to hear them? Take a look at our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+        },
+        {
+         "term": "The couple’s song, sung live",
+         "text": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a> can sing your first-dance song in front of both families, and he can usually learn it if he doesn’t know it already. He’s happy to take requests for the rest of the party, too."
+        },
+        {
+         "term": "A Spanish guitarist for dinner",
+         "text": "Spanish guitar gives a dinner a romantic sound, and many couples go on to choose it for their wedding ceremony, too. Looking for something bigger? <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> plays flamenco as a trio."
+        },
+        {
+         "term": "A band for a party your friends throw",
+         "text": "When your friends throw the party, you may want a dance floor. <a href=\"/artists/tony-medina/\">Tony Medina</a> can play as a quartet, and <a href=\"/ensembles/dj/\">a DJ</a> can keep the party going after they finish."
+        },
+        {
+         "term": "Live band karaoke for the wedding party",
+         "text": "Want to hear your wedding party sing months before the wedding? With <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a>, they can take turns at the microphone while the band plays the hits."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Planning your budget? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> shows what each size costs in Colorado, including wedding cocktail hours.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "What couples ask about engagement party music",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Can we hire a band for an engagement party?",
+         "a": "Yes. We can bring anything from one musician to a quartet, depending on how big your party is and whether you’d like dancing. Signet Artists is based in Denver, and you’ll have one personal contact the whole way through."
+        },
+        {
+         "q": "Can the same musicians play the engagement party and the wedding?",
+         "a": "Yes, on one contract. The duo from the engagement party can play the cocktail hour, and the singer who learned the couple's song already has it for the first dance. Tell us both dates when you write."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "It’s quiet enough for both families to hear each other across the table, and the musicians can stop for each toast. We can have an announcement microphone ready for the toasts. A trio can play dinner at that same volume and turn up when it’s time to dance."
+        },
+        {
+         "q": "Can the band play on a patio?",
+         "a": "Yes, as long as the musicians are under cover and there’s an outlet nearby. You can fit a singer with a guitar in about 6 by 4 feet with just one outlet, a duo in about 8 by 6 and a trio in about 12 by 8. Once the sun goes down, it’s best to move the louder music indoors or switch to the DJ. If you need a certificate of insurance, just let us know."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-25",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the couple's song.",
+       "lede": "Whether you’d like one musician or a full band, we’ll bring a sound system that suits your venue."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

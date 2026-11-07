@@ -1,0 +1,83 @@
+{
+ "id": "tejas-singh",
+ "name": "Tejas Singh",
+ "presentation": "face",
+ "status": "flagship",
+ "page": "artists/tejas-singh/",
+ "style": "Singer-songwriter covers",
+ "face": "Tejas Singh",
+ "material": "Covers",
+ "bucket_tags": [
+  "cocktail",
+  "party"
+ ],
+ "config_tags": [
+  "duo",
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "singer-songwriter",
+  "pop-covers"
+ ],
+ "vocals": "sung",
+ "from": "duo",
+ "img": "tejas-card.jpg",
+ "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
+ "video": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+ "blurb": "Authentic and intimate with a specialty in building familiar songs from the ground up with his amazing ear and looping tech, Tejas brings a wide variety of fan favorite songs and is also available to play his original, singer-songwriter material to your event.",
+ "seo_title": "Tejas Singh: cover band for weddings and private events in Denver",
+ "meta_description": "Tejas Singh plays covers for private events in Denver and the Colorado mountains. Book a duo for cocktails or a quartet for the dance floor. Send us your date.",
+ "identity": [
+  "You can book Tejas as a duo, a trio or a quartet. That makes it easy to keep one act for your whole event.",
+  "For instance, he can start out as a duo, and then the rest of the band can join him when it's time to dance.",
+  "The band keeps an eye on your guests and picks the next song to keep people dancing."
+ ],
+ "ladder": [
+  {
+   "config": "duo",
+   "build": "A singer-guitarist, plus bass",
+   "bestFor": "The duo can work well for cocktails and dinner."
+  },
+  {
+   "config": "trio",
+   "build": "Voice and guitar, bass, drums",
+   "bestFor": "The trio is the one for a small venue, or for when you want a dance floor without a full band."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus keys or a second guitar",
+   "bestFor": "Book the quartet when you want a lively dance floor at a wedding or a corporate party."
+  }
+ ],
+ "setlist": {
+  "note": "Here's a sample from his song list, from dinner songs to dance floor favorites. Requests are welcome.",
+  "from_repertoire": true,
+  "groups": [
+   {
+    "label": "Arrival and dinner",
+    "moment": "dinner",
+    "count": 6
+   },
+   {
+    "label": "Picking up the energy",
+    "moment": "lift",
+    "count": 6
+   },
+   {
+    "label": "The dance floor",
+    "moment": "dance",
+    "count": 6
+   }
+  ]
+ },
+ "video_poster": "img/acts/tejas-live-poster.jpg",
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person"
+ }
+}

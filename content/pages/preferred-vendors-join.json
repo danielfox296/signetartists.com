@@ -1,0 +1,99 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/join/",
+   "title": "Join the Preferred Vendor List | Signet Artists",
+   "description": "We offer photographers, planners, videographers, makeup artists, caterers, florists and venues a free listing with a link to their site when we've seen their work.",
+   "titleExact": true
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "For event vendors",
+       "slab": true,
+       "title": "Join the Preferred Vendor List.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Our clients ask us who to call for photography, video, planning, catering, flowers and a venue, and we’d rather give them a name we trust than a search result. We book the music for weddings, private parties and corporate events in Denver, Boulder, Colorado Springs, Fort Collins, Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte, so we're looking for people who work in those same towns.",
+       "headingText": [
+        {
+         "html": "The list stays short, with a few names in each category, and we pick people whose work we’ve seen. If you’re listed, you get a card on this site with your city, a couple of sentences on what you do best and the kinds of events you’re great for, and a link straight to your website. The listing is free, and we don’t ask for anything in return."
+        },
+        {
+         "html": "Tell us about your business and we’ll take a look."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Apply to the list",
+         "href": "https://docs.google.com/forms/d/e/1FAIpQLSceJeX15gxvOkWoahNqD9jw4C3dv8P7_3C3nKu6IYfibteUGw/viewform",
+         "cls": "btn"
+        },
+        {
+         "label": "See the list",
+         "href": "/preferred-vendors/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "buttons": [
+        {
+         "label": "Apply to the list",
+         "href": "https://docs.google.com/forms/d/e/1FAIpQLSceJeX15gxvOkWoahNqD9jw4C3dv8P7_3C3nKu6IYfibteUGw/viewform",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Apply to the list.",
+       "lede": "The form takes about five minutes, and it just asks for your category, where you work, your website and two recent events. We read every application, and if you’re a good fit, we’ll write back and add you to the list."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Anyone with this link can apply, so pass it along to someone whose work you’d vouch for.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-close.html"
+   }
+  }
+ ]
+}

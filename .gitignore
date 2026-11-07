@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+_site/
+.claude/
+
+# Build/pitch handoffs live outside the repo (public)
+_src/pages/**/HANDOFF.md

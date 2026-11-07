@@ -1,0 +1,366 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/tejas-singh/",
+   "title": "Tejas Singh: cover band for weddings and private events in Denver",
+   "description": "Tejas Singh sings covers for events in Denver and the Colorado mountains. He can start out as a duo and finish as a quartet on the dance floor.",
+   "titleExact": true,
+   "ogImage": "img/tejas-card.jpg",
+   "ogImageAlt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
+   "nav": "music",
+   "breadcrumb": "Tejas Singh",
+   "schema": {
+    "service": {
+     "name": "Voice-fronted cover band",
+     "serviceType": "Cover band for private and corporate events",
+     "description": "Tejas Singh sings covers at private and corporate events anywhere from Denver and the Front Range to the Colorado mountains, and you can book him as a duo, a trio or a quartet.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "tejas-singh",
+    "video": {
+     "name": "Tejas Singh live: acoustic singer and guitarist for private parties and weddings",
+     "description": "Tejas Singh's full live set at Sofar Sounds, with his voice, his guitar and live looping.",
+     "uploadDate": "2022-05-12",
+     "duration": "PT13M5S"
+    },
+    "videos": [
+     {
+      "id": "Cp4cfviYj3M",
+      "name": "Singer and guitarist for a private party: Tejas Singh live-looping No Woman No Cry",
+      "description": "Tejas Singh builds No Woman No Cry from the ground up with live looping.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M12S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Singer-songwriter covers",
+       "slab": true,
+       "title": "Tejas Singh",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers as a duo, a trio or a full band.",
+       "lede": "It’s a lot of fun to watch a song you love come together one guitar part at a time. Tejas Singh builds it live with a looper, a device that repeats what he’s just played, until it sounds like the whole record is playing behind his voice. You can start with a duo for dinner and have the full band join him for the dance floor.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=tejas-singh",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can fit the music to your event, including how many musicians play, which songs they choose and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+       "title": "Tejas Singh live for Sofar Sounds",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "This is the act to book when you want one singer for your whole event. Whether Tejas is performing as a duo, as a trio or with the full band, you get sophisticated covers of your guests’ favorite songs, and his own singer-songwriter material when you want it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-90",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "As a quartet, he’s got a real dance band, with bass and drums behind him, plus keys or a second guitar.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "tejas-singh",
+    "title": "Configurations",
+    "note": "Not sure which size you need? Send us the date and we’ll help you choose.",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "The quartet is perfect for a company party with a dance floor, and it can play a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> ballroom or your own office."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Client evenings and corporate dinners</a>",
+         "text": "As a duo, Tejas can keep the same songs quiet enough for easy conversation, and that’s just right for a client dinner or a member event. If you only need an hour, we can do that, too."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
+         "text": "He’s a great pick for a milestone birthday or an anniversary, especially if you’re planning dinner and then dancing."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Wedding cocktail hours</a>",
+         "text": "The duo gives you a singer for the hour after the ceremony, and it’s a great choice when you want songs everyone knows."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Got speeches or a program? We can plan the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. Curious about prices? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> lays out what live music costs across Colorado.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-19",
+    "act": "tejas-singh",
+    "title": "A sample of his song list",
+    "more": "For more, check out our <a href=\"/repertoire/\">full song list</a>.",
+    "_file": "05-setlist.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "eyebrow": "Video Clips",
+       "title": "Watch Tejas Singh play",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s a Bob Marley cover he builds live, plus one of his own songs, so you can hear more of him before you book."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-21",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Cp4cfviYj3M?rel=0",
+         "title": "Tejas Singh live looping a Bob Marley cover",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/GRBAijVpRA8?rel=0",
+         "title": "Tejas Singh performing A Life of Crime",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-22",
+       "images": [
+        {
+         "src": "/img/acts/tejas-fire-escape.jpg",
+         "alt": "Tejas Singh playing an acoustic guitar on a fire escape, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/tejas-mural.jpg",
+         "alt": "Tejas Singh carrying a guitar case past a jazz mural.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/tejas-portrait.jpg",
+         "alt": "Tejas Singh in a white shirt, looking up past the camera.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/tejas-profile.jpg",
+         "alt": "Tejas Singh in profile, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "05b-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-29",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-25",
+       "html": "Tejas Singh questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Don’t see your question? Check out our <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "What does Tejas Singh play?",
+         "a": "He mostly plays covers, and they reach right up to the songs of the last twenty years."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "As a duo, it's pretty soft. The quartet plays about as loud as a band at a good party. The band can turn up or down to suit your venue, so if there's a sound limit, just let us know."
+        },
+        {
+         "q": "Can we ask for a song?",
+         "a": "Yes. If there’s a song that isn’t on his list, such as your first dance, just tell us when you book and he can usually learn it."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about your event and when you'd like Tejas Singh to play.",
+       "lede": "We’ll reply with availability and costs, and we may have a question or two about your plans."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

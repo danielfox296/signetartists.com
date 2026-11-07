@@ -1,0 +1,491 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/tony-medina/",
+   "title": "Tony Medina: blues and rock band in Denver | Signet Artists",
+   "description": "Tony Medina plays blues, classic rock and originals for private events in Denver. He can play solo or bring a four-piece band to get people dancing.",
+   "titleExact": true,
+   "ogImage": "img/tony-medina-card.jpg",
+   "ogImageAlt": "Tony Medina playing an acoustic guitar under string lights, in black and white.",
+   "nav": "music",
+   "breadcrumb": "Tony Medina",
+   "schema": {
+    "service": {
+     "name": "Blues and rock band",
+     "serviceType": "Blues and rock covers for private and corporate events",
+     "description": "Tony Medina plays blues, classic rock and his own songs at private and corporate events in Denver, across the Front Range and in the mountains of Colorado, from solo voice and guitar up to a four-piece band.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "tony-medina",
+    "video": {
+     "name": "Tony Medina live: blues and rock voice and guitar for private events in Denver",
+     "description": "Tony Medina playing the Prince song Purple Rain on voice and acoustic guitar.",
+     "uploadDate": "2026-09-06",
+     "duration": "PT7M13S"
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Blues, rock and roots",
+       "slab": true,
+       "title": "Tony Medina",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers and originals, from one guitar up to a four-piece band.",
+       "lede": "Have you ever stopped mid-conversation because the singer in the corner turned out to be amazing? That’s Tony Medina, who sings The Thrill Is Gone with gravel in his voice and plays guitar with the rhythm of a funk player. He plays the blues and the rock and roll that came out of it, and he can play solo while people talk or bring a four-piece band to get people dancing.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=tony-medina",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We’re happy to tailor the music to your event, from the number of musicians to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/mHtY8DbqLtA?rel=0",
+       "title": "Tony Medina playing a Prince cover, Purple Rain",
+       "loading": "lazy"
+      }
+     }
+    ],
+    "_file": "01-hero.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "His song list goes from Freddie King and B.B. King to The Cars, Prince and the rock records of the seventies and nineties. Your guests will probably recognize nearly all of it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-identity.html",
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "tony-medina",
+    "title": "Configurations",
+    "note": "Send us your date and we’ll help you choose the size that works best.",
+    "_file": "03-ladder.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/private-parties/\">Milestones and private parties</a>",
+         "text": "He’s a great choice for a 50th or a 60th when your guests grew up on these songs. He can keep things quiet over dinner, and the full band can take over when you're ready to dance."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "Classic rock goes over well at a company party, since most of your team will know these songs no matter when they grew up. Book the four-piece band if you want a dance floor, at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue or in your own office."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreat evenings in the mountains</a>",
+         "text": "When the meetings are done, Tony can play the acoustic side of his song list solo or as a duo."
+        },
+        {
+         "term": "<a href=\"/weddings/cocktail-hour/\">Welcome drinks and rehearsal dinners</a>",
+         "text": "On his own, Tony can play the night before the wedding or the hour after the ceremony, and he’s a great fit if you’d like a little grit in the music."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "If you’re planning speeches or a program, we can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. Want a general idea of what live music costs across Colorado? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "Song list",
+       "title": "A sample of his songs.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "You can watch him play most of these covers in the video clips below."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-25",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-19",
+          "html": "Blues",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-20",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Going Down</span> <span class=\"song-artist\">Freddie King</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">The Thrill Is Gone</span> <span class=\"song-artist\">B.B. King</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-21",
+          "html": "Classic rock",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-22",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Purple Rain</span> <span class=\"song-artist\">Prince</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Drive</span> <span class=\"song-artist\">The Cars</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Don’t Drink the Water</span> <span class=\"song-artist\">Dave Matthews Band</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-23",
+          "html": "Originals",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "List",
+         "props": {
+          "id": "List-24",
+          "items": [
+           {
+            "html": "<span class=\"song-title\">Headline</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">Breathe In Deep</span>"
+           },
+           {
+            "html": "<span class=\"song-title\">How Love Saved My Life</span>"
+           }
+          ],
+          "cls": "setlist"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "He also plays sixties soul and nineties alternative, and you can find more on our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "05-book.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Tony Medina play blues and rock",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/C6M9wwR9DWk?rel=0",
+         "title": "Tony Medina playing a cover of Drive by The Cars",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Drive</span> by The Cars"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/t_s2FavrDew?rel=0",
+         "title": "Tony Medina playing the Freddie King standard Going Down as a duo",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Going Down</span> by Freddie King, as a duo"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/qf4_7lKu3iE?rel=0",
+         "title": "Tony Medina playing a Dave Matthews cover as a duo",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Don’t Drink the Water</span> by Dave Matthews Band, as a duo"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wt2SnYjWxKs?rel=0",
+         "title": "Tony Medina playing his original song Headline",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Headline</span>, one of his own songs"
+        }
+       ],
+       "single": false,
+       "playlist": true
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/medina-marquee.jpg",
+         "alt": "Tony Medina playing an acoustic guitar under string lights, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-patio.jpg",
+         "alt": "Tony Medina seated on cobbles in a hat and waistcoat, a lit patio behind him.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-street.jpg",
+         "alt": "Tony Medina playing an outdoor set at night beside a streetlight.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-portrait.jpg",
+         "alt": "Tony Medina in a hat and waistcoat outside a bar at night.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-glass.jpg",
+         "alt": "Tony Medina holding a drink up to the light in dappled shade.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-inlay.jpg",
+         "alt": "His surname inlaid in abalone along a guitar fretboard.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/medina-soundhole.jpg",
+         "alt": "The soundhole and strings of his acoustic guitar, close up.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "05b-footage.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Tony Medina questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "items": [
+        {
+         "q": "Will it get people dancing?",
+         "a": "Yes, the trio and the four-piece band can both get people dancing."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "When he plays solo, he's on the quiet side. The four-piece band is as loud as you'd expect from a rock band at a good party. He can bring the volume up or down to suit your venue, and if there's a sound limit, just let us know."
+        },
+        {
+         "q": "Does he play originals at a private event?",
+         "a": "Only if you want them. He usually sticks to covers at an event, since people tend to dance to songs they recognize. We can work a few of his own songs in if there's time, and it's worth asking about if your guests are there to listen."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want Tony Medina at your event? Send us the date.",
+       "lede": "We’ll let you know if he’s available and what it would cost."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

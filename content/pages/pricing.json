@@ -1,0 +1,499 @@
+{
+ "root": {
+  "props": {
+   "path": "/pricing/",
+   "title": "Pricing: what a band costs for a private event in Colorado",
+   "description": "In the Denver, Colorado market, a live band can run $2,500 to $8,000. Here's what changes the price. Send us your date and we'll get you a quote.",
+   "titleExact": true,
+   "nav": "pricing",
+   "schemaKind": "pricing"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "live music Pricing",
+       "slab": true,
+       "title": "What live music costs in denver",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "How much does professional music entertainment cost in the Front Range of Colorado? How are quotes put together, and what changes the rates. All right here so you can set a budget before you write to anybody.",
+       "headingText": [
+        {
+         "html": "We're excited to work with your event's needs and can provide quotes quickly. Tell us the date and your plan for the perfect night, and we will come back with a recommendation and price for you."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Live Music Cost Guide",
+         "href": "/guides/live-music-cost-colorado/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "RateTable",
+   "props": {
+    "id": "RateTable-10",
+    "band": "ruled",
+    "anchor": "market",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "colorado market rates",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "We've compiled a Denver-first, price rubric for those clients who are still preparing the budget for their event, sourced from published guides and wedding budget datasets.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-6",
+       "caption": "Published 2026 market prices for live music in Colorado and the US.",
+       "captionCls": "rate-caption",
+       "head": [
+        {
+         "html": "2 hours of live music performance"
+        },
+        {
+         "html": "Market rate"
+        },
+        {
+         "html": "Market"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "trio to a full band with horns",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$2,500 to $8,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "Denver"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "four to six-piece bands, Denver mid-market",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$4,000 to $6,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "Denver"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "A cover or jazz band for a corporate event",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$2,500 to $8,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "United States"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "average budget for a live wedding band",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$2,338 to $2,858",
+           "cls": "num-accent"
+          },
+          {
+           "html": "Colorado"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "What most couples pay for a wedding band",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$3,000 to $8,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "United States"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "A seven to nine piece show band",
+           "tag": "th",
+           "cls": "rate-size",
+           "scope": "row"
+          },
+          {
+           "html": "$7,500 to $17,000",
+           "cls": "num-accent"
+          },
+          {
+           "html": "United States"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Note: Professional live sound represents a significant difference in the range of these quotes. It's included with some acts' prices and not others. Insurance, travel considerations, and other factors can affect the price as well.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Signet provides prices for a specific date on request.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "01b-ratecard.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-16",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-11",
+       "html": "Factors that affect price",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-14",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-12",
+          "html": "<strong>What can raise the price:</strong> A wedding rather than a private party. A Saturday in June, September or October. A holiday weekend, which can run 20 to 30 percent above a standard date in the Colorado market. A venue with a tricky load-in, a long walk to carry the gear in or a late curfew. An event that needs music for the ceremony, cocktails, dinner and dancing. A drive over the mountain passes, plus a night’s lodging for anywhere beyond them.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-13",
+          "html": "<strong>What can lower the price:</strong> An early weeknight date. Fewer hours of performance time. A single set rather than the whole evening. A smaller build for the same music. A venue where the load-in is easy.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01b-ratecard.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-17",
+       "html": "How signet puts together a live entertainment quote",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Most acts in the Denver, Colorado market split their billing into two parts. <br><br>A <strong>call-out</strong> is a flat fee for coming out to your event, however long the performance runs. It handles things like the drive, load-in, setup, sound check, strike, load-out and the production that comes along with all of it (in business parlance, they're the fixed costs). <br><br>Then a rate for performance time (these are like variable cost). That is why the price for an hour of cocktail entertainment is not strictly 1/4th the price of a 4 hour reception.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-19",
+       "html": "When comparing bookings, sound is the line item on a quote worth verifying the closest. With some acts, it's part of the total. With others, it shows up later as its own charge (or the venue is expected to have a system).",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Travel and lodging are separate line items for us. Similarly, high-demand times like holiday weekends add a little extra to the bill.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "The Denver, Colorado market prices for live entertainment bookings are set out in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>, and we've got a corporate version, too that covers the types of entertainment companies book for client dinners, happy hours, and corporate events. Take a look at <a href=\"/blog/what-live-music-costs-corporate-event/\">what live music costs for a corporate event</a> if that’s what you’re planning.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-32",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-30",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-24",
+          "html": "Included for every act",
+          "tag": "h2",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "SpecList",
+         "props": {
+          "id": "SpecList-25",
+          "source": "included",
+          "cols": false
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-26",
+          "html": "Stage lighting and a dedicated engineer are optional add-ons.",
+          "cls": "note"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-27",
+          "html": "Quoted separately",
+          "tag": "h2",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-28",
+          "html": "",
+          "cls": "note"
+         }
+        },
+        {
+         "type": "SpecList",
+         "props": {
+          "id": "SpecList-29",
+          "source": "extras",
+          "cols": false
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-33",
+       "html": "Save money: Booking more than one part of the night",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-34",
+       "html": "Once one of our acts is on site, the drive is made, the sound system is up, and everyone is ready. <br><br>Covering the ceremony or the cocktail hour alongside the main booking is a cheaper way to fill the night than hiring twice.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "How much of the night to cover is your call, and a smaller group early is a great answer as often as a bigger one later. If you would rather bring your own ceremony musician and use us to get people out onto the dance floor later, that's a common approach, too!",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-36",
+       "html": "<strong>Tell us the flow of the evening</strong> when you send the date and we'll reply with availability and costs - maybe a few questions, too.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-multi.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-44",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-39",
+       "html": "Common questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-40",
+       "html": "Below are a few common questions about money and how Signet bills. Everything else, from player substitutions to decibel caps, is available on the <a href=\"/planners/faq/\">full question list</a>, and if you're curious about the wider, Colorado live entertainment market check out those answers in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-41",
+       "items": [
+        {
+         "q": "What does a band cost for a corporate event in Denver?",
+         "a": "In this market, a cover or jazz band for a corporate event can run $2,500 to $8,000, and a four to six piece band (the size the Denver market treats as its mid-tier), runs $4,000 to $6,000. Those are the market's figures. At Signet, we send you prices for the date and event when you enquire with us. Because, for example, mid-day on a Tuesday in September and Fourth of July weekend have significantly different demand."
+        },
+        {
+         "q": "Do you publish your prices?",
+         "a": "We quote each date one-by-one. What's published on our site is a general market-view of what live music costs in Denver, Colorado. Send the date and we'll come back with a recommendation and a price for your night."
+        },
+        {
+         "q": "Do you provide a certificate of insurance?",
+         "a": "Yes, we can, and also name your venue as additional insured, sent in the same email as the contract. The coverage limits match what Colorado venues write into their vendor requirements. Just let us know that's something you need."
+        },
+        {
+         "q": "How far in advance should we book?",
+         "a": "Corporate holiday parties can be decided as far out as August, all the way through October for November, December and January dates. New Year's Eve books earliest of all - sometimes a year or more in advance. Weddings and galas can similarly be booked with more lead time - often 10 to 12 months, and 12 to 18 for a mountain venue or a fall Saturday. If your event is coming up sooner, no worries. Just reach out and we can often make something great work."
+        }
+       ],
+       "schema": true
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-42",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        },
+        {
+         "label": "The other FAQs",
+         "href": "/planners/faq/",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "04-faq.html"
+   }
+  }
+ ]
+}

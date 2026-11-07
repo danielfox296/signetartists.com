@@ -1,0 +1,314 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/vail/",
+   "title": "Live music for Vail corporate retreat evenings",
+   "description": "Planning evening activities for a Vail corporate retreat? We can bring a duo or a quartet, and we'll plan around the pedestrian village and the altitude.",
+   "titleExact": true,
+   "nav": "corporate",
+   "schema": {
+    "service": {
+     "name": "Corporate retreat entertainment in Vail",
+     "serviceType": "Live music for corporate retreats and incentive events",
+     "description": "We bring live music to corporate retreats, incentive events and private celebrations at Vail venues, whether you need one musician or a quartet.",
+     "areaServed": [
+      "Vail"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "In the Colorado mountains",
+       "slab": true,
+       "title": "Live music for corporate retreats in Vail",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The daytime sessions are easy enough to plan, but it’s the closing night in Vail that’s been on your mind. We’d love to help you get people dancing that night, and we can play your welcome reception and dinners, too, with as few as one musician or as many as four.",
+       "headingText": [
+        {
+         "html": "Vail is a favorite for Colorado incentive trips and leadership offsites. With its pedestrian village centers and 8,150 feet of altitude, it takes some extra planning, and we’ll take care of that with you. You can learn more about how we work on our <a href=\"/corporate/retreats/\">corporate retreats page</a>, or browse eight <a href=\"/blog/corporate-retreat-evening-ideas-vail/\">corporate retreat evening ideas in Vail</a>, from the welcome reception to the closing night."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "The look",
+       "title": "Outdoor events in Vail",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s a stage under a tent, the way we might set up on a resort lawn or deck, and a guitarist playing outdoors."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/outdoor.jpg",
+         "alt": "A frame tent on grass with a plywood stage deck under it.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Ballrooms & private dining",
+       "title": "Vail venues.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Six venues host many of the corporate events in Vail, and each one is good for something different."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "The village hotels are a classic choice for a retreat, with a general session during the day and an awards dinner at night. In Vail Village, that means The Sonnenalp and the Four Seasons Resort Vail. The Arrabelle at Vail Square and The Hythe are in Lionshead, and the Grand Hyatt Vail is at the west end of town, a little way from the village core. Their ballrooms have plenty of space for a quartet, and a duo is a lovely fit for their private dining spaces.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Donovan Pavilion is the town's own event venue on Gore Creek, and it’s a great choice if you’d like one open space with your own vendors and your own flow of the evening, rather than a hotel package.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Tejas Singh can start as a duo and finish as a quartet, so you’ll have one band that simply gets bigger as your event goes on. If you just want dinner music, a jazz duo is a sophisticated choice that’s easy to talk over.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-19",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Travel",
+       "title": "Getting a band to Vail",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A few things make a Vail event different from one in Denver."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Vail is up I-70, which is a mountain highway with its share of weather, so we’ll plan the drive around the time your hotel gives us at the loading dock. It’s a longer day for the band than a Denver event, so we’ll talk that through with you.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "A late curfew or a long closing night may mean a night of lodging for the band, and we’ll let you know up front.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "Curious about prices? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> covers the whole Colorado market.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-rates.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-24",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Private celebrations in Vail",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "We’d be happy to play your milestone birthday, anniversary or family gathering at any of these venues. You can see more occasions on our <a href=\"/private-parties/\">private parties page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Staying down the valley? <a href=\"/corporate/retreats/beaver-creek/\">Beaver Creek</a> is just down the road, and we can play there, too, even at the venues where the gear has to travel over snow.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-private.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-25",
+       "eyebrow": "Questions",
+       "title": "Booking a band in Vail",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Need details for your venue? Check out our <a href=\"/planners/mountain/\">mountain corridor page</a> for sound limits and our <a href=\"/planners/technical/\">technical page</a> for stage sizes and power.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "items": [
+        {
+         "q": "How does setup work at a Vail hotel?",
+         "a": "The band comes in through the dock at a scheduled time. Vail Village and Lionshead keep cars out of their cores, so hotels receive vendors at loading docks and move gear by freight elevator. We’ll work out the dock time, the freight elevator, the route to the stage and where the cases go during your event with the venue ahead of time."
+        },
+        {
+         "q": "What power does the band need?",
+         "a": "Depending on its size, the band will usually need one or two power sources that aren’t shared with anything else, and we’ll sort that out with your venue."
+        },
+        {
+         "q": "Does the altitude change the performance?",
+         "a": "It can, a little, and it mostly changes how we plan. At 8,150 feet, singers and horn players have to pace themselves in the thin, dry air, and instruments can go out of tune as the temperature changes. That’s why we plan a longer sound check."
+        },
+        {
+         "q": "How loud can the band be, indoors and out?",
+         "a": "At dinner, the band can stay quiet enough for easy conversation, and on your closing night they can turn it up and get people dancing, up to what the venue allows. You can also have part of your event outdoors, as long as we have a covered, level and dry performance area with power. The town has a reported limit on outdoor sound in the resort villages, and it was reviewing its rules when we checked, so we’ll confirm the current number with your venue. That limit matters more for a late set than it does for dinner."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faq.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-30",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the Vail dates and we'll plan the closing night with you.",
+       "lede": "Our artists come up from Denver, whether you book one musician or a full band, and you’ll have a sound system sized to your venue and a single point of contact."
+      }
+     }
+    ],
+    "_file": "07-close.html"
+   }
+  }
+ ]
+}

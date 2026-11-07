@@ -1,0 +1,92 @@
+{
+ "id": "rene-moffatt",
+ "name": "René Moffatt",
+ "presentation": "face",
+ "status": "listing",
+ "page": "artists/rene-moffatt/",
+ "style": "Original singer-songwriter",
+ "face": "René Moffatt",
+ "material": "Originals and covers",
+ "bucket_tags": [
+  "cocktail",
+  "patio",
+  "specialty",
+  "budget"
+ ],
+ "config_tags": [
+  "solo",
+  "duo",
+  "trio",
+  "quartet"
+ ],
+ "genre_tags": [
+  "singer-songwriter",
+  "americana"
+ ],
+ "vocals": "sung",
+ "from": "solo",
+ "img": "rene-moffatt-card.jpg",
+ "alt": "René Moffatt singing at a microphone with an acoustic guitar, in a hat under warm stage light.",
+ "video": "https://www.youtube-nocookie.com/embed/DEvhVzOZeQg?rel=0",
+ "video_poster": "img/acts/rene-moffatt-live-poster.jpg",
+ "blurb": "It's a special thing to hear a song from the person who wrote it, and that's what you get with René Moffatt. He sings his own songs with an acoustic guitar. His music is folk and Americana, and it fits right in on a playlist with Josh Ritter and The Avett Brothers. You can book him on his own, or he can bring his band, René Moffatt & The Moonshadows, if you'd like a bigger sound.",
+ "seo_title": "René Moffatt: folk singer-songwriter for events in Denver",
+ "meta_description": "René Moffatt plays original folk and Americana songs for private events in Denver and the Colorado mountains. You can book him solo with an acoustic guitar, as a duo or trio, or with his four-piece band. Tell us your date and we'll get back to you with availability and costs.",
+ "identity": [
+  "René is based just outside Denver, and he's made six records, including King of the Mountain and Here and Now Is Home. He's also entered the NPR Tiny Desk Contest every year since 2019. He calls his music heady folk for the open-hearted, and if you like Jeff Tweedy, you'll probably love him.",
+  "On his own, he's a great fit for welcome drinks or a patio party, at a volume people can easily talk over. He also works well for a dinner party or a retreat evening where you want everyone listening to the songs. He's played venues around Denver where people come to listen, like Swallow Hill and the Black Rose Acoustic Society, along with stages at the Denver Botanic Gardens and the Clyfford Still Museum.",
+  "With his band, René Moffatt & The Moonshadows, he plays the same songs with lead guitar, bass and drums. You can watch the full band on a Denver club stage and at the Underground Music Showcase in the video clips below. They've played the Boulder Roots Music Fest as well.",
+  "He usually leads with his own songs. He also plays covers from Willie Nelson to The Beatles and The Cars, so just tell us the balance you'd like and he can plan the setlist around it."
+ ],
+ "ladder": [
+  {
+   "config": "solo",
+   "build": "Voice and acoustic guitar",
+   "bestFor": "Just René and his guitar is perfect for a smaller crowd where people want to sit and listen."
+  },
+  {
+   "config": "duo",
+   "build": "Voice and acoustic guitar, plus lead guitar",
+   "bestFor": "The duo is a good fit for cocktail hours, patios and dinners that are a little too big for one guitar."
+  },
+  {
+   "config": "trio",
+   "build": "Voice and guitar, lead guitar and bass",
+   "bestFor": "Go with the trio if you'd like a fuller sound without drums."
+  },
+  {
+   "config": "quartet",
+   "build": "The trio plus drums, which is René Moffatt & The Moonshadows",
+   "bestFor": "Book the whole band for a park stage, a summer party or a festival-style event."
+  }
+ ],
+ "setlist": {
+  "note": "This is just a sample of his songs, so the setlist at your event may be a little different.",
+  "items": [
+   "Hope For Better Things",
+   "Calendar Year",
+   "Heirloom Winnebago",
+   "Stuck Inside",
+   "Standing In The Shadow Of The Moon",
+   "If You Were Near",
+   "Goodnight, Texas",
+   "Come Of Age",
+   "Halfway Home",
+   "Iron Gates Of Love",
+   "Waterfall",
+   "What If I, What If You",
+   "Blackbird",
+   "Mammas Don't Let Your Babies Grow Up To Be Cowboys",
+   "Drive"
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties",
+  "daytime"
+ ],
+ "entity": {
+  "type": "Person"
+ }
+}

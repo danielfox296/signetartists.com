@@ -1,0 +1,288 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/afro-house-dj/",
+   "title": "Afro house DJ in Denver, with live tabla | Signet Artists",
+   "titleExact": true,
+   "description": "A Denver DJ playing Afro house, deep house, amapiano, techno and electronic music, with live tabla on request, for after-parties, weddings and birthdays.",
+   "nav": "music",
+   "ogImage": "img/afro-house-dj-card.jpg",
+   "ogImageAlt": "A DJ holding headphones to one ear under purple and pink stage light.",
+   "breadcrumb": "Afro House DJ",
+   "schema": {
+    "service": {
+     "name": "Afro house DJ with live tabla",
+     "serviceType": "Afro house, deep house, amapiano, techno and electronic DJ sets, with live tabla on request, for corporate events, weddings and private parties",
+     "description": "A Denver DJ playing Afro house, deep house, amapiano, techno and electronic music, with live Indian classical tabla over the set on request, for conference after-parties, holiday parties, wedding receptions and birthdays across Denver, the Front Range and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "dj"
+     ]
+    },
+    "act": "afro-house-dj",
+    "video": {
+     "name": "Afro house DJ for an after-party: live DJ set",
+     "description": "Here’s the DJ playing a live outdoor set. The DJ plays Afro house, deep house, amapiano, techno and electronic music, and can play live tabla on request.",
+     "uploadDate": "2026-11-04",
+     "duration": "PT2M31S"
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Afro house and amapiano",
+       "slab": true,
+       "title": "An Afro house DJ in Denver, with live tabla over the set.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the point in a house set when the drums lock in and the people standing at the edge of the floor start to move. This DJ plays Afro house, deep house, amapiano (a style of house music built around piano), techno and electronic music, and can sit down at a pair of tabla drums and play them live over the records.",
+       "headingText": [
+        {
+         "html": "This is the act to book when you want people dancing to house music."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=afro-house-dj",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We’ll shape the set around your event, from the styles the DJ plays to whether you want the tabla. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/v0nKiT2_7RE?rel=0",
+       "title": "The Afro house DJ playing a live outdoor set",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "The tabla",
+       "title": "What does live tabla add to a DJ set?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The DJ trained in Indian classical music on the tabla, a pair of hand drums. The drums give your guests a live musician to watch as well as music to dance to, and the set works just as well without them, so just let us know what you’d like."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The DJ has played Denver’s house clubs and club nights in Chicago, San Francisco, San Diego and Hong Kong, and can play a relaxed warm-up set, a high-energy set, or one long set that builds from one to the other.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/after-party/\">Conference after-parties</a>",
+         "text": "House music is a great way to get your conference guests dancing once the program is over, especially if they’ve flown in from all over."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "If your team loves house music, we can book the DJ alone or with the tabla at a <a href=\"/corporate/holiday-party/denver/\">downtown Denver</a> venue."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthdays</a>",
+         "text": "This is a great way to celebrate a birthday if you and your friends love going out to hear Afro house and amapiano, whether you’re at a venue or at a house with space to dance."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Wedding receptions</a>",
+         "text": "If you and your friends love dancing to house music, the DJ can make your reception sound like the clubs you go to."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "We can plan the music around speeches and a program - just share your <a href=\"/planners/run-of-show/\">flow of the evening</a> with us. Need a sense of prices? Check out our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Photos",
+       "title": "The Afro house DJ at work",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/acts/afro-house-dj-decks.jpg",
+         "alt": "A DJ at a pair of Pioneer decks on a club stage, a big monstera plant in the foreground, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/afro-house-dj-portrait.jpg",
+         "alt": "The DJ in sunglasses, a backwards cap and a white T-shirt under a steel canopy.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Afro house DJ questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still curious? We cover a lot more on our <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "schema": true,
+       "items": [
+        {
+         "q": "What does the Afro house DJ play?",
+         "a": "It’s mostly house music, and the DJ also plays techno and mixes in electronic music from around the world."
+        },
+        {
+         "q": "How long does the DJ play?",
+         "a": "The DJ can play anywhere from one hour to four, and we’ll plan any breaks around your program."
+        },
+        {
+         "q": "Does the DJ play outside Denver?",
+         "a": "Yes, the DJ plays all across Colorado, so just let us know where your event is."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want an Afro house DJ and a live drummer in one person? Tell us your date and we’ll check availability.",
+       "lede": "We’ll match the sound system to your venue, and you’ll have one person to call from start to finish."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

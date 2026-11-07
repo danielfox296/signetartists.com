@@ -1,0 +1,311 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/holiday-party/colorado-springs/",
+   "title": "Corporate holiday party music in Colorado Springs",
+   "description": "We book live music for Colorado Springs corporate holiday parties, from a solo musician to a quartet, for resort ballrooms and downtown dinners alike.",
+   "titleExact": true,
+   "nav": "corporate",
+   "breadcrumb": "Colorado Springs",
+   "schema": {
+    "service": {
+     "name": "Corporate holiday party entertainment in Colorado Springs",
+     "serviceType": "Live music and DJ for corporate holiday parties",
+     "description": "Signet Artists books duos, trios, quartets and DJs for Colorado Springs corporate holiday parties.",
+     "areaServed": [
+      "Colorado Springs"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    }
+   },
+   "schemaArticle": "on",
+   "published": "2026-09-05"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Live music & DJs",
+       "slab": true,
+       "title": "Corporate holiday parties in Colorado Springs, November and December.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know that moment at the company party when the thank-yous are done and nobody’s sure what happens next. We can help with that, from a duo for dinner to a quartet that gets people dancing, at a resort ballroom or anywhere else in the Springs.",
+       "headingText": [
+        {
+         "html": "Let us know what you’re picturing, and we’ll suggest the live entertainment that fits your company and your venue."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Photos",
+       "title": "A look at our live entertainment.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s a snare drum set up for a band, and Tony Medina, one of our Featured Artists, playing acoustic guitar under string lights."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-5",
+       "images": [
+        {
+         "src": "/img/headliners.jpg",
+         "alt": "A snare drum with sticks laid across it and a close microphone.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/medina-marquee.jpg",
+         "alt": "Tony Medina playing an acoustic guitar under string lights, black and white.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Sizes",
+       "title": "What size band do you need for a Springs holiday party?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A duo is a great choice for a company dinner, at a volume where everyone can keep talking. A quartet is the one to book when you want the whole ballroom dancing."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "Many Springs company parties take place in a ballroom, with a few remarks from the stage and dancing once they’re done. You can book both, too, with the duo playing through dinner and the quartet taking over when the program ends.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Want one act for the whole party? Tejas Singh can start as a duo at dinner and grow to a quartet for the dancing, so you’ll hear the same singer all night, and it’s all on one contract.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Curious what any of these would cost? Just send us your date and we’ll let you know.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-rates.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Where the parties happen",
+       "title": "Colorado Springs holiday party venues",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The right live entertainment often depends on your venue, and the Springs has a few great kinds to choose from."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "Resort ballrooms",
+         "text": "The Broadmoor, Garden of the Gods Resort and Club, and Cheyenne Mountain Resort host many of the area’s biggest company parties. A quartet is often the right size for a ballroom this big, and it can play softly through dinner before getting people dancing."
+        },
+        {
+         "term": "Downtown venues",
+         "text": "The Mining Exchange and the Antlers are great choices for a company dinner or a private floor, and they’re an easy walk if your office is downtown. A duo or a trio is a great fit for these, and either one can play quietly through dinner."
+        },
+        {
+         "term": "The restaurant buyout",
+         "text": "When the whole company is sitting down together, we’ll keep the music under the conversation all night. A solo musician or a duo is the simplest way for a small company to celebrate the holidays."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "Bringing the team to one of these resorts for a retreat? Learn more about live music for <a href=\"/corporate/retreats/\">corporate retreats</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-23",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Booking",
+       "title": "Checking a date in the Springs.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Tell us the date and the venue and we’ll check the booking calendar. If your party is coming up sooner, no worries. Just reach out and we can often make something great work.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Planning a ballroom party with remarks or awards? Check out our <a href=\"/planners/run-of-show/\">run of show planner</a> to see how the music can work around them. Want to see the full list of dates? Check out our <a href=\"/corporate/holiday-party/\">corporate holiday party page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-clock.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-27",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-24",
+       "eyebrow": "FAQ",
+       "title": "Colorado Springs booking questions.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-25",
+       "items": [
+        {
+         "q": "Can you clear a defense contractor's vendor process?",
+         "a": "Yes. Many companies in the Springs work with purchase orders and vendor onboarding, from defense contractors and firms around the Air Force Academy and the bases to national nonprofits based in town. We can be set up as a vendor and quote against a PO, and we can send whatever paperwork your finance team needs. Just let us know what the process looks like."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "That’s up to you. We can stay soft enough for easy conversation or play like a full dance band, as loud as the ballroom allows, and we’re happy to turn it up or down when you ask."
+        },
+        {
+         "q": "What do travel and setup look like?",
+         "a": "Colorado Springs is a straightforward drive down the Front Range for us, so there’s no need to put anyone up overnight. Setup can take 45 to 90 minutes, and it mostly comes down to how big the band is. We’ll bring a sound system that’s right for your venue, and we’ll work out the loading dock and unloading with them ahead of time. Signet Artists is based in Denver and books company parties all over Colorado Springs."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-28",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us your date and we’ll help you plan a great holiday party in the Springs.",
+       "lede": "We can bring anything from a solo musician to a full band, and you’ll have a personal point of contact for the whole event."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

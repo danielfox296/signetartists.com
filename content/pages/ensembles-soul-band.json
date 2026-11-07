@@ -1,0 +1,289 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/soul-band/",
+   "title": "Soul and R&B band for Denver parties, galas and weddings",
+   "description": "A soul and R&B band for Denver holiday parties, galas, after-parties and wedding receptions: Stevie Wonder, Aretha Franklin, Al Green and the Motown songbook.",
+   "titleExact": true,
+   "ogImage": "img/soul-band-card.jpg",
+   "nav": "music",
+   "breadcrumb": "Soul and R&B band",
+   "schema": {
+    "service": {
+     "name": "Soul and R&B band",
+     "serviceType": "Soul and R&B cover band for company holiday parties, galas, after-parties and wedding receptions",
+     "description": "A soul and R&B band singing Stevie Wonder, Aretha Franklin, Al Green, Bill Withers, Marvin Gaye and the Motown songbook. You can book it as a quartet or a five to six piece with a horn for company holiday parties, galas, after-parties, milestone birthdays and wedding receptions across Denver, the Front Range and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "soul-rnb"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Aretha, Stevie and Motown",
+       "slab": true,
+       "title": "A soul and R&amp;B band for holiday parties, galas and wedding receptions.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know how a party changes when Signed, Sealed, Delivered comes on, and the people who swore they don’t dance are suddenly out there? Our soul band brings that to your event, with a singer who can carry an Aretha song, a horn if you’d like one, and a band behind them that knows how to get people dancing.",
+       "headingText": [
+        {
+         "html": "It’s a great choice for a company holiday party, a gala after-party, a wedding reception or a 50th birthday."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=soul-rnb",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can build the band around your event, from how many musicians you’d like to the songs and what they wear. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/soul-band-card.jpg",
+        "alt": "A black 45 with a rose label on a cream field, drawn flat, with the words soul and R&B band beside it.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a soul and R&amp;B band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The song list can include anything from Sam Cooke and Otis Redding to Aretha Franklin, Al Green and Bill Withers, along with Motown hits by Stevie Wonder, Marvin Gaye and The Temptations. The band can play newer soul from Amy Winehouse and Leon Bridges, too."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Think songs like Respect, Let’s Stay Together and Lean on Me, which just about everyone can sing along to. The band can stretch a song out for as long as people are dancing. Want soul and funk without a singer? Take a look at our <a href=\"/ensembles/funk-band/\">funk band</a>. Looking for a particular song? Browse our <a href=\"/repertoire/\">full song list</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Sizes",
+       "title": "A soul quartet or a full band with a horn",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-12",
+       "rows": [
+        {
+         "term": "The quartet",
+         "text": "The quartet is a singer, keys, bass and drums, and the keys cover the horn and guitar parts. This size works well for a company party of eighty to two hundred guests or a wedding reception in a restaurant."
+        },
+        {
+         "term": "Five to six piece",
+         "text": "This band adds guitar, a horn and a second voice to the quartet, and it’s great for a ballroom or a crowd of more than two hundred. With a horn on the big choruses and guitar alongside the keys, this is the size that sounds most like the records."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Want music before the band starts? A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> or our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> can play the cocktail hour, and a <a href=\"/ensembles/dj/\">DJ</a> can take over when the band is done, all on the same contract.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-builds.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-16",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-17",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "This is a great band for a company party in a hotel ballroom, since these songs tend to go over well with every generation on your staff. Still deciding? Take a look at our <a href=\"/blog/office-holiday-party-ideas-denver/\">office holiday party ideas</a>."
+        },
+        {
+         "term": "<a href=\"/corporate/galas-and-awards/\">Galas and award nights</a>",
+         "text": "A soul band is a great way to get people dancing once the last award has been given. The band can play your <a href=\"/corporate/after-party/\">after-party</a> or the second half of the gala itself."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Wedding receptions</a>",
+         "text": "Couples book this band when they want live music for the dancing at their reception, and we can bring in music for the ceremony, too."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Milestone birthdays and anniversaries</a>",
+         "text": "A fiftieth or sixtieth birthday is a great fit if your crowd grew up on these records, whether you’re at a club or a restaurant buyout. For an <a href=\"/private-parties/anniversary-party/\">anniversary</a>, we can work your song in, too."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     }
+    ],
+    "_file": "04-occasions.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-20",
+       "html": "Soul and R&amp;B band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "Wondering about something that isn’t here, like substitutions? Our <a href=\"/planners/faq/\">full list of questions</a> should help.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-22",
+       "items": [
+        {
+         "q": "How loud is a soul band?",
+         "a": "During dinner, the band can play ballads softly enough that your guests can talk comfortably at their tables. When it’s time to dance, they’ll play like a dance band, loud enough to reach the back of a ballroom. The band will adjust the volume to fit your space and your crowd, and if your venue has a sound limit, just let us know and we’ll work it out with you."
+        },
+        {
+         "q": "Can the band work around speeches and awards?",
+         "a": "Yes. We’ll plan the music around your program with you, so the band can stop in time for the speeches and thank-yous. If you think your event might run long, let us know that, too."
+        },
+        {
+         "q": "Can the band learn our first dance?",
+         "a": "Yes. Let us know the song when you book and we can usually learn it (we usually need a few weeks before a booking to learn new material)."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-25",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a soul band for your event?",
+       "lede": "Send us your date and a few details, and we’ll let you know if the band is available and what it costs."
+      }
+     }
+    ],
+    "_file": "06-faqs.html"
+   }
+  }
+ ]
+}

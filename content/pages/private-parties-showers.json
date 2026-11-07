@@ -1,0 +1,307 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/showers/",
+   "title": "Live music for a baby shower or bridal shower",
+   "description": "Book a guitarist, a jazz duo or a singer for a baby shower or bridal shower in Denver, at home or in a garden, when you want some entertainment besides games.",
+   "titleExact": true,
+   "ogImage": "img/acts/solo-bridge.jpg",
+   "ogImageAlt": "A singer and guitarist playing on a bridge over a river.",
+   "breadcrumb": "Baby and bridal showers",
+   "schema": {
+    "service": {
+     "name": "Live music for baby showers and bridal showers",
+     "serviceType": "A guitarist, a Spanish guitarist, a singer with a guitar or a jazz duo for baby showers, bridal showers and couples showers",
+     "description": "We play baby showers and bridal showers across Denver and the Front Range. One guitarist or a jazz duo can play standards through the meal at home, in a garden or in a private dining space, at a level your guests can talk over, and one singer and guitarist can take the guest of honor's requests. We can usually learn a special song for the day, too, and you'll have sound that suits your space and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo"
+     ]
+    },
+    "videos": [
+     {
+      "id": "hIPHFuxl9YI",
+      "name": "Solo jazz guitar for a baby shower or bridal shower: Autumn Leaves",
+      "description": "A solo jazz guitarist plays Autumn Leaves, and one guitar is a popular choice for a shower.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M14S"
+     },
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a bridal shower: Can't Help Falling in Love",
+      "description": "Dirty Flamenco plays Can't Help Falling in Love on Spanish guitar, a song hosts often request for a bridal shower.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver shower entertainment",
+       "slab": true,
+       "title": "Live music for a baby shower or a bridal shower.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "There’s usually a point at a shower when everyone’s talking at once and the next game can wait. One guitarist or a singer with a guitar makes a lovely addition, and it’s an easy way to give your shower something special besides the games.",
+       "headingText": [
+        {
+         "html": "Want to see what else we do? Learn more about our <a href=\"/private-parties/\">private parties</a> and <a href=\"/daytime/\">daytime events</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Video clips of a jazz guitarist and a Spanish guitarist.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "One jazz guitar is the size many showers start with, and you can hear it here on Autumn Leaves. Can’t Help Falling in Love on Spanish guitar is the kind of song hosts often request for a bridal shower."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+         "title": "One jazz guitar playing Autumn Leaves at a dinner",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Dirty Flamenco playing Can't Help Falling in Love on Spanish guitar",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Types of showers",
+       "title": "Music for baby showers, bridal showers and couples showers.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The baby shower",
+         "text": "A baby shower is often an afternoon at home or in a garden, with family and friends together. One guitarist can play through the meal, and we can add a song for the mother-to-be if there’s one she’d love to hear."
+        },
+        {
+         "term": "The bridal shower",
+         "text": "A guitarist or a jazz duo can play standards through lunch. A singer can play the couple’s song if you’d like. We can also bring the same jazz duo back for the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a> on the wedding day, and it can all go on one contract."
+        },
+        {
+         "term": "The couples shower",
+         "text": "A couples shower can happen in the evening on a patio, with both partners and their friends invited, so it feels more like a small party than a lunch. A singer with a guitar or a duo is a great fit here, just like at a <a href=\"/private-parties/backyard-party/\">backyard party</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-who-books.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "What we can bring",
+       "title": "Shower entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Showers tend to happen around a table, so we like music that fits in a corner and stays soft enough for your guests to keep talking."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "rows": [
+        {
+         "term": "A guitarist for the meal",
+         "text": "A jazz guitarist or a Spanish guitarist can play through lunch at home or in a private dining space. Our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays jazz standards, and if you’d prefer Spanish guitar, we have a solo <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> as well as the trio <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a>."
+        },
+        {
+         "term": "A singer taking requests",
+         "text": "One voice and a guitar can play the songs your guests ask for. A <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> from our roster can do this, and <a href=\"/artists/tejas-singh/\">Tejas Singh</a> builds songs live with a looper (a pedal that repeats what he plays), with a bass player alongside him."
+        },
+        {
+         "term": "A song for the guest of honor",
+         "text": "It might be the couple’s song, a lullaby or the song her mother danced to, and we can usually learn one song for the day and play it as a <a href=\"/private-parties/proposals/\">surprise song</a>."
+        },
+        {
+         "term": "A jazz duo for a bigger shower, or a brunch",
+         "text": "Upright bass and guitar can fill out a bigger shower in a garden, where one guitar might get lost, and restaurants book the same duo for a Sunday <a href=\"/daytime/brunch/\">brunch</a>. Take a look at our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "To see what one guitarist or a duo costs in Colorado, check out our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Questions",
+       "title": "What hosts ask about shower music.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-20",
+       "items": [
+        {
+         "q": "Can you play live music at a baby shower?",
+         "a": "Yes. You can book it through us here at Signet Artists in Denver."
+        },
+        {
+         "q": "How loud is it, and how much space does it need?",
+         "a": "It’s usually about as loud as the conversation at the table, so everyone can hear each other easily. One guitarist needs about 6 by 4 feet and one electrical circuit, plus about 45 minutes to set up, and a duo needs about 8 by 6. Either one fits in the corner of a dining space or under cover in a garden. A guitarist or a duo can play for 45 to 60 minutes at a time, and we can keep music going during the breaks. If the venue asks for a certificate of insurance, just let us know."
+        },
+        {
+         "q": "Can the music work outdoors in a garden?",
+         "a": "Yes. We’ll just want a covered spot out of direct sun, with power nearby. If there's no outlet nearby, a guitarist can play through a battery-powered sound system."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-23",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date, the space and roughly how many people are coming.",
+       "lede": "We can bring one guitarist or a jazz duo with sound that’s right for your space, and one personal contact will look after you for the day."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "We’ll reply with a recommendation and a price for your shower. Want a wider view of what live music costs in the Denver, Colorado market? Take a look at our <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

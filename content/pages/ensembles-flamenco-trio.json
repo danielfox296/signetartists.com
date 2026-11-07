@@ -1,0 +1,476 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/flamenco-trio/",
+   "title": "Spanish guitar for private events in Denver: Dirty Flamenco",
+   "description": "Spanish guitar for dinner parties, birthdays and corporate dinners in Denver. Dirty Flamenco plays real flamenco as a trio, and you can add a dancer too.",
+   "titleExact": true,
+   "ogImage": "img/flamenco-card.jpg",
+   "ogImageAlt": "A Spanish guitarist playing in black and white.",
+   "nav": "music",
+   "breadcrumb": "Dirty Flamenco",
+   "indexLabel": "Dirty Flamenco, the trio",
+   "schema": {
+    "service": {
+     "name": "Spanish guitar and flamenco for private events",
+     "serviceType": "Spanish guitar and flamenco trio for dinner parties, milestone birthdays, corporate dinners and weddings",
+     "description": "Dirty Flamenco, fronted by Gary Meyers, is a flamenco trio that plays the traditional forms of flamenco and Spanish guitar for private events across Denver and the Colorado mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "trio",
+      "quartet"
+     ]
+    },
+    "act": "dirty-flamenco",
+    "video": {
+     "name": "Dirty Flamenco, live",
+     "description": "A minute of Dirty Flamenco playing live at a private event: flamenco guitar, bass and percussion.",
+     "uploadDate": "2026-09-20",
+     "duration": "PT1M5S"
+    },
+    "videos": [
+     {
+      "id": "klpdQ4wtXkc",
+      "name": "Spanish guitar for a wedding ceremony: Malaguena, Dirty Flamenco",
+      "description": "Gary Meyers plays a Malagueña on solo Spanish guitar, live.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M2S"
+     },
+     {
+      "id": "IGww0fFkjyg",
+      "name": "Flamenco trio for a private party: rumba, Dirty Flamenco",
+      "description": "Guitar, bass and percussion play a rumba, a lively, danceable style of flamenco.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M31S"
+     },
+     {
+      "id": "Npuomaienyo",
+      "name": "Spanish guitar for a dinner party: farruca, Dirty Flamenco",
+      "description": "Gary Meyers plays a farruca, a slow flamenco form, on solo guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT3M49S"
+     },
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a wedding ceremony: Can't Help Falling in Love",
+      "description": "Gary Meyers plays Can't Help Falling in Love on flamenco guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     },
+     {
+      "id": "4DMf0D47_N0",
+      "name": "Three Spanish guitars for a corporate event: Entre dos Aguas",
+      "description": "Three flamenco guitars take turns playing Entre dos Aguas.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT34S"
+     },
+     {
+      "id": "wEhN63qX0RA",
+      "name": "Flamenco guitar for a cocktail hour: tangos, Dirty Flamenco",
+      "description": "Flamenco tangos are quick and bright, and Gary Meyers plays them here on guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT39S"
+     },
+     {
+      "id": "CXqYXJGUuRc",
+      "name": "Spanish guitar for a private party: the Sabicas verdiales",
+      "description": "Gary Meyers plays a piece by Sabicas, one of the great flamenco guitarists.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT48S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Flamenco trio",
+       "slab": true,
+       "title": "Spanish guitar for private events, played by Dirty Flamenco.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know how it feels when a flamenco guitarist really gets going, and you can't take your eyes off those hands? Dirty Flamenco is a flamenco trio led by guitarist Gary Meyers, with bass and cajón (a box drum). The trio can play quietly through cocktails and dinner, and we can plan a featured performance for the moment you'd like everyone to stop and watch.",
+       "headingText": [
+        {
+         "html": "Dirty Flamenco is a great pick for dinner parties, milestone birthdays, member events and corporate dinners. Prefer one musician? Check out our <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a>, who's a lovely fit for a ceremony or a cocktail hour."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=dirty-flamenco",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "We can plan the music around your event, including the songs, whether you'd like a dancer and what the trio wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "video",
+       "src": "/media/dirty-flamenco-2.mp4",
+       "title": "Dirty Flamenco performing",
+       "poster": "/media/dirty-flamenco-2-poster.jpg"
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Featured performance",
+       "title": "How does a flamenco trio fit into an event?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-10",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-8",
+          "html": "The trio can play through your whole event, and the featured performance is when they really let loose. Just let us know where you'd like it in the flow of the evening, and our <a href=\"/planners/run-of-show/\">run of show guide</a> can help you plan it.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-9",
+          "html": "The trio can also play slower or livelier to suit your event.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "02-setpiece.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Video Clips",
+       "title": "Watch Dirty Flamenco play live",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here's the trio playing live, along with a few clips of Gary Meyers on guitar. You'll hear a Malagueña, a rumba, a farruca, tangos, a piece by the flamenco guitarist Sabicas, Can’t Help Falling in Love and three guitars on Entre dos Aguas."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-14",
+       "videos": [
+        {
+         "kind": "video",
+         "src": "/media/dirty-flamenco.mp4",
+         "title": "Dirty Flamenco performing at a private event",
+         "poster": "/media/dirty-flamenco-poster.jpg"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/klpdQ4wtXkc?rel=0",
+         "title": "Gary Meyers playing Malagueña live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/IGww0fFkjyg?rel=0",
+         "title": "Gary Meyers playing a rumba flamenca",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Npuomaienyo?rel=0",
+         "title": "Gary Meyers playing a farruca live",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Gary Meyers playing Can't Help Falling in Love on flamenco guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/4DMf0D47_N0?rel=0",
+         "title": "Three flamenco guitars on Entre dos Aguas",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wEhN63qX0RA?rel=0",
+         "title": "Gary Meyers playing tangos on flamenco guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/CXqYXJGUuRc?rel=0",
+         "title": "Gary Meyers playing the Sabicas verdiales",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-15",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-colonnade.jpg",
+         "alt": "Gary Meyers playing flamenco guitar under a colonnade.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-live.jpg",
+         "alt": "Gary Meyers playing a seated set on a venue stage.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-stone.jpg",
+         "alt": "Gary Meyers playing against a stone wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-steps.jpg",
+         "alt": "Gary Meyers seated on brick steps with his flamenco guitar.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-suit.jpg",
+         "alt": "Gary Meyers in a suit with his guitar on a garden wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/flamenco-window.jpg",
+         "alt": "Gary Meyers playing beneath a shuttered window, black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "02b-footage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-19",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Member and association events</a>",
+         "text": "Flamenco is a great way to give a member or association event some color and a sense of occasion."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Corporate dinners</a>",
+         "text": "A short flamenco performance can give a corporate dinner a high point, and we'll plan it around your program."
+        },
+        {
+         "term": "The dinner party at home",
+         "text": "A flamenco trio can turn a dinner at home into a real occasion, indoors or out in the backyard. It's one of the best fits for the trio, too."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">The milestone birthday</a>",
+         "text": "The trio can play a fiftieth or sixtieth birthday, an anniversary or a retirement party, in <a href=\"/private-parties/denver/\">Denver</a> or up in the mountains. The music gives the party a centerpiece, so the guest of honor can just enjoy it."
+        },
+        {
+         "term": "<a href=\"/weddings/ceremony/\">The wedding ceremony and cocktail hour</a>",
+         "text": "The trio can play your prelude, your processional and your recessional, and then keep the flamenco going through the <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Curious what live music costs in Colorado? Our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a> gives a general view. Looking for covers, too? Browse our full <a href=\"/repertoire/\">song list</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-occasions.html"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-24",
+    "act": "dirty-flamenco",
+    "title": "Configurations",
+    "note": "Not sure whether you want the trio on its own or with a dancer? Just tell us about your event and we'll help you decide.",
+    "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-26",
+    "act": "dirty-flamenco",
+    "title": "A sample of the song list",
+    "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-27",
+       "html": "Flamenco booking questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Got another question? You'll find more in our <a href=\"/planners/faq/\">full FAQ</a>, or you can just ask us.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-29",
+       "items": [
+        {
+         "q": "Does Dirty Flamenco play traditional flamenco or Spanish guitar?",
+         "a": "It's traditional flamenco first, and the trio plays covers too. Spanish guitar can also mean familiar songs with a Spanish flavor, and that's closer to what our solo Spanish guitarist plays. You can book Dirty Flamenco through Signet Artists in Denver."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "During dinner, the trio can keep things soft enough for your guests to carry on talking. The featured performance will be louder, since that's the part you'll want everyone to watch. The trio can adjust to the venue and your crowd. If your venue has a sound limit, just let us know and they'll play within it."
+        },
+        {
+         "q": "Is Spanish guitar right for a wedding ceremony?",
+         "a": "Yes. It's a beautiful sound for a wedding ceremony, and the trio can move between Spanish pieces and the songs you ask for."
+        },
+        {
+         "q": "Can we add a dancer?",
+         "a": "Yes. The dancer becomes the star of the featured performance. Just let us know when you send us the date."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-34",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-32",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want Dirty Flamenco at your event? Send us the date and we'll see if they're free.",
+       "lede": "We'll size the sound to your venue, and you'll have a single point of contact from start to finish."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

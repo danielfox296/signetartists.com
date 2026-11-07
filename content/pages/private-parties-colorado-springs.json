@@ -1,0 +1,369 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/colorado-springs/",
+   "title": "Live music for private parties in Colorado Springs",
+   "description": "Book live music for your Colorado Springs party, wedding weekend or milestone, with anything from one musician to a trio.",
+   "titleExact": true,
+   "nav": "private",
+   "breadcrumb": "Colorado Springs",
+   "schema": {
+    "service": {
+     "name": "Private party entertainment in Colorado Springs",
+     "serviceType": "Live music for private parties, wedding weekends and milestone celebrations",
+     "description": "We book an acoustic duo, a solo guitarist or a trio for Colorado Springs private parties, wedding weekend dinners and milestone celebrations, at resorts, at clubs and at home.",
+     "areaServed": [
+      "Colorado Springs"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Milestones, anniversaries & wedding weekends",
+       "slab": true,
+       "title": "Live music for a Colorado Springs private party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know that part of the evening when the sun slips behind Pikes Peak and nobody’s ready to go inside? A duo is a lovely choice for that time of day, and it works just as well indoors. They’ll play covers your guests know, quietly enough that everyone can keep talking.",
+       "headingText": [
+        {
+         "html": "We play <a href=\"/private-parties/\">private parties</a> all over The Springs, from club celebrations to evenings at home."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Photos",
+       "title": "Live bands for a Colorado Springs party",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Tony Medina’s band on stage and Dirty Flamenco playing live. One gets people dancing, and the other makes an amazing centerpiece for your party."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-7",
+       "images": [
+        {
+         "src": "/img/acts/medina-band.jpg",
+         "alt": "Tony Medina and three other musicians on a stage lit with teal neon.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/flamenco-live.jpg",
+         "alt": "Gary Meyers playing a seated set on a venue stage.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-20",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Solo, duo or trio",
+       "title": "Ensemble sizes for a Colorado Springs party.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A duo sounds great from anywhere in your venue, and the two musicians don’t take up much space."
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-17",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-11",
+          "html": "A solo player",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-12",
+          "html": "One voice and a guitar is a lovely choice for a small dinner or an outdoor afternoon.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-13",
+          "html": "An acoustic duo",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-14",
+          "html": "It’s the size we book most often in Colorado Springs. You can choose voice and guitar if you’d like songs your guests can sing along to, or guitar and upright bass if you’d like to keep it instrumental through dinner.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-15",
+          "html": "A trio",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-16",
+          "html": "If you’re planning on dancing, a trio can get people moving, and you won’t have to find a stage for it.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Learn more about our <a href=\"/ensembles/acoustic-duo/\">acoustic duo and trio</a>, including the songs they play.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-21",
+       "eyebrow": "Where we play",
+       "title": "Private party venues in Colorado Springs",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-22",
+       "html": "Private celebrations in The Springs tend to happen at a handful of great places. Garden of the Gods Resort and Club and Cheyenne Mountain Resort are popular for family gatherings and milestone weekends, and both have lovely terraces for drinks before dinner. The Broadmoor is on a bigger scale, and it hosts plenty of large events. Downtown, The Mining Exchange and The Antlers work well if you’d like your guests to be able to walk over from their hotel.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "In our experience, weddings are an even bigger part of the event calendar in The Springs than in Denver, and a wedding weekend comes with plenty of parties, too. A duo is an excellent choice for the Friday welcome party, the rehearsal dinner or the Sunday brunch. Planning the wedding day itself? Check out <a href=\"/weddings/colorado-springs/\">live music for Colorado Springs weddings</a>, from the ceremony to the dance floor.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "A party at home is often even easier for us to plan. You usually won’t need a stage. Just tell us the address and which door to use, and we’ll plan how to bring in the gear ahead of time.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-venues.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-31",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "Altitude & weather",
+       "title": "Planning an outdoor party in Colorado Springs",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Colorado Springs sits at about 6,035 feet, and guests from sea level may notice it, but it doesn’t change anything for our musicians. The bigger thing to plan for in The Springs is the weather. Wind can come off the range, and a terrace can get about fifteen degrees cooler as the sun goes down, so we’ll work out a plan with you ahead of time for moving indoors.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "We also play private parties in <a href=\"/private-parties/denver/\">Denver</a> and <a href=\"/private-parties/boulder/\">Boulder</a>, and if you’re planning a company party in The Springs, take a look at our <a href=\"/corporate/holiday-party/colorado-springs/\">Colorado Springs holiday party page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "04-logistics.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-32",
+       "eyebrow": "Questions",
+       "title": "Planning live music in Colorado Springs",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-33",
+       "html": "Want the details on stage sizes and power? Check out our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-34",
+       "items": [
+        {
+         "q": "Do your musicians travel from Denver to Colorado Springs?",
+         "a": "Yes, Signet Artists is based in Denver, and our musicians are happy to make the drive down I-25. The band can usually drive home the same night, so you won’t need to think about lodging. Wondering what live music costs along the Front Range? Take a look at our <a href=\"/guides/live-music-cost-colorado/\">Live Music Cost Guide</a>."
+        },
+        {
+         "q": "Can a band play outdoors on a Colorado Springs terrace?",
+         "a": "Yes, as long as the spot is covered, level and dry and there’s power nearby. If the weather starts to turn, we’ll talk with you early about moving the music inside."
+        },
+        {
+         "q": "What does a band need to set up in Colorado Springs?",
+         "a": "A solo musician can usually fit in about 6 by 4 feet, a duo in a corner of about 8 by 6 and a trio in about 12 by 8. A duo will usually need one outlet that isn’t sharing power with anything else. Setup can take 45 to 60 minutes. If a club or resort asks for a certificate of insurance, just let us know."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the Colorado Springs venue, and we'll recommend the size.",
+       "lede": "Whatever you choose, from a solo musician to a full band, you’ll have a personal point of contact for the event."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

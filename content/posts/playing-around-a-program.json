@@ -1,0 +1,278 @@
+{
+ "root": {
+  "props": {
+   "title": "How a live band works around a corporate program",
+   "slug": "playing-around-a-program",
+   "eyebrow": "CORPORATE",
+   "parent": "corporate/galas-and-awards/",
+   "dek": "A gala usually follows one document that puts everything in a fixed order. Here's what the band does around remarks, an award, an auction and a video package, and who gives the cue for each one.",
+   "date": "2026-08-05",
+   "last_updated": "2026-08-18",
+   "author": {
+    "name": "Signet Artists"
+   },
+   "meta_description": "Here's how a live band works around a corporate program, including remarks, award walk-ons, auctions and video packages, and who gives each cue.",
+   "hero": {
+    "src": "/img/unsplash/photo-1630300727308-fe49b6ae8a62.jpg",
+    "alt": "A place setting with a printed dinner menu on a gold-rimmed plate."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "KeyTakeaways",
+   "props": {
+    "id": "KeyTakeaways-1",
+    "items": [
+     {
+      "text": "Most corporate events follow a run of show, the document that lists everything in order. We plan the band's time around that document, just as your caterer and AV team plan theirs."
+     },
+     {
+      "text": "We aim to end the music before the speaker reaches the microphone, so nobody is left at the side of the stage waiting for a song to finish."
+     },
+     {
+      "text": "Each moment in the program needs one person who gives the cue, and you'll want to settle on that person at sound check."
+     },
+     {
+      "text": "It's best to decide the dinner volume ahead of time and write it into the run of show."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-2",
+    "html": "<p>A wedding reception has a structure most of the guests already know.\nPeople can feel what comes next even when they haven&rsquo;t seen the timeline.</p>\n<p>A gala doesn&rsquo;t work that way. There&rsquo;s a document, usually called the\nrun of show, and it exists because a lot of things have to happen in a\nspecific order in front of a crowd that&rsquo;s also eating. Your chief executive may speak, an award may go out to several recipients, a video may play and an auctioneer may work the crowd. Somewhere in there, the\ndancing is supposed to start.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-3",
+    "text": "The band works from the run of show"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-4",
+    "html": "<p>We plan the music around the run of show, and we give the most attention to the transitions, because that&rsquo;s where an event is most likely to go wrong.</p>\n<p> The bandleader will know when the award presentation is coming, for instance, and can plan the songs before it to finish in time. If the program runs behind, whoever has the run of show can just tell the bandleader.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-5",
+    "text": "Remarks"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-6",
+    "html": "<p>We want the music to end before the speaker reaches the microphone. That may sound like a small thing, but nobody wants a speaker waiting at the side of the stage, in front of everybody, for the band to finish a song.</p>\n<p>So the band will end the song early, which gives the speaker a quiet walk to the microphone. Then there&rsquo;s silence through the remarks. The music comes back when the applause starts, and the band can hear that cue without anybody signaling it.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-7",
+    "text": "Music for an award presentation"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-8",
+    "html": "<p>An award presentation is a series of short musical moments rather than one long one. Each recipient gets a short piece of music to walk up to, and the band ends it cleanly during the applause.</p>\n<p>To make this work, we&rsquo;ll settle at sound check on one person who signals the next recipient. Usually that&rsquo;s the emcee. Occasionally\nit&rsquo;s whoever is running the slides, because the name on the screen changes\nbefore the recipient gets up. </p>"
+   }
+  },
+  {
+   "type": "ComparisonTable",
+   "props": {
+    "id": "ComparisonTable-9",
+    "title": "Who gives each cue",
+    "columns": [
+     {
+      "text": "Moment"
+     },
+     {
+      "text": "What the band does"
+     },
+     {
+      "text": "Who gives the cue"
+     }
+    ],
+    "rows": [
+     {
+      "cells": [
+       {
+        "text": "Dinner"
+       },
+       {
+        "text": "Instrumental music, quiet enough for easy conversation at the tables"
+       },
+       {
+        "text": "The bandleader, following the run of show"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Remarks"
+       },
+       {
+        "text": "Ends the song before the speaker walks up, then stays silent"
+       },
+       {
+        "text": "Whoever holds the run of show"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Award walk-on"
+       },
+       {
+        "text": "A short piece of music for each recipient, ending during the applause"
+       },
+       {
+        "text": "The emcee, decided at sound check"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Auction"
+       },
+       {
+        "text": "Silent during the bidding, then music when the hammer falls"
+       },
+       {
+        "text": "Auctioneer"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Video package"
+       },
+       {
+        "text": "The band stops playing and the house sound system takes over"
+       },
+       {
+        "text": "The AV vendor, decided before the doors open"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "Dancing"
+       },
+       {
+        "text": "Full volume, with the bandleader reading the crowd song by song"
+       },
+       {
+        "text": "Bandleader"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-10",
+    "text": "Music around a live auction"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-11",
+    "html": "<p>An auctioneer needs the crowd&rsquo;s full attention and complete silence for every item. That part is straightforward. Everybody\nunderstands that a band doesn&rsquo;t play during the bidding.</p>\n<p>The harder part comes after. After a stretch of concentrating, bidding against colleagues and doing arithmetic about money, a crowd can come out of it quiet and a little tired. Getting people dancing again at that point is a different job from getting them dancing right after dinner.</p>\n<p>The band handles it by building the energy back up. That&rsquo;s a judgment\ncall made in the moment by someone watching the dance floor, which is why the\nbandleader chooses the music song by song.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-12",
+    "text": "The video package and the audio handoff"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-13",
+    "html": "<p>A video package is the moment where two sound systems are in the same\nspace and only one of them should be making noise. The band stops playing, the house sound system takes over, and that handoff happens on a cue.</p>\n<p>In our experience, this is one of the most common places for an event to go wrong, and the cause is usually that the band and the AV vendor never spoke. They&rsquo;re usually two different companies who met that afternoon.\nBefore the doors open, settle whose sound board the video runs through, who mutes what and who gives the cue. It only takes a few minutes at sound check, and it can save you from that problem.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-14",
+    "text": "Planning the volume at a corporate event"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-15",
+    "html": "<p>During dinner and networking, we keep the music low enough that people at a round table can talk to each other without leaning in. The band can get louder later, when it&rsquo;s time to dance.</p>\n<p> Put that change\nin the run of show, the same as the dinner courses, because in our experience &ldquo;the band was too loud&rdquo; usually means the wrong volume at the wrong time. If a sponsor needs to be able to hold a conversation at some point, put that in the run of show and we&rsquo;ll plan around it.</p>"
+   }
+  },
+  {
+   "type": "Aside",
+   "props": {
+    "id": "Aside-16",
+    "title": "What to send, and when",
+    "html": "<p>Send the run of show a week out, in whatever state it&rsquo;s in. It will\nchange, and that&rsquo;s fine. Then send the names and the order for any\nwalk-ons as soon as you have them, along with the AV vendor&rsquo;s contact info and the venue&rsquo;s\nload-in instructions. If there&rsquo;s a song that means something to your\norganization, send that too.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-17",
+    "text": "What a well-run corporate program looks like"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-18",
+    "html": "<p>When it goes well, most of your guests won&rsquo;t notice any of this. </p>\n<p>The program moves along from one moment to the next, and then the band can get people dancing.</p>"
+   }
+  },
+  {
+   "type": "PostCta",
+   "props": {
+    "id": "PostCta-19",
+    "headline": "Send us the run of show.",
+    "html": "<p>Even if it&rsquo;s still a rough draft, we can work through the timing with you, whatever size your event is.</p>",
+    "link": "/corporate/",
+    "link_text": "Corporate events and galas"
+   }
+  },
+  {
+   "type": "RelatedPosts",
+   "props": {
+    "id": "RelatedPosts-20",
+    "posts": [
+     {
+      "slug": "what-live-music-costs-corporate-event"
+     },
+     {
+      "slug": "what-a-band-needs-from-the-room"
+     }
+    ]
+   }
+  }
+ ]
+}

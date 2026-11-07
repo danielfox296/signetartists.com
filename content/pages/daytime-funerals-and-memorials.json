@@ -1,0 +1,382 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/funerals-and-memorials/",
+   "title": "Musicians for a funeral or memorial service in Denver",
+   "description": "Hire a musician for a funeral or memorial service in Denver. We can bring a guitarist or pianist for the service and a jazz duo for the reception.",
+   "titleExact": true,
+   "ogImage": "img/acts/flamenco-window.jpg",
+   "ogImageAlt": "A Spanish guitarist playing beneath a shuttered window, in black and white.",
+   "schema": {
+    "service": {
+     "name": "Musicians for funerals, memorial services and celebrations of life",
+     "serviceType": "A guitarist, pianist, singer or jazz duo for a funeral, a memorial service, a graveside and the celebration of life afterward",
+     "description": "We book a solo guitarist, Spanish guitarist, pianist or singer for the prelude, a special song and the recessional at a funeral or memorial service, and a jazz duo or trio for the reception or celebration of life afterward. We play across Denver, the Front Range and the Colorado mountain corridor, we’ll plan the music with the officiant or the funeral director, and we can often help on short notice.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "videos": [
+     {
+      "id": "Ck7tQx7YIik",
+      "name": "Spanish guitar for a memorial service: Can't Help Falling in Love",
+      "description": "Can’t Help Falling in Love played live on Spanish guitar, a song many families ask for during a service.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT2M40S"
+     },
+     {
+      "id": "hIPHFuxl9YI",
+      "name": "Solo guitarist for a celebration of life: Autumn Leaves",
+      "description": "Autumn Leaves played live on solo jazz guitar, soft enough for people to talk at a reception.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT1M14S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Funerals and memorials",
+       "slab": true,
+       "title": "A musician for a funeral, a memorial service or a celebration of life.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "As people find their seats, a guitarist is playing the hymn your family chose, and later in the service, your loved one’s favorite song. We can help with music for any part of a funeral or memorial, from the prelude to the reception afterward. A guitarist or a pianist is often all you need for the service, and a duo of upright bass and guitar works well at the reception.",
+       "headingText": [
+        {
+         "html": "We’ll work with whoever is leading the service, whether that’s the family, the funeral director, the officiant or the church, and you’ll have a single point of contact from the first email to the last song. Learn more about our <a href=\"/daytime/\">daytime music</a>."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Video Clips",
+       "title": "Hear music for a funeral or memorial",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Can’t Help Falling in Love on Spanish guitar, which a family might choose for the service, and Autumn Leaves on jazz guitar, played softly enough for a reception."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-5",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ck7tQx7YIik?rel=0",
+         "title": "Spanish guitar playing Can't Help Falling in Love",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+         "title": "A solo jazz guitarist playing Autumn Leaves",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-11",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The service",
+       "title": "Where the music goes in a funeral or a memorial.",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The officiant or the family will set the order of the service. A musician usually plays in these four places, and you can book any one of them on its own."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "As people arrive",
+         "text": "A guitarist or a <a href=\"/ensembles/solo-piano/\">pianist</a> can play a prelude of 20 to 30 minutes as people come in, with hymns, standards and any songs your family asks for. It’s the easiest part to add, and it’s a lovely way to begin a service."
+        },
+        {
+         "term": "During the service",
+         "text": "A musician can play a song or two at whatever moment the family or the officiant chooses. It’s often a song that meant a lot to your loved one, and we can play it on guitar or piano or sing it."
+        },
+        {
+         "term": "The recessional and the graveside",
+         "text": "A musician can play as everyone stands and leaves, and at the graveside if your family would like that."
+        },
+        {
+         "term": "The reception or the celebration of life",
+         "text": "Afterward, we can play softly at the church hall, a restaurant or the house while people talk. A duo can play the standards, or a singer with a guitar can play the songs the person loved. If your family would like a jazz band, check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "02-the-service.html"
+   }
+  },
+  {
+   "type": "TwoColumns",
+   "props": {
+    "id": "TwoColumns-22",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "Who plays it",
+       "title": "Which musician is right for a funeral or memorial?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Columns",
+      "props": {
+       "id": "Columns-19",
+       "cls": "split split--three",
+       "n": 3,
+       "c1": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-13",
+          "html": "Acoustic or Spanish guitar",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-14",
+          "html": "Our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a> plays hymns, standards and the songs your family asks for on a steel-string guitar. Our <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> can play the same music on a nylon-string guitar, which has a softer sound. Either one can play a small chapel without amplification.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c2": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-15",
+          "html": "Piano",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-16",
+          "html": "If the chapel, the church or the funeral home has a piano, a <a href=\"/ensembles/solo-piano/\">pianist</a> can play the prelude, the song and the recessional, and can sing, too, if your family would like the words.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-17",
+          "html": "A singer",
+          "tag": "h3",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-18",
+          "html": "Our <a href=\"/ensembles/singer-guitarist/\">singer and guitarist</a> is a great choice when the words matter most, whether that’s a hymn, a country song or a song from the year your loved one got married. It’s one voice and a guitar, and the same musician can play the prelude without singing.",
+          "cls": "prose"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "If your family would like strings, <a href=\"/ensembles/string-quartet/\">a violinist</a>, or a violin and cello duo, can play Ave Maria and hymns in the chapel and at the graveside. If a celebration of life at a home or a club runs into the evening, we can play longer, too. Learn more about <a href=\"/private-parties/\">private party music</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-who-plays.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-27",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Booking it",
+       "title": "How to book a musician for a funeral",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Send us the date, the venue and the time of the service as soon as you have them. The musician will then go over the order of service with the officiant or the funeral director, so nobody has to signal anything from a pew during the service.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "The songs are yours to choose. Just tell us the titles, whether they’re hymns, standards, folk songs or the song from a first dance, and we can usually learn anything the musician doesn’t already play. If you’re not sure, the musician can suggest some songs that families often choose. You can also browse our <a href=\"/repertoire/\">song list</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-booking.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-31",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Questions",
+       "title": "What families ask about music for a funeral or memorial",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-29",
+       "items": [
+        {
+         "q": "Can we hire a musician for a funeral on short notice?",
+         "a": "Yes, in many cases. Funerals are usually arranged within a week, so a date a few days away is a normal request for us. We book funeral and memorial musicians across Denver and the Front Range, so just reach out and we’ll see who can be there."
+        },
+        {
+         "q": "Can a musician play at the graveside?",
+         "a": "Yes. A guitarist can play a graveside service or a scattering of ashes without power, using a battery-powered sound system or no amplification at all, and the same guitarist can play the service beforehand."
+        },
+        {
+         "q": "What does the church or funeral home need to do?",
+         "a": "Very little. Churches, funeral homes and cemeteries each have their own rules about amplification and where a musician can stand, and we’ll check with them beforehand. If the venue doesn’t have a sound system, we can bring one, and we can send a certificate of insurance to any venue that asks."
+        },
+        {
+         "q": "Can the service and the reception be one booking?",
+         "a": "Yes. Just tell us about both when you reach out, and we’ll plan them together."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-32",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Need a musician for a funeral or memorial service?",
+       "lede": "We know this is a hard time, and we’d like to make the music one less thing for you to worry about."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-33",
+       "html": "Send us what you know so far, and we’ll write back with a recommendation and costs. If you’d like a sense of what live music costs around Colorado, you’re welcome to look through our <a href=\"/pricing/\">pricing page</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

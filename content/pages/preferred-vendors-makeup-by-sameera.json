@@ -1,0 +1,318 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/makeup-by-sameera/",
+   "title": "Makeup by Sameera: Denver Bridal Makeup Artist",
+   "description": "Sameera Ahmed is a Denver makeup and hair artist for weddings, available on location, with looks that range from natural to eccentric.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Makeup by Sameera",
+   "schema": {
+    "vendor": {
+     "@id": "https://www.makeupbysameera.com/#organization",
+     "name": "Makeup by Sameera",
+     "url": "https://www.makeupbysameera.com/",
+     "description": "Makeup by Sameera is the business of Sameera Ahmed, a Denver makeup and hair artist working on bridal, editorial, runway and commercial projects.",
+     "founder": {
+      "@type": "Person",
+      "name": "Sameera Ahmed"
+     },
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "postalCode": "80205",
+      "addressCountry": "US"
+     },
+     "areaServed": [
+      {
+       "@type": "City",
+       "name": "Denver"
+      },
+      {
+       "@type": "Place",
+       "name": "Colorado"
+      }
+     ],
+     "knowsAbout": [
+      "Bridal makeup",
+      "Bridal hair",
+      "Editorial makeup",
+      "Men's grooming"
+     ],
+     "sameAs": [
+      "https://www.instagram.com/makeupsammy/",
+      "https://www.facebook.com/makeupbysameeraco/"
+     ]
+    }
+   },
+   "heroImage": "img/vendors/makeup-by-sameera/eye-makeup-brush.jpg",
+   "ogImage": "img/vendors/makeup-by-sameera/rooftop-couple.jpg",
+   "ogImageAlt": "A bride and groom holding each other on a rooftop above the city."
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "On our Preferred Vendor List",
+       "slab": true,
+       "title": "Makeup by Sameera: bridal hair and makeup in Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Most people want to look like themselves on their wedding day, and they want that to come through in the photographs, too. <a href=\"https://www.makeupbysameera.com/\" target=\"_blank\" rel=\"noopener\">Makeup by Sameera</a> is a great choice if that sounds like you.",
+       "headingText": [
+        {
+         "html": "Sameera Ahmed is a Denver makeup and hair artist, and she’s available on location. Her looks range from natural to eccentric, so she can go as soft or as bold as you like."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "title": "Makeup by Sameera at a glance",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "What she offers",
+         "text": "She offers bridal makeup and hair, and she also works on editorial, runway and commercial projects, including men’s grooming."
+        },
+        {
+         "term": "Where she works",
+         "text": "She’s based in Denver, and she also takes destination work."
+        },
+        {
+         "term": "Beauty and fashion brands",
+         "text": "She’s worked with brands including Yves Saint Laurent, Giorgio Armani, Bobbi Brown and Estée Lauder."
+        },
+        {
+         "term": "Commercial work",
+         "text": "The brands she has supported include The North Face, Frontier Airlines, Aveeno and Pact."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-3",
+       "html": "Bridal hair and makeup in Denver",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3a",
+       "cls": "prose",
+       "html": "Sameera says it’s an honor to help people feel beautiful on one of the most important days of their lives. She works to bring out your best in a way that represents your own style."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3b",
+       "cls": "prose",
+       "html": "She has a keen eye for detail and a strong sense of color, light and texture, and she’s worked with some of the most talented photographers in Denver. That’s a big help on a day when you’ll be in so many photographs."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3c",
+       "cls": "prose",
+       "html": "Her bridal portfolio includes soft, monochromatic peach looks and Desi bridal makeup, and she specializes in skin of all ethnicities and tones. She also brings a gentle hand and an uplifting attitude, which is lovely to have around when there’s a lot going on."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-4",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "title": "Bridal makeup by Sameera",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-4",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/vendors/makeup-by-sameera/white-halter-bouquet.jpg",
+         "alt": "A bride with her dark hair pulled back, sitting in a green velvet chair with a bouquet in her lap.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/natural-curls.jpg",
+         "alt": "A close portrait of a woman with short brown curls, her eyes closed and one hand against her cheek.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/flower-crown.jpg",
+         "alt": "A bride with long, wavy auburn hair and a large crown of red and cream flowers.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/rooftop-couple.jpg",
+         "alt": "A bride and groom holding each other on a rooftop above the city.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/soft-waves.jpg",
+         "alt": "A smiling bride with long, soft blonde waves, wearing a lace gown and pearls.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/desi-bridal.jpg",
+         "alt": "A Desi bride with shimmering gold eye makeup, her hennaed hands framing her face.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/birdcage-veil.jpg",
+         "alt": "A bride with red lipstick and white flowers pinned over a birdcage veil.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/makeup-by-sameera/black-and-white-kiss.jpg",
+         "alt": "A black and white close-up of a groom kissing a smiling bride on the cheek.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-4",
+       "cls": "note note--small",
+       "html": "All of the makeup on this page is by Sameera Ahmed, and the photographs come from her portfolio."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-5",
+       "html": "Makeup and hair for photo and video shoots",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5a",
+       "cls": "prose",
+       "html": "If your company is planning a photo or video shoot, Sameera supports commercial productions, too. She has a background in corporate marketing and branding, so she’ll think about how hair and makeup fit your brand."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5b",
+       "cls": "prose",
+       "html": "You can see more of her work in her <a href=\"https://www.makeupbysameera.com/bridal\" target=\"_blank\" rel=\"noopener\">bridal portfolio</a>, her <a href=\"https://www.makeupbysameera.com/editorial\" target=\"_blank\" rel=\"noopener\">beauty and editorial portfolio</a> and her <a href=\"https://www.makeupbysameera.com/lifestyle\" target=\"_blank\" rel=\"noopener\">commercial portfolio</a>."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5c",
+       "cls": "prose",
+       "html": "To check your date or ask about a shoot, <a href=\"https://www.makeupbysameera.com/about\" target=\"_blank\" rel=\"noopener\">reach out to Sameera</a> through her website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Need live music for your wedding, too?",
+       "lede": "From the ceremony to the dance floor, we book live music all over Colorado. Take a look at <a href=\"/weddings/\">live music for your wedding</a>, or just send us your date."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

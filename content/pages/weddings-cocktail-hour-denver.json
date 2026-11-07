@@ -1,0 +1,238 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/cocktail-hour/denver/",
+   "title": "Wedding cocktail hour music in Denver | Signet Artists",
+   "description": "Book a live jazz duo for your Denver wedding cocktail hour, in a hotel lobby, a gallery or on a garden terrace.",
+   "titleExact": true,
+   "nav": "weddings",
+   "schema": {
+    "service": {
+     "name": "Wedding cocktail hour music in Denver",
+     "serviceType": "Live music for wedding cocktail hours in Denver",
+     "description": "We book jazz duos and solo guitarists for wedding cocktail hours at Denver hotels, galleries, gardens, mansions and industrial venues.",
+     "areaServed": [
+      "Denver"
+     ],
+     "configs": [
+      "solo",
+      "duo"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Denver, Colorado",
+       "slab": true,
+       "title": "Live music for cocktail hour at a Denver wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know that hour right after the ceremony, when you’re off taking photos and everyone else is heading for the bar. A <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> is a lovely way to fill that hour, and it’s easy for everyone to talk over the music.",
+       "headingText": [
+        {
+         "html": "The same duo can keep playing through dinner, too, if you’d like. Wondering what the duo should play, or how long the hour should run? Check out our <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>. Planning the rest of the day? Take a look at our <a href=\"/weddings/\">weddings page</a> for ceremony and reception music."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-7",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "eyebrow": "Hear it",
+       "title": "Wedding cocktail hour music",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s one of our jazz duos playing Autumn Leaves on guitar and upright bass."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-5",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Autumn Leaves on guitar and upright bass, played live by a jazz duo",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ],
+    "_file": "01b-footage.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "The venues",
+       "title": "Where do Denver weddings hold the cocktail hour?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The cocktail hour usually happens away from the main floor, because that’s where the staff are setting up for dinner. That often means a lobby, a mezzanine, a gallery or a terrace, and a duo is a great fit for all of them, since it only needs a corner, and we can adjust the volume to suit a marble floor or the open air."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-9",
+       "rows": [
+        {
+         "term": "The grand hotels",
+         "text": "Downtown hotels usually hold the cocktail hour one floor from dinner. At the Brown Palace, that can mean right under the atrium. At the Four Seasons and The Oxford, the banquet team is usually busy nearby, so the duo will get set up before guests arrive."
+        },
+        {
+         "term": "The galleries",
+         "text": "Space Gallery on Santa Fe Drive is a good example, with concrete floors and white walls. Hard surfaces carry sound further than carpet and drapes do, so the duo starts quieter than it would in a ballroom."
+        },
+        {
+         "term": "The gardens",
+         "text": "At Denver Botanic Gardens, the cocktail hour is usually outdoors. It can get cold fast after sunset, so we’ll figure out ahead of time how to move the music indoors. A guitar sounds best up close, so if your guests will spread out across the terrace, just let us know and we can talk about adding a third musician."
+        },
+        {
+         "term": "The mansions and clubs",
+         "text": "Grant-Humphreys Mansion and the University Club of Denver spread the crowd across parlors and landings rather than one open floor. The duo can set up within sight of the bar, where most guests gather, and the far parlors stay quiet enough for easy conversation."
+        },
+        {
+         "term": "The industrial venues",
+         "text": "Mile High Station holds the ceremony, cocktails and dinner under one roof. The cocktail hour can happen at one end of the building while the staff reset the space at the other, and a duo can keep that changeover from feeling like a wait."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "Most Denver cocktail hours happen in one of these five kinds of venue, so your venue is the first thing we’ll ask about.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-venues.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Denver wedding cocktail hour questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "The same duo can also play <a href=\"/private-parties/denver/\">private parties across Denver</a>. Working with a planner or a venue? Feel free to share our <a href=\"/planners/technical/\">technical page</a> and our <a href=\"/planners/run-of-show/\">run of show page</a> with them, and they can find more on our <a href=\"/planners/\">planners resources page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-15",
+       "items": [
+        {
+         "q": "What does setup look like at a downtown Denver venue?",
+         "a": "It's a small setup, and we'll get there early. A duo usually takes one van and one trip, with about 60 minutes for setup and 45 for strike. Before the day, we'll work out with the banquet office how we get in and out, so that's one less thing for you to think about."
+        },
+        {
+         "q": "What does the duo need for space, power and parking?",
+         "a": "The duo will need a corner of about 8 by 6 feet, and we'll talk through any electrical concerns with your venue and caterer. We'll sort out parking before the day. A hotel dock usually has set delivery times and a gallery may just have a curb, and either way the van should be gone before guests arrive."
+        },
+        {
+         "q": "Is there a travel charge for a Denver wedding?",
+         "a": "No. We're based in Denver, so a wedding anywhere in the Denver area won't have a travel charge. Boulder and Colorado Springs are a short drive, and mountain venues are a longer one."
+        },
+        {
+         "q": "Can the duo play an outdoor cocktail hour at a Denver garden venue?",
+         "a": "Yes. The duo just needs a spot that's covered, level and dry, with power nearby. A garden terrace with a pavilion makes it especially easy."
+        },
+        {
+         "q": "Is a duo enough for a cocktail hour at a Denver hotel?",
+         "a": "Yes, a duo is usually plenty for the crowds these hotels hold at cocktail hour. Two musicians can easily cover a lobby lounge or a mezzanine. If your crowd will spread across a full ballroom, a trio is a better fit."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-18",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us the Denver venue and the date, and we'll plan the cocktail hour with you.",
+       "lede": "Looking for something bigger than a duo? We can bring anything up to a full band, with a sound system that fits your venue and a personal contact for the whole day."
+      }
+     }
+    ],
+    "_file": "04-faqs.html"
+   }
+  }
+ ]
+}

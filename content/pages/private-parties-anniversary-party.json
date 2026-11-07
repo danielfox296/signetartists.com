@@ -1,0 +1,353 @@
+{
+ "root": {
+  "props": {
+   "path": "/private-parties/anniversary-party/",
+   "title": "Anniversary party band and live music in Denver",
+   "description": "Book a jazz duo, a singer with a guitar or a band for a 25th, 40th or 50th anniversary party in Denver. We can usually learn the couple's song, too.",
+   "titleExact": true,
+   "ogImage": "img/acts/jazz-duo-poster.jpg",
+   "schema": {
+    "service": {
+     "name": "Live music for an anniversary party",
+     "serviceType": "A jazz duo, a singer with a guitar, a Spanish guitarist or a party band for 25th, 40th and 50th anniversary parties, surprise anniversary dinners and vow renewals",
+     "description": "We book live music for anniversary parties across Denver and the Front Range. A jazz duo can play jazz standards at dinner, quiet enough that everyone can keep talking, and a singer with a guitar can usually learn the couple's first-dance song. A Spanish guitarist is lovely for a long family dinner, and a trio or quartet can get people dancing. We play in homes, at clubs and in private dining spaces, with an announcement microphone for the toasts and one personal contact.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Castle Pines",
+      "Castle Rock",
+      "Evergreen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "quartet",
+      "dj"
+     ]
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for an anniversary party: Autumn Leaves on upright bass and guitar",
+      "description": "A jazz duo plays Autumn Leaves on upright bass and guitar.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     },
+     {
+      "id": "NI0kunpQQiA",
+      "name": "Singer with a guitar for an anniversary party: Tejas Singh at a wedding cocktail hour",
+      "description": "Tejas Singh sings at a wedding cocktail hour.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT4M9S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "25th, 40th & 50th anniversaries",
+       "slab": true,
+       "title": "Live music for your anniversary party.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "There’s nothing quite like hearing a couple’s wedding song again, years later, with the people who were there the first time. A jazz duo or a singer with a guitar is an excellent choice for dinner and the toasts, and if you want dancing, too, we can bring a band.",
+       "headingText": [
+        {
+         "html": "We play <a href=\"/private-parties/\">private parties</a> in homes, at clubs and in private dining spaces at restaurants, and you’ll have one contract and one personal contact for the music."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Hear it",
+       "title": "Watch a jazz duo and a singer play live",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s a jazz duo playing Autumn Leaves on upright bass and guitar, and Tejas Singh singing at a wedding cocktail hour."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-7",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo on upright bass and guitar playing Autumn Leaves",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/NI0kunpQQiA?rel=0",
+         "title": "Tejas Singh singing at a wedding cocktail hour",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-hear.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-14",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Sizes",
+       "title": "What size band works for an anniversary party?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "In our experience, most anniversary parties are a seated dinner with a few toasts, so a duo is a great place to start. We can go bigger from there."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "The jazz duo",
+         "text": "Upright bass and guitar make a warm, polished sound, and they can play jazz standards all the way through dinner. Learn more about our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+        },
+        {
+         "term": "A singer with a guitar",
+         "text": "One voice and a guitar are perfect if you’d like the couple’s song sung rather than played. <a href=\"/artists/tejas-singh/\">Tejas Singh</a> would be a lovely fit. He can start as a duo with a bass player, and the rest of his band can join him if you want dancing."
+        },
+        {
+         "term": "A Spanish guitarist for a long dinner",
+         "text": "Spanish guitar is a lovely sound for a 50th anniversary dinner with the whole family. Want a fuller sound? <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> is our flamenco trio."
+        },
+        {
+         "term": "A band for a 25th anniversary with dancing",
+         "text": "A trio or a quartet works well if the friends who danced at the wedding are coming back to do it again. <a href=\"/artists/tony-medina/\">Tony Medina</a> can bring up to a four-piece band, and the same band can play dinner first. Later on, a <a href=\"/ensembles/dj/\">DJ</a> can take over through the same sound system."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Curious what each size costs in Colorado? You’ll find a general market view in our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-sizes.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-15",
+       "eyebrow": "The party",
+       "title": "Surprise parties, anniversary dinners & vow renewals",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-16",
+       "rows": [
+        {
+         "term": "Surprise anniversary parties",
+         "text": "We can have a musician start the couple’s song as they walk in, the same way we’d plan a <a href=\"/private-parties/proposals/\">surprise proposal song</a>."
+        },
+        {
+         "term": "Anniversary dinners at home or at a club",
+         "text": "A duo fits well into a home or a <a href=\"/private-parties/denver/\">Denver</a> club, and for many couples that’s all the music they’ll want."
+        },
+        {
+         "term": "Vow renewals",
+         "text": "Some couples renew their vows at a 25th or 50th anniversary. A guitarist or a duo can play the walk in, the song the couple chose and the walk out, much like <a href=\"/weddings/ceremony/\">wedding ceremony music</a>, and we can stay to play dinner afterward, too."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "03-the-party.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-19",
+       "eyebrow": "Ways to celebrate",
+       "title": "Anniversary party entertainment ideas.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-20",
+       "rows": [
+        {
+         "term": "A sing-along the grandchildren can join",
+         "text": "A 40th or 50th anniversary can bring a few generations together, and almost everyone knows the Beatles. <a href=\"/ensembles/beatles-sing-along/\">Your Bird Can Sing</a> is our Beatles sing-along duo, and it’s a great way to get the whole family singing."
+        },
+        {
+         "term": "Their first-dance song, played again",
+         "text": "We can play the song from the wedding so the couple can have that first dance all over again."
+        },
+        {
+         "term": "Songs from the years they’ve been together",
+         "text": "We can mix jazz standards with songs from the decade the couple met. Looking for a particular song? Search our <a href=\"/repertoire/\">song list</a> by title."
+        },
+        {
+         "term": "Live band karaoke for the wedding party",
+         "text": "With <a href=\"/ensembles/live-band-karaoke/\">live band karaoke</a>, the band plays the hits and anyone from the original wedding party can take a turn singing."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ],
+    "_file": "04-ideas.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-23",
+       "eyebrow": "Questions",
+       "title": "What to know about anniversary party music",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-24",
+       "items": [
+        {
+         "q": "Can we hire a band for an anniversary party?",
+         "a": "Yes. Signet Artists books bands and smaller groups for anniversary parties across Denver and the Front Range, and we'd love to help with yours."
+        },
+        {
+         "q": "Can the band play the couple's first-dance song?",
+         "a": "Yes. Tell us the title with the date, and whether it should be played or sung, and we can usually learn the song from the wedding if it isn't already on the song list."
+        },
+        {
+         "q": "How does a surprise anniversary party work with a musician?",
+         "a": "The musician can set up early and play quietly, so it just looks like there's live music that night. We'll work out a cue with you ahead of time, like a nod from the host, and the couple's song can start right on it."
+        },
+        {
+         "q": "How loud is the music at dinner?",
+         "a": "It's about as loud as the conversation at the table, so the toasts are easy to hear and nobody has to lean in to talk. The duo can stop for each toast, and we can have a microphone ready for whoever wants to speak. The musicians can adjust the volume to fit your venue, so a private dining space at a restaurant will need less sound than a backyard."
+        },
+        {
+         "q": "How much space does the band need at a dinner?",
+         "a": "A guitarist or a singer with a guitar can fit in about 6 by 4 feet, a duo in 8 by 6, a trio in 12 by 8 and a quartet in 14 by 10. In many cases, one power source is enough, though a quartet needs two. Setup can take about 45 minutes for a solo musician and an hour for a duo or a trio. If the venue asks for a certificate of insurance, just let us know."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-29",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-27",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and the couple's song.",
+       "lede": "We can bring a solo musician, a full band or anything in between, and the sound system will be the right size for your venue."
+      }
+     }
+    ],
+    "_file": "06-close.html"
+   }
+  }
+ ]
+}

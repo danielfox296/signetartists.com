@@ -1,0 +1,177 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/",
+   "title": "Denver Wedding Vendors We Recommend | Signet Artists",
+   "description": "These are the photographers, planners, videographers, makeup artists, caterers, florists and venues we'd recommend to our own clients in Denver. The list is short on purpose.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Preferred Vendor List",
+   "schemaKind": "vendorlist"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "For clients and planners",
+       "slab": true,
+       "title": "Preferred Vendor List.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Putting on an event means hiring six or seven people who have to work well together when the day comes. We’d love to connect you with the people we recommend to our own clients, and we keep that list short on purpose. If someone on it isn’t right for your event, we’ll tell you."
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "VendorList",
+   "props": {
+    "id": "VendorList-5",
+    "categories": [
+     {
+      "id": "venues",
+      "label": "Venues",
+      "ask": "Need a venue? Ask us where we’ve played, and we’ll tell you what each place is like to work with."
+     },
+     {
+      "id": "planning",
+      "label": "Planning and coordination",
+      "ask": "Need someone to run the day? We’ll give you the name of a planner we’ve worked with."
+     },
+     {
+      "id": "photography",
+      "label": "Photography",
+      "ask": "Looking for a photographer? We’re happy to recommend one."
+     },
+     {
+      "id": "videography",
+      "label": "Videography",
+      "ask": "Want it all on video? Just ask, and we’ll send you the name of a videographer we know."
+     },
+     {
+      "id": "hair-makeup",
+      "label": "Hair and makeup",
+      "ask": "Need hair and makeup for the day? Let us know, and we’ll recommend someone."
+     },
+     {
+      "id": "catering",
+      "label": "Catering",
+      "ask": "Need someone to feed your guests? Let us know, and we’ll suggest a caterer."
+     },
+     {
+      "id": "design-florals",
+      "label": "Design and florals",
+      "ask": "For flowers and decor, just reach out and we’ll point you to a designer."
+     }
+    ],
+    "vendors": [
+     {
+      "name": "MXBloom Films",
+      "url": "https://mxbloom.com/photography/",
+      "location": "Denver and Seattle",
+      "category": "photography",
+      "page": "/preferred-vendors/mxbloom-films/",
+      "note": "Neil and Fiona are a husband-and-wife team who take bright, lovely wedding photographs across Colorado and Washington. They’re a great choice if you’d like a natural, story-driven look.",
+      "image": "/img/vendors/mxbloom-films/forest-bouquet.jpg",
+      "imageAlt": "A bride and groom smiling at each other among tall trees, with her bouquet between them."
+     },
+     {
+      "name": "MXBloom Films",
+      "url": "https://mxbloom.com/cinematography/",
+      "location": "Denver and Seattle",
+      "category": "videography",
+      "note": "The same team makes emotional, cinematic wedding films, so you can have your photographs and your film from the same two people.",
+      "image": "/img/vendors/mxbloom-films/meadow-couple.jpg",
+      "imageAlt": "A couple playing in a field of tall grass with evergreens behind them."
+     },
+     {
+      "name": "Makeup by Sameera",
+      "url": "https://www.makeupbysameera.com/bridal",
+      "location": "Denver",
+      "category": "hair-makeup",
+      "page": "/preferred-vendors/makeup-by-sameera/",
+      "note": "Sameera Ahmed is a Denver makeup and hair artist whose bridal looks range from soft and natural to bold. She’s a great choice if you’d like a look that represents your own style.",
+      "image": "/img/vendors/makeup-by-sameera/desi-bridal.jpg",
+      "imageAlt": "A Desi bride with shimmering gold eye makeup, her hennaed hands framing her face."
+     },
+     {
+      "name": "Grace Martin",
+      "url": "https://stylistgracemartin.com/work/wedding-78w6l",
+      "location": "Denver",
+      "category": "hair-makeup",
+      "page": "/preferred-vendors/grace-martin/",
+      "note": "Grace Martin is a Denver hair and makeup artist who also works in film, television and national campaigns. Her bridal work has appeared in Rocky Mountain Bride, and she works with all hair textures and skin tones.",
+      "image": "/img/vendors/grace-martin/soft-blonde-waves.jpg",
+      "imageAlt": "A bride with long, soft blonde waves, sitting in a vintage convertible with one gloved hand near her cheek."
+     }
+    ],
+    "_file": "02-list.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-7",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "03-credits.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Work in events and want to be on this list? <a href=\"join/\">Here’s how to apply.</a>",
+       "cls": "note note--small"
+      }
+     }
+    ],
+    "_file": "04-join.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-11",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book the music with us.",
+       "lede": "We book live music for events of every size, from a solo musician to a full band. We’ll make sure the sound system suits the venue, and you’ll have one person to call with any questions."
+      }
+     }
+    ],
+    "_file": "05-close.html"
+   }
+  }
+ ]
+}

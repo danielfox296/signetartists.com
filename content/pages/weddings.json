@@ -1,0 +1,406 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/",
+   "title": "Wedding music in Colorado: ceremony, cocktails, reception",
+   "description": "We play live music at Colorado weddings, with an acoustic guitarist for the ceremony, a jazz duo for cocktail hour and a DJ for the late night.",
+   "titleExact": true,
+   "ogImage": "img/outdoor.jpg",
+   "ogImageAlt": "A frame tent on grass with a plywood stage deck under it.",
+   "nav": "weddings",
+   "schema": {
+    "service": {
+     "name": "Wedding music in Colorado",
+     "serviceType": "Live music for wedding ceremonies, cocktail hours and receptions",
+     "description": "We book acoustic and Spanish guitarists for the ceremony, jazz or acoustic duos for the cocktail hour, and DJs for the reception, all on one contract, in Denver, along the Front Range and up in the mountains.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-3",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Weddings",
+       "slab": true,
+       "title": "Live music for a Colorado wedding.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A guitar starts the processional, and everyone turns toward the bride. An hour later those same guests enjoy a jazz duo over cocktails. By the end of the night, they’re shaking it on the dance floor. <br><strong><br>3 different jobs for the music - one booking covers all of them.</strong>",
+       "headingText": [
+        {
+         "html": "An acoustic or Spanish guitarist is a lovely choice for <a href=\"/weddings/ceremony/\">the ceremony</a>, and a jazz or acoustic duo is great for <a href=\"/weddings/cocktail-hour/\">the cocktail hour</a>. For the reception, a <a href=\"/ensembles/dj/\">DJ</a> hands out late night bangers."
+        }
+       ],
+       "buttons": []
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "PagesAndPosts",
+   "props": {
+    "id": "PagesAndPosts-5",
+    "band": "ruled",
+    "heading": "All wedding pages",
+    "groups": [
+     {
+      "label": "Parts of the day",
+      "pages": [
+       {
+        "path": "ceremony"
+       },
+       {
+        "path": "cocktail-hour"
+       },
+       {
+        "path": "cocktail-hour/denver",
+        "label": "Cocktail hour in Denver"
+       }
+      ]
+     },
+     {
+      "label": "By act",
+      "pages": [
+       {
+        "path": "jazz-band"
+       }
+      ]
+     },
+     {
+      "label": "Towns",
+      "pages": [
+       {
+        "path": "boulder"
+       },
+       {
+        "path": "colorado-springs"
+       },
+       {
+        "path": "fort-collins"
+       },
+       {
+        "path": "vail"
+       },
+       {
+        "path": "telluride"
+       }
+      ]
+     }
+    ],
+    "_file": "01-pages.html"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-7",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "_file": "01a-credits.html"
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-8",
+       "eyebrow": "Photos",
+       "title": "Spanish guitar and acoustic music for a Colorado wedding",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Picture Spanish guitarist, Gary Meyers (aka Dirty Flamenco) in the courtyard serenading your guests, and an acoustic set in the open air during cocktail hour. <br><br>Two distinct sounds Colorado weddings enjoy the most."
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-9",
+       "images": [
+        {
+         "src": "/img/acts/flamenco-court.jpg",
+         "alt": "Dirty Flamenco in a stone courtyard, in black and white.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        },
+        {
+         "src": "/img/acts/acoustic-outdoor.jpg",
+         "alt": "A guitarist playing outdoors at a wedding.",
+         "loading": "lazy",
+         "decoding": "async",
+         "width": "1600",
+         "height": "1200"
+        }
+       ],
+       "single": false
+      }
+     }
+    ],
+    "_file": "01b-media.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-12",
+       "eyebrow": "wedding day music",
+       "title": "What music works for the ceremony, cocktail hour and reception?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-13",
+       "rows": [
+        {
+         "term": "The ceremony",
+         "text": "The one stretch of the day where everyone - friends and family alike - are paying close attention to it. The music is exposed and the timing has to be precise. A guitarist or <a href=\"/ensembles/string-quartet/\">a violinist</a> can play the prelude as your guests arrive, the processional and the recessional, and softly during the ring exchange if you'd like. Want to know more about how the different parts of the day come together, or how many songs each act needs? Learn more on our <a href=\"/weddings/ceremony/\">ceremony page</a>."
+        },
+        {
+         "term": "The cocktail hour",
+         "text": "This is the hour when the vibe turns from formal to slightly less so. As the couple leaves for photographs, guests stand with a first drink feeling out what kind of night is ahead. The venue may be turning ceremony seating into dinner tables behind a wall. <br><br>A duo covers the whole hour at a level guests talk freely over. Wondering what a duo plays, how many songs you'll need, or whether a duo is enough for your guest list? Find out on our <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>."
+        },
+        {
+         "term": "The reception",
+         "text": "You want the dance floor to stay active for hours, and that's a DJ's job. An <a href=\"/ensembles/dj/\">open-format DJ</a>, who plays all kinds of music, can read the crowd from the first dance to the last song. Where a wedding wants live musicians for dinner and a DJ after it, that's easy with Signet. One contract."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Quote",
+      "props": {
+       "id": "Quote-14",
+       "html": "“Our guests couldn’t stop talking about how amazing he was, and we loved how he read the crowd and kept everyone engaged. He went above and beyond to make our day special, even learning a few of our favorite songs just for us.”",
+       "by": "Savannah H., an outdoor wedding, November 2025."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Not sure what to budget for wedding music? <a href=\"/guides/live-music-cost-colorado/\">Our cost guide</a> can help. Your cocktail hour duo can also play a <a href=\"/daytime/brunch/\">Sunday brunch</a> the morning after, or an <a href=\"/private-parties/engagement-party/\">engagement party</a> months before the wedding.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "02-the-day.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "headingStyle": "max-width: 63.5rem;",
+       "eyebrow": "The formats",
+       "title": "What act to book for a wedding",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Four sizes of musical act can cover nearly every Colorado wedding, and the guest count influences that quite a bit. Each entertainment option is spec'd below with a link to their own page for more details.",
+       "ledeStyle": "max-width: 63.5rem;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-19",
+       "rows": [
+        {
+         "term": "The solo guitarist",
+         "text": "This is our smallest option, and a popular choice for a ceremony. A solo guitarist can play a processional without amplification in most indoor spaces. Learn more about our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>."
+        },
+        {
+         "term": "The jazz duo or trio",
+         "text": "This is an upright bass and a guitar playing jazz standards, and it's our most common booking for a cocktail hour. The duo can play straight through dinner, and the trio adds soft brushed drums for a bigger space or a longer guest list, while staying quiet enough for easy conversation. Take a look at our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo and trio</a>."
+        },
+        {
+         "term": "The acoustic duo",
+         "text": "The same footprint with the set turned toward singer-songwriter covers, for a wedding that wants the songs one notch more familiar than standards. Check out our <a href=\"/ensembles/acoustic-duo/\">acoustic duo and trio</a>."
+        },
+        {
+         "term": "Spanish guitar",
+         "text": "One <a href=\"/ensembles/spanish-guitarist/\">Spanish guitarist</a> is a lovely choice for the ceremony or the cocktail hour. If you'd like a full flamenco show, <a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> plays as a trio."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "For a small sample of music some acts perform, check out the <a href=\"/repertoire/\">repertoire page</a>. <br><br>Getting married in Colorado Springs? Our <a href=\"/weddings/colorado-springs/\">Colorado Springs wedding page</a> covers the venues and the drive. You can also learn about the venues and sound rules for weddings in <a href=\"/weddings/boulder/\">Boulder</a>, <a href=\"/weddings/fort-collins/\">Fort Collins</a>, <a href=\"/weddings/vail/\">Vail</a> and <a href=\"/weddings/telluride/\">Telluride</a>. Want jazz from the ceremony to the last dance? Check out our <a href=\"/weddings/jazz-band/\">jazz band for weddings</a>.",
+       "cls": "note"
+      }
+     }
+    ],
+    "_file": "03-formats.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-28",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-23",
+       "html": "For whomever is running the schedule",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Wedding dates get decided ten to twelve months out, and twelve to eighteen for a mountain venue or a fall Saturday. We see that music tends to be shopped for 9 to 14 months before the date.<br><br>Send a date and you get a yes or a straight no on an act's availability with more details and other recommendations should you desire them.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "Most of a wedding's <em>music</em> questions are really <em>timing</em> questions, and those details are on the <a href=\"/planners/\">planners pages</a>: Things like stage footprints, and power requirements, load-in and strike time. Want to see how each part of the day leads into the next? Take a look at our <a href=\"/planners/run-of-show/\">run of show page</a>. For altitude, curfews and other mountain venue details, head to our <a href=\"/planners/mountain/\">mountain corridor page</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Our <a href=\"/preferred-vendors/\">Preferred Vendor List</a> has the photographers, planners, videographers, makeup artists, caterers, florists and venues we’d recommend to our own clients, each with a link to their site.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-planning.html"
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-32",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-29",
+       "html": "Wedding music questions",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.2;"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-30",
+       "items": [
+        {
+         "q": "Can one booking cover the ceremony and the cocktail hour?",
+         "a": "Yes, and it's the most common way to book it. The same musicians walk from the ceremony space to wherever cocktails are happening, on one contract, which also covers the gap while the couple is away for photographs. Signet Artists books wedding musicians across Denver and the Colorado mountains."
+        },
+        {
+         "q": "Do we need a band for the whole wedding?",
+         "a": "Most Colorado weddings are better served with live musicians for the ceremony and the cocktail hour, where volume and attention need a person reading the crowd, and a DJ for the reception, where you want your dance floor to stay active for hours."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "The ceremony and the cocktail hour are gentle enough that guests greet and easily talk over them without raising their voices. The reception plays like a dance floor, up to what the venue allows and the guests prefer"
+        },
+        {
+         "q": "What paperwork comes with the booking?",
+         "a": "A certificate of insurance naming the venue, and one itemized invoice come in the same email as the contract. A personal contact's mobile number is reachable from setup to strike."
+        },
+        {
+         "q": "Do you play outdoor weddings in Colorado?",
+         "a": "Yes, and many of them are outdoors. Outdoors adds three requirements at any size: a covered, level and dry performance area, power run to it (depending on instrumentation), and a \"move-indoors\" call before the day."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-35",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-33",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Book the ceremony, the cocktail hour and the reception all in one place.",
+       "lede": "Whether you're planning a small ceremony or a big reception, we'll help you find the right act and make sure the sound suits your venue."
+      }
+     }
+    ],
+    "_file": "05-faqs.html"
+   }
+  }
+ ]
+}

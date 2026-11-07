@@ -1,0 +1,112 @@
+{
+ "root": {
+  "props": {
+   "path": "/sitemap/",
+   "title": "All pages",
+   "description": "Here's every page on signetartists.com, including our occasions, ensembles, artists, planning pages and guides.",
+   "nav": "",
+   "breadcrumb": "All pages"
+  }
+ },
+ "content": [
+  {
+   "type": "AllPages",
+   "props": {
+    "id": "AllPages-4",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Site map",
+       "title": "Everything on this site.",
+       "titleTag": "h1",
+       "titleClass": "h1",
+       "lede": "Here's every occasion, ensemble, artist and planning page in one list."
+      }
+     },
+     {
+      "type": "PageIndex",
+      "props": {
+       "id": "PageIndex-2",
+       "top": [
+        {
+         "output": "index.html"
+        },
+        {
+         "output": "music/index.html"
+        },
+        {
+         "output": "repertoire/index.html"
+        },
+        {
+         "output": "pricing/index.html"
+        },
+        {
+         "output": "about/index.html"
+        },
+        {
+         "output": "contact/index.html"
+        },
+        {
+         "output": "blog/index.html"
+        },
+        {
+         "output": "for-artists/index.html"
+        },
+        {
+         "output": "thanks/index.html"
+        }
+       ],
+       "groups": [
+        {
+         "prefix": "corporate/",
+         "heading": "Corporate"
+        },
+        {
+         "prefix": "weddings/",
+         "heading": "Weddings"
+        },
+        {
+         "prefix": "private-parties/",
+         "heading": "Private parties"
+        },
+        {
+         "prefix": "daytime/",
+         "heading": "Daytime"
+        },
+        {
+         "prefix": "ensembles/",
+         "heading": "House Ensembles",
+         "lanes": true
+        },
+        {
+         "prefix": "artists/",
+         "heading": "Featured Artists"
+        },
+        {
+         "prefix": "planners/",
+         "heading": "For planners"
+        },
+        {
+         "prefix": "preferred-vendors/",
+         "heading": "Preferred vendors"
+        },
+        {
+         "prefix": "guides/",
+         "heading": "Guides"
+        },
+        {
+         "prefix": "video/",
+         "heading": "Video clips"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "01-index.html"
+   }
+  }
+ ]
+}
