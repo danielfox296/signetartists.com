@@ -604,9 +604,13 @@ img {
   border-color: var(--rule);
 }
 
-.btn--outline:hover {
-  background: transparent;
-  color: var(--ink);
+/* An outline button fills with the band's ink under the pointer or keyboard
+   focus, so it answers like a button on any band (an aqua band turns --ink
+   near-black and --paper near-white, so there it fills near-black). */
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
   border-color: var(--ink);
 }
 
@@ -3447,6 +3451,67 @@ main:focus {
   transform: scale(1.03);
 }
 
+/* A photo card's silent loop: over the photo, unseen until it is playing, so
+   the photo shows while it loads and stays for data saver and reduced motion. */
+.photo-card-loop {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.photo-card-loop.is-playing {
+  opacity: 1;
+}
+
+.photo-card-loop video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: transform 0.5s ease;
+}
+
+.roster-card-link:hover .photo-card-loop video {
+  transform: scale(1.03);
+}
+
+/* Photo cards sit a little off the band on a soft shadow, and rise further
+   while the pointer or keyboard focus is on them; they settle back after. */
+.act-card--photo .roster-card-photo {
+  box-shadow: 0 1px 2px rgba(18, 18, 18, 0.12), 0 10px 24px -10px rgba(18, 18, 18, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.act-card--photo .roster-card-link:hover .roster-card-photo,
+.act-card--photo .roster-card-link:focus-visible .roster-card-photo {
+  transform: translateY(-6px);
+  box-shadow: 0 2px 4px rgba(18, 18, 18, 0.14), 0 24px 44px -14px rgba(18, 18, 18, 0.5);
+}
+
+/* On a dark band a dark shadow disappears, so the card gets a faint light
+   edge and a deeper shadow instead. */
+.section:not(.section--sunk) .act-card--photo .roster-card-photo {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 14px 30px -12px rgba(0, 0, 0, 0.85);
+}
+
+.section:not(.section--sunk) .act-card--photo .roster-card-link:hover .roster-card-photo,
+.section:not(.section--sunk) .act-card--photo .roster-card-link:focus-visible .roster-card-photo {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16), 0 28px 50px -14px rgba(0, 0, 0, 0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .act-card--photo .roster-card-photo {
+    transition: box-shadow 0.35s ease;
+  }
+
+  .act-card--photo .roster-card-link:hover .roster-card-photo,
+  .act-card--photo .roster-card-link:focus-visible .roster-card-photo {
+    transform: none;
+  }
+}
+
 .roster-card-over {
   position: absolute;
   inset: auto 0 0 0;
@@ -3456,6 +3521,8 @@ main:focus {
 
 .roster-card-over .act-kind {
   margin: 0 0 0.4rem;
+  /* Over the photo's dark foot on any band: a sunk band turns --brass to near-black. */
+  color: var(--red);
 }
 
 .roster-card-name {
@@ -4407,4 +4474,26 @@ img[src$="img/standards.jpg"],
 img[src$="img/dj.jpg"],
 img[src$="img/headliners.jpg"] {
   filter: grayscale(1) contrast(1.05);
+}
+
+/* A heading with its picture to the left (Heading, Picture: Left of the
+   words): two equal columns from 800px, the words centred against the
+   picture; below that the picture sits above the words. */
+.heading-split {
+  display: grid;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.heading-split__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 800px) {
+  .heading-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 5vw, 5rem);
+  }
 }

@@ -51,22 +51,6 @@
    }
   },
   {
-   "type": "RangeStrip",
-   "props": {
-    "id": "RangeStrip-10",
-    "image": {
-     "src": "/img/range.jpg",
-     "alt": "The Denver skyline against the Front Range, from City Park.",
-     "width": "2400",
-     "height": "800",
-     "loading": "lazy",
-     "decoding": "async"
-    },
-    "label": "Where we play",
-    "_file": "02b-range.html"
-   }
-  },
-  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-17",
@@ -77,12 +61,12 @@
       "props": {
        "id": "Heading-11",
        "headingStyle": "max-width: 62.5rem;",
-       "eyebrow": "The artists roster",
+       "eyebrow": "Featured Artists",
        "title": "Check out signet's growing book of Flavorful Acts",
        "titleTag": "h2",
        "titleClass": "h2",
        "titleStyle": "max-width: 54rem;",
-       "lede": "From singer-songwriters, cover artists, jazz, flamenco, string quartets, funk and DJ options to sound baths, Signet Artists offers many of our acts as solo, duo, trio and more players. Some with a notable front-person and others are purpose-built for your event. We've highlighted a few below,",
+       "lede": "From singer-songwriters, cover artists, jazz, flamenco, string quartets, funk and DJ options to sound baths, Signet Artists offers many of our acts as solo, duo, trio and more players. Some with a notable front-person and others are purpose-built for your event. We've highlighted a few below.",
        "ledeStyle": "max-width: 62.5rem;"
       }
      },
@@ -90,7 +74,86 @@
       "type": "Cards",
       "props": {
        "id": "Cards-12",
-       "source": "flagships"
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "meghan-clarisse"
+        },
+        {
+         "act": "rene-moffatt"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "tejas-singh"
+        },
+        {
+         "act": "tony-medina"
+        }
+       ]
+      }
+     }
+    ],
+    "_file": "03-range.html"
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-48",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-44",
+       "headingStyle": "max-width: 62.5rem;",
+       "eyebrow": "House Ensembles",
+       "title": "live bands and musicians by genre",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "titleStyle": "max-width: 54rem;",
+       "lede": "We put these groups together from seasoned players, in the genre you want. Pick a sound, from jazz and strings to funk, soul and DJs, and we'll make it the right size for your event.",
+       "ledeStyle": "max-width: 62.5rem;"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-45",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "afro-house-dj"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "classical-strings"
+        },
+        {
+         "act": "americana-band"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "solo-piano"
+        }
+       ]
       }
      },
      {
@@ -147,50 +210,109 @@
        "cls": "tag-list"
       }
      }
-    ],
-    "_file": "03-range.html"
+    ]
    }
   },
   {
-   "type": "CoverStrip",
+   "type": "CoverWall",
    "props": {
-    "id": "CoverStrip-19",
+    "id": "CoverWall-41",
+    "eyebrow": "The songs",
+    "title": "",
+    "text": "We love music - both originals from our artists and a few hundred familiar favorites. For our singer-songwriter acts, you can check out our <a href=\"/repertoire/\">Songs page</a> for an example of the available repertoire.",
+    "textStyle": "max-width: 26rem;",
+    "textAt": 0,
     "tiles": [
      {
       "src": "/img/covers/into-the-mystic.jpg",
-      "alt": "Moondance, Van Morrison album cover"
-     },
-     {
-      "src": "/img/covers/landslide.jpg",
-      "alt": "Fleetwood Mac album cover"
-     },
-     {
-      "src": "/img/covers/tennessee-whiskey.jpg",
-      "alt": "Chris Stapleton album cover"
+      "alt": "Moondance album cover, Van Morrison",
+      "song": "Into the Mystic",
+      "credit": "Van Morrison · Moondance",
+      "style": "--c:6;--r:1;--cs:2;--rs:2;--d:0.22;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
      },
      {
       "src": "/img/covers/dock-of-the-bay.jpg",
-      "alt": "The Dock of the Bay, Otis Redding album cover"
+      "alt": "The Dock of the Bay album cover, Otis Redding",
+      "song": "(Sittin' On) The Dock of the Bay",
+      "credit": "Otis Redding · The Dock of the Bay",
+      "style": "--c:8;--r:1;--cs:1;--rs:1;--d:0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
      },
      {
       "src": "/img/covers/valerie.jpg",
-      "alt": "Version, Mark Ronson album cover"
+      "alt": "Version album cover, Mark Ronson",
+      "song": "Valerie",
+      "credit": "Mark Ronson · Version",
+      "style": "--c:10;--r:1;--cs:1;--rs:1;--d:-1;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
      },
      {
-      "src": "/img/covers/sweet-caroline.jpg",
-      "alt": "Neil Diamond album cover"
+      "src": "/img/covers/tennessee-whiskey.jpg",
+      "alt": "Traveller album cover, Chris Stapleton",
+      "song": "Tennessee Whiskey",
+      "credit": "Chris Stapleton · Traveller",
+      "style": "--c:5;--r:2;--cs:1;--rs:1;--d:0.7;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
      },
      {
-      "src": "/img/covers/dont-stop-believin.jpg",
-      "alt": "Escape, Journey album cover"
+      "src": "/img/covers/landslide.jpg",
+      "alt": "Fleetwood Mac album cover, Fleetwood Mac",
+      "song": "Landslide",
+      "credit": "Fleetwood Mac",
+      "style": "--c:9;--r:2;--cs:2;--rs:2;--d:0.22;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
      },
      {
       "src": "/img/covers/mr-brightside.jpg",
-      "alt": "Hot Fuss, The Killers album cover"
+      "alt": "Hot Fuss album cover, The Killers",
+      "song": "Mr. Brightside",
+      "credit": "The Killers · Hot Fuss",
+      "style": "--c:6;--r:3;--cs:1;--rs:1;--d:-1;--z:2",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/sweet-caroline.jpg",
+      "alt": "Brother Love's Travelling Salvation Show album cover, Neil Diamond",
+      "song": "Sweet Caroline",
+      "credit": "Neil Diamond · Brother Love's Travelling Salvation Show",
+      "style": "--c:7;--r:3;--cs:1;--rs:1;--d:0.5;--z:4",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/dont-stop-believin.jpg",
+      "alt": "Escape album cover, Journey",
+      "song": "Don't Stop Believin'",
+      "credit": "Journey · Escape",
+      "style": "--c:8;--r:3;--cs:1;--rs:1;--d:-0.5;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
+     },
+     {
+      "src": "/img/covers/brown-eyed-girl.jpg",
+      "alt": "Blowin' Your Mind! album cover, Van Morrison",
+      "song": "Brown Eyed Girl",
+      "credit": "Van Morrison · Blowin' Your Mind!",
+      "style": "--c:5;--r:1;--cs:1;--rs:1;--d:-0.7;--z:3",
+      "loading": "lazy",
+      "decoding": "async"
      }
     ],
-    "note": "We love music - both originals from our artists and a few hundred familiar favorites. For our singer-songwriter acts, you can check out our <a href=\"/repertoire/\">Songs page</a> for an example of the available repertoire.",
-    "_file": "03-range.html"
+    "notes": ""
+   }
+  },
+  {
+   "type": "CustomHtml",
+   "props": {
+    "id": "CustomHtml-42",
+    "html": "<script>\n  // Set-wall parallax: every sleeve drifts at its own rate (--d) against\n  // scroll. Desktop-map layouts only (>=1100px; the packed grids hold still),\n  // reduced motion wins outright, and with JS off the walls are simply\n  // static — placement never depends on this script.\n  (function () {\n    var mm = window.matchMedia;\n    if (!mm || mm('(prefers-reduced-motion: reduce)').matches) return;\n    var tiles = [];\n    document.querySelectorAll('.cover-wall .wall-tile').forEach(function (t) {\n      tiles.push({ el: t, d: parseFloat(t.style.getPropertyValue('--d')) || 0 });\n    });\n    if (!tiles.length) return;\n    var MAX = 96, wide = mm('(min-width: 1100px)').matches, ticking = false;\n    function frame() {\n      ticking = false;\n      var vh = window.innerHeight;\n      var shifts = tiles.map(function (t) {\n        var r = t.el.getBoundingClientRect();          // read phase\n        if (r.bottom < -MAX || r.top > vh + MAX) return null;\n        return ((r.top + r.height / 2 - vh / 2) / vh) * t.d * -MAX;\n      });\n      shifts.forEach(function (y, i) {                 // write phase\n        if (y !== null) tiles[i].el.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0)';\n      });\n    }\n    function onScroll() {\n      if (!wide || ticking) return;\n      ticking = true;\n      requestAnimationFrame(frame);\n    }\n    mm('(min-width: 1100px)').addEventListener('change', function (e) {\n      wide = e.matches;\n      if (!wide) tiles.forEach(function (t) { t.el.style.transform = ''; });\n      else onScroll();\n    });\n    window.addEventListener('scroll', onScroll, { passive: true });\n    window.addEventListener('resize', onScroll, { passive: true });\n    onScroll();\n  })();\n</script>"
    }
   },
   {
@@ -210,15 +332,14 @@
        "titleClass": "h2",
        "titleStyle": "max-width: 42rem; zoom: 1.25;",
        "image": {
-        "src": "/img/unsplash/photo-1511379938547-c1f69419868d.jpg",
-        "alt": "Acoustic and electric guitars, a keyboard and a microphone stand by tall windows.",
+        "src": "/img/unsplash/photo-1527529482837-4698179dc6ce.jpg",
+        "alt": "Guests raising glasses in a toast at a dinner under string lights.",
         "width": "1600",
         "height": "1067",
         "loading": "lazy",
-        "decoding": "async",
-        "style": "width: 22rem; height: auto;"
+        "decoding": "async"
        },
-       "imageFirst": true,
+       "imageFirst": "left",
        "lede": "Hiring the right entertainment can be nerve-racking. Everyone's got an opinion, and to some degree, your reputation might be on the line.",
        "ledeStyle": "max-width: 53rem;",
        "headingText": [
@@ -226,26 +347,28 @@
          "html": "Signet Artists makes it hard to get wrong. You get an act that fits your vision, sound support that's the right size for the venue, and clear, professional support all along the way.",
          "style": "max-width: 51.5rem;"
         }
-       ]
-      }
-     },
-     {
-      "type": "ButtonRow",
-      "props": {
-       "id": "ButtonRow-21",
-       "buttons": []
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-22",
-       "html": "<a href=\"/pricing/\">Learn what live music costs in different markets including Colorado, the Front Range and Nationally.</a>",
-       "cls": "note"
+       ],
+       "headingNote": "<a href=\"/pricing/\">Learn what live music costs in different markets including Colorado, the Front Range and Nationally.</a>"
       }
      }
     ],
     "_file": "04-pricing.html"
+   }
+  },
+  {
+   "type": "RangeStrip",
+   "props": {
+    "id": "RangeStrip-10",
+    "image": {
+     "src": "/img/range.jpg",
+     "alt": "The Denver skyline against the Front Range, from City Park.",
+     "width": "2400",
+     "height": "800",
+     "loading": "lazy",
+     "decoding": "async"
+    },
+    "label": "Where we play",
+    "_file": "02b-range.html"
    }
   },
   {
@@ -331,7 +454,8 @@
       }
      }
     ],
-    "_file": "05-close.html"
+    "_file": "05-close.html",
+    "wrapStyle": "padding-block: calc(var(--space-4) * 2);"
    }
   }
  ]

@@ -21,12 +21,16 @@ export const Heading = {
   render: function HeadingRender(p) {
     const s = useSite();
     const href = useHref();
+    // "left": the picture in a column of its own beside the words, which stack
+    // under it on a narrow screen. The pair is not a .heading, so the section
+    // keeps its full width instead of narrowing to the reading column.
+    const left = p.imageFirst === "left" && p.image && p.image.src;
     const heading = (
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
       {p.title != null ? <H as={p.titleTag || "h2"} className={p.titleClass || "h2"} style={css(p.titleStyle)} html={p.title} /> : null}
       {p.face != null ? <H as="p" className="act-face" html={p.face} /> : null}
-      {p.imageFirst ? <Img im={p.image} /> : null}
+      {p.imageFirst && !left ? <Img im={p.image} /> : null}
       {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
       {(p.headingText || []).map((t, i) => (
         <H key={i} as="p" className={t.cls || "prose"} style={css(t.style)} html={t.html} />
@@ -36,6 +40,14 @@ export const Heading = {
       {p.headingNote != null ? <H as="p" className="note" html={p.headingNote} /> : null}
     </div>
     );
+    if (left) {
+      return (
+        <div className="heading-split">
+          <div className="heading-split__media"><Img im={p.image} /></div>
+          {heading}
+        </div>
+      );
+    }
     // The page's own h1 heading sits over a full-bleed photo, the same
     // treatment as the closing call to action.
     const photo = p.titleTag === "h1" ? heroPhoto(s) : null;
@@ -717,6 +729,59 @@ export function RosterGrid({ acts, id }) {
   );
 }
 
+// A photo card: the act's photograph with the kind and the name over its foot,
+// and nothing under it; the whole card links to the act. An act with a `loop`
+// (a short silent clip under media/loops/) plays it over the photo while the
+// card is on screen. The video is written as raw HTML because React's server
+// render drops the muted attribute, and a browser only autoplays a muted video.
+function PhotoCard({ a }) {
+  const s = useSite();
+  const m = s.model;
+  const href = useHref();
+  const url = a.status === "flagship" || a.page ? m.actUrl(a, s.prefix) : href(`/contact/?act=${a.id}`);
+  return (
+    <article className="act-card act-card--roster act-card--photo" id={`act-${a.id}`} data-name={a.name}>
+      <a className="roster-card-link" href={url}>
+        <div className="roster-card-photo">
+          {a.img ? <Pic src={href(`/img/${a.img}`)} alt="" width="1600" height="1200" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}
+          {a.loop ? (
+            <div
+              className="photo-card-loop"
+              dangerouslySetInnerHTML={{ __html: `<video data-src="${href("/" + a.loop)}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>` }}
+            />
+          ) : null}
+          <div className="roster-card-over">
+            <p className="act-kind">{a.style}</p>
+            <h3 className="roster-card-name">{a.name}</h3>
+          </div>
+        </div>
+      </a>
+    </article>
+  );
+}
+
+// Plays each card's loop while it is on screen and pauses it off screen. Loads
+// nothing for data saver or reduced motion, which keep the photos still.
+const LOOP_SCRIPT =
+  `(function(){var g=document.currentScript.previousElementSibling,c=navigator.connection;` +
+  `if((c&&c.saveData)||matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;` +
+  `var o=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;` +
+  `if(e.isIntersecting){if(!v.src){v.src=v.dataset.src;v.addEventListener("playing",function(){v.parentNode.classList.add("is-playing");});}` +
+  `var p=v.play();p&&p.catch&&p.catch(function(){});}else if(v.src){v.pause();}});},{rootMargin:"150px 0px"});` +
+  `g.querySelectorAll(".photo-card-loop video").forEach(function(v){o.observe(v);});})();`;
+
+export function PhotoGrid({ acts, id, style }) {
+  const looping = acts.some((a) => a.loop);
+  return (
+    <>
+      <div className="roster-grid roster-grid--photo" id={id} style={css(style)}>
+        {acts.map((a) => <PhotoCard key={a.id} a={a} />)}
+      </div>
+      {looping ? <script dangerouslySetInnerHTML={{ __html: LOOP_SCRIPT }} /> : null}
+    </>
+  );
+}
+
 export function CardGrid({ acts, compact, id, cls = "card-grid card-grid--3", style }) {
   return (
     <div className={cls} id={id} style={css(style)}>
@@ -743,6 +808,7 @@ export const Cards = {
     night: text("Kind of night"),
     acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act") } },
     compact: { type: "radio", label: "Cards", options: [{ label: "Full", value: false }, { label: "Short", value: true }] },
+    look: { type: "radio", label: "Look", options: [{ label: "Cards", value: "cards" }, { label: "Photos", value: "photos" }] },
     picks: {
       type: "array",
       label: "Picks",
@@ -751,10 +817,11 @@ export const Cards = {
     },
   },
   defaultProps: { source: "flagships", picks: [] },
-  render: function CardsRender({ source, picks, occasion, night, acts, compact, style }) {
+  render: function CardsRender({ source, picks, occasion, night, acts, compact, look, style }) {
     const s = useSite();
     const m = s.model;
     const href = useHref();
+    if (source !== "picks" && look === "photos") return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} />;
     if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} style={style} />;
     return (
       <div className="card-grid card-grid--3" style={css(style)}>
