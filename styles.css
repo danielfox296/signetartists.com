@@ -615,6 +615,15 @@ img {
   border-color: var(--ink);
 }
 
+/* On the aqua band the outline button fills near-black under the pointer or
+   keyboard focus, so it answers like a button. */
+.section--sunk .btn--outline:hover,
+.section--sunk .btn--outline:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
 .btn--sm {
   padding: 0.4rem 0.8rem;
 }
@@ -4459,4 +4468,26 @@ img[src$="img/standards.jpg"],
 img[src$="img/dj.jpg"],
 img[src$="img/headliners.jpg"] {
   filter: grayscale(1) contrast(1.05);
+}
+
+/* A heading with its picture to the left (Heading, Picture: Left of the
+   words): two equal columns from 800px, the words centred against the
+   picture; below that the picture sits above the words. */
+.heading-split {
+  display: grid;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.heading-split__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 800px) {
+  .heading-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 5vw, 5rem);
+  }
 }

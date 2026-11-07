@@ -21,12 +21,16 @@ export const Heading = {
   render: function HeadingRender(p) {
     const s = useSite();
     const href = useHref();
+    // "left": the picture in a column of its own beside the words, which stack
+    // under it on a narrow screen. The pair is not a .heading, so the section
+    // keeps its full width instead of narrowing to the reading column.
+    const left = p.imageFirst === "left" && p.image && p.image.src;
     const heading = (
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
       {p.title != null ? <H as={p.titleTag || "h2"} className={p.titleClass || "h2"} style={css(p.titleStyle)} html={p.title} /> : null}
       {p.face != null ? <H as="p" className="act-face" html={p.face} /> : null}
-      {p.imageFirst ? <Img im={p.image} /> : null}
+      {p.imageFirst && !left ? <Img im={p.image} /> : null}
       {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
       {(p.headingText || []).map((t, i) => (
         <H key={i} as="p" className={t.cls || "prose"} style={css(t.style)} html={t.html} />
@@ -36,6 +40,14 @@ export const Heading = {
       {p.headingNote != null ? <H as="p" className="note" html={p.headingNote} /> : null}
     </div>
     );
+    if (left) {
+      return (
+        <div className="heading-split">
+          <div className="heading-split__media"><Img im={p.image} /></div>
+          {heading}
+        </div>
+      );
+    }
     // The page's own h1 heading sits over a full-bleed photo, the same
     // treatment as the closing call to action.
     const photo = p.titleTag === "h1" ? heroPhoto(s) : null;

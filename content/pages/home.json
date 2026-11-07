@@ -286,10 +286,9 @@
         "width": "1600",
         "height": "1067",
         "loading": "lazy",
-        "decoding": "async",
-        "style": "width: 22rem; height: auto;"
+        "decoding": "async"
        },
-       "imageFirst": true,
+       "imageFirst": "left",
        "lede": "Hiring the right entertainment can be nerve-racking. Everyone's got an opinion, and to some degree, your reputation might be on the line.",
        "ledeStyle": "max-width: 53rem;",
        "headingText": [
@@ -297,22 +296,8 @@
          "html": "Signet Artists makes it hard to get wrong. You get an act that fits your vision, sound support that's the right size for the venue, and clear, professional support all along the way.",
          "style": "max-width: 51.5rem;"
         }
-       ]
-      }
-     },
-     {
-      "type": "ButtonRow",
-      "props": {
-       "id": "ButtonRow-21",
-       "buttons": []
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-22",
-       "html": "<a href=\"/pricing/\">Learn what live music costs in different markets including Colorado, the Front Range and Nationally.</a>",
-       "cls": "note"
+       ],
+       "headingNote": "<a href=\"/pricing/\">Learn what live music costs in different markets including Colorado, the Front Range and Nationally.</a>"
       }
      }
     ],
