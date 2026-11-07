@@ -178,7 +178,7 @@ const ROW_ART = [
   [/\b(?:paperwork|invoice|w-9|contract)/, "document"],
   [/\b(?:load-in|load in|load-out|setup|strike)/, "box"],
 ];
-function rowMark(term) {
+export function rowMark(term) {
   const t = String(term || "").replace(/<[^>]+>/g, "").toLowerCase();
   const n = t.match(/\b(\d{1,3})(?:st|nd|rd|th)\b/);
   if (n) return { num: n[1] };

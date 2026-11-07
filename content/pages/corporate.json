@@ -480,7 +480,8 @@
        {
         "path": "retreats"
        }
-      ]
+      ],
+      "art": "building"
      },
      {
       "label": "Holiday parties by city",
@@ -516,10 +517,12 @@
        {
         "path": "jazz-band"
        }
-      ]
+      ],
+      "art": "musicians"
      }
     ],
-    "_file": "01-pages.html"
+    "_file": "01-pages.html",
+    "look": "cards"
    }
   },
   {
