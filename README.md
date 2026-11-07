@@ -117,6 +117,43 @@ the `?occasion=` deep link; `entity` emits a Person or MusicGroup node with
 `/music/#act-<id>` everywhere. The three party formats' tiles are drawn by
 `scripts/format_art.py`. `scripts/copy_gate.py music` gates the roster copy.
 
+## Vendor pages (Preferred Vendor List)
+
+`/preferred-vendors/` lists wedding vendors Signet recommends; a vendor who
+says yes also gets a page of their own at `/preferred-vendors/<slug>/`. The
+first two were MXBloom Films and Makeup by Sameera (2026-11-06). Copy
+`content/pages/preferred-vendors-mxbloom-films.json` for the next one. The
+whole loop, outreach to the link back, is the `signet-vendor-list` skill.
+
+A new vendor touches:
+
+- `content/pages/preferred-vendors-<slug>.json`, the page
+- `content/pages/preferred-vendors.json`, their card on the list (`page`
+  points at their page on our site; a new category goes here too)
+- `img/vendors/<slug>/`, their photographs, with a row in
+  `content/records/media-sources.json` saying where they came from
+
+Rules for the page:
+
+- Facts come only from the vendor's own emails and website. Their numbers go
+  stale (MXBloom's "close to 300 weddings" was "more than 300"), so the email
+  that sends them the live page always invites corrections.
+- Say nothing about what Daniel has or hasn't seen of their work.
+- No link to WeddingWire, The Knot or any platform like them, in the copy or
+  the schema: they compete with Signet for music. Naming an award is fine.
+- Photographs come from the vendor's site. Alt text says only what is in the
+  frame and names no place, because vendors' own descriptions don't always
+  match their pictures. Credit the work under the gallery; leave off any
+  photo carrying another photographer's watermark.
+- The schema's vendor node keeps the `@id` their own site uses and carries no
+  rating.
+- The page closes on Signet's own call to action.
+
+Going live: a vendor change is committed on a branch, then merged into `main`
+with a merge commit titled `Go live: <what changed>` (the admin's Go live
+does the same from `staging`). Deploys take a few minutes; check the live
+page before telling the vendor it's up.
+
 ## Section tokens
 
 A section can drop in any of these and the build fills them from `site.json`:
