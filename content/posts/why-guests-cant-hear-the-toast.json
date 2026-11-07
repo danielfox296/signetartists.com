@@ -49,7 +49,7 @@
    "type": "Prose",
    "props": {
     "id": "Prose-3",
-    "html": "<p>The father of the bride stands up with a microphone in front of two hundred people, and the first sound in the ballroom is a squeal from the speakers. He flinches, steps back, starts again at half the voice, and the tables along the window catch every third word.</p>\n<p>Nobody remembers what the band played at 9:40. Everybody remembers the toast they couldn't hear. The same goes for the CEO's thank-you at the holiday party and the founder's remarks at the client dinner. A wedding has maybe four minutes that cannot be redone, and all four happen on a handheld microphone in the hands of someone who has never held one.</p>\n<p>No need to know anything about sound to fix this. You need to know what goes wrong, so you can ask the right three questions.</p>"
+    "html": "<p>The father of the bride stands up with a microphone in front of two hundred people, and the first sound in the ballroom is a squeal from the speakers. He flinches, steps back, starts again at half the voice, and the tables along the window catch every third word.</p>\n<p>Nobody remembers what the band played at 9:40. Everybody remembers the toast they couldn't hear. The same goes for the CEO's thank-you at the holiday party and the founder's remarks at the client dinner. A wedding has maybe four minutes that cannot be redone, and all four happen on a handheld microphone in the hands of someone who has never held one.</p>\n<p>Fixing it takes three questions. Here is what goes wrong, so the questions make sense.</p>"
    }
   },
   {
@@ -64,7 +64,7 @@
    "type": "Prose",
    "props": {
     "id": "Prose-5",
-    "html": "<p>The first is the microphone held too low. A nervous person holds it at their chest, the way they'd hold a drink, and the microphone picks up about half as much voice as it would at the chin. Everyone at the back leans in.</p>\n<p>The second is the squeal. A microphone hears whatever is in front of it, including the loudspeakers that are playing the microphone. If the person giving the toast walks toward a speaker, the microphone hears itself, the speaker plays that back, the microphone hears it again, and in a fraction of a second the whole loop turns into a shriek. Sound people call it feedback. It happens when the microphone and the speakers are pointed at each other, and it is the band's job to arrange the speakers so that a nervous person can wander and nothing happens.</p>\n<p>The third is music left up under the voice. The band's dinner level feels soft when nobody is talking into a microphone. Put a voice on top of it and the back half of the hall hears music with somebody talking somewhere inside it.</p>"
+    "html": "<p>The first is the microphone held too low. A nervous person holds it at their chest, the way they'd hold a drink, and the microphone picks up about half as much voice as it would at the chin. Everyone at the back leans in.</p>\n<p>The second is the squeal. A microphone picks up whatever is in front of it, and that includes the speakers it is being played through. If the person giving the toast walks toward a speaker, the microphone hears itself, the speaker plays that back, the microphone hears it again, and in a fraction of a second the whole loop turns into a shriek. Sound people call it feedback. It happens when the microphone and the speakers are pointed at each other, and it is the band's job to arrange the speakers so that a nervous person can wander and nothing happens.</p>\n<p>The third is music left up under the voice. The band's dinner level feels soft when nobody is talking into a microphone. Put a voice on top of it and the back half of the hall hears music with somebody talking somewhere inside it.</p>"
    }
   },
   {
@@ -88,7 +88,7 @@
    "type": "Prose",
    "props": {
     "id": "Prose-8",
-    "html": "<p>Loudness is measured in decibels. The only thing worth remembering is that a ten-decibel jump sounds about twice as loud to a person in the seat. A voice on a microphone <a href=\"https://da.lib.kobe-u.ac.jp/da/kernel/90004034/90004034.pdf\">needs to sit about ten to fifteen decibels above</a> whatever is playing underneath it to be understood without effort. That is roughly twice as loud as the background. <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC4898833\">Guests over sixty need a few decibels more than that</a>, even with ordinary hearing, which is why the grandparents' table is the first to give up on a speech.</p>\n<p>Turning the microphone up is the obvious fix, and it is the one that causes the squeal. The better fix is to bring the music all the way down for the length of the speech, so the voice has nothing to climb over.</p>"
+    "html": "<p>Loudness is measured in decibels. The only thing worth remembering is that a ten-decibel jump sounds about twice as loud to a person in the seat. A voice on a microphone <a href=\"https://da.lib.kobe-u.ac.jp/da/kernel/90004034/90004034.pdf\">needs to sit about ten to fifteen decibels above</a> whatever is playing underneath it to be understood without effort. That is roughly twice as loud as the background. A normal voice across a dinner table is about 60 decibels. If the band is also at 60, the microphone has to bring that voice up to 70 or 75, about where a raised voice lands. <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC4898833\">Guests over sixty need a few decibels more than that</a>, even with ordinary hearing, which is why the grandparents' table is the first to give up on a speech.</p>\n<p>Turning the microphone up is the obvious fix, and it is the one that causes the squeal. The better fix is to bring the music all the way down for the length of the speech, so the voice has nothing to climb over.</p>"
    }
   },
   {
@@ -118,7 +118,7 @@
    "type": "Prose",
    "props": {
     "id": "Prose-12",
-    "html": "<p>The last piece is a person. Somebody from the band walks the microphone to the speaker and says one sentence: hold it here, right at your chin. Then they go back to the sound board and keep a hand on the volume for the whole speech, riding it up when the voice drops and down when it rises. A second microphone is switched on and within reach, because batteries die and cables fail at exactly this moment.</p>\n<p>The announcement that the shuttle leaves at eleven gets the same treatment. Miss it and the night ends with sixty guests on a curb.</p>"
+    "html": "<p>The last piece is a person. Somebody from the band walks the microphone to the speaker and says one sentence: hold it here, right at your chin. Then they go back to the mixing board, the desk with all the knobs, and keep a hand on the volume for the whole speech, nudging it up when the voice drops and down when it rises. A second microphone is switched on and within reach, because batteries die and cables fail at exactly this moment.</p>\n<p>The announcement that the shuttle leaves at eleven gets the same treatment. Miss it and the night ends with sixty guests on a curb.</p>"
    }
   },
   {
