@@ -325,3 +325,33 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1786540601357-aba5b71f3da8
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-11-03
+
+## photo-1521321335080-61c4776db11b.jpg
+- Used on: the blog › how the space sounds page
+- Source: https://images.unsplash.com/photo-1521321335080-61c4776db11b
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-07
+
+## photo-1767784097019-f19285b71a12.jpg
+- Used on: the blog › how the space sounds page
+- Source: https://images.unsplash.com/photo-1767784097019-f19285b71a12
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-07
+
+## photo-1665607437981-973dcd6a22bb.jpg
+- Used on: the blog › how the space sounds page
+- Source: https://images.unsplash.com/photo-1665607437981-973dcd6a22bb
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-07
+
+## photo-1724858103797-6d388eb1006a.jpg
+- Used on: the blog › how the space sounds page
+- Source: https://images.unsplash.com/photo-1724858103797-6d388eb1006a
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-07
+
+## photo-1698217384861-66e7da179ed6.jpg
+- Used on: the blog › how the space sounds page
+- Source: https://images.unsplash.com/photo-1698217384861-66e7da179ed6
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-07
