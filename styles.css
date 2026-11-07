@@ -1054,6 +1054,40 @@ img {
   }
 }
 
+/* The home hero as a video, 2026-11-07: a 24 s silent black and white loop of
+   the acts on stage. The first picture stays underneath as the poster (and is
+   the picture search engines and slow connections get); it holds still while
+   the video plays over it. Reduced motion hides the video and keeps the still. */
+.hero-cine--video .hero-cine__frame {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+.hero-cine--video .hero-cine__frame ~ .hero-cine__frame {
+  display: none;
+}
+
+.hero-cine__video-wrap,
+.hero-cine__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-cine__video {
+  object-fit: cover;
+  object-position: center 35%;
+  filter: grayscale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cine__video-wrap {
+    display: none;
+  }
+}
+
 /* ----------------------------------------------------------------- media */
 
 /* Placeholder imagery until the shoot. Duotoned into the palette so the set

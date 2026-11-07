@@ -145,9 +145,10 @@ const HomeHero = {
     buttons: buttonFields,
     frames: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: imageFields },
     framesHidden: text("Hidden"),
+    video: text("Video (a silent loop, e.g. /media/signet-hero.mp4; the first picture is its poster)"),
   },
-  render: ({ label, frames, framesHidden, title, titleStyle, lede, ledeStyle, buttons, wrapStyle }) => (
-    <section className="hero-cine" aria-label={label || undefined}>
+  render: ({ label, frames, framesHidden, video, title, titleStyle, lede, ledeStyle, buttons, wrapStyle }) => (
+    <section className={video ? "hero-cine hero-cine--video" : "hero-cine"} aria-label={label || undefined}>
       <div className="hero-cine__frames" aria-hidden={framesHidden || "false"}>
         {(frames || []).map((im, i) => (
           <Fragment key={i}>
@@ -155,6 +156,16 @@ const HomeHero = {
             <Img im={{ cls: "hero-cine__frame", ...im }} sizes={SIZES.screen} />
           </Fragment>
         ))}
+        {video ? (
+          // Written as raw HTML: React's server render drops the muted attribute, and a
+          // browser only autoplays a video it can see is muted.
+          <div
+            className="hero-cine__video-wrap"
+            dangerouslySetInnerHTML={{
+              __html: `<video class="hero-cine__video" src="${video}"${frames && frames[0] ? ` poster="${frames[0].src}"` : ""} autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>`,
+            }}
+          />
+        ) : null}
       </div>
       <div className="hero-cine__scrim" aria-hidden="true"></div>
       <div className="wrap hero-cine__copy" style={css(wrapStyle)}>

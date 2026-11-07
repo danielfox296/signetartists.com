@@ -17,28 +17,15 @@
     "label": "Signet Artists",
     "frames": [
      {
-      "src": "/img/hero/gary-meyers.jpg",
-      "alt": "Gary Meyers playing flamenco guitar beside a Spanish doorway, in black and white.",
+      "src": "/img/hero/signet-hero-poster.jpg",
+      "alt": "Meghan Clarisse singing with her band on stage, in black and white.",
       "width": "1600",
       "height": "900",
       "fetchpriority": "high",
       "decoding": "async"
-     },
-     {
-      "src": "/img/hero/tejas-singh.jpg",
-      "alt": "Tejas Singh in profile, looking upward, in black and white.",
-      "width": "1600",
-      "height": "900",
-      "decoding": "async"
-     },
-     {
-      "src": "/img/hero/last-consulate.jpg",
-      "alt": "Last Consulate's artwork: a black and white prop passport held open in one hand.",
-      "width": "1600",
-      "height": "900",
-      "decoding": "async"
      }
     ],
+    "video": "/media/signet-hero.mp4",
     "title": "Live music for your event.",
     "titleStyle": "max-width: 25.5rem;",
     "lede": "Signet Artists delivers live entertainment for private events in Denver, Colorado and surrounding areas. All provided in a variety of genres and configurations - effortlessly.",
