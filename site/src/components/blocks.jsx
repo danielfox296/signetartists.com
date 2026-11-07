@@ -24,7 +24,7 @@ export const Heading = {
     // "left": the picture in a column of its own beside the words, which stack
     // under it on a narrow screen. The pair is not a .heading, so the section
     // keeps its full width instead of narrowing to the reading column.
-    const left = p.imageFirst === "left" && p.image && p.image.src;
+    const left = (p.imageFirst === "left" || p.imageFirst === "right") && p.image && p.image.src;
     const heading = (
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
@@ -42,7 +42,7 @@ export const Heading = {
     );
     if (left) {
       return (
-        <div className="heading-split">
+        <div className={cx("heading-split", p.imageFirst === "right" && "heading-split--right")}>
           <div className="heading-split__media"><Img im={p.image} /></div>
           {heading}
         </div>
@@ -63,7 +63,7 @@ export const Heading = {
 
 export const Paragraph = {
   label: "Paragraph",
-  fields: { html: rich("Text"), cls: select("Style", [{ label: "Text", value: "prose" }, { label: "Note", value: "note" }, { label: "Small note", value: "note note--small" }, { label: "Lede", value: "lede" }]), style: text("Style") },
+  fields: { html: rich("Text"), cls: select("Style", [{ label: "Text", value: "prose" }, { label: "Note", value: "note" }, { label: "Small note", value: "note note--small" }, { label: "Lede", value: "lede" }, { label: "Callout", value: "callout" }]), style: text("Style") },
   defaultProps: { html: "Text", cls: "prose" },
   render: ({ html, cls, style }) => <H as="p" className={cls || undefined} style={css(style)} html={html} />,
 };
@@ -121,15 +121,16 @@ export const SpecList = {
     source: select("List", [{ label: "This list", value: "own" }, { label: "What's included", value: "included" }, { label: "Quoted separately", value: "extras" }]),
     items: { type: "array", label: "Items", getItemSummary: (x) => plain(x.html), arrayFields: { html: rich("Item") } },
     cols: { type: "radio", label: "Columns", options: [{ label: "One", value: false }, { label: "Two", value: true }] },
+    mark: select("Marker", [{ label: "Dash", value: "" }, { label: "Check", value: "check" }, { label: "Plus", value: "plus" }]),
   },
   defaultProps: { source: "own", items: [{ html: "Item" }], cols: false },
-  render: function SpecListRender({ source, items, cols, style }) {
+  render: function SpecListRender({ source, items, cols, mark, style }) {
     const s = useSite();
     const DASH = '<span class="dash" aria-hidden="true"></span>';
     const list = source && source !== "own" ? s.model.site.lists[source].map((t) => DASH + esc(t)) : (items || []).map((it) => (typeof it.html === "string" ? DASH + it.html : it.html));
     // Copy being edited on the canvas is an editor, not a string: the dash goes before it.
     return (
-      <ul className={cx("spec-list", cols && "spec-list--cols")} style={css(style)}>
+      <ul className={cx("spec-list", cols && "spec-list--cols", mark && `spec-list--${mark}`)} style={css(style)}>
         {list.map((h, i) => (typeof h === "string" ? <H key={i} as="li" html={h} /> : <li key={i}><span className="dash" aria-hidden="true"></span>{h}</li>))}
       </ul>
     );
@@ -218,14 +219,14 @@ export const DefRows = {
       getItemSummary: (r) => plain(r.term),
       arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
     },
-    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Cards", value: "def-list def-list--cards" }, { label: "Side by side", value: "def-list" }]),
+    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Cards", value: "def-list def-list--cards" }, { label: "Icon list", value: "def-list def-list--icons" }, { label: "Side by side", value: "def-list" }]),
     bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
     style: text("Style"),
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
   render: ({ cls, style, bare, rows }) => {
     const layout = cls || "def-list def-list--stack";
-    const marked = /def-list--(stack|cards)/.test(layout);
+    const marked = /def-list--(stack|cards|icons)/.test(layout);
     const leads = /def-list--stack/.test(layout);
     return (
     <dl className={layout} style={css(style)}>
@@ -416,6 +417,66 @@ export const Panel = {
 // ----------------------------------------------------------------- table
 
 const cellFields = { html: rich("Text"), tag: select("Cell", [{ label: "Data", value: "" }, { label: "Header", value: "th" }, { label: "Data cell", value: "td" }]), cls: text("Class"), scope: text("Scope") };
+// Price ranges: each row is a published market range drawn as a bar on one
+// shared dollar scale, with its label, its market and the figures in large
+// type. Each bar grows in from the left as its row scrolls into view (not
+// for reduced motion, and with script off they are simply drawn). It carries
+// the rate-table class, so the pricing_engaged event in analytics.js still
+// fires when a reader reaches it.
+const money = (n) => "$" + Math.round(Number(n) || 0).toLocaleString("en-US");
+const RANGE_SCRIPT =
+  `(function(){var r=document.currentScript.parentNode;` +
+  `if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;` +
+  `r.classList.add("is-armed");var o=new IntersectionObserver(function(es){es.forEach(function(e){` +
+  `if(e.isIntersecting){e.target.classList.add("is-in");o.unobserve(e.target);}});},{threshold:0.6});` +
+  `r.querySelectorAll(".price-range").forEach(function(x){o.observe(x);});})();`;
+export const PriceRanges = {
+  label: "Price ranges",
+  fields: {
+    caption: rich("Caption"),
+    max: { type: "number", label: "Scale to ($)", min: 0 },
+    rows: {
+      type: "array",
+      label: "Rows",
+      getItemSummary: (r) => plain(r.label),
+      arrayFields: { label: rich("What"), market: text("Market"), low: { type: "number", label: "From ($)", min: 0 }, high: { type: "number", label: "To ($)", min: 0 } },
+    },
+  },
+  defaultProps: { rows: [] },
+  render: ({ caption, max, rows, style }) => {
+    const list = rows || [];
+    const top = Number(max) || Math.ceil(Math.max(1, ...list.map((r) => Number(r.high) || 0)) / 5000) * 5000;
+    const pct = (n) => `${Math.max(0, Math.min(100, ((Number(n) || 0) / top) * 100)).toFixed(2)}%`;
+    const ticks = [];
+    for (let t = 0; t <= top; t += 5000) ticks.push(t);
+    return (
+      <div className="rate-table price-ranges" style={css(style)}>
+        {caption != null ? <H as="p" className="price-ranges__caption" html={caption} /> : null}
+        <div className="price-ranges__axis" aria-hidden="true">
+          <div className="price-ranges__ticks">
+            {ticks.map((t) => (
+              <span key={t} style={{ left: pct(t) }}>{t ? `$${t / 1000}k` : "$0"}</span>
+            ))}
+          </div>
+        </div>
+        <ul className="price-ranges__rows">
+          {list.map((r, i) => (
+            <li className="price-range" key={i} style={{ "--lo": pct(r.low), "--hi": pct(r.high), "--i": i }}>
+              <div className="price-range__what">
+                <H as="span" className="price-range__label" html={r.label} />
+                {r.market ? <span className="price-range__market">{r.market}</span> : null}
+              </div>
+              <div className="price-range__track" aria-hidden="true"><span className="price-range__bar"></span></div>
+              <p className="price-range__figure tnum">{money(r.low)}<span className="price-range__to"> to </span>{money(r.high)}</p>
+            </li>
+          ))}
+        </ul>
+        <script dangerouslySetInnerHTML={{ __html: RANGE_SCRIPT }} />
+      </div>
+    );
+  },
+};
+
 export const Table = {
   label: "Rate table",
   fields: {
@@ -932,4 +993,4 @@ export const HtmlBlock = {
   render: ({ html, style }) => <Boxed style={style}><Raw html={html} /></Boxed>,
 };
 
-export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };
+export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, PriceRanges, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };

@@ -4497,3 +4497,277 @@ img[src$="img/headliners.jpg"] {
     gap: clamp(2.5rem, 5vw, 5rem);
   }
 }
+
+/* ------------------------------------------------ price ranges (2026-11-07)
+   Published market ranges drawn as bars on one dollar scale: what it is and
+   its market on the left, the bar in the middle, the figures in display type
+   on the right. On a phone each row stacks: words, figures, then the bar,
+   under one shared scale. Each bar grows in as its row is first seen. */
+.price-ranges {
+  min-width: 0;
+  margin-top: var(--space-3);
+}
+.price-ranges__caption {
+  font-size: 0.9625rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+.price-ranges__axis,
+.price-range {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+.price-ranges__ticks {
+  position: relative;
+  height: 1.4rem;
+}
+.price-ranges__ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.price-ranges__ticks span:first-child {
+  transform: none;
+}
+.price-ranges__ticks span:last-child {
+  transform: translateX(-100%);
+}
+.price-ranges__rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.price-range {
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--rule);
+  align-items: center;
+}
+.price-range__what {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+.price-range__label {
+  font-size: 1.0588rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--ink);
+}
+.price-range__label::first-letter {
+  text-transform: uppercase;
+}
+.price-range__market {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--red);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+.price-range__track {
+  position: relative;
+  height: 0.75rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(var(--rule), var(--rule)) center / 100% 1px no-repeat;
+}
+.price-range__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--lo);
+  width: calc(var(--hi) - var(--lo));
+  min-width: 0.75rem;
+  border-radius: 999px;
+  background: var(--red);
+  transform-origin: left center;
+}
+.price-range__figure {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(1.6rem, 1.15rem + 1.3vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.price-range__to {
+  font-family: var(--sans);
+  font-stretch: 100%;
+  font-weight: 500;
+  font-size: 0.45em;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+  vertical-align: 0.35em;
+  padding: 0 0.3em;
+}
+@media (min-width: 900px) {
+  .price-ranges__axis,
+  .price-range {
+    grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr) minmax(12rem, 15rem);
+    gap: 2.25rem;
+  }
+  .price-ranges__ticks {
+    grid-column: 2;
+  }
+  .price-range__figure {
+    text-align: right;
+  }
+}
+@media (max-width: 899px) {
+  .price-range__track {
+    order: 3;
+  }
+}
+.price-ranges.is-armed .price-range__bar {
+  transform: scaleX(0);
+}
+.price-ranges.is-armed .price-range__figure {
+  opacity: 0;
+  transform: translateY(0.4rem);
+}
+.price-ranges.is-armed .price-range.is-in .price-range__bar {
+  transform: scaleX(1);
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--i) * 70ms);
+}
+.price-ranges.is-armed .price-range.is-in .price-range__figure {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease calc(var(--i) * 70ms + 250ms), transform 0.6s ease calc(var(--i) * 70ms + 250ms);
+}
+
+/* Icon list (Rows, Layout: Icon list): a compact list with the row's line
+   drawing beside a short label and a line of text. */
+.def-list--icons {
+  max-width: 46rem;
+  border-bottom: 0;
+}
+/* A column pair right under a section title gets the room a heading gets. */
+.h3 + .split,
+.h2 + .split {
+  margin-top: var(--space-3);
+}
+.def-list--icons .def-row {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 1.1rem;
+  row-gap: 0.2rem;
+  justify-content: stretch;
+  align-items: start;
+  padding: 1rem 0;
+}
+.def-list--icons .def-row::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--brass);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.def-list--icons dt,
+.def-list--icons dd {
+  grid-column: 2;
+  margin: 0;
+}
+.def-list--icons dt {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+.def-list--icons dd {
+  font-size: 0.9625rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* Spec list markers: a check for what comes with every booking, a plus for
+   what is added to a quote. */
+.spec-list--check .dash,
+.spec-list--plus .dash {
+  margin-top: 0.2rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  background: var(--brass);
+  -webkit-mask: var(--mark) center / contain no-repeat;
+  mask: var(--mark) center / contain no-repeat;
+}
+.spec-list--check {
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E");
+}
+.spec-list--plus {
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M12 4v16M4 12h16'/%3E%3C/svg%3E");
+}
+.spec-list--check li,
+.spec-list--plus li {
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+/* Callout: one line set large, for the sentence a skimmer should not miss. */
+.callout {
+  max-width: 40rem;
+  margin: var(--space-3) 0 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem);
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--red);
+}
+
+/* Right of the words: the picture column comes second from 800px. */
+@media (min-width: 800px) {
+  .heading-split--right .heading-split__media {
+    order: 2;
+  }
+}
+
+/* Lists, cards and pictures in a section rise gently into place as they
+   scroll into view, where the browser can tie motion to scrolling; nothing
+   moves under reduced motion. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .def-list--icons .def-row,
+    .heading-split__media,
+    .spec-list--check li,
+    .spec-list--plus li,
+    .callout {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

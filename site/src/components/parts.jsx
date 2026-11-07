@@ -287,7 +287,7 @@ export const headingFields = {
   headingNote: rich("Note"),
   headingStyle: text("Heading style"),
   image: { type: "object", label: "Picture", objectFields: imageFields },
-  imageFirst: { type: "radio", label: "Picture", options: [{ label: "After the text", value: false }, { label: "Before the lede", value: true }, { label: "Left of the words", value: "left" }] },
+  imageFirst: { type: "radio", label: "Picture", options: [{ label: "After the text", value: false }, { label: "Before the lede", value: true }, { label: "Left of the words", value: "left" }, { label: "Right of the words", value: "right" }] },
 };
 
 export const flowFields = (label) => ({
