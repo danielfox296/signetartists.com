@@ -9,13 +9,13 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Added: 2026-10-08 with CopyDesk
 
 ## photo-1655459765544-39065b741a9e.jpg
-- Used on: the blog › how does music affect people at a party page
+- Used on: the blog › how does music affect people at a party page; the private parties page
 - Source: https://images.unsplash.com/photo-1655459765544-39065b741a9e
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
 
 ## photo-1714972383570-44ddc9738355.jpg
-- Used on: the blog › how to get people to dance at a wedding page
+- Used on: the blog › how to get people to dance at a wedding page; the weddings page
 - Source: https://images.unsplash.com/photo-1714972383570-44ddc9738355
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
@@ -189,7 +189,7 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Added: 2026-10-08 with CopyDesk
 
 ## photo-1783314870559-b93cdcf6db7a.jpg
-- Used on: the blog › outdoor reception page
+- Used on: the blog › outdoor reception page; the weddings page
 - Source: https://images.unsplash.com/photo-1783314870559-b93cdcf6db7a
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
@@ -231,7 +231,7 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Added: 2026-10-08 with CopyDesk
 
 ## photo-1592153978217-6913256c7e1e.jpg
-- Used on: the blog › company picnic entertainment ideas denver page
+- Used on: the blog › company picnic entertainment ideas denver page; the private parties page
 - Source: https://images.unsplash.com/photo-1592153978217-6913256c7e1e
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
@@ -327,7 +327,7 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Added: 2026-11-03
 
 ## photo-1521321335080-61c4776db11b.jpg
-- Used on: the blog › why guests can't hear the toast page
+- Used on: the blog › why guests can't hear the toast page; the private parties page
 - Source: https://images.unsplash.com/photo-1521321335080-61c4776db11b
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-11-07

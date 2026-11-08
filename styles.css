@@ -5171,3 +5171,53 @@ img[src$="img/headliners.jpg"] {
     grid-auto-columns: 80%;
   }
 }
+
+/* ------------------------------------- weddings and private parties (2026-11-07)
+   A tile whose label carries an ordinal (a 30th, a 40th) shows the number in
+   display type in place of a drawing. A link inside a tile's text sits above
+   the whole-tile link, so both can be clicked. */
+.def-list--tiles .def-row[data-num]::before {
+  content: attr(data-num);
+  width: auto;
+  height: auto;
+  margin-bottom: 0.35rem;
+  background: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  color: var(--brass);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.def-list--tiles dd a {
+  position: relative;
+  z-index: 1;
+}
+
+/* Questions beside a photo (Columns, class split--faq): the heading and photo
+   on the left stay in view while the questions scroll on the right. */
+.split--faq img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-3);
+  border-radius: 12px;
+}
+@media (min-width: 900px) {
+  .split--faq {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: start;
+  }
+  .split--faq > :first-child {
+    position: sticky;
+    top: 6rem;
+  }
+}
+/* Questions beside a photo take the full width (the rule that narrows a
+   questions section to 46rem is for a column of questions on its own). */
+.section:has(.split--faq) > .wrap {
+  max-width: var(--wrap);
+}
