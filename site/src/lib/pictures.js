@@ -36,6 +36,7 @@ export const SIZES = {
   post: `(min-width: 768px) 672px, ${PAD}`,
   related: `(min-width: 640px) 304px, calc(100vw - 96px)`,
   row: `(min-width: 640px) 208px, ${PAD}`,
+  rail: `(min-width: 1072px) 320px, (min-width: 640px) 40vw, 80vw`,
   clip: grid,
   strip: "(max-width: 700px) 25vw, 12.5vw",
   wall: "(min-width: 1100px) 20vw, (min-width: 641px) 34vw, 50vw",

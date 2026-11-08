@@ -6,7 +6,7 @@ import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
 import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
-import { ALLOW, CloseRow, RosterGrid } from "./blocks.jsx";
+import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
 
 const { rich, text } = F;
 const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0, 48) : "");
@@ -82,6 +82,15 @@ const LogoStrip = {
 
 // A hub's list of everything under it: its groups of pages, anything not
 // yet grouped, then the posts filed under it. Labels come from each page.
+// The article rail's arrows: each press moves the row by most of its width,
+// and an arrow is disabled at its end. Without script the row still scrolls.
+const RAIL_SCRIPT =
+  `(function(){var w=document.currentScript.parentNode,u=w.querySelector(".post-rail"),b=w.querySelectorAll(".rail-btn");` +
+  `function f(){b[0].disabled=u.scrollLeft<8;b[1].disabled=u.scrollLeft+u.clientWidth>=u.scrollWidth-8;}` +
+  `b.forEach(function(x){x.addEventListener("click",function(){u.scrollBy({left:(+x.dataset.dir)*u.clientWidth*0.9,` +
+  `behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});});` +
+  `u.addEventListener("scroll",f,{passive:true});addEventListener("resize",f);f();})();`;
+
 const PagesAndPosts = {
   label: "Pages and posts",
   fields: {
@@ -91,15 +100,61 @@ const PagesAndPosts = {
       type: "array",
       label: "Groups",
       getItemSummary: (g) => g.label,
-      arrayFields: { label: text("Label"), pages: { type: "array", label: "Pages", getItemSummary: (p) => p.path, arrayFields: { path: text("Page"), label: text("Label") } } },
+      arrayFields: { label: text("Label"), art: text("Drawing (Cards only; blank: picked from the label)"), pages: { type: "array", label: "Pages", getItemSummary: (p) => p.path, arrayFields: { path: text("Page"), label: text("Label") } } },
     },
+    look: { type: "radio", label: "Look", options: [{ label: "List", value: "list" }, { label: "Cards", value: "cards" }] },
   },
   defaultProps: { band: "ruled", heading: "All pages", groups: [] },
-  render: function PagesAndPostsRender({ band, heading, groups, wrapStyle }) {
+  render: function PagesAndPostsRender({ band, heading, groups, look, wrapStyle }) {
     const s = useSite();
     const href = useHref();
     const url = s.url;
     const { rows, posts } = s.model.hubIndex(url, groups || []);
+    if (look === "cards") {
+      const arts = Object.fromEntries((groups || []).filter((g) => g.art).map((g) => [g.label, g.art]));
+      return (
+        <section className={cx(bandClass(band), "hub-cards-band")}>
+          <div className="wrap" style={css(wrapStyle)}>
+            <nav className="hub-cards" aria-label={heading}>
+              <h2 className="h2">{heading}</h2>
+              <div className="hub-groups">
+                {rows.map(([label, links], i) => (
+                  <div className="def-row hub-group" key={i} data-art={arts[label] || rowMark(label).art}>
+                    <h3 className="hub-group__label">{label}</h3>
+                    <ul className="hub-chips">
+                      {links.map(([u, t], j) => <li key={j}><a className="hub-chip" href={href(u)}>{t}</a></li>)}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              {posts ? (
+                <div className="hub-articles">
+                  <div className="hub-articles__head">
+                    <h3 className="hub-group__label">Articles</h3>
+                    <div className="rail-nav">
+                      <button type="button" className="rail-btn" data-dir="-1" aria-label="Earlier articles in the row">{"\u2190"}</button>
+                      <button type="button" className="rail-btn" data-dir="1" aria-label="Later articles in the row">{"\u2192"}</button>
+                    </div>
+                  </div>
+                  <ul className="post-rail">
+                    {posts.map((p) => (
+                      <li key={p.slug}>
+                        <a className="post-card" href={href(`/blog/${p.slug}/`)}>
+                          {p.hero && p.hero.src ? <Pic src={href(p.hero.src)} alt="" width="640" height="360" loading="lazy" decoding="async" sizes={SIZES.rail} /> : null}
+                          {p.eyebrow ? <span className="post-card__eyebrow">{p.eyebrow}</span> : null}
+                          <span className="post-card__title">{p.title}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <script dangerouslySetInnerHTML={{ __html: RAIL_SCRIPT }} />
+                </div>
+              ) : null}
+            </nav>
+          </div>
+        </section>
+      );
+    }
     return (
       <section className={cx(bandClass(band), "hub-index-band")}>
         <div className="wrap" style={css(wrapStyle)}>

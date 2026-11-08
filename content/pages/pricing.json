@@ -25,10 +25,10 @@
        "title": "What live music costs in denver",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "How much does professional music entertainment cost in the Front Range of Colorado? How are quotes put together, and what changes the rates. All right here so you can set a budget before you write to anybody.",
+       "lede": "Here's what live music costs in Denver and the Front Range, how a quote comes together, and what can change the price, so you can set a budget before you write to anybody.",
        "headingText": [
         {
-         "html": "We're excited to work with your event's needs and can provide quotes quickly. Tell us the date and your plan for the perfect night, and we will come back with a recommendation and price for you."
+         "html": "Tell us the date and your plan for the night, and we'll come back quickly with a recommendation and a price."
         }
        ],
        "buttons": [
@@ -40,8 +40,7 @@
        ]
       }
      }
-    ],
-    "_file": "01-intro.html"
+    ]
    }
   },
   {
@@ -65,129 +64,51 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "We've compiled a Denver-first, price rubric for those clients who are still preparing the budget for their event, sourced from published guides and wedding budget datasets.",
-       "cls": "prose"
+       "html": "These are published 2026 prices for two hours of live music, starting with Denver. They come from market guides and wedding budget surveys.",
+       "cls": "lede"
       }
      },
      {
-      "type": "Table",
+      "type": "PriceRanges",
       "props": {
-       "id": "Table-6",
-       "caption": "Published 2026 market prices for live music in Colorado and the US.",
-       "captionCls": "rate-caption",
-       "head": [
-        {
-         "html": "2 hours of live music performance"
-        },
-        {
-         "html": "Market rate"
-        },
-        {
-         "html": "Market"
-        }
-       ],
+       "id": "PriceRanges-50",
+       "max": 20000,
        "rows": [
         {
-         "cells": [
-          {
-           "html": "trio to a full band with horns",
-           "tag": "th",
-           "cls": "rate-size",
-           "scope": "row"
-          },
-          {
-           "html": "$2,500 to $8,000",
-           "cls": "num-accent"
-          },
-          {
-           "html": "Denver"
-          }
-         ]
+         "label": "A trio to a full band with horns",
+         "market": "Denver",
+         "low": 2500,
+         "high": 8000
         },
         {
-         "cells": [
-          {
-           "html": "four to six-piece bands, Denver mid-market",
-           "tag": "th",
-           "cls": "rate-size",
-           "scope": "row"
-          },
-          {
-           "html": "$4,000 to $6,000",
-           "cls": "num-accent"
-          },
-          {
-           "html": "Denver"
-          }
-         ]
+         "label": "A four to six-piece band",
+         "market": "Denver",
+         "low": 4000,
+         "high": 6000
         },
         {
-         "cells": [
-          {
-           "html": "A cover or jazz band for a corporate event",
-           "tag": "th",
-           "cls": "rate-size",
-           "scope": "row"
-          },
-          {
-           "html": "$2,500 to $8,000",
-           "cls": "num-accent"
-          },
-          {
-           "html": "United States"
-          }
-         ]
+         "label": "The average budget for a live wedding band",
+         "market": "Colorado",
+         "low": 2338,
+         "high": 2858
         },
         {
-         "cells": [
-          {
-           "html": "average budget for a live wedding band",
-           "tag": "th",
-           "cls": "rate-size",
-           "scope": "row"
-          },
-          {
-           "html": "$2,338 to $2,858",
-           "cls": "num-accent"
-          },
-          {
-           "html": "Colorado"
-          }
-         ]
+         "label": "A cover or jazz band for a corporate event",
+         "market": "United States",
+         "low": 2500,
+         "high": 8000
         },
         {
-         "cells": [
-          {
-           "html": "What most couples pay for a wedding band",
-           "tag": "th",
-           "cls": "rate-size",
-           "scope": "row"
-          },
-          {
-           "html": "$3,000 to $8,000",
-           "cls": "num-accent"
-          },
-          {
-           "html": "United States"
-          }
-         ]
+         "label": "What most couples pay for a wedding band",
+         "market": "United States",
+         "low": 3000,
+         "high": 8000
         },
         {
-         "cells": [
-          {
-           "html": "A seven to nine piece show band",
-           "tag": "th",
-           "cls": "rate-size",
-           "scope": "row"
-          },
-          {
-           "html": "$7,500 to $17,000",
-           "cls": "num-accent"
-          },
-          {
-           "html": "United States"
-          }
-         ]
+         "label": "A seven to nine-piece show band",
+         "market": "United States",
+         "low": 7500,
+         "high": 17000
         }
        ]
       }
@@ -196,7 +117,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-7",
-       "html": "Note: Professional live sound represents a significant difference in the range of these quotes. It's included with some acts' prices and not others. Insurance, travel considerations, and other factors can affect the price as well.",
+       "html": "Live sound makes the biggest difference inside these ranges, since some acts include it and some don't. Insurance and travel can change the price, too.",
        "cls": "prose"
       }
      },
@@ -208,8 +129,7 @@
        "cls": "note"
       }
      }
-    ],
-    "_file": "01b-ratecard.html"
+    ]
    }
   },
   {
@@ -222,9 +142,10 @@
       "type": "Title",
       "props": {
        "id": "Title-11",
-       "html": "Factors that affect price",
+       "html": "What affects the price",
        "tag": "h2",
-       "cls": "h3"
+       "cls": "h3",
+       "style": "zoom: 1.6;"
       }
      },
      {
@@ -235,28 +156,83 @@
        "n": 2,
        "c1": [
         {
-         "type": "Paragraph",
+         "type": "Title",
          "props": {
-          "id": "Paragraph-12",
-          "html": "<strong>What can raise the price:</strong> A wedding rather than a private party. A Saturday in June, September or October. A holiday weekend, which can run 20 to 30 percent above a standard date in the Colorado market. A venue with a tricky load-in, a long walk to carry the gear in or a late curfew. An event that needs music for the ceremony, cocktails, dinner and dancing. A drive over the mountain passes, plus a night’s lodging for anywhere beyond them.",
-          "cls": "prose"
+          "id": "Title-51",
+          "html": "Can raise the price",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "DefRows",
+         "props": {
+          "id": "DefRows-52",
+          "cls": "def-list def-list--icons",
+          "rows": [
+           {
+            "term": "Weddings",
+            "text": "A wedding usually costs more than a private party."
+           },
+           {
+            "term": "Popular dates",
+            "text": "A Saturday in June, September or October, or a holiday weekend, which can run 20 to 30 percent above a standard date in the Colorado market."
+           },
+           {
+            "term": "A tricky venue",
+            "text": "A hard load-in, a long walk to carry the gear in, or a late curfew."
+           },
+           {
+            "term": "Longer hours",
+            "text": "Music for the ceremony, cocktails, dinner and dancing."
+           },
+           {
+            "term": "Mountain travel",
+            "text": "A drive over the passes, plus a night's lodging for anywhere beyond them."
+           }
+          ]
          }
         }
        ],
        "c2": [
         {
-         "type": "Paragraph",
+         "type": "Title",
          "props": {
-          "id": "Paragraph-13",
-          "html": "<strong>What can lower the price:</strong> An early weeknight date. Fewer hours of performance time. A single set rather than the whole evening. A smaller build for the same music. A venue where the load-in is easy.",
-          "cls": "prose"
+          "id": "Title-53",
+          "html": "Can lower the price",
+          "tag": "h3",
+          "cls": "h5"
+         }
+        },
+        {
+         "type": "DefRows",
+         "props": {
+          "id": "DefRows-54",
+          "cls": "def-list def-list--icons",
+          "rows": [
+           {
+            "term": "A weeknight",
+            "text": "An early weeknight date."
+           },
+           {
+            "term": "Fewer hours",
+            "text": "Less performance time, or a single set rather than the whole evening."
+           },
+           {
+            "term": "A smaller band",
+            "text": "A smaller lineup playing the same music."
+           },
+           {
+            "term": "An easy venue",
+            "text": "A venue where the load-in is easy."
+           }
+          ]
          }
         }
        ]
       }
      }
-    ],
-    "_file": "01b-ratecard.html"
+    ]
    }
   },
   {
@@ -266,170 +242,243 @@
     "band": "ruled",
     "blocks": [
      {
-      "type": "Title",
+      "type": "Heading",
       "props": {
-       "id": "Title-17",
-       "html": "How signet puts together a live entertainment quote",
-       "tag": "h2",
-       "cls": "h3"
+       "id": "Heading-55",
+       "title": "How signet puts together a live entertainment quote",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "image": {
+        "src": "/img/acts/little-moses-jones-stage.jpg",
+        "alt": "Little Moses Jones on a white stage in red, two singers out front with guitar, bass, drums, keys and a tuba.",
+        "width": "1920",
+        "height": "1280",
+        "loading": "lazy",
+        "decoding": "async"
+       },
+       "imageFirst": "left",
+       "lede": "Most acts in the Denver, Colorado market split their billing into two parts."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-56",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "The call-out fee",
+         "text": "A flat fee for coming out to your event, however long the performance runs. It covers the drive, load-in, setup, sound check, strike and load-out."
+        },
+        {
+         "term": "Performance time",
+         "text": "A rate for the hours of music itself."
+        }
+       ]
       }
      },
      {
       "type": "Paragraph",
       "props": {
-       "id": "Paragraph-18",
-       "html": "Most acts in the Denver, Colorado market split their billing into two parts. <br><br>A <strong>call-out</strong> is a flat fee for coming out to your event, however long the performance runs. It handles things like the drive, load-in, setup, sound check, strike, load-out and the production that comes along with all of it (in business parlance, they're the fixed costs). <br><br>Then a rate for performance time (these are like variable cost). That is why the price for an hour of cocktail entertainment is not strictly 1/4th the price of a 4 hour reception.",
-       "cls": "prose"
+       "id": "Paragraph-57",
+       "html": "That's why an hour of cocktail music isn't a quarter of the price of a four-hour reception.",
+       "cls": "callout"
       }
      },
      {
-      "type": "Paragraph",
+      "type": "DefRows",
       "props": {
-       "id": "Paragraph-19",
-       "html": "When comparing bookings, sound is the line item on a quote worth verifying the closest. With some acts, it's part of the total. With others, it shows up later as its own charge (or the venue is expected to have a system).",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-20",
-       "html": "Travel and lodging are separate line items for us. Similarly, high-demand times like holiday weekends add a little extra to the bill.",
-       "cls": "prose"
+       "id": "DefRows-58",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound",
+         "text": "When you compare quotes, check this line closest. Some acts include sound in the total, and others add it later as its own charge or expect the venue to have a system."
+        },
+        {
+         "term": "Travel and lodging",
+         "text": "These are separate line items for us."
+        }
+       ]
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-21",
-       "html": "The Denver, Colorado market prices for live entertainment bookings are set out in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>, and we've got a corporate version, too that covers the types of entertainment companies book for client dinners, happy hours, and corporate events. Take a look at <a href=\"/blog/what-live-music-costs-corporate-event/\">what live music costs for a corporate event</a> if that’s what you’re planning.",
+       "html": "Planning a company event? Take a look at <a href=\"/blog/what-live-music-costs-corporate-event/\">what live music costs for a corporate event</a>.",
        "cls": "prose"
       }
      }
-    ],
-    "_file": "02-rates.html"
+    ]
    }
   },
   {
-   "type": "TwoColumns",
+   "type": "Rows",
    "props": {
-    "id": "TwoColumns-32",
+    "id": "Rows-60",
     "band": "sunk",
     "blocks": [
      {
-      "type": "Columns",
+      "type": "Title",
       "props": {
-       "id": "Columns-30",
-       "cls": "split split--two",
-       "n": 2,
-       "c1": [
+       "id": "Title-24",
+       "html": "Included for every act",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-61",
+       "cls": "def-list def-list--tiles",
+       "rows": [
         {
-         "type": "Title",
-         "props": {
-          "id": "Title-24",
-          "html": "Included for every act",
-          "tag": "h2",
-          "cls": "h3"
-         }
+         "term": "Your point of contact",
+         "text": "One person who's reachable from your first email to load-out."
         },
         {
-         "type": "SpecList",
-         "props": {
-          "id": "SpecList-25",
-          "source": "included",
-          "cols": false
-         }
+         "term": "Sound for the venue",
+         "text": "Sound sized for a small-to-medium event venue."
         },
         {
-         "type": "Paragraph",
-         "props": {
-          "id": "Paragraph-26",
-          "html": "Stage lighting and a dedicated engineer are optional add-ons.",
-          "cls": "note"
-         }
-        }
-       ],
-       "c2": [
-        {
-         "type": "Title",
-         "props": {
-          "id": "Title-27",
-          "html": "Quoted separately",
-          "tag": "h2",
-          "cls": "h3"
-         }
+         "term": "Load-in to load-out",
+         "text": "Setup, sound check, strike and load-out."
         },
         {
-         "type": "Paragraph",
-         "props": {
-          "id": "Paragraph-28",
-          "html": "",
-          "cls": "note"
-         }
+         "term": "Timeline coordination",
+         "text": "We'll go over the flow of the event with you beforehand."
         },
         {
-         "type": "SpecList",
-         "props": {
-          "id": "SpecList-29",
-          "source": "extras",
-          "cols": false
-         }
+         "term": "Music between sets",
+         "text": "Continuous audio during set breaks."
+        },
+        {
+         "term": "Paperwork",
+         "text": "A certificate of insurance, a W-9 and one itemized invoice."
         }
        ]
       }
      }
-    ],
-    "_file": "02-rates.html"
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-62",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-27",
+       "html": "Quoted separately",
+       "tag": "h2",
+       "cls": "h3",
+       "style": "zoom: 1.6;"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-63",
+       "cls": "def-list def-list--route",
+       "image": "/img/range.jpg",
+       "rows": [
+        {
+         "term": "Front Range travel",
+         "text": "Boulder, Colorado Springs and Fort Collins.",
+         "art": "car"
+        },
+        {
+         "term": "I-70 corridor travel",
+         "text": "Vail, Beaver Creek, Breckenridge and Winter Park.",
+         "art": "mountain"
+        },
+        {
+         "term": "Far resort travel",
+         "text": "Aspen, Telluride, Steamboat and Crested Butte, plus a night's lodging.",
+         "art": "moon"
+        }
+       ]
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-64",
+       "cls": "def-list def-list--tiles def-list--addons",
+       "rows": [
+        {
+         "term": "Holiday and peak weekends",
+         "text": "New Year's Eve, too."
+        },
+        {
+         "term": "Live-band karaoke",
+         "text": "Your guests sing with a live band."
+        },
+        {
+         "term": "Learned songs",
+         "text": "A song the band doesn't already play, with four weeks' notice."
+        },
+        {
+         "term": "Stage lighting",
+         "text": "Lights for the stage."
+        },
+        {
+         "term": "A dedicated sound engineer",
+         "text": "Someone running sound for your whole event."
+        }
+       ]
+      }
+     }
+    ]
    }
   },
   {
    "type": "Text",
    "props": {
     "id": "Text-38",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
-      "type": "Title",
+      "type": "Heading",
       "props": {
-       "id": "Title-33",
-       "html": "Save money: Booking more than one part of the night",
-       "tag": "h2",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-34",
-       "html": "Once one of our acts is on site, the drive is made, the sound system is up, and everyone is ready. <br><br>Covering the ceremony or the cocktail hour alongside the main booking is a cheaper way to fill the night than hiring twice.",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-35",
-       "html": "How much of the night to cover is your call, and a smaller group early is a great answer as often as a bigger one later. If you would rather bring your own ceremony musician and use us to get people out onto the dance floor later, that's a common approach, too!",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-36",
-       "html": "<strong>Tell us the flow of the evening</strong> when you send the date and we'll reply with availability and costs - maybe a few questions, too.",
-       "cls": "prose"
+       "id": "Heading-59",
+       "title": "Save money: Booking more than one part of the night",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "image": {
+        "src": "/img/acts/classical-strings-ceremony.jpg",
+        "alt": "A violinist in a blue dress plays beside a couple marrying under a flowered arch in the mountains.",
+        "width": "1920",
+        "height": "1547",
+        "loading": "lazy",
+        "decoding": "async"
+       },
+       "imageFirst": "right",
+       "lede": "Once one of our acts is on site, the drive is made and the sound system is up. Covering the ceremony or the cocktail hour alongside the main booking costs less than booking twice.",
+       "headingText": [
+        {
+         "html": "How much of the night to cover is your call. If you'd rather bring your own ceremony musician and have us get people out onto the dance floor later, that's a common approach, too!"
+        },
+        {
+         "html": "<strong>Tell us the flow of the evening</strong> when you send the date and we'll reply with availability and costs - maybe a few questions, too."
+        }
+       ]
       }
      }
-    ],
-    "_file": "03-multi.html"
+    ]
    }
   },
   {
    "type": "Questions",
    "props": {
     "id": "Questions-44",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",
@@ -444,7 +493,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-40",
-       "html": "Below are a few common questions about money and how Signet bills. Everything else, from player substitutions to decibel caps, is available on the <a href=\"/planners/faq/\">full question list</a>, and if you're curious about the wider, Colorado live entertainment market check out those answers in <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>.",
+       "html": "Here are a few common questions about prices and how Signet bills. For everything else, from player substitutions to volume limits, see the <a href=\"/planners/faq/\">full question list</a>.",
        "cls": "note"
       }
      },
@@ -452,10 +501,11 @@
       "type": "Faq",
       "props": {
        "id": "Faq-41",
+       "schema": true,
        "items": [
         {
          "q": "What does a band cost for a corporate event in Denver?",
-         "a": "In this market, a cover or jazz band for a corporate event can run $2,500 to $8,000, and a four to six piece band (the size the Denver market treats as its mid-tier), runs $4,000 to $6,000. Those are the market's figures. At Signet, we send you prices for the date and event when you enquire with us. Because, for example, mid-day on a Tuesday in September and Fourth of July weekend have significantly different demand."
+         "a": "In the Denver market, a cover or jazz band for a corporate event can run $2,500 to $8,000, and a four to six-piece band runs $4,000 to $6,000. Those are the market's figures. We send you a price for your own date and event when you get in touch, because a Tuesday afternoon in September and Fourth of July weekend are in very different demand."
         },
         {
          "q": "Do you publish your prices?",
@@ -463,14 +513,13 @@
         },
         {
          "q": "Do you provide a certificate of insurance?",
-         "a": "Yes, we can, and also name your venue as additional insured, sent in the same email as the contract. The coverage limits match what Colorado venues write into their vendor requirements. Just let us know that's something you need."
+         "a": "Yes, and we can name your venue as additional insured, too. We'll send it in the same email as the contract. Just let us know that's something you need."
         },
         {
          "q": "How far in advance should we book?",
-         "a": "Corporate holiday parties can be decided as far out as August, all the way through October for November, December and January dates. New Year's Eve books earliest of all - sometimes a year or more in advance. Weddings and galas can similarly be booked with more lead time - often 10 to 12 months, and 12 to 18 for a mountain venue or a fall Saturday. If your event is coming up sooner, no worries. Just reach out and we can often make something great work."
+         "a": "Whenever you're ready. Some people book early and some book late. If your event is coming up sooner, no worries. Just reach out and we can often make something great work."
         }
-       ],
-       "schema": true
+       ]
       }
      },
      {
@@ -482,17 +531,11 @@
          "label": "Check a Date",
          "href": "/contact/",
          "cls": "btn"
-        },
-        {
-         "label": "The other FAQs",
-         "href": "/planners/faq/",
-         "cls": "btn btn--outline"
         }
        ]
       }
      }
-    ],
-    "_file": "04-faq.html"
+    ]
    }
   }
  ]

@@ -3923,11 +3923,19 @@ main:focus {
 
 @media (max-width: 640px) {
   .credits-list {
-    gap: 1.5rem 2.25rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 1.75rem 1.5rem;
+  }
+
+  .credit:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .credit svg {
     height: calc(1.5rem * var(--credit-h, 1));
+    max-width: 100%;
   }
 }
 
@@ -4335,14 +4343,15 @@ main:focus {
   max-width: 46rem;
 }
 /* A section that holds only measure-width blocks (headings, prose, notes,
-   stacked lists, questions, one video, a row of links or buttons) narrows to
+   stacked lists, questions, one video, a row of links or buttons; tiles and
+   routes are grids, so they keep the full width) narrows to
    the same 46rem column and sits centred on the page, its type still set left,
    so it no longer leaves the right third of the screen empty (2026-11-02,
    Daniel, sitewide). Any section with a grid, a table, cards or a hero photo
    keeps the full width. */
 .section > .wrap:not(:has(> :not(
   .heading, .prose, .eyebrow, .note, .lede, .h3, .h5,
-  .def-list:not(.def-list--cards), .spec-list:not(.spec-list--cols),
+  .def-list:not(.def-list--cards):not(.def-list--tiles):not(.def-list--route), .spec-list:not(.spec-list--cols),
   .faq-list, .btn-row, .blog-article, .review-pull, .stage-plot, .panel,
   .sibling-list, .video-grid--single, .media-grid,
   img, script, template, style
@@ -4496,4 +4505,734 @@ img[src$="img/headliners.jpg"] {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: clamp(2.5rem, 5vw, 5rem);
   }
+}
+
+/* ------------------------------------------------ price ranges (2026-11-07)
+   Published market ranges drawn as bars on one dollar scale: what it is and
+   its market on the left, the bar in the middle, the figures in display type
+   on the right. On a phone each row stacks: words, figures, then the bar,
+   under one shared scale. Each bar grows in as its row is first seen. */
+.price-ranges {
+  min-width: 0;
+  margin-top: var(--space-3);
+}
+.price-ranges__caption {
+  font-size: 0.9625rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+.price-ranges__axis,
+.price-range {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+.price-ranges__ticks {
+  position: relative;
+  height: 1.4rem;
+}
+.price-ranges__ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.price-ranges__ticks span:first-child {
+  transform: none;
+}
+.price-ranges__ticks span:last-child {
+  transform: translateX(-100%);
+}
+.price-ranges__rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.price-range {
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--rule);
+  align-items: center;
+}
+.price-range__what {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+.price-range__label {
+  font-size: 1.0588rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--ink);
+}
+.price-range__label::first-letter {
+  text-transform: uppercase;
+}
+.price-range__market {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--red);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+.price-range__track {
+  position: relative;
+  height: 0.75rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(var(--rule), var(--rule)) center / 100% 1px no-repeat;
+}
+.price-range__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--lo);
+  width: calc(var(--hi) - var(--lo));
+  min-width: 0.75rem;
+  border-radius: 999px;
+  background: var(--red);
+  transform-origin: left center;
+}
+.price-range__figure {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(1.6rem, 1.15rem + 1.3vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.price-range__to {
+  font-family: var(--sans);
+  font-stretch: 100%;
+  font-weight: 500;
+  font-size: 0.45em;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+  vertical-align: 0.35em;
+  padding: 0 0.3em;
+}
+@media (min-width: 900px) {
+  .price-ranges__axis,
+  .price-range {
+    grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr) minmax(12rem, 15rem);
+    gap: 2.25rem;
+  }
+  .price-ranges__ticks {
+    grid-column: 2;
+  }
+  .price-range__figure {
+    text-align: right;
+  }
+}
+@media (max-width: 899px) {
+  .price-range__track {
+    order: 3;
+  }
+}
+.price-ranges.is-armed .price-range__bar {
+  transform: scaleX(0);
+}
+.price-ranges.is-armed .price-range__figure {
+  opacity: 0;
+  transform: translateY(0.4rem);
+}
+.price-ranges.is-armed .price-range.is-in .price-range__bar {
+  transform: scaleX(1);
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--i) * 70ms);
+}
+.price-ranges.is-armed .price-range.is-in .price-range__figure {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease calc(var(--i) * 70ms + 250ms), transform 0.6s ease calc(var(--i) * 70ms + 250ms);
+}
+
+/* Icon list (Rows, Layout: Icon list): a compact list with the row's line
+   drawing beside a short label and a line of text. */
+.def-list--icons {
+  max-width: 46rem;
+  border-bottom: 0;
+}
+/* A column pair right under a section title gets the room a heading gets. */
+.h3 + .split,
+.h2 + .split {
+  margin-top: var(--space-3);
+}
+.def-list--icons .def-row {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 1.1rem;
+  row-gap: 0.2rem;
+  justify-content: stretch;
+  align-items: start;
+  padding: 1rem 0;
+}
+.def-list--icons .def-row::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--brass);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.def-list--icons dt,
+.def-list--icons dd {
+  grid-column: 2;
+  margin: 0;
+}
+.def-list--icons dt {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+.def-list--icons dd {
+  font-size: 0.9625rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* Spec list markers: a check for what comes with every booking, a plus for
+   what is added to a quote. */
+.spec-list--check .dash,
+.spec-list--plus .dash {
+  margin-top: 0.2rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  background: var(--brass);
+  -webkit-mask: var(--mark) center / contain no-repeat;
+  mask: var(--mark) center / contain no-repeat;
+}
+.spec-list--check {
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E");
+}
+.spec-list--plus {
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M12 4v16M4 12h16'/%3E%3C/svg%3E");
+}
+.spec-list--check li,
+.spec-list--plus li {
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+/* Callout: one line set large, for the sentence a skimmer should not miss. */
+.callout {
+  max-width: 40rem;
+  margin: var(--space-3) 0 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem);
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--red);
+}
+
+/* Right of the words: the picture column comes second from 800px. */
+@media (min-width: 800px) {
+  .heading-split--right .heading-split__media {
+    order: 2;
+  }
+}
+
+/* Lists, cards and pictures in a section rise gently into place as they
+   scroll into view, where the browser can tie motion to scrolling; nothing
+   moves under reduced motion. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .def-list--icons .def-row,
+    .heading-split__media,
+    .spec-list--check li,
+    .spec-list--plus li,
+    .callout {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Drawings added 2026-11-07 for the pricing page: point of contact, insurance,
+   paperwork, load-in and stage lighting. */
+.def-row[data-art="phone"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='20' y='8' width='24' height='48' rx='4'/%3E%3Cpath d='M28 49h8M28 14h8'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='20' y='8' width='24' height='48' rx='4'/%3E%3Cpath d='M28 49h8M28 14h8'/%3E%3C/svg%3E"); }
+.def-row[data-art="shield"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 8l20 8v14c0 13-9 22-20 26C21 52 12 43 12 30V16z'/%3E%3Cpath d='M24 32l6 6 11-12'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 8l20 8v14c0 13-9 22-20 26C21 52 12 43 12 30V16z'/%3E%3Cpath d='M24 32l6 6 11-12'/%3E%3C/svg%3E"); }
+.def-row[data-art="document"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h20l10 10v38H18z'/%3E%3Cpath d='M38 8v10h10M24 30h18M24 38h18M24 46h12'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h20l10 10v38H18z'/%3E%3Cpath d='M38 8v10h10M24 30h18M24 38h18M24 46h12'/%3E%3C/svg%3E"); }
+.def-row[data-art="box"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22l20-10 20 10v22L32 54 12 44z'/%3E%3Cpath d='M12 22l20 10 20-10M32 32v22'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22l20-10 20 10v22L32 54 12 44z'/%3E%3Cpath d='M12 22l20 10 20-10M32 32v22'/%3E%3C/svg%3E"); }
+.def-row[data-art="spotlight"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 8h16l-3 12H27z'/%3E%3Cpath d='M27 20L14 54M37 20l13 34M10 56h44'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 8h16l-3 12H27z'/%3E%3Cpath d='M27 20L14 54M37 20l13 34M10 56h44'/%3E%3C/svg%3E"); }
+
+/* Tiles (Rows, Layout: Tiles): short items as a grid of small panels, each
+   with its drawing, a label and one line. Add-on tiles have a dashed edge and
+   a plus, for what is added to a quote. */
+.def-list--tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+  margin-top: var(--space-3);
+  border: 0;
+}
+.def-list--tiles .def-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  padding: 1.5rem 1.4rem 1.6rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--paper-sunk);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.def-list--tiles .def-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -16px rgba(0, 0, 0, 0.45);
+}
+.def-list--tiles .def-row::before,
+.def-list--route .def-row::before {
+  content: "";
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 0.6rem;
+  background-color: var(--brass);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.def-list--tiles dt,
+.def-list--route dt {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+.def-list--tiles dd,
+.def-list--route dd {
+  margin: 0;
+  font-size: 0.9625rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.def-list--addons {
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+.def-list--addons .def-row {
+  background: transparent;
+  border: 1px dashed var(--rule-strong);
+}
+.def-list--addons .def-row::after {
+  content: "+";
+  position: absolute;
+  top: 0.85rem;
+  right: 1.1rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--red);
+}
+
+/* Route (Rows, Layout: Route): stops in order of distance, joined by a line
+   with a dot at each stop, across on a wide screen and down on a phone. On a
+   photo (route-panel) the photo is black and white under a dark wash. */
+.route-panel {
+  position: relative;
+  isolation: isolate;
+  margin-top: var(--space-3);
+  padding: clamp(1.75rem, 1rem + 3vw, 3.5rem);
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 40%;
+}
+.route-panel::before,
+.route-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.route-panel::before {
+  z-index: -2;
+  background-image: inherit;
+  background-size: cover;
+  background-position: inherit;
+  filter: grayscale(1) contrast(1.05);
+}
+.route-panel::after {
+  z-index: -1;
+  background: rgba(18, 18, 18, 0.7);
+}
+.route-panel .def-list--route {
+  --ink: var(--near-white);
+  --ink-soft: rgba(245, 245, 242, 0.82);
+  --brass: var(--red);
+  margin-top: 0;
+}
+.def-list--route {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  margin-top: var(--space-3);
+  border: 0;
+}
+.def-list--route .def-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  padding: 0 0 0 2.25rem;
+  border: 0;
+}
+.def-list--route .def-row::after {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(18, 18, 18, 0.7);
+}
+.def-list--route::before {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  bottom: 1.5rem;
+  left: calc(0.45rem - 1px);
+  width: 2px;
+  background: var(--red);
+  opacity: 0.6;
+  transform-origin: top center;
+}
+@media (min-width: 800px) {
+  .def-list--route {
+    grid-template-columns: repeat(var(--stops, 3), minmax(0, 1fr));
+  }
+  .def-list--route .def-row {
+    padding: 2.25rem 0 0;
+  }
+  .def-list--route .def-row::after {
+    top: 0;
+  }
+  .def-list--route::before {
+    top: calc(0.45rem - 1px);
+    bottom: auto;
+    left: 0.45rem;
+    right: calc((100% - 4rem) / 3 - 0.45rem);
+    width: auto;
+    height: 2px;
+    transform-origin: left center;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .def-list--tiles .def-row {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry calc(mod(var(--i, 0), 3) * 8%) entry calc(60% + mod(var(--i, 0), 3) * 8%);
+    }
+    .def-list--route::before {
+      animation: draw-line linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 50%;
+    }
+    @media (min-width: 800px) {
+      .def-list--route::before {
+        animation-name: draw-line-across;
+      }
+    }
+    .def-list--route .def-row {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry calc(20% + var(--i, 0) * 10%) cover calc(35% + var(--i, 0) * 8%);
+    }
+  }
+}
+@keyframes draw-line {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes draw-line-across {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* A tile whose label is a link: the label is underlined in the accent, and
+   the whole tile is the link's target. */
+.def-list--tiles dt a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+.def-list--tiles dt a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.def-list--tiles .def-row:has(dt a):hover dt a {
+  text-decoration-color: currentColor;
+}
+
+/* ------------------------------------------- page index, Cards (2026-11-07)
+   A hub's pages as small panels of rounded links, each panel with its
+   drawing, and its articles as a row of photo cards that scrolls sideways,
+   with arrows on a wide screen. */
+.hub-cards .h2 {
+  margin: 0;
+}
+.hub-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+  margin-top: var(--space-3);
+}
+.def-row.hub-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.85rem;
+  padding: 1.5rem 1.4rem 1.6rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--paper-sunk);
+}
+.def-row.hub-group::before {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--brass);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.hub-group__label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink);
+}
+.hub-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+.hub-chip {
+  display: inline-block;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.hub-chip:hover,
+.hub-chip:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.hub-articles {
+  margin-top: var(--space-4);
+}
+.hub-articles__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.rail-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+.rail-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+.rail-btn:hover:not(:disabled),
+.rail-btn:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+.rail-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.post-rail {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(15rem, calc((100% - 2rem) / 3.25));
+  gap: 1rem;
+  margin: 1.25rem 0 0;
+  padding: 0.25rem 0.25rem 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.25rem;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+.post-rail > li {
+  scroll-snap-align: start;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--paper-sunk);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post-card:hover,
+.post-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -16px rgba(0, 0, 0, 0.45);
+}
+.post-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+.post-card__eyebrow {
+  padding: 0.35rem 1.1rem 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--brass);
+}
+.post-card__title {
+  padding: 0 1.1rem 1.3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+@media (max-width: 639px) {
+  .rail-nav {
+    display: none;
+  }
+  .post-rail {
+    grid-auto-columns: 80%;
+  }
+}
+
+/* ------------------------------------- weddings and private parties (2026-11-07)
+   A tile whose label carries an ordinal (a 30th, a 40th) shows the number in
+   display type in place of a drawing. A link inside a tile's text sits above
+   the whole-tile link, so both can be clicked. */
+.def-list--tiles .def-row[data-num]::before {
+  content: attr(data-num);
+  width: auto;
+  height: auto;
+  margin-bottom: 0.35rem;
+  background: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  color: var(--brass);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.def-list--tiles dd a {
+  position: relative;
+  z-index: 1;
+}
+
+/* Questions beside a photo (Columns, class split--faq): the heading and photo
+   on the left stay in view while the questions scroll on the right. */
+.split--faq img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-3);
+  border-radius: 12px;
+}
+@media (min-width: 900px) {
+  .split--faq {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: start;
+  }
+  .split--faq > :first-child {
+    position: sticky;
+    top: 6rem;
+  }
+}
+/* Questions beside a photo take the full width (the rule that narrows a
+   questions section to 46rem is for a column of questions on its own). */
+.section:has(.split--faq) > .wrap {
+  max-width: var(--wrap);
+}
+
+/* Set for a moment while the wrap script measures rows, so sizes are final. */
+.wrap-fitting *,
+.wrap-fitting *::before,
+.wrap-fitting *::after {
+  transition: none !important;
 }

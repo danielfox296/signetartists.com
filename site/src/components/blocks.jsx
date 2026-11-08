@@ -24,7 +24,7 @@ export const Heading = {
     // "left": the picture in a column of its own beside the words, which stack
     // under it on a narrow screen. The pair is not a .heading, so the section
     // keeps its full width instead of narrowing to the reading column.
-    const left = p.imageFirst === "left" && p.image && p.image.src;
+    const left = (p.imageFirst === "left" || p.imageFirst === "right") && p.image && p.image.src;
     const heading = (
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
@@ -42,7 +42,7 @@ export const Heading = {
     );
     if (left) {
       return (
-        <div className="heading-split">
+        <div className={cx("heading-split", p.imageFirst === "right" && "heading-split--right")}>
           <div className="heading-split__media"><Img im={p.image} /></div>
           {heading}
         </div>
@@ -63,7 +63,7 @@ export const Heading = {
 
 export const Paragraph = {
   label: "Paragraph",
-  fields: { html: rich("Text"), cls: select("Style", [{ label: "Text", value: "prose" }, { label: "Note", value: "note" }, { label: "Small note", value: "note note--small" }, { label: "Lede", value: "lede" }]), style: text("Style") },
+  fields: { html: rich("Text"), cls: select("Style", [{ label: "Text", value: "prose" }, { label: "Note", value: "note" }, { label: "Small note", value: "note note--small" }, { label: "Lede", value: "lede" }, { label: "Callout", value: "callout" }]), style: text("Style") },
   defaultProps: { html: "Text", cls: "prose" },
   render: ({ html, cls, style }) => <H as="p" className={cls || undefined} style={css(style)} html={html} />,
 };
@@ -121,15 +121,16 @@ export const SpecList = {
     source: select("List", [{ label: "This list", value: "own" }, { label: "What's included", value: "included" }, { label: "Quoted separately", value: "extras" }]),
     items: { type: "array", label: "Items", getItemSummary: (x) => plain(x.html), arrayFields: { html: rich("Item") } },
     cols: { type: "radio", label: "Columns", options: [{ label: "One", value: false }, { label: "Two", value: true }] },
+    mark: select("Marker", [{ label: "Dash", value: "" }, { label: "Check", value: "check" }, { label: "Plus", value: "plus" }]),
   },
   defaultProps: { source: "own", items: [{ html: "Item" }], cols: false },
-  render: function SpecListRender({ source, items, cols, style }) {
+  render: function SpecListRender({ source, items, cols, mark, style }) {
     const s = useSite();
     const DASH = '<span class="dash" aria-hidden="true"></span>';
     const list = source && source !== "own" ? s.model.site.lists[source].map((t) => DASH + esc(t)) : (items || []).map((it) => (typeof it.html === "string" ? DASH + it.html : it.html));
     // Copy being edited on the canvas is an editor, not a string: the dash goes before it.
     return (
-      <ul className={cx("spec-list", cols && "spec-list--cols")} style={css(style)}>
+      <ul className={cx("spec-list", cols && "spec-list--cols", mark && `spec-list--${mark}`)} style={css(style)}>
         {list.map((h, i) => (typeof h === "string" ? <H key={i} as="li" html={h} /> : <li key={i}><span className="dash" aria-hidden="true"></span>{h}</li>))}
       </ul>
     );
@@ -143,6 +144,8 @@ export const SpecList = {
 // drawing its words point to, first match wins, music notes when nothing does.
 // The drawings themselves are in styles.css, keyed by data-art.
 const ROW_ART = [
+  [/\b(?:stage lighting|lighting\b|spotlight)/, "spotlight"],
+  [/\bkaraoke/, "microphone"],
   [/\b(?:wedding|reception|ceremony|couple|bride|engagement|propos)/, "rings"],
   [/\b(?:anniversar)/, "heart"],
   [/\b(?:birthday)/, "cake"],
@@ -170,8 +173,12 @@ const ROW_ART = [
   [/\b(?:venue|denver|boulder|colorado springs|fort collins|city|town|space|stage|floor)/, "pin"],
   [/\b(?:when|date|book|ahead|month|week|calendar|season)/, "calendar"],
   [/\b(?:time|hour|minute|length|long|curfew|late)/, "clock"],
+  [/\b(?:point of contact|contact|phone)/, "phone"],
+  [/\b(?:insurance|insured|certificate)/, "shield"],
+  [/\b(?:paperwork|invoice|w-9|contract)/, "document"],
+  [/\b(?:load-in|load in|load-out|setup|strike)/, "box"],
 ];
-function rowMark(term) {
+export function rowMark(term) {
   const t = String(term || "").replace(/<[^>]+>/g, "").toLowerCase();
   const n = t.match(/\b(\d{1,3})(?:st|nd|rd|th)\b/);
   if (n) return { num: n[1] };
@@ -216,31 +223,48 @@ export const DefRows = {
       type: "array",
       label: "Rows",
       getItemSummary: (r) => plain(r.term),
-      arrayFields: { term: rich("Label"), text: rich("Text"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
+      arrayFields: { term: rich("Label"), text: rich("Text"), art: text("Drawing (blank: picked from the label)"), termStyle: text("Label style"), textStyle: text("Text style"), textCls: text("Text class") },
     },
-    cls: select("Layout", [{ label: "Stacked", value: "def-list def-list--stack" }, { label: "Cards", value: "def-list def-list--cards" }, { label: "Side by side", value: "def-list" }]),
+    cls: select("Layout", [
+      { label: "Stacked", value: "def-list def-list--stack" },
+      { label: "Cards", value: "def-list def-list--cards" },
+      { label: "Icon list", value: "def-list def-list--icons" },
+      { label: "Tiles", value: "def-list def-list--tiles" },
+      { label: "Add-on tiles", value: "def-list def-list--tiles def-list--addons" },
+      { label: "Route", value: "def-list def-list--route" },
+      { label: "Side by side", value: "def-list" },
+    ]),
+    image: text("Photo behind (Route only)"),
     bare: { type: "radio", label: "Row boxes", options: [{ label: "Yes", value: false }, { label: "No", value: true }] },
     style: text("Style"),
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
-  render: ({ cls, style, bare, rows }) => {
+  render: function DefRowsRender({ cls, style, bare, rows, image }) {
+    const href = useHref();
     const layout = cls || "def-list def-list--stack";
-    const marked = /def-list--(stack|cards)/.test(layout);
+    const marked = /def-list--(stack|cards|icons|tiles|route)/.test(layout);
     const leads = /def-list--stack/.test(layout);
-    return (
+    const staggered = /def-list--(tiles|route)/.test(layout);
+    const list = (
     <dl className={layout} style={css(style)}>
       {(rows || []).map((r, i) => {
         const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
         const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={leads ? leadSentence(r.text) : r.text} />;
-        const mark = marked ? rowMark(r.term) : {};
+        const mark = marked ? (r.art ? { art: r.art } : rowMark(r.term)) : {};
         return bare ? (
           <Fragment key={i}>{dt}{dd}</Fragment>
         ) : (
-          <div className="def-row" key={i} data-art={mark.art} data-num={mark.num}>{dt}{dd}</div>
+          <div className="def-row" key={i} data-art={mark.art} data-num={mark.num} style={staggered ? { "--i": i } : undefined}>{dt}{dd}</div>
         );
       })}
     </dl>
     );
+    // A route can sit on a photo, drawn in black and white under a dark wash
+    // like the closing call; the photo is a background, so it needs no description.
+    if (/def-list--route/.test(layout) && image) {
+      return <div className="route-panel" style={{ backgroundImage: `url("${href(image)}")` }}>{list}</div>;
+    }
+    return list;
   },
 };
 
@@ -416,6 +440,66 @@ export const Panel = {
 // ----------------------------------------------------------------- table
 
 const cellFields = { html: rich("Text"), tag: select("Cell", [{ label: "Data", value: "" }, { label: "Header", value: "th" }, { label: "Data cell", value: "td" }]), cls: text("Class"), scope: text("Scope") };
+// Price ranges: each row is a published market range drawn as a bar on one
+// shared dollar scale, with its label, its market and the figures in large
+// type. Each bar grows in from the left as its row scrolls into view (not
+// for reduced motion, and with script off they are simply drawn). It carries
+// the rate-table class, so the pricing_engaged event in analytics.js still
+// fires when a reader reaches it.
+const money = (n) => "$" + Math.round(Number(n) || 0).toLocaleString("en-US");
+const RANGE_SCRIPT =
+  `(function(){var r=document.currentScript.parentNode;` +
+  `if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;` +
+  `r.classList.add("is-armed");var o=new IntersectionObserver(function(es){es.forEach(function(e){` +
+  `if(e.isIntersecting){e.target.classList.add("is-in");o.unobserve(e.target);}});},{threshold:0.6});` +
+  `r.querySelectorAll(".price-range").forEach(function(x){o.observe(x);});})();`;
+export const PriceRanges = {
+  label: "Price ranges",
+  fields: {
+    caption: rich("Caption"),
+    max: { type: "number", label: "Scale to ($)", min: 0 },
+    rows: {
+      type: "array",
+      label: "Rows",
+      getItemSummary: (r) => plain(r.label),
+      arrayFields: { label: rich("What"), market: text("Market"), low: { type: "number", label: "From ($)", min: 0 }, high: { type: "number", label: "To ($)", min: 0 } },
+    },
+  },
+  defaultProps: { rows: [] },
+  render: ({ caption, max, rows, style }) => {
+    const list = rows || [];
+    const top = Number(max) || Math.ceil(Math.max(1, ...list.map((r) => Number(r.high) || 0)) / 5000) * 5000;
+    const pct = (n) => `${Math.max(0, Math.min(100, ((Number(n) || 0) / top) * 100)).toFixed(2)}%`;
+    const ticks = [];
+    for (let t = 0; t <= top; t += 5000) ticks.push(t);
+    return (
+      <div className="rate-table price-ranges" style={css(style)}>
+        {caption != null ? <H as="p" className="price-ranges__caption" html={caption} /> : null}
+        <div className="price-ranges__axis" aria-hidden="true">
+          <div className="price-ranges__ticks">
+            {ticks.map((t) => (
+              <span key={t} style={{ left: pct(t) }}>{t ? `$${t / 1000}k` : "$0"}</span>
+            ))}
+          </div>
+        </div>
+        <ul className="price-ranges__rows">
+          {list.map((r, i) => (
+            <li className="price-range" key={i} style={{ "--lo": pct(r.low), "--hi": pct(r.high), "--i": i }}>
+              <div className="price-range__what">
+                <H as="span" className="price-range__label" html={r.label} />
+                {r.market ? <span className="price-range__market">{r.market}</span> : null}
+              </div>
+              <div className="price-range__track" aria-hidden="true"><span className="price-range__bar"></span></div>
+              <p className="price-range__figure tnum">{money(r.low)}<span className="price-range__to"> to </span>{money(r.high)}</p>
+            </li>
+          ))}
+        </ul>
+        <script dangerouslySetInnerHTML={{ __html: RANGE_SCRIPT }} />
+      </div>
+    );
+  },
+};
+
 export const Table = {
   label: "Rate table",
   fields: {
@@ -734,7 +818,7 @@ export function RosterGrid({ acts, id }) {
 // (a short silent clip under media/loops/) plays it over the photo while the
 // card is on screen. The video is written as raw HTML because React's server
 // render drops the muted attribute, and a browser only autoplays a muted video.
-function PhotoCard({ a }) {
+function PhotoCard({ a, kicker }) {
   const s = useSite();
   const m = s.model;
   const href = useHref();
@@ -751,7 +835,7 @@ function PhotoCard({ a }) {
             />
           ) : null}
           <div className="roster-card-over">
-            <p className="act-kind">{a.style}</p>
+            <p className="act-kind">{kicker || a.style}</p>
             <h3 className="roster-card-name">{a.name}</h3>
           </div>
         </div>
@@ -770,12 +854,12 @@ const LOOP_SCRIPT =
   `var p=v.play();p&&p.catch&&p.catch(function(){});}else if(v.src){v.pause();}});},{rootMargin:"150px 0px"});` +
   `g.querySelectorAll(".photo-card-loop video").forEach(function(v){o.observe(v);});})();`;
 
-export function PhotoGrid({ acts, id, style }) {
+export function PhotoGrid({ acts, id, style, kickers }) {
   const looping = acts.some((a) => a.loop);
   return (
     <>
       <div className="roster-grid roster-grid--photo" id={id} style={css(style)}>
-        {acts.map((a) => <PhotoCard key={a.id} a={a} />)}
+        {acts.map((a) => <PhotoCard key={a.id} a={a} kicker={kickers && kickers[a.id]} />)}
       </div>
       {looping ? <script dangerouslySetInnerHTML={{ __html: LOOP_SCRIPT }} /> : null}
     </>
@@ -806,7 +890,7 @@ export const Cards = {
     source: select("Acts", CARD_SOURCES),
     occasion: text("Occasion"),
     night: text("Kind of night"),
-    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act") } },
+    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act"), kicker: text("Line over the name (Photos only; blank: the act's style)") } },
     compact: { type: "radio", label: "Cards", options: [{ label: "Full", value: false }, { label: "Short", value: true }] },
     look: { type: "radio", label: "Look", options: [{ label: "Cards", value: "cards" }, { label: "Photos", value: "photos" }] },
     picks: {
@@ -821,7 +905,10 @@ export const Cards = {
     const s = useSite();
     const m = s.model;
     const href = useHref();
-    if (source !== "picks" && look === "photos") return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} />;
+    if (source !== "picks" && look === "photos") {
+      const kickers = Object.fromEntries((acts || []).filter((x) => x && x.act && x.kicker).map((x) => [x.act, x.kicker]));
+      return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} kickers={kickers} />;
+    }
     if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} style={style} />;
     return (
       <div className="card-grid card-grid--3" style={css(style)}>
@@ -932,4 +1019,4 @@ export const HtmlBlock = {
   render: ({ html, style }) => <Boxed style={style}><Raw html={html} /></Boxed>,
 };
 
-export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };
+export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, PriceRanges, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };
