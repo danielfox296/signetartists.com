@@ -380,8 +380,8 @@ const ActAbout = {
 // button opens the contact form with the act chosen.
 const ActClose = {
   label: "Act close",
-  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede"), button: text("Button") },
-  render: function ActCloseRender({ act, band, title, lede, button, wrapStyle }) {
+  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede"), button: text("Button"), note: rich("Line under the button") },
+  render: function ActCloseRender({ act, band, title, lede, button, note, wrapStyle }) {
     const s = useSite();
     const a = actFor(s, act);
     if (!a) return null;
@@ -390,7 +390,7 @@ const ActClose = {
     return (
       <section className={bandClass(band || "ruled")}>
         <div className="wrap" style={css(wrapStyle)}>
-          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a date", href: `/contact/?act=${a.id}`, cls: "btn" }]} />
+          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a date", href: `/contact/?act=${a.id}`, cls: "btn" }]} note={note} />
         </div>
       </section>
     );
@@ -554,6 +554,7 @@ const ContactForm = {
   label: "Contact form",
   fields: {
     band: shellFields.band,
+    anchor: shellFields.anchor,
     ...headingFields,
     details: { type: "array", label: "Details", getItemSummary: (d) => plain(d.term), arrayFields: { term: rich("Label"), html: rich("Text") } },
     action: text("Sends to"),
@@ -563,7 +564,7 @@ const ContactForm = {
       label: "Fields",
       getItemSummary: (f) => (f.kind === "acts" ? "Act" : plain(f.label)),
       arrayFields: {
-        kind: { type: "select", label: "Kind", options: [{ label: "Text", value: "input" }, { label: "Long text", value: "textarea" }, { label: "Act", value: "acts" }] },
+        kind: { type: "select", label: "Kind", options: [{ label: "Text", value: "input" }, { label: "Long text", value: "textarea" }, { label: "Act", value: "acts" }, { label: "Checkboxes", value: "checks" }, { label: "One of", value: "choice" }] },
         label: rich("Label"),
         id: text("Id"),
         name: text("Name"),
@@ -573,6 +574,7 @@ const ContactForm = {
         full: { type: "radio", label: "Width", options: [{ label: "Half", value: false }, { label: "Full", value: true }] },
         rows: text("Rows"),
         placeholder: text("Placeholder"),
+        options: text("Choices (Checkboxes and One of), separated by |"),
       },
     },
     button: text("Button"),
@@ -584,7 +586,7 @@ const ContactForm = {
     const opts = (acts) => acts.map((a) => <option key={a.id} value={a.name} data-id={a.id}>{`${a.name} (${a.style})`}</option>);
     return (
       <>
-        <section className={bandClass(p.band || "top")}>
+        <section className={bandClass(p.band || "top")} id={p.anchor || undefined}>
           <div className="wrap" style={css(p.wrapStyle)}>
             <div className="split contact-grid">
               <div>
@@ -621,6 +623,24 @@ const ContactForm = {
                           <optgroup label="House Ensembles">{opts(m.FORMAT_ACTS)}</optgroup>
                         </select>
                       </div>
+                    ) : f.kind === "checks" || f.kind === "choice" ? (
+                      <fieldset className={f.full ? "field field--full field--choices" : "field field--choices"} key={i}>
+                        <H as="legend" html={f.label} />
+                        <div className="choices">
+                          {String(f.options || "").split("|").map((o) => o.trim()).filter(Boolean).map((o, j) => (
+                            <label className="choice" key={j}>
+                              <input
+                                type={f.kind === "checks" ? "checkbox" : "radio"}
+                                name={f.kind === "checks" ? o : f.name}
+                                value={f.kind === "checks" ? "Yes" : o}
+                                id={j ? undefined : f.id}
+                              />
+                              {" "}
+                              <span>{o}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </fieldset>
                     ) : (
                       <div className={f.full ? "field field--full" : "field"} key={i}>
                         <H as="label" htmlFor={f.id} html={f.label} />

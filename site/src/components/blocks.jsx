@@ -648,6 +648,7 @@ export const CloseRow = {
     titleStyle: text("Title style"),
     titleCls: text("Title size"),
     ledeStyle: text("Text style"),
+    note: rich("Line under the button"),
     image: { type: "object", label: "Picture", objectFields: imageFields },
   },
   defaultProps: { boxed: true, boxStyle: "max-width: 32rem;", title: "Title", lede: "Text", buttons: [{ label: "Check a Date", href: "/contact/", cls: "btn" }] },
@@ -666,6 +667,7 @@ export const CloseRow = {
         {photo ? <div className="close-photo" aria-hidden="true" style={photoStyle(href, photo)} /> : null}
         {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
         <Buttons items={p.buttons || []} />
+        {p.note ? <H as="p" className="close-note" html={p.note} /> : null}
       </div>
     );
   },

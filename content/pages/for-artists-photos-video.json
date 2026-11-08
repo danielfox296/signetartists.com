@@ -1,0 +1,348 @@
+{
+ "root": {
+  "props": {
+   "path": "/for-artists/photos-video/",
+   "title": "Band Photos and Live Video in Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Promo photos and live performance video for Colorado musicians, made by a booking agency that knows what event planners look for. Tell us about your act.",
+   "breadcrumb": "Photos and Video",
+   "schema": {
+    "service": {
+     "name": "Band photos and live video for musicians",
+     "serviceType": "Promo photography and live performance video for musicians and bands",
+     "description": "Promo photos and live performance video for Colorado musicians and bands, shot by a Denver booking agency with event planners in mind.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Fort Collins"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-112",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-111",
+       "title": "Band photos and live video for Colorado musicians.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "We book live music for weddings, corporate events and private parties across Colorado, so we know what a planner wants to see before they hire a band. We shoot promo photos and live video for musicians with those questions in mind.",
+       "buttons": [
+        {
+         "label": "Tell us about your act",
+         "href": "#form",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-115",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-113",
+       "title": "What do event planners look for in a band?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "When a planner is choosing between a few acts, they're usually asking three questions."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-114",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Can I see them play to a real crowd?",
+         "art": "video",
+         "text": "A clear live clip with good sound tells a planner more than any bio can."
+        },
+        {
+         "term": "Will they look right at my event?",
+         "art": "bowtie",
+         "text": "Photos that show how you dress and carry yourself on stage help them picture you at their event."
+        },
+        {
+         "term": "Do they seem professional?",
+         "art": "camera",
+         "text": "Current photos that match across your website, your socials and your booking pages tell them you're organized and easy to work with."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-120",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-116",
+       "title": "Promo shoots and live video for bands",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-117",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Promo shoot",
+         "art": "camera",
+         "text": "For acts that need current photos for a website, socials, press and booking pages. You'll get edited photos, sized for the web and social media, shot at a real venue or in a performance setting."
+        },
+        {
+         "term": "Live video",
+         "art": "video",
+         "text": "For acts that need a clip a planner can watch and trust. You'll get edited performance clips with clean sound, cut for booking pages and social media."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-118",
+       "html": "Want both? We can plan the photos and the video together in one session.",
+       "cls": "callout"
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-119",
+       "buttons": [
+        {
+         "label": "Tell us about your act",
+         "href": "#form",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-123",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-121",
+       "title": "How a shoot works",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-122",
+       "cls": "def-list def-list--route",
+       "rows": [
+        {
+         "term": "Tell us about your act",
+         "art": "list",
+         "text": "Send links to the photos, video and website you have now, and let us know what you need."
+        },
+        {
+         "term": "Get a quote and plan the shoot",
+         "art": "calendar",
+         "text": "We'll send you a quote, and then we'll plan the look, the location and the songs that show you at your best."
+        },
+        {
+         "term": "The shoot",
+         "art": "camera",
+         "text": "We can shoot at a gig you already have, which is often the best option, or at a set we arrange with you."
+        },
+        {
+         "term": "Get your files",
+         "art": "document",
+         "text": "You'll get everything edited and sized for booking sites, socials and press, usually within a week of the shoot (depending on the project)."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-126",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-124",
+       "title": "Questions about band photos and video",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-125",
+       "schema": true,
+       "items": [
+        {
+         "q": "Do I need to be on the Signet roster?",
+         "a": "No. We shoot for any musician or band in Colorado, whether or not you play events with us."
+        },
+        {
+         "q": "Do you help with what to wear for band photos?",
+         "a": "Yes. We'll go over it with you before the shoot, so you look like you belong at the events you want to play."
+        },
+        {
+         "q": "How much do band photos and live video cost?",
+         "a": "We quote every project to fit the act and what you need. Tell us about your act and we'll send you a quote."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ContactForm",
+   "props": {
+    "id": "ContactForm-127",
+    "band": "sunk",
+    "anchor": "form",
+    "title": "Tell us about your act.",
+    "titleTag": "h2",
+    "titleClass": "h2",
+    "lede": "Send us what you have now and what you need, and we'll get back to you with a quote.",
+    "details": [
+     {
+      "term": "Email",
+      "html": "<a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>"
+     }
+    ],
+    "action": "https://formsubmit.co/6a0410c3f604efa0e95283b9d52a9eb8",
+    "hidden": [
+     {
+      "name": "_next",
+      "value": "https://signetartists.com/thanks/photos-video/"
+     },
+     {
+      "name": "_subject",
+      "value": "Photos and video inquiry via signetartists.com"
+     },
+     {
+      "name": "_template",
+      "value": "table"
+     },
+     {
+      "name": "_captcha",
+      "value": "false"
+     }
+    ],
+    "fields": [
+     {
+      "kind": "input",
+      "id": "name",
+      "name": "Name",
+      "label": "Name <span class=\"req\">*</span>",
+      "autocomplete": "name",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "email",
+      "name": "email",
+      "label": "Email <span class=\"req\">*</span>",
+      "type": "email",
+      "autocomplete": "email",
+      "required": true
+     },
+     {
+      "kind": "input",
+      "id": "act",
+      "name": "Act name",
+      "label": "Act name"
+     },
+     {
+      "kind": "input",
+      "id": "genre",
+      "name": "Genre",
+      "label": "Genre"
+     },
+     {
+      "kind": "textarea",
+      "id": "links",
+      "name": "Links",
+      "label": "Links to your current photos, video or website",
+      "full": true,
+      "rows": "3"
+     },
+     {
+      "kind": "choice",
+      "id": "need",
+      "name": "What you need",
+      "label": "What you need",
+      "options": "Photos | Video | Both",
+      "full": true
+     },
+     {
+      "kind": "textarea",
+      "id": "gigs",
+      "name": "Upcoming gigs",
+      "label": "Any upcoming gigs we could shoot at?",
+      "full": true,
+      "rows": "3",
+      "placeholder": "The date and the venue for each one."
+     },
+     {
+      "kind": "input",
+      "id": "by",
+      "name": "Needed by",
+      "label": "When do you need it by?"
+     },
+     {
+      "kind": "textarea",
+      "id": "message",
+      "name": "Anything else",
+      "label": "Anything else we should know?",
+      "full": true,
+      "rows": "3"
+     }
+    ],
+    "button": "Send",
+    "script": false
+   }
+  }
+ ]
+}

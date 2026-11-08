@@ -101,6 +101,13 @@
       "full": true,
       "rows": "4",
       "placeholder": "Tell us a little about it and roughly how many people you're expecting. A sentence is plenty."
+     },
+     {
+      "kind": "checks",
+      "id": "addons",
+      "label": "Add <a href=\"/event-photo-video/\">photos or video</a>",
+      "options": "Event photos | Event video",
+      "full": true
      }
     ],
     "button": "Send",

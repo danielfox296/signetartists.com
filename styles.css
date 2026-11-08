@@ -1631,6 +1631,84 @@ img {
   grid-column: 1 / -1;
 }
 
+/* Checkboxes and a one-of choice in a form: the label row reads like the
+   other field labels, the choices sit on one line and wrap. */
+.field--choices {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.field--choices legend {
+  padding: 0;
+  font-size: 0.825rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  color: var(--ink-faint);
+}
+.field--choices .choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin-top: 0.75rem;
+}
+.field .choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9625rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+  cursor: pointer;
+}
+.field .choice input {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  margin: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: 0;
+  background: var(--paper);
+  cursor: pointer;
+}
+.field .choice input[type="radio"] {
+  border-radius: 50%;
+}
+.field .choice input:checked {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 3px var(--paper);
+}
+.field .choice input:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* A short line under the closing call's button. */
+.close-row .close-note {
+  margin: 1.25rem auto 0;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft, var(--ink-faint));
+  text-wrap: pretty;
+}
+.close-row .close-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.close-row--photo .close-note {
+  color: inherit;
+  opacity: 0.85;
+}
+
 .contact-details {
   margin-top: 2.75rem;
   border-top: 1px solid var(--rule);
@@ -4788,6 +4866,8 @@ img[src$="img/headliners.jpg"] {
 .def-row[data-art="document"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h20l10 10v38H18z'/%3E%3Cpath d='M38 8v10h10M24 30h18M24 38h18M24 46h12'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h20l10 10v38H18z'/%3E%3Cpath d='M38 8v10h10M24 30h18M24 38h18M24 46h12'/%3E%3C/svg%3E"); }
 .def-row[data-art="box"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22l20-10 20 10v22L32 54 12 44z'/%3E%3Cpath d='M12 22l20 10 20-10M32 32v22'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22l20-10 20 10v22L32 54 12 44z'/%3E%3Cpath d='M12 22l20 10 20-10M32 32v22'/%3E%3C/svg%3E"); }
 .def-row[data-art="spotlight"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 8h16l-3 12H27z'/%3E%3Cpath d='M27 20L14 54M37 20l13 34M10 56h44'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 8h16l-3 12H27z'/%3E%3Cpath d='M27 20L14 54M37 20l13 34M10 56h44'/%3E%3C/svg%3E"); }
+.def-row[data-art="camera"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 24h12l4-6h16l4 6h12v28H8z'/%3E%3Ccircle cx='32' cy='37' r='9'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 24h12l4-6h16l4 6h12v28H8z'/%3E%3Ccircle cx='32' cy='37' r='9'/%3E%3C/svg%3E"); }
+.def-row[data-art="video"]::before { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='20' width='34' height='26' rx='3'/%3E%3Cpath d='M42 29l14-7v22l-14-7z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='20' width='34' height='26' rx='3'/%3E%3Cpath d='M42 29l14-7v22l-14-7z'/%3E%3C/svg%3E"); }
 
 /* Tiles (Rows, Layout: Tiles): short items as a grid of small panels, each
    with its drawing, a label and one line. Add-on tiles have a dashed edge and
