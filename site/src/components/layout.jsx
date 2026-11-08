@@ -176,6 +176,139 @@ const NAV_SCRIPT = `
 
   `;
 
+// Even rows for anything that wraps. A grid of cards or tiles never ends on a
+// row with one item under three or more: it drops to the nearest column count
+// that comes out even (four in three columns becomes two and two). Two across
+// with one left over is allowed. A wrapping row of chips or logos that ends
+// on one item is narrowed until its rows even out. Runs on load and on every
+// width change, and again after a click or change, so filtered lists stay even.
+const WRAP_SCRIPT = `
+    (function () {
+      var SKIP = '.breadcrumb ol, .blog-byline, .blog-row-meta, .wall-grid, .nav-mobile';
+      var watched = [];
+      function items(el) {
+        var out = [];
+        for (var i = 0; i < el.children.length; i++) {
+          var k = el.children[i], s = getComputedStyle(k);
+          if (s.display === 'none' || s.position === 'absolute' || s.position === 'fixed') { continue; }
+          out.push(k);
+        }
+        return out;
+      }
+      function rows(list) {
+        var r = [];
+        list.forEach(function (k) {
+          var t = k.offsetTop, b = t + k.offsetHeight, last = r[r.length - 1];
+          if (last && t < last.b - 2) { last.n++; last.b = Math.max(last.b, b); } else { r.push({ b: b, n: 1 }); }
+        });
+        return r.map(function (x) { return x.n; });
+      }
+      function lone(counts) {
+        return counts.length > 1 && counts[counts.length - 1] === 1 && Math.max.apply(null, counts) >= 3;
+      }
+      function tracks(el) {
+        var t = getComputedStyle(el).gridTemplateColumns;
+        if (!t || t === 'none') { return 0; }
+        return t.replace(/\\[[^\\]]*\\]/g, ' ').split(/\\s+/).filter(Boolean).length;
+      }
+      function pick(n, c) {
+        var k, r;
+        if (c < 3 || n <= c) { return c; }
+        for (k = c; k >= c - 1; k--) { r = n % k; if (r === 0 || r >= k - 1) { return k; } }
+        for (k = c; k >= 2; k--) { r = n % k; if (r !== 1 || k === 2) { return k; } }
+        return c;
+      }
+      function kind(el) {
+        var s = getComputedStyle(el);
+        if (s.display.indexOf('grid') > -1) {
+          if (s.gridAutoFlow.indexOf('column') > -1) { return ''; }
+          for (var j = 0; j < el.children.length; j++) {
+            var c = getComputedStyle(el.children[j]);
+            if (c.gridColumnStart !== 'auto' || c.gridColumnEnd !== 'auto') { return ''; }
+          }
+          return 'grid';
+        }
+        return s.display.indexOf('flex') > -1 && s.flexWrap === 'wrap' ? 'flex' : '';
+      }
+      function scan() {
+        var all = document.querySelectorAll('main *, footer *');
+        for (var i = 0; i < all.length; i++) {
+          var el = all[i];
+          if (el._even || el.children.length < 3 || el.matches(SKIP) || el.closest('.wall-grid') || !kind(el)) { continue; }
+          el._even = { gtc: el.style.gridTemplateColumns, mw: el.style.maxWidth, ml: el.style.marginLeft, mr: el.style.marginRight, n: -1 };
+          watched.push(el);
+        }
+      }
+      function reset(el) {
+        var st = el._even;
+        el.style.gridTemplateColumns = st.gtc;
+        el.style.maxWidth = st.mw;
+        el.style.marginLeft = st.ml;
+        el.style.marginRight = st.mr;
+      }
+      function fitGrid(el, n) {
+        var c = tracks(el), k = pick(n, c);
+        if (k !== c) { el.style.gridTemplateColumns = 'repeat(' + k + ', minmax(0, 1fr))'; }
+      }
+      function fitFlex(el, list) {
+        var counts = rows(list);
+        if (!lone(counts)) { return; }
+        var top = el.clientWidth, floor = 0, want = counts.length, found = 0;
+        list.forEach(function (k) { floor = Math.max(floor, k.offsetWidth); });
+        for (var extra = 0; extra < 6 && !found; extra++) {
+          var lo = floor, hi = top;
+          while (hi - lo > 4) {
+            var mid = Math.floor((lo + hi) / 2);
+            el.style.maxWidth = mid + 'px';
+            if (rows(list).length > want + extra) { lo = mid; } else { hi = mid; }
+          }
+          el.style.maxWidth = hi + 'px';
+          if (!lone(rows(list))) { found = hi; } else { top = hi - 1; }
+        }
+        if (!found) { reset(el); return; }
+        if (getComputedStyle(el).justifyContent === 'center') { el.style.marginLeft = 'auto'; el.style.marginRight = 'auto'; }
+      }
+      function fit(el) {
+        reset(el);
+        var k = kind(el), list = items(el);
+        el._even.n = list.length;
+        if (!el.isConnected || !el.clientWidth || list.length < 3) { return; }
+        if (k === 'grid') { fitGrid(el, list.length); } else if (k === 'flex') { fitFlex(el, list); }
+      }
+      function fitAll() {
+        var root = document.documentElement;
+        root.classList.add('wrap-fitting');
+        scan();
+        watched.forEach(fit);
+        void root.offsetWidth;
+        root.classList.remove('wrap-fitting');
+      }
+      function countsChanged() {
+        return watched.some(function (el) { return items(el).length !== el._even.n; });
+      }
+      var queued = false, lastW = window.innerWidth;
+      function soon(check) {
+        if (queued) { return; }
+        queued = true;
+        requestAnimationFrame(function () {
+          queued = false;
+          if (check === 'count' && !countsChanged()) { return; }
+          fitAll();
+        });
+      }
+      window.addEventListener('resize', function () {
+        if (window.innerWidth === lastW) { return; }
+        lastW = window.innerWidth;
+        soon();
+      });
+      document.addEventListener('click', function () { soon('count'); });
+      document.addEventListener('change', function () { soon('count'); });
+      window.addEventListener('load', function () { soon(); });
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function () { soon(); }); }
+      fitAll();
+    })();
+  `;
+
 // The whole <body>: header, main, footer and the menu script.
 export function Body({ nav, trail, output, hubs, indexed, children }) {
   return (
@@ -188,6 +321,7 @@ export function Body({ nav, trail, output, hubs, indexed, children }) {
       </main>
       <Footer />
       <Raw html={`<script>${NAV_SCRIPT}</script>`} />
+      <Raw html={`<script>${WRAP_SCRIPT}</script>`} />
     </>
   );
 }
