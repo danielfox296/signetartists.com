@@ -630,6 +630,30 @@ img {
   gap: 0.75rem;
 }
 
+/* Beside Check a Date: opens the chat box (chat.js). Reads as a link. */
+.chat-link {
+  align-self: center;
+  padding: 0.5rem 0.25rem;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.9625rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.3em;
+  cursor: pointer;
+}
+
+.chat-link:hover,
+.chat-link:focus-visible {
+  color: var(--brass);
+}
+
+.blog-cta-btn + .chat-link {
+  margin: 1.65rem 0 0 0.75rem;
+}
+
 /* --------------------------------------------------------------- header */
 
 .site-header {

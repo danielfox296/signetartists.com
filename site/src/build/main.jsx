@@ -133,6 +133,13 @@ export function hero(html) {
   return html.slice(0, m.index) + tag + html.slice(m.index + m[0].length);
 }
 
+// Each Check a Date button gains a second way in: the chat box, opened by
+// chat.js. Without the chat box the click follows the button to the form.
+const CHECK_DATE = /<a\b(?=[^>]*\sclass="btn[ "])(?=[^>]*\shref="([^"]*contact\/(?:\?[^"#]*)?)")[^>]*>Check a [Dd]ate<\/a>/g;
+function chatButtons(html) {
+  return html.replace(CHECK_DATE, (a, href) => `${a}<button type="button" class="chat-link" data-chat="${href}">Or ask Daniel in chat</button>`);
+}
+
 // Click-to-play YouTube: a video's button becomes its player, playing.
 const YT_SCRIPT = `<script>
     document.addEventListener('click', function (e) {
@@ -279,6 +286,7 @@ export function buildSite(c, out) {
       ctx
     );
     if (first) body = hero(body);
+    if (m.site.crispId) body = chatButtons(body);
     if (body.includes('<button type="button" class="yt"')) body += "\n" + YT_SCRIPT;
     const canonical = m.canonicalFor(output);
     const ogMeta = shareImageMeta(ogImage, body, ogAlt);
