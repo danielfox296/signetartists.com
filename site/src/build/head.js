@@ -27,15 +27,16 @@ export function gaTag(gid) {
 
 // The Crisp chat box, as Crisp's setup page gives it. chat.js tags the
 // conversation with the page's part of the site and wires the chat buttons.
-export function crispTag(id, prefix) {
+export function crispTag(id, prefix, version) {
   if (!id) return "";
+  const v = version ? `?v=${version}` : "";
   return (
     "<script>window.$crisp=[];" +
     `window.CRISP_WEBSITE_ID="${id}";` +
     "(function(){var d=document,s=d.createElement('script');" +
     "s.src='https://client.crisp.chat/l.js';s.async=1;" +
     "d.getElementsByTagName('head')[0].appendChild(s);})();</script>\n" +
-    `  <script defer src="${prefix}chat.js"></script>`
+    `  <script defer src="${prefix}chat.js${v}"></script>`
   );
 }
 
@@ -79,7 +80,7 @@ export function head(h) {
   ${h.schema || ""}
   ${gaTag(site.gaId)}
   <script defer src="${h.prefix}analytics.js"></script>
-  ${crispTag(site.crispId, h.prefix)}
+  ${crispTag(site.crispId, h.prefix, site.chatVersion)}
 </head>`;
 }
 
