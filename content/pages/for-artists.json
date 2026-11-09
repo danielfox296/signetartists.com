@@ -2,9 +2,9 @@
  "root": {
   "props": {
    "path": "/for-artists/",
-   "title": "For Artists | Signet Artists",
-   "description": "Musicians and DJs: Signet books live music for weddings, parties and corporate events across Denver and Colorado, and handles the client side of every booking.",
+   "title": "For Artists: Event Gigs, Photos and Video | Signet Artists",
    "titleExact": true,
+   "description": "Musicians and DJs: play weddings, parties and corporate events across Colorado with Signet, or get promo photos and live video made with planners in mind.",
    "breadcrumb": "For Artists"
   }
  },
@@ -12,101 +12,104 @@
   {
    "type": "Intro",
    "props": {
-    "id": "Intro-3",
+    "id": "Intro-102",
     "band": "top",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-1",
-       "eyebrow": "Musicians and DJs",
-       "slab": true,
-       "title": "Looking for more event gigs in Colorado?",
+       "id": "Heading-101",
+       "title": "Event gigs, photos and video for Colorado musicians.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Signet books live music for weddings, private parties and corporate events in Denver, Boulder, Colorado Springs, Fort Collins, Vail, Beaver Creek, Aspen, Breckenridge, Telluride, Steamboat Springs, Winter Park and Crested Butte. We look after the client side of every booking, from the first inquiry through the quote, the contract, the deposit and the details on the day, so that you can show up and play.",
-       "headingText": [
-        {
-         "html": "We represent solo acts, duos, trios and quartets, and we put a larger band together when a client asks for one. We book jazz, flamenco and Spanish guitar, funk, soul and R&amp;B, blues, classic rock, yacht rock, Americana and bluegrass, country, Latin, pop and rock covers, string players, pianists, singer-songwriters and DJs, and if you play something else, send it anyway."
-        },
-        {
-         "html": "Representation is non-exclusive, so you keep your own gigs and your own clients."
-        }
-       ],
-       "buttons": [
-        {
-         "label": "Send us your act",
-         "href": "https://docs.google.com/forms/d/e/1FAIpQLSfwqRn9_PH7so43wI-q2zGRAD32v2rtrYaGVMudcOIVl6jdjg/viewform",
-         "cls": "btn"
-        },
-        {
-         "label": "See the roster",
-         "href": "/music/",
-         "cls": "btn btn--outline"
-        }
-       ]
+       "lede": "Signet books live music for weddings, private parties and corporate events across Colorado. We also shoot promo photos and live video for musicians, with the people who hire bands in mind."
       }
      }
-    ],
-    "_file": "01-intro.html"
+    ]
    }
   },
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-7",
-    "band": "ruled",
+    "id": "Rows-110",
+    "band": "sunk",
     "blocks": [
      {
-      "type": "Heading",
+      "type": "Columns",
       "props": {
-       "id": "Heading-4",
-       "eyebrow": "Before you send",
-       "title": "What we need to consider an act.",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-5",
-       "rows": [
+       "id": "Columns-109",
+       "cls": "split split--two",
+       "n": 2,
+       "c1": [
         {
-         "term": "Live video",
-         "text": "Send us a clip of you playing to a crowd. A phone recording from the back of the venue is fine, and it’s the first thing we open."
-        },
-        {
-         "term": "A song list",
-         "text": "We’re looking for enough songs for a three-hour event, and most of them should be songs the crowd already knows. Paste it in the form or link it."
-        },
-        {
-         "term": "Your own PA",
-         "text": "You’ll need a sound system that fits the venues you play, from a dinner party to a courtyard, and someone who can run it."
-        },
-        {
-         "term": "Liability insurance (or you’re willing to get it)",
-         "text": "Many venues ask for a certificate of insurance before the event. <a href=\"https://www.insurancecanopy.com/\">Insurance Canopy</a> writes performer policies by the year, and <a href=\"https://www.musicproinsurance.com/\">MusicPro</a> covers the gear."
-        },
-        {
-         "term": "How you dress",
-         "text": "Your clothes should suit a wedding or a corporate dinner. We ask for business casual at least, and we’ll let you know when a client wants something dressier."
-        },
-        {
-         "term": "The set format",
-         "text": "We usually ask for sets of 45 to 60 minutes, with 15 to 20 minutes between them and music playing through the break."
-        },
-        {
-         "term": "A quick answer on a date",
-         "text": "When we write to ask about a date, a reply the same day keeps the booking moving."
+         "type": "Panel",
+         "props": {
+          "id": "Panel-105",
+          "blocks": [
+           {
+            "type": "Heading",
+            "props": {
+             "id": "Heading-103",
+             "title": "Play events with Signet",
+             "titleTag": "h2",
+             "titleClass": "h3",
+             "lede": "Join the Artist Roster and play weddings, private parties and corporate events. We handle the client side of each booking, so you can focus on playing."
+            }
+           },
+           {
+            "type": "ButtonRow",
+            "props": {
+             "id": "ButtonRow-104",
+             "buttons": [
+              {
+               "label": "See what we look for",
+               "href": "/for-artists/join/",
+               "cls": "btn"
+              }
+             ]
+            }
+           }
+          ]
+         }
         }
        ],
-       "bare": true,
-       "cls": "def-list def-list--stack"
+       "c2": [
+        {
+         "type": "Panel",
+         "props": {
+          "id": "Panel-108",
+          "blocks": [
+           {
+            "type": "Heading",
+            "props": {
+             "id": "Heading-106",
+             "title": "Photos and video for musicians",
+             "titleTag": "h2",
+             "titleClass": "h3",
+             "lede": "Promo photos and live video that show a planner what you sound like and how you look at an event."
+            }
+           },
+           {
+            "type": "ButtonRow",
+            "props": {
+             "id": "ButtonRow-107",
+             "buttons": [
+              {
+               "label": "Get photos and video",
+               "href": "/for-artists/photos-video/",
+               "cls": "btn"
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
       }
      }
     ],
-    "_file": "01a-requirements.html"
+    "cls": "artist-doors"
    }
   },
   {
@@ -117,41 +120,6 @@
     "label": "Trusted and booked by",
     "showAlso": false,
     "_file": "01b-credits.html"
-   }
-  },
-  {
-   "type": "CallToAction",
-   "props": {
-    "id": "CallToAction-13",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "CloseRow",
-      "props": {
-       "id": "CloseRow-10",
-       "buttons": [
-        {
-         "label": "Send us your act",
-         "href": "https://docs.google.com/forms/d/e/1FAIpQLSfwqRn9_PH7so43wI-q2zGRAD32v2rtrYaGVMudcOIVl6jdjg/viewform",
-         "cls": "btn"
-        }
-       ],
-       "boxed": true,
-       "boxStyle": "max-width: 32rem;",
-       "title": "Want to play events with us?",
-       "lede": "To get started, we just need links to live video, your song list, the sizes you offer and your typical rate for a three-hour event. We read every submission, and when there’s a fit we’ll write back and set up a call."
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-11",
-       "html": "If you’d rather ask something first, email <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>.",
-       "cls": "note"
-      }
-     }
-    ],
-    "_file": "02-close.html"
    }
   }
  ]

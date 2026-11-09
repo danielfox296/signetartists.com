@@ -1,0 +1,48 @@
+{
+ "root": {
+  "props": {
+   "path": "/thanks/photos-video/",
+   "title": "Thanks, we've got it",
+   "description": "We've received your note about photos and video. We'll take a look and get back to you with a quote.",
+   "robots": "noindex, follow"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-6",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Panel",
+      "props": {
+       "id": "Panel-4",
+       "blocks": [
+        {
+         "type": "Title",
+         "props": {
+          "id": "Title-1",
+          "html": "Thanks for reaching out! <span class=\"smile\">We'll take a look.</span>",
+          "tag": "h1",
+          "cls": "h3"
+         }
+        },
+        {
+         "type": "Paragraph",
+         "props": {
+          "id": "Paragraph-2",
+          "html": "We'll get back to you with a quote, and we may have a question or two about your act.",
+          "cls": "prose"
+         }
+        }
+       ],
+       "style": "max-width: 34rem;"
+      }
+     }
+    ],
+    "_file": "01-thanks.html"
+   }
+  }
+ ]
+}
