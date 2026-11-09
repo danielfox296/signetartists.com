@@ -1,0 +1,324 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/divine-beauty-artists/",
+   "title": "Divine Beauty Artists: Denver Bridal Hair & Makeup",
+   "description": "Divine Beauty Artists is a team of licensed bridal hair and makeup artists around Denver, Boulder and the mountains, run by Christy Kaliana and Kemper.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Divine Beauty Artists",
+   "schema": {
+    "vendor": {
+     "@id": "https://www.divinebeautyartists.com/#organization",
+     "name": "Divine Beauty Artists",
+     "url": "https://www.divinebeautyartists.com/",
+     "description": "Divine Beauty Artists is a team of licensed and insured wedding hair and makeup artists in Colorado, Florida and Arizona, founded by Christy Kaliana.",
+     "founder": {
+      "@type": "Person",
+      "name": "Christy Kaliana"
+     },
+     "areaServed": [
+      {
+       "@type": "City",
+       "name": "Denver"
+      },
+      {
+       "@type": "City",
+       "name": "Boulder"
+      },
+      {
+       "@type": "Place",
+       "name": "Colorado"
+      },
+      {
+       "@type": "Place",
+       "name": "Florida"
+      },
+      {
+       "@type": "Place",
+       "name": "Arizona"
+      }
+     ],
+     "knowsAbout": [
+      "Bridal hair",
+      "Bridal makeup",
+      "Airbrush makeup",
+      "Hair extensions"
+     ],
+     "sameAs": [
+      "https://www.instagram.com/divinebeautyartists",
+      "https://www.facebook.com/pages/colorado-makeup-and-hair/226839154070464"
+     ]
+    }
+   },
+   "heroImage": "img/vendors/divine-beauty-artists/fan-glam-portrait.jpg",
+   "ogImage": "img/vendors/divine-beauty-artists/fan-glam-portrait.jpg",
+   "ogImageAlt": "A woman with her dark hair in a sleek low bun, her eyes closed as a makeup artist works beside a folding fan."
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "On our Preferred Vendor List",
+       "slab": true,
+       "title": "Divine Beauty Artists: bridal hair and makeup in Colorado.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Getting a bride, her bridesmaids and the moms ready on the same morning is a lot for one person. <a href=\"https://www.divinebeautyartists.com/\" target=\"_blank\" rel=\"noopener\">Divine Beauty Artists</a> is a great choice when you need a whole team.",
+       "headingText": [
+        {
+         "html": "Christy Kaliana founded Divine Beauty, and she runs it today with her husband, Kemper. Their licensed and insured artists work in Colorado, Florida and Arizona, and the Colorado team is based around Denver."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "title": "Divine Beauty Artists at a glance",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "What they offer",
+         "text": "They offer bridal hair and makeup, with trials, airbrush or conventional makeup, false lashes and clip-in extensions."
+        },
+        {
+         "term": "Where they work",
+         "text": "Their Colorado artists are based around Denver, and they work in Boulder, Breckenridge, Vail and across the state. On the wedding day, they come to you."
+        },
+        {
+         "term": "Experience",
+         "text": "Christy has more than 20 years in the beauty industry, including time as a national CoverGirl makeup artist, and she’s worked with hundreds of celebrities and professional athletes."
+        },
+        {
+         "term": "The team",
+         "text": "Christy hand-picks and trains every artist, and they’ll match you with an artist based on the look you want."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-3",
+       "html": "Bridal hair and makeup in Denver and the mountains",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3a",
+       "cls": "prose",
+       "html": "Whether you want full glam or a more polished version of your everyday look, the team works from your ideas. It helps to send photos of looks you like, including the back of the hairstyle you want."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3b",
+       "cls": "prose",
+       "html": "Their artists keep their kits full of long-wearing products, and they’re happy to use your own favorites if you ask."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3c",
+       "cls": "prose",
+       "html": "Many of their stylists also do cuts, color and other kinds of extensions, if you’d like those, too."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-4",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "title": "Bridal hair and makeup by Divine Beauty Artists",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-4",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/vendors/divine-beauty-artists/smiling-soft-waves.jpg",
+         "alt": "A smiling bride with long, glossy waves swept to one side.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/jeweled-headpiece.jpg",
+         "alt": "A bride with long dark waves and a jeweled headpiece, looking down.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/makeup-brush-blonde-waves.jpg",
+         "alt": "A bride with long blonde waves as an artist sweeps a brush across her cheek.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/half-up-waves.jpg",
+         "alt": "A bride seen from behind with her long hair in soft half-up waves.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/white-flower-headpiece.jpg",
+         "alt": "A close portrait of a woman wearing a large white flower headpiece and soft, glowing makeup.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/floral-pinned-updo.jpg",
+         "alt": "A bride with a low updo pinned with small white flowers, adjusting her veil.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/smiling-off-shoulder.jpg",
+         "alt": "A smiling bride with dark waves and a sparkling hair pin, in an off-the-shoulder gown.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/divine-beauty-artists/low-bun-lipstick.jpg",
+         "alt": "A bride with her hair in a low bun as an artist applies her lipstick.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "tall": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-4",
+       "cls": "note note--small",
+       "html": "All of the hair and makeup on this page is by Divine Beauty Artists. Photographs by Two One Photography, Sarah Porter, Kayla Coleman, We the Light Photography, James Lang, Lizzy Beerman, Jamee Photography and Bridget Burnett."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-5",
+       "html": "Hair and makeup for the whole wedding party",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5a",
+       "cls": "prose",
+       "html": "For a bigger wedding party, they send more than one artist, so the bridesmaids, the moms and anyone else who wants hair and makeup can be ready together."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5b",
+       "cls": "prose",
+       "html": "Trials happen at an artist’s studio or with a mobile artist, depending on who you’re matched with."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5c",
+       "cls": "prose",
+       "html": "You can see more of their work in their <a href=\"https://www.divinebeautyartists.com/portfolio/\" target=\"_blank\" rel=\"noopener\">portfolio</a> and on their <a href=\"https://www.divinebeautyartists.com/our-locations/colorado-weding-makeup-hair/\" target=\"_blank\" rel=\"noopener\">Colorado page</a>. To check your date, <a href=\"https://www.divinebeautyartists.com/contact/\" target=\"_blank\" rel=\"noopener\">reach out to Divine Beauty</a> through their website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Need live music for your wedding, too?",
+       "lede": "From the ceremony to the dance floor, we book live music all over Colorado. Take a look at <a href=\"/weddings/\">live music for your wedding</a>, or just send us your date."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
