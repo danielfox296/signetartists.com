@@ -1,6 +1,6 @@
 /* Signet Artists — the Crisp chat box. The page's <head> loads Crisp; this
    file tags each conversation with the part of the site it started on and
-   opens the chat from the "Or ask Daniel in chat" buttons beside Check a
+   opens the chat from the "Or chat with us" buttons beside Check a
    Date. If Crisp never loads, those buttons go to the form instead. */
 (function () {
   "use strict";
@@ -37,7 +37,7 @@
     corporate: "a corporate event",
     "private-event": /^\/private-parties\//.test(path) ? "a private party" : "an event"
   }[seg] || "an event";
-  var starter = "Hi Daniel - I'm planning " + occasion + ", and the date is ";
+  var starter = "Hi! I'm planning " + occasion + ", and the date is ";
 
   function loaded() {
     return window.$crisp && typeof window.$crisp.is === "function";

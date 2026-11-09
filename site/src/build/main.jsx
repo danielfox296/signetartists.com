@@ -137,7 +137,7 @@ export function hero(html) {
 // chat.js. Without the chat box the click follows the button to the form.
 const CHECK_DATE = /<a\b(?=[^>]*\sclass="btn[ "])(?=[^>]*\shref="([^"]*contact\/(?:\?[^"#]*)?)")[^>]*>Check a [Dd]ate<\/a>/g;
 function chatButtons(html) {
-  return html.replace(CHECK_DATE, (a, href) => `${a}<button type="button" class="chat-link" data-chat="${href}">Or ask Daniel in chat</button>`);
+  return html.replace(CHECK_DATE, (a, href) => `${a}<button type="button" class="chat-link" data-chat="${href}">Or chat with us</button>`);
 }
 
 // Click-to-play YouTube: a video's button becomes its player, playing.
