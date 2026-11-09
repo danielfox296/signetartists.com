@@ -22,8 +22,14 @@
     return "other";
   }
 
+  // The tag is the part of the site the conversation starts on: each page
+  // replaces it until the visitor sends a message, then it stays.
   var seg = segment(path);
-  crisp(["set", "session:segments", [[seg]]]);
+  crisp(["on", "session:loaded", function () {
+    try {
+      if (!window.$crisp.is("session:ongoing")) crisp(["set", "session:segments", [[seg], true]]);
+    } catch (e) {}
+  }]);
 
   // The line the chat opens with; the visitor finishes it.
   var occasion = {
