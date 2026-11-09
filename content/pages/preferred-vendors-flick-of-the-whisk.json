@@ -1,0 +1,310 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/flick-of-the-whisk/",
+   "title": "Flick of the Whisk: Denver Wedding Cakes & Cupcakes",
+   "description": "Flick of the Whisk is Bryonna’s Denver cake studio, making minimalist wedding cakes, cupcakes and jar cupcakes since 2019.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Flick of the Whisk",
+   "schema": {
+    "vendor": {
+     "@id": "https://www.flickofthewhiskcakes.com/#organization",
+     "name": "Flick of the Whisk",
+     "url": "https://www.flickofthewhiskcakes.com/",
+     "description": "Flick of the Whisk is a Denver cake studio founded by Bryonna in 2019, making wedding cakes, cupcakes and artisan desserts.",
+     "founder": {
+      "@type": "Person",
+      "name": "Bryonna Williams"
+     },
+     "foundingDate": "2019",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+     },
+     "areaServed": [
+      {
+       "@type": "City",
+       "name": "Denver"
+      },
+      {
+       "@type": "Place",
+       "name": "Colorado"
+      }
+     ],
+     "knowsAbout": [
+      "Wedding cakes",
+      "Cupcakes",
+      "Vegan and gluten-free cakes"
+     ],
+     "sameAs": [
+      "https://www.instagram.com/flickofthewhiskcakes/",
+      "https://www.tiktok.com/@flickofthewhiskcakes"
+     ]
+    }
+   },
+   "heroImage": "img/vendors/flick-of-the-whisk/roses-cake-couple-2.jpg",
+   "ogImage": "img/vendors/flick-of-the-whisk/roses-cake-couple-2.jpg",
+   "ogImageAlt": "A bride and groom holding hands across a small table with a dark textured cake ringed by pink and red roses."
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "On our Preferred Vendor List",
+       "slab": true,
+       "title": "Flick of the Whisk: wedding cakes and cupcakes in Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A wedding cake has to look beautiful in the photos and taste great afterward. <a href=\"https://www.flickofthewhiskcakes.com/\" target=\"_blank\" rel=\"noopener\">Flick of the Whisk</a> is a great choice if you care about both.",
+       "headingText": [
+        {
+         "html": "Bryonna founded Flick of the Whisk in Denver in 2019. She’s self-taught, and her cakes are minimalist and modern, with a subtle edge."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "title": "Flick of the Whisk at a glance",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "What she makes",
+         "text": "She makes wedding and celebration cakes, cupcakes and mini cupcakes, and she’s added sheet cakes, brownie bites and chocolate chip cookies to the menu."
+        },
+        {
+         "term": "Where she works",
+         "text": "She’s based in Denver, and she makes cakes for weddings across Colorado."
+        },
+        {
+         "term": "Dietary needs",
+         "text": "Vegan and gluten-free versions are available for most of her flavors."
+        },
+        {
+         "term": "Tasting",
+         "text": "You can order a tasting box to try her flavors before you decide."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-3",
+       "html": "Wedding cakes in Denver",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3a",
+       "cls": "prose",
+       "html": "Bryonna’s style is curated minimalism: clean lines, careful details and the colors you choose, with flowers or a custom topper if you’d like one."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3b",
+       "cls": "prose",
+       "html": "Her flavor menu runs from classics like vanilla and marble to Strawberry Dreams, Zesty Lemon and Just Peachy, a cinnamon cake with peach filling."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3c",
+       "cls": "prose",
+       "html": "Her cakes run from a small 4-inch cake for an elopement to a three-tier statement cake, and with a tiered cake you can save the top tier to freeze."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-4",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "title": "Wedding cakes by Flick of the Whisk",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-4",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/vendors/flick-of-the-whisk/black-cake-red-roses.jpg",
+         "alt": "A two-tier black textured cake on a clear stand ringed with red, pink and white roses.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/baby-breath-tiers.jpg",
+         "alt": "A white cake decorated with small white flowers and orchids, in front of a wall of baby’s breath.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/couple-cutting-tall-cake.jpg",
+         "alt": "A bride and groom laughing beside a tall cake of square white and blue patterned tiers.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/wildflower-textured-cake.jpg",
+         "alt": "A three-tier white textured cake topped with wildflowers on a gold stand.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/black-stacked-cake.jpg",
+         "alt": "A tall cake of stacked black square tiers with purple and red flowers.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/candlelit-tiers.jpg",
+         "alt": "A tall white tiered cake decorated with white roses, among lit candles.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/drip-cake-barrel.jpg",
+         "alt": "A cake with a chocolate drip and red flowers on a stand set on a wooden barrel.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/flick-of-the-whisk/white-cupcakes.jpg",
+         "alt": "A tray of vanilla cupcakes topped with white swirled frosting.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "tall": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-4",
+       "cls": "note note--small",
+       "html": "All of the cakes on this page are by Bryonna, and the photographs come from her gallery."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-5",
+       "html": "Cupcakes and dessert tables",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5a",
+       "cls": "prose",
+       "html": "If you’d like cupcakes instead of a big cake, or alongside one, Bryonna makes standard and mini cupcakes in your color palette, with custom toppers if you like. Her 4-ounce jar cupcakes come individually packaged with custom labels, so they double as favors."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5b",
+       "cls": "prose",
+       "html": "You can see more of her cakes in her <a href=\"https://www.flickofthewhiskcakes.com/gallery\" target=\"_blank\" rel=\"noopener\">gallery</a>, and her <a href=\"https://www.flickofthewhiskcakes.com/menu\" target=\"_blank\" rel=\"noopener\">menu page</a> has every flavor. To check your date, use the order form on <a href=\"https://www.flickofthewhiskcakes.com/menu\" target=\"_blank\" rel=\"noopener\">that page</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Need live music for your wedding, too?",
+       "lede": "From the ceremony to the dance floor, we book live music all over Colorado. Take a look at <a href=\"/weddings/\">live music for your wedding</a>, or just send us your date."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

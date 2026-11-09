@@ -311,10 +311,10 @@ const figureFields = { ...imageFields, caption: rich("Caption") };
 
 export const MediaGrid = {
   label: "Images",
-  fields: { images: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: figureFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] } },
-  defaultProps: { images: [], single: false },
-  render: ({ images, single, style }) => (
-    <div className={cx("media-grid", single && "media-grid--single")} style={css(style)}>
+  fields: { images: { type: "array", label: "Pictures", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: figureFields }, single: { type: "radio", label: "Layout", options: [{ label: "Grid", value: false }, { label: "One", value: true }] }, tall: { type: "radio", label: "Picture shape", options: [{ label: "Wide", value: false }, { label: "Tall", value: true }] } },
+  defaultProps: { images: [], single: false, tall: false },
+  render: ({ images, single, tall, style }) => (
+    <div className={cx("media-grid", single && "media-grid--single", tall && "media-grid--tall")} style={css(style)}>
       {(images || []).map((im, i) => (
         <figure key={i}>
           <Img im={im} sizes={single ? SIZES.single : SIZES.grid} />

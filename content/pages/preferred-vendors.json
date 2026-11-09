@@ -3,7 +3,7 @@
   "props": {
    "path": "/preferred-vendors/",
    "title": "Denver Wedding Vendors We Recommend | Signet Artists",
-   "description": "These are the photographers, planners, videographers, makeup artists, caterers, florists and venues we'd recommend to our own clients in Denver. The list is short on purpose.",
+   "description": "The photographers, planners, videographers, makeup artists, caterers, bakers, florists and venues we’d recommend to our own clients in Denver.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
@@ -69,6 +69,11 @@
       "ask": "Need someone to feed your guests? Let us know, and we’ll suggest a caterer."
      },
      {
+      "id": "cakes",
+      "label": "Cakes and desserts",
+      "ask": "Need a wedding cake or a dessert table? Let us know, and we’ll point you to a baker."
+     },
+     {
       "id": "design-florals",
       "label": "Design and florals",
       "ask": "For flowers and decor, just reach out and we’ll point you to a designer."
@@ -113,6 +118,26 @@
       "note": "Grace Martin is a Denver hair and makeup artist who also works in film, television and national campaigns. Her bridal work has appeared in Rocky Mountain Bride, and she works with all hair textures and skin tones.",
       "image": "/img/vendors/grace-martin/soft-blonde-waves.jpg",
       "imageAlt": "A bride with long, soft blonde waves, sitting in a vintage convertible with one gloved hand near her cheek."
+     },
+     {
+      "name": "Prairie Hill Flower Co.",
+      "url": "https://prairiehillflowerco.com/weddings",
+      "location": "Parker",
+      "category": "design-florals",
+      "page": "/preferred-vendors/prairie-hill-flower-co/",
+      "note": "Lisa Frahm designs lush, garden-inspired flowers for weddings and events, and many of her blooms come from her own flower farm. She was an architect before she became a florist, which shows in the big pieces.",
+      "image": "/img/vendors/prairie-hill-flower-co/blue-table-centerpiece.jpg",
+      "imageAlt": "A long centerpiece of white roses, blue flowers and greenery on a reception table set with blue glasses."
+     },
+     {
+      "name": "Flick of the Whisk",
+      "url": "https://www.flickofthewhiskcakes.com/menu",
+      "location": "Denver",
+      "category": "cakes",
+      "page": "/preferred-vendors/flick-of-the-whisk/",
+      "note": "Bryonna’s Denver cake studio makes minimalist wedding cakes with a modern edge, plus cupcakes, mini cupcakes and jar cupcakes. Vegan and gluten-free versions are available for most flavors.",
+      "image": "/img/vendors/flick-of-the-whisk/black-cake-roses-close.jpg",
+      "imageAlt": "A dark textured two-tier cake surrounded by red, pink and white roses on tall stems."
      }
     ],
     "_file": "02-list.html"

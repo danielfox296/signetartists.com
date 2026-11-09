@@ -1,0 +1,321 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/prairie-hill-flower-co/",
+   "title": "Prairie Hill Flower Co.: Denver Wedding & Event Florist",
+   "description": "Prairie Hill Flower Co. is a wedding and event florist in Parker, led by Lisa Frahm, a former architect who grows many of her own flowers.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Prairie Hill Flower Co.",
+   "schema": {
+    "vendor": {
+     "@id": "https://prairiehillflowerco.com/#organization",
+     "name": "Prairie Hill Flower Co.",
+     "url": "https://prairiehillflowerco.com/",
+     "description": "Prairie Hill Flower Co. is a full-service wedding and event florist in Parker, Colorado, founded by Lisa Frahm.",
+     "founder": {
+      "@type": "Person",
+      "name": "Lisa Frahm"
+     },
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Parker",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+     },
+     "areaServed": [
+      {
+       "@type": "City",
+       "name": "Denver"
+      },
+      {
+       "@type": "City",
+       "name": "Colorado Springs"
+      },
+      {
+       "@type": "Place",
+       "name": "Colorado"
+      }
+     ],
+     "knowsAbout": [
+      "Wedding flowers",
+      "Event floral design",
+      "Corporate event flowers"
+     ],
+     "sameAs": [
+      "https://www.instagram.com/prairiehilleventco/",
+      "https://www.facebook.com/prairiehillflowerco"
+     ]
+    }
+   },
+   "heroImage": "img/vendors/prairie-hill-flower-co/orange-table-flowers.jpg",
+   "ogImage": "img/vendors/prairie-hill-flower-co/orange-table-flowers.jpg",
+   "ogImageAlt": "A low arrangement of orange, peach and cream flowers on a reception table, beside a reserved card and candles."
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "On our Preferred Vendor List",
+       "slab": true,
+       "title": "Prairie Hill Flower Co.: wedding and event flowers near Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "When you walk into a wedding, the flowers set the tone before anyone says a word. <a href=\"https://prairiehillflowerco.com/\" target=\"_blank\" rel=\"noopener\">Prairie Hill Flower Co.</a> is a great choice if you want yours to make a statement.",
+       "headingText": [
+        {
+         "html": "Lisa Frahm founded Prairie Hill in Parker, and she was a licensed architect before she became a florist. She designs full-service wedding flowers and tailored flowers for private and corporate events."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "title": "Prairie Hill Flower Co. at a glance",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "What they offer",
+         "text": "They offer full-service wedding flowers and custom flowers for private and corporate events."
+        },
+        {
+         "term": "Where they work",
+         "text": "They’re based in Parker, and they work across the Front Range, including Denver, Colorado Springs and Larkspur."
+        },
+        {
+         "term": "Their own flowers",
+         "text": "Prairie Hill started as a flower farm, and many of the blooms in their designs are still grown on that farm."
+        },
+        {
+         "term": "Recognition",
+         "text": "Their work has been published in several magazines, and they’ve won “Best of” awards year after year."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-3",
+       "html": "Wedding flowers in Denver and Colorado Springs",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3a",
+       "cls": "prose",
+       "html": "Lisa’s background in architecture shows up in the work. She thinks about form, scale and balance, so she can build the custom structures that big pieces like ceremony arches need."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3b",
+       "cls": "prose",
+       "html": "Her style is lush and garden-inspired, with airy movement and layered textures, and it ranges from romantic blooms to modern, artful statements."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3c",
+       "cls": "prose",
+       "html": "Their weddings include The Broadmoor in Colorado Springs and Crooked Willow Farm in Larkspur, and their event work includes the Denver Center for the Performing Arts, Cherry Hills Country Club and Villa Parker."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-4",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "title": "Wedding flowers by Prairie Hill Flower Co.",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-4",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/bride-in-blooms.jpg",
+         "alt": "A smiling bride framed by white roses and pale blue and peach flowers.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/garden-arch.jpg",
+         "alt": "A garden arch covered in white roses, blue flowers and greenery.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/orange-bouquet.jpg",
+         "alt": "A bride holding a bouquet of orange ranunculus, red and pink flowers and trailing greenery.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/white-aisle-flowers.jpg",
+         "alt": "White flowers and greenery lining a ceremony aisle beside white chairs.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/bright-flower-frame.jpg",
+         "alt": "A smiling bride framed by red, orange and pink flowers.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/pastel-ground-flowers.jpg",
+         "alt": "Pale pink, peach and lavender flowers gathered at the foot of a stone wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/autumn-bouquet-ribbons.jpg",
+         "alt": "A bride holding a red, orange and rust bouquet with long ribbons.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/prairie-hill-flower-co/white-centerpiece-candles.jpg",
+         "alt": "A centerpiece of white roses and greenery on a reception table with candles.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "tall": true
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-4",
+       "cls": "note note--small",
+       "html": "All of the flowers on this page are by Prairie Hill Flower Co., and the photographs come from their website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-5",
+       "html": "Flowers for private and corporate events",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5a",
+       "cls": "prose",
+       "html": "If you’re planning a company party, a gala or a dinner at home, Prairie Hill designs event flowers, too. Their past events include black-tie events, corporate retreats, executive holiday events and parties in private homes."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5b",
+       "cls": "prose",
+       "html": "For a wedding, Lisa starts with a one-on-one consultation, then sends a custom proposal that lists every floral piece, along with a visual plan and color palette."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5c",
+       "cls": "prose",
+       "html": "You can see more of their work on their <a href=\"https://prairiehillflowerco.com/weddings\" target=\"_blank\" rel=\"noopener\">weddings page</a> and their <a href=\"https://prairiehillflowerco.com/private-and-corporate-events\" target=\"_blank\" rel=\"noopener\">events page</a>. To check your date, <a href=\"https://prairiehillflowerco.com/weddings\" target=\"_blank\" rel=\"noopener\">send Prairie Hill an inquiry</a> through their website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Need live music for your wedding, too?",
+       "lede": "From the ceremony to the dance floor, we book live music all over Colorado. Take a look at <a href=\"/weddings/\">live music for your wedding</a>, or just send us your date."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -3804,6 +3804,11 @@ main:focus {
   grid-template-columns: minmax(0, 40rem);
 }
 
+/* Upright subjects (a tiered cake, a bouquet) keep their tops in a tall cell. */
+.media-grid--tall img {
+  aspect-ratio: 3 / 4;
+}
+
 .media-grid--single img {
   aspect-ratio: auto;
 }
