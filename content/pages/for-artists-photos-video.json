@@ -317,15 +317,6 @@
       "full": true
      },
      {
-      "kind": "textarea",
-      "id": "gigs",
-      "name": "Upcoming gigs",
-      "label": "Any upcoming gigs we could shoot at?",
-      "full": true,
-      "rows": "3",
-      "placeholder": "The date and the venue for each one."
-     },
-     {
       "kind": "input",
       "id": "by",
       "name": "Needed by",
