@@ -2,15 +2,16 @@
  "root": {
   "props": {
    "path": "/for-artists/photos-video/",
-   "title": "Band Photos and Live Video in Denver | Signet Artists",
+   "title": "Artist Development for Musicians in Denver | Signet Artists",
    "titleExact": true,
-   "description": "Promo photos and live performance video for Colorado musicians, made by a booking agency that knows what event planners look for. Tell us about your act.",
-   "breadcrumb": "Photos and Video",
+   "description": "Signet works with Colorado musicians on positioning, branding, styling, marketing and building an audience. Tell us where you want to take your music.",
+   "breadcrumb": "Artist Development",
+   "heroImage": "none",
    "schema": {
     "service": {
-     "name": "Band photos and live video for musicians",
-     "serviceType": "Promo photography and live performance video for musicians and bands",
-     "description": "Promo photos and live performance video for Colorado musicians and bands, shot by a Denver booking agency with event planners in mind.",
+     "name": "Artist development for musicians",
+     "serviceType": "Artist development, branding and marketing for musicians",
+     "description": "Positioning, branding, styling, marketing and audience building for Colorado musicians and bands, from a Denver booking agency.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -25,67 +26,44 @@
   {
    "type": "Intro",
    "props": {
-    "id": "Intro-112",
+    "id": "Intro-201",
     "band": "top",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-111",
-       "title": "Band photos and live video for Colorado musicians.",
+       "id": "Heading-202",
+       "title": "Artist development for Colorado musicians.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "We book live music for weddings, corporate events and private parties across Colorado, so we know what a planner wants to see before they hire a band. We shoot promo photos and live video for musicians with those questions in mind.",
-       "buttons": [
+       "lede": "You've probably seen an artist in one photo and known right away who they are and what they might sound like. We help talented musicians become that clear.",
+       "headingText": [
         {
-         "label": "Tell us about your act",
-         "href": "#form",
-         "cls": "btn"
+         "html": "We get there by working on the whole picture with you. That means positioning (where you fit and who books you), branding, styling and a clear sense of who you are on stage. Sometimes it means finding an archetype that's already in you and leaning all the way into it.",
+         "cls": "prose"
+        },
+        {
+         "html": "From there, we help with marketing and with building an audience of people who love what you do.",
+         "cls": "prose"
+        },
+        {
+         "html": "The photos on this page are where that work shows. For each artist below, we started with who they are, and the styling, the setting and the light all came from the answer.",
+         "cls": "prose"
         }
        ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-115",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-113",
-       "title": "What do event planners look for in a band?",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "When a planner is choosing between a few acts, they're usually asking three questions."
       }
      },
      {
-      "type": "DefRows",
+      "type": "WidePicture",
       "props": {
-       "id": "DefRows-114",
-       "cls": "def-list def-list--icons",
-       "rows": [
-        {
-         "term": "Can I see them play to a real crowd?",
-         "art": "video",
-         "text": "A clear live clip with good sound tells a planner more than any bio can."
-        },
-        {
-         "term": "Will they look right at my event?",
-         "art": "bowtie",
-         "text": "Photos that show how you dress and carry yourself on stage help them picture you at their event."
-        },
-        {
-         "term": "Do they seem professional?",
-         "art": "camera",
-         "text": "Current photos that match across your website, your socials and your booking pages tell them you're organized and easy to work with."
-        }
-       ]
+       "id": "WidePicture-203",
+       "image": {
+        "src": "/img/for-artists/studio-alti-39.jpg",
+        "alt": "Guitarist lying on a sunlit floor playing a black electric guitar, the cable curling beside them",
+        "width": "2000",
+        "height": "1335",
+        "fetchpriority": "high"
+       }
       }
      }
     ]
@@ -94,54 +72,333 @@
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-120",
+    "id": "Rows-204",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-116",
-       "title": "Promo shoots and live video for bands",
+       "id": "Heading-205",
+       "title": "Artists we've worked with",
        "titleTag": "h2",
        "titleClass": "h2"
       }
      },
      {
-      "type": "DefRows",
+      "type": "Stories",
       "props": {
-       "id": "DefRows-117",
-       "cls": "def-list def-list--cards",
-       "rows": [
+       "id": "Stories-206",
+       "small": false,
+       "stories": [
         {
-         "term": "Promo shoot",
-         "art": "camera",
-         "text": "For acts that need current photos for a website, socials, press and booking pages. You'll get edited photos, sized for the web and social media, shot at a real venue or in a performance setting."
+         "type": "Story",
+         "props": {
+          "id": "Story-207",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-1-2.jpg",
+            "alt": "Black and white portrait of a singer in a cowboy hat and a shearling coat",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-106.jpg",
+            "alt": "Black and white photo of the singer in a flat-brimmed hat, seated in profile",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-86.jpg",
+            "alt": "Black and white photo of the singer in a hat and western shirt, crouched mid-step",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-79.jpg",
+            "alt": "The singer's face in deep shadow under a hat brim, one eye lit",
+            "width": "1428",
+            "height": "2000"
+           }
+          ],
+          "more": [
+           {
+            "src": "/img/for-artists/studio-alti-115.jpg",
+            "alt": "Black and white close portrait of the singer, with a handlebar mustache and a bolo tie",
+            "width": "1428",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-44.jpg",
+            "alt": "The singer in a cowboy hat sitting on a stool, playing a sunburst acoustic guitar",
+            "width": "1334",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-26.jpg",
+            "alt": "The singer in a cowboy hat and shearling coat standing beside a guitar case and a leather bag",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-19-2.jpg",
+            "alt": "The singer in a hat and long coat balancing on one foot on a wooden stool, arms out",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-2-2.jpg",
+            "alt": "Old-style plate photo of the singer in a cowboy hat and vest, holding an acoustic guitar",
+            "width": "2000",
+            "height": "1535"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-7.jpg",
+            "alt": "Old-style plate photo of the singer in a cowboy hat and a blanket coat, holding a small acoustic guitar",
+            "width": "1577",
+            "height": "2000"
+           }
+          ],
+          "moreLabel": "See the full set",
+          "small": false
+         }
         },
         {
-         "term": "Live video",
-         "art": "video",
-         "text": "For acts that need a clip a planner can watch and trust. You'll get edited performance clips with clean sound, cut for booking pages and social media."
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-118",
-       "html": "Want both? We can plan the photos and the video together in one session.",
-       "cls": "callout"
-      }
-     },
-     {
-      "type": "ButtonRow",
-      "props": {
-       "id": "ButtonRow-119",
-       "buttons": [
+         "type": "Story",
+         "props": {
+          "id": "Story-208",
+          "name": "Val Vampola",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-7133.jpg",
+            "alt": "Val Vampola resting folded arms on a grand piano in near darkness",
+            "width": "2000",
+            "height": "1335"
+           },
+           {
+            "src": "/img/for-artists/dcf-7258.jpg",
+            "alt": "Val Vampola sitting at a grand piano in a black dress, laughing, in a pool of light",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-7202.jpg",
+            "alt": "Val Vampola in silhouette at a grand piano under a single light",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/1-29.jpg",
+            "alt": "Val Vampola with both hands in their hair, leaning over the keys of a red keyboard",
+            "width": "2000",
+            "height": "1336"
+           }
+          ],
+          "more": [
+           {
+            "src": "/img/for-artists/1-07.jpg",
+            "alt": "Val Vampola standing against a white backdrop, holding a red keyboard",
+            "width": "1364",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/1-33.jpg",
+            "alt": "Val Vampola laughing in a gold shopping cart with a red keyboard, one arm in the air",
+            "width": "1428",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-7100.jpg",
+            "alt": "Val Vampola in profile, seen through soft warm lights",
+            "width": "1335",
+            "height": "2000"
+           }
+          ],
+          "moreLabel": "See the full set",
+          "small": false
+         }
+        },
         {
-         "label": "Tell us about your act",
-         "href": "#form",
-         "cls": "btn"
+         "type": "Story",
+         "props": {
+          "id": "Story-209",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-7716.jpg",
+            "alt": "Guitarist in a brown T-shirt playing an acoustic guitar against a plain wall",
+            "width": "2000",
+            "height": "1335"
+           },
+           {
+            "src": "/img/for-artists/dcf-7685.jpg",
+            "alt": "Guitarist in a denim shirt, seated with an electric guitar in front of a wall of framed pictures",
+            "width": "1428",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-7734.jpg",
+            "alt": "The guitarist's face seen through blurred guitar strings and streaks of light",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-7882.jpg",
+            "alt": "Guitarist playing under red and green light, blurred with movement",
+            "width": "1429",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": false
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-210",
+          "name": "Lauren King",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-4638.jpg",
+            "alt": "Black and white photo of Lauren King in a black turtleneck, leaning on white angled columns",
+            "width": "1408",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-4746.jpg",
+            "alt": "Black and white portrait of Lauren King looking back over one shoulder beside a stair rail",
+            "width": "1400",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-4642.jpg",
+            "alt": "Lauren King in silhouette against a pale wall with orange marks",
+            "width": "1335",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": false
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-211",
+          "name": "Michal",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-2039.jpg",
+            "alt": "Michal playing the cello in front of a pale green wall",
+            "width": "1841",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-2073.jpg",
+            "alt": "Michal holding a cello sideways in front of a pale wall, looking up",
+            "width": "2000",
+            "height": "1108"
+           },
+           {
+            "src": "/img/for-artists/dcf-2059.jpg",
+            "alt": "Close view of Michal's hands on the cello in low light",
+            "width": "1335",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": false
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-212",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-34.jpg",
+            "alt": "Three band members standing in a row in a white studio, with an electric guitar, drumsticks and an acoustic guitar",
+            "width": "2000",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-2.jpg",
+            "alt": "Three band members in denim against a peach wall, two holding guitars",
+            "width": "2000",
+            "height": "1429"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-21.jpg",
+            "alt": "Band member in a striped shirt holding up a candelabra in a dark setting",
+            "width": "1429",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-15.jpg",
+            "alt": "Three band members in seventies clothes lit by candles, one reaching toward another's face",
+            "width": "1429",
+            "height": "2000"
+           }
+          ],
+          "more": [
+           {
+            "src": "/img/for-artists/studio-alti-8.jpg",
+            "alt": "Three band members in silhouette with guitars on a red and white checkered floor",
+            "width": "1429",
+            "height": "2000"
+           }
+          ],
+          "moreLabel": "See the full set",
+          "small": false
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-213",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-95.jpg",
+            "alt": "Singer in a bathtub filled with greenery and white flowers, holding a trumpet, with a guitar beside them",
+            "width": "1468",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-110.jpg",
+            "alt": "Singer in a long floral dress holding a pampas stem, with a guitar in one hand",
+            "width": "1443",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-58.jpg",
+            "alt": "Singer in a dark jumpsuit dancing barefoot against a white backdrop, one knee raised",
+            "width": "1422",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-29.jpg",
+            "alt": "Singer in a green dress jumping barefoot against a white backdrop",
+            "width": "1335",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": false
+         }
         }
        ]
       }
@@ -152,82 +409,217 @@
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-123",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-121",
-       "title": "How a shoot works",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-122",
-       "cls": "def-list def-list--route",
-       "rows": [
-        {
-         "term": "Tell us about your act",
-         "art": "list",
-         "text": "Send links to the photos, video and website you have now, and let us know what you need."
-        },
-        {
-         "term": "Get a quote and plan the shoot",
-         "art": "calendar",
-         "text": "We'll send you a quote, and then we'll plan the look, the location and the songs that show you at your best."
-        },
-        {
-         "term": "The shoot",
-         "art": "camera",
-         "text": "Now and then we can shoot at a gig you already have, if the room and the sound are right for it. Most of the time, we'll work with you to set up the shoot somewhere that helps sell your act to the people who book it."
-        },
-        {
-         "term": "Get your files",
-         "art": "document",
-         "text": "You'll get everything edited and sized for booking sites, socials and press, usually within a week of the shoot (depending on the project)."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Questions",
-   "props": {
-    "id": "Questions-126",
+    "id": "Rows-214",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-124",
-       "title": "Questions about band photos and video",
+       "id": "Heading-215",
+       "title": "More artists",
        "titleTag": "h2",
        "titleClass": "h2"
       }
      },
      {
-      "type": "Faq",
+      "type": "Stories",
       "props": {
-       "id": "Faq-125",
-       "schema": true,
-       "items": [
+       "id": "Stories-216",
+       "small": true,
+       "stories": [
         {
-         "q": "Do I need to be on the Signet roster?",
-         "a": "No. We shoot for any musician or band in Colorado, whether or not you play events with us."
+         "type": "Story",
+         "props": {
+          "id": "Story-217",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-19.jpg",
+            "alt": "Guitarist playing a black electric guitar by a bright window, with light flaring across the frame",
+            "width": "1429",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
         },
         {
-         "q": "Do you help with what to wear for band photos?",
-         "a": "Yes. We'll go over it with you before the shoot, so you look like you belong at the events you want to play."
+         "type": "Story",
+         "props": {
+          "id": "Story-218",
+          "name": "Leo",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/leo-27.jpg",
+            "alt": "Leo in a striped shirt in front of a black and white mural",
+            "width": "1428",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/leo-46.jpg",
+            "alt": "Leo leaning against a building on a city street, hands in pockets",
+            "width": "1335",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/leo-21.jpg",
+            "alt": "Leo looking through a chain-link fence in daylight",
+            "width": "2000",
+            "height": "1429"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
         },
         {
-         "q": "How much do band photos and live video cost?",
-         "a": "We quote every project to fit the act and what you need. Tell us about your act and we'll send you a quote."
+         "type": "Story",
+         "props": {
+          "id": "Story-219",
+          "name": "Meghna",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-3941.jpg",
+            "alt": "Black and white portrait of Meghna with long curly hair, hands at the shoulders",
+            "width": "1617",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-3912.jpg",
+            "alt": "Meghna in profile against a dark background, hands together, lit from behind",
+            "width": "1595",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-220",
+          "name": "Dan Steel",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-3113.jpg",
+            "alt": "Dan Steel holding an electric guitar, half hidden behind a white wall",
+            "width": "1689",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/dcf-3125-enhanced-nr.jpg",
+            "alt": "Dan Steel in a cap with an electric guitar, standing beside a white wall",
+            "width": "1644",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-221",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-13.jpg",
+            "alt": "Guitarist on a stool in a white studio, playing an electric guitar",
+            "width": "1428",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-14.jpg",
+            "alt": "Guitarist in a light blue shirt smiling, with an electric guitar on a cream strap",
+            "width": "1429",
+            "height": "2000"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-222",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-1.jpg",
+            "alt": "Black and white photo of a duo, one of them holding an acoustic guitar",
+            "width": "1474",
+            "height": "2000"
+           },
+           {
+            "src": "/img/for-artists/studio-alti-9.jpg",
+            "alt": "Black and white photo of a duo standing back to back, both looking up",
+            "width": "2000",
+            "height": "1716"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-223",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/dcf-7860.jpg",
+            "alt": "DJ in headphones at the decks, with trails of colored light across the frame",
+            "width": "2000",
+            "height": "1335"
+           },
+           {
+            "src": "/img/for-artists/dcf-7975.jpg",
+            "alt": "Double exposure of the DJ with green and red light trails over a brick wall",
+            "width": "2000",
+            "height": "1335"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-224",
+          "name": "",
+          "text": "",
+          "images": [
+           {
+            "src": "/img/for-artists/studio-alti-28.jpg",
+            "alt": "A singer facing the camera in front of a black curtain, with the band standing behind with their backs turned",
+            "width": "2000",
+            "height": "1501"
+           }
+          ],
+          "more": [],
+          "moreLabel": "",
+          "small": true
+         }
         }
        ]
       }
@@ -241,10 +633,10 @@
     "id": "ContactForm-127",
     "band": "sunk",
     "anchor": "form",
-    "title": "Tell us about your act.",
+    "title": "Tell us where you want to take your music.",
     "titleTag": "h2",
     "titleClass": "h2",
-    "lede": "Send us what you have now and what you need, and we'll get back to you with a quote.",
+    "lede": "Send us a little about your act and where you'd like it to go, and we'll get back to you to talk it through.",
     "details": [
      {
       "term": "Email",
@@ -259,7 +651,7 @@
      },
      {
       "name": "_subject",
-      "value": "Photos and video inquiry via signetartists.com"
+      "value": "Artist development inquiry via signetartists.com"
      },
      {
       "name": "_template",
@@ -298,37 +690,23 @@
       "kind": "input",
       "id": "genre",
       "name": "Genre",
-      "label": "Genre"
+      "label": "What kind of music do you play?"
      },
      {
       "kind": "textarea",
       "id": "links",
       "name": "Links",
-      "label": "Links to your current photos, video or website",
+      "label": "Links to your music, photos or website",
       "full": true,
       "rows": "3"
-     },
-     {
-      "kind": "choice",
-      "id": "need",
-      "name": "What you need",
-      "label": "What you need",
-      "options": "Photos | Video | Both",
-      "full": true
-     },
-     {
-      "kind": "input",
-      "id": "by",
-      "name": "Needed by",
-      "label": "When do you need it by?"
      },
      {
       "kind": "textarea",
       "id": "message",
-      "name": "Anything else",
-      "label": "Anything else we should know?",
+      "name": "Where you want to go",
+      "label": "Where do you want to take your music?",
       "full": true,
-      "rows": "3"
+      "rows": "4"
      }
     ],
     "button": "Send",

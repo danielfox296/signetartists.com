@@ -615,7 +615,9 @@ function heroPhoto(s) {
   if (!s || !s.model || !s.page) return null;
   // A page about someone else's business (a preferred vendor) sits on their
   // photo: one of our musicians behind their name would read as their work.
+  // "none": the page opens on its own pictures, with no photo behind the h1.
   const own = s.page.root && s.page.root.props && s.page.root.props.heroImage;
+  if (own === "none") return null;
   if (own) return { src: slash(own) };
   const act = pageActOf(s);
   if (act) {
@@ -1014,6 +1016,77 @@ ${Math.round(saved / 10)} guests standing.</figcaption>
 };
 
 // A run of markup the other blocks don't cover, kept exactly as written.
+// An artist's story: their name and a few sentences, the photos in their own
+// shapes, and the rest of the set behind a click. On a wide screen the photos
+// share one row at one height; on a phone they wrap.
+const storyPhotoFields = { ...imageFields };
+const SIZES_STORY = { big: "(min-width: 1072px) 480px, (min-width: 720px) 40vw, calc(50vw - 32px)", small: "(min-width: 1072px) 260px, (min-width: 720px) 22vw, calc(50vw - 32px)" };
+
+function StoryPhotos({ list, small, wrap }) {
+  if (!list || !list.length) return null;
+  return (
+    <div className={cx("story-photos", wrap && "story-photos--wrap")}>
+      {list.map((im, i) => {
+        const r = Number(im.width) && Number(im.height) ? Number(im.width) / Number(im.height) : 0.75;
+        return (
+          <figure key={i} style={{ "--r": r.toFixed(4) }}>
+            <Img im={{ loading: "lazy", decoding: "async", ...im }} sizes={small ? SIZES_STORY.small : SIZES_STORY.big} />
+          </figure>
+        );
+      })}
+    </div>
+  );
+}
+
+export const Story = {
+  label: "Artist story",
+  fields: {
+    name: text("Name"),
+    text: rich("Story"),
+    images: { type: "array", label: "Photos on the page", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
+    more: { type: "array", label: "Photos in the full set", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
+    moreLabel: text("Full set button"),
+    small: { type: "radio", label: "Size", options: [{ label: "Featured", value: false }, { label: "Smaller", value: true }] },
+  },
+  defaultProps: { name: "", text: "", images: [], more: [], moreLabel: "", small: false },
+  render: ({ name, text: story, images, more, moreLabel, small, style }) => (
+    <article className={cx("story", small && "story--small")} style={css(style)}>
+      {name ? <H as="h3" className={small ? "h4 story-name" : "h3 story-name"} html={name} /> : null}
+      {story ? <H as="p" className="prose story-text" html={story} /> : null}
+      <StoryPhotos list={images} small={small} />
+      {more && more.length ? (
+        <details className="story-more">
+          <summary className="btn btn--outline">{moreLabel || "See the full set"}</summary>
+          <StoryPhotos list={more} small={small} wrap />
+        </details>
+      ) : null}
+    </article>
+  ),
+};
+
+// A run of artist stories, one under the other, or two across when smaller.
+export const Stories = {
+  label: "Artist stories",
+  fields: { small: Story.fields.small, stories: { type: "slot", label: "Stories" } },
+  defaultProps: { small: false },
+  render: ({ small, stories: Slot, style }) => (
+    <div className={cx("stories", small && "stories--small")} style={css(style)}>
+      {Slot ? <Slot /> : null}
+    </div>
+  ),
+};
+
+// One picture the width of the screen, in its own shape.
+export const WidePicture = {
+  label: "Wide picture",
+  fields: { image: { type: "object", label: "Picture", objectFields: imageFields } },
+  render: ({ image }) => (
+    <figure className="wide-picture">
+      <Img im={image} sizes={SIZES.screen} />
+    </figure>
+  ),
+};
+
 export const HtmlBlock = {
   label: "HTML",
   fields: { html: { type: "textarea", label: "HTML" } },
@@ -1021,4 +1094,4 @@ export const HtmlBlock = {
   render: ({ html, style }) => <Boxed style={style}><Raw html={html} /></Boxed>,
 };
 
-export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, PriceRanges, Table, CloseRow, Cards, Season, StagePlot, HtmlBlock };
+export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, PriceRanges, Table, CloseRow, Cards, Season, StagePlot, Story, Stories, WidePicture, HtmlBlock };

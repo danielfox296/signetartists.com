@@ -5345,3 +5345,97 @@ img[src$="img/headliners.jpg"] {
 .wrap-fitting *::after {
   transition: none !important;
 }
+
+/* ------------------------------------------------------------ artist stories
+   One artist at a time: the name and a few sentences, then the photos in
+   their own shapes. On a wide screen a story's photos share one row at one
+   height, each as wide as its shape asks (--r is width over height); on a
+   phone they wrap two to a row. The full set opens under a button. */
+.wide-picture {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin: var(--space-4) 0 0;
+  transform: translateX(-50%);
+}
+.wide-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.section:has(.wide-picture) {
+  overflow-x: clip;
+}
+.section:has(> .wrap > .wide-picture:last-child) {
+  padding-bottom: 0;
+}
+.stories {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+}
+.stories--small {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
+  column-gap: var(--space-4);
+  row-gap: var(--space-5);
+}
+.story {
+  margin: 0;
+}
+.story-name {
+  margin: 0 0 var(--space-2);
+}
+.story--small .story-name {
+  font-size: 1.25rem;
+}
+.story-text {
+  max-width: 46rem;
+  margin: 0 0 var(--space-3);
+}
+.story-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.story-photos figure {
+  flex: var(--r) 1 calc(var(--r) * 9rem);
+  min-width: 0;
+  margin: 0;
+}
+.story--small .story-photos figure {
+  max-width: calc(var(--r) * 18rem);
+}
+.story-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 720px) {
+  .story-photos:not(.story-photos--wrap) {
+    flex-wrap: nowrap;
+  }
+  .story-photos:not(.story-photos--wrap) figure {
+    flex-basis: 0;
+  }
+  .story-photos--wrap figure {
+    flex-basis: calc(var(--r) * 16rem);
+    max-width: calc(var(--r) * 26rem);
+  }
+  .story--small .story-photos--wrap figure {
+    flex-basis: calc(var(--r) * 10rem);
+    max-width: calc(var(--r) * 16rem);
+  }
+}
+.story-more {
+  margin-top: var(--space-3);
+}
+.story-more summary {
+  list-style: none;
+  cursor: pointer;
+}
+.story-more summary::-webkit-details-marker {
+  display: none;
+}
+.story-more[open] summary {
+  margin-bottom: var(--space-3);
+}
