@@ -31,17 +31,79 @@
  ],
  "setlist": {
   "note": "Here's a sample of songs that sound great on piano. Requests are welcome.",
-  "items": [
-   "Autumn Leaves",
-   "All of Me",
-   "The Girl from Ipanema",
-   "All the Things You Are",
-   "Someday My Prince Will Come",
-   "Your Song",
-   "Piano Man",
-   "Let It Be",
-   "Can't Help Falling in Love",
-   "Tiny Dancer"
+  "songs": [
+   {
+    "title": "Piano Man",
+    "artist": "Billy Joel"
+   },
+   {
+    "title": "Dancing Queen",
+    "artist": "ABBA"
+   },
+   {
+    "title": "Your Song",
+    "artist": "Elton John"
+   },
+   {
+    "title": "September",
+    "artist": "Earth, Wind & Fire"
+   },
+   {
+    "title": "Tiny Dancer",
+    "artist": "Elton John"
+   },
+   {
+    "title": "Isn't She Lovely",
+    "artist": "Stevie Wonder"
+   },
+   {
+    "title": "Someone Like You",
+    "artist": "Adele"
+   },
+   {
+    "title": "Lovely Day",
+    "artist": "Bill Withers"
+   },
+   {
+    "title": "Let It Be",
+    "artist": "The Beatles"
+   },
+   {
+    "title": "Don't Stop Believin'",
+    "artist": "Journey"
+   },
+   {
+    "title": "All of Me",
+    "artist": "John Legend"
+   },
+   {
+    "title": "Ain't No Sunshine",
+    "artist": "Bill Withers"
+   },
+   {
+    "title": "Can't Help Falling in Love",
+    "artist": "Elvis Presley"
+   },
+   {
+    "title": "Summertime",
+    "artist": "Ella Fitzgerald & Louis Armstrong"
+   },
+   {
+    "title": "The Scientist",
+    "artist": "Coldplay"
+   },
+   {
+    "title": "God Only Knows",
+    "artist": "The Beach Boys"
+   },
+   {
+    "title": "Don't Know Why",
+    "artist": "Norah Jones"
+   },
+   {
+    "title": "Perfect",
+    "artist": "Ed Sheeran"
+   }
   ]
  }
 }
