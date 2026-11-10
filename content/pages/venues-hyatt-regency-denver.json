@@ -1,0 +1,345 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/hyatt-regency-denver/",
+   "title": "Live music at Hyatt Regency Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Hyatt Regency Denver, by the convention center: the Centennial and Capitol ballrooms and the rooftop terrace, for conferences and weddings.",
+   "nav": "planners",
+   "breadcrumb": "Hyatt Regency Denver",
+   "indexLabel": "Hyatt Regency Denver",
+   "heroImage": "img/acts/little-moses-jones-stage.jpg",
+   "venue": {
+    "name": "Hyatt Regency Denver at Colorado Convention Center",
+    "kind": "hotel",
+    "group": "Denver",
+    "area": "Downtown Denver, at the Colorado Convention Center",
+    "spaces": "The Centennial Ballroom, the Capitol Ballroom, the Denver City Terrace and the Silver Room.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-hr1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hr1",
+       "eyebrow": "Live music at the convention center hotel",
+       "slab": true,
+       "title": "Hyatt Regency Denver at Colorado Convention Center",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Hyatt Regency Denver is the big hotel connected to the Colorado Convention Center, with 1,100 guest rooms and the largest hotel ballroom in the state.",
+       "headingText": [
+        {
+         "html": "A lot of the conference receptions, awards dinners and company parties in Denver happen here, along with big weddings, and the rooftop terrace looks out over the skyline."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hr2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hr2",
+       "title": "Event spaces at Hyatt Regency Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hr2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Centennial Ballroom",
+         "art": "musicians",
+         "text": "The Centennial Ballroom is about 30,000 sq ft with 30-foot ceilings, for banquets of up to about 1,900 guests and receptions of up to 3,000. It divides into smaller sections, and the Centennial Foyer outside it holds receptions of up to 1,500."
+        },
+        {
+         "term": "Capitol Ballroom",
+         "art": "glass",
+         "text": "The Capitol Ballroom has 22-foot ceilings and hand-blown Italian glass light fixtures, for seated events of up to about 1,200."
+        },
+        {
+         "term": "Denver City Terrace",
+         "art": "tree",
+         "text": "The Denver City Terrace is a rooftop with views of the skyline, about 3,500 sq ft, for up to 300 guests. The hotel holds wedding ceremonies up there."
+        },
+        {
+         "term": "Silver Room",
+         "art": "plate",
+         "text": "The Silver Room is about 1,200 sq ft with floor-to-ceiling windows, for rehearsal dinners and small receptions."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-hr3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hr3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Centennial and Capitol ballrooms",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for conference parties, awards dinners, galas and big weddings."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-hr3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "quadrasonic"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-hr3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hr3b",
+       "eyebrow": "Our picks",
+       "title": "Live music on the Denver City Terrace",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s great for a ceremony, a welcome reception or a cocktail hour over the city."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-hr3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "americana-band"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hr40",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hr40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hr40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space, from a small speaker on the terrace to a full stage system in the Centennial Ballroom."
+        },
+        {
+         "term": "Load-in",
+         "art": "box",
+         "text": "It’s a big hotel with a lot going on, so we plan load-in with the events team and the convention services staff."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters events in-house."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hr41",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hr41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hr41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Conference weeks",
+         "art": "building",
+         "text": "When a big convention is in town, the hotel and the streets around it are busy, so we build in extra time for the act to arrive and set up."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s self-parking and valet at the hotel."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-hr5",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-hr5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Hyatt Regency Denver.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a duo on the rooftop to a full band in the Centennial Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Hyatt%20Regency%20Denver%20at%20Colorado%20Convention%20Center",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hr6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hr6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hr6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "650 15th St, Denver, CO 80202"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.hyatt.com/hyatt-regency/en-US/dencc-hyatt-regency-denver-at-colorado-convention-center/meetings\" target=\"_blank\" rel=\"noopener\">Meetings and events at Hyatt Regency Denver</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://www.hyatt.com/hyatt-regency/en-US/dencc-hyatt-regency-denver-at-colorado-convention-center/weddings\" target=\"_blank\" rel=\"noopener\">Weddings at Hyatt Regency Denver</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

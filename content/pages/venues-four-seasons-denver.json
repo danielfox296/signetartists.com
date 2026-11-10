@@ -1,0 +1,343 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/four-seasons-denver/",
+   "title": "Live music at Four Seasons Hotel Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Four Seasons Hotel Denver: the Grand Ballroom, the Cottonwood Ballroom and the Pool Terrace, for weddings, galas and corporate events.",
+   "nav": "planners",
+   "breadcrumb": "Four Seasons Hotel Denver",
+   "indexLabel": "Four Seasons Hotel Denver",
+   "heroImage": "img/acts/classical-strings-stage.jpg",
+   "venue": {
+    "name": "Four Seasons Hotel Denver",
+    "kind": "hotel",
+    "group": "Denver",
+    "area": "Downtown Denver",
+    "spaces": "The Grand Ballroom, the Cottonwood Ballroom and the third-floor Pool Terrace.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-fs1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-fs1",
+       "eyebrow": "Live music at a Downtown Denver hotel",
+       "slab": true,
+       "title": "Four Seasons Hotel Denver",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Four Seasons Hotel Denver is a 45-story tower a few blocks from the Denver Center for the Performing Arts, and its Grand Ballroom is one of the city’s favorite places for a wedding or a gala.",
+       "headingText": [
+        {
+         "html": "There’s a terrace by the pool on the third floor with views of the city, so you can have the cocktail hour outside and dinner in the ballroom."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-fs2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-fs2",
+       "title": "Event spaces at Four Seasons Hotel Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-fs2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Grand Ballroom",
+         "art": "musicians",
+         "text": "The Grand Ballroom is about 5,200 sq ft, for banquets of up to 350 guests. It divides into two equal halves, and it has its own pre-function area."
+        },
+        {
+         "term": "Cottonwood Ballroom",
+         "art": "glass",
+         "text": "The Cottonwood Ballroom is the hotel’s junior ballroom, about 3,400 sq ft, and it divides into two."
+        },
+        {
+         "term": "Pool Terrace",
+         "art": "tree",
+         "text": "The Pool Terrace is an outdoor event space on the third floor with views of the city, for banquets of up to 200."
+        },
+        {
+         "term": "Private dining and smaller spaces",
+         "art": "plate",
+         "text": "The hotel has three private dining spaces and seven smaller meeting spaces, for rehearsal dinners, client dinners and breakouts."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-fs3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-fs3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Grand Ballroom",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the space for wedding receptions, galas and holiday parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-fs3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ballroom.jpg"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-fs3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-fs3b",
+       "eyebrow": "Our picks",
+       "title": "Live music on the Pool Terrace",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s a lovely spot for a ceremony or a cocktail hour, with the city all around."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-fs3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "Solo or duo",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "solo-guitarist"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-fs40",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-fs40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-fs40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The Grand Ballroom also has a stage and a sound system of its own."
+        },
+        {
+         "term": "Load-in",
+         "art": "box",
+         "text": "We plan the layout, load-in and load-out with the hotel’s events team, who sign off on them ahead of time."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters events in-house."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-fs41",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-fs41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-fs41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Weather",
+         "art": "sun",
+         "text": "The Pool Terrace is outdoors, so we’ll plan the music with an indoor backup if the weather turns."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s valet parking at the hotel."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-fs5",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-fs5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Four Seasons Hotel Denver.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from strings on the Pool Terrace to a full band in the Grand Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Four%20Seasons%20Hotel%20Denver",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-fs6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-fs6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-fs6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "1111 14th St, Denver, CO 80202"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.fourseasons.com/denver/meetings-and-events/\" target=\"_blank\" rel=\"noopener\">Meetings and events at Four Seasons Hotel Denver</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

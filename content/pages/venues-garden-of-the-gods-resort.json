@@ -1,0 +1,394 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/garden-of-the-gods-resort/",
+   "title": "Live music at Garden of the Gods Resort | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Garden of the Gods Resort in Colorado Springs: the Three Graces Ballroom, the View at Kissing Camels and the Reflection Pool, for weddings.",
+   "nav": "planners",
+   "breadcrumb": "Garden of the Gods Resort",
+   "indexLabel": "Garden of the Gods Resort",
+   "heroImage": "img/acts/meghan-clarisse-red-rock.jpg",
+   "venue": {
+    "name": "Garden of the Gods Resort and Club",
+    "kind": "resort",
+    "group": "Colorado Springs",
+    "area": "Colorado Springs, above Garden of the Gods",
+    "spaces": "The Three Graces Ballroom and Terrace, the View at Kissing Camels, the Garden Room, the Hill Room and the Reflection Pool.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-gg1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg1",
+       "eyebrow": "Live music at a Colorado Springs resort",
+       "slab": true,
+       "title": "Garden of the Gods Resort and Club",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Garden of the Gods Resort looks out over the red rocks of Garden of the Gods and up to Pikes Peak. It was a private club for decades, and it’s one of the most beautiful places in Colorado for a wedding.",
+       "headingText": [
+        {
+         "html": "It has seven event spaces with five terraces and lawns between them, and most of them look right at the rocks."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gg2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg2",
+       "title": "Event spaces at Garden of the Gods Resort",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gg2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Three Graces Ballroom and Terrace",
+         "art": "musicians",
+         "text": "The Three Graces Ballroom is about 3,400 sq ft, for 220 to 300 guests. It has a glass-walled foyer and a private terrace with fire and water features."
+        },
+        {
+         "term": "The View at Kissing Camels",
+         "art": "mountain",
+         "text": "The View at Kissing Camels is about 2,700 sq ft, for 130 to 150 guests, looking out over the golf course, Pikes Peak and the red rocks."
+        },
+        {
+         "term": "Garden Room and Terrace",
+         "art": "glass",
+         "text": "The Garden Room is a ballroom with windows, about 1,900 sq ft, for 100 to 150 guests, and it can be divided."
+        },
+        {
+         "term": "Hill Room and Terrace",
+         "art": "plate",
+         "text": "The Hill Room is round, with picture windows facing the rocks and the mountains, for 40 to 60 guests."
+        },
+        {
+         "term": "Reflection Pool",
+         "art": "tree",
+         "text": "The Reflection Pool is the resort’s main outdoor ceremony site, for up to 220 guests seated."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-gg3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg3a",
+       "eyebrow": "Our picks",
+       "title": "Live music for a ceremony at the Reflection Pool",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the resort’s favorite spot for a ceremony, with the red rocks behind you."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-gg3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "solo-guitarist",
+         "kicker": "For the ceremony"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "singer-guitarist",
+         "kicker": "For the ceremony"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-gg3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Three Graces Ballroom and on the terraces",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for the cocktail hour and the reception."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-gg3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-gg3c",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg3c",
+       "eyebrow": "Our picks",
+       "title": "Live music at the View and the Hill Room",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re lovely for rehearsal dinners, client dinners and small receptions."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-gg3c",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "solo-piano"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "americana-band"
+        },
+        {
+         "act": "meghan-clarisse"
+        },
+        {
+         "act": "rene-moffatt"
+        },
+        {
+         "act": "last-consulate"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gg40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gg40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The resort also has full AV support for events."
+        },
+        {
+         "term": "Coordination",
+         "art": "box",
+         "text": "Every wedding has a planner or coordinator, and we plan load-in and setup with them and the resort’s sales and catering team."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The resort caters events in-house, and the reception includes a dance floor."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gg41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gg41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gg41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Weather",
+         "art": "sun",
+         "text": "The Reflection Pool and the terraces are outdoors, and the resort offers backup space for an outdoor ceremony."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s complimentary valet and self-parking at the resort."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-gg5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-gg5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Garden of the Gods Resort.",
+       "lede": "Send us your date, and we can put together live music for your wedding or event at the resort, from strings at the Reflection Pool to a band in the Three Graces Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Garden%20of%20the%20Gods%20Resort%20and%20Club",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gg6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-gg6",
+       "html": "Resort details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gg6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "3320 Mesa Rd, Colorado Springs, CO 80904"
+        },
+        {
+         "term": "Events at the resort",
+         "text": "<a href=\"https://www.gardenofthegodsresort.com/meetings/\" target=\"_blank\" rel=\"noopener\">Meetings and events at Garden of the Gods Resort</a>"
+        },
+        {
+         "term": "Weddings at the resort",
+         "text": "<a href=\"https://www.gardenofthegodsresort.com/meetings/weddings/\" target=\"_blank\" rel=\"noopener\">Weddings at Garden of the Gods Resort</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

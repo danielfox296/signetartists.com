@@ -1,0 +1,401 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/broadmoor/",
+   "title": "Live music at the Broadmoor | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at the Broadmoor in Colorado Springs: the Main Ballroom, the Lake Terrace, Broadmoor Hall and Cheyenne Lodge, for weddings, galas and conferences.",
+   "nav": "planners",
+   "breadcrumb": "the Broadmoor",
+   "indexLabel": "the Broadmoor",
+   "heroImage": "img/acts/classical-strings-meadow.jpg",
+   "venue": {
+    "name": "The Broadmoor",
+    "kind": "resort",
+    "group": "Colorado Springs",
+    "area": "Colorado Springs, at the foot of Cheyenne Mountain",
+    "spaces": "The Main Ballroom, the Lake Terrace and Lakeside Terrace, Broadmoor Hall, the International Center and Cheyenne Lodge.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-bm1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm1",
+       "eyebrow": "Live music at a Colorado Springs resort",
+       "slab": true,
+       "title": "The Broadmoor",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The Broadmoor opened in 1918 on Cheyenne Lake, at the foot of Cheyenne Mountain, and it’s still the grandest resort in Colorado for a wedding, a gala or a company meeting.",
+       "headingText": [
+        {
+         "html": "It has over 200,000 sq ft of meeting and event space, from the original ballroom to a hall for thousands, and lodges up on the mountain."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-bm2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm2",
+       "title": "Event spaces at the Broadmoor",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-bm2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Main Ballroom",
+         "art": "musicians",
+         "text": "The Main Ballroom dates back to the 1918 opening, with ornate ceilings and hardwood floors. It’s about 3,100 sq ft, for banquets of up to 240 and receptions of up to 300, and the resort holds wedding ceremonies there too."
+        },
+        {
+         "term": "Lake Terrace and Lakeside Terrace",
+         "art": "tree",
+         "text": "The Lake Terrace Dining Room looks out over Cheyenne Lake and the mountains, for banquets of up to 240. The Lakeside Terrace is the outdoor space beside the lake, for receptions of up to 300."
+        },
+        {
+         "term": "Broadmoor Hall",
+         "art": "building",
+         "text": "Broadmoor Hall is about 60,000 sq ft, for banquets of up to 3,800 and receptions of up to 4,600, and the resort uses it for weddings of over 1,000 guests."
+        },
+        {
+         "term": "International Center",
+         "art": "glass",
+         "text": "The International Center is about 14,500 sq ft, for banquets of up to 1,100 and receptions of up to 1,500."
+        },
+        {
+         "term": "Cheyenne Lodge and the Mountain Clubhouse",
+         "art": "mountain",
+         "text": "Cheyenne Lodge is a rustic lodge up on the mountain, about 6,300 sq ft, for banquets of up to 300 and receptions of up to 450. The Mountain Clubhouse has about 2,000 sq ft indoors, with outdoor space too."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-bm3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Main Ballroom and on the Lake Terrace",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the classic Broadmoor spaces for weddings, rehearsal dinners and galas."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-bm3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ballroom.jpg"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-bm3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in Broadmoor Hall and the International Center",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for conference parties, awards dinners and the biggest weddings."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-bm3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "quadrasonic"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-bm3c",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm3c",
+       "eyebrow": "Our picks",
+       "title": "Live music at Cheyenne Lodge and the Mountain Clubhouse",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re great for a mountain dinner or a welcome night with a view."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-bm3c",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "americana-band"
+        },
+        {
+         "act": "chelsey-webb"
+        },
+        {
+         "act": "meghan-clarisse"
+        },
+        {
+         "act": "tony-medina"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "dirty-flamenco"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-bm40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-bm40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Power and staging",
+         "text": "The resort’s wedding packages include power and a riser for the band or DJ, and a dance floor. Our acts bring their own sound system."
+        },
+        {
+         "term": "AV",
+         "text": "INSPIRE is the resort’s AV company, for anything beyond what the act brings."
+        },
+        {
+         "term": "Paperwork",
+         "text": "Every wedding has a day-of coordinator, and the resort asks for proof of insurance from the vendors. We’ll get it to them ahead of time."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-bm41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-bm41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-bm41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Getting there",
+         "art": "pin",
+         "text": "Cheyenne Lodge and the Mountain Clubhouse are up the mountain, away from the main resort, so we plan the drive and load-in with the events team."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The resort caters every event in-house."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s valet and self-parking at the resort."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-bm5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-bm5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at the Broadmoor.",
+       "lede": "Send us your date, and we can put together live music for your event at the Broadmoor, from strings by the lake to a full band in Broadmoor Hall.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=The%20Broadmoor",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-bm6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-bm6",
+       "html": "Resort details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-bm6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "1 Lake Ave, Colorado Springs, CO 80906"
+        },
+        {
+         "term": "Events at the resort",
+         "text": "<a href=\"https://www.broadmoor.com/convention-center\" target=\"_blank\" rel=\"noopener\">Meetings and events at the Broadmoor</a>"
+        },
+        {
+         "term": "Weddings at the resort",
+         "text": "<a href=\"https://www.broadmoor.com/weddings\" target=\"_blank\" rel=\"noopener\">Weddings at the Broadmoor</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
