@@ -97,6 +97,19 @@
         }
        ]
       }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-18",
+       "buttons": [
+        {
+         "label": "See all our Featured Artists",
+         "href": "/music/#featured-artists",
+         "cls": "btn btn--outline"
+        }
+       ]
+      }
      }
     ],
     "_file": "03-range.html"

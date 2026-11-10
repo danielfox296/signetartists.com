@@ -1960,6 +1960,10 @@ img {
   scroll-margin-top: 6.6rem;
 }
 
+.roster-lane {
+  scroll-margin-top: 6.6rem;
+}
+
 .clip-group + .clip-group {
   margin-top: var(--space-5);
   padding-top: var(--space-4);
