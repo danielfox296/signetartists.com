@@ -282,3 +282,15 @@ michael-jackson--man-in-the-mirror.jpg — Man in the Mirror — Michael Jackson
 
 stevie-wonder--i-just-called-to-say-i-love-you.jpg — I Just Called to Say I Love You — Stevie Wonder — The Woman in Red (Original Motion Picture Soundtrack) — itunes album 1443899836
 ed-sheeran--thinking-out-loud.jpg — Thinking Out Loud — Ed Sheeran — x (Deluxe Edition) — deezer 7964062 (pinned)
+
+gary-meyers--zambra.jpg — Zambra — Gary Meyers — Dirty Flamenco — itunes album 488009731
+rodrigo-y-gabriela--tamacun.jpg — Tamacún — Rodrigo y Gabriela — Rodrigo y Gabriela — itunes album 432825225
+jesse-cook--tempest.jpg — Tempest — Jesse Cook — Tempest — deezer album 331947
+gary-meyers--desperados-shade.jpg — Desperado's Shade — Gary Meyers — Desperado's Shade — itunes album 1625983717
+jesse-cook--cafe-mocha.jpg — Cafe Mocha — Jesse Cook — Frontiers — deezer album 759174451
+jesse-cook--azul.jpg — Azul — Jesse Cook — Love In The Time Of Covid — deezer album 736814271
+jesse-cook--taxi-brasil.jpg — Taxi Brasil — Jesse Cook — One World — deezer album 749361231
+jesse-cook--la-rumba-del-jefe.jpg — La Rumba d'El Jefe — Jesse Cook — The Rumba Foundation — itunes album 1822381202
+
+gipsy-kings--volare.jpg — Volare — Gipsy Kings — Mosaique — deezer album 8568529
+jesse-cook--mario-takes-a-walk.jpg — Mario Takes a Walk — Jesse Cook — Gravity — deezer album 331948
