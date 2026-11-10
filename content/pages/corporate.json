@@ -353,8 +353,87 @@
   {
    "type": "Text",
    "props": {
-    "id": "Text-37",
+    "id": "Text-PV1",
     "band": "sunk",
+    "anchor": "photos-and-video",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-PV2",
+       "title": "Corporate event photos and video",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "image": {
+        "src": "/img/unsplash/photo-1655459765544-39065b741a9e.jpg",
+        "alt": "Guests with their arms in the air at a packed party in a bar with a chandelier.",
+        "width": "1600",
+        "height": "1067",
+        "loading": "lazy",
+        "decoding": "async"
+       },
+       "imageFirst": "right",
+       "lede": "Part of what makes a great party is being able to tell its story once it's over.",
+       "headingText": [
+        {
+         "html": "We can add a photographer and a videographer to your booking, so <em>that one party</em> is still there to watch years from now. It's a way to remember something that brought your whole company together, and over time it becomes part of your company's history and culture."
+        }
+       ]
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-PV3",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Recruiting",
+         "text": "A short video from your party shows candidates what it's like to work with your team.",
+         "art": "heart"
+        },
+        {
+         "term": "Showing clients your culture",
+         "text": "Potential clients get to see the people they'd be working with, and what your company is like when it celebrates.",
+         "art": "building"
+        },
+        {
+         "term": "On stage at your next event",
+         "text": "Last year's highlight video makes a great opener for next year's party, or for the program at your next conference.",
+         "art": "spotlight"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-PV5",
+       "html": "Learn more about <a href=\"/event-photo-video/\">event photos and video</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-PV4",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?photo-video=yes",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-37",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -372,7 +451,7 @@
         "decoding": "async",
         "style": "aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%;"
        },
-       "imageFirst": "right",
+       "imageFirst": "left",
        "lede": "We create the evening to meet the expectations of a group that flew in for it."
       }
      },
@@ -405,7 +484,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-75",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Title",
@@ -459,7 +538,7 @@
    "type": "PagesAndPosts",
    "props": {
     "id": "PagesAndPosts-5",
-    "band": "sunk",
+    "band": "ruled",
     "heading": "more details about our corporate events",
     "groups": [
      {
@@ -529,7 +608,7 @@
    "type": "Questions",
    "props": {
     "id": "Questions-42",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Title",
@@ -593,8 +672,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Tell us about your event, and we'll help put the night together.",
-       "lede": "We’d love to help you find the right live entertainment, whatever the size of your event.",
-       "note": "Want your event on camera for your team channels or next year's invite? <a href=\"/event-photo-video/\">Add photos or video</a>."
+       "lede": "We’d love to help you find the right live entertainment, whatever the size of your event."
       }
      }
     ],

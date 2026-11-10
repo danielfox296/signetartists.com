@@ -62,7 +62,12 @@
        "groups": [
         {
          "prefix": "corporate/",
-         "heading": "Corporate"
+         "heading": "Corporate",
+         "also": [
+          {
+           "output": "event-photo-video/index.html"
+          }
+         ]
         },
         {
          "prefix": "weddings/",

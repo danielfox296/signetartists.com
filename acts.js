@@ -142,3 +142,17 @@
     }
   }
 })();
+
+/* Contact form: tick a checkbox from the link, the same way. A checkbox with
+ * data-param="photo-video" is ticked when the page was opened with
+ * ?photo-video (any value). */
+(function () {
+  "use strict";
+
+  if (!window.location.search) return;
+  var boxes = document.querySelectorAll("input[type=checkbox][data-param]");
+  for (var i = 0; i < boxes.length; i += 1) {
+    var key = boxes[i].getAttribute("data-param").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (new RegExp("[?&]" + key + "(=|&|$)").test(window.location.search)) boxes[i].checked = true;
+  }
+})();

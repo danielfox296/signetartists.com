@@ -239,7 +239,7 @@ export const PageIndex = {
   label: "All pages",
   fields: {
     top: { type: "array", label: "First", getItemSummary: (t) => t.output, arrayFields: { output: { type: "text", label: "Page" } } },
-    groups: { type: "array", label: "Groups", getItemSummary: (g) => g.heading, arrayFields: { prefix: { type: "text", label: "Folder" }, heading: { type: "text", label: "Heading" }, lanes: { type: "radio", label: "Acts by lane", options: [{ label: "No", value: false }, { label: "Yes", value: true }] } } },
+    groups: { type: "array", label: "Groups", getItemSummary: (g) => g.heading, arrayFields: { prefix: { type: "text", label: "Folder" }, heading: { type: "text", label: "Heading" }, lanes: { type: "radio", label: "Acts by lane", options: [{ label: "No", value: false }, { label: "Yes", value: true }] }, also: { type: "array", label: "Also in this group", getItemSummary: (t) => t.output, arrayFields: { output: { type: "text", label: "Page" } } } } },
   },
   render: function PageIndexRender({ top, groups, style }) {
     const s = useSite();
@@ -264,7 +264,9 @@ export const PageIndex = {
         }
       }
       const group = live.filter((b) => b.output.startsWith(g.prefix) && !used.has(b.output)).sort((a, b) => depth(a.output) - depth(b.output) || (a.output < b.output ? -1 : a.output > b.output ? 1 : 0));
-      if (group.length) emit(g.heading, group);
+      // Pages outside the folder that belong with it, after the folder's own.
+      const also = (g.also || []).map((t) => t.output).filter((o) => byOutput[o] && !used.has(o) && !group.includes(byOutput[o])).map((o) => byOutput[o]);
+      if (group.length || also.length) emit(g.heading, group.concat(also));
     }
     const rest = live.filter((b) => !used.has(b.output)).sort((a, b) => (a.output < b.output ? -1 : a.output > b.output ? 1 : 0));
     if (rest.length) emit("Elsewhere", rest);

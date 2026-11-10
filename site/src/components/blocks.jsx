@@ -360,6 +360,8 @@ export const VideoGrid = {
   defaultProps: { videos: [], single: false, playlist: false },
   render: ({ videos, single, playlist, style }) => {
     const list = videos || [];
+    // No clips yet: nothing on the page, not an empty frame.
+    if (!list.length) return null;
     // A playlist: one player and the clips listed beside it; a
     // click on a line plays that clip in the player (YT_SCRIPT in main.jsx).
     if (playlist && list.length) {

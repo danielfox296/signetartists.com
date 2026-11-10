@@ -357,6 +357,33 @@
    }
   },
   {
+   "type": "Text",
+   "props": {
+    "id": "Text-PV1",
+    "band": "sunk",
+    "anchor": "photos-and-video",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-PV2",
+       "title": "Holiday party photos and video",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-PV3",
+       "html": "The holiday party is often the one night of the year the whole company celebrates together. We can add a photographer and a videographer, so the party becomes part of your company's story, and this year's highlight video can open next year's party. Learn more about <a href=\"/event-photo-video/\">event photos and video</a>.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "Questions",
    "props": {
     "id": "Questions-35",
@@ -470,8 +497,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Send us the date and we'll help put the holiday party together.",
-       "lede": "From a solo musician to a full band, we’ll match the live music and the sound system to your venue and stay with you the whole way.",
-       "note": "Want the party on camera for your team channels or next year's invite? <a href=\"/event-photo-video/\">Add photos or video</a>."
+       "lede": "From a solo musician to a full band, we’ll match the live music and the sound system to your venue and stay with you the whole way."
       }
      }
     ],
