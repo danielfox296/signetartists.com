@@ -1,7 +1,7 @@
 {
  "root": {
   "props": {
-   "path": "/for-artists/photos-video/",
+   "path": "/for-artists/artist-development/",
    "title": "Artist Development for Musicians in Denver | Signet Artists",
    "titleExact": true,
    "description": "Signet works with Colorado musicians on positioning, branding, styling, marketing and building an audience. Tell us where you want to take your music.",
@@ -47,23 +47,10 @@
          "cls": "prose"
         },
         {
-         "html": "The photos and video on this page are where that work shows. For each artist below, we started with who they are, and the styling, the setting and the light all came from the answer.",
+         "html": "The photos and video on this page are where that work shows. For each artist below, we started with who they are and then chose the styling, the setting and the light to match.",
          "cls": "prose"
         }
        ]
-      }
-     },
-     {
-      "type": "WidePicture",
-      "props": {
-       "id": "WidePicture-203",
-       "image": {
-        "src": "/img/for-artists/studio-alti-39.jpg",
-        "alt": "Andy Tran lying on a sunlit floor playing a black electric guitar, the cable curling beside them",
-        "width": "2000",
-        "height": "1335",
-        "fetchpriority": "high"
-       }
       }
      }
     ]
@@ -72,13 +59,13 @@
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-204",
+    "id": "Rows-203",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-205",
+       "id": "Heading-204",
        "title": "Artists we've worked with",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -87,80 +74,148 @@
      {
       "type": "Stories",
       "props": {
-       "id": "Stories-206",
+       "id": "Stories-205",
        "small": false,
        "stories": [
         {
          "type": "Story",
          "props": {
-          "id": "Story-207",
+          "id": "Story-206",
           "name": "Thomas Owen",
-          "text": "",
+          "text": "Thomas Owen is an outlaw Americana singer-songwriter who isn't afraid to play in the shadow of the psyche, and the music is dark, mysterious and emotional. We carried that with old-style plate photos, a shearling coat, black and white and deep shadow under a hat brim.",
           "images": [
            {
             "src": "/img/for-artists/studio-alti-1-2.jpg",
             "alt": "Black and white portrait of Thomas Owen in a cowboy hat and a shearling coat",
             "width": "1429",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
             "src": "/img/for-artists/studio-alti-106.jpg",
             "alt": "Black and white photo of Thomas Owen in a flat-brimmed hat, seated in profile",
             "width": "1429",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
             "src": "/img/for-artists/studio-alti-86.jpg",
             "alt": "Black and white photo of Thomas Owen in a hat and western shirt, crouched mid-step",
             "width": "1429",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
             "src": "/img/for-artists/studio-alti-79.jpg",
             "alt": "Thomas Owen's face in deep shadow under a hat brim, one eye lit",
             "width": "1428",
-            "height": "2000"
-           }
-          ],
-          "more": [
+            "height": "2000",
+            "row": 1
+           },
            {
             "src": "/img/for-artists/studio-alti-115.jpg",
             "alt": "Black and white close portrait of Thomas Owen, with a handlebar mustache and a bolo tie",
             "width": "1428",
-            "height": "2000"
+            "height": "2000",
+            "row": 2
            },
            {
             "src": "/img/for-artists/studio-alti-44.jpg",
             "alt": "Thomas Owen in a cowboy hat sitting on a stool, playing a sunburst acoustic guitar",
             "width": "1334",
-            "height": "2000"
+            "height": "2000",
+            "row": 2
            },
            {
             "src": "/img/for-artists/studio-alti-26.jpg",
             "alt": "Thomas Owen in a cowboy hat and shearling coat standing beside a guitar case and a leather bag",
             "width": "1429",
-            "height": "2000"
+            "height": "2000",
+            "row": 2
            },
            {
             "src": "/img/for-artists/studio-alti-19-2.jpg",
             "alt": "Thomas Owen in a hat and long coat balancing on one foot on a wooden stool, arms out",
             "width": "1429",
-            "height": "2000"
+            "height": "2000",
+            "row": 2
            },
            {
             "src": "/img/for-artists/studio-alti-2-2.jpg",
             "alt": "Old-style plate photo of Thomas Owen in a cowboy hat and vest, holding an acoustic guitar",
             "width": "2000",
-            "height": "1535"
+            "height": "1535",
+            "row": 3
            },
            {
             "src": "/img/for-artists/studio-alti-7.jpg",
             "alt": "Old-style plate photo of Thomas Owen in a cowboy hat and a blanket coat, holding a small acoustic guitar",
             "width": "1577",
-            "height": "2000"
+            "height": "2000",
+            "row": 3
            }
           ],
-          "moreLabel": "See the full set",
+          "small": false
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-207",
+          "name": "Val Vampola",
+          "text": "Val Vampola plays piano and keys, and we showed two sides of the same player. One is bright, fun and poppy and ready for a festival, with a red keyboard and a gold shopping cart. The other is sleek, mysterious and sultry and ready for a lounge or a jazz night, with a black dress and one pool of light on a grand piano.",
+          "images": [
+           {
+            "src": "/img/for-artists/1-07.jpg",
+            "alt": "Val Vampola standing against a white backdrop, holding a red keyboard",
+            "width": "1364",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/1-29.jpg",
+            "alt": "Val Vampola with both hands in their hair, leaning over the keys of a red keyboard",
+            "width": "2000",
+            "height": "1336",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/1-33.jpg",
+            "alt": "Val Vampola laughing in a gold shopping cart with a red keyboard, one arm in the air",
+            "width": "1428",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/dcf-7133.jpg",
+            "alt": "Val Vampola resting folded arms on a grand piano in near darkness",
+            "width": "2000",
+            "height": "1335",
+            "row": 2,
+            "shape": "tall"
+           },
+           {
+            "src": "/img/for-artists/dcf-7258.jpg",
+            "alt": "Val Vampola sitting at a grand piano in a black dress, laughing, in a pool of light",
+            "width": "1429",
+            "height": "2000",
+            "row": 2
+           },
+           {
+            "src": "/img/for-artists/dcf-7202.jpg",
+            "alt": "Val Vampola in silhouette at a grand piano under a single light",
+            "width": "1429",
+            "height": "2000",
+            "row": 2
+           },
+           {
+            "src": "/img/for-artists/dcf-7100.jpg",
+            "alt": "Val Vampola in profile, seen through soft warm lights",
+            "width": "1335",
+            "height": "2000",
+            "row": 2
+           }
+          ],
           "small": false
          }
         },
@@ -168,55 +223,38 @@
          "type": "Story",
          "props": {
           "id": "Story-208",
-          "name": "Val Vampola",
-          "text": "",
+          "name": "Vaughn Tromburgh",
+          "text": "Vaughn Tromburgh plays emotional, solo-driven blues rock with a psychedelic edge and a lothario's charm. We started with warm, direct portraits and then let the playing take over the frame, with light streaking through the strings and red and green blurring with the movement.",
           "images": [
            {
-            "src": "/img/for-artists/dcf-7133.jpg",
-            "alt": "Val Vampola resting folded arms on a grand piano in near darkness",
+            "src": "/img/for-artists/dcf-7716.jpg",
+            "alt": "Vaughn Tromburgh in a brown T-shirt playing an acoustic guitar against a plain wall",
             "width": "2000",
-            "height": "1335"
+            "height": "1335",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-7258.jpg",
-            "alt": "Val Vampola sitting at a grand piano in a black dress, laughing, in a pool of light",
-            "width": "1429",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/dcf-7202.jpg",
-            "alt": "Val Vampola in silhouette at a grand piano under a single light",
-            "width": "1429",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/1-29.jpg",
-            "alt": "Val Vampola with both hands in their hair, leaning over the keys of a red keyboard",
-            "width": "2000",
-            "height": "1336"
-           }
-          ],
-          "more": [
-           {
-            "src": "/img/for-artists/1-07.jpg",
-            "alt": "Val Vampola standing against a white backdrop, holding a red keyboard",
-            "width": "1364",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/1-33.jpg",
-            "alt": "Val Vampola laughing in a gold shopping cart with a red keyboard, one arm in the air",
+            "src": "/img/for-artists/dcf-7685.jpg",
+            "alt": "Vaughn Tromburgh in a denim shirt, seated with an electric guitar in front of a wall of framed pictures",
             "width": "1428",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-7100.jpg",
-            "alt": "Val Vampola in profile, seen through soft warm lights",
-            "width": "1335",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-7734.jpg",
+            "alt": "Vaughn Tromburgh's face seen through blurred guitar strings and streaks of light",
+            "width": "1429",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/dcf-7882.jpg",
+            "alt": "Vaughn Tromburgh playing guitar under red and green light, blurred with movement",
+            "width": "1429",
+            "height": "2000",
+            "row": 1
            }
           ],
-          "moreLabel": "See the full set",
           "small": false
          }
         },
@@ -224,36 +262,31 @@
          "type": "Story",
          "props": {
           "id": "Story-209",
-          "name": "Vaughn Tromburgh",
-          "text": "",
+          "name": "Lauren King",
+          "text": "Lauren King is a singer-songwriter, and her session was all about portraiture. We shot her in black and white in modern, architectural spaces for a cool, fashion editorial feel.",
           "images": [
            {
-            "src": "/img/for-artists/dcf-7716.jpg",
-            "alt": "Vaughn Tromburgh in a brown T-shirt playing an acoustic guitar against a plain wall",
-            "width": "2000",
-            "height": "1335"
+            "src": "/img/for-artists/dcf-4638.jpg",
+            "alt": "Black and white photo of Lauren King in a black turtleneck, leaning on white angled columns",
+            "width": "1408",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-7685.jpg",
-            "alt": "Vaughn Tromburgh in a denim shirt, seated with an electric guitar in front of a wall of framed pictures",
-            "width": "1428",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-4746.jpg",
+            "alt": "Black and white portrait of Lauren King looking back over one shoulder beside a stair rail",
+            "width": "1400",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-7734.jpg",
-            "alt": "Vaughn Tromburgh's face seen through blurred guitar strings and streaks of light",
-            "width": "1429",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/dcf-7882.jpg",
-            "alt": "Vaughn Tromburgh playing guitar under red and green light, blurred with movement",
-            "width": "1429",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-4642.jpg",
+            "alt": "Lauren King in silhouette against a pale wall with orange marks",
+            "width": "1335",
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": false
          }
         },
@@ -261,30 +294,31 @@
          "type": "Story",
          "props": {
           "id": "Story-210",
-          "name": "Lauren King",
-          "text": "",
+          "name": "Michal",
+          "text": "Michal is a classical cellist who's warm, professional and focused. We gave the cello equal space in the frame, with close, low light on the hands and the bow and a red floral dress against a pale wall.",
           "images": [
            {
-            "src": "/img/for-artists/dcf-4638.jpg",
-            "alt": "Black and white photo of Lauren King in a black turtleneck, leaning on white angled columns",
-            "width": "1408",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-2039.jpg",
+            "alt": "Michal playing the cello in front of a pale green wall",
+            "width": "1841",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-4746.jpg",
-            "alt": "Black and white portrait of Lauren King looking back over one shoulder beside a stair rail",
-            "width": "1400",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-2073.jpg",
+            "alt": "Michal holding a cello sideways in front of a pale wall, looking up",
+            "width": "2000",
+            "height": "1108",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-4642.jpg",
-            "alt": "Lauren King in silhouette against a pale wall with orange marks",
+            "src": "/img/for-artists/dcf-2059.jpg",
+            "alt": "Close view of Michal's hands on the cello in low light",
             "width": "1335",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": false
          }
         },
@@ -292,30 +326,39 @@
          "type": "Story",
          "props": {
           "id": "Story-211",
-          "name": "Michal",
-          "text": "",
+          "name": "Arbor Sons",
+          "text": "Arbor Sons play Americana with a playful streak and a dry sense of humor. We dressed the trio in seventies denim, lit them by candlelight and had them keep a straight face the whole time.",
           "images": [
            {
-            "src": "/img/for-artists/dcf-2039.jpg",
-            "alt": "Michal playing the cello in front of a pale green wall",
-            "width": "1841",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/dcf-2073.jpg",
-            "alt": "Michal holding a cello sideways in front of a pale wall, looking up",
+            "src": "/img/for-artists/studio-alti-34.jpg",
+            "alt": "Arbor Sons standing in a row in a white studio, with an electric guitar, drumsticks and an acoustic guitar",
             "width": "2000",
-            "height": "1108"
+            "height": "2000",
+            "row": 1,
+            "shape": "tall"
            },
            {
-            "src": "/img/for-artists/dcf-2059.jpg",
-            "alt": "Close view of Michal's hands on the cello in low light",
-            "width": "1335",
-            "height": "2000"
+            "src": "/img/for-artists/studio-alti-21.jpg",
+            "alt": "A member of Arbor Sons in a striped shirt holding up a candelabra in a dark setting",
+            "width": "1429",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/studio-alti-15.jpg",
+            "alt": "Arbor Sons in seventies clothes lit by candles, one reaching toward another's face",
+            "width": "1429",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/studio-alti-8.jpg",
+            "alt": "Arbor Sons in silhouette with guitars on a red and white checkered floor",
+            "width": "1429",
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": false
          }
         },
@@ -323,86 +366,40 @@
          "type": "Story",
          "props": {
           "id": "Story-212",
-          "name": "Arbor Sons",
-          "text": "",
-          "images": [
-           {
-            "src": "/img/for-artists/studio-alti-34.jpg",
-            "alt": "Arbor Sons standing in a row in a white studio, with an electric guitar, drumsticks and an acoustic guitar",
-            "width": "2000",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/studio-alti-2.jpg",
-            "alt": "Arbor Sons in denim against a peach wall, two of them holding guitars",
-            "width": "2000",
-            "height": "1429"
-           },
-           {
-            "src": "/img/for-artists/studio-alti-21.jpg",
-            "alt": "A member of Arbor Sons in a striped shirt holding up a candelabra in a dark setting",
-            "width": "1429",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/studio-alti-15.jpg",
-            "alt": "Arbor Sons in seventies clothes lit by candles, one reaching toward another's face",
-            "width": "1429",
-            "height": "2000"
-           }
-          ],
-          "more": [
-           {
-            "src": "/img/for-artists/studio-alti-8.jpg",
-            "alt": "Arbor Sons in silhouette with guitars on a red and white checkered floor",
-            "width": "1429",
-            "height": "2000"
-           }
-          ],
-          "moreLabel": "See the full set",
-          "small": false
-         }
-        },
-        {
-         "type": "Story",
-         "props": {
-          "id": "Story-213",
           "name": "Sarah Banker",
-          "text": "",
+          "text": "Sarah Banker brings positive vibes and good energy, and the look is flirty, classy, feminine and fun. We shot in a white studio and in a bathtub full of flowers and greenery, with bare feet, floral and green dresses and plenty of movement.",
           "images": [
            {
             "src": "/img/for-artists/studio-alti-95.jpg",
-            "alt": "Sarah Banker in a bathtub filled with greenery and white flowers, holding a trumpet, with a guitar beside them",
+            "alt": "Sarah Banker in a bathtub filled with greenery and white flowers",
             "width": "1468",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
             "src": "/img/for-artists/studio-alti-110.jpg",
             "alt": "Sarah Banker in a long floral dress holding a pampas stem, with a guitar in one hand",
             "width": "1443",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
             "src": "/img/for-artists/studio-alti-58.jpg",
             "alt": "Sarah Banker in a dark jumpsuit dancing barefoot against a white backdrop, one knee raised",
             "width": "1422",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            },
            {
             "src": "/img/for-artists/studio-alti-29.jpg",
             "alt": "Sarah Banker in a green dress jumping barefoot against a white backdrop",
             "width": "1335",
-            "height": "2000"
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": false,
           "videos": [
-           {
-            "src": "https://www.youtube-nocookie.com/embed/9hr_pQJF0O8?rel=0",
-            "title": "Sarah Banker - Cockadoodledoo"
-           },
            {
             "src": "https://www.youtube-nocookie.com/embed/tjBJh9Xcn0k?rel=0",
             "title": "Sarah Banker - Friends"
@@ -410,6 +407,11 @@
            {
             "src": "https://www.youtube-nocookie.com/embed/XKX2fkq8YDM?rel=0",
             "title": "Sarah Banker - Our Love"
+           },
+           {
+            "src": "https://www.youtube-nocookie.com/embed/9hr_pQJF0O8?rel=0",
+            "title": "Sarah Banker - Cockadoodledoo",
+            "full": true
            }
           ]
          }
@@ -423,13 +425,13 @@
   {
    "type": "Rows",
    "props": {
-    "id": "Rows-214",
+    "id": "Rows-213",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-215",
+       "id": "Heading-214",
        "title": "More artists",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -438,25 +440,65 @@
      {
       "type": "Stories",
       "props": {
-       "id": "Stories-216",
+       "id": "Stories-215",
        "small": true,
        "stories": [
         {
          "type": "Story",
          "props": {
-          "id": "Story-217",
+          "id": "Story-216",
           "name": "Andy Tran",
-          "text": "",
+          "text": "Andy Tran is a rock guitarist, and these are the promo shots for his new album. They're all about the playing, with window light flaring across the guitar and Andy stretched out on the floor with the cable curling beside him.",
           "images": [
+           {
+            "src": "/img/for-artists/studio-alti-39.jpg",
+            "alt": "Andy Tran lying on a sunlit floor playing a black electric guitar, the cable curling beside them",
+            "width": "2000",
+            "height": "1335",
+            "row": 1
+           },
            {
             "src": "/img/for-artists/studio-alti-19.jpg",
             "alt": "Andy Tran playing a black electric guitar by a bright window, with light flaring across the frame",
             "width": "1429",
-            "height": "2000"
+            "height": "2000",
+            "row": 2,
+            "shape": "wide",
+            "focus": "50% 40%"
            }
           ],
-          "more": [],
-          "moreLabel": "",
+          "small": true
+         }
+        },
+        {
+         "type": "Story",
+         "props": {
+          "id": "Story-217",
+          "name": "Leo",
+          "text": "Leo plays sophisticated, positive, psychedelic funk. We took the shoot outside into daylight, with city streets, a mural and patterned shirts to keep the feel open and easy.",
+          "images": [
+           {
+            "src": "/img/for-artists/leo-27.jpg",
+            "alt": "Leo in a striped shirt in front of a black and white mural",
+            "width": "1428",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/leo-46.jpg",
+            "alt": "Leo leaning against a building on a city street, hands in pockets",
+            "width": "1335",
+            "height": "2000",
+            "row": 1
+           },
+           {
+            "src": "/img/for-artists/leo-21.jpg",
+            "alt": "Leo looking through a chain-link fence in daylight",
+            "width": "2000",
+            "height": "1429",
+            "row": 2
+           }
+          ],
           "small": true
          }
         },
@@ -464,30 +506,24 @@
          "type": "Story",
          "props": {
           "id": "Story-218",
-          "name": "Leo",
-          "text": "",
+          "name": "Meghna",
+          "text": "Meghna is a singer, and the look is sexy, sultry and intimate. The camera stays close, with Meghna lit from behind and the hands in the frame.",
           "images": [
            {
-            "src": "/img/for-artists/leo-27.jpg",
-            "alt": "Leo in a striped shirt in front of a black and white mural",
-            "width": "1428",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-3941.jpg",
+            "alt": "Black and white portrait of Meghna with long curly hair, hands at the shoulders",
+            "width": "1617",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/leo-46.jpg",
-            "alt": "Leo leaning against a building on a city street, hands in pockets",
-            "width": "1335",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/leo-21.jpg",
-            "alt": "Leo looking through a chain-link fence in daylight",
-            "width": "2000",
-            "height": "1429"
+            "src": "/img/for-artists/dcf-3912.jpg",
+            "alt": "Meghna in profile against a dark background, hands together, lit from behind",
+            "width": "1595",
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": true
          }
         },
@@ -495,24 +531,24 @@
          "type": "Story",
          "props": {
           "id": "Story-219",
-          "name": "Meghna",
-          "text": "",
+          "name": "Dan Steel",
+          "text": "Dan Steel is the deadpan center of the funk community, in his low-key uniform of a cap and a hoodie. We put him half in the frame and half behind the wall.",
           "images": [
            {
-            "src": "/img/for-artists/dcf-3941.jpg",
-            "alt": "Black and white portrait of Meghna with long curly hair, hands at the shoulders",
-            "width": "1617",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-3113.jpg",
+            "alt": "Dan Steel holding an electric guitar, half hidden behind a white wall",
+            "width": "1689",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-3912.jpg",
-            "alt": "Meghna in profile against a dark background, hands together, lit from behind",
-            "width": "1595",
-            "height": "2000"
+            "src": "/img/for-artists/dcf-3125-enhanced-nr.jpg",
+            "alt": "Dan Steel in a cap with an electric guitar, standing beside a white wall",
+            "width": "1644",
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": true
          }
         },
@@ -520,24 +556,24 @@
          "type": "Story",
          "props": {
           "id": "Story-220",
-          "name": "Dan Steel",
-          "text": "",
+          "name": "Jordan Lovinger",
+          "text": "Jordan Lovinger is a jazz guitar teacher and influencer. The look is simple and clean, with a white studio, a stool, a light blue shirt and an easy smile.",
           "images": [
            {
-            "src": "/img/for-artists/dcf-3113.jpg",
-            "alt": "Dan Steel holding an electric guitar, half hidden behind a white wall",
-            "width": "1689",
-            "height": "2000"
+            "src": "/img/for-artists/studio-alti-13.jpg",
+            "alt": "Jordan Lovinger on a stool in a white studio, playing an electric guitar",
+            "width": "1428",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/dcf-3125-enhanced-nr.jpg",
-            "alt": "Dan Steel in a cap with an electric guitar, standing beside a white wall",
-            "width": "1644",
-            "height": "2000"
+            "src": "/img/for-artists/studio-alti-14.jpg",
+            "alt": "Jordan Lovinger in a light blue shirt smiling, with an electric guitar on a cream strap",
+            "width": "1429",
+            "height": "2000",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": true
          }
         },
@@ -545,24 +581,24 @@
          "type": "Story",
          "props": {
           "id": "Story-221",
-          "name": "Jordan Lovinger",
-          "text": "",
+          "name": "The Ford Edition",
+          "text": "The Ford Edition is a husband and wife duo. We shot them in black and white, standing back to back and looking up in the same direction.",
           "images": [
            {
-            "src": "/img/for-artists/studio-alti-13.jpg",
-            "alt": "Jordan Lovinger on a stool in a white studio, playing an electric guitar",
-            "width": "1428",
-            "height": "2000"
+            "src": "/img/for-artists/studio-alti-1.jpg",
+            "alt": "Black and white photo of The Ford Edition, one of them holding an acoustic guitar",
+            "width": "1474",
+            "height": "2000",
+            "row": 1
            },
            {
-            "src": "/img/for-artists/studio-alti-14.jpg",
-            "alt": "Jordan Lovinger in a light blue shirt smiling, with an electric guitar on a cream strap",
-            "width": "1429",
-            "height": "2000"
+            "src": "/img/for-artists/studio-alti-9.jpg",
+            "alt": "Black and white photo of The Ford Edition standing back to back, both looking up",
+            "width": "2000",
+            "height": "1716",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": true
          }
         },
@@ -570,24 +606,17 @@
          "type": "Story",
          "props": {
           "id": "Story-222",
-          "name": "The Ford Edition",
-          "text": "",
+          "name": "Kate Claire",
+          "text": "Kate Claire is a DJ, and the photos are all about night energy, with trails of colored light over the decks.",
           "images": [
            {
-            "src": "/img/for-artists/studio-alti-1.jpg",
-            "alt": "Black and white photo of The Ford Edition, one of them holding an acoustic guitar",
-            "width": "1474",
-            "height": "2000"
-           },
-           {
-            "src": "/img/for-artists/studio-alti-9.jpg",
-            "alt": "Black and white photo of The Ford Edition standing back to back, both looking up",
+            "src": "/img/for-artists/dcf-7860.jpg",
+            "alt": "Kate Claire in headphones at the decks, with trails of colored light across the frame",
             "width": "2000",
-            "height": "1716"
+            "height": "1335",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": true
          }
         },
@@ -595,43 +624,17 @@
          "type": "Story",
          "props": {
           "id": "Story-223",
-          "name": "Kate Claire",
-          "text": "",
-          "images": [
-           {
-            "src": "/img/for-artists/dcf-7860.jpg",
-            "alt": "Kate Claire in headphones at the decks, with trails of colored light across the frame",
-            "width": "2000",
-            "height": "1335"
-           },
-           {
-            "src": "/img/for-artists/dcf-7975.jpg",
-            "alt": "Double exposure of Kate Claire with green and red light trails over a brick wall",
-            "width": "2000",
-            "height": "1335"
-           }
-          ],
-          "more": [],
-          "moreLabel": "",
-          "small": true
-         }
-        },
-        {
-         "type": "Story",
-         "props": {
-          "id": "Story-224",
           "name": "Val Chillmer",
-          "text": "",
+          "text": "Val Chillmer is a funk band led by Val Vampola. We put Val front and center, facing the camera, with the band turned away as the backdrop.",
           "images": [
            {
             "src": "/img/for-artists/studio-alti-28.jpg",
-            "alt": "Val Chillmer facing the camera in front of a black curtain, with the band standing behind with their backs turned",
+            "alt": "Val Vampola facing the camera in front of a black curtain, with the rest of Val Chillmer standing behind with their backs turned",
             "width": "2000",
-            "height": "1501"
+            "height": "1501",
+            "row": 1
            }
           ],
-          "more": [],
-          "moreLabel": "",
           "small": true
          }
         }

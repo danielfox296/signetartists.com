@@ -1016,22 +1016,75 @@ ${Math.round(saved / 10)} guests standing.</figcaption>
 };
 
 // A run of markup the other blocks don't cover, kept exactly as written.
-// An artist's story: their name and a few sentences, the photos in their own
-// shapes, and the rest of the set behind a click. On a wide screen the photos
-// share one row at one height; on a phone they wrap.
-const storyPhotoFields = { ...imageFields };
-const SIZES_STORY = { big: "(min-width: 1072px) 480px, (min-width: 720px) 40vw, calc(50vw - 32px)", small: "(min-width: 1072px) 260px, (min-width: 720px) 22vw, calc(50vw - 32px)" };
+// An artist's story: the name and a few sentences, then every photo in rows.
+// Photos share two shapes, so a story reads as one set: a tall tile (4:5) and
+// a wide one (8:5) that takes two columns. A row is as many columns as its
+// tiles take, so it always comes out full. A photo's `row` puts it on a row of
+// its own choosing; without one, rows fill four columns at a time. On a phone
+// the rows fold to two columns, and a tile left alone on a line takes the
+// whole line. A wide tile beside tall ones takes their height on a wide
+// screen (--fit), so the row's bottoms line up across the gaps. `shape` overrides the shape the photo's own proportions pick,
+// and `focus` is the crop's center (an object-position).
+const storyPhotoFields = {
+  ...imageFields,
+  row: { type: "number", label: "Row" },
+  shape: { type: "select", label: "Shape", options: [{ label: "From the photo", value: "" }, { label: "Tall", value: "tall" }, { label: "Wide", value: "wide" }] },
+  focus: text("Crop center"),
+};
 
-function StoryPhotos({ list, small, wrap }) {
+function storyRows(list) {
+  const tiles = list.map((im) => {
+    const r = Number(im.width) && Number(im.height) ? Number(im.width) / Number(im.height) : 0.8;
+    return { im, span: im.shape === "wide" ? 2 : im.shape === "tall" ? 1 : r > 1.2 ? 2 : 1 };
+  });
+  const rows = [];
+  if (tiles.some((t) => t.im.row)) {
+    const at = new Map();
+    for (const t of tiles) {
+      const k = Number(t.im.row) || 1;
+      if (!at.has(k)) rows.push((at.set(k, []), at.get(k)));
+      at.get(k).push(t);
+    }
+  } else {
+    let row = [], n = 0;
+    for (const t of tiles) {
+      if (n + t.span > 4 && row.length) rows.push(row), (row = []), (n = 0);
+      row.push(t), (n += t.span);
+    }
+    if (row.length) rows.push(row);
+  }
+  // Two columns on a phone: a tile that ends a line alone takes the line.
+  for (const row of rows) {
+    let pos = 0, last = null;
+    for (const t of row) {
+      if (pos + t.span > 2 && last) last.sm = 2, (pos = 0);
+      t.sm = t.span, (pos = (pos + t.span) % 2), (last = t);
+      if (pos === 0) last = null;
+    }
+    if (last) last.sm = 2;
+  }
+  return rows;
+}
+
+function StoryPhotos({ list, small }) {
   if (!list || !list.length) return null;
   return (
-    <div className={cx("story-photos", wrap && "story-photos--wrap")}>
-      {list.map((im, i) => {
-        const r = Number(im.width) && Number(im.height) ? Number(im.width) / Number(im.height) : 0.75;
+    <div className="story-photos">
+      {storyRows(list).map((row, i) => {
+        const units = row.reduce((n, t) => n + t.span, 0);
+        const fit = row.some((t) => t.span === 1);
+        const w = small ? 496 : 1024;
         return (
-          <figure key={i} style={{ "--r": r.toFixed(4) }}>
-            <Img im={{ loading: "lazy", decoding: "async", ...im }} sizes={small ? SIZES_STORY.small : SIZES_STORY.big} />
-          </figure>
+          <div className="story-row" key={i} style={{ "--units": units }}>
+            {row.map((t, j) => (
+              <figure key={j} className={cx("story-tile", t.span === 2 && "story-tile--wide", t.span === 2 && fit && "story-tile--fit", t.sm === 2 && "story-tile--line")} style={t.im.focus ? { "--focus": t.im.focus } : undefined}>
+                <Img
+                  im={{ loading: "lazy", decoding: "async", ...t.im, row: undefined, shape: undefined, focus: undefined }}
+                  sizes={`(min-width: 1072px) ${Math.round((w * t.span) / units)}px, (min-width: 720px) ${Math.round((90 * t.span) / units / (small ? 2 : 1))}vw, ${t.sm === 2 ? "calc(100vw - 48px)" : "calc(50vw - 32px)"}`}
+                />
+              </figure>
+            ))}
+          </div>
         );
       })}
     </div>
@@ -1043,45 +1096,54 @@ export const Story = {
   fields: {
     name: text("Name"),
     text: rich("Story"),
-    images: { type: "array", label: "Photos on the page", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
-    more: { type: "array", label: "Photos in the full set", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
-    moreLabel: text("Full set button"),
-    videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: { src: text("YouTube address"), title: text("Title") } },
+    images: { type: "array", label: "Photos", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
+    videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: { src: text("YouTube address"), title: text("Title"), full: { type: "radio", label: "Width", options: [{ label: "Half", value: false }, { label: "Full", value: true }] } } },
     small: { type: "radio", label: "Size", options: [{ label: "Featured", value: false }, { label: "Smaller", value: true }] },
   },
-  defaultProps: { name: "", text: "", images: [], more: [], moreLabel: "", videos: [], small: false },
-  render: ({ name, text: story, images, more, moreLabel, videos, small, style }) => (
+  defaultProps: { name: "", text: "", images: [], videos: [], small: false },
+  render: ({ name, text: story, images, videos, small, style }) => (
     <article className={cx("story", small && "story--small")} style={css(style)}>
-      {name ? <H as="h3" className={small ? "h4 story-name" : "h3 story-name"} html={name} /> : null}
-      {story ? <H as="p" className="prose story-text" html={story} /> : null}
+      {name || story ? (
+        <div className="story-head">
+          {name ? <H as="h3" className="h3 story-name" html={name} /> : null}
+          {story ? <H as="p" className="prose story-text" html={story} /> : null}
+        </div>
+      ) : null}
       <StoryPhotos list={images} small={small} />
       {videos && videos.length ? (
-        <div className="video-grid story-videos">
+        <div className="story-videos">
           {videos.map((v, i) => (
-            <div className="act-video" key={i}>
-              <Player v={{ kind: "iframe", ...v }} sizes={SIZES.videos(videos.length)} />
+            <div className={cx("act-video", v.full && "story-video--full")} key={i}>
+              <Player v={{ kind: "iframe", src: v.src, title: v.title }} sizes={v.full ? SIZES.wrap : SIZES.videos(2)} />
             </div>
           ))}
         </div>
-      ) : null}
-      {more && more.length ? (
-        <details className="story-more">
-          <summary className="btn btn--outline">{moreLabel || "See the full set"}</summary>
-          <StoryPhotos list={more} small={small} wrap />
-        </details>
       ) : null}
     </article>
   ),
 };
 
+// Stories come in as they scroll into view: each photo rises and fades in a
+// beat after the one before. Not for reduced motion, and with script off they
+// are simply there.
+const STORY_SCRIPT =
+  `(function(){var r=document.currentScript.parentNode;` +
+  `if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;` +
+  `r.querySelectorAll(".story-tile").forEach(function(f){var i=0,p=f.parentNode;while(p&&!p.classList.contains("story-photos"))p=p.parentNode;` +
+  `if(p){i=Array.prototype.indexOf.call(p.querySelectorAll(".story-tile"),f);}f.style.setProperty("--i",Math.min(i,8));});` +
+  `r.classList.add("is-armed");var o=new IntersectionObserver(function(es){es.forEach(function(e){` +
+  `if(e.isIntersecting){e.target.classList.add("is-in");o.unobserve(e.target);}});},{threshold:0.12});` +
+  `r.querySelectorAll(".story-row,.story-head").forEach(function(x){o.observe(x);});})();`;
+
 // A run of artist stories, one under the other, or two across when smaller.
 export const Stories = {
   label: "Artist stories",
-  fields: { small: Story.fields.small, stories: { type: "slot", label: "Stories" } },
+  fields: { small: { type: "radio", label: "Size", options: [{ label: "Featured", value: false }, { label: "Smaller", value: true }] }, stories: { type: "slot", label: "Stories" } },
   defaultProps: { small: false },
   render: ({ small, stories: Slot, style }) => (
     <div className={cx("stories", small && "stories--small")} style={css(style)}>
       {Slot ? <Slot /> : null}
+      <script dangerouslySetInnerHTML={{ __html: STORY_SCRIPT }} />
     </div>
   ),
 };
