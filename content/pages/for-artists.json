@@ -2,9 +2,9 @@
  "root": {
   "props": {
    "path": "/for-artists/",
-   "title": "For Artists: Event Gigs, Photos and Video | Signet Artists",
+   "title": "For Artists: Gigs and Artist Development | Signet Artists",
    "titleExact": true,
-   "description": "Musicians and DJs: play weddings, parties and corporate events across Colorado with Signet, or get promo photos and live video made with planners in mind.",
+   "description": "Musicians and DJs: play weddings, parties and corporate events across Colorado with Signet, or work with us on positioning, branding and styling.",
    "breadcrumb": "For Artists"
   }
  },
@@ -19,10 +19,10 @@
       "type": "Heading",
       "props": {
        "id": "Heading-101",
-       "title": "Event gigs, photos and video for Colorado musicians.",
+       "title": "Event gigs and artist development for Colorado musicians.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Signet books live music for weddings, private parties and corporate events across Colorado. We also shoot promo photos and live video for musicians, with the people who hire bands in mind."
+       "lede": "Signet books live music for weddings, private parties and corporate events across Colorado. We also work with talented musicians on artist development."
       }
      }
     ]
@@ -83,10 +83,10 @@
             "type": "Heading",
             "props": {
              "id": "Heading-106",
-             "title": "Photos and video for musicians",
+             "title": "Artist development",
              "titleTag": "h2",
              "titleClass": "h3",
-             "lede": "Promo photos and live video that show a planner what you sound like and how you look at an event."
+             "lede": "We help talented musicians get clear on who they are, with positioning, branding, styling and the photos and video that show it."
             }
            },
            {
@@ -95,8 +95,8 @@
              "id": "ButtonRow-107",
              "buttons": [
               {
-               "label": "Get photos and video",
-               "href": "/for-artists/photos-video/",
+               "label": "See the artists we've worked with",
+               "href": "/for-artists/artist-development/",
                "cls": "btn"
               }
              ]
