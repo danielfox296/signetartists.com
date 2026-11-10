@@ -407,6 +407,15 @@
    }
   },
   {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
    "type": "Questions",
    "props": {
     "id": "Questions-38",

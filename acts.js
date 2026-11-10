@@ -156,3 +156,16 @@
     if (new RegExp("[?&]" + key + "(=|&|$)").test(window.location.search)) boxes[i].checked = true;
   }
 })();
+
+/* Contact form: fill the venue from the link. A venue page's button opens
+ * the form with ?venue=<the venue's name>, and the venue field starts with it. */
+(function () {
+  "use strict";
+
+  var field = document.getElementById("venue");
+  var match = /[?&]venue=([^&]+)/.exec(window.location.search);
+  if (!field || !match || field.value) return;
+  try {
+    field.value = decodeURIComponent(match[1].replace(/\+/g, " "));
+  } catch (e) {}
+})();

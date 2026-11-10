@@ -6,7 +6,7 @@ import { ui, useUi } from "../state.js";
 // The four kinds of thing on the site, as the prototype colours them.
 // Sections that draw from act, post or video files are data; the parts
 // every page shares are shared; layouts arrive in phase 6.
-const DATA = new Set(["ActCards", "Cards", "Roster", "Setlist", "ActSizes", "ActHeader", "ActAbout", "ActClose", "ActOwn", "SongCatalog", "VideoIndex", "BlogList", "BlogPosts", "AllPages", "PageIndex", "PagesAndPosts", "ActVideo"]);
+const DATA = new Set(["ActCards", "Cards", "Roster", "Setlist", "ActSizes", "ActHeader", "ActAbout", "ActVenues", "ActClose", "VenueList", "ActOwn", "SongCatalog", "VideoIndex", "BlogList", "BlogPosts", "AllPages", "PageIndex", "PagesAndPosts", "ActVideo"]);
 const SHARED = new Set(["LogoStrip"]);
 export const kindOf = (type) => (SHARED.has(type) ? "shared" : DATA.has(type) ? "data" : "page");
 export const KIND_LABEL = { page: "Page", shared: "Shared", data: "Data", layout: "Layout" };

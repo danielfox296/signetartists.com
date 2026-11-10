@@ -1,0 +1,474 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/chelsey-webb/",
+   "title": "Chelsey Webb: Denver country band for weddings and events",
+   "description": "Chelsey Webb, the 2025 Female Entertainer of the Year at the Colorado Country Music Hall of Fame awards, plays country, rock and pop as a duo or with a band.",
+   "titleExact": true,
+   "ogImage": "img/chelsey-webb-card.jpg",
+   "ogImageAlt": "Chelsey Webb in a white top and a turquoise thunderbird necklace, sitting forward on a blue cushion in a dim retro lounge.",
+   "nav": "music",
+   "breadcrumb": "Chelsey Webb",
+   "schema": {
+    "service": {
+     "name": "Country singer and band",
+     "serviceType": "Country, rock and pop covers and originals for weddings, private events and corporate events",
+     "description": "Chelsey Webb plays country, rock and pop covers and her own songs at weddings, private events and corporate events in Denver and across Colorado, as a duo or with a five or six-piece band.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "duo",
+      "quintet"
+     ]
+    },
+    "act": "chelsey-webb",
+    "video": {
+     "name": "Chelsey Webb and her band: a dance medley into Here for the Party",
+     "description": "Chelsey Webb and her band playing a dance medley of Shut Up and Dance, I Wanna Dance with Somebody and Girls Just Want to Have Fun into Here for the Party, live on an outdoor stage.",
+     "uploadDate": "2026-09-07",
+     "duration": "PT7M50S"
+    },
+    "videos": [
+     {
+      "id": "N6Q9v7kA90c",
+      "name": "Chelsey Webb and her band playing Sweet Home Alabama by Lynyrd Skynyrd",
+      "description": "Chelsey Webb and her band playing Sweet Home Alabama by Lynyrd Skynyrd live on an outdoor stage.",
+      "uploadDate": "2026-09-07",
+      "duration": "PT6M7S"
+     },
+     {
+      "id": "bvEEz_ZRgws",
+      "name": "Chelsey Webb and her band playing What’s Up by 4 Non Blondes",
+      "description": "Chelsey Webb and her band playing What’s Up by 4 Non Blondes live on an outdoor stage.",
+      "uploadDate": "2026-09-07",
+      "duration": "PT3M57S"
+     },
+     {
+      "id": "8qIiTMVps-g",
+      "name": "Chelsey Webb and her band playing Wagon Wheel by Darius Rucker",
+      "description": "Chelsey Webb and her band playing Wagon Wheel by Darius Rucker live on an outdoor stage.",
+      "uploadDate": "2026-09-07",
+      "duration": "PT5M"
+     },
+     {
+      "id": "4Gmx7mFSCFE",
+      "name": "Chelsey Webb and her band playing Party in the U.S.A. by Miley Cyrus",
+      "description": "Chelsey Webb and her band playing Party in the U.S.A. by Miley Cyrus live on an outdoor stage.",
+      "uploadDate": "2026-09-07",
+      "duration": "PT3M39S"
+     },
+     {
+      "id": "9qAtJpl4RfM",
+      "name": "Chelsey Webb and her band playing Listen to the Music by The Doobie Brothers",
+      "description": "Chelsey Webb and her band playing Listen to the Music by The Doobie Brothers live on an outdoor stage.",
+      "uploadDate": "2026-09-07",
+      "duration": "PT4M31S"
+     },
+     {
+      "id": "BrMwaTI7EK0",
+      "name": "Chelsey Webb and her band playing The Devil Went Down to Georgia by The Charlie Daniels Band",
+      "description": "Chelsey Webb and her band playing The Devil Went Down to Georgia by The Charlie Daniels Band live on an outdoor stage.",
+      "uploadDate": "2026-09-07",
+      "duration": "PT4M28S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Country, rock and pop",
+       "slab": true,
+       "title": "Chelsey Webb",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers and originals, as a duo or with a full band.",
+       "lede": "You know that feeling when the fiddle kicks in on a country song you love? Chelsey Webb is a Denver country singer raised in Alabama, with a big, soulful voice and just enough outlaw spirit, and she plays country, rock and pop covers alongside her own songs. You can book her as a duo, or bring her full band, fiddle and all, when you want people dancing.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=chelsey-webb",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/VaSpleGsZ4I?rel=0",
+       "title": "Chelsey Webb and her band playing a dance medley into Here for the Party, live",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Chelsey was named Female Entertainer of the Year at the 2025 Colorado Country Music Hall of Fame awards, and <a href=\"https://gazette.com/2025/08/19/colorado-country-music-hall-of-fame-celebrates-local-talent-at-annual-awards-festival-938924d7-ce3f-5f44-9095-bb605e1d2dd4\">The Denver Gazette</a> covered the night. She’s played Cheyenne Frontier Days, the Greeley Stampede, the National Western Stock Show, the Grizzly Rose and the Copper Mountain Country Music Festival, and she’s shared the stage with Tracy Byrd, Jackson Dean, Corey Kent and Wyatt Flores, too.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-107",
+       "html": "She grew up in Alabama singing along to the family jukebox and Southern gospel, and she’s recorded in Nashville at Omni Studios. She names Shania Twain, Faith Hill, Dolly Parton, Stevie Nicks and Janis Joplin among the singers who shaped her smoky, soulful voice.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-207",
+       "html": "Along with the covers, Chelsey writes and records her own songs. Two of her 2025 releases, <em>Look What I Found</em> and <em>Blue Side of Lonesome</em>, are songs her family wrote in the 1990s, and she brought them back to life with her husband.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "chelsey-webb",
+    "title": "Configurations",
+    "note": "Send us your date and we’ll help you choose the size that works best. She can bring a band somewhere in between, too."
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/\">Country weddings</a>",
+         "text": "Book the duo for your <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>, then bring in the full band for the reception when you want people dancing."
+        },
+        {
+         "term": "<a href=\"/private-parties/backyard-party/\">Backyard parties</a>",
+         "text": "Chelsey plays a lot of fairs, rodeos and outdoor stages, so a big summer party in the backyard suits her band well."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Birthdays and anniversaries</a>",
+         "text": "The duo is an easy fit for a party at home, and the full band is a blast for a milestone birthday when your friends love country music."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Company and holiday parties</a>",
+         "text": "Her song list runs from Brooks & Dunn to Sabrina Carpenter, so there’s something for a mixed crowd, and the full band gets people dancing."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Planning toasts or a program? We can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. You can also get a general idea of what live music costs in Colorado from our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-28",
+    "eyebrow": "Song list",
+    "title": "A sample of her songs.",
+    "lede": "This is a sample of the covers on her song list, and we’ll put the setlist together with you.",
+    "more": ""
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Chelsey Webb and her band play live",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/N6Q9v7kA90c?rel=0",
+         "title": "Chelsey Webb and her band playing Sweet Home Alabama by Lynyrd Skynyrd live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Sweet Home Alabama</span>, by Lynyrd Skynyrd"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/bvEEz_ZRgws?rel=0",
+         "title": "Chelsey Webb and her band playing What’s Up by 4 Non Blondes live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">What’s Up</span>, by 4 Non Blondes"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/8qIiTMVps-g?rel=0",
+         "title": "Chelsey Webb and her band playing Wagon Wheel by Darius Rucker live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Wagon Wheel</span>, by Darius Rucker"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/4Gmx7mFSCFE?rel=0",
+         "title": "Chelsey Webb and her band playing Party in the U.S.A. by Miley Cyrus live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Party in the U.S.A.</span>, by Miley Cyrus"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/9qAtJpl4RfM?rel=0",
+         "title": "Chelsey Webb and her band playing Listen to the Music by The Doobie Brothers live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Listen to the Music</span>, by The Doobie Brothers"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/BrMwaTI7EK0?rel=0",
+         "title": "Chelsey Webb and her band playing The Devil Went Down to Georgia by The Charlie Daniels Band live",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">The Devil Went Down to Georgia</span>, by The Charlie Daniels Band"
+        }
+       ],
+       "single": false,
+       "playlist": true
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/chelsey-webb-armchair.jpg",
+         "alt": "Chelsey Webb in a white top and a turquoise thunderbird necklace, sitting forward on a blue cushion in a dim retro lounge.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-fringe.jpg",
+         "alt": "Chelsey Webb in a black cowboy hat and a fringed leather vest, laughing with her hands in her hair.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-orange-sofa.jpg",
+         "alt": "Chelsey Webb lying on an orange velvet sofa in a retro lounge, reading a card.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-mountains.jpg",
+         "alt": "Chelsey Webb in a cream wide-brim hat, smiling in front of a snowy Colorado mountain.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-pink-dress.jpg",
+         "alt": "Chelsey Webb in a pink dress and pink platform heels, sitting in a dim retro lounge with a string of pearls.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-fur-vest.jpg",
+         "alt": "Chelsey Webb in a tan hat and a red fur vest, looking into the camera.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-zebra-coat.jpg",
+         "alt": "Chelsey Webb in sunglasses and a zebra-print coat, lying back on an orange sofa.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-white-dress.jpg",
+         "alt": "Chelsey Webb in a white dress and a trucker cap, sitting on an orange sofa under a big lamp.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-orange-bath.jpg",
+         "alt": "Chelsey Webb in cow-print boots and denim shorts, sitting on the edge of an orange bathtub.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chelsey-webb-red.jpg",
+         "alt": "Chelsey Webb leaning back with her boots in the air, in a red-tinted photograph.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Chelsey Webb questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "items": [
+        {
+         "q": "Does Chelsey Webb play covers or her own songs?",
+         "a": "She plays both. Her song list mixes country, rock and pop covers with songs of her own, and we’ll put the setlist together with you."
+        },
+        {
+         "q": "Can the volume stay down during dinner?",
+         "a": "Yes. The duo can play at a level where nobody has to raise their voice, and the full band is the one to bring when it’s time to dance. If your venue has a sound limit, just let us know."
+        },
+        {
+         "q": "Does she play outdoor events?",
+         "a": "Yes. She plays fairs, rodeos and outdoor festivals all over Colorado, so an outdoor wedding or a summer party is a comfortable fit."
+        },
+        {
+         "q": "Can we request a song?",
+         "a": "Yes. Let us know the song when you book and we’ll check with her."
+        },
+        {
+         "q": "Does she play outside Denver?",
+         "a": "Yes. She plays all over Colorado and the mountain West. Tell us where your event is and we’ll let you know what’s possible."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=chelsey-webb",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want Chelsey Webb and her band at your event?",
+       "lede": "Send us your date and we’ll let you know if Chelsey is available and what it would cost.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,433 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/hyatt-centric-downtown-denver/",
+   "title": "Live music at Hyatt Centric Downtown Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Hyatt Centric Downtown Denver: its rooftop bar and patio, lobby and Colorado Ballroom, for corporate events, weddings and parties.",
+   "nav": "planners",
+   "breadcrumb": "Hyatt Centric Downtown Denver",
+   "indexLabel": "Hyatt Centric Downtown Denver",
+   "heroImage": "img/acts/tejas-mural.jpg",
+   "venue": {
+    "name": "Hyatt Centric Downtown Denver",
+    "kind": "hotel",
+    "group": "Hotels",
+    "area": "Downtown Denver",
+    "spaces": "A rooftop bar and patio, a cozy lobby and the Colorado Ballroom.",
+    "played": [
+     "tejas-singh"
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-h1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h1",
+       "eyebrow": "Live music at a Downtown Denver hotel",
+       "slab": true,
+       "title": "Hyatt Centric Downtown Denver",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "If you’re planning an event at Hyatt Centric Downtown Denver, you’ve probably seen the rooftop already. It’s an awesome indoor-outdoor bar on the top floor, looking out over the buildings downtown, and live music sounds great up there.",
+       "headingText": [
+        {
+         "html": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a> played the rooftop bar and patio as a duo for a corporate conference reception hosted by Softdocs."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-h2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h2",
+       "title": "Event spaces at Hyatt Centric Downtown Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-h2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Rooftop bar and patio",
+         "art": "tree",
+         "text": "The rooftop is an indoor-outdoor performance space with a bar, on the top floor. Huge folding glass doors open the indoor side to the patio, and the act can set up in a spot that covers both sides, wherever guests are standing. The hotel lists its Rooftop Terrace at about 1,260 sq ft, for up to 78 guests."
+        },
+        {
+         "term": "Lobby",
+         "art": "glass",
+         "text": "The lobby is cozy, and it’s at street level."
+        },
+        {
+         "term": "Colorado Ballroom",
+         "art": "musicians",
+         "text": "The Colorado Ballroom is on the top floor, with about 2,530 sq ft for up to 300 guests. It divides into three smaller spaces: Breckenridge (up to 120 guests), Aspen (up to 100) and Vail (up to 80)."
+        },
+        {
+         "term": "Apple Blossom and the Hospitality Suite",
+         "art": "plate",
+         "text": "Apple Blossom, the hotel’s farm-to-table restaurant, offers the restaurant and its terrace (about 5,000 sq ft together) for weddings and gatherings. The hotel also has a Hospitality Suite with its own outdoor terrace."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-h3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h3a",
+       "eyebrow": "Our picks",
+       "title": "Live music on the rooftop bar and patio",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s great for receptions, cocktail hours and sunset events."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-h3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "spanish-guitarist"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "afro-house-dj",
+         "kicker": "Through the bar’s sound system"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-h3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the lobby",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s a lovely fit for arrivals, welcome receptions and evenings at the bar."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-h3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "solo-piano"
+        },
+        {
+         "act": "solo-guitarist"
+        },
+        {
+         "act": "singer-guitarist"
+        },
+        {
+         "act": "last-consulate"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "Solo or duo"
+        },
+        {
+         "act": "christmas-jazz-trio",
+         "kicker": "For the holidays"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-h3c",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h3c",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Colorado Ballroom",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the space for dinners, galas, holiday parties and wedding receptions."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-h3c",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-h4",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h4",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-h4",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Unloading and load-in",
+         "art": "box",
+         "text": "The act unloads in the alley, and load-in is through the main elevator."
+        },
+        {
+         "term": "Sound system",
+         "text": "Our act brought its own sound system, so the hotel didn’t need to provide any AV support. The rooftop bar also has a built-in sound system, with an audio input performers can use."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-h5",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h5",
+       "title": "Parking, staff and catering",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-h5",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s valet parking, parking in the alley and street parking."
+        },
+        {
+         "term": "Staff",
+         "text": "The hotel staff are warm and available."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "Apple Blossom caters events at the hotel, and the food is great."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-h6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-h6",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-h6",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound limits",
+         "art": "speaker",
+         "text": "Noise considerations at the hotel start at 10pm, and we’ll plan the music around them."
+        },
+        {
+         "term": "Weather",
+         "art": "sun",
+         "text": "The folding glass doors let an event on the rooftop move between indoors and outdoors with the weather."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-h7",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-h7",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Hyatt Centric Downtown Denver.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a solo musician in the lobby to a full band in the Colorado Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Hyatt%20Centric%20Downtown%20Denver",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and venues</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-h8",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-h8",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-h8",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "1776 Champa St, Denver, CO 80202"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.hyatt.com/hyatt-centric/en-US/denct-hyatt-centric-downtown-denver/meetings\" target=\"_blank\" rel=\"noopener\">Meetings and events at Hyatt Centric Downtown Denver</a>"
+        },
+        {
+         "term": "Last played here",
+         "text": "September 2026"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "id": "chelsey-webb",
+ "name": "Chelsey Webb",
+ "presentation": "face",
+ "status": "listing",
+ "page": "artists/chelsey-webb/",
+ "style": "Country, rock and pop",
+ "face": "Chelsey Webb",
+ "material": "Covers and originals",
+ "bucket_tags": [
+  "party",
+  "cocktail",
+  "patio"
+ ],
+ "config_tags": [
+  "duo",
+  "quintet"
+ ],
+ "configRangeLabel": "Duo or full band",
+ "genre_tags": [
+  "country",
+  "pop-covers"
+ ],
+ "vocals": "sung",
+ "from": "duo",
+ "img": "chelsey-webb-card.jpg",
+ "alt": "Chelsey Webb in a white top and a turquoise thunderbird necklace, sitting forward on a blue cushion in a dim retro lounge.",
+ "video": "https://www.youtube-nocookie.com/embed/VaSpleGsZ4I?rel=0",
+ "video_poster": "img/acts/chelsey-webb-live-poster.jpg",
+ "loop": "media/loops/chelsey-webb.mp4",
+ "blurb": "Chelsey Webb is a Denver country singer raised in Alabama, and she was named Female Entertainer of the Year at the 2025 Colorado Country Music Hall of Fame awards. She plays country, rock and pop covers alongside her own songs, as a duo with her husband or with her five or six-piece band, and her band is an excellent choice when you want people dancing.",
+ "identity": [
+  "Chelsey was named Female Entertainer of the Year at the 2025 Colorado Country Music Hall of Fame awards, and <a href=\"https://gazette.com/2025/08/19/colorado-country-music-hall-of-fame-celebrates-local-talent-at-annual-awards-festival-938924d7-ce3f-5f44-9095-bb605e1d2dd4\">The Denver Gazette</a> covered the night. She’s played Cheyenne Frontier Days, the Greeley Stampede, the National Western Stock Show, the Grizzly Rose and the Copper Mountain Country Music Festival, and she’s shared the stage with Tracy Byrd, Jackson Dean, Corey Kent and Wyatt Flores, too.",
+  "She grew up in Alabama singing along to the family jukebox and Southern gospel, and she’s recorded in Nashville at Omni Studios. She names Shania Twain, Faith Hill, Dolly Parton, Stevie Nicks and Janis Joplin among the singers who shaped her smoky, soulful voice.",
+  "Along with the covers, Chelsey writes and records her own songs. Two of her 2025 releases, <em>Look What I Found</em> and <em>Blue Side of Lonesome</em>, are songs her family wrote in the 1990s, and she brought them back to life with her husband."
+ ],
+ "ladder": [
+  {
+   "config": "duo",
+   "build": "Chelsey on vocals, with her husband on acoustic guitar and harmony vocals",
+   "bestFor": "As a duo, they’re a warm, fun choice for a cocktail hour, a dinner or a party at home, and they play country classics, pop and classic rock."
+  },
+  {
+   "config": "quintet",
+   "label": "Five or six-piece band",
+   "build": "Lead vocals, acoustic guitar, electric guitar, fiddle and drums, and the six-piece adds pedal steel (the guitar that gives classic country its crying sound)",
+   "bestFor": "This is the size to book when you want people dancing at a wedding reception, a company party or a big birthday."
+  }
+ ],
+ "setlist": {
+  "note": "This is a sample of the covers on her song list, and we’ll put the setlist together with you.",
+  "songs": [
+   {
+    "title": "Sweet Home Alabama",
+    "artist": "Lynyrd Skynyrd",
+    "album": "Second Helping"
+   },
+   {
+    "title": "Here for the Party",
+    "artist": "Gretchen Wilson",
+    "album": "Here for the Party"
+   },
+   {
+    "title": "Neon Moon",
+    "artist": "Brooks & Dunn",
+    "album": "Brand New Man"
+   },
+   {
+    "title": "Wagon Wheel",
+    "artist": "Darius Rucker",
+    "album": "True Believers"
+   },
+   {
+    "title": "The Devil Went Down to Georgia",
+    "artist": "The Charlie Daniels Band",
+    "album": "Million Mile Reflections"
+   },
+   {
+    "title": "Heads Carolina, Tails California",
+    "artist": "Jo Dee Messina",
+    "album": "Jo Dee Messina"
+   },
+   {
+    "title": "Piece of My Heart",
+    "artist": "Big Brother & The Holding Company",
+    "album": "Cheap Thrills"
+   },
+   {
+    "title": "You Look Like You Love Me",
+    "artist": "Ella Langley"
+   },
+   {
+    "title": "Tipsy",
+    "artist": "Shaboozey",
+    "album": "Where I've Been, Isn't Where I'm Going"
+   },
+   {
+    "title": "Espresso",
+    "artist": "Sabrina Carpenter",
+    "album": "Short n' Sweet"
+   },
+   {
+    "title": "Party in the U.S.A.",
+    "artist": "Miley Cyrus",
+    "album": "The Time of Our Lives"
+   },
+   {
+    "title": "What's Up?",
+    "artist": "4 Non Blondes",
+    "album": "Bigger, Better, Faster, More!"
+   },
+   {
+    "title": "Linger",
+    "artist": "The Cranberries"
+   },
+   {
+    "title": "All I Wanna Do",
+    "artist": "Sheryl Crow",
+    "album": "Tuesday Night Music Club"
+   },
+   {
+    "title": "Listen to the Music",
+    "artist": "The Doobie Brothers",
+    "album": "Toulouse Street"
+   },
+   {
+    "title": "Shut Up and Dance",
+    "artist": "Walk the Moon",
+    "album": "Talking Is Hard"
+   },
+   {
+    "title": "I Wanna Dance with Somebody (Who Loves Me)",
+    "artist": "Whitney Houston",
+    "album": "Whitney"
+   },
+   {
+    "title": "Girls Just Want to Have Fun",
+    "artist": "Cyndi Lauper",
+    "album": "She's So Unusual"
+   },
+   {
+    "title": "No Diggity",
+    "artist": "Blackstreet",
+    "album": "Another Level"
+   },
+   {
+    "title": "10-90",
+    "artist": "Muscadine Bloodline"
+   },
+   {
+    "title": "Nose on the Grindstone",
+    "artist": "Tyler Childers"
+   }
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person"
+ }
+}

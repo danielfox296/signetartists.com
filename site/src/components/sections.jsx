@@ -618,6 +618,79 @@ const VendorList = {
   },
 };
 
+// The venues: every venue page as a card, with its area, its spaces and the
+// acts that have played there. Grouped under each venue's group once there is
+// more than one group.
+const actLinks = (s, ids) => {
+  const m = s.model;
+  const links = ids.map((id) => m.ACT_BY_ID[id]).map((a) => (a.page ? `<a href="/${a.page}">${esc(a.name)}</a>` : esc(a.name)));
+  return links.length < 2 ? links.join("") : `${links.slice(0, -1).join(", ")} and ${links[links.length - 1]}`;
+};
+function VenueCards({ s, venues, line }) {
+  return (
+    <dl className="def-list def-list--cards">
+      {venues.map((v) => (
+        <div className="def-row" data-art="pin" key={v.path}>
+          <dt><a href={s.prefix + v.path.slice(1)}>{v.name}</a></dt>
+          <H as="dd" html={line(v)} />
+        </div>
+      ))}
+    </dl>
+  );
+}
+const VenueList = {
+  label: "Venue list",
+  fields: { band: shellFields.band, title: rich("Title"), lede: rich("Lede") },
+  render: function VenueListRender({ band, title, lede, wrapStyle }) {
+    const s = useSite();
+    const venues = s.model.VENUES;
+    if (!venues.length) return null;
+    const line = (v) => [v.area ? `${esc(v.area)}.` : "", v.spaces || "", v.played.length ? `${actLinks(s, v.played)} ${v.played.length > 1 ? "have" : "has"} played here.` : ""].filter(Boolean).join(" ");
+    const groups = [...new Set(venues.map((v) => v.group || ""))];
+    return (
+      <section className={bandClass(band || "ruled")} id="venues">
+        <div className="wrap" style={css(wrapStyle)}>
+          <H as="h2" className="h2" html={title} />
+          <H as="p" className="lede" html={lede} />
+          {groups.length < 2 ? (
+            <VenueCards s={s} venues={venues} line={line} />
+          ) : (
+            groups.map((g) => (
+              <Fragment key={g}>
+                <h3 className="h4">{g || "More venues"}</h3>
+                <VenueCards s={s} venues={venues.filter((v) => (v.group || "") === g)} line={line} />
+              </Fragment>
+            ))
+          )}
+        </div>
+      </section>
+    );
+  },
+};
+
+// On an act page: the venue pages that name the act. Nothing when none do.
+const ActVenues = {
+  label: "Act venues",
+  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede ({name} is the act's name)") },
+  render: function ActVenuesRender({ act, band, title, lede, wrapStyle }) {
+    const s = useSite();
+    const a = actFor(s, act);
+    const venues = a ? s.model.venuesFor(a.id) : [];
+    if (!venues.length) return null;
+    const name = esc(a.name);
+    const line = (v) => [v.kind && v.area ? `A ${esc(v.kind)} in ${esc(v.area)}.` : v.area ? `${esc(v.area)}.` : "", v.played.includes(a.id) ? `${name} has played here.` : ""].filter(Boolean).join(" ");
+    return (
+      <section className={bandClass(band || "ruled")} id="venues">
+        <div className="wrap" style={css(wrapStyle)}>
+          <H as="h2" className="h3" html={title} />
+          <H as="p" className="prose" html={typeof lede === "string" ? lede.replace(/\{name\}/g, name) : lede} />
+          <VenueCards s={s} venues={venues} line={line} />
+        </div>
+      </section>
+    );
+  },
+};
+
 const actsScript = (s) => `<script defer src="${s.prefix}acts.js"></script>`;
 
 // The enquiry form. The act field lists the roster and stays hidden until
@@ -923,7 +996,7 @@ const SongCatalog = {
   },
 };
 
-export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActClose, VendorList, ContactForm, Roster, SongCatalog };
+export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActVenues, ActClose, VendorList, VenueList, ContactForm, Roster, SongCatalog };
 
 export const components = { ...blockSections, ...fixedSections, ActOwn };
 
