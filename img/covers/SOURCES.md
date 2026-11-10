@@ -294,3 +294,33 @@ jesse-cook--la-rumba-del-jefe.jpg — La Rumba d'El Jefe — Jesse Cook — The 
 
 gipsy-kings--volare.jpg — Volare — Gipsy Kings — Mosaique — deezer album 8568529
 jesse-cook--mario-takes-a-walk.jpg — Mario Takes a Walk — Jesse Cook — Gravity — deezer album 331948
+
+toto--africa.jpg — Africa — Toto — Toto IV — deezer album 116670
+steely-dan--peg.jpg — Peg — Steely Dan — Aja — deezer album 491146635
+gerry-rafferty--baker-street.jpg — Baker Street — Gerry Rafferty — City to City — deezer album 304293
+daryl-hall-and-john-oates--you-make-my-dreams.jpg — You Make My Dreams — Daryl Hall & John Oates — Voices — deezer album 72006
+steely-dan--reelin-in-the-years.jpg — Reelin' in the Years — Steely Dan — Can't Buy A Thrill — deezer album 370602437
+the-doobie-brothers--takin-it-to-the-streets.jpg — Takin' It to the Streets — The Doobie Brothers — Takin' It to the Streets — deezer album 341054
+michael-mcdonald--i-keep-forgettin.jpg — I Keep Forgettin' — Michael McDonald — If That's What It Takes — deezer album 512915
+kenny-loggins--this-is-it.jpg — This Is It — Kenny Loggins — Keep The Fire — deezer album 1209554
+rupert-holmes--escape-the-pina-colada-song.jpg — Escape (The Piña Colada Song) — Rupert Holmes — Partners In Crime — deezer album 320870387
+daryl-hall-and-john-oates--kiss-on-my-list.jpg — Kiss on My List — Daryl Hall & John Oates — Voices — deezer album 72006
+toto--hold-the-line.jpg — Hold the Line — Toto — Toto — deezer album 116633
+looking-glass--brandy-youre-a-fine-girl.jpg — Brandy (You're a Fine Girl) — Looking Glass — Looking Glass — deezer album 638870
+seals-and-crofts--summer-breeze.jpg — Summer Breeze — Seals & Crofts — Traces — deezer album 793699
+steely-dan--do-it-again.jpg — Do It Again — Steely Dan — Can't Buy A Thrill — deezer album 370602437
+daryl-hall-and-john-oates--kiss-on-my-list.jpg — Kiss on My List — Daryl Hall & John Oates — Rock 'N Soul, Part 1 (Expanded Edition) — deezer album 74460
+steely-dan--do-it-again.jpg — Do It Again — Steely Dan — Go Back Jack and Do It Again — deezer album 4529511
+
+the-doobie-brothers--what-a-fool-believes.jpg — What a Fool Believes — The Doobie Brothers — Minute by Minute — deezer album 356305
+daryl-hall-and-john-oates--rich-girl.jpg — Rich Girl — Daryl Hall & John Oates — Bigger Than Both Of Us — deezer album 241202
+boz-scaggs--lowdown.jpg — Lowdown — Boz Scaggs — Silk Degrees (2023 Remaster) — deezer album 462068685
+boz-scaggs--lido-shuffle.jpg — Lido Shuffle — Boz Scaggs — Hits! — deezer album 73421
+robbie-dupree--steal-away.jpg — Steal Away — Robbie Dupree — Robbie Dupree — deezer album 95024372
+ambrosia--biggest-part-of-me.jpg — Biggest Part of Me — Ambrosia — One Eighty — deezer album 436194
+america--ventura-highway.jpg — Ventura Highway — America — Homecoming — deezer album 436178
+george-michael--careless-whisper.jpg — Careless Whisper — George Michael — Make It Big — deezer album 1399876
+
+christopher-cross--sailing.jpg — Sailing — Christopher Cross — Christopher Cross — itunes album 1862733668
+
+christopher-cross--ride-like-the-wind.jpg — Ride Like the Wind — Christopher Cross — All Right (The Worldwide Singles 1980-1988) — itunes album 1845049883
