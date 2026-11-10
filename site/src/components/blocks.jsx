@@ -849,7 +849,9 @@ export function RosterGrid({ acts, id }) {
 // (a short silent clip under media/loops/) plays it over the photo while the
 // card is on screen. The video is written as raw HTML because React's server
 // render drops the muted attribute, and a browser only autoplays a muted video.
-function PhotoCard({ a, kicker }) {
+// `photo` (a site path) swaps in another of the act's photographs, for a page
+// that shows the same act twice; that card then stays still, without the loop.
+function PhotoCard({ a, kicker, photo }) {
   const s = useSite();
   const m = s.model;
   const href = useHref();
@@ -858,8 +860,8 @@ function PhotoCard({ a, kicker }) {
     <article className="act-card act-card--roster act-card--photo" id={`act-${a.id}`} data-name={a.name}>
       <a className="roster-card-link" href={url}>
         <div className="roster-card-photo">
-          {a.img ? <Pic src={href(`/img/${a.img}`)} alt="" width="1600" height="1200" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}
-          {a.loop ? (
+          {photo || a.img ? <Pic src={href(photo || `/img/${a.img}`)} alt="" width="1600" height="1200" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}
+          {a.loop && !photo ? (
             <div
               className="photo-card-loop"
               dangerouslySetInnerHTML={{ __html: `<video data-src="${href("/" + a.loop)}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>` }}
@@ -886,12 +888,12 @@ const LOOP_SCRIPT =
   `var p=v.play();p&&p.catch&&p.catch(function(){});}else if(v.src){v.pause();}});},{rootMargin:"150px 0px"});` +
   `g.querySelectorAll(".photo-card-loop video").forEach(function(v){o.observe(v);});})();`;
 
-export function PhotoGrid({ acts, id, style, kickers }) {
-  const looping = acts.some((a) => a.loop);
+export function PhotoGrid({ acts, id, style, kickers, photos }) {
+  const looping = acts.some((a) => a.loop && !(photos && photos[a.id]));
   return (
     <>
       <div className="roster-grid roster-grid--photo" id={id} style={css(style)}>
-        {acts.map((a) => <PhotoCard key={a.id} a={a} kicker={kickers && kickers[a.id]} />)}
+        {acts.map((a) => <PhotoCard key={a.id} a={a} kicker={kickers && kickers[a.id]} photo={photos && photos[a.id]} />)}
       </div>
       {looping ? <script dangerouslySetInnerHTML={{ __html: LOOP_SCRIPT }} /> : null}
     </>
@@ -922,7 +924,7 @@ export const Cards = {
     source: select("Acts", CARD_SOURCES),
     occasion: text("Occasion"),
     night: text("Kind of night"),
-    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act"), kicker: text("Line over the name (Photos only; blank: the act's style)") } },
+    acts: { type: "array", label: "Acts", getItemSummary: (p) => p.act, arrayFields: { act: text("Act"), kicker: text("Line over the name (Photos only; blank: the act's style)"), photo: text("Photo (Photos only; blank: the act's card photo)") } },
     compact: { type: "radio", label: "Cards", options: [{ label: "Full", value: false }, { label: "Short", value: true }] },
     look: { type: "radio", label: "Look", options: [{ label: "Cards", value: "cards" }, { label: "Photos", value: "photos" }] },
     picks: {
@@ -939,7 +941,8 @@ export const Cards = {
     const href = useHref();
     if (source !== "picks" && look === "photos") {
       const kickers = Object.fromEntries((acts || []).filter((x) => x && x.act && x.kicker).map((x) => [x.act, x.kicker]));
-      return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} kickers={kickers} />;
+      const photos = Object.fromEntries((acts || []).filter((x) => x && x.act && x.photo).map((x) => [x.act, x.photo]));
+      return <PhotoGrid acts={m.actsWhere({ source, occasion, night, acts })} style={style} kickers={kickers} photos={photos} />;
     }
     if (source !== "picks") return <CardGrid acts={m.actsWhere({ source, occasion, night, acts })} compact={!!compact} style={style} />;
     return (
