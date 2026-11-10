@@ -367,3 +367,15 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Source: https://images.unsplash.com/photo-1768508951405-10e83c4a2872
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-11-07
+
+## photo-1664291332601-e45f41e23dea.jpg
+- Used on: the yacht rock band card and page (cropped 16:9 as img/yacht-rock-card.jpg)
+- Source: https://images.unsplash.com/photo-1664291332601-e45f41e23dea
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-10
+
+## photo-1626407937756-0ca787f02f35.jpg
+- Used on: the live band karaoke card and page (as img/live-band-karaoke-card-photo.jpg)
+- Source: https://images.unsplash.com/photo-1626407937756-0ca787f02f35
+- Licence: Unsplash License (https://unsplash.com/license)
+- Added: 2026-11-10
