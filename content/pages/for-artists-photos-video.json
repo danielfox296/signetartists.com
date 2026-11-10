@@ -47,7 +47,7 @@
          "cls": "prose"
         },
         {
-         "html": "The photos on this page are where that work shows. For each artist below, we started with who they are, and the styling, the setting and the light all came from the answer.",
+         "html": "The photos and video on this page are where that work shows. For each artist below, we started with who they are, and the styling, the setting and the light all came from the answer.",
          "cls": "prose"
         }
        ]
@@ -367,37 +367,51 @@
          "type": "Story",
          "props": {
           "id": "Story-213",
-          "name": "",
+          "name": "Sarah Banker",
           "text": "",
           "images": [
            {
             "src": "/img/for-artists/studio-alti-95.jpg",
-            "alt": "Singer in a bathtub filled with greenery and white flowers, holding a trumpet, with a guitar beside them",
+            "alt": "Sarah Banker in a bathtub filled with greenery and white flowers, holding a trumpet, with a guitar beside them",
             "width": "1468",
             "height": "2000"
            },
            {
             "src": "/img/for-artists/studio-alti-110.jpg",
-            "alt": "Singer in a long floral dress holding a pampas stem, with a guitar in one hand",
+            "alt": "Sarah Banker in a long floral dress holding a pampas stem, with a guitar in one hand",
             "width": "1443",
             "height": "2000"
            },
            {
             "src": "/img/for-artists/studio-alti-58.jpg",
-            "alt": "Singer in a dark jumpsuit dancing barefoot against a white backdrop, one knee raised",
+            "alt": "Sarah Banker in a dark jumpsuit dancing barefoot against a white backdrop, one knee raised",
             "width": "1422",
             "height": "2000"
            },
            {
             "src": "/img/for-artists/studio-alti-29.jpg",
-            "alt": "Singer in a green dress jumping barefoot against a white backdrop",
+            "alt": "Sarah Banker in a green dress jumping barefoot against a white backdrop",
             "width": "1335",
             "height": "2000"
            }
           ],
           "more": [],
           "moreLabel": "",
-          "small": false
+          "small": false,
+          "videos": [
+           {
+            "src": "https://www.youtube-nocookie.com/embed/9hr_pQJF0O8?rel=0",
+            "title": "Sarah Banker - Cockadoodledoo"
+           },
+           {
+            "src": "https://www.youtube-nocookie.com/embed/tjBJh9Xcn0k?rel=0",
+            "title": "Sarah Banker - Friends"
+           },
+           {
+            "src": "https://www.youtube-nocookie.com/embed/XKX2fkq8YDM?rel=0",
+            "title": "Sarah Banker - Our Love"
+           }
+          ]
          }
         }
        ]

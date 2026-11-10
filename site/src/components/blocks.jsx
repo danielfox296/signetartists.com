@@ -1046,14 +1046,24 @@ export const Story = {
     images: { type: "array", label: "Photos on the page", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
     more: { type: "array", label: "Photos in the full set", getItemSummary: (i) => (i.src || "").split("/").pop(), arrayFields: storyPhotoFields },
     moreLabel: text("Full set button"),
+    videos: { type: "array", label: "Videos", getItemSummary: (v) => v.title || v.src, arrayFields: { src: text("YouTube address"), title: text("Title") } },
     small: { type: "radio", label: "Size", options: [{ label: "Featured", value: false }, { label: "Smaller", value: true }] },
   },
-  defaultProps: { name: "", text: "", images: [], more: [], moreLabel: "", small: false },
-  render: ({ name, text: story, images, more, moreLabel, small, style }) => (
+  defaultProps: { name: "", text: "", images: [], more: [], moreLabel: "", videos: [], small: false },
+  render: ({ name, text: story, images, more, moreLabel, videos, small, style }) => (
     <article className={cx("story", small && "story--small")} style={css(style)}>
       {name ? <H as="h3" className={small ? "h4 story-name" : "h3 story-name"} html={name} /> : null}
       {story ? <H as="p" className="prose story-text" html={story} /> : null}
       <StoryPhotos list={images} small={small} />
+      {videos && videos.length ? (
+        <div className="video-grid story-videos">
+          {videos.map((v, i) => (
+            <div className="act-video" key={i}>
+              <Player v={{ kind: "iframe", ...v }} sizes={SIZES.videos(videos.length)} />
+            </div>
+          ))}
+        </div>
+      ) : null}
       {more && more.length ? (
         <details className="story-more">
           <summary className="btn btn--outline">{moreLabel || "See the full set"}</summary>
