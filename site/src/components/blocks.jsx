@@ -67,7 +67,7 @@ export const Heading = {
     const photo = p.titleTag === "h1" ? heroPhoto(s) : null;
     if (!photo) return heading;
     return (
-      <div className="hero-photo">
+      <div className={cx("hero-photo", photo.act && "hero-photo--act")}>
         <div className="hero-photo__bg" aria-hidden="true" style={photoStyle(href, photo)} />
         {heading}
       </div>
@@ -647,8 +647,13 @@ function heroPhoto(s) {
       }
     };
     walk(s.page.content);
-    if (first) return { src: slash(first) };
-    return act.img ? { src: "/img/" + act.img } : null;
+    const src = first ? slash(first) : act.img ? "/img/" + act.img : null;
+    if (!src) return null;
+    // An artist's photo sits beside the words, so the face it frames is kept
+    // in view: the photo's focus point (content/photo-focus.json) places it.
+    const focus = (s.model.c && s.model.c.photoFocus) || {};
+    const pos = focus[src.replace(/^\//, "")];
+    return { src, act: true, ...(pos ? { pos } : {}) };
   }
   return dealt(s, false);
 }

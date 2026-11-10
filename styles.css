@@ -933,6 +933,7 @@ img {
 
 /* One vendor in a category: the card keeps its width and leaves no empty
    grid cell beside it. */
+.def-list--cards:has(> .def-row:only-child),
 .vendor-cat .card-grid:has(> .card:only-child) {
   grid-template-columns: 1fr;
   max-width: 34rem;
@@ -1299,6 +1300,16 @@ img {
   flex-shrink: 0;
   font-size: 0.9625rem;
   color: var(--ink);
+}
+
+/* A long value (a link's whole title) wraps rather than pushing a phone's
+   page sideways (the Hyatt Centric page, 2026-11-10). */
+@media (max-width: 640px) {
+  .def-row dd {
+    flex-shrink: 1;
+    min-width: 0;
+    text-align: right;
+  }
 }
 
 .def-list--stack .def-row {
@@ -3847,6 +3858,32 @@ main:focus {
   white-space: normal;
 }
 
+/* An act's sizes on a phone (2026-11-10): each size over what it suits, so
+   nobody scrolls the table sideways to read the second column. */
+@media (max-width: 640px) {
+  .rate-table:has(td.ladder-best) {
+    min-width: 0;
+  }
+  .rate-table:has(td.ladder-best) thead {
+    display: none;
+  }
+  .rate-table:has(td.ladder-best) tr {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .rate-table:has(td.ladder-best) th,
+  .rate-table:has(td.ladder-best) td {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+  }
+  .rate-table:has(td.ladder-best) td.ladder-best {
+    margin-top: 0.5rem;
+  }
+}
+
 .rate-card {
   min-width: 34rem;
 }
@@ -4242,6 +4279,46 @@ main:focus {
 .hero-photo .act-face,
 .hero-photo .note {
   color: var(--ink);
+}
+
+/* Artist pages (2026-11-10, Daniel: the hero photos looked "very covered by
+   type"). On a wide screen the artist's photo takes the right of the band and
+   fades in from behind the words, under a lighter wash, so the face it frames
+   stays clear of the text; the words keep the left. Below that width the photo
+   is a band of its own above the words. */
+@media (min-width: 1100px) {
+  .hero-photo--act .hero-photo__bg {
+    left: auto;
+    right: calc(50% - 50vw);
+    width: 60vw;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40%);
+    mask-image: linear-gradient(to right, transparent 0, #000 40%);
+  }
+  .hero-photo--act .hero-photo__bg::after {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.1) 65%);
+  }
+  .act-hero .hero-photo--act .heading {
+    max-width: min(44rem, 52%);
+  }
+}
+@media (max-width: 1099px) {
+  .hero-photo--act {
+    padding-top: 0;
+  }
+  .hero-photo--act .hero-photo__bg {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    height: clamp(16rem, 58vw, 32rem);
+    margin-bottom: clamp(1.5rem, 0.5rem + 3vw, 2.75rem);
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent);
+    mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  }
+  .hero-photo--act .hero-photo__bg::after {
+    background: rgba(18, 18, 18, 0.12);
+  }
 }
 
 /* ------------------------------------------------------------ the lists
@@ -5798,6 +5875,26 @@ a.laurel-link:focus-visible .laurel-title {
   gap: 0.75rem 1.5rem;
 }
 
+/* Under the name the laurels stay on one line (Daniel, 2026-11-10: a third
+   one alone on a second line "looks bad"): a little smaller here, and where
+   even that is too wide, only the first shows. */
+.laurels--hero {
+  flex-wrap: nowrap;
+  gap: 0.75rem 1rem;
+}
+.laurels--hero.laurels--small .laurel-branch {
+  width: 1.9rem;
+  height: 3.6rem;
+}
+.laurels--hero.laurels--small .laurel-text {
+  width: 8rem;
+}
+@media (max-width: 760px) {
+  .laurels--hero .laurel:nth-child(n + 2) {
+    display: none;
+  }
+}
+
 .laurels--small .laurel-branch {
   width: 2.3rem;
   height: 4.25rem;
@@ -6048,5 +6145,16 @@ a.laurel-link:focus-visible .laurel-title {
 
   .honor-mark {
     height: calc(1.6rem * var(--mark-h, 1));
+  }
+  .honor-marks--hero {
+    flex-wrap: nowrap;
+    gap: 0.75rem 1rem;
+  }
+  .honor-marks--hero > li {
+    min-width: 0;
+  }
+  .honor-marks--hero .honor-mark {
+    height: calc(1.2rem * var(--mark-h, 1));
+    max-width: 100%;
   }
 }
