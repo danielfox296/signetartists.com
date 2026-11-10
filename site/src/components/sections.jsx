@@ -773,7 +773,7 @@ const Roster = {
             <RosterFilters />
             <H as="p" className="filter-empty" id="filter-empty" hidden html={empty} />
             {(lanes || []).map((l, i) => (
-              <div className="roster-lane" data-lane={l.lane} key={i}>
+              <div className="roster-lane" data-lane={l.lane} id={l.lane === "named" ? "featured-artists" : "house-ensembles"} key={i}>
                 <div className="heading">
                   <H as="p" className="eyebrow" html={l.eyebrow} />
                   <H as="h2" className="h2" html={l.title} />

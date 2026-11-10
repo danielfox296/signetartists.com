@@ -1,0 +1,93 @@
+{
+ "id": "quadrasonic",
+ "name": "Quadrasonic",
+ "presentation": "spec",
+ "status": "listing",
+ "page": "artists/quadrasonic/",
+ "style": "Alternative rock covers",
+ "spec": "Lead vocals, electric guitar, bass and drums",
+ "material": "Covers",
+ "bucket_tags": [
+  "party",
+  "specialty"
+ ],
+ "config_tags": [
+  "quartet"
+ ],
+ "configRangeLabel": "Four-piece band",
+ "genre_tags": [
+  "pop-covers",
+  "classic-rock"
+ ],
+ "vocals": "sung",
+ "from": "quartet",
+ "img": "quadrasonic-card.jpg",
+ "alt": "Quadrasonic laughing in a rehearsal studio, the singer lying on the floor in red heels with the guitarist, bassist and drummer behind her.",
+ "video": "https://www.youtube-nocookie.com/embed/yU27RExn2xw?rel=0",
+ "video_poster": "img/acts/quadrasonic-live-poster.jpg",
+ "blurb": "Quadrasonic is a hard-hitting alternative rock band from the Vail Valley. They play the rock songs everyone knows from Pat Benatar, Blondie, No Doubt, Nirvana, The Cranberries and Paramore, with a powerhouse singer out front, and they're an excellent choice for a wedding reception or a party where you want people dancing.",
+ "identity": [
+  "Quadrasonic plays rock from the ’70s to today, and a lot of their song list comes from ’90s alternative radio. You’ll hear Heart and Joan Jett next to Hole, Veruca Salt and Garbage, and newer songs from Paramore and Chappell Roan, too. They also play a few pop hits, like Toxic and Levitating, with the guitars turned up.",
+  "Their singer can go from a grunge growl to soaring high notes, and she’s been on stage her whole life, so she brings a little theater to every show. She plays hundreds of shows a year around Colorado.",
+  "The band is based in the Vail Valley, and they play weddings, festivals, summer concert series and clubs across Colorado, including the GoPro Mountain Games in Vail."
+ ],
+ "ladder": [
+  {
+   "config": "quartet",
+   "label": "Four-piece band",
+   "build": "Lead vocals, electric guitar, bass and drums",
+   "bestFor": "This is the full band, and it’s the size to book when you want people dancing at a wedding reception, a big birthday or a company party."
+  }
+ ],
+ "setlist": {
+  "note": "This is a sample of the songs they play, and we’ll put the setlist together with you.",
+  "songs": [
+   {"title": "Hit Me With Your Best Shot", "artist": "Pat Benatar", "album": "Crimes of Passion"},
+   {"title": "Mother Mother", "artist": "Tracy Bonham", "album": "The Burdens of Being Upright"},
+   {"title": "Call Me", "artist": "Blondie", "album": "American Gigolo"},
+   {"title": "Sweet Dreams (Are Made of This)", "artist": "Eurythmics", "album": "Sweet Dreams (Are Made of This)"},
+   {"title": "Seven Nation Army", "artist": "The White Stripes", "album": "Elephant"},
+   {"title": "I Believe in a Thing Called Love", "artist": "The Darkness", "album": "Permission to Land"},
+   {"title": "Flowers", "artist": "Miley Cyrus", "album": "Endless Summer Vacation"},
+   {"title": "Cannonball", "artist": "The Breeders", "album": "Last Splash"},
+   {"title": "Bad Reputation", "artist": "Joan Jett", "album": "Bad Reputation"},
+   {"title": "Blitzkrieg Bop", "artist": "Ramones", "album": "Ramones"},
+   {"title": "Under the Bridge", "artist": "Red Hot Chili Peppers", "album": "Blood Sugar Sex Magik"},
+   {"title": "Celebrity Skin", "artist": "Hole", "album": "Celebrity Skin"},
+   {"title": "Heartbreaker", "artist": "Pat Benatar", "album": "In the Heat of the Night"},
+   {"title": "Smells Like Teen Spirit", "artist": "Nirvana", "album": "Nevermind"},
+   {"title": "Spiderwebs", "artist": "No Doubt", "album": "Tragic Kingdom"},
+   {"title": "Still Into You", "artist": "Paramore", "album": "Paramore"},
+   {"title": "Just a Girl", "artist": "No Doubt", "album": "Tragic Kingdom"},
+   {"title": "Volcano Girls", "artist": "Veruca Salt", "album": "Eight Arms to Hold You"},
+   {"title": "Only Happy When It Rains", "artist": "Garbage", "album": "Garbage"},
+   {"title": "Zombie", "artist": "The Cranberries", "album": "No Need to Argue"},
+   {"title": "Are You Gonna Be My Girl", "artist": "Jet", "album": "Get Born"},
+   {"title": "What’s Up", "artist": "4 Non Blondes", "album": "Bigger, Better, Faster, More!"},
+   {"title": "Pink Pony Club", "artist": "Chappell Roan", "album": "The Rise and Fall of a Midwest Princess"},
+   {"title": "Misery Business", "artist": "Paramore", "album": "Riot!"},
+   {"title": "The Middle", "artist": "Jimmy Eat World", "album": "Bleed American"},
+   {"title": "Mr. Brightside", "artist": "The Killers", "album": "Hot Fuss"},
+   {"title": "Bad Romance", "artist": "Halestorm"},
+   {"title": "You Oughta Know", "artist": "Alanis Morissette", "album": "Jagged Little Pill"},
+   {"title": "Ex’s & Oh’s", "artist": "Elle King", "album": "Love Stuff"},
+   {"title": "Creep", "artist": "Radiohead", "album": "Pablo Honey"},
+   {"title": "Roam", "artist": "The B-52’s", "album": "Cosmic Thing"},
+   {"title": "Bring Me to Life", "artist": "Evanescence", "album": "Fallen"},
+   {"title": "Piece of My Heart", "artist": "Big Brother & the Holding Company", "album": "Cheap Thrills"},
+   {"title": "Brain Stew", "artist": "Green Day", "album": "Insomniac"},
+   {"title": "Barracuda", "artist": "Heart", "album": "Little Queen"},
+   {"title": "Toxic", "artist": "Britney Spears", "album": "In the Zone"},
+   {"title": "Levitating", "artist": "Dua Lipa", "album": "Future Nostalgia"}
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "lane": "named",
+ "entity": {
+  "type": "MusicGroup"
+ }
+}

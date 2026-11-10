@@ -324,3 +324,39 @@ george-michael--careless-whisper.jpg — Careless Whisper — George Michael —
 christopher-cross--sailing.jpg — Sailing — Christopher Cross — Christopher Cross — itunes album 1862733668
 
 christopher-cross--ride-like-the-wind.jpg — Ride Like the Wind — Christopher Cross — All Right (The Worldwide Singles 1980-1988) — itunes album 1845049883
+
+pat-benatar--hit-me-with-your-best-shot.jpg — Hit Me With Your Best Shot — Pat Benatar — Crimes Of Passion — deezer album 315844
+tracy-bonham--mother-mother.jpg — Mother Mother — Tracy Bonham — The Burdens Of Being Upright — deezer album 246714
+eurythmics--sweet-dreams-are-made-of-this.jpg — Sweet Dreams (Are Made of This) — Eurythmics — Sweet Dreams (Are Made Of This) — deezer album 73280
+the-white-stripes--seven-nation-army.jpg — Seven Nation Army — The White Stripes — Elephant (Deluxe) — deezer album 422329267
+the-darkness--i-believe-in-a-thing-called-love.jpg — I Believe in a Thing Called Love — The Darkness — Permission to Land — deezer album 361342
+miley-cyrus--flowers.jpg — Flowers — Miley Cyrus — Endless Summer Vacation — deezer album 415418547
+the-breeders--cannonball.jpg — Cannonball — The Breeders — Last Splash (30th Anniversary Edition) — deezer album 482536145
+joan-jett--bad-reputation.jpg — Bad Reputation — Joan Jett — Bad Reputation (Expanded Edition) — deezer album 906312972
+ramones--blitzkrieg-bop.jpg — Blitzkrieg Bop — Ramones — Ramones (40th Anniversary Deluxe Edition; 2016 Remaster) — deezer album 13995252
+red-hot-chili-peppers--under-the-bridge.jpg — Under the Bridge — Red Hot Chili Peppers — Blood Sugar Sex Magik (Deluxe Edition) — deezer album 86548
+hole--celebrity-skin.jpg — Celebrity Skin — Hole — Celebrity Skin — deezer album 223168
+pat-benatar--heartbreaker.jpg — Heartbreaker — Pat Benatar — In The Heat Of The Night — deezer album 301275
+nirvana--smells-like-teen-spirit.jpg — Smells Like Teen Spirit — Nirvana — Nevermind (Super Deluxe Edition) — deezer album 1252980
+no-doubt--spiderwebs.jpg — Spiderwebs — No Doubt — Tragic Kingdom — deezer album 320369957
+paramore--still-into-you.jpg — Still Into You — Paramore — Paramore — deezer album 6443604
+no-doubt--just-a-girl.jpg — Just a Girl — No Doubt — Tragic Kingdom — deezer album 320369957
+veruca-salt--volcano-girls.jpg — Volcano Girls — Veruca Salt — Eight Arms To Hold You — deezer album 226367
+garbage--only-happy-when-it-rains.jpg — Only Happy When It Rains — Garbage — Garbage (20th Anniversary Deluxe Edition/Remastered) — deezer album 321180677
+the-cranberries--zombie.jpg — Zombie — The Cranberries — No Need To Argue (2025 Remastered) — deezer album 801396511
+jet--are-you-gonna-be-my-girl.jpg — Are You Gonna Be My Girl — Jet — Get Born (Expanded Edition) — deezer album 187792362
+paramore--misery-business.jpg — Misery Business — Paramore — Riot! — deezer album 356913
+halestorm--bad-romance.jpg — Bad Romance — Halestorm — ReAniMate: The CoVeRs eP — deezer album 928876
+alanis-morissette--you-oughta-know.jpg — You Oughta Know — Alanis Morissette — Jagged Little Pill (2015 Remaster) — deezer album 11443410
+elle-king--exs-and-ohs.jpg — Ex’s & Oh’s — Elle King — Love Stuff — deezer album 9640466
+radiohead--creep.jpg — Creep — Radiohead — Pablo Honey — deezer album 14880711
+the-b-52s--roam.jpg — Roam — The B-52's — Cosmic Thing — deezer album 366876
+evanescence--bring-me-to-life.jpg — Bring Me to Life — Evanescence — Fallen — deezer album 8015598
+green-day--brain-stew.jpg — Brain Stew — Green Day — Insomniac — deezer album 339675
+heart--barracuda.jpg — Barracuda — Heart — Little Queen — deezer album 116794
+britney-spears--toxic.jpg — Toxic — Britney Spears — In The Zone — deezer album 1421245
+dua-lipa--levitating.jpg — Levitating — Dua Lipa — Future Nostalgia — deezer album 182811182
+no-doubt--just-a-girl.jpg — Just a Girl — No Doubt — The Singles Collection — deezer album 2317301
+
+blondie--call-me.jpg — Call Me — Blondie — American Gigolo — itunes
+big-brother-and-the-holding-company--piece-of-my-heart.jpg — Piece of My Heart — Big Brother & The Holding Company — Cheap Thrills — deezer album 97533
