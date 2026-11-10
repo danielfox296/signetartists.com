@@ -730,18 +730,18 @@ const ActHonors = {
 
 // The roster's awards in one place: every laurel won across the Featured
 // Artists, each naming and linking its act, then every outlet's and stage's
-// mark once.
+// mark once. With "strongest", honors marked minor in the act file stay off.
 const HonorsWall = {
   label: "Artists' awards and press",
-  fields: { band: shellFields.band, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede"), marksLabel: rich("Marks label") },
+  fields: { band: shellFields.band, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede"), marksLabel: rich("Marks label"), strongest: { type: "radio", label: "Awards shown", options: [{ label: "All", value: false }, { label: "Leave out the minor ones", value: true }] } },
   defaultProps: { band: "ruled", eyebrow: "Featured Artists", title: "Our artists' awards and press", marksLabel: "In the press, on air and on stage" },
-  render: function HonorsWallRender({ band, eyebrow, title, lede, marksLabel, wrapStyle }) {
+  render: function HonorsWallRender({ band, eyebrow, title, lede, marksLabel, strongest, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const acts = m.ACTS.filter((a) => a.page && honorsOf(a).length);
     const rank = ["award", "honoree", "finalist", "invited"];
     const laurels = acts
-      .flatMap((a) => laurelsOf(a).filter((h) => rank.includes(h.kind)).map((h) => ({ h, a })))
+      .flatMap((a) => laurelsOf(a).filter((h) => rank.includes(h.kind) && !(strongest && h.minor)).map((h) => ({ h, a })))
       .map((x, i) => [x, i])
       .sort((x, y) => rank.indexOf(x[0].h.kind) - rank.indexOf(y[0].h.kind) || x[1] - y[1])
       .map(([x]) => x);
