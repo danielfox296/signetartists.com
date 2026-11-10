@@ -236,3 +236,30 @@ bob-marley--three-little-birds.jpg — Three Little Birds — Bob Marley & The W
 the-beatles--something.jpg — Something — The Beatles — Love — deezer album 13367057
 the-beatles--while-my-guitar-gently-weeps.jpg — While My Guitar Gently Weeps — The Beatles — The Beatles 1967 - 1970 (Remastered 2009) — deezer album 12047930
 the-beatles--rocky-raccoon.jpg — Rocky Raccoon — The Beatles — Anthology 3 — deezer album 12779758
+billy-joel--its-still-rock-and-roll-to-me.jpg — It's Still Rock and Roll to Me — Billy Joel — Glass Houses — deezer album 78173
+citizen-cope--sons-gonna-rise.jpg — Son's Gonna Rise — Citizen Cope — The Clarence Greenwood Recordings — deezer album 224317
+jack-johnson--inaudible-melodies.jpg — Inaudible Melodies — Jack Johnson — Brushfire Fairytales (Remastered Bonus Version) — deezer album 8351730
+jeff-buckley--hallelujah.jpg — Hallelujah — Jeff Buckley — Grace — deezer album 11336428
+jimmy-eat-world--the-middle.jpg — The Middle — Jimmy Eat World — Bleed American — deezer album 85606432
+john-mayer--waiting-on-the-world-to-change.jpg — Waiting on the World to Change — John Mayer — Continuum — deezer album 1372014
+ray-lamontagne--jolene.jpg — Jolene — Ray Lamontagne — Trouble — deezer album 606734622
+vance-joy--riptide.jpg — Riptide — Vance Joy — Dream Your Life Away — deezer album 8435920
+
+ben-harper--burn-one-down.jpg — Burn One Down — Ben Harper — Fight For Your Mind — deezer album 301976
+billy-joel--movin-out-anthonys-song.jpg — Movin' Out (Anthony's Song) — Billy Joel — The Stranger (Legacy Edition) — deezer album 108285
+citizen-cope--bullet-and-a-target.jpg — Bullet and a Target — Citizen Cope — Citizen Cope — deezer album 223530
+damien-rice--volcano.jpg — Volcano — Damien Rice — O — deezer album 102157
+dave-matthews-band--ants-marching.jpg — Ants Marching — Dave Matthews Band — Under The Table And Dreaming — deezer album 8247674
+dave-matthews-band--two-step.jpg — Two Step — Dave Matthews Band — Live Trax Vol. 4: Classic Amphitheatre — deezer album 51357502
+dave-matthews-band--satellite.jpg — Satellite — Dave Matthews Band — Live At Red Rocks 8.15.95 — deezer album 1421263
+dave-matthews-band--so-much-to-say.jpg — So Much to Say — Dave Matthews Band — Live Trax Vol. 8: Alpine Valley Music Theatre (Live) — deezer album 51356922
+gavin-degraw--not-over-you.jpg — Not Over You — Gavin DeGraw — Sweeter — deezer album 1261164
+john-mayer--daughters.jpg — Daughters — John Mayer — Heavier Things — deezer album 6885383
+john-mayer--good-love-is-on-the-way.jpg — Good Love Is on the Way — John Mayer — Battle Studies — deezer album 426587
+ray-lamontagne--you-are-the-best-thing.jpg — You Are the Best Thing — Ray Lamontagne — Gossip In The Grain (Expanded Edition) — deezer album 1441185
+
+dave-matthews-band--41.jpg — #41 — Dave Matthews Band — Crash — itunes album 388136111
+
+dave-matthews-band--tripping-billies.jpg — Tripping Billies — Dave Matthews Band — Remember Two Things — itunes album 1479249399
+
+king-harvest--dancing-in-the-moonlight.jpg — Dancing in the Moonlight — King Harvest — Dancing In the Moonlight — itunes album 208819125
