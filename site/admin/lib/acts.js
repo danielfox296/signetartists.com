@@ -218,7 +218,7 @@ export function duplicateAct(repo, id) {
 
 // What goes with an act when it is deleted: its page, its video clips, and
 // the parts and list entries on other pages that name it.
-const NAMES_ACT = new Set(["ActHeader", "ActAbout", "ActSizes", "Setlist", "ActClose"]);
+const NAMES_ACT = new Set(["ActHeader", "ActAbout", "ActSizes", "Setlist", "ActVenues", "ActClose"]);
 function withoutAct(items, id) {
   let n = 0;
   const walk = (list) =>

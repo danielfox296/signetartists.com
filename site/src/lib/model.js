@@ -142,6 +142,29 @@ export function createModel(c) {
     const own = p.layout === "act" && p.schema && ACT_BY_ID[p.schema.act];
     LABELS[p.path] = p.breadcrumb || (own ? own.name : "") || slugLabel(p.path);
   }
+  // Venues: a page whose root carries `venue` is a venue page. The acts it
+  // names are the acts in its act cards and the acts that have played there.
+  // The venues hub lists every venue page, and each act page lists the venue
+  // pages that name it, so a new venue page joins both with no other edit.
+  const cardActs = (o, out) => {
+    if (Array.isArray(o)) o.forEach((x) => cardActs(x, out));
+    else if (o && typeof o === "object") {
+      if (o.type === "Cards" && o.props) for (const k of ["acts", "picks"]) for (const x of o.props[k] || []) if (x && x.act) out.add(x.act);
+      Object.values(o).forEach((x) => cardActs(x, out));
+    }
+    return out;
+  };
+  const VENUES = pages
+    .filter((d) => d.root.props.venue && !(d.root.props.robots || "").startsWith("noindex"))
+    .map((d) => {
+      const p = d.root.props;
+      const v = p.venue;
+      const played = (v.played || []).filter((id) => ACT_BY_ID[id] && !ACT_BY_ID[id].hidden);
+      const named = new Set([...played, ...cardActs(d.content, new Set())]);
+      return { ...v, path: p.path, played, named };
+    })
+    .sort((a, b) => pySort(a.name, b.name));
+  const venuesFor = (id) => VENUES.filter((v) => v.named.has(id));
   const CRUMB_OVERRIDES = {};
   for (const v of FOOTAGE) {
     const a = ACT_BY_ID[v.act];
@@ -262,7 +285,7 @@ export function createModel(c) {
     actLane, actUrl, actConfigs, actAreaIds, actAreas, actByline, actBylineInline, actConfigRange, actCardLine,
     canonicalFor, FOOTAGE, FOOTAGE_BY_KEY, footageKey, watchOutput, watchUrl, watchThumb,
     posts, postBySlug, published, indexedPosts, pages, pageByUrl, LABELS, crumbLabel, crumbParent, crumbTrail, breadcrumbs,
-    siblings, relatedArticles, actClips, hubIndex, POSTS_BY_PARENT, readingTime, dateDisplay,
+    siblings, relatedArticles, actClips, hubIndex, POSTS_BY_PARENT, readingTime, dateDisplay, VENUES, venuesFor,
   };
 }
 
