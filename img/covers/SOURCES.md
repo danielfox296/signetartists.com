@@ -360,3 +360,19 @@ no-doubt--just-a-girl.jpg — Just a Girl — No Doubt — The Singles Collectio
 
 blondie--call-me.jpg — Call Me — Blondie — American Gigolo — itunes
 big-brother-and-the-holding-company--piece-of-my-heart.jpg — Piece of My Heart — Big Brother & The Holding Company — Cheap Thrills — deezer album 97533
+
+lynyrd-skynyrd--sweet-home-alabama.jpg — Sweet Home Alabama — Lynyrd Skynyrd — Second Helping (Expanded Edition) — deezer album 2375511
+gretchen-wilson--here-for-the-party.jpg — Here for the Party — Gretchen Wilson — Here For The Party — deezer album 75262
+darius-rucker--wagon-wheel.jpg — Wagon Wheel — Darius Rucker — True Believers — deezer album 6585618
+the-charlie-daniels-band--the-devil-went-down-to-georgia.jpg — The Devil Went Down to Georgia — The Charlie Daniels Band — Million Mile Reflections — deezer album 116737
+jo-dee-messina--heads-carolina-tails-california.jpg — Heads Carolina, Tails California — Jo Dee Messina — Jo Dee Messina — deezer album 7507394
+ella-langley--you-look-like-you-love-me.jpg — You Look Like You Love Me — Ella Langley — you look like you love me — deezer album 602947762
+sabrina-carpenter--espresso.jpg — Espresso — Sabrina Carpenter — Short n' Sweet — deezer album 631839161
+miley-cyrus--party-in-the-u-s-a.jpg — Party in the U.S.A. — Miley Cyrus — The Time Of Our Lives — deezer album 2376141
+the-cranberries--linger.jpg — Linger — The Cranberries — Everybody Else Is Doing It, So Why Can't We? (Super Deluxe) — deezer album 75627352
+the-doobie-brothers--listen-to-the-music.jpg — Listen to the Music — The Doobie Brothers — Toulouse Street — deezer album 613168
+whitney-houston--i-wanna-dance-with-somebody-who-loves-me.jpg — I Wanna Dance with Somebody (Who Loves Me) — Whitney Houston — Whitney — deezer album 7530488
+muscadine-bloodline--10-90.jpg — 10-90 — Muscadine Bloodline — 10-90 (The Sound of Roses) — deezer album 950892351
+tyler-childers--nose-on-the-grindstone.jpg — Nose on the Grindstone — Tyler Childers — Nose On The Grindstone — deezer album 769792961
+
+shaboozey--tipsy.jpg — Tipsy — Shaboozey — Where I've Been, Isn't Where I'm Going — deezer album 594079172
