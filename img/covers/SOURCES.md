@@ -263,3 +263,21 @@ dave-matthews-band--41.jpg — #41 — Dave Matthews Band — Crash — itunes a
 dave-matthews-band--tripping-billies.jpg — Tripping Billies — Dave Matthews Band — Remember Two Things — itunes album 1479249399
 
 king-harvest--dancing-in-the-moonlight.jpg — Dancing in the Moonlight — King Harvest — Dancing In the Moonlight — itunes album 208819125
+
+aretha-franklin--respect.jpg — Respect — Aretha Franklin — I Never Loved a Man the Way I Love You — deezer album 102206
+the-temptations--my-girl.jpg — My Girl — The Temptations — The Temptations Sing Smokey — deezer album 70198002
+marvin-gaye--whats-going-on.jpg — What's Going On — Marvin Gaye — What's Going On — deezer album 184480112
+al-green--lets-stay-together.jpg — Let's Stay Together — Al Green — Let's Stay Together — deezer album 9884426
+stevie-wonder--signed-sealed-delivered-im-yours.jpg — Signed, Sealed, Delivered (I'm Yours) — Stevie Wonder — Signed Sealed And Delivered — deezer album 116586982
+aretha-franklin--think.jpg — Think — Aretha Franklin — Aretha Now — deezer album 102210
+marvin-gaye-and-tammi-terrell--aint-no-mountain-high-enough.jpg — Ain't No Mountain High Enough — Marvin Gaye — United — deezer album 89926872
+
+marvin-gaye--i-heard-it-through-the-grapevine.jpg — I Heard It Through the Grapevine — Marvin Gaye — In The Groove — deezer album 320936317
+bill-withers--lean-on-me.jpg — Lean on Me — Bill Withers — Still Bill — deezer album 10154728
+michael-jackson--the-way-you-make-me-feel.jpg — The Way You Make Me Feel — Michael Jackson — Bad (Remastered) — deezer album 5814031
+michael-jackson--man-in-the-mirror.jpg — Man in the Mirror — Michael Jackson — Bad (Remastered) — deezer album 5814031
+al-green--tired-of-being-alone.jpg — Tired of Being Alone — Al Green — Gets Next to You — deezer album 14585592
+aretha-franklin--you-make-me-feel-like-a-natural-woman.jpg — (You Make Me Feel Like) A Natural Woman — Aretha Franklin — Lady Soul (With Bonus Selections) — deezer album 102209
+michael-jackson--man-in-the-mirror.jpg — Man in the Mirror — Michael Jackson — Michael Jackson's This Is It — deezer album 423368
+
+stevie-wonder--i-just-called-to-say-i-love-you.jpg — I Just Called to Say I Love You — Stevie Wonder — The Woman in Red (Original Motion Picture Soundtrack) — itunes album 1443899836
