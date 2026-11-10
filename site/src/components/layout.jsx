@@ -184,7 +184,7 @@ const NAV_SCRIPT = `
 // width change, and again after a click or change, so filtered lists stay even.
 const WRAP_SCRIPT = `
     (function () {
-      var SKIP = '.breadcrumb ol, .blog-byline, .blog-row-meta, .wall-grid, .nav-mobile';
+      var SKIP = '.breadcrumb ol, .blog-byline, .blog-row-meta, .wall-grid, .nav-mobile, .story-photos';
       var watched = [];
       function items(el) {
         var out = [];
