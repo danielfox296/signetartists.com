@@ -7,12 +7,25 @@ import { css, cx, esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
 import { Boxed, buttonFields, Buttons, F, H, headingFields, Img, imageFields, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
+import { honorsOf, LaurelRow, laurelsOf, markedOf, MarkRow, MiniLaurel } from "./honors.jsx";
 
 const { rich, text } = F;
 const select = (label, values) => ({ type: "select", label, options: values.map((v) => (typeof v === "string" ? { label: v, value: v } : v)) });
 const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0, 48) : "");
 
 // ------------------------------------------------------------------ copy
+
+// Under an act page's h1: its top three laurels, or, with none, the marks of
+// the outlets and stages it has, linking down to the awards section.
+function HeroHonors({ a }) {
+  if (!honorsOf(a).length) return null;
+  const laurels = laurelsOf(a).slice(0, 3);
+  return (
+    <a className="hero-honors" href="#awards" aria-label="Awards and press">
+      {laurels.length ? <LaurelRow items={laurels} small plain cls="laurels--hero" /> : <MarkRow items={markedOf(a)} cls="honor-marks--hero" />}
+    </a>
+  );
+}
 
 export const Heading = {
   label: "Heading",
@@ -29,6 +42,7 @@ export const Heading = {
     <div className="heading" style={css(p.headingStyle)}>
       {p.eyebrow != null ? <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} /> : null}
       {p.title != null ? <H as={p.titleTag || "h2"} className={p.titleClass || "h2"} style={css(p.titleStyle)} html={p.title} /> : null}
+      {p.titleTag === "h1" ? <HeroHonors a={pageActOf(s)} /> : null}
       {p.face != null ? <H as="p" className="act-face" html={p.face} /> : null}
       {p.imageFirst && !left ? <Img im={p.image} /> : null}
       {p.lede != null ? <H as="p" className="lede" style={css(p.ledeStyle)} html={p.lede} /> : null}
@@ -694,7 +708,12 @@ function ActCard({ a, compact }) {
       : (a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => [b, m.BUCKET_LABEL[b]]);
   const part = {
     kind: () => <p key="kind" className="act-kind">{a.style}</p>,
-    name: () => <h3 key="name" className="act-name">{a.name}</h3>,
+    name: () => (
+      <Fragment key="name">
+        <h3 className="act-name">{a.name}</h3>
+        {a.honorLine ? <p className="card-honor"><MiniLaurel />{a.honorLine}</p> : null}
+      </Fragment>
+    ),
     face: () => <p key="face" className="act-face">{m.actByline(a)}</p>,
     tags: () => (
       <ul key="tags" className="pill-row">
@@ -797,6 +816,7 @@ function RosterCard({ a }) {
           <div className="roster-card-over">
             <p className="act-kind">{a.style}</p>
             <h3 className="roster-card-name">{a.name}</h3>
+            {a.honorLine ? <p className="card-honor"><MiniLaurel />{a.honorLine}</p> : null}
           </div>
         </div>
         <div className="roster-card-meta">
@@ -843,6 +863,7 @@ function PhotoCard({ a, kicker }) {
           <div className="roster-card-over">
             <p className="act-kind">{kicker || a.style}</p>
             <h3 className="roster-card-name">{a.name}</h3>
+            {a.honorLine ? <p className="card-honor"><MiniLaurel />{a.honorLine}</p> : null}
           </div>
         </div>
       </a>

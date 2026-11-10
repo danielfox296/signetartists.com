@@ -90,5 +90,52 @@
  "lane": "named",
  "entity": {
   "type": "MusicGroup"
- }
+ },
+ "honorLine": "As seen in the Vail Daily",
+ "honors": [
+  {
+   "kind": "press",
+   "title": "A new alternative rock band is ready to rock Eagle County",
+   "from": "Vail Daily",
+   "year": "2025",
+   "link": "https://www.vaildaily.com/news/new-alternative-rock-band-ready-to-rock-eagle-county",
+   "logo": "honors/vail-daily.png"
+  },
+  {
+   "kind": "press",
+   "title": "Meet Your Musician: Michelle Cohn Levy",
+   "from": "Vail Daily",
+   "year": "2022",
+   "link": "https://vaildaily.com/entertainment/meet-your-musician-michelle-cohn-levy",
+   "logo": "honors/vail-daily.png"
+  },
+  {
+   "kind": "stage",
+   "title": "Michelle played six shows in one season at the Gerald R. Ford Amphitheater in Vail, and the Vilar Performing Arts Center",
+   "year": "2022"
+  },
+  {
+   "kind": "stage",
+   "title": "Special guest for Teenage Wasteland, the national touring show of The Who's music",
+   "year": "2025",
+   "link": "https://events.leapevents.com/event/teenage-wasteland"
+  },
+  {
+   "kind": "stage",
+   "title": "Copper Mountain's summer concert series",
+   "year": "2025"
+  },
+  {
+   "kind": "stage",
+   "title": "Glenwood Pride, Fat Tire Fest, Sunset Live, Rock Island Oyster Bar in Glenwood Springs, the Shakedown Bar in Vail and Route 6 Café"
+  },
+  {
+   "kind": "release",
+   "title": "Michelle's album Ascend, with Coleen Dieker"
+  },
+  {
+   "kind": "other",
+   "title": "Michelle is the cantor at B'nai Vail and leads its Friday Shabbat services"
+  }
+ ]
 }

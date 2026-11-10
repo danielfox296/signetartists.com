@@ -8,6 +8,7 @@ import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields
 import { SIZES, ytId } from "../lib/pictures.js";
 import { coverPath, patchwork } from "../lib/patchwork.js";
 import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
+import { CreditList, honorsOf, Laurel, LaurelRow, laurelsOf, Mark, markedOf, PressList, pressOf, creditsOf } from "./honors.jsx";
 
 const { rich, text } = F;
 const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0, 48) : "");
@@ -691,6 +692,93 @@ const ActVenues = {
   },
 };
 
+// On an act page, under the hero: the act's awards as laurels, its press,
+// TV and radio with the outlets' marks, then stages and credits. Nothing
+// when the act has none.
+const ActHonors = {
+  label: "Act awards and press",
+  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede ({name} is the act's name)"), pressTitle: rich("Press title"), creditsTitle: rich("Stages title") },
+  defaultProps: { band: "ruled", title: "Awards and press", pressTitle: "In the press and on air", creditsTitle: "Stages and credits" },
+  render: function ActHonorsRender({ act, band, title, lede, pressTitle, creditsTitle, wrapStyle }) {
+    const s = useSite();
+    const a = actFor(s, act);
+    if (!honorsOf(a).length) return null;
+    const laurels = laurelsOf(a), press = pressOf(a), credits = creditsOf(a);
+    return (
+      <section className={cx(bandClass(band || "ruled"), "honors")} id="awards">
+        <div className="wrap" style={css(wrapStyle)}>
+          <H as="h2" className="h2" html={title || "Awards and press"} />
+          <H as="p" className="prose honors-lede" html={typeof lede === "string" ? lede.replace(/\{name\}/g, esc(a.name)) : lede} />
+          <LaurelRow items={laurels} />
+          {press.length ? (
+            <>
+              <H as="h3" className="h4 honors-sub" html={pressTitle || "In the press and on air"} />
+              <PressList items={press} />
+            </>
+          ) : null}
+          {credits.length ? (
+            <>
+              <H as="h3" className="h4 honors-sub" html={creditsTitle || "Stages and credits"} />
+              <CreditList items={credits} />
+            </>
+          ) : null}
+        </div>
+      </section>
+    );
+  },
+};
+
+// The roster's awards in one place: every laurel won across the Featured
+// Artists, each naming and linking its act, then every outlet's and stage's
+// mark once.
+const HonorsWall = {
+  label: "Artists' awards and press",
+  fields: { band: shellFields.band, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede"), marksLabel: rich("Marks label") },
+  defaultProps: { band: "ruled", eyebrow: "Featured Artists", title: "Our artists' awards and press", marksLabel: "In the press, on air and on stage" },
+  render: function HonorsWallRender({ band, eyebrow, title, lede, marksLabel, wrapStyle }) {
+    const s = useSite();
+    const m = s.model;
+    const acts = m.ACTS.filter((a) => a.page && honorsOf(a).length);
+    const rank = ["award", "honoree", "finalist", "invited"];
+    const laurels = acts
+      .flatMap((a) => laurelsOf(a).filter((h) => rank.includes(h.kind)).map((h) => ({ h, a })))
+      .map((x, i) => [x, i])
+      .sort((x, y) => rank.indexOf(x[0].h.kind) - rank.indexOf(y[0].h.kind) || x[1] - y[1])
+      .map(([x]) => x);
+    const seen = new Set();
+    const marks = acts.flatMap((a) => markedOf(a).map((h) => ({ h, a }))).filter(({ h }) => !seen.has(h.logo) && seen.add(h.logo));
+    if (!laurels.length && !marks.length) return null;
+    return (
+      <section className={cx(bandClass(band || "ruled"), "honors honors-wall")} id="awards">
+        <div className="wrap" style={css(wrapStyle)}>
+          <div className="heading honors-wall-head">
+            <H as="p" className="eyebrow" html={eyebrow} />
+            <H as="h2" className="h2" html={title} />
+            <H as="p" className="lede" html={lede} />
+          </div>
+          {laurels.length ? (
+            <ul className="laurels laurels--wall">
+              {laurels.map(({ h, a }, i) => <Laurel key={i} h={h} act={a.name} href={m.actUrl(a, s.prefix)} />)}
+            </ul>
+          ) : null}
+          {marks.length ? (
+            <>
+              <H as="p" className="eyebrow honors-marks-label" html={marksLabel} />
+              <ul className="honor-marks honor-marks--wall">
+                {marks.map(({ h, a }, i) => (
+                  <li key={i}>
+                    <a href={m.actUrl(a, s.prefix)} aria-label={`${h.from}: ${a.name}`}><Mark h={h} /></a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+        </div>
+      </section>
+    );
+  },
+};
+
 const actsScript = (s) => `<script defer src="${s.prefix}acts.js"></script>`;
 
 // The enquiry form. The act field lists the roster and stays hidden until
@@ -996,7 +1084,7 @@ const SongCatalog = {
   },
 };
 
-export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActVenues, ActClose, VendorList, VenueList, ContactForm, Roster, SongCatalog };
+export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActHonors, HonorsWall, ActVenues, ActClose, VendorList, VenueList, ContactForm, Roster, SongCatalog };
 
 export const components = { ...blockSections, ...fixedSections, ActOwn };
 

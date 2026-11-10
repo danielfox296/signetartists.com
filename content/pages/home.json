@@ -117,6 +117,17 @@
    }
   },
   {
+   "type": "HonorsWall",
+   "props": {
+    "id": "HonorsWall-1",
+    "band": "ruled",
+    "eyebrow": "Featured Artists",
+    "title": "Our artists' awards and press",
+    "lede": "Here are some of the awards our artists have won, and the press, TV and stages they've been on.",
+    "marksLabel": "In the press, on air and on stage"
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-48",
