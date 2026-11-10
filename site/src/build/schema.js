@@ -48,6 +48,9 @@ export function makeSchema(m) {
     const node = { "@type": e.type, "@id": a.page ? `${url}#act` : `${SITE_URL}/${m.ACTS_BASE}/#entity-${a.id}`, name: a.name, url, image: `${SITE_URL}/img/${a.img}` };
     if (e.type === "MusicGroup") node.genre = (a.genre_tags || []).map((g) => m.GENRE_LABEL[g]);
     if (e.sameAs) node.sameAs = e.sameAs;
+    // What the act has won (honors in its act file), as schema.org award text.
+    const won = (a.honors || []).filter((h) => h.kind === "award" || h.kind === "honoree").map((h) => `${h.title}${h.from ? `, ${h.from}` : ""}${h.year ? ` (${h.year})` : ""}`);
+    if (won.length) node.award = won;
     return node;
   };
   const rosterEntityNodes = () => m.ACTS.map(actEntityNode).filter(Boolean);
