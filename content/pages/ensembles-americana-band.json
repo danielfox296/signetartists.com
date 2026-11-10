@@ -104,19 +104,28 @@
        "title": "What does an Americana band play?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "The band plays the songs people love in the mountains, like Friend of the Devil by the Grateful Dead and Wildflowers by Tom Petty, along with Neil Young, Bob Dylan, The Band, the Allman Brothers, John Prine and the Avett Brothers. It also plays music from right here in Colorado, including S.O.B. by Nathaniel Rateliff and the Night Sweats from Denver, Big Black Car by Gregory Alan Isakov from Boulder, and songs by the Lumineers."
+       "lede": "The band plays the songs people love in the mountains, like Friend of the Devil by the Grateful Dead and Harvest Moon by Neil Young, along with John Prine, Johnny Cash, Dolly Parton, Tyler Childers and Chris Stapleton. It also plays music from right here in Colorado, including Ho Hey by the Lumineers from Denver."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "Have a song in mind that isn’t here? It may be on our <a href=\"/repertoire/\">full song list</a>. If you’d rather book a Colorado singer-songwriter by name, take a look at <a href=\"/artists/meghan-clarisse/\">Meghan Clarisse</a>.",
+       "html": "Have a song in mind that isn’t here? Just let us know when you book, and the band can usually learn it. If you’d rather book a Colorado singer-songwriter by name, take a look at <a href=\"/artists/meghan-clarisse/\">Meghan Clarisse</a>.",
        "cls": "prose"
       }
      }
     ],
     "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-27",
+    "act": "americana-band",
+    "eyebrow": "Song list",
+    "title": "A sample of songs"
    }
   },
   {
@@ -195,7 +204,7 @@
         },
         {
          "term": "<a href=\"/private-parties/\">Birthdays and parties outdoors</a>",
-         "text": "Planning a milestone birthday in a backyard or at a rented ranch? This is a great band if your friends know every word of Wildflowers."
+         "text": "Planning a milestone birthday in a backyard or at a rented ranch? This is a great band if your friends know every word of Wagon Wheel."
         }
        ],
        "cls": "def-list def-list--cards"

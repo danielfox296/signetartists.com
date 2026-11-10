@@ -52,22 +52,94 @@
  ],
  "setlist": {
   "note": "Here's a sample from his song list, from dinner songs to dance floor favorites. Requests are welcome.",
-  "from_repertoire": true,
-  "groups": [
+  "songs": [
    {
-    "label": "Arrival and dinner",
-    "moment": "dinner",
-    "count": 6
+    "title": "Three Little Birds",
+    "artist": "Bob Marley & The Wailers",
+    "album": "Exodus"
    },
    {
-    "label": "Picking up the energy",
-    "moment": "lift",
-    "count": 6
+    "title": "Into the Mystic",
+    "artist": "Van Morrison",
+    "album": "Moondance"
    },
    {
-    "label": "The dance floor",
-    "moment": "dance",
-    "count": 6
+    "title": "(Sittin' On) The Dock of the Bay",
+    "artist": "Otis Redding",
+    "album": "The Dock of the Bay"
+   },
+   {
+    "title": "Landslide",
+    "artist": "Fleetwood Mac"
+   },
+   {
+    "title": "Fire and Rain",
+    "artist": "James Taylor",
+    "album": "Sweet Baby James"
+   },
+   {
+    "title": "The Scientist",
+    "artist": "Coldplay",
+    "album": "A Rush of Blood to the Head"
+   },
+   {
+    "title": "Tiny Dancer",
+    "artist": "Elton John",
+    "album": "Madman Across the Water"
+   },
+   {
+    "title": "Ho Hey",
+    "artist": "The Lumineers"
+   },
+   {
+    "title": "Use Somebody",
+    "artist": "Kings of Leon",
+    "album": "Only by the Night"
+   },
+   {
+    "title": "Brown Eyed Girl",
+    "artist": "Van Morrison",
+    "album": "Blowin' Your Mind!"
+   },
+   {
+    "title": "Valerie",
+    "artist": "Mark Ronson",
+    "album": "Version"
+   },
+   {
+    "title": "I Wanna Dance with Somebody",
+    "artist": "Whitney Houston",
+    "album": "Whitney"
+   },
+   {
+    "title": "Don't Stop Believin'",
+    "artist": "Journey",
+    "album": "Escape"
+   },
+   {
+    "title": "Wonderwall",
+    "artist": "Oasis",
+    "album": "(What's the Story) Morning Glory?"
+   },
+   {
+    "title": "Mr. Brightside",
+    "artist": "The Killers",
+    "album": "Hot Fuss"
+   },
+   {
+    "title": "Can't Help Falling in Love",
+    "artist": "Elvis Presley",
+    "album": "Blue Hawaii"
+   },
+   {
+    "title": "Thinking Out Loud",
+    "artist": "Ed Sheeran",
+    "album": "x"
+   },
+   {
+    "title": "Tennessee Whiskey",
+    "artist": "Chris Stapleton",
+    "album": "Traveller"
    }
   ]
  },

@@ -40,7 +40,7 @@ const ACT_FIELDS = {
   img: t("Photo"), alt: t("Alt text"), video: t("Video"), video_poster: t("Poster"), blurb: t("Description"), card_line: t("Short description"),
   configRangeLabel: t("Size range"), page: t("Page"), identity: t("About"),
   ladder: { type: "array", label: "Size ladder", arrayFields: { config: t("Size"), build: t("Lineup"), bestFor: t("Best for") } },
-  setlist: { type: "object", label: "Setlist", objectFields: { note: t("Note"), items: t("Songs"), groups: { type: "array", label: "Groups", arrayFields: { label: t("Heading"), moment: t("Moment"), count: t("Songs") } } } },
+  setlist: { type: "object", label: "Setlist", objectFields: { note: t("Note"), items: t("Songs"), songs: { type: "array", label: "Songs", arrayFields: { title: t("Song"), artist: t("Artist"), album: t("Album"), cover: t("Cover") } }, groups: { type: "array", label: "Groups", arrayFields: { label: t("Heading"), moment: t("Moment"), count: t("Songs") } } } },
   entity: { type: "object", label: "Search", objectFields: { type: t("Schema type"), sameAs: t("Links") } },
 };
 const choice = (label, extra) => ({ type: "array", label, arrayFields: { label: t("Name"), ...extra } });

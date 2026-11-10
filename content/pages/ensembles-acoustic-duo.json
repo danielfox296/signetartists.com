@@ -105,19 +105,28 @@
        "title": "What does an acoustic duo play?",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "We mostly play singer-songwriter and folk-rock covers people know the words to, like Peaceful Easy Feeling, Three Little Birds and Carolina in My Mind. Prefer jazz standards? Check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
+       "lede": "We mostly play singer-songwriter and folk-rock covers people know the words to, like Free Fallin’, Margaritaville and Ain’t No Sunshine. Prefer jazz standards? Check out our <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a>."
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "Want some more ideas? Take a look at our full <a href=\"/repertoire/\">song list</a>. If there’s a song you want that isn’t on it, just let us know when you book and the duo can usually learn it.",
+       "html": "If there’s a song you want that isn’t on the list, just let us know when you book and the duo can usually learn it.",
        "cls": "prose"
       }
      }
     ],
     "_file": "02-repertoire.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-29",
+    "act": "acoustic-duo",
+    "eyebrow": "Song list",
+    "title": "A sample of songs"
    }
   },
   {

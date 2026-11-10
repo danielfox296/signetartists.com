@@ -6,6 +6,7 @@ import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
 import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
+import { coverPath, patchwork } from "../lib/patchwork.js";
 import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
 
 const { rich, text } = F;
@@ -450,17 +451,88 @@ const ActSizes = {
   },
 };
 
+// An act's go-to songs as a patchwork of their record sleeves on the night
+// band. The sleeves are placed ahead of time at three widths (lib/patchwork.js)
+// so every row is full. Only songs with a real sleeve on file are in the
+// patchwork, never a title set as a stand-in. Every song, sleeve or not, is
+// in the list of names underneath, which is what
+// a screen reader, a phone and a search engine read; the sleeves are pictures
+// of it. As the patchwork scrolls into view the sleeves come in one after
+// another and each one settles from a slight zoom. Nothing moves under
+// reduced motion, and with script off they are simply there.
+const PATCH_SCRIPT =
+  `(function(){var r=document.currentScript.parentNode,g=r.querySelector(".song-patch__grid");` +
+  `if(!g||matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;` +
+  `var t=Array.prototype.slice.call(g.querySelectorAll(".song-tile"));` +
+  `function order(){var b=t.map(function(f){var x=f.getBoundingClientRect();return [x.top+x.left/1e4,f];});` +
+  `b.sort(function(p,q){return p[0]-q[0];});b.forEach(function(p,i){p[1].style.setProperty("--i",Math.min(i,14));});}` +
+  `order();g.classList.add("is-armed");var o=new IntersectionObserver(function(es){es.forEach(function(e){` +
+  `if(e.isIntersecting){g.classList.add("is-in");o.disconnect();}});},{threshold:0.15});o.observe(g);})();`;
+
+function SongPatch({ s, songs, eyebrow, title, lede, note, more, wrapStyle }) {
+  const href = useHref();
+  const exists = s.model.c.exists;
+  const sleeved = songs.filter((song) => song.cover !== false && exists && exists(coverPath(song)));
+  const layout = patchwork(sleeved.length);
+  const place = (i) =>
+    ["sm", "md", "lg"].map((k) => {
+      const p = layout[k].at[i];
+      return `--c-${k}: ${p.c}; --r-${k}: ${p.r}; --s-${k}: ${p.s}`;
+    }).join("; ");
+  const gridStyle = layout ? ["sm", "md", "lg"].map((k) => `--cols-${k}: ${layout[k].cols}`).join("; ") : "";
+  return (
+    <section className="section section--night song-patch">
+      <div className="wrap song-patch__head" style={css(wrapStyle)}>
+        <H as="p" className="eyebrow" html={eyebrow} />
+        <H as="h2" className="h2" html={title} />
+        {lede ? <H as="p" className="prose song-patch__note" html={lede} /> : note ? <p className="prose song-patch__note">{note}</p> : null}
+      </div>
+      {sleeved.length ? (
+        <div className="song-patch__field">
+          <div className="song-patch__grid" style={css(gridStyle)} aria-hidden="true">
+            {sleeved.map((song, i) => {
+              const big = layout.lg.at[i].s > 1;
+              return (
+                <figure className={cx("song-tile", big && "song-tile--big")} style={css(place(i))} key={i}>
+                  <Pic src={href("/" + coverPath(song))} alt={`Album cover for ${song.title} by ${song.artist}`} loading="lazy" decoding="async" sizes={big ? SIZES.patchBig : SIZES.patch} />
+                  <figcaption>
+                    <span className="song-tile__title">{song.title}</span>
+                    <span className="song-tile__artist">{song.artist}</span>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
+          <script dangerouslySetInnerHTML={{ __html: PATCH_SCRIPT }} />
+        </div>
+      ) : null}
+      <div className="wrap" style={css(wrapStyle)}>
+        <ul className="song-patch__list">
+          {songs.map((song, i) => (
+            <li key={i}>
+              <span className="song-title">{song.title}</span>
+              {song.artist ? <span className="song-artist">{song.artist}</span> : null}
+            </li>
+          ))}
+        </ul>
+        <H as="p" className="note song-patch__more" html={more} />
+      </div>
+    </section>
+  );
+}
+
 // A sample of an act's set: picked from the song list by moment, or the
 // act's own list.
 const Setlist = {
   label: "Setlist",
-  fields: { act: text("Act"), title: rich("Title"), more: rich("Note") },
-  render: function SetlistRender({ act, title, more, wrapStyle }) {
+  fields: { act: text("Act"), eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede (else the act's note)"), more: rich("Note") },
+  render: function SetlistRender({ act, eyebrow, title, lede, more, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const a = actFor(s, act);
     const sl = a && a.setlist;
     if (!sl) return null;
+    if ((sl.songs || []).length) return <SongPatch s={s} songs={sl.songs} eyebrow={eyebrow} title={title} lede={lede} note={sl.note} more={more} wrapStyle={wrapStyle} />;
     let body;
     if (sl.from_repertoire) {
       const songs = m.c.repertoire;

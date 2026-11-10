@@ -63,22 +63,70 @@
  ],
  "setlist": {
   "note": "This is just a sample of his songs, so the setlist at your event may be a little different.",
-  "items": [
-   "Hope For Better Things",
-   "Calendar Year",
-   "Heirloom Winnebago",
-   "Stuck Inside",
-   "Standing In The Shadow Of The Moon",
-   "If You Were Near",
-   "Goodnight, Texas",
-   "Come Of Age",
-   "Halfway Home",
-   "Iron Gates Of Love",
-   "Waterfall",
-   "What If I, What If You",
-   "Blackbird",
-   "Mammas Don't Let Your Babies Grow Up To Be Cowboys",
-   "Drive"
+  "songs": [
+   {
+    "title": "Hope For Better Things",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Calendar Year",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Heirloom Winnebago",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Stuck Inside",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Standing In The Shadow Of The Moon",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "If You Were Near",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Goodnight, Texas",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Come Of Age",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Halfway Home",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Iron Gates Of Love",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Waterfall",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "What If I, What If You",
+    "artist": "René Moffatt"
+   },
+   {
+    "title": "Blackbird",
+    "artist": "The Beatles",
+    "album": "The Beatles"
+   },
+   {
+    "title": "Mammas Don’t Let Your Babies Grow Up To Be Cowboys",
+    "artist": "Willie Nelson",
+    "album": "Waylon & Willie"
+   },
+   {
+    "title": "Drive",
+    "artist": "The Cars",
+    "album": "Heartbeat City"
+   }
   ]
  },
  "occasion_tags": [

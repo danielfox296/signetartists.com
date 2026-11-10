@@ -112,12 +112,21 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "The band can play ballads through dinner, and the up-tempo songs are great for getting people dancing. Looking for more songs? Check out our <a href=\"/repertoire/\">full song list</a>.",
+       "html": "The band can play ballads through dinner, and the up-tempo songs are great for getting people dancing.",
        "cls": "prose"
       }
      }
     ],
     "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-28",
+    "act": "yacht-rock",
+    "eyebrow": "Song list",
+    "title": "A sample of songs"
    }
   },
   {

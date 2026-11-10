@@ -30,18 +30,63 @@
  ],
  "setlist": {
   "note": "Requests are welcome.",
-  "items": [
-   "Hey Jude",
-   "Let It Be",
-   "Yesterday",
-   "Blackbird",
-   "Come Together",
-   "Eleanor Rigby",
-   "A Hard Day's Night",
-   "Something",
-   "While My Guitar Gently Weeps",
-   "Rocky Raccoon",
-   "Mother Nature's Son"
+  "songs": [
+   {
+    "title": "Hey Jude",
+    "artist": "The Beatles",
+    "album": "Hey Jude"
+   },
+   {
+    "title": "Let It Be",
+    "artist": "The Beatles",
+    "album": "Let It Be"
+   },
+   {
+    "title": "Yesterday",
+    "artist": "The Beatles",
+    "album": "Help!"
+   },
+   {
+    "title": "Blackbird",
+    "artist": "The Beatles",
+    "album": "The Beatles"
+   },
+   {
+    "title": "Come Together",
+    "artist": "The Beatles",
+    "album": "Abbey Road"
+   },
+   {
+    "title": "Eleanor Rigby",
+    "artist": "The Beatles",
+    "album": "Revolver"
+   },
+   {
+    "title": "A Hard Day's Night",
+    "artist": "The Beatles",
+    "album": "A Hard Day's Night"
+   },
+   {
+    "title": "Something",
+    "artist": "The Beatles",
+    "album": "Love"
+   },
+   {
+    "title": "While My Guitar Gently Weeps",
+    "artist": "The Beatles",
+    "album": "The Beatles 1967 - 1970"
+   },
+   {
+    "title": "Rocky Raccoon",
+    "artist": "The Beatles",
+    "album": "Anthology 3"
+   },
+   {
+    "title": "Mother Nature's Son",
+    "artist": "The Beatles",
+    "album": "The Beatles",
+    "cover": false
+   }
   ]
  },
  "occasion_tags": [

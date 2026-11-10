@@ -47,15 +47,39 @@
  ],
  "setlist": {
   "note": "Flamenco is organized by palo, the traditional form, rather than by song title. This is just a sample, and the trio picks from these forms to suit your guests.",
-  "items": [
-   "Bulerias",
-   "Solea",
-   "Alegrias",
-   "Tangos",
-   "Rumba",
-   "Fandangos",
-   "Sevillanas",
-   "Guajiras"
+  "songs": [
+   {
+    "title": "Bulerias",
+    "cover": false
+   },
+   {
+    "title": "Solea",
+    "cover": false
+   },
+   {
+    "title": "Alegrias",
+    "cover": false
+   },
+   {
+    "title": "Tangos",
+    "cover": false
+   },
+   {
+    "title": "Rumba",
+    "cover": false
+   },
+   {
+    "title": "Fandangos",
+    "cover": false
+   },
+   {
+    "title": "Sevillanas",
+    "cover": false
+   },
+   {
+    "title": "Guajiras",
+    "cover": false
+   }
   ]
  },
  "occasion_tags": [

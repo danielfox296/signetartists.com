@@ -144,12 +144,21 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-9",
-       "html": "Prefer blues, roots or jazz? Check out our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>. Want some more ideas? Take a look at our <a href=\"/repertoire/\">full song list</a>.",
+       "html": "Prefer blues, roots or jazz? Check out our <a href=\"/ensembles/solo-guitarist/\">solo guitarist</a>.",
        "cls": "note"
       }
      }
     ],
     "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-30",
+    "act": "spanish-guitarist",
+    "eyebrow": "Song list",
+    "title": "A sample of songs"
    }
   },
   {

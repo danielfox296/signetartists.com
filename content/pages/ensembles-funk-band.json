@@ -112,12 +112,21 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "The band can play slower, warmer songs during dinner and pick up the pace when it's time to dance. Want a singer? Our <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> plays the same songwriters with a singer out front and a horn on the choruses. Want some more song ideas? Our full <a href=\"/repertoire/\">song list</a> has plenty.",
+       "html": "The band can play slower, warmer songs during dinner and pick up the pace when it's time to dance. Want a singer? Our <a href=\"/ensembles/soul-band/\">soul and R&amp;B band</a> plays the same songwriters with a singer out front and a horn on the choruses.",
        "cls": "prose"
       }
      }
     ],
     "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-28",
+    "act": "funk-trio",
+    "eyebrow": "Song list",
+    "title": "A sample of songs"
    }
   },
   {

@@ -112,12 +112,21 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-8",
-       "html": "Between singers, the band keeps playing the same hits as a party band, so the dance floor stays active. Have a song in mind for someone special, like your CEO’s karaoke song or a retiring colleague’s favorite? Just let us know ahead of time, and if it isn’t on the song list, we can usually learn it. Curious what else the band plays? <a href=\"/repertoire/\">Check out our full song list</a>.",
+       "html": "Between singers, the band keeps playing the same hits as a party band, so the dance floor stays active. Have a song in mind for someone special, like your CEO’s karaoke song or a retiring colleague’s favorite? Just let us know ahead of time, and if it isn’t on the song list, we can usually learn it.",
        "cls": "prose"
       }
      }
     ],
     "_file": "02-set.html"
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-28",
+    "act": "live-band-karaoke",
+    "eyebrow": "Song list",
+    "title": "A sample of songs"
    }
   },
   {
