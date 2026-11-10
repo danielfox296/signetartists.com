@@ -1,0 +1,426 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/quadrasonic/",
+   "title": "Quadrasonic: rock cover band for hire in Colorado",
+   "description": "Quadrasonic is a hard-hitting rock cover band from the Vail Valley, playing Pat Benatar, No Doubt, Nirvana and Paramore at Colorado weddings and parties.",
+   "titleExact": true,
+   "ogImage": "img/quadrasonic-card.jpg",
+   "ogImageAlt": "Quadrasonic laughing in a rehearsal studio, the singer lying on the floor in red heels with the guitarist, bassist and drummer behind her.",
+   "nav": "music",
+   "breadcrumb": "Quadrasonic",
+   "schema": {
+    "service": {
+     "name": "Quadrasonic",
+     "serviceType": "Alternative rock cover band for weddings, private parties and corporate events",
+     "description": "Quadrasonic is a four-piece alternative rock cover band from the Vail Valley, with lead vocals, electric guitar, bass and drums. They play rock from the ’70s to today at weddings, private parties and corporate events across Colorado.",
+     "areaServed": [
+      "Vail",
+      "Beaver Creek",
+      "Aspen",
+      "Breckenridge",
+      "Denver",
+      "Boulder",
+      "Colorado Springs"
+     ],
+     "configs": [
+      "quartet"
+     ]
+    },
+    "act": "quadrasonic",
+    "video": {
+     "name": "Quadrasonic playing Hit Me With Your Best Shot",
+     "description": "Quadrasonic playing Pat Benatar’s Hit Me With Your Best Shot live.",
+     "uploadDate": "2025-01-29",
+     "duration": "PT1M14S"
+    },
+    "videos": [
+     {
+      "id": "MWNxJoBqNEA",
+      "name": "Quadrasonic playing Smells Like Teen Spirit",
+      "description": "Quadrasonic playing Nirvana’s Smells Like Teen Spirit live.",
+      "uploadDate": "2025-01-29",
+      "duration": "PT1M30S"
+     },
+     {
+      "id": "JQtrWO1x_Bg",
+      "name": "Quadrasonic playing Zombie",
+      "description": "Quadrasonic playing The Cranberries’ Zombie live.",
+      "uploadDate": "2025-01-29",
+      "duration": "PT1M31S"
+     },
+     {
+      "id": "6_G6VREVVP0",
+      "name": "Quadrasonic playing Are You Gonna Be My Girl",
+      "description": "Quadrasonic playing Jet’s Are You Gonna Be My Girl live.",
+      "uploadDate": "2025-01-29",
+      "duration": "PT1M14S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Alternative rock covers",
+       "slab": true,
+       "title": "Quadrasonic",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "A four-piece rock band from the Vail Valley.",
+       "lede": "You know what happens when the opening riff of Zombie or Mr. Brightside comes on at a wedding. Quadrasonic is a hard-hitting rock band with a powerhouse singer out front, playing the songs your guests grew up on, from Pat Benatar and Blondie to No Doubt, Nirvana and Paramore. This is the band to book when you want a rock show and a dance floor at the same time.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=quadrasonic",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/yU27RExn2xw?rel=0",
+       "title": "Quadrasonic playing Hit Me With Your Best Shot live",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Quadrasonic plays rock from the ’70s to today, and a lot of their song list comes from ’90s alternative radio. You’ll hear Heart and Joan Jett next to Hole, Veruca Salt and Garbage, and newer songs from Paramore and Chappell Roan, too. They also play a few pop hits, like Toxic and Levitating, with the guitars turned up.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-107",
+       "html": "Their singer can go from a grunge growl to soaring high notes, and she’s been on stage her whole life, so she brings a little theater to every show. She plays hundreds of shows a year around Colorado.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-207",
+       "html": "The band is based in the Vail Valley, and they play weddings, festivals, summer concert series and clubs across Colorado, including the GoPro Mountain Games in Vail.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "cls": "statement"
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "quadrasonic",
+    "title": "Configurations",
+    "note": "Send us your date and we’ll let you know what Quadrasonic would need at your venue."
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/vail/\">Mountain wedding receptions</a>",
+         "text": "If you’re getting married in Vail or Beaver Creek, a band that already lives in the valley is a great fit for your reception. They’re a great choice when you and your friends grew up on No Doubt and Nirvana."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Birthdays and big parties</a>",
+         "text": "For a 40th or a 50th where everyone grew up on ’90s radio, Quadrasonic is a lot of fun."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">Company parties and after-parties</a>",
+         "text": "After a conference or a holiday dinner, a loud, fun rock band is an easy way to get a whole company on the dance floor."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/vail/\">Retreats in Vail</a>",
+         "text": "If your team is meeting in Vail, a band from the valley is an easy choice for your closing party."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Planning toasts or a program? We can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. You can also get a general idea of what live music costs in Colorado from our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-28",
+    "eyebrow": "Song list",
+    "title": "A sample of their songs.",
+    "lede": "This is a sample of the songs they play, and we’ll put the setlist together with you.",
+    "more": ""
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Quadrasonic play rock covers",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/MWNxJoBqNEA?rel=0",
+         "title": "Quadrasonic playing Smells Like Teen Spirit by Nirvana",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Smells Like Teen Spirit</span> by Nirvana"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/JQtrWO1x_Bg?rel=0",
+         "title": "Quadrasonic playing Zombie by The Cranberries",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Zombie</span> by The Cranberries"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/6_G6VREVVP0?rel=0",
+         "title": "Quadrasonic playing Are You Gonna Be My Girl by Jet",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Are You Gonna Be My Girl</span> by Jet"
+        }
+       ],
+       "single": false,
+       "playlist": true
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "images": [
+        {
+         "src": "/img/acts/quadrasonic-full-band-stage.jpg",
+         "alt": "Quadrasonic on a big stage under purple lights, the singer in a red skirt with her arm in the air between the bassist and the guitarist.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-singer-close.jpg",
+         "alt": "The singer of Quadrasonic belting into the mic in a red and black tiger-stripe outfit.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-guitarist-boot.jpg",
+         "alt": "The guitarist of Quadrasonic in red plaid pants, one boot up toward the camera.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-singer-guitarist-logo.jpg",
+         "alt": "The singer and guitarist of Quadrasonic on stage in front of the band’s glowing logo.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-snow-stage.jpg",
+         "alt": "Quadrasonic playing on an outdoor stage while snow falls.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-hands-up.jpg",
+         "alt": "Quadrasonic on a small club stage with a crowd’s hands up in front of them.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-singer-bassist.jpg",
+         "alt": "The singer of Quadrasonic in a red skirt and patterned tights, beside the bassist under blue stage lights.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-mountain-games.jpg",
+         "alt": "The guitarist of Quadrasonic playing a red guitar on an outdoor festival stage in Vail.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-shakedown.jpg",
+         "alt": "Quadrasonic hamming it up on a club stage, the singer leaning back between two guitarists.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-sitting-stage.jpg",
+         "alt": "The singer and the guitarist of Quadrasonic sitting at the edge of the stage while the bassist plays.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-railroad-tracks.jpg",
+         "alt": "The four members of Quadrasonic standing on snowy railroad tracks in a mountain canyon.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/quadrasonic-group-portrait.jpg",
+         "alt": "The four members of Quadrasonic posing on rocks in the snow, dressed in black and red.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Quadrasonic questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "items": [
+        {
+         "q": "Is Quadrasonic too loud for a wedding?",
+         "a": "They’re a rock band, so they’re at their best when people are dancing. If your venue has a sound limit, or you’d like dinner to stay quiet, just let us know and we’ll plan around it."
+        },
+        {
+         "q": "Can we request a song?",
+         "a": "Of course. Send us your requests with your date, and we’ll ask the band about them."
+        },
+        {
+         "q": "Do they play outside the Vail Valley?",
+         "a": "Yes. Tell us where your event is and we’ll let you know what’s possible."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=quadrasonic",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a rock band in Vail or Denver?",
+       "lede": "Send us your date and we’ll let you know if Quadrasonic is available and what it would cost.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
