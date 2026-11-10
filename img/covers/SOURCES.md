@@ -172,3 +172,14 @@ frank-sinatra--jingle-bells.jpg — Jingle Bells — Frank Sinatra — A Jolly C
 
 bing-crosby--white-christmas.jpg — White Christmas — Bing Crosby — White Christmas — deezer album 114200612
 jimmy-smith--god-rest-ye-merry-gentlemen.jpg — God Rest Ye Merry Gentlemen — Jimmy Smith — Christmas Cookin' — deezer album 320928867
+
+herbie-hancock--chameleon.jpg — Chameleon — Herbie Hancock — Head Hunters — deezer album 111628
+the-meters--cissy-strut.jpg — Cissy Strut — The Meters — The Meters — deezer album 87478
+james-brown--aint-it-funky-now.jpg — Ain't It Funky Now — James Brown — Ain't It Funky — deezer album 1673216
+herbie-hancock--cantaloupe-island.jpg — Cantaloupe Island — Herbie Hancock — Empyrean Isles (Expanded Edition) — deezer album 300216
+bobby-hebb--sunny.jpg — Sunny — Bobby Hebb — Sunny — deezer album 125719
+stevie-wonder--higher-ground.jpg — Higher Ground — Stevie Wonder — Innervisions — deezer album 230976
+
+jaco-pastorius--the-chicken.jpg — The Chicken — Jaco Pastorius — Invitation [Live] — deezer album 82400
+
+cannonball-adderley--mercy-mercy-mercy.jpg — Mercy, Mercy, Mercy — Cannonball Adderley — Mercy, Mercy, Mercy (Live) — deezer album 301833
