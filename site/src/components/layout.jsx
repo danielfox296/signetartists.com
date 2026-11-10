@@ -185,6 +185,9 @@ const NAV_SCRIPT = `
 const WRAP_SCRIPT = `
     (function () {
       var SKIP = '.breadcrumb ol, .blog-byline, .blog-row-meta, .wall-grid, .nav-mobile, .story-photos';
+      // Rows of award laurels and outlet marks never end on one alone, even
+      // two-and-one; a photo gallery fills its last row when a count allows.
+      var STRICT = '.laurels, .honor-marks';
       var watched = [];
       function items(el) {
         var out = [];
@@ -203,8 +206,9 @@ const WRAP_SCRIPT = `
         });
         return r.map(function (x) { return x.n; });
       }
-      function lone(counts) {
-        return counts.length > 1 && counts[counts.length - 1] === 1 && Math.max.apply(null, counts) >= 3;
+      function lone(counts, el) {
+        var most = el && el.matches(STRICT) ? 2 : 3;
+        return counts.length > 1 && counts[counts.length - 1] === 1 && Math.max.apply(null, counts) >= most;
       }
       function tracks(el) {
         var t = getComputedStyle(el).gridTemplateColumns;
@@ -246,13 +250,18 @@ const WRAP_SCRIPT = `
         el.style.marginLeft = st.ml;
         el.style.marginRight = st.mr;
       }
+      function exact(n, c) {
+        var tries = [c, c + 1, c - 1];
+        for (var i = 0; i < tries.length; i++) { if (tries[i] >= 2 && n > tries[i] && n % tries[i] === 0) { return tries[i]; } }
+        return 0;
+      }
       function fitGrid(el, n) {
-        var c = tracks(el), k = pick(n, c);
+        var c = tracks(el), k = (el.matches('.media-grid') && exact(n, c)) || pick(n, c);
         if (k !== c) { el.style.gridTemplateColumns = 'repeat(' + k + ', minmax(0, 1fr))'; }
       }
       function fitFlex(el, list) {
         var counts = rows(list);
-        if (!lone(counts)) { return; }
+        if (!lone(counts, el)) { return; }
         var top = el.clientWidth, floor = 0, want = counts.length, found = 0;
         list.forEach(function (k) { floor = Math.max(floor, k.offsetWidth); });
         for (var extra = 0; extra < 6 && !found; extra++) {
@@ -263,7 +272,7 @@ const WRAP_SCRIPT = `
             if (rows(list).length > want + extra) { lo = mid; } else { hi = mid; }
           }
           el.style.maxWidth = hi + 'px';
-          if (!lone(rows(list))) { found = hi; } else { top = hi - 1; }
+          if (!lone(rows(list), el)) { found = hi; } else { top = hi - 1; }
         }
         if (!found) { reset(el); return; }
         if (getComputedStyle(el).justifyContent === 'center') { el.style.marginLeft = 'auto'; el.style.marginRight = 'auto'; }
