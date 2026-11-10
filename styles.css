@@ -5347,10 +5347,13 @@ img[src$="img/headliners.jpg"] {
 }
 
 /* ------------------------------------------------------------ artist stories
-   One artist at a time: the name and a few sentences, then the photos in
-   their own shapes. On a wide screen a story's photos share one row at one
-   height, each as wide as its shape asks (--r is width over height); on a
-   phone they wrap two to a row. The full set opens under a button. */
+   One artist at a time: the name, then a few sentences, then every photo.
+   On a wide screen the name sits in its own column beside the words. Photos
+   come in two shapes, a tall tile (4:5) and a wide one across two columns,
+   cropped to fit (--focus moves the crop). Each row has as many columns as
+   its tiles take; on a phone the rows fold to two, and a tile alone on a
+   line takes the line. A photo lifts a little under the pointer, and the
+   rows rise in as they scroll into view. */
 .wide-picture {
   position: relative;
   left: 50%;
@@ -5370,75 +5373,156 @@ img[src$="img/headliners.jpg"] {
   padding-bottom: 0;
 }
 .stories {
+  --story-gap: 0.75rem;
   display: grid;
-  gap: var(--space-5);
   margin-top: var(--space-4);
-}
-.stories--small {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
-  column-gap: var(--space-4);
-  row-gap: var(--space-5);
 }
 .story {
   margin: 0;
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--rule);
+}
+.story:first-child {
+  padding-top: var(--space-3);
+  border-top: 0;
+}
+.story-head {
+  margin-bottom: var(--space-4);
 }
 .story-name {
   margin: 0 0 var(--space-2);
 }
-.story--small .story-name {
-  font-size: 1.25rem;
-}
 .story-text {
-  max-width: 46rem;
-  margin: 0 0 var(--space-3);
-}
-.story-photos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.story-photos figure {
-  flex: var(--r) 1 calc(var(--r) * 9rem);
-  min-width: 0;
+  max-width: 40rem;
   margin: 0;
 }
-.story--small .story-photos figure {
-  max-width: calc(var(--r) * 18rem);
+.story-photos {
+  display: grid;
+  gap: var(--story-gap);
 }
-.story-photos img {
+.story-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--story-gap);
+}
+.story-tile {
+  position: relative;
+  grid-column: span 1;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--paper-sunk);
+}
+.story-tile--wide {
+  grid-column: span 2;
+  aspect-ratio: 8 / 5;
+}
+.story-tile--line {
+  grid-column: span 2;
+}
+.story-tile img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, 50% 35%);
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-@media (min-width: 720px) {
-  .story-photos:not(.story-photos--wrap) {
-    flex-wrap: nowrap;
-  }
-  .story-photos:not(.story-photos--wrap) figure {
-    flex-basis: 0;
-  }
-  .story-photos--wrap figure {
-    flex-basis: calc(var(--r) * 16rem);
-    max-width: calc(var(--r) * 26rem);
-  }
-  .story--small .story-photos--wrap figure {
-    flex-basis: calc(var(--r) * 10rem);
-    max-width: calc(var(--r) * 16rem);
+@media (hover: hover) {
+  .story-tile:hover img {
+    transform: scale(1.045);
+    filter: brightness(1.06);
   }
 }
 .story-videos {
-  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--story-gap);
+  margin-top: var(--story-gap);
 }
-.story-more {
-  margin-top: var(--space-3);
+.story-videos .act-video {
+  margin-top: 0;
 }
-.story-more summary {
-  list-style: none;
-  cursor: pointer;
+@media (min-width: 640px) {
+  .stories {
+    --story-gap: 1rem;
+  }
+  .story-videos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .story-video--full {
+    grid-column: 1 / -1;
+  }
 }
-.story-more summary::-webkit-details-marker {
-  display: none;
+@media (min-width: 720px) {
+  .story-row {
+    grid-template-columns: repeat(var(--units), minmax(0, 1fr));
+  }
+  .story-tile--line:not(.story-tile--wide) {
+    grid-column: span 1;
+  }
+  .story-tile--fit {
+    aspect-ratio: auto;
+  }
+  .story-tile--fit img {
+    position: absolute;
+    inset: 0;
+  }
 }
-.story-more[open] summary {
+@media (min-width: 900px) {
+  .stories:not(.stories--small) .story-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: var(--space-4);
+    align-items: baseline;
+  }
+  .stories:not(.stories--small) .story-name {
+    margin: 0;
+    font-size: clamp(1.75rem, 1rem + 1.6vw, 2.5rem);
+    line-height: 1.05;
+  }
+}
+.stories--small {
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--space-5);
+}
+@media (min-width: 960px) {
+  .stories--small {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.stories--small .story {
+  padding: var(--space-4) 0;
+}
+.stories--small .story:nth-child(-n + 2) {
+  padding-top: var(--space-3);
+  border-top: 0;
+}
+.story--small .story-name {
+  font-size: 1.35rem;
+}
+.story--small .story-head {
   margin-bottom: var(--space-3);
+}
+@media (max-width: 959px) {
+  .stories--small .story:nth-child(2) {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--rule);
+  }
+}
+
+/* The rise-in: armed by the stories' script, so nothing hides without it. */
+.stories.is-armed .story-head,
+.stories.is-armed .story-tile {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+.stories.is-armed .story-head.is-in,
+.stories.is-armed .story-row.is-in .story-tile {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.stories.is-armed .story-row.is-in .story-tile {
+  transition-delay: calc(var(--i, 0) * 70ms);
 }
