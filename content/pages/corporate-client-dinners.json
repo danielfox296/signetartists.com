@@ -186,6 +186,33 @@
    }
   },
   {
+   "type": "Text",
+   "props": {
+    "id": "Text-PV1",
+    "band": "sunk",
+    "anchor": "photos-and-video",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-PV2",
+       "title": "Client dinner photos and video",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-PV3",
+       "html": "Photos from a client dinner show potential clients the kind of evening you host for the people you work with. We can add a photographer or a videographer who works around the table without getting in the way of the conversation. Learn more about <a href=\"/event-photo-video/\">event photos and video</a>.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "Questions",
    "props": {
     "id": "Questions-24",
@@ -253,8 +280,7 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Tell us the guest count and the venue, and we'll recommend the right ensemble for your dinner.",
-       "lede": "Whether you need a solo musician or a full band, we'll size the sound to your venue, and you'll have a personal point of contact all the way through.",
-       "note": "Want the dinner on camera for your company's channels? <a href=\"/event-photo-video/\">Add photos or video</a>."
+       "lede": "Whether you need a solo musician or a full band, we'll size the sound to your venue, and you'll have a personal point of contact all the way through."
       }
      }
     ],

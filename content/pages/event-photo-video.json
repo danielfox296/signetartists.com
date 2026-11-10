@@ -2,15 +2,15 @@
  "root": {
   "props": {
    "path": "/event-photo-video/",
-   "title": "Event Photography and Video in Denver | Signet Artists",
+   "title": "Corporate Event Photos and Video in Denver | Signet Artists",
    "titleExact": true,
-   "description": "Add a photographer or videographer to your live music booking in Denver and across Colorado, with one point of contact and one contract.",
+   "description": "A photographer and a videographer for your corporate event in Denver and across Colorado, so your company can tell the story of the event after it's over.",
    "breadcrumb": "Event Photos and Video",
    "schema": {
     "service": {
      "name": "Event photography and video",
-     "serviceType": "Event photography and highlight video, booked alongside live music",
-     "description": "A photographer or videographer added to a live music booking for corporate events, private parties and wedding cocktail hours in Denver and across Colorado, on the same contract as the music.",
+     "serviceType": "Corporate event photography and highlight video",
+     "description": "A photographer and a videographer for corporate events and private parties in Denver and across Colorado, booked with live music on one contract.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -35,10 +35,61 @@
       "type": "Heading",
       "props": {
        "id": "Heading-128",
-       "title": "Event photos and video, booked with your music.",
+       "title": "Photos and video to tell the story of your event.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Add a photographer or videographer to your Signet booking, and you'll have your event in photos and a short video to keep."
+       "lede": "Part of what makes a great event is being able to tell its story after it's over. We can add a photographer and a videographer to your booking, so you'll have photos and a short film of something that brought everyone together."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-PV0",
+       "single": true,
+       "videos": []
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-PV1",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-PV2",
+       "title": "How companies use their event photos and video",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A highlight video helps the event live on as part of your company's history and culture."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-PV3",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Recruiting",
+         "text": "Candidates get a real look at your team, and at what it's like to be part of it.",
+         "art": "heart"
+        },
+        {
+         "term": "Showing potential clients your culture",
+         "text": "A few minutes of your team celebrating together gives a client a feel for the people they'd be working with.",
+         "art": "building"
+        },
+        {
+         "term": "On stage at future events",
+         "text": "This year's highlight video can open next year's party, a kickoff or an awards program.",
+         "art": "spotlight"
+        }
+       ]
       }
      }
     ]
@@ -82,16 +133,42 @@
    }
   },
   {
-   "type": "Rows",
+   "type": "Text",
    "props": {
-    "id": "Rows-135",
+    "id": "Text-138",
     "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
+       "id": "Heading-136",
+       "title": "Events we photograph and film",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-137",
+       "cls": "prose",
+       "html": "We can add photos and video to <a href=\"/corporate/holiday-party/\">an office holiday party</a>, <a href=\"/corporate/client-dinners/\">a client dinner</a>, <a href=\"/corporate/galas-and-awards/\">a gala or fundraiser</a>, <a href=\"/corporate/retreats/\">a company retreat</a>, <a href=\"/corporate/after-party/\">an after-party</a> or <a href=\"/private-parties/birthday-party/\">a milestone birthday</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-135",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
        "id": "Heading-133",
-       "title": "Why add photos and video through Signet",
+       "title": "Booking photos and video with your music",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -116,34 +193,13 @@
          "term": "One contract",
          "art": "document",
          "text": "Photos and video go on the same contract as your music, so there's no second vendor to find, vet and manage."
+        },
+        {
+         "term": "Delivery",
+         "art": "clock",
+         "text": "You'll usually have your photos and video within a week of the event (depending on the project)."
         }
        ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Text",
-   "props": {
-    "id": "Text-138",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-136",
-       "title": "Events we photograph and film",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-137",
-       "cls": "prose",
-       "html": "We can add photos and video to <a href=\"/corporate/holiday-party/\">an office holiday party</a>, <a href=\"/corporate/client-dinners/\">a client dinner</a>, <a href=\"/corporate/galas-and-awards/\">a gala or fundraiser</a>, <a href=\"/corporate/retreats/\">a company retreat</a>, <a href=\"/private-parties/birthday-party/\">a milestone birthday</a> or <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a>."
       }
      }
     ]
@@ -175,12 +231,8 @@
          "a": "Yes. Just let us know, and we'll check the date and add it to your booking."
         },
         {
-         "q": "When will we get the photos and video?",
-         "a": "Usually within a week of the event (depending on the project)."
-        },
-        {
-         "q": "Can you photograph our whole wedding day?",
-         "a": "For full wedding-day photography or film, take a look at the photographers and videographers on our <a href=\"/preferred-vendors/\">Preferred Vendor List</a>."
+         "q": "Can you photograph or film our wedding?",
+         "a": "For wedding-day photography or film, take a look at the photographers and videographers on our <a href=\"/preferred-vendors/\">Preferred Vendor List</a>."
         }
        ]
       }
@@ -201,11 +253,11 @@
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
        "title": "Tell us about your event.",
-       "lede": "Choose photos or video when you check a date, or just mention it in your message, and we'll include it in your quote.",
+       "lede": "Send us the date and the venue, and we'll get back to you about photos and video for your event.",
        "buttons": [
         {
          "label": "Check a Date",
-         "href": "/contact/",
+         "href": "/contact/?photo-video=yes",
          "cls": "btn"
         }
        ]

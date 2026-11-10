@@ -564,7 +564,7 @@ const ContactForm = {
       label: "Fields",
       getItemSummary: (f) => (f.kind === "acts" ? "Act" : plain(f.label)),
       arrayFields: {
-        kind: { type: "select", label: "Kind", options: [{ label: "Text", value: "input" }, { label: "Long text", value: "textarea" }, { label: "Act", value: "acts" }, { label: "Checkboxes", value: "checks" }, { label: "One of", value: "choice" }] },
+        kind: { type: "select", label: "Kind", options: [{ label: "Text", value: "input" }, { label: "Long text", value: "textarea" }, { label: "Act", value: "acts" }, { label: "One checkbox", value: "check" }, { label: "Checkboxes", value: "checks" }, { label: "One of", value: "choice" }] },
         label: rich("Label"),
         id: text("Id"),
         name: text("Name"),
@@ -575,6 +575,7 @@ const ContactForm = {
         rows: text("Rows"),
         placeholder: text("Placeholder"),
         options: text("Choices (Checkboxes and One of), separated by |"),
+        param: text("Ticked when the link carries (One checkbox), e.g. photo-video"),
       },
     },
     button: text("Button"),
@@ -622,6 +623,14 @@ const ContactForm = {
                           <optgroup label="Featured Artists">{opts(m.NAMED_ACTS)}</optgroup>
                           <optgroup label="House Ensembles">{opts(m.FORMAT_ACTS)}</optgroup>
                         </select>
+                      </div>
+                    ) : f.kind === "check" ? (
+                      <div className={f.full ? "field field--full field--check" : "field field--check"} key={i}>
+                        <label className="choice">
+                          <input type="checkbox" id={f.id} name={f.name} value="Yes" data-param={f.param || undefined} />
+                          {" "}
+                          <H as="span" html={f.label} />
+                        </label>
                       </div>
                     ) : f.kind === "checks" || f.kind === "choice" ? (
                       <fieldset className={f.full ? "field field--full field--choices" : "field field--choices"} key={i}>
