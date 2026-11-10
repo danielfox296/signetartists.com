@@ -142,3 +142,18 @@ abba--dancing-queen.jpg — Dancing Queen — ABBA — Arrival — deezer album 
 bill-withers--lovely-day.jpg — Lovely Day — Bill Withers — Menagerie — deezer album 10154730
 journey--dont-stop-believin.jpg — Don't Stop Believin' — Journey — Escape (2022 Remaster) — deezer album 347056437
 norah-jones--dont-know-why.jpg — Don't Know Why — Norah Jones — Come Away With Me (Super Deluxe Edition) — deezer album 318674457
+
+john-denver--take-me-home-country-roads.jpg — Take Me Home, Country Roads — John Denver — Poems, Prayers and Promises — deezer album 8305100
+chris-stapleton--tennessee-whiskey.jpg — Tennessee Whiskey — Chris Stapleton — Traveller — deezer album 10127538
+grateful-dead--friend-of-the-devil.jpg — Friend of the Devil — Grateful Dead — American Beauty (50th Anniversary Deluxe Edition) — deezer album 182219042
+neil-young--harvest-moon.jpg — Harvest Moon — Neil Young — Harvest Moon — deezer album 81868
+the-lumineers--ho-hey.jpg — Ho Hey — The Lumineers — The Lumineers — deezer album 111543132
+tyler-childers--lady-may.jpg — Lady May — Tyler Childers — Purgatory — deezer album 42276251
+ella-langley--choosin-texas.jpg — Choosin' Texas — Ella Langley — Choosin' Texas — deezer album 837881302
+patty-loveless--chains.jpg — Chains — Patty Loveless — Honky Tonk Angel — deezer album 230494
+
+alan-jackson--dont-rock-the-jukebox.jpg — Don't Rock the Jukebox — Alan Jackson — Don`t Rock The Jukebox — deezer album 72394
+johnny-cash--ring-of-fire.jpg — Ring of Fire — Johnny Cash — Ring Of Fire: The Best Of Johnny Cash — deezer album 7452487
+noah-kahan--northern-attitude.jpg — Northern Attitude — Noah Kahan — Stick Season (We'll All Be Here Forever) — deezer album 448625925
+
+roy-orbison--blue-bayou.jpg — Blue Bayou — Roy Orbison — In Dreams — deezer album 10488788
