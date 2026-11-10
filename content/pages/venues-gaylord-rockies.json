@@ -1,0 +1,407 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/gaylord-rockies/",
+   "title": "Live music at Gaylord Rockies | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Gaylord Rockies: the Colorado, Adams, Aurora and Juniper ballrooms, the Mountain View Pavilion and the Grand Lodge, for conferences and weddings.",
+   "nav": "planners",
+   "breadcrumb": "Gaylord Rockies",
+   "indexLabel": "Gaylord Rockies",
+   "heroImage": "img/acts/little-moses-jones-stage.jpg",
+   "venue": {
+    "name": "Gaylord Rockies Resort & Convention Center",
+    "kind": "resort and convention center",
+    "group": "Conference centers",
+    "area": "Aurora, by Denver International Airport",
+    "spaces": "Four ballrooms, the Mountain View Pavilion and its lawns, the Grand Lodge and the Front Range Lawn.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-g1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g1",
+       "eyebrow": "Live music at an Aurora resort and convention center",
+       "slab": true,
+       "title": "Gaylord Rockies Resort & Convention Center",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Gaylord Rockies is the biggest resort in Colorado for events, on 85 acres out by Denver International Airport. It has four ballrooms, almost 555,000 sq ft of meeting space and lawns that look west to the mountains.",
+       "headingText": [
+        {
+         "html": "Most events here are conferences, company meetings and big weddings, with guests flying in from all over. Live music works in every part of it, from a duo at the welcome reception to a string quartet at the ceremony and a full band in the ballroom."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-g2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g2",
+       "title": "Event spaces at Gaylord Rockies",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-g2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Colorado and Adams ballrooms",
+         "art": "musicians",
+         "text": "The Colorado Ballroom and the Adams Ballroom are about 34,000 sq ft each, for banquets of up to about 2,000 guests and receptions of over 3,000. Each one has about 10,000 sq ft of pre-function space outside it."
+        },
+        {
+         "term": "Aurora Ballroom",
+         "art": "musicians",
+         "text": "The Aurora Ballroom is the biggest, at about 47,600 sq ft, for banquets of up to about 2,550 guests. It sits beside the Aurora Exhibit Hall, which is about 175,000 sq ft."
+        },
+        {
+         "term": "Juniper Ballroom and Patio",
+         "art": "glass",
+         "text": "The Juniper Ballroom is about 7,500 sq ft, for banquets of up to 400 guests and receptions of about 700. The Juniper Patio outside it is about 13,400 sq ft, and the resort uses the two together for weddings of up to 400."
+        },
+        {
+         "term": "Mountain View Pavilion",
+         "art": "mountain",
+         "text": "The Mountain View Pavilion faces west to the mountains, with about 9,500 sq ft indoors for banquets of up to 450 and receptions of up to 800. Around it are patios, terraces and the Longs Peak, Mount Blue Sky and Pikes Peak lawns."
+        },
+        {
+         "term": "Grand Lodge and its lawn",
+         "art": "glass",
+         "text": "The Grand Lodge is the resort’s big central lounge, and the resort has live music there most evenings. The Grand Lodge Lawn outside has four firepits and two fireplaces."
+        },
+        {
+         "term": "Front Range Lawn",
+         "art": "mountain",
+         "text": "The Front Range Lawn is about 39,800 sq ft, for outdoor events of up to 3,600 guests."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-g3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Colorado, Adams and Aurora ballrooms",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for conference parties, awards dinners, galas and the biggest weddings."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-g3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "quadrasonic"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-g3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g3b",
+       "eyebrow": "Our picks",
+       "title": "Live music for a wedding at the Mountain View Pavilion or the Juniper Ballroom",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "These are the resort’s wedding spaces, for the ceremony, the cocktail hour and the reception."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-g3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "solo-guitarist",
+         "kicker": "For the ceremony"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-g3c",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g3c",
+       "eyebrow": "Our picks",
+       "title": "Live music at a welcome reception in the Grand Lodge or on the lawns",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s a great way to welcome guests who’ve flown in, with the firepits going and the mountains to the west."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-g3c",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "americana-band"
+        },
+        {
+         "act": "chelsey-webb"
+        },
+        {
+         "act": "meghan-clarisse"
+        },
+        {
+         "act": "tony-medina"
+        },
+        {
+         "act": "last-consulate"
+        },
+        {
+         "act": "your-bird-can-sing"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-g40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-g40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "AV and power",
+         "text": "Encore is the resort’s in-house AV company, and it handles AV and power in the ballrooms, the Grand Lodge and the restaurants. Our acts bring their own sound system, and wedding packages at the resort include power for a band or DJ."
+        },
+        {
+         "term": "Load-in",
+         "art": "box",
+         "text": "With almost 555,000 sq ft of meeting space, we plan load-in with the resort’s events team, from the loading dock to the right ballroom."
+        },
+        {
+         "term": "Paperwork",
+         "text": "The resort asks for the act’s details and a certificate of insurance ahead of the event, and we’ll get both to the events team in plenty of time."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-g41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-g41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-g41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound limits",
+         "art": "speaker",
+         "text": "In the Grand Lodge, music goes through the house sound system and stays under 95 dB, and entertainment there ends at 10pm."
+        },
+        {
+         "term": "Weddings",
+         "art": "rings",
+         "text": "The resort caters every wedding in-house, and every wedding has an approved day-of coordinator. Outside musicians are welcome, and the ceremony package includes a weather backup location."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s self-parking and valet, and wedding guests get discounted self-parking."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-g5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-g5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Gaylord Rockies.",
+       "lede": "Send us your date, and we can put together live music for your event at the resort, from a duo at the welcome reception to a full band in the ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Gaylord%20Rockies%20Resort%20%26%20Convention%20Center",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-g6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-g6",
+       "html": "Resort details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-g6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "6700 North Gaylord Rockies Blvd, Aurora, CO 80019"
+        },
+        {
+         "term": "Events at the resort",
+         "text": "<a href=\"https://www.marriott.com/en-us/hotels/dengr-gaylord-rockies-resort-and-convention-center/events\" target=\"_blank\" rel=\"noopener\">Meetings, events and weddings at Gaylord Rockies</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,364 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/brown-palace/",
+   "title": "Live music at the Brown Palace | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at the Brown Palace in Denver: the Grand Ballroom, the Onyx Room, Central City and the Brown Palace Club, for weddings, galas and holiday parties.",
+   "nav": "planners",
+   "breadcrumb": "the Brown Palace",
+   "indexLabel": "the Brown Palace",
+   "heroImage": "img/acts/classical-strings-ballroom.jpg",
+   "venue": {
+    "name": "The Brown Palace Hotel and Spa",
+    "kind": "hotel",
+    "group": "Hotels",
+    "area": "Downtown Denver",
+    "spaces": "The Grand Ballroom, the Onyx Room, Central City, the Brown Palace Club and the atrium lobby.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-b1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-b1",
+       "eyebrow": "Live music at a Downtown Denver hotel",
+       "slab": true,
+       "title": "The Brown Palace Hotel and Spa",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The Brown Palace opened in 1892 with a banquet in its ballroom, and it’s still one of the most elegant places in Denver for a wedding, a gala or a holiday party.",
+       "headingText": [
+        {
+         "html": "Live music is already part of the hotel. There’s piano at afternoon tea in the atrium lobby, and jazz on Friday and Saturday evenings."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-b2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-b2",
+       "title": "Event spaces at the Brown Palace",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-b2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Grand Ballroom",
+         "art": "musicians",
+         "text": "The Grand Ballroom is the hotel’s historic ballroom, about 5,800 sq ft, for banquets of up to 400 guests and receptions of up to 480. It divides into two halves of about 2,900 sq ft each."
+        },
+        {
+         "term": "Onyx Room",
+         "art": "glass",
+         "text": "The Onyx Room is a historic salon of about 1,425 sq ft, for up to 100 guests, with white onyx on the walls and a recreated medallion mural on the ceiling."
+        },
+        {
+         "term": "Central City",
+         "art": "plate",
+         "text": "Central City is about 2,150 sq ft, for banquets of up to 90, and its look goes back to the gold rush."
+        },
+        {
+         "term": "Brown Palace Club",
+         "art": "glass",
+         "text": "The Brown Palace Club is a long space, about 28 by 110 ft, for seated dinners of up to 80. Eisenhower ran his campaign from the hotel, and the club keeps that history."
+        },
+        {
+         "term": "Ellyngton’s and the 5280 Suite",
+         "art": "plate",
+         "text": "Ellyngton’s is about 5,400 sq ft, for banquets of up to 150 and receptions of up to 250. The 5280 Suite is about 3,500 sq ft, for banquets of up to 220."
+        },
+        {
+         "term": "Atrium lobby",
+         "art": "tree",
+         "text": "The atrium is the heart of the hotel, eight floors high under a stained-glass ceiling, with afternoon tea by day and cocktails in the evening."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-b3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-b3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Grand Ballroom",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the space for wedding receptions, galas and holiday parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-b3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ballroom.jpg"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-b3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-b3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Onyx Room, Central City and the Brown Palace Club",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re lovely for ceremonies, rehearsal dinners, client dinners and cocktail hours."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-b3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "Solo or duo"
+        },
+        {
+         "act": "solo-guitarist"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "solo-piano"
+        },
+        {
+         "act": "christmas-jazz-trio",
+         "kicker": "For the holidays"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-b40",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-b40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-b40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The hotel also has AV on site."
+        },
+        {
+         "term": "A historic building",
+         "art": "building",
+         "text": "It’s an 1892 building, so we work out load-in and staging with the hotel’s events team ahead of time."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters events in-house, and wedding packages include a dance floor and a DJ table."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-b41",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-b41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-b41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "The hotel’s own music",
+         "art": "speaker",
+         "text": "The atrium has jazz on Friday and Saturday evenings and piano at afternoon tea, so we’ll plan your music to fit around it."
+        },
+        {
+         "term": "The holidays",
+         "art": "tree",
+         "text": "In the holiday season the atrium has carolers and the Champagne Cascade, a tower of over 5,000 champagne glasses."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s valet parking at the hotel."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-b5",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-b5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at the Brown Palace.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a jazz duo in the Onyx Room to a full band in the Grand Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=The%20Brown%20Palace%20Hotel%20and%20Spa",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-b6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-b6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-b6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "321 17th St, Denver, CO 80202"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.marriott.com/en-us/hotels/denak-the-brown-palace-hotel-and-spa-autograph-collection/events\" target=\"_blank\" rel=\"noopener\">Meetings and events at the Brown Palace</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://www.brownpalace.com/wedding-spaces/\" target=\"_blank\" rel=\"noopener\">Wedding spaces at the Brown Palace</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

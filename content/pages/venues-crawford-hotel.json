@@ -1,0 +1,354 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/crawford-hotel/",
+   "title": "Live music at the Crawford Hotel | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at the Crawford Hotel in Denver Union Station: the Cooper Lounge, the Great Hall, the Webb Gallery and the Terminal Bar, for parties and weddings.",
+   "nav": "planners",
+   "breadcrumb": "the Crawford Hotel",
+   "indexLabel": "the Crawford Hotel",
+   "heroImage": "img/acts/classical-strings-stage.jpg",
+   "venue": {
+    "name": "The Crawford Hotel",
+    "kind": "hotel",
+    "group": "Hotels",
+    "area": "Union Station, Lower Downtown Denver",
+    "spaces": "The Cooper Lounge, the Great Hall, the Webb Gallery and the Terminal Bar on the Plaza.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-c1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-c1",
+       "eyebrow": "Live music at Denver Union Station",
+       "slab": true,
+       "title": "The Crawford Hotel",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "The Crawford Hotel is inside Denver Union Station, and its lobby is the station’s Great Hall, with its arched windows and chandeliers. An event here happens in one of the most beautiful spaces in the city.",
+       "headingText": [
+        {
+         "html": "Trains to the airport leave from just outside, so it’s an easy place for guests who are flying in. This December, our string duo plays the Cooper Lounge for a company holiday party."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-c2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-c2",
+       "title": "Event spaces at the Crawford Hotel",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-c2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Cooper Lounge",
+         "art": "glass",
+         "text": "The Cooper Lounge is on the mezzanine, one floor above the Great Hall, with about 2,100 sq ft for receptions of up to 80 guests. It has 28-foot cast-iron windows on one side and a view down into the Great Hall on the other."
+        },
+        {
+         "term": "Great Hall",
+         "art": "musicians",
+         "text": "The Great Hall has high ceilings, arches and chandeliers, with lounge seating and its own bar. It hosts semi-private events of up to 350 guests, or 270 seated."
+        },
+        {
+         "term": "Webb Gallery",
+         "art": "plate",
+         "text": "The Webb Gallery is in the station’s original foundations, about 2,400 sq ft with a built-in bar, for 20 to 150 guests."
+        },
+        {
+         "term": "McWhinney Room",
+         "art": "plate",
+         "text": "The McWhinney Room is about 1,050 sq ft, with stone walls from the original foundations, for up to 70 guests."
+        },
+        {
+         "term": "Terminal Bar on the Plaza",
+         "art": "tree",
+         "text": "The Terminal Bar’s plaza is outdoors on Wynkoop Street, facing LoDo, with about 3,500 sq ft and a satellite bar for receptions of up to 220."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-c3a",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-c3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Cooper Lounge and the Great Hall",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s a lovely fit for holiday parties, receptions and cocktail hours."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-c3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String duo"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "solo-piano"
+        },
+        {
+         "act": "solo-guitarist"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "christmas-jazz-trio",
+         "kicker": "For the holidays"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-c3b",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-c3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Webb Gallery and on the Terminal Bar plaza",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re great for wedding receptions, rehearsal dinners and parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-c3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "americana-band"
+        },
+        {
+         "act": "last-consulate"
+        },
+        {
+         "act": "your-bird-can-sing"
+        },
+        {
+         "act": "afro-house-dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-c40",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-c40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-c40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Event staff",
+         "text": "Every private event at the station has its own service manager, and an event captain on the day, and we coordinate load-in and setup with them."
+        },
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The hotel also has AV equipment on site."
+        },
+        {
+         "term": "Parking for the act",
+         "art": "car",
+         "text": "The hotel’s valet can’t take vehicles over 6'6\" or with trailers, so we plan where the act parks and unloads ahead of time."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-c41",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-c41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-c41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "A shared space",
+         "art": "speaker",
+         "text": "The Great Hall is the hotel’s lobby and an entrance to the trains, so it stays open to the public. We set the music at a level that works for a shared space."
+        },
+        {
+         "term": "The holidays",
+         "art": "tree",
+         "text": "The station lights its tree at the Grand Illumination each year, and carolers sing in the Great Hall."
+        },
+        {
+         "term": "Getting here",
+         "art": "pin",
+         "text": "There’s valet at the Wynkoop Street entrance, and the A Line to Denver International Airport stops just outside, about 37 minutes away."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-c5",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-c5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at the Crawford Hotel.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a string duo in the Cooper Lounge to a band in the Webb Gallery.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=The%20Crawford%20Hotel",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-c6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-c6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-c6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "1701 Wynkoop St, Denver, CO 80202"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.thecrawfordhotel.com/gather/\" target=\"_blank\" rel=\"noopener\">Meetings and events at the Crawford Hotel</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://www.thecrawfordhotel.com/gather/weddings-occasions/\" target=\"_blank\" rel=\"noopener\">Weddings at the Crawford Hotel</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

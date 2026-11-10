@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/venues/",
-   "title": "Live music at Denver hotels and venues",
-   "description": "Live music at Denver hotels and venues: the spaces, load-in and setup, and the acts we’d pick for corporate events, weddings and parties.",
+   "title": "Live music at Denver hotels and conference centers",
+   "description": "Live music at Denver hotels and conference centers: the spaces, load-in and setup, and the acts we’d pick for corporate events, weddings and parties.",
    "nav": "planners",
    "breadcrumb": "Venues",
    "indexLabel": "Venues"
@@ -22,13 +22,13 @@
        "id": "Heading-v1",
        "eyebrow": "Venues",
        "slab": true,
-       "title": "Live music at Denver hotels and venues.",
+       "title": "Live music at Denver hotels and conference centers.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "You’ve booked the venue, and now you’re picturing the music in it. Every venue has its own spaces, its own way in for the band and its own sound limits, and we plan the music around all of it.",
+       "lede": "You’ve booked the hotel, and now you’re picturing the music in it. Every hotel has its own spaces, its own way in for the band and its own sound limits, and we plan the music around all of it.",
        "headingText": [
         {
-         "html": "Here’s what live music looks like at the hotels and venues where our artists play, with the acts we’d pick for each space."
+         "html": "Here’s what live music looks like at the hotels and conference centers where our artists play, with the acts we’d pick for each space."
         }
        ]
       }
@@ -41,7 +41,7 @@
    "props": {
     "id": "VenueList-v2",
     "band": "sunk",
-    "title": "Hotels and venues"
+    "title": "Hotels and conference centers"
    }
   },
   {
@@ -54,7 +54,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-v3",
-       "title": "How live music works at your venue",
+       "title": "How live music works at your hotel",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -67,7 +67,7 @@
        "rows": [
         {
          "term": "Sound system",
-         "text": "Our acts bring their own sound system, and we’ll always size it to the space and to the venue’s specs."
+         "text": "Our acts bring their own sound system, and we’ll always size it to the space and to the hotel’s specs."
         },
         {
          "term": "Insurance",
@@ -76,12 +76,12 @@
         {
          "term": "Unloading and setup",
          "art": "box",
-         "text": "We coordinate unloading and setup with the venue’s staff."
+         "text": "We coordinate unloading and setup with the hotel’s staff."
         },
         {
          "term": "Sound limits",
          "art": "clock",
-         "text": "We plan the music around the venue’s sound limits, and we can turn it up or down whenever you need."
+         "text": "We plan the music around the hotel’s sound limits, and we can turn it up or down whenever you need."
         }
        ]
       }
@@ -101,8 +101,8 @@
        "id": "CloseRow-v4",
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Planning an event at another venue?",
-       "lede": "We book acts at venues all over Denver, the Front Range and the mountain towns. Just send us your date and the venue, and we’ll take it from there.",
+       "title": "Planning an event at another hotel?",
+       "lede": "We book acts at hotels and conference centers all over Denver, the Front Range and the mountain towns. Just send us your date and the hotel, and we’ll take it from there.",
        "buttons": [
         {
          "label": "Check a Date",
