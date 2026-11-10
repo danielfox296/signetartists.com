@@ -40,6 +40,8 @@ export const SIZES = {
   clip: grid,
   strip: "(max-width: 700px) 25vw, 12.5vw",
   wall: "(min-width: 1100px) 20vw, (min-width: 641px) 34vw, 50vw",
+  patch: "(min-width: 1100px) 17vw, (min-width: 641px) 25vw, 50vw",
+  patchBig: "(min-width: 1100px) 50vw, (min-width: 641px) 75vw, 100vw",
 };
 
 // A picture given a width in its style (width: 39.5rem) is drawn that wide,

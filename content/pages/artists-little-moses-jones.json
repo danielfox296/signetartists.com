@@ -265,123 +265,13 @@
    }
   },
   {
-   "type": "TwoColumns",
+   "type": "Setlist",
    "props": {
-    "id": "TwoColumns-28",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-18",
-       "eyebrow": "Song list",
-       "title": "A sample of their songs.",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "Want to hear them live? You can watch the band play every one of these songs in our video clips."
-      }
-     },
-     {
-      "type": "Columns",
-      "props": {
-       "id": "Columns-25",
-       "cls": "split split--three",
-       "n": 3,
-       "c1": [
-        {
-         "type": "Title",
-         "props": {
-          "id": "Title-19",
-          "html": "West Coast hip-hop",
-          "tag": "h3",
-          "cls": "h5"
-         }
-        },
-        {
-         "type": "List",
-         "props": {
-          "id": "List-20",
-          "items": [
-           {
-            "html": "<span class=\"song-title\">Gin and Juice</span> <span class=\"song-artist\">Snoop Dogg</span>"
-           },
-           {
-            "html": "<span class=\"song-title\">Regulate</span> <span class=\"song-artist\">Warren G and Nate Dogg</span>"
-           },
-           {
-            "html": "<span class=\"song-title\">I Got 5 On It</span> <span class=\"song-artist\">Luniz</span>"
-           },
-           {
-            "html": "<span class=\"song-title\">Forgot About Dre</span> <span class=\"song-artist\">Dr. Dre and Eminem</span>"
-           }
-          ],
-          "cls": "setlist"
-         }
-        }
-       ],
-       "c2": [
-        {
-         "type": "Title",
-         "props": {
-          "id": "Title-21",
-          "html": "Outkast, Missy Elliott and Lauryn Hill",
-          "tag": "h3",
-          "cls": "h5"
-         }
-        },
-        {
-         "type": "List",
-         "props": {
-          "id": "List-22",
-          "items": [
-           {
-            "html": "<span class=\"song-title\">So Fresh, So Clean</span> <span class=\"song-artist\">Outkast</span>"
-           },
-           {
-            "html": "<span class=\"song-title\">Get Ur Freak On</span> <span class=\"song-artist\">Missy Elliott</span>"
-           },
-           {
-            "html": "<span class=\"song-title\">Doo Wop (That Thing)</span> <span class=\"song-artist\">Lauryn Hill</span>"
-           }
-          ],
-          "cls": "setlist"
-         }
-        }
-       ],
-       "c3": [
-        {
-         "type": "Title",
-         "props": {
-          "id": "Title-23",
-          "html": "Originals",
-          "tag": "h3",
-          "cls": "h5"
-         }
-        },
-        {
-         "type": "List",
-         "props": {
-          "id": "List-24",
-          "items": [
-           {
-            "html": "<span class=\"song-title\">The Rain Came Falling Down</span>"
-           }
-          ],
-          "cls": "setlist"
-         }
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-26",
-       "html": "Beyond these, they play songs by Usher, TLC, Destiny’s Child, Mary J. Blige, Nelly and Montell Jordan, along with the soul and funk songs that inspired them. They can also play their original songs at your event if you ask.",
-       "cls": "note"
-      }
-     }
-    ]
+    "id": "Setlist-28",
+    "eyebrow": "Song list",
+    "title": "A sample of their songs.",
+    "lede": "Want to hear them live? You can watch the band play every one of these songs in our video clips.",
+    "more": "Beyond these, they play songs by Usher, TLC, Destiny’s Child, Mary J. Blige, Nelly and Montell Jordan, along with the soul and funk songs that inspired them. They can also play their original songs at your event if you ask."
    }
   },
   {

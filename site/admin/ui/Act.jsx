@@ -768,19 +768,27 @@ function Setlist({ a, edit }) {
     return (
       <Group label="Setlist">
         <div>
-          <button className="btn sm" onClick={() => edit((x) => (x.setlist = { note: "", items: [] }))}>
+          <button className="btn sm" onClick={() => edit((x) => (x.setlist = { note: "", songs: [] }))}>
             + Setlist
           </button>
         </div>
       </Group>
     );
   const byMoment = !!sl.from_repertoire;
+  // Songs with their artists draw as the cover patchwork; a plain list of
+  // titles is the older form, kept until the act is switched over.
+  const withArtists = !!sl.songs;
   const items = sl.items || [];
+  const songList = sl.songs || [];
   const hits = q.trim().length > 1 ? songs.filter((s) => `${s.title} ${s.artist}`.toLowerCase().includes(q.trim().toLowerCase())).slice(0, 8) : [];
-  const addSong = (title) => {
+  const addSong = (title, artist) => {
     const t = title.trim();
     if (!t) return;
-    setSl((n) => (n.items = [...(n.items || []), t]));
+    if (withArtists) {
+      // Typed as "Song / Artist", or picked from the song list.
+      const [st, sa] = artist !== undefined ? [t, artist] : t.split(/\s+\/\s+/);
+      setSl((n) => (n.songs = [...(n.songs || []), { title: st.trim(), artist: (sa || "").trim() }]));
+    } else setSl((n) => (n.items = [...(n.items || []), t]));
     setQ("");
   };
   return (
@@ -838,8 +846,41 @@ function Setlist({ a, edit }) {
             </button>
           </div>
         </div>
+      ) : withArtists ? (
+        <>
+          <div className="chips">
+            {songList.map((x, i) => (
+              <span key={i} className="chip song" aria-pressed="true">
+                <button type="button" className="mv" aria-label={"Move " + x.title + " up"} onClick={() => setSl((n) => (n.songs = moveIn(n.songs, i, -1)))}>
+                  ‹
+                </button>
+                {x.title}
+                {x.artist ? " · " + x.artist : ""}
+                <button type="button" className="x" aria-label={"Remove " + x.title} onClick={() => setSl((n) => (n.songs = n.songs.filter((_, j) => j !== i)))}>
+                  ✕
+                </button>
+              </span>
+            ))}
+          </div>
+          <input className="input" aria-label="Add song" placeholder="Add a song as Song / Artist" value={q} onChange={(e) => setQ(e.target.value)} onKeyDown={(e) => e.key === "Enter" && addSong(q)} />
+          {hits.length ? (
+            <div className="chips">
+              {hits.map((x, i) => (
+                <button key={i} type="button" className="chip" onClick={() => addSong(x.title, x.artist)}>
+                  + {x.title} · {x.artist}
+                </button>
+              ))}
+            </div>
+          ) : null}
+          <p className="note">The first song gets the biggest cover. A new song shows as its title until its cover is fetched.</p>
+        </>
       ) : (
         <>
+          <div>
+            <button className="btn sm" onClick={() => setSl((n) => { n.songs = (n.items || []).map((t) => ({ title: t, artist: "" })); delete n.items; })}>
+              Show as covers
+            </button>
+          </div>
           <div className="chips">
             {items.map((t, i) => (
               <span key={i} className="chip song" aria-pressed="true">
