@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/preferred-vendors/michelle-cohn-levy/",
-   "title": "Michelle Cohn Levy: Jewish Wedding Officiant in Vail",
-   "description": "Michelle Cohn Levy is a Vail wedding and B’nai Mitzvah officiant who leads Jewish ceremonies on her own or with a rabbi, and sings parts of the ceremony.",
+   "title": "Michelle Cohn Levy: Jewish & Secular Officiant in Vail",
+   "description": "Michelle Cohn Levy is a Vail officiant for Jewish and secular weddings and B’nai Mitzvahs. She can lead with a rabbi and sing parts of the ceremony.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Michelle Cohn Levy",
@@ -12,7 +12,7 @@
      "@id": "https://whatmichelledoes.com/#organization",
      "name": "Michelle Cohn Levy",
      "url": "https://whatmichelledoes.com/weddings.html",
-     "description": "Michelle Cohn Levy is a wedding and B’nai Mitzvah officiant in Vail, Colorado. She leads Jewish ceremonies on her own or with a rabbi, sings parts of the ceremony, and tutors B’nai Mitzvah students in person or online.",
+     "description": "Michelle Cohn Levy is a wedding and B’nai Mitzvah officiant in Vail, Colorado. She leads Jewish and secular weddings, leads Jewish ceremonies on her own or with a rabbi, sings parts of the ceremony, and tutors B’nai Mitzvah students in person or online.",
      "address": {
       "@type": "PostalAddress",
       "addressLocality": "Vail",
@@ -39,6 +39,7 @@
      ],
      "knowsAbout": [
       "Jewish wedding ceremonies",
+      "Secular wedding ceremonies",
       "Wedding officiant",
       "Bar and Bat Mitzvah officiant",
       "B’nai Mitzvah tutoring",
@@ -67,7 +68,7 @@
        "title": "Michelle Cohn Levy: a wedding officiant in Vail.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Your ceremony is the part of the day your families came for, and it helps a lot to have someone leading it who knows the traditions and can make everyone feel welcome. <a href=\"https://whatmichelledoes.com/weddings.html\" target=\"_blank\" rel=\"noopener\">Michelle Cohn Levy</a> leads Jewish weddings in Vail and across the Colorado mountains, on her own or alongside a rabbi.",
+       "lede": "Your ceremony is the part of the day your families came for, and it helps a lot to have someone leading it who knows the traditions and can make everyone feel welcome. <a href=\"https://whatmichelledoes.com/weddings.html\" target=\"_blank\" rel=\"noopener\">Michelle Cohn Levy</a> leads Jewish and secular weddings in Vail and across the Colorado mountains. For a Jewish ceremony, she can lead on her own or alongside a rabbi.",
        "headingText": [
         {
          "html": "She’s also a singer, so she can sing parts of your ceremony herself, and she leads B’nai Mitzvah ceremonies and Jewish services, too."
@@ -101,7 +102,7 @@
        "rows": [
         {
          "term": "What she offers",
-         "text": "She officiates weddings and Bar and Bat Mitzvahs, on her own or with a rabbi. She also tutors B’nai Mitzvah students, in person or online."
+         "text": "She officiates Jewish and secular weddings, and Bar and Bat Mitzvahs. For a Jewish ceremony, she can lead on her own or with a rabbi. She also tutors B’nai Mitzvah students, in person or online."
         },
         {
          "term": "Where she works",
@@ -131,7 +132,7 @@
       "type": "Title",
       "props": {
        "id": "Title-3",
-       "html": "Jewish wedding ceremonies in Vail",
+       "html": "Jewish and secular wedding ceremonies in Vail",
        "tag": "h2",
        "cls": "h3"
       }
@@ -142,6 +143,14 @@
        "id": "Paragraph-3a",
        "cls": "prose",
        "html": "Michelle leads the whole ceremony, from signing the ketubah to breaking the glass. Her couples often mention that she made the traditions easy to follow for guests who didn’t know them, so everyone felt included."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3c",
+       "cls": "prose",
+       "html": "She officiates secular weddings, too, so she can lead your ceremony whether or not you’d like the religious traditions in it."
       }
      },
      {
