@@ -157,3 +157,18 @@ johnny-cash--ring-of-fire.jpg — Ring of Fire — Johnny Cash — Ring Of Fire:
 noah-kahan--northern-attitude.jpg — Northern Attitude — Noah Kahan — Stick Season (We'll All Be Here Forever) — deezer album 448625925
 
 roy-orbison--blue-bayou.jpg — Blue Bayou — Roy Orbison — In Dreams — deezer album 10488788
+
+nat-king-cole--the-christmas-song.jpg — The Christmas Song — Nat King Cole — The Christmas Song — deezer album 393644
+judy-garland--have-yourself-a-merry-little-christmas.jpg — Have Yourself a Merry Little Christmas — Judy Garland — Meet Me in St. Louis (O.S.T - 1944) — deezer album 1514765
+dean-martin--let-it-snow-let-it-snow-let-it-snow.jpg — Let It Snow! Let It Snow! Let It Snow! — Dean Martin — The Dean Martin Christmas Album — deezer album 6937751
+ella-fitzgerald--winter-wonderland.jpg — Winter Wonderland — Ella Fitzgerald — Ella Wishes You A Swinging Christmas — itunes album 1469551473
+the-ronettes--sleigh-ride.jpg — Sleigh Ride — The Ronettes — A Christmas Gift For You From Phil Spector — deezer album 1199982
+andy-williams--its-the-most-wonderful-time-of-the-year.jpg — It's the Most Wonderful Time of the Year — Andy Williams — The Andy Williams Christmas Album — deezer album 75249
+bill-evans--santa-claus-is-coming-to-town.jpg — Santa Claus Is Coming to Town — Bill Evans — Trio 64 — deezer album 247862
+vince-guaraldi-trio--what-child-is-this.jpg — What Child Is This — Vince Guaraldi Trio — A Charlie Brown Christmas [2012 Remastered & Expanded Edition] (Remastered & Expanded Edition) — deezer album 14328772
+
+elvis-presley--blue-christmas.jpg — Blue Christmas — Elvis Presley — Elvis' Christmas Album — deezer album 6768975
+frank-sinatra--jingle-bells.jpg — Jingle Bells — Frank Sinatra — A Jolly Christmas From Frank Sinatra — deezer album 328728
+
+bing-crosby--white-christmas.jpg — White Christmas — Bing Crosby — White Christmas — deezer album 114200612
+jimmy-smith--god-rest-ye-merry-gentlemen.jpg — God Rest Ye Merry Gentlemen — Jimmy Smith — Christmas Cookin' — deezer album 320928867
