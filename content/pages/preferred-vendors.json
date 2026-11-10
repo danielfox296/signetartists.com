@@ -3,7 +3,7 @@
   "props": {
    "path": "/preferred-vendors/",
    "title": "Denver Wedding Vendors We Recommend | Signet Artists",
-   "description": "The photographers, planners, videographers, makeup artists, caterers, bakers, florists and venues we’d recommend to our own clients in Denver.",
+   "description": "The photographers, planners, officiants, videographers, makeup artists, caterers, bakers, florists and venues we’d recommend to our own clients in Denver.",
    "titleExact": true,
    "nav": "planners",
    "breadcrumb": "Preferred Vendor List",
@@ -49,6 +49,11 @@
       "ask": "Need someone to run the day? We’ll give you the name of a planner we’ve worked with."
      },
      {
+      "id": "officiants",
+      "label": "Officiants",
+      "ask": "Need someone to lead your ceremony? Just ask, and we’ll recommend an officiant."
+     },
+     {
       "id": "photography",
       "label": "Photography",
       "ask": "Looking for a photographer? We’re happy to recommend one."
@@ -80,6 +85,16 @@
      }
     ],
     "vendors": [
+     {
+      "name": "Michelle Cohn Levy",
+      "url": "https://whatmichelledoes.com/weddings.html",
+      "location": "Vail",
+      "category": "officiants",
+      "page": "/preferred-vendors/michelle-cohn-levy/",
+      "note": "Michelle leads Jewish weddings in Vail and across the Colorado mountains, on her own or with a rabbi. She’s also a singer, so she can sing parts of your ceremony herself.",
+      "image": "/img/vendors/michelle-cohn-levy/mountain-overlook-ceremony.jpg",
+      "imageAlt": "A couple at a mountain overlook ceremony, the groom stepping on the glass while the officiant stands beside them."
+     },
      {
       "name": "MXBloom Films",
       "url": "https://mxbloom.com/photography/",

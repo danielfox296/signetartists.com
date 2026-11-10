@@ -1,0 +1,302 @@
+{
+ "root": {
+  "props": {
+   "path": "/preferred-vendors/michelle-cohn-levy/",
+   "title": "Michelle Cohn Levy: Jewish Wedding Officiant in Vail",
+   "description": "Michelle Cohn Levy is a Vail wedding and B’nai Mitzvah officiant who leads Jewish ceremonies on her own or with a rabbi, and sings parts of the ceremony.",
+   "titleExact": true,
+   "nav": "planners",
+   "breadcrumb": "Michelle Cohn Levy",
+   "schema": {
+    "vendor": {
+     "@id": "https://whatmichelledoes.com/#organization",
+     "name": "Michelle Cohn Levy",
+     "url": "https://whatmichelledoes.com/weddings.html",
+     "description": "Michelle Cohn Levy is a wedding and B’nai Mitzvah officiant in Vail, Colorado. She leads Jewish ceremonies on her own or with a rabbi, sings parts of the ceremony, and tutors B’nai Mitzvah students in person or online.",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vail",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+     },
+     "areaServed": [
+      {
+       "@type": "City",
+       "name": "Vail"
+      },
+      {
+       "@type": "City",
+       "name": "Beaver Creek"
+      },
+      {
+       "@type": "City",
+       "name": "Aspen"
+      },
+      {
+       "@type": "Place",
+       "name": "Colorado"
+      }
+     ],
+     "knowsAbout": [
+      "Jewish wedding ceremonies",
+      "Wedding officiant",
+      "Bar and Bat Mitzvah officiant",
+      "B’nai Mitzvah tutoring",
+      "Jewish services"
+     ]
+    }
+   },
+   "heroImage": "img/vendors/michelle-cohn-levy/snowy-mountain-chuppah.jpg",
+   "ogImage": "img/vendors/michelle-cohn-levy/mountain-overlook-ceremony.jpg",
+   "ogImageAlt": "A couple at a mountain overlook ceremony, the groom stepping on the glass while the officiant stands beside them."
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "On our Preferred Vendor List",
+       "slab": true,
+       "title": "Michelle Cohn Levy: a wedding officiant in Vail.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Your ceremony is the part of the day your families came for, and it helps a lot to have someone leading it who knows the traditions and can make everyone feel welcome. <a href=\"https://whatmichelledoes.com/weddings.html\" target=\"_blank\" rel=\"noopener\">Michelle Cohn Levy</a> leads Jewish weddings in Vail and across the Colorado mountains, on her own or alongside a rabbi.",
+       "headingText": [
+        {
+         "html": "She’s also a singer, so she can sing parts of your ceremony herself, and she leads B’nai Mitzvah ceremonies and Jewish services, too."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "title": "Michelle Cohn Levy at a glance",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "What she offers",
+         "text": "She officiates weddings and Bar and Bat Mitzvahs, on her own or with a rabbi. She also tutors B’nai Mitzvah students, in person or online."
+        },
+        {
+         "term": "Where she works",
+         "text": "She lives in Vail, and she’s led weddings in Vail, Beaver Creek, Bachelor Gulch, Aspen, Camp Hale, Piney Lake and Denver. She’s traveled for weddings in Chicago, Orlando and Maryland, too."
+        },
+        {
+         "term": "Jewish services",
+         "text": "She’s led hundreds of services in Reform, Conservative, Reconstructionist and non-denominational settings, for congregations of thousands and for small groups in a living room. She leads Friday evening Shabbat services for B’nai Vail."
+        },
+        {
+         "term": "Music for the ceremony",
+         "text": "She can sing during your ceremony, and she’s arranged all of the music for a wedding with cello, violin, piano and vocals."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-3",
+       "html": "Jewish wedding ceremonies in Vail",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3a",
+       "cls": "prose",
+       "html": "Michelle leads the whole ceremony, from signing the ketubah to breaking the glass. Her couples often mention that she made the traditions easy to follow for guests who didn’t know them, so everyone felt included."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-3b",
+       "cls": "prose",
+       "html": "She plans the ceremony with you, gets to know you as a couple and builds it around what you’d like. Couples on her site also write about how flexible she is on the day: one moved their ceremony to a new spot on Beaver Creek Mountain at the last minute, and another saw rain coming, so she picked up the pace and got everyone under the tent in time."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-4",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-4",
+       "title": "Weddings with Michelle Cohn Levy",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-4",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/vendors/michelle-cohn-levy/mountain-overlook-ceremony.jpg",
+         "alt": "A couple at a mountain overlook ceremony, the groom stepping on the glass while the officiant stands beside them.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/floral-arch-ceremony.jpg",
+         "alt": "A bride and groom laughing under a white floral arch on a lawn, with the officiant and a rabbi beside them.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/singing-under-chuppah.jpg",
+         "alt": "A black and white picture of the officiant singing with a guitar under a chuppah beside the bride and groom.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/ketubah-signing-cabin.jpg",
+         "alt": "A black and white picture of a groom signing the ketubah at a round table in a log cabin, with the officiant beside him.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/beaver-creek-arch.jpg",
+         "alt": "Michelle Cohn Levy holding an acoustic guitar beside a rabbi under a white flower arch in Beaver Creek.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/piney-lake-chuppah.jpg",
+         "alt": "Michelle Cohn Levy and a rabbi under a pink and white flower chuppah at Piney Lake, with mountains behind them.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/ketubah-signing.jpg",
+         "alt": "A black and white picture of a bride signing the ketubah beside the groom and the officiant.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/vendors/michelle-cohn-levy/toast-with-couple.jpg",
+         "alt": "Michelle Cohn Levy smiling with the bride and groom during the blessing over the wine.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-4",
+       "cls": "note note--small",
+       "html": "The photographs on this page come from Michelle’s website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-5",
+       "html": "Bar and Bat Mitzvah officiant in Vail",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5a",
+       "cls": "prose",
+       "html": "If your family is planning a Bar or Bat Mitzvah in the mountains, Michelle can officiate on her own or with a rabbi. She tutors students in person or online, too, so your child can prepare with the same person who’ll lead the service."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5b",
+       "cls": "prose",
+       "html": "You can see more of her ceremonies on her <a href=\"https://whatmichelledoes.com/weddings.html\" target=\"_blank\" rel=\"noopener\">weddings page</a> and her <a href=\"https://whatmichelledoes.com/bnai-mitzvah.html\" target=\"_blank\" rel=\"noopener\">B’nai Mitzvah page</a>. To check your date, reach out to Michelle through her website."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-6",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "title": "Need live music for your wedding, too?",
+       "lede": "From the ceremony to the dance floor, we book live music all over Colorado. Take a look at <a href=\"/weddings/vail/\">wedding music in Vail</a>, or just send us your date."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
