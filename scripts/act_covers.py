@@ -9,7 +9,8 @@ Each song in an act's `setlist.songs` ({title, artist, album?}) gets
 img/covers/<artist>--<title>.jpg, the sleeve of the record the song first
 came out on, found by Deezer track search (iTunes as a fallback). `album`
 pins the record when the search picks the wrong one. A song nothing is found
-for is drawn by the site as a type tile, so a miss is never an error.
+for stays in the act's song list but out of its patchwork, so a miss is
+never an error.
 """
 
 import json
@@ -200,35 +201,58 @@ def main(argv):
         with open(SOURCES, 'a', encoding='utf-8') as f:
             f.write('\n' + '\n'.join(rows) + '\n')
     if misses:
-        print('\nNo cover (the site draws these as type tiles; add "album" to pin one):')
+        print('\nNo cover found, so these stay in the song list but out of the patchwork (add "album" to pin one):')
         for act, s in misses:
             print(f'  {act}: {s["title"]} ({s["artist"]})')
-    repeats = mark_repeats()
-    print(f'\n{len(rows)} fetched, {len(misses)} without a cover, {repeats} set in type as a repeat sleeve.')
+    swapped, dropped = resolve_repeats()
+    print(f'\n{len(rows)} fetched, {len(misses)} without a cover, {swapped} repeat sleeves swapped for another release, {dropped} left out.')
+
+
+def record(title):
+    """A record's name without its edition: "Abbey Road (Super Deluxe
+    Edition)" is Abbey Road, and has the same sleeve."""
+    return norm(re.split(r'\s+-\s+(?:single|ep)\b', bare(title), flags=re.I)[0])
 
 
 def album_of():
-    """file -> the album id it was fetched from, from SOURCES.md (last row wins)."""
+    """file -> the record it was fetched from, from SOURCES.md (last row wins)."""
     out = {}
     if os.path.exists(SOURCES):
         for line in open(SOURCES, encoding='utf-8'):
             parts = [p.strip() for p in line.split(' — ')]
             if len(parts) == 5 and parts[0].endswith('.jpg'):
-                out[parts[0]] = parts[4]
+                out[parts[0]] = record(parts[3])
     return out
 
 
-def mark_repeats():
+def other_release(song, used):
+    """A real release of the song whose sleeve isn't already in the act:
+    the song's own single, a later album, a compilation. Never a live,
+    tribute or karaoke record."""
+    try:
+        hits = deezer_tracks(song)
+    except Exception:
+        return None
+    ok = [h for h in hits if score(song, h) > 0 and record(h['album']) not in used
+          and not any(bad in norm(h['album']) for bad in DEMOTE)]
+    if not ok:
+        return None
+    return max(ok, key=lambda h: (score(song, h), h.get('rank', 0)))
+
+
+def resolve_repeats():
     """Two songs off one record would show one sleeve twice in an act's
-    patchwork, so the later song gets "cover": false and is set in type."""
-    albums, n = album_of(), 0
+    patchwork, so the later song gets another real release of itself. A song
+    with no other release gets "cover": false and is left out of the
+    patchwork (it stays in the song list under it)."""
+    albums, swapped, dropped = album_of(), 0, 0
     for name in sorted(os.listdir(ACTS)):
         if not name.endswith('.json'):
             continue
         path = os.path.join(ACTS, name)
         with open(path, encoding='utf-8') as f:
             act = json.load(f)
-        seen, changed = set(), False
+        used, changed = set(), False
         for s in ((act.get('setlist') or {}).get('songs') or []):
             if not s.get('artist') or s.get('cover') is False:
                 continue
@@ -236,14 +260,28 @@ def mark_repeats():
             if not os.path.exists(os.path.join(COVERS, file)):
                 continue
             key = albums.get(file, file)
-            if key in seen:
-                s['cover'] = False
-                changed, n = True, n + 1
-            seen.add(key)
+            if key in used:
+                hit = other_release(s, used)
+                if hit:
+                    req = urllib.request.Request(hit['art'], headers=UA)
+                    with urllib.request.urlopen(req, timeout=30) as r, open(os.path.join(COVERS, file), 'wb') as out:
+                        out.write(r.read())
+                    with open(SOURCES, 'a', encoding='utf-8') as f:
+                        f.write(f"{file} — {s['title']} — {hit['artist']} — {hit['album']} — {hit['id']}\n")
+                    albums[file] = key = record(hit['album'])
+                    swapped += 1
+                    print(f'  ~ {file}  <- {hit["album"]} (the first record is already in {act["id"]})')
+                    time.sleep(0.4)
+                else:
+                    s['cover'] = False
+                    changed, dropped = True, dropped + 1
+                    print(f'  - {act["id"]}: {s["title"]} has no other release, left out of the patchwork')
+                    continue
+            used.add(key)
         if changed:
             with open(path, 'w', encoding='utf-8') as f:
                 f.write(json.dumps(act, indent=1, ensure_ascii=False) + '\n')
-    return n
+    return swapped, dropped
 
 
 if __name__ == '__main__':

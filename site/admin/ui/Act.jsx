@@ -872,7 +872,7 @@ function Setlist({ a, edit }) {
               ))}
             </div>
           ) : null}
-          <p className="note">The first song gets the biggest cover. A new song shows as its title until its cover is fetched.</p>
+          <p className="note">The first song gets the biggest cover. A new song is listed under the covers, and joins them once its cover is fetched.</p>
         </>
       ) : (
         <>

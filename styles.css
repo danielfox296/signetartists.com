@@ -5646,64 +5646,6 @@ img[src$="img/headliners.jpg"] {
   .song-patch__grid:hover .song-tile:not(:hover) img {
     filter: brightness(0.55) saturate(0.8);
   }
-  .song-patch__grid:hover .song-tile--type:not(:hover) {
-    filter: brightness(0.6);
-  }
-}
-
-/* A song with no sleeve on file is set in type on one of the four colours. */
-.song-tile--type {
-  display: flex;
-  transition: filter 0.6s ease;
-}
-
-.song-tile--type figcaption {
-  position: static;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  padding: 9cqi;
-  background: none;
-  opacity: 1;
-  transform: none;
-}
-
-.song-tile--type .song-tile__title {
-  font-family: var(--display);
-  font-size: 13cqi;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.015em;
-  overflow-wrap: anywhere;
-}
-
-.song-tile--type .song-tile__artist {
-  margin-top: 0.6em;
-  font-size: max(0.75rem, 6.5cqi);
-}
-
-.song-tile--red {
-  background: var(--red);
-}
-.song-tile--red .song-tile__title,
-.song-tile--red .song-tile__artist {
-  color: var(--near-white);
-}
-
-.song-tile--aqua {
-  background: var(--second);
-}
-.song-tile--aqua .song-tile__title,
-.song-tile--aqua .song-tile__artist {
-  color: var(--near-black);
-}
-
-.song-tile--ink {
-  background: #1c1c1c;
-}
-.song-tile--ink .song-tile__artist {
-  color: var(--brass-bright);
 }
 
 /* The song names under the patchwork, in short columns. */
@@ -5748,8 +5690,7 @@ img[src$="img/headliners.jpg"] {
 
 @media (prefers-reduced-motion: reduce) {
   .song-tile img,
-  .song-tile figcaption,
-  .song-tile--type {
+  .song-tile figcaption {
     transition: none;
   }
   .song-tile:hover img {

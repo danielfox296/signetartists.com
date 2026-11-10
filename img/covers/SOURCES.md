@@ -8,7 +8,6 @@ Rows: slug — song — matched artist — matched album — source id.
 thinking-out-loud.jpg — Thinking Out Loud — Ed Sheeran — x (Deluxe Edition) — deezer 7964062 (pinned)
 tennessee-whiskey.jpg — Tennessee Whiskey — Chris Stapleton — Traveller — deezer 10127538
 god-only-knows.jpg — God Only Knows — The Beach Boys — Pet Sounds — deezer 436186197
-your-song.jpg — Your Song — Elton John — Elton John — deezer 99998 (pinned)
 cover-me-up.jpg — Cover Me Up — Jason Isbell — Southeastern — deezer 6649319
 peaceful-easy-feeling.jpg — Peaceful Easy Feeling — Eagles — Eagles (2013 Remaster) — deezer 6670659 (pinned)
 i-will-wait.jpg — I Will Wait — Mumford & Sons — Babel — deezer 650717441 (pinned)
@@ -41,9 +40,6 @@ prince--purple-rain.jpg — Purple Rain — Prince — Purple Rain (Deluxe Expan
 the-beatles--let-it-be.jpg — Let It Be — The Beatles — Let It Be (Remastered 2009) — deezer album 12047958
 the-beatles--come-together.jpg — Come Together — The Beatles — Abbey Road (Remastered 2009) — deezer album 12047952
 the-beatles--eleanor-rigby.jpg — Eleanor Rigby — The Beatles — Revolver (Remastered 2009) — deezer album 12047948
-the-beatles--something.jpg — Something — The Beatles — Abbey Road (Remastered 2009) — deezer album 12047952
-the-beatles--while-my-guitar-gently-weeps.jpg — While My Guitar Gently Weeps — The Beatles — The Beatles (Remastered 2009) — deezer album 12047934
-the-beatles--rocky-raccoon.jpg — Rocky Raccoon — The Beatles — The Beatles (Remastered 2009) — deezer album 12047934
 the-beatles--mother-natures-son.jpg — Mother Nature's Son — The Beatles — The Beatles (Remastered 2009) — deezer album 12047934
 
 willie-nelson--mammas-dont-let-your-babies-grow-up-to-be-cowboys.jpg — Mammas Don't Let Your Babies Grow Up To Be Cowboys — Waylon Jennings — Waylon & Willie — deezer album 108415
@@ -236,3 +232,7 @@ weezer--island-in-the-sun.jpg — Island in the Sun — Weezer — Weezer (Green
 
 van-morrison--brown-eyed-girl.jpg — Brown Eyed Girl — Van Morrison — Blowin' Your Mind! — deezer album 793589981
 bob-marley--three-little-birds.jpg — Three Little Birds — Bob Marley & The Wailers — Exodus (Deluxe Edition) — deezer album 328176677
+
+the-beatles--something.jpg — Something — The Beatles — Love — deezer album 13367057
+the-beatles--while-my-guitar-gently-weeps.jpg — While My Guitar Gently Weeps — The Beatles — The Beatles 1967 - 1970 (Remastered 2009) — deezer album 12047930
+the-beatles--rocky-raccoon.jpg — Rocky Raccoon — The Beatles — Anthology 3 — deezer album 12779758

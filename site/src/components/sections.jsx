@@ -453,8 +453,9 @@ const ActSizes = {
 
 // An act's go-to songs as a patchwork of their record sleeves on the night
 // band. The sleeves are placed ahead of time at three widths (lib/patchwork.js)
-// so every row is full. A song with no sleeve on file is set in type on one of
-// the site's colours. The song names run underneath as a list, which is what
+// so every row is full. Only songs with a real sleeve on file are in the
+// patchwork, never a title set as a stand-in. Every song, sleeve or not, is
+// in the list of names underneath, which is what
 // a screen reader, a phone and a search engine read; the sleeves are pictures
 // of it. As the patchwork scrolls into view the sleeves come in one after
 // another and each one settles from a slight zoom. Nothing moves under
@@ -468,18 +469,17 @@ const PATCH_SCRIPT =
   `order();g.classList.add("is-armed");var o=new IntersectionObserver(function(es){es.forEach(function(e){` +
   `if(e.isIntersecting){g.classList.add("is-in");o.disconnect();}});},{threshold:0.15});o.observe(g);})();`;
 
-const TYPE_GROUNDS = ["song-tile--red", "song-tile--aqua", "song-tile--ink"];
-
 function SongPatch({ s, songs, eyebrow, title, lede, note, more, wrapStyle }) {
   const href = useHref();
-  const layout = patchwork(songs.length);
+  const exists = s.model.c.exists;
+  const sleeved = songs.filter((song) => song.cover !== false && exists && exists(coverPath(song)));
+  const layout = patchwork(sleeved.length);
   const place = (i) =>
     ["sm", "md", "lg"].map((k) => {
       const p = layout[k].at[i];
       return `--c-${k}: ${p.c}; --r-${k}: ${p.r}; --s-${k}: ${p.s}`;
     }).join("; ");
-  const gridStyle = ["sm", "md", "lg"].map((k) => `--cols-${k}: ${layout[k].cols}`).join("; ");
-  let typed = 0;
+  const gridStyle = layout ? ["sm", "md", "lg"].map((k) => `--cols-${k}: ${layout[k].cols}`).join("; ") : "";
   return (
     <section className="section section--night song-patch">
       <div className="wrap song-patch__head" style={css(wrapStyle)}>
@@ -487,25 +487,25 @@ function SongPatch({ s, songs, eyebrow, title, lede, note, more, wrapStyle }) {
         <H as="h2" className="h2" html={title} />
         {lede ? <H as="p" className="prose song-patch__note" html={lede} /> : note ? <p className="prose song-patch__note">{note}</p> : null}
       </div>
-      <div className="song-patch__field">
-        <div className="song-patch__grid" style={css(gridStyle)} aria-hidden="true">
-          {songs.map((song, i) => {
-            const file = song.cover === false ? null : coverPath(song);
-            const has = file && s.model.c.exists && s.model.c.exists(file);
-            const big = layout.lg.at[i].s > 1;
-            return (
-              <figure className={cx("song-tile", !has && "song-tile--type", !has && TYPE_GROUNDS[typed++ % TYPE_GROUNDS.length], big && "song-tile--big")} style={css(place(i))} key={i}>
-                {has ? <Pic src={href("/" + file)} alt={`Album cover for ${song.title} by ${song.artist}`} loading="lazy" decoding="async" sizes={big ? SIZES.patchBig : SIZES.patch} /> : null}
-                <figcaption>
-                  <span className="song-tile__title">{song.title}</span>
-                  {song.artist ? <span className="song-tile__artist">{song.artist}</span> : null}
-                </figcaption>
-              </figure>
-            );
-          })}
+      {sleeved.length ? (
+        <div className="song-patch__field">
+          <div className="song-patch__grid" style={css(gridStyle)} aria-hidden="true">
+            {sleeved.map((song, i) => {
+              const big = layout.lg.at[i].s > 1;
+              return (
+                <figure className={cx("song-tile", big && "song-tile--big")} style={css(place(i))} key={i}>
+                  <Pic src={href("/" + coverPath(song))} alt={`Album cover for ${song.title} by ${song.artist}`} loading="lazy" decoding="async" sizes={big ? SIZES.patchBig : SIZES.patch} />
+                  <figcaption>
+                    <span className="song-tile__title">{song.title}</span>
+                    <span className="song-tile__artist">{song.artist}</span>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
+          <script dangerouslySetInnerHTML={{ __html: PATCH_SCRIPT }} />
         </div>
-        <script dangerouslySetInnerHTML={{ __html: PATCH_SCRIPT }} />
-      </div>
+      ) : null}
       <div className="wrap" style={css(wrapStyle)}>
         <ul className="song-patch__list">
           {songs.map((song, i) => (
