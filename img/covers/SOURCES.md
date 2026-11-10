@@ -183,3 +183,25 @@ stevie-wonder--higher-ground.jpg — Higher Ground — Stevie Wonder — Innervi
 jaco-pastorius--the-chicken.jpg — The Chicken — Jaco Pastorius — Invitation [Live] — deezer album 82400
 
 cannonball-adderley--mercy-mercy-mercy.jpg — Mercy, Mercy, Mercy — Cannonball Adderley — Mercy, Mercy, Mercy (Live) — deezer album 301833
+
+bon-jovi--livin-on-a-prayer.jpg — Livin' on a Prayer — Bon Jovi — Slippery When Wet — deezer album 70200002
+whitney-houston--i-wanna-dance-with-somebody.jpg — I Wanna Dance with Somebody — Whitney Houston — Whitney — deezer album 7530488
+bonnie-tyler--total-eclipse-of-the-heart.jpg — Total Eclipse of the Heart — Bonnie Tyler — Faster Than the Speed of Night — deezer album 137770592
+cyndi-lauper--girls-just-want-to-have-fun.jpg — Girls Just Want to Have Fun — Cyndi Lauper — She's So Unusual — deezer album 7094224
+madonna--like-a-prayer.jpg — Like a Prayer — Madonna — Like a Prayer — deezer album 80554
+mark-ronson-and-amy-winehouse--valerie.jpg — Valerie — Mark Ronson — Version — deezer album 731280
+walk-the-moon--shut-up-and-dance.jpg — Shut Up and Dance — WALK THE MOON — TALKING IS HARD — deezer album 9154869
+rihanna--umbrella.jpg — Umbrella — Rihanna — Good Girl Gone Bad: Reloaded — deezer album 104188
+queen--bohemian-rhapsody.jpg — Bohemian Rhapsody — Queen — A Night At The Opera — deezer album 1007321681
+ac-dc--you-shook-me-all-night-long.jpg — You Shook Me All Night Long — AC/DC — Back In Black — deezer album 9410100
+backstreet-boys--everybody-backstreets-back.jpg — Everybody (Backstreet's Back) — Backstreet Boys — Backstreet's Back (European Version) — deezer album 1442196
+britney-spears--baby-one-more-time.jpg — ...Baby One More Time — Britney Spears — ...Baby One More Time (Digital Deluxe Version) — deezer album 71569
+eminem--lose-yourself.jpg — Lose Yourself — Eminem — 8 Mile (Music From And Inspired By The Motion Picture Expanded Edition) — deezer album 368443007
+
+the-killers--mr-brightside.jpg — Mr. Brightside — The Killers — Hot Fuss — deezer album 164869492
+neil-diamond--sweet-caroline.jpg — Sweet Caroline — Neil Diamond — Brother Love's Travelling Salvation Show — deezer album 14229202
+oasis--wonderwall.jpg — Wonderwall — Oasis — (What's The Story) Morning Glory? (30th Anniversary Deluxe Edition) — deezer album 773995921
+michael-jackson--billie-jean.jpg — Billie Jean — Michael Jackson — Thriller — deezer album 96126
+blink-182--all-the-small-things.jpg — All the Small Things — blink-182 — Enema Of The State — deezer album 72704062
+gloria-gaynor--i-will-survive.jpg — I Will Survive — Gloria Gaynor — Love Tracks (Deluxe Edition) — deezer album 106250552
+taylor-swift--shake-it-off.jpg — Shake It Off — Taylor Swift — 1989 (Taylor's Version) — deezer album 504180521
