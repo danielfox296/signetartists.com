@@ -1,14 +1,15 @@
 {
  "root": {
   "props": {
-   "path": "/repertoire/",
-   "title": "Repertoire",
-   "description": "Browse the songs our musicians play at each part of an event, from the ceremony to dinner and dancing, and search our song list by moment and energy.",
-   "nav": "repertoire",
-   "breadcrumb": "Songs",
-   "indexLabel": "Songs",
+   "path": "/artists/tejas-singh/song-list/",
+   "title": "Tejas Singh song list",
+   "description": "Browse the songs Tejas Singh plays at each part of an event, from the ceremony to dinner and dancing, and search his full song list.",
+   "nav": "music",
+   "breadcrumb": "Song list",
+   "indexLabel": "Tejas Singh song list",
    "schemaArticle": "on",
-   "published": "2026-09-05"
+   "published": "2026-09-05",
+   "heroImage": "img/acts/tejas-mural.jpg"
   }
  },
  "content": [
@@ -22,7 +23,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-1",
-       "eyebrow": "a sample of the signet Repertoire",
+       "eyebrow": "Tejas Singh’s song list",
        "slab": true,
        "title": "some real crowd pleasers",
        "titleTag": "h1",
@@ -504,11 +505,14 @@
        "buttons": [
         {
          "label": "Check a Date",
-         "href": "/contact/",
+         "href": "/contact/?act=tejas-singh",
          "cls": "btn"
         }
        ],
-       "title": "Send us the flow of the evening, and we’ll help build the music around it."
+       "title": "Send us the flow of the evening, and we’ll help build the music around it.",
+       "image": {
+        "src": "/img/acts/tejas-profile.jpg"
+       }
       }
      }
     ],

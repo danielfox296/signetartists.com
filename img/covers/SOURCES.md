@@ -281,3 +281,4 @@ aretha-franklin--you-make-me-feel-like-a-natural-woman.jpg — (You Make Me Feel
 michael-jackson--man-in-the-mirror.jpg — Man in the Mirror — Michael Jackson — Michael Jackson's This Is It — deezer album 423368
 
 stevie-wonder--i-just-called-to-say-i-love-you.jpg — I Just Called to Say I Love You — Stevie Wonder — The Woman in Red (Original Motion Picture Soundtrack) — itunes album 1443899836
+ed-sheeran--thinking-out-loud.jpg — Thinking Out Loud — Ed Sheeran — x (Deluxe Edition) — deezer 7964062 (pinned)
