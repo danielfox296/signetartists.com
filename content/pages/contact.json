@@ -3,7 +3,7 @@
   "props": {
    "path": "/contact/",
    "title": "Check a Date",
-   "description": "Tell us the date and the venue. We'll reply with availability and an exact price within 24 to 48 hours, during business hours.",
+   "description": "Tell us the date and the venue. We'll reply with availability and an exact price within 24 hours.",
    "nav": "contact",
    "breadcrumb": "Check a Date"
   }
@@ -18,7 +18,7 @@
     "title": "Check a date.",
     "titleTag": "h1",
     "titleClass": "h2 display",
-    "lede": "Tell us when and where. You'll hear back from us with availability and an exact price within 24 to 48 hours, during business hours.",
+    "lede": "Tell us when and where. You'll hear back from us with availability and an exact price within 24 hours.",
     "headingText": [
      {
       "html": "All we need to get started is a date and a rough idea of what you're planning. You don't need to have the size of the band, the song list or a budget worked out first. Just tell us about the event and we'll help you figure out the rest."
@@ -89,6 +89,14 @@
       "id": "venue",
       "name": "Venue or city",
       "label": "Venue or city"
+     },
+     {
+      "kind": "input",
+      "id": "phone",
+      "name": "Phone",
+      "label": "Phone",
+      "type": "tel",
+      "autocomplete": "tel"
      },
      {
       "kind": "acts"
