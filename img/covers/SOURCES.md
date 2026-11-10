@@ -135,7 +135,6 @@ elvis-presley--cant-help-falling-in-love.jpg — Can't Help Falling in Love — 
 henry-mancini--moon-river.jpg — Moon River — Henry Mancini — Breakfast at Tiffany's — deezer album 8270832
 frank-sinatra--fly-me-to-the-moon.jpg — Fly Me to the Moon — Frank Sinatra — It Might As Well Be Swing — deezer album 6954975
 chet-baker--there-will-never-be-another-you.jpg — There Will Never Be Another You — Chet Baker — Chet Baker Sings — deezer album 319950
-chick-corea--spain.jpg — Spain — Chick Corea — Light As A Feather (Deluxe Edition) — deezer album 239959
 wayne-shorter--footprints.jpg — Footprints — Wayne Shorter — Adam's Apple (Rudy Van Gelder Edition) — deezer album 299427
 vince-guaraldi-trio--the-great-pumpkin-waltz.jpg — The Great Pumpkin Waltz — Vince Guaraldi Trio — Peanuts Greatest Hits (Music From The TV Specials) — deezer album 10847938
 abba--dancing-queen.jpg — Dancing Queen — ABBA — Arrival — deezer album 126502
@@ -148,7 +147,6 @@ chris-stapleton--tennessee-whiskey.jpg — Tennessee Whiskey — Chris Stapleton
 grateful-dead--friend-of-the-devil.jpg — Friend of the Devil — Grateful Dead — American Beauty (50th Anniversary Deluxe Edition) — deezer album 182219042
 neil-young--harvest-moon.jpg — Harvest Moon — Neil Young — Harvest Moon — deezer album 81868
 the-lumineers--ho-hey.jpg — Ho Hey — The Lumineers — The Lumineers — deezer album 111543132
-tyler-childers--lady-may.jpg — Lady May — Tyler Childers — Purgatory — deezer album 42276251
 ella-langley--choosin-texas.jpg — Choosin' Texas — Ella Langley — Choosin' Texas — deezer album 837881302
 patty-loveless--chains.jpg — Chains — Patty Loveless — Honky Tonk Angel — deezer album 230494
 
@@ -205,3 +203,36 @@ michael-jackson--billie-jean.jpg — Billie Jean — Michael Jackson — Thrille
 blink-182--all-the-small-things.jpg — All the Small Things — blink-182 — Enema Of The State — deezer album 72704062
 gloria-gaynor--i-will-survive.jpg — I Will Survive — Gloria Gaynor — Love Tracks (Deluxe Edition) — deezer album 106250552
 taylor-swift--shake-it-off.jpg — Shake It Off — Taylor Swift — 1989 (Taylor's Version) — deezer album 504180521
+
+pachelbel--canon-in-d.jpg — Canon in D — Sir Neville Marriner — Pachelbel: Canon - Albinoni: Adagio - Bach: Air on G String - Mozart: Eine kleine Nachtmusik - Fauré: Pavane & Other Classical Hit — deezer album 781896141
+
+bach--air-on-the-g-string.jpg — Air on the G String — Academy of St Martin in the Fields — Bach, J.S.: Orchestral Suites 1-4 — deezer album 6443208
+
+debussy--clair-de-lune.jpg — Clair de Lune — Menahem Pressler — Clair de lune — deezer album 58142782
+
+vivaldi--spring.jpg — Spring — Itzhak Perlman — Vivaldi: The Four Seasons — deezer album 301716
+
+bach--jesu-joy-of-mans-desiring.jpg — Jesu, Joy of Man's Desiring — Eugene Ormandy, Richard Kapp, Raymond Leppard, E. Power Biggs — Pachelbel: Canon; Albinoni: Adagio; Bach: Jesu, Joy of Man's Desiring; more — deezer album 97809
+
+schubert--ave-maria.jpg — Ave Maria — Barbara Hendricks — Schubert: Ave Maria — deezer album 499952981
+
+saint-saens--the-swan.jpg — The Swan — Yo-Yo Ma — Saint-Saens: Carnival of the Animals (Remastered) — deezer album 411393147
+
+mendelssohn--wedding-march.jpg — Wedding March — André Previn — Mendelssohn: A Midsummer Night's Dream, Op. 61 — deezer album 321251
+
+mozart--eine-kleine-nachtmusik.jpg — Eine Kleine Nachtmusik — Sir Neville Marriner — Mozart - Eine kleine Nachtmusik — deezer album 320334
+
+traditional--amazing-grace.jpg — Amazing Grace — Gautier Capuçon — Sensations — deezer album 331319937
+
+chick-corea--spain.jpg — Spain — Chick Corea, London Philharmonic Orchestra, Steven Mercurio — Corea: Spain & Piano Concerto No. 1 — deezer album 96187
+
+tyler-childers--lady-may.jpg — Lady May — Various Artists — Take Me Home: A Concert for West Virginia, Vol.1 (Recorded Live) — deezer album 14485714
+
+the-animals--house-of-the-rising-sun.jpg — House of the Rising Sun — The Animals — The Animals (The Best) — deezer album 11224474
+jason-mraz--im-yours.jpg — I'm Yours — Jason Mraz — We Sing. We Dance. We Steal Things. (Bonus Tracks Version) — deezer album 260090
+ben-e-king--stand-by-me.jpg — Stand By Me — Ben E. King — Stand By Me — deezer album 14632126
+coldplay--yellow.jpg — Yellow — Coldplay — Parachutes — deezer album 301663
+weezer--island-in-the-sun.jpg — Island in the Sun — Weezer — Weezer (Green Album) — deezer album 249320
+
+van-morrison--brown-eyed-girl.jpg — Brown Eyed Girl — Van Morrison — Blowin' Your Mind! — deezer album 793589981
+bob-marley--three-little-birds.jpg — Three Little Birds — Bob Marley & The Wailers — Exodus (Deluxe Edition) — deezer album 328176677
