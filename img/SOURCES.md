@@ -53,3 +53,9 @@ Pulled by `scripts/stills.py` from Openverse, filtered to licences permitting co
   top hit; the top hit for every skyline query was the stadium angle, which has
   no mountains in it. Crop: 2400x800 from the 12590x1819 original, centred at
   x=0.405 to keep the skyline mid-frame, then the standard palette duotone.
+## changes-jazz-trio-card.jpg
+- Used on: roster card and share image: Changes Jazz Trio
+- Title: a man sitting in front of a drum set
+- Licence: Unsplash License (https://unsplash.com/license)
+- Source: https://unsplash.com/photos/a-man-sitting-in-front-of-a-drum-set-xCF7SQfgNfk (images.unsplash.com/photo-1674320122711-594e3113bfce)
+- Note: cropped to 1600x900 from the top of the frame, cymbals to snare.
