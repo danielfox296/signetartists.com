@@ -6127,18 +6127,18 @@ a.laurel-link:focus-visible .laurel-title {
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: 0.01em;
-  color: #121212;
+  color: #fff;
 }
 
 .card-honor-icon {
   flex: none;
   width: 1.05rem;
   height: 1.15rem;
-  color: #121212;
+  color: #fff;
 }
 
 .act-card-body .card-honor {
-  color: #121212;
+  color: #fff;
 }
 
 @media (max-width: 640px) {

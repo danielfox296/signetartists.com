@@ -1,0 +1,494 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/emily-barnes/",
+   "title": "Emily Barnes: folk singer-songwriter for hire in Colorado",
+   "description": "Emily Barnes is an award-winning folk singer-songwriter who plays Joni Mitchell, Fleetwood Mac and her own songs. You can book her solo, as a duo or as a trio.",
+   "titleExact": true,
+   "ogImage": "img/emily-barnes-card.jpg",
+   "ogImageAlt": "Emily Barnes with her arms folded over her head and a rust bandana at her neck, red rock towers glowing in the sun behind her.",
+   "nav": "music",
+   "breadcrumb": "Emily Barnes",
+   "schema": {
+    "service": {
+     "name": "Folk singer-songwriter",
+     "serviceType": "Folk and singer-songwriter covers and originals for weddings, private events and corporate events",
+     "description": "Emily Barnes plays folk and singer-songwriter covers and her own songs at weddings, private events and corporate events in Denver and across Colorado, solo, as a duo or as a trio.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Fort Collins",
+      "Colorado Springs",
+      "Breckenridge",
+      "Vail",
+      "Beaver Creek",
+      "Aspen"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    },
+    "act": "emily-barnes",
+    "video": {
+     "name": "Emily Barnes: Say It Again, live at The Black Rose Acoustic Society",
+     "description": "Emily Barnes playing her song Say It Again live at The Black Rose Acoustic Society in Black Forest, Colorado.",
+     "uploadDate": "2025-08-10",
+     "duration": "PT3M56S"
+    },
+    "videos": [
+     {
+      "id": "3CcVsA-hkCA",
+      "name": "Emily Barnes playing her song Comets",
+      "description": "Emily Barnes playing Comets, the song that won the 2025 Hey Nonny Songwriting Contest.",
+      "uploadDate": "2024-11-28",
+      "duration": "PT3M34S"
+     },
+     {
+      "id": "Ld_GJbIvSJg",
+      "name": "Emily Barnes playing Warren County at Stone Cottage Studios",
+      "description": "Emily Barnes playing her song Warren County live at Stone Cottage Studios.",
+      "uploadDate": "2023-10-10",
+      "duration": "PT3M37S"
+     },
+     {
+      "id": "0ycFICKQWfo",
+      "name": "Emily Barnes at TrueSongs 2025, Caffe Lena",
+      "description": "Emily Barnes playing a song she wrote from a listener's story, at Caffe Lena's TrueSongs in 2025.",
+      "uploadDate": "2025-12-03",
+      "duration": "PT4M17S"
+     },
+     {
+      "id": "7r90d1mQwoQ",
+      "name": "Emily Barnes playing Mint Condition at The Acorn Singer-Songwriter Competition",
+      "description": "Emily Barnes playing her song Mint Condition in round one of the 2024 Acorn Singer-Songwriter Competition.",
+      "uploadDate": "2025-01-13",
+      "duration": "PT3M52S"
+     },
+     {
+      "id": "I_W8yikrpDc",
+      "name": "Emily Barnes playing Illusion at Stone Cottage Studios",
+      "description": "Emily Barnes playing her song Illusion live at Stone Cottage Studios.",
+      "uploadDate": "2023-10-10",
+      "duration": "PT4M45S"
+     },
+     {
+      "id": "WJuWgYN1dvE",
+      "name": "Emily Barnes playing Welfare Warrior",
+      "description": "Emily Barnes playing her song Welfare Warrior.",
+      "uploadDate": "2022-03-18",
+      "duration": "PT4M20S"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Folk singer-songwriter",
+       "slab": true,
+       "title": "Emily Barnes",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Covers and originals, solo, as a duo or as a trio.",
+       "lede": "Some singers fill the background, and some make everyone go quiet and lean in. Emily Barnes is the second kind. She’s an award-winning folk singer-songwriter who plays Joni Mitchell, Fleetwood Mac and Dolly Parton alongside her own songs, and she can play on her own for a ceremony or a dinner, or bring guitar, fiddle and harmonies as a duo or a trio.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=emily-barnes",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/FchP_e3GIWk?rel=0",
+       "title": "Emily Barnes playing her song Say It Again live at The Black Rose Acoustic Society",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActHonors",
+   "props": {
+    "id": "ActHonors-1",
+    "band": "ruled",
+    "title": "Awards and press",
+    "pressTitle": "In the press",
+    "creditsTitle": "Stages and records"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "cls": "statement",
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Emily won the 2025 Hey Nonny Songwriting Contest, and in 2026 the Colorado Music Business Organization named her one of the ten winners of its songwriting contest. She’s been a finalist at the Kerrville Folk Festival’s New Folk competition, the Red Lodge Songwriting Festival and The Acorn Songwriting Contest, too. Critics have compared her to Brandi Carlile and Joan Baez.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-107",
+       "html": "She grew up in Johnsonburg, New Jersey, a town of under a hundred people, writing songs on the stone steps of her family’s 200-year-old house. She’s made four albums since, and her album <em>Mint Condition</em> took her on a sold-out tour of the Northeast. These days she plays all over Colorado, from Denver and Boulder to Fort Collins and Grand Junction.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-207",
+       "html": "Last year she played 165 shows of her own music and 45 private events, so she knows how to hold a listening crowd and how to keep a cocktail hour easy and warm. She brings her own sound system, and she’s happy to plan the night around the songs you love.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "emily-barnes",
+    "title": "Configurations",
+    "note": "Send us your date and we’ll help you choose the size that works best. She can change up the players to fit the style or theme of your event, too."
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/\">Mountain and garden weddings</a>",
+         "text": "Book her solo for your <a href=\"/weddings/ceremony/\">ceremony</a>, then bring in the duo or the trio for your <a href=\"/weddings/cocktail-hour/\">cocktail hour</a> and dinner. Landslide and You’ve Got a Friend are hard to beat for a first dance."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and celebrations</a>",
+         "text": "She’s a great fit for a birthday, an anniversary or a dinner at home, when you want music people actually stop and listen to."
+        },
+        {
+         "term": "<a href=\"/corporate/retreats/\">Retreats and client dinners</a>",
+         "text": "A Colorado songwriter telling the stories behind her songs makes a warm evening for a team or for clients after a long day of meetings."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Holiday parties</a>",
+         "text": "The trio’s guitar, fiddle and harmonies give a party a full sound without drums, so your guests can still talk."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "cls": "note",
+       "html": "Planning toasts or a program? We can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. You can also get a general idea of what live music costs in Colorado from our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Setlist",
+   "props": {
+    "id": "Setlist-28",
+    "eyebrow": "Song list",
+    "title": "A sample of her songs.",
+    "lede": "This is a sample of the covers on her song list, and we’ll put the setlist together with you.",
+    "more": ""
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Emily Barnes play",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "single": false,
+       "playlist": true,
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/3CcVsA-hkCA?rel=0",
+         "title": "Emily Barnes playing her song Comets",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Comets</span>, her Hey Nonny winning song"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/Ld_GJbIvSJg?rel=0",
+         "title": "Emily Barnes playing Warren County at Stone Cottage Studios",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Warren County</span>, one of her own songs"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/0ycFICKQWfo?rel=0",
+         "title": "Emily Barnes at TrueSongs 2025, Caffe Lena",
+         "loading": "lazy",
+         "caption": "A song she wrote from a listener’s story, at <span class=\"clip-name\">Caffe Lena</span>"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/7r90d1mQwoQ?rel=0",
+         "title": "Emily Barnes playing Mint Condition at The Acorn Singer-Songwriter Competition",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Mint Condition</span>, at The Acorn songwriting competition"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/I_W8yikrpDc?rel=0",
+         "title": "Emily Barnes playing Illusion at Stone Cottage Studios",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Illusion</span>, one of her own songs"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/WJuWgYN1dvE?rel=0",
+         "title": "Emily Barnes playing Welfare Warrior",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Welfare Warrior</span>, one of her own songs"
+        }
+       ]
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/acts/emily-barnes-stage.jpg",
+         "alt": "Emily Barnes singing at a microphone with an acoustic guitar, in a white shirt and jeans, in black and white.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-blue-stage.jpg",
+         "alt": "Emily Barnes smiling on a blue-lit stage, an acoustic guitar slung in front of her.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-black-rose.jpg",
+         "alt": "Emily Barnes in a black hat and a floral blouse, singing and playing guitar in a log-walled concert hall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-hat.jpg",
+         "alt": "Emily Barnes in a tan hat, laughing at the mic as she plays an acoustic guitar.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-electric.jpg",
+         "alt": "Emily Barnes singing into a microphone and playing a hollow-body electric guitar under low stage light.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-laughing.jpg",
+         "alt": "Emily Barnes in a red top, laughing with her guitar at an outdoor microphone.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-road.jpg",
+         "alt": "Emily Barnes in a denim jumpsuit, walking down the center line of a road with her guitar case.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-fence.jpg",
+         "alt": "Emily Barnes in a patterned outfit and white boots, sitting in a leather chair against a weathered wooden fence.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-highway.jpg",
+         "alt": "Emily Barnes sitting on the yellow lines of a desert highway, red rock cliffs behind her.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-juniper.jpg",
+         "alt": "Emily Barnes in a long dress, leaning on a twisted dead juniper in the desert.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-desert-portrait.jpg",
+         "alt": "Black and white portrait of Emily Barnes looking back over her shoulder, desert rock behind her.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/emily-barnes-desert-sun.jpg",
+         "alt": "Emily Barnes with her arms folded over her head and a rust bandana at her neck, red rock towers in the sun behind her.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Emily Barnes questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "schema": true,
+       "items": [
+        {
+         "q": "Does she play covers or her own songs?",
+         "a": "She plays both. Her song list runs from Joni Mitchell and Carole King to Fleetwood Mac, Brandi Carlile and Coldplay, and she’s happy to mix in her own songs. We’ll work out the balance with you."
+        },
+        {
+         "q": "Can she keep the volume down during dinner?",
+         "a": "Yes. Solo or as a duo, she plays at a level where your guests can talk easily, and the trio has no drums."
+        },
+        {
+         "q": "Does she bring her own sound?",
+         "a": "Yes, she brings her own sound system. Just let us know how big the space is and whether you’re indoors or out."
+        },
+        {
+         "q": "Does she play in the mountains?",
+         "a": "Yes. She plays all over Colorado and often stays in Summit County, so Breckenridge, Vail and other mountain weddings and retreats are an easy fit. Tell us where your event is and we’ll let you know what’s possible."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=emily-barnes",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a folk singer for your event?",
+       "lede": "Send us your date and we’ll let you know if Emily is available and what it would cost.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
