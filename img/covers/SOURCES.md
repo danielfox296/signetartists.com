@@ -376,3 +376,19 @@ muscadine-bloodline--10-90.jpg — 10-90 — Muscadine Bloodline — 10-90 (The 
 tyler-childers--nose-on-the-grindstone.jpg — Nose on the Grindstone — Tyler Childers — Nose On The Grindstone — deezer album 769792961
 
 shaboozey--tipsy.jpg — Tipsy — Shaboozey — Where I've Been, Isn't Where I'm Going — deezer album 594079172
+
+joni-mitchell--both-sides-now.jpg — Both Sides Now — Joni Mitchell — Clouds — deezer album 369496
+john-prine--in-spite-of-ourselves.jpg — In Spite of Ourselves — John Prine — In Spite Of Ourselves — deezer album 644712521
+dolly-parton--coat-of-many-colors.jpg — Coat of Many Colors — Dolly Parton — Coat Of Many Colors — deezer album 1444381
+dolly-parton--9-to-5.jpg — 9 to 5 — Dolly Parton — 9 To 5 And Odd Jobs — deezer album 110191
+john-denver--annies-song.jpg — Annie's Song — John Denver — Back Home Again — deezer album 92497272
+carole-king--youve-got-a-friend.jpg — You've Got a Friend — Carole King — Tapestry — deezer album 12487266
+brandi-carlile--the-story.jpg — The Story — Brandi Carlile — The Story — deezer album 7198771
+joan-baez--diamonds-and-rust.jpg — Diamonds & Rust — Joan Baez — Diamonds & Rust — deezer album 70928652
+crosby-stills-nash-and-young--our-house.jpg — Our House — Crosby, Stills, Nash & Young — Deja Vu — deezer album 356304
+jackson-browne--running-on-empty.jpg — Running on Empty — Jackson Browne — Running on Empty (Remastered) — deezer album 102969992
+the-chicks--wide-open-spaces.jpg — Wide Open Spaces — The Chicks — Wide Open Spaces — deezer album 71928
+sheryl-crow--if-it-makes-you-happy.jpg — If It Makes You Happy — Sheryl Crow — Sheryl Crow — deezer album 321159567
+alanis-morissette--hand-in-my-pocket.jpg — Hand in My Pocket — Alanis Morissette — Jagged Little Pill (2015 Remaster) — deezer album 11443410
+jewel--you-were-meant-for-me.jpg — You Were Meant for Me — Jewel — Pieces Of You (25th Anniversary Edition) — deezer album 247044382
+sixpence-none-the-richer--kiss-me.jpg — Kiss Me — Sixpence None The Richer — Sixpence None The Richer — deezer album 14294456
