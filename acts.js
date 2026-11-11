@@ -157,6 +157,40 @@
   }
 })();
 
+/* Contact form: a one-of choice with data-param="package" ships hidden and
+ * disabled, and appears with its choice made when the page was opened with
+ * ?package=<the choice in lower case, words joined by hyphens>, e.g.
+ * ?package=photos-and-film. Opened any other way, the form never shows it. */
+(function () {
+  "use strict";
+
+  if (!window.location.search) return;
+  var sets = document.querySelectorAll("fieldset[data-param]");
+  var slug = function (t) {
+    return String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  };
+  for (var i = 0; i < sets.length; i += 1) {
+    var key = sets[i].getAttribute("data-param").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    var match = new RegExp("[?&]" + key + "=([^&]+)").exec(window.location.search);
+    if (!match) continue;
+    var wanted;
+    try {
+      wanted = slug(decodeURIComponent(match[1].replace(/\+/g, " ")));
+    } catch (e) {
+      continue;
+    }
+    var radios = sets[i].querySelectorAll("input[type=radio]");
+    for (var j = 0; j < radios.length; j += 1) {
+      if (slug(radios[j].value) === wanted) {
+        radios[j].checked = true;
+        sets[i].disabled = false;
+        sets[i].hidden = false;
+        break;
+      }
+    }
+  }
+})();
+
 /* Contact form: fill the venue from the link. A venue page's button opens
  * the form with ?venue=<the venue's name>, and the venue field starts with it. */
 (function () {

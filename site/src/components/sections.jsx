@@ -809,7 +809,7 @@ const ContactForm = {
         rows: text("Rows"),
         placeholder: text("Placeholder"),
         options: text("Choices (Checkboxes and One of), separated by |"),
-        param: text("Ticked when the link carries (One checkbox), e.g. photo-video"),
+        param: text("Ticked when the link carries (One checkbox, e.g. photo-video); for One of, shown and chosen only when the link names a choice (e.g. package=event-photos)"),
       },
     },
     button: text("Button"),
@@ -867,7 +867,14 @@ const ContactForm = {
                         </label>
                       </div>
                     ) : f.kind === "checks" || f.kind === "choice" ? (
-                      <fieldset className={f.full ? "field field--full field--choices" : "field field--choices"} key={i}>
+                      // A one-of with a link key stays hidden and off until the link names a choice (acts.js).
+                      <fieldset
+                        className={f.full ? "field field--full field--choices" : "field field--choices"}
+                        key={i}
+                        data-param={f.kind === "choice" && f.param ? f.param : undefined}
+                        hidden={f.kind === "choice" && f.param ? true : undefined}
+                        disabled={f.kind === "choice" && f.param ? true : undefined}
+                      >
                         <H as="legend" html={f.label} />
                         <div className="choices">
                           {String(f.options || "").split("|").map((o) => o.trim()).filter(Boolean).map((o, j) => (
