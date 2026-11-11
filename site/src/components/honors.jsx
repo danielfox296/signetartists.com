@@ -107,7 +107,7 @@ export function LaurelRow({ items, small, plain, cls }) {
 const MARK_H = {
   "honors/swallow-hill.png": 1.45, "honors/dazzle.png": 1.5, "honors/josie-music-awards.png": 1.7, "honors/jazziz.png": 1.5,
   "honors/focoma.svg": 1.45, "honors/wammies.svg": 1.05, "honors/9news.png": 0.8, "honors/berklee.svg": 0.75,
-  "honors/rolling-stone-india.png": 0.9, "honors/vail-daily.png": 0.75, "honors/denver-gazette.png": 1.1,
+  "honors/rolling-stone-india.png": 0.9, "honors/vail-daily.png": 0.75, "honors/denver-gazette.png": 1.1, "honors/gazette.png": 1.05,
 };
 
 export function Mark({ h }) {
