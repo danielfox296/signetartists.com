@@ -6094,26 +6094,33 @@ a.laurel-link:focus-visible .laurel-title {
   color: var(--ink-faint);
 }
 
-/* A card's award line, over the photo's dark foot or in the card body. */
+/* A card's award line: a coral pill, over the photo's dark foot or in the card body. */
 .card-honor {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  margin: 0.55rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: #fff;
+  gap: 0.35rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.6rem 0 0;
+  padding: 0.3rem 0.85rem 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: var(--red);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #121212;
 }
 
 .card-honor-icon {
   flex: none;
-  width: 1.15rem;
-  height: 1.25rem;
-  color: var(--red);
+  width: 1.05rem;
+  height: 1.15rem;
+  color: #121212;
 }
 
 .act-card-body .card-honor {
-  color: var(--ink-soft);
+  color: #121212;
 }
 
 @media (max-width: 640px) {
