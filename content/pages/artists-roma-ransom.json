@@ -1,0 +1,488 @@
+{
+ "root": {
+  "props": {
+   "path": "/artists/roma-ransom/",
+   "title": "Roma Ransom: violin and guitar duo for hire in Colorado",
+   "description": "Roma Ransom is a violin and guitar duo from Colorado Springs playing Romanian and Eastern European folk, old-time ballads and swing at weddings and private events.",
+   "titleExact": true,
+   "ogImage": "img/roma-ransom-card.jpg",
+   "ogImageAlt": "Gordon Lewis and Grace Easley of Roma Ransom walking through a pasture in cowboy hats, his guitar and her violin in hand, smiling at each other.",
+   "nav": "music",
+   "breadcrumb": "Roma Ransom",
+   "schema": {
+    "service": {
+     "name": "Violin and guitar duo",
+     "serviceType": "Eastern European folk, old-time and swing music for weddings, private events and corporate events",
+     "description": "Roma Ransom, Grace Easley on violin and vocals and Gordon Lewis on guitar, play Romanian and Eastern European folk tunes, old-time ballads and swing at weddings, private events and corporate events in Denver, Colorado Springs and across Colorado.",
+     "areaServed": [
+      "Denver",
+      "Colorado Springs",
+      "Boulder",
+      "Fort Collins",
+      "Breckenridge",
+      "Vail",
+      "Beaver Creek",
+      "Aspen"
+     ],
+     "configs": [
+      "duo"
+     ]
+    },
+    "act": "roma-ransom",
+    "video": {
+     "name": "Roma Ransom: Smoke Rings",
+     "description": "Roma Ransom's music video for their song Smoke Rings, with Grace Easley on violin and vocals and Gordon Lewis on guitar.",
+     "uploadDate": "2019-01-31",
+     "duration": "PT3M19S"
+    },
+    "videos": [
+     {
+      "id": "HU-JjPPlxyQ",
+      "name": "Roma Ransom at the Parker Days Festival",
+      "description": "Roma Ransom playing violin and guitar on the East Music Stage at the Parker Days Festival in Parker, Colorado.",
+      "uploadDate": "2024-06-15",
+      "duration": "PT3M24S"
+     },
+     {
+      "id": "hlV552j19UQ",
+      "name": "Roma Ransom at the Lon Chaney Theater",
+      "description": "Grace Easley singing the blues with Gordon Lewis on guitar and percussion, at the Lon Chaney Theater's Finale Series in Colorado Springs.",
+      "uploadDate": "2023-10-23",
+      "duration": "PT3M54S"
+     },
+     {
+      "id": "LRpTUKtvCq8",
+      "name": "Roma Ransom playing Tchavolo Swing",
+      "description": "Roma Ransom playing the swing tune Tchavolo Swing on violin and guitar, outdoors among the aspens.",
+      "uploadDate": "2021-10-14",
+      "duration": "PT1M11S"
+     },
+     {
+      "id": "b8BeAkvX824",
+      "name": "Roma Ransom live at Mash Mechanix",
+      "description": "Roma Ransom playing live at Mash Mechanix in Colorado Springs.",
+      "uploadDate": "2023-03-05",
+      "duration": "PT6M58S"
+     },
+     {
+      "id": "JXJSqV6KYJg",
+      "name": "Roma Ransom: Waltz in the Mountains",
+      "description": "Roma Ransom playing a waltz on violin and guitar in the Colorado mountains.",
+      "uploadDate": "2021-11-18",
+      "duration": "PT48S"
+     },
+     {
+      "id": "GskXR7vMZAU",
+      "name": "Roma Ransom at the Parker Days Festival, second set",
+      "description": "More of Roma Ransom's set at the Parker Days Festival in Parker, Colorado.",
+      "uploadDate": "2024-06-16",
+      "duration": "PT4M56S"
+     },
+     {
+      "id": "YFwWCpx18gM",
+      "name": "Roma Ransom playing Caravan",
+      "description": "Roma Ransom playing Caravan at an Irish pub in Galway.",
+      "uploadDate": "2026-01-23",
+      "duration": "PT1M3S"
+     },
+     {
+      "id": "DJqCEgwM7cg",
+      "name": "Roma Ransom at Herman's Hideaway",
+      "description": "Roma Ransom playing live at Herman's Hideaway in Denver.",
+      "uploadDate": "2025-07-31",
+      "duration": "PT52S"
+     },
+     {
+      "id": "UhvXDfYViYU",
+      "name": "Roma Ransom playing Los Caminos De La Vida",
+      "description": "Roma Ransom playing Los Caminos De La Vida with two friends, beside a river.",
+      "uploadDate": "2026-05-04",
+      "duration": "PT4M"
+     }
+    ]
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "ActHero",
+   "props": {
+    "id": "ActHero-4",
+    "band": "top",
+    "cls": "act-hero",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Violin and guitar duo",
+       "slab": true,
+       "title": "Roma Ransom",
+       "titleTag": "h1",
+       "titleClass": "h1 display",
+       "face": "Folk tunes, covers and originals, as a duo.",
+       "lede": "There’s something about a violin and a guitar together that makes an event feel a little more special. Roma Ransom is Grace Easley on violin and vocals and Gordon Lewis on guitar, a married duo from Colorado Springs who play Romanian and Eastern European folk tunes, old-time ballads and a little swing. They’re a lovely choice for a wedding or a dinner party.",
+       "buttons": [
+        {
+         "label": "Check a date",
+         "href": "/contact/?act=roma-ransom",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/hIkbkIMVHBE?rel=0",
+       "title": "Roma Ransom playing their song Smoke Rings",
+       "loading": "lazy"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActHonors",
+   "props": {
+    "id": "ActHonors-1",
+    "band": "ruled",
+    "title": "Press and stages",
+    "pressTitle": "In the press and on air",
+    "creditsTitle": "Stages and credits"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-6",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "ruled",
+    "narrow": true,
+    "cls": "statement",
+    "blocks": [
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Grace and Gordon met busking on a street in Springfield, Missouri, and they’ve played together ever since. They named the duo for the music of Romania, and their song list runs from swing tunes like Caravan to Romanian and Eastern European folk, old-time ballads and their own songs. Both trained classically from an early age, Grace on violin and viola and Gordon on guitar, and Grace sings, too.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-107",
+       "html": "For about a decade they’ve played more than 200 shows a year, touring all over North America, and they’ve shared festival bills with Leftover Salmon and Larry and His Flask. Closer to home, they’ve played Dazzle in Denver and the Lon Chaney Theater in Colorado Springs, and they played a VIP event at the Pikes Peak Center for an Itzhak Perlman performance.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-207",
+       "html": "Their music has been in films and ads for Patagonia, Yeti, Huckberry and Bud Light, and Colorado Public Radio has featured them on Air Check. They bring their own sound system, so they can play outdoors or in just about anywhere you’d like them.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActSizes",
+   "props": {
+    "id": "ActSizes-12",
+    "act": "roma-ransom",
+    "title": "Configuration",
+    "note": "Send us your date and we’ll help you plan the music around your event. They can play instrumental tunes or songs with vocals, or a mix of both."
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/\">Mountain and garden weddings</a>",
+         "text": "Book them for your <a href=\"/weddings/ceremony/\">ceremony</a>, and a few swing and folk tunes give your <a href=\"/weddings/cocktail-hour/\">cocktail hour</a> a romantic, old-world feel."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Dinner parties and celebrations</a>",
+         "text": "They’re a great fit for a birthday, an anniversary or a dinner at home, when you’d like music with some character that still lets everyone talk."
+        },
+        {
+         "term": "<a href=\"/corporate/\">Banquets and client dinners</a>",
+         "text": "Two classically trained players with a song list from Romania to Appalachia make a memorable dinner for clients or a team, at a volume where nobody has to raise their voice."
+        },
+        {
+         "term": "<a href=\"/daytime/\">Daytime and outdoor events</a>",
+         "text": "They bring their own sound system and play outdoors all the time, so a patio or a garden party is an easy fit."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "cls": "note",
+       "html": "Planning toasts or a program? We can work the music around them with your <a href=\"/planners/run-of-show/\">run of show</a>. You can also get a general idea of what live music costs in Colorado from our <a href=\"/guides/live-music-cost-colorado/\">cost guide</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-33",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-29",
+       "eyebrow": "Video Clips",
+       "title": "Watch Roma Ransom play",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-30",
+       "single": false,
+       "playlist": true,
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/HU-JjPPlxyQ?rel=0",
+         "title": "Roma Ransom at the Parker Days Festival",
+         "loading": "lazy",
+         "caption": "Live at the <span class=\"clip-name\">Parker Days Festival</span>"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hlV552j19UQ?rel=0",
+         "title": "Roma Ransom at the Lon Chaney Theater",
+         "loading": "lazy",
+         "caption": "Grace sings the blues at the <span class=\"clip-name\">Lon Chaney Theater</span>"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/LRpTUKtvCq8?rel=0",
+         "title": "Roma Ransom playing Tchavolo Swing",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Tchavolo Swing</span>, a swing tune on violin and guitar"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/b8BeAkvX824?rel=0",
+         "title": "Roma Ransom live at Mash Mechanix",
+         "loading": "lazy",
+         "caption": "Live at <span class=\"clip-name\">Mash Mechanix</span> in Colorado Springs"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/JXJSqV6KYJg?rel=0",
+         "title": "Roma Ransom: Waltz in the Mountains",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Waltz in the Mountains</span>"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/GskXR7vMZAU?rel=0",
+         "title": "Roma Ransom at the Parker Days Festival, second set",
+         "loading": "lazy",
+         "caption": "More from <span class=\"clip-name\">Parker Days</span>"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/YFwWCpx18gM?rel=0",
+         "title": "Roma Ransom playing Caravan",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Caravan</span>, at an Irish pub in Galway"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/DJqCEgwM7cg?rel=0",
+         "title": "Roma Ransom at Herman's Hideaway",
+         "loading": "lazy",
+         "caption": "Live at <span class=\"clip-name\">Herman’s Hideaway</span> in Denver"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/UhvXDfYViYU?rel=0",
+         "title": "Roma Ransom playing Los Caminos De La Vida",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Los Caminos De La Vida</span>, with two friends"
+        }
+       ]
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-31",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/acts/roma-ransom-tintype.jpg",
+         "alt": "A tintype portrait of Gordon Lewis in a wide-brimmed hat and Grace Easley in a turquoise necklace, arm in arm.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/roma-ransom-field.jpg",
+         "alt": "Gordon Lewis and Grace Easley walking through a pasture in cowboy hats, his guitar and her violin in hand.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/roma-ransom-mountains.jpg",
+         "alt": "Grace Easley playing violin and Gordon Lewis playing guitar on a mountain hillside under big clouds.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/roma-ransom-aspens.jpg",
+         "alt": "Grace Easley playing violin and Gordon Lewis playing guitar in a grove of golden aspens.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/roma-ransom-stage.jpg",
+         "alt": "Grace Easley on violin and Gordon Lewis on guitar playing on a club stage under green lights.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/roma-ransom-parker-days.jpg",
+         "alt": "Grace Easley playing violin and Gordon Lewis playing guitar on an outdoor festival stage in Parker, Colorado.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-38",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Roma Ransom questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "Still have a question? Our <a href=\"/planners/faq/\">full question list</a> may have the answer.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-36",
+       "schema": true,
+       "items": [
+        {
+         "q": "Do they play instrumental music or songs?",
+         "a": "Both. Much of their song list is instrumental violin and guitar tunes, and Grace sings the ballads and blues. We can plan the mix with you."
+        },
+        {
+         "q": "Can they play our ceremony?",
+         "a": "Yes. They’re both classically trained, and violin and guitar make a lovely ceremony. Let us know if you have a processional song in mind."
+        },
+        {
+         "q": "Do they bring their own sound?",
+         "a": "Yes, they bring their own sound system. Just let us know how big the space is and whether you’re indoors or out."
+        },
+        {
+         "q": "Do they play outside Colorado Springs?",
+         "a": "Yes. They play all over Colorado, from Denver and Fort Collins to the mountains. Tell us where your event is and we’ll let you know what’s possible."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-39",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=roma-ransom",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Looking for a violin and guitar duo for your event?",
+       "lede": "Send us your date and we’ll let you know if Roma Ransom is available and what it would cost.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

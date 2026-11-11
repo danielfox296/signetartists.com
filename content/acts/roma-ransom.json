@@ -1,0 +1,117 @@
+{
+ "id": "roma-ransom",
+ "name": "Roma Ransom",
+ "presentation": "face",
+ "status": "listing",
+ "page": "artists/roma-ransom/",
+ "style": "Violin and guitar duo",
+ "face": "Grace Easley and Gordon Lewis",
+ "byline": "Grace Easley on vocals and violin, and Gordon Lewis on guitar.",
+ "byline_inline": "Grace Easley on vocals and violin and Gordon Lewis on guitar",
+ "material": "Folk tunes, covers and originals",
+ "bucket_tags": [
+  "cocktail",
+  "patio",
+  "specialty"
+ ],
+ "config_tags": [
+  "duo"
+ ],
+ "configRangeLabel": "Duo",
+ "genre_tags": [
+  "world-folk",
+  "americana"
+ ],
+ "vocals": "optional",
+ "from": "duo",
+ "img": "roma-ransom-card.jpg",
+ "alt": "Gordon Lewis and Grace Easley of Roma Ransom walking through a pasture in cowboy hats, his guitar and her violin in hand, smiling at each other.",
+ "video": "https://www.youtube-nocookie.com/embed/hIkbkIMVHBE?rel=0",
+ "video_poster": "img/acts/roma-ransom-live-poster.jpg",
+ "blurb": "Roma Ransom is Grace Easley on violin and vocals and Gordon Lewis on guitar, a married duo from Colorado Springs. They play Romanian and Eastern European folk tunes, old-time ballads like Shady Grove and St. James Infirmary, and a few swing tunes, and both trained as classical musicians, so they’re a lovely choice for a wedding ceremony or a dinner.",
+ "seo_title": "Roma Ransom: violin and guitar duo for hire in Colorado",
+ "meta_description": "Roma Ransom is a violin and guitar duo from Colorado Springs playing Romanian and Eastern European folk, old-time ballads and swing at weddings and private events.",
+ "identity": [
+  "Grace and Gordon met busking on a street in Springfield, Missouri, and they’ve played together ever since. They named the duo for the music of Romania, and their song list runs from swing tunes like Caravan to Romanian and Eastern European folk, old-time ballads and their own songs. Both trained classically from an early age, Grace on violin and viola and Gordon on guitar, and Grace sings, too.",
+  "For about a decade they’ve played more than 200 shows a year, touring all over North America, and they’ve shared festival bills with Leftover Salmon and Larry and His Flask. Closer to home, they’ve played Dazzle in Denver and the Lon Chaney Theater in Colorado Springs, and they played a VIP event at the Pikes Peak Center for an Itzhak Perlman performance.",
+  "Their music has been in films and ads for Patagonia, Yeti, Huckberry and Bud Light, and Colorado Public Radio has featured them on Air Check. They bring their own sound system, so they can play outdoors or in just about anywhere you’d like them."
+ ],
+ "ladder": [
+  {
+   "config": "duo",
+   "build": "Grace Easley on vocals, violin and viola, and Gordon Lewis on guitar and percussion",
+   "bestFor": "Violin and guitar make a beautiful pair for a ceremony or a cocktail hour. They can play a whole set of instrumental tunes, or bring in Grace’s voice for the songs."
+  }
+ ],
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties",
+  "daytime"
+ ],
+ "entity": {
+  "type": "MusicGroup"
+ },
+ "honorLine": "Music in Patagonia and Yeti films",
+ "honors": [
+  {
+   "kind": "radio",
+   "title": "Gypsy jazz from Roma Ransom on Air Check",
+   "from": "Colorado Public Radio",
+   "link": "https://www.cpr.org/podcast-episode/jane-rigler-doctor-of-music-and-gypsy-jazz-from-roma-ransom-on-air-check"
+  },
+  {
+   "kind": "press",
+   "title": "What’s the secret to sharing love and the stage? A Colorado Springs duo dishes",
+   "from": "The Gazette, Colorado Springs",
+   "year": "2020",
+   "logo": "honors/gazette.png",
+   "link": "https://gazette.com/?p=1255293"
+  },
+  {
+   "kind": "press",
+   "title": "Roma Ransom are all the rage on the Front Range",
+   "from": "Colorado Springs Lifestyle",
+   "quote": "Grace and Gordon are truly exceptional.",
+   "who": "Ryan Flores, a Colorado Springs musician",
+   "link": "https://citylifestyle.com/articles/roma-ransom-are-all-the-rage-on-the-front-range"
+  },
+  {
+   "kind": "stage",
+   "title": "Played Dazzle, Denver’s jazz club",
+   "from": "Dazzle",
+   "year": "2024",
+   "logo": "honors/dazzle.png"
+  },
+  {
+   "kind": "stage",
+   "title": "A VIP event at the Pikes Peak Center for an Itzhak Perlman performance"
+  },
+  {
+   "kind": "with",
+   "title": "Festival bills with Leftover Salmon and Larry and His Flask"
+  },
+  {
+   "kind": "stage",
+   "title": "The Lon Chaney Theater’s Finale Series in Colorado Springs",
+   "year": "2023"
+  },
+  {
+   "kind": "stage",
+   "title": "The Parker Days Festival",
+   "year": "2024"
+  },
+  {
+   "kind": "stage",
+   "title": "The MeadowGrass Music Festival, the Colorado Wine Festival and The Black Rose Acoustic Society"
+  },
+  {
+   "kind": "other",
+   "title": "Music in films and ads for Patagonia, Yeti, Huckberry, Bud Light, Vice and Xtratuf"
+  },
+  {
+   "kind": "release",
+   "title": "Three EPs: Roma Ransom, Hiraeth and Isolation"
+  }
+ ]
+}
