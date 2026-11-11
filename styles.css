@@ -3744,6 +3744,24 @@ main:focus {
   display: block;
 }
 
+/* A picture's credit line, in its bottom corner. */
+.act-video-credit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.25rem 0.6rem;
+  background: rgba(18, 18, 18, 0.7);
+  color: #f5f5f2;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+}
+
+.act-video-credit a {
+  color: inherit;
+}
+
 /* Click-to-play YouTube, 2026-10-17: the video's picture and YouTube's play
    button. A click or Enter swaps in the player, playing; until then nothing
    loads from YouTube. The watch pages keep the player itself. */

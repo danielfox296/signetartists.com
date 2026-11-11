@@ -411,11 +411,12 @@ export const VideoGrid = {
 // The picture or the clip beside an act's heading.
 export const ActVideo = {
   label: "Act video",
-  fields: videoFields,
+  fields: { ...videoFields, credit: rich("Credit") },
   defaultProps: { kind: "iframe", src: "", title: "" },
   render: (v) => (
     <div className="act-video" style={css(v.style)}>
       <Player v={v} sizes={SIZES.wrap} />
+      {v.credit ? <H as="p" className="act-video-credit" html={v.credit} /> : null}
     </div>
   ),
 };
