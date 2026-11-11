@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "St Julien Hotel & Spa",
    "indexLabel": "St Julien Hotel & Spa",
-   "heroImage": "img/acts/classical-strings-meadow.jpg",
+   "heroImage": "img/venues/st-julien-boulder/exterior-flatirons.jpg",
    "venue": {
     "name": "St Julien Hotel & Spa",
     "kind": "hotel",
@@ -94,10 +94,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of St Julien Hotel &amp; Spa",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/st-julien-boulder/xanadu-ballroom.jpg",
+         "alt": "The Xanadu Ballroom set for a wedding reception, with candlelit tables around a dance floor and a band stage lit in blue.",
+         "caption": "The Xanadu Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/st-julien-boulder/lawn-ceremony.jpg",
+         "alt": "The lawn set with rows of white ceremony chairs, seen from above, with terraced gardens behind.",
+         "caption": "The lawn. Photo by Haley Hawn",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/st-julien-boulder/terrace-dusk.jpg",
+         "alt": "A stone terrace at dusk with cocktail tables and a hedge, and the Flatirons on the skyline.",
+         "caption": "A terrace at dusk",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/st-julien-boulder/terrace-gazebo.jpg",
+         "alt": "A paved terrace with a white gazebo, a buffet line and round tables in white linens, with mountains behind.",
+         "caption": "The terrace and gazebo",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: St Julien Hotel &amp; Spa."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-sj3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -150,7 +213,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-sj3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -202,7 +265,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-sj40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -243,7 +306,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-sj41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -285,7 +348,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-sj5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -312,7 +375,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-sj6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

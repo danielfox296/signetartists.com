@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Hilton Denver City Center",
    "indexLabel": "Hilton Denver City Center",
-   "heroImage": "img/acts/quadrasonic-full-band-stage.jpg",
+   "heroImage": "img/venues/hilton-denver-city-center/colorado-ballroom.jpg",
    "venue": {
     "name": "Hilton Denver City Center",
     "kind": "hotel",
@@ -94,10 +94,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Hilton Denver City Center",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/hilton-denver-city-center/denver-ballroom.jpg",
+         "alt": "The Denver Ballroom set with black cocktail tables on a patterned carpet.",
+         "caption": "The Denver Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hilton-denver-city-center/penrose-ballroom.jpg",
+         "alt": "The Penrose Ballroom set with round tables in dark linens.",
+         "caption": "The Penrose Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hilton-denver-city-center/outdoor-plaza.jpg",
+         "alt": "White chairs with gold sashes set for a ceremony on the tree-lined outdoor plaza.",
+         "caption": "The outdoor plaza",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hilton-denver-city-center/pre-function.jpg",
+         "alt": "The pre-function space by the escalators, set with cocktail tables.",
+         "caption": "The pre-function space",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Hilton Denver City Center."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-hc3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -148,7 +211,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-hc3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -198,7 +261,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-hc40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -239,7 +302,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-hc41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -271,7 +334,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-hc5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -298,7 +361,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-hc6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

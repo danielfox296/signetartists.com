@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "the Crawford Hotel",
    "indexLabel": "the Crawford Hotel",
-   "heroImage": "img/acts/classical-strings-stage.jpg",
+   "heroImage": "img/venues/crawford-hotel/great-hall.jpg",
    "venue": {
     "name": "The Crawford Hotel",
     "kind": "hotel",
@@ -99,10 +99,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of the Crawford Hotel",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/crawford-hotel/cooper-lounge.jpg",
+         "alt": "The Cooper Lounge on the Great Hall mezzanine, with a curved bar, armchairs and the hall's arched windows behind.",
+         "caption": "The Cooper Lounge",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/crawford-hotel/webb-gallery-reception.jpg",
+         "alt": "The Webb Gallery set for a reception, with dressed round tables and cocktail tables under string lights beside a wall of windows.",
+         "caption": "The Webb Gallery. Photo by From the Hip Photo",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/crawford-hotel/mcwhinney-room.jpg",
+         "alt": "The McWhinney Room set with round tables and flower centerpieces, with a stone wall along one side.",
+         "caption": "The McWhinney Room. Photo by From the Hip Photo",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/crawford-hotel/union-station-exterior.jpg",
+         "alt": "Denver Union Station's front facade and Union Station sign, with umbrella-shaded tables on the plaza below.",
+         "caption": "Denver Union Station",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: The Crawford Hotel."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-c3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -156,7 +219,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-c3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -206,7 +269,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-c40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -246,7 +309,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-c41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -288,7 +351,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-c5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -315,7 +378,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-c6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

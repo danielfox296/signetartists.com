@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Grand Hyatt Denver",
    "indexLabel": "Grand Hyatt Denver",
-   "heroImage": "img/acts/medina-band.jpg",
+   "heroImage": "img/venues/grand-hyatt-denver/pinnacle-club-wedding.jpg",
    "venue": {
     "name": "Grand Hyatt Denver",
     "kind": "hotel",
@@ -94,10 +94,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Grand Hyatt Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/grand-hyatt-denver/pinnacle-club-reception.jpg",
+         "alt": "The Pinnacle Club set with cocktail tables, with the mountains through tall windows.",
+         "caption": "The Pinnacle Club",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/grand-hyatt-denver/colorado-ballroom.jpg",
+         "alt": "The Colorado Ballroom set for a gala dinner, with screens either side of a lit stage.",
+         "caption": "The Colorado Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/grand-hyatt-denver/aspen-ballroom.jpg",
+         "alt": "The Aspen Ballroom set with round tables and red flowers under crystal chandeliers.",
+         "caption": "The Aspen Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/grand-hyatt-denver/mt-elbert.jpg",
+         "alt": "Mt. Elbert set for a wedding dinner, with windows onto the trees of the street.",
+         "caption": "Mt. Elbert",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Grand Hyatt Denver."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-gh3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -152,7 +215,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-gh3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -200,7 +263,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-gh40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -241,7 +304,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-gh41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -273,7 +336,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-gh5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -300,7 +363,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-gh6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Gaylord Rockies",
    "indexLabel": "Gaylord Rockies",
-   "heroImage": "img/acts/little-moses-jones-stage.jpg",
+   "heroImage": "img/venues/gaylord-rockies/exterior.jpg",
    "venue": {
     "name": "Gaylord Rockies Resort & Convention Center",
     "kind": "resort and convention center",
@@ -104,10 +104,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Gaylord Rockies",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/gaylord-rockies/juniper-ballroom.jpg",
+         "alt": "The Juniper Ballroom set for dinner with navy linens, candles and white roses.",
+         "caption": "The Juniper Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/gaylord-rockies/colorado-ballroom.jpg",
+         "alt": "The Colorado Ballroom set theater-style under large round chandeliers.",
+         "caption": "The Colorado Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/gaylord-rockies/aurora-ballroom.jpg",
+         "alt": "The empty Aurora Ballroom with a sculpted ceiling.",
+         "caption": "The Aurora Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/gaylord-rockies/lobby.jpg",
+         "alt": "A lobby lounge with leather armchairs, a stone fireplace and an iron chandelier.",
+         "caption": "The lobby",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Gaylord Rockies Resort &amp; Convention Center."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-g3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -158,7 +221,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-g3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -215,7 +278,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-g3c",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -263,7 +326,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-g40",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -303,7 +366,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-g41",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -345,7 +408,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-g5",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "CloseRow",
@@ -372,7 +435,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-g6",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Title",

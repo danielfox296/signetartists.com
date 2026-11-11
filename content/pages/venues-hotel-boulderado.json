@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Hotel Boulderado",
    "indexLabel": "Hotel Boulderado",
-   "heroImage": "img/acts/jazz-duo-card.jpg",
+   "heroImage": "img/venues/hotel-boulderado/lobby.jpg",
    "venue": {
     "name": "Hotel Boulderado",
     "kind": "hotel",
@@ -94,10 +94,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Hotel Boulderado",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/hotel-boulderado/mezzanine.jpg",
+         "alt": "A long dinner table with flowers on the Mezzanine, under the stained-glass ceiling.",
+         "caption": "The Mezzanine. Photo by Danna Frost Photography",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hotel-boulderado/boulderado-ballroom.jpg",
+         "alt": "The Boulderado Ballroom set theater-style, with rows of chairs facing projection screens.",
+         "caption": "The Boulderado Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hotel-boulderado/columbine-balsam.jpg",
+         "alt": "The Columbine room set with tables in a U shape facing a projection screen.",
+         "caption": "Columbine-Balsam. Photo by Tim Romano",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hotel-boulderado/exterior.jpg",
+         "alt": "The hotel's red brick corner building seen from the street at dusk.",
+         "caption": "The hotel at dusk. Photo by Tim Romano",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Hotel Boulderado. The photo at the top of the page is by Tim Romano."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-hb3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -142,7 +205,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-hb3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -199,7 +262,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-hb40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -235,7 +298,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-hb41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -277,7 +340,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-hb5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -304,7 +367,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-hb6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

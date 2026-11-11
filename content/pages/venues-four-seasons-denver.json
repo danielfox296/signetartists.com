@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Four Seasons Hotel Denver",
    "indexLabel": "Four Seasons Hotel Denver",
-   "heroImage": "img/acts/classical-strings-stage.jpg",
+   "heroImage": "img/venues/four-seasons-denver/ballroom-wedding.jpg",
    "venue": {
     "name": "Four Seasons Hotel Denver",
     "kind": "hotel",
@@ -94,10 +94,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Four Seasons Hotel Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/four-seasons-denver/pool-terrace-ceremony.jpg",
+         "alt": "Rows of white chairs and a draped arch set for a ceremony beside the rooftop pool.",
+         "caption": "The Pool Terrace",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/four-seasons-denver/pool-terrace-evening.jpg",
+         "alt": "Cocktail tables in orange linens around the lit pool on the rooftop terrace, with the clock tower behind.",
+         "caption": "The Pool Terrace at night",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/four-seasons-denver/private-dining.jpg",
+         "alt": "A private dining table beside a grand piano and tall windows over the city.",
+         "caption": "A private dining space",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/four-seasons-denver/exterior.jpg",
+         "alt": "The Four Seasons tower among downtown buildings at dusk.",
+         "caption": "The hotel at dusk",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Four Seasons Hotel Denver."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-fs3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -151,7 +214,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-fs3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -203,7 +266,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-fs40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -244,7 +307,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-fs41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -281,7 +344,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-fs5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -308,7 +371,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-fs6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

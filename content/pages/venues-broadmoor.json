@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "the Broadmoor",
    "indexLabel": "the Broadmoor",
-   "heroImage": "img/acts/classical-strings-meadow.jpg",
+   "heroImage": "img/venues/broadmoor/resort-exterior.jpg",
    "venue": {
     "name": "The Broadmoor",
     "kind": "resort",
@@ -99,10 +99,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of the Broadmoor",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/broadmoor/main-ballroom.jpg",
+         "alt": "The Main Ballroom set for a reception, with high-top cocktail tables on a wood floor under chandeliers and an ornate ceiling.",
+         "caption": "The Main Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/broadmoor/lake-terrace-dining-room.jpg",
+         "alt": "The Lake Terrace Dining Room with a long wooden buffet table, arched doorways and a chandelier.",
+         "caption": "The Lake Terrace Dining Room. Photo by Chad Chisholm",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/broadmoor/lakeside-terrace.jpg",
+         "alt": "The Lakeside Terrace set with round tables beside a fountain and the lake, with the hotel and mountains behind.",
+         "caption": "The Lakeside Terrace",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/broadmoor/cheyenne-lodge.jpg",
+         "alt": "Cheyenne Lodge at dusk, with a lit patio of lounge seating and a stone fireplace, and mountains behind.",
+         "caption": "Cheyenne Lodge. Photo by Kevin Syms",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: The Broadmoor."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-bm3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -157,7 +220,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-bm3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -205,7 +268,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-bm3c",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -254,7 +317,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-bm40",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -293,7 +356,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-bm41",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -335,7 +398,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-bm5",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "CloseRow",
@@ -362,7 +425,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-bm6",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Title",

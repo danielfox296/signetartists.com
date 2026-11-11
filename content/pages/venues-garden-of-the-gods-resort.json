@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Garden of the Gods Resort",
    "indexLabel": "Garden of the Gods Resort",
-   "heroImage": "img/acts/meghan-clarisse-red-rock.jpg",
+   "heroImage": "img/venues/garden-of-the-gods-resort/reflection-pool.jpg",
    "venue": {
     "name": "Garden of the Gods Resort and Club",
     "kind": "resort",
@@ -99,10 +99,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Garden of the Gods Resort",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/garden-of-the-gods-resort/three-graces-ballroom.jpg",
+         "alt": "The Three Graces Ballroom set with navy-draped round tables and gold chairs.",
+         "caption": "The Three Graces Ballroom. Photo by Shawn O'Connor",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/garden-of-the-gods-resort/the-view.jpg",
+         "alt": "The View at Kissing Camels set with round dinner tables in front of tall windows facing the mountains.",
+         "caption": "The View at Kissing Camels",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/garden-of-the-gods-resort/hill-room.jpg",
+         "alt": "The round Hill Room set with long wooden tables and red napkins, with windows looking out toward the rocks.",
+         "caption": "The Hill Room",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/garden-of-the-gods-resort/lawn.jpg",
+         "alt": "A lawn set with rows of white ceremony chairs facing the red rocks and mountains.",
+         "caption": "The lawn",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Garden of the Gods Resort and Club."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-gg3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -148,7 +211,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-gg3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -201,7 +264,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-gg3c",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -250,7 +313,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-gg40",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -291,7 +354,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-gg41",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -328,7 +391,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-gg5",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "CloseRow",
@@ -355,7 +418,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-gg6",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Title",

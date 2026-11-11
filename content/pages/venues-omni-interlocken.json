@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Omni Interlocken",
    "indexLabel": "Omni Interlocken",
-   "heroImage": "img/acts/quadrasonic-snow-stage.jpg",
+   "heroImage": "img/venues/omni-interlocken/outdoor-pavilion.jpg",
    "venue": {
     "name": "Omni Interlocken Hotel",
     "kind": "resort hotel",
@@ -99,10 +99,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Omni Interlocken",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/omni-interlocken/pavilion-reception.jpg",
+         "alt": "The pavilion set for a wedding dinner under a wood-beamed ceiling and iron chandeliers.",
+         "caption": "The Outdoor Pavilion",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/omni-interlocken/interlocken-ballroom.jpg",
+         "alt": "A round table set for a wedding dinner with candles and flowers in the Interlocken Ballroom.",
+         "caption": "The Interlocken Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/omni-interlocken/centennial-ballroom.jpg",
+         "alt": "Wooden chairs and pampas grass set for a ceremony before a curtain of lights in the Centennial Ballroom.",
+         "caption": "The Centennial Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/omni-interlocken/golf-course.jpg",
+         "alt": "A couple on the golf course in late light, with the hotel on the hill behind.",
+         "caption": "The golf course",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Omni Interlocken Hotel."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-oi3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -155,7 +218,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-oi3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -207,7 +270,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-oi40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -248,7 +311,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-oi41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -285,7 +348,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-oi5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -312,7 +375,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-oi6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

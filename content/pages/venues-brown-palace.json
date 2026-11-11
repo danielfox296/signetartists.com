@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "the Brown Palace",
    "indexLabel": "the Brown Palace",
-   "heroImage": "img/acts/classical-strings-ballroom.jpg",
+   "heroImage": "img/venues/brown-palace/atrium-lobby.jpg",
    "venue": {
     "name": "The Brown Palace Hotel and Spa",
     "kind": "hotel",
@@ -104,10 +104,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of the Brown Palace",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/brown-palace/grand-ballroom.jpg",
+         "alt": "The Grand Ballroom set classroom-style, with rows of tables facing two projection screens under a chandelier.",
+         "caption": "The Grand Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/brown-palace/onyx-room.jpg",
+         "alt": "The Onyx Room set with round dinner tables, with onyx-clad walls and pillars and a painted ceiling medallion.",
+         "caption": "The Onyx Room",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/brown-palace/atrium-skylight.jpg",
+         "alt": "Looking straight up the atrium to the stained-glass skylight, framed by floors of iron balconies.",
+         "caption": "The atrium skylight. Photo by Shawn O'Connor",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/brown-palace/exterior.jpg",
+         "alt": "The hotel's triangular red stone building at dusk among downtown Denver towers, with light trails from passing traffic.",
+         "caption": "The hotel at dusk",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: The Brown Palace Hotel and Spa."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-b3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -161,7 +224,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-b3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -215,7 +278,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-b40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -256,7 +319,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-b41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -298,7 +361,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-b5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -325,7 +388,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-b6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

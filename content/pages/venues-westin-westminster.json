@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "the Westin Westminster",
    "indexLabel": "the Westin Westminster",
-   "heroImage": "img/acts/little-moses-jones-wedding.jpg",
+   "heroImage": "img/venues/westin-westminster/exterior.jpg",
    "venue": {
     "name": "The Westin Westminster",
     "kind": "hotel",
@@ -99,10 +99,87 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of the Westin Westminster",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/westin-westminster/westminster-ballroom.jpg",
+         "alt": "The Westminster Ballroom set with round tables before a wall of windows at dusk.",
+         "caption": "The Westminster Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/westin-westminster/legacy-ballroom.jpg",
+         "alt": "The empty Legacy Ballroom with windows along two walls.",
+         "caption": "The Legacy Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/westin-westminster/courtyard.jpg",
+         "alt": "A courtyard set with cocktail tables under string lights at dusk, with a fire table behind.",
+         "caption": "A courtyard",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/westin-westminster/lake-house.jpg",
+         "alt": "The Lake House set with round tables beside a stone fireplace and tall windows.",
+         "caption": "The Lake House",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/westin-westminster/waterfall-gardens.jpg",
+         "alt": "The Waterfall Gardens, with stepped rock and plantings below the hotel.",
+         "caption": "The Waterfall Gardens",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/westin-westminster/patio.jpg",
+         "alt": "A patio of lounge sofas and fire tables outside the hotel entrance.",
+         "caption": "The patio",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: The Westin Westminster."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-ww3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -153,7 +230,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-ww3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -206,7 +283,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-ww40",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -247,7 +324,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-ww41",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -279,7 +356,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-ww5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -306,7 +383,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-ww6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",

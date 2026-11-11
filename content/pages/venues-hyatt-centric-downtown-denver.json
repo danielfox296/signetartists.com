@@ -8,7 +8,7 @@
    "nav": "planners",
    "breadcrumb": "Hyatt Centric Downtown Denver",
    "indexLabel": "Hyatt Centric Downtown Denver",
-   "heroImage": "img/acts/tejas-mural.jpg",
+   "heroImage": "img/venues/hyatt-centric-downtown-denver/rooftop.jpg",
    "venue": {
     "name": "Hyatt Centric Downtown Denver",
     "kind": "hotel",
@@ -96,10 +96,73 @@
    }
   },
   {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Hyatt Centric Downtown Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/hyatt-centric-downtown-denver/rooftop-fireplace.jpg",
+         "alt": "Lounge chairs around the rooftop fireplace, with a glass rail and city towers beyond.",
+         "caption": "The rooftop patio",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hyatt-centric-downtown-denver/lobby-bar.jpg",
+         "alt": "The lobby bar with a long wood counter and a blue tile wall.",
+         "caption": "The lobby bar",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hyatt-centric-downtown-denver/colorado-ballroom.jpg",
+         "alt": "The Colorado Ballroom set with round tables, with windows on two sides.",
+         "caption": "The Colorado Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hyatt-centric-downtown-denver/hospitality-suite.jpg",
+         "alt": "The Hospitality Suite with a long wood dining table, a kitchenette and a sitting area.",
+         "caption": "The Hospitality Suite",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Hyatt Centric Downtown Denver."
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActCards",
    "props": {
     "id": "ActCards-h3a",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -148,7 +211,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-h3b",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -198,7 +261,7 @@
    "type": "ActCards",
    "props": {
     "id": "ActCards-h3c",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -251,7 +314,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-h4",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -287,7 +350,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-h5",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -328,7 +391,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-h6",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -365,7 +428,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-h7",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
@@ -392,7 +455,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-h8",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",
