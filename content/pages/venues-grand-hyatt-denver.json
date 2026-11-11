@@ -1,0 +1,402 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/grand-hyatt-denver/",
+   "title": "Live music at Grand Hyatt Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Grand Hyatt Denver: the Pinnacle Club on the 38th floor, the Colorado Ballroom and the Aspen Ballroom, for weddings and corporate events.",
+   "nav": "planners",
+   "breadcrumb": "Grand Hyatt Denver",
+   "indexLabel": "Grand Hyatt Denver",
+   "heroImage": "img/venues/grand-hyatt-denver/pinnacle-club-wedding.jpg",
+   "venue": {
+    "name": "Grand Hyatt Denver",
+    "kind": "hotel",
+    "group": "Denver",
+    "area": "Downtown Denver",
+    "spaces": "The Pinnacle Club on the 38th floor, the Colorado Ballroom and the Aspen Ballroom.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-gh1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gh1",
+       "eyebrow": "Live music at a Downtown Denver hotel",
+       "slab": true,
+       "title": "Grand Hyatt Denver",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Grand Hyatt Denver is on Welton Street in the middle of downtown, and its Pinnacle Club, on the 38th floor, has some of the best views of the Rockies in the city.",
+       "headingText": [
+        {
+         "html": "Downstairs, the Colorado and Aspen ballrooms handle the bigger dinners, conference receptions and weddings."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gh2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gh2",
+       "title": "Event spaces at Grand Hyatt Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gh2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Pinnacle Club",
+         "art": "mountain",
+         "text": "The Pinnacle Club is on the 38th floor, about 4,200 sq ft with views of the mountains and the city. It used to be the Petroleum Club, and the hotel uses it for weddings and receptions of up to about 350."
+        },
+        {
+         "term": "Colorado Ballroom",
+         "art": "musicians",
+         "text": "The Colorado Ballroom is about 8,400 sq ft with 18-foot ceilings, for banquets of up to 640 and receptions of up to 1,000. It divides into two halves, with a foyer outside."
+        },
+        {
+         "term": "Aspen Ballroom",
+         "art": "glass",
+         "text": "The Aspen Ballroom is about 5,900 sq ft, for banquets of up to 450 and receptions of up to 700."
+        },
+        {
+         "term": "Maroon Peak",
+         "art": "plate",
+         "text": "Maroon Peak is about 960 sq ft, for dinners of up to 70."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Grand Hyatt Denver",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/grand-hyatt-denver/pinnacle-club-reception.jpg",
+         "alt": "The Pinnacle Club set with cocktail tables, with the mountains through tall windows.",
+         "caption": "The Pinnacle Club",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/grand-hyatt-denver/colorado-ballroom.jpg",
+         "alt": "The Colorado Ballroom set for a gala dinner, with screens either side of a lit stage.",
+         "caption": "The Colorado Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/grand-hyatt-denver/aspen-ballroom.jpg",
+         "alt": "The Aspen Ballroom set with round tables and red flowers under crystal chandeliers.",
+         "caption": "The Aspen Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/grand-hyatt-denver/mt-elbert.jpg",
+         "alt": "Mt. Elbert set for a wedding dinner, with windows onto the trees of the street.",
+         "caption": "Mt. Elbert",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Grand Hyatt Denver."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-gh3a",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gh3a",
+       "eyebrow": "Our picks",
+       "title": "Live music at the Pinnacle Club",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the space for a wedding with a view, a client reception or a holiday party up above the city."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-gh3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "solo-piano"
+        },
+        {
+         "act": "christmas-jazz-trio",
+         "kicker": "For the holidays"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-gh3b",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gh3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Colorado and Aspen ballrooms",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for conference receptions, awards dinners and big wedding receptions."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-gh3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "quadrasonic"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gh40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gh40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gh40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space."
+        },
+        {
+         "term": "Load-in",
+         "art": "box",
+         "text": "The Pinnacle Club is on the 38th floor, so we plan the elevator and load-in with the hotel’s events team ahead of time."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters events in-house, and its wedding packages include the catering."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gh41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-gh41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gh41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s self-parking and valet at the hotel."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-gh5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-gh5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Grand Hyatt Denver.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a jazz duo at the Pinnacle Club to a full band in the Colorado Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Grand%20Hyatt%20Denver",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-gh6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-gh6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-gh6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "1750 Welton St, Denver, CO 80202"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.hyatt.com/grand-hyatt/en-US/denrd-grand-hyatt-denver/meetings\" target=\"_blank\" rel=\"noopener\">Meetings and events at Grand Hyatt Denver</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://www.hyatt.com/grand-hyatt/en-US/denrd-grand-hyatt-denver/weddings\" target=\"_blank\" rel=\"noopener\">Weddings at Grand Hyatt Denver</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

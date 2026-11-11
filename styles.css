@@ -3744,6 +3744,24 @@ main:focus {
   display: block;
 }
 
+/* A picture's credit line, in its bottom corner. */
+.act-video-credit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.25rem 0.6rem;
+  background: rgba(18, 18, 18, 0.7);
+  color: #f5f5f2;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+}
+
+.act-video-credit a {
+  color: inherit;
+}
+
 /* Click-to-play YouTube, 2026-10-17: the video's picture and YouTube's play
    button. A click or Enter swaps in the player, playing; until then nothing
    loads from YouTube. The watch pages keep the player itself. */
@@ -6094,26 +6112,33 @@ a.laurel-link:focus-visible .laurel-title {
   color: var(--ink-faint);
 }
 
-/* A card's award line, over the photo's dark foot or in the card body. */
+/* A card's award line: a coral pill, over the photo's dark foot or in the card body. */
 .card-honor {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  margin: 0.55rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: #fff;
+  gap: 0.35rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.6rem 0 0;
+  padding: 0.3rem 0.85rem 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: var(--red);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #121212;
 }
 
 .card-honor-icon {
   flex: none;
-  width: 1.15rem;
-  height: 1.25rem;
-  color: var(--red);
+  width: 1.05rem;
+  height: 1.15rem;
+  color: #121212;
 }
 
 .act-card-body .card-honor {
-  color: var(--ink-soft);
+  color: #121212;
 }
 
 @media (max-width: 640px) {

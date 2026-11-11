@@ -1,0 +1,392 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/hilton-denver-city-center/",
+   "title": "Live music at Hilton Denver City Center | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Hilton Denver City Center: the Colorado, Denver and Penrose ballrooms and the outdoor plaza, for conferences, company parties and weddings.",
+   "nav": "planners",
+   "breadcrumb": "Hilton Denver City Center",
+   "indexLabel": "Hilton Denver City Center",
+   "heroImage": "img/venues/hilton-denver-city-center/colorado-ballroom.jpg",
+   "venue": {
+    "name": "Hilton Denver City Center",
+    "kind": "hotel",
+    "group": "Denver",
+    "area": "Downtown Denver",
+    "spaces": "The Colorado, Denver and Penrose ballrooms and an outdoor plaza.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-hc1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hc1",
+       "eyebrow": "Live music at a Downtown Denver hotel",
+       "slab": true,
+       "title": "Hilton Denver City Center",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Hilton Denver City Center is on California Street, a short walk from the Colorado Convention Center, with 613 guest rooms and three ballrooms.",
+       "headingText": [
+        {
+         "html": "It’s a busy conference and company-meeting hotel, and it hosts weddings too, with its own wedding planning team."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hc2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hc2",
+       "title": "Event spaces at Hilton Denver City Center",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hc2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Colorado Ballroom",
+         "art": "musicians",
+         "text": "The Colorado Ballroom is the hotel’s biggest, for events of up to about 1,200 guests, and it divides into eight sections."
+        },
+        {
+         "term": "Denver Ballroom",
+         "art": "glass",
+         "text": "The Denver Ballroom is about 5,900 sq ft, for banquets of up to 450. It divides into six salons, and it opens onto a pre-function space of about 3,200 sq ft."
+        },
+        {
+         "term": "Penrose Ballroom",
+         "art": "plate",
+         "text": "The Penrose Ballroom is about 2,800 sq ft, for dinners of up to about 200 and receptions of up to 240, across from Prospect’s Urban Kitchen and Bar."
+        },
+        {
+         "term": "Outdoor plaza",
+         "art": "tree",
+         "text": "The hotel has an outdoor plaza that it uses for weddings and receptions."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Hilton Denver City Center",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/hilton-denver-city-center/denver-ballroom.jpg",
+         "alt": "The Denver Ballroom set with black cocktail tables on a patterned carpet.",
+         "caption": "The Denver Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hilton-denver-city-center/penrose-ballroom.jpg",
+         "alt": "The Penrose Ballroom set with round tables in dark linens.",
+         "caption": "The Penrose Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hilton-denver-city-center/outdoor-plaza.jpg",
+         "alt": "White chairs with gold sashes set for a ceremony on the tree-lined outdoor plaza.",
+         "caption": "The outdoor plaza",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hilton-denver-city-center/pre-function.jpg",
+         "alt": "The pre-function space by the escalators, set with cocktail tables.",
+         "caption": "The pre-function space",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Hilton Denver City Center."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-hc3a",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hc3a",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Colorado and Denver ballrooms",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for conference parties, awards dinners and company holiday parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-hc3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "quadrasonic"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-hc3b",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hc3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Penrose Ballroom and on the plaza",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re a good fit for welcome receptions, cocktail hours and smaller dinners."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-hc3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "singer-guitarist"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "last-consulate"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hc40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hc40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hc40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The hotel also has its own AV team on site."
+        },
+        {
+         "term": "Load-in",
+         "art": "box",
+         "text": "We plan load-in and setup with the hotel’s events team."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters events in-house."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hc41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hc41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hc41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "There’s self-parking and valet at the hotel."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-hc5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-hc5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Hilton Denver City Center.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a jazz duo at the reception to a full band in the Colorado Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Hilton%20Denver%20City%20Center",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hc6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hc6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hc6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "1701 California St, Denver, CO 80202"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,414 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/st-julien-boulder/",
+   "title": "Live music at St Julien Hotel & Spa | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at St Julien Hotel & Spa in Boulder: the Xanadu Ballroom, the lawn and the Redgarden terraces under the Flatirons, for weddings and company events.",
+   "nav": "planners",
+   "breadcrumb": "St Julien Hotel & Spa",
+   "indexLabel": "St Julien Hotel & Spa",
+   "heroImage": "img/venues/st-julien-boulder/exterior-flatirons.jpg",
+   "venue": {
+    "name": "St Julien Hotel & Spa",
+    "kind": "hotel",
+    "group": "Boulder",
+    "area": "Downtown Boulder",
+    "spaces": "The Xanadu Ballroom, the lawn, the Redgarden terraces and Jill’s, with views of the Flatirons.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-sj1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-sj1",
+       "eyebrow": "Live music at a Boulder hotel",
+       "slab": true,
+       "title": "St Julien Hotel & Spa",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "St Julien is in downtown Boulder, a block off Pearl Street, and its lawn and terraces look straight up at the Flatirons.",
+       "headingText": [
+        {
+         "html": "Live music is part of the hotel already. There are bands on the terrace from Wednesday to Saturday, and jazz at the holiday buffets."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-sj2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-sj2",
+       "title": "Event spaces at St Julien Hotel & Spa",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-sj2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Xanadu Ballroom",
+         "art": "musicians",
+         "text": "The Xanadu Ballroom is about 4,100 sq ft with 14-foot ceilings, for banquets of up to 300 and receptions of up to 360. It divides into three, and there’s about 2,900 sq ft of pre-function space outside."
+        },
+        {
+         "term": "The lawn",
+         "art": "mountain",
+         "text": "The lawn is about 2,400 sq ft of grass with views of the Flatirons, for banquets of up to 200 and receptions of up to 275."
+        },
+        {
+         "term": "Redgarden terraces and court",
+         "art": "tree",
+         "text": "The Redgarden Lower Terrace holds dinners of up to 80, and the Redgarden Court and Upper Terrace hold receptions of up to 100 and 75."
+        },
+        {
+         "term": "Jill’s and the Honey Onyx Room",
+         "art": "plate",
+         "text": "Jill’s, the hotel’s restaurant, holds private events of up to 140, and the Honey Onyx Room holds up to 40."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of St Julien Hotel &amp; Spa",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/st-julien-boulder/xanadu-ballroom.jpg",
+         "alt": "The Xanadu Ballroom set for a wedding reception, with candlelit tables around a dance floor and a band stage lit in blue.",
+         "caption": "The Xanadu Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/st-julien-boulder/lawn-ceremony.jpg",
+         "alt": "The lawn set with rows of white ceremony chairs, seen from above, with terraced gardens behind.",
+         "caption": "The lawn. Photo by Haley Hawn",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/st-julien-boulder/terrace-dusk.jpg",
+         "alt": "A stone terrace at dusk with cocktail tables and a hedge, and the Flatirons on the skyline.",
+         "caption": "A terrace at dusk",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/st-julien-boulder/terrace-gazebo.jpg",
+         "alt": "A paved terrace with a white gazebo, a buffet line and round tables in white linens, with mountains behind.",
+         "caption": "The terrace and gazebo",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: St Julien Hotel &amp; Spa."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-sj3a",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-sj3a",
+       "eyebrow": "Our picks",
+       "title": "Live music for a ceremony on the lawn or the terraces",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for the ceremony and the cocktail hour, under the Flatirons."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-sj3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "solo-guitarist",
+         "kicker": "For the ceremony"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "rene-moffatt"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-sj3b",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-sj3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Xanadu Ballroom",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the space for wedding receptions, company dinners and holiday parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-sj3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "your-bird-can-sing"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-sj40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-sj40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-sj40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The hotel also has AV in-house."
+        },
+        {
+         "term": "Parking for the act",
+         "art": "car",
+         "text": "The hotel’s garage has a 7-foot height limit, so we plan where the act parks and unloads ahead of time."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters events in-house, and it has its own wedding specialist."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-sj41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-sj41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-sj41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "The hotel’s own music",
+         "art": "speaker",
+         "text": "The terrace has bands from Wednesday to Saturday, so we’ll plan your music around it."
+        },
+        {
+         "term": "Boulder’s noise rules",
+         "art": "speaker",
+         "text": "Boulder limits amplified sound outdoors late at night, so an outdoor event wraps up its loud music and moves inside."
+        },
+        {
+         "term": "Weather",
+         "art": "sun",
+         "text": "The lawn and terraces are outdoors, so we’ll plan the music with an indoor backup in mind."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-sj5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-sj5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at St Julien Hotel & Spa.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from strings on the lawn to a full band in the Xanadu Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=St%20Julien%20Hotel%20%26%20Spa",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-sj6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-sj6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-sj6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "900 Walnut St, Boulder, CO 80302"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://stjulien.com/boulder-colorado-event-space/\" target=\"_blank\" rel=\"noopener\">Event spaces at St Julien</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://stjulien.com/boulder-wedding-venue/\" target=\"_blank\" rel=\"noopener\">Weddings at St Julien</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

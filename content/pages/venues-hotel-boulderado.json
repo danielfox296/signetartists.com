@@ -1,0 +1,406 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/hotel-boulderado/",
+   "title": "Live music at Hotel Boulderado | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Hotel Boulderado in Boulder: the ballroom, the Mezzanine under the stained-glass ceiling and the Grand Staircase, for weddings and parties.",
+   "nav": "planners",
+   "breadcrumb": "Hotel Boulderado",
+   "indexLabel": "Hotel Boulderado",
+   "heroImage": "img/venues/hotel-boulderado/lobby.jpg",
+   "venue": {
+    "name": "Hotel Boulderado",
+    "kind": "hotel",
+    "group": "Boulder",
+    "area": "Downtown Boulder",
+    "spaces": "The Boulderado Ballroom, the Mezzanine and the Grand Staircase, Columbine-Balsam and the Corner Bar.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-hb1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hb1",
+       "eyebrow": "Live music at a Boulder hotel",
+       "slab": true,
+       "title": "Hotel Boulderado",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Hotel Boulderado opened with a New Year’s Eve ball in 1909, a block from Pearl Street, and couples still get married on its Grand Staircase under the stained-glass ceiling.",
+       "headingText": [
+        {
+         "html": "Live music is part of the hotel already. There’s jazz in the lobby on Friday evenings, and music every week downstairs at License No. 1."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hb2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hb2",
+       "title": "Event spaces at Hotel Boulderado",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hb2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Boulderado Ballroom",
+         "art": "musicians",
+         "text": "The Boulderado Ballroom is about 2,900 sq ft, for dinners of up to 180 and receptions of up to 250. The ceiling is lower than most ballrooms, at about 8 ft 8 in."
+        },
+        {
+         "term": "Mezzanine and the Grand Staircase",
+         "art": "glass",
+         "text": "The Mezzanine Lounge is about 3,300 sq ft under the stained-glass ceiling, for dinners of up to 80 and receptions of up to 110. Ceremonies happen on the Grand Staircase, with up to 180 guests watching from the Mezzanine."
+        },
+        {
+         "term": "Columbine-Balsam",
+         "art": "plate",
+         "text": "Columbine-Balsam is about 2,200 sq ft, for dinners of up to 120 and receptions of up to 175, and Columbine on its own holds dinners of up to 80."
+        },
+        {
+         "term": "Spruce and the Corner Bar",
+         "art": "plate",
+         "text": "Spruce Farm & Fish and the Corner Bar each host private brunches and dinners of up to 30."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Hotel Boulderado",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/hotel-boulderado/mezzanine.jpg",
+         "alt": "A long dinner table with flowers on the Mezzanine, under the stained-glass ceiling.",
+         "caption": "The Mezzanine. Photo by Danna Frost Photography",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hotel-boulderado/boulderado-ballroom.jpg",
+         "alt": "The Boulderado Ballroom set theater-style, with rows of chairs facing projection screens.",
+         "caption": "The Boulderado Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hotel-boulderado/columbine-balsam.jpg",
+         "alt": "The Columbine room set with tables in a U shape facing a projection screen.",
+         "caption": "Columbine-Balsam. Photo by Tim Romano",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/hotel-boulderado/exterior.jpg",
+         "alt": "The hotel's red brick corner building seen from the street at dusk.",
+         "caption": "The hotel at dusk. Photo by Tim Romano",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Hotel Boulderado. The photo at the top of the page is by Tim Romano."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-hb3a",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hb3a",
+       "eyebrow": "Our picks",
+       "title": "Live music for a ceremony on the Grand Staircase",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "It’s the hotel’s classic ceremony, with your guests on the Mezzanine."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-hb3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "solo-guitarist",
+         "kicker": "For the ceremony"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "solo-piano"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-hb3b",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hb3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Mezzanine and the Boulderado Ballroom",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for the cocktail hour, the reception and holiday parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-hb3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "changes-jazz-trio"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "your-bird-can-sing"
+        },
+        {
+         "act": "christmas-jazz-trio",
+         "kicker": "For the holidays"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hb40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hb40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hb40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. The ballroom’s ceiling is low, so we size the band and the sound to fit it."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters every event in-house, and its wedding packages include a dance floor."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hb41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-hb41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hb41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "The hotel’s own music",
+         "art": "speaker",
+         "text": "There’s jazz in the lobby on Friday evenings, so we’ll plan your music around it."
+        },
+        {
+         "term": "The holidays",
+         "art": "tree",
+         "text": "The hotel lights a 29-foot Christmas tree in the lobby each year, and it hosts holiday teas and buffets."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "Parking at the hotel is valet only, with street parking nearby."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-hb5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-hb5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Hotel Boulderado.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from strings on the Grand Staircase to a band in the ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Hotel%20Boulderado",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-hb6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hb6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-hb6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "2115 13th St, Boulder, CO 80302"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.boulderado.com/event-planning/event-spaces/\" target=\"_blank\" rel=\"noopener\">Event spaces at Hotel Boulderado</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://www.boulderado.com/weddings/\" target=\"_blank\" rel=\"noopener\">Weddings at Hotel Boulderado</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

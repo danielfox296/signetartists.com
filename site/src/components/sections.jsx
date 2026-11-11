@@ -647,7 +647,8 @@ const VenueList = {
     const venues = s.model.VENUES;
     if (!venues.length) return null;
     const line = (v) => [v.area ? `${esc(v.area)}.` : "", v.spaces || "", v.played.length ? `${actLinks(s, v.played)} ${v.played.length > 1 ? "have" : "has"} played here.` : ""].filter(Boolean).join(" ");
-    const groups = [...new Set(venues.map((v) => v.group || ""))];
+    const count = (g) => venues.filter((v) => (v.group || "") === g).length;
+    const groups = [...new Set(venues.map((v) => v.group || ""))].sort((x, y) => count(y) - count(x));
     return (
       <section className={bandClass(band || "ruled")} id="venues">
         <div className="wrap" style={css(wrapStyle)}>

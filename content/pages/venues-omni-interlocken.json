@@ -1,0 +1,414 @@
+{
+ "root": {
+  "props": {
+   "path": "/venues/omni-interlocken/",
+   "title": "Live music at Omni Interlocken | Signet Artists",
+   "titleExact": true,
+   "description": "Live music at Omni Interlocken in Broomfield: the Interlocken and Centennial ballrooms, the Outdoor Pavilion and the lawn, for weddings and company meetings.",
+   "nav": "planners",
+   "breadcrumb": "Omni Interlocken",
+   "indexLabel": "Omni Interlocken",
+   "heroImage": "img/venues/omni-interlocken/outdoor-pavilion.jpg",
+   "venue": {
+    "name": "Omni Interlocken Hotel",
+    "kind": "resort hotel",
+    "group": "Denver",
+    "area": "Broomfield, between Denver and Boulder",
+    "spaces": "The Interlocken and Centennial ballrooms, Ponderosa, the Outdoor Pavilion and the ceremony lawn.",
+    "played": []
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-oi1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-oi1",
+       "eyebrow": "Live music at a Broomfield resort hotel",
+       "slab": true,
+       "title": "Omni Interlocken Hotel",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Omni Interlocken sits on a 27-hole golf course between Denver and Boulder, with views of the Rockies and about 40,000 sq ft of indoor and outdoor event space.",
+       "headingText": [
+        {
+         "html": "It’s a favorite for company meetings from both cities, and for weddings with the ceremony on the lawn and the reception in the ballroom."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-oi2",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-oi2",
+       "title": "Event spaces at Omni Interlocken",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-oi2",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "Interlocken Ballroom",
+         "art": "musicians",
+         "text": "The Interlocken Ballroom is about 9,100 sq ft with 16-foot ceilings, for receptions of up to about 950 and weddings of up to 500 seated with a dance floor. It divides into four salons, and its pre-function space looks out over the golf course."
+        },
+        {
+         "term": "Centennial Ballroom",
+         "art": "glass",
+         "text": "The Centennial Ballroom is about 4,100 sq ft, for receptions of up to about 420 and weddings of up to 170 with a dance floor. It splits into two equal halves."
+        },
+        {
+         "term": "Ponderosa",
+         "art": "plate",
+         "text": "Ponderosa is about 1,600 sq ft, with French doors to the lobby atrium, for dinners of up to 70 with a dance floor."
+        },
+        {
+         "term": "Outdoor Pavilion",
+         "art": "tree",
+         "text": "The Outdoor Pavilion is covered, about 4,750 sq ft, for banquets of up to 320 and receptions of up to 475, with golf course views, a waterfall and a fire pit. It’s open from late May to early October."
+        },
+        {
+         "term": "Ceremony lawn",
+         "art": "mountain",
+         "text": "The lawn holds ceremonies of up to 220 guests seated, looking out over the golf course."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Images",
+   "props": {
+    "id": "Images-venue",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-venue-photos",
+       "title": "Photos of Omni Interlocken",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-venue",
+       "single": false,
+       "images": [
+        {
+         "src": "/img/venues/omni-interlocken/pavilion-reception.jpg",
+         "alt": "The pavilion set for a wedding dinner under a wood-beamed ceiling and iron chandeliers.",
+         "caption": "The Outdoor Pavilion",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/omni-interlocken/interlocken-ballroom.jpg",
+         "alt": "A round table set for a wedding dinner with candles and flowers in the Interlocken Ballroom.",
+         "caption": "The Interlocken Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/omni-interlocken/centennial-ballroom.jpg",
+         "alt": "Wooden chairs and pampas grass set for a ceremony before a curtain of lights in the Centennial Ballroom.",
+         "caption": "The Centennial Ballroom",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/venues/omni-interlocken/golf-course.jpg",
+         "alt": "A couple on the golf course in late light, with the hotel on the hill behind.",
+         "caption": "The golf course",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-venue-credit",
+       "cls": "note note--small",
+       "html": "Photos: Omni Interlocken Hotel."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-oi3a",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-oi3a",
+       "eyebrow": "Our picks",
+       "title": "Live music for a ceremony on the lawn or a reception in the Pavilion",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for the ceremony and the cocktail hour, with the course and the mountains around you."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-oi3a",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "classical-strings",
+         "kicker": "String quartet",
+         "photo": "/img/acts/classical-strings-ceremony.jpg"
+        },
+        {
+         "act": "solo-guitarist",
+         "kicker": "For the ceremony"
+        },
+        {
+         "act": "dirty-flamenco"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Duo or trio"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Acoustic pop duo"
+        },
+        {
+         "act": "americana-band"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-oi3b",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-oi3b",
+       "eyebrow": "Our picks",
+       "title": "Live music in the Interlocken and Centennial ballrooms",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "They’re the spaces for wedding receptions, company dinners and holiday parties."
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-oi3b",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "little-moses-jones"
+        },
+        {
+         "act": "soul-rnb"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "Duo or full band"
+        },
+        {
+         "act": "yacht-rock"
+        },
+        {
+         "act": "funk-trio"
+        },
+        {
+         "act": "live-band-karaoke"
+        },
+        {
+         "act": "dj"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-oi40",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-oi40",
+       "title": "Load-in and setup",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-oi40",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "Sound system",
+         "text": "Our acts bring their own sound system, sized to the space. Pinnacle Live is the hotel’s recommended AV company for anything more."
+        },
+        {
+         "term": "Coordination",
+         "art": "box",
+         "text": "The hotel doesn’t provide a day-of wedding coordinator, so we plan load-in and setup with your planner and the hotel’s events team."
+        },
+        {
+         "term": "Catering",
+         "art": "plate",
+         "text": "The hotel caters every event in-house."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-oi41",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-oi41",
+       "title": "Things to plan around",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-oi41",
+       "cls": "def-list def-list--icons",
+       "rows": [
+        {
+         "term": "The season",
+         "art": "sun",
+         "text": "The Outdoor Pavilion is open from late May to early October, so a winter event moves inside to the ballrooms."
+        },
+        {
+         "term": "Parking",
+         "art": "car",
+         "text": "Self-parking at the hotel is free."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-oi5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-oi5",
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Ask about your date at Omni Interlocken.",
+       "lede": "Send us your date, and we can put together live music for your event at the hotel, from strings on the lawn to a full band in the Interlocken Ballroom.",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Omni%20Interlocken%20Hotel",
+         "cls": "btn"
+        }
+       ],
+       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-oi6",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-oi6",
+       "html": "Hotel details",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-oi6",
+       "cls": "def-list",
+       "rows": [
+        {
+         "term": "Address",
+         "text": "500 Interlocken Blvd, Broomfield, CO 80021"
+        },
+        {
+         "term": "Events at the hotel",
+         "text": "<a href=\"https://www.omnihotels.com/hotels/denver-interlocken/meetings\" target=\"_blank\" rel=\"noopener\">Meetings and events at Omni Interlocken</a>"
+        },
+        {
+         "term": "Weddings at the hotel",
+         "text": "<a href=\"https://www.omnihotels.com/hotels/denver-interlocken/weddings\" target=\"_blank\" rel=\"noopener\">Weddings at Omni Interlocken</a>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
