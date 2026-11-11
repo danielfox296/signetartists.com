@@ -13,6 +13,7 @@ redrawn.
 | dazzle.png | Dazzle, Denver | https://www.dazzledenver.com/wp-content/smush-webp/2024/10/logo-dazzle.png.webp |
 | denver-gazette.png | The Denver Gazette | https://www.denvergazette.com/wp-content/themes/denver-gazette-wp-theme-integrated/assets/images/gazette-logo.webp |
 | focoma.svg | Fort Collins Musicians Association (FoCoMX) | https://focoma.org/themes/custom/focoma/logo.svg |
+| gazette.png | The Gazette, Colorado Springs | https://gazette.com/wp-content/uploads/2026/10/cropped-cropped-logo.webp (the wordmark, without the mountain and the Pulitzer line) |
 | jazziz.png | JAZZIZ Discovery | https://jazzizdiscovery.com/wp-content/uploads/2025/03/JAZZIZ_LOGO_2025a.png |
 | josie-music-awards.png | The Josie Music Awards | https://www.josiemusicawards.com/uploads/4/1/0/3/41030395/published/josieawardslogotransparent-1.png |
 | rolling-stone-india.png | Rolling Stone India | https://rollingstoneindia.com/wp-content/uploads/2023/03/rsi-new-logo-480x95.png |
