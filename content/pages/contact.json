@@ -117,6 +117,15 @@
       "label": "I'd like information about photo and video services for the event.",
       "param": "photo-video",
       "full": true
+     },
+     {
+      "kind": "choice",
+      "id": "package",
+      "name": "Package",
+      "label": "Photo and video package",
+      "options": "Event Photos|Highlight Film|Photos and Film|Culture Film",
+      "param": "package",
+      "full": true
      }
     ],
     "button": "Send",

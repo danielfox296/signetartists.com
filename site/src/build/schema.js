@@ -138,6 +138,11 @@ export function makeSchema(m) {
         areaServed: (svc.areaServed || m.SERVICE_AREAS).map((n) => ({ "@type": "Place", name: n })),
       };
     }
+    // A service sold as named packages: each package is its own Service, tied
+    // to the page's service, with what it includes and no price.
+    const packages = svc && !act ? svc.packages || [] : [];
+    const slug = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    if (node && packages.length) node.isRelatedTo = packages.map((k) => ({ "@id": `${canonical}#package-${slug(k.name)}` }));
     if (node) {
       const reviews = sc.reviews || [];
       if (reviews.length) {
@@ -150,6 +155,18 @@ export function makeSchema(m) {
         }));
       }
       graph.push(node);
+      for (const k of packages) {
+        graph.push({
+          "@type": "Service",
+          "@id": `${canonical}#package-${slug(k.name)}`,
+          name: k.name,
+          serviceType: svc.serviceType,
+          description: k.description || "",
+          provider: { "@id": `${SITE_URL}/#business` },
+          areaServed: node.areaServed,
+          isRelatedTo: { "@id": node["@id"] },
+        });
+      }
     }
     if (act) graph.push(actServiceNode(act));
     if (sc.video) {
