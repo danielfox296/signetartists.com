@@ -19,6 +19,24 @@
       "Aspen",
       "Beaver Creek",
       "Breckenridge"
+     ],
+     "packages": [
+      {
+       "name": "Event Photos",
+       "description": "One photographer for up to 3 hours, about 80 to 100 edited photos, and full use of the photos for your company."
+      },
+      {
+       "name": "Highlight Film",
+       "description": "One videographer for up to 3 hours, a 60 to 90 second recap of the event, and three clips sized for social media."
+      },
+      {
+       "name": "Photos and Film",
+       "description": "Event Photos and Highlight Film together, planned with the band."
+      },
+      {
+       "name": "Culture Film",
+       "description": "A 2 to 3 minute film with short interviews, cut for recruiting, for showing clients what the company is like, and for playing at future events. Scoped for each company."
+      }
      ]
     }
    }
@@ -100,33 +118,245 @@
    "props": {
     "id": "Rows-132",
     "band": "sunk",
+    "anchor": "packages",
+    "cls": "packages",
     "blocks": [
      {
       "type": "Heading",
       "props": {
        "id": "Heading-130",
-       "title": "What you get",
+       "title": "Photo and video packages",
        "titleTag": "h2",
-       "titleClass": "h2"
+       "titleClass": "h2",
+       "lede": "Pick the one that fits your event, and we'll plan it together with your music."
       }
      },
      {
-      "type": "DefRows",
+      "type": "Columns",
       "props": {
-       "id": "DefRows-131",
-       "cls": "def-list def-list--cards",
-       "rows": [
+       "id": "Columns-PK0",
+       "cls": "split split--two",
+       "n": 4,
+       "c1": [
         {
-         "term": "Event photos",
-         "art": "camera",
-         "text": "Edited photos of your guests, your speakers and the music."
-        },
+         "type": "Panel",
+         "props": {
+          "id": "Panel-PK1",
+          "blocks": [
+           {
+            "type": "Heading",
+            "props": {
+             "id": "Heading-PK1",
+             "title": "Event Photos",
+             "titleTag": "h3",
+             "titleClass": "h3",
+             "lede": "A great fit when you want photos of your guests, your speakers and the music."
+            }
+           },
+           {
+            "type": "SpecList",
+            "props": {
+             "id": "SpecList-PK1",
+             "source": "own",
+             "mark": "check",
+             "cols": false,
+             "items": [
+              {
+               "html": "One photographer for up to 3 hours"
+              },
+              {
+               "html": "About 80 to 100 edited photos"
+              },
+              {
+               "html": "Full use of the photos for your company"
+              }
+             ]
+            }
+           },
+           {
+            "type": "ButtonRow",
+            "props": {
+             "id": "ButtonRow-PK1",
+             "buttons": [
+              {
+               "label": "Check a Date",
+               "href": "/contact/?photo-video=yes&package=event-photos",
+               "cls": "btn"
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "c2": [
         {
-         "term": "A highlight video",
-         "art": "video",
-         "text": "A short recap of your event, plus clips sized for social media."
+         "type": "Panel",
+         "props": {
+          "id": "Panel-PK2",
+          "blocks": [
+           {
+            "type": "Heading",
+            "props": {
+             "id": "Heading-PK2",
+             "title": "Highlight Film",
+             "titleTag": "h3",
+             "titleClass": "h3",
+             "lede": "For a short film you can share with the whole company after the event."
+            }
+           },
+           {
+            "type": "SpecList",
+            "props": {
+             "id": "SpecList-PK2",
+             "source": "own",
+             "mark": "check",
+             "cols": false,
+             "items": [
+              {
+               "html": "One videographer for up to 3 hours"
+              },
+              {
+               "html": "A 60 to 90 second recap of your event"
+              },
+              {
+               "html": "Three clips sized for social media"
+              }
+             ]
+            }
+           },
+           {
+            "type": "ButtonRow",
+            "props": {
+             "id": "ButtonRow-PK2",
+             "buttons": [
+              {
+               "label": "Check a Date",
+               "href": "/contact/?photo-video=yes&package=highlight-film",
+               "cls": "btn"
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "c3": [
+        {
+         "type": "Panel",
+         "props": {
+          "id": "Panel-PK3",
+          "blocks": [
+           {
+            "type": "Heading",
+            "props": {
+             "id": "Heading-PK3",
+             "title": "Photos and Film",
+             "titleTag": "h3",
+             "titleClass": "h3",
+             "lede": "When you want both, with the photographer, the videographer and the band all working from one plan."
+            }
+           },
+           {
+            "type": "SpecList",
+            "props": {
+             "id": "SpecList-PK3",
+             "source": "own",
+             "mark": "check",
+             "cols": false,
+             "items": [
+              {
+               "html": "Everything in Event Photos"
+              },
+              {
+               "html": "Everything in Highlight Film"
+              },
+              {
+               "html": "Planned together with the band"
+              }
+             ]
+            }
+           },
+           {
+            "type": "ButtonRow",
+            "props": {
+             "id": "ButtonRow-PK3",
+             "buttons": [
+              {
+               "label": "Check a Date",
+               "href": "/contact/?photo-video=yes&package=photos-and-film",
+               "cls": "btn"
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "c4": [
+        {
+         "type": "Panel",
+         "props": {
+          "id": "Panel-PK4",
+          "blocks": [
+           {
+            "type": "Heading",
+            "props": {
+             "id": "Heading-PK4",
+             "title": "Culture Film",
+             "titleTag": "h3",
+             "titleClass": "h3",
+             "lede": "The one to book when you want to show people what your company is like."
+            }
+           },
+           {
+            "type": "SpecList",
+            "props": {
+             "id": "SpecList-PK4",
+             "source": "own",
+             "mark": "check",
+             "cols": false,
+             "items": [
+              {
+               "html": "A 2 to 3 minute film with short interviews"
+              },
+              {
+               "html": "Cut for recruiting, for showing clients your culture and for playing at future events"
+              },
+              {
+               "html": "Planned with you for your company"
+              }
+             ]
+            }
+           },
+           {
+            "type": "ButtonRow",
+            "props": {
+             "id": "ButtonRow-PK4",
+             "buttons": [
+              {
+               "label": "Check a Date",
+               "href": "/contact/?photo-video=yes&package=culture-film",
+               "cls": "btn"
+              }
+             ]
+            }
+           }
+          ]
+         }
         }
        ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-PK5",
+       "cls": "note",
+       "html": "Need more than three hours? We can add hours for a longer event."
       }
      }
     ]
@@ -226,6 +456,10 @@
        "id": "Faq-140",
        "schema": true,
        "items": [
+        {
+         "q": "How much do event photos and video cost?",
+         "a": "We quote photos and video together with your music, one date at a time, so you won't find prices for them on the site. Send us the date and the package you have in mind, and we'll get back to you with the total."
+        },
         {
          "q": "Can I add photos or video after I've booked the music?",
          "a": "Yes. Just let us know, and we'll check the date and add it to your booking."
