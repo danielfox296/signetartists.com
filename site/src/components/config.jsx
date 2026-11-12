@@ -36,6 +36,7 @@ export const pageConfig = {
   categories: {
     ...sectionCategories,
     other: { title: "Other", components: ["CustomHtml", "VideoIndex"] },
+    reviews: { title: "Testimonials", components: ["ActReviews", "Reviews"] },
     blocks: { title: "Blocks", components: Object.keys(blocks) },
   },
   components: pageComponents,

@@ -3,9 +3,10 @@
 import { blockComponents } from "./blocks.jsx";
 import { components as sectionComponents } from "./sections.jsx";
 import { BlogPosts, CustomHtml, PageIndex, VideoIndex } from "./generated.jsx";
+import { ActReviews, Review, Reviews } from "./reviews.jsx";
 
-export const blocks = { ...blockComponents, BlogPosts, PageIndex };
-export const sections = { ...sectionComponents, CustomHtml, VideoIndex };
+export const blocks = { ...blockComponents, BlogPosts, PageIndex, Review };
+export const sections = { ...sectionComponents, CustomHtml, VideoIndex, ActReviews, Reviews };
 export const registry = { ...sections, ...blocks };
 
 export function Item({ c }) {

@@ -71,7 +71,7 @@ export function head(h) {
   <meta name="twitter:card" content="summary_large_image">
   ${h.headExtra || ""}
 
-  <link rel="preload" href="${h.prefix}vendor/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${h.prefix}vendor/fonts/bricolage-grotesque-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

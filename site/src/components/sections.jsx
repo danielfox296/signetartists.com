@@ -4,7 +4,7 @@
    the hub lists, the home hero, the cover walls, the act lists. */
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
-import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
+import { bandClass, shapeClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
 import { coverPath, patchwork } from "../lib/patchwork.js";
 import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
@@ -15,9 +15,9 @@ const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0,
 
 // ------------------------------------------------------- block sections
 
-function Standard({ band, cls, anchor, label, narrow, wrapStyle, blocks: Blocks }) {
+function Standard({ band, cls, anchor, label, narrow, wrapStyle, edge, pin, blocks: Blocks }) {
   return (
-    <section className={cx(bandClass(band), cls)} id={anchor || undefined} aria-label={label || undefined}>
+    <section className={cx(bandClass(band), shapeClass({ edge, pin }), cls)} id={anchor || undefined} aria-label={label || undefined}>
       <div className={cx("wrap", narrow && "wrap--narrow")} style={css(wrapStyle)}>
         {Blocks ? <Blocks /> : null}
       </div>
@@ -917,19 +917,21 @@ const ContactForm = {
   },
 };
 
-// The roster page: the filters, then the two lanes of act cards, two across
-// with the photograph first.
+// The roster page: the sort, then the two lanes of act cards, two across
+// with the photograph first. The sort never hides an act: the acts that suit
+// the kind of event picked move to the top of each lane, and the rest follow.
 const Roster = {
   label: "Roster",
   fields: {
     title: rich("Title"),
     note: rich("Note"),
-    empty: rich("Nothing matches"),
+    more: rich("Heading over the rest"),
+    sorted: rich("Status after a pick ({label})"),
     lanes: { type: "array", label: "Lanes", getItemSummary: (l) => plain(l.eyebrow), arrayFields: { lane: { type: "select", label: "Acts", options: [{ label: "House Ensembles", value: "format" }, { label: "Featured Artists", value: "named" }] }, eyebrow: rich("Eyebrow"), title: rich("Title"), lede: rich("Lede") } },
     band: shellFields.band,
     script: { type: "radio", label: "Act script", options: [{ label: "Yes", value: true }, { label: "No", value: false }] },
   },
-  render: function RosterRender({ band, title, note, empty, lanes, script, wrapStyle }) {
+  render: function RosterRender({ band, title, note, more, sorted, lanes, script, wrapStyle }) {
     const s = useSite();
     const m = s.model;
     const href = useHref();
@@ -939,8 +941,7 @@ const Roster = {
           <div className="wrap" style={css(wrapStyle)}>
             <H as="h2" className="h3" html={title} />
             <H as="p" className="note" html={note} />
-            <RosterFilters />
-            <H as="p" className="filter-empty" id="filter-empty" hidden html={empty} />
+            <RosterSort more={more} sorted={sorted} />
             {(lanes || []).map((l, i) => (
               <div className="roster-lane" data-lane={l.lane} id={l.lane === "named" ? "featured-artists" : "house-ensembles"} key={i}>
                 <div className="heading">
@@ -966,43 +967,22 @@ const Roster = {
   },
 };
 
-// The filters: each one lists only what some act on the roster carries.
-function RosterFilters() {
+// The sort: one chip for each kind of event some act on the roster carries,
+// leaving out a kind marked "chip": false in roster.json.
+function RosterSort({ more, sorted }) {
   const s = useSite();
   const m = s.model;
-  const r = m.roster;
-  const acts = m.ACTS;
-  const has = (list, f) => list.filter(f);
-  const usedB = new Set(acts.flatMap((a) => a.bucket_tags));
-  const usedC = new Set(acts.flatMap((a) => a.config_tags));
-  const usedG = new Set(acts.flatMap((a) => a.genre_tags || []));
-  const vocal = new Set(acts.flatMap((a) => m.VOCALS_MATCH[a.vocals || "instrumental"].split(" ")));
-  const restricted = acts.some((a) => a.area_tags && a.area_tags.length);
-  const usedA = new Set(acts.flatMap((a) => m.actAreaIds(a)));
-  const usedO = new Set(acts.flatMap((a) => a.occasion_tags || []));
-  const opt = (list) => list.map((x) => <option key={x.id} value={x.id}>{x.label}</option>);
-  const occ = has(r.occasions || [], (o) => usedO.has(o.id));
-  const gen = has(r.genres || [], (g) => usedG.has(g.id));
-  const field = (id, name, label, any, options) => (
-    <div className="filter-field">
-      <label htmlFor={id}>{label}</label>
-      <select id={id} name={name}>
-        <option value="">{any}</option>
-        {options}
-      </select>
-    </div>
-  );
+  const used = new Set(m.ACTS.flatMap((a) => a.bucket_tags || []));
+  const kinds = m.roster.buckets.filter((b) => used.has(b.id) && b.chip !== false);
+  const text = (h) => (h || "").replace(/<[^>]+>/g, "");
   return (
-    <form className="roster-filters" id="roster-filters" hidden>
-      {occ.length ? field("filter-occasion", "occasion", "Occasion", "Any", opt(occ)) : null}
-      {field("filter-bucket", "bucket", "Kind of night", "Any", opt(has(r.buckets, (b) => usedB.has(b.id))))}
-      {field("filter-config", "config", "Size", "Any", opt(has(r.rateCard, (c) => usedC.has(c.id))))}
-      {gen.length ? field("filter-genre", "genre", "Genre", "Any", opt(gen)) : null}
-      {vocal.size > 1 ? field("filter-vocals", "vocals", "Vocals", "Any", Object.entries(m.VOCALS_LABEL).filter(([v]) => vocal.has(v)).map(([v, l]) => <option key={v} value={v}>{l}</option>)) : null}
-      {restricted ? field("filter-area", "area", "Where", "Anywhere we play", opt(has(r.areas || [], (a) => usedA.has(a.id)))) : null}
-      <button type="button" className="btn btn--sm btn--outline" id="filter-reset">Reset</button>
-      <p className="filter-count" id="filter-count" role="status">Every act</p>
-    </form>
+    <div className="roster-filters roster-sort" id="roster-filters" data-more={text(more)} data-sorted={text(sorted)} hidden>
+      <div className="catalog-chips" role="group" aria-label="Kind of event">
+        {kinds.map((b) => <button key={b.id} type="button" className="chip" data-fit={b.id} aria-pressed="false" title={b.blurb}>{b.label}</button>)}
+      </div>
+      <button type="button" className="btn btn--sm btn--outline" id="filter-reset" hidden>Reset</button>
+      <p className="filter-count" id="filter-count" role="status"></p>
+    </div>
   );
 }
 

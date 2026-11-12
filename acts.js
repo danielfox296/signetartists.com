@@ -2,112 +2,100 @@
  *
  * Two behaviours, both guarded on the elements they need, so the one file
  * loads on the roster page and the contact page and does the right thing on
- * each: roster filtering, and preselecting the act on the contact form.
+ * each: sorting the roster, and preselecting the act on the contact form.
  *
  * Progressive enhancement: the controls ship hidden in the HTML and this file
  * unhides them. With script off, or if this file fails to load, every act on
- * the roster is still on the page and nothing is offered that cannot work.
+ * the roster is still on the page in its usual order.
  *
- * The filter is a hidden-attribute toggle over data attributes rendered by
- * build.py. No re-render, no template in JS, and the cards remain the same
- * DOM nodes the crawler saw.
- *
- * The starting-price filter was removed 2026-09-04 with the published rate
- * card. Kind of night and size were the two axes left; genre, vocals and
- * where joined them 2026-09-16 (acts.json _facets_note), each rendered by
- * build.py only when the roster varies on it. Occasion joined 2026-09-23,
- * the same day the roster split into two lanes: the configurations and the
- * named acts. A lane whose every card is filtered out hides its heading too,
- * and the page can be opened pre-filtered (?occasion=weddings, ?size=duo,
- * ?genre=jazz, ?night=party, ?vocals=sung) so an occasion page can link
- * straight to the acts that suit it.
+ * Since 2026-11-11 the roster sorts and never hides. One chip per kind of
+ * event (the cards' data-buckets); picking one moves the acts tagged with it
+ * to the top of each lane, marks the matching pill on those cards, and puts
+ * the rest under a heading below them. Picking it again, or Reset, puts every
+ * card back in its built order. ?night=<bucket> opens the page sorted.
  */
 (function () {
   "use strict";
 
   var form = document.getElementById("roster-filters");
-  var grids = document.querySelectorAll(".roster-grid");
+  var grids = Array.prototype.slice.call(document.querySelectorAll(".roster-grid"));
   if (!form || !grids.length) return;
 
-  var cards = [];
-  for (var g = 0; g < grids.length; g += 1) {
-    cards = cards.concat(Array.prototype.slice.call(grids[g].querySelectorAll(".act-card")));
-  }
-  if (!cards.length) return;
-  var lanes = Array.prototype.slice.call(document.querySelectorAll(".roster-lane"));
-
-  // Each select filters one data attribute on the cards. build.py renders a
-  // select only when the roster varies on that facet, so every entry here is
-  // guarded on the element existing. The third column is the query-string
-  // key an occasion page can use to open the roster already filtered.
-  var facets = [
-    ["filter-occasion", "occasions", "occasion"],
-    ["filter-bucket", "buckets", "night"],
-    ["filter-config", "configs", "size"],
-    ["filter-genre", "genres", "genre"],
-    ["filter-vocals", "vocals", "vocals"],
-    ["filter-area", "areas", "where"],
-  ].map(function (row) {
-    return { el: document.getElementById(row[0]), key: row[1], param: row[2] };
-  }).filter(function (f) { return f.el; });
+  var chips = Array.prototype.slice.call(form.querySelectorAll("[data-fit]"));
+  if (!chips.length) return;
   var reset = document.getElementById("filter-reset");
   var countEl = document.getElementById("filter-count");
-  var emptyEl = document.getElementById("filter-empty");
+  var moreText = form.getAttribute("data-more") || "";
+  var sortedText = form.getAttribute("data-sorted") || "";
 
-  function tags(card, key) {
-    return (card.getAttribute("data-" + key) || "").split(/\s+/);
+  // Each grid's cards in the order the build wrote them.
+  var order = grids.map(function (grid) {
+    return Array.prototype.slice.call(grid.querySelectorAll(".act-card"));
+  });
+
+  function fits(card, id) {
+    return (card.getAttribute("data-buckets") || "").split(/\s+/).indexOf(id) !== -1;
   }
 
-  function apply() {
-    var shown = 0;
+  function apply(id) {
+    chips.forEach(function (chip) {
+      chip.setAttribute("aria-pressed", chip.getAttribute("data-fit") === id ? "true" : "false");
+    });
 
-    cards.forEach(function (card) {
-      var ok = facets.every(function (f) {
-        return !f.el.value || tags(card, f.key).indexOf(f.el.value) !== -1;
+    grids.forEach(function (grid, g) {
+      var old = grid.querySelector(".roster-more");
+      if (old) grid.removeChild(old);
+      var cards = order[g];
+      var top = id ? cards.filter(function (c) { return fits(c, id); }) : cards;
+      var rest = id ? cards.filter(function (c) { return !fits(c, id); }) : [];
+      cards.forEach(function (card) {
+        card.classList.toggle("is-fit", !!id && fits(card, id));
+        var pills = card.querySelectorAll(".pill[data-bucket]");
+        for (var i = 0; i < pills.length; i += 1) {
+          pills[i].classList.toggle("pill--on", pills[i].getAttribute("data-bucket") === id);
+        }
       });
-      card.hidden = !ok;
-      if (ok) shown += 1;
+      top.forEach(function (card) { grid.appendChild(card); });
+      if (top.length && rest.length && moreText) {
+        var more = document.createElement("p");
+        more.className = "roster-more";
+        more.textContent = moreText;
+        grid.appendChild(more);
+      }
+      rest.forEach(function (card) { grid.appendChild(card); });
     });
 
-    // A lane with nothing left in it takes its heading with it, so a buyer
-    // filtering to one named act never reads "Configurations" over nothing.
-    lanes.forEach(function (lane) {
-      var visible = lane.querySelectorAll(".act-card:not([hidden])").length;
-      lane.hidden = visible === 0;
+    var label = "";
+    chips.forEach(function (chip) {
+      if (chip.getAttribute("data-fit") === id) label = chip.textContent;
     });
-
-    countEl.textContent =
-      shown === cards.length
-        ? "Every act"
-        : shown + " matching";
-    emptyEl.hidden = shown !== 0;
+    countEl.textContent = id ? sortedText.replace("{label}", label) : "";
+    if (reset) reset.hidden = !id;
+    form.setAttribute("data-picked", id || "");
   }
 
-  facets.forEach(function (f) {
-    f.el.addEventListener("change", apply);
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var id = chip.getAttribute("data-fit");
+      apply(form.getAttribute("data-picked") === id ? "" : id);
+    });
   });
 
-  reset.addEventListener("click", function () {
-    facets.forEach(function (f) { f.el.value = ""; });
-    apply();
-  });
+  if (reset) reset.addEventListener("click", function () { apply(""); });
 
-  // Preselect from the query string. A value the select does not carry is
-  // ignored, so a stale link filters nothing rather than everything.
-  if (window.location.search) {
-    facets.forEach(function (f) {
-      var m = new RegExp("[?&]" + f.param + "=([^&]+)").exec(window.location.search);
-      if (!m) return;
-      var wanted = decodeURIComponent(m[1]);
-      for (var i = 0; i < f.el.options.length; i += 1) {
-        if (f.el.options[i].value === wanted) { f.el.value = wanted; break; }
-      }
+  // Open sorted from ?night=<bucket>. A value no chip carries is ignored.
+  var start = "";
+  var m = /[?&]night=([^&]+)/.exec(window.location.search);
+  if (m) {
+    var wanted = decodeURIComponent(m[1]);
+    chips.forEach(function (chip) {
+      if (chip.getAttribute("data-fit") === wanted) start = wanted;
     });
   }
 
   // Unhide last: until the listeners are attached the controls would be inert.
   form.hidden = false;
-  apply();
+  if (start) apply(start);
 })();
 
 /* Contact form: preselect the act from ?act=<id>.

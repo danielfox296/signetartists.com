@@ -257,7 +257,8 @@
         "decoding": "async"
        },
        "imageFirst": "left",
-       "lede": "Most acts in the Denver, Colorado market split their billing into two parts."
+       "lede": "Most acts in the Denver, Colorado market split their billing into two parts.",
+       "frame": "bleed"
       }
      },
      {
@@ -473,7 +474,8 @@
         {
          "html": "<strong>Tell us the flow of the evening</strong> when you send the date and we'll reply with availability and costs - maybe a few questions, too."
         }
-       ]
+       ],
+       "frame": "crops"
       }
      }
     ]

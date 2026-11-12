@@ -53,8 +53,15 @@ const BANDS = {
   sunk: "section section--ruled section--sunk",
   top: "section section--top",
   night: "section section--ruled section--night",
+  linen: "section section--ruled section--linen",
+  cloth: "section section--ruled section--cloth",
 };
 export const bandClass = (band) => BANDS[band || "ruled"] ?? band;
+
+// A section's shape: a sheet has rounded top corners and slides up over the
+// section above; a pinned section keeps its heading in place on the left
+// while the rest of it scrolls past on the right.
+export const shapeClass = (p) => cx(p && p.edge === "sheet" && "section--sheet", p && p.pin && "section--pinned");
 
 export function Shell({ p, cls, wrap = true, children }) {
   const inner = wrap ? (
@@ -65,7 +72,7 @@ export function Shell({ p, cls, wrap = true, children }) {
     children
   );
   return (
-    <section className={cx(bandClass(p.band), cls)} id={p.anchor || undefined} aria-label={p.label || undefined}>
+    <section className={cx(bandClass(p.band), shapeClass(p), cls)} id={p.anchor || undefined} aria-label={p.label || undefined}>
       {inner}
     </section>
   );
@@ -237,8 +244,12 @@ export const shellFields = {
       { label: "Band", value: "sunk" },
       { label: "Top", value: "top" },
       { label: "Night", value: "night" },
+      { label: "Midnight linen", value: "linen" },
+      { label: "Speaker cloth", value: "cloth" },
     ],
   },
+  edge: { type: "radio", label: "Top edge", options: [{ label: "Straight", value: "" }, { label: "Sheet over the section above", value: "sheet" }] },
+  pin: { type: "radio", label: "Heading", options: [{ label: "Above the rest", value: false }, { label: "Pinned beside the rest", value: true }] },
   anchor: { type: "text", label: "Anchor" },
   label: { type: "text", label: "Label" },
   narrow: { type: "radio", label: "Width", options: [{ label: "Full", value: false }, { label: "Narrow", value: true }] },
@@ -288,6 +299,18 @@ export const headingFields = {
   headingStyle: text("Heading style"),
   image: { type: "object", label: "Picture", objectFields: imageFields },
   imageFirst: { type: "radio", label: "Picture", options: [{ label: "After the text", value: false }, { label: "Before the lede", value: true }, { label: "Left of the words", value: "left" }, { label: "Right of the words", value: "right" }] },
+  frame: {
+    type: "select",
+    label: "Picture frame (left or right of the words)",
+    options: [
+      { label: "Plain", value: "" },
+      { label: "Bleed to the edge", value: "bleed" },
+      { label: "Two crops", value: "crops" },
+      { label: "Arch", value: "arch" },
+      { label: "Scale shock (giant title, small picture)", value: "scale" },
+      { label: "Split field (half the band)", value: "split" },
+    ],
+  },
 };
 
 export const flowFields = (label) => ({

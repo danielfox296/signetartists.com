@@ -55,9 +55,15 @@ export const Heading = {
     </div>
     );
     if (left) {
+      // A frame: the picture bleeding to the page's edge, two crops of it, an
+      // arch, a giant title over a small picture, or half the band.
+      const frame = p.frame || "";
       return (
-        <div className={cx("heading-split", p.imageFirst === "right" && "heading-split--right")}>
-          <div className="heading-split__media"><Img im={p.image} /></div>
+        <div className={cx("heading-split", p.imageFirst === "right" && "heading-split--right", frame && `heading-split--${frame}`)}>
+          <div className="heading-split__media">
+            <Img im={p.image} />
+            {frame === "crops" ? <span className="heading-split__sliver" aria-hidden="true" style={{ backgroundImage: `url("${href(p.image.src)}")` }} /> : null}
+          </div>
           {heading}
         </div>
       );
@@ -246,6 +252,7 @@ export const DefRows = {
       { label: "Tiles", value: "def-list def-list--tiles" },
       { label: "Add-on tiles", value: "def-list def-list--tiles def-list--addons" },
       { label: "Route", value: "def-list def-list--route" },
+      { label: "Numbered index", value: "def-list def-list--index" },
       { label: "Side by side", value: "def-list" },
     ]),
     image: text("Photo behind (Route only)"),
@@ -793,7 +800,7 @@ function CardMedia({ a, ratio }) {
 // The roster page's card: the act's photograph carries
 // it, with the kind and the name over the foot of the photo; under it the
 // size, the tags and one line. The whole card is the link. It keeps the act
-// card's class and data so acts.js filters it as before. The photo carries no
+// card's class and data so acts.js can sort it. The photo carries no
 // description: the act's name is over it inside the same link, and the card
 // photo is often a crop of a photo the act's page describes in the same words.
 function RosterCard({ a }) {
@@ -828,7 +835,7 @@ function RosterCard({ a }) {
         <div className="roster-card-meta">
           <span className="roster-card-size">{m.actConfigRange(a)}</span>
           <ul className="pill-row">
-            {(a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
+            {(a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => <li key={b} className="pill" data-bucket={b}>{m.BUCKET_LABEL[b]}</li>)}
           </ul>
         </div>
         <p className="roster-card-line">{named ? m.actCardLine(a) : m.actByline(a) || m.actCardLine(a)}</p>

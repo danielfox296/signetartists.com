@@ -71,8 +71,8 @@
 
      That site's standing ruling comes with it: no serif ever appears, in the
      stack or anywhere else. The fallbacks are the system sans. */
-  --display: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
-  --sans: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --display: "Bricolage Grotesque", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Bricolage Grotesque", system-ui, "Helvetica Neue", Arial, sans-serif;
 
   /* TRACKING LAW (2026-08-07, from a retired sister site's "zero positive
      letter-spacing anywhere"). One value, one token, every uppercase label on
@@ -102,17 +102,16 @@
   --space-6: 6.5rem;
 }
 
-/* Self-hosted latin subset, both axes, ~88KB. OFL, licence in vendor/fonts/.
-   Self-hosted rather than linked: it drops two preconnects and a
-   render-blocking Google stylesheet, which matters for the venue-basement
-   phone this site is designed around. */
+/* Bricolage Grotesque, the face of the social slides, for headings and
+   running text (2026-11-11). Self-hosted latin subset, weight and optical
+   size axes, ~77KB. OFL, licence in vendor/fonts/. It has no width axis, so
+   the font-stretch values below no longer change anything. */
 @font-face {
-  font-family: "Archivo";
+  font-family: "Bricolage Grotesque";
   font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
+  font-weight: 200 800;
   font-display: swap;
-  src: url(vendor/fonts/archivo-variable-latin.woff2) format("woff2");
+  src: url(vendor/fonts/bricolage-grotesque-variable-latin.woff2) format("woff2");
 }
 
 *,
@@ -532,6 +531,42 @@ img {
   margin-top: 0.55rem;
   font-size: 0.9625rem;
   color: var(--ink-faint);
+}
+.review-pull figcaption .review-by {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+/* Testimonials in a section: two across from 900px, each in its panel. */
+.reviews .review-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.reviews .review-grid .review-pull {
+  margin: 0;
+  max-width: none;
+}
+.reviews .review-grid .review-pull blockquote {
+  font-size: 1.0625rem;
+}
+@media (min-width: 900px) {
+  .reviews .review-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+.review-more {
+  margin-top: 1rem;
+}
+.review-more > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0.5rem 0;
+}
+.review-more > .review-grid {
+  margin-top: 0.5rem;
 }
 
 /* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set at the size
@@ -3454,58 +3489,54 @@ main:focus {
   color: var(--brass);
 }
 
-/* ------------------------------------------------------------- filtering */
+/* ------------------------------------------------------------- sorting */
 
-/* Ships hidden and roster.js unhides it. With script off the controls never
-   appear and every act is on the page, which is the only honest default:
-   a filter that cannot filter must not be offered. */
+/* Ships hidden and acts.js unhides it. With script off the chips never
+   appear and every act is on the page in its usual order. Since 2026-11-11
+   the chips sort the roster and never hide an act. */
 .roster-filters {
   margin-top: 2.2rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--rule);
 }
 
-.filter-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-  min-width: 10rem;
-  flex: 1 1 10rem;
+.roster-sort .catalog-chips {
+  margin-top: 0;
 }
 
-.filter-field label {
+/* role="status": says which acts came first, for the eye and a screen reader. */
+.filter-count {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 0.9625rem;
+  color: var(--ink-faint);
+}
+
+.filter-count:empty {
+  display: none;
+}
+
+/* The heading between the acts that suit the pick and the rest of a lane. */
+.roster-more {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
   font-size: 0.7563rem;
   text-transform: uppercase;
   letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
-.filter-field select {
-  padding: 0.5rem 0.625rem;
-  font-family: inherit;
-  font-size: 0.9625rem;
+/* The pill on a card that matches the kind of event picked. */
+.pill.pill--on {
+  background: var(--red);
+  border-color: var(--red);
   color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--rule-strong);
-}
-
-/* role="status" — the count is the only confirmation a filter did anything,
-   so it has to reach a screen reader as well as the eye. */
-.filter-count {
-  flex: 0 0 auto;
-  font-size: 0.9625rem;
-  color: var(--ink-faint);
-  font-variant-numeric: tabular-nums;
-}
-
-.filter-empty {
-  margin-top: 2.2rem;
-  font-size: 0.9625rem;
-  color: var(--ink-soft);
 }
 
 .act-card[hidden] {
@@ -4581,9 +4612,9 @@ main:focus {
    so it no longer leaves the right third of the screen empty (2026-11-02,
    Daniel, sitewide). Any section with a grid, a table, cards or a hero photo
    keeps the full width. */
-.section > .wrap:not(:has(> :not(
+.section:not(.section--pinned) > .wrap:not(:has(> :not(
   .heading, .prose, .eyebrow, .note, .lede, .h3, .h5,
-  .def-list:not(.def-list--cards):not(.def-list--tiles):not(.def-list--route), .spec-list:not(.spec-list--cols),
+  .def-list:not(.def-list--cards):not(.def-list--tiles):not(.def-list--route):not(.def-list--index), .spec-list:not(.spec-list--cols),
   .faq-list, .btn-row, .blog-article, .review-pull, .stage-plot, .panel,
   .sibling-list, .video-grid--single, .media-grid,
   img, script, template, style
@@ -6207,5 +6238,386 @@ a.laurel-link:focus-visible .laurel-title {
   .honor-marks--hero .honor-mark {
     height: calc(1.2rem * var(--mark-h, 1));
     max-width: 100%;
+  }
+}
+
+/* 2026-11-11 Bricolage Grotesque headings, as on the social slides: weight
+   800, tracked in, written as sentence case rather than set in capitals, and
+   a heading's closing full stop in the red (the build wraps it in .dot). */
+body {
+  font-weight: 450;
+  font-optical-sizing: auto;
+}
+
+.h1,
+.h2,
+.h3,
+.h1.display,
+.h2.display,
+.h3.display,
+.roster-card-name,
+.callout {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.h1::first-letter,
+.h2::first-letter,
+.h3::first-letter {
+  text-transform: uppercase;
+}
+
+.dot {
+  color: var(--red);
+}
+
+.section--sunk .dot,
+.close-row--photo .dot {
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .h2 {
+    font-size: clamp(2.25rem, 1.2rem + 1.6vw, 3rem);
+  }
+}
+
+/* Two more grounds for a section (2026-11-11). Midnight linen is a deep ink
+   blue with a fine woven cross-thread; speaker cloth is graphite with a
+   perforated grille, lit a little from above. Both are dark, so type and
+   marks keep the site's dark-ground colours. */
+.section--linen {
+  --paper: #131b26;
+  --paper-sunk: #18222f;
+  --rule: #263345;
+  --ink-soft: #dfe4ea;
+  --ink-faint: #a9b4c1;
+  background-color: #131b26;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 4px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23fff' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.section--cloth {
+  --paper: #1e1e1f;
+  --paper-sunk: #252526;
+  --rule: #343436;
+  background-color: #1e1e1f;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 55%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 1.05px, transparent 1.5px),
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 1.05px, transparent 1.5px);
+  background-size: auto, 6px 6px, 6px 6px;
+  background-position: 0 0, 0 0, 3px 3px;
+}
+
+.section--linen.section--ruled,
+.section--cloth.section--ruled {
+  border-top-color: transparent;
+}
+
+.section--linen .btn:not(.btn--outline) {
+  color: #131b26;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .section--linen,
+  .section--cloth {
+    background-image: none;
+  }
+}
+
+/* ------------------------------------------- module shapes (2026-11-11)
+   Layout moves from the social slides, each one a setting in the admin:
+   picture frames for a heading with its picture beside the words (bleed,
+   two crops, arch, scale shock, split field), a numbered index for rows,
+   a testimonial set as a statement, a sheet edge and a pinned heading. */
+
+/* Frames start where the heading and picture sit side by side. */
+@media (min-width: 800px) {
+  /* Bleed: the picture runs off the page's edge and up over the section
+     above, with one rounded inside corner. */
+  .heading-split--bleed,
+  .heading-split--split {
+    position: relative;
+    min-height: 30rem;
+  }
+  .heading-split--bleed .heading-split__media,
+  .heading-split--split .heading-split__media {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .heading-split--bleed .heading-split__media img,
+  .heading-split--split .heading-split__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .heading-split--bleed .heading-split__media {
+    top: calc(-1 * var(--space-6) - 3.5rem);
+    bottom: 0;
+    width: 50vw;
+  }
+  .heading-split--bleed.heading-split--right .heading-split__media {
+    right: calc(50% - 50vw);
+    border-bottom-left-radius: 1.75rem;
+  }
+  .heading-split--bleed:not(.heading-split--right) .heading-split__media {
+    left: calc(50% - 50vw);
+    border-bottom-right-radius: 1.75rem;
+  }
+  .heading-split--bleed:not(.heading-split--right) > .heading,
+  .heading-split--split:not(.heading-split--right) > .heading {
+    grid-column: 2;
+  }
+
+  /* Split field: the picture fills half the band, edge to edge and top to
+     bottom; the words keep the band's colour on the other half. */
+  .heading-split--split .heading-split__media {
+    top: calc(-1 * var(--space-6));
+    bottom: calc(-1 * var(--space-6));
+    width: 50vw;
+  }
+  .heading-split--split.heading-split--right .heading-split__media {
+    right: calc(50% - 50vw);
+  }
+  .heading-split--split:not(.heading-split--right) .heading-split__media {
+    left: calc(50% - 50vw);
+  }
+  .section:has(> .wrap > .heading-split--split:last-child) {
+    overflow: hidden;
+  }
+
+  /* Two crops: the picture whole, and beside it a tall sliver cut close
+     from the same picture. */
+  .heading-split--crops {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  }
+  .heading-split--crops.heading-split--right {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  }
+  .heading-split--crops:not(.heading-split--right) {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  }
+  .heading-split--crops .heading-split__media {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .heading-split--crops .heading-split__media img {
+    flex: 3 1 0;
+    min-width: 0;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 1.75rem;
+  }
+  .heading-split__sliver {
+    flex: 1 1 0;
+    align-self: center;
+    aspect-ratio: 1 / 3;
+    border-radius: 1.75rem;
+    background-size: 340% auto;
+    background-position: 42% 38%;
+    background-repeat: no-repeat;
+  }
+
+  /* Arch: the picture under a round top. */
+  .heading-split--arch .heading-split__media img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 999px 999px 1.75rem 1.75rem;
+    max-height: 40rem;
+  }
+
+  /* Scale shock: the title across the whole band, the picture small under
+     it, the rest of the words beside the picture. */
+  .heading-split--scale {
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    align-items: start;
+    column-gap: 2.5rem;
+  }
+  .heading-split--scale > .heading {
+    display: contents;
+  }
+  .heading-split--scale > .heading > * {
+    grid-column: 2;
+    order: 4;
+  }
+  .heading-split--scale > .heading > .eyebrow {
+    grid-column: 1 / -1;
+    order: 1;
+  }
+  .heading-split--scale > .heading > :is(h1, h2, h3) {
+    grid-column: 1 / -1;
+    order: 2;
+    margin-bottom: 2.5rem;
+  }
+  .heading-split--scale .heading-split__media {
+    grid-column: 1;
+    grid-row: span 6;
+    order: 3;
+  }
+  .heading-split--scale .heading-split__media img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+}
+
+.heading-split--scale :is(h1, h2, h3) {
+  font-size: clamp(3.25rem, 9vw, 9.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  max-width: 14ch;
+}
+
+/* A narrow screen: bleed and split pictures run to the screen's edges, the
+   other frames keep their shapes. */
+@media (max-width: 799px) {
+  .heading-split--bleed .heading-split__media,
+  .heading-split--split .heading-split__media {
+    margin-inline: -3rem;
+  }
+  .heading-split--bleed .heading-split__media {
+    margin-top: calc(-1 * var(--space-5) - 2rem);
+  }
+  .heading-split--split .heading-split__media {
+    margin-top: calc(-1 * var(--space-5));
+  }
+  .heading-split--bleed .heading-split__media img,
+  .heading-split--split .heading-split__media img {
+    height: 22rem;
+    object-fit: cover;
+  }
+  .heading-split--arch .heading-split__media img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 999px 999px 1.5rem 1.5rem;
+  }
+  .heading-split--crops .heading-split__media img,
+  .heading-split--scale .heading-split__media img {
+    border-radius: 1.5rem;
+  }
+  .heading-split--scale .heading-split__media {
+    max-width: 12rem;
+    order: 2;
+  }
+  .heading-split__sliver {
+    display: none;
+  }
+}
+
+/* Numbered index: each row's number large in the red, its label and its
+   text in columns across the page, hairlines between. */
+.def-list--index {
+  counter-reset: index;
+  border-bottom: 1px solid var(--rule);
+}
+.def-list--index .def-row {
+  counter-increment: index;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+.def-list--index .def-row::before {
+  content: counter(index, decimal-leading-zero);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--brass);
+}
+.def-list--index dt {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.def-list--index dd {
+  margin: 0;
+  text-align: left;
+  color: var(--ink-soft);
+}
+@media (min-width: 800px) {
+  .def-list--index .def-row {
+    grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    padding: 2.25rem 0;
+  }
+  .def-list--index .def-row::before {
+    font-size: 4.5rem;
+  }
+}
+
+/* A testimonial as a statement: the words at display size, no box. */
+.review-statement,
+.section--sunk .review-statement {
+  max-width: none;
+  margin: 2.5rem 0 3rem;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.review-statement blockquote {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 1rem + 3.4vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  max-width: 24ch;
+}
+.review-statement blockquote em {
+  font-style: normal;
+  color: var(--red);
+}
+.review-statement figcaption {
+  margin-top: 1.75rem;
+}
+
+/* Sheet: rounded top corners, sliding up over the section above. */
+.section--sheet {
+  position: relative;
+  z-index: 1;
+  margin-top: -1.75rem;
+  border-top: 0;
+  border-radius: 1.75rem 1.75rem 0 0;
+  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.28);
+}
+@media (min-width: 800px) {
+  .section--sheet {
+    margin-top: -2.25rem;
+    border-radius: 2.25rem 2.25rem 0 0;
+  }
+}
+
+/* Pinned heading: the heading stays on the left while the rest of the
+   section scrolls past it on the right. */
+@media (min-width: 1024px) {
+  .section--pinned > .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    column-gap: 5rem;
+    align-items: start;
+  }
+  .section--pinned > .wrap > * {
+    grid-column: 2;
+  }
+  .section--pinned > .wrap > .heading:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 40;
+    position: sticky;
+    top: 7.5rem;
+  }
+  .section--pinned > .wrap > .heading:first-child + * {
+    margin-top: 0;
   }
 }

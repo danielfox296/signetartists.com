@@ -195,11 +195,11 @@
       }
      },
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-16",
-       "html": "“[He] recently played for my wedding ceremony, and I couldn’t be happier or more grateful. He is extremely talented and so sweet, my guests and I loved him!! He played ‘Bless the Telephone’ by Labi Siffre while I walked down the aisle and it was a dream. I would hire him 1000 times over.”",
-       "by": "Jailynn G., an outdoor ceremony, November 2025."
+       "id": "Review-16",
+       "review": "jailynn-g",
+       "withAct": true
       }
      },
      {
@@ -290,6 +290,17 @@
      }
     ],
     "_file": "04-who-plays.html"
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "ceremony",
+    "limit": 4,
+    "show": 4
    }
   },
   {

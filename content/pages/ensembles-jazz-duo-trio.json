@@ -138,11 +138,11 @@
       }
      },
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-9",
-       "html": "“[He] was fantastic, he struck the right note (pardon the pun) with our guests by not only playing beautifully, but also by playing quietly in the background so as not to disturb the conversation of our guests. Everyone loved him and would 100% hire him again. He is a tru pro!”",
-       "by": "Mara S., cocktail hour, February 2025."
+       "id": "Review-9",
+       "review": "mara-s",
+       "withAct": false
       }
      },
      {
@@ -229,6 +229,15 @@
     "act": "jazz-duo",
     "title": "A sample of songs",
     "_file": "04-configurations.html"
+   }
+  },
+  {
+   "type": "ActReviews",
+   "props": {
+    "id": "ActReviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "show": 4
    }
   },
   {
