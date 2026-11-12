@@ -1,39 +1,17 @@
 /* Client testimonials, drawn from content/records/testimonials.json. Each one
-   is shown with who wrote it, the event, the month and where it was
-   published; away from its act's own page it also names the act. */
+   is shown with the person who left it and, away from its act's own page,
+   the act, linking its page. */
 import { css, cx, esc } from "../lib/util.js";
 import { bandClass, F, H, shellFields, useSite } from "./parts.jsx";
 
 const { rich, text } = F;
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-// "2025-02-26" or "2025-02" → "February 2025"; "2025" → "2025".
-export function monthYear(d) {
-  if (!d) return "";
-  const [y, m] = String(d).split("-");
-  return m ? `${MONTHS[Number(m) - 1]} ${y}` : y;
-}
-
-
-// The lines under a testimonial: who, the event and the month; then the act
-// (with `withAct`, linking its page) and where it was published.
+// The line under a testimonial: who left it, then (with `withAct`) the act.
 export function reviewCaption(m, t, withAct) {
-  const who = [t.author ? `<span class="review-by">${esc(t.author)}</span>` : "", t.role ? esc(t.role) : ""].filter(Boolean).join(", ");
-  const what = [t.event ? esc(t.event) : "", monthYear(t.date)].filter(Boolean).join(", ");
-  const first = [who, what].filter(Boolean).join(", ");
+  const who = t.author ? `<span class="review-by">${esc(t.author)}</span>` : "";
   const a = withAct && t.act && m.ACT_BY_ID[t.act];
   const act = a && !a.hidden ? `<a href="/${esc(m.actUrl(a))}">${esc(a.name)}</a>` : "";
-  const src = sourcePhrase(t.source || {});
-  const second = [act, act ? src.charAt(0).toLowerCase() + src.slice(1) : src].filter(Boolean).join(", ");
-  return [first ? first + "." : "", second ? `<span class="review-src">${second}.</span>` : ""].filter(Boolean).join(" ");
-}
-
-function sourcePhrase(src) {
-  const p = src.platform || "";
-  if (!p) return "";
-  if (/website/i.test(p)) return "From the artist's website";
-  if (/^signet/i.test(p)) return "Sent to Signet";
-  return `${src.verified ? "Verified review" : "Review"} on ${esc(p)}`;
+  return [who, act].filter(Boolean).join(", ");
 }
 
 export function ReviewCard({ t, withAct, cls }) {

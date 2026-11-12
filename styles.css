@@ -536,11 +536,6 @@ img {
   color: var(--ink-soft);
   font-weight: 600;
 }
-.review-pull figcaption .review-src {
-  display: block;
-  margin-top: 0.15rem;
-  font-size: 0.875rem;
-}
 
 /* Testimonials in a section: two across from 900px, each in its panel. */
 .reviews .review-grid {

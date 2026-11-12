@@ -80,4 +80,4 @@ Run everything from the repo root.
 | `site.json` | brand, business, lists shared by pages, llms.txt wording |
 | `redirects.json`, `robots.txt`, `photo-focus.json`, `repertoire.json` | as named |
 | `lastmod.json` | each URL's sitemap date when converted, and the hash of its file |
-| `records/` | `market-rates.json`, the published market figures with their sources; `testimonials.json`, the client testimonials the site shows (each with its act, author, event, month, occasions and platform) |
+| `records/` | `market-rates.json`, the published market figures with their sources; `testimonials.json`, the client testimonials the site shows (each with its act, the person who left it, its date and occasions) |

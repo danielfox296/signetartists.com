@@ -166,10 +166,10 @@ export function createModel(c) {
     .sort((a, b) => pySort(a.name, b.name));
   const venuesFor = (id) => VENUES.filter((v) => v.named.has(id));
   // Testimonials (content/records/testimonials.json): the ones not hidden whose
-  // act is on the site (no act: about Signet), verified first, then newest first.
+  // act is on the site (no act: about Signet), newest first.
   const REVIEWS = ((c.testimonials && c.testimonials.testimonials) || [])
     .filter((t) => t && t.id && t.quote && !t.hidden && (!t.act || (ACT_BY_ID[t.act] && !ACT_BY_ID[t.act].hidden)))
-    .sort((x, y) => (!!(y.source && y.source.verified) - !!(x.source && x.source.verified)) || String(y.date || "").localeCompare(String(x.date || "")));
+    .sort((x, y) => String(y.date || "").localeCompare(String(x.date || "")));
   const REVIEW_BY_ID = Object.fromEntries(REVIEWS.map((t) => [t.id, t]));
   const reviewsFor = (id) => REVIEWS.filter((t) => t.act === id);
   const reviewsWhere = ({ occasions = [], acts = [], ids = [], limit } = {}) => {
