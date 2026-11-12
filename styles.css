@@ -6634,7 +6634,7 @@ body {
   padding: clamp(4.5rem, 3rem + 5vw, 8rem) 0;
 }
 .review-feature {
-  margin: 0 auto;
+  margin: 0;
   max-width: 58rem;
 }
 .reviews .h2 + .review-feature,
