@@ -47,7 +47,7 @@ export const blocks = {
     render: ({ text: t, attribution }) => (
       <figure className="blog-pullquote">
         <blockquote>{t}</blockquote>
-        {attribution ? <figcaption>{"— " + attribution}</figcaption> : null}
+        {attribution ? <figcaption>{attribution}</figcaption> : null}
       </figure>
     ),
   },
@@ -78,7 +78,7 @@ export const blocks = {
           {caption || source ? (
             <figcaption>
               {caption || null}
-              {caption && source ? " — " : null}
+              {caption && source ? ". " : null}
               {source ? <cite>{source}</cite> : null}
             </figcaption>
           ) : null}
