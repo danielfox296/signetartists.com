@@ -88,6 +88,33 @@ export function createModel(c) {
   const L = Object.fromEntries(Object.keys(LAYOUT_DEFAULTS).map((k) => [k, layoutOf(c.layouts && c.layouts[k], k)]));
   const usesLayout = (doc) => !!(LAYOUT && doc && doc.root && doc.root.props.layout === "act");
   // A layout section switched off is left out; the act's own sections still go where it says.
+  // Grounds, so a page scans as a run of distinct sections (Daniel,
+  // 2026-11-11: "there's very little separation between sections by color,
+  // texture"). The client logos sit on speaker cloth and the questions on
+  // midnight linen; any plain section that would sit against another plain
+  // one takes a textured ground instead, never the same as its neighbours.
+  // Sections set to the top, the light band or night keep theirs.
+  const TEXTURES = ["cloth", "linen"];
+  const groundRhythm = (content) => {
+    const want = content.map((x) => {
+      const b = x && x.props ? x.props.band : undefined;
+      if (b === undefined) return null;
+      if ((b || "ruled") === "ruled" && x.type === "LogoStrip") return "cloth";
+      if ((b || "ruled") === "ruled" && (x.type === "Questions" || x.type === "Faq")) return "linen";
+      return b || "ruled";
+    });
+    const out = [...want];
+    for (let i = 1; i < out.length; i++) {
+      const prev = out[i - 1];
+      if (out[i] === null || prev === null) continue;
+      if (out[i] === prev && (out[i] === "ruled" || TEXTURES.includes(out[i]))) {
+        const next = out[i + 1];
+        out[i] = ["ruled", ...TEXTURES].find((g) => g !== prev && g !== next) || out[i];
+      }
+    }
+    return content.map((x, i) => (out[i] && x.props.band !== out[i] ? { ...x, props: { ...x.props, band: out[i] } } : x));
+  };
+  const pageSections = (doc) => groundRhythm(pageContent(doc));
   const pageContent = (doc) => {
     if (!usesLayout(doc)) return doc.content;
     const out = [];
@@ -161,7 +188,7 @@ export function createModel(c) {
       const v = p.venue;
       const played = (v.played || []).filter((id) => ACT_BY_ID[id] && !ACT_BY_ID[id].hidden);
       const named = new Set([...played, ...cardActs(d.content, new Set())]);
-      return { ...v, path: p.path, played, named };
+      return { ...v, path: p.path, played, named, img: p.heroImage || null, short: p.breadcrumb || v.name };
     })
     .sort((a, b) => pySort(a.name, b.name));
   const venuesFor = (id) => VENUES.filter((v) => v.named.has(id));
@@ -307,7 +334,7 @@ export function createModel(c) {
     canonicalFor, FOOTAGE, FOOTAGE_BY_KEY, footageKey, watchOutput, watchUrl, watchThumb,
     posts, postBySlug, published, indexedPosts, pages, pageByUrl, LABELS, crumbLabel, crumbParent, crumbTrail, breadcrumbs,
     siblings, relatedArticles, actClips, hubIndex, POSTS_BY_PARENT, readingTime, dateDisplay, VENUES, venuesFor,
-    REVIEWS, REVIEW_BY_ID, reviewsFor, reviewsWhere,
+    REVIEWS, REVIEW_BY_ID, reviewsFor, reviewsWhere, pageSections,
   };
 }
 

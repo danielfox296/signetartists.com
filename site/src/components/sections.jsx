@@ -627,41 +627,67 @@ const actLinks = (s, ids) => {
   const links = ids.map((id) => m.ACT_BY_ID[id]).map((a) => (a.page ? `<a href="/${a.page}">${esc(a.name)}</a>` : esc(a.name)));
   return links.length < 2 ? links.join("") : `${links.slice(0, -1).join(", ")} and ${links[links.length - 1]}`;
 };
-function VenueCards({ s, venues, line }) {
+// The hub's venue cards: the hotel's own photograph, its town, its name, its
+// event spaces and the acts that have played there or that its page picks.
+// The photograph drifts in as it scrolls into view and catches a sweep of
+// light on hover; nothing moves under reduced motion.
+function VenueCards({ s, venues }) {
+  const href = useHref();
+  const m = s.model;
+  const acts = (v) => {
+    const names = (ids) => ids.map((id) => m.ACT_BY_ID[id]).filter((a) => a && !a.hidden).map((a) => esc(a.name));
+    if (v.played.length) {
+      const n = names(v.played);
+      return `<span class="venue-card__label">Played here</span>${n.join(" · ")}`;
+    }
+    const n = names([...v.named]).slice(0, 3);
+    return n.length ? `<span class="venue-card__label">Acts we'd pick</span>${n.join(" · ")}` : "";
+  };
   return (
-    <dl className="def-list def-list--cards">
+    <ul className="venue-cards">
       {venues.map((v) => (
-        <div className="def-row" data-art="pin" key={v.path}>
-          <dt><a href={s.prefix + v.path.slice(1)}>{v.name}</a></dt>
-          <H as="dd" html={line(v)} />
-        </div>
+        <li className="venue-card" key={v.path}>
+          <a className="venue-card__link" href={s.prefix + v.path.slice(1)}>
+            <div className="venue-card__photo">
+              {v.img ? <Pic src={href("/" + v.img.replace(/^\//, ""))} alt="" width="1600" height="1067" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}
+              <span className="venue-card__sheen" aria-hidden="true" />
+            </div>
+            <div className="venue-card__body">
+              {v.area ? <p className="venue-card__area">{v.area}</p> : null}
+              <h4 className="venue-card__name">{v.name}</h4>
+              {v.spaces ? <p className="venue-card__spaces">{v.spaces}</p> : null}
+              <H as="p" className="venue-card__acts" html={acts(v) || null} />
+              <span className="venue-card__more">{`Live music at ${v.short}`}</span>
+            </div>
+          </a>
+        </li>
       ))}
-    </dl>
+    </ul>
   );
 }
 const VenueList = {
   label: "Venue list",
-  fields: { band: shellFields.band, title: rich("Title"), lede: rich("Lede") },
-  render: function VenueListRender({ band, title, lede, wrapStyle }) {
+  fields: { band: shellFields.band, title: rich("Title"), lede: rich("Lede"), groupTitle: text("Heading for each town ({group} is the town)") },
+  render: function VenueListRender({ band, title, lede, groupTitle, wrapStyle }) {
     const s = useSite();
     const venues = s.model.VENUES;
     if (!venues.length) return null;
-    const line = (v) => [v.area ? `${esc(v.area)}.` : "", v.spaces || "", v.played.length ? `${actLinks(s, v.played)} ${v.played.length > 1 ? "have" : "has"} played here.` : ""].filter(Boolean).join(" ");
     const count = (g) => venues.filter((v) => (v.group || "") === g).length;
     const groups = [...new Set(venues.map((v) => v.group || ""))].sort((x, y) => count(y) - count(x));
+    const head = (g) => (groupTitle && g ? groupTitle.replace(/\{group\}/g, g) : g || "More venues");
     return (
-      <section className={bandClass(band || "ruled")} id="venues">
+      <section className={cx(bandClass(band || "ruled"), "venues-hub")} id="venues">
         <div className="wrap" style={css(wrapStyle)}>
           <H as="h2" className="h2" html={title} />
           <H as="p" className="lede" html={lede} />
           {groups.length < 2 ? (
-            <VenueCards s={s} venues={venues} line={line} />
+            <VenueCards s={s} venues={venues} />
           ) : (
             groups.map((g) => (
-              <Fragment key={g}>
-                <h3 className="h4">{g || "More venues"}</h3>
-                <VenueCards s={s} venues={venues.filter((v) => (v.group || "") === g)} line={line} />
-              </Fragment>
+              <div className="venue-town" key={g}>
+                <h3 className="venue-town__name">{head(g)}</h3>
+                <VenueCards s={s} venues={venues.filter((v) => (v.group || "") === g)} />
+              </div>
             ))
           )}
         </div>
