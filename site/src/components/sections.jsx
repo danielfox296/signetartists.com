@@ -979,9 +979,7 @@ function RosterFilters() {
   const vocal = new Set(acts.flatMap((a) => m.VOCALS_MATCH[a.vocals || "instrumental"].split(" ")));
   const restricted = acts.some((a) => a.area_tags && a.area_tags.length);
   const usedA = new Set(acts.flatMap((a) => m.actAreaIds(a)));
-  const usedO = new Set(acts.flatMap((a) => a.occasion_tags || []));
   const opt = (list) => list.map((x) => <option key={x.id} value={x.id}>{x.label}</option>);
-  const occ = has(r.occasions || [], (o) => usedO.has(o.id));
   const gen = has(r.genres || [], (g) => usedG.has(g.id));
   const field = (id, name, label, any, options) => (
     <div className="filter-field">
@@ -994,7 +992,6 @@ function RosterFilters() {
   );
   return (
     <form className="roster-filters" id="roster-filters" hidden>
-      {occ.length ? field("filter-occasion", "occasion", "Occasion", "Any", opt(occ)) : null}
       {field("filter-bucket", "bucket", "Kind of night", "Any", opt(has(r.buckets, (b) => usedB.has(b.id))))}
       {field("filter-config", "config", "Size", "Any", opt(has(r.rateCard, (c) => usedC.has(c.id))))}
       {gen.length ? field("filter-genre", "genre", "Genre", "Any", opt(gen)) : null}

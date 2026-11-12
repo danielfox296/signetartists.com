@@ -18,9 +18,8 @@
  * build.py only when the roster varies on it. Occasion joined 2026-09-23,
  * the same day the roster split into two lanes: the configurations and the
  * named acts. A lane whose every card is filtered out hides its heading too,
- * and the page can be opened pre-filtered (?occasion=weddings, ?size=duo,
- * ?genre=jazz, ?night=party, ?vocals=sung) so an occasion page can link
- * straight to the acts that suit it.
+ * and the page can be opened pre-filtered (?size=duo, ?genre=jazz,
+ * ?night=party, ?vocals=sung). The occasion filter was removed 2026-11-11.
  */
 (function () {
   "use strict";
@@ -41,7 +40,6 @@
   // guarded on the element existing. The third column is the query-string
   // key an occasion page can use to open the roster already filtered.
   var facets = [
-    ["filter-occasion", "occasions", "occasion"],
     ["filter-bucket", "buckets", "night"],
     ["filter-config", "configs", "size"],
     ["filter-genre", "genres", "genre"],
