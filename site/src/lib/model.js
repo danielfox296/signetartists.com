@@ -177,6 +177,8 @@ export function createModel(c) {
     if (Array.isArray(o)) o.forEach((x) => cardActs(x, out));
     else if (o && typeof o === "object") {
       if (o.type === "Cards" && o.props) for (const k of ["acts", "picks"]) for (const x of o.props[k] || []) if (x && x.act) out.add(x.act);
+      // A venue page's space panels and moments name their acts too.
+      if ((o.type === "VenueSpaces" || o.type === "VenueMoments") && o.props) for (const x of o.props.spaces || o.props.moments || []) if (x && x.act) out.add(x.act);
       Object.values(o).forEach((x) => cardActs(x, out));
     }
     return out;
