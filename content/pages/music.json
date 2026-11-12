@@ -55,8 +55,7 @@
    "type": "HonorsWall",
    "props": {
     "id": "HonorsWall-1",
-    "band": "ruled",
-    "eyebrow": "Featured Artists",
+    "band": "linen",
     "title": "Our artists' awards and press",
     "lede": "Here are some of the awards our artists have won, and the press, TV and stages they've been on.",
     "marksLabel": "In the press, on air and on stage",
@@ -64,10 +63,19 @@
    }
   },
   {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-41",
+    "band": "ruled",
+    "title": null,
+    "ids": "lmj-kelly"
+   }
+  },
+  {
    "type": "Rows",
    "props": {
     "id": "Rows-10",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -154,10 +162,19 @@
    }
   },
   {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-42",
+    "band": "night",
+    "title": null,
+    "ids": "annette-m"
+   }
+  },
+  {
    "type": "Specs",
    "props": {
     "id": "Specs-17",
-    "band": "sunk",
+    "band": "cloth",
     "blocks": [
      {
       "type": "Heading",
@@ -173,7 +190,8 @@
       "props": {
        "id": "SpecList-14",
        "source": "included",
-       "cols": true
+       "cols": true,
+       "mark": "check"
       }
      },
      {
@@ -187,18 +205,6 @@
     ],
     "_file": "03-included.html",
     "edge": "sheet"
-   }
-  },
-  {
-   "type": "Reviews",
-   "props": {
-    "id": "Reviews-testimonials",
-    "band": "ruled",
-    "title": "What clients say",
-    "occasions": "",
-    "limit": 8,
-    "show": 4,
-    "statement": true
    }
   },
   {
@@ -246,45 +252,12 @@
    }
   },
   {
-   "type": "CoverStrip",
+   "type": "Reviews",
    "props": {
-    "id": "CoverStrip-24",
-    "tiles": [
-     {
-      "src": "/img/covers/into-the-mystic.jpg",
-      "alt": "Moondance, Van Morrison album cover"
-     },
-     {
-      "src": "/img/covers/landslide.jpg",
-      "alt": "Fleetwood Mac album cover"
-     },
-     {
-      "src": "/img/covers/tennessee-whiskey.jpg",
-      "alt": "Chris Stapleton album cover"
-     },
-     {
-      "src": "/img/covers/dock-of-the-bay.jpg",
-      "alt": "The Dock of the Bay, Otis Redding album cover"
-     },
-     {
-      "src": "/img/covers/valerie.jpg",
-      "alt": "Version, Mark Ronson album cover"
-     },
-     {
-      "src": "/img/covers/sweet-caroline.jpg",
-      "alt": "Neil Diamond album cover"
-     },
-     {
-      "src": "/img/covers/dont-stop-believin.jpg",
-      "alt": "Escape, Journey album cover"
-     },
-     {
-      "src": "/img/covers/mr-brightside.jpg",
-      "alt": "Hot Fuss, The Killers album cover"
-     }
-    ],
-    "note": "We love music - both originals from our artists and a few hundred familiar favorites.",
-    "_file": "04-close.html"
+    "id": "Reviews-43",
+    "band": "ruled",
+    "title": null,
+    "ids": "mia-v-2025-08"
    }
   },
   {
