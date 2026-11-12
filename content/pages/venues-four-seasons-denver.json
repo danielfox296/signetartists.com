@@ -40,6 +40,13 @@
         {
          "html": "There’s a terrace by the pool on the third floor with views of the city, so you can have the cocktail hour outside and dinner in the ballroom."
         }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Four%20Seasons%20Hotel%20Denver",
+         "cls": "btn"
+        }
        ]
       }
      }
@@ -47,16 +54,140 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-four-seasons-denver",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "VenueSpaces",
+   "props": {
+    "id": "VenueSpaces-four-seasons-denver",
+    "band": "night",
+    "eyebrow": "Music for each space",
+    "title": "Live music in each Four Seasons Hotel Denver event space",
+    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "spaces": [
+     {
+      "name": "Grand Ballroom",
+      "facts": "The Grand Ballroom is about 5,200 sq ft, for banquets of up to 350 guests. It divides into two equal halves, and it has its own pre-function area.",
+      "act": "little-moses-jones",
+      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "stat": "Up to 350 guests"
+     },
+     {
+      "name": "Cottonwood Ballroom",
+      "facts": "The Cottonwood Ballroom is the hotel’s junior ballroom, about 3,400 sq ft, and it divides into two.",
+      "act": "tejas-singh",
+      "why": "He can start as a duo and grow to a full band over the evening.",
+      "stat": "About 3,400 sq ft"
+     },
+     {
+      "name": "Pool Terrace",
+      "facts": "The Pool Terrace is an outdoor event space on the third floor with views of the city, for banquets of up to 200.",
+      "act": "dirty-flamenco",
+      "why": "Flamenco and rumba on Spanish guitar, for a cocktail hour or a dinner.",
+      "img": "/img/venues/four-seasons-denver/pool-terrace-evening.jpg",
+      "alt": "Cocktail tables in orange linens around the lit pool on the rooftop terrace, with the clock tower behind.",
+      "credit": "Photo: Four Seasons Hotel Denver"
+     },
+     {
+      "name": "Private dining and smaller spaces",
+      "facts": "The hotel has three private dining spaces and seven smaller meeting spaces, for rehearsal dinners, client dinners and breakouts.",
+      "act": "jazz-duo",
+      "why": "Upright bass and guitar, at a volume nobody has to raise their voice over.",
+      "img": "/img/venues/four-seasons-denver/private-dining.jpg",
+      "alt": "A private dining table beside a grand piano and tall windows over the city.",
+      "credit": "Photo: Four Seasons Hotel Denver"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-four-seasons-denver",
+    "band": "ruled",
+    "title": null,
+    "ids": "lori-b-2017-10"
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-four-seasons-denver-w",
+    "band": "sunk",
+    "eyebrow": "Weddings",
+    "title": "Music for a wedding at Four Seasons Hotel Denver",
+    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "moments": [
+     {
+      "label": "The ceremony",
+      "space": "The Pool Terrace",
+      "act": "classical-strings",
+      "line": "A solo violin or a string quartet for the walk down the aisle."
+     },
+     {
+      "label": "The cocktail hour",
+      "space": "",
+      "act": "acoustic-duo",
+      "line": "Acoustic covers everyone knows, soft enough to keep talking."
+     },
+     {
+      "label": "The reception",
+      "space": "The Grand Ballroom",
+      "act": "soul-rnb",
+      "line": "Stevie Wonder, Aretha Franklin and Motown for the dance floor."
+     }
+    ],
+    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-four-seasons-denver-c",
+    "band": "ruled",
+    "eyebrow": "Company events",
+    "title": "Music for a company event at Four Seasons Hotel Denver",
+    "moments": [
+     {
+      "label": "The holiday party",
+      "space": "The Cottonwood Ballroom",
+      "act": "yacht-rock",
+      "line": "The Doobie Brothers, Steely Dan and Hall and Oates, with three voices and a saxophone."
+     },
+     {
+      "label": "The gala",
+      "space": "The Grand Ballroom",
+      "act": "changes-jazz-trio",
+      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+     },
+     {
+      "label": "The client dinner",
+      "space": "A private dining space",
+      "act": "solo-guitarist",
+      "line": "One guitarist, soft enough that nobody has to raise their voice."
+     }
+    ],
+    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+   }
+  },
+  {
    "type": "Rows",
    "props": {
-    "id": "Rows-fs2",
-    "band": "sunk",
+    "id": "Rows-four-seasons-denver-plan",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-fs2",
-       "title": "Event spaces at Four Seasons Hotel Denver",
+       "id": "Heading-four-seasons-denver-plan",
+       "eyebrow": "Planning",
+       "title": "Planning music at Four Seasons Hotel Denver",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -64,223 +195,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-fs2",
-       "cls": "def-list def-list--cards",
-       "rows": [
-        {
-         "term": "Grand Ballroom",
-         "art": "musicians",
-         "text": "The Grand Ballroom is about 5,200 sq ft, for banquets of up to 350 guests. It divides into two equal halves, and it has its own pre-function area."
-        },
-        {
-         "term": "Cottonwood Ballroom",
-         "art": "glass",
-         "text": "The Cottonwood Ballroom is the hotel’s junior ballroom, about 3,400 sq ft, and it divides into two."
-        },
-        {
-         "term": "Pool Terrace",
-         "art": "tree",
-         "text": "The Pool Terrace is an outdoor event space on the third floor with views of the city, for banquets of up to 200."
-        },
-        {
-         "term": "Private dining and smaller spaces",
-         "art": "plate",
-         "text": "The hotel has three private dining spaces and seven smaller meeting spaces, for rehearsal dinners, client dinners and breakouts."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Images",
-   "props": {
-    "id": "Images-venue",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-venue-photos",
-       "title": "Photos of Four Seasons Hotel Denver",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "MediaGrid",
-      "props": {
-       "id": "MediaGrid-venue",
-       "single": false,
-       "images": [
-        {
-         "src": "/img/venues/four-seasons-denver/pool-terrace-ceremony.jpg",
-         "alt": "Rows of white chairs and a draped arch set for a ceremony beside the rooftop pool.",
-         "caption": "The Pool Terrace",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/four-seasons-denver/pool-terrace-evening.jpg",
-         "alt": "Cocktail tables in orange linens around the lit pool on the rooftop terrace, with the clock tower behind.",
-         "caption": "The Pool Terrace at night",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/four-seasons-denver/private-dining.jpg",
-         "alt": "A private dining table beside a grand piano and tall windows over the city.",
-         "caption": "A private dining space",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/four-seasons-denver/exterior.jpg",
-         "alt": "The Four Seasons tower among downtown buildings at dusk.",
-         "caption": "The hotel at dusk",
-         "loading": "lazy",
-         "decoding": "async"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-venue-credit",
-       "cls": "note note--small",
-       "html": "Photos: Four Seasons Hotel Denver."
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-fs3a",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-fs3a",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Grand Ballroom",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s the space for wedding receptions, galas and holiday parties."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-fs3a",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "little-moses-jones"
-        },
-        {
-         "act": "soul-rnb"
-        },
-        {
-         "act": "tejas-singh",
-         "kicker": "Duo or full band"
-        },
-        {
-         "act": "yacht-rock"
-        },
-        {
-         "act": "funk-trio"
-        },
-        {
-         "act": "classical-strings",
-         "kicker": "String quartet",
-         "photo": "/img/acts/classical-strings-ballroom.jpg"
-        },
-        {
-         "act": "dj"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-fs3b",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-fs3b",
-       "eyebrow": "Our picks",
-       "title": "Live music on the Pool Terrace",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s a lovely spot for a ceremony or a cocktail hour, with the city all around."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-fs3b",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "classical-strings",
-         "kicker": "Solo or duo",
-         "photo": "/img/acts/classical-strings-ceremony.jpg"
-        },
-        {
-         "act": "solo-guitarist"
-        },
-        {
-         "act": "dirty-flamenco"
-        },
-        {
-         "act": "jazz-duo",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "changes-jazz-trio"
-        },
-        {
-         "act": "acoustic-duo",
-         "kicker": "Acoustic pop duo"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-fs40",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-fs40",
-       "title": "Load-in and setup",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-fs40",
+       "id": "DefRows-four-seasons-denver-plan",
        "cls": "def-list def-list--icons",
        "rows": [
         {
@@ -296,34 +211,7 @@
          "term": "Catering",
          "art": "plate",
          "text": "The hotel caters events in-house."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-fs41",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-fs41",
-       "title": "Things to plan around",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-fs41",
-       "cls": "def-list def-list--icons",
-       "rows": [
+        },
         {
          "term": "Weather",
          "art": "sun",
@@ -336,8 +224,101 @@
         }
        ]
       }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-four-seasons-denver-ask",
+       "html": "Questions to ask the Four Seasons Hotel Denver events team",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-four-seasons-denver-ask",
+       "source": "own",
+       "items": [
+        {
+         "html": "Which spaces have an end time for amplified music, and when is it?"
+        },
+        {
+         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
+        },
+        {
+         "html": "Where do vendors load in, and when can the band set up?"
+        },
+        {
+         "html": "Is there power near where the band will play?"
+        },
+        {
+         "html": "What wording do you need on the certificate of insurance?"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-four-seasons-denver-ask",
+       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
+       "cls": "note"
+      }
      }
     ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-four-seasons-denver",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-four-seasons-denver-faq",
+       "html": "Questions about music at Four Seasons Hotel Denver",
+       "tag": "h2",
+       "cls": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-four-seasons-denver",
+       "schema": true,
+       "items": [
+        {
+         "q": "Can we bring our own band to a wedding at Four Seasons Hotel Denver?",
+         "a": "Hotels like Four Seasons Hotel Denver generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
+        },
+        {
+         "q": "Does the band need the hotel’s AV team?",
+         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
+        },
+        {
+         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
+         "a": "Yes. The same act can move with you from The Pool Terrace to The Grand Ballroom, and one booking covers all of it."
+        },
+        {
+         "q": "How much does live music add to a wedding at Four Seasons Hotel Denver?",
+         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "VenueNearby",
+   "props": {
+    "id": "VenueNearby-four-seasons-denver",
+    "band": "ruled",
+    "title": "More Denver hotel wedding and event venues",
+    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
    }
   },
   {

@@ -40,6 +40,13 @@
         {
          "html": "Most events here are conferences, company meetings and big weddings, with guests flying in from all over. Live music works in every part of it, from a duo at the welcome reception to a string quartet at the ceremony and a full band in the ballroom."
         }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Gaylord%20Rockies%20Resort%20%26%20Convention%20Center",
+         "cls": "btn"
+        }
        ]
       }
      }
@@ -47,16 +54,156 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-gaylord-rockies",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "VenueSpaces",
+   "props": {
+    "id": "VenueSpaces-gaylord-rockies",
+    "band": "night",
+    "eyebrow": "Music for each space",
+    "title": "Live music in each Gaylord Rockies event space",
+    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "spaces": [
+     {
+      "name": "Juniper Ballroom and Patio",
+      "facts": "The Juniper Ballroom is about 7,500 sq ft, for banquets of up to 400 guests and receptions of about 700. The Juniper Patio outside it is about 13,400 sq ft, and the resort uses the two together for weddings of up to 400.",
+      "act": "tejas-singh",
+      "why": "He can start as a duo and grow to a full band over the evening.",
+      "img": "/img/venues/gaylord-rockies/juniper-ballroom.jpg",
+      "alt": "The Juniper Ballroom set for dinner with navy linens, candles and white roses.",
+      "credit": "Photo: Gaylord Rockies"
+     },
+     {
+      "name": "Colorado and Adams ballrooms",
+      "facts": "The Colorado Ballroom and the Adams Ballroom are about 34,000 sq ft each, for banquets of up to about 2,000 guests and receptions of over 3,000. Each one has about 10,000 sq ft of pre-function space outside it.",
+      "act": "little-moses-jones",
+      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "img": "/img/venues/gaylord-rockies/colorado-ballroom.jpg",
+      "alt": "The Colorado Ballroom set theater-style under large round chandeliers.",
+      "credit": "Photo: Gaylord Rockies"
+     },
+     {
+      "name": "Aurora Ballroom",
+      "facts": "The Aurora Ballroom is the biggest, at about 47,600 sq ft, for banquets of up to about 2,550 guests. It sits beside the Aurora Exhibit Hall, which is about 175,000 sq ft.",
+      "act": "quadrasonic",
+      "why": "Rock covers everyone knows, with a powerhouse singer out front.",
+      "img": "/img/venues/gaylord-rockies/aurora-ballroom.jpg",
+      "alt": "The empty Aurora Ballroom with a sculpted ceiling.",
+      "credit": "Photo: Gaylord Rockies"
+     },
+     {
+      "name": "Mountain View Pavilion",
+      "facts": "The Mountain View Pavilion faces west to the mountains, with about 9,500 sq ft indoors for banquets of up to 450 and receptions of up to 800. Around it are patios, terraces and the Longs Peak, Mount Blue Sky and Pikes Peak lawns.",
+      "act": "classical-strings",
+      "why": "A solo violin to a full string quartet, from the ceremony through dinner.",
+      "stat": "Up to 800 guests"
+     },
+     {
+      "name": "Grand Lodge and its lawn",
+      "facts": "The Grand Lodge is the resort’s big central lounge, and the resort has live music there most evenings. The Grand Lodge Lawn outside has four firepits and two fireplaces.",
+      "act": "meghan-clarisse",
+      "why": "Country and Americana, solo, as a duo or with her five-piece band.",
+      "stat": "Four firepits and two fireplaces"
+     },
+     {
+      "name": "Front Range Lawn",
+      "facts": "The Front Range Lawn is about 39,800 sq ft, for outdoor events of up to 3,600 guests.",
+      "act": "tony-medina",
+      "why": "Blues and rock and roll, solo for drinks or a four-piece when you want people dancing.",
+      "stat": "Up to 3,600 guests"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-gaylord-rockies",
+    "band": "ruled",
+    "title": null,
+    "ids": "clay-c-2026-04"
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-gaylord-rockies-w",
+    "band": "sunk",
+    "eyebrow": "Weddings",
+    "title": "Music for a wedding at Gaylord Rockies",
+    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "moments": [
+     {
+      "label": "The ceremony",
+      "space": "",
+      "act": "classical-strings",
+      "line": "A solo violin or a string quartet for the walk down the aisle."
+     },
+     {
+      "label": "The cocktail hour",
+      "space": "The Juniper Patio",
+      "act": "jazz-duo",
+      "line": "Jazz standards on upright bass and guitar."
+     },
+     {
+      "label": "The reception",
+      "space": "The Juniper Ballroom",
+      "act": "little-moses-jones",
+      "line": "The band to book when you want everyone on the dance floor."
+     }
+    ],
+    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-gaylord-rockies-c",
+    "band": "ruled",
+    "eyebrow": "Company events",
+    "title": "Music for a company event at Gaylord Rockies",
+    "moments": [
+     {
+      "label": "The holiday party",
+      "space": "The Colorado Ballroom",
+      "act": "soul-rnb",
+      "line": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance."
+     },
+     {
+      "label": "The gala",
+      "space": "The Aurora Ballroom",
+      "act": "changes-jazz-trio",
+      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+     },
+     {
+      "label": "The welcome night",
+      "space": "The Grand Lodge Lawn",
+      "act": "americana-band",
+      "line": "The Grateful Dead to Nathaniel Rateliff, for a night that sounds like Colorado."
+     }
+    ],
+    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+   }
+  },
+  {
    "type": "Rows",
    "props": {
-    "id": "Rows-g2",
-    "band": "sunk",
+    "id": "Rows-gaylord-rockies-plan",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-g2",
-       "title": "Event spaces at Gaylord Rockies",
+       "id": "Heading-gaylord-rockies-plan",
+       "eyebrow": "Planning",
+       "title": "Planning music at Gaylord Rockies",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -64,283 +211,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-g2",
-       "cls": "def-list def-list--cards",
-       "rows": [
-        {
-         "term": "Colorado and Adams ballrooms",
-         "art": "musicians",
-         "text": "The Colorado Ballroom and the Adams Ballroom are about 34,000 sq ft each, for banquets of up to about 2,000 guests and receptions of over 3,000. Each one has about 10,000 sq ft of pre-function space outside it."
-        },
-        {
-         "term": "Aurora Ballroom",
-         "art": "musicians",
-         "text": "The Aurora Ballroom is the biggest, at about 47,600 sq ft, for banquets of up to about 2,550 guests. It sits beside the Aurora Exhibit Hall, which is about 175,000 sq ft."
-        },
-        {
-         "term": "Juniper Ballroom and Patio",
-         "art": "glass",
-         "text": "The Juniper Ballroom is about 7,500 sq ft, for banquets of up to 400 guests and receptions of about 700. The Juniper Patio outside it is about 13,400 sq ft, and the resort uses the two together for weddings of up to 400."
-        },
-        {
-         "term": "Mountain View Pavilion",
-         "art": "mountain",
-         "text": "The Mountain View Pavilion faces west to the mountains, with about 9,500 sq ft indoors for banquets of up to 450 and receptions of up to 800. Around it are patios, terraces and the Longs Peak, Mount Blue Sky and Pikes Peak lawns."
-        },
-        {
-         "term": "Grand Lodge and its lawn",
-         "art": "glass",
-         "text": "The Grand Lodge is the resort’s big central lounge, and the resort has live music there most evenings. The Grand Lodge Lawn outside has four firepits and two fireplaces."
-        },
-        {
-         "term": "Front Range Lawn",
-         "art": "mountain",
-         "text": "The Front Range Lawn is about 39,800 sq ft, for outdoor events of up to 3,600 guests."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Images",
-   "props": {
-    "id": "Images-venue",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-venue-photos",
-       "title": "Photos of Gaylord Rockies",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "MediaGrid",
-      "props": {
-       "id": "MediaGrid-venue",
-       "single": false,
-       "images": [
-        {
-         "src": "/img/venues/gaylord-rockies/juniper-ballroom.jpg",
-         "alt": "The Juniper Ballroom set for dinner with navy linens, candles and white roses.",
-         "caption": "The Juniper Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/gaylord-rockies/colorado-ballroom.jpg",
-         "alt": "The Colorado Ballroom set theater-style under large round chandeliers.",
-         "caption": "The Colorado Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/gaylord-rockies/aurora-ballroom.jpg",
-         "alt": "The empty Aurora Ballroom with a sculpted ceiling.",
-         "caption": "The Aurora Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/gaylord-rockies/lobby.jpg",
-         "alt": "A lobby lounge with leather armchairs, a stone fireplace and an iron chandelier.",
-         "caption": "The lobby",
-         "loading": "lazy",
-         "decoding": "async"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-venue-credit",
-       "cls": "note note--small",
-       "html": "Photos: Gaylord Rockies Resort &amp; Convention Center."
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-g3a",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-g3a",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Colorado, Adams and Aurora ballrooms",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "They’re the spaces for conference parties, awards dinners, galas and the biggest weddings."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-g3a",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "little-moses-jones"
-        },
-        {
-         "act": "soul-rnb"
-        },
-        {
-         "act": "quadrasonic"
-        },
-        {
-         "act": "yacht-rock"
-        },
-        {
-         "act": "funk-trio"
-        },
-        {
-         "act": "live-band-karaoke"
-        },
-        {
-         "act": "dj"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-g3b",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-g3b",
-       "eyebrow": "Our picks",
-       "title": "Live music for a wedding at the Mountain View Pavilion or the Juniper Ballroom",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "These are the resort’s wedding spaces, for the ceremony, the cocktail hour and the reception."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-g3b",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "classical-strings",
-         "kicker": "String quartet",
-         "photo": "/img/acts/classical-strings-ceremony.jpg"
-        },
-        {
-         "act": "solo-guitarist",
-         "kicker": "For the ceremony"
-        },
-        {
-         "act": "dirty-flamenco"
-        },
-        {
-         "act": "jazz-duo",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "changes-jazz-trio"
-        },
-        {
-         "act": "tejas-singh",
-         "kicker": "Duo or full band"
-        },
-        {
-         "act": "acoustic-duo",
-         "kicker": "Acoustic pop duo"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-g3c",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-g3c",
-       "eyebrow": "Our picks",
-       "title": "Live music at a welcome reception in the Grand Lodge or on the lawns",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s a great way to welcome guests who’ve flown in, with the firepits going and the mountains to the west."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-g3c",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "americana-band"
-        },
-        {
-         "act": "chelsey-webb"
-        },
-        {
-         "act": "meghan-clarisse"
-        },
-        {
-         "act": "tony-medina"
-        },
-        {
-         "act": "last-consulate"
-        },
-        {
-         "act": "your-bird-can-sing"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-g40",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-g40",
-       "title": "Load-in and setup",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-g40",
+       "id": "DefRows-gaylord-rockies-plan",
        "cls": "def-list def-list--icons",
        "rows": [
         {
@@ -355,34 +226,7 @@
         {
          "term": "Paperwork",
          "text": "The resort asks for the act’s details and a certificate of insurance ahead of the event, and we’ll get both to the events team in plenty of time."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-g41",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-g41",
-       "title": "Things to plan around",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-g41",
-       "cls": "def-list def-list--icons",
-       "rows": [
+        },
         {
          "term": "Sound limits",
          "art": "speaker",
@@ -400,8 +244,101 @@
         }
        ]
       }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-gaylord-rockies-ask",
+       "html": "Questions to ask the Gaylord Rockies events team",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-gaylord-rockies-ask",
+       "source": "own",
+       "items": [
+        {
+         "html": "Which spaces have an end time for amplified music, and when is it?"
+        },
+        {
+         "html": "Does Encore need to connect or run the band’s sound, and is there a fee for that?"
+        },
+        {
+         "html": "Where do vendors load in, and when can the band set up?"
+        },
+        {
+         "html": "Is there power near where the band will play?"
+        },
+        {
+         "html": "What wording do you need on the certificate of insurance?"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-gaylord-rockies-ask",
+       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
+       "cls": "note"
+      }
      }
     ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-gaylord-rockies",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-gaylord-rockies-faq",
+       "html": "Questions about music at Gaylord Rockies",
+       "tag": "h2",
+       "cls": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-gaylord-rockies",
+       "schema": true,
+       "items": [
+        {
+         "q": "Can we bring our own band to a wedding at Gaylord Rockies?",
+         "a": "Hotels like Gaylord Rockies generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
+        },
+        {
+         "q": "Does the band need Encore, the resort’s AV company?",
+         "a": "Our acts bring their own sound system. Encore is the resort’s AV company for anything beyond what the act brings, and we’ll work out the details with the events team."
+        },
+        {
+         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
+         "a": "Yes. The same act can move with you from The Juniper Patio to The Juniper Ballroom, and one booking covers all of it."
+        },
+        {
+         "q": "How much does live music add to a wedding at Gaylord Rockies?",
+         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "VenueNearby",
+   "props": {
+    "id": "VenueNearby-gaylord-rockies",
+    "band": "ruled",
+    "title": "More Denver hotel wedding and event venues",
+    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
    }
   },
   {

@@ -6982,9 +6982,17 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media (min-width: 1150px) {
-  .venue-cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (min-width: 900px) {
+  .venue-card--wide {
+    grid-column: span 2;
+  }
+  .venue-card--wide .venue-card__link {
+    flex-direction: row;
+  }
+  .venue-card--wide .venue-card__photo {
+    flex: 0 0 56%;
+    aspect-ratio: auto;
+    min-height: 100%;
   }
 }
 .venue-card {
@@ -7224,18 +7232,7 @@ body {
 .vendor-cat .venue-cards {
   margin-top: 1.5rem;
 }
-@media (min-width: 1150px) {
-  .venue-card__body {
-    padding: 1.1rem 1.15rem 1.3rem;
-  }
-  .venue-card__name {
-    font-size: 1.15rem;
-  }
-  .venue-card__spaces,
-  .venue-card__acts {
-    font-size: 0.86rem;
-  }
-}
+
 /* A numbered row in an icon list: the number in brass where the drawing goes. */
 .def-list--icons .def-row[data-num]::before {
   content: attr(data-num);
@@ -7340,4 +7337,301 @@ body {
 }
 .story--small .story-name {
   font-size: clamp(1.6rem, 1.3rem + 0.9vw, 2rem);
+}
+
+/* ------------------------------------------ venue landing pages (11-12)
+   Each event space as a large panel: the hotel's photograph beside what the
+   space is and the one act we'd pick, with a button that plays the act in a
+   small player over the photo's corner. Panels alternate sides. */
+.vspaces__list {
+  display: grid;
+  gap: clamp(3.5rem, 2.5rem + 3vw, 6rem);
+  margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+}
+.vspace {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .vspace {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+  }
+  .vspace:nth-child(even) .vspace__media {
+    order: 2;
+  }
+}
+.vspace__media {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #0d0d0d;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.85);
+}
+.vspace__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vspace__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 60%),
+    linear-gradient(to top, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0) 40%);
+  pointer-events: none;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .vspace__media img {
+      animation: venue-drift linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 50%;
+    }
+  }
+}
+.vspace__credit {
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.7rem;
+  z-index: 2;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 242, 0.75);
+}
+/* No photograph of the space: its size, set large on a lit ground. */
+.vspace--stat .vspace__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background:
+    radial-gradient(90% 80% at 30% 20%, rgba(224, 119, 107, 0.22), rgba(224, 119, 107, 0) 60%),
+    radial-gradient(80% 90% at 80% 90%, rgba(171, 204, 214, 0.16), rgba(171, 204, 214, 0) 60%),
+    #151a22;
+}
+.vspace__stat {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 1.4rem + 3.6vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.vspace__player {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  width: min(48%, 22rem);
+  aspect-ratio: 16 / 9;
+  display: none;
+  background: #000;
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.vspace__player.is-on {
+  display: block;
+}
+.vspace__player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 599px) {
+  .vspace__player {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: auto;
+  }
+}
+.vspace__name {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.vspace__facts {
+  margin: 0.9rem 0 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.vspace__pick {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.vspace__label {
+  margin: 0;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--red);
+}
+.vspace__act {
+  margin: 0.35rem 0 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+.vspace__act a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.vspace__act a:hover {
+  border-bottom-color: var(--red);
+}
+.vspace__why {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+.vspace__play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding: 0.4rem 1.1rem 0.4rem 0.4rem;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+.vspace__play:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--ink);
+}
+.vspace__play-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background-color: var(--red);
+  -webkit-mask: none;
+  position: relative;
+}
+.vspace__play-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 0.85rem;
+  height: 0.85rem;
+  background: var(--near-black);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 4l13 8-13 8z' fill='%23000'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 4l13 8-13 8z' fill='%23000'/%3E%3C/svg%3E") center / contain no-repeat;
+  transform: translateX(1px);
+}
+.vspace__play.is-on .vspace__play-icon::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='6' y='6' width='12' height='12' fill='%23000'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='6' y='6' width='12' height='12' fill='%23000'/%3E%3C/svg%3E");
+  transform: none;
+}
+
+/* Moments: three cards, each an act's photograph with the moment, the space
+   and the act under it. */
+.vmoments__list {
+  list-style: none;
+  margin: clamp(2rem, 1.5rem + 2vw, 3rem) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 800px) {
+  .vmoments__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.vmoment__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  background: var(--paper-sunk);
+  border: 1px solid var(--rule);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.4s ease;
+}
+.vmoment__link:hover {
+  border-color: var(--rule-strong);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vmoment__link:hover {
+    transform: translateY(-4px);
+  }
+}
+.vmoment__photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+.vmoment__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.6s ease;
+}
+.vmoment__link:hover .vmoment__photo img {
+  filter: grayscale(0);
+}
+.vmoment__body {
+  padding: 1.25rem 1.35rem 1.5rem;
+}
+.vmoment__label {
+  margin: 0;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--red);
+}
+.vmoment__space {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+}
+.vmoment__act {
+  margin: 0.7rem 0 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.vmoment__line {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.vmoments .note,
+.vnearby .note {
+  margin-top: 2rem;
+}
+@media (min-width: 900px) {
+  .vspace:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  }
+}
+/* A heading under a list in the same section starts a new group. */
+.def-list + .h3,
+.def-list + h3 {
+  margin-top: clamp(3rem, 2.5rem + 2vw, 4.5rem);
 }

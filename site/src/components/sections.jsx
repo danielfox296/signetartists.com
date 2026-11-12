@@ -648,10 +648,15 @@ function VenueCards({ s, venues }) {
     const n = names([...v.named]).slice(0, 3);
     return n.length ? `<span class="venue-card__label">Acts we'd pick</span>${n.join(" · ")}` : "";
   };
+  // Three across: a venue an act has played comes first, and when the count
+  // would leave one card alone on the last row, the first card runs double
+  // width so every row stays full or a pair.
+  const sorted = [...venues].sort((x, y) => (y.played.length ? 1 : 0) - (x.played.length ? 1 : 0));
+  const wide = sorted.length > 3 && sorted.length % 3 === 1;
   return (
     <ul className="venue-cards">
-      {venues.map((v) => (
-        <li className="venue-card" key={v.path}>
+      {sorted.map((v, i) => (
+        <li className={cx("venue-card", wide && i === 0 && "venue-card--wide")} key={v.path}>
           <a className="venue-card__link" href={s.prefix + v.path.slice(1)}>
             <div className="venue-card__photo">
               {v.img ? <Pic src={href("/" + v.img.replace(/^\//, ""))} alt="" width="1600" height="1067" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}
@@ -1103,7 +1108,172 @@ const SongCatalog = {
   },
 };
 
-export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActHonors, HonorsWall, ActVenues, ActClose, VendorList, VenueList, ContactForm, Roster, SongCatalog };
+// ------------------------------------------------ venue landing pages
+// Built 2026-11-12 for the venue pages (Daniel: "make these great landing
+// pages for people who have or are considering booking music there").
+
+// The act a venue section picks, its page and its first YouTube clip.
+function venueAct(s, id, clip) {
+  const m = s.model;
+  const a = id ? m.ACT_BY_ID[id] : null;
+  if (!a || a.hidden) return null;
+  const yt = clip || ((m.FOOTAGE || []).find((v) => v.act === a.id && v.id) || {}).id || null;
+  return { a, url: m.actUrl(a, s.prefix), yt };
+}
+
+// Each event space as its own panel: the hotel's photograph of it (or, with
+// no photograph, the space's size set large), what the space is, the one act
+// we'd pick for it and why, and a button that plays that act over the photo.
+const VenueSpaces = {
+  label: "Venue spaces",
+  fields: {
+    band: shellFields.band,
+    eyebrow: rich("Eyebrow"),
+    title: rich("Title"),
+    lede: rich("Lede"),
+    spaces: {
+      type: "array",
+      label: "Spaces",
+      getItemSummary: (x) => x.name,
+      arrayFields: { name: text("Space"), img: text("Photo"), alt: text("Photo's alt text"), credit: text("Photo credit"), stat: text("Without a photo: the size, set large"), facts: rich("What the space is"), act: text("Act we'd pick (id)"), kicker: text("Line over the act's name"), why: rich("Why"), clip: text("YouTube id (blank: the act's first clip)") },
+    },
+  },
+  render: function VenueSpacesRender({ band, eyebrow, title, lede, spaces, wrapStyle }) {
+    const s = useSite();
+    const href = useHref();
+    return (
+      <section className={cx(bandClass(band || "ruled"), "vspaces")}>
+        <div className="wrap" style={css(wrapStyle)}>
+          <div className="heading">
+            <H as="p" className="eyebrow" html={eyebrow} />
+            <H as="h2" className="h2" html={title} />
+            <H as="p" className="lede" html={lede} />
+          </div>
+          <div className="vspaces__list">
+            {(spaces || []).map((x, i) => {
+              const pick = venueAct(s, x.act, x.clip);
+              return (
+                <article className={cx("vspace", !x.img && "vspace--stat")} key={i}>
+                  <figure className="vspace__media">
+                    {x.img ? <Pic src={href(x.img)} alt={x.alt || ""} loading="lazy" decoding="async" sizes="(min-width: 1100px) 640px, 100vw" /> : <p className="vspace__stat">{x.stat}</p>}
+                    <div className="vspace__player" aria-live="polite"></div>
+                    {x.credit ? <figcaption className="vspace__credit">{x.credit}</figcaption> : null}
+                  </figure>
+                  <div className="vspace__body">
+                    <h3 className="vspace__name">{x.name}</h3>
+                    <H as="p" className="vspace__facts" html={x.facts} />
+                    {pick ? (
+                      <div className="vspace__pick">
+                        <p className="vspace__label">{x.kicker || "Our pick"}</p>
+                        <p className="vspace__act"><a href={pick.url}>{pick.a.name}</a></p>
+                        <H as="p" className="vspace__why" html={x.why} />
+                        {pick.yt ? (
+                          <button type="button" className="vspace__play" data-vclip={pick.yt} data-title={pick.a.name}>
+                            <span className="vspace__play-icon" aria-hidden="true"></span>
+                            <span className="vspace__play-text">{`Hear ${pick.a.name}`}</span>
+                          </button>
+                        ) : null}
+                      </div>
+                    ) : null}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+        <Raw html={`<script>${VSPACE_JS}</script>`} />
+      </section>
+    );
+  },
+};
+// The play button: the act's clip in a small player over the corner of the
+// space's photo, so the room stays in view while the music plays. One at a
+// time; the button stops it again.
+const VSPACE_JS =
+  `(function(){var root=document.currentScript.parentNode;` +
+  `function stop(b){var p=b.closest(".vspace").querySelector(".vspace__player");p.innerHTML="";p.classList.remove("is-on");b.classList.remove("is-on");b.querySelector(".vspace__play-text").textContent="Hear "+b.dataset.title;}` +
+  `root.querySelectorAll("[data-vclip]").forEach(function(b){b.addEventListener("click",function(){` +
+  `var on=b.classList.contains("is-on");root.querySelectorAll("[data-vclip].is-on").forEach(stop);if(on)return;` +
+  `var p=b.closest(".vspace").querySelector(".vspace__player");` +
+  `p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.dataset.vclip+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="'+b.dataset.title.replace(/"/g,"")+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';` +
+  `p.classList.add("is-on");b.classList.add("is-on");b.querySelector(".vspace__play-text").textContent="Stop the music";});});})();`;
+
+// Moments at a venue: a wedding's ceremony, cocktails and reception, or a
+// company's party, gala and reception, each with the space and one act, shown
+// by the act's photograph.
+const VenueMoments = {
+  label: "Venue moments",
+  fields: {
+    band: shellFields.band,
+    eyebrow: rich("Eyebrow"),
+    title: rich("Title"),
+    lede: rich("Lede"),
+    moments: { type: "array", label: "Moments", getItemSummary: (x) => x.label, arrayFields: { label: text("Moment"), space: text("Space"), act: text("Act (id)"), photo: text("Photo (blank: the act's card)"), line: rich("Line") } },
+    note: rich("Note"),
+  },
+  render: function VenueMomentsRender({ band, eyebrow, title, lede, moments, note, wrapStyle }) {
+    const s = useSite();
+    const href = useHref();
+    return (
+      <section className={cx(bandClass(band || "ruled"), "vmoments")}>
+        <div className="wrap" style={css(wrapStyle)}>
+          <div className="heading">
+            <H as="p" className="eyebrow" html={eyebrow} />
+            <H as="h2" className="h2" html={title} />
+            <H as="p" className="lede" html={lede} />
+          </div>
+          <ol className="vmoments__list">
+            {(moments || []).map((x, i) => {
+              const pick = venueAct(s, x.act);
+              const img = x.photo || (pick && pick.a.img ? "/img/" + pick.a.img : null);
+              return (
+                <li className="vmoment" key={i}>
+                  <a className="vmoment__link" href={pick ? pick.url : undefined}>
+                    <div className="vmoment__photo">
+                      {img ? <Pic src={href(img)} alt="" loading="lazy" decoding="async" sizes="(min-width: 900px) 33vw, 100vw" /> : null}
+                    </div>
+                    <div className="vmoment__body">
+                      <p className="vmoment__label">{x.label}</p>
+                      <p className="vmoment__space">{x.space}</p>
+                      {pick ? <p className="vmoment__act">{pick.a.name}</p> : null}
+                      <H as="p" className="vmoment__line" html={x.line} />
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+          <H as="p" className="note" html={note} />
+        </div>
+      </section>
+    );
+  },
+};
+
+// The other venue pages in the same town as this one, as venue cards.
+const VenueNearby = {
+  label: "Nearby venues",
+  fields: { band: shellFields.band, title: rich("Title"), lede: rich("Lede"), note: rich("Note") },
+  render: function VenueNearbyRender({ band, title, lede, note, wrapStyle }) {
+    const s = useSite();
+    const here = s.page && s.page.root && s.page.root.props;
+    const group = here && here.venue && here.venue.group;
+    const venues = (s.model.VENUES || []).filter((v) => v.group === group && v.path !== here.path);
+    if (!venues.length) return null;
+    return (
+      <section className={cx(bandClass(band || "ruled"), "venues-hub vnearby")}>
+        <div className="wrap" style={css(wrapStyle)}>
+          <H as="h2" className="h2" html={title} />
+          <H as="p" className="lede" html={lede} />
+          <VenueCards s={s} venues={venues} />
+          <H as="p" className="note" html={note} />
+        </div>
+      </section>
+    );
+  },
+};
+
+export const fixedSections = { LogoStrip, PagesAndPosts, HomeHero, RangeStrip, CoverStrip, CoverWall, ActHeader, ActAbout, ActSizes, Setlist, ActHonors, HonorsWall, ActVenues, ActClose, VendorList, VenueList, VenueSpaces, VenueMoments, VenueNearby, ContactForm, Roster, SongCatalog };
 
 export const components = { ...blockSections, ...fixedSections, ActOwn };
 

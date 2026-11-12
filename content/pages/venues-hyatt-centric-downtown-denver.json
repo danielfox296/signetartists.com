@@ -42,6 +42,13 @@
         {
          "html": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a> played the rooftop bar and patio as a duo for a corporate conference reception hosted by Softdocs."
         }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Hyatt%20Centric%20Downtown%20Denver",
+         "cls": "btn"
+        }
        ]
       }
      }
@@ -49,16 +56,145 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-hyatt-centric-downtown-denver",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "VenueSpaces",
+   "props": {
+    "id": "VenueSpaces-hyatt-centric-downtown-denver",
+    "band": "night",
+    "eyebrow": "Music for each space",
+    "title": "Live music in each Hyatt Centric Downtown Denver event space",
+    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "spaces": [
+     {
+      "name": "Rooftop bar and patio",
+      "facts": "The rooftop is an indoor-outdoor performance space with a bar, on the top floor. Huge folding glass doors open the indoor side to the patio, and the act can set up in a spot that covers both sides, wherever guests are standing. The hotel lists its Rooftop Terrace at about 1,260 sq ft, for up to 78 guests.",
+      "act": "tejas-singh",
+      "why": "Tejas played the rooftop as a duo for a corporate conference reception.",
+      "img": "/img/venues/hyatt-centric-downtown-denver/rooftop-fireplace.jpg",
+      "alt": "Lounge chairs around the rooftop fireplace, with a glass rail and city towers beyond.",
+      "credit": "Photo: Hyatt Centric Downtown Denver",
+      "kicker": "Played here"
+     },
+     {
+      "name": "Lobby",
+      "facts": "The lobby is cozy, and it’s at street level.",
+      "act": "solo-guitarist",
+      "why": "One guitarist playing blues, jazz and Spanish flavors, soft enough to keep talking.",
+      "img": "/img/venues/hyatt-centric-downtown-denver/lobby-bar.jpg",
+      "alt": "The lobby bar with a long wood counter and a blue tile wall.",
+      "credit": "Photo: Hyatt Centric Downtown Denver"
+     },
+     {
+      "name": "Colorado Ballroom",
+      "facts": "The Colorado Ballroom is on the top floor, with about 2,530 sq ft for up to 300 guests. It divides into three smaller spaces: Breckenridge (up to 120 guests), Aspen (up to 100) and Vail (up to 80).",
+      "act": "little-moses-jones",
+      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "img": "/img/venues/hyatt-centric-downtown-denver/colorado-ballroom.jpg",
+      "alt": "The Colorado Ballroom set with round tables, with windows on two sides.",
+      "credit": "Photo: Hyatt Centric Downtown Denver"
+     },
+     {
+      "name": "Apple Blossom and the Hospitality Suite",
+      "facts": "Apple Blossom, the hotel’s farm-to-table restaurant, offers the restaurant and its terrace (about 5,000 sq ft together) for weddings and gatherings. The hotel also has a Hospitality Suite with its own outdoor terrace.",
+      "act": "jazz-duo",
+      "why": "Upright bass and guitar, at a volume nobody has to raise their voice over.",
+      "img": "/img/venues/hyatt-centric-downtown-denver/hospitality-suite.jpg",
+      "alt": "The Hospitality Suite with a long wood dining table, a kitchenette and a sitting area.",
+      "credit": "Photo: Hyatt Centric Downtown Denver"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-hyatt-centric-downtown-denver",
+    "band": "ruled",
+    "title": null,
+    "ids": "debra-w-2026-05"
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-hyatt-centric-downtown-denver-c",
+    "band": "ruled",
+    "eyebrow": "Company events",
+    "title": "Music for a company event at Hyatt Centric Downtown Denver",
+    "moments": [
+     {
+      "label": "The conference reception",
+      "space": "The rooftop",
+      "act": "tejas-singh",
+      "line": "Tejas played the rooftop as a duo for a conference reception."
+     },
+     {
+      "label": "The holiday party",
+      "space": "The Colorado Ballroom",
+      "act": "soul-rnb",
+      "line": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance."
+     },
+     {
+      "label": "The welcome night",
+      "space": "The lobby",
+      "act": "solo-piano",
+      "line": "Standards and covers on piano, at a level everyone can talk over."
+     }
+    ],
+    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-hyatt-centric-downtown-denver-w",
+    "band": "sunk",
+    "eyebrow": "Weddings",
+    "title": "Music for a wedding at Hyatt Centric Downtown Denver",
+    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "moments": [
+     {
+      "label": "The ceremony",
+      "space": "",
+      "act": "classical-strings",
+      "line": "A solo violin or a string quartet for the walk down the aisle."
+     },
+     {
+      "label": "The cocktail hour",
+      "space": "Apple Blossom’s terrace",
+      "act": "acoustic-duo",
+      "line": "Acoustic covers everyone knows, soft enough to keep talking."
+     },
+     {
+      "label": "The reception",
+      "space": "The Colorado Ballroom",
+      "act": "yacht-rock",
+      "line": "Yacht rock with three voices in harmony and a saxophone."
+     }
+    ],
+    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+   }
+  },
+  {
    "type": "Rows",
    "props": {
-    "id": "Rows-h2",
-    "band": "sunk",
+    "id": "Rows-hyatt-centric-downtown-denver-plan",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-h2",
-       "title": "Event spaces at Hyatt Centric Downtown Denver",
+       "id": "Heading-hyatt-centric-downtown-denver-plan",
+       "eyebrow": "Planning",
+       "title": "Planning music at Hyatt Centric Downtown Denver",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -66,269 +202,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-h2",
-       "cls": "def-list def-list--cards",
-       "rows": [
-        {
-         "term": "Rooftop bar and patio",
-         "art": "tree",
-         "text": "The rooftop is an indoor-outdoor performance space with a bar, on the top floor. Huge folding glass doors open the indoor side to the patio, and the act can set up in a spot that covers both sides, wherever guests are standing. The hotel lists its Rooftop Terrace at about 1,260 sq ft, for up to 78 guests."
-        },
-        {
-         "term": "Lobby",
-         "art": "glass",
-         "text": "The lobby is cozy, and it’s at street level."
-        },
-        {
-         "term": "Colorado Ballroom",
-         "art": "musicians",
-         "text": "The Colorado Ballroom is on the top floor, with about 2,530 sq ft for up to 300 guests. It divides into three smaller spaces: Breckenridge (up to 120 guests), Aspen (up to 100) and Vail (up to 80)."
-        },
-        {
-         "term": "Apple Blossom and the Hospitality Suite",
-         "art": "plate",
-         "text": "Apple Blossom, the hotel’s farm-to-table restaurant, offers the restaurant and its terrace (about 5,000 sq ft together) for weddings and gatherings. The hotel also has a Hospitality Suite with its own outdoor terrace."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Images",
-   "props": {
-    "id": "Images-venue",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-venue-photos",
-       "title": "Photos of Hyatt Centric Downtown Denver",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "MediaGrid",
-      "props": {
-       "id": "MediaGrid-venue",
-       "single": false,
-       "images": [
-        {
-         "src": "/img/venues/hyatt-centric-downtown-denver/rooftop-fireplace.jpg",
-         "alt": "Lounge chairs around the rooftop fireplace, with a glass rail and city towers beyond.",
-         "caption": "The rooftop patio",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/hyatt-centric-downtown-denver/lobby-bar.jpg",
-         "alt": "The lobby bar with a long wood counter and a blue tile wall.",
-         "caption": "The lobby bar",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/hyatt-centric-downtown-denver/colorado-ballroom.jpg",
-         "alt": "The Colorado Ballroom set with round tables, with windows on two sides.",
-         "caption": "The Colorado Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/hyatt-centric-downtown-denver/hospitality-suite.jpg",
-         "alt": "The Hospitality Suite with a long wood dining table, a kitchenette and a sitting area.",
-         "caption": "The Hospitality Suite",
-         "loading": "lazy",
-         "decoding": "async"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-venue-credit",
-       "cls": "note note--small",
-       "html": "Photos: Hyatt Centric Downtown Denver."
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-h3a",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-h3a",
-       "eyebrow": "Our picks",
-       "title": "Live music on the rooftop bar and patio",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s great for receptions, cocktail hours and sunset events."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-h3a",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "tejas-singh",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "jazz-duo",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "dirty-flamenco"
-        },
-        {
-         "act": "acoustic-duo",
-         "kicker": "Acoustic pop duo"
-        },
-        {
-         "act": "afro-house-dj",
-         "kicker": "Through the bar’s sound system"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-h3b",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-h3b",
-       "eyebrow": "Our picks",
-       "title": "Live music in the lobby",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s a lovely fit for arrivals, welcome receptions and evenings at the bar."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-h3b",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "solo-piano"
-        },
-        {
-         "act": "solo-guitarist"
-        },
-        {
-         "act": "singer-guitarist"
-        },
-        {
-         "act": "last-consulate"
-        },
-        {
-         "act": "classical-strings",
-         "kicker": "Solo or duo"
-        },
-        {
-         "act": "christmas-jazz-trio",
-         "kicker": "For the holidays"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-h3c",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-h3c",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Colorado Ballroom",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s the space for dinners, galas, holiday parties and wedding receptions."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-h3c",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "little-moses-jones"
-        },
-        {
-         "act": "soul-rnb"
-        },
-        {
-         "act": "funk-trio"
-        },
-        {
-         "act": "yacht-rock"
-        },
-        {
-         "act": "live-band-karaoke"
-        },
-        {
-         "act": "classical-strings",
-         "kicker": "String quartet",
-         "photo": "/img/acts/classical-strings-ballroom.jpg"
-        },
-        {
-         "act": "dj"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-h4",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-h4",
-       "title": "Load-in and setup",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-h4",
+       "id": "DefRows-hyatt-centric-downtown-denver-plan",
        "cls": "def-list def-list--icons",
        "rows": [
         {
@@ -339,34 +213,7 @@
         {
          "term": "Sound system",
          "text": "Our act brought its own sound system, so the hotel didn’t need to provide any AV support. The rooftop bar also has a built-in sound system, with an audio input performers can use."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-h5",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-h5",
-       "title": "Parking, staff and catering",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-h5",
-       "cls": "def-list def-list--icons",
-       "rows": [
+        },
         {
          "term": "Parking",
          "art": "car",
@@ -380,34 +227,7 @@
          "term": "Catering",
          "art": "plate",
          "text": "Apple Blossom caters events at the hotel, and the food is great."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-h6",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-h6",
-       "title": "Things to plan around",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-h6",
-       "cls": "def-list def-list--icons",
-       "rows": [
+        },
         {
          "term": "Sound limits",
          "art": "speaker",
@@ -420,8 +240,101 @@
         }
        ]
       }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hyatt-centric-downtown-denver-ask",
+       "html": "Questions to ask the Hyatt Centric Downtown Denver events team",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-hyatt-centric-downtown-denver-ask",
+       "source": "own",
+       "items": [
+        {
+         "html": "Which spaces have an end time for amplified music, and when is it?"
+        },
+        {
+         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
+        },
+        {
+         "html": "Where do vendors load in, and when can the band set up?"
+        },
+        {
+         "html": "Is there power near where the band will play?"
+        },
+        {
+         "html": "What wording do you need on the certificate of insurance?"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-hyatt-centric-downtown-denver-ask",
+       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
+       "cls": "note"
+      }
      }
     ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-hyatt-centric-downtown-denver",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hyatt-centric-downtown-denver-faq",
+       "html": "Questions about music at Hyatt Centric Downtown Denver",
+       "tag": "h2",
+       "cls": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-hyatt-centric-downtown-denver",
+       "schema": true,
+       "items": [
+        {
+         "q": "Can we bring our own band to an event at Hyatt Centric Downtown Denver?",
+         "a": "Hotels like Hyatt Centric Downtown Denver generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
+        },
+        {
+         "q": "Does the band need the hotel’s AV team?",
+         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
+        },
+        {
+         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
+         "a": "Yes. The same act can move with you from Apple Blossom’s terrace to The Colorado Ballroom, and one booking covers all of it."
+        },
+        {
+         "q": "How much does live music add to an event at Hyatt Centric Downtown Denver?",
+         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "VenueNearby",
+   "props": {
+    "id": "VenueNearby-hyatt-centric-downtown-denver",
+    "band": "ruled",
+    "title": "More Denver hotel wedding and event venues",
+    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
    }
   },
   {

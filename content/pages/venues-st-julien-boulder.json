@@ -40,6 +40,13 @@
         {
          "html": "Live music is part of the hotel already. There are bands on the terrace from Wednesday to Saturday, and jazz at the holiday buffets."
         }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=St%20Julien%20Hotel%20%26%20Spa",
+         "cls": "btn"
+        }
        ]
       }
      }
@@ -47,16 +54,142 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-st-julien-boulder",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "VenueSpaces",
+   "props": {
+    "id": "VenueSpaces-st-julien-boulder",
+    "band": "night",
+    "eyebrow": "Music for each space",
+    "title": "Live music in each St Julien Hotel & Spa event space",
+    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "spaces": [
+     {
+      "name": "The lawn",
+      "facts": "The lawn is about 2,400 sq ft of grass with views of the Flatirons, for banquets of up to 200 and receptions of up to 275.",
+      "act": "classical-strings",
+      "why": "A solo violin to a full string quartet, from the ceremony through dinner.",
+      "img": "/img/venues/st-julien-boulder/lawn-ceremony.jpg",
+      "alt": "The lawn set with rows of white ceremony chairs, seen from above, with terraced gardens behind.",
+      "credit": "Photo: Haley Hawn"
+     },
+     {
+      "name": "Xanadu Ballroom",
+      "facts": "The Xanadu Ballroom is about 4,100 sq ft with 14-foot ceilings, for banquets of up to 300 and receptions of up to 360. It divides into three, and there’s about 2,900 sq ft of pre-function space outside.",
+      "act": "tejas-singh",
+      "why": "He can start as a duo and grow to a full band over the evening.",
+      "img": "/img/venues/st-julien-boulder/xanadu-ballroom.jpg",
+      "alt": "The Xanadu Ballroom set for a wedding reception, with candlelit tables around a dance floor and a band stage lit in blue.",
+      "credit": "Photo: St Julien Hotel & Spa"
+     },
+     {
+      "name": "Redgarden terraces and court",
+      "facts": "The Redgarden Lower Terrace holds dinners of up to 80, and the Redgarden Court and Upper Terrace hold receptions of up to 100 and 75.",
+      "act": "rene-moffatt",
+      "why": "His own folk and Americana songs on acoustic guitar, solo or with his band.",
+      "img": "/img/venues/st-julien-boulder/terrace-dusk.jpg",
+      "alt": "A stone terrace at dusk with cocktail tables and a hedge, and the Flatirons on the skyline.",
+      "credit": "Photo: St Julien Hotel & Spa"
+     },
+     {
+      "name": "Jill’s and the Honey Onyx Room",
+      "facts": "Jill’s, the hotel’s restaurant, holds private events of up to 140, and the Honey Onyx Room holds up to 40.",
+      "act": "jazz-duo",
+      "why": "Upright bass and guitar, at a volume nobody has to raise their voice over.",
+      "stat": "Private events of up to 140"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-st-julien-boulder",
+    "band": "ruled",
+    "title": null,
+    "ids": "jailynn-g"
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-st-julien-boulder-w",
+    "band": "sunk",
+    "eyebrow": "Weddings",
+    "title": "Music for a wedding at St Julien Hotel & Spa",
+    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "moments": [
+     {
+      "label": "The ceremony",
+      "space": "The lawn",
+      "act": "classical-strings",
+      "line": "A solo violin or a string quartet for the walk down the aisle."
+     },
+     {
+      "label": "The cocktail hour",
+      "space": "The Redgarden terraces",
+      "act": "dirty-flamenco",
+      "line": "Flamenco and rumba on Spanish guitar."
+     },
+     {
+      "label": "The reception",
+      "space": "The Xanadu Ballroom",
+      "act": "little-moses-jones",
+      "line": "The band to book when you want everyone on the dance floor."
+     }
+    ],
+    "note": "There are more ideas for <a href=\"/weddings/boulder/\">a Boulder wedding</a> on our weddings pages."
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-st-julien-boulder-c",
+    "band": "ruled",
+    "eyebrow": "Company events",
+    "title": "Music for a company event at St Julien Hotel & Spa",
+    "moments": [
+     {
+      "label": "The holiday party",
+      "space": "The Xanadu Ballroom",
+      "act": "soul-rnb",
+      "line": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance."
+     },
+     {
+      "label": "The client dinner",
+      "space": "Jill’s",
+      "act": "solo-guitarist",
+      "line": "One guitarist, soft enough that nobody has to raise their voice."
+     },
+     {
+      "label": "The summer party",
+      "space": "The lawn",
+      "act": "americana-band",
+      "line": "The Grateful Dead to Nathaniel Rateliff, for a night that sounds like Colorado."
+     }
+    ],
+    "note": "There’s more on <a href=\"/corporate/holiday-party/\">company holiday parties</a> and <a href=\"/corporate/\">corporate events</a>."
+   }
+  },
+  {
    "type": "Rows",
    "props": {
-    "id": "Rows-sj2",
-    "band": "sunk",
+    "id": "Rows-st-julien-boulder-plan",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-sj2",
-       "title": "Event spaces at St Julien Hotel & Spa",
+       "id": "Heading-st-julien-boulder-plan",
+       "eyebrow": "Planning",
+       "title": "Planning music at St Julien Hotel & Spa",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -64,222 +197,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-sj2",
-       "cls": "def-list def-list--cards",
-       "rows": [
-        {
-         "term": "Xanadu Ballroom",
-         "art": "musicians",
-         "text": "The Xanadu Ballroom is about 4,100 sq ft with 14-foot ceilings, for banquets of up to 300 and receptions of up to 360. It divides into three, and there’s about 2,900 sq ft of pre-function space outside."
-        },
-        {
-         "term": "The lawn",
-         "art": "mountain",
-         "text": "The lawn is about 2,400 sq ft of grass with views of the Flatirons, for banquets of up to 200 and receptions of up to 275."
-        },
-        {
-         "term": "Redgarden terraces and court",
-         "art": "tree",
-         "text": "The Redgarden Lower Terrace holds dinners of up to 80, and the Redgarden Court and Upper Terrace hold receptions of up to 100 and 75."
-        },
-        {
-         "term": "Jill’s and the Honey Onyx Room",
-         "art": "plate",
-         "text": "Jill’s, the hotel’s restaurant, holds private events of up to 140, and the Honey Onyx Room holds up to 40."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Images",
-   "props": {
-    "id": "Images-venue",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-venue-photos",
-       "title": "Photos of St Julien Hotel &amp; Spa",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "MediaGrid",
-      "props": {
-       "id": "MediaGrid-venue",
-       "single": false,
-       "images": [
-        {
-         "src": "/img/venues/st-julien-boulder/xanadu-ballroom.jpg",
-         "alt": "The Xanadu Ballroom set for a wedding reception, with candlelit tables around a dance floor and a band stage lit in blue.",
-         "caption": "The Xanadu Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/st-julien-boulder/lawn-ceremony.jpg",
-         "alt": "The lawn set with rows of white ceremony chairs, seen from above, with terraced gardens behind.",
-         "caption": "The lawn. Photo by Haley Hawn",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/st-julien-boulder/terrace-dusk.jpg",
-         "alt": "A stone terrace at dusk with cocktail tables and a hedge, and the Flatirons on the skyline.",
-         "caption": "A terrace at dusk",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/st-julien-boulder/terrace-gazebo.jpg",
-         "alt": "A paved terrace with a white gazebo, a buffet line and round tables in white linens, with mountains behind.",
-         "caption": "The terrace and gazebo",
-         "loading": "lazy",
-         "decoding": "async"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-venue-credit",
-       "cls": "note note--small",
-       "html": "Photos: St Julien Hotel &amp; Spa."
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-sj3a",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-sj3a",
-       "eyebrow": "Our picks",
-       "title": "Live music for a ceremony on the lawn or the terraces",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "They’re the spaces for the ceremony and the cocktail hour, under the Flatirons."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-sj3a",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "classical-strings",
-         "kicker": "String quartet",
-         "photo": "/img/acts/classical-strings-ceremony.jpg"
-        },
-        {
-         "act": "solo-guitarist",
-         "kicker": "For the ceremony"
-        },
-        {
-         "act": "dirty-flamenco"
-        },
-        {
-         "act": "jazz-duo",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "acoustic-duo",
-         "kicker": "Acoustic pop duo"
-        },
-        {
-         "act": "rene-moffatt"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-sj3b",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-sj3b",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Xanadu Ballroom",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s the space for wedding receptions, company dinners and holiday parties."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-sj3b",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "tejas-singh",
-         "kicker": "Duo or full band"
-        },
-        {
-         "act": "little-moses-jones"
-        },
-        {
-         "act": "soul-rnb"
-        },
-        {
-         "act": "yacht-rock"
-        },
-        {
-         "act": "funk-trio"
-        },
-        {
-         "act": "your-bird-can-sing"
-        },
-        {
-         "act": "dj"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-sj40",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-sj40",
-       "title": "Load-in and setup",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-sj40",
+       "id": "DefRows-st-julien-boulder-plan",
        "cls": "def-list def-list--icons",
        "rows": [
         {
@@ -295,34 +213,7 @@
          "term": "Catering",
          "art": "plate",
          "text": "The hotel caters events in-house, and it has its own wedding specialist."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-sj41",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-sj41",
-       "title": "Things to plan around",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-sj41",
-       "cls": "def-list def-list--icons",
-       "rows": [
+        },
         {
          "term": "The hotel’s own music",
          "art": "speaker",
@@ -340,8 +231,101 @@
         }
        ]
       }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-st-julien-boulder-ask",
+       "html": "Questions to ask the St Julien Hotel & Spa events team",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-st-julien-boulder-ask",
+       "source": "own",
+       "items": [
+        {
+         "html": "Which spaces have an end time for amplified music, and when is it?"
+        },
+        {
+         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
+        },
+        {
+         "html": "Where do vendors load in, and when can the band set up?"
+        },
+        {
+         "html": "Is there power near where the band will play?"
+        },
+        {
+         "html": "What wording do you need on the certificate of insurance?"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-st-julien-boulder-ask",
+       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
+       "cls": "note"
+      }
      }
     ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-st-julien-boulder",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-st-julien-boulder-faq",
+       "html": "Questions about music at St Julien Hotel & Spa",
+       "tag": "h2",
+       "cls": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-st-julien-boulder",
+       "schema": true,
+       "items": [
+        {
+         "q": "Can we bring our own band to a wedding at St Julien Hotel & Spa?",
+         "a": "Hotels like St Julien Hotel & Spa generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
+        },
+        {
+         "q": "Does the band need the hotel’s AV team?",
+         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
+        },
+        {
+         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
+         "a": "Yes. The same act can move with you from The lawn to The Redgarden terraces to The Xanadu Ballroom, and one booking covers all of it."
+        },
+        {
+         "q": "How much does live music add to a wedding at St Julien Hotel & Spa?",
+         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "VenueNearby",
+   "props": {
+    "id": "VenueNearby-st-julien-boulder",
+    "band": "ruled",
+    "title": "More Boulder hotel wedding and event venues",
+    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
    }
   },
   {
