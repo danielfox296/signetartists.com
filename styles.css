@@ -6938,3 +6938,22 @@ body {
     transform: translateY(14px);
   }
 }
+
+/* Capitals for the small information, option 1 (Daniel, 2026-11-11): the
+   eyebrow over a heading is led by a short rule in its own colour, like a
+   testimonial's attribution. The page's slab eyebrow keeps its box. */
+.eyebrow:not(.eyebrow--slab)::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+  background: currentColor;
+}
+.review-feature figcaption .review-sep,
+.review-pull figcaption .review-sep {
+  color: var(--red);
+}

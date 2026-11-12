@@ -6,12 +6,13 @@ import { bandClass, F, H, shellFields, useSite } from "./parts.jsx";
 
 const { rich, text } = F;
 
-// The line under a testimonial: who left it, then (with `withAct`) the act.
+// The line under a testimonial: who left it, then (with `withAct`) the act
+// it reviews, worded so the person reads as the client, not a band member.
 export function reviewCaption(m, t, withAct) {
   const who = t.author ? `<span class="review-by">${esc(t.author)}</span>` : "";
   const a = withAct && t.act && m.ACT_BY_ID[t.act];
-  const act = a && !a.hidden ? `<a href="/${esc(m.actUrl(a))}">${esc(a.name)}</a>` : "";
-  const line = [who, act].filter(Boolean).join(", ");
+  const act = a && !a.hidden ? `<span class="review-of">Review of <a href="/${esc(m.actUrl(a))}">${esc(a.name)}</a></span>` : "";
+  const line = [who, act].filter(Boolean).join('<span class="review-sep" aria-hidden="true"> · </span>');
   return line ? `<span class="review-who">${line}</span>` : "";
 }
 
