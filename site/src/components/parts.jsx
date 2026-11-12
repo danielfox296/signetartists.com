@@ -53,6 +53,8 @@ const BANDS = {
   sunk: "section section--ruled section--sunk",
   top: "section section--top",
   night: "section section--ruled section--night",
+  linen: "section section--ruled section--linen",
+  cloth: "section section--ruled section--cloth",
 };
 export const bandClass = (band) => BANDS[band || "ruled"] ?? band;
 
@@ -237,6 +239,8 @@ export const shellFields = {
       { label: "Band", value: "sunk" },
       { label: "Top", value: "top" },
       { label: "Night", value: "night" },
+      { label: "Midnight linen", value: "linen" },
+      { label: "Speaker cloth", value: "cloth" },
     ],
   },
   anchor: { type: "text", label: "Anchor" },

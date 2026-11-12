@@ -176,9 +176,13 @@ const minifyCss = (css) => transformSync(css, { loader: "css", minify: true }).c
 
 export { plan };
 
+// A heading's closing full stop is set in the red, as on the social slides.
+const fullStops = (html) =>
+  html.replace(/(<h[12]\b[^>]*class="[^"]*\bh[12]\b[^"]*"[^>]*>)((?:(?!<\/h[12]>)[\s\S])*?[^.])\.(\s*<\/h[12]>)/g, '$1$2<span class="dot">.</span>$3');
+
 function renderStatic(el, ctx) {
   const html = renderToStaticMarkup(<Site.Provider value={ctx}>{el}</Site.Provider>);
-  return html.replace(/<raw-html data-k="(\d+)"><\/raw-html>/g, (_, k) => ctx.raw[Number(k)]);
+  return fullStops(html.replace(/<raw-html data-k="(\d+)"><\/raw-html>/g, (_, k) => ctx.raw[Number(k)]));
 }
 
 export function makeSite(c) {

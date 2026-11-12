@@ -71,8 +71,8 @@
 
      That site's standing ruling comes with it: no serif ever appears, in the
      stack or anywhere else. The fallbacks are the system sans. */
-  --display: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
-  --sans: "Archivo", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --display: "Bricolage Grotesque", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Bricolage Grotesque", system-ui, "Helvetica Neue", Arial, sans-serif;
 
   /* TRACKING LAW (2026-08-07, from a retired sister site's "zero positive
      letter-spacing anywhere"). One value, one token, every uppercase label on
@@ -102,17 +102,16 @@
   --space-6: 6.5rem;
 }
 
-/* Self-hosted latin subset, both axes, ~88KB. OFL, licence in vendor/fonts/.
-   Self-hosted rather than linked: it drops two preconnects and a
-   render-blocking Google stylesheet, which matters for the venue-basement
-   phone this site is designed around. */
+/* Bricolage Grotesque, the face of the social slides, for headings and
+   running text (2026-11-11). Self-hosted latin subset, weight and optical
+   size axes, ~77KB. OFL, licence in vendor/fonts/. It has no width axis, so
+   the font-stretch values below no longer change anything. */
 @font-face {
-  font-family: "Archivo";
+  font-family: "Bricolage Grotesque";
   font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
+  font-weight: 200 800;
   font-display: swap;
-  src: url(vendor/fonts/archivo-variable-latin.woff2) format("woff2");
+  src: url(vendor/fonts/bricolage-grotesque-variable-latin.woff2) format("woff2");
 }
 
 *,
@@ -6203,5 +6202,93 @@ a.laurel-link:focus-visible .laurel-title {
   .honor-marks--hero .honor-mark {
     height: calc(1.2rem * var(--mark-h, 1));
     max-width: 100%;
+  }
+}
+
+/* 2026-11-11 Bricolage Grotesque headings, as on the social slides: weight
+   800, tracked in, written as sentence case rather than set in capitals, and
+   a heading's closing full stop in the red (the build wraps it in .dot). */
+body {
+  font-weight: 450;
+  font-optical-sizing: auto;
+}
+
+.h1,
+.h2,
+.h3,
+.h1.display,
+.h2.display,
+.h3.display,
+.roster-card-name,
+.callout {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.h1::first-letter,
+.h2::first-letter,
+.h3::first-letter {
+  text-transform: uppercase;
+}
+
+.dot {
+  color: var(--red);
+}
+
+.section--sunk .dot,
+.close-row--photo .dot {
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .h2 {
+    font-size: clamp(2.25rem, 1.2rem + 1.6vw, 3rem);
+  }
+}
+
+/* Two more grounds for a section (2026-11-11). Midnight linen is a deep ink
+   blue with a fine woven cross-thread; speaker cloth is graphite with a
+   perforated grille, lit a little from above. Both are dark, so type and
+   marks keep the site's dark-ground colours. */
+.section--linen {
+  --paper: #131b26;
+  --paper-sunk: #18222f;
+  --rule: #263345;
+  --ink-soft: #dfe4ea;
+  --ink-faint: #a9b4c1;
+  background-color: #131b26;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 4px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23fff' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.section--cloth {
+  --paper: #1e1e1f;
+  --paper-sunk: #252526;
+  --rule: #343436;
+  background-color: #1e1e1f;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 55%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 1.05px, transparent 1.5px),
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 1.05px, transparent 1.5px);
+  background-size: auto, 6px 6px, 6px 6px;
+  background-position: 0 0, 0 0, 3px 3px;
+}
+
+.section--linen.section--ruled,
+.section--cloth.section--ruled {
+  border-top-color: transparent;
+}
+
+.section--linen .btn:not(.btn--outline) {
+  color: #131b26;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .section--linen,
+  .section--cloth {
+    background-image: none;
   }
 }
