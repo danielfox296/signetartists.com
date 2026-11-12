@@ -40,13 +40,6 @@
         {
          "html": "Downstairs, the Colorado and Aspen ballrooms handle the bigger dinners, conference receptions and weddings."
         }
-       ],
-       "buttons": [
-        {
-         "label": "Check a Date",
-         "href": "/contact/?venue=Grand%20Hyatt%20Denver",
-         "cls": "btn"
-        }
        ]
       }
      }
@@ -67,15 +60,13 @@
    "props": {
     "id": "VenueSpaces-grand-hyatt-denver",
     "band": "night",
-    "eyebrow": "Music for each space",
-    "title": "Live music in each Grand Hyatt Denver event space",
-    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "title": "Event spaces at Grand Hyatt Denver",
     "spaces": [
      {
       "name": "Pinnacle Club",
       "facts": "The Pinnacle Club is on the 38th floor, about 4,200 sq ft with views of the mountains and the city. It used to be the Petroleum Club, and the hotel uses it for weddings and receptions of up to about 350.",
       "act": "jazz-duo",
-      "why": "Upright bass and guitar, at a volume nobody has to raise their voice over.",
+      "why": "A jazz duo suits a reception up here with the mountains in view.",
       "img": "/img/venues/grand-hyatt-denver/pinnacle-club-reception.jpg",
       "alt": "The Pinnacle Club set with cocktail tables, with the mountains through tall windows.",
       "credit": "Photo: Grand Hyatt Denver"
@@ -84,7 +75,7 @@
       "name": "Colorado Ballroom",
       "facts": "The Colorado Ballroom is about 8,400 sq ft with 18-foot ceilings, for banquets of up to 640 and receptions of up to 1,000. It divides into two halves, with a foyer outside.",
       "act": "little-moses-jones",
-      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "why": "It’s big enough for a six-piece band, so Little Moses Jones is our pick here.",
       "img": "/img/venues/grand-hyatt-denver/colorado-ballroom.jpg",
       "alt": "The Colorado Ballroom set for a gala dinner, with screens either side of a lit stage.",
       "credit": "Photo: Grand Hyatt Denver"
@@ -93,7 +84,7 @@
       "name": "Aspen Ballroom",
       "facts": "The Aspen Ballroom is about 5,900 sq ft, for banquets of up to 450 and receptions of up to 700.",
       "act": "quadrasonic",
-      "why": "Rock covers everyone knows, with a powerhouse singer out front.",
+      "why": "Quadrasonic for a company party in the Aspen Ballroom, with rock covers everyone knows.",
       "img": "/img/venues/grand-hyatt-denver/aspen-ballroom.jpg",
       "alt": "The Aspen Ballroom set with round tables and red flowers under crystal chandeliers.",
       "credit": "Photo: Grand Hyatt Denver"
@@ -102,7 +93,7 @@
       "name": "Maroon Peak",
       "facts": "Maroon Peak is about 960 sq ft, for dinners of up to 70.",
       "act": "classical-strings",
-      "why": "A solo violin to a full string quartet, from the ceremony through dinner.",
+      "why": "A string duo for a dinner of up to 70 in Maroon Peak.",
       "stat": "Dinners of up to 70"
      }
     ]
@@ -122,29 +113,28 @@
    "props": {
     "id": "VenueMoments-grand-hyatt-denver-c",
     "band": "ruled",
-    "eyebrow": "Company events",
-    "title": "Music for a company event at Grand Hyatt Denver",
+    "title": "Company events at Grand Hyatt Denver",
     "moments": [
      {
       "label": "The holiday party",
       "space": "The Colorado Ballroom",
       "act": "live-band-karaoke",
-      "line": "A live band plays the hits, then hands the mic to anyone who wants a turn."
+      "line": "Live band karaoke for a holiday party in the Colorado Ballroom, with the band following whoever’s singing."
      },
      {
       "label": "The gala",
       "space": "The Pinnacle Club",
       "act": "changes-jazz-trio",
-      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+      "line": "Changes for a gala reception at the Pinnacle Club."
      },
      {
       "label": "The client dinner",
       "space": "Maroon Peak",
       "act": "solo-guitarist",
-      "line": "One guitarist, soft enough that nobody has to raise their voice."
+      "line": "One guitarist for a client dinner in Maroon Peak."
      }
     ],
-    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+    "note": "We also have ideas for <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and other <a href=\"/corporate/\">corporate events</a>."
    }
   },
   {
@@ -152,30 +142,28 @@
    "props": {
     "id": "VenueMoments-grand-hyatt-denver-w",
     "band": "sunk",
-    "eyebrow": "Weddings",
-    "title": "Music for a wedding at Grand Hyatt Denver",
-    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "title": "Wedding music at Grand Hyatt Denver",
     "moments": [
      {
       "label": "The ceremony",
       "space": "",
       "act": "classical-strings",
-      "line": "A solo violin or a string quartet for the walk down the aisle."
+      "line": "A violinist for the ceremony, or a full quartet if you’d like."
      },
      {
       "label": "The cocktail hour",
       "space": "",
       "act": "dirty-flamenco",
-      "line": "Flamenco and rumba on Spanish guitar."
+      "line": "Spanish guitar for the cocktail hour."
      },
      {
       "label": "The reception",
       "space": "The Pinnacle Club",
       "act": "tejas-singh",
-      "line": "A duo through dinner that grows into a full band for dancing."
+      "line": "Tejas for a reception at the Pinnacle Club, as a duo or with his band."
      }
     ],
-    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+    "note": "Want some more ideas? Check out live music for <a href=\"/weddings/\">a Colorado wedding</a>."
    }
   },
   {
@@ -188,7 +176,6 @@
       "type": "Heading",
       "props": {
        "id": "Heading-grand-hyatt-denver-plan",
-       "eyebrow": "Planning",
        "title": "Planning music at Grand Hyatt Denver",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -202,7 +189,7 @@
        "rows": [
         {
          "term": "Sound system",
-         "text": "Our acts bring their own sound system, sized to the space."
+         "text": "Tell us which ballroom you’ve booked, and we’ll match the band’s sound to it."
         },
         {
          "term": "Load-in",
@@ -217,50 +204,9 @@
         {
          "term": "Parking",
          "art": "car",
-         "text": "There’s self-parking and valet at the hotel."
+         "text": "Grand Hyatt Denver has self-parking and valet."
         }
        ]
-      }
-     },
-     {
-      "type": "Title",
-      "props": {
-       "id": "Title-grand-hyatt-denver-ask",
-       "html": "Questions to ask the Grand Hyatt Denver events team",
-       "tag": "h3",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "SpecList",
-      "props": {
-       "id": "SpecList-grand-hyatt-denver-ask",
-       "source": "own",
-       "items": [
-        {
-         "html": "Which spaces have an end time for amplified music, and when is it?"
-        },
-        {
-         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
-        },
-        {
-         "html": "Where do vendors load in, and when can the band set up?"
-        },
-        {
-         "html": "Is there power near where the band will play?"
-        },
-        {
-         "html": "What wording do you need on the certificate of insurance?"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-grand-hyatt-denver-ask",
-       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
-       "cls": "note"
       }
      }
     ]
@@ -288,20 +234,8 @@
        "schema": true,
        "items": [
         {
-         "q": "Can we bring our own band to an event at Grand Hyatt Denver?",
-         "a": "Hotels like Grand Hyatt Denver generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
-        },
-        {
-         "q": "Does the band need the hotel’s AV team?",
-         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
-        },
-        {
-         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
-         "a": "Yes. The same act can move with you through the day, and one booking covers all of it."
-        },
-        {
          "q": "How much does live music add to an event at Grand Hyatt Denver?",
-         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+         "a": "It depends on the act and how long the music runs. A duo at the Pinnacle Club costs less than a six-piece band in the Colorado Ballroom. Take a look at our <a href=\"/pricing/\">pricing page</a> for a general view of what live music costs in Denver. When you send your date, we’ll quote it."
         }
        ]
       }
@@ -314,8 +248,7 @@
    "props": {
     "id": "VenueNearby-grand-hyatt-denver",
     "band": "ruled",
-    "title": "More Denver hotel wedding and event venues",
-    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
+    "title": "More Denver hotel wedding and event venues"
    }
   },
   {
@@ -330,16 +263,14 @@
        "id": "CloseRow-gh5",
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Ask about your date at Grand Hyatt Denver.",
-       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a jazz duo at the Pinnacle Club to a full band in the Colorado Ballroom.",
+       "title": "Hosting an event at Grand Hyatt Denver?",
        "buttons": [
         {
          "label": "Check a Date",
          "href": "/contact/?venue=Grand%20Hyatt%20Denver",
          "cls": "btn"
         }
-       ],
-       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+       ]
       }
      }
     ]

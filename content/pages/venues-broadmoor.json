@@ -40,13 +40,6 @@
         {
          "html": "It has over 200,000 sq ft of meeting and event space, from the original ballroom to a hall for thousands, and lodges up on the mountain."
         }
-       ],
-       "buttons": [
-        {
-         "label": "Check a Date",
-         "href": "/contact/?venue=The%20Broadmoor",
-         "cls": "btn"
-        }
        ]
       }
      }
@@ -67,9 +60,7 @@
    "props": {
     "id": "VenueSpaces-bm",
     "band": "night",
-    "eyebrow": "Music for each space",
-    "title": "Live music in each Broadmoor event space",
-    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "title": "Event spaces at the Broadmoor",
     "spaces": [
      {
       "name": "The Main Ballroom",
@@ -78,7 +69,7 @@
       "credit": "Photo: The Broadmoor",
       "facts": "The Main Ballroom dates back to the 1918 opening, with ornate ceilings and hardwood floors. It seats up to 240 for a banquet and holds 300 for a reception, and the resort holds wedding ceremonies here too.",
       "act": "classical-strings",
-      "why": "Strings suit the ornate 1918 ballroom, and a quartet can play the ceremony and stay on through dinner.",
+      "why": "A string quartet under those 1918 ceilings is a lovely way to start a wedding, and the same players can stay on through dinner.",
       "clip": "K-ADcBUHePE"
      },
      {
@@ -88,7 +79,7 @@
       "credit": "Photo: Chad Chisholm",
       "facts": "The Lake Terrace Dining Room looks out over Cheyenne Lake and the mountains, with seating for up to 240 at a banquet.",
       "act": "jazz-duo",
-      "why": "Upright bass and guitar for a rehearsal dinner or a client dinner, at a volume nobody has to raise their voice over.",
+      "why": "For a rehearsal dinner with the lake out the windows, upright bass and guitar keep things relaxed and easy to talk over.",
       "clip": "O2A0PKE7CXE"
      },
      {
@@ -98,7 +89,7 @@
       "credit": "Photo: The Broadmoor",
       "facts": "The Lakeside Terrace is the outdoor space beside the lake, for receptions of up to 300.",
       "act": "dirty-flamenco",
-      "why": "Spanish guitar by the water, for a cocktail hour or a welcome reception outdoors.",
+      "why": "Gary’s Spanish guitar outdoors by Cheyenne Lake is our favorite pick for a cocktail hour or a welcome reception.",
       "clip": "wEhN63qX0RA"
      },
      {
@@ -108,7 +99,7 @@
       "credit": "Photo: Kevin Syms",
       "facts": "Cheyenne Lodge is a rustic lodge up on the mountain, with about 6,300 sq ft for banquets of up to 300 and receptions of up to 450.",
       "act": "meghan-clarisse",
-      "why": "Country and Americana for a mountain dinner or a welcome night with a view, solo, as a duo or with her five-piece band.",
+      "why": "A rustic lodge up the mountain calls for country, and Meghan Clarisse can play it solo by the fireplace or bring her five-piece band.",
       "clip": "HGsbmeBlcb0"
      },
      {
@@ -116,7 +107,7 @@
       "stat": "Up to 4,600 guests",
       "facts": "Broadmoor Hall is about 60,000 sq ft, for receptions of up to 4,600, and the resort holds weddings of over 1,000 guests there. The International Center is about 14,500 sq ft, for receptions of up to 1,500.",
       "act": "tejas-singh",
-      "why": "Tejas can start as a duo and grow to a full band over the evening, for a conference party or a big wedding.",
+      "why": "Tejas can start as a duo for a conference reception and grow into a four-piece for the dancing, so one act covers the whole party.",
       "clip": "isKpOj8rPos"
      }
     ]
@@ -136,30 +127,28 @@
    "props": {
     "id": "VenueMoments-bmw",
     "band": "sunk",
-    "eyebrow": "A Broadmoor wedding",
-    "title": "Music for a wedding at the Broadmoor",
-    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "title": "Wedding music at the Broadmoor",
     "moments": [
      {
       "label": "The ceremony",
       "space": "The Main Ballroom",
       "act": "classical-strings",
-      "line": "A solo violin or a string quartet for the walk down the aisle."
+      "line": "A solo violin or a full quartet for the processional, right in the ballroom."
      },
      {
       "label": "The cocktail hour",
       "space": "The Lakeside Terrace",
       "act": "jazz-duo",
-      "line": "Jazz standards on upright bass and guitar, out by the lake."
+      "line": "Jazz standards on upright bass and guitar, out on the terrace by the lake."
      },
      {
       "label": "The reception",
       "space": "The Main Ballroom",
       "act": "little-moses-jones",
-      "line": "The band to book when you want everyone on the dance floor."
+      "line": "Little Moses Jones is the band to book when you want the ballroom shaking it all night."
      }
     ],
-    "note": "There are more ideas for <a href=\"/weddings/colorado-springs/\">a Colorado Springs wedding</a> on our weddings pages."
+    "note": "Want some more ideas? Check out live music for <a href=\"/weddings/colorado-springs/\">a Colorado Springs wedding</a>."
    }
   },
   {
@@ -167,29 +156,28 @@
    "props": {
     "id": "VenueMoments-bmc",
     "band": "ruled",
-    "eyebrow": "Company events",
-    "title": "Music for a company event at the Broadmoor",
+    "title": "Company events at the Broadmoor",
     "moments": [
      {
       "label": "The holiday party",
       "space": "The International Center",
       "act": "soul-rnb",
-      "line": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance."
+      "line": "Motown and Aretha Franklin in the International Center, for a company party where people actually dance."
      },
      {
       "label": "The gala",
       "space": "The Main Ballroom",
       "act": "changes-jazz-trio",
-      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+      "line": "Changes plays modern jazz through cocktails and dinner, and a saxophone can join when you want the music out front."
      },
      {
       "label": "The conference party",
       "space": "Broadmoor Hall",
       "act": "afro-house-dj",
-      "line": "A DJ with live tabla for the after-party."
+      "line": "An Afro house DJ with live tabla over the set, for the after-party in Broadmoor Hall."
      }
     ],
-    "note": "There’s more on <a href=\"/corporate/holiday-party/colorado-springs/\">holiday parties in Colorado Springs</a> and <a href=\"/corporate/\">corporate events</a>."
+    "note": "We also have ideas for <a href=\"/corporate/holiday-party/colorado-springs/\">holiday parties in Colorado Springs</a> and other <a href=\"/corporate/\">corporate events</a>."
    }
   },
   {
@@ -202,7 +190,6 @@
       "type": "Heading",
       "props": {
        "id": "Heading-bmplan",
-       "eyebrow": "Planning",
        "title": "Planning music at the Broadmoor",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -246,47 +233,6 @@
         }
        ]
       }
-     },
-     {
-      "type": "Title",
-      "props": {
-       "id": "Title-bmask",
-       "html": "Questions to ask the Broadmoor events team",
-       "tag": "h3",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "SpecList",
-      "props": {
-       "id": "SpecList-bmask",
-       "source": "own",
-       "items": [
-        {
-         "html": "Which of our spaces have an end time for amplified music, and when is it?"
-        },
-        {
-         "html": "Does INSPIRE need to connect or run the band’s sound, and is there a fee for that?"
-        },
-        {
-         "html": "Where do vendors load in, and when can the band set up?"
-        },
-        {
-         "html": "Is there power near where the band will play?"
-        },
-        {
-         "html": "What wording do you need on the certificate of insurance?"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-bmask",
-       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
-       "cls": "note"
-      }
      }
     ]
    }
@@ -314,19 +260,11 @@
        "items": [
         {
          "q": "Can we bring our own band to a Broadmoor wedding?",
-         "a": "The resort’s wedding packages include power, a riser for the band or DJ and a dance floor, so an outside band is part of how weddings there work. The resort asks every vendor for proof of insurance, and we send ours ahead of time."
-        },
-        {
-         "q": "Does the band need INSPIRE, the resort’s AV company?",
-         "a": "Our acts bring their own sound system. INSPIRE is the resort’s AV company for anything beyond what the act brings, and we’ll work out the details with the events team."
-        },
-        {
-         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
-         "a": "Yes. The same act can move with you from the Main Ballroom to the Lakeside Terrace and back, and one booking covers all of it."
+         "a": "Yes. The resort’s wedding packages include power, a riser for the band or DJ and a dance floor, so bringing in your own band is part of how weddings work there. The resort asks its vendors for proof of insurance, and we can get ours to the events team ahead of time."
         },
         {
          "q": "How much does live music add to a Broadmoor wedding?",
-         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+         "a": "It depends on how big the act is and how much of the day you’d like covered. A solo violin for the ceremony is a very different number from a six-piece band in Broadmoor Hall. Our <a href=\"/pricing/\">pricing page</a> has a general view of what live music costs in Colorado, and we’re happy to quote your date."
         }
        ]
       }
@@ -339,8 +277,7 @@
    "props": {
     "id": "VenueNearby-bm",
     "band": "ruled",
-    "title": "More Colorado Springs hotel wedding and event venues",
-    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
+    "title": "More Colorado Springs hotel wedding and event venues"
    }
   },
   {
@@ -355,16 +292,14 @@
        "id": "CloseRow-bm5",
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Ask about your date at the Broadmoor.",
-       "lede": "Send us your date, and we can put together live music for your event at the Broadmoor, from strings by the lake to a full band in Broadmoor Hall.",
+       "title": "Planning a wedding at the Broadmoor?",
        "buttons": [
         {
          "label": "Check a Date",
          "href": "/contact/?venue=The%20Broadmoor",
          "cls": "btn"
         }
-       ],
-       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+       ]
       }
      }
     ]

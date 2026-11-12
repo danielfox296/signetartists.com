@@ -40,13 +40,6 @@
         {
          "html": "Couples get married on the beach by the lake, and companies come for meetings and retreats with the mountain right there."
         }
-       ],
-       "buttons": [
-        {
-         "label": "Check a Date",
-         "href": "/contact/?venue=Cheyenne%20Mountain%20Resort",
-         "cls": "btn"
-        }
        ]
       }
      }
@@ -67,15 +60,13 @@
    "props": {
     "id": "VenueSpaces-cheyenne-mountain-resort",
     "band": "night",
-    "eyebrow": "Music for each space",
-    "title": "Live music in each Cheyenne Mountain Resort event space",
-    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "title": "Event spaces at Cheyenne Mountain Resort",
     "spaces": [
      {
       "name": "The lake",
       "facts": "The resort’s private lake has a beach for wedding ceremonies, with the ballrooms as the indoor option.",
       "act": "classical-strings",
-      "why": "A solo violin to a full string quartet, from the ceremony through dinner.",
+      "why": "The beach by the lake is a beautiful spot for a solo violin or a string duo at a ceremony.",
       "stat": "A private beach for ceremonies",
       "clip": "NfkVbgovXQU"
      },
@@ -83,21 +74,21 @@
       "name": "Centennial Ballroom",
       "facts": "The Centennial Ballroom is about 4,800 sq ft, built with acoustics for live entertainment. It divides into three smaller spaces.",
       "act": "tejas-singh",
-      "why": "He can start as a duo and grow to a full band over the evening.",
+      "why": "It’s a great fit for Tejas, as a trio for dinner or a full band for dancing.",
       "stat": "About 4,800 sq ft"
      },
      {
       "name": "Colorado Ballroom",
       "facts": "The Colorado Ballroom has a stone fireplace, and it holds events of up to about 600 guests.",
       "act": "little-moses-jones",
-      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "why": "A six-piece band like Little Moses Jones for a big reception.",
       "stat": "Up to 600 guests"
      },
      {
       "name": "Remingtons Ballroom",
       "facts": "The Remingtons Ballroom is about 3,200 sq ft, for events of up to about 300.",
       "act": "yacht-rock",
-      "why": "The Doobie Brothers, Steely Dan and Hall and Oates, with three voices and a saxophone.",
+      "why": "Yacht rock with three voices and a saxophone suits a party of up to 300 in Remingtons.",
       "img": "/img/venues/cheyenne-mountain-resort/remingtons.jpg",
       "alt": "Remingtons set for a party, with a lounge sofa, round tables and a stone fireplace.",
       "credit": "Photo: Cheyenne Mountain Resort"
@@ -119,30 +110,28 @@
    "props": {
     "id": "VenueMoments-cheyenne-mountain-resort-w",
     "band": "sunk",
-    "eyebrow": "Weddings",
-    "title": "Music for a wedding at Cheyenne Mountain Resort",
-    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "title": "Wedding music at Cheyenne Mountain Resort",
     "moments": [
      {
       "label": "The ceremony",
       "space": "The lake",
       "act": "classical-strings",
-      "line": "A solo violin or a string quartet for the walk down the aisle."
+      "line": "A solo violin on the beach for the walk down the aisle."
      },
      {
       "label": "The cocktail hour",
       "space": "",
       "act": "dirty-flamenco",
-      "line": "Flamenco and rumba on Spanish guitar."
+      "line": "Spanish guitar for the cocktail hour, indoors or out."
      },
      {
       "label": "The reception",
       "space": "The Colorado Ballroom",
       "act": "little-moses-jones",
-      "line": "The band to book when you want everyone on the dance floor."
+      "line": "A six-piece band for the reception, so the dance floor stays active."
      }
     ],
-    "note": "There are more ideas for <a href=\"/weddings/colorado-springs/\">a Colorado Springs wedding</a> on our weddings pages."
+    "note": "Want some more ideas? Check out live music for <a href=\"/weddings/colorado-springs/\">a Colorado Springs wedding</a>."
    }
   },
   {
@@ -150,29 +139,28 @@
    "props": {
     "id": "VenueMoments-cheyenne-mountain-resort-c",
     "band": "ruled",
-    "eyebrow": "Company events",
-    "title": "Music for a company event at Cheyenne Mountain Resort",
+    "title": "Company events at Cheyenne Mountain Resort",
     "moments": [
      {
       "label": "The holiday party",
       "space": "The Remingtons Ballroom",
       "act": "soul-rnb",
-      "line": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance."
+      "line": "Stevie Wonder and Motown for a company holiday party in Remingtons."
      },
      {
       "label": "The gala",
       "space": "The Centennial Ballroom",
       "act": "changes-jazz-trio",
-      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+      "line": "Changes for a gala dinner in the Centennial Ballroom, with a saxophone if you’d like one."
      },
      {
       "label": "The after-party",
       "space": "The Colorado Ballroom",
       "act": "live-band-karaoke",
-      "line": "A live band plays the hits, then hands the mic to anyone who wants a turn."
+      "line": "Live band karaoke in the Colorado Ballroom, with the words up on a screen for anyone who wants a turn."
      }
     ],
-    "note": "There’s more on <a href=\"/corporate/holiday-party/colorado-springs/\">holiday parties in Colorado Springs</a> and <a href=\"/corporate/\">corporate events</a>."
+    "note": "We also have ideas for <a href=\"/corporate/holiday-party/colorado-springs/\">holiday parties in Colorado Springs</a> and other <a href=\"/corporate/\">corporate events</a>."
    }
   },
   {
@@ -185,7 +173,6 @@
       "type": "Heading",
       "props": {
        "id": "Heading-cheyenne-mountain-resort-plan",
-       "eyebrow": "Planning",
        "title": "Planning music at Cheyenne Mountain Resort",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -199,7 +186,7 @@
        "rows": [
         {
          "term": "Sound system",
-         "text": "Our acts bring their own sound system, sized to the space, and the Centennial Ballroom was built with live music in mind."
+         "text": "The Centennial Ballroom was built with live music in mind, so the band’s sound sits well in it."
         },
         {
          "term": "Load-in",
@@ -217,47 +204,6 @@
          "text": "Elevations, the resort’s lounge, has had live music some evenings, so we’ll check the schedule around your event."
         }
        ]
-      }
-     },
-     {
-      "type": "Title",
-      "props": {
-       "id": "Title-cheyenne-mountain-resort-ask",
-       "html": "Questions to ask the Cheyenne Mountain Resort events team",
-       "tag": "h3",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "SpecList",
-      "props": {
-       "id": "SpecList-cheyenne-mountain-resort-ask",
-       "source": "own",
-       "items": [
-        {
-         "html": "Which spaces have an end time for amplified music, and when is it?"
-        },
-        {
-         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
-        },
-        {
-         "html": "Where do vendors load in, and when can the band set up?"
-        },
-        {
-         "html": "Is there power near where the band will play?"
-        },
-        {
-         "html": "What wording do you need on the certificate of insurance?"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-cheyenne-mountain-resort-ask",
-       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
-       "cls": "note"
       }
      }
     ]
@@ -285,20 +231,8 @@
        "schema": true,
        "items": [
         {
-         "q": "Can we bring our own band to a wedding at Cheyenne Mountain Resort?",
-         "a": "Hotels like Cheyenne Mountain Resort generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
-        },
-        {
-         "q": "Does the band need the resort’s AV team?",
-         "a": "Our acts bring their own sound system, sized to the space. The resort’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
-        },
-        {
-         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
-         "a": "Yes. The same act can move with you from The lake to The Colorado Ballroom, and one booking covers all of it."
-        },
-        {
          "q": "How much does live music add to a wedding at Cheyenne Mountain Resort?",
-         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+         "a": "That comes down to the act and how much of the day you’d like covered. A violinist on the beach costs much less than a six-piece band in the Colorado Ballroom. Learn more about what live music costs in Colorado on our <a href=\"/pricing/\">pricing page</a>. Send us your date and we’ll put a quote together."
         }
        ]
       }
@@ -311,8 +245,7 @@
    "props": {
     "id": "VenueNearby-cheyenne-mountain-resort",
     "band": "ruled",
-    "title": "More Colorado Springs hotel wedding and event venues",
-    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
+    "title": "More Colorado Springs hotel wedding and event venues"
    }
   },
   {
@@ -327,16 +260,14 @@
        "id": "CloseRow-cm5",
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Ask about your date at Cheyenne Mountain Resort.",
-       "lede": "Send us your date, and we can put together live music for your event at the resort, from strings at the lake to a full band in the ballroom.",
+       "title": "Getting married at Cheyenne Mountain Resort?",
        "buttons": [
         {
          "label": "Check a Date",
          "href": "/contact/?venue=Cheyenne%20Mountain%20Resort",
          "cls": "btn"
         }
-       ],
-       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+       ]
       }
      }
     ]

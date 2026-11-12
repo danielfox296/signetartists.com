@@ -40,13 +40,6 @@
         {
          "html": "It’s a busy conference and company-meeting hotel, and it hosts weddings too, with its own wedding planning team."
         }
-       ],
-       "buttons": [
-        {
-         "label": "Check a Date",
-         "href": "/contact/?venue=Hilton%20Denver%20City%20Center",
-         "cls": "btn"
-        }
        ]
       }
      }
@@ -67,22 +60,20 @@
    "props": {
     "id": "VenueSpaces-hilton-denver-city-center",
     "band": "night",
-    "eyebrow": "Music for each space",
-    "title": "Live music in each Hilton Denver City Center event space",
-    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "title": "Event spaces at Hilton Denver City Center",
     "spaces": [
      {
       "name": "Colorado Ballroom",
       "facts": "The Colorado Ballroom is the hotel’s biggest, for events of up to about 1,200 guests, and it divides into eight sections.",
       "act": "little-moses-jones",
-      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "why": "Little Moses Jones, when you want the hotel’s biggest ballroom dancing.",
       "stat": "Up to 1,200 guests"
      },
      {
       "name": "Denver Ballroom",
       "facts": "The Denver Ballroom is about 5,900 sq ft, for banquets of up to 450. It divides into six salons, and it opens onto a pre-function space of about 3,200 sq ft.",
       "act": "soul-rnb",
-      "why": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance.",
+      "why": "A soul and R&B band, with a horn on the big choruses if you’d like one.",
       "img": "/img/venues/hilton-denver-city-center/denver-ballroom.jpg",
       "alt": "The Denver Ballroom set with black cocktail tables on a patterned carpet.",
       "credit": "Photo: Hilton Denver City Center"
@@ -91,7 +82,7 @@
       "name": "Penrose Ballroom",
       "facts": "The Penrose Ballroom is about 2,800 sq ft, for dinners of up to about 200 and receptions of up to 240, across from Prospect’s Urban Kitchen and Bar.",
       "act": "jazz-duo",
-      "why": "Upright bass and guitar, at a volume nobody has to raise their voice over.",
+      "why": "A jazz duo for a reception, easy to talk over.",
       "img": "/img/venues/hilton-denver-city-center/penrose-ballroom.jpg",
       "alt": "The Penrose Ballroom set with round tables in dark linens.",
       "credit": "Photo: Hilton Denver City Center"
@@ -100,7 +91,7 @@
       "name": "Outdoor plaza",
       "facts": "The hotel has an outdoor plaza that it uses for weddings and receptions.",
       "act": "dirty-flamenco",
-      "why": "Flamenco and rumba on Spanish guitar, for a cocktail hour or a dinner.",
+      "why": "Spanish guitar outdoors on the hotel’s plaza, for a wedding reception or a summer gathering.",
       "img": "/img/venues/hilton-denver-city-center/outdoor-plaza.jpg",
       "alt": "White chairs with gold sashes set for a ceremony on the tree-lined outdoor plaza.",
       "credit": "Photo: Hilton Denver City Center"
@@ -122,29 +113,28 @@
    "props": {
     "id": "VenueMoments-hilton-denver-city-center-c",
     "band": "ruled",
-    "eyebrow": "Company events",
-    "title": "Music for a company event at Hilton Denver City Center",
+    "title": "Company events at Hilton Denver City Center",
     "moments": [
      {
       "label": "The holiday party",
       "space": "The Denver Ballroom",
       "act": "quadrasonic",
-      "line": "Rock covers everyone knows, with a powerhouse singer out front."
+      "line": "Quadrasonic for the company holiday party, from Blondie to Paramore."
      },
      {
       "label": "The gala",
       "space": "The Colorado Ballroom",
       "act": "changes-jazz-trio",
-      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+      "line": "Changes for a gala in the Colorado Ballroom."
      },
      {
       "label": "The after-party",
       "space": "The Penrose Ballroom",
       "act": "live-band-karaoke",
-      "line": "A live band plays the hits, then hands the mic to anyone who wants a turn."
+      "line": "Live band karaoke for an after-party in the Penrose Ballroom."
      }
     ],
-    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+    "note": "We also have ideas for <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and other <a href=\"/corporate/\">corporate events</a>."
    }
   },
   {
@@ -152,30 +142,28 @@
    "props": {
     "id": "VenueMoments-hilton-denver-city-center-w",
     "band": "sunk",
-    "eyebrow": "Weddings",
-    "title": "Music for a wedding at Hilton Denver City Center",
-    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "title": "Wedding music at Hilton Denver City Center",
     "moments": [
      {
       "label": "The ceremony",
       "space": "",
       "act": "classical-strings",
-      "line": "A solo violin or a string quartet for the walk down the aisle."
+      "line": "A string trio for the ceremony."
      },
      {
       "label": "The cocktail hour",
       "space": "The outdoor plaza",
       "act": "acoustic-duo",
-      "line": "Acoustic covers everyone knows, soft enough to keep talking."
+      "line": "An acoustic duo out on the plaza for cocktails."
      },
      {
       "label": "The reception",
       "space": "The Denver Ballroom",
       "act": "tejas-singh",
-      "line": "A duo through dinner that grows into a full band for dancing."
+      "line": "Tejas and his band for the reception in the Denver Ballroom."
      }
     ],
-    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+    "note": "Want some more ideas? Check out live music for <a href=\"/weddings/\">a Colorado wedding</a>."
    }
   },
   {
@@ -188,7 +176,6 @@
       "type": "Heading",
       "props": {
        "id": "Heading-hilton-denver-city-center-plan",
-       "eyebrow": "Planning",
        "title": "Planning music at Hilton Denver City Center",
        "titleTag": "h2",
        "titleClass": "h2"
@@ -202,12 +189,12 @@
        "rows": [
         {
          "term": "Sound system",
-         "text": "Our acts bring their own sound system, sized to the space. The hotel also has its own AV team on site."
+         "text": "The Hilton has its own AV team on site, too."
         },
         {
          "term": "Load-in",
          "art": "box",
-         "text": "We plan load-in and setup with the hotel’s events team."
+         "text": "We work out the load-in time and the setup with the Hilton’s events team before your date."
         },
         {
          "term": "Catering",
@@ -217,50 +204,9 @@
         {
          "term": "Parking",
          "art": "car",
-         "text": "There’s self-parking and valet at the hotel."
+         "text": "Guests can self-park or use the Hilton’s valet."
         }
        ]
-      }
-     },
-     {
-      "type": "Title",
-      "props": {
-       "id": "Title-hilton-denver-city-center-ask",
-       "html": "Questions to ask the Hilton Denver City Center events team",
-       "tag": "h3",
-       "cls": "h3"
-      }
-     },
-     {
-      "type": "SpecList",
-      "props": {
-       "id": "SpecList-hilton-denver-city-center-ask",
-       "source": "own",
-       "items": [
-        {
-         "html": "Which spaces have an end time for amplified music, and when is it?"
-        },
-        {
-         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
-        },
-        {
-         "html": "Where do vendors load in, and when can the band set up?"
-        },
-        {
-         "html": "Is there power near where the band will play?"
-        },
-        {
-         "html": "What wording do you need on the certificate of insurance?"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-hilton-denver-city-center-ask",
-       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
-       "cls": "note"
       }
      }
     ]
@@ -288,20 +234,8 @@
        "schema": true,
        "items": [
         {
-         "q": "Can we bring our own band to an event at Hilton Denver City Center?",
-         "a": "Hotels like Hilton Denver City Center generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
-        },
-        {
-         "q": "Does the band need the hotel’s AV team?",
-         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
-        },
-        {
-         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
-         "a": "Yes. The same act can move with you from The outdoor plaza to The Denver Ballroom, and one booking covers all of it."
-        },
-        {
          "q": "How much does live music add to an event at Hilton Denver City Center?",
-         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+         "a": "The act and how long it plays decide most of it. Our <a href=\"/pricing/\">pricing page</a> covers what live music generally costs in Denver, and once we have your date we’ll quote it."
         }
        ]
       }
@@ -314,8 +248,7 @@
    "props": {
     "id": "VenueNearby-hilton-denver-city-center",
     "band": "ruled",
-    "title": "More Denver hotel wedding and event venues",
-    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
+    "title": "More Denver hotel wedding and event venues"
    }
   },
   {
@@ -330,16 +263,14 @@
        "id": "CloseRow-hc5",
        "boxed": true,
        "boxStyle": "max-width: 32rem;",
-       "title": "Ask about your date at Hilton Denver City Center.",
-       "lede": "Send us your date, and we can put together live music for your event at the hotel, from a jazz duo at the reception to a full band in the Colorado Ballroom.",
+       "title": "Hosting a company event at Hilton Denver City Center?",
        "buttons": [
         {
          "label": "Check a Date",
          "href": "/contact/?venue=Hilton%20Denver%20City%20Center",
          "cls": "btn"
         }
-       ],
-       "note": "Want some more ideas? Take a look at live music for <a href=\"/corporate/\">corporate events</a>, <a href=\"/weddings/\">weddings</a>, <a href=\"/weddings/cocktail-hour/\">a wedding cocktail hour</a> and <a href=\"/private-parties/\">private parties</a>, or at <a href=\"/venues/\">more Denver hotels and conference centers</a>."
+       ]
       }
      }
     ]
