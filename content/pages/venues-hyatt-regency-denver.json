@@ -40,6 +40,13 @@
         {
          "html": "A lot of the conference receptions, awards dinners and company parties in Denver happen here, along with big weddings, and the rooftop terrace looks out over the skyline."
         }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=Hyatt%20Regency%20Denver%20at%20Colorado%20Convention%20Center",
+         "cls": "btn"
+        }
        ]
       }
      }
@@ -47,16 +54,141 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-hyatt-regency-denver",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "VenueSpaces",
+   "props": {
+    "id": "VenueSpaces-hyatt-regency-denver",
+    "band": "night",
+    "eyebrow": "Music for each space",
+    "title": "Live music in each Hyatt Regency Denver event space",
+    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "spaces": [
+     {
+      "name": "Denver City Terrace",
+      "facts": "The Denver City Terrace is a rooftop with views of the skyline, about 3,500 sq ft, for up to 300 guests. The hotel holds wedding ceremonies up there.",
+      "act": "classical-strings",
+      "why": "A solo violin to a full string quartet, from the ceremony through dinner.",
+      "img": "/img/venues/hyatt-regency-denver/denver-city-terrace.jpg",
+      "alt": "A long high-top table set for dinner on the Denver City Terrace, with the convention center behind.",
+      "credit": "Photo: Hyatt Regency Denver",
+      "clip": "NfkVbgovXQU"
+     },
+     {
+      "name": "Centennial Ballroom",
+      "facts": "The Centennial Ballroom is about 30,000 sq ft with 30-foot ceilings, for banquets of up to about 1,900 guests and receptions of up to 3,000. It divides into smaller sections, and the Centennial Foyer outside it holds receptions of up to 1,500.",
+      "act": "little-moses-jones",
+      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "stat": "Up to 3,000 guests"
+     },
+     {
+      "name": "Capitol Ballroom",
+      "facts": "The Capitol Ballroom has 22-foot ceilings and hand-blown Italian glass light fixtures, for seated events of up to about 1,200.",
+      "act": "soul-rnb",
+      "why": "Stevie Wonder, Aretha Franklin and Motown, for a party where people dance.",
+      "stat": "Up to 1,200 seated"
+     },
+     {
+      "name": "Silver Room",
+      "facts": "The Silver Room is about 1,200 sq ft with floor-to-ceiling windows, for rehearsal dinners and small receptions.",
+      "act": "jazz-duo",
+      "why": "Upright bass and guitar, at a volume nobody has to raise their voice over.",
+      "img": "/img/venues/hyatt-regency-denver/silver-room.jpg",
+      "alt": "The Silver Room set with cocktail tables and flowers, with floor-to-ceiling windows.",
+      "credit": "Photo: Hyatt Regency Denver"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-hyatt-regency-denver",
+    "band": "ruled",
+    "title": null,
+    "ids": "madeline-g-2025-09"
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-hyatt-regency-denver-w",
+    "band": "sunk",
+    "eyebrow": "Weddings",
+    "title": "Music for a wedding at Hyatt Regency Denver",
+    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "moments": [
+     {
+      "label": "The ceremony",
+      "space": "The Denver City Terrace",
+      "act": "classical-strings",
+      "line": "A solo violin or a string quartet for the walk down the aisle."
+     },
+     {
+      "label": "The cocktail hour",
+      "space": "The Silver Room",
+      "act": "dirty-flamenco",
+      "line": "Flamenco and rumba on Spanish guitar."
+     },
+     {
+      "label": "The reception",
+      "space": "The Capitol Ballroom",
+      "act": "tejas-singh",
+      "line": "A duo through dinner that grows into a full band for dancing."
+     }
+    ],
+    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-hyatt-regency-denver-c",
+    "band": "ruled",
+    "eyebrow": "Company events",
+    "title": "Music for a company event at Hyatt Regency Denver",
+    "moments": [
+     {
+      "label": "The holiday party",
+      "space": "The Capitol Ballroom",
+      "act": "yacht-rock",
+      "line": "The Doobie Brothers, Steely Dan and Hall and Oates, with three voices and a saxophone."
+     },
+     {
+      "label": "The gala",
+      "space": "The Centennial Ballroom",
+      "act": "changes-jazz-trio",
+      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+     },
+     {
+      "label": "The after-party",
+      "space": "The Centennial Ballroom",
+      "act": "afro-house-dj",
+      "line": "A DJ with live tabla for the after-party."
+     }
+    ],
+    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+   }
+  },
+  {
    "type": "Rows",
    "props": {
-    "id": "Rows-hr2",
-    "band": "sunk",
+    "id": "Rows-hyatt-regency-denver-plan",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-hr2",
-       "title": "Event spaces at Hyatt Regency Denver",
+       "id": "Heading-hyatt-regency-denver-plan",
+       "eyebrow": "Planning",
+       "title": "Planning music at Hyatt Regency Denver",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -64,221 +196,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-hr2",
-       "cls": "def-list def-list--cards",
-       "rows": [
-        {
-         "term": "Centennial Ballroom",
-         "art": "musicians",
-         "text": "The Centennial Ballroom is about 30,000 sq ft with 30-foot ceilings, for banquets of up to about 1,900 guests and receptions of up to 3,000. It divides into smaller sections, and the Centennial Foyer outside it holds receptions of up to 1,500."
-        },
-        {
-         "term": "Capitol Ballroom",
-         "art": "glass",
-         "text": "The Capitol Ballroom has 22-foot ceilings and hand-blown Italian glass light fixtures, for seated events of up to about 1,200."
-        },
-        {
-         "term": "Denver City Terrace",
-         "art": "tree",
-         "text": "The Denver City Terrace is a rooftop with views of the skyline, about 3,500 sq ft, for up to 300 guests. The hotel holds wedding ceremonies up there."
-        },
-        {
-         "term": "Silver Room",
-         "art": "plate",
-         "text": "The Silver Room is about 1,200 sq ft with floor-to-ceiling windows, for rehearsal dinners and small receptions."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Images",
-   "props": {
-    "id": "Images-venue",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-venue-photos",
-       "title": "Photos of Hyatt Regency Denver",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "MediaGrid",
-      "props": {
-       "id": "MediaGrid-venue",
-       "single": false,
-       "images": [
-        {
-         "src": "/img/venues/hyatt-regency-denver/ballroom.jpg",
-         "alt": "An empty ballroom with a carpeted floor and a coffered ceiling of lit panels.",
-         "caption": "One of the hotel’s ballrooms",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/hyatt-regency-denver/denver-city-terrace.jpg",
-         "alt": "A long high-top table set for dinner on the Denver City Terrace, with the convention center behind.",
-         "caption": "The Denver City Terrace",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/hyatt-regency-denver/silver-room.jpg",
-         "alt": "The Silver Room set with cocktail tables and flowers, with floor-to-ceiling windows.",
-         "caption": "The Silver Room",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/hyatt-regency-denver/exterior.jpg",
-         "alt": "The Hyatt Regency tower at sunset, with the mountains on the horizon.",
-         "caption": "The hotel at sunset",
-         "loading": "lazy",
-         "decoding": "async"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-venue-credit",
-       "cls": "note note--small",
-       "html": "Photos: Hyatt Regency Denver at Colorado Convention Center."
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-hr3a",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-hr3a",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Centennial and Capitol ballrooms",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "They’re the spaces for conference parties, awards dinners, galas and big weddings."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-hr3a",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "little-moses-jones"
-        },
-        {
-         "act": "soul-rnb"
-        },
-        {
-         "act": "quadrasonic"
-        },
-        {
-         "act": "yacht-rock"
-        },
-        {
-         "act": "funk-trio"
-        },
-        {
-         "act": "live-band-karaoke"
-        },
-        {
-         "act": "dj"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-hr3b",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-hr3b",
-       "eyebrow": "Our picks",
-       "title": "Live music on the Denver City Terrace",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "It’s great for a ceremony, a welcome reception or a cocktail hour over the city."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-hr3b",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "classical-strings",
-         "kicker": "String quartet",
-         "photo": "/img/acts/classical-strings-ceremony.jpg"
-        },
-        {
-         "act": "jazz-duo",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "dirty-flamenco"
-        },
-        {
-         "act": "tejas-singh",
-         "kicker": "Duo or full band"
-        },
-        {
-         "act": "acoustic-duo",
-         "kicker": "Acoustic pop duo"
-        },
-        {
-         "act": "americana-band"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-hr40",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-hr40",
-       "title": "Load-in and setup",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-hr40",
+       "id": "DefRows-hyatt-regency-denver-plan",
        "cls": "def-list def-list--icons",
        "rows": [
         {
@@ -294,34 +212,7 @@
          "term": "Catering",
          "art": "plate",
          "text": "The hotel caters events in-house."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-hr41",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-hr41",
-       "title": "Things to plan around",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-hr41",
-       "cls": "def-list def-list--icons",
-       "rows": [
+        },
         {
          "term": "Conference weeks",
          "art": "building",
@@ -334,8 +225,101 @@
         }
        ]
       }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hyatt-regency-denver-ask",
+       "html": "Questions to ask the Hyatt Regency Denver events team",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-hyatt-regency-denver-ask",
+       "source": "own",
+       "items": [
+        {
+         "html": "Which spaces have an end time for amplified music, and when is it?"
+        },
+        {
+         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
+        },
+        {
+         "html": "Where do vendors load in, and when can the band set up?"
+        },
+        {
+         "html": "Is there power near where the band will play?"
+        },
+        {
+         "html": "What wording do you need on the certificate of insurance?"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-hyatt-regency-denver-ask",
+       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
+       "cls": "note"
+      }
      }
     ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-hyatt-regency-denver",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-hyatt-regency-denver-faq",
+       "html": "Questions about music at Hyatt Regency Denver",
+       "tag": "h2",
+       "cls": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-hyatt-regency-denver",
+       "schema": true,
+       "items": [
+        {
+         "q": "Can we bring our own band to a wedding at Hyatt Regency Denver?",
+         "a": "Hotels like Hyatt Regency Denver generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
+        },
+        {
+         "q": "Does the band need the hotel’s AV team?",
+         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
+        },
+        {
+         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
+         "a": "Yes. The same act can move with you from The Denver City Terrace to The Silver Room to The Capitol Ballroom, and one booking covers all of it."
+        },
+        {
+         "q": "How much does live music add to a wedding at Hyatt Regency Denver?",
+         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "VenueNearby",
+   "props": {
+    "id": "VenueNearby-hyatt-regency-denver",
+    "band": "ruled",
+    "title": "More Denver hotel wedding and event venues",
+    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
    }
   },
   {

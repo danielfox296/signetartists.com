@@ -648,10 +648,15 @@ function VenueCards({ s, venues }) {
     const n = names([...v.named]).slice(0, 3);
     return n.length ? `<span class="venue-card__label">Acts we'd pick</span>${n.join(" · ")}` : "";
   };
+  // Three across: a venue an act has played comes first, and when the count
+  // would leave one card alone on the last row, the first card runs double
+  // width so every row stays full or a pair.
+  const sorted = [...venues].sort((x, y) => (y.played.length ? 1 : 0) - (x.played.length ? 1 : 0));
+  const wide = sorted.length > 3 && sorted.length % 3 === 1;
   return (
     <ul className="venue-cards">
-      {venues.map((v) => (
-        <li className="venue-card" key={v.path}>
+      {sorted.map((v, i) => (
+        <li className={cx("venue-card", wide && i === 0 && "venue-card--wide")} key={v.path}>
           <a className="venue-card__link" href={s.prefix + v.path.slice(1)}>
             <div className="venue-card__photo">
               {v.img ? <Pic src={href("/" + v.img.replace(/^\//, ""))} alt="" width="1600" height="1067" loading="lazy" decoding="async" sizes={SIZES.roster} /> : null}

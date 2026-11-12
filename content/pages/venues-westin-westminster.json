@@ -40,6 +40,13 @@
         {
          "html": "It hosts big conferences, company parties and weddings, including Indian weddings, which the hotel plans for."
         }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?venue=The%20Westin%20Westminster",
+         "cls": "btn"
+        }
        ]
       }
      }
@@ -47,16 +54,151 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-westin-westminster",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "VenueSpaces",
+   "props": {
+    "id": "VenueSpaces-westin-westminster",
+    "band": "night",
+    "eyebrow": "Music for each space",
+    "title": "Live music in each Westin Westminster event space",
+    "lede": "Here’s the act we’d pick for each space. Press play to hear it over the photo.",
+    "spaces": [
+     {
+      "name": "Waterfall Gardens and the courtyards",
+      "facts": "The Waterfall Gardens are about 19,800 sq ft outdoors, for receptions of up to 400. The North and South courtyards hold receptions of up to 350 and 400.",
+      "act": "classical-strings",
+      "why": "A solo violin to a full string quartet, from the ceremony through dinner.",
+      "img": "/img/venues/westin-westminster/waterfall-gardens.jpg",
+      "alt": "The Waterfall Gardens, with stepped rock and plantings below the hotel.",
+      "credit": "Photo: The Westin Westminster"
+     },
+     {
+      "name": "Westminster Ballroom",
+      "facts": "The Westminster Ballroom is about 11,900 sq ft with 22-foot ceilings, for banquets of up to 840 and receptions of up to 1,200. It divides into four sections.",
+      "act": "little-moses-jones",
+      "why": "A six-piece band playing 90s and 2000s R&B and hip-hop, for when you want everyone dancing.",
+      "img": "/img/venues/westin-westminster/westminster-ballroom.jpg",
+      "alt": "The Westminster Ballroom set with round tables before a wall of windows at dusk.",
+      "credit": "Photo: The Westin Westminster"
+     },
+     {
+      "name": "Legacy and Standley ballrooms",
+      "facts": "The Legacy Ballroom is about 9,600 sq ft, for banquets of up to 675 and receptions of up to 960. The Standley Ballroom is about 4,600 sq ft, for banquets of up to 320 and receptions of up to 500.",
+      "act": "quadrasonic",
+      "why": "Rock covers everyone knows, with a powerhouse singer out front.",
+      "img": "/img/venues/westin-westminster/legacy-ballroom.jpg",
+      "alt": "The empty Legacy Ballroom with windows along two walls.",
+      "credit": "Photo: The Westin Westminster"
+     },
+     {
+      "name": "The Lake House",
+      "facts": "The Lake House is about 3,300 sq ft, for banquets of up to 200 and receptions of up to 250.",
+      "act": "tejas-singh",
+      "why": "He can start as a duo and grow to a full band over the evening.",
+      "img": "/img/venues/westin-westminster/lake-house.jpg",
+      "alt": "The Lake House set with round tables beside a stone fireplace and tall windows.",
+      "credit": "Photo: The Westin Westminster"
+     },
+     {
+      "name": "Sunset Rooftop Deck",
+      "facts": "The Sunset Rooftop Deck is about 2,700 sq ft, for banquets of up to 110 and receptions of up to 140.",
+      "act": "dirty-flamenco",
+      "why": "Flamenco and rumba on Spanish guitar, for a cocktail hour or a dinner.",
+      "stat": "Up to 140 guests"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-westin-westminster",
+    "band": "ruled",
+    "title": null,
+    "ids": "carolyn-f-2019-08"
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-westin-westminster-w",
+    "band": "sunk",
+    "eyebrow": "Weddings",
+    "title": "Music for a wedding at the Westin Westminster",
+    "lede": "One booking can cover the ceremony, the cocktail hour and the reception.",
+    "moments": [
+     {
+      "label": "The ceremony",
+      "space": "",
+      "act": "classical-strings",
+      "line": "A solo violin or a string quartet for the walk down the aisle."
+     },
+     {
+      "label": "The cocktail hour",
+      "space": "The Sunset Rooftop Deck",
+      "act": "jazz-duo",
+      "line": "Jazz standards on upright bass and guitar."
+     },
+     {
+      "label": "The reception",
+      "space": "The Westminster Ballroom",
+      "act": "soul-rnb",
+      "line": "Stevie Wonder, Aretha Franklin and Motown for the dance floor."
+     }
+    ],
+    "note": "There are more ideas for <a href=\"/weddings/\">a Colorado wedding</a> on our weddings pages."
+   }
+  },
+  {
+   "type": "VenueMoments",
+   "props": {
+    "id": "VenueMoments-westin-westminster-c",
+    "band": "ruled",
+    "eyebrow": "Company events",
+    "title": "Music for a company event at the Westin Westminster",
+    "moments": [
+     {
+      "label": "The holiday party",
+      "space": "The Legacy Ballroom",
+      "act": "live-band-karaoke",
+      "line": "A live band plays the hits, then hands the mic to anyone who wants a turn."
+     },
+     {
+      "label": "The gala",
+      "space": "The Westminster Ballroom",
+      "act": "changes-jazz-trio",
+      "line": "Modern jazz through the reception and dinner, with a saxophone when you want the music out front."
+     },
+     {
+      "label": "The after-party",
+      "space": "The Waterfall Gardens",
+      "act": "afro-house-dj",
+      "line": "A DJ with live tabla for the after-party."
+     }
+    ],
+    "note": "There’s more on <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and <a href=\"/corporate/\">corporate events</a>."
+   }
+  },
+  {
    "type": "Rows",
    "props": {
-    "id": "Rows-ww2",
-    "band": "sunk",
+    "id": "Rows-westin-westminster-plan",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
       "props": {
-       "id": "Heading-ww2",
-       "title": "Event spaces at the Westin Westminster",
+       "id": "Heading-westin-westminster-plan",
+       "eyebrow": "Planning",
+       "title": "Planning music at the Westin Westminster",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -64,240 +206,7 @@
      {
       "type": "DefRows",
       "props": {
-       "id": "DefRows-ww2",
-       "cls": "def-list def-list--cards",
-       "rows": [
-        {
-         "term": "Westminster Ballroom",
-         "art": "musicians",
-         "text": "The Westminster Ballroom is about 11,900 sq ft with 22-foot ceilings, for banquets of up to 840 and receptions of up to 1,200. It divides into four sections."
-        },
-        {
-         "term": "Legacy and Standley ballrooms",
-         "art": "glass",
-         "text": "The Legacy Ballroom is about 9,600 sq ft, for banquets of up to 675 and receptions of up to 960. The Standley Ballroom is about 4,600 sq ft, for banquets of up to 320 and receptions of up to 500."
-        },
-        {
-         "term": "Waterfall Gardens and the courtyards",
-         "art": "tree",
-         "text": "The Waterfall Gardens are about 19,800 sq ft outdoors, for receptions of up to 400. The North and South courtyards hold receptions of up to 350 and 400."
-        },
-        {
-         "term": "The Lake House",
-         "art": "plate",
-         "text": "The Lake House is about 3,300 sq ft, for banquets of up to 200 and receptions of up to 250."
-        },
-        {
-         "term": "Sunset Rooftop Deck",
-         "art": "sun",
-         "text": "The Sunset Rooftop Deck is about 2,700 sq ft, for banquets of up to 110 and receptions of up to 140."
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Images",
-   "props": {
-    "id": "Images-venue",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-venue-photos",
-       "title": "Photos of the Westin Westminster",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "MediaGrid",
-      "props": {
-       "id": "MediaGrid-venue",
-       "single": false,
-       "images": [
-        {
-         "src": "/img/venues/westin-westminster/westminster-ballroom.jpg",
-         "alt": "The Westminster Ballroom set with round tables before a wall of windows at dusk.",
-         "caption": "The Westminster Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/westin-westminster/legacy-ballroom.jpg",
-         "alt": "The empty Legacy Ballroom with windows along two walls.",
-         "caption": "The Legacy Ballroom",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/westin-westminster/courtyard.jpg",
-         "alt": "A courtyard set with cocktail tables under string lights at dusk, with a fire table behind.",
-         "caption": "A courtyard",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/westin-westminster/lake-house.jpg",
-         "alt": "The Lake House set with round tables beside a stone fireplace and tall windows.",
-         "caption": "The Lake House",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/westin-westminster/waterfall-gardens.jpg",
-         "alt": "The Waterfall Gardens, with stepped rock and plantings below the hotel.",
-         "caption": "The Waterfall Gardens",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/venues/westin-westminster/patio.jpg",
-         "alt": "A patio of lounge sofas and fire tables outside the hotel entrance.",
-         "caption": "The patio",
-         "loading": "lazy",
-         "decoding": "async"
-        }
-       ]
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-venue-credit",
-       "cls": "note note--small",
-       "html": "Photos: The Westin Westminster."
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-ww3a",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-ww3a",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Westminster and Legacy ballrooms",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "They’re the spaces for conference parties, awards dinners, big weddings and holiday parties."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-ww3a",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "little-moses-jones"
-        },
-        {
-         "act": "soul-rnb"
-        },
-        {
-         "act": "quadrasonic"
-        },
-        {
-         "act": "yacht-rock"
-        },
-        {
-         "act": "funk-trio"
-        },
-        {
-         "act": "live-band-karaoke"
-        },
-        {
-         "act": "dj"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "ActCards",
-   "props": {
-    "id": "ActCards-ww3b",
-    "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-ww3b",
-       "eyebrow": "Our picks",
-       "title": "Live music in the Waterfall Gardens, the Lake House and on the rooftop",
-       "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "They’re lovely for ceremonies, cocktail hours, rehearsal dinners and welcome receptions."
-      }
-     },
-     {
-      "type": "Cards",
-      "props": {
-       "id": "Cards-ww3b",
-       "source": "acts",
-       "look": "photos",
-       "acts": [
-        {
-         "act": "classical-strings",
-         "kicker": "String quartet",
-         "photo": "/img/acts/classical-strings-ceremony.jpg"
-        },
-        {
-         "act": "jazz-duo",
-         "kicker": "Duo or trio"
-        },
-        {
-         "act": "dirty-flamenco"
-        },
-        {
-         "act": "tejas-singh",
-         "kicker": "Duo or full band"
-        },
-        {
-         "act": "acoustic-duo",
-         "kicker": "Acoustic pop duo"
-        },
-        {
-         "act": "singer-guitarist"
-        }
-       ]
-      }
-     }
-    ]
-   }
-  },
-  {
-   "type": "Rows",
-   "props": {
-    "id": "Rows-ww40",
-    "band": "sunk",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-ww40",
-       "title": "Load-in and setup",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-ww40",
+       "id": "DefRows-westin-westminster-plan",
        "cls": "def-list def-list--icons",
        "rows": [
         {
@@ -313,6 +222,95 @@
          "term": "Catering",
          "art": "plate",
          "text": "The hotel caters events in-house."
+        },
+        {
+         "term": "Weather",
+         "art": "sun",
+         "text": "The gardens, courtyards and rooftop are outdoors, so we’ll plan the music with an indoor backup in mind."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-westin-westminster-ask",
+       "html": "Questions to ask the Westin Westminster events team",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "SpecList",
+      "props": {
+       "id": "SpecList-westin-westminster-ask",
+       "source": "own",
+       "items": [
+        {
+         "html": "Which spaces have an end time for amplified music, and when is it?"
+        },
+        {
+         "html": "Does the hotel’s AV team need to connect or run the band’s sound, and is there a fee for that?"
+        },
+        {
+         "html": "Where do vendors load in, and when can the band set up?"
+        },
+        {
+         "html": "Is there power near where the band will play?"
+        },
+        {
+         "html": "What wording do you need on the certificate of insurance?"
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-westin-westminster-ask",
+       "html": "Forward this list to the events team, or send us the answers and we’ll plan around them.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-westin-westminster",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-westin-westminster-faq",
+       "html": "Questions about music at the Westin Westminster",
+       "tag": "h2",
+       "cls": "h2"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-westin-westminster",
+       "schema": true,
+       "items": [
+        {
+         "q": "Can we bring our own band to a wedding at the Westin Westminster?",
+         "a": "Hotels like the Westin Westminster generally let you book your own entertainment, within their rules on insurance, load-in and sound. Your event manager can confirm them for your date, and we send a certificate of insurance with every booking."
+        },
+        {
+         "q": "Does the band need the hotel’s AV team?",
+         "a": "Our acts bring their own sound system, sized to the space. The hotel’s AV team can add anything beyond that, and we’ll work out the details with your event manager."
+        },
+        {
+         "q": "Can one act play the ceremony, the cocktail hour and the reception?",
+         "a": "Yes. The same act can move with you from The Sunset Rooftop Deck to The Westminster Ballroom, and one booking covers all of it."
+        },
+        {
+         "q": "How much does live music add to a wedding at the Westin Westminster?",
+         "a": "It depends on the size of the act and how much of the day it covers. Our <a href=\"/pricing/\">pricing page</a> has what live music costs in the Colorado market, and we’ll send a quote for your date."
         }
        ]
       }
@@ -321,35 +319,12 @@
    }
   },
   {
-   "type": "Rows",
+   "type": "VenueNearby",
    "props": {
-    "id": "Rows-ww41",
+    "id": "VenueNearby-westin-westminster",
     "band": "ruled",
-    "blocks": [
-     {
-      "type": "Heading",
-      "props": {
-       "id": "Heading-ww41",
-       "title": "Things to plan around",
-       "titleTag": "h2",
-       "titleClass": "h2"
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-ww41",
-       "cls": "def-list def-list--icons",
-       "rows": [
-        {
-         "term": "Weather",
-         "art": "sun",
-         "text": "The gardens, courtyards and rooftop are outdoors, so we’ll plan the music with an indoor backup in mind."
-        }
-       ]
-      }
-     }
-    ]
+    "title": "More Denver hotel wedding and event venues",
+    "note": "Or see <a href=\"/venues/\">every hotel and conference center</a> we cover."
    }
   },
   {

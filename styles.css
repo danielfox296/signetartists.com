@@ -6982,9 +6982,17 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media (min-width: 1150px) {
-  .venue-cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (min-width: 900px) {
+  .venue-card--wide {
+    grid-column: span 2;
+  }
+  .venue-card--wide .venue-card__link {
+    flex-direction: row;
+  }
+  .venue-card--wide .venue-card__photo {
+    flex: 0 0 56%;
+    aspect-ratio: auto;
+    min-height: 100%;
   }
 }
 .venue-card {
@@ -7224,18 +7232,7 @@ body {
 .vendor-cat .venue-cards {
   margin-top: 1.5rem;
 }
-@media (min-width: 1150px) {
-  .venue-card__body {
-    padding: 1.1rem 1.15rem 1.3rem;
-  }
-  .venue-card__name {
-    font-size: 1.15rem;
-  }
-  .venue-card__spaces,
-  .venue-card__acts {
-    font-size: 0.86rem;
-  }
-}
+
 /* A numbered row in an icon list: the number in brass where the drawing goes. */
 .def-list--icons .def-row[data-num]::before {
   content: attr(data-num);
