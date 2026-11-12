@@ -289,7 +289,8 @@
         "loading": "lazy",
         "decoding": "async"
        },
-       "imageFirst": "right"
+       "imageFirst": "right",
+       "frame": "scale"
       }
      },
      {
@@ -365,7 +366,8 @@
         {
          "html": "<a href=\"/ensembles/flamenco-trio/\">Dirty Flamenco</a> plays the traditional forms solo or as a trio, at dinner-conversation volume, and needs no stage."
         }
-       ]
+       ],
+       "frame": "arch"
       }
      }
     ]

@@ -122,7 +122,8 @@
       }
      }
     ],
-    "_file": "01b-which.html"
+    "_file": "01b-which.html",
+    "pin": true
    }
   },
   {
@@ -184,7 +185,8 @@
       }
      }
     ],
-    "_file": "03-included.html"
+    "_file": "03-included.html",
+    "edge": "sheet"
    }
   },
   {
@@ -195,7 +197,8 @@
     "title": "What clients say",
     "occasions": "",
     "limit": 8,
-    "show": 4
+    "show": 4,
+    "statement": true
    }
   },
   {

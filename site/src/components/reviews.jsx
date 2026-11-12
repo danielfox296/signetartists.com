@@ -24,8 +24,21 @@ export function ReviewCard({ t, withAct, cls }) {
   );
 }
 
-// More than `show` testimonials: the rest wait behind a "More" toggle.
-function ReviewList({ items, show, withAct }) {
+// More than `show` testimonials: the rest wait behind a "More" toggle. As a
+// statement, the first is set large on its own above the rest.
+function ReviewList({ items, show, withAct, statement }) {
+  if (statement && items.length) {
+    // The shortest testimonial carries best at display size.
+    const len = (t) => String(t.quote || "").replace(/<[^>]+>/g, "").length;
+    const lead = items.reduce((a, b) => (len(b) < len(a) ? b : a));
+    const others = items.filter((t) => t !== lead);
+    return (
+      <>
+        <ReviewCard t={lead} withAct={withAct} cls="review-statement" />
+        {others.length ? <ReviewList items={others} show={show > 1 ? show - 1 : show} withAct={withAct} /> : null}
+      </>
+    );
+  }
   const n = show > 0 ? show : items.length;
   const first = items.slice(0, n);
   const rest = items.slice(n);
@@ -47,6 +60,7 @@ function ReviewList({ items, show, withAct }) {
 }
 
 const num = (label) => ({ type: "number", label, min: 0 });
+const statementField = { type: "radio", label: "First testimonial", options: [{ label: "In the grid", value: false }, { label: "Set large as a statement", value: true }] };
 
 // The testimonials a page already places in Testimonial blocks: a section
 // on the same page does not repeat them.
@@ -66,9 +80,9 @@ function placedOn(page) {
 // An act page: every testimonial for the act. Draws nothing when it has none.
 export const ActReviews = {
   label: "Act testimonials",
-  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede ({name} is the act's name)"), show: num("Shown before More") },
+  fields: { act: text("Act"), band: shellFields.band, title: rich("Title"), lede: rich("Lede ({name} is the act's name)"), show: num("Shown before More"), statement: statementField },
   defaultProps: { band: "ruled", title: "What clients say", show: 4 },
-  render: function ActReviewsRender({ act, band, title, lede, show, wrapStyle }) {
+  render: function ActReviewsRender({ act, band, title, lede, show, statement, wrapStyle }) {
     const s = useSite();
     const a = act ? s.model.ACT_BY_ID[act] : s.model.pageAct(s.page);
     const placed = placedOn(s.page);
@@ -79,7 +93,7 @@ export const ActReviews = {
         <div className="wrap" style={css(wrapStyle)}>
           <H as="h2" className="h2" html={title || "What clients say"} />
           <H as="p" className="prose" html={typeof lede === "string" ? lede.replace(/\{name\}/g, esc(a.name)) : lede} />
-          <ReviewList items={items} show={show == null ? 4 : show} />
+          <ReviewList items={items} show={show == null ? 4 : show} statement={statement} />
         </div>
       </section>
     );
@@ -98,9 +112,10 @@ export const Reviews = {
     ids: text("Testimonials (comma separated ids; overrides the filters)"),
     limit: num("How many"),
     show: num("Shown before More"),
+    statement: statementField,
   },
   defaultProps: { band: "ruled", title: "What clients say", limit: 6, show: 4 },
-  render: function ReviewsRender({ band, title, lede, occasions, acts, ids, limit, show, wrapStyle }) {
+  render: function ReviewsRender({ band, title, lede, occasions, acts, ids, limit, show, statement, wrapStyle }) {
     const s = useSite();
     const placed = placedOn(s.page);
     const items = s.model.reviewsWhere({ occasions: list(occasions), acts: list(acts), ids: list(ids) }).filter((t) => !placed.has(t.id)).slice(0, limit > 0 ? limit : undefined);
@@ -110,7 +125,7 @@ export const Reviews = {
         <div className="wrap" style={css(wrapStyle)}>
           <H as="h2" className="h2" html={title} />
           <H as="p" className="prose" html={lede} />
-          <ReviewList items={items} show={show == null ? 4 : show} withAct />
+          <ReviewList items={items} show={show == null ? 4 : show} withAct statement={statement} />
         </div>
       </section>
     );

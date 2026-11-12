@@ -4,7 +4,7 @@
    the hub lists, the home hero, the cover walls, the act lists. */
 import { Fragment } from "react";
 import { css, cx, esc } from "../lib/util.js";
-import { bandClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
+import { bandClass, shapeClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
 import { coverPath, patchwork } from "../lib/patchwork.js";
 import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
@@ -15,9 +15,9 @@ const plain = (s) => (typeof s === "string" ? s.replace(/<[^>]+>/g, "").slice(0,
 
 // ------------------------------------------------------- block sections
 
-function Standard({ band, cls, anchor, label, narrow, wrapStyle, blocks: Blocks }) {
+function Standard({ band, cls, anchor, label, narrow, wrapStyle, edge, pin, blocks: Blocks }) {
   return (
-    <section className={cx(bandClass(band), cls)} id={anchor || undefined} aria-label={label || undefined}>
+    <section className={cx(bandClass(band), shapeClass({ edge, pin }), cls)} id={anchor || undefined} aria-label={label || undefined}>
       <div className={cx("wrap", narrow && "wrap--narrow")} style={css(wrapStyle)}>
         {Blocks ? <Blocks /> : null}
       </div>

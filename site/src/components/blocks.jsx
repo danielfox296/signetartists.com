@@ -55,9 +55,15 @@ export const Heading = {
     </div>
     );
     if (left) {
+      // A frame: the picture bleeding to the page's edge, two crops of it, an
+      // arch, a giant title over a small picture, or half the band.
+      const frame = p.frame || "";
       return (
-        <div className={cx("heading-split", p.imageFirst === "right" && "heading-split--right")}>
-          <div className="heading-split__media"><Img im={p.image} /></div>
+        <div className={cx("heading-split", p.imageFirst === "right" && "heading-split--right", frame && `heading-split--${frame}`)}>
+          <div className="heading-split__media">
+            <Img im={p.image} />
+            {frame === "crops" ? <span className="heading-split__sliver" aria-hidden="true" style={{ backgroundImage: `url("${href(p.image.src)}")` }} /> : null}
+          </div>
           {heading}
         </div>
       );
@@ -246,6 +252,7 @@ export const DefRows = {
       { label: "Tiles", value: "def-list def-list--tiles" },
       { label: "Add-on tiles", value: "def-list def-list--tiles def-list--addons" },
       { label: "Route", value: "def-list def-list--route" },
+      { label: "Numbered index", value: "def-list def-list--index" },
       { label: "Side by side", value: "def-list" },
     ]),
     image: text("Photo behind (Route only)"),
