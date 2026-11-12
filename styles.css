@@ -6668,14 +6668,6 @@ body {
   letter-spacing: 0.14em;
   color: var(--ink-faint);
 }
-.review-feature figcaption::before,
-.review-pull figcaption::before {
-  content: "";
-  flex: none;
-  width: 2.5rem;
-  height: 2px;
-  background: var(--red);
-}
 .review-feature figcaption .review-by,
 .review-pull figcaption .review-by {
   color: var(--ink);
@@ -6939,20 +6931,6 @@ body {
   }
 }
 
-/* Capitals for the small information, option 1 (Daniel, 2026-11-11): the
-   eyebrow over a heading is led by a short rule in its own colour, like a
-   testimonial's attribution. The page's slab eyebrow keeps its box. */
-.eyebrow:not(.eyebrow--slab)::before {
-  content: "";
-  display: inline-block;
-  width: 1.5rem;
-  height: 2px;
-  margin-right: 0.75rem;
-  vertical-align: middle;
-  position: relative;
-  top: -0.1em;
-  background: currentColor;
-}
 .review-feature figcaption .review-sep,
 .review-pull figcaption .review-sep {
   color: var(--red);
@@ -6968,6 +6946,8 @@ body {
 }
 .venue-town {
   margin-top: clamp(3.5rem, 2.5rem + 3vw, 5.5rem);
+  padding-top: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  border-top: 1px solid var(--rule);
 }
 .venues-hub .h2 + .venue-town,
 .venues-hub .lede + .venue-town {
@@ -6985,12 +6965,6 @@ body {
   letter-spacing: -0.015em;
   color: var(--ink);
 }
-.venue-town__name::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--rule);
-}
 .venue-cards {
   list-style: none;
   margin: 0;
@@ -7003,9 +6977,14 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
   .venue-cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1150px) {
+  .venue-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 .venue-card {
@@ -7178,4 +7157,187 @@ body {
     /* Over a heading's own width style, which some pages set wider. */
     max-width: min(40rem, 46%) !important;
   }
+}
+
+/* Pricing page (Daniel, 2026-11-11: "crunched top and bottom spacing ...
+   everything just seems too wide"): more room above and below each section
+   and a narrower column for everything in it. */
+.section.pricing-band {
+  padding-top: clamp(5rem, 3.5rem + 4vw, 8rem);
+  padding-bottom: clamp(5rem, 3.5rem + 4vw, 8rem);
+}
+.pricing-band > .wrap {
+  max-width: 56rem;
+}
+
+/* Tiles: the icon and the words centred on the card, three across from
+   800px so six tiles sit as two rows of three. */
+.def-list--tiles .def-row {
+  align-items: center;
+  text-align: center;
+}
+.def-list--tiles .def-row::before {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 560px) {
+  .def-list--tiles,
+  .def-list--tiles.def-list--addons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 800px) {
+  .def-list--tiles,
+  .def-list--tiles.def-list--addons {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* In the pricing page's narrower column the figures sit in a column wide
+   enough for the longest range, a size smaller. */
+@media (min-width: 900px) {
+  .pricing-band .price-range,
+  .pricing-band .price-ranges__axis {
+    grid-template-columns: minmax(10rem, 13rem) minmax(0, 1fr) minmax(14rem, 16rem);
+    gap: 1.75rem;
+  }
+}
+.pricing-band .price-range__figure {
+  font-size: clamp(1.3rem, 1rem + 0.8vw, 1.7rem);
+  white-space: nowrap;
+}
+
+/* Smaller cards (Daniel, 2026-11-11): vendors three across, each a photo and
+   a short block of words; venue cards four across on a wide screen, their
+   type a step smaller to suit. */
+.vendor-grid .card.vendor-card {
+  padding: 0;
+}
+.vendor-grid .vendor-card-body {
+  padding: 1.25rem 1.35rem 1.4rem;
+}
+.vendor-grid .vendor-card-body h3 {
+  font-size: 1.15rem;
+}
+.vendor-grid .vendor-card-body p {
+  font-size: 0.92rem;
+}
+.vendor-cat .venue-cards {
+  margin-top: 1.5rem;
+}
+@media (min-width: 1150px) {
+  .venue-card__body {
+    padding: 1.1rem 1.15rem 1.3rem;
+  }
+  .venue-card__name {
+    font-size: 1.15rem;
+  }
+  .venue-card__spaces,
+  .venue-card__acts {
+    font-size: 0.86rem;
+  }
+}
+/* A numbered row in an icon list: the number in brass where the drawing goes. */
+.def-list--icons .def-row[data-num]::before {
+  content: attr(data-num);
+  background: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  color: var(--brass);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: center;
+}
+/* A row whose label points to no drawing the list hasn't used: a plain dot. */
+.def-row[data-art="dot"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='6' fill='%23000'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='6' fill='%23000'/%3E%3C/svg%3E");
+}
+
+/* No mark that reads as a dash anywhere (Daniel, 2026-11-11). A plain list's
+   bullet and a blog takeaway's are small brass dots; eyebrows and
+   testimonial lines carry no leading rule; the footer logo is twice the size. */
+.spec-list:not(.spec-list--check):not(.spec-list--plus) .dash,
+.blog-takeaways li::before {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: 0.62rem;
+  border-radius: 50%;
+}
+.footer-logo {
+  width: 13.5rem;
+}
+
+/* For Artists: the two doors as photo cards (Daniel, 2026-11-11), each
+   photograph across the top of its card, then the title, the words and the
+   button at the foot, the two cards the same height. */
+.artist-doors .split {
+  gap: 1.5rem;
+  align-items: stretch;
+}
+.artist-doors .split > div {
+  display: flex;
+}
+.artist-doors .panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 0 1.75rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.artist-doors .panel .heading {
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  padding: 0 1.75rem;
+}
+.artist-doors .panel .heading img {
+  order: -1;
+  display: block;
+  width: calc(100% + 3.5rem);
+  max-width: none;
+  margin: 0 -1.75rem 1.5rem;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.6s ease, transform 0.8s ease;
+}
+.artist-doors .panel:hover .heading img {
+  filter: grayscale(0);
+}
+.artist-doors .panel .h3 {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+}
+.artist-doors .panel .btn-row {
+  margin-top: auto;
+  padding: 1.25rem 1.75rem 0;
+}
+
+/* Artist development (Daniel, 2026-11-11): the photos rise in quicker and a
+   little before they reach the screen, and the artists' names are larger. */
+.stories.is-armed .story-head,
+.stories.is-armed .story-tile {
+  transform: translateY(0.75rem);
+}
+.stories.is-armed .story-head.is-in,
+.stories.is-armed .story-row.is-in .story-tile {
+  transform: none;
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.stories.is-armed .story-row.is-in .story-tile {
+  transition-delay: calc(var(--i, 0) * 35ms);
+}
+.story-name {
+  font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem);
+  line-height: 1.05;
+}
+@media (min-width: 900px) {
+  .stories:not(.stories--small) .story-name {
+    font-size: clamp(2.25rem, 1.3rem + 2vw, 3.25rem);
+  }
+}
+.story--small .story-name {
+  font-size: clamp(1.6rem, 1.3rem + 0.9vw, 2rem);
 }

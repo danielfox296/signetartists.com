@@ -168,6 +168,12 @@ export const SpecList = {
 // The drawings themselves are in styles.css, keyed by data-art.
 const ROW_ART = [
   [/\b(?:stage lighting|lighting\b|spotlight)/, "spotlight"],
+  [/\b(?:video|film|slideshow|photo)/, "video"],
+  [/\b(?:auction|paddle raise|gift|christmas|present)/, "gift"],
+  [/\b(?:walk-ups?|remarks|speech|toast|emcee|sing-along|singalong)/, "microphone"],
+  [/\b(?:memory care|hospice|recovery|care\b)/, "heart"],
+  [/\b(?:school|class|student)/, "cap"],
+  [/\b(?:lodging|overnight|hotel|stay\b)/, "moon"],
   [/\bkaraoke/, "microphone"],
   [/\b(?:wedding|reception|ceremony|couple|bride|engagement|propos)/, "rings"],
   [/\b(?:anniversar)/, "heart"],
@@ -182,7 +188,7 @@ const ROW_ART = [
   [/\b(?:after-party|after party|conference|gala|award|fundrais|launch|keynote|program)/, "microphone"],
   [/\b(?:retreat|mountain|vail|aspen|breckenridge|beaver creek|telluride|steamboat|crested butte|winter park|resort)/, "mountain"],
   [/\b(?:backyard|garden|patio|outdoor|lawn|park|courtyard|terrace|rooftop)/, "tree"],
-  [/\b(?:daytime|morning|afternoon|markets?\b|farmers|festival|summer)/, "sun"],
+  [/\b(?:daytime|during the day|morning|afternoon|markets?\b|farmers|festival|summer)/, "sun"],
   [/\b(?:senior|community|library|neighbo|house party|at home)/, "house"],
   [/\b(?:\bdj\b|late night|dance floor|dancing)/, "headphones"],
   [/\b(?:sound|volume|speaker|\bpa\b|loud|quiet|noise)/, "speaker"],
@@ -197,7 +203,7 @@ const ROW_ART = [
   [/\b(?:when|date|book|ahead|month|week|calendar|season)/, "calendar"],
   [/\b(?:time|hour|minute|length|long|curfew|late)/, "clock"],
   [/\b(?:point of contact|contact|phone)/, "phone"],
-  [/\b(?:insurance|insured|certificate)/, "shield"],
+  [/\b(?:insurance|insured|certificate|liability)/, "shield"],
   [/\b(?:paperwork|invoice|w-9|contract)/, "document"],
   [/\b(?:load-in|load in|load-out|setup|strike)/, "box"],
 ];
@@ -207,6 +213,48 @@ export function rowMark(term) {
   if (n) return { num: n[1] };
   for (const [re, art] of ROW_ART) if (re.test(t)) return { art };
   return { art: "notes" };
+}
+// A band's size as the number of musicians, when the label names a size.
+const SIZE_NUM = [
+  [/\b(?:solo|one musician|on its own)\b/, "1"],
+  [/\bduo\b/, "2"],
+  [/\btrio\b/, "3"],
+  [/\b(?:string quartet|quartet|four-piece|four piece)\b/, "4"],
+  [/\b(?:five to six|five-to-six|5 to 6|six-piece|six piece|five-piece|five piece|quintet)\b/, "5+"],
+];
+// The markers for a whole list: no drawing is used twice in one list
+// (Daniel, 2026-11-11: two different things never share an icon). Each row
+// takes the first drawing its label points to that the list hasn't used, and
+// a plain dot when every drawing it points to is taken, rather than a drawing
+// of something else; a list of band sizes is
+// numbered by musicians instead. A drawing set on the row is kept unless an
+// earlier row in the list already has it.
+export function rowMarks(rows) {
+  const plainOf = (h) => String(h || "").replace(/<[^>]+>/g, "").toLowerCase();
+  const sized = rows.map((r) => {
+    const t = plainOf(r.term);
+    if (/\d{1,3}(?:st|nd|rd|th)\b/.test(t)) return null;
+    const hit = SIZE_NUM.find(([re]) => re.test(t));
+    return hit ? hit[1] : null;
+  });
+  const sizeList = sized.filter(Boolean).length >= 2 && new Set(sized.filter(Boolean)).size === sized.filter(Boolean).length;
+  const used = new Set();
+  return rows.map((r, i) => {
+    if (r.art && !used.has(r.art)) {
+      used.add(r.art);
+      return { art: r.art };
+    }
+    const t = plainOf(r.term);
+    const n = t.match(/\b(\d{1,3})(?:st|nd|rd|th)\b/);
+    if (n) return { num: n[1] };
+    if (sizeList && sized[i]) return { num: sized[i] };
+    const fromTerm = ROW_ART.filter(([re]) => re.test(t)).map(([, a]) => a);
+    if (!fromTerm.length && !used.has("notes")) fromTerm.push("notes");
+    const art = fromTerm.find((a) => !used.has(a));
+    if (!art) return { art: "dot" };
+    used.add(art);
+    return { art };
+  });
 }
 
 // The first sentence of a row in the brighter ink, so a skimmer gets the point
@@ -269,12 +317,13 @@ export const DefRows = {
     const marked = /def-list--(stack|cards|icons|tiles|route)/.test(layout);
     const leads = /def-list--stack/.test(layout);
     const staggered = /def-list--(tiles|route)/.test(layout);
+    const marks = marked ? rowMarks(rows || []) : [];
     const list = (
     <dl className={layout} style={css(style)}>
       {(rows || []).map((r, i) => {
         const dt = <H as="dt" style={css(r.termStyle)} html={r.term} />;
         const dd = <H as="dd" className={r.textCls || undefined} style={css(r.textStyle)} html={leads ? leadSentence(r.text) : r.text} />;
-        const mark = marked ? (r.art ? { art: r.art } : rowMark(r.term)) : {};
+        const mark = marked ? marks[i] : {};
         return bare ? (
           <Fragment key={i}>{dt}{dd}</Fragment>
         ) : (
@@ -1201,7 +1250,7 @@ const STORY_SCRIPT =
   `r.querySelectorAll(".story-tile").forEach(function(f){var i=0,p=f.parentNode;while(p&&!p.classList.contains("story-photos"))p=p.parentNode;` +
   `if(p){i=Array.prototype.indexOf.call(p.querySelectorAll(".story-tile"),f);}f.style.setProperty("--i",Math.min(i,8));});` +
   `r.classList.add("is-armed");var o=new IntersectionObserver(function(es){es.forEach(function(e){` +
-  `if(e.isIntersecting){e.target.classList.add("is-in");o.unobserve(e.target);}});},{threshold:0.12});` +
+  `if(e.isIntersecting){e.target.classList.add("is-in");o.unobserve(e.target);}});},{threshold:0,rootMargin:"0px 0px 12% 0px"});` +
   `r.querySelectorAll(".story-row,.story-head").forEach(function(x){o.observe(x);});})();`;
 
 // A run of artist stories, one under the other, or two across when smaller.

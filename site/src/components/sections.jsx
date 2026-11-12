@@ -581,6 +581,9 @@ const VendorList = {
   },
   render: function VendorListRender({ categories, vendors, wrapStyle }) {
     const href = useHref();
+    const s = useSite();
+    // The venues category lists every hotel and conference center page.
+    const venues = s.model.VENUES || [];
     return (
     <section className="section section--ruled">
       <div className="wrap vendor-cats" style={css(wrapStyle)}>
@@ -589,8 +592,10 @@ const VendorList = {
           return (
             <div className="vendor-cat" id={cat.id} key={cat.id}>
               <h2 className="h3">{cat.label}</h2>
-              {rows.length ? (
-                <div className="card-grid card-grid--2">
+              {cat.id === "venues" && venues.length ? (
+                <VenueCards s={s} venues={venues} />
+              ) : rows.length ? (
+                <div className="card-grid card-grid--3 vendor-grid">
                   {rows.map((v, i) => (
                     <article className="card vendor-card" key={i}>
                       {v.image ? (
