@@ -71,13 +71,13 @@
     });
     countEl.textContent = id ? sortedText.replace("{label}", label) : "";
     if (reset) reset.hidden = !id;
-    form.setAttribute("data-fit", id || "");
+    form.setAttribute("data-picked", id || "");
   }
 
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       var id = chip.getAttribute("data-fit");
-      apply(form.getAttribute("data-fit") === id ? "" : id);
+      apply(form.getAttribute("data-picked") === id ? "" : id);
     });
   });
 
