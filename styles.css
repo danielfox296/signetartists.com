@@ -6957,3 +6957,225 @@ body {
 .review-pull figcaption .review-sep {
   color: var(--red);
 }
+
+/* ---------------------------------------------- venues hub (2026-11-11)
+   Each hotel as a photograph card: the hotel's own photo under a soft light
+   from above, a lifted shadow, the photo drifting in as it scrolls into view
+   and a slow sweep of light across it on hover. Each town opens with room
+   above it and a rule, so it starts a new group, not a line under the last. */
+.venues-hub .lede {
+  max-width: 44rem;
+}
+.venue-town {
+  margin-top: clamp(3.5rem, 2.5rem + 3vw, 5.5rem);
+}
+.venues-hub .h2 + .venue-town,
+.venues-hub .lede + .venue-town {
+  margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+}
+.venue-town__name {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 1.75rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.85rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.venue-town__name::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.venue-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+@media (min-width: 700px) {
+  .venue-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1100px) {
+  .venue-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.venue-card {
+  min-width: 0;
+}
+.venue-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0) 40%), var(--paper-sunk);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 18px 40px -18px rgba(0, 0, 0, 0.75);
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease, border-color 0.45s ease;
+}
+.venue-card__photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: #0d0d0d;
+}
+.venue-card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s ease;
+  filter: saturate(0.85) contrast(1.02);
+}
+/* A soft light from above and a shade at the foot. */
+.venue-card__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 60%),
+    linear-gradient(to top, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0) 45%);
+  pointer-events: none;
+}
+.venue-card__sheen {
+  position: absolute;
+  inset: -20% -60%;
+  z-index: 1;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.16) 50%, transparent 60%);
+  transform: translateX(-60%);
+  opacity: 0;
+  pointer-events: none;
+}
+.venue-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.35rem 1.5rem 1.6rem;
+}
+.venue-card__area {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--red);
+}
+.venue-card__name {
+  margin: 0.55rem 0 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.venue-card__spaces {
+  margin: 0.7rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.venue-card__acts {
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.venue-card__label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+.venue-card__more {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.venue-card__more::after {
+  content: " →";
+  color: var(--red);
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+.venue-card__link:hover,
+.venue-card__link:focus-visible {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07) inset, 0 28px 60px -22px rgba(0, 0, 0, 0.85);
+}
+.venue-card__link:hover .venue-card__more::after,
+.venue-card__link:focus-visible .venue-card__more::after {
+  transform: translateX(4px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .venue-card__link:hover,
+  .venue-card__link:focus-visible {
+    transform: translateY(-4px);
+  }
+  .venue-card__link:hover .venue-card__photo img,
+  .venue-card__link:focus-visible .venue-card__photo img {
+    transform: scale(1.07);
+    filter: saturate(1) contrast(1.04);
+  }
+  .venue-card__link:hover .venue-card__sheen {
+    animation: venue-sheen 1.4s ease forwards;
+  }
+}
+@keyframes venue-sheen {
+  0% { opacity: 0; transform: translateX(-60%); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(60%); }
+}
+/* The photo settles from a slight zoom as the card scrolls into view. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .venue-card__photo img {
+      animation: venue-drift linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+    }
+    .venue-card__link:hover .venue-card__photo img {
+      animation: none;
+    }
+  }
+}
+@keyframes venue-drift {
+  from { transform: scale(1.14) translateY(3%); }
+  to { transform: scale(1.02) translateY(0); }
+}
+
+/* Every hero photo, 2026-11-11 (Daniel: "all hero images need examined for
+   type layout clashes"): on a wide screen the photo starts just past the
+   words and fades in over a short run, so no face or body sits under the
+   type; the words keep a column a little under half the band. */
+@media (min-width: 1100px) {
+  .hero-photo--act .hero-photo__bg,
+  .hero-photo--side .hero-photo__bg {
+    width: 55vw;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30%);
+    mask-image: linear-gradient(to right, transparent 0, #000 30%);
+  }
+  .hero-photo--act .heading,
+  .hero-photo--side .heading,
+  .act-hero .hero-photo--act .heading {
+    /* Over a heading's own width style, which some pages set wider. */
+    max-width: min(40rem, 46%) !important;
+  }
+}

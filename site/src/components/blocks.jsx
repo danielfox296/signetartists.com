@@ -144,8 +144,11 @@ export const SpecList = {
     mark: select("Marker", [{ label: "Dash", value: "" }, { label: "Check", value: "check" }, { label: "Plus", value: "plus" }]),
   },
   defaultProps: { source: "own", items: [{ html: "Item" }], cols: false },
-  render: function SpecListRender({ source, items, cols, mark, style }) {
+  render: function SpecListRender({ source, items, cols, mark: markSet, style }) {
     const s = useSite();
+    // What comes with every booking is checked and what is quoted separately
+    // is a plus, unless the block picks its own marker.
+    const mark = markSet || (source === "included" ? "check" : source === "extras" ? "plus" : "");
     const DASH = '<span class="dash" aria-hidden="true"></span>';
     const list = source && source !== "own" ? s.model.site.lists[source].map((t) => DASH + esc(t)) : (items || []).map((it) => (typeof it.html === "string" ? DASH + it.html : it.html));
     // Copy being edited on the canvas is an editor, not a string: the dash goes before it.
@@ -584,13 +587,36 @@ function pageActOf(s) {
   return m && id ? m.ACT_BY_ID[id] : null;
 }
 const slash = (src) => (src.startsWith("/") ? src : "/" + src);
-// site.closePhotos is the pool
-// of professional photos, listed one act at a time. The pages are dealt from
-// it in URL order, so a tree's pages sit together: each page's hero is the
-// next photo in the pool whose act is not on the page already and not among
-// the last five pages' heroes; its close is dealt the same way from half the
-// pool along, never its hero's act. An act page uses a dealt close only when
-// its card is already its hero. One deal per build, kept on the model.
+// A page's own hero: its heroImage, or on an act page the first photograph in
+// its gallery, else the act's card. null: no photo ("none", or an act with no
+// picture). undefined: the page is dealt one.
+function ownHero(m, doc) {
+  const p = doc && doc.root && doc.root.props;
+  if (!p) return undefined;
+  if (p.heroImage === "none") return null;
+  if (p.heroImage) return slash(p.heroImage);
+  const act = p.schema && p.schema.act ? m.ACT_BY_ID[p.schema.act] : null;
+  if (!act) return undefined;
+  let first = null;
+  const walk = (o) => {
+    if (first || !o) return;
+    if (Array.isArray(o)) return o.forEach(walk);
+    if (typeof o === "object") {
+      if (o.type === "MediaGrid" && o.props && o.props.images && o.props.images[0]) first = o.props.images[0].src;
+      else Object.values(o).forEach(walk);
+    }
+  };
+  walk(doc.content);
+  return first ? slash(first) : act.img ? "/img/" + act.img : null;
+}
+// site.closePhotos is the pool of professional photos, best first. No hero is
+// ever repeated (Daniel, 2026-11-11): a photo that is any page's own hero is
+// kept out of the deal, and each dealt page takes the next photo no other
+// page has, preferring one whose act is not on the page already. The main
+// pages are dealt first so they get the strongest photos. A close is dealt
+// from half the pool along, never the page's hero or its act. One deal per
+// build, kept on the model.
+const FIRST_DEALT = ["/", "/music/", "/pricing/", "/corporate/", "/weddings/", "/private-parties/", "/about/", "/planners/", "/daytime/", "/venues/", "/preferred-vendors/", "/contact/"];
 const deals = new WeakMap();
 function dealt(s, close) {
   const m = s && s.model;
@@ -606,31 +632,45 @@ function deal(m, pool) {
   for (const a of Object.values(m.ACT_BY_ID)) if (a.img) actOf["img/" + a.img] = a.id;
   Object.assign(actOf, (m.site && m.site.photoActs) || {});
   for (const e of pool) actOf[e.src] = e.act;
-  const n = pool.length;
-  const at = [0, Math.floor(n / 2)];
-  const recent = [[], []];
-  const out = {};
-  const pick = (k, avoid) => {
-    // Relax the neighbours rule, then the page's own acts, before repeating.
-    for (const strict of [2, 1, 0]) {
-      for (let i = 0; i < n; i++) {
-        const e = pool[(at[k] + i) % n];
-        if (strict > 0 && avoid.has(e.act)) continue;
-        if (strict > 1 && recent[k].includes(e.act)) continue;
-        at[k] = (at[k] + i + 1) % n;
-        recent[k] = [...recent[k], e.act].slice(-5);
-        return e;
-      }
-    }
-    return pool[0];
+  const pages = m.pages || [];
+  const reserved = new Set(pages.map((d) => ownHero(m, d)).filter(Boolean).map((src) => src.replace(/^\//, "")));
+  const free = pool.filter((e) => !reserved.has(e.src));
+  const rank = (d) => {
+    const i = FIRST_DEALT.indexOf(d.root.props.path);
+    return i < 0 ? FIRST_DEALT.length : i;
   };
-  for (const d of [...(m.pages || [])].sort((x, y) => (x.root.props.path < y.root.props.path ? -1 : 1))) {
+  const order = [...pages].sort((x, y) => rank(x) - rank(y) || (x.root.props.path < y.root.props.path ? -1 : 1));
+  const shownOn = (d) => {
     const body = JSON.stringify(d.content || []);
     const shown = new Set(Object.keys(actOf).filter((src) => body.includes(src)).map((src) => actOf[src]));
     const id = d.root.props.schema && d.root.props.schema.act;
     if (id) shown.add(id);
-    const hero = pick(0, shown);
-    const close = pick(1, new Set([...shown, hero.act]));
+    return shown;
+  };
+  const used = new Set();
+  const out = {};
+  let at = Math.floor(pool.length / 2);
+  for (const d of order) {
+    const shown = shownOn(d);
+    let hero = null;
+    if (ownHero(m, d) === undefined) {
+      hero = free.find((e) => !used.has(e.src) && !shown.has(e.act)) || free.find((e) => !used.has(e.src)) || null;
+      if (hero) used.add(hero.src);
+      else console.warn(`No unused hero photo left for ${d.root.props.path}; add photos to site.closePhotos.`);
+    }
+    const own = ownHero(m, d);
+    const heroSrc = hero ? hero.src : own ? own.replace(/^\//, "") : "";
+    const avoid = new Set([...shown, hero && hero.act].filter(Boolean));
+    let close = null;
+    for (const strict of [1, 0]) {
+      for (let i = 0; i < pool.length && !close; i++) {
+        const e = pool[(at + i) % pool.length];
+        if (e.src === heroSrc || (strict && avoid.has(e.act))) continue;
+        close = e;
+        at = (at + i + 1) % pool.length;
+      }
+      if (close) break;
+    }
     out[d.root.props.path] = { hero, close };
   }
   return out;
@@ -640,23 +680,10 @@ function heroPhoto(s) {
   // A page about someone else's business (a preferred vendor) sits on their
   // photo: one of our musicians behind their name would read as their work.
   // "none": the page opens on its own pictures, with no photo behind the h1.
-  const own = s.page.root && s.page.root.props && s.page.root.props.heroImage;
-  if (own === "none") return null;
-  if (own) return { src: slash(own) };
-  const act = pageActOf(s);
-  if (act) {
-    let first = null;
-    const walk = (o) => {
-      if (first || !o) return;
-      if (Array.isArray(o)) return o.forEach(walk);
-      if (typeof o === "object") {
-        if (o.type === "MediaGrid" && o.props && o.props.images && o.props.images[0]) first = o.props.images[0].src;
-        else Object.values(o).forEach(walk);
-      }
-    };
-    walk(s.page.content);
-    const src = first ? slash(first) : act.img ? "/img/" + act.img : null;
-    if (!src) return null;
+  const src = ownHero(s.model, s.page);
+  if (src === null) return null;
+  if (src) {
+    if (s.page.root.props.heroImage) return { src, side: true };
     // An artist's photo sits beside the words, so the face it frames is kept
     // in view: the photo's focus point (content/photo-focus.json) places it.
     const focus = (s.model.c && s.model.c.photoFocus) || {};

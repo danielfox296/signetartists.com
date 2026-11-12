@@ -324,7 +324,7 @@ export function buildSite(c, out) {
       nav: p.nav || "",
       trail,
       indexed,
-      content: m.pageContent(doc).map((x) => <Section key={x.props.id} c={x} />),
+      content: m.pageSections(doc).map((x) => <Section key={x.props.id} c={x} />),
       ctxExtra: { page: doc },
       title: brandTitle(p.title, p.titleExact),
       description: p.description || "",
