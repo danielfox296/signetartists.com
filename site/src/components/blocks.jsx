@@ -203,7 +203,7 @@ const ROW_ART = [
   [/\b(?:when|date|book|ahead|month|week|calendar|season)/, "calendar"],
   [/\b(?:time|hour|minute|length|long|curfew|late)/, "clock"],
   [/\b(?:point of contact|contact|phone)/, "phone"],
-  [/\b(?:insurance|insured|certificate)/, "shield"],
+  [/\b(?:insurance|insured|certificate|liability)/, "shield"],
   [/\b(?:paperwork|invoice|w-9|contract)/, "document"],
   [/\b(?:load-in|load in|load-out|setup|strike)/, "box"],
 ];
