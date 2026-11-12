@@ -74,10 +74,33 @@
     form.setAttribute("data-picked", id || "");
   }
 
+  // The bar stays just under the sticky header.
+  var header = document.querySelector(".site-header");
+  function place() {
+    if (header) form.style.setProperty("--sort-top", header.offsetHeight + 12 + "px");
+  }
+  place();
+  window.addEventListener("resize", place);
+
+  // After a pick, the roster comes into view under the bar and the acts that
+  // suit it rise into place, so the pick visibly does something.
+  function show() {
+    var lane = document.querySelector(".roster-lane:not([hidden])");
+    if (lane) lane.scrollIntoView({ behavior: "smooth", block: "start" });
+    var fit = document.querySelectorAll(".act-card.is-fit");
+    for (var i = 0; i < fit.length; i += 1) {
+      fit[i].classList.remove("is-moved");
+      void fit[i].offsetWidth;
+      fit[i].classList.add("is-moved");
+    }
+  }
+
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       var id = chip.getAttribute("data-fit");
-      apply(form.getAttribute("data-picked") === id ? "" : id);
+      var next = form.getAttribute("data-picked") === id ? "" : id;
+      apply(next);
+      if (next) show();
     });
   });
 

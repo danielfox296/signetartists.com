@@ -6621,3 +6621,320 @@ body {
     margin-top: 0;
   }
 }
+
+/* ------------------------------------------ roster page pass (2026-11-11)
+   Daniel's notes on /music/, most of them sitewide: testimonials one at a
+   time, large and light; questions with a marker on the left; more room
+   around the logos, the awards and the closing call; a dealt hero photo
+   beside the words; the roster's sort as a lit bar and its cards as panels. */
+
+/* A testimonial on its own: the words large and light, the attribution set
+   apart below a short red rule, in capitals. */
+.reviews {
+  padding: clamp(4.5rem, 3rem + 5vw, 8rem) 0;
+}
+.review-feature {
+  margin: 0 auto;
+  max-width: 58rem;
+}
+.reviews .h2 + .review-feature,
+.reviews .prose + .review-feature {
+  margin-top: 2.75rem;
+}
+.review-feature blockquote {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(1.75rem, 1.05rem + 2.3vw, 3.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.review-feature--long blockquote {
+  font-size: clamp(1.4rem, 1rem + 1.35vw, 2.15rem);
+  line-height: 1.3;
+}
+.review-feature figcaption,
+.review-pull figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin-top: 2.5rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+.review-feature figcaption::before,
+.review-pull figcaption::before {
+  content: "";
+  flex: none;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--red);
+}
+.review-feature figcaption .review-by,
+.review-pull figcaption .review-by {
+  color: var(--ink);
+  font-weight: 600;
+}
+.review-feature figcaption a,
+.review-pull figcaption a {
+  color: var(--ink-faint);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.review-feature figcaption a:hover,
+.review-pull figcaption a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--red);
+}
+
+/* A single testimonial inside a section: no bar, no panel. */
+.review-pull,
+.section--sunk .review-pull {
+  --ink: inherit;
+  --ink-soft: inherit;
+  --ink-faint: inherit;
+  --brass: inherit;
+  max-width: 46rem;
+  margin-top: 3.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+}
+.review-pull blockquote {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(1.35rem, 1rem + 1vw, 1.8rem);
+  line-height: 1.3;
+  color: var(--ink);
+}
+.review-pull figcaption {
+  margin-top: 1.75rem;
+}
+@media (max-width: 599px) {
+  .review-pull {
+    padding: 0;
+  }
+}
+
+/* Questions: a round marker on the left, a chevron that turns down as the
+   answer opens; the answer lines up with the question. */
+.faq-row summary {
+  justify-content: flex-start;
+  gap: 1.1rem;
+}
+.faq-toggle {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 0;
+  border: 1.5px solid var(--brass);
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.faq-toggle::after {
+  display: none;
+}
+.faq-toggle::before {
+  top: 0;
+  bottom: 0;
+  height: auto;
+  background: var(--brass);
+  transform: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.5 6l6 6-6 6'/%3E%3C/svg%3E") center / 0.95rem no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.5 6l6 6-6 6'/%3E%3C/svg%3E") center / 0.95rem no-repeat;
+}
+.faq-row[open] .faq-toggle {
+  transform: rotate(90deg);
+  background-color: var(--brass);
+}
+.faq-row[open] .faq-toggle::before {
+  background: var(--paper);
+}
+.faq-row summary:hover .faq-toggle {
+  border-color: var(--brass-bright);
+}
+.faq-a {
+  padding: 0 2.6rem 1.5rem 2.85rem;
+}
+@media (max-width: 599px) {
+  .faq-a {
+    padding-right: 0;
+  }
+}
+
+/* More room around the client logos, the awards and the closing call. */
+.credits {
+  padding: clamp(4rem, 3rem + 3vw, 6.5rem) 0;
+}
+.laurels--wall {
+  margin-top: 3rem;
+  gap: 3.25rem 4.5rem;
+}
+/* Over :has(> .wrap > .close-row), which sets every closing band to 40px. */
+.section:has(.close-row--photo),
+.section:has(> .wrap > .close-row.close-row--photo) {
+  padding: clamp(6.5rem, 4rem + 7vw, 11rem) 0;
+}
+
+/* A list with its note under it: the note stands clear of the last row. */
+.spec-list + .note {
+  margin-top: 3.25rem;
+}
+
+/* A dealt hero photo takes the right of the band, faded in from behind the
+   words, the way an artist's page does; below 1100px it is a band of its
+   own above the words. */
+@media (min-width: 1100px) {
+  .hero-photo--side .hero-photo__bg {
+    left: auto;
+    right: calc(50% - 50vw);
+    width: 60vw;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40%);
+    mask-image: linear-gradient(to right, transparent 0, #000 40%);
+  }
+  .hero-photo--side .hero-photo__bg::after {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.12) 65%);
+  }
+  .hero-photo--side .heading {
+    max-width: min(42rem, 50%);
+  }
+}
+@media (max-width: 1099px) {
+  .hero-photo--side {
+    padding-top: 0;
+  }
+  .hero-photo--side .hero-photo__bg {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    height: clamp(16rem, 58vw, 32rem);
+    margin-bottom: clamp(1.5rem, 0.5rem + 3vw, 2.75rem);
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent);
+    mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  }
+  .hero-photo--side .hero-photo__bg::after {
+    background: rgba(18, 18, 18, 0.12);
+  }
+}
+
+/* The roster's sort: a light bar that stays under the header while the
+   roster scrolls, so a pick shows its effect on the cards in view. */
+.roster-filters.roster-sort {
+  position: sticky;
+  top: var(--sort-top, 5.25rem);
+  z-index: 5;
+  margin-top: 2rem;
+  padding: 0.6rem 0.75rem 0.6rem 0.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--second);
+  color: var(--near-black);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  gap: 0.5rem 0.75rem;
+}
+.roster-sort .catalog-chips {
+  gap: 0.5rem;
+}
+.roster-sort .chip {
+  padding: 0.55rem 1.15rem;
+  font-weight: 600;
+  color: var(--near-black);
+  background: rgba(18, 18, 18, 0.06);
+  border: 1.5px solid rgba(18, 18, 18, 0.4);
+}
+.roster-sort .chip:hover {
+  color: var(--near-black);
+  background: rgba(18, 18, 18, 0.14);
+  border-color: var(--near-black);
+}
+.roster-sort .chip[aria-pressed="true"] {
+  color: var(--near-black);
+  background: var(--red);
+  border-color: var(--red);
+}
+.roster-sort #filter-reset {
+  padding: 0.4rem 0.5rem;
+  border: 0;
+  background: none;
+  color: var(--near-black);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.roster-sort .filter-count {
+  flex: 1 1 14rem;
+  padding-right: 0.75rem;
+  font-size: 0.9rem;
+  color: #1f2b30;
+}
+@media (max-width: 699px) {
+  .roster-filters.roster-sort {
+    top: var(--sort-top, 4.5rem);
+    flex-wrap: nowrap;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  .roster-sort .catalog-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .roster-sort .chip {
+    flex: none;
+    padding: 0.5rem 0.9rem;
+  }
+  .roster-sort .filter-count,
+  .roster-sort #filter-reset {
+    display: none;
+  }
+}
+.roster-lane {
+  scroll-margin-top: 12.5rem;
+}
+
+/* Roster cards as panels: the photo, the size and tags and the line under
+   it read as one card, apart from the card below. A card that suits the
+   sort's pick takes a red edge. */
+.roster-grid--photo {
+  gap: 2rem;
+}
+.roster-grid--photo .act-card--roster {
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  transition: border-color 0.3s ease;
+}
+.roster-grid--photo .roster-card-link {
+  height: 100%;
+  padding-bottom: 1.6rem;
+}
+.roster-grid--photo .roster-card-meta,
+.roster-grid--photo .roster-card-line {
+  padding: 0 1.4rem;
+}
+.roster-grid--photo .roster-card-meta {
+  margin-top: 1.25rem;
+}
+.roster-grid--photo .act-card--roster.is-fit {
+  border-color: var(--red);
+}
+.roster-grid--photo .roster-more {
+  margin-top: 1rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .act-card--roster.is-moved {
+    animation: fit-in 0.5s ease both;
+  }
+}
+@keyframes fit-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}

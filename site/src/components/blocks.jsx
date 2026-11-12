@@ -73,7 +73,7 @@ export const Heading = {
     const photo = p.titleTag === "h1" ? heroPhoto(s) : null;
     if (!photo) return heading;
     return (
-      <div className={cx("hero-photo", photo.act && "hero-photo--act")}>
+      <div className={cx("hero-photo", photo.act && "hero-photo--act", photo.side && "hero-photo--side")}>
         <div className="hero-photo__bg" aria-hidden="true" style={photoStyle(href, photo)} />
         {heading}
       </div>
@@ -312,8 +312,8 @@ export const Faq = {
       {(items || []).map((f, i) => (
         <details className="faq-row" key={i} open={i === 0 || undefined}>
           <summary>
-            <H as="span" className="faq-q" html={f.q} />
             <span className="faq-toggle" aria-hidden="true" />
+            <H as="span" className="faq-q" html={f.q} />
           </summary>
           {f.open ? (
             <div className="faq-a"><H as="span" data-tbd="true" html={f.a} /></div>
@@ -663,7 +663,10 @@ function heroPhoto(s) {
     const pos = focus[src.replace(/^\//, "")];
     return { src, act: true, ...(pos ? { pos } : {}) };
   }
-  return dealt(s, false);
+  // A dealt photo sits beside the words too, the way an artist's does, so the
+  // musician in it isn't under the type (Daniel, 2026-11-11).
+  const d = dealt(s, false);
+  return d ? { ...d, side: true } : null;
 }
 const photoStyle = (href, photo) => ({ backgroundImage: `url("${href(photo.src)}")`, ...(photo.pos ? { backgroundPosition: photo.pos } : {}) });
 
