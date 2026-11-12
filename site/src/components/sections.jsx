@@ -695,7 +695,7 @@ const VenueList = {
           ) : (
             groups.map((g) => (
               <div className="venue-town" key={g}>
-                <h3 className="venue-town__name">{head(g)}</h3>
+                {title ? <h3 className="venue-town__name">{head(g)}</h3> : <h2 className="venue-town__name">{head(g)}</h2>}
                 <VenueCards s={s} venues={venues.filter((v) => (v.group || "") === g)} />
               </div>
             ))

@@ -6,7 +6,8 @@
    "description": "Live music for weddings and events at hotels in Denver, Colorado Springs and Boulder: the ballrooms and terraces, how a band gets in and sets up, and the acts we’d pick for each space.",
    "nav": "planners",
    "breadcrumb": "Venues",
-   "indexLabel": "Venues"
+   "indexLabel": "Venues",
+   "heroImage": "img/venues/brown-palace/exterior.jpg"
   }
  },
  "content": [
@@ -25,10 +26,10 @@
        "title": "Live music at Denver hotel wedding and event venues.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Maybe you’ve booked the hotel already, or you’re choosing between a few. Either way, you’re picturing the music there. Every hotel has its own event spaces, its own way in for the band and its own rules on sound, and we plan the music around all of it.",
+       "lede": "Maybe you’ve booked the hotel already, or you’re choosing between a few. Either way, you’re picturing the music there. Every hotel has its own rules on sound and its own way in for the band, and we plan the music around them.",
        "headingText": [
         {
-         "html": "Here’s what live music looks like at hotels and conference centers around Denver, Colorado Springs and Boulder, with the acts we’d pick for each space."
+         "html": "Here’s what live music looks like at hotels and conference centers around Denver, Colorado Springs and Boulder, and the acts we’d pick for their ballrooms and terraces."
         }
        ]
       }
@@ -41,7 +42,7 @@
    "props": {
     "id": "VenueList-v2",
     "band": "night",
-    "title": "Live music at each hotel",
+    "title": null,
     "groupTitle": "{group} hotel wedding and event venues"
    }
   },
@@ -69,7 +70,7 @@
         {
          "term": "Getting in",
          "art": "box",
-         "text": "Bands come in through the hotel’s loading dock or a service entrance, not the lobby, at a time the hotel’s event manager sets. We work out the time and the way in with them before your date, and the musicians handle their own load-in, setup and load-out."
+         "text": "Bands come in through the hotel’s loading dock or a service entrance, not the lobby, at a time the hotel’s event manager sets. We work out the time and the way in with them before your date."
         },
         {
          "term": "Sound",
@@ -78,14 +79,22 @@
         },
         {
          "term": "Insurance",
-         "text": "Most hotels ask outside vendors for a certificate of insurance before the event, and we send one with every booking."
+         "text": "Most hotels ask outside vendors for a certificate of insurance before the event, and we can send ours to your event manager ahead of time."
         },
         {
          "term": "End times and volume",
          "art": "clock",
-         "text": "Hotels with guest rooms nearby often set an end time for amplified music, and outdoor terraces and lawns often stop earlier than the ballrooms. We plan around the hotel’s rules, and the band can bring the volume up or down whenever you ask."
+         "text": "Hotels with guest rooms nearby often set an end time for amplified music, and outdoor terraces and lawns tend to stop earlier than the ballrooms. We plan around the hotel’s rules, and the band can bring the volume up or down whenever you ask."
         }
        ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-vhero",
+       "html": "The photo at the top of this page is the Brown Palace Hotel and Spa at dusk.",
+       "cls": "note"
       }
      }
     ]
