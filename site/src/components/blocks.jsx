@@ -793,7 +793,7 @@ function CardMedia({ a, ratio }) {
 // The roster page's card: the act's photograph carries
 // it, with the kind and the name over the foot of the photo; under it the
 // size, the tags and one line. The whole card is the link. It keeps the act
-// card's class and data so acts.js filters it as before. The photo carries no
+// card's class and data so acts.js can sort it. The photo carries no
 // description: the act's name is over it inside the same link, and the card
 // photo is often a crop of a photo the act's page describes in the same words.
 function RosterCard({ a }) {
@@ -828,7 +828,7 @@ function RosterCard({ a }) {
         <div className="roster-card-meta">
           <span className="roster-card-size">{m.actConfigRange(a)}</span>
           <ul className="pill-row">
-            {(a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => <li key={b} className="pill">{m.BUCKET_LABEL[b]}</li>)}
+            {(a.bucket_tags || []).filter((b) => m.BUCKET_LABEL[b]).map((b) => <li key={b} className="pill" data-bucket={b}>{m.BUCKET_LABEL[b]}</li>)}
           </ul>
         </div>
         <p className="roster-card-line">{named ? m.actCardLine(a) : m.actByline(a) || m.actCardLine(a)}</p>

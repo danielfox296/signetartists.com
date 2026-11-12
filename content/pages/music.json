@@ -130,9 +130,10 @@
    "props": {
     "id": "Roster-12",
     "band": "ruled",
-    "title": "Filter the roster",
-    "note": "You can narrow it down by the occasion, the kind of event, the size of the act, the genre or whether it has vocals.",
-    "empty": "Nothing on the roster matches that combination. Try removing one of your filters.",
+    "title": "What's the music for?",
+    "note": "Pick one and the acts that suit it come first. Many of our acts play in more than one size, so if you're not sure which fits, <a href=\"/contact/\">tell us the date</a> and what you have in mind, and we'll suggest a few.",
+    "more": "Also on the roster",
+    "sorted": "{label} acts come first, and every other act is still below.",
     "lanes": [
      {
       "lane": "named",

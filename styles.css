@@ -3454,58 +3454,54 @@ main:focus {
   color: var(--brass);
 }
 
-/* ------------------------------------------------------------- filtering */
+/* ------------------------------------------------------------- sorting */
 
-/* Ships hidden and roster.js unhides it. With script off the controls never
-   appear and every act is on the page, which is the only honest default:
-   a filter that cannot filter must not be offered. */
+/* Ships hidden and acts.js unhides it. With script off the chips never
+   appear and every act is on the page in its usual order. Since 2026-11-11
+   the chips sort the roster and never hide an act. */
 .roster-filters {
   margin-top: 2.2rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--rule);
 }
 
-.filter-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-  min-width: 10rem;
-  flex: 1 1 10rem;
+.roster-sort .catalog-chips {
+  margin-top: 0;
 }
 
-.filter-field label {
+/* role="status": says which acts came first, for the eye and a screen reader. */
+.filter-count {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 0.9625rem;
+  color: var(--ink-faint);
+}
+
+.filter-count:empty {
+  display: none;
+}
+
+/* The heading between the acts that suit the pick and the rest of a lane. */
+.roster-more {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
   font-size: 0.7563rem;
   text-transform: uppercase;
   letter-spacing: var(--track-caps);
   color: var(--ink-faint);
 }
 
-.filter-field select {
-  padding: 0.5rem 0.625rem;
-  font-family: inherit;
-  font-size: 0.9625rem;
+/* The pill on a card that matches the kind of event picked. */
+.pill.pill--on {
+  background: var(--red);
+  border-color: var(--red);
   color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--rule-strong);
-}
-
-/* role="status" — the count is the only confirmation a filter did anything,
-   so it has to reach a screen reader as well as the eye. */
-.filter-count {
-  flex: 0 0 auto;
-  font-size: 0.9625rem;
-  color: var(--ink-faint);
-  font-variant-numeric: tabular-nums;
-}
-
-.filter-empty {
-  margin-top: 2.2rem;
-  font-size: 0.9625rem;
-  color: var(--ink-soft);
 }
 
 .act-card[hidden] {
