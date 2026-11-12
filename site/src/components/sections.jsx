@@ -967,12 +967,13 @@ const Roster = {
   },
 };
 
-// The sort: one chip for each kind of event some act on the roster carries.
+// The sort: one chip for each kind of event some act on the roster carries,
+// leaving out a kind marked "chip": false in roster.json.
 function RosterSort({ more, sorted }) {
   const s = useSite();
   const m = s.model;
   const used = new Set(m.ACTS.flatMap((a) => a.bucket_tags || []));
-  const kinds = m.roster.buckets.filter((b) => used.has(b.id));
+  const kinds = m.roster.buckets.filter((b) => used.has(b.id) && b.chip !== false);
   const text = (h) => (h || "").replace(/<[^>]+>/g, "");
   return (
     <div className="roster-filters roster-sort" id="roster-filters" data-more={text(more)} data-sorted={text(sorted)} hidden>
