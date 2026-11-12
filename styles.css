@@ -7628,3 +7628,13 @@ body {
 .vnearby .note {
   margin-top: 2rem;
 }
+@media (min-width: 900px) {
+  .vspace:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  }
+}
+/* A heading under a list in the same section starts a new group. */
+.def-list + .h3,
+.def-list + h3 {
+  margin-top: clamp(3rem, 2.5rem + 2vw, 4.5rem);
+}
