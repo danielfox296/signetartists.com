@@ -71,11 +71,11 @@
     "_file": "01a-credits.html",
     "blocks": [
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-14",
-       "html": "“Our guests couldn’t stop talking about how amazing he was, and we loved how he read the crowd and kept everyone engaged. He went above and beyond to make our day special, even learning a few of our favorite songs just for us.”",
-       "by": "Savannah H., an outdoor wedding, November 2025."
+       "id": "Review-14",
+       "review": "savannah-h",
+       "withAct": true
       }
      }
     ]
@@ -479,6 +479,17 @@
     ],
     "_file": "01-pages.html",
     "look": "cards"
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "wedding,ceremony",
+    "limit": 8,
+    "show": 4
    }
   },
   {

@@ -532,6 +532,47 @@ img {
   font-size: 0.9625rem;
   color: var(--ink-faint);
 }
+.review-pull figcaption .review-by {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+.review-pull figcaption .review-src {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.875rem;
+}
+
+/* Testimonials in a section: two across from 900px, each in its panel. */
+.reviews .review-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.reviews .review-grid .review-pull {
+  margin: 0;
+  max-width: none;
+}
+.reviews .review-grid .review-pull blockquote {
+  font-size: 1.0625rem;
+}
+@media (min-width: 900px) {
+  .reviews .review-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+.review-more {
+  margin-top: 1rem;
+}
+.review-more > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0.5rem 0;
+}
+.review-more > .review-grid {
+  margin-top: 0.5rem;
+}
 
 /* The wink (WEBSITE-PLAN §6.4): the one playful line per page, set at the size
    of the text around it so the register shift reads as intentional design

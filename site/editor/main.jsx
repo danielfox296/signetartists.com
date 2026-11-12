@@ -33,6 +33,7 @@ const content = {
   photoFocus: at("photo-focus.json"),
   lastmod: {},
   repertoire: at("repertoire.json"),
+  testimonials: at("records/testimonials.json"),
   logoSvg: (id) => logos[`../../img/logos/${id}.svg`] || "<svg></svg>",
   exists: (rel) => thumbs.has(rel),
 };

@@ -182,11 +182,11 @@
       }
      },
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-17",
-       "html": "“[He] came to play in our home for a party and did an amazing job! He is a talented musician and was extremely easy and responsive to work with. He was able to play exactly the type of music we were looking for. Thanks for taking our party up a notch!”",
-       "by": "Conner S., a party at home, November 2025."
+       "id": "Review-17",
+       "review": "conner-s",
+       "withAct": true
       }
      },
      {
@@ -243,6 +243,17 @@
      }
     ],
     "_file": "05-evenings.html"
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "party,home",
+    "limit": 4,
+    "show": 4
    }
   },
   {

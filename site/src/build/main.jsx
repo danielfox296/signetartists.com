@@ -58,6 +58,7 @@ export function loadContent(dir = CONTENT) {
     photoFocus: j(at("photo-focus.json")),
     lastmod: fs.existsSync(at("lastmod.json")) ? j(at("lastmod.json")) : {},
     repertoire: j(at("repertoire.json")),
+    testimonials: fs.existsSync(at("records/testimonials.json")) ? j(at("records/testimonials.json")) : null,
     layouts: {
       act: fs.existsSync(at("layouts/act-page.json")) ? j(at("layouts/act-page.json")) : null,
       ...Object.fromEntries(Object.entries(LAYOUT_FILES).map(([k, f]) => [k, fs.existsSync(at(`layouts/${f}`)) ? j(at(`layouts/${f}`)) : null])),

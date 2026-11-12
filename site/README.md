@@ -20,6 +20,7 @@ Run everything from the repo root.
   - `sections.jsx` section types, `blocks.jsx` the blocks a section holds
   - `generated.jsx` lists built from data (video index, blog list, all pages)
   - `post.jsx` blog posts, `layout.jsx` header, footer, breadcrumb, sibling lists
+  - `reviews.jsx` testimonials from `content/records/testimonials.json`: Act testimonials (every one for the page's act, on every act page), Testimonials (picked by occasion and act, for any page) and the Testimonial block (one, by id)
   - `config.jsx` the Puck configs, `registry.jsx` how the build renders stored items
 - `src/lib/model.js` everything derived from `content/`: act facts, trails, sibling and hub lists, posts by parent
 - `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD), `feeds.js`
@@ -79,4 +80,4 @@ Run everything from the repo root.
 | `site.json` | brand, business, lists shared by pages, llms.txt wording |
 | `redirects.json`, `robots.txt`, `photo-focus.json`, `repertoire.json` | as named |
 | `lastmod.json` | each URL's sitemap date when converted, and the hash of its file |
-| `records/` | market rates, media sources and reviews: provenance, not rendered |
+| `records/` | `market-rates.json`, the published market figures with their sources; `testimonials.json`, the client testimonials the site shows (each with its act, author, event, month, occasions and platform) |

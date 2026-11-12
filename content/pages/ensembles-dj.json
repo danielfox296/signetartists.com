@@ -249,6 +249,15 @@
    }
   },
   {
+   "type": "ActReviews",
+   "props": {
+    "id": "ActReviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "show": 4
+   }
+  },
+  {
    "type": "ActVenues",
    "props": {
     "id": "ActVenues-venues",

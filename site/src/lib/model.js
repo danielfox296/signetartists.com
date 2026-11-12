@@ -165,6 +165,27 @@ export function createModel(c) {
     })
     .sort((a, b) => pySort(a.name, b.name));
   const venuesFor = (id) => VENUES.filter((v) => v.named.has(id));
+  // Testimonials (content/records/testimonials.json): the ones not hidden whose
+  // act is on the site (no act: about Signet), verified first, then newest first.
+  const REVIEWS = ((c.testimonials && c.testimonials.testimonials) || [])
+    .filter((t) => t && t.id && t.quote && !t.hidden && (!t.act || (ACT_BY_ID[t.act] && !ACT_BY_ID[t.act].hidden)))
+    .sort((x, y) => (!!(y.source && y.source.verified) - !!(x.source && x.source.verified)) || String(y.date || "").localeCompare(String(x.date || "")));
+  const REVIEW_BY_ID = Object.fromEntries(REVIEWS.map((t) => [t.id, t]));
+  const reviewsFor = (id) => REVIEWS.filter((t) => t.act === id);
+  const reviewsWhere = ({ occasions = [], acts = [], ids = [], limit } = {}) => {
+    let out = ids.length
+      ? ids.map((i) => REVIEW_BY_ID[i]).filter(Boolean)
+      : REVIEWS.filter((t) => (!acts.length || acts.includes(t.act)) && (!occasions.length || (t.occasions || []).some((o) => occasions.includes(o))));
+    // One act at a time while the list runs: the first of each act, then the second.
+    if (!ids.length) {
+      const by = new Map();
+      for (const t of out) by.set(t.act || "", [...(by.get(t.act || "") || []), t]);
+      const rounds = [];
+      for (let i = 0; rounds.length < out.length; i++) for (const ts of by.values()) if (ts[i]) rounds.push(ts[i]);
+      out = rounds;
+    }
+    return limit > 0 ? out.slice(0, limit) : out;
+  };
   const CRUMB_OVERRIDES = {};
   for (const v of FOOTAGE) {
     const a = ACT_BY_ID[v.act];
@@ -286,6 +307,7 @@ export function createModel(c) {
     canonicalFor, FOOTAGE, FOOTAGE_BY_KEY, footageKey, watchOutput, watchUrl, watchThumb,
     posts, postBySlug, published, indexedPosts, pages, pageByUrl, LABELS, crumbLabel, crumbParent, crumbTrail, breadcrumbs,
     siblings, relatedArticles, actClips, hubIndex, POSTS_BY_PARENT, readingTime, dateDisplay, VENUES, venuesFor,
+    REVIEWS, REVIEW_BY_ID, reviewsFor, reviewsWhere,
   };
 }
 

@@ -96,11 +96,11 @@
     "_file": "01a-credits.html",
     "blocks": [
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-28",
-       "html": "“...We discussed what we were looking for, (funky jams) and they delivered. It was the perfect band for my husband’s 50th. They are personable, professional, and very talented musicians.”",
-       "by": "Jill B. a 50th Birthday Party, September 2025."
+       "id": "Review-28",
+       "review": "jill-b",
+       "withAct": true
       }
      }
     ]
@@ -319,11 +319,11 @@
       }
      },
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-33",
-       "html": "...From beginning to end. Pulled together bandmates for my husband’s 80th outdoor birthday bash. Guests were impressed with the repertoire. More than the usual cover band – jazzy sophistication.”",
-       "by": "Noreen S., an outdoor 80th, September 2025."
+       "id": "Review-33",
+       "review": "noreen-s",
+       "withAct": true
       }
      },
      {
@@ -611,6 +611,17 @@
     ],
     "_file": "01-pages.html",
     "look": "cards"
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "party,birthday,home",
+    "limit": 8,
+    "show": 4
    }
   },
   {

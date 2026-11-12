@@ -35,6 +35,7 @@ export function contentFrom(repo) {
     photoFocus: repo.json("content/photo-focus.json"),
     lastmod: {},
     repertoire: repo.json("content/repertoire.json"),
+    testimonials: repo.json("content/records/testimonials.json") || null,
     layouts: { act: repo.json(ACT_LAYOUT) || null, ...Object.fromEntries(Object.entries(LAYOUT_FILES).map(([k, f]) => [k, repo.json(`content/layouts/${f}`) || null])) },
     styles: repo.json(STYLES) || null,
     logoSvg: (id) => repo.get(`img/logos/${id}.svg`) || "<svg></svg>",

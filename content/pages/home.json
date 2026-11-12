@@ -463,6 +463,17 @@
    }
   },
   {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "",
+    "limit": 6,
+    "show": 6
+   }
+  },
+  {
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-27",

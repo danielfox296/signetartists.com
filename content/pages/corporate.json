@@ -79,11 +79,11 @@
     "showAlso": false,
     "blocks": [
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-6",
-       "html": "“[our act] naturally read the vibe and flow of the crowd, adjusting intensity and volume of the performance accordingly. He checked in during the event to ensure he was delivering what was asked for, but there was no direction needed.”",
-       "by": "Lindy R., a four-hour outdoor company picnic for 101 to 150, October 2025."
+       "id": "Review-6",
+       "review": "lindy-r",
+       "withAct": true
       }
      }
     ],
@@ -156,11 +156,11 @@
       }
      },
      {
-      "type": "Quote",
+      "type": "Review",
       "props": {
-       "id": "Quote-11",
-       "html": "“Their music created the perfect atmosphere, elegant, sophisticated and beautifully understated, while still adding something truly special to the evening. They were professional, polished and elevated the entire event.”",
-       "by": "Annette M., August 2026"
+       "id": "Review-11",
+       "review": "annette-m",
+       "withAct": true
       }
      }
     ]
@@ -607,6 +607,17 @@
     ],
     "_file": "01-pages.html",
     "look": "cards"
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "corporate",
+    "limit": 8,
+    "show": 4
    }
   },
   {

@@ -308,6 +308,17 @@
    }
   },
   {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "senior",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
    "type": "Questions",
    "props": {
     "id": "Questions-33",
