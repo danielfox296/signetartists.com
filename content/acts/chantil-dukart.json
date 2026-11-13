@@ -1,0 +1,210 @@
+{
+ "id": "chantil-dukart",
+ "name": "Chantil Dukart",
+ "presentation": "face",
+ "status": "listing",
+ "page": "artists/chantil-dukart/",
+ "style": "Jazz pianist and singer",
+ "face": "Chantil Dukart",
+ "material": "Standards, covers and originals",
+ "bucket_tags": [
+  "cocktail",
+  "patio",
+  "specialty"
+ ],
+ "config_tags": [
+  "solo",
+  "duo",
+  "trio",
+  "quintet"
+ ],
+ "configRangeLabel": "Solo to five-piece band",
+ "genre_tags": [
+  "jazz",
+  "soul"
+ ],
+ "vocals": "optional",
+ "from": "solo",
+ "img": "chantil-dukart-card.jpg",
+ "alt": "Chantil Dukart smiling at a grand piano in a black dress, a KUVO Jazz banner behind her.",
+ "video": "https://www.youtube-nocookie.com/embed/iklrXQw9KIA?rel=0",
+ "video_poster": "img/acts/chantil-dukart-live-poster.jpg",
+ "blurb": "Chantil Dukart is a Denver jazz pianist and singer with roots in the Tsimshian and Sugpiaq peoples of Alaska. She plays standards like Blue Skies and Honeysuckle Rose alongside Moondance, Natural Woman and her own songs, and she’s performed at the Kennedy Center and the Smithsonian Folklife Festival. You can book her solo at the piano, as a duo, with her jazz trio or with a five-piece band.",
+ "seo_title": "Chantil Dukart: jazz pianist and singer for Denver events",
+ "meta_description": "Chantil Dukart is a Denver jazz pianist and singer who plays standards, soul and her own songs. Book her solo, as a duo, as a trio or with a five-piece band.",
+ "identity": [
+  "Chantil grew up in Alaska and studied music at the University of Miami’s Frost School of Music. She’s played Miami hotels, an Australian cruise and venues in Anchorage, and now she makes her home in Denver. She also tours with the Julia Keefe Indigenous Big Band and with Pamyua, an Alaska Native group.",
+  "She’s shared the stage with Esperanza Spalding and Jill Scott, and she’s played the Kennedy Center and the Smithsonian Folklife Festival. Around Denver, you may have heard her at Dazzle, and she’s spent years as an on-air DJ at Jazz 93.5 in Colorado Springs.",
+  "Chantil writes her own songs, too, mixing jazz with pop and soul. Her records include <em>Lady and the Champ</em> and <em>Chantil and the Dukes of Art</em>, which she made with her trio. She’s happy to work a few of her songs in with the standards, or to stick with songs everybody knows."
+ ],
+ "ladder": [
+  {
+   "config": "solo",
+   "build": "Voice and piano",
+   "bestFor": "Just Chantil at the piano is a lovely choice for welcome drinks or a dinner, and it fits easily into a home."
+  },
+  {
+   "config": "duo",
+   "build": "Voice and piano, plus upright bass",
+   "bestFor": "Adding upright bass gives a cocktail hour or a patio party a fuller jazz sound."
+  },
+  {
+   "config": "trio",
+   "build": "Voice and piano, upright bass and drums, which is her trio, Chantil and the Dukes of Art",
+   "bestFor": "This is a classic jazz trio, and it’s the size to book when you’d like the music to be a little more of a show."
+  },
+  {
+   "config": "quintet",
+   "label": "Five-piece band",
+   "build": "The trio plus guitar and tenor saxophone",
+   "bestFor": "Book the five-piece when you want a bigger, brighter sound for a reception or a big party."
+  }
+ ],
+ "setlist": {
+  "note": "She plays every song here in her video clips. It’s just a sample, and we’ll put the setlist together with you.",
+  "songs": [
+   {
+    "title": "Imagination",
+    "artist": "Frank Sinatra"
+   },
+   {
+    "title": "Blue Skies",
+    "artist": "Ella Fitzgerald"
+   },
+   {
+    "title": "Honeysuckle Rose",
+    "artist": "Fats Waller"
+   },
+   {
+    "title": "Don’t Get Around Much Anymore",
+    "artist": "Duke Ellington"
+   },
+   {
+    "title": "Born to Be Blue",
+    "artist": "Mel Tormé"
+   },
+   {
+    "title": "Moondance",
+    "artist": "Van Morrison",
+    "album": "Moondance"
+   },
+   {
+    "title": "(You Make Me Feel Like) A Natural Woman",
+    "artist": "Aretha Franklin",
+    "album": "Lady Soul"
+   },
+   {
+    "title": "Sixteen Tons",
+    "artist": "Tennessee Ernie Ford"
+   },
+   {
+    "title": "Appreciate",
+    "artist": "Chantil Dukart"
+   },
+   {
+    "title": "FlutterBy",
+    "artist": "Chantil Dukart"
+   },
+   {
+    "title": "Situation",
+    "artist": "Chantil Dukart"
+   },
+   {
+    "title": "Remedy",
+    "artist": "Chantil Dukart"
+   },
+   {
+    "title": "Understated",
+    "artist": "Chantil Dukart",
+    "cover": false
+   },
+   {
+    "title": "Day To Day",
+    "artist": "Chantil Dukart"
+   },
+   {
+    "title": "The Silent Ones",
+    "artist": "Chantil Dukart"
+   }
+  ]
+ },
+ "occasion_tags": [
+  "weddings",
+  "corporate",
+  "private-parties"
+ ],
+ "entity": {
+  "type": "Person"
+ },
+ "honors": [
+  {
+   "kind": "honoree",
+   "title": "Native Launchpad Associate Artist",
+   "from": "Western Arts Alliance",
+   "year": "2023",
+   "link": "https://www.westarts.org/chantil-dukart"
+  },
+  {
+   "kind": "press",
+   "title": "Music feature, summer 2023 issue",
+   "from": "SAY Magazine",
+   "year": "2023",
+   "quote": "Dukart is a powerhouse on and off stage.",
+   "link": "https://issuu.com/saymag/docs/sm20230714_40"
+  },
+  {
+   "kind": "press",
+   "title": "Live review",
+   "from": "Outside the PhotoPit",
+   "quote": "Listening to Dukart reaffirms my love of Jazz."
+  },
+  {
+   "kind": "press",
+   "title": "Review of her album In The Beginning",
+   "from": "Artistic Manifesto",
+   "quote": "‘In The Beginning’ is well worth the listen."
+  },
+  {
+   "kind": "radio",
+   "title": "Played the KUVO Jazz Holiday Celebration with her trio",
+   "from": "KUVO Jazz, Denver",
+   "year": "2025"
+  },
+  {
+   "kind": "radio",
+   "title": "On-air DJ",
+   "from": "Jazz 93.5, Colorado Springs"
+  },
+  {
+   "kind": "stage",
+   "title": "The Kennedy Center, the Smithsonian Folklife Festival, the Kuumbwa Jazz Center and the Mary Lou Williams Jazz Festival"
+  },
+  {
+   "kind": "stage",
+   "title": "Dazzle in Denver, the Colorado Chautauqua in Boulder and the Ned Jazz & Wine Festival"
+  },
+  {
+   "kind": "stage",
+   "title": "A’awk Rock Indigenous Music Festival",
+   "year": "2024"
+  },
+  {
+   "kind": "with",
+   "title": "Has performed with Esperanza Spalding, Jill Scott, Nikki Glaspie and Nicholas Galanin"
+  },
+  {
+   "kind": "with",
+   "title": "Tours with the Julia Keefe Indigenous Big Band and Pamyua"
+  },
+  {
+   "kind": "release",
+   "title": "Albums including In The Beginning, Lady and the Champ and Chantil and the Dukes of Art"
+  },
+  {
+   "kind": "training",
+   "title": "Bachelor of Arts in music",
+   "from": "University of Miami Frost School of Music",
+   "year": "2014"
+  }
+ ]
+}
