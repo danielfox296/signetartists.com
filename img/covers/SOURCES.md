@@ -392,3 +392,13 @@ sheryl-crow--if-it-makes-you-happy.jpg — If It Makes You Happy — Sheryl Crow
 alanis-morissette--hand-in-my-pocket.jpg — Hand in My Pocket — Alanis Morissette — Jagged Little Pill (2015 Remaster) — deezer album 11443410
 jewel--you-were-meant-for-me.jpg — You Were Meant for Me — Jewel — Pieces Of You (25th Anniversary Edition) — deezer album 247044382
 sixpence-none-the-richer--kiss-me.jpg — Kiss Me — Sixpence None The Richer — Sixpence None The Richer — deezer album 14294456
+
+frank-sinatra--imagination.jpg — Imagination — Frank Sinatra — I Remember Tommy — deezer album 6954972
+ella-fitzgerald--blue-skies.jpg — Blue Skies — Ella Fitzgerald — G.I. Jukebox Jive, Vol. 1 — deezer album 331339817
+fats-waller--honeysuckle-rose.jpg — Honeysuckle Rose — Fats Waller — Ain't Misbehavin — deezer album 14167328
+duke-ellington--dont-get-around-much-anymore.jpg — Don’t Get Around Much Anymore — Duke Ellington — The Duke: The Columbia Years (1927-1962) — deezer album 1429663
+mel-torme--born-to-be-blue.jpg — Born to Be Blue — Mel Tormé — My Kind Of Music — deezer album 240186
+van-morrison--moondance.jpg — Moondance — Van Morrison — Moondance — deezer album 7014850
+tennessee-ernie-ford--sixteen-tons.jpg — Sixteen Tons — Tennessee Ernie Ford — Ramblin' Down Country Roads With Tennessee Ernie Ford — deezer album 699423581
+chantil-dukart--situation.jpg — Situation — Chantil Dukart — Lady and the Champ — itunes album 1647180934
+chantil-dukart--understated.jpg — Understated — Chantil Dukart — Lady and the Champ — itunes album 1647180934
