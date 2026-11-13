@@ -481,6 +481,12 @@
        "single": false,
        "images": [
         {
+         "src": "/img/acts/chantil-dukart-red-hat.jpg",
+         "alt": "Chantil Dukart in a red hat, singing into a microphone.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
          "src": "/img/acts/chantil-dukart-kuvo-holiday.jpg",
          "alt": "Chantil Dukart in a red lace dress at a grand piano, with upright bass and drums beside her on a stage hung with snowflakes.",
          "loading": "lazy",
@@ -513,12 +519,6 @@
         {
          "src": "/img/acts/chantil-dukart-green-stage.jpg",
          "alt": "Chantil Dukart singing at the front of a green-lit stage, with her band behind her.",
-         "loading": "lazy",
-         "decoding": "async"
-        },
-        {
-         "src": "/img/acts/chantil-dukart-red-hat.jpg",
-         "alt": "Chantil Dukart in a red hat, singing into a microphone.",
          "loading": "lazy",
          "decoding": "async"
         },
