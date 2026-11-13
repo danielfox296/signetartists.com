@@ -401,4 +401,20 @@ mel-torme--born-to-be-blue.jpg — Born to Be Blue — Mel Tormé — My Kind Of
 van-morrison--moondance.jpg — Moondance — Van Morrison — Moondance — deezer album 7014850
 tennessee-ernie-ford--sixteen-tons.jpg — Sixteen Tons — Tennessee Ernie Ford — Ramblin' Down Country Roads With Tennessee Ernie Ford — deezer album 699423581
 chantil-dukart--situation.jpg — Situation — Chantil Dukart — Lady and the Champ — itunes album 1647180934
-chantil-dukart--understated.jpg — Understated — Chantil Dukart — Lady and the Champ — itunes album 1647180934
+
+nat-king-cole--unforgettable.jpg — Unforgettable — Nat King Cole — The Extraordinary — deezer album 7786186
+nat-king-cole--the-very-thought-of-you.jpg — The Very Thought of You — Nat King Cole — The Very Thought Of You (Expanded Edition) — deezer album 308952
+ella-fitzgerald--someone-to-watch-over-me.jpg — Someone to Watch Over Me — Ella Fitzgerald — Someone To Watch Over Me — deezer album 48730532
+sarah-vaughan--misty.jpg — Misty — Sarah Vaughan — And Friends — deezer album 197940
+peggy-lee--fever.jpg — Fever — Peggy Lee — The Peggy Lee Songbook: There'll Be Another Spring — deezer album 132672
+bobby-darin--beyond-the-sea.jpg — Beyond the Sea — Bobby Darin — Sing & Swing with Bobby Darin — deezer album 340865
+louis-armstrong--what-a-wonderful-world.jpg — What a Wonderful World — Louis Armstrong — Louis Armstrong and His Friends — deezer album 314356837
+etta-james--at-last.jpg — At Last — Etta James — At Last! — deezer album 217268
+ray-charles--georgia-on-my-mind.jpg — Georgia on My Mind — Ray Charles — Ray Sings, Basie Swings — deezer album 931643371
+antonio-carlos-jobim--corcovado.jpg — Corcovado — Antonio Carlos Jobim — Pure Bossa Nova — deezer album 87717462
+bill-withers--just-the-two-of-us.jpg — Just the Two of Us — Bill Withers & Grover Washington, Jr. — Winelight — itunes album 321974938
+amy-winehouse--valerie.jpg — Valerie — Amy Winehouse — Back To Black (Deluxe Edition) — deezer album 6993387
+stealers-wheel--stuck-in-the-middle-with-you.jpg — Stuck in the Middle with You — Stealers Wheel — Stealers Wheel — deezer album 161781
+patsy-cline--crazy.jpg — Crazy — Patsy Cline — Patsy Cline Classics Vol 1 — deezer album 1282599
+frank-ocean--thinking-about-you.jpg — Thinking About You — Frank Ocean — channel ORANGE — deezer album 9908666
+leonard-cohen--hallelujah.jpg — Hallelujah — Leonard Cohen — The Essential Leonard Cohen — deezer album 1401919

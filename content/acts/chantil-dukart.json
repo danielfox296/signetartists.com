@@ -16,6 +16,7 @@
   "solo",
   "duo",
   "trio",
+  "quartet",
   "quintet"
  ],
  "configRangeLabel": "Solo to five-piece band",
@@ -29,12 +30,12 @@
  "alt": "Chantil Dukart smiling at a grand piano in a black dress, a KUVO Jazz banner behind her.",
  "video": "https://www.youtube-nocookie.com/embed/iklrXQw9KIA?rel=0",
  "video_poster": "img/acts/chantil-dukart-live-poster.jpg",
- "blurb": "Chantil Dukart is a Denver jazz pianist and singer with roots in the Tsimshian and Sugpiaq peoples of Alaska. She plays standards like Blue Skies and Honeysuckle Rose alongside Moondance, Natural Woman and her own songs, and she’s performed at the Kennedy Center and the Smithsonian Folklife Festival. You can book her solo at the piano, as a duo, with her jazz trio or with a five-piece band.",
+ "blurb": "Chantil Dukart is a Denver jazz pianist and singer with roots in the Tsimshian and Sugpiaq peoples of Alaska. Her song list runs from Nat King Cole and Ella Fitzgerald to jazz versions of Stevie Wonder, Elvis and Frank Ocean, and she’s performed at the Kennedy Center and the Smithsonian Folklife Festival. You can book her solo at the piano, as a duo, with her jazz trio or with a full band.",
  "seo_title": "Chantil Dukart: jazz pianist and singer for Denver events",
- "meta_description": "Chantil Dukart is a Denver jazz pianist and singer who plays standards, soul and her own songs. Book her solo, as a duo, as a trio or with a five-piece band.",
+ "meta_description": "Denver jazz pianist and singer Chantil Dukart plays Nat King Cole, Ella Fitzgerald and jazz takes on soul and pop, solo at the piano or with her band.",
  "identity": [
   "Chantil grew up in Alaska and studied music at the University of Miami’s Frost School of Music. She’s played Miami hotels, an Australian cruise and venues in Anchorage, and now she makes her home in Denver. She also tours with the Julia Keefe Indigenous Big Band and with Pamyua, an Alaska Native group.",
-  "She’s shared the stage with Esperanza Spalding and Jill Scott, and she’s played the Kennedy Center and the Smithsonian Folklife Festival. Around Denver, you may have heard her at Dazzle, and she’s spent years as an on-air DJ at Jazz 93.5 in Colorado Springs.",
+  "She’s shared the stage with Esperanza Spalding and Jill Scott, and she’s played the Kennedy Center and the Smithsonian Folklife Festival. Her grandmother’s Nat King Cole CDs back in Anchorage started her love of his music, and now she plays a tribute to him at Dazzle every year. She’s also spent years as an on-air DJ at Jazz 93.5 in Colorado Springs.",
   "Chantil writes her own songs, too, mixing jazz with pop and soul. Her records include <em>Lady and the Champ</em> and <em>Chantil and the Dukes of Art</em>, which she made with her trio. She’s happy to work a few of her songs in with the standards, or to stick with songs everybody knows."
  ],
  "ladder": [
@@ -54,6 +55,11 @@
    "bestFor": "This is a classic jazz trio, and it’s the size to book when you’d like the music to be a little more of a show."
   },
   {
+   "config": "quartet",
+   "build": "The trio plus tenor saxophone or trumpet",
+   "bestFor": "A horn out front gives the trio a classic swing sound, and it’s a lovely choice for a reception or a gala."
+  },
+  {
    "config": "quintet",
    "label": "Five-piece band",
    "build": "The trio plus guitar and tenor saxophone",
@@ -61,8 +67,20 @@
   }
  ],
  "setlist": {
-  "note": "She plays every song here in her video clips. It’s just a sample, and we’ll put the setlist together with you.",
+  "note": "Here’s a sample of the songs she plays, and she has plenty more. We’ll put the setlist together with you.",
   "songs": [
+   {
+    "title": "Unforgettable",
+    "artist": "Nat King Cole"
+   },
+   {
+    "title": "The Very Thought of You",
+    "artist": "Nat King Cole"
+   },
+   {
+    "title": "Don’t Get Around Much Anymore",
+    "artist": "Duke Ellington"
+   },
    {
     "title": "Imagination",
     "artist": "Frank Sinatra"
@@ -72,21 +90,62 @@
     "artist": "Ella Fitzgerald"
    },
    {
-    "title": "Honeysuckle Rose",
-    "artist": "Fats Waller"
-   },
-   {
-    "title": "Don’t Get Around Much Anymore",
-    "artist": "Duke Ellington"
+    "title": "Someone to Watch Over Me",
+    "artist": "Ella Fitzgerald"
    },
    {
     "title": "Born to Be Blue",
     "artist": "Mel Tormé"
    },
    {
-    "title": "Moondance",
-    "artist": "Van Morrison",
-    "album": "Moondance"
+    "title": "Misty",
+    "artist": "Sarah Vaughan"
+   },
+   {
+    "title": "Fever",
+    "artist": "Peggy Lee"
+   },
+   {
+    "title": "Beyond the Sea",
+    "artist": "Bobby Darin"
+   },
+   {
+    "title": "What a Wonderful World",
+    "artist": "Louis Armstrong"
+   },
+   {
+    "title": "At Last",
+    "artist": "Etta James",
+    "album": "At Last!"
+   },
+   {
+    "title": "Georgia on My Mind",
+    "artist": "Ray Charles"
+   },
+   {
+    "title": "Honeysuckle Rose",
+    "artist": "Fats Waller"
+   },
+   {
+    "title": "Corcovado",
+    "artist": "Antônio Carlos Jobim"
+   },
+   {
+    "title": "Let’s Stay Together",
+    "artist": "Al Green",
+    "album": "Let’s Stay Together"
+   },
+   {
+    "title": "Just the Two of Us",
+    "artist": "Bill Withers"
+   },
+   {
+    "title": "Signed, Sealed, Delivered I’m Yours",
+    "artist": "Stevie Wonder"
+   },
+   {
+    "title": "Valerie",
+    "artist": "Amy Winehouse"
    },
    {
     "title": "(You Make Me Feel Like) A Natural Woman",
@@ -94,36 +153,43 @@
     "album": "Lady Soul"
    },
    {
+    "title": "Moondance",
+    "artist": "Van Morrison",
+    "album": "Moondance"
+   },
+   {
+    "title": "Can’t Help Falling in Love",
+    "artist": "Elvis Presley",
+    "album": "Blue Hawaii"
+   },
+   {
+    "title": "Stuck in the Middle with You",
+    "artist": "Stealers Wheel"
+   },
+   {
+    "title": "Crazy",
+    "artist": "Patsy Cline"
+   },
+   {
     "title": "Sixteen Tons",
     "artist": "Tennessee Ernie Ford"
    },
    {
-    "title": "Appreciate",
-    "artist": "Chantil Dukart"
+    "title": "Thinking About You",
+    "artist": "Frank Ocean",
+    "album": "channel ORANGE"
    },
    {
-    "title": "FlutterBy",
-    "artist": "Chantil Dukart"
+    "title": "Shake It Off",
+    "artist": "Taylor Swift",
+    "album": "1989"
+   },
+   {
+    "title": "Hallelujah",
+    "artist": "Leonard Cohen"
    },
    {
     "title": "Situation",
-    "artist": "Chantil Dukart"
-   },
-   {
-    "title": "Remedy",
-    "artist": "Chantil Dukart"
-   },
-   {
-    "title": "Understated",
-    "artist": "Chantil Dukart",
-    "cover": false
-   },
-   {
-    "title": "Day To Day",
-    "artist": "Chantil Dukart"
-   },
-   {
-    "title": "The Silent Ones",
     "artist": "Chantil Dukart"
    }
   ]
@@ -185,7 +251,11 @@
   },
   {
    "kind": "stage",
-   "title": "A’awk Rock Indigenous Music Festival",
+   "title": "Laid Back Swing, her yearly Nat King Cole tribute at Dazzle in Denver"
+  },
+  {
+   "kind": "stage",
+   "title": "A’awk Rock Indigenous Music Festival in Alaska",
    "year": "2024"
   },
   {

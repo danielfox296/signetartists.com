@@ -3,7 +3,7 @@
   "props": {
    "path": "/artists/chantil-dukart/",
    "title": "Chantil Dukart: jazz pianist and singer for hire in Denver",
-   "description": "Chantil Dukart is a Denver jazz pianist and singer who plays standards, Moondance and her own songs. Book her solo, as a duo, a trio or a five-piece band.",
+   "description": "Chantil Dukart is a Denver jazz pianist and singer who plays Nat King Cole, Ella Fitzgerald and jazz takes on soul and pop, solo or with her trio or band.",
    "titleExact": true,
    "ogImage": "img/chantil-dukart-card.jpg",
    "ogImageAlt": "Chantil Dukart smiling at a grand piano in a black dress, a KUVO Jazz banner behind her.",
@@ -13,7 +13,7 @@
     "service": {
      "name": "Jazz pianist and singer",
      "serviceType": "Jazz standards, covers and originals on piano and vocals for weddings, private events and corporate events",
-     "description": "Chantil Dukart plays jazz standards, covers and her own songs on piano and vocals at weddings, private events and corporate events in Denver and across Colorado, solo, as a duo, with her trio or with a five-piece band.",
+     "description": "Chantil Dukart plays jazz standards, soul and pop covers and her own songs on piano and vocals at weddings, private events and corporate events in Denver and across Colorado, solo, as a duo, with her trio or with a band of four or five.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -28,6 +28,7 @@
       "solo",
       "duo",
       "trio",
+      "quartet",
       "quintet"
      ]
     },
@@ -45,6 +46,20 @@
       "description": "Chantil Dukart singing Van Morrison’s Moondance and playing piano.",
       "uploadDate": "2019-03-10",
       "duration": "PT4M1S"
+     },
+     {
+      "id": "GDOEITkWTeQ",
+      "name": "Chantil and the Dukes of Art highlight reel, live at Dazzle",
+      "description": "Audio highlights from a live set by Chantil Dukart’s jazz trio, Chantil and the Dukes of Art, at Dazzle in Denver.",
+      "uploadDate": "2024-10-08",
+      "duration": "PT6M49S"
+     },
+     {
+      "id": "kr2uQzu54DA",
+      "name": "Chantil and the Dukes of Art live at the A’awk Rock Indigenous Music Festival",
+      "description": "Chantil Dukart’s trio playing live at the A’awk Rock Indigenous Music Festival in Alaska.",
+      "uploadDate": "2024-09-02",
+      "duration": "PT0M56S"
      },
      {
       "id": "IPKsRtCq8a0",
@@ -180,7 +195,7 @@
        "titleTag": "h1",
        "titleClass": "h1 display",
        "face": "Standards, covers and originals, from solo piano to a five-piece band.",
-       "lede": "There’s something about a singer at the piano that makes an event feel special. Chantil Dukart is a Denver jazz pianist and singer with roots in the Tsimshian and Sugpiaq peoples of Alaska, and she plays standards like Blue Skies and Honeysuckle Rose alongside Moondance, Natural Woman and her own songs. You can book her solo at the piano, as a duo, with her jazz trio or with a five-piece band.",
+       "lede": "There’s something about a singer at the piano that makes an event feel special. Chantil Dukart is a Denver jazz pianist and singer with roots in the Tsimshian and Sugpiaq peoples of Alaska, and her song list runs from Nat King Cole and Ella Fitzgerald to jazz versions of Stevie Wonder, Elvis and Frank Ocean. You can book her solo at the piano, as a duo, with her jazz trio or with a full band.",
        "buttons": [
         {
          "label": "Check a date",
@@ -243,7 +258,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-107",
-       "html": "She’s shared the stage with Esperanza Spalding and Jill Scott, and she’s played the Kennedy Center and the Smithsonian Folklife Festival. Around Denver, you may have heard her at Dazzle, and she’s spent years as an on-air DJ at Jazz 93.5 in Colorado Springs.",
+       "html": "She’s shared the stage with Esperanza Spalding and Jill Scott, and she’s played the Kennedy Center and the Smithsonian Folklife Festival. Her grandmother’s Nat King Cole CDs back in Anchorage started her love of his music, and now she plays a tribute to him at Dazzle every year. She’s also spent years as an on-air DJ at Jazz 93.5 in Colorado Springs.",
        "cls": "prose"
       }
      },
@@ -291,7 +306,7 @@
        "rows": [
         {
          "term": "<a href=\"/weddings/\">Weddings</a>",
-         "text": "Book her solo at the piano for your <a href=\"/weddings/ceremony/\">ceremony</a> and <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>, then add bass and drums for dinner. She loves playing classy jazz versions of a couple’s favorite songs, and she’ll even turn a hip-hop song into classical piano. If you’d like, she can write a song for your partner, too."
+         "text": "Book her solo at the piano for your <a href=\"/weddings/ceremony/\">ceremony</a> and <a href=\"/weddings/cocktail-hour/\">cocktail hour</a>, then add bass and drums for dinner. Her song list has first-dance favorites like At Last and Can’t Help Falling in Love, and she loves playing classy jazz versions of a couple’s favorite songs. She’ll even turn a hip-hop song into classical piano, and if you’d like, she can write a song for your partner, too."
         },
         {
          "term": "<a href=\"/corporate/galas-and-awards/\">Galas and awards dinners</a>",
@@ -324,8 +339,8 @@
    "props": {
     "id": "Setlist-28",
     "eyebrow": "Song list",
-    "title": "Jazz standards and her own songs.",
-    "lede": "She plays every song here in her video clips. It’s just a sample, and we’ll put the setlist together with you.",
+    "title": "Jazz standards, soul and pop.",
+    "lede": "Here’s a sample of the songs she plays, and she has plenty more. We’ll put the setlist together with you.",
     "more": ""
    }
   },
@@ -358,6 +373,20 @@
          "title": "Chantil Dukart singing Moondance at the piano",
          "loading": "lazy",
          "caption": "<span class=\"clip-name\">Moondance</span>, the Van Morrison song"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/GDOEITkWTeQ?rel=0",
+         "title": "Chantil and the Dukes of Art highlight reel, live at Dazzle",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Highlight reel</span>, her trio live at Dazzle (audio)"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/kr2uQzu54DA?rel=0",
+         "title": "Chantil and the Dukes of Art live at the A’awk Rock Indigenous Music Festival",
+         "loading": "lazy",
+         "caption": "<span class=\"clip-name\">Live in Alaska</span>, her trio at the A’awk Rock Indigenous Music Festival"
         },
         {
          "kind": "iframe",
@@ -487,8 +516,26 @@
          "decoding": "async"
         },
         {
+         "src": "/img/acts/chantil-dukart-red-dress.jpg",
+         "alt": "Chantil Dukart in a red lace dress, smiling beside a grand piano on a stage hung with snowflakes.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
          "src": "/img/acts/chantil-dukart-kuvo-holiday.jpg",
          "alt": "Chantil Dukart in a red lace dress at a grand piano, with upright bass and drums beside her on a stage hung with snowflakes.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chantil-dukart-holiday-trio.jpg",
+         "alt": "Chantil Dukart in red lace at a grand piano, with an upright bass player beside her under red curtains and snowflakes.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chantil-dukart-green-dress.jpg",
+         "alt": "Chantil Dukart in a green dress, singing at a grand piano.",
          "loading": "lazy",
          "decoding": "async"
         },
@@ -501,6 +548,18 @@
         {
          "src": "/img/acts/chantil-dukart-grand-piano.jpg",
          "alt": "Chantil Dukart singing at a grand piano in warm stage light.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chantil-dukart-christmas-tree.jpg",
+         "alt": "Chantil Dukart smiling at an upright piano beside a lit Christmas tree.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/chantil-dukart-holiday-crowd.jpg",
+         "alt": "Chantil Dukart and her trio on a stage of red curtains and snowflakes, seen from the audience.",
          "loading": "lazy",
          "decoding": "async"
         },
