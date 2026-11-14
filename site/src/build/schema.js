@@ -267,10 +267,81 @@ export function makeSchema(m) {
     return null;
   };
 
+  // A venue page: the hotel or resort as a place, the live music we offer
+  // there as a service, the acts the page names, and its questions.
+  const venueGraph = (doc, canonical) => {
+    const p = doc.root.props;
+    const v = p.venue;
+    const kind = String(v.kind || "").toLowerCase();
+    const placeType = kind.includes("resort") ? "Resort" : kind.includes("hotel") ? "Hotel" : "EventVenue";
+    const place = {
+      "@type": placeType,
+      "@id": `${canonical}#venue`,
+      name: v.name,
+      description: v.area || "",
+      address: { "@type": "PostalAddress", addressRegion: "CO", addressCountry: "US" },
+      containedInPlace: { "@type": "Place", name: `${v.group}, Colorado` },
+    };
+    if (p.heroImage) place.image = `${SITE_URL}/${p.heroImage.replace(/^\/+/, "")}`;
+    const venue = (m.VENUES || []).find((x) => x.path === p.path);
+    const acts = venue ? [...venue.named].map((id) => m.ACT_BY_ID[id]).filter((a) => a && !a.hidden) : [];
+    const service = {
+      "@type": "Service",
+      "@id": `${canonical}#service`,
+      name: `Live music at ${v.name}`,
+      serviceType: "Live music for weddings and events",
+      description: p.description || "",
+      provider: { "@id": `${SITE_URL}/#business` },
+      areaServed: { "@id": place["@id"] },
+    };
+    const webpage = {
+      "@type": "WebPage",
+      "@id": canonical,
+      url: canonical,
+      name: p.title || brand.name,
+      isPartOf: { "@type": "WebSite", url: SITE_URL, name: brand.name },
+      about: { "@id": place["@id"] },
+      mainEntity: { "@id": service["@id"] },
+      primaryImageOfPage: { "@type": "ImageObject", url: place.image || ogFor(p) },
+    };
+    if (acts.length) webpage.mentions = acts.map((a) => ({ "@type": a.entity ? a.entity.type : "MusicGroup", name: a.name, url: `${SITE_URL}/${m.actUrl(a)}` }));
+    const graph = [localBusinessNode(), place, service, webpage];
+    const faqs = pageFaqs(doc);
+    if (faqs.length) graph.push(faqPage(faqs));
+    return { "@context": "https://schema.org", "@graph": graph };
+  };
+
+  // Every other page: the business and the page, typed by what it is.
+  const plainGraph = (doc, canonical) => {
+    const p = doc.root.props;
+    const type = { "/about/": "AboutPage", "/contact/": "ContactPage", "/blog/": "CollectionPage", "/venues/": "CollectionPage" }[p.path] || "WebPage";
+    const webpage = {
+      "@type": type,
+      "@id": canonical,
+      url: canonical,
+      name: p.title || brand.name,
+      description: p.description || "",
+      isPartOf: { "@type": "WebSite", url: SITE_URL, name: brand.name },
+      about: { "@id": `${SITE_URL}/#business` },
+      primaryImageOfPage: { "@type": "ImageObject", url: ogFor(p) },
+    };
+    if (p.path === "/venues/" && m.VENUES && m.VENUES.length) {
+      webpage.mainEntity = { "@type": "ItemList", itemListElement: m.VENUES.map((v, i) => ({ "@type": "ListItem", position: i + 1, name: v.name, url: `${SITE_URL}${v.path}` })) };
+    }
+    const graph = [localBusinessNode(), webpage];
+    if (p.path === "/about/") graph.push(websiteNode());
+    const faqs = pageFaqs(doc);
+    if (faqs.length) graph.push(faqPage(faqs));
+    return { "@context": "https://schema.org", "@graph": graph };
+  };
+
   const pageSchema = (doc, canonical, dates) => {
     if (doc.root.props.schema || doc.root.props.schemaArticle === "on") return schemaTag(pageGraph(doc, canonical, dates));
     const k = kindSchema(doc);
-    return k ? schemaTag(k) : "";
+    if (k) return schemaTag(k);
+    if ((doc.root.props.robots || "").startsWith("noindex")) return "";
+    if (doc.root.props.venue) return schemaTag(venueGraph(doc, canonical));
+    return schemaTag(plainGraph(doc, canonical));
   };
 
   const breadcrumbSchema = (trail) =>

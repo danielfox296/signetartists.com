@@ -1,0 +1,272 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/retreats/boulder/",
+   "heroImage": "img/acts/emily-barnes-stage.jpg",
+   "title": "Live music for a corporate offsite in Boulder | Signet Artists",
+   "titleExact": true,
+   "description": "Live music for a company offsite or executive retreat in Boulder, at St Julien or Hotel Boulderado, from a jazz duo at dinner to a band on the last night.",
+   "nav": "corporate",
+   "breadcrumb": "Boulder",
+   "indexLabel": "Boulder",
+   "schema": {
+    "service": {
+     "name": "Corporate offsite entertainment in Boulder",
+     "serviceType": "Live music for corporate offsites and executive retreats",
+     "description": "We bring live music to company offsites and executive retreats in Boulder, from a duo at the team dinner to a band on the closing night.",
+     "areaServed": [
+      "Boulder"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio",
+      "band"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-2",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Boulder, Colorado",
+       "slab": true,
+       "title": "Live music for a corporate offsite in Boulder.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Boulder gives an offsite the mountains without the drive up I-70, and the hotels downtown are a block from Pearl Street. We can play the welcome dinner, the evening reception or the closing night, with anything from one musician to a full band.",
+       "headingText": [
+        {
+         "html": "Learn more about how we plan music for <a href=\"/corporate/retreats/\">corporate retreats</a>. If you’re bringing people in from out of state, check out our <a href=\"/blog/company-offsite-ideas-colorado-remote-teams/\">company offsite ideas for remote teams</a>, too."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-3",
+       "eyebrow": "Who plays",
+       "title": "Acts for a Boulder offsite",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-4",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "americana-band",
+         "kicker": "Colorado favorites"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "The team dinner"
+        },
+        {
+         "act": "emily-barnes",
+         "kicker": "A songwriter at dinner"
+        },
+        {
+         "act": "soul-rnb",
+         "kicker": "The closing night"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The hotels",
+       "title": "Offsite venues in Boulder",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "St Julien Hotel & Spa",
+         "text": "A block off Pearl Street, with a lawn and terraces that look up at the Flatirons. The Xanadu Ballroom holds dinners of up to 300, and Jill’s, the hotel’s restaurant, takes private events of up to 140. Boulder limits amplified sound outdoors late at night, so a party on the lawn moves inside for the loud part. Learn more about live music at <a href=\"/venues/st-julien-boulder/\">St Julien</a>."
+        },
+        {
+         "term": "Hotel Boulderado",
+         "text": "Boulder’s historic hotel opened in 1909, and its Mezzanine sits under a stained-glass ceiling, for dinners of up to 80. Columbine-Balsam holds dinners of up to 120, and the ballroom has a low ceiling, so we size the sound to suit it. Learn more about live music at <a href=\"/venues/hotel-boulderado/\">Hotel Boulderado</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Having dinner at a restaurant on Pearl Street, or a session somewhere else in town? We can play there, too.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Video Clips",
+       "title": "Hear it",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s one of our jazz trios playing Sunny, and Emily Barnes playing her song Say It Again."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-11",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/FchP_e3GIWk?rel=0",
+         "title": "Emily Barnes playing her song Say It Again",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "corporate",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-16",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Questions about a Boulder offsite",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Planning a retreat further up? Learn more about <a href=\"/corporate/retreats/vail/\">Vail</a> and <a href=\"/corporate/retreats/aspen/\">Aspen</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-15",
+       "items": [
+        {
+         "q": "Can the same act play the dinner and the closing night?",
+         "a": "Yes, if you’d like one act for the whole offsite. A jazz duo can play dinner and add a third musician for a livelier reception, and we’ll plan each night with you."
+        },
+        {
+         "q": "Can you help with the quieter parts of the offsite?",
+         "a": "Yes. <a href=\"/artists/firstwater/\">Firstwater</a> is a sound bath for the whole group, and it’s a lovely way to start a morning session."
+        },
+        {
+         "q": "How long is the drive to Boulder for the band?",
+         "a": "It’s a short drive up US 36 from Denver, so there’s no mountain highway to plan around."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-17",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the offsite dates and the hotel, and we’ll suggest the music for each night.",
+       "lede": "Let us know roughly how many people are coming, too."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

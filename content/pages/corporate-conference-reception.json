@@ -1,0 +1,274 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/conference-reception/",
+   "heroImage": "img/acts/little-moses-jones-lineup.jpg",
+   "title": "Live music for a conference reception in Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Live music for a conference reception in downtown Denver, from a jazz duo in the foyer to an Americana band for attendees flying in.",
+   "nav": "corporate",
+   "breadcrumb": "Conference receptions",
+   "indexLabel": "Conference receptions",
+   "schema": {
+    "service": {
+     "name": "Conference reception entertainment in downtown Denver",
+     "serviceType": "Live music for conference and convention receptions",
+     "description": "We book live music for conference receptions, sponsor parties and closing nights at downtown Denver hotels near the Colorado Convention Center.",
+     "areaServed": [
+      "Denver",
+      "Aurora"
+     ],
+     "configs": [
+      "duo",
+      "trio",
+      "quartet",
+      "band"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-2",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Conferences & conventions",
+       "slab": true,
+       "title": "Live music for a conference reception in downtown Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "After a long day of sessions, the evening reception is where your attendees finally get to talk to each other. A jazz duo in the foyer or an Americana band on a rooftop terrace is an easy way to make that reception feel like Denver.",
+       "headingText": [
+        {
+         "html": "We can play a welcome reception, a sponsor party, an awards dinner or the closing night, at the hotels around the Colorado Convention Center and anywhere else downtown. Learn more about our <a href=\"/corporate/\">corporate entertainment</a>."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-3",
+       "eyebrow": "Who plays",
+       "title": "Acts for a conference reception",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-4",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "jazz-duo",
+         "kicker": "Jazz standards"
+        },
+        {
+         "act": "americana-band",
+         "kicker": "Colorado favorites"
+        },
+        {
+         "act": "dirty-flamenco",
+         "kicker": "Flamenco guitar"
+        },
+        {
+         "act": "little-moses-jones",
+         "kicker": "The closing party"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-8",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The hotels",
+       "title": "Conference reception venues in downtown Denver",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Many conference receptions in Denver happen at the hotels near the convention center, and each one has its own way in for the band."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "Hyatt Regency Denver",
+         "text": "It’s connected to the Colorado Convention Center and has the largest hotel ballroom in the state, plus a rooftop terrace with skyline views for up to 300. When a big convention is in town, we build in extra time to get the act in. Learn more about live music at <a href=\"/venues/hyatt-regency-denver/\">Hyatt Regency Denver</a>."
+        },
+        {
+         "term": "Grand Hyatt Denver",
+         "text": "The Pinnacle Club on the 38th floor holds receptions of up to about 350 with views of the mountains, and the Colorado Ballroom holds up to 1,000. Learn more about live music at <a href=\"/venues/grand-hyatt-denver/\">Grand Hyatt Denver</a>."
+        },
+        {
+         "term": "Hilton Denver City Center",
+         "text": "It’s a short walk from the convention center, with three ballrooms. The Penrose Ballroom holds receptions of up to 240, and the Colorado Ballroom up to about 1,200. Learn more about live music at <a href=\"/venues/hilton-denver-city-center/\">Hilton Denver City Center</a>."
+        },
+        {
+         "term": "Gaylord Rockies",
+         "text": "Out by Denver International Airport, it’s the biggest resort in Colorado for events, with ballrooms for thousands and lawns that look west to the mountains for an outdoor reception. Learn more about live music at <a href=\"/venues/gaylord-rockies/\">Gaylord Rockies</a>."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-9",
+       "eyebrow": "Video Clips",
+       "title": "Hear it",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s our jazz duo playing Autumn Leaves, and Dirty Flamenco playing Entre dos Aguas on three Spanish guitars at a corporate event."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-10",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo playing Autumn Leaves on guitar and upright bass",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/4DMf0D47_N0?rel=0",
+         "title": "Three Spanish guitars playing Entre dos Aguas at a corporate event",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "corporate",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-15",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-12",
+       "html": "Conference reception questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Planning with the hotel’s events team? Share our <a href=\"/planners/technical/\">technical page</a> and our <a href=\"/planners/run-of-show/\">run of show page</a> with them.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-14",
+       "items": [
+        {
+         "q": "Can the music stop for a welcome speech?",
+         "a": "Yes. Send us the run of show, and the act will stop for remarks and pick back up when the speaker is done. We can bring a microphone for the speaker, too."
+        },
+        {
+         "q": "Can you be set up as a vendor for our company or association?",
+         "a": "Yes. Send us your vendor forms, and we can work from a purchase order if that’s how your finance team pays."
+        },
+        {
+         "q": "Can we have music on more than one night of the conference?",
+         "a": "Yes. Tell us each night you’d like music, and we can plan them together, with the same act or a different one each night."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-16",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the conference dates and the hotel, and we’ll suggest an act.",
+       "lede": "Let us know roughly how many attendees are coming to the reception, too."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

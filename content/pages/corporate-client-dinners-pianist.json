@@ -1,0 +1,265 @@
+{
+ "root": {
+  "props": {
+   "path": "/corporate/client-dinners/pianist/",
+   "heroImage": "img/acts/chantil-dukart-grand-piano.jpg",
+   "title": "Hire a pianist for a dinner in Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Hire a jazz pianist for a client dinner or a private dinner in Denver, playing standards your guests can talk over, solo or with a singer.",
+   "nav": "corporate",
+   "breadcrumb": "A pianist for dinner",
+   "indexLabel": "A pianist for a dinner",
+   "schema": {
+    "service": {
+     "name": "Pianist for a dinner in Denver",
+     "serviceType": "Live piano for client dinners and private dinners",
+     "description": "We book jazz pianists, with or without a singer, for client dinners, board dinners, club dinners and dinners at home in Denver.",
+     "areaServed": [
+      "Denver"
+     ],
+     "configs": [
+      "solo",
+      "duo",
+      "trio"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-2",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Client dinners & private dinners",
+       "slab": true,
+       "title": "Hire a pianist for a dinner in Denver.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You’ve booked the table and settled the menu, and now you’re wondering if the evening could use a little something more. A pianist is a lovely answer to that. One player at the keys can carry a whole dinner with jazz standards and songs everybody knows, and it stays soft enough for easy conversation.",
+       "headingText": [
+        {
+         "html": "It’s a great choice for a client dinner, a board dinner, a dinner at a private club or a birthday dinner at home. Learn more about <a href=\"/corporate/client-dinners/\">live music for client dinners</a>, including our jazz duo and trio."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-3",
+       "eyebrow": "Who plays",
+       "title": "Pianists for a Denver dinner",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-4",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "chantil-dukart",
+         "kicker": "A singer at the piano"
+        },
+        {
+         "act": "solo-piano",
+         "kicker": "Standards and covers"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Solo or with a singer",
+       "title": "Which pianist is right for your dinner?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "A pianist on their own",
+         "text": "Our solo pianist plays standards and covers through cocktails and dinner, at a level where nobody has to lean in to hear the person next to them. It’s the simplest way to make a dinner feel thoughtfully planned, and we can add a singer if you’d like the words."
+        },
+        {
+         "term": "A pianist who sings",
+         "text": "Chantil Dukart is a Denver jazz pianist and singer who has played the Kennedy Center. Her songs run from Nat King Cole and Ella Fitzgerald to jazz takes on Stevie Wonder, and she’s an amazing fit for a dinner where you’d like the music to be part of the evening."
+        },
+        {
+         "term": "A pianist with a band",
+         "text": "For a bigger dinner or a wider space, Chantil can bring a bassist, or her trio with drums, and still keep the music under the conversation."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "If the venue has a piano, the pianist is happy to play it. If it doesn’t, we’ll bring a stage piano and the sound to go with it.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Hear it",
+       "title": "Jazz piano for a dinner",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Chantil Dukart singing Moondance at the piano."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-11",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/lz478-a2r4M?rel=0",
+         "title": "Chantil Dukart singing Moondance at the piano",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "corporate",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-16",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Questions about hiring a pianist for dinner",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "Need details for the venue? Learn more on our <a href=\"/planners/technical/\">technical page</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-15",
+       "items": [
+        {
+         "q": "Does the venue need a piano?",
+         "a": "No. A tuned piano at the venue is lovely, and if there isn’t one, we’ll bring a stage piano."
+        },
+        {
+         "q": "Can the pianist play a song for a toast or a birthday?",
+         "a": "Yes. Just tell us the song and where it goes in the evening, and the pianist will have it ready."
+        },
+        {
+         "q": "How loud is a pianist at dinner?",
+         "a": "About as loud as the conversation at the table, and the pianist can bring it up or down whenever you’d like."
+        },
+        {
+         "q": "How much does a pianist cost for a dinner in Denver?",
+         "a": "It depends on how long the music runs and whether you’d like a singer. Our <a href=\"/pricing/\">pricing page</a> gives a general view of what live music costs in Denver, and when you send the date, we’ll send you a price."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-17",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about the dinner, and we’ll suggest the right pianist.",
+       "lede": "Send the date, the venue and roughly how many guests, and we’ll write back with a recommendation and a price."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

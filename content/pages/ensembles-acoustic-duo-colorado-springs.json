@@ -1,0 +1,276 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/acoustic-duo/colorado-springs/",
+   "heroImage": "img/acts/roma-ransom-tintype.jpg",
+   "title": "Acoustic duos and trios in Colorado Springs | Signet Artists",
+   "titleExact": true,
+   "description": "Hire an acoustic duo or trio in Colorado Springs: voice and guitar, flamenco guitar, a violin and guitar duo, or jazz on guitar and upright bass.",
+   "nav": "music",
+   "breadcrumb": "Acoustic duos in Colorado Springs",
+   "indexLabel": "Acoustic duos in Colorado Springs",
+   "schema": {
+    "service": {
+     "name": "Acoustic duos and trios in Colorado Springs",
+     "serviceType": "Acoustic duo and trio for weddings, parties and corporate events",
+     "description": "We book acoustic duos and trios in Colorado Springs, from voice and guitar to flamenco, a violin and guitar duo and jazz on guitar and upright bass.",
+     "areaServed": [
+      "Colorado Springs"
+     ],
+     "configs": [
+      "duo",
+      "trio"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-2",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Colorado Springs",
+       "slab": true,
+       "title": "Acoustic duos and trios in Colorado Springs.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "A pair of guitars is one of the easiest ways to bring live music to an event in The Springs. A duo fits on a patio, in a hotel lobby or beside the dinner tables, and two musicians can play anything from flamenco to the songs everybody knows.",
+       "headingText": [
+        {
+         "html": "Here are the duos and trios we’d suggest for Colorado Springs, including a married violin and guitar duo who live there. Planning a bigger party? Learn more about <a href=\"/private-parties/colorado-springs/\">private parties in Colorado Springs</a>."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-3",
+       "eyebrow": "Who plays",
+       "title": "Duos and trios for Colorado Springs",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-4",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "roma-ransom",
+         "kicker": "Violin and guitar"
+        },
+        {
+         "act": "acoustic-duo",
+         "kicker": "Voice and guitar"
+        },
+        {
+         "act": "dirty-flamenco",
+         "kicker": "Flamenco guitar"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Jazz on guitar and bass"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Four kinds of duo",
+       "title": "Which acoustic duo is right for your Colorado Springs event?",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "Roma Ransom",
+         "text": "Grace Easley and Gordon Lewis are a married violin and guitar duo from Colorado Springs. They play Romanian and Eastern European folk tunes, old-time ballads and a little swing, and both trained as classical musicians, so they’re a lovely choice for a ceremony or a dinner."
+        },
+        {
+         "term": "An acoustic duo or trio",
+         "text": "This is the one to book when you’d like songs everybody knows. It’s voice and guitar, or guitar and upright bass if you’d rather keep it instrumental, and a third musician makes it a trio when you want a fuller sound."
+        },
+        {
+         "term": "Dirty Flamenco",
+         "text": "Dirty Flamenco plays real flamenco and rumba on guitar, and it’s a great choice for a dinner party, a garden party or a company dinner with some flair."
+        },
+        {
+         "term": "A jazz duo",
+         "text": "Jazz standards on guitar and upright bass are a sophisticated pick for a cocktail hour or a client dinner, and they’re easy to talk over."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Planning your event at one of the resorts? Learn more about live music at <a href=\"/venues/broadmoor/\">the Broadmoor</a>, <a href=\"/venues/cheyenne-mountain-resort/\">Cheyenne Mountain Resort</a> and <a href=\"/venues/garden-of-the-gods-resort/\">Garden of the Gods Resort</a>.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-12",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Video Clips",
+       "title": "Hear the duos",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Roma Ransom playing their song Smoke Rings, Dirty Flamenco playing tangos, and our jazz duo playing Autumn Leaves."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-11",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIkbkIMVHBE?rel=0",
+         "title": "Roma Ransom playing their song Smoke Rings",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/wEhN63qX0RA?rel=0",
+         "title": "Dirty Flamenco playing tangos on flamenco guitar",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "A jazz duo playing Autumn Leaves on guitar and upright bass",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "party,wedding",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-15",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-13",
+       "html": "Colorado Springs acoustic duo questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-14",
+       "items": [
+        {
+         "q": "Can an acoustic duo play outdoors in Colorado Springs?",
+         "a": "Yes. The duo needs a level spot with shade or cover and power nearby, and we’ll plan an indoor backup with you in case the weather turns."
+        },
+        {
+         "q": "How much space does an acoustic duo need?",
+         "a": "Not much, about 8 by 6 feet. That’s why a duo works so well on a patio or in a lobby where a band wouldn’t fit."
+        },
+        {
+         "q": "Can the same duo play the ceremony and the reception?",
+         "a": "Yes. Roma Ransom and the acoustic duo can both play a ceremony and then keep going through cocktails and dinner, so just tell us about both parts when you reach out."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-16",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and your Colorado Springs venue, and we’ll suggest a duo.",
+       "lede": "Let us know roughly how many guests, too, and whether you’d like songs with vocals or something instrumental."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

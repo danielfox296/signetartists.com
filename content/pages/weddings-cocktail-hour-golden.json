@@ -1,0 +1,267 @@
+{
+ "root": {
+  "props": {
+   "path": "/weddings/cocktail-hour/golden/",
+   "heroImage": "img/acts/tejas-fire-escape.jpg",
+   "title": "Wedding cocktail hour music in Golden | Signet Artists",
+   "titleExact": true,
+   "description": "Live music for a wedding cocktail hour in Golden, Colorado: an acoustic duo or a singer with a guitar, in a garden, a courtyard or by the pool.",
+   "nav": "weddings",
+   "breadcrumb": "Golden",
+   "indexLabel": "Cocktail hour in Golden",
+   "schema": {
+    "service": {
+     "name": "Wedding cocktail hour music in Golden",
+     "serviceType": "Live music for wedding cocktail hours in Golden, Colorado",
+     "description": "We book acoustic duos, singers with a guitar and jazz duos for wedding cocktail hours in Golden, Colorado.",
+     "areaServed": [
+      "Golden"
+     ],
+     "configs": [
+      "solo",
+      "duo"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-2",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Golden, Colorado",
+       "slab": true,
+       "title": "Live music for a wedding cocktail hour in Golden.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Golden is just far enough from Denver that a wedding there feels like a getaway, with Lookout Mountain on one side of town and Clear Creek running through the middle. An acoustic duo is a lovely way to fill the hour between the ceremony and dinner, and it’s easy to talk over.",
+       "headingText": [
+        {
+         "html": "Planning the rest of the day? Learn more about <a href=\"/weddings/\">wedding music</a>, and for ideas on what to play, check out our <a href=\"/weddings/cocktail-hour/\">cocktail hour page</a>."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-3",
+       "eyebrow": "Who plays",
+       "title": "Acts for a Golden cocktail hour",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-4",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "acoustic-duo",
+         "kicker": "Voice and guitar"
+        },
+        {
+         "act": "tejas-singh",
+         "kicker": "A singer-songwriter"
+        },
+        {
+         "act": "emily-barnes",
+         "kicker": "Folk songs"
+        },
+        {
+         "act": "jazz-duo",
+         "kicker": "Jazz standards"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-8",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "The venues",
+       "title": "Golden wedding venues for a cocktail hour",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A duo only needs a small level spot with power nearby, so it fits in a garden, a courtyard or beside a pool."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-7",
+       "rows": [
+        {
+         "term": "Boettcher Mansion",
+         "text": "The mansion dates to 1917 and sits up on Lookout Mountain, and its garden is a lovely spot for cocktails. We’ll plan an indoor spot for the duo, too, in case the weather turns."
+        },
+        {
+         "term": "The Golden Hotel",
+         "text": "Right downtown on Clear Creek, the hotel’s Creekside Courtyard is a lovely spot for an outdoor ceremony and the cocktail hour that follows."
+        },
+        {
+         "term": "Table Mountain Inn",
+         "text": "On Washington Avenue in the middle of downtown Golden, with event space inside and a pool outside."
+        }
+       ],
+       "cls": "def-list def-list--stack"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-11",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-9",
+       "eyebrow": "Video Clips",
+       "title": "Hear it",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here’s Tejas Singh playing Thirty Days at a cocktail hour, and one of our singers and guitarists playing Mary Jane’s Last Dance."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-10",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/NI0kunpQQiA?rel=0",
+         "title": "Tejas Singh playing Thirty Days at a wedding cocktail hour",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/nzVtbiEF5ak?rel=0",
+         "title": "A singer and guitarist playing Mary Jane’s Last Dance",
+         "loading": "lazy"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "cocktail,wedding",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-15",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-12",
+       "html": "Golden cocktail hour questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "Getting married in Denver instead? Learn more about <a href=\"/weddings/cocktail-hour/denver/\">cocktail hour music in Denver</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-14",
+       "items": [
+        {
+         "q": "Can the duo play outdoors in Golden?",
+         "a": "Yes. It needs a level spot with cover and power within reach. Evenings at the foot of the mountains can cool off fast, so we’ll plan where the music goes if everyone moves inside."
+        },
+        {
+         "q": "Can the same musicians play the ceremony?",
+         "a": "Yes. A duo or a singer with a guitar can play the processional and then move to the cocktail hour."
+        },
+        {
+         "q": "Is a duo enough for a cocktail hour in Golden?",
+         "a": "For most cocktail hours, yes. If your guests will be spread across a big garden, a third musician helps the music reach everyone."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-16",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Send us the date and your Golden venue, and we’ll suggest a duo for the cocktail hour.",
+       "lede": "Let us know roughly how many guests are coming, too."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
