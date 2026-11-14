@@ -1,217 +1,217 @@
 {
-  "root": {
-    "props": {
-      "title": "Hispanic Heritage Month ideas for the office: a mariachi band",
-      "seo_title": "Hispanic Heritage Month ideas for the office in Denver",
-      "slug": "hispanic-heritage-month-ideas-for-the-office",
-      "eyebrow": "CORPORATE",
-      "parent": "corporate/",
-      "dek": "Hispanic Heritage Month runs from September 15 to October 15. We’d put a mariachi band and a taco truck in the middle of a workday. Here is when it fits and what to pair it with.",
-      "date": "2026-11-14",
-      "author": {
-        "name": "Signet Artists"
-      },
-      "meta_description": "Hispanic Heritage Month runs September 15 to October 15. A mariachi band and a taco truck during the workday: when it fits and what to pair it with.",
-      "llms_description": "This post gives a company planner in Denver a plan for Hispanic Heritage Month, which runs from September 15 to October 15 each year: a mariachi band during the workday, paired with Mexican food from a taco truck. It covers the dates and why the month starts on September 15, what Signet Artists’ mariachi band is (usually six or seven musicians in charro suits with violins, trumpet, vihuela, guitar and guitarrón, playing rancheras, boleros, huapangos and cumbias), when in the workday it fits (lunch, an afternoon reception or the end of the day), what to pair it with, and mariachi’s place in Colorado, where schools teach it and MSU Denver offers a degree in it.",
-      "hero": {
-        "src": "/img/acts/mariachi-band-pavilion.jpg",
-        "alt": "Seven mariachi musicians in plum charro suits standing in an open pavilion with their violins, trumpets, guitarrón and vihuela."
-      }
-    }
+ "root": {
+  "props": {
+   "title": "Hispanic Heritage Month ideas for the office: a mariachi band",
+   "seo_title": "Hispanic Heritage Month ideas for the office in Denver",
+   "slug": "hispanic-heritage-month-ideas-for-the-office",
+   "eyebrow": "CORPORATE",
+   "parent": "corporate/",
+   "dek": "Hispanic Heritage Month runs from September 15 to October 15. We’d put a mariachi band and a taco truck in the middle of a workday. Here is when it fits and what to pair it with.",
+   "date": "2026-11-14",
+   "author": {
+    "name": "Signet Artists"
+   },
+   "meta_description": "Hispanic Heritage Month runs September 15 to October 15. A mariachi band and a taco truck during the workday: when it fits and what to pair it with.",
+   "llms_description": "This post gives a company planner in Denver a plan for Hispanic Heritage Month, which runs from September 15 to October 15 each year: a mariachi band during the workday, paired with Mexican food from a taco truck. It covers the dates and why the month starts on September 15, what Signet Artists’ mariachi band is (usually six or seven musicians in charro suits with violins, trumpet, vihuela, guitar and guitarrón, playing rancheras, boleros, huapangos and cumbias), when in the workday it fits (lunch, an afternoon reception or the end of the day), what to pair it with, and mariachi’s place in Colorado, where schools teach it and MSU Denver offers a degree in it.",
+   "hero": {
+    "src": "/img/acts/mariachi-band-pavilion.jpg",
+    "alt": "Seven mariachi musicians in plum charro suits standing in an open pavilion with their violins, trumpets, guitarrón and vihuela."
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-1",
+    "html": "<p>Someone at the company has been asked to plan something for Hispanic Heritage Month. There&rsquo;s a date range, a budget and a blank page.</p>\n<p>We&rsquo;d fill it with a <a href=\"https://signetartists.com/ensembles/mariachi-band/\">mariachi band</a> during the workday and Mexican food to go with it.</p>"
+   }
   },
-  "content": [
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-1",
-        "html": "<p>Someone at the company has been asked to plan something for Hispanic Heritage Month. There&rsquo;s a date range, a budget and a blank page.</p>\n<p>We&rsquo;d fill it with a <a href=\"https://signetartists.com/ensembles/mariachi-band/\">mariachi band</a> during the workday and Mexican food to go with it.</p>"
-      }
-    },
-    {
-      "type": "Subhead",
-      "props": {
-        "id": "Subhead-2",
-        "text": "When is Hispanic Heritage Month?"
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-3",
-        "html": "<p>September 15 to October 15, every year. It began as a week in 1968 and became a month in 1988. September 15 is the independence day of five Central American countries, and Mexico&rsquo;s follows on September 16. In 2027, September 16 is a Thursday.</p>"
-      }
-    },
-    {
-      "type": "Subhead",
-      "props": {
-        "id": "Subhead-4",
-        "text": "Why a mariachi band?"
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-5",
-        "html": "<p>Our favorite kind of event takes people somewhere else. Sounds people don&rsquo;t hear every day make an event more memorable, especially alongside the food, the decor and a fully formed theme.</p>\n<p>A mariachi needs no build-up. The band walks in dressed, the trumpets start, and by the end of the first song an ordinary Thursday is an occasion.</p>\n<p>Our <a href=\"https://signetartists.com/ensembles/mariachi-band/\">mariachi band</a> is usually six or seven musicians in charro suits, with violins, trumpet, vihuela, guitar and guitarrón, and several of them sing. They play rancheras, boleros, huapangos and cumbias.</p>"
-      }
-    },
-    {
-      "type": "Subhead",
-      "props": {
-        "id": "Subhead-6",
-        "text": "When in the day does it fit?"
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-7",
-        "html": "<p>The workday is best, and any part of it.</p>"
-      }
-    },
-    {
-      "type": "ComparisonTable",
-      "props": {
-        "id": "ComparisonTable-8",
-        "title": "A mariachi band through the workday",
-        "columns": [
-          {
-            "text": "Part of the day"
-          },
-          {
-            "text": "What the band plays"
-          }
-        ],
-        "rows": [
-          {
-            "cells": [
-              {
-                "text": "Lunch"
-              },
-              {
-                "text": "Gentle boleros while people eat"
-              }
-            ]
-          },
-          {
-            "cells": [
-              {
-                "text": "An afternoon reception"
-              },
-              {
-                "text": "Rancheras and huapangos, with the band as the center of attention"
-              }
-            ]
-          },
-          {
-            "cells": [
-              {
-                "text": "The end of the day"
-              },
-              {
-                "text": "Cumbias, for the people who want to dance"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-9",
-        "html": "<p>The band plays outdoors often, so a courtyard or the lot beside the truck works as well as a lobby or a cafeteria.</p>"
-      }
-    },
-    {
-      "type": "Subhead",
-      "props": {
-        "id": "Subhead-10",
-        "text": "What should you pair it with?"
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-11",
-        "html": "<p>Mexican food, and the real thing. A taco truck parked outside is the easy answer.</p>"
-      }
-    },
-    {
-      "type": "Subhead",
-      "props": {
-        "id": "Subhead-12",
-        "text": "Is mariachi a Colorado tradition?"
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-13",
-        "html": "<p>It is now. More Colorado schools teach mariachi alongside jazz band and orchestra, and Metropolitan State University of Denver offers the state&rsquo;s first degree in it.</p>"
-      }
-    },
-    {
-      "type": "Subhead",
-      "props": {
-        "id": "Subhead-14",
-        "text": "What should you tell us?"
-      }
-    },
-    {
-      "type": "Prose",
-      "props": {
-        "id": "Prose-15",
-        "html": "<p>The date, the headcount, the part of the day, and whether it&rsquo;s indoors or out. Our <a href=\"https://signetartists.com/corporate/\">corporate page</a> covers how we work with a company, and <a href=\"https://signetartists.com/blog/how-to-make-a-corporate-event-sound-like-colorado/\">How to make a corporate event sound like Colorado</a> covers the rest of the state&rsquo;s music.</p>"
-      }
-    },
-    {
-      "type": "References",
-      "props": {
-        "id": "References-16",
-        "heading": "Sources",
-        "items": [
-          {
-            "text": "Library of Congress Blogs, Celebrating Hispanic Heritage Month: Why Sept. 15?",
-            "url": "https://blogs.loc.gov/loc/2013/09/celebrating-hispanic-heritage-month-why-sept-15/"
-          },
-          {
-            "text": "KUNC, For one music teacher, mariachi creates a connection to culture, September 29, 2023.",
-            "url": "https://www.kunc.org/podcast/inthenoco/2023-09-29/for-one-music-teacher-mariachi-creates-a-connection-to-culture"
-          },
-          {
-            "text": "Denver7, MSU Denver set to launch Colorado’s first mariachi degree program.",
-            "url": "https://www.denver7.com/lifestyle/education/msu-denver-set-to-launch-colorados-first-mariachi-degree-program"
-          }
-        ]
-      }
-    },
-    {
-      "type": "PostCta",
-      "props": {
-        "id": "PostCta-17",
-        "headline": "Send us your date and venue.",
-        "html": "<p>Tell us the part of the day and whether it&rsquo;s indoors or out. We&rsquo;ll tell you how we&rsquo;d bring the mariachi in.</p>",
-        "link": "/contact/",
-        "link_text": "Check a Date"
-      }
-    },
-    {
-      "type": "RelatedPosts",
-      "props": {
-        "id": "RelatedPosts-18",
-        "posts": [
-          {
-            "slug": "how-to-make-a-corporate-event-sound-like-colorado"
-          },
-          {
-            "slug": "company-picnic-entertainment-ideas-denver"
-          },
-          {
-            "slug": "corporate-event-entertainment-ideas-denver"
-          }
-        ]
-      }
-    }
-  ]
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-2",
+    "text": "When is Hispanic Heritage Month?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-3",
+    "html": "<p>September 15 to October 15, every year. It began as a week in 1968 and became a month in 1988. September 15 is the independence day of five Central American countries, and Mexico&rsquo;s follows on September 16. In 2027, September 16 is a Thursday.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-4",
+    "text": "Why a mariachi band?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-5",
+    "html": "<p>Our favorite kind of event takes people somewhere else. Sounds people don&rsquo;t hear every day make an event more memorable, especially alongside the food, the decor and a fully formed theme.</p>\n<p>A mariachi needs no build-up. The band walks in dressed, the trumpets start, and by the end of the first song an ordinary Thursday is an occasion.</p>\n<p>Our <a href=\"https://signetartists.com/ensembles/mariachi-band/\">mariachi band</a> is usually six or seven musicians in charro suits, with violins, trumpet, vihuela, guitar and guitarrón, and several of them sing. They play rancheras, boleros, huapangos and cumbias.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-6",
+    "text": "When in the day does it fit?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-7",
+    "html": "<p>The workday is best, and any part of it.</p>"
+   }
+  },
+  {
+   "type": "ComparisonTable",
+   "props": {
+    "id": "ComparisonTable-8",
+    "title": "A mariachi band through the workday",
+    "columns": [
+     {
+      "text": "Part of the day"
+     },
+     {
+      "text": "What the band plays"
+     }
+    ],
+    "rows": [
+     {
+      "cells": [
+       {
+        "text": "Lunch"
+       },
+       {
+        "text": "Gentle boleros while people eat"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "An afternoon reception"
+       },
+       {
+        "text": "Rancheras and huapangos, with the band as the center of attention"
+       }
+      ]
+     },
+     {
+      "cells": [
+       {
+        "text": "The end of the day"
+       },
+       {
+        "text": "Cumbias, for the people who want to dance"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-9",
+    "html": "<p>The band plays outdoors often, so a courtyard or the lot beside the truck works as well as a lobby or a cafeteria.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-10",
+    "text": "What should you pair it with?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-11",
+    "html": "<p>Mexican food, and the real thing. A taco truck parked outside is the easy answer.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-12",
+    "text": "Is mariachi a Colorado tradition?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-13",
+    "html": "<p>It is now. More Colorado schools teach mariachi alongside jazz band and orchestra, and Metropolitan State University of Denver offers the state&rsquo;s first degree in it.</p>"
+   }
+  },
+  {
+   "type": "Subhead",
+   "props": {
+    "id": "Subhead-14",
+    "text": "What should you tell us?"
+   }
+  },
+  {
+   "type": "Prose",
+   "props": {
+    "id": "Prose-15",
+    "html": "<p>The date, the headcount, the part of the day, and whether it&rsquo;s indoors or out. Our <a href=\"https://signetartists.com/corporate/\">corporate page</a> covers how we work with a company, and <a href=\"https://signetartists.com/blog/how-to-make-a-corporate-event-sound-like-colorado/\">How to make a corporate event sound like Colorado</a> covers the rest of the state&rsquo;s music.</p>"
+   }
+  },
+  {
+   "type": "References",
+   "props": {
+    "id": "References-16",
+    "heading": "Sources",
+    "items": [
+     {
+      "text": "Library of Congress Blogs, Celebrating Hispanic Heritage Month: Why Sept. 15?",
+      "url": "https://blogs.loc.gov/loc/2013/09/celebrating-hispanic-heritage-month-why-sept-15/"
+     },
+     {
+      "text": "KUNC, For one music teacher, mariachi creates a connection to culture, September 29, 2023.",
+      "url": "https://www.kunc.org/podcast/inthenoco/2023-09-29/for-one-music-teacher-mariachi-creates-a-connection-to-culture"
+     },
+     {
+      "text": "Denver7, MSU Denver set to launch Colorado’s first mariachi degree program.",
+      "url": "https://www.denver7.com/lifestyle/education/msu-denver-set-to-launch-colorados-first-mariachi-degree-program"
+     }
+    ]
+   }
+  },
+  {
+   "type": "PostCta",
+   "props": {
+    "id": "PostCta-17",
+    "headline": "Send us your date and venue.",
+    "html": "<p>Tell us the part of the day and whether it&rsquo;s indoors or out. We&rsquo;ll tell you how we&rsquo;d bring the mariachi in.</p>",
+    "link": "/contact/",
+    "link_text": "Check a Date"
+   }
+  },
+  {
+   "type": "RelatedPosts",
+   "props": {
+    "id": "RelatedPosts-18",
+    "posts": [
+     {
+      "slug": "how-to-make-a-corporate-event-sound-like-colorado"
+     },
+     {
+      "slug": "company-picnic-entertainment-ideas-denver"
+     },
+     {
+      "slug": "corporate-event-entertainment-ideas-denver"
+     }
+    ]
+   }
+  }
+ ]
 }
