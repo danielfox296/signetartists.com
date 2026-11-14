@@ -6,14 +6,14 @@
    "description": "A millennial party rock band for Denver weddings, 30th and 40th birthdays, holiday parties and after-parties, playing the rock and pop hits of the 2000s.",
    "titleExact": true,
    "ogImage": "img/millennial-party-band-card.jpg",
-   "ogImageAlt": "Five band members in front of a white vintage RV, in a mustard beanie, a long patterned cardigan, a denim jacket and a Hawaiian shirt, with one seated in front in a backwards cap.",
+   "ogImageAlt": "Four band members in sunglasses against a corrugated metal wall, one in a bucket hat and a blue dinosaur-print shirt and one with long hair and a beard.",
    "nav": "music",
    "breadcrumb": "Millennial party rock band",
    "schema": {
     "service": {
      "name": "Millennial party rock band",
      "serviceType": "Millennial party rock band for weddings, birthdays and company parties",
-     "description": "A party rock band of four or five musicians with a lead singer, playing rock and pop hits from the late 90s and 2000s for weddings, milestone birthdays, holiday parties and after-parties across Denver and Colorado.",
+     "description": "A four-piece party rock band, with two guitars, bass and drums, playing rock and pop hits from the late 90s and 2000s for weddings, milestone birthdays, holiday parties and after-parties across Denver and Colorado.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -24,8 +24,7 @@
       "Breckenridge"
      ],
      "configs": [
-      "quartet",
-      "quintet"
+      "quartet"
      ]
     },
     "act": "millennial-party-band"
@@ -48,7 +47,7 @@
        "title": "A millennial party rock band for weddings, birthdays, holiday parties and reunions.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "Everybody has a song from high school or college that they still know every word to. This is a rock band that plays those songs live, with a lead singer out front, and it’s a perfect choice for a party where most of the guests are in their thirties and forties.",
+       "lede": "Everybody has a song from high school or college that they still know every word to. This is a rock band that plays those songs live, and it’s a perfect choice for a party where most of the guests are in their thirties and forties.",
        "headingText": [
         {
          "html": ""
@@ -71,7 +70,7 @@
        "kind": "photo",
        "image": {
         "src": "/img/millennial-party-band-card.jpg",
-        "alt": "Five band members in front of a white vintage RV, in a mustard beanie, a long patterned cardigan, a denim jacket and a Hawaiian shirt, with one seated in front in a backwards cap.",
+        "alt": "Four band members in sunglasses against a corrugated metal wall, one in a bucket hat and a blue dinosaur-print shirt and one with long hair and a beard.",
         "width": "1600",
         "height": "900",
         "decoding": "async"
@@ -123,6 +122,80 @@
        "id": "Paragraph-8",
        "html": "Send us the songs you loved back then, and we’ll put the song list together with you.",
        "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-19",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-20",
+       "title": "Millennial party rock band photos",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-21",
+       "images": [
+        {
+         "src": "/img/acts/millennial-party-band-festival-stage.jpg",
+         "alt": "The four band members on an outdoor festival stage, holding two electric guitars and a bass, the one in front in a bucket hat.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-guitarist-hat.jpg",
+         "alt": "A guitarist in a bucket hat, sunglasses and a patterned short-sleeved shirt playing on stage.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-guitarist.jpg",
+         "alt": "A guitarist in a black tank top and sunglasses playing a white electric guitar on stage.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-bass.jpg",
+         "alt": "The bass player in sunglasses and a blue scarf playing a white bass at his microphone.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-drums.jpg",
+         "alt": "The drummer, with long hair, a patterned headband and a crocheted vest, behind his cymbals at the microphone.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-house.jpg",
+         "alt": "The four band members outside a white clapboard house, one in a long knit cardigan and one in a dinosaur-print shirt.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-black-and-white.jpg",
+         "alt": "A black-and-white photo of the four band members laughing against a white wall.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/millennial-party-band-string-lights.jpg",
+         "alt": "The four band members together at night under a tent strung with lights, one in a cap and one in a bucket hat.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
       }
      }
     ]
@@ -228,7 +301,7 @@
        "items": [
         {
          "q": "How many musicians are in the band?",
-         "a": "The band plays as a four-piece or a five-piece. Tell us about your event and your venue, and we’ll talk through which size fits best."
+         "a": "The band is a four-piece, with two guitars, bass and drums."
         },
         {
          "q": "How much does a party band cost in Denver?",
