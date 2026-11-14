@@ -1,0 +1,338 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/mariachi-band/",
+   "title": "Mariachi band for hire in Denver, Colorado",
+   "description": "A Denver mariachi band in charro suits for birthday serenades, quinceañeras, anniversaries, weddings and memorials, playing rancheras, boleros and cumbias.",
+   "titleExact": true,
+   "ogImage": "img/mariachi-band-card.jpg",
+   "ogImageAlt": "Six mariachi musicians in gray charro suits under aspens with yellow fall leaves, holding three violins, a guitarrón, a vihuela and a trumpet.",
+   "nav": "music",
+   "breadcrumb": "Mariachi band",
+   "schema": {
+    "service": {
+     "name": "Mariachi band",
+     "serviceType": "Mariachi band for birthdays, quinceañeras, weddings, memorials and private events",
+     "description": "A full mariachi of usually six or seven musicians in charro suits, with violins, trumpet, vihuela, guitar and guitarrón, playing rancheras, boleros, huapangos and cumbias for birthdays, quinceañeras, anniversaries, weddings, memorials and company events across Denver and Colorado.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Fort Collins",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quintet"
+     ]
+    },
+    "act": "mariachi-band"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "eyebrow": "El Son de la Negra to Amor Eterno",
+       "slab": true,
+       "title": "A mariachi band for birthdays, quinceañeras, anniversaries and weddings.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "You know the part of a ranchera where the trumpets come in and the whole family starts singing. This is the band to book when you want that at your own celebration. It’s a full mariachi in matching charro suits, with violins, a trumpet, a vihuela (a small guitar with a rounded back), a guitar and a guitarrón (a big bass guitar), and several of the musicians sing.",
+       "headingText": [
+        {
+         "html": ""
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=mariachi-band",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-3",
+       "kind": "photo",
+       "image": {
+        "src": "/img/mariachi-band-card.jpg",
+        "alt": "Six mariachi musicians in gray charro suits under aspens with yellow fall leaves, holding three violins, a guitarrón, a vihuela and a trumpet.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActHonors",
+   "props": {
+    "id": "ActHonors-4",
+    "band": "ruled",
+    "title": "Awards and press",
+    "pressTitle": "In the press and on air",
+    "creditsTitle": "Stages and credits"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a mariachi band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "This mariachi plays rancheras, boleros, huapangos, polkas and cumbias, plus music from all over Latin America. Their song list includes La Barca, Contigo Aprendí, Regálame Esta Noche, Que Sepan Todos and Las Llaves de Mi Alma."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "The band can play gentle boleros through dinner and pick up the pace with cumbias when it’s time to dance. The musicians are happy to work with Spanish and English speaking families, so you can plan the music in whichever language is easier for you.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "title": "Mariachi band photos",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "MediaGrid",
+      "props": {
+       "id": "MediaGrid-11",
+       "images": [
+        {
+         "src": "/img/acts/mariachi-band-stage.jpg",
+         "alt": "The mariachi in black charro suits playing on an outdoor festival stage, violins and a trumpet on one side and the guitarrón, guitar and vihuela on the other.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/mariachi-band-marigolds.jpg",
+         "alt": "The mariachi in teal charro suits playing on a stage hung with orange and yellow marigold garlands.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/mariachi-band-pavilion.jpg",
+         "alt": "Seven mariachi musicians in plum charro suits standing in an open pavilion with their violins, trumpets, guitarrón and vihuela.",
+         "loading": "lazy",
+         "decoding": "async"
+        },
+        {
+         "src": "/img/acts/mariachi-band-white-suits.jpg",
+         "alt": "Six mariachi musicians in cream charro suits under a wooden pergola, holding violins, a trumpet, a guitarrón and a vihuela.",
+         "loading": "lazy",
+         "decoding": "async"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-12",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-13",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-14",
+       "rows": [
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Birthdays</a>",
+         "text": "A mariachi serenade is a classic birthday surprise, whether it’s at home, at a restaurant or at a big milestone party."
+        },
+        {
+         "term": "<a href=\"/private-parties/\">Quinceañeras</a>",
+         "text": "A full mariachi in charro suits makes a quinceañera feel even more special, and we can plan the songs with your family ahead of time."
+        },
+        {
+         "term": "<a href=\"/private-parties/anniversary-party/\">Anniversaries</a>",
+         "text": "Mariachi is a lovely way to celebrate a 25th or 50th anniversary with the whole family, and the band can play the couple’s favorite boleros."
+        },
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "A mariachi brings a lot of joy to a wedding cocktail hour or reception, whether it’s a big family wedding or a small one."
+        },
+        {
+         "term": "<a href=\"/daytime/funerals-and-memorials/\">Funerals and memorials</a>",
+         "text": "The band can play the songs your family asks for at a funeral, a memorial or a celebration of life."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Planning something for work? A mariachi is a fun way to celebrate Cinco de Mayo or Hispanic Heritage Month at a <a href=\"/corporate/\">company event</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActReviews",
+   "props": {
+    "id": "ActReviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "show": 4
+   }
+  },
+  {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-16",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-17",
+       "html": "Mariachi band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-18",
+       "html": "Looking for something else? Our <a href=\"/planners/faq/\">full list of questions</a> covers things like how far ahead to book and what happens if a musician can’t make the date.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-19",
+       "items": [
+        {
+         "q": "How many musicians are in a mariachi band?",
+         "a": "This mariachi usually comes as six or seven musicians, and several of them sing. Let us know about your event and we’ll talk through what fits."
+        },
+        {
+         "q": "How much does it cost to hire a mariachi band in Denver?",
+         "a": "It depends on your date, how long you’d like the band to play and where your event is, so we quote each date one by one."
+        },
+        {
+         "q": "Can we book a mariachi for a surprise serenade?",
+         "a": "Yes. A serenade for a birthday, Mother’s Day or an anniversary is a classic way to book a mariachi, whether it’s at home, at a restaurant or at a party."
+        },
+        {
+         "q": "Can the band play outdoors?",
+         "a": "Yes. This mariachi plays outdoors often, from backyard birthday parties to festival stages, and we’ll plan ahead with you in case the weather turns."
+        },
+        {
+         "q": "Can we request songs?",
+         "a": "Yes. Tell us the songs that matter most to your family when you book, and the band will do its best to include them."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-20",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-21",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=mariachi-band",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning a serenade, a quinceañera or a family party? Send us your date and we’ll get back to you with availability and costs.",
+       "lede": "You’ll have a single point of contact for the whole booking, and we can help with the rest of the music for your event, too.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
