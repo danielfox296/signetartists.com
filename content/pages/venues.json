@@ -92,6 +92,14 @@
      {
       "type": "Paragraph",
       "props": {
+       "id": "Paragraph-conference",
+       "html": "Hosting a conference? Learn more about <a href=\"/corporate/conference-reception/\">live music for a conference reception in downtown Denver</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
        "id": "Paragraph-vhero",
        "html": "The photo at the top of this page is the Brown Palace Hotel and Spa at dusk.",
        "cls": "note"

@@ -3,7 +3,7 @@
   "props": {
    "path": "/corporate/client-dinners/",
    "title": "Live music for client dinners and member events in Denver",
-   "description": "A jazz duo for client dinners and member events in Denver, at a volume that lets your guests talk all evening.",
+   "description": "A jazz duo or trio for client dinners and member events in Denver, at a volume that lets your guests talk all evening.",
    "titleExact": false,
    "nav": "corporate",
    "schema": {
@@ -114,12 +114,47 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-9",
-       "html": "If you're planning a toast, we can bring a microphone for your speaker. If you'd like a singer out front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can play your dinner as a duo. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> can also play your dinner, either on the venue’s piano or on a stage piano we bring.",
+       "html": "If you're planning a toast, we can bring a microphone for your speaker. If you'd like a singer out front, <a href=\"/artists/tejas-singh/\">Tejas Singh</a> can play your dinner as a duo. A <a href=\"/ensembles/solo-piano/\">solo pianist</a> can also play your dinner, either on the venue’s piano or on a stage piano we bring. Learn more about <a href=\"/corporate/client-dinners/pianist/\">hiring a pianist for a dinner in Denver</a>.",
        "cls": "prose"
       }
      }
     ],
     "_file": "02-volume.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-trio",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-trio",
+       "eyebrow": "A jazz trio",
+       "title": "A jazz trio for a client dinner",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-trio-1",
+       "html": "If the dinner is bigger, or you’d like a little more swing in the music, a trio is a great step up from the duo. The <a href=\"/ensembles/changes-jazz-trio/\">Changes Jazz Trio</a> plays standards with a modern edge on guitar, bass and drums, and <a href=\"/artists/chantil-dukart/\">Chantil Dukart</a>’s trio puts a singer at the piano.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-trio-2",
+       "html": "Both trios can keep the volume low enough for the table to talk, and you can ask them to bring it up or down at any point.",
+       "cls": "prose"
+      }
+     }
+    ]
    }
   },
   {
@@ -133,10 +168,10 @@
       "props": {
        "id": "Heading-12",
        "eyebrow": "Video Clips",
-       "title": "Hear the jazz duo play live.",
+       "title": "Hear the jazz duo and trio play live.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Here's a clip of the duo playing a jazz standard."
+       "lede": "Here’s the duo playing a jazz standard, and a trio playing Sunny."
       }
      },
      {
@@ -149,9 +184,15 @@
          "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
          "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
          "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/cA2KwgmJqGc?rel=0",
+         "title": "A jazz trio playing Sunny",
+         "loading": "lazy"
         }
        ],
-       "single": true
+       "single": false
       }
      }
     ],

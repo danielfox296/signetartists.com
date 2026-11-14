@@ -201,6 +201,10 @@
          "text": "Dinners where the conversation is the event. We often recommend a jazz duo, low enough to add some class without pulling attention away from the table."
         },
         {
+         "term": "<a href=\"/corporate/conference-reception/\">Conference receptions</a>",
+         "text": "A welcome reception, a sponsor party or the closing night at a downtown hotel. An Americana band is a great pick when most of your attendees are flying in."
+        },
+        {
          "term": "<a href=\"/corporate/retreats/\">Corporate retreats</a>",
          "text": "Retreats and incentive trips in the mountain corridor, Vail through Aspen, and the Colorado foothills."
         },
@@ -559,6 +563,9 @@
         "path": "client-dinners"
        },
        {
+        "path": "conference-reception"
+       },
+       {
         "path": "after-party"
        },
        {
@@ -592,6 +599,9 @@
        },
        {
         "path": "retreats/aspen"
+       },
+       {
+        "path": "retreats/boulder"
        }
       ]
      },
@@ -600,6 +610,10 @@
       "pages": [
        {
         "path": "jazz-band"
+       },
+       {
+        "path": "client-dinners/pianist",
+        "label": "A pianist for a dinner"
        }
       ],
       "art": "musicians"

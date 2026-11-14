@@ -1,0 +1,251 @@
+{
+ "root": {
+  "props": {
+   "path": "/daytime/funerals-and-memorials/pianist/",
+   "heroImage": "img/acts/chantil-dukart-hands.jpg",
+   "title": "Pianist for a memorial service in Denver | Signet Artists",
+   "titleExact": true,
+   "description": "Hire a pianist for a funeral, memorial service or celebration of life in Denver, for the prelude, a song during the service and the reception.",
+   "nav": "daytime",
+   "breadcrumb": "A pianist for a memorial",
+   "indexLabel": "A pianist for a memorial service",
+   "schema": {
+    "service": {
+     "name": "Pianist for a funeral or memorial service in Denver",
+     "serviceType": "Live piano for funerals, memorial services and celebrations of life",
+     "description": "We book pianists for funerals, memorial services and celebrations of life in Denver and along the Front Range, at a church, a chapel, a funeral home or a reception.",
+     "areaServed": [
+      "Denver",
+      "the Front Range"
+     ],
+     "configs": [
+      "solo"
+     ]
+    }
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-2",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "Funerals and memorials",
+       "slab": true,
+       "title": "A pianist for a memorial service.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Some songs only sound right on a piano, whether it’s a hymn from church or a standard your loved one used to play at home. A pianist can play as people arrive, play the song your family chose during the service, and keep playing softly at the reception.",
+       "headingText": [
+        {
+         "html": "We’ll work with your family, the funeral director or the church, and if the chapel doesn’t have a piano, we can bring one. Learn more about <a href=\"/daytime/funerals-and-memorials/\">music for funerals and memorials</a>, including guitar, strings and a singer."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActCards",
+   "props": {
+    "id": "ActCards-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-3",
+       "eyebrow": "Who plays",
+       "title": "Musicians for a memorial service",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Cards",
+      "props": {
+       "id": "Cards-4",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
+        {
+         "act": "solo-piano",
+         "kicker": "Hymns and standards"
+        },
+        {
+         "act": "classical-strings",
+         "kicker": "If you’d like strings"
+        },
+        {
+         "act": "solo-guitarist",
+         "kicker": "At the graveside"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-10",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "Choosing the music",
+       "title": "What a pianist can play at a memorial",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "A pianist can play hymns like Amazing Grace and How Great Thou Art, standards from the years your loved one was young, or the song from their first dance. Just send us the titles, and if there’s one the pianist doesn’t already know, they can usually learn it.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "If your family would like the words sung, the pianist can sing, too.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-9",
+       "html": "A piano is a natural fit for a church, a chapel or a funeral home that already has one, and it’s lovely at a reception at a club or at home. For a graveside service, a guitarist can play with no power at all.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-13",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-11",
+       "eyebrow": "Video Clips",
+       "title": "Hear strings for a service",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "If your family would rather have strings, here’s one of our violinists playing the Andante from Bach’s Sonata No. 2."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-12",
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/NfkVbgovXQU?rel=0",
+         "title": "Solo violin playing the Andante from Bach’s Sonata No. 2",
+         "loading": "lazy"
+        }
+       ],
+       "single": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Reviews",
+   "props": {
+    "id": "Reviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "occasions": "memorial",
+    "limit": 4,
+    "show": 4
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-16",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-14",
+       "html": "Questions about a pianist for a memorial",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-15",
+       "items": [
+        {
+         "q": "Does the church or funeral home need a piano?",
+         "a": "It helps, but it isn’t required. If there’s a piano, the pianist will play it, and if there isn’t, we’ll bring a stage piano with its own sound."
+        },
+        {
+         "q": "Can we book a pianist for a service later this week?",
+         "a": "Often, yes. Send us the date, the place and the time of the service, and we’ll let you know who can be there."
+        },
+        {
+         "q": "Can the pianist play at the reception, too?",
+         "a": "Yes. The same pianist can play the service and then the reception, and we’ll plan both with you."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-17",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Tell us about the service, and we’ll find a pianist.",
+       "lede": "Send the date, the place and roughly how many people are coming. We’ll take care of the details with the church or the funeral home, so you don’t have to."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
