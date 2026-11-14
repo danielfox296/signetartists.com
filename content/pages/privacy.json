@@ -1,0 +1,334 @@
+{
+ "root": {
+  "props": {
+   "path": "/privacy/",
+   "title": "Privacy policy",
+   "description": "What Signet Artists collects when you visit the site, check a date or chat with us, what we do with it, and how to ask us to delete it.",
+   "breadcrumb": "Privacy",
+   "published": "2026-11-13"
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "eyebrow": "Signet Artists",
+       "slab": true,
+       "title": "Privacy policy.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "This page explains what we collect when you visit signetartists.com, send us a date or chat with us, and what we do with it. We use what you send us to answer you and plan your event, and we never sell it to anyone."
+      }
+     }
+    ],
+    "_file": "01-intro.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-4",
+       "html": "What you send us",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-5",
+       "html": "When you check a date, the form asks for your name, email, phone number, the event date, the venue or city, what the occasion is, and the act or package you have in mind. Musicians who ask about artist development send their name, email, act name, genre and a few links. Both forms reach our inbox through FormSubmit, a form service, and we use what you send to reply, put a quote together and plan the booking.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-6",
+       "html": "The forms for musicians joining our roster and for vendors joining our Preferred Vendor List are Google Forms, so Google keeps those answers for us in our own Google account.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "If you email us at <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>, we keep the email so we can answer it and follow up.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "02-forms.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-8",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-9",
+       "html": "Chatting with us",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-10",
+       "html": "The chat box on the site is run by Crisp. When you chat with us, Crisp stores the conversation, any email address you give it and the page where you started, so we can pick the conversation back up and reply by email if you leave the site.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "03-chat.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-11",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-12",
+       "html": "Analytics and cookies",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-13",
+       "html": "We use Google Analytics to see which pages people visit and which buttons they click, such as Check a Date. Google Analytics sets cookies in your browser to do this, and Crisp sets cookies to remember your chat. We don't run ads on the site, and we don't use advertising pixels.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-14",
+       "html": "You can block or clear cookies in your browser settings, and the site still works without them.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "04-analytics.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-15",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-16",
+       "html": "Videos on our pages",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-17",
+       "html": "The videos on our pages play from YouTube's privacy-enhanced version, youtube-nocookie.com, and most of them don't load anything from YouTube until you press play. Once a video is playing, <a href=\"https://policies.google.com/privacy\">Google's Privacy Policy</a> covers what YouTube collects.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "05-videos.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-18",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-19",
+       "html": "Our social media accounts",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "We post to our own Instagram, Facebook, Threads, LinkedIn, Pinterest, YouTube and Google Business Profile accounts, and some of that posting goes through each platform's API from our own tools. Those tools sign in to our own accounts and nobody else's. They read the comments and replies people leave on our posts so we can answer them, and they don't collect anything else about you.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-21",
+       "html": "If you comment on one of our posts, the platform you used holds that comment under its own privacy policy.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "06-social.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-22",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-23",
+       "html": "YouTube API Services",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-24",
+       "html": "Our tools can use YouTube API Services to upload our own videos to our own YouTube channel. They don't sign in to anyone else's YouTube account, and they don't collect or store information about people who watch or comment on our videos. By watching our videos on YouTube, you agree to the <a href=\"https://www.youtube.com/t/terms\">YouTube Terms of Service</a>, and <a href=\"https://policies.google.com/privacy\">Google's Privacy Policy</a> covers what Google collects.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-25",
+       "html": "If you ever give anything of ours access to your Google account, you can take that access back at any time on <a href=\"https://myaccount.google.com/permissions\">Google's security settings page</a>.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "07-youtube.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-26",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-27",
+       "html": "Who sees your information",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-28",
+       "html": "Only the people at Signet who are working on your inquiry or booking see what you send us. When we book an act for your event, we share what the musicians need to play it, such as the date, the venue, the flow of the evening and an onsite contact.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-29",
+       "html": "We never sell your information, and we never give it to anyone for their own marketing.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "08-sharing.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-31",
+       "html": "How long we keep it, and deleting it",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-32",
+       "html": "We keep inquiries and booking records for as long as we need them to run the booking and keep our business records. If you'd like to see what we have about you, or you'd like us to delete it, just email <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a> and we'll take care of it.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "09-keeping.html"
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-33",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-34",
+       "html": "Changes to this page",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-35",
+       "html": "If we change how we handle your information, we'll update this page and the date below. Questions are always welcome at <a href=\"mailto:hello@signetartists.com\">hello@signetartists.com</a>.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-36",
+       "html": "This page was last updated on November 13, 2026.",
+       "cls": "prose"
+      }
+     }
+    ],
+    "_file": "10-changes.html"
+   }
+  }
+ ]
+}
