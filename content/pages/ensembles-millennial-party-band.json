@@ -1,0 +1,276 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/millennial-party-band/",
+   "title": "Millennial party rock band for hire in Denver, Colorado",
+   "description": "A millennial party rock band for Denver weddings, 30th and 40th birthdays, holiday parties and after-parties, playing the rock and pop hits of the 2000s.",
+   "titleExact": true,
+   "ogImage": "img/millennial-party-band-card.jpg",
+   "ogImageAlt": "Five band members in front of a white vintage RV, in a mustard beanie, a long patterned cardigan, a denim jacket and a Hawaiian shirt, with one seated in front in a backwards cap.",
+   "nav": "music",
+   "breadcrumb": "Millennial party rock band",
+   "schema": {
+    "service": {
+     "name": "Millennial party rock band",
+     "serviceType": "Millennial party rock band for weddings, birthdays and company parties",
+     "description": "A party rock band of four or five musicians with a lead singer, playing rock and pop hits from the late 90s and 2000s for weddings, milestone birthdays, holiday parties and after-parties across Denver and Colorado.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "quartet",
+      "quintet"
+     ]
+    },
+    "act": "millennial-party-band"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-2",
+       "eyebrow": "Late 90s and 2000s hits",
+       "slab": true,
+       "title": "A millennial party rock band for weddings, birthdays, holiday parties and reunions.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "Everybody has a song from high school or college that they still know every word to. This is a rock band that plays those songs live, with a lead singer out front, and it’s a perfect choice for a party where most of the guests are in their thirties and forties.",
+       "headingText": [
+        {
+         "html": ""
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=millennial-party-band",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "<a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-3",
+       "kind": "photo",
+       "image": {
+        "src": "/img/millennial-party-band-card.jpg",
+        "alt": "Five band members in front of a white vintage RV, in a mustard beanie, a long patterned cardigan, a denim jacket and a Hawaiian shirt, with one seated in front in a backwards cap.",
+        "width": "1600",
+        "height": "900",
+        "decoding": "async"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActHonors",
+   "props": {
+    "id": "ActHonors-4",
+    "band": "ruled",
+    "title": "Awards and press",
+    "pressTitle": "In the press and on air",
+    "creditsTitle": "Stages and credits"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-5",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-6",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-7",
+       "eyebrow": "Song list",
+       "title": "What does a millennial party band play?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Millennial party rock means the big rock and pop songs of the 2000s, from The Killers, Blink-182, Fall Out Boy and Paramore to Kelly Clarkson and Outkast."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Send us the songs you loved back then, and we’ll put the song list together with you.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-10",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-11",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/\">Weddings</a>",
+         "text": "If you and most of your friends grew up in the 2000s, this band can get your reception dancing to songs everyone knows. We can help with music for the ceremony and the cocktail hour, too."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">30th and 40th birthdays</a>",
+         "text": "A 30th or a 40th is a great excuse for a real dance party, whether it’s in your backyard or at a venue you’ve rented."
+        },
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Holiday parties</a>",
+         "text": "Plenty of your coworkers likely grew up on these songs, which makes this band a fun pick for a company holiday party."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">After-parties</a>",
+         "text": "This band is a great fit for the after-party at a conference or a gala, when people are ready to let loose."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-12",
+       "html": "Planning a longer event? Our <a href=\"/ensembles/acoustic-duo/\">acoustic duo</a> is a lovely fit for the cocktail hour, and our <a href=\"/ensembles/dj/\">DJ</a> can keep the music going between the band’s sets.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActReviews",
+   "props": {
+    "id": "ActReviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "show": 4
+   }
+  },
+  {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-14",
+       "html": "Millennial party rock band questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-15",
+       "html": "Something else on your mind? Take a look at our <a href=\"/planners/faq/\">planner questions</a>, from how far ahead to book to how loud a band plays.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-16",
+       "items": [
+        {
+         "q": "How many musicians are in the band?",
+         "a": "The band plays as a four-piece or a five-piece. Tell us about your event and your venue, and we’ll talk through which size fits best."
+        },
+        {
+         "q": "How much does a party band cost in Denver?",
+         "a": "We quote each date one by one, since the cost depends on the day, how long you’d like the band to play and where your event is. Our pricing page gives a general view of what live music costs in Denver."
+        },
+        {
+         "q": "Can the band play our first dance?",
+         "a": "In most cases, yes. Tell us the song when you book and we’ll check with the band, and we can plan the last song of the night with you, too."
+        }
+       ],
+       "schema": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-18",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=millennial-party-band",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Planning a party for people who grew up on the 2000s? Send us the date, and we’ll reply with the band’s availability and costs.",
+       "lede": "We’re happy to help with the rest of your event’s music, too.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
