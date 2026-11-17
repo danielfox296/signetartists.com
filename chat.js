@@ -52,7 +52,22 @@
       if (!window.$crisp.get("message:text")) crisp(["set", "message:text", [starter]]);
     } catch (e) {}
   }
-  crisp(["on", "chat:opened", function () { if (pending) fill(); }]);
+  // Analytics: chat_open when the box opens, chat_start when the visitor
+  // sends a message. Each fires once per page view, with the part of the
+  // site as "segment". Crisp keeps one handler per event, so the opened
+  // handler does both jobs.
+  var sent = {};
+  function track(name) {
+    if (sent[name]) return;
+    sent[name] = true;
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", name, { segment: seg, page: path, transport_type: "beacon" });
+      }
+    } catch (e) {}
+  }
+  crisp(["on", "chat:opened", function () { track("chat_open"); if (pending) fill(); }]);
+  crisp(["on", "message:sent", function () { track("chat_start"); }]);
 
   document.addEventListener("click", function (e) {
     var b = e.target && e.target.closest && e.target.closest("[data-chat]");
