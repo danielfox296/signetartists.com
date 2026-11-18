@@ -1,14 +1,18 @@
-/* Signet Artists: the site's forms send to Signet's own enquiry endpoint
-   (a Google Apps Script web app that writes each one to a sheet and emails
-   it on). The form's FormSubmit action stays as the fallback: it is used
-   when the endpoint can't be reached, answers with an error or takes longer
-   than 15 seconds, and when this script doesn't run at all. */
+/* Website forms for every site (signetartists.com, foxlessons.com,
+   daniel-fox.com). A page loads this one file from
+   https://signetartists.com/enquiry.js, and any form on it whose action is
+   FormSubmit is sent to the shared enquiry endpoint instead (a Google Apps
+   Script web app that writes each one to a sheet and emails it on). The
+   FormSubmit action stays as the fallback: it is used when the endpoint
+   can't be reached, answers with an error or takes longer than 15 seconds,
+   and when this script doesn't load. */
 (function () {
   "use strict";
 
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbw4WojjT1h0DfgxeECpG1ud0Hg3FeiqJFE-EA1veNaqOw9VFH0LU2O1sqN_I9rgKruxEA/exec";
   var me = document.currentScript;
-  var endpoint = me && me.getAttribute("data-endpoint");
-  if (!endpoint || !window.fetch || !window.FormData || !window.URLSearchParams) return;
+  var endpoint = (me && me.getAttribute("data-endpoint")) || ENDPOINT;
+  if (!window.fetch || !window.FormData || !window.URLSearchParams) return;
 
   // Bubble phase on document, so the analytics listener (capture phase)
   // has already counted the submit.
