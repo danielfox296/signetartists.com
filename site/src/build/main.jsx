@@ -387,7 +387,7 @@ export function buildSite(c, out) {
         `<meta property="article:modified_time" content="${p.last_updated || p.date}">`,
         `<meta property="article:author" content="${esc(authorName)}">`,
       ].join("\n  "),
-      schema: schemaFor(S.articleSchema(p, canonical, og || OG_DEFAULT)),
+      schema: schemaFor(S.articleSchema(p, canonical, og || OG_DEFAULT, lastmod({ output, file: `content/posts/${d.slug}.json` }))),
     });
   }
 

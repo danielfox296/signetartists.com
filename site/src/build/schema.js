@@ -47,22 +47,35 @@ export function makeSchema(m) {
     return node;
   };
 
-  const actServiceNode = (a) => ({
-    "@type": "Service",
-    "@id": a.page ? `${SITE_URL}/${m.actUrl(a)}#service` : `${SITE_URL}/${m.ACTS_BASE}/#service-${a.id}`,
-    name: a.name,
-    serviceType: `${a.style} for private events`,
-    description: a.blurb,
-    provider: { "@id": `${SITE_URL}/#business` },
-    areaServed: m.actAreas(a).map((n) => ({ "@type": "Place", name: n })),
-  });
+  // The act's own entity node: every act has one. Its id is the act page's
+  // URL plus #act. The type is the one the act's file declares (a Featured
+  // Artist), else MusicGroup, which is what a house format is.
+  const actEntityId = (a) => (a.page ? `${SITE_URL}/${m.actUrl(a)}#act` : `${SITE_URL}/${m.ACTS_BASE}/#entity-${a.id}`);
+
+  // The service is provided by the business; the act is what the service
+  // delivers, so it is linked with serviceOutput when the graph carries the
+  // act's node.
+  const actServiceNode = (a, withEntity = false) => {
+    const node = {
+      "@type": "Service",
+      "@id": a.page ? `${SITE_URL}/${m.actUrl(a)}#service` : `${SITE_URL}/${m.ACTS_BASE}/#service-${a.id}`,
+      name: a.name,
+      serviceType: `${a.style} for private events`,
+      description: a.blurb,
+      provider: { "@id": `${SITE_URL}/#business` },
+      areaServed: m.actAreas(a).map((n) => ({ "@type": "Place", name: n })),
+    };
+    if (withEntity) node.serviceOutput = { "@id": actEntityId(a) };
+    return node;
+  };
 
   const actEntityNode = (a) => {
-    const e = a.entity;
-    if (!e) return null;
+    if (!a) return null;
+    const e = a.entity || {};
+    const type = e.type || "MusicGroup";
     const url = `${SITE_URL}/${m.actUrl(a)}`;
-    const node = { "@type": e.type, "@id": a.page ? `${url}#act` : `${SITE_URL}/${m.ACTS_BASE}/#entity-${a.id}`, name: a.name, url, image: `${SITE_URL}/img/${a.img}` };
-    if (e.type === "MusicGroup") node.genre = (a.genre_tags || []).map((g) => m.GENRE_LABEL[g]);
+    const node = { "@type": type, "@id": actEntityId(a), name: a.name, url, image: `${SITE_URL}/img/${a.img}` };
+    if (type === "MusicGroup") node.genre = (a.genre_tags || []).map((g) => m.GENRE_LABEL[g]).filter(Boolean);
     if (e.sameAs) node.sameAs = e.sameAs;
     // What the act has won (honors in its act file), as schema.org award text.
     const won = (a.honors || []).filter((h) => h.kind === "award" || h.kind === "honoree").map((h) => `${h.title}${h.from ? `, ${h.from}` : ""}${h.year ? ` (${h.year})` : ""}`);
@@ -70,6 +83,7 @@ export function makeSchema(m) {
     return node;
   };
   const rosterEntityNodes = () => m.ACTS.map(actEntityNode).filter(Boolean);
+  const rosterNodes = () => [...m.ACTS.map((a) => actServiceNode(a, true)), ...rosterEntityNodes()];
 
   const faqPage = (items) => ({
     "@type": "FAQPage",
@@ -132,12 +146,12 @@ export function makeSchema(m) {
     const graph = [localBusinessNode()];
     const svc = sc.service;
     let act = sc.act ? m.ACT_BY_ID[sc.act] : null;
-    if (p.schemaKind === "roster") graph.push(...m.ACTS.map(actServiceNode), ...rosterEntityNodes());
+    if (p.schemaKind === "roster") graph.push(...rosterNodes());
     let pageEntity = null;
     if (act && `${SITE_URL}/${m.actUrl(act)}` === canonical) pageEntity = actEntityNode(act);
     let node = null;
     if (act && svc && `${SITE_URL}/${m.actUrl(act)}` === canonical) {
-      node = actServiceNode(act);
+      node = actServiceNode(act, !!pageEntity);
       if (svc.name !== act.name) node.alternateName = svc.name;
       node.serviceType = svc.serviceType;
       if (svc.description) node.description = svc.description;
@@ -248,7 +262,12 @@ export function makeSchema(m) {
     const kind = doc.root.props.schemaKind;
     const faqs = pageFaqs(doc);
     if (kind === "organization") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), websiteNode()] };
-    if (kind === "faq" || kind === "plannerfaq") return { "@context": "https://schema.org", ...faqPage(faqs) };
+    if (kind === "faq" || kind === "plannerfaq") {
+      const p = doc.root.props;
+      const canonical = `${SITE_URL}${p.path}`;
+      const page = { ...faqPage(faqs), "@id": canonical, url: canonical, name: p.title || brand.name, isPartOf: { "@type": "WebSite", url: SITE_URL, name: brand.name }, about: { "@id": `${SITE_URL}/#business` } };
+      return { "@context": "https://schema.org", "@graph": [localBusinessNode(), page] };
+    }
     if (kind === "vendorlist") {
       const canonical = `${SITE_URL}${doc.root.props.path}`;
       const seen = new Set();
@@ -278,8 +297,8 @@ export function makeSchema(m) {
         ],
       };
     }
-    if (kind === "roster") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map(actServiceNode), ...rosterEntityNodes()] };
-    if (kind === "pricing") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map(actServiceNode), faqPage(faqs)] };
+    if (kind === "roster") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...rosterNodes()] };
+    if (kind === "pricing") return { "@context": "https://schema.org", "@graph": [localBusinessNode(), ...m.ACTS.map((a) => actServiceNode(a)), faqPage(faqs)] };
     return null;
   };
 
@@ -320,8 +339,9 @@ export function makeSchema(m) {
       mainEntity: { "@id": service["@id"] },
       primaryImageOfPage: { "@type": "ImageObject", url: place.image || ogFor(p) },
     };
-    if (acts.length) webpage.mentions = acts.map((a) => ({ "@type": a.entity ? a.entity.type : "MusicGroup", name: a.name, url: `${SITE_URL}/${m.actUrl(a)}` }));
-    const graph = [localBusinessNode(), place, service, webpage];
+    const entities = acts.map(actEntityNode).filter(Boolean);
+    if (entities.length) webpage.mentions = entities.map((e) => ({ "@id": e["@id"] }));
+    const graph = [localBusinessNode(), place, service, webpage, ...entities];
     const faqs = pageFaqs(doc);
     if (faqs.length) graph.push(faqPage(faqs));
     return { "@context": "https://schema.org", "@graph": graph };
@@ -367,7 +387,7 @@ export function makeSchema(m) {
       itemListElement: trail.map(([u, label], i) => ({ "@type": "ListItem", position: i + 1, name: label, item: SITE_URL + u })),
     });
 
-  const articleSchema = (post, canonical, ogImage) => {
+  const articleSchema = (post, canonical, ogImage, modified) => {
     const authorName = (post.author || {}).name ?? brand.name;
     const entity = { "@type": "LocalBusiness", "@id": `${SITE_URL}/#business`, name: brand.name, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo-512.png` } };
     return {
@@ -378,7 +398,7 @@ export function makeSchema(m) {
       author: authorName === brand.name ? entity : { "@type": "Person", name: authorName },
       publisher: entity,
       datePublished: post.date || "",
-      dateModified: post.last_updated || post.date || "",
+      dateModified: [post.last_updated, modified].filter((d) => d && d >= (post.date || "")).sort().pop() || post.date || "",
       image: ogImage,
       mainEntityOfPage: { "@type": "WebPage", "@id": canonical, primaryImageOfPage: { "@type": "ImageObject", url: ogImage } },
     };
