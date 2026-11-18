@@ -867,22 +867,14 @@ const ContactForm = {
       <>
         <section className={bandClass(p.band || "top")} id={p.anchor || undefined}>
           <div className="wrap" style={css(p.wrapStyle)}>
+            {/* Heading, form, then details: one column on phones in this order; from
+                1024px the heading and details share the left column, the form the right. */}
             <div className="split contact-grid">
-              <div>
-                <div className="heading">
-                  <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} />
-                  <H as={p.titleTag || "h1"} className={p.titleClass || "h2 display"} html={p.title} />
-                  <H as="p" className="lede" html={p.lede} />
-                  {(p.headingText || []).map((t, i) => <H key={i} as="p" className={t.cls || "prose"} html={t.html} />)}
-                </div>
-                <dl className="contact-details">
-                  {(p.details || []).map((d, i) => (
-                    <div key={i}>
-                      <H as="dt" html={d.term} />
-                      <H as="dd" html={d.html} />
-                    </div>
-                  ))}
-                </dl>
+              <div className="heading">
+                <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} />
+                <H as={p.titleTag || "h1"} className={p.titleClass || "h2 display"} html={p.title} />
+                <H as="p" className="lede" html={p.lede} />
+                {(p.headingText || []).map((t, i) => <H key={i} as="p" className={t.cls || "prose"} html={t.html} />)}
               </div>
               <form action={p.action} method="POST">
                 {(p.hidden || []).map((h, i) => (
@@ -953,6 +945,14 @@ const ContactForm = {
                   <button type="submit" className="btn">{p.button}</button>
                 </div>
               </form>
+              <dl className="contact-details">
+                {(p.details || []).map((d, i) => (
+                  <div key={i}>
+                    <H as="dt" html={d.term} />
+                    <H as="dd" html={d.html} />
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </section>
