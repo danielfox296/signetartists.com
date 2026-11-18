@@ -37,7 +37,7 @@ def main(root):
             missing.append(str(p))
             continue
         s = FORM.sub(lambda m: off(m) if 'action=' in m.group(1) else m.group(0), s)
-        if 'formsubmit.co' in s:
+        if any('formsubmit.co' in m.group(1) for m in FORM.finditer(s)):
             sending.append(str(p))
         p.write_text(s, encoding='utf-8')
         pages += 1
