@@ -1,0 +1,29 @@
+name: Health check
+
+# Once a day, and on demand: the live site, its sitemaps, the enquiry script
+# and endpoint, the redirects, the certificate, the domain registration,
+# staging, admin and the last live deploy. Read-only. A failed check fails the
+# run, and GitHub emails the owner. scripts/health_check.py runs the same
+# checks by hand.
+
+on:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/health_check.py

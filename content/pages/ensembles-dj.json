@@ -59,7 +59,7 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "Tell us what you have in mind, from the music to what the DJ wears, and we’ll plan it with you. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "Tell us what you have in mind, from the music to what the DJ wears, and we’ll plan it with you. <a href=\"/planners/booking/\">Here’s how booking through Signet works</a>."
       }
      },
      {
@@ -327,7 +327,7 @@
        "buttons": [
         {
          "label": "Check a Date",
-         "href": "/contact/",
+         "href": "/contact/?act=dj",
          "cls": "btn"
         }
        ],

@@ -1174,6 +1174,76 @@ img {
   }
 }
 
+/* Pause and play for a silent loop (the home hero, a photo card): a small
+   square in the loop's top right corner, on the same dark wash as a picture's
+   credit line. Two bars while it plays, a triangle while it is paused. Shown
+   by page.js once the loop plays. */
+.act-card--photo {
+  position: relative;
+}
+
+.loop-toggle {
+  position: absolute;
+  z-index: 3;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 0;
+  background: rgba(18, 18, 18, 0.7);
+  color: #f5f5f2;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.35s ease;
+}
+
+.loop-toggle[hidden] {
+  display: none;
+}
+
+.loop-toggle::before {
+  content: "";
+  box-sizing: border-box;
+  width: 0.7rem;
+  height: 0.8rem;
+  border-left: 0.22rem solid currentColor;
+  border-right: 0.22rem solid currentColor;
+}
+
+.loop-toggle[aria-pressed="true"]::before {
+  width: 0;
+  height: 0;
+  margin-left: 0.15rem;
+  border-style: solid;
+  border-width: 0.45rem 0 0.45rem 0.7rem;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.loop-toggle:hover,
+.loop-toggle:focus-visible {
+  color: var(--red);
+}
+
+.hero-cine .loop-toggle {
+  top: 1rem;
+  right: 1rem;
+}
+
+/* A card's button rides with the photo as the card rises. */
+.act-card--photo .roster-card-link:hover ~ .loop-toggle,
+.act-card--photo .roster-card-link:focus-visible ~ .loop-toggle {
+  transform: translateY(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .act-card--photo .roster-card-link:hover ~ .loop-toggle,
+  .act-card--photo .roster-card-link:focus-visible ~ .loop-toggle {
+    transform: none;
+  }
+}
+
 /* ----------------------------------------------------------------- media */
 
 /* Placeholder imagery until the shoot. Duotoned into the palette so the set
@@ -1690,6 +1760,15 @@ img {
 .field textarea:focus {
   border-color: var(--ink);
   outline: none;
+}
+
+/* 16px controls on phones: iOS Safari zooms into a field set any smaller. */
+@media (max-width: 767px) {
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 1rem;
+  }
 }
 
 .field input::placeholder,
@@ -3821,7 +3900,7 @@ main:focus {
 
 /* Click-to-play YouTube, 2026-10-17: the video's picture and YouTube's play
    button. A click or Enter swaps in the player, playing; until then nothing
-   loads from YouTube. The watch pages keep the player itself. */
+   loads from YouTube. */
 .yt {
   position: relative;
   display: block;

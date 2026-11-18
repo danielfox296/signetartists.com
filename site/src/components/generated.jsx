@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { css, esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
 import { isoSeconds } from "../build/feeds.js";
-import { Boxed, H, Pic, Raw, useHref, useSite } from "./parts.jsx";
+import { Boxed, H, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES } from "../lib/pictures.js";
 
 export const CustomHtml = {
@@ -96,7 +96,7 @@ export function WatchPage({ v }) {
   const others = m.FOOTAGE.filter((x) => x.act === v.act && x.slug !== v.slug);
   const player = v.id ? (
     <div className="act-video watch-video">
-      <iframe src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0`} title={v.name} allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen />
+      <YouTube id={v.id} src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0`} title={v.name} allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" sizes={SIZES.wrap} />
     </div>
   ) : (
     <div className="act-video watch-video">

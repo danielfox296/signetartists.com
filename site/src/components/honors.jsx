@@ -4,7 +4,8 @@
    training are a plain list. One-colour marks live in img/honors/. */
 import { Fragment } from "react";
 import { cx } from "../lib/util.js";
-import { useHref } from "./parts.jsx";
+import { useHref, useSite } from "./parts.jsx";
+import { useOf } from "../lib/sprite-use.js";
 
 // The word over a laurel, by kind.
 export const LAUREL = { award: "Winner", finalist: "Finalist", honoree: "Honoree", nomination: "Nominee", invited: "Invited" };
@@ -26,7 +27,7 @@ export const markedOf = (a) => honorsOf(a).filter((h) => h.logo);
 
 // One half of a laurel wreath: a stem curving up and out, leaves set along it
 // in pairs. Worked out once; the right half is the same drawing mirrored.
-const BRANCH = (() => {
+export const BRANCH = (() => {
   const P0 = [36, 118], P1 = [-8, 66], P2 = [26, 6];
   const at = (t) => [0, 1].map((k) => (1 - t) ** 2 * P0[k] + 2 * (1 - t) * t * P1[k] + t * t * P2[k]);
   const tan = (t) => [0, 1].map((k) => 2 * (1 - t) * (P1[k] - P0[k]) + 2 * t * (P2[k] - P1[k]));
@@ -53,17 +54,28 @@ const BRANCH = (() => {
 })();
 
 // A small pair of branches, for a card's award line.
+export const MINI_LAUREL = `<g>${BRANCH}</g><g transform="translate(76 0) scale(-1 1)">${BRANCH}</g>`;
+
+// In the static build the drawing comes from the laurels sprite sheet.
+function useLaurelSprite(id) {
+  const s = useSite();
+  const href = useHref();
+  return s && s.sprites && s.sprites.laurels ? `${href(s.sprites.laurels)}#${id}` : null;
+}
+
 export function MiniLaurel() {
+  const use = useLaurelSprite("mini-laurel");
   return (
     <svg className="card-honor-icon" viewBox="-22 -6 120 128" aria-hidden="true" focusable="false" fill="currentColor"
-      dangerouslySetInnerHTML={{ __html: `<g>${BRANCH}</g><g transform="translate(76 0) scale(-1 1)">${BRANCH}</g>` }} />
+      dangerouslySetInnerHTML={{ __html: use ? useOf(use, "-22 -6 120 128") : MINI_LAUREL }} />
   );
 }
 
 export function Branch({ right }) {
+  const use = useLaurelSprite("laurel-branch");
   return (
     <svg className={cx("laurel-branch", right && "laurel-branch--r")} viewBox="-22 -6 70 128" aria-hidden="true" focusable="false" fill="currentColor"
-      dangerouslySetInnerHTML={{ __html: BRANCH }} />
+      dangerouslySetInnerHTML={{ __html: use ? useOf(use, "-22 -6 70 128") : BRANCH }} />
   );
 }
 

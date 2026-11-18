@@ -82,7 +82,8 @@
       "name": "Event date",
       "label": "Event date <span class=\"req\">*</span>",
       "type": "date",
-      "required": true
+      "required": true,
+      "hint": "No fixed date yet? Pick your best guess and tell us below."
      },
      {
       "kind": "input",

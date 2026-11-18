@@ -1,0 +1,58 @@
+name: Publish to a Pages repo
+description: Copy a staged folder into another repository over SSH with a deploy key, and push the commit.
+
+inputs:
+  repo:
+    description: owner/name of the repository to push to
+    required: true
+  key:
+    description: Deploy key for that repository
+    required: true
+  source:
+    description: Folder to publish
+    required: true
+  message:
+    description: Commit message prefix
+    required: true
+  keep-assets:
+    description: Leave files already in /assets/ in place and only add to them
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - name: Push
+      shell: bash
+      env:
+        DEPLOY_KEY: ${{ inputs.key }}
+        REPO: ${{ inputs.repo }}
+        SOURCE: ${{ inputs.source }}
+        MESSAGE: ${{ inputs.message }}
+        KEEP_ASSETS: ${{ inputs.keep-assets }}
+      run: |
+        mkdir -p ~/.ssh
+        printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > ~/.ssh/known_hosts
+        export GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes"
+        git clone --depth 1 "git@github.com:${REPO}.git" ../out
+        # --checksum: a fresh clone and a fresh build can share a size and a
+        # second, and rsync's quick check would skip the new file.
+        if [ "$KEEP_ASSETS" = "true" ]; then
+          # Old builds' hashed files stay: a tab still running an earlier
+          # build loads its chunks.
+          rsync -a --checksum --delete --exclude='.git' --exclude='/assets/' "$SOURCE"/ ../out/
+          rsync -a --checksum "$SOURCE"/assets/ ../out/assets/
+        else
+          rsync -a --checksum --delete --exclude='.git' "$SOURCE"/ ../out/
+        fi
+        cd ../out
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add -A
+        if git diff --cached --quiet; then
+          echo "No change to the published site"
+          exit 0
+        fi
+        git commit -q -m "${MESSAGE}@${GITHUB_SHA::8}"
+        git push origin HEAD:main

@@ -1,4 +1,4 @@
-/* sitemap.xml, video-sitemap.xml, rss.xml and llms.txt, from the list of
+/* sitemap.xml, video-sitemap.xml, rss.xml, llms.txt and llms-full.txt, from the list of
    pages the build wrote and the post and video files. */
 import { esc, rssDate } from "../lib/util.js";
 
@@ -91,8 +91,9 @@ export function rss(m, blogDescription) {
   return lines.join("\n");
 }
 
-// llms.txt: the words come from site.json "llms", the lists from the files.
-export function llms(m, built) {
+// llms-full.txt: every page with its description, then the clips, the posts
+// and the acts. The words come from site.json "llms", the lists from the files.
+export function llmsFull(m, built) {
   const { brand, site } = m;
   const t = site.llms;
   const fill = (s) => s.replace(/\{name\}/g, brand.name).replace(/\{serviceArea\}/g, brand.serviceArea).replace(/\{site\}/g, m.SITE_URL);
@@ -124,8 +125,33 @@ export function llms(m, built) {
   }
   lines.push("", "## Acts", "", t.actsNote, "");
   for (const a of m.ACTS) {
-    lines.push(`- ${a.name} (${a.style}, ${m.actBylineInline(a)}): ${a.blurb} Configurations: ${m.actConfigRange(a)}. ${m.SITE_URL}/${m.actUrl(a)}`);
+    const byline = m.actBylineInline(a);
+    lines.push(`- [${a.name}](${m.SITE_URL}/${m.actUrl(a)}): ${[a.style, byline].filter(Boolean).join(", ")}. ${a.blurb} Configurations: ${m.actConfigRange(a)}.`);
   }
   lines.push("", "## Pricing", "", ...t.pricing.map(fill).flatMap((s) => [s, ""]));
+  return lines.join("\n");
+}
+
+// llms.txt: the short index. The summary, the main hubs, a one-line link for
+// every act page, and a link to llms-full.txt.
+const LLMS_HUBS = ["/weddings/", "/corporate/", "/private-parties/", "/daytime/", "/music/", "/pricing/", "/guides/live-music-cost-colorado/", "/planners/", "/venues/", "/about/", "/contact/"];
+
+export function llmsIndex(m, built) {
+  const { brand, site } = m;
+  const t = site.llms;
+  const fill = (s) => s.replace(/\{name\}/g, brand.name).replace(/\{serviceArea\}/g, brand.serviceArea).replace(/\{site\}/g, m.SITE_URL);
+  const byUrl = new Map(built.filter((b) => !noindex(b.robots) && !b.watch).map((b) => [m.canonicalFor(b.output), b]));
+  const lines = [`# ${brand.name}`, "", `> ${brand.intro}`, "", fill(t.about), "", "## Main pages", ""];
+  for (const path of LLMS_HUBS) {
+    const b = byUrl.get(m.SITE_URL + path);
+    if (b) lines.push(`- [${b.title}](${m.SITE_URL + path}): ${b.description || ""}`);
+  }
+  lines.push("", "## Acts", "");
+  for (const a of m.ACTS) {
+    const url = `${m.SITE_URL}/${m.actUrl(a)}`;
+    const b = byUrl.get(url);
+    lines.push(`- [${a.name}](${url}): ${(b && b.description) || a.blurb}`);
+  }
+  lines.push("", "## Optional", "", `- [Full index](${m.SITE_URL}/llms-full.txt): every page with its description`, "");
   return lines.join("\n");
 }

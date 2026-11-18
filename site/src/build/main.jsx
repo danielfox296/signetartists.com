@@ -19,14 +19,17 @@ import { Body } from "../components/layout.jsx";
 import { Item } from "../components/registry.jsx";
 import { PostArticle } from "../components/post.jsx";
 import { WatchPage, watchHeadExtra } from "../components/generated.jsx";
-import { makeSchema } from "./schema.js";
+import { makeSchema, schemaTag } from "./schema.js";
 import { document, head, redirectStub } from "./head.js";
-import { llms, rss, sitemap, videoSitemap } from "./feeds.js";
+import { llmsFull, llmsIndex, rss, sitemap, videoSitemap } from "./feeds.js";
 import { fingerprint, stylesheet, stylesOf } from "./styles.js";
-import { esc, pyjson } from "../lib/util.js";
+import { esc } from "../lib/util.js";
 import { LAYOUT_FILES } from "../lib/layouts.js";
 import { repoPath, SHARE, sharePath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
 import { imageDims, makeImages } from "./images.js";
+import { sheet, splitSvg } from "./sprites.js";
+import { withPolicy } from "./csp.js";
+import { BRANCH, MINI_LAUREL } from "../components/honors.jsx";
 
 const REPO = process.cwd();
 const CONTENT = path.join(REPO, "content");
@@ -141,38 +144,6 @@ function chatButtons(html) {
   return html.replace(CHECK_DATE, (a, href) => `${a}<button type="button" class="chat-link" data-chat="${href}">Or chat with us</button>`);
 }
 
-// Click-to-play YouTube: a video's button becomes its player, playing.
-const YT_SCRIPT = `<script>
-    document.addEventListener('click', function (e) {
-      var item = e.target.closest && e.target.closest('.playlist-item');
-      if (item) {
-        var pl = item.closest('.playlist');
-        var stage = pl.querySelector('.playlist-stage');
-        var p = document.createElement('iframe');
-        var u = item.getAttribute('data-play');
-        p.src = u + (u.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
-        p.title = item.getAttribute('data-title') || '';
-        p.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture');
-        p.allowFullscreen = true;
-        stage.replaceChildren(p);
-        pl.querySelectorAll('.playlist-item').forEach(function (x) { x.setAttribute('aria-pressed', x === item ? 'true' : 'false'); });
-        if (stage.getBoundingClientRect().top < 0) { stage.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-        return;
-      }
-      var b = e.target.closest && e.target.closest('.yt');
-      if (!b) { return; }
-      var src = b.getAttribute('data-yt');
-      var f = document.createElement('iframe');
-      f.src = src + (src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
-      f.title = b.getAttribute('data-title') || '';
-      f.setAttribute('allow', b.getAttribute('data-allow') || '');
-      if (b.hasAttribute('data-referrerpolicy')) { f.referrerPolicy = b.getAttribute('data-referrerpolicy'); }
-      f.allowFullscreen = true;
-      b.replaceWith(f);
-      f.focus();
-    });
-  </script>`;
-
 const minifyCss = (css) => transformSync(css, { loader: "css", minify: true }).code;
 
 export { plan };
@@ -216,8 +187,22 @@ export function renderSections(c, reqs) {
 export function buildSite(c, out) {
   const { m, S, hubs, OG_DEFAULT, OG_DEFAULT_ALT, brandTitle, absImg, base: plain } = makeSite(c);
   const pictures = c.images ? picturesFor(c.images) : null;
-  const base = { ...plain, pictures };
   const files = {};
+  // The client logos and the laurels, each drawn once in a sprite sheet that
+  // every page points at.
+  const logoDrawings = Object.fromEntries(c.logoStrip.logos.map((l) => [l.id, splitSvg(c.logoSvg(l.id))]));
+  const logoSheet = sheet(logoDrawings);
+  const laurelSheet = sheet({
+    "laurel-branch": { viewBox: "-22 -6 70 128", paint: [["fill", "currentColor"]], inner: BRANCH },
+    "mini-laurel": { viewBox: "-22 -6 120 128", paint: [["fill", "currentColor"]], inner: MINI_LAUREL },
+  });
+  files["img/sprites/logos.svg"] = logoSheet.text;
+  files["img/sprites/laurels.svg"] = laurelSheet.text;
+  const sprites = {
+    logos: { url: `/img/sprites/logos.svg?v=${logoSheet.version}`, drawings: logoDrawings },
+    laurels: `/img/sprites/laurels.svg?v=${laurelSheet.version}`,
+  };
+  const base = { ...plain, pictures, sprites };
   const built = [];
   const lastmod = lastmodFor(c);
   const write = (rel, text) => {
@@ -238,6 +223,10 @@ export function buildSite(c, out) {
   // chat.js gets a ?v= of its own too, so an edit reaches cached browsers.
   const chatPath = path.join(REPO, "chat.js");
   if (fs.existsSync(chatPath)) headSite = { ...headSite, chatVersion: fingerprint(fs.readFileSync(chatPath, "utf8")) };
+  const analyticsPath = path.join(REPO, "analytics.js");
+  if (fs.existsSync(analyticsPath)) headSite = { ...headSite, analyticsVersion: fingerprint(fs.readFileSync(analyticsPath, "utf8")) };
+  const pagePath = path.join(REPO, "page.js");
+  if (fs.existsSync(pagePath)) headSite = { ...headSite, pageVersion: fingerprint(fs.readFileSync(pagePath, "utf8")) };
   const enquiryPath = path.join(REPO, "enquiry.js");
   if (fs.existsSync(enquiryPath)) headSite = { ...headSite, enquiryVersion: fingerprint(fs.readFileSync(enquiryPath, "utf8")) };
 
@@ -247,8 +236,7 @@ export function buildSite(c, out) {
   // A local file's size comes from the picture sizes the build already reads;
   // YouTube's hqdefault is always 480x360. A video's own picture at
   // img/yt/<id>.jpg is made by the deploy at 1280x720; sharing it
-  // asks the deploy to make it, as showing it on a page does, since a watch
-  // page draws YouTube's player and not the picture.
+  // asks the deploy to make it, as showing it on a page does.
   // A photo taller than wide is shared as a wide cut of itself,
   // made by the deploy around the photo's focus point (content/photo-focus.json)
   // or, with none, around what draws the eye. It keeps the photo's description.
@@ -297,11 +285,10 @@ export function buildSite(c, out) {
     );
     if (first) body = hero(body);
     if (m.site.crispId) body = chatButtons(body);
-    if (body.includes('<button type="button" class="yt"')) body += "\n" + YT_SCRIPT;
     const canonical = m.canonicalFor(output);
     const ogMeta = shareImageMeta(ogImage, body, ogAlt);
     const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage: ogMeta.url || ogImage, ogMeta, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
-    write(output, photoFocus(m, document(h, body)));
+    write(output, withPolicy(photoFocus(m, document(h, body))));
   };
 
   const renderDoc = (doc) => {
@@ -355,6 +342,7 @@ export function buildSite(c, out) {
       trail,
       indexed: true,
       content: <WatchPage v={v} />,
+      first: true,
       title: brandTitle(v.seoTitle || v.name, false),
       description: v.description,
       robots: "index, follow",
@@ -399,14 +387,15 @@ export function buildSite(c, out) {
         `<meta property="article:modified_time" content="${p.last_updated || p.date}">`,
         `<meta property="article:author" content="${esc(authorName)}">`,
       ].join("\n  "),
-      schema: schemaFor(S.articleSchema(p, canonical, og || OG_DEFAULT)),
+      schema: schemaFor(S.articleSchema(p, canonical, og || OG_DEFAULT, lastmod({ output, file: `content/posts/${d.slug}.json` }))),
     });
   }
 
   const blogIndex = c.pages.find((d) => d.slug === "blog-index");
   write("sitemap.xml", sitemap(m, built, lastmod));
   write("video-sitemap.xml", videoSitemap(m, built, lastmod));
-  write("llms.txt", llms(m, built));
+  write("llms.txt", llmsIndex(m, built));
+  write("llms-full.txt", llmsFull(m, built));
   write("rss.xml", rss(m, blogIndex ? blogIndex.root.props.description : ""));
   write("robots.txt", fs.readFileSync(path.join(c.dir, "robots.txt"), "utf8"));
 
@@ -418,9 +407,7 @@ export function buildSite(c, out) {
   return { files: Object.keys(files), built, pictures };
 }
 
-function schemaFor(payload) {
-  return `<script type="application/ld+json">${pyjson(payload)}</script>`;
-}
+const schemaFor = schemaTag;
 
 // A page's sitemap date: the date it had when it was converted while its
 // file is unchanged, then the file's own last commit. A page added since the

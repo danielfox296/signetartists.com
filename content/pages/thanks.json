@@ -35,6 +35,29 @@
           "html": "One of us will reply with availability and costs, and we may have a question or two for you.",
           "cls": "prose"
          }
+        },
+        {
+         "type": "ButtonRow",
+         "props": {
+          "id": "ButtonRow-3",
+          "buttons": [
+           {
+            "label": "Artist Roster",
+            "href": "/music/",
+            "cls": "btn btn--outline"
+           },
+           {
+            "label": "Pricing",
+            "href": "/pricing/",
+            "cls": "btn btn--outline"
+           },
+           {
+            "label": "How a booking works",
+            "href": "/planners/booking/",
+            "cls": "btn btn--outline"
+           }
+          ]
+         }
         }
        ],
        "style": "max-width: 34rem;"

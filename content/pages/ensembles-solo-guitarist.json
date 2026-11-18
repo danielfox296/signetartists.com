@@ -6,6 +6,7 @@
    "description": "Hire a solo guitarist for cocktail hours, client dinners and private dinners in Denver. One musician can play blues, roots, jazz and Spanish guitar.",
    "titleExact": true,
    "ogImage": "img/acts/solo-bridge.jpg",
+   "ogImageAlt": "A guitarist playing an acoustic set on a Denver bridge.",
    "nav": "music",
    "schema": {
     "service": {
@@ -58,21 +59,17 @@
          "cls": "btn"
         }
        ],
-       "headingNote": "Tell us what you have in mind and we’ll work out the songs with you, and even what the guitarist wears. <a href=\"/#why-signet\">Here’s how booking through Signet works</a>."
+       "headingNote": "Tell us what you have in mind and we’ll work out the songs with you, and even what the guitarist wears. <a href=\"/planners/booking/\">Here’s how booking through Signet works</a>."
       }
      },
      {
       "type": "ActVideo",
       "props": {
        "id": "ActVideo-2",
-       "kind": "photo",
-       "image": {
-        "src": "/img/acts/solo-bridge.jpg",
-        "alt": "A guitarist playing an acoustic set on a Denver bridge.",
-        "width": "1600",
-        "height": "1066",
-        "decoding": "async"
-       }
+       "kind": "iframe",
+       "src": "https://www.youtube-nocookie.com/embed/hIPHFuxl9YI?rel=0",
+       "title": "Solo jazz guitarist for a client dinner: Autumn Leaves",
+       "loading": "lazy"
       }
      }
     ],
@@ -281,7 +278,7 @@
        "buttons": [
         {
          "label": "Check a Date",
-         "href": "/contact/",
+         "href": "/contact/?act=solo-guitarist",
          "cls": "btn"
         }
        ],

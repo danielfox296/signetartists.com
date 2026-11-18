@@ -3,11 +3,12 @@
    what a new one starts with. The rest have one fixed shape: the logo strip,
    the hub lists, the home hero, the cover walls, the act lists. */
 import { Fragment } from "react";
-import { css, cx, esc } from "../lib/util.js";
+import { css, cx, esc, relUrl } from "../lib/util.js";
 import { bandClass, shapeClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
 import { coverPath, patchwork } from "../lib/patchwork.js";
 import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
+import { useOf } from "../lib/sprite-use.js";
 import { CreditList, honorsOf, Laurel, LaurelRow, laurelsOf, Mark, markedOf, PressList, pressOf, creditsOf } from "./honors.jsx";
 
 const { rich, text } = F;
@@ -70,7 +71,12 @@ const LogoStrip = {
           <p className="eyebrow">{c.label}</p>
           <ul className="credits-list" aria-label={c.label}>
             {c.logos.map((l) => {
-              const svg = s.model.c.logoSvg(l.id).replace("<svg ", `<svg role="img" aria-label="${esc(l.name)}" focusable="false" `);
+              const sprite = s.sprites && s.sprites.logos && s.sprites.logos.drawings[l.id];
+              const svg = sprite
+                ? `<svg role="img" aria-label="${esc(l.name)}" focusable="false" viewBox="${sprite.viewBox}">` +
+                  (sprite.title ? `<title>${sprite.title}</title>` : "") +
+                  useOf(`${relUrl(s.sprites.logos.url, s.prefix)}#${l.id}`, sprite.viewBox) + "</svg>"
+                : s.model.c.logoSvg(l.id).replace("<svg ", `<svg role="img" aria-label="${esc(l.name)}" focusable="false" `);
               return <li key={l.id} className="credit" style={{ "--credit-h": String(l.h ?? 1) }} dangerouslySetInnerHTML={{ __html: svg }} />;
             })}
           </ul>
@@ -234,6 +240,7 @@ const HomeHero = {
         ) : null}
       </div>
       <div className="hero-cine__scrim" aria-hidden="true"></div>
+      {video ? <button type="button" className="loop-toggle" aria-label="Pause video" aria-pressed="false" hidden /> : null}
       <div className="wrap hero-cine__copy" style={css(wrapStyle)}>
         <H as="h1" className="h1 display" style={css(titleStyle)} html={title} />
         <H as="p" className="hero-lede" style={css(ledeStyle)} html={lede} />
@@ -664,7 +671,7 @@ function VenueCards({ s, venues }) {
             </div>
             <div className="venue-card__body">
               {v.area ? <p className="venue-card__area">{v.area}</p> : null}
-              <h4 className="venue-card__name">{v.name}</h4>
+              <h3 className="venue-card__name">{v.name}</h3>
               {v.spaces ? <p className="venue-card__spaces">{v.spaces}</p> : null}
               <H as="p" className="venue-card__acts" html={acts(v) || null} />
               <span className="venue-card__more">{`Live music at ${v.short}`}</span>
@@ -844,6 +851,7 @@ const ContactForm = {
         full: { type: "radio", label: "Width", options: [{ label: "Half", value: false }, { label: "Full", value: true }] },
         rows: text("Rows"),
         placeholder: text("Placeholder"),
+        hint: text("Hint (a small line under the field)"),
         options: text("Choices (Checkboxes and One of), separated by |"),
         param: text("Ticked when the link carries (One checkbox, e.g. photo-video); for One of, shown and chosen only when the link names a choice (e.g. package=event-photos)"),
       },
@@ -932,10 +940,11 @@ const ContactForm = {
                         <H as="label" htmlFor={f.id} html={f.label} />
                         {" "}
                         {f.kind === "textarea" ? (
-                          <textarea id={f.id} name={f.name} rows={f.rows} placeholder={f.placeholder} />
+                          <textarea id={f.id} name={f.name} rows={f.rows} placeholder={f.placeholder} aria-describedby={f.hint ? `${f.id}-hint` : undefined} />
                         ) : (
-                          <input id={f.id} name={f.name} type={f.type || undefined} autoComplete={f.autocomplete || undefined} required={f.required || undefined} />
+                          <input id={f.id} name={f.name} type={f.type || undefined} autoComplete={f.autocomplete || undefined} required={f.required || undefined} aria-describedby={f.hint ? `${f.id}-hint` : undefined} />
                         )}
+                        {f.hint ? <p className="note note--small" id={`${f.id}-hint`}>{f.hint}</p> : null}
                       </div>
                     )
                   )}
@@ -1181,23 +1190,10 @@ const VenueSpaces = {
             })}
           </div>
         </div>
-        <Raw html={`<script>${VSPACE_JS}</script>`} />
       </section>
     );
   },
 };
-// The play button: the act's clip in a small player over the corner of the
-// space's photo, so the room stays in view while the music plays. One at a
-// time; the button stops it again.
-const VSPACE_JS =
-  `(function(){var root=document.currentScript.parentNode;` +
-  `function stop(b){var p=b.closest(".vspace").querySelector(".vspace__player");p.innerHTML="";p.classList.remove("is-on");b.classList.remove("is-on");b.querySelector(".vspace__play-text").textContent="Hear "+b.dataset.title;}` +
-  `root.querySelectorAll("[data-vclip]").forEach(function(b){b.addEventListener("click",function(){` +
-  `var on=b.classList.contains("is-on");root.querySelectorAll("[data-vclip].is-on").forEach(stop);if(on)return;` +
-  `var p=b.closest(".vspace").querySelector(".vspace__player");` +
-  `p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.dataset.vclip+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="'+b.dataset.title.replace(/"/g,"")+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';` +
-  `p.classList.add("is-on");b.classList.add("is-on");b.querySelector(".vspace__play-text").textContent="Stop the music";});});})();`;
-
 // Moments at a venue: a wedding's ceremony, cocktails and reception, or a
 // company's party, gala and reception, each with the space and one act, shown
 // by the act's photograph.

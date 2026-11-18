@@ -6,3 +6,6 @@ _site/
 
 # Build/pitch handoffs live outside the repo (public)
 _src/pages/**/HANDOFF.md
+
+node_modules/
+.build/

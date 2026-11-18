@@ -33,6 +33,8 @@ export function Raw({ html }) {
 export function H({ as: Tag = "span", html, ...rest }) {
   const s = useSite();
   if (html == null) return null;
+  // The built page has no empty headings; the editor keeps one to type into.
+  if (s && s.raw && /^h[1-6]$/.test(Tag) && typeof html === "string" && !html.replace(/<[^>]*>|&nbsp;|\s/g, "")) return null;
   if (typeof html !== "string") {
     const Box = Tag === "p" ? "div" : Tag;
     return <Box {...rest}>{html}</Box>;

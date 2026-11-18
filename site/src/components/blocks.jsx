@@ -436,7 +436,7 @@ export const VideoGrid = {
     // No clips yet: nothing on the page, not an empty frame.
     if (!list.length) return null;
     // A playlist: one player and the clips listed beside it; a
-    // click on a line plays that clip in the player (YT_SCRIPT in main.jsx).
+    // click on a line plays that clip in the player (page.js).
     if (playlist && list.length) {
       return (
         <div className="playlist" style={css(style)}>
@@ -961,17 +961,19 @@ function PhotoCard({ a, kicker, photo }) {
           </div>
         </div>
       </a>
+      {a.loop && !photo ? <button type="button" className="loop-toggle" aria-label="Pause video" aria-pressed="false" hidden /> : null}
     </article>
   );
 }
 
 // Plays each card's loop while it is on screen and pauses it off screen. Loads
-// nothing for data saver or reduced motion, which keep the photos still.
+// nothing for data saver or reduced motion, which keep the photos still. A
+// loop paused with its button (page.js) stays paused.
 const LOOP_SCRIPT =
   `(function(){var g=document.currentScript.previousElementSibling,c=navigator.connection;` +
   `if((c&&c.saveData)||matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;` +
   `var o=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;` +
-  `if(e.isIntersecting){if(!v.src){v.src=v.dataset.src;v.addEventListener("playing",function(){v.parentNode.classList.add("is-playing");});}` +
+  `if(e.isIntersecting){if(v.dataset.paused)return;if(!v.src){v.src=v.dataset.src;v.addEventListener("playing",function(){v.parentNode.classList.add("is-playing");});}` +
   `var p=v.play();p&&p.catch&&p.catch(function(){});}else if(v.src){v.pause();}});},{rootMargin:"150px 0px"});` +
   `g.querySelectorAll(".photo-card-loop video").forEach(function(v){o.observe(v);});})();`;
 
