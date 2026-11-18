@@ -50,7 +50,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-5",
-       "html": "When you check a date, the form asks for your name, email, phone number, the event date, the venue or city, what the occasion is, and the act or package you have in mind. Musicians who ask about artist development send their name, email, act name, genre and a few links. Both forms reach our inbox through FormSubmit, a form service, and we use what you send to reply, put a quote together and plan the booking.",
+       "html": "When you check a date, the form asks for your name, email, phone number, the event date, the venue or city, what the occasion is, and the act or package you have in mind. Musicians who ask about artist development send their name, email, act name, genre and a few links. Both forms are sent first to a Google Apps Script web app that we run, which saves each one to a Google Sheet in our own Google account and emails it to us, so Google keeps those answers for us. FormSubmit, a form service, is used only if that can't be reached or if JavaScript is off. We use what you send to reply, put a quote together and plan the booking.",
        "cls": "prose"
       }
      },
