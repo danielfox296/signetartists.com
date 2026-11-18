@@ -671,7 +671,7 @@ function VenueCards({ s, venues }) {
             </div>
             <div className="venue-card__body">
               {v.area ? <p className="venue-card__area">{v.area}</p> : null}
-              <h4 className="venue-card__name">{v.name}</h4>
+              <h3 className="venue-card__name">{v.name}</h3>
               {v.spaces ? <p className="venue-card__spaces">{v.spaces}</p> : null}
               <H as="p" className="venue-card__acts" html={acts(v) || null} />
               <span className="venue-card__more">{`Live music at ${v.short}`}</span>
