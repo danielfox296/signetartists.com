@@ -3215,6 +3215,8 @@ main:focus {
      tall — a 1.2% vertical crop on every sleeve. Without a container, cqw
      falls back to the viewport, i.e. exactly the old behaviour. */
   container-type: inline-size;
+  /* A hidden caption wider than a narrow edge tile stays inside the page width. */
+  overflow-x: clip;
 }
 
 /* Row height MUST equal column width or the sleeves stop being square. Ten
