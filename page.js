@@ -1,15 +1,24 @@
 /* signetartists.com: the page behaviour every page shares. Loaded with defer
    from the <head>, so it runs once the page is parsed. */
 
-// Mobile nav toggle. The button label doubles as the state indicator.
+// Mobile nav toggle. The button label doubles as the state indicator. Escape
+// closes the open menu and puts focus back on the button.
 (function () {
   var btn = document.querySelector('.nav-toggle');
   var panel = document.querySelector('.nav-mobile');
   if (!btn || !panel) { return; }
-  btn.addEventListener('click', function () {
-    var open = panel.classList.toggle('open');
+  function set(open) {
+    panel.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     btn.textContent = open ? 'Close' : 'Menu';
+  }
+  btn.addEventListener('click', function () {
+    set(!panel.classList.contains('open'));
+  });
+  document.addEventListener('keydown', function (e) {
+    if ((e.key !== 'Escape' && e.key !== 'Esc') || !panel.classList.contains('open')) { return; }
+    set(false);
+    btn.focus();
   });
 })();
 

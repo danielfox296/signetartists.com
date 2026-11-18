@@ -84,6 +84,7 @@ export function head(h) {
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="${h.prefix}styles.css?v=${site.cssVersion}">
+  <noscript><style>@media (max-width: 1023.98px) { .nav-mobile { display: block; } .nav-toggle { display: none; } }</style></noscript>
   ${h.schema || ""}
   ${gaTag(site.gaId)}
   <script defer src="${h.prefix}analytics.js"></script>
