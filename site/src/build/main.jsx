@@ -28,6 +28,7 @@ import { LAYOUT_FILES } from "../lib/layouts.js";
 import { repoPath, SHARE, sharePath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
 import { imageDims, makeImages } from "./images.js";
 import { sheet, splitSvg } from "./sprites.js";
+import { withPolicy } from "./csp.js";
 import { BRANCH, MINI_LAUREL } from "../components/honors.jsx";
 
 const REPO = process.cwd();
@@ -287,7 +288,7 @@ export function buildSite(c, out) {
     const canonical = m.canonicalFor(output);
     const ogMeta = shareImageMeta(ogImage, body, ogAlt);
     const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage: ogMeta.url || ogImage, ogMeta, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });
-    write(output, photoFocus(m, document(h, body)));
+    write(output, withPolicy(photoFocus(m, document(h, body))));
   };
 
   const renderDoc = (doc) => {
