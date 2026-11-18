@@ -87,7 +87,7 @@ export function head(h) {
   <noscript><style>@media (max-width: 1023.98px) { .nav-mobile { display: block; } .nav-toggle { display: none; } }</style></noscript>
   ${h.schema || ""}
   ${gaTag(site.gaId)}
-  <script defer src="${h.prefix}analytics.js"></script>
+  <script defer src="${h.prefix}analytics.js${site.analyticsVersion ? `?v=${site.analyticsVersion}` : ""}"></script>
   ${site.pageVersion ? `<script defer src="${h.prefix}page.js?v=${site.pageVersion}"></script>` : ""}
   ${crispTag(site.crispId, h.prefix, site.chatVersion)}
   ${enquiryTag(h.prefix, site.enquiryVersion)}

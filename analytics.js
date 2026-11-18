@@ -1,7 +1,7 @@
 /* Signet Artists — GA4 event instrumentation (WEBSITE-PLAN.md §7).
-   Six events, nothing more: lead_submit, cta_click, email_click,
-   pricing_engaged, roster_filter, nav_click. No-ops cleanly if gtag is
-   absent or blocked. */
+   Seven events, nothing more: lead_submit, cta_click, email_click,
+   pricing_engaged, roster_filter, nav_click, ai_referral. No-ops cleanly if
+   gtag is absent or blocked. */
 (function () {
   "use strict";
 
@@ -73,6 +73,26 @@
   // Since 2026-09-04 the table that carries that class is the MARKET table
   // (build.py market_table), so the event still means what it always meant:
   // a reader reached the money block and read it. No change was needed here.
+  // ai_referral: a visit that arrives from an AI assistant, once per session.
+  // ai_source is the assistant's host (bing.com/chat for Copilot in Bing,
+  // when the referrer carries its path).
+  (function () {
+    var AI = ["chatgpt.com", "chat.openai.com", "perplexity.ai", "copilot.microsoft.com", "gemini.google.com", "claude.ai"];
+    try {
+      if (typeof window.gtag !== "function" || !document.referrer) return;
+      var r = new URL(document.referrer);
+      var host = r.hostname.replace(/^www\./, "");
+      var source = "";
+      for (var i = 0; i < AI.length; i++) {
+        if (host === AI[i] || host.slice(-(AI[i].length + 1)) === "." + AI[i]) { source = AI[i]; break; }
+      }
+      if (!source && host === "bing.com" && /^\/chat/.test(r.pathname)) source = "bing.com/chat";
+      if (!source || sessionStorage.getItem("signet_ai_referral")) return;
+      sessionStorage.setItem("signet_ai_referral", source);
+      send("ai_referral", { ai_source: source });
+    } catch (e) { /* analytics must never break the page */ }
+  })();
+
   var tables = document.querySelectorAll(".rate-table");
   if (tables.length && "IntersectionObserver" in window) {
     var fired = false; // latch: a pending batch can land after disconnect()

@@ -222,6 +222,8 @@ export function buildSite(c, out) {
   // chat.js gets a ?v= of its own too, so an edit reaches cached browsers.
   const chatPath = path.join(REPO, "chat.js");
   if (fs.existsSync(chatPath)) headSite = { ...headSite, chatVersion: fingerprint(fs.readFileSync(chatPath, "utf8")) };
+  const analyticsPath = path.join(REPO, "analytics.js");
+  if (fs.existsSync(analyticsPath)) headSite = { ...headSite, analyticsVersion: fingerprint(fs.readFileSync(analyticsPath, "utf8")) };
   const pagePath = path.join(REPO, "page.js");
   if (fs.existsSync(pagePath)) headSite = { ...headSite, pageVersion: fingerprint(fs.readFileSync(pagePath, "utf8")) };
   const enquiryPath = path.join(REPO, "enquiry.js");
