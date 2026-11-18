@@ -240,6 +240,7 @@ const HomeHero = {
         ) : null}
       </div>
       <div className="hero-cine__scrim" aria-hidden="true"></div>
+      {video ? <button type="button" className="loop-toggle" aria-label="Pause video" aria-pressed="false" hidden /> : null}
       <div className="wrap hero-cine__copy" style={css(wrapStyle)}>
         <H as="h1" className="h1 display" style={css(titleStyle)} html={title} />
         <H as="p" className="hero-lede" style={css(ledeStyle)} html={lede} />

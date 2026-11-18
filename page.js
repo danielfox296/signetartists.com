@@ -230,3 +230,42 @@ document.querySelectorAll('.vspaces').forEach(function (root) {
     });
   });
 });
+
+// Pause and play for the silent loops: the home hero's video and the photo
+// cards' clips. A loop's button shows once the loop is playing (data saver and
+// reduced motion load no loop, so no button either). A paused loop stays
+// paused until its button plays it again.
+(function () {
+  var LOOPS = '.hero-cine__video, .photo-card-loop video';
+  function buttonOf(v) {
+    var box = v.closest('.hero-cine, .act-card');
+    return box && box.querySelector('.loop-toggle');
+  }
+  function show(v) {
+    var b = buttonOf(v);
+    if (b && b.hidden) { b.hidden = false; }
+  }
+  document.addEventListener('playing', function (e) {
+    if (e.target.matches && e.target.matches(LOOPS)) { show(e.target); }
+  }, true);
+  document.querySelectorAll(LOOPS).forEach(function (v) {
+    if (!v.paused) { show(v); }
+  });
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.loop-toggle');
+    if (!b) { return; }
+    var v = b.parentNode.querySelector(LOOPS);
+    if (!v) { return; }
+    var pause = !v.dataset.paused;
+    if (pause) {
+      v.dataset.paused = '1';
+      v.pause();
+    } else {
+      delete v.dataset.paused;
+      var p = v.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    }
+    b.setAttribute('aria-pressed', pause ? 'true' : 'false');
+    b.setAttribute('aria-label', pause ? 'Play video' : 'Pause video');
+  });
+})();
