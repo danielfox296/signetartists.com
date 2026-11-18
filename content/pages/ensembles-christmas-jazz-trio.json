@@ -217,6 +217,46 @@
    }
   },
   {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-30",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-27",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-28",
+       "rows": [
+        {
+         "term": "<a href=\"/corporate/holiday-party/\">Office holiday parties</a>",
+         "text": "You can book the trio for a cocktail hour, for drinks and dinner, or for your whole holiday party."
+        },
+        {
+         "term": "<a href=\"/corporate/client-dinners/\">Client dinners and member events</a>",
+         "text": "At a client dinner the conversation comes first, so the trio can keep the music low all the way through."
+        },
+        {
+         "term": "<a href=\"/private-parties/holiday-party/\">Christmas parties at home</a>",
+         "text": "A duo fits a house or a club without moving the furniture."
+        }
+       ],
+       "cls": "def-list def-list--cards"
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "ActReviews",
    "props": {
     "id": "ActReviews-testimonials",
