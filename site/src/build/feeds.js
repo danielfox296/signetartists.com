@@ -15,7 +15,7 @@ const noindex = (r) => (r || "").startsWith("noindex");
 // their lastmod, and nowhere else: no URL is in two sitemaps. Both sitemaps
 // carry lastmod because scripts/indexnow.py reads both after a deploy and
 // pings only the URLs whose date moved.
-export function sitemap(m, built, lastmod) {
+export function sitemap(m, built, lastmod, postModified) {
   const urls = [];
   for (const b of built) {
     if (noindex(b.robots) || b.watch) continue;
@@ -26,7 +26,7 @@ export function sitemap(m, built, lastmod) {
   for (const d of m.published) {
     const p = d.root.props;
     if (noindex(p.robots)) continue;
-    urls.push(`  <url><loc>${esc(`${m.SITE_URL}/blog/${p.slug}/`)}</loc><lastmod>${p.last_updated || p.date}</lastmod></url>`);
+    urls.push(`  <url><loc>${esc(`${m.SITE_URL}/blog/${p.slug}/`)}</loc><lastmod>${postModified(p)}</lastmod></url>`);
   }
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.join("\n") + "\n</urlset>\n";
 }

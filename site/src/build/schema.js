@@ -398,7 +398,7 @@ export function makeSchema(m) {
       author: authorName === brand.name ? entity : { "@type": "Person", name: authorName },
       publisher: entity,
       datePublished: post.date || "",
-      dateModified: [post.last_updated, modified].filter((d) => d && d >= (post.date || "")).sort().pop() || post.date || "",
+      dateModified: modified,
       image: ogImage,
       mainEntityOfPage: { "@type": "WebPage", "@id": canonical, primaryImageOfPage: { "@type": "ImageObject", url: ogImage } },
     };
