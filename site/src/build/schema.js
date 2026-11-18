@@ -302,6 +302,21 @@ export function makeSchema(m) {
     return null;
   };
 
+  // The street address from a page's Hotel details "Address" row, split into
+  // street, city, state and ZIP. Null unless the row has exactly that shape.
+  const venueAddress = (doc) => {
+    let text = null;
+    const walk = (o) => {
+      if (text !== null || !o || typeof o !== "object") return;
+      if (!Array.isArray(o) && o.term === "Address" && typeof o.text === "string") { text = o.text; return; }
+      for (const v of Array.isArray(o) ? o : Object.values(o)) walk(v);
+    };
+    walk(doc.content);
+    const parts = text && text.trim().match(/^([^,]+),\s*([^,]+),\s*([A-Z]{2})\s+(\d{5})$/);
+    if (!parts) return null;
+    return { streetAddress: parts[1].trim(), addressLocality: parts[2].trim(), addressRegion: parts[3], postalCode: parts[4] };
+  };
+
   // A venue page: the hotel or resort as a place, the live music we offer
   // there as a service, the acts the page names, and its questions.
   const venueGraph = (doc, canonical) => {
@@ -317,6 +332,8 @@ export function makeSchema(m) {
       address: { "@type": "PostalAddress", addressRegion: "CO", addressCountry: "US" },
       containedInPlace: { "@type": "Place", name: `${v.group}, Colorado` },
     };
+    const street = venueAddress(doc);
+    if (street) place.address = { "@type": "PostalAddress", ...street, addressCountry: "US" };
     if (p.heroImage) place.image = `${SITE_URL}/${p.heroImage.replace(/^\/+/, "")}`;
     const venue = (m.VENUES || []).find((x) => x.path === p.path);
     const acts = venue ? [...venue.named].map((id) => m.ACT_BY_ID[id]).filter((a) => a && !a.hidden) : [];
