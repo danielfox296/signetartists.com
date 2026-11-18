@@ -40,7 +40,6 @@ prince--purple-rain.jpg — Purple Rain — Prince — Purple Rain (Deluxe Expan
 the-beatles--let-it-be.jpg — Let It Be — The Beatles — Let It Be (Remastered 2009) — deezer album 12047958
 the-beatles--come-together.jpg — Come Together — The Beatles — Abbey Road (Remastered 2009) — deezer album 12047952
 the-beatles--eleanor-rigby.jpg — Eleanor Rigby — The Beatles — Revolver (Remastered 2009) — deezer album 12047948
-the-beatles--mother-natures-son.jpg — Mother Nature's Son — The Beatles — The Beatles (Remastered 2009) — deezer album 12047934
 
 willie-nelson--mammas-dont-let-your-babies-grow-up-to-be-cowboys.jpg — Mammas Don't Let Your Babies Grow Up To Be Cowboys — Waylon Jennings — Waylon & Willie — deezer album 108415
 dave-matthews-band--dont-drink-the-water.jpg — Don't Drink the Water — Dave Matthews Band — Before These Crowded Streets — deezer album 1372322
