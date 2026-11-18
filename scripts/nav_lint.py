@@ -83,7 +83,7 @@ def main() -> int:
     home = ROOT / "index.html"
     nf = ROOT / "404.html"
     if not home.exists():
-        print("nav_lint: run build.py first")
+        print(f"nav_lint: no index.html in {ROOT}: build the site first (node site/scripts/build.mjs --out _gen) and point nav_lint at the staged folder")
         return 1
 
     lists = surfaces(home.read_text(encoding="utf-8"))
