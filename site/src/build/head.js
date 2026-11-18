@@ -40,12 +40,11 @@ export function crispTag(id, prefix, version) {
   );
 }
 
-// The forms' sender: enquiry.js posts the site's forms to Signet's own
+// The forms' sender: enquiry.js posts the site's forms to the shared
 // enquiry endpoint, with the FormSubmit action as the fallback.
-export function enquiryTag(endpoint, prefix, version) {
-  if (!endpoint) return "";
-  const v = version ? `?v=${version}` : "";
-  return `<script defer src="${prefix}enquiry.js${v}" data-endpoint="${esc(endpoint)}"></script>`;
+export function enquiryTag(prefix, version) {
+  if (!version) return "";
+  return `<script defer src="${prefix}enquiry.js?v=${version}"></script>`;
 }
 
 // The share image's size and description, each only when it is known.
@@ -89,7 +88,7 @@ export function head(h) {
   ${gaTag(site.gaId)}
   <script defer src="${h.prefix}analytics.js"></script>
   ${crispTag(site.crispId, h.prefix, site.chatVersion)}
-  ${enquiryTag(site.enquiryEndpoint, h.prefix, site.enquiryVersion)}
+  ${enquiryTag(h.prefix, site.enquiryVersion)}
 </head>`;
 }
 
