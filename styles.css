@@ -1762,6 +1762,15 @@ img {
   outline: none;
 }
 
+/* 16px controls on phones: iOS Safari zooms into a field set any smaller. */
+@media (max-width: 767px) {
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 1rem;
+  }
+}
+
 .field input::placeholder,
 .field textarea::placeholder {
   color: var(--ink-faint);
