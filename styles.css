@@ -1858,6 +1858,11 @@ img {
   opacity: 0.85;
 }
 
+/* Stacked on phones: heading, form, details, a small step apart. */
+.contact-grid {
+  gap: var(--space-2);
+}
+
 .contact-details {
   margin-top: 2.75rem;
   border-top: 1px solid var(--rule);
