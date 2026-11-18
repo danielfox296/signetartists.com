@@ -19,11 +19,11 @@ import { Body } from "../components/layout.jsx";
 import { Item } from "../components/registry.jsx";
 import { PostArticle } from "../components/post.jsx";
 import { WatchPage, watchHeadExtra } from "../components/generated.jsx";
-import { makeSchema } from "./schema.js";
+import { makeSchema, schemaTag } from "./schema.js";
 import { document, head, redirectStub } from "./head.js";
 import { llms, rss, sitemap, videoSitemap } from "./feeds.js";
 import { fingerprint, stylesheet, stylesOf } from "./styles.js";
-import { esc, pyjson } from "../lib/util.js";
+import { esc } from "../lib/util.js";
 import { LAYOUT_FILES } from "../lib/layouts.js";
 import { repoPath, SHARE, sharePath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
 import { imageDims, makeImages } from "./images.js";
@@ -406,9 +406,7 @@ export function buildSite(c, out) {
   return { files: Object.keys(files), built, pictures };
 }
 
-function schemaFor(payload) {
-  return `<script type="application/ld+json">${pyjson(payload)}</script>`;
-}
+const schemaFor = schemaTag;
 
 // A page's sitemap date: the date it had when it was converted while its
 // file is unchanged, then the file's own last commit. A page added since the

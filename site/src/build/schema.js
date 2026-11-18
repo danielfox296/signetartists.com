@@ -2,7 +2,23 @@
    FAQPage on a page is its visible Questions sections. */
 import { htmlText, pyjson } from "../lib/util.js";
 
-export const schemaTag = (payload) => `<script type="application/ld+json">${pyjson(payload)}</script>`;
+// Leaves out any property whose value is null, undefined, an empty string or
+// an empty array, at every depth.
+export function prune(v) {
+  if (Array.isArray(v)) return v.map(prune).filter((x) => x !== undefined);
+  if (v && typeof v === "object") {
+    const out = {};
+    for (const [k, x] of Object.entries(v)) {
+      const y = prune(x);
+      if (y === null || y === undefined || y === "" || (Array.isArray(y) && !y.length)) continue;
+      out[k] = y;
+    }
+    return out;
+  }
+  return v;
+}
+
+export const schemaTag = (payload) => `<script type="application/ld+json">${pyjson(prune(payload))}</script>`;
 
 export function makeSchema(m) {
   const { SITE_URL, brand, site } = m;
