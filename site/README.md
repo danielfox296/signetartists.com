@@ -23,14 +23,21 @@ Run everything from the repo root.
   - `reviews.jsx` testimonials from `content/records/testimonials.json`: Act testimonials (every one for the page's act, on every act page), Testimonials (picked by occasion and act, for any page) and the Testimonial block (one, by id)
   - `config.jsx` the Puck configs, `registry.jsx` how the build renders stored items
 - `src/lib/model.js` everything derived from `content/`: act facts, trails, sibling and hub lists, posts by parent
-- `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD), `feeds.js`
+- `src/build/` the build: `main.jsx`, `head.js`, `schema.js` (JSON-LD; every act page carries an entity node, and empty
+  values are left out), `feeds.js` (sitemaps, `rss.xml`, `llms.txt`, the short index of main pages and acts, and
+  `llms-full.txt`, every page with its description), `sprites.js` (repeated drawings, written once as files under
+  `img/sprites/`)
+- `page.js` (repo root) the behaviour every page shares, loaded with defer from the head: the mobile nav, even rows for
+  wrapping grids, and the like
+- A field in a Check a Date form can carry a `hint` (the Contact form's Fields list in the admin): a small line under the
+  control, tied to it with `aria-describedby`
 - `src/lib/pictures.js` pictures in the built site: a local JPEG or PNG keeps its `<img>`, which gains a `srcset` of
   WebP copies in 480, 800, 1200 and 1600 wide (up to its own width) and each component's `sizes`. No wrapper
   element: the page's element tree is what it was. The editor draws the plain `<img>`. `src/build/images.js` makes the
   copies at deploy time (`--images`), recompresses every JPEG under `img/` and `media/`, and fetches each YouTube
   video's picture to `img/yt/<id>.jpg`; none of it is committed, and the workflows keep it in the Actions cache
 - YouTube videos are click-to-play (`YouTube` in `components/parts.jsx`): the video's poster or its YouTube picture
-  and a play button, swapped for the player on a click or Enter. The watch pages under `/video/` keep the player.
+  and a play button, swapped for the player on a click or Enter. The watch pages under `/video/` use the same click-to-play poster.
 - The build minifies `styles.css` and gives it a `?v=` of its own; the first picture of a page's first section loads
   first and never lazily
 - `admin/` the admin app at admin.signetartists.com
