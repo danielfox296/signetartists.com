@@ -9,7 +9,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+    - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       with:
         node-version-file: .nvmrc
         cache: npm
@@ -26,7 +26,7 @@ runs:
     # runs, so a run makes only what is new, and is saved again only when
     # something was made.
     - name: Restore pictures
-      uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: ~/.cache/signet-pictures
         key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -43,7 +43,7 @@ runs:
 
     - name: Save pictures
       if: steps.build.outputs.pictures_made != '0'
-      uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: ~/.cache/signet-pictures
         key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
