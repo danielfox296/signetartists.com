@@ -436,7 +436,7 @@ export const VideoGrid = {
     // No clips yet: nothing on the page, not an empty frame.
     if (!list.length) return null;
     // A playlist: one player and the clips listed beside it; a
-    // click on a line plays that clip in the player (YT_SCRIPT in main.jsx).
+    // click on a line plays that clip in the player (page.js).
     if (playlist && list.length) {
       return (
         <div className="playlist" style={css(style)}>

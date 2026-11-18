@@ -1187,23 +1187,10 @@ const VenueSpaces = {
             })}
           </div>
         </div>
-        <Raw html={`<script>${VSPACE_JS}</script>`} />
       </section>
     );
   },
 };
-// The play button: the act's clip in a small player over the corner of the
-// space's photo, so the room stays in view while the music plays. One at a
-// time; the button stops it again.
-const VSPACE_JS =
-  `(function(){var root=document.currentScript.parentNode;` +
-  `function stop(b){var p=b.closest(".vspace").querySelector(".vspace__player");p.innerHTML="";p.classList.remove("is-on");b.classList.remove("is-on");b.querySelector(".vspace__play-text").textContent="Hear "+b.dataset.title;}` +
-  `root.querySelectorAll("[data-vclip]").forEach(function(b){b.addEventListener("click",function(){` +
-  `var on=b.classList.contains("is-on");root.querySelectorAll("[data-vclip].is-on").forEach(stop);if(on)return;` +
-  `var p=b.closest(".vspace").querySelector(".vspace__player");` +
-  `p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.dataset.vclip+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="'+b.dataset.title.replace(/"/g,"")+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';` +
-  `p.classList.add("is-on");b.classList.add("is-on");b.querySelector(".vspace__play-text").textContent="Stop the music";});});})();`;
-
 // Moments at a venue: a wedding's ceremony, cocktails and reception, or a
 // company's party, gala and reception, each with the space and one act, shown
 // by the act's photograph.

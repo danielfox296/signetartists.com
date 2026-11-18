@@ -87,6 +87,7 @@ export function head(h) {
   ${h.schema || ""}
   ${gaTag(site.gaId)}
   <script defer src="${h.prefix}analytics.js"></script>
+  ${site.pageVersion ? `<script defer src="${h.prefix}page.js?v=${site.pageVersion}"></script>` : ""}
   ${crispTag(site.crispId, h.prefix, site.chatVersion)}
   ${enquiryTag(h.prefix, site.enquiryVersion)}
 </head>`;

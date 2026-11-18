@@ -143,38 +143,6 @@ function chatButtons(html) {
   return html.replace(CHECK_DATE, (a, href) => `${a}<button type="button" class="chat-link" data-chat="${href}">Or chat with us</button>`);
 }
 
-// Click-to-play YouTube: a video's button becomes its player, playing.
-const YT_SCRIPT = `<script>
-    document.addEventListener('click', function (e) {
-      var item = e.target.closest && e.target.closest('.playlist-item');
-      if (item) {
-        var pl = item.closest('.playlist');
-        var stage = pl.querySelector('.playlist-stage');
-        var p = document.createElement('iframe');
-        var u = item.getAttribute('data-play');
-        p.src = u + (u.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
-        p.title = item.getAttribute('data-title') || '';
-        p.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture');
-        p.allowFullscreen = true;
-        stage.replaceChildren(p);
-        pl.querySelectorAll('.playlist-item').forEach(function (x) { x.setAttribute('aria-pressed', x === item ? 'true' : 'false'); });
-        if (stage.getBoundingClientRect().top < 0) { stage.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-        return;
-      }
-      var b = e.target.closest && e.target.closest('.yt');
-      if (!b) { return; }
-      var src = b.getAttribute('data-yt');
-      var f = document.createElement('iframe');
-      f.src = src + (src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
-      f.title = b.getAttribute('data-title') || '';
-      f.setAttribute('allow', b.getAttribute('data-allow') || '');
-      if (b.hasAttribute('data-referrerpolicy')) { f.referrerPolicy = b.getAttribute('data-referrerpolicy'); }
-      f.allowFullscreen = true;
-      b.replaceWith(f);
-      f.focus();
-    });
-  </script>`;
-
 const minifyCss = (css) => transformSync(css, { loader: "css", minify: true }).code;
 
 export { plan };
@@ -254,6 +222,8 @@ export function buildSite(c, out) {
   // chat.js gets a ?v= of its own too, so an edit reaches cached browsers.
   const chatPath = path.join(REPO, "chat.js");
   if (fs.existsSync(chatPath)) headSite = { ...headSite, chatVersion: fingerprint(fs.readFileSync(chatPath, "utf8")) };
+  const pagePath = path.join(REPO, "page.js");
+  if (fs.existsSync(pagePath)) headSite = { ...headSite, pageVersion: fingerprint(fs.readFileSync(pagePath, "utf8")) };
   const enquiryPath = path.join(REPO, "enquiry.js");
   if (fs.existsSync(enquiryPath)) headSite = { ...headSite, enquiryVersion: fingerprint(fs.readFileSync(enquiryPath, "utf8")) };
 
@@ -313,7 +283,6 @@ export function buildSite(c, out) {
     );
     if (first) body = hero(body);
     if (m.site.crispId) body = chatButtons(body);
-    if (body.includes('<button type="button" class="yt"')) body += "\n" + YT_SCRIPT;
     const canonical = m.canonicalFor(output);
     const ogMeta = shareImageMeta(ogImage, body, ogAlt);
     const h = head({ site: headSite, title, description, robots, canonical, prefix, ogType, ogImage: ogMeta.url || ogImage, ogMeta, headExtra, schema: schema + (trail ? S.breadcrumbSchema(trail) : "") });

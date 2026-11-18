@@ -298,21 +298,6 @@ export const blocks = {
   },
 };
 
-const ANCHOR_SCRIPT = `<script>
-  // Anchor-link copy for subheads. Click puts the section URL on the
-  // clipboard; the # flips to a check for a moment as the receipt.
-  document.querySelectorAll('.anchor-link').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      navigator.clipboard.writeText(
-        window.location.origin + window.location.pathname + a.getAttribute('href')
-      );
-      a.textContent = '✓';
-      setTimeout(function () { a.textContent = '#'; }, 1500);
-    });
-  });
-</script>`;
-
 function Block({ c }) {
   const C = blocks[c.type];
   if (!C) throw new Error(`Unknown post block ${c.type}`);
@@ -405,7 +390,6 @@ export function PostArticle({ doc }) {
         {last(cta).map((c) => <Block key={c.props.id} c={c} />)}
         {last(rel).map((c) => <Block key={c.props.id} c={c} />)}
       </PostFrame>
-      <Raw html={ANCHOR_SCRIPT} />
     </>
   );
 }
