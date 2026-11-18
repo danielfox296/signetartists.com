@@ -3430,16 +3430,19 @@ main:focus {
   display: none;
 }
 
+/* The song takes the space the artist leaves; the artist wraps only when the
+   song is down to its longest word, so a long artist stays inside the row. */
 .catalog-song {
   font-size: 0.9625rem;
   color: var(--ink);
+  flex: 1 1 0%;
 }
 
 .catalog-artist {
   font-size: 0.9625rem;
   color: var(--ink-faint);
   text-align: right;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 .catalog-empty {
