@@ -851,6 +851,7 @@ const ContactForm = {
         full: { type: "radio", label: "Width", options: [{ label: "Half", value: false }, { label: "Full", value: true }] },
         rows: text("Rows"),
         placeholder: text("Placeholder"),
+        hint: text("Hint (a small line under the field)"),
         options: text("Choices (Checkboxes and One of), separated by |"),
         param: text("Ticked when the link carries (One checkbox, e.g. photo-video); for One of, shown and chosen only when the link names a choice (e.g. package=event-photos)"),
       },
@@ -939,10 +940,11 @@ const ContactForm = {
                         <H as="label" htmlFor={f.id} html={f.label} />
                         {" "}
                         {f.kind === "textarea" ? (
-                          <textarea id={f.id} name={f.name} rows={f.rows} placeholder={f.placeholder} />
+                          <textarea id={f.id} name={f.name} rows={f.rows} placeholder={f.placeholder} aria-describedby={f.hint ? `${f.id}-hint` : undefined} />
                         ) : (
-                          <input id={f.id} name={f.name} type={f.type || undefined} autoComplete={f.autocomplete || undefined} required={f.required || undefined} />
+                          <input id={f.id} name={f.name} type={f.type || undefined} autoComplete={f.autocomplete || undefined} required={f.required || undefined} aria-describedby={f.hint ? `${f.id}-hint` : undefined} />
                         )}
+                        {f.hint ? <p className="note note--small" id={`${f.id}-hint`}>{f.hint}</p> : null}
                       </div>
                     )
                   )}
