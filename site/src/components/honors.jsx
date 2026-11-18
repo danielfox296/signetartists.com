@@ -5,6 +5,7 @@
 import { Fragment } from "react";
 import { cx } from "../lib/util.js";
 import { useHref, useSite } from "./parts.jsx";
+import { useOf } from "../lib/sprite-use.js";
 
 // The word over a laurel, by kind.
 export const LAUREL = { award: "Winner", finalist: "Finalist", honoree: "Honoree", nomination: "Nominee", invited: "Invited" };
@@ -66,7 +67,7 @@ export function MiniLaurel() {
   const use = useLaurelSprite("mini-laurel");
   return (
     <svg className="card-honor-icon" viewBox="-22 -6 120 128" aria-hidden="true" focusable="false" fill="currentColor"
-      dangerouslySetInnerHTML={{ __html: use ? `<use href="${use}"/>` : MINI_LAUREL }} />
+      dangerouslySetInnerHTML={{ __html: use ? useOf(use, "-22 -6 120 128") : MINI_LAUREL }} />
   );
 }
 
@@ -74,7 +75,7 @@ export function Branch({ right }) {
   const use = useLaurelSprite("laurel-branch");
   return (
     <svg className={cx("laurel-branch", right && "laurel-branch--r")} viewBox="-22 -6 70 128" aria-hidden="true" focusable="false" fill="currentColor"
-      dangerouslySetInnerHTML={{ __html: use ? `<use href="${use}"/>` : BRANCH }} />
+      dangerouslySetInnerHTML={{ __html: use ? useOf(use, "-22 -6 70 128") : BRANCH }} />
   );
 }
 

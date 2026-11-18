@@ -8,6 +8,7 @@ import { bandClass, shapeClass, Buttons, buttonFields, F, H, headingFields, Img,
 import { SIZES, ytId } from "../lib/pictures.js";
 import { coverPath, patchwork } from "../lib/patchwork.js";
 import { ALLOW, CloseRow, RosterGrid, rowMark } from "./blocks.jsx";
+import { useOf } from "../lib/sprite-use.js";
 import { CreditList, honorsOf, Laurel, LaurelRow, laurelsOf, Mark, markedOf, PressList, pressOf, creditsOf } from "./honors.jsx";
 
 const { rich, text } = F;
@@ -74,7 +75,7 @@ const LogoStrip = {
               const svg = sprite
                 ? `<svg role="img" aria-label="${esc(l.name)}" focusable="false" viewBox="${sprite.viewBox}">` +
                   (sprite.title ? `<title>${sprite.title}</title>` : "") +
-                  `<use href="${relUrl(s.sprites.logos.url, s.prefix)}#${l.id}"/></svg>`
+                  useOf(`${relUrl(s.sprites.logos.url, s.prefix)}#${l.id}`, sprite.viewBox) + "</svg>"
                 : s.model.c.logoSvg(l.id).replace("<svg ", `<svg role="img" aria-label="${esc(l.name)}" focusable="false" `);
               return <li key={l.id} className="credit" style={{ "--credit-h": String(l.h ?? 1) }} dangerouslySetInnerHTML={{ __html: svg }} />;
             })}
