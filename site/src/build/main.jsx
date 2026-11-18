@@ -27,6 +27,8 @@ import { esc, pyjson } from "../lib/util.js";
 import { LAYOUT_FILES } from "../lib/layouts.js";
 import { repoPath, SHARE, sharePath, widthsFor, YT_WIDTHS } from "../lib/pictures.js";
 import { imageDims, makeImages } from "./images.js";
+import { sheet, splitSvg } from "./sprites.js";
+import { BRANCH, MINI_LAUREL } from "../components/honors.jsx";
 
 const REPO = process.cwd();
 const CONTENT = path.join(REPO, "content");
@@ -216,8 +218,22 @@ export function renderSections(c, reqs) {
 export function buildSite(c, out) {
   const { m, S, hubs, OG_DEFAULT, OG_DEFAULT_ALT, brandTitle, absImg, base: plain } = makeSite(c);
   const pictures = c.images ? picturesFor(c.images) : null;
-  const base = { ...plain, pictures };
   const files = {};
+  // The client logos and the laurels, each drawn once in a sprite sheet that
+  // every page points at.
+  const logoDrawings = Object.fromEntries(c.logoStrip.logos.map((l) => [l.id, splitSvg(c.logoSvg(l.id))]));
+  const logoSheet = sheet(logoDrawings);
+  const laurelSheet = sheet({
+    "laurel-branch": { viewBox: "-22 -6 70 128", paint: [["fill", "currentColor"]], inner: BRANCH },
+    "mini-laurel": { viewBox: "-22 -6 120 128", paint: [["fill", "currentColor"]], inner: MINI_LAUREL },
+  });
+  files["img/sprites/logos.svg"] = logoSheet.text;
+  files["img/sprites/laurels.svg"] = laurelSheet.text;
+  const sprites = {
+    logos: { url: `/img/sprites/logos.svg?v=${logoSheet.version}`, drawings: logoDrawings },
+    laurels: `/img/sprites/laurels.svg?v=${laurelSheet.version}`,
+  };
+  const base = { ...plain, pictures, sprites };
   const built = [];
   const lastmod = lastmodFor(c);
   const write = (rel, text) => {

@@ -3,7 +3,7 @@
    what a new one starts with. The rest have one fixed shape: the logo strip,
    the hub lists, the home hero, the cover walls, the act lists. */
 import { Fragment } from "react";
-import { css, cx, esc } from "../lib/util.js";
+import { css, cx, esc, relUrl } from "../lib/util.js";
 import { bandClass, shapeClass, Buttons, buttonFields, F, H, headingFields, Img, imageFields, Pic, Raw, shellFields, useHref, useSite, YouTube } from "./parts.jsx";
 import { SIZES, ytId } from "../lib/pictures.js";
 import { coverPath, patchwork } from "../lib/patchwork.js";
@@ -70,7 +70,12 @@ const LogoStrip = {
           <p className="eyebrow">{c.label}</p>
           <ul className="credits-list" aria-label={c.label}>
             {c.logos.map((l) => {
-              const svg = s.model.c.logoSvg(l.id).replace("<svg ", `<svg role="img" aria-label="${esc(l.name)}" focusable="false" `);
+              const sprite = s.sprites && s.sprites.logos && s.sprites.logos.drawings[l.id];
+              const svg = sprite
+                ? `<svg role="img" aria-label="${esc(l.name)}" focusable="false" viewBox="${sprite.viewBox}">` +
+                  (sprite.title ? `<title>${sprite.title}</title>` : "") +
+                  `<use href="${relUrl(s.sprites.logos.url, s.prefix)}#${l.id}"/></svg>`
+                : s.model.c.logoSvg(l.id).replace("<svg ", `<svg role="img" aria-label="${esc(l.name)}" focusable="false" `);
               return <li key={l.id} className="credit" style={{ "--credit-h": String(l.h ?? 1) }} dangerouslySetInnerHTML={{ __html: svg }} />;
             })}
           </ul>
