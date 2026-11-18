@@ -70,7 +70,8 @@ Run everything from the repo root.
     site styles with contrast; `ui/Media.jsx` and `lib/media.js` the pictures under img/, their uses, replace everywhere
 - `src/lib/layouts.js` the layouts' parts and defaults; `src/build/styles.js` the site styles written into the stylesheet
   (unchanged, byte for byte, while they match it)
-- `scripts/` the build entry (`build.mjs`) and the site check (`site_check.py`)
+- `scripts/` the build entry (`build.mjs`) and the site check (`site_check.py`: titles, descriptions, pictures, structured data, the
+  page policy tag, headings, `llms.txt` links, sprite symbols, the Check a Date label and form labels)
 
 ## content/
 
