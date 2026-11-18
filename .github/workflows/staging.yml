@@ -62,26 +62,19 @@ jobs:
           key: pictures-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       # The repo's static files (styles, scripts, images, fonts), then the
-      # build's output over them. The HTML and feeds build.py committed are
-      # left out, so a page deleted from content/ is gone from staging too.
+      # build's output over them, so a page deleted from content/ is gone from
+      # staging too.
       - name: Stage site
         run: |
           mkdir -p _site
           rsync -a \
             --exclude='.git' \
             --exclude='.github' \
-            --exclude='_src' \
             --exclude='_site' \
             --exclude='_gen' \
             --exclude='/site' \
             --exclude='/content' \
-            --exclude='build.py' \
             --exclude='*.md' \
-            --exclude='*.html' \
-            --exclude='/sitemap.xml' \
-            --exclude='/video-sitemap.xml' \
-            --exclude='/rss.xml' \
-            --exclude='/llms.txt' \
             --exclude='.gitignore' \
             --exclude='__pycache__' \
             --exclude='node_modules' \

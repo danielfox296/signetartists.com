@@ -1,9 +1,8 @@
 name: Deploy signetartists.com
 
 # Builds main with the new build (site/, from content/) and deploys it to
-# GitHub Pages. build.py and the HTML it committed are no longer read: the
-# stage leaves them out and puts the new build's output over the repo's
-# static files, so a page deleted from content/ is gone from the site too.
+# GitHub Pages. The stage puts the build's output over the repo's static
+# files, so a page deleted from content/ is gone from the site too.
 
 on:
   push:
@@ -87,18 +86,11 @@ jobs:
           rsync -a \
             --exclude='.git' \
             --exclude='.github' \
-            --exclude='_src' \
             --exclude='_site' \
             --exclude='_gen' \
             --exclude='/site' \
             --exclude='/content' \
-            --exclude='build.py' \
             --exclude='*.md' \
-            --exclude='*.html' \
-            --exclude='/sitemap.xml' \
-            --exclude='/video-sitemap.xml' \
-            --exclude='/rss.xml' \
-            --exclude='/llms.txt' \
             --exclude='.gitignore' \
             --exclude='__pycache__' \
             --exclude='node_modules' \
