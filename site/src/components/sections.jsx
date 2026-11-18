@@ -356,7 +356,7 @@ const ActHeader = {
             {face ? <p className="act-face">{face}</p> : null}
             {a.blurb ? <p className="lede">{a.blurb}</p> : null}
             <div className="btn-row">
-              <a className="btn" href={href(`/contact/?act=${a.id}`)}>{button || "Check a date"}</a>
+              <a className="btn" href={href(`/contact/?act=${a.id}`)}>{button || "Check a Date"}</a>
             </div>
           </div>
           {media ? <div className="act-video">{media}</div> : null}
@@ -399,7 +399,7 @@ const ActClose = {
     return (
       <section className={bandClass(band || "ruled")}>
         <div className="wrap" style={css(wrapStyle)}>
-          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a date", href: `/contact/?act=${a.id}`, cls: "btn" }]} note={note} />
+          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a Date", href: `/contact/?act=${a.id}`, cls: "btn" }]} note={note} />
         </div>
       </section>
     );

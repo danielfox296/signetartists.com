@@ -114,7 +114,7 @@ export function WatchPage({ v }) {
     description: (k) => <p key={k} className="lede">{v.description}</p>,
     buttons: (k) => (
       <div key={k} className="btn-row">
-        <a className="btn" href={`${s.prefix}contact/?act=${act.id}`}>Check a date</a>
+        <a className="btn" href={`${s.prefix}contact/?act=${act.id}`}>Check a Date</a>
         <a className="btn btn--outline" href={actHref}>{"See " + act.name}</a>
       </div>
     ),

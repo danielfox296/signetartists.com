@@ -1049,7 +1049,7 @@ export const Cards = {
                 <dt>Configuration</dt>
                 <dd>{`${r.label}, ${r.pieces} ${r.pieces === 1 ? "musician" : "musicians"}`}</dd>
               </dl>
-              <a className="act-card-link" href={href(`/contact/?act=${a.id}`)}>Check a date</a>
+              <a className="act-card-link" href={href(`/contact/?act=${a.id}`)}>Check a Date</a>
             </article>
           );
         })}
