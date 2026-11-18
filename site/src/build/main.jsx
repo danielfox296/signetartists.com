@@ -21,7 +21,7 @@ import { PostArticle } from "../components/post.jsx";
 import { WatchPage, watchHeadExtra } from "../components/generated.jsx";
 import { makeSchema, schemaTag } from "./schema.js";
 import { document, head, redirectStub } from "./head.js";
-import { llms, rss, sitemap, videoSitemap } from "./feeds.js";
+import { llmsFull, llmsIndex, rss, sitemap, videoSitemap } from "./feeds.js";
 import { fingerprint, stylesheet, stylesOf } from "./styles.js";
 import { esc } from "../lib/util.js";
 import { LAYOUT_FILES } from "../lib/layouts.js";
@@ -394,7 +394,8 @@ export function buildSite(c, out) {
   const blogIndex = c.pages.find((d) => d.slug === "blog-index");
   write("sitemap.xml", sitemap(m, built, lastmod));
   write("video-sitemap.xml", videoSitemap(m, built, lastmod));
-  write("llms.txt", llms(m, built));
+  write("llms.txt", llmsIndex(m, built));
+  write("llms-full.txt", llmsFull(m, built));
   write("rss.xml", rss(m, blogIndex ? blogIndex.root.props.description : ""));
   write("robots.txt", fs.readFileSync(path.join(c.dir, "robots.txt"), "utf8"));
 
