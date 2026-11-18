@@ -122,9 +122,26 @@ const MARK_H = {
   "honors/rolling-stone-india.png": 0.9, "honors/vail-daily.png": 0.75, "honors/denver-gazette.png": 1.1, "honors/gazette.png": 1.05,
 };
 
+// Each mark file's own width and height, so the page keeps its place before the picture loads.
+const MARK_SIZE = {
+  "honors/9news.png": [336, 68],
+  "honors/berklee.svg": [700, 166],
+  "honors/dazzle.png": [168, 126],
+  "honors/denver-gazette.png": [540, 162],
+  "honors/focoma.svg": [254, 179],
+  "honors/gazette.png": [540, 99],
+  "honors/jazziz.png": [191, 180],
+  "honors/josie-music-awards.png": [339, 240],
+  "honors/rolling-stone-india.png": [476, 88],
+  "honors/swallow-hill.png": [345, 180],
+  "honors/vail-daily.png": [190, 45],
+  "honors/wammies.svg": [149, 55],
+};
+
 export function Mark({ h }) {
   const href = useHref();
-  if (h.logo) return <img className="honor-mark" style={{ "--mark-h": String(MARK_H[h.logo] ?? 1) }} src={href(`/img/${h.logo}`)} alt={h.from || ""} loading="lazy" decoding="async" />;
+  const size = MARK_SIZE[h.logo] || [];
+  if (h.logo) return <img className="honor-mark" style={{ "--mark-h": String(MARK_H[h.logo] ?? 1) }} src={href(`/img/${h.logo}`)} alt={h.from || ""} width={size[0]} height={size[1]} loading="lazy" decoding="async" />;
   return <span className="honor-mark honor-mark--type">{h.from}</span>;
 }
 
