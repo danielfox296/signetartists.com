@@ -375,6 +375,13 @@
          "style": "max-width: 51.5rem;"
         }
        ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ],
        "headingNote": "<a href=\"/pricing/\">Learn what live music costs in different markets including Colorado, the Front Range and Nationally.</a>",
        "frame": "split"
       }

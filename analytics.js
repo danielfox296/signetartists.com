@@ -61,12 +61,17 @@
 
   // roster_filter: a sort chip on the roster page was clicked (the selects
   // until 2026-11-11). facet is "night", value the kind of event picked;
-  // clicking the picked chip again sends "any".
+  // clicking the picked chip again sends "any". A size chip (data-size) sends
+  // facet "size" with the size picked.
   document.addEventListener("click", function (e) {
-    var el = e.target && e.target.closest ? e.target.closest("[data-fit]") : null;
+    var el = e.target && e.target.closest ? e.target.closest("[data-fit], [data-size]") : null;
     if (!el || !el.closest("#roster-filters")) return;
     var on = el.getAttribute("aria-pressed") === "true";
-    send("roster_filter", { facet: "night", value: on ? "any" : el.getAttribute("data-fit") });
+    var size = el.getAttribute("data-size");
+    send("roster_filter", {
+      facet: size ? "size" : "night",
+      value: on ? "any" : size || el.getAttribute("data-fit")
+    });
   }, true);
 
   // pricing_engaged: first .rate-table scrolled into view, once per page view.

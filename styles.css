@@ -1858,6 +1858,11 @@ img {
   opacity: 0.85;
 }
 
+/* Stacked on phones: heading, form, details, a small step apart. */
+.contact-grid {
+  gap: var(--space-2);
+}
+
 .contact-details {
   margin-top: 2.75rem;
   border-top: 1px solid var(--rule);
@@ -2485,7 +2490,24 @@ main:focus {
 
   .contact-grid {
     grid-template-columns: 1fr 1.4fr;
-    gap: 5rem;
+    grid-template-rows: auto 1fr;
+    gap: 0 5rem;
+  }
+
+  .contact-grid > .heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contact-grid > form {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .contact-grid > .contact-details {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
   }
 }
 
@@ -3198,6 +3220,8 @@ main:focus {
      tall — a 1.2% vertical crop on every sleeve. Without a container, cqw
      falls back to the viewport, i.e. exactly the old behaviour. */
   container-type: inline-size;
+  /* A hidden caption wider than a narrow edge tile stays inside the page width. */
+  overflow-x: clip;
 }
 
 /* Row height MUST equal column width or the sleeves stop being square. Ten
@@ -3413,16 +3437,19 @@ main:focus {
   display: none;
 }
 
+/* The song takes the space the artist leaves; the artist wraps only when the
+   song is down to its longest word, so a long artist stays inside the row. */
 .catalog-song {
   font-size: 0.9625rem;
   color: var(--ink);
+  flex: 1 1 0%;
 }
 
 .catalog-artist {
   font-size: 0.9625rem;
   color: var(--ink-faint);
   text-align: right;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 .catalog-empty {
@@ -3585,6 +3612,10 @@ main:focus {
 
 .roster-sort .catalog-chips {
   margin-top: 0;
+}
+
+.roster-filters[hidden] {
+  display: none;
 }
 
 /* role="status": says which acts came first, for the eye and a screen reader. */
@@ -3890,7 +3921,7 @@ main:focus {
   padding: 0.25rem 0.6rem;
   background: rgba(18, 18, 18, 0.7);
   color: #f5f5f2;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   line-height: 1.35;
 }
 
@@ -6914,6 +6945,11 @@ body {
 .roster-sort .catalog-chips {
   gap: 0.5rem;
 }
+/* The size group follows the kind group after a thin rule. */
+.roster-sort .catalog-chips + .catalog-chips {
+  padding-left: 0.75rem;
+  border-left: 1.5px solid rgba(18, 18, 18, 0.25);
+}
 .roster-sort .chip {
   padding: 0.55rem 1.15rem;
   font-weight: 600;
@@ -6951,11 +6987,12 @@ body {
     flex-wrap: nowrap;
     border-radius: 1rem;
     padding: 0.5rem;
-  }
-  .roster-sort .catalog-chips {
-    flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
+  }
+  .roster-sort .catalog-chips {
+    flex: none;
+    flex-wrap: nowrap;
   }
   .roster-sort .chip {
     flex: none;
@@ -7478,7 +7515,7 @@ body {
   left: 0.9rem;
   bottom: 0.7rem;
   z-index: 2;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(245, 245, 242, 0.75);

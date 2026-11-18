@@ -205,6 +205,14 @@ export function buildSite(c, out) {
   const base = { ...plain, pictures, sprites };
   const built = [];
   const lastmod = lastmodFor(c);
+  // A post's modified date: the later of its last_updated and its file's last
+  // commit, never earlier than its publish date. The article schema, the
+  // article:modified_time tag and the sitemap all use it.
+  const postModified = (p) => {
+    const file = `content/posts/${p.slug}.json`;
+    const last = lastmod({ output: `blog/${p.slug}/index.html`, file });
+    return [p.last_updated, last].filter((d) => d && d >= (p.date || "")).sort().pop() || p.date || "";
+  };
   const write = (rel, text) => {
     files[rel] = text;
   };
@@ -384,15 +392,15 @@ export function buildSite(c, out) {
       ogImage: og || OG_DEFAULT,
       headExtra: [
         `<meta property="article:published_time" content="${p.date}">`,
-        `<meta property="article:modified_time" content="${p.last_updated || p.date}">`,
+        `<meta property="article:modified_time" content="${postModified(p)}">`,
         `<meta property="article:author" content="${esc(authorName)}">`,
       ].join("\n  "),
-      schema: schemaFor(S.articleSchema(p, canonical, og || OG_DEFAULT, lastmod({ output, file: `content/posts/${d.slug}.json` }))),
+      schema: schemaFor(S.articleSchema(p, canonical, og || OG_DEFAULT, postModified(p))),
     });
   }
 
   const blogIndex = c.pages.find((d) => d.slug === "blog-index");
-  write("sitemap.xml", sitemap(m, built, lastmod));
+  write("sitemap.xml", sitemap(m, built, lastmod, postModified));
   write("video-sitemap.xml", videoSitemap(m, built, lastmod));
   write("llms.txt", llmsIndex(m, built));
   write("llms-full.txt", llmsFull(m, built));

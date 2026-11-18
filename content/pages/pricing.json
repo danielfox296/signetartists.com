@@ -306,6 +306,19 @@
       }
      },
      {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-P1",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     },
+     {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-21",

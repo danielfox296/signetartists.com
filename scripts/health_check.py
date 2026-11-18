@@ -15,6 +15,7 @@ import ssl
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -69,6 +70,46 @@ def check_pages():
             record("FAIL", name, "200 but no <title>")
         else:
             record("PASS", name, f"200, title {m.group(1)[:50]!r}")
+
+
+def check_index_files():
+    for path in ("/llms.txt", "/llms-full.txt"):
+        name = f"index file {path}"
+        try:
+            status, body = get(BASE + path)
+            record("PASS" if status == 200 and body.strip() else "FAIL", name, f"HTTP {status}, {len(body)} bytes")
+        except Exception as e:  # noqa: BLE001
+            record("FAIL", name, str(e))
+
+
+def check_home_files():
+    """The home page carries a policy tag, and every script, stylesheet and sprite file it names loads."""
+    try:
+        status, body = get(BASE + "/")
+    except Exception as e:  # noqa: BLE001
+        record("FAIL", "home page files", str(e))
+        return
+    if re.search(r'<meta http-equiv="Content-Security-Policy" content="[^"]+"', body):
+        record("PASS", "home page policy tag", "Content-Security-Policy tag present")
+    else:
+        record("FAIL", "home page policy tag", "no Content-Security-Policy tag")
+    refs = re.findall(r'<script\b[^>]*\ssrc="([^"]+)"', body)
+    refs += re.findall(r'<link\b[^>]*\srel="stylesheet"[^>]*\shref="([^"]+)"', body)
+    refs += re.findall(r'<use\b[^>]*\shref="([^"#]+\.svg[^"#]*)#', body)
+    seen = []
+    for ref in refs:
+        url = urllib.parse.urljoin(BASE + "/", ref)
+        if url.startswith(BASE + "/") and url not in seen:
+            seen.append(url)
+    if not seen:
+        record("FAIL", "home page files", "the home page names no script, stylesheet or sprite file")
+    for url in seen:
+        name = f"home page file {url[len(BASE):].split('?')[0]}"
+        try:
+            status, _ = get(url)
+            record("PASS" if status == 200 else "FAIL", name, f"HTTP {status}")
+        except Exception as e:  # noqa: BLE001
+            record("FAIL", name, str(e))
 
 
 def check_sitemaps():
@@ -195,6 +236,8 @@ def check_last_deploy():
 def main():
     check_pages()
     check_sitemaps()
+    check_index_files()
+    check_home_files()
     check_enquiry()
     check_redirects()
     check_tls()

@@ -356,7 +356,7 @@ const ActHeader = {
             {face ? <p className="act-face">{face}</p> : null}
             {a.blurb ? <p className="lede">{a.blurb}</p> : null}
             <div className="btn-row">
-              <a className="btn" href={href(`/contact/?act=${a.id}`)}>{button || "Check a date"}</a>
+              <a className="btn" href={href(`/contact/?act=${a.id}`)}>{button || "Check a Date"}</a>
             </div>
           </div>
           {media ? <div className="act-video">{media}</div> : null}
@@ -399,7 +399,7 @@ const ActClose = {
     return (
       <section className={bandClass(band || "ruled")}>
         <div className="wrap" style={css(wrapStyle)}>
-          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a date", href: `/contact/?act=${a.id}`, cls: "btn" }]} note={note} />
+          <R boxed boxStyle="max-width: 32rem;" title={t} lede={lede} buttons={[{ label: button || "Check a Date", href: `/contact/?act=${a.id}`, cls: "btn" }]} note={note} />
         </div>
       </section>
     );
@@ -867,22 +867,14 @@ const ContactForm = {
       <>
         <section className={bandClass(p.band || "top")} id={p.anchor || undefined}>
           <div className="wrap" style={css(p.wrapStyle)}>
+            {/* Heading, form, then details: one column on phones in this order; from
+                1024px the heading and details share the left column, the form the right. */}
             <div className="split contact-grid">
-              <div>
-                <div className="heading">
-                  <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} />
-                  <H as={p.titleTag || "h1"} className={p.titleClass || "h2 display"} html={p.title} />
-                  <H as="p" className="lede" html={p.lede} />
-                  {(p.headingText || []).map((t, i) => <H key={i} as="p" className={t.cls || "prose"} html={t.html} />)}
-                </div>
-                <dl className="contact-details">
-                  {(p.details || []).map((d, i) => (
-                    <div key={i}>
-                      <H as="dt" html={d.term} />
-                      <H as="dd" html={d.html} />
-                    </div>
-                  ))}
-                </dl>
+              <div className="heading">
+                <H as="p" className={cx("eyebrow", p.slab && "eyebrow--slab")} html={p.eyebrow} />
+                <H as={p.titleTag || "h1"} className={p.titleClass || "h2 display"} html={p.title} />
+                <H as="p" className="lede" html={p.lede} />
+                {(p.headingText || []).map((t, i) => <H key={i} as="p" className={t.cls || "prose"} html={t.html} />)}
               </div>
               <form action={p.action} method="POST">
                 {(p.hidden || []).map((h, i) => (
@@ -953,6 +945,14 @@ const ContactForm = {
                   <button type="submit" className="btn">{p.button}</button>
                 </div>
               </form>
+              <dl className="contact-details">
+                {(p.details || []).map((d, i) => (
+                  <div key={i}>
+                    <H as="dt" html={d.term} />
+                    <H as="dd" html={d.html} />
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </section>
@@ -1013,7 +1013,15 @@ const Roster = {
 };
 
 // The sort: one chip for each kind of event some act on the roster carries,
-// leaving out a kind marked "chip": false in roster.json.
+// leaving out a kind marked "chip": false in roster.json, then a second group
+// of chips by size.
+const SIZE_CHIPS = [
+  { id: "solo", label: "Solo" },
+  { id: "duo", label: "Duo" },
+  { id: "trio", label: "Trio" },
+  { id: "band", label: "Band" },
+  { id: "dj", label: "DJ" },
+];
 function RosterSort({ more, sorted }) {
   const s = useSite();
   const m = s.model;
@@ -1024,6 +1032,9 @@ function RosterSort({ more, sorted }) {
     <div className="roster-filters roster-sort" id="roster-filters" data-more={text(more)} data-sorted={text(sorted)} hidden>
       <div className="catalog-chips" role="group" aria-label="Kind of event">
         {kinds.map((b) => <button key={b.id} type="button" className="chip" data-fit={b.id} aria-pressed="false" title={b.blurb}>{b.label}</button>)}
+      </div>
+      <div className="catalog-chips" role="group" aria-label="Size">
+        {SIZE_CHIPS.map((z) => <button key={z.id} type="button" className="chip" data-size={z.id} aria-pressed="false">{z.label}</button>)}
       </div>
       <button type="button" className="btn btn--sm btn--outline" id="filter-reset" hidden>Reset</button>
       <p className="filter-count" id="filter-count" role="status"></p>
