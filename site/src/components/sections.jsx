@@ -1013,7 +1013,15 @@ const Roster = {
 };
 
 // The sort: one chip for each kind of event some act on the roster carries,
-// leaving out a kind marked "chip": false in roster.json.
+// leaving out a kind marked "chip": false in roster.json, then a second group
+// of chips by size.
+const SIZE_CHIPS = [
+  { id: "solo", label: "Solo" },
+  { id: "duo", label: "Duo" },
+  { id: "trio", label: "Trio" },
+  { id: "band", label: "Band" },
+  { id: "dj", label: "DJ" },
+];
 function RosterSort({ more, sorted }) {
   const s = useSite();
   const m = s.model;
@@ -1024,6 +1032,9 @@ function RosterSort({ more, sorted }) {
     <div className="roster-filters roster-sort" id="roster-filters" data-more={text(more)} data-sorted={text(sorted)} hidden>
       <div className="catalog-chips" role="group" aria-label="Kind of event">
         {kinds.map((b) => <button key={b.id} type="button" className="chip" data-fit={b.id} aria-pressed="false" title={b.blurb}>{b.label}</button>)}
+      </div>
+      <div className="catalog-chips" role="group" aria-label="Size">
+        {SIZE_CHIPS.map((z) => <button key={z.id} type="button" className="chip" data-size={z.id} aria-pressed="false">{z.label}</button>)}
       </div>
       <button type="button" className="btn btn--sm btn--outline" id="filter-reset" hidden>Reset</button>
       <p className="filter-count" id="filter-count" role="status"></p>

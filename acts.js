@@ -13,6 +13,10 @@
  * to the top of each lane, marks the matching pill on those cards, and puts
  * the rest under a heading below them. Picking it again, or Reset, puts every
  * card back in its built order. ?night=<bucket> opens the page sorted.
+ *
+ * A second group of chips sorts by size (Solo, Duo, Trio, Band, DJ) from the
+ * cards' data-configs. One sort at a time across both groups. ?size=<id>
+ * opens the page sorted by size; ?night= wins when both are present.
  */
 (function () {
   "use strict";
@@ -21,7 +25,7 @@
   var grids = Array.prototype.slice.call(document.querySelectorAll(".roster-grid"));
   if (!form || !grids.length) return;
 
-  var chips = Array.prototype.slice.call(form.querySelectorAll("[data-fit]"));
+  var chips = Array.prototype.slice.call(form.querySelectorAll("[data-fit], [data-size]"));
   if (!chips.length) return;
   var reset = document.getElementById("filter-reset");
   var countEl = document.getElementById("filter-count");
@@ -33,13 +37,33 @@
     return Array.prototype.slice.call(grid.querySelectorAll(".act-card"));
   });
 
-  function fits(card, id) {
-    return (card.getAttribute("data-buckets") || "").split(/\s+/).indexOf(id) !== -1;
+  // A pick is a key: "night:<bucket>" or "size:<id>". A chip's key comes from
+  // its data-fit (kind of event) or data-size attribute.
+  function keyOf(chip) {
+    var size = chip.getAttribute("data-size");
+    return size ? "size:" + size : "night:" + chip.getAttribute("data-fit");
   }
 
-  function apply(id) {
+  function words(card, attr) {
+    return (card.getAttribute(attr) || "").split(/\s+/).filter(Boolean);
+  }
+
+  function fits(card, key) {
+    var i = key.indexOf(":");
+    var kind = key.slice(0, i);
+    var id = key.slice(i + 1);
+    if (kind === "night") return words(card, "data-buckets").indexOf(id) !== -1;
+    return words(card, "data-configs").some(function (c) {
+      if (id === "band") return c !== "dj" && c !== "solo" && c !== "duo" && c !== "trio";
+      return c === id;
+    });
+  }
+
+  function apply(key) {
+    var id = key;
+    var night = key.indexOf("night:") === 0 ? key.slice(6) : "";
     chips.forEach(function (chip) {
-      chip.setAttribute("aria-pressed", chip.getAttribute("data-fit") === id ? "true" : "false");
+      chip.setAttribute("aria-pressed", keyOf(chip) === key ? "true" : "false");
     });
 
     grids.forEach(function (grid, g) {
@@ -52,7 +76,7 @@
         card.classList.toggle("is-fit", !!id && fits(card, id));
         var pills = card.querySelectorAll(".pill[data-bucket]");
         for (var i = 0; i < pills.length; i += 1) {
-          pills[i].classList.toggle("pill--on", pills[i].getAttribute("data-bucket") === id);
+          pills[i].classList.toggle("pill--on", !!night && pills[i].getAttribute("data-bucket") === night);
         }
       });
       top.forEach(function (card) { grid.appendChild(card); });
@@ -67,7 +91,7 @@
 
     var label = "";
     chips.forEach(function (chip) {
-      if (chip.getAttribute("data-fit") === id) label = chip.textContent;
+      if (keyOf(chip) === key) label = chip.textContent;
     });
     countEl.textContent = id ? sortedText.replace("{label}", label) : "";
     if (reset) reset.hidden = !id;
@@ -97,7 +121,7 @@
 
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
-      var id = chip.getAttribute("data-fit");
+      var id = keyOf(chip);
       var next = form.getAttribute("data-picked") === id ? "" : id;
       apply(next);
       if (next) show();
@@ -106,15 +130,18 @@
 
   if (reset) reset.addEventListener("click", function () { apply(""); });
 
-  // Open sorted from ?night=<bucket>. A value no chip carries is ignored.
+  // Open sorted from ?night=<bucket> or ?size=<id>; ?night= wins. A value no
+  // chip carries is ignored.
   var start = "";
-  var m = /[?&]night=([^&]+)/.exec(window.location.search);
-  if (m) {
-    var wanted = decodeURIComponent(m[1]);
+  ["size", "night"].forEach(function (name) {
+    var m = new RegExp("[?&]" + name + "=([^&]+)").exec(window.location.search);
+    if (!m) return;
+    var wanted;
+    try { wanted = name + ":" + decodeURIComponent(m[1]); } catch (e) { return; }
     chips.forEach(function (chip) {
-      if (chip.getAttribute("data-fit") === wanted) start = wanted;
+      if (keyOf(chip) === wanted) start = wanted;
     });
-  }
+  });
 
   // Unhide last: until the listeners are attached the controls would be inert.
   form.hidden = false;

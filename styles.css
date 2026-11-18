@@ -3587,6 +3587,10 @@ main:focus {
   margin-top: 0;
 }
 
+.roster-filters[hidden] {
+  display: none;
+}
+
 /* role="status": says which acts came first, for the eye and a screen reader. */
 .filter-count {
   flex: 1 1 100%;
@@ -6914,6 +6918,11 @@ body {
 .roster-sort .catalog-chips {
   gap: 0.5rem;
 }
+/* The size group follows the kind group after a thin rule. */
+.roster-sort .catalog-chips + .catalog-chips {
+  padding-left: 0.75rem;
+  border-left: 1.5px solid rgba(18, 18, 18, 0.25);
+}
 .roster-sort .chip {
   padding: 0.55rem 1.15rem;
   font-weight: 600;
@@ -6951,11 +6960,12 @@ body {
     flex-wrap: nowrap;
     border-radius: 1rem;
     padding: 0.5rem;
-  }
-  .roster-sort .catalog-chips {
-    flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
+  }
+  .roster-sort .catalog-chips {
+    flex: none;
+    flex-wrap: nowrap;
   }
   .roster-sort .chip {
     flex: none;
