@@ -6921,16 +6921,6 @@ body {
   background: rgba(18, 18, 18, 0.06);
   border: 1.5px solid rgba(18, 18, 18, 0.4);
 }
-/* A taller tap area than the pill: it reaches 0.4rem above and below the chip
-   and stops at its sides, so neighbouring chips' areas never overlap. */
-.roster-sort .chip {
-  position: relative;
-}
-.roster-sort .chip::after {
-  content: "";
-  position: absolute;
-  inset: -0.4rem 0;
-}
 .roster-sort .chip:hover {
   color: var(--near-black);
   background: rgba(18, 18, 18, 0.14);
@@ -6966,10 +6956,6 @@ body {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
-    /* Room inside the scroll box for the chips' taller tap area, taken back
-       by the margin so the bar keeps its height. */
-    padding: 0.4rem 0;
-    margin: -0.4rem 0;
   }
   .roster-sort .chip {
     flex: none;
