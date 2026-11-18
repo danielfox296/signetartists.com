@@ -238,6 +238,8 @@ export function buildSite(c, out) {
   // chat.js gets a ?v= of its own too, so an edit reaches cached browsers.
   const chatPath = path.join(REPO, "chat.js");
   if (fs.existsSync(chatPath)) headSite = { ...headSite, chatVersion: fingerprint(fs.readFileSync(chatPath, "utf8")) };
+  const enquiryPath = path.join(REPO, "enquiry.js");
+  if (fs.existsSync(enquiryPath)) headSite = { ...headSite, enquiryVersion: fingerprint(fs.readFileSync(enquiryPath, "utf8")) };
 
   // The share image's size and description. Facebook and
   // LinkedIn can draw a link's first share with no picture until they know
