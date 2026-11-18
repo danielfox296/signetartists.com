@@ -233,8 +233,7 @@ export function buildSite(c, out) {
   // A local file's size comes from the picture sizes the build already reads;
   // YouTube's hqdefault is always 480x360. A video's own picture at
   // img/yt/<id>.jpg is made by the deploy at 1280x720; sharing it
-  // asks the deploy to make it, as showing it on a page does, since a watch
-  // page draws YouTube's player and not the picture.
+  // asks the deploy to make it, as showing it on a page does.
   // A photo taller than wide is shared as a wide cut of itself,
   // made by the deploy around the photo's focus point (content/photo-focus.json)
   // or, with none, around what draws the eye. It keeps the photo's description.
@@ -340,6 +339,7 @@ export function buildSite(c, out) {
       trail,
       indexed: true,
       content: <WatchPage v={v} />,
+      first: true,
       title: brandTitle(v.seoTitle || v.name, false),
       description: v.description,
       robots: "index, follow",

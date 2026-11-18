@@ -3821,7 +3821,7 @@ main:focus {
 
 /* Click-to-play YouTube, 2026-10-17: the video's picture and YouTube's play
    button. A click or Enter swaps in the player, playing; until then nothing
-   loads from YouTube. The watch pages keep the player itself. */
+   loads from YouTube. */
 .yt {
   position: relative;
   display: block;
