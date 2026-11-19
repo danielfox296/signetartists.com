@@ -96,6 +96,13 @@
       "why": "A string duo for a dinner of up to 70 in Maroon Peak.",
       "stat": "Dinners of up to 70"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=Grand%20Hyatt%20Denver",
+      "cls": "btn"
+     }
     ]
    }
   },

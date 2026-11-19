@@ -101,6 +101,13 @@
       "alt": "The Hospitality Suite with a long wood dining table, a kitchenette and a sitting area.",
       "credit": "Photo: Hyatt Centric Downtown Denver"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=Hyatt%20Centric%20Downtown%20Denver",
+      "cls": "btn"
+     }
     ]
    }
   },
@@ -121,10 +128,10 @@
     "title": "Company events at Hyatt Centric Downtown Denver",
     "moments": [
      {
-      "label": "The after-party",
+      "label": "The cocktail reception",
       "space": "The rooftop",
-      "act": "afro-house-dj",
-      "line": "An Afro house DJ with live tabla for an after-party on the rooftop."
+      "act": "last-consulate",
+      "line": "Last Consulate on the rooftop, with upright bass and guitar over downtempo electronics, soft enough to talk over."
      },
      {
       "label": "The holiday party",

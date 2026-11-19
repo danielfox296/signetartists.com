@@ -1157,8 +1157,9 @@ const VenueSpaces = {
       getItemSummary: (x) => x.name,
       arrayFields: { name: text("Space"), img: text("Photo"), alt: text("Photo's alt text"), credit: text("Photo credit"), stat: text("Without a photo: the size, set large"), facts: rich("What the space is"), act: text("Act we'd pick (id)"), kicker: text("Line over the act's name"), why: rich("Why"), clip: text("YouTube id (blank: the act's first clip)") },
     },
+    buttons: buttonFields,
   },
-  render: function VenueSpacesRender({ band, eyebrow, title, lede, spaces, wrapStyle }) {
+  render: function VenueSpacesRender({ band, eyebrow, title, lede, spaces, buttons, wrapStyle }) {
     const s = useSite();
     const href = useHref();
     return (
@@ -1200,6 +1201,7 @@ const VenueSpaces = {
               );
             })}
           </div>
+          {buttons && buttons.length ? <Buttons items={buttons} cls="vspaces__cta" /> : null}
         </div>
       </section>
     );
