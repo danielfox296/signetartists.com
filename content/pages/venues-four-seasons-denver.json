@@ -94,6 +94,13 @@
       "alt": "A private dining table beside a grand piano and tall windows over the city.",
       "credit": "Photo: Four Seasons Hotel Denver"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=Four%20Seasons%20Hotel%20Denver",
+      "cls": "btn"
+     }
     ]
    }
   },
@@ -151,8 +158,8 @@
      {
       "label": "The gala",
       "space": "The Grand Ballroom",
-      "act": "changes-jazz-trio",
-      "line": "Changes for a gala in the Grand Ballroom, through the reception and dinner."
+      "act": "chantil-dukart",
+      "line": "Chantil Dukart at the piano for a gala in the Grand Ballroom, singing Nat King Cole and Ella Fitzgerald through the reception and dinner."
      },
      {
       "label": "The client dinner",

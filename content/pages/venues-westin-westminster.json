@@ -105,6 +105,13 @@
       "why": "Spanish guitar on the Sunset Rooftop Deck, for cocktails up top.",
       "stat": "Up to 140 guests"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=The%20Westin%20Westminster",
+      "cls": "btn"
+     }
     ]
    }
   },
@@ -166,10 +173,10 @@
       "line": "Changes for a gala dinner in the Westminster Ballroom."
      },
      {
-      "label": "The after-party",
+      "label": "The welcome night",
       "space": "The Waterfall Gardens",
-      "act": "afro-house-dj",
-      "line": "An Afro house DJ for an outdoor after-party in the Waterfall Gardens."
+      "act": "mariachi-band",
+      "line": "A mariachi in charro suits for a welcome night out in the Waterfall Gardens, with violins, trumpet and guitarrón."
      }
     ],
     "note": "We also have ideas for <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and other <a href=\"/corporate/\">corporate events</a>."

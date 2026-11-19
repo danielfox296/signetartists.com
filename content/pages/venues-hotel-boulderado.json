@@ -97,6 +97,13 @@
       "why": "A solo guitarist for a private brunch or dinner of up to 30 at Spruce or the Corner Bar.",
       "stat": "Brunches and dinners of up to 30"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=Hotel%20Boulderado",
+      "cls": "btn"
+     }
     ]
    }
   },
@@ -119,8 +126,8 @@
      {
       "label": "The ceremony",
       "space": "The Grand Staircase",
-      "act": "classical-strings",
-      "line": "A violinist for the walk down the Grand Staircase."
+      "act": "spanish-guitarist",
+      "line": "Spanish guitar for the walk down the Grand Staircase."
      },
      {
       "label": "The cocktail hour",

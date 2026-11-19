@@ -101,6 +101,13 @@
       "why": "There’s space for a soul and R&B band and a dance floor in Ellyngton’s.",
       "stat": "Up to 250 guests"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=The%20Brown%20Palace%20Hotel%20and%20Spa",
+      "cls": "btn"
+     }
     ]
    }
   },
@@ -164,8 +171,8 @@
      {
       "label": "The client dinner",
       "space": "The Brown Palace Club",
-      "act": "solo-guitarist",
-      "line": "One guitarist for a client dinner in the Brown Palace Club, soft enough that nobody has to raise their voice."
+      "act": "solo-piano",
+      "line": "A pianist for a client dinner in the Brown Palace Club, with standards and covers that are easy to talk over."
      }
     ],
     "note": "We also have ideas for <a href=\"/corporate/holiday-party/denver/\">holiday parties in Denver</a> and other <a href=\"/corporate/\">corporate events</a>."

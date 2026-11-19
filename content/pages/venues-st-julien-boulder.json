@@ -96,6 +96,13 @@
       "why": "A jazz duo for a private dinner at Jill’s.",
       "stat": "Private events of up to 140"
      }
+    ],
+    "buttons": [
+     {
+      "label": "Check a Date",
+      "href": "/contact/?venue=St%20Julien%20Hotel%20%26%20Spa",
+      "cls": "btn"
+     }
     ]
    }
   },
@@ -124,8 +131,8 @@
      {
       "label": "The cocktail hour",
       "space": "The Redgarden terraces",
-      "act": "dirty-flamenco",
-      "line": "Spanish guitar on the Redgarden terraces."
+      "act": "emily-barnes",
+      "line": "Emily Barnes on the Redgarden terraces, with Joni Mitchell and Fleetwood Mac alongside her own songs."
      },
      {
       "label": "The reception",
