@@ -74,7 +74,7 @@ export const Heading = {
     if (!photo) return heading;
     return (
       <div className={cx("hero-photo", photo.act && "hero-photo--act", photo.side && "hero-photo--side")}>
-        <div className="hero-photo__bg" aria-hidden="true" style={photoStyle(href, photo)} />
+        <PhotoLayer className="hero-photo__bg" photo={photo} sizes="(min-width: 1100px) 70vw, 100vw" />
         {heading}
       </div>
     );
@@ -744,7 +744,17 @@ function heroPhoto(s) {
   const d = dealt(s, false);
   return d ? { ...d, side: true } : null;
 }
-const photoStyle = (href, photo) => ({ backgroundImage: `url("${href(photo.src)}")`, ...(photo.pos ? { backgroundPosition: photo.pos } : {}) });
+// A photo behind words, drawn as a picture of its own so the browser finds
+// it in the page and takes the copy that fits the screen. The layer's CSS
+// sets the crop; a photo's focus point moves it.
+function PhotoLayer({ className, photo, sizes, lazy }) {
+  const href = useHref();
+  return (
+    <div className={className} aria-hidden="true">
+      <Pic src={href(photo.src)} alt="" sizes={sizes} loading={lazy ? "lazy" : undefined} decoding={lazy ? "async" : undefined} style={photo.pos ? `object-position: ${photo.pos}` : undefined} />
+    </div>
+  );
+}
 
 
 export const CloseRow = {
@@ -774,7 +784,7 @@ export const CloseRow = {
     );
     return (
       <div className={photo ? "close-row close-row--photo" : "close-row"}>
-        {photo ? <div className="close-photo" aria-hidden="true" style={photoStyle(href, photo)} /> : null}
+        {photo ? <PhotoLayer className="close-photo" photo={photo} sizes="(max-width: 700px) 250vw, 100vw" lazy /> : null}
         {p.boxed ? <div style={css(p.boxStyle)}>{words}</div> : words}
         <Buttons items={p.buttons || []} />
         {p.note ? <H as="p" className="close-note" html={p.note} /> : null}
