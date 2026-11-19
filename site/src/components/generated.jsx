@@ -111,7 +111,12 @@ export function WatchPage({ v }) {
     style: () => <p key="style" className="eyebrow eyebrow--slab">{act.style}</p>,
     title: () => <h1 key="title" className="h1 display">{v.name}</h1>,
     player: (k) => <Fragment key={k}>{player}</Fragment>,
-    description: (k) => <p key={k} className="lede">{v.description}</p>,
+    description: (k) => (
+      <Fragment key={k}>
+        <p className="lede">{v.description}</p>
+        {v.more ? <p className="prose">{v.more}</p> : null}
+      </Fragment>
+    ),
     buttons: (k) => (
       <div key={k} className="btn-row">
         <a className="btn" href={`${s.prefix}contact/?act=${act.id}`}>Check a Date</a>

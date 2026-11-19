@@ -2191,6 +2191,12 @@ img {
   max-width: 44rem;
 }
 
+/* The second paragraph under a clip. */
+.watch .prose {
+  margin-top: 1.1rem;
+  max-width: 44rem;
+}
+
 /* ------------------------------------------------------------ skip link */
 
 /* WCAG 2.4.1. Off-screen until focused, then it lands on the ground colour so
