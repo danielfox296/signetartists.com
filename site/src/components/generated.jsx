@@ -271,7 +271,7 @@ export const PageIndex = {
     const rest = live.filter((b) => !used.has(b.output)).sort((a, b) => (a.output < b.output ? -1 : a.output > b.output ? 1 : 0));
     if (rest.length) emit("Elsewhere", rest);
     const posts = m.indexedPosts.map((d) => d.root.props);
-    if (posts.length) rows.push(["Notes", posts.map((p) => [`/blog/${p.slug}/`, p.title])]);
+    if (posts.length) rows.push(["Blog", posts.map((p) => [`/blog/${p.slug}/`, p.title])]);
     const href = (u) => s.prefix + u.slice(1);
     return (
       <dl className="def-list def-list--stack" style={css(style)}>
