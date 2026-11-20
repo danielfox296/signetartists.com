@@ -4,7 +4,7 @@
    "path": "/for-artists/artist-development/",
    "title": "Artist Development for Musicians in Denver | Signet Artists",
    "titleExact": true,
-   "description": "Signet works with Colorado musicians on positioning, branding, styling, marketing and building an audience. Tell us where you want to take your music.",
+   "description": "Signet works with Colorado musicians on positioning, branding, styling and marketing, with professional photos and video, as a paid service.",
    "breadcrumb": "Artist Development",
    "heroImage": "none",
    "schema": {
@@ -44,6 +44,10 @@
         },
         {
          "html": "From there, we help with marketing and with building an audience of people who love what you do.",
+         "cls": "prose"
+        },
+        {
+         "html": "It's a paid service, and what you come away with is professional photos and video, clear positioning and an act that stands out to the people who hire you.",
          "cls": "prose"
         },
         {
@@ -650,10 +654,10 @@
     "id": "ContactForm-127",
     "band": "sunk",
     "anchor": "form",
-    "title": "Tell us where you want to take your music.",
+    "title": "Talk to us about artist development.",
     "titleTag": "h2",
     "titleClass": "h2",
-    "lede": "Send us a little about your act and where you'd like it to go, and we'll get back to you to talk it through.",
+    "lede": "Tell us a little about your act and what you want from it, and we'll get back to you to talk it through.",
     "details": [
      {
       "term": "Email",
@@ -720,14 +724,20 @@
      {
       "kind": "textarea",
       "id": "message",
-      "name": "Where you want to go",
-      "label": "Where do you want to take your music?",
+      "name": "What you want",
+      "label": "What do you want your music to do for you?",
       "full": true,
       "rows": "4"
      }
     ],
     "button": "Send",
-    "script": false
+    "script": false,
+    "headingText": [
+     {
+      "html": "Looking for event gigs? <a href=\"/for-artists/join/\">Send us your act here</a>.",
+      "cls": "prose"
+     }
+    ]
    }
   }
  ]
