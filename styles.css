@@ -5269,20 +5269,26 @@ img[src$="img/headliners.jpg"] {
   padding: clamp(1.75rem, 1rem + 3vw, 3.5rem);
   border-radius: 14px;
   overflow: hidden;
-  background-size: cover;
-  background-position: center 40%;
 }
-.route-panel::before,
+.route-panel__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
 .route-panel::after {
   content: "";
   position: absolute;
   inset: 0;
 }
-.route-panel::before {
-  z-index: -2;
-  background-image: inherit;
-  background-size: cover;
-  background-position: inherit;
+.route-panel .route-panel__bg > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 40%;
   filter: grayscale(1) contrast(1.05);
 }
 .route-panel::after {
@@ -5591,6 +5597,19 @@ img[src$="img/headliners.jpg"] {
   font-weight: 800;
   font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
   line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+/* A numbered stop on a route: the number where the drawing goes. */
+.def-list--route .def-row[data-num]::before {
+  content: attr(data-num);
+  background: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  color: var(--brass);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
   letter-spacing: -0.02em;
 }
 .def-list--tiles dd a {
