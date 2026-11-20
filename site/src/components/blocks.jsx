@@ -312,7 +312,6 @@ export const DefRows = {
   },
   defaultProps: { cls: "def-list def-list--stack", rows: [{ term: "Label", text: "Text" }] },
   render: function DefRowsRender({ cls, style, bare, rows, image }) {
-    const href = useHref();
     const layout = cls || "def-list def-list--stack";
     const marked = /def-list--(stack|cards|icons|tiles|route)/.test(layout);
     const leads = /def-list--stack/.test(layout);
@@ -333,9 +332,9 @@ export const DefRows = {
     </dl>
     );
     // A route can sit on a photo, drawn in black and white under a dark wash
-    // like the closing call; the photo is a background, so it needs no description.
+    // like the closing call; the photo is a backdrop, so it needs no description.
     if (/def-list--route/.test(layout) && image) {
-      return <div className="route-panel" style={{ backgroundImage: `url("${href(image)}")` }}>{list}</div>;
+      return <div className="route-panel"><PhotoLayer className="route-panel__bg" photo={{ src: image }} sizes="(max-width: 700px) 250vw, 100vw" lazy />{list}</div>;
     }
     return list;
   },
