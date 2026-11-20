@@ -334,7 +334,7 @@ export const DefRows = {
     // A route can sit on a photo, drawn in black and white under a dark wash
     // like the closing call; the photo is a backdrop, so it needs no description.
     if (/def-list--route/.test(layout) && image) {
-      return <div className="route-panel"><PhotoLayer className="route-panel__bg" photo={{ src: image }} sizes="(max-width: 700px) 250vw, 100vw" lazy />{list}</div>;
+      return <div className="route-panel"><PhotoLayer className="route-panel__bg" photo={{ src: image }} sizes="100vw" lazy />{list}</div>;
     }
     return list;
   },
