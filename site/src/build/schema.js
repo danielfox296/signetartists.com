@@ -406,7 +406,7 @@ export function makeSchema(m) {
 
   const articleSchema = (post, canonical, ogImage, modified) => {
     const authorName = (post.author || {}).name ?? brand.name;
-    const entity = { "@type": "LocalBusiness", "@id": `${SITE_URL}/#business`, name: brand.name, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo-512.png` } };
+    const entity = { "@type": "Organization", "@id": `${SITE_URL}/#business`, name: brand.name, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo-512.png` } };
     return {
       "@context": "https://schema.org",
       "@type": "Article",

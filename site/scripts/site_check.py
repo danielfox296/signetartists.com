@@ -194,6 +194,9 @@ def check_structured_data(url: str, page: str, errors: list[str]):
                 defined.add(node["@id"])
             elif list(node) == ["@id"]:
                 refs.append(node["@id"])
+            kinds = node.get("@type") or []
+            if "LocalBusiness" in ([kinds] if isinstance(kinds, str) else kinds) and not node.get("address"):
+                errors.append(f"{url}: structured data names a local business at {path or 'the top'} without its address")
             for k, v in node.items():
                 if v is None or v == "" or v == []:
                     errors.append(f"{url}: structured data property {path}{k} is empty")
