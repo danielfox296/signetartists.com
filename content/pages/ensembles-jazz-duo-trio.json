@@ -105,6 +105,47 @@
    }
   },
   {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-30",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-28",
+       "eyebrow": "Video Clips",
+       "title": "Watch our jazz duo play",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Here's the duo on guitar and upright bass, playing There Will Never Be Another You and Blue Bossa."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-29",
+       "videos": [
+        {
+         "kind": "video",
+         "src": "/media/jazz-duo-there-will-never-be-another-you.mp4",
+         "title": "Jazz duo playing There Will Never Be Another You on guitar and upright bass",
+         "poster": "/media/jazz-duo-there-will-never-be-another-you-poster.jpg"
+        },
+        {
+         "kind": "video",
+         "src": "/media/jazz-duo-blue-bossa.mp4",
+         "title": "Jazz duo playing Blue Bossa on guitar and upright bass",
+         "poster": "/media/jazz-duo-blue-bossa-poster.jpg"
+        }
+       ],
+       "single": false
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "Rows",
    "props": {
     "id": "Rows-12",
