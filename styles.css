@@ -4459,6 +4459,19 @@ main:focus {
   background-repeat: no-repeat;
   filter: grayscale(1) contrast(1.05);
 }
+/* The photo itself: a picture filling its layer, cropped like a cover. */
+.hero-photo .hero-photo__bg > img,
+.close-row .close-photo > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 28%;
+  /* The layer already sets black and white; a stock photo is not filtered twice. */
+  filter: none;
+}
 .hero-photo__bg::after {
   content: "";
   position: absolute;

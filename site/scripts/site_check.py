@@ -92,6 +92,12 @@ def named_by_container(page: str, at: int) -> bool:
     return False
 
 
+def backdrop(page: str, at: int) -> bool:
+    """Whether the picture at `at` is a backdrop: the only thing in an element
+    marked aria-hidden, which screen readers skip."""
+    return re.search(r'<div\b[^>]*\saria-hidden="true"[^>]*>\s*$', page[max(0, at - 300) : at]) is not None
+
+
 # ---- Rule A: policy tag covers the page -------------------------------------------------
 
 def csp_directives(page: str):
@@ -380,7 +386,7 @@ def main() -> int:
             text = html.unescape(alt.group(1)).strip()
             if text:
                 alts[text].add(picture_key(src))
-            elif not named_by_container(page, m.start()):
+            elif not named_by_container(page, m.start()) and not backdrop(page, m.start()):
                 errors.append(f"{url}: picture {src} has no description and nothing around it names it")
 
         check_policy(url, page, errors)
