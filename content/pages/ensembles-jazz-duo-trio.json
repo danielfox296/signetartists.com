@@ -30,11 +30,20 @@
     },
     "act": "jazz-duo",
     "video": {
-     "name": "Jazz duo for a cocktail hour: Autumn Leaves on guitar and upright bass",
-     "description": "A short clip of the jazz duo playing Autumn Leaves on guitar and upright bass.",
-     "uploadDate": "2026-09-06",
-     "duration": "PT59S"
-    }
+     "name": "Jazz duo playing There Will Never Be Another You on guitar and upright bass",
+     "description": "Our jazz duo plays There Will Never Be Another You on guitar and upright bass.",
+     "uploadDate": "2026-11-20",
+     "duration": "PT1M3S"
+    },
+    "videos": [
+     {
+      "id": "O2A0PKE7CXE",
+      "name": "Jazz duo for a cocktail hour: Autumn Leaves on guitar and upright bass",
+      "description": "A short clip of the jazz duo playing Autumn Leaves on guitar and upright bass.",
+      "uploadDate": "2026-09-06",
+      "duration": "PT59S"
+     }
+    ]
    }
   }
  },
@@ -74,10 +83,10 @@
       "type": "ActVideo",
       "props": {
        "id": "ActVideo-2",
-       "kind": "iframe",
-       "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
-       "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
-       "loading": "lazy"
+       "kind": "video",
+       "src": "/media/jazz-duo-there-will-never-be-another-you.mp4",
+       "title": "Jazz duo playing There Will Never Be Another You on guitar and upright bass",
+       "poster": "/media/jazz-duo-there-will-never-be-another-you-poster.jpg"
       }
      }
     ],
@@ -118,7 +127,7 @@
        "title": "Watch our jazz duo play",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "Here's the duo on guitar and upright bass, playing There Will Never Be Another You and Blue Bossa."
+       "lede": "Here's the duo playing Blue Bossa and Autumn Leaves on guitar and upright bass."
       }
      },
      {
@@ -128,15 +137,15 @@
        "videos": [
         {
          "kind": "video",
-         "src": "/media/jazz-duo-there-will-never-be-another-you.mp4",
-         "title": "Jazz duo playing There Will Never Be Another You on guitar and upright bass",
-         "poster": "/media/jazz-duo-there-will-never-be-another-you-poster.jpg"
-        },
-        {
-         "kind": "video",
          "src": "/media/jazz-duo-blue-bossa.mp4",
          "title": "Jazz duo playing Blue Bossa on guitar and upright bass",
          "poster": "/media/jazz-duo-blue-bossa-poster.jpg"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
+         "loading": "lazy"
         }
        ],
        "single": false
