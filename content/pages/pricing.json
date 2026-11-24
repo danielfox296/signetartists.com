@@ -378,6 +378,23 @@
         }
        ]
       }
+     },
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-BP1",
+       "html": "<span id=\"backup-promise\">The Backup Promise</span>",
+       "tag": "h3",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-BP2",
+       "html": "If a musician or a whole act can't make your date, we'll replace them with an act of the same style and size at no extra cost, and tell you who it is as soon as we know. If you'd rather not have the replacement act, or we can't find one, you get everything you've paid back. On the day, your point of contact answers their cell from load-in to load-out.",
+       "cls": "prose"
+      }
      }
     ],
     "cls": "pricing-band"
