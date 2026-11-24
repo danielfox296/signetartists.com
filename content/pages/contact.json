@@ -103,6 +103,16 @@
       "kind": "acts"
      },
      {
+      "kind": "choice",
+      "id": "program",
+      "name": "Live music program",
+      "label": "Live music program",
+      "options": "Weekly",
+      "param": "program",
+      "dateHint": "Pick the first night you have in mind.",
+      "full": true
+     },
+     {
       "kind": "textarea",
       "id": "message",
       "name": "What's the night",
