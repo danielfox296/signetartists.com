@@ -854,6 +854,7 @@ const ContactForm = {
         hint: text("Hint (a small line under the field)"),
         options: text("Choices (Checkboxes and One of), separated by |"),
         param: text("Ticked when the link carries (One checkbox, e.g. photo-video); for One of, shown and chosen only when the link names a choice (e.g. package=event-photos)"),
+        dateHint: text("Event date hint while this One of is shown (replaces the date field's own)"),
       },
     },
     button: text("Button"),
@@ -908,6 +909,7 @@ const ContactForm = {
                         className={f.full ? "field field--full field--choices" : "field field--choices"}
                         key={i}
                         data-param={f.kind === "choice" && f.param ? f.param : undefined}
+                        data-date-hint={f.kind === "choice" && f.param && f.dateHint ? f.dateHint : undefined}
                         hidden={f.kind === "choice" && f.param ? true : undefined}
                         disabled={f.kind === "choice" && f.param ? true : undefined}
                       >

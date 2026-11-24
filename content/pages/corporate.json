@@ -357,8 +357,75 @@
   {
    "type": "Text",
    "props": {
-    "id": "Text-PV1",
+    "id": "Text-WM1",
     "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-WM2",
+       "eyebrow": "What the music does",
+       "title": "Music sets how long people stay",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM3",
+       "html": "In restaurant studies, the pace of the music changed how long guests stayed. In a 2024 experiment, tables stayed about 80 minutes with slow music and about 57 with fast music. At a client dinner or a reception, that extra time is when the talking happens.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Bars",
+      "props": {
+       "id": "Bars-WM4",
+       "rows": [
+        {
+         "label": "Fast music",
+         "value": 57.3,
+         "text": "about 57 minutes"
+        },
+        {
+         "label": "The restaurant's usual playlist",
+         "value": 69.2,
+         "text": "about 69 minutes"
+        },
+        {
+         "label": "Slow music",
+         "value": 80.3,
+         "text": "about 80 minutes"
+        }
+       ],
+       "caption": "Average time at the table across 282 tables in a 2024 experiment at one Italian restaurant in Tel Aviv."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM5",
+       "html": "The effect is stronger when guests like what they hear, according to a 2006 review of 32 studies. That's why we pick the act for your crowd.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM6",
+       "html": "Read <a href=\"/blog/why-do-restaurants-have-live-music/\">what the research says about music, time and spending</a>, or <a href=\"https://danielchristopherfox.com/notes/\">Daniel Fox's research notes</a>.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-PV1",
+    "band": "ruled",
     "anchor": "photos-and-video",
     "blocks": [
      {
@@ -437,7 +504,7 @@
    "type": "Text",
    "props": {
     "id": "Text-37",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -488,7 +555,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-75",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",
@@ -653,7 +720,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-39",
-       "html": "Have a different question? Check out our <a href=\"/planners/faq/\">planners question list</a> for substitutions, volume limits and more. Bringing people in from out of state? We wrote about <a href=\"/blog/how-to-make-a-corporate-event-sound-like-colorado/\">how to make a corporate event sound like Colorado</a>.",
+       "html": "Have a different question? Check out our <a href=\"/planners/faq/\">planners question list</a> for volume limits and more, and <a href=\"/pricing/#backup-promise\">the Backup Promise</a> for what happens if a musician can't make it. Bringing people in from out of state? We wrote about <a href=\"/blog/how-to-make-a-corporate-event-sound-like-colorado/\">how to make a corporate event sound like Colorado</a>.",
        "cls": "note"
       }
      },

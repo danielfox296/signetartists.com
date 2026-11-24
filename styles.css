@@ -2108,6 +2108,62 @@ img {
   text-decoration: none;
 }
 
+/* Bars: a short list of values, each with a bar as long as its share of the
+   largest. The label and the value are text; the bar is drawing only. */
+.bars {
+  margin: 2rem 0 0;
+  max-width: 46rem;
+}
+.bars__rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bars__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem 1.5rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+}
+.bars__row:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.bars__label {
+  font-weight: 500;
+  color: var(--ink);
+}
+.bars__value {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.bars__track {
+  grid-column: 1 / -1;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(var(--rule), var(--rule)) center / 100% 1px no-repeat;
+}
+.bars__bar {
+  display: block;
+  height: 100%;
+  width: var(--w);
+  min-width: 0.75rem;
+  border-radius: 999px;
+  background: var(--red);
+}
+.bars__caption {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
 /* ----------------------------------------------------------- clip index */
 
 /* /video/, every clip by act (2026-10-03). Cards link to the watch pages and

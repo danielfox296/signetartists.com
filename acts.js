@@ -198,7 +198,9 @@
 /* Contact form: a one-of choice with data-param="package" ships hidden and
  * disabled, and appears with its choice made when the page was opened with
  * ?package=<the choice in lower case, words joined by hyphens>, e.g.
- * ?package=photos-and-film. Opened any other way, the form never shows it. */
+ * ?package=photos-and-film. Opened any other way, the form never shows it.
+ * A choice that carries data-date-hint also puts that line under the event
+ * date while it is shown (?program=weekly: the first night of a weekly program). */
 (function () {
   "use strict";
 
@@ -223,6 +225,9 @@
         radios[j].checked = true;
         sets[i].disabled = false;
         sets[i].hidden = false;
+        var dateHint = sets[i].getAttribute("data-date-hint");
+        var hintLine = document.getElementById("eventDate-hint");
+        if (dateHint && hintLine) hintLine.textContent = dateHint;
         break;
       }
     }

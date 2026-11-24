@@ -1288,6 +1288,40 @@ export const WidePicture = {
   ),
 };
 
+// A short list of values as horizontal bars: what, the bar, the value in words.
+// The values are text in the page, so it reads as a list without the drawing.
+export const Bars = {
+  label: "Bars",
+  fields: {
+    rows: {
+      type: "array",
+      label: "Rows",
+      getItemSummary: (r) => plain(r.label),
+      arrayFields: { label: rich("What"), value: { type: "number", label: "Value (sets the bar's length)", min: 0 }, text: text("Shown as (e.g. about 57 minutes)") },
+    },
+    caption: rich("Caption"),
+    style: text("Style"),
+  },
+  defaultProps: { rows: [] },
+  render: ({ rows, caption, style }) => {
+    const list = rows || [];
+    const top = Math.max(1, ...list.map((r) => Number(r.value) || 0));
+    return (
+      <figure className="bars" style={css(style)}>
+        <ul className="bars__rows">
+          {list.map((r, i) => (
+            <li className="bars__row" key={i} style={{ "--w": `${(((Number(r.value) || 0) / top) * 100).toFixed(2)}%` }}>
+              <H as="span" className="bars__label" html={r.label} />
+              <span className="bars__track" aria-hidden="true"><span className="bars__bar"></span></span>
+              <span className="bars__value tnum">{r.text}</span>
+            </li>
+          ))}
+        </ul>
+        {caption ? <H as="figcaption" className="bars__caption" html={caption} /> : null}
+      </figure>
+    );
+  },
+};
 export const HtmlBlock = {
   label: "HTML",
   fields: { html: { type: "textarea", label: "HTML" } },
@@ -1295,4 +1329,4 @@ export const HtmlBlock = {
   render: ({ html, style }) => <Boxed style={style}><Raw html={html} /></Boxed>,
 };
 
-export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, PriceRanges, Table, CloseRow, Cards, Season, StagePlot, Story, Stories, WidePicture, HtmlBlock };
+export const blockComponents = { Heading, Paragraph, Title, Quote, Picture, ButtonRow, List, SpecList, DefRows, Faq, MediaGrid, VideoGrid, ActVideo, Columns, Panel, PriceRanges, Bars, Table, CloseRow, Cards, Season, StagePlot, Story, Stories, WidePicture, HtmlBlock };

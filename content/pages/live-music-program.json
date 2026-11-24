@@ -2,15 +2,14 @@
  "root": {
   "props": {
    "path": "/live-music-program/",
-   "title": "A weekly live music program for your bar | Signet Artists",
-   "description": "Signet Artists runs weekly live music programs for hotel bars, restaurants and lounges in Denver and Colorado, with the same solo act on the nights you pick, a sub from our roster for any missed night, and one invoice a month.",
+   "title": "Weekly Live Music for Colorado Hotels and Restaurants | Signet Artists",
+   "description": "A standing night of live music for Colorado hotels and restaurants: the same musician each week, a backup when they can't make it, and one invoice a month.",
    "titleExact": true,
-   "robots": "noindex, follow",
    "schema": {
     "service": {
      "name": "Weekly live music program",
-     "serviceType": "Standing live music program for hotel bars, restaurants and lounges",
-     "description": "A weekly live music program for hotel bars, restaurants and lounges in Denver and Colorado, with one solo act from the Signet roster on the nights the venue picks, a sub from the same roster for any missed night, a sound system sized for a bar, and one itemized invoice a month.",
+     "serviceType": "Standing weekly live music program for hotels, restaurants and lounges",
+     "description": "A standing weekly night of live music for hotels, restaurants and lounges in Denver and across Colorado, with the same solo or duo act each week, a backup act the venue has already approved, a trial of up to four weeks, and one invoice a month.",
      "areaServed": [
       "Denver",
       "Boulder",
@@ -21,7 +20,8 @@
       "Breckenridge"
      ],
      "configs": [
-      "solo"
+      "solo",
+      "duo"
      ]
     }
    }
@@ -46,7 +46,7 @@
        "lede": "You know the moment on a quiet night when your tables start asking for the check. A musician on your floor, on the same night every week, can give them a reason to stay for one more round.",
        "headingText": [
         {
-         "html": "We'll bring one of our solo acts to your bar on the nights you pick, for a term we set together."
+         "html": "We'll bring the same solo or duo act to your hotel or restaurant on the same night each week. If they can't make it, we'll send a backup you've already approved, and you'll get one invoice a month."
         },
         {
          "html": "It’s built for a hotel lobby bar, a restaurant bar, a cocktail lounge or a member club, on a night that’s already busy or the one you want to build."
@@ -55,7 +55,7 @@
        "buttons": [
         {
          "label": "Check a Date",
-         "href": "/contact/",
+         "href": "/contact/?program=weekly",
          "cls": "btn"
         },
         {
@@ -93,27 +93,27 @@
        "rows": [
         {
          "term": "The same musician every week",
-         "text": "We'll pick one act for your bar and your crowd, and they'll play the same nights for the whole term. Your regulars get to know the musician, and that's often a reason to come back."
+         "text": "A Colorado act you've watched on video plays your night every week, so your regulars get to know them."
         },
         {
-         "term": "A sub who fits",
-         "text": "If your regular musician can't make it, another act from our roster will step in and play in a similar style at the same volume. We'll let you know ahead of time, and your invoice stays the same."
+         "term": "A backup who fits",
+         "text": "If your musician can't make it, we'll send an act you've already approved. If we can't fill the night, you aren't billed for it. This is part of <a href=\"/pricing/#backup-promise\">the Backup Promise</a>."
         },
         {
          "term": "A different act if the first one isn't right",
-         "text": "If the act isn't right for your crowd after the first few weeks, just let us know. We can have a different act playing by the following week."
+         "text": "Just tell us, and we'll bring in another act from our roster."
         },
         {
          "term": "Extra nights when you want them",
-         "text": "We can add a private party, a holiday or a game night to the same program, with the same act or a bigger one from our roster."
+         "text": "We can add a holiday night, a bigger act for a special evening, or a seasonal act like the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> or the <a href=\"/ensembles/mariachi-band/\">mariachi band</a>."
         },
         {
-         "term": "Sound sized for a bar",
-         "text": "The act brings a small sound system and runs it, or plugs into your house system. The music stays at about the level of a conversation at the next table, and the musician will turn it down as soon as you or your staff ask."
+         "term": "Sound kept at conversation level",
+         "text": "The act brings a small sound system and plays under our volume guidelines, so your guests can still talk."
         },
         {
          "term": "One invoice a month",
-         "text": "You'll get one itemized invoice from one company every month, along with any paperwork your venue needs."
+         "text": "We bill on the 1st for that month's nights, due in 30 days, and we'll send a certificate of insurance naming your property."
         }
        ],
        "bare": true,
@@ -125,10 +125,88 @@
    }
   },
   {
+   "type": "Text",
+   "props": {
+    "id": "Text-WM1",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-WM2",
+       "eyebrow": "What the music does",
+       "title": "Does music keep guests at the table longer?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Researchers have tested music in real restaurants for forty years. What they agree on most is that music changes how long guests stay."
+      }
+     },
+     {
+      "type": "Bars",
+      "props": {
+       "id": "Bars-WM3",
+       "rows": [
+        {
+         "label": "Fast music",
+         "value": 57.3,
+         "text": "about 57 minutes"
+        },
+        {
+         "label": "The restaurant's usual playlist",
+         "value": 69.2,
+         "text": "about 69 minutes"
+        },
+        {
+         "label": "Slow music",
+         "value": 80.3,
+         "text": "about 80 minutes"
+        }
+       ],
+       "caption": "Average time at the table across 282 tables in a 2024 experiment at one Italian restaurant in Tel Aviv. The size of the check didn't change."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-WM4",
+       "bare": true,
+       "cls": "def-list def-list--stack",
+       "rows": [
+        {
+         "term": "How long guests stay",
+         "text": "The pace of the music sets the pace of the table. Slower music kept guests longer in the Tel Aviv experiment and in a 1986 study in an American restaurant. That helps most on a night when you have open tables."
+        },
+        {
+         "term": "What guests spend",
+         "text": "The studies disagree here. In the 1986 study, slower music went with more drinks ordered. In Tel Aviv, the check stayed the same. Extra time turns into a bigger check when there's another round to order."
+        },
+        {
+         "term": "Whether guests like it",
+         "text": "When 32 studies of music in stores were pooled in 2006, the effect was real and modest, and it grew when people liked the music. A musician can watch your guests and change the next song, which a playlist can't do."
+        },
+        {
+         "term": "Live or recorded",
+         "text": "We haven't found a study that compares live and recorded music on what a bar takes in. In a 2019 concert study, the audience moved more at the live show than another audience did to the same album played back."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM5",
+       "html": "Signet's founder, Daniel Fox, researches how music changes what people do. Read <a href=\"/blog/why-do-restaurants-have-live-music/\">the full research summary, with sources</a>, or <a href=\"https://danielchristopherfox.com/notes/\">his research notes</a>.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "Rows",
    "props": {
     "id": "Rows-11",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -138,7 +216,7 @@
        "title": "Who plays.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "We can bring one of these solo acts from our roster, or a <a href=\"/ensembles/jazz-duo-trio/\">jazz duo</a> if you have space for two musicians."
+       "lede": "These are solo and duo acts who sound good at conversation level. Here are a few who fit a weekly night."
       }
      },
      {
@@ -147,36 +225,53 @@
        "id": "DefRows-9",
        "rows": [
         {
-         "term": "<a href=\"/ensembles/singer-guitarist/\">A singer and guitarist</a>",
-         "text": "A singer with a guitar covering songs everybody knows."
+         "term": "<a href=\"/artists/emily-barnes/\">Emily Barnes</a>",
+         "text": "A folk singer-songwriter who plays solo or as a duo."
         },
         {
-         "term": "<a href=\"/ensembles/spanish-guitarist/\">A Spanish guitarist</a>",
-         "text": "Classic Spanish guitar pieces and familiar songs, all instrumental."
+         "term": "<a href=\"/artists/meghan-clarisse/\">Meghan Clarisse</a>",
+         "text": "Country and Americana, solo or as a duo."
         },
         {
-         "term": "<a href=\"/ensembles/solo-guitarist/\">A solo guitarist</a>",
-         "text": "Blues, roots and jazz on solo guitar, with or without vocals."
-        },
-        {
-         "term": "<a href=\"/ensembles/solo-piano/\">Solo piano</a>",
-         "text": "Cocktail piano for a lobby bar."
+         "term": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a>",
+         "text": "Familiar songs from a singer-songwriter, played as a duo."
         },
         {
          "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
          "text": "Blues, rock and roots from one voice and a guitar."
         },
         {
-         "term": "<a href=\"/artists/rene-moffatt/\">René Moffatt</a>",
-         "text": "Original songs from a Denver singer-songwriter."
+         "term": "<a href=\"/ensembles/jazz-duo-trio/\">The jazz duo</a>",
+         "text": "Jazz standards on upright bass and guitar."
         },
         {
-         "term": "<a href=\"/artists/last-consulate/\">Last Consulate</a>",
-         "text": "Instrumental downtempo (slow, mellow electronic music) that's a lovely fit for a lounge."
+         "term": "<a href=\"/artists/chantil-dukart/\">Chantil Dukart</a>",
+         "text": "Jazz piano and vocals, from Nat King Cole to Stevie Wonder."
+        },
+        {
+         "term": "<a href=\"/ensembles/afro-house-dj/\">The Afro house DJ</a>",
+         "text": "A DJ for hotel lounge nights who can play tabla (hand drums) live over the music."
+        },
+        {
+         "term": "<a href=\"/artists/roma-ransom/\">Roma Ransom</a>",
+         "text": "Violin and guitar, for venues in Colorado Springs."
         }
        ],
        "bare": true,
        "cls": "def-list def-list--stack"
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-WP1",
+       "buttons": [
+        {
+         "label": "See the roster",
+         "href": "/music/",
+         "cls": "btn btn--outline"
+        }
+       ]
       }
      }
     ],
@@ -187,7 +282,7 @@
    "type": "Rows",
    "props": {
     "id": "Rows-15",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -206,15 +301,15 @@
        "rows": [
         {
          "term": "A conversation",
-         "text": "Tell us the venue, the nights you have in mind and what the bar sounds like now. We'll reply with the act we'd recommend and a price per night for your venue."
+         "text": "Tell us your nights, your space and your guests. We'll suggest two or three acts, and you can watch their videos."
         },
         {
-         "term": "One evening at your bar",
-         "text": "Before the first night, one of us will spend an evening at your bar to get a feel for your crowd and how loud the music can be. Then we'll plan the songs around what we heard."
+         "term": "Try it for up to four weeks",
+         "text": "You can start without a long commitment. If the act fits, those weeks count toward your first 12."
         },
         {
-         "term": "The first night, then every week",
-         "text": "Your musician sets up, plays and then comes back the same night the next week. We'll check in with you every month and change the song list, the volume or the act if anything needs it."
+         "term": "Twelve weeks, then month to month",
+         "text": "The program runs 12 weeks at the program rate. After that it continues month to month, and either side can end it with 30 days' notice."
         }
        ],
        "bare": true,
@@ -256,24 +351,40 @@
        "id": "Faq-19",
        "items": [
         {
-         "q": "What does the venue provide?",
-         "a": "We'll just need a corner of the floor about 6 by 4 feet, one outlet that isn't shared with anything else, and a stool. Setup usually takes about 45 minutes."
+         "q": "What nights work best?",
+         "a": "Most venues start with one night, like a weeknight in the lobby bar or restaurant, or a weekend brunch. You pick the day and the time."
         },
         {
-         "q": "Which nights can we pick?",
-         "a": "You can pick whichever nights suit your bar."
+         "q": "How long does the musician play?",
+         "a": "They play for three hours, in three 50-minute sets. We can keep recorded music going during the breaks if you'd like."
         },
         {
-         "q": "How long is the term, and what does it cost?",
-         "a": "We'll work out the term with you before the first night, and we quote the price per night for your venue."
+         "q": "What do you need from us?",
+         "a": "We'll need a corner about 6 by 4 feet, one outlet, a stool, and about 45 minutes to set up before the first set."
         },
         {
-         "q": "What about holidays and extra hours?",
-         "a": "We can play holidays and add extra hours to a regular night. Just let us know what you have in mind and we'll work it out with you."
+         "q": "What if we need to cancel a night?",
+         "a": "Tell us 14 or more days ahead and you aren't billed for it. With less notice the night is billed, because the musician is still paid."
         },
         {
-         "q": "What paperwork comes with it?",
-         "a": "If you need a certificate of insurance naming your venue as additional insured, just let us know."
+         "q": "What happens on the patio when the weather turns?",
+         "a": "The musician moves inside, or plays a shorter night if you'd rather."
+        },
+        {
+         "q": "Can we pay by invoice?",
+         "a": "Yes. You'll get one invoice on the 1st of each month, due in 30 days. The first month is paid before the first night. We can set up as a vendor and work from a purchase order."
+        },
+        {
+         "q": "Do we need a license for live music?",
+         "a": "Yes, and it's the venue that holds it. Live music is covered by public performance licenses from ASCAP, BMI, SESAC and GMR, and many hotels already have them. A license for background music, or one that comes with a music service, may not cover a live musician, so it's worth checking with each of them before the first night."
+        },
+        {
+         "q": "Does the musician put out a tip jar?",
+         "a": "Only if you'd like one."
+        },
+        {
+         "q": "What does it cost?",
+         "a": "We quote per night after a conversation, based on the act and the nights you want."
         }
        ],
        "schema": true
@@ -296,7 +407,7 @@
        "buttons": [
         {
          "label": "Check a Date",
-         "href": "/contact/",
+         "href": "/contact/?program=weekly",
          "cls": "btn"
         }
        ],
