@@ -364,8 +364,7 @@
       "type": "Heading",
       "props": {
        "id": "Heading-WM2",
-       "eyebrow": "What the music does",
-       "title": "Music sets how long people stay",
+       "title": "Guests stay at the table longer to slower songs",
        "titleTag": "h2",
        "titleClass": "h2"
       }
@@ -374,7 +373,15 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-WM3",
-       "html": "In restaurant studies, the pace of the music changed how long guests stayed. In a 2024 experiment, tables stayed about 80 minutes with slow music and about 57 with fast music. At a client dinner or a reception, more time at the table means more time to talk.",
+       "html": "At a client dinner, people came to talk to each other, and they do most of it at the table.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM7",
+       "html": "In 2024, researchers timed 282 tables at a restaurant in Tel Aviv while they changed the tempo of the background music. Guests stayed about 80 minutes when the songs were slow and about 57 when they were fast.",
        "cls": "prose"
       }
      },
@@ -398,23 +405,14 @@
          "value": 80.3,
          "text": "about 80 minutes"
         }
-       ],
-       "caption": "Average time at the table across 282 tables in a 2024 experiment at one Italian restaurant in Tel Aviv."
+       ]
       }
      },
      {
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-WM5",
-       "html": "The effect is stronger when guests like what they hear, according to a 2006 review of 32 studies. That's why we pick the act for your crowd.",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-WM6",
-       "html": "Read <a href=\"/blog/why-do-restaurants-have-live-music/\">what the research says about music, time and spending</a>, or <a href=\"https://danielchristopherfox.com/notes/\">Daniel Fox's research notes</a>.",
+       "html": "Researchers who pooled 32 studies in 2006 found that people respond more to music they know and like. That's why we ask who's coming before we pick the act.",
        "cls": "prose"
       }
      }

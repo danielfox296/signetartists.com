@@ -134,11 +134,17 @@
       "type": "Heading",
       "props": {
        "id": "Heading-WM2",
-       "eyebrow": "What the music does",
-       "title": "Does music keep guests at the table longer?",
+       "title": "Guests stay longer to slower songs",
        "titleTag": "h2",
-       "titleClass": "h2",
-       "lede": "Researchers have tested music in real restaurants for forty years. What they agree on most is that music changes how long guests stay."
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM6",
+       "html": "In 2024, researchers at an Italian restaurant in Tel Aviv changed the tempo of the background music and timed 282 tables. Guests stayed about 80 minutes when the songs were slow, about 69 with the restaurant's usual playlist and about 57 when the songs were fast. The researchers kept the same food, the same staff and the same prices.",
+       "cls": "prose"
       }
      },
      {
@@ -161,41 +167,38 @@
          "value": 80.3,
          "text": "about 80 minutes"
         }
-       ],
-       "caption": "Average time at the table across 282 tables in a 2024 experiment at one Italian restaurant in Tel Aviv. The size of the check didn't change."
-      }
-     },
-     {
-      "type": "DefRows",
-      "props": {
-       "id": "DefRows-WM4",
-       "bare": true,
-       "cls": "def-list def-list--stack",
-       "rows": [
-        {
-         "term": "How long guests stay",
-         "text": "Slower music kept guests at the table longer, both in the Tel Aviv experiment and in a 1986 study in an American restaurant. That helps most on a night when you have open tables."
-        },
-        {
-         "term": "What guests spend",
-         "text": "The studies disagree here. In the 1986 study, slower music went with more drinks ordered. In Tel Aviv, the check stayed the same. Guests who stay longer spend more when they order another round."
-        },
-        {
-         "term": "Whether guests like it",
-         "text": "When 32 studies of music in stores were pooled in 2006, the effect was real and modest, and it grew when people liked the music. A musician can watch your guests and change the next song, which a playlist can't do."
-        },
-        {
-         "term": "Live or recorded",
-         "text": "We haven't found a study that compares live and recorded music on what a bar takes in. In a 2019 concert study, the audience moved more at the live show than another audience did to the same album played back."
-        }
        ]
       }
      },
      {
       "type": "Paragraph",
       "props": {
+       "id": "Paragraph-WM7",
+       "html": "Guests in Tel Aviv spent about the same either way. In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks. A table that stays longer probably spends more when your staff offers another round.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM8",
+       "html": "In 2006, researchers pooled 32 studies of music in stores and found that shoppers responded more to music they knew and liked.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM9",
+       "html": "Nobody has compared a live musician with a playlist on a bar's sales yet. A musician can watch who's at the bar and pick the next song for them. With a playlist, nobody picks the next song.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
        "id": "Paragraph-WM5",
-       "html": "Signet's founder, Daniel Fox, researches how music changes what people do. Read <a href=\"/blog/why-do-restaurants-have-live-music/\">the full research summary, with sources</a>, or <a href=\"https://danielchristopherfox.com/notes/\">his research notes</a>.",
+       "html": "Daniel Fox, who founded Signet, researches how people respond to music. You can read the full research, with every source, in our post on <a href=\"/blog/why-do-restaurants-have-live-music/\">why restaurants have live music</a>, or in <a href=\"https://danielchristopherfox.com/notes/\">his research notes</a>.",
        "cls": "prose"
       }
      }
