@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { css, esc } from "../lib/util.js";
 import { ratioStyle, runs } from "../lib/layouts.js";
 import { isoSeconds } from "../build/feeds.js";
-import { Boxed, H, Pic, Raw, useHref, useSite, YouTube } from "./parts.jsx";
+import { Boxed, H, Pic, Raw, useHref, useSite } from "./parts.jsx";
 import { SIZES } from "../lib/pictures.js";
 
 export const CustomHtml = {
@@ -87,7 +87,8 @@ export const VideoIndex = {
 };
 
 // A clip's own page: the clip at the top, its words, the act it books and
-// the act's other clips.
+// the act's other clips. The player is on the page from the start, not a
+// picture swapped for it on a click.
 export function WatchPage({ v }) {
   const s = useSite();
   const m = s.model;
@@ -96,7 +97,7 @@ export function WatchPage({ v }) {
   const others = m.FOOTAGE.filter((x) => x.act === v.act && x.slug !== v.slug);
   const player = v.id ? (
     <div className="act-video watch-video">
-      <YouTube id={v.id} src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0`} title={v.name} allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" sizes={SIZES.wrap} />
+      <iframe src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0`} title={v.name} allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen loading="eager"></iframe>
     </div>
   ) : (
     <div className="act-video watch-video">
