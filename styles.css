@@ -2111,7 +2111,7 @@ img {
 /* Bars: a short list of values, each with a bar as long as its share of the
    largest. The label and the value are text; the bar is drawing only. */
 .bars {
-  margin: 2rem 0 0;
+  margin: 2rem 0;
   max-width: 46rem;
 }
 .bars__rows {
