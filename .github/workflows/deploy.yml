@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url }}
     steps:
       # Full history: a page's sitemap <lastmod> is its file's last commit.
       - name: Checkout
@@ -54,8 +54,24 @@ jobs:
         with:
           path: _site
 
+      # The publish step finds the artifact by name, and GitHub's list of a
+      # run's artifacts can lag the upload. Wait, publish, and publish once
+      # more after a longer wait if the first try doesn't find it.
+      - name: Wait for the artifact to be listed
+        run: sleep 45
+
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+      - name: Wait before the second try
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy to GitHub Pages, second try
+        id: deployment2
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
 
       # Tell IndexNow-participating engines (Bing, etc.) what changed — only
