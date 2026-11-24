@@ -2231,15 +2231,27 @@ img {
 
 /* ---------------------------------------------------------- watch pages */
 /* One clip per page (2026-09-25). The player is the main content, so it sits
-   directly under the heading at the full width of the wrap, and the
-   description reads under it at the act pages' measure. */
+   directly under the heading, and the description reads under it at the act
+   pages' measure. The title is set small and runs the width of the wrap, and
+   the player is no taller than the window leaves under the title, so on a
+   laptop the whole clip shows without scrolling. */
+
+.watch.section--top {
+  padding-top: 1.5rem;
+}
 
 .watch .heading {
-  max-width: 44rem;
+  max-width: none;
+}
+
+.watch .heading h1 {
+  font-size: clamp(1.7rem, 1.1rem + 1.7vw, 2.4rem);
+  line-height: 1.1;
 }
 
 .watch .watch-video {
-  margin-top: 2.2rem;
+  margin-top: 1.25rem;
+  max-width: max(30rem, calc((100svh - 24.5rem) * 16 / 9));
 }
 
 .watch .lede {

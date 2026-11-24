@@ -433,10 +433,10 @@ export function makeSchema(m) {
       url: canonical,
       publisher: { "@id": `${SITE_URL}/#business` },
     };
-    if (v.id) {
-      node.embedUrl = `https://www.youtube-nocookie.com/embed/${v.id}`;
-      node.contentUrl = `https://www.youtube.com/watch?v=${v.id}`;
-    } else node.contentUrl = `${SITE_URL}/${v.file}`;
+    // A YouTube clip has a player address and no file address of ours; a clip
+    // we host has its file.
+    if (v.id) node.embedUrl = `https://www.youtube-nocookie.com/embed/${v.id}`;
+    else node.contentUrl = `${SITE_URL}/${v.file}`;
     const graph = [localBusinessNode(), node];
     const ent = actEntityNode(m.ACT_BY_ID[v.act]);
     if (ent) {
