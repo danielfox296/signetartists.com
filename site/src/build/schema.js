@@ -428,7 +428,8 @@ export function makeSchema(m) {
       name: v.name,
       description: v.description,
       thumbnailUrl: m.watchThumb(v),
-      uploadDate: v.uploadDate,
+      // Google reads a bare date as incomplete: a clip's day is given as noon, Mountain time.
+      uploadDate: /^\d{4}-\d\d-\d\d$/.test(v.uploadDate || "") ? `${v.uploadDate}T12:00:00-07:00` : v.uploadDate,
       duration: v.duration,
       url: canonical,
       publisher: { "@id": `${SITE_URL}/#business` },
