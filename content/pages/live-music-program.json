@@ -43,7 +43,7 @@
        "title": "Live music on your calendar, every week.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "You know the moment on a quiet night when your tables start asking for the check. A musician on your floor, on the same night every week, can give them a reason to stay for one more round.",
+       "lede": "You know the moment on a quiet night when your guests start asking for the check. A musician on your floor, on the same night every week, can give them a reason to stay for one more round.",
        "headingText": [
         {
          "html": "We'll bring the same solo or duo act to your hotel or restaurant on the same night each week. If they can't make it, we'll send a backup you've already approved, and you'll get one invoice a month."
@@ -151,6 +151,7 @@
       "type": "Bars",
       "props": {
        "id": "Bars-WM3",
+       "caption": "Average minutes at the table, 282 tables, one Italian restaurant in Tel Aviv, 2024.",
        "rows": [
         {
          "label": "Fast music",
@@ -174,7 +175,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-WM7",
-       "html": "Guests in Tel Aviv spent about the same either way. In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks. A table that stays longer probably spends more when your staff offers another round.",
+       "html": "Guests in Tel Aviv spent about the same either way. In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks. Guests who stay longer probably spend more when your staff offers another round.",
        "cls": "prose"
       }
      },
