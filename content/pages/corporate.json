@@ -389,6 +389,7 @@
       "type": "Bars",
       "props": {
        "id": "Bars-WM4",
+       "caption": "Average minutes at the table, 282 tables, one Italian restaurant in Tel Aviv, 2024.",
        "rows": [
         {
          "label": "Fast music",
@@ -413,6 +414,14 @@
       "props": {
        "id": "Paragraph-WM5",
        "html": "Researchers who pooled 32 studies in 2006 found that people respond more to music they know and like. That's why we ask who's coming before we pick the act.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM8",
+       "html": "You can read more in our post on <a href=\"/blog/why-do-restaurants-have-live-music/\">why restaurants have live music</a>, or in <a href=\"https://danielchristopherfox.com/notes/\">Daniel Fox's research notes</a>.",
        "cls": "prose"
       }
      }
