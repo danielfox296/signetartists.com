@@ -2631,6 +2631,17 @@ main:focus {
   font-weight: 500;
 }
 
+/* The link to /about/ after the author's name: the body links' hairline, in
+   the byline's own colour. */
+.blog-byline-author a {
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 1px;
+}
+
+.blog-byline-author a:hover {
+  color: var(--brass);
+}
+
 .blog-hero {
   margin-top: var(--space-4);
 }

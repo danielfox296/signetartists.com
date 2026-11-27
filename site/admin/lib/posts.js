@@ -98,7 +98,7 @@ export function slugProblem(repo, slug, self, kind = "post") {
 
 // A new post, as a draft, blank or from another post's blocks.
 export function newPost({ title, slug, from }) {
-  const props = { title, slug, eyebrow: "", parent: "", dek: "", date: today(), author: { name: "Signet Artists" }, meta_description: "", hero: { src: "", alt: "" }, draft: true };
+  const props = { title, slug, eyebrow: "", parent: "", dek: "", date: today(), author: { name: "Daniel Fox" }, meta_description: "", hero: { src: "", alt: "" }, draft: true };
   if (!from) return { root: { props }, content: [] };
   const d = structuredClone(from);
   const keep = ["eyebrow", "parent", "dek", "author", "meta_description", "llms_description", "hero", "video"];
