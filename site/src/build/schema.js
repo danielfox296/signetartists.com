@@ -20,6 +20,12 @@ export function prune(v) {
 
 export const schemaTag = (payload) => `<script type="application/ld+json">${pyjson(prune(payload))}</script>`;
 
+// A clip's upload date with a time and timezone. A bare date gets noon,
+// Mountain Standard Time; anything else passes through.
+function uploadDateTime(d) {
+  return /^\d{4}-\d\d-\d\d$/.test(d || "") ? `${d}T12:00:00-07:00` : d;
+}
+
 export function makeSchema(m) {
   const { SITE_URL, brand, site } = m;
   const biz = site.business;
@@ -202,7 +208,7 @@ export function makeSchema(m) {
     if (sc.video) {
       const a = m.ACT_BY_ID[sc.act];
       const vid = sc.video;
-      const vn = { "@type": "VideoObject", "@id": `${canonical}#video`, name: vid.name, description: vid.description, thumbnailUrl: `${SITE_URL}/${a.video_poster}`, uploadDate: vid.uploadDate, duration: vid.duration };
+      const vn = { "@type": "VideoObject", "@id": `${canonical}#video`, name: vid.name, description: vid.description, thumbnailUrl: `${SITE_URL}/${a.video_poster}`, uploadDate: uploadDateTime(vid.uploadDate), duration: vid.duration };
       if (/^https?:\/\//.test(a.video)) vn.embedUrl = a.video;
       else vn.contentUrl = `${SITE_URL}/${a.video}`;
       const k = m.footageKey(a.video);
@@ -217,7 +223,7 @@ export function makeSchema(m) {
         name: v.name,
         description: v.description,
         thumbnailUrl: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
-        uploadDate: v.uploadDate,
+        uploadDate: uploadDateTime(v.uploadDate),
         duration: v.duration,
         embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
         publisher: { "@id": `${SITE_URL}/#business` },
@@ -428,7 +434,7 @@ export function makeSchema(m) {
       description: v.description,
       thumbnailUrl: m.watchThumb(v),
       // Google reads a bare date as incomplete: a clip's day is given as noon, Mountain time.
-      uploadDate: /^\d{4}-\d\d-\d\d$/.test(v.uploadDate || "") ? `${v.uploadDate}T12:00:00-07:00` : v.uploadDate,
+      uploadDate: uploadDateTime(v.uploadDate),
       duration: v.duration,
       url: canonical,
       publisher: { "@id": `${SITE_URL}/#business` },
