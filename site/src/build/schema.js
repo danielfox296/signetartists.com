@@ -220,7 +220,6 @@ export function makeSchema(m) {
         uploadDate: v.uploadDate,
         duration: v.duration,
         embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
-        contentUrl: `https://www.youtube.com/watch?v=${id}`,
         publisher: { "@id": `${SITE_URL}/#business` },
       };
       if (m.FOOTAGE_BY_KEY[id]) vn.url = m.watchUrl(m.FOOTAGE_BY_KEY[id]);
