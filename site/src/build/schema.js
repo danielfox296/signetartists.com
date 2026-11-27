@@ -409,6 +409,14 @@ export function makeSchema(m) {
       itemListElement: trail.map(([u, label], i) => ({ "@type": "ListItem", position: i + 1, name: label, item: SITE_URL + u })),
     });
 
+  // A post's author as a Person. When the author is the founder in site.json,
+  // the Person carries that id and links, so every post names one person.
+  const personFor = (name) => {
+    const f = biz.founder || {};
+    if (name !== f.name && name !== f.alternateName) return { "@type": "Person", name };
+    return { "@type": "Person", "@id": f["@id"], name, url: `${SITE_URL}/about/`, worksFor: { "@id": `${SITE_URL}/#business` }, sameAs: f.sameAs || [f.url].filter(Boolean) };
+  };
+
   const articleSchema = (post, canonical, ogImage, modified) => {
     const authorName = (post.author || {}).name ?? brand.name;
     const entity = { "@type": "Organization", "@id": `${SITE_URL}/#business`, name: brand.name, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo-512.png` } };
@@ -417,7 +425,7 @@ export function makeSchema(m) {
       "@type": "Article",
       headline: post.title || "",
       description: post.meta_description || "",
-      author: authorName === brand.name ? entity : { "@type": "Person", name: authorName },
+      author: authorName === brand.name ? entity : personFor(authorName),
       publisher: entity,
       datePublished: post.date || "",
       dateModified: modified,

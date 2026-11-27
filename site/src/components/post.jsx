@@ -322,7 +322,10 @@ export function PostFrame({ p, minutes, content, children }) {
     dek: () => <p key="dek" className="lede blog-dek">{p.dek}</p>,
     byline: () => (
       <p key="byline" className="blog-byline">
-        <span className="blog-byline-author">{author.name}</span>{" "}
+        <span className="blog-byline-author">
+          {author.name}
+          {author.name && author.name !== s.model.brand.name ? <>{", "}<a href={href("/about/")}>{s.model.brand.name}</a></> : null}
+        </span>{" "}
         {author.role ? <>{sep}{" "}<span>{author.role}</span>{" "}</> : null}
         {sep}{" "}
         <time dateTime={p.date}>{s.model.dateDisplay(p.date)}</time>{" "}
