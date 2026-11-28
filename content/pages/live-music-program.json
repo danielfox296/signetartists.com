@@ -166,14 +166,6 @@
      {
       "type": "Paragraph",
       "props": {
-       "id": "Paragraph-WM10",
-       "html": "Guests stayed at the table about 23 minutes longer when the songs were slow.",
-       "cls": "callout"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
        "id": "Paragraph-WM6",
        "html": "In 2024, researchers at an Italian restaurant in Tel Aviv changed the tempo of the background music and timed 282 tables. They kept the same food, the same staff and the same prices.",
        "cls": "prose"
@@ -207,8 +199,16 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-WM7",
-       "html": "In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks. A live musician can also watch who’s at the bar and pick the next song for them, which a playlist can’t do.",
+       "html": "In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks.",
        "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-WM10",
+       "html": "A musician can watch who’s at the bar and pick the next song for them.",
+       "cls": "callout"
       }
      },
      {
@@ -387,14 +387,6 @@
       }
      },
      {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-HV6",
-       "html": "Start with a trial of up to four weeks. If the act fits, those weeks count toward your first 12.",
-       "cls": "callout"
-      }
-     },
-     {
       "type": "DefRows",
       "props": {
        "id": "DefRows-13",
@@ -499,7 +491,8 @@
     "title": "What venues say",
     "occasions": "venue",
     "limit": 8,
-    "show": 4
+    "show": 4,
+    "ids": "michelle-samuel-r"
    }
   },
   {
