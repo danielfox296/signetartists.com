@@ -2,8 +2,8 @@
  "root": {
   "props": {
    "path": "/live-music-program/",
-   "title": "Weekly Live Music for Colorado Hotels and Restaurants | Signet Artists",
-   "description": "A standing night of live music for Colorado hotels and restaurants: the same musician each week, a backup when they can't make it, and one invoice a month.",
+   "title": "Hotel and Restaurant Live Music in Colorado | Signet Artists",
+   "description": "Live music for Colorado hotels and restaurants: a standing weekly night with the same musician and one invoice a month, or a single date for a lobby event or the holidays.",
    "titleExact": true,
    "nav": "program",
    "schema": {
@@ -26,7 +26,8 @@
      ]
     }
    },
-   "breadcrumb": "Hotels"
+   "breadcrumb": "Hotels",
+   "heroImage": "img/unsplash/photo-1687945512099-400cbe94460c.jpg"
   }
  },
  "content": [
@@ -45,13 +46,10 @@
        "title": "Live music on your calendar, every week.",
        "titleTag": "h1",
        "titleClass": "h2 display",
-       "lede": "You know the moment on a quiet night when your guests start asking for the check. A musician on your floor, on the same night every week, can give them a reason to stay for one more round.",
+       "lede": "You know the moment on a quiet night when your guests start asking for the check. A musician on your floor can give them a reason to stay for one more round.",
        "headingText": [
         {
-         "html": "We'll bring the same solo or duo act to your hotel or restaurant on the same night each week. If they can't make it, we'll send a backup you've already approved, and you'll get one invoice a month."
-        },
-        {
-         "html": "It’s built for a hotel lobby bar, a restaurant bar, a cocktail lounge or a member club, on a night that’s already busy or the one you want to build."
+         "html": "We bring the same solo or duo act to your lobby bar, restaurant or lounge on the same night each week. We also book single dates for lobby events and the holidays."
         }
        ],
        "buttons": [
@@ -73,10 +71,29 @@
    }
   },
   {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-17",
+    "band": "ruled",
+    "label": "Trusted and booked by",
+    "showAlso": false,
+    "blocks": [
+     {
+      "type": "Review",
+      "props": {
+       "id": "Review-HV1",
+       "review": "amy-e-2020-12",
+       "withAct": true
+      }
+     }
+    ]
+   }
+  },
+  {
    "type": "Rows",
    "props": {
     "id": "Rows-7",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -95,31 +112,36 @@
        "rows": [
         {
          "term": "The same musician every week",
-         "text": "A Colorado act you've watched on video plays at your venue every week, so your regulars get to know them."
+         "text": "A Colorado act you've watched on video plays at your venue every week, so your regulars get to know them.",
+         "art": "musicians"
         },
         {
          "term": "A backup who fits",
-         "text": "If your musician can't make it, we'll send an act you've already approved. If we can't fill the night, you aren't billed for it. This is part of <a href=\"/pricing/#backup-promise\">the Backup Promise</a>."
+         "text": "If your musician can't make it, we'll send an act you've already approved. If we can't fill the night, you aren't billed for it. This is part of <a href=\"/pricing/#backup-promise\">the Backup Promise</a>.",
+         "art": "shield"
         },
         {
          "term": "A different act if the first one isn't right",
-         "text": "Just tell us, and we'll bring in another act from our roster."
+         "text": "Just tell us, and we'll bring in another act from our roster.",
+         "art": "guitar"
         },
         {
          "term": "Extra nights when you want them",
-         "text": "We can add a holiday night, a bigger act for a special evening, or a seasonal act like the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> or the <a href=\"/ensembles/mariachi-band/\">mariachi band</a>."
+         "text": "We can add a holiday night, a bigger act for a special evening, or a seasonal act like the <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> or the <a href=\"/ensembles/mariachi-band/\">mariachi band</a>.",
+         "art": "calendar"
         },
         {
          "term": "Sound kept at conversation level",
-         "text": "The act brings a small sound system and keeps the music low enough that your guests can still talk."
+         "text": "The act brings a small sound system and keeps the music low enough that your guests can still talk.",
+         "art": "speaker"
         },
         {
          "term": "One invoice a month",
-         "text": "We bill on the 1st for that month's nights, due in 30 days, and we'll send a certificate of insurance naming your property."
+         "text": "We bill on the 1st for that month's nights, due in 30 days, and we'll send a certificate of insurance naming your property.",
+         "art": "document"
         }
        ],
-       "bare": true,
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--tiles"
       }
      }
     ],
@@ -130,7 +152,7 @@
    "type": "Text",
    "props": {
     "id": "Text-WM1",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Heading",
@@ -144,8 +166,16 @@
      {
       "type": "Paragraph",
       "props": {
+       "id": "Paragraph-WM10",
+       "html": "Guests stayed at the table about 23 minutes longer when the songs were slow.",
+       "cls": "callout"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
        "id": "Paragraph-WM6",
-       "html": "In 2024, researchers at an Italian restaurant in Tel Aviv changed the tempo of the background music and timed 282 tables. Guests stayed about 80 minutes when the songs were slow, about 69 with the restaurant's usual playlist and about 57 when the songs were fast. The researchers kept the same food, the same staff and the same prices.",
+       "html": "In 2024, researchers at an Italian restaurant in Tel Aviv changed the tempo of the background music and timed 282 tables. They kept the same food, the same staff and the same prices.",
        "cls": "prose"
       }
      },
@@ -177,23 +207,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-WM7",
-       "html": "Guests in Tel Aviv spent about the same either way. In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks. Guests who stay longer probably spend more when your staff offers another round.",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-WM8",
-       "html": "In 2006, researchers pooled 32 studies of music in stores and found that shoppers responded more to music they knew and liked.",
-       "cls": "prose"
-      }
-     },
-     {
-      "type": "Paragraph",
-      "props": {
-       "id": "Paragraph-WM9",
-       "html": "Nobody has compared a live musician with a playlist on a bar's sales yet. A musician can watch who's at the bar and pick the next song for them. With a playlist, nobody picks the next song.",
+       "html": "In a 1986 study at an American restaurant, guests on slow-music nights ordered more drinks. A live musician can also watch who’s at the bar and pick the next song for them, which a playlist can’t do.",
        "cls": "prose"
       }
      },
@@ -202,17 +216,17 @@
       "props": {
        "id": "Paragraph-WM5",
        "html": "You can read the full research, with every source, in our post on <a href=\"/blog/why-do-restaurants-have-live-music/\">why restaurants have live music</a>.",
-       "cls": "prose"
+       "cls": "note"
       }
      }
     ]
    }
   },
   {
-   "type": "Rows",
+   "type": "ActCards",
    "props": {
-    "id": "Rows-11",
-    "band": "ruled",
+    "id": "ActCards-HW1",
+    "band": "sunk",
     "blocks": [
      {
       "type": "Heading",
@@ -222,49 +236,49 @@
        "title": "Who plays.",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "These are solo and duo acts who sound good at conversation level. Here are a few who fit a weekly night."
+       "lede": "Solo and duo acts who sound good at conversation level. Here are a few who fit a weekly night."
       }
      },
      {
-      "type": "DefRows",
+      "type": "Cards",
       "props": {
-       "id": "DefRows-9",
-       "rows": [
+       "id": "Cards-HW2",
+       "source": "acts",
+       "look": "photos",
+       "acts": [
         {
-         "term": "<a href=\"/artists/emily-barnes/\">Emily Barnes</a>",
-         "text": "A folk singer-songwriter who plays solo or as a duo."
+         "act": "jazz-duo",
+         "kicker": "The cocktail lounge"
         },
         {
-         "term": "<a href=\"/artists/meghan-clarisse/\">Meghan Clarisse</a>",
-         "text": "Country and Americana, solo or as a duo."
+         "act": "emily-barnes",
+         "kicker": "The lobby bar"
         },
         {
-         "term": "<a href=\"/artists/tejas-singh/\">Tejas Singh</a>",
-         "text": "Familiar songs from a singer-songwriter, played as a duo."
+         "act": "chantil-dukart",
+         "kicker": "Jazz piano and vocals"
         },
         {
-         "term": "<a href=\"/artists/tony-medina/\">Tony Medina</a>",
-         "text": "Blues, rock and roots from one voice and a guitar."
+         "act": "tejas-singh",
+         "kicker": "The restaurant bar"
         },
         {
-         "term": "<a href=\"/ensembles/jazz-duo-trio/\">The jazz duo</a>",
-         "text": "Jazz standards on upright bass and guitar."
+         "act": "meghan-clarisse",
+         "kicker": "Patio season"
         },
         {
-         "term": "<a href=\"/artists/chantil-dukart/\">Chantil Dukart</a>",
-         "text": "Jazz piano and vocals, from Nat King Cole to Stevie Wonder."
+         "act": "tony-medina",
+         "kicker": "Blues and roots"
         },
         {
-         "term": "<a href=\"/ensembles/afro-house-dj/\">The Afro house DJ</a>",
-         "text": "A DJ for hotel lounge nights who can play tabla (hand drums) live over the music."
+         "act": "afro-house-dj",
+         "kicker": "Lounge nights"
         },
         {
-         "term": "<a href=\"/artists/roma-ransom/\">Roma Ransom</a>",
-         "text": "Violin and guitar, for venues in Colorado Springs."
+         "act": "roma-ransom",
+         "kicker": "Dinner service"
         }
-       ],
-       "bare": true,
-       "cls": "def-list def-list--stack"
+       ]
       }
      },
      {
@@ -279,9 +293,81 @@
         }
        ]
       }
+     },
+     {
+      "type": "Review",
+      "props": {
+       "id": "Review-HV2",
+       "review": "natasha-s-2015-01",
+       "withAct": true
+      }
      }
-    ],
-    "_file": "03-who.html"
+    ]
+   }
+  },
+  {
+   "type": "Videos",
+   "props": {
+    "id": "Videos-HV3",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-HV4",
+       "eyebrow": "Video clips",
+       "title": "Watch before you pick",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "A few of the acts above, live."
+      }
+     },
+     {
+      "type": "VideoGrid",
+      "props": {
+       "id": "VideoGrid-HV5",
+       "single": false,
+       "videos": [
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/O2A0PKE7CXE?rel=0",
+         "title": "Jazz duo playing Autumn Leaves on guitar and upright bass",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/FchP_e3GIWk?rel=0",
+         "title": "Emily Barnes playing her song Say It Again",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/iklrXQw9KIA?rel=0",
+         "title": "Chantil Dukart and her trio playing Imagination live at Rocky Mountain Recorders",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/8sVxHJ9ql2g?rel=0",
+         "title": "Tejas Singh live for Sofar Sounds",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/hIkbkIMVHBE?rel=0",
+         "title": "Roma Ransom playing their song Smoke Rings",
+         "loading": "lazy"
+        },
+        {
+         "kind": "iframe",
+         "src": "https://www.youtube-nocookie.com/embed/v0nKiT2_7RE?rel=0",
+         "title": "Afro house DJ playing a live DJ set",
+         "loading": "lazy"
+        }
+       ]
+      }
+     }
+    ]
    }
   },
   {
@@ -298,6 +384,14 @@
        "title": "How to start a weekly music program",
        "titleTag": "h2",
        "titleClass": "h2"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-HV6",
+       "html": "Start with a trial of up to four weeks. If the act fits, those weeks count toward your first 12.",
+       "cls": "callout"
       }
      },
      {
@@ -318,8 +412,7 @@
          "text": "The program runs for 12 weeks at the program price. After that it continues month to month, and either side can end it with 30 days' notice."
         }
        ],
-       "bare": true,
-       "cls": "def-list def-list--stack"
+       "cls": "def-list def-list--index"
       }
      }
     ],
@@ -327,10 +420,11 @@
    }
   },
   {
-   "type": "Rows",
+   "type": "Text",
    "props": {
-    "id": "Rows-OT1",
+    "id": "Text-OT1",
     "band": "ruled",
+    "anchor": "one-time",
     "blocks": [
      {
       "type": "Heading",
@@ -340,31 +434,43 @@
        "title": "Lobby and holiday music for a single date",
        "titleTag": "h2",
        "titleClass": "h2",
-       "lede": "We also book a musician for one evening or a short run of dates, like a winter market in your lobby, a tree lighting, Thanksgiving dinner or New Year’s Eve."
+       "lede": "We also book a musician for one evening or a short run of dates, like a winter market in your lobby, a tree lighting, Thanksgiving dinner or New Year’s Eve.",
+       "image": {
+        "src": "/img/acts/chantil-dukart-christmas-tree.jpg",
+        "alt": "Chantil Dukart smiling at an upright piano beside a lit Christmas tree.",
+        "width": "1800",
+        "height": "2006",
+        "loading": "lazy",
+        "decoding": "async"
+       },
+       "imageFirst": "right"
       }
      },
      {
       "type": "DefRows",
       "props": {
        "id": "DefRows-OT3",
-       "bare": true,
-       "cls": "def-list def-list--stack",
+       "cls": "def-list def-list--icons",
        "rows": [
         {
          "term": "Music for a lobby event",
-         "text": "A solo or duo act plays your lobby, atrium or bar during a market, a reception or an open house, at a level your guests can talk over."
+         "text": "A solo or duo act plays your lobby, atrium or bar during a market, a reception or an open house, at a level your guests can talk over.",
+         "art": "building"
         },
         {
          "term": "Holiday dates",
-         "text": "December fills up with tree lightings, holiday teas and New Year’s Eve. The <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> and <a href=\"/ensembles/solo-piano/\">solo piano</a> fit most of them, and the <a href=\"/ensembles/mariachi-band/\">mariachi band</a> suits a fiesta or a brunch."
+         "text": "December fills up with tree lightings, holiday teas and New Year’s Eve. The <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> and <a href=\"/ensembles/solo-piano/\">solo piano</a> fit most of them, and the <a href=\"/ensembles/mariachi-band/\">mariachi band</a> suits a fiesta or a brunch.",
+         "art": "gift"
         },
         {
          "term": "The paperwork in one email",
-         "text": "You get the contract, the certificate of insurance, the W-9 and the invoice together. Here’s <a href=\"/planners/booking/\">how a booking works</a>."
+         "text": "You get the contract, the certificate of insurance, the W-9 and the invoice together. Here’s <a href=\"/planners/booking/\">how a booking works</a>.",
+         "art": "document"
         },
         {
          "term": "A weekly night later, if you like",
-         "text": "If the act fits your guests, we can turn the date into a standing night."
+         "text": "If the act fits your guests, we can turn the date into a standing night.",
+         "art": "calendar"
         }
        ]
       }
@@ -386,20 +492,21 @@
    }
   },
   {
-   "type": "LogoStrip",
+   "type": "Reviews",
    "props": {
-    "id": "LogoStrip-17",
-    "band": "ruled",
-    "label": "Trusted and booked by",
-    "showAlso": false,
-    "_file": "05-credits.html"
+    "id": "Reviews-venues",
+    "band": "sunk",
+    "title": "What venues say",
+    "occasions": "venue",
+    "limit": 8,
+    "show": 4
    }
   },
   {
    "type": "Questions",
    "props": {
     "id": "Questions-21",
-    "band": "sunk",
+    "band": "ruled",
     "blocks": [
      {
       "type": "Title",
@@ -463,7 +570,7 @@
    "type": "CallToAction",
    "props": {
     "id": "CallToAction-25",
-    "band": "ruled",
+    "band": "sunk",
     "blocks": [
      {
       "type": "CloseRow",
