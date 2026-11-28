@@ -811,7 +811,7 @@ const HonorsWall = {
               <ul className="honor-marks honor-marks--wall">
                 {marks.map(({ h, a }, i) => (
                   <li key={i}>
-                    <a href={m.actUrl(a, s.prefix)} aria-label={`${h.from}: ${a.name}`}><Mark h={h} /></a>
+                    <a href={m.actUrl(a, s.prefix)} aria-label={`${h.from || h.title}: ${a.name}`}><Mark h={h} /></a>
                   </li>
                 ))}
               </ul>

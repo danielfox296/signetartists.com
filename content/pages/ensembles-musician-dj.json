@@ -1,0 +1,508 @@
+{
+ "root": {
+  "props": {
+   "path": "/ensembles/musician-dj/",
+   "title": "Musician DJ in Denver, a DJ who plays a live instrument | Signet Artists",
+   "description": "One performer DJs your Denver wedding or party and plays a live instrument over the mix, with one booking from the ceremony to the last dance.",
+   "titleExact": true,
+   "ogImage": "img/unsplash/photo-1660211934853-e33d8a02201d.jpg",
+   "ogImageAlt": "A DJ’s hands on the mixer and decks, lit by warm stage lights.",
+   "nav": "music",
+   "breadcrumb": "Musician DJ",
+   "schema": {
+    "service": {
+     "name": "Musician DJ for weddings and parties",
+     "serviceType": "One performer who DJs and plays a live instrument, for weddings, corporate events and private parties",
+     "description": "A DJ who also plays a live instrument over the mix, for wedding ceremonies and receptions, corporate parties and private parties across Denver and the Colorado mountain corridor.",
+     "areaServed": [
+      "Denver",
+      "Boulder",
+      "Colorado Springs",
+      "Vail",
+      "Aspen",
+      "Beaver Creek",
+      "Breckenridge"
+     ],
+     "configs": [
+      "dj"
+     ]
+    },
+    "act": "musician-dj"
+   }
+  }
+ },
+ "content": [
+  {
+   "type": "Intro",
+   "props": {
+    "id": "Intro-1",
+    "band": "top",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-1",
+       "eyebrow": "DJ and live instrument",
+       "slab": true,
+       "title": "A musician DJ in Denver, for weddings and parties.",
+       "titleTag": "h1",
+       "titleClass": "h2 display",
+       "lede": "It’s late, the floor is full, and the DJ steps out from behind the decks with a saxophone to play over the chorus everyone knows. A musician DJ plays your whole event as a DJ and picks up a live instrument over the mix a few times through the evening.",
+       "headingText": [
+        {
+         "html": "It’s one performer, one booking and one setup for a wedding, a company party or a milestone birthday."
+        }
+       ],
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=musician-dj",
+         "cls": "btn"
+        }
+       ],
+       "headingNote": "Tell us which instrument you’d like to hear and the songs you can’t do without, and we’ll plan it with you. <a href=\"/planners/booking/\">Here’s how booking through Signet works</a>."
+      }
+     },
+     {
+      "type": "ActVideo",
+      "props": {
+       "id": "ActVideo-2",
+       "kind": "photo",
+       "image": {
+        "src": "/img/unsplash/photo-1660211934853-e33d8a02201d.jpg",
+        "alt": "A DJ’s hands on the mixer and decks, lit by warm stage lights.",
+        "width": "1600",
+        "height": "1200",
+        "decoding": "async"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActHonors",
+   "props": {
+    "id": "ActHonors-3",
+    "band": "ruled",
+    "title": "Awards and press",
+    "pressTitle": "In the press and on air",
+    "creditsTitle": "Stages and credits"
+   }
+  },
+  {
+   "type": "LogoStrip",
+   "props": {
+    "id": "LogoStrip-4",
+    "band": "ruled",
+    "label": "Where our artists have played",
+    "showAlso": false
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-5",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-6",
+       "eyebrow": "How it works",
+       "title": "What does a musician DJ do?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "The performer plays a full DJ set on their own decks, mixer and sound system. A few times through the evening, they pick up their instrument and play live over the mix for fifteen to thirty minutes, then go back to the decks."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-7",
+       "html": "Each performer plays one instrument, such as saxophone, violin, guitar, keys or hand drums, and we match you with the one you’d like to hear. The performer plays live for about a third of your event. The rest of the time, you have a DJ set with your requests and your do-not-play list.",
+       "cls": "prose"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-8",
+       "html": "Want a second musician or a full band, too? Take a look at the <a href=\"/ensembles/dj/\">DJ</a> page or the <a href=\"/music/\">roster</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "RateTable",
+   "props": {
+    "id": "RateTable-9",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-10",
+       "html": "When you’ll hear the live instrument",
+       "tag": "h2",
+       "cls": "h3 h3--lead"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-11",
+       "html": "Pick the length that fits your event. The performer sets up before your start time and takes everything down after, outside the hours you book.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Table",
+      "props": {
+       "id": "Table-12",
+       "head": [
+        {
+         "html": ""
+        },
+        {
+         "html": "Party"
+        },
+        {
+         "html": "Wedding reception"
+        },
+        {
+         "html": "Full wedding day"
+        }
+       ],
+       "rows": [
+        {
+         "cells": [
+          {
+           "html": "Length",
+           "cls": "rate-size"
+          },
+          {
+           "html": "3 hours"
+          },
+          {
+           "html": "4 hours"
+          },
+          {
+           "html": "6 hours"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Ceremony",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Not included"
+          },
+          {
+           "html": "Not included"
+          },
+          {
+           "html": "Live instrument, solo"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Cocktail hour",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Live instrument over a light DJ mix"
+          },
+          {
+           "html": "Live instrument over a light DJ mix"
+          },
+          {
+           "html": "Live instrument over a light DJ mix"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Dinner",
+           "cls": "rate-size"
+          },
+          {
+           "html": "Not included"
+          },
+          {
+           "html": "A quiet DJ mix, with one short live passage"
+          },
+          {
+           "html": "A quiet DJ mix, with one short live passage"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "html": "Dancing",
+           "cls": "rate-size"
+          },
+          {
+           "html": "DJ set, with live passages"
+          },
+          {
+           "html": "DJ set, with live passages"
+          },
+          {
+           "html": "DJ set, with live passages"
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-13",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-14",
+       "eyebrow": "Every booking",
+       "title": "What’s included",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-15",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "A full DJ set",
+         "text": "The performer brings their own decks, mixer and sound system."
+        },
+        {
+         "term": "Live playing",
+         "text": "Live passages on one instrument, fifteen to thirty minutes at a time."
+        },
+        {
+         "term": "A wireless mic",
+         "text": "For toasts, introductions and announcements."
+        },
+        {
+         "term": "A planning call",
+         "text": "We’ll go over your timeline, your must-play and do-not-play lists, and the songs you’d like played live."
+        },
+        {
+         "term": "Setup and breakdown",
+         "text": "The performer sets up before your start time and takes everything down after your event ends."
+        },
+        {
+         "term": "Travel in the Denver area",
+         "text": "Travel inside the Denver metro is part of every booking."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-16",
+       "html": "You can add a ceremony set, an extra hour, lighting, or a song the performer learns to play live for you. For a large venue, the performer can play through the venue’s sound system, or we can bring more sound.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-17",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-18",
+       "eyebrow": "Occasions",
+       "title": "Perfect booking for",
+       "titleTag": "h2",
+       "titleClass": "h2"
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-19",
+       "cls": "def-list def-list--cards",
+       "rows": [
+        {
+         "term": "<a href=\"/weddings/\">Weddings, from the ceremony to the last dance</a>",
+         "text": "With one booking, you have music for the ceremony, the cocktail hour, dinner and the dancing. You keep a DJ’s full request list for the reception and still have a live musician for the moments you care about."
+        },
+        {
+         "term": "<a href=\"/corporate/after-party/\">Company parties and after-parties</a>",
+         "text": "Your team dances to the songs they know, and the performer plays live over the ones they cheer loudest for."
+        },
+        {
+         "term": "<a href=\"/private-parties/birthday-party/\">Milestone birthdays</a>",
+         "text": "A musician DJ is a great pick for a party at home or a restaurant buyout, where there’s no space for a band."
+        },
+        {
+         "term": "Smaller venues",
+         "text": "The performer needs the same floor space and power as a DJ, so you can have live music at a venue where a band won’t fit."
+        }
+       ]
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-20",
+       "html": "Wondering what it all costs? Take a look at <a href=\"/guides/live-music-cost-colorado/\">the cost guide</a>. Still deciding? Here’s our take on <a href=\"/blog/band-or-dj-denver/\">band or DJ for a Denver wedding or company party</a>.",
+       "cls": "note"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "Text",
+   "props": {
+    "id": "Text-21",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-22",
+       "eyebrow": "The music",
+       "title": "Can I choose what’s played live?",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "Yes. Give us a few songs you’d love to hear on the instrument, and the performer will plan the live passages around them. If there’s a song they don’t play yet, they can learn it for you."
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-23",
+       "html": "The DJ set is open format, so the performer plays all kinds of music, and you can mix as many styles as you’d like.",
+       "cls": "prose"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "ActReviews",
+   "props": {
+    "id": "ActReviews-testimonials",
+    "band": "ruled",
+    "title": "What clients say",
+    "show": 4
+   }
+  },
+  {
+   "type": "ActVenues",
+   "props": {
+    "id": "ActVenues-venues",
+    "band": "ruled",
+    "title": "Venues",
+    "lede": "We’d pick {name} for live music at these venues."
+   }
+  },
+  {
+   "type": "Questions",
+   "props": {
+    "id": "Questions-24",
+    "band": "sunk",
+    "blocks": [
+     {
+      "type": "Title",
+      "props": {
+       "id": "Title-25",
+       "html": "Musician DJ questions",
+       "tag": "h2",
+       "cls": "h3"
+      }
+     },
+     {
+      "type": "Paragraph",
+      "props": {
+       "id": "Paragraph-26",
+       "html": "Have a question about curfews or volume limits? You can find more answers on our <a href=\"/planners/faq/\">full question list</a>.",
+       "cls": "note"
+      }
+     },
+     {
+      "type": "Faq",
+      "props": {
+       "id": "Faq-27",
+       "schema": true,
+       "items": [
+        {
+         "q": "What instrument does the performer play?",
+         "a": "Each performer plays one instrument, such as saxophone, violin, guitar, keys or hand drums. Tell us what you’d like to hear, and we’ll match you with the right performer."
+        },
+        {
+         "q": "How loud is it?",
+         "a": "As loud as your venue allows. The performer keeps the music low during dinner so your guests can talk, then turns it up for dancing. If your venue has a sound limit, let us know and the performer will work within it."
+        },
+        {
+         "q": "Does the musician DJ take requests?",
+         "a": "Yes. The performer plays your requests, and guests’ requests when they fit, and works from your do-not-play list."
+        },
+        {
+         "q": "How much space does the performer need?",
+         "a": "About the same as a DJ: a table, power nearby and a little space to stand and play. So a musician DJ is a good choice for a venue where a band won’t fit."
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "CallToAction",
+   "props": {
+    "id": "CallToAction-28",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "CloseRow",
+      "props": {
+       "id": "CloseRow-29",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/?act=musician-dj",
+         "cls": "btn"
+        }
+       ],
+       "boxed": true,
+       "boxStyle": "max-width: 32rem;",
+       "title": "Want a DJ who plays live, too? Send us the date and the venue, and tell us which instrument you’d like to hear.",
+       "lede": "We’ll match you with a performer and reply with availability and costs.",
+       "note": "Want photos or video of your event? <a href=\"/event-photo-video/\">Add them to your booking</a>."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
