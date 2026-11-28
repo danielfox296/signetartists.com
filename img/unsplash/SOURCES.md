@@ -27,7 +27,7 @@ Photos added to pages through CopyDesk, copied from Unsplash at 1600px wide. One
 - Added: 2026-10-08 with CopyDesk
 
 ## photo-1660211934853-e33d8a02201d.jpg
-- Used on: the blog › band or dj denver page
+- Used on: the blog › band or dj denver page; the ensembles › musician dj page
 - Source: https://images.unsplash.com/photo-1660211934853-e33d8a02201d
 - Licence: Unsplash License (https://unsplash.com/license)
 - Added: 2026-10-08 with CopyDesk
