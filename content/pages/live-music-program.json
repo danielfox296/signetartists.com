@@ -26,7 +26,7 @@
      ]
     }
    },
-   "breadcrumb": "Hotels & Restaurants"
+   "breadcrumb": "Hotels"
   }
  },
  "content": [
@@ -201,7 +201,7 @@
       "type": "Paragraph",
       "props": {
        "id": "Paragraph-WM5",
-       "html": "Daniel Fox, who founded Signet, researches how people respond to music. You can read the full research, with every source, in our post on <a href=\"/blog/why-do-restaurants-have-live-music/\">why restaurants have live music</a>, or in <a href=\"https://danielchristopherfox.com/notes/\">his research notes</a>.",
+       "html": "You can read the full research, with every source, in our post on <a href=\"/blog/why-do-restaurants-have-live-music/\">why restaurants have live music</a>.",
        "cls": "prose"
       }
      }
@@ -324,6 +324,65 @@
      }
     ],
     "_file": "04-how.html"
+   }
+  },
+  {
+   "type": "Rows",
+   "props": {
+    "id": "Rows-OT1",
+    "band": "ruled",
+    "blocks": [
+     {
+      "type": "Heading",
+      "props": {
+       "id": "Heading-OT2",
+       "eyebrow": "One night or one season",
+       "title": "Lobby and holiday music for a single date",
+       "titleTag": "h2",
+       "titleClass": "h2",
+       "lede": "We also book a musician for one evening or a short run of dates, like a winter market in your lobby, a tree lighting, Thanksgiving dinner or New Year’s Eve."
+      }
+     },
+     {
+      "type": "DefRows",
+      "props": {
+       "id": "DefRows-OT3",
+       "bare": true,
+       "cls": "def-list def-list--stack",
+       "rows": [
+        {
+         "term": "Music for a lobby event",
+         "text": "A solo or duo act plays your lobby, atrium or bar during a market, a reception or an open house, at a level your guests can talk over."
+        },
+        {
+         "term": "Holiday dates",
+         "text": "December fills up with tree lightings, holiday teas and New Year’s Eve. The <a href=\"/ensembles/christmas-jazz-trio/\">Christmas jazz trio</a> and <a href=\"/ensembles/solo-piano/\">solo piano</a> fit most of them, and the <a href=\"/ensembles/mariachi-band/\">mariachi band</a> suits a fiesta or a brunch."
+        },
+        {
+         "term": "The paperwork in one email",
+         "text": "You get the contract, the certificate of insurance, the W-9 and the invoice together. Here’s <a href=\"/planners/booking/\">how a booking works</a>."
+        },
+        {
+         "term": "A weekly night later, if you like",
+         "text": "If the act fits your guests, we can turn the date into a standing night."
+        }
+       ]
+      }
+     },
+     {
+      "type": "ButtonRow",
+      "props": {
+       "id": "ButtonRow-OT4",
+       "buttons": [
+        {
+         "label": "Check a Date",
+         "href": "/contact/",
+         "cls": "btn"
+        }
+       ]
+      }
+     }
+    ]
    }
   },
   {
